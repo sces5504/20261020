@@ -44,3 +44,9 @@
 使用者要求不再等待對應，直接將原先M1六角色套用六圖。依使用者明確指定：05 地球、04 水星、01 金星、03 火星、02 天王星、06 月球。`content/core/art-bindings.json` 與美術庫已記錄；保留原PNG，runtime只複製原位元組，未採用SD重繪。較早的mapping pending敘述為歷史狀態，已由本段取代。
 
 最後六圖映射檢查：已以明確對應逐一核對 runtime portrait／avatar／sprite，並比較 public runtime PNG 與 standard 原圖位元組，六張完全一致。角色對應已完成，無需再等待使用者。
+
+## 目前交付檢查點
+
+實作提交 `630be63` 已推送至 `m1/foundation`；草稿 PR：https://github.com/sces5504/20261020/pull/3 。main 未合併、未正式部署。最後 daily／build／Chromium E2E 的程式與此提交相同，包含使用者最終明確映射；後續本段只補交接紀錄。下一位先從此分支／PR取進度，不只同步尚只有規格的main。
+
+尚未宣稱完整M1完成；release gate剩世界／敵人素材、音效、整體品質、遷移／獨立接力演練與真機／效能。原圖保持不變，圖像重繪不恢復。

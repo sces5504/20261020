@@ -1,0 +1,134 @@
+[
+  {
+    "id": "m1art:character.maiden-01",
+    "displayName": "M1-01 蜜銅長髮星紋輕甲",
+    "version": "1.0.0",
+    "gameCharacterId": "m1:venus",
+    "sourceRef": "artref:source.character-input-01",
+    "standardAssetId": "m1art:asset.maiden-01-standard-v1",
+    "hairstyleId": "artref:hairstyle.long-side-braid",
+    "poseId": "m1art:pose.hand-to-chest",
+    "appearance": {
+      "hairColor": "蜜銅色",
+      "eyeColor": "金棕色",
+      "expression": "溫柔自信",
+      "palette": "白／酒紅／金",
+      "lockedFeatures": "超長披髮、側編髮、紅寶石星飾、白色長靴",
+      "agePresentation": "成年女性"
+    },
+    "promptPath": "docs/art/prompts/maiden-01-v1.txt",
+    "reviewStatus": "awaiting-user-review",
+    "note": "原作CID／星體名／技能未綁定，實際圖像優先於生成提示詞。",
+    "mappingSource": "使用者明確指定：05地球、04水星、01金星、03火星、02天王星、06月球。"
+  },
+  {
+    "id": "m1art:character.maiden-02",
+    "displayName": "M1-02 黑短髮航行制服",
+    "version": "1.0.0",
+    "gameCharacterId": "m1:uranus",
+    "sourceRef": "artref:source.character-input-02",
+    "standardAssetId": "m1art:asset.maiden-02-standard-v1",
+    "hairstyleId": "artref:hairstyle.short-black-bob",
+    "poseId": "m1art:pose.one-hand-on-hip",
+    "appearance": {
+      "hairColor": "黑色",
+      "eyeColor": "灰色",
+      "expression": "爽朗俐落",
+      "palette": "海軍藍／薄荷／銀",
+      "lockedFeatures": "下顎鮑伯、碎瀏海、薄荷領帶、短褲、導航棒、綁帶短靴",
+      "agePresentation": "成年女性"
+    },
+    "promptPath": "docs/art/prompts/maiden-02-v1.txt",
+    "reviewStatus": "awaiting-user-review",
+    "note": "原作CID／星體名／技能未綁定，實際圖像優先於生成提示詞。",
+    "mappingSource": "使用者明確指定：05地球、04水星、01金星、03火星、02天王星、06月球。"
+  },
+  {
+    "id": "m1art:character.maiden-03",
+    "displayName": "M1-03 紅雙馬尾飛行制服",
+    "version": "1.0.0",
+    "gameCharacterId": "m1:mars",
+    "sourceRef": "artref:source.character-input-03",
+    "standardAssetId": "m1art:asset.maiden-03-standard-v1",
+    "hairstyleId": "artref:hairstyle.long-high-twintails",
+    "poseId": "m1art:pose.two-hands-at-console",
+    "appearance": {
+      "hairColor": "深紅色",
+      "eyeColor": "琥珀金色",
+      "expression": "活潑自信",
+      "palette": "白／海軍藍／紅／金",
+      "lockedFeatures": "高位雙馬尾、藍蝴蝶結、腰前圓形控制裝置、雙色百褶裙、長襪",
+      "agePresentation": "成年女性"
+    },
+    "promptPath": "docs/art/prompts/maiden-03-v1.txt",
+    "reviewStatus": "awaiting-user-review",
+    "note": "原作CID／星體名／技能未綁定，實際圖像優先於生成提示詞。",
+    "mappingSource": "使用者明確指定：05地球、04水星、01金星、03火星、02天王星、06月球。"
+  },
+  {
+    "id": "m1art:character.maiden-04",
+    "displayName": "M1-04 藍長髮軍官裝",
+    "version": "1.0.0",
+    "gameCharacterId": "m1:mercury",
+    "sourceRef": "artref:source.character-input-04",
+    "standardAssetId": "m1art:asset.maiden-04-standard-v1",
+    "hairstyleId": "artref:hairstyle.long-side-waves",
+    "poseId": "m1art:pose.finger-near-cheek",
+    "appearance": {
+      "hairColor": "藍青色",
+      "eyeColor": "青藍色",
+      "expression": "成熟俏皮",
+      "palette": "珊瑚橙／白／炭灰",
+      "lockedFeatures": "側分波浪披髮、藍水晶耳飾、橙色外套、不對稱裙、黑色長靴",
+      "agePresentation": "成年女性"
+    },
+    "promptPath": "docs/art/prompts/maiden-04-v1.txt",
+    "reviewStatus": "awaiting-user-review",
+    "note": "原作CID／星體名／技能未綁定，實際圖像優先於生成提示詞。",
+    "mappingSource": "使用者明確指定：05地球、04水星、01金星、03火星、02天王星、06月球。"
+  },
+  {
+    "id": "m1art:character.maiden-05",
+    "displayName": "M1-05 髮箍深棕長髮制服",
+    "version": "1.0.0",
+    "gameCharacterId": "m1:earth",
+    "sourceRef": "artref:source.character-input-05",
+    "standardAssetId": "m1art:asset.maiden-05-standard-v1",
+    "hairstyleId": "artref:hairstyle.headband-midlong",
+    "poseId": "m1art:pose.hands-behind-back",
+    "appearance": {
+      "hairColor": "深棕色",
+      "eyeColor": "藍色",
+      "expression": "文靜親切",
+      "palette": "海軍藍／白／灰／金",
+      "lockedFeatures": "黑髮箍、中長直髮、斜瀏海、黑領結、長版制服外套、樂福鞋",
+      "agePresentation": "成年女性"
+    },
+    "promptPath": "docs/art/prompts/maiden-05-v1.txt",
+    "reviewStatus": "awaiting-user-review",
+    "note": "原作CID／星體名／技能未綁定，實際圖像優先於生成提示詞。",
+    "mappingSource": "使用者明確指定：05地球、04水星、01金星、03火星、02天王星、06月球。"
+  },
+  {
+    "id": "m1art:character.maiden-06",
+    "displayName": "M1-06 栗棕短層次研究服",
+    "version": "1.0.0",
+    "gameCharacterId": "m1:moon",
+    "sourceRef": "artref:source.character-input-06",
+    "standardAssetId": "m1art:asset.maiden-06-standard-v1",
+    "hairstyleId": "artref:hairstyle.short-asymmetric-layers",
+    "poseId": "m1art:pose.coat-pocket-datapad",
+    "appearance": {
+      "hairColor": "栗棕色",
+      "eyeColor": "灰青色",
+      "expression": "沉著知性",
+      "palette": "象牙白／酒紅／青綠",
+      "lockedFeatures": "側分短層次、青綠墜飾、長研究袍、酒紅中長裙、資料板、低跟鞋",
+      "agePresentation": "成年女性"
+    },
+    "promptPath": "docs/art/prompts/maiden-06-v1.txt",
+    "reviewStatus": "awaiting-user-review",
+    "note": "原作CID／星體名／技能未綁定，實際圖像優先於生成提示詞。",
+    "mappingSource": "使用者明確指定：05地球、04水星、01金星、03火星、02天王星、06月球。"
+  }
+]

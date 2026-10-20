@@ -1,0 +1,34 @@
+{
+  "name": "stella-maiden-remake",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test --test-isolation=none tests/*.test.ts",
+    "content:check": "npm run content:build && node --import tsx tools/game/content-check.ts content/generated/runtime.json",
+    "test:e2e": "node tools/game/e2e.mjs",
+    "content:build": "node --import tsx tools/game/build-content.ts",
+    "predev": "npm run content:build",
+    "prebuild": "npm run content:build",
+    "pretypecheck": "npm run content:build",
+    "pretest": "npm run content:build",
+    "release:ready": "npm run content:build && node --import tsx tools/game/release-ready.ts",
+    "format": "prettier --write src tests/*.test.ts tools/game content/core/pack.json content/manifest.json package.json tsconfig.json vite.config.ts index.html",
+    "test:playtest": "node tools/game/playtest.mjs"
+  },
+  "dependencies": {
+    "fflate": "0.8.3",
+    "phaser": "3.90.0",
+    "zod": "3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "22.14.0",
+    "prettier": "3.5.3",
+    "tsx": "4.19.3",
+    "typescript": "5.8.3",
+    "vite": "6.4.4"
+  }
+}

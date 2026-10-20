@@ -1,0 +1,304 @@
+[
+  {
+    "id": "artref:sheet.hair-04",
+    "path": "art/reference-library/hairstyles/previews/sheet-04.png",
+    "width": 1242,
+    "height": 364,
+    "pdfPage": 1,
+    "pdfRects": [
+      [
+        394.5,
+        72.0,
+        1100.5,
+        279.0
+      ]
+    ],
+    "title": "髮型變化小覽",
+    "tags": [
+      "短髮",
+      "雙辮",
+      "盤髮",
+      "長直髮"
+    ],
+    "sourceId": "artref:source.bilibili-hairstyles-20231013",
+    "classification": "AI目視分類，非作者逐項標籤"
+  },
+  {
+    "id": "artref:sheet.hair-05",
+    "path": "art/reference-library/hairstyles/previews/sheet-05.png",
+    "width": 1192,
+    "height": 1589,
+    "pdfPage": 1,
+    "pdfRects": [
+      [
+        449.5,
+        480.0,
+        1045.5,
+        1274.5
+      ]
+    ],
+    "title": "多角色髮型總覽",
+    "tags": [
+      "鮑伯",
+      "長髮",
+      "雙馬尾",
+      "側辮",
+      "包頭",
+      "瀏海"
+    ],
+    "sourceId": "artref:source.bilibili-hairstyles-20231013",
+    "classification": "AI目視分類，非作者逐項標籤"
+  },
+  {
+    "id": "artref:sheet.hair-06",
+    "path": "art/reference-library/hairstyles/previews/sheet-06.png",
+    "width": 1192,
+    "height": 1589,
+    "pdfPage": 1,
+    "pdfRects": [
+      [
+        449.5,
+        1351.5,
+        1045.5,
+        2146.5
+      ]
+    ],
+    "title": "長直髮、馬尾與短鮑伯",
+    "tags": [
+      "長直髮",
+      "高馬尾",
+      "鮑伯",
+      "層次髮"
+    ],
+    "sourceId": "artref:source.bilibili-hairstyles-20231013",
+    "classification": "AI目視分類，非作者逐項標籤"
+  },
+  {
+    "id": "artref:sheet.hair-07",
+    "path": "art/reference-library/hairstyles/previews/sheet-07.png",
+    "width": 1192,
+    "height": 1589,
+    "pdfPage": 1,
+    "pdfRects": [
+      [
+        449.5,
+        2223.5,
+        1045.5,
+        3018.0
+      ]
+    ],
+    "title": "中短髮輪廓與側分",
+    "tags": [
+      "側分",
+      "短髮",
+      "半束髮",
+      "雙馬尾",
+      "波浪髮"
+    ],
+    "sourceId": "artref:source.bilibili-hairstyles-20231013",
+    "classification": "AI目視分類，非作者逐項標籤"
+  },
+  {
+    "id": "artref:sheet.hair-08",
+    "path": "art/reference-library/hairstyles/previews/sheet-08.png",
+    "width": 1192,
+    "height": 1589,
+    "pdfPage": 1,
+    "pdfRects": [
+      [
+        449.5,
+        3095.0,
+        1045.5,
+        3889.5
+      ]
+    ],
+    "title": "頭部體積、髮流與動態",
+    "tags": [
+      "髮流",
+      "蓬鬆",
+      "長髮",
+      "捲髮",
+      "繪製結構"
+    ],
+    "sourceId": "artref:source.bilibili-hairstyles-20231013",
+    "classification": "AI目視分類，非作者逐項標籤"
+  },
+  {
+    "id": "artref:sheet.hair-09",
+    "path": "art/reference-library/hairstyles/previews/sheet-09.png",
+    "width": 1192,
+    "height": 1589,
+    "pdfPage": 1,
+    "pdfRects": [
+      [
+        449.5,
+        3966.5,
+        1045.5,
+        4761.5
+      ]
+    ],
+    "title": "編髮、低髮髻與背面結構",
+    "tags": [
+      "編髮",
+      "低髮髻",
+      "側辮",
+      "後腦",
+      "背面"
+    ],
+    "sourceId": "artref:source.bilibili-hairstyles-20231013",
+    "classification": "AI目視分類，非作者逐項標籤"
+  },
+  {
+    "id": "artref:sheet.hair-10",
+    "path": "art/reference-library/hairstyles/previews/sheet-10.png",
+    "width": 1192,
+    "height": 1589,
+    "pdfPage": 1,
+    "pdfRects": [
+      [
+        449.5,
+        4838.5,
+        1045.5,
+        5633.0
+      ]
+    ],
+    "title": "短中長髮與瀏海形狀",
+    "tags": [
+      "短髮",
+      "鮑伯",
+      "中長髮",
+      "長直髮",
+      "齊瀏海",
+      "側分"
+    ],
+    "sourceId": "artref:source.bilibili-hairstyles-20231013",
+    "classification": "AI目視分類，非作者逐項標籤"
+  },
+  {
+    "id": "artref:sheet.hair-11",
+    "path": "art/reference-library/hairstyles/previews/sheet-11.png",
+    "width": 1192,
+    "height": 1589,
+    "pdfPage": 1,
+    "pdfRects": [
+      [
+        449.5,
+        5710.0,
+        1045.5,
+        6504.5
+      ]
+    ],
+    "title": "長髮、波浪與髮尾走向",
+    "tags": [
+      "長直髮",
+      "波浪髮",
+      "髮尾",
+      "側分",
+      "側面"
+    ],
+    "sourceId": "artref:source.bilibili-hairstyles-20231013",
+    "classification": "AI目視分類，非作者逐項標籤"
+  },
+  {
+    "id": "artref:sheet.hair-12",
+    "path": "art/reference-library/hairstyles/previews/sheet-12.png",
+    "width": 1192,
+    "height": 1589,
+    "pdfPage": 1,
+    "pdfRects": [
+      [
+        449.5,
+        6581.5,
+        1045.5,
+        7376.0
+      ]
+    ],
+    "title": "十二種髮型線稿",
+    "tags": [
+      "鮑伯",
+      "雙馬尾",
+      "單辮",
+      "短層次",
+      "丸子頭",
+      "長髮"
+    ],
+    "sourceId": "artref:source.bilibili-hairstyles-20231013",
+    "classification": "AI目視分類，非作者逐項標籤"
+  },
+  {
+    "id": "artref:sheet.hair-13",
+    "path": "art/reference-library/hairstyles/previews/sheet-13.png",
+    "width": 1192,
+    "height": 1589,
+    "pdfPage": 1,
+    "pdfRects": [
+      [
+        449.5,
+        7453.0,
+        1045.5,
+        8247.5
+      ]
+    ],
+    "title": "角色髮型與多角度設定",
+    "tags": [
+      "長層次",
+      "捲髮",
+      "馬尾",
+      "側辮",
+      "背面",
+      "多角度"
+    ],
+    "sourceId": "artref:source.bilibili-hairstyles-20231013",
+    "classification": "AI目視分類，非作者逐項標籤"
+  },
+  {
+    "id": "artref:sheet.hair-14",
+    "path": "art/reference-library/hairstyles/previews/sheet-14.png",
+    "width": 1192,
+    "height": 610,
+    "pdfPage": 1,
+    "pdfRects": [
+      [
+        449.5,
+        8324.5,
+        1045.5,
+        8629.5
+      ]
+    ],
+    "title": "小型髮型圖例表",
+    "tags": [
+      "圖例總覽",
+      "髮型詞彙",
+      "輪廓",
+      "原圖放大閱讀"
+    ],
+    "sourceId": "artref:source.bilibili-hairstyles-20231013",
+    "classification": "AI目視分類，非作者逐項標籤"
+  },
+  {
+    "id": "artref:sheet.hair-15",
+    "path": "art/reference-library/hairstyles/previews/sheet-15.png",
+    "width": 1192,
+    "height": 1192,
+    "pdfPage": 1,
+    "pdfRects": [
+      [
+        449.5,
+        8706.5,
+        1045.5,
+        9302.5
+      ]
+    ],
+    "title": "同角色六種髮型比較",
+    "tags": [
+      "長直髮",
+      "包頭",
+      "鮑伯",
+      "側分",
+      "雙辮",
+      "高馬尾"
+    ],
+    "sourceId": "artref:source.bilibili-hairstyles-20231013",
+    "classification": "AI目視分類，非作者逐項標籤"
+  }
+]

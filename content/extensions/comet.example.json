@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "comet:package.example",
+  "version": "0.1.0",
+  "requires": [{"id":"m1:core","version":"0.1.0"}],
+  "definitions": {
+    "characters": [{
+      "id":"comet:maiden","name":"彗星（擴充範例）","description":"沿用已支援技能的資料擴充範例，未納入正式包。",
+      "status":"active","provenance":"m1-design","rarity":3,"hp":300,"attack":30,"defense":20,
+      "speed":180,"range":430,"interval":0.8,"growth":0.08,"skill":"m1:dispersion","color":"#8dcfff",
+      "portrait":"","avatar":"","sprite":"","recipe":[100,100,100,100],"starter":false,"role":"火力 · 範例","sourceRow":0
+    }]
+  }
+}

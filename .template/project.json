@@ -1,11 +1,75 @@
 {
   "schema_version": 1,
-  "initialized": false,
-  "name": "",
+  "initialized": true,
+  "name": "Stella Maiden M1",
   "site_dir": "dist",
-  "install": [],
-  "start": [],
-  "ready_url": "",
-  "checks": {"daily": [], "release": []},
-  "build": []
+  "install": [
+    [
+      "npm",
+      "ci",
+      "--ignore-scripts"
+    ]
+  ],
+  "start": [
+    [
+      "npm",
+      "run",
+      "dev",
+      "--",
+      "--port",
+      "5173",
+      "--strictPort"
+    ]
+  ],
+  "ready_url": "http://127.0.0.1:5173",
+  "checks": {
+    "daily": [
+      [
+        "npm",
+        "run",
+        "content:check"
+      ],
+      [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      [
+        "npm",
+        "test"
+      ]
+    ],
+    "release": [
+      [
+        "npm",
+        "run",
+        "build"
+      ],
+      [
+        "npm",
+        "run",
+        "test:e2e"
+      ],
+      [
+        "npm",
+        "run",
+        "test:playtest"
+      ],
+      [
+        "npm",
+        "run",
+        "release:ready",
+        "--",
+        "--target",
+        "playtest"
+      ]
+    ]
+  },
+  "build": [
+    [
+      "npm",
+      "run",
+      "build"
+    ]
+  ]
 }

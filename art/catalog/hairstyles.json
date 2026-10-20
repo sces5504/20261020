@@ -1,0 +1,185 @@
+[
+  {
+    "id": "artref:hairstyle.long-side-braid",
+    "label": "超長披髮＋細側編髮",
+    "tags": [
+      "長髮",
+      "披髮",
+      "側編",
+      "開額"
+    ],
+    "sheetIds": [
+      "artref:sheet.hair-09",
+      "artref:sheet.hair-11",
+      "artref:sheet.hair-13"
+    ],
+    "classification": "AI依參考板目視整理；組合設計可用局部結構參考，不聲稱原板逐項相同。"
+  },
+  {
+    "id": "artref:hairstyle.short-black-bob",
+    "label": "下顎短鮑伯＋碎瀏海",
+    "tags": [
+      "短髮",
+      "鮑伯",
+      "碎瀏海"
+    ],
+    "sheetIds": [
+      "artref:sheet.hair-05",
+      "artref:sheet.hair-06",
+      "artref:sheet.hair-10",
+      "artref:sheet.hair-12"
+    ],
+    "classification": "AI依參考板目視整理；組合設計可用局部結構參考，不聲稱原板逐項相同。"
+  },
+  {
+    "id": "artref:hairstyle.long-high-twintails",
+    "label": "高位長雙馬尾",
+    "tags": [
+      "雙馬尾",
+      "高束",
+      "長髮"
+    ],
+    "sheetIds": [
+      "artref:sheet.hair-05",
+      "artref:sheet.hair-07",
+      "artref:sheet.hair-12"
+    ],
+    "classification": "AI依參考板目視整理；組合設計可用局部結構參考，不聲稱原板逐項相同。"
+  },
+  {
+    "id": "artref:hairstyle.long-side-waves",
+    "label": "側分波浪長披髮",
+    "tags": [
+      "長髮",
+      "側分",
+      "波浪髮"
+    ],
+    "sheetIds": [
+      "artref:sheet.hair-07",
+      "artref:sheet.hair-08",
+      "artref:sheet.hair-11"
+    ],
+    "classification": "AI依參考板目視整理；組合設計可用局部結構參考，不聲稱原板逐項相同。"
+  },
+  {
+    "id": "artref:hairstyle.headband-midlong",
+    "label": "髮箍中長直髮",
+    "tags": [
+      "中長髮",
+      "直髮",
+      "髮箍",
+      "斜瀏海"
+    ],
+    "sheetIds": [
+      "artref:sheet.hair-05",
+      "artref:sheet.hair-06",
+      "artref:sheet.hair-10"
+    ],
+    "classification": "AI依參考板目視整理；組合設計可用局部結構參考，不聲稱原板逐項相同。"
+  },
+  {
+    "id": "artref:hairstyle.short-asymmetric-layers",
+    "label": "側分蓬鬆短層次",
+    "tags": [
+      "短髮",
+      "側分",
+      "不對稱",
+      "層次"
+    ],
+    "sheetIds": [
+      "artref:sheet.hair-07",
+      "artref:sheet.hair-10",
+      "artref:sheet.hair-12"
+    ],
+    "classification": "AI依參考板目視整理；組合設計可用局部結構參考，不聲稱原板逐項相同。"
+  },
+  {
+    "id": "artref:hairstyle.low-bun",
+    "label": "低髮髻",
+    "tags": [
+      "盤髮",
+      "低髮髻",
+      "後腦"
+    ],
+    "sheetIds": [
+      "artref:sheet.hair-09",
+      "artref:sheet.hair-12"
+    ],
+    "classification": "AI依參考板目視整理；組合設計可用局部結構參考，不聲稱原板逐項相同。"
+  },
+  {
+    "id": "artref:hairstyle.high-ponytail",
+    "label": "高單馬尾",
+    "tags": [
+      "馬尾",
+      "高束"
+    ],
+    "sheetIds": [
+      "artref:sheet.hair-06",
+      "artref:sheet.hair-12",
+      "artref:sheet.hair-13",
+      "artref:sheet.hair-15"
+    ],
+    "classification": "AI依參考板目視整理；組合設計可用局部結構參考，不聲稱原板逐項相同。"
+  },
+  {
+    "id": "artref:hairstyle.twin-braids",
+    "label": "雙編辮",
+    "tags": [
+      "雙辮",
+      "編髮"
+    ],
+    "sheetIds": [
+      "artref:sheet.hair-05",
+      "artref:sheet.hair-15"
+    ],
+    "classification": "AI依參考板目視整理；組合設計可用局部結構參考，不聲稱原板逐項相同。"
+  },
+  {
+    "id": "artref:hairstyle.straight-long",
+    "label": "長直披髮",
+    "tags": [
+      "長髮",
+      "直髮",
+      "瀏海"
+    ],
+    "sheetIds": [
+      "artref:sheet.hair-05",
+      "artref:sheet.hair-06",
+      "artref:sheet.hair-10",
+      "artref:sheet.hair-11"
+    ],
+    "classification": "AI依參考板目視整理；組合設計可用局部結構參考，不聲稱原板逐項相同。"
+  },
+  {
+    "id": "artref:hairstyle.odango",
+    "label": "丸子頭／包頭",
+    "tags": [
+      "盤髮",
+      "丸子頭",
+      "包頭"
+    ],
+    "sheetIds": [
+      "artref:sheet.hair-04",
+      "artref:sheet.hair-12",
+      "artref:sheet.hair-15"
+    ],
+    "classification": "AI依參考板目視整理；組合設計可用局部結構參考，不聲稱原板逐項相同。"
+  },
+  {
+    "id": "artref:hairstyle.hair-volume",
+    "label": "髮流、體積與轉面",
+    "tags": [
+      "結構",
+      "髮流",
+      "多角度"
+    ],
+    "sheetIds": [
+      "artref:sheet.hair-08",
+      "artref:sheet.hair-09",
+      "artref:sheet.hair-13",
+      "artref:sheet.hair-14"
+    ],
+    "classification": "AI依參考板目視整理；組合設計可用局部結構參考，不聲稱原板逐項相同。"
+  }
+]

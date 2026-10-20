@@ -1,6 +1,6 @@
 # 接力索引
 
-專案狀態：Stella Maiden 規格0.4，已從main接入4.3.2研究，驗證／SQLite通過；資源已做四槽合二分析、正在選方案，成長消耗鏈仍有未知。遊戲尚未初始化。
+專案狀態：Stella Maiden 規格0.5，已確認保留四資源，用配方預設、一鍵投入、批次管理簡化；4.3.2研究／SQLite已驗證，成長消耗鏈仍有未知。遊戲尚未初始化。
 
 - Stella Maiden研究入口：`research/stella-maiden/START_HERE.md`；資料交付接力：`docs/handoffs/stella-research-20261020.md`。先按導覽查局部資料，不需重新逆向或一次載入全部JSON。
 - 已確認規格：`docs/spec.md`
@@ -18,5 +18,5 @@
 
 目前任務：`docs/handoffs/stella-spec-20261020.md`，0.4研究接力見 `docs/handoffs/stella-spec-research-integration-20261020.md`。branch `main`；來源main為 `16e64e5`，保留規格合併為 `b51525c`；備份 `backup/stella-spec-v03`。
 已驗證：研究863檔、67表37723列、370份bXML、4個有界傷害樣例、SQLite integrity與關聯；遊戲、真機、效能及部署未驗證。
-下一步：處理證據後的資源選擇，追查融合／配點／被動消耗的具體缺口，再確認六名角色與SolarSystem候選及其所需技能／素材。已收錄資料不重做解析、不重索APK；OBB／美術原檔仍缺。既有九題已確認項目不重問。
+下一步：核對四槽名稱映射、追查融合／配點／被動消耗的具體缺口，再確認六名角色與SolarSystem候選及其所需技能／素材。四資源與操作簡化已確認，勿重問或默認兩資源；OBB／美術原檔仍缺，不重索已收錄表的APK。
 

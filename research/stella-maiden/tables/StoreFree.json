@@ -1,0 +1,89 @@
+{
+  "_round_trip_exact": true,
+  "_format": "stella-gen-v1",
+  "_header_hex": "c417a55e0000000021f38a5e00000000",
+  "_row_count": 4,
+  "_schema_fingerprint": "0x454ec92e",
+  "_size": 164,
+  "_source_sha256": "8bd71d0d61b124c84a5128f0fe4774118ab2b8b408ab96c8ba1fe91c13093910",
+  "fields": [
+    {
+      "name": "f00",
+      "type": "str",
+      "reader": "0x453dbc",
+      "call_pc": "0x15d4ac",
+      "native_destination": "mov x1, sp",
+      "native_slot_offset": 0,
+      "native_offset": null
+    },
+    {
+      "name": "f01",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15d4bc",
+      "native_destination": "mov x1, x19",
+      "native_slot_offset": 24,
+      "native_offset": 24
+    },
+    {
+      "name": "f02",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15d4c8",
+      "native_destination": "add x1, x19, #4",
+      "native_slot_offset": 28,
+      "native_offset": 28
+    },
+    {
+      "name": "f03",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15d4d4",
+      "native_destination": "add x1, x19, #8",
+      "native_slot_offset": 32,
+      "native_offset": 32
+    },
+    {
+      "name": "f04",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15d4e0",
+      "native_destination": "add x1, x19, #0xc",
+      "native_slot_offset": 36,
+      "native_offset": 36
+    },
+    {
+      "name": "f05",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15d4ec",
+      "native_destination": "add x1, x19, #0x10",
+      "native_slot_offset": 40,
+      "native_offset": 40
+    },
+    {
+      "name": "f06",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15d4f8",
+      "native_destination": "add x1, x19, #0x14",
+      "native_slot_offset": 44,
+      "native_offset": 44
+    },
+    {
+      "name": "f07",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15d504",
+      "native_destination": "add x1, x19, #0x18",
+      "native_slot_offset": 48,
+      "native_offset": 48
+    }
+  ],
+  "rows": [
+    {"_row":0,"_offset":24,"f00":"Crystal","f01":0,"f02":253,"f03":11,"f04":0,"f05":150,"f06":120,"f07":1,"_size":37,"_field_offsets":[24,33,37,41,45,49,53,57]},
+    {"_row":1,"_offset":61,"f00":"Gas","f01":1,"f02":255,"f03":16,"f04":1,"f05":150,"f06":120,"f07":1,"_size":33,"_field_offsets":[61,66,70,74,78,82,86,90]},
+    {"_row":2,"_offset":94,"f00":"Metal","f01":2,"f02":254,"f03":21,"f04":2,"f05":150,"f06":120,"f07":1,"_size":35,"_field_offsets":[94,101,105,109,113,117,121,125]},
+    {"_row":3,"_offset":129,"f00":"Ether","f01":3,"f02":256,"f03":14,"f04":3,"f05":150,"f06":120,"f07":1,"_size":35,"_field_offsets":[129,136,140,144,148,152,156,160]}
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "scope": "Static ARM64 disassembly + extracted GEN data; no live requests or executable patching.",
+  "gacha": {
+    "function": "0xe22dc",
+    "candidate_filter": [
+      "0xe2480",
+      "0xe2498",
+      "0xe24c4",
+      "0xe24ec"
+    ],
+    "distance": "0xe2500..0xe2574",
+    "ascending_comparator": "0xe1308",
+    "tie_randomization": "0xe25dc..0xe28dc",
+    "second_comparator": "0xe131c",
+    "rarity_draw": "0xe292c..0xe2dfc",
+    "high_grade_weights": "0xe2fd8..0xe3174",
+    "low_grade_weights": "0xe3178..0xe3744",
+    "prng_signature": {
+      "state_words": 16,
+      "index_offset": "0x40",
+      "mask": "0xda442d20",
+      "observed_at": "0xe27c0..0xe284c"
+    },
+    "ordinary_unmodified_percent": {
+      "5": 3,
+      "4": 9,
+      "3": 18,
+      "2": 70
+    },
+    "hyper_base_percent": {
+      "5": 10,
+      "4": 40,
+      "3": 50
+    },
+    "global_low_grade_rank_percent": [
+      10,
+      8,
+      8,
+      6,
+      6,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "global_tail_rank_percent": 2,
+    "caveat": "Event/account flags, core inputs, special recipes and empty selected-grade pools change final distribution."
+  },
+  "growth": {
+    "exp_lookup": "0xa7db8",
+    "exp_apply": "0xb3c24",
+    "attack": "0xa7e18",
+    "secondary_stat": "0xa7ee4",
+    "hp": "0xa7fa8",
+    "level_range_stat_formula": [
+      1,
+      150
+    ],
+    "level_cap_apply": 120,
+    "progression_gates": [
+      {
+        "level": 20,
+        "minimum_tier_to_continue": 1
+      },
+      {
+        "level": 40,
+        "minimum_tier_to_continue": 2
+      },
+      {
+        "level": 60,
+        "minimum_tier_to_continue": 3
+      },
+      {
+        "level": 80,
+        "minimum_tier_to_continue": 4
+      },
+      {
+        "level": 100,
+        "minimum_tier_to_continue": 5
+      },
+      {
+        "level": 110,
+        "minimum_tier_to_continue": 6
+      }
+    ]
+  },
+  "skill": {
+    "ui_template_renderer": "0x1a6b24",
+    "character_to_skill_reference": "CID.f106 -> Skill row index",
+    "ui_cooldown_formula": "0x1a445c..0x1a44bc",
+    "ui_time_formula": "0x1a700c..0x1a70a4",
+    "ui_skilltime_formula": "0x1a74b0..0x1a7550",
+    "constants": {
+      "0x75e6c4": 0.0010000000474974513,
+      "0x75a044": 100.0,
+      "0x75a048": 0.01
+    }
+  },
+  "unresolved": [
+    "Complete damage formula including armor, crit, elemental/type affinity and hit order.",
+    "Complete battle effect dispatch table and every skill-type branch.",
+    "Stage wave scheduling/timing and enemy AI interpretation.",
+    "Server authority, seed initialization and any server override of locally computed summon results.",
+    "Names/meaning of Gacha f10..f14 and exact event flags."
+  ]
+}

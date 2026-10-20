@@ -2,6 +2,7 @@
 
 專案狀態：尚未初始化。這個範本沒有遊戲程式。
 
+- Stella Maiden研究入口：`research/stella-maiden/START_HERE.md`；資料交付接力：`docs/handoffs/stella-research-20261020.md`。先按導覽查局部資料，不需重新逆向或一次載入全部JSON。
 - 已確認規格：`docs/spec.md`
 - 使用者要求與偏好：`docs/memory/owner-preferences.md`
 - 決策：`docs/memory/decisions.md`

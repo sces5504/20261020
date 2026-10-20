@@ -1,0 +1,14 @@
+{
+  "apk_sha256_verified": true,
+  "package_members_crc_and_sha256_verified": 502,
+  "tables_exact_round_trip": 67,
+  "table_rows": 37723,
+  "asset_sha256_verified": 630,
+  "png_crc_verified": 27,
+  "sqlite_integrity": "ok",
+  "skills_localization_out_of_range": 0,
+  "runtime_execution_performed": false,
+  "bxml_json_disk_roundtrip_verified": 370,
+  "static_damage_formula_cases_checked": 4,
+  "event_commands_in_database": 7809
+}

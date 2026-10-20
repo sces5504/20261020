@@ -1,0 +1,191 @@
+{
+  "_round_trip_exact": true,
+  "_format": "stella-gen-v1",
+  "_header_hex": "c417a55e0000000021f38a5e00000000",
+  "_row_count": 7,
+  "_schema_fingerprint": "0x39723e9c",
+  "_size": 556,
+  "_source_sha256": "90e8a767daea26f37c8f84649f1084c77f94927109ca99ce3639183bc113ddb4",
+  "fields": [
+    {
+      "name": "f00",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15d958",
+      "native_destination": "mov x1, x19",
+      "native_slot_offset": 0,
+      "native_offset": 0
+    },
+    {
+      "name": "f01",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15d964",
+      "native_destination": "add x1, x19, #4",
+      "native_slot_offset": 4,
+      "native_offset": 4
+    },
+    {
+      "name": "f02",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15d970",
+      "native_destination": "add x1, x19, #8",
+      "native_slot_offset": 8,
+      "native_offset": 8
+    },
+    {
+      "name": "f03",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15d97c",
+      "native_destination": "add x1, x19, #0xc",
+      "native_slot_offset": 12,
+      "native_offset": 12
+    },
+    {
+      "name": "f04",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15d988",
+      "native_destination": "add x1, x19, #0x10",
+      "native_slot_offset": 16,
+      "native_offset": 16
+    },
+    {
+      "name": "f05",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15d994",
+      "native_destination": "add x1, x19, #0x14",
+      "native_slot_offset": 20,
+      "native_offset": 20
+    },
+    {
+      "name": "f06",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15d9a0",
+      "native_destination": "add x1, x19, #0x18",
+      "native_slot_offset": 24,
+      "native_offset": 24
+    },
+    {
+      "name": "f07",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15d9ac",
+      "native_destination": "add x1, x19, #0x1c",
+      "native_slot_offset": 28,
+      "native_offset": 28
+    },
+    {
+      "name": "f08",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15d9b8",
+      "native_destination": "add x1, x19, #0x20",
+      "native_slot_offset": 32,
+      "native_offset": 32
+    },
+    {
+      "name": "f09",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15d9c4",
+      "native_destination": "add x1, x19, #0x24",
+      "native_slot_offset": 36,
+      "native_offset": 36
+    },
+    {
+      "name": "f10",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15d9d0",
+      "native_destination": "add x1, x19, #0x28",
+      "native_slot_offset": 40,
+      "native_offset": 40
+    },
+    {
+      "name": "f11",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15d9dc",
+      "native_destination": "add x1, x19, #0x2c",
+      "native_slot_offset": 44,
+      "native_offset": 44
+    },
+    {
+      "name": "f12",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15d9e8",
+      "native_destination": "add x1, x19, #0x30",
+      "native_slot_offset": 48,
+      "native_offset": 48
+    },
+    {
+      "name": "f13",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15d9f4",
+      "native_destination": "add x1, x19, #0x34",
+      "native_slot_offset": 52,
+      "native_offset": 52
+    },
+    {
+      "name": "f14",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15da00",
+      "native_destination": "add x1, x19, #0x38",
+      "native_slot_offset": 56,
+      "native_offset": 56
+    },
+    {
+      "name": "f15",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15da0c",
+      "native_destination": "add x1, x19, #0x3c",
+      "native_slot_offset": 60,
+      "native_offset": 60
+    },
+    {
+      "name": "f16",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15da18",
+      "native_destination": "add x1, x19, #0x40",
+      "native_slot_offset": 64,
+      "native_offset": 64
+    },
+    {
+      "name": "f17",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15da24",
+      "native_destination": "add x1, x19, #0x44",
+      "native_slot_offset": 68,
+      "native_offset": 68
+    },
+    {
+      "name": "f18",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15da30",
+      "native_destination": "add x1, x19, #0x48",
+      "native_slot_offset": 72,
+      "native_offset": 72
+    }
+  ],
+  "rows": [
+    {"_row":0,"_offset":24,"f00":1,"f01":2,"f02":1000,"f03":1000,"f04":1000,"f05":1000,"f06":0,"f07":0,"f08":0,"f09":0,"f10":50,"f11":0,"f12":0,"f13":0,"f14":0,"f15":0,"f16":0,"f17":0,"f18":0,"_size":76,"_field_offsets":[24,28,32,36,40,44,48,52,56,60,64,68,72,76,80,84,88,92,96]},
+    {"_row":1,"_offset":100,"f00":2,"f01":2,"f02":1000,"f03":1000,"f04":1000,"f05":1000,"f06":0,"f07":0,"f08":0,"f09":0,"f10":10,"f11":0,"f12":0,"f13":0,"f14":0,"f15":0,"f16":0,"f17":0,"f18":0,"_size":76,"_field_offsets":[100,104,108,112,116,120,124,128,132,136,140,144,148,152,156,160,164,168,172]},
+    {"_row":2,"_offset":176,"f00":3,"f01":2,"f02":1000,"f03":1000,"f04":1000,"f05":1000,"f06":0,"f07":0,"f08":0,"f09":0,"f10":10,"f11":0,"f12":0,"f13":0,"f14":0,"f15":0,"f16":0,"f17":0,"f18":0,"_size":76,"_field_offsets":[176,180,184,188,192,196,200,204,208,212,216,220,224,228,232,236,240,244,248]},
+    {"_row":3,"_offset":252,"f00":4,"f01":2,"f02":500,"f03":500,"f04":500,"f05":500,"f06":0,"f07":10,"f08":0,"f09":0,"f10":0,"f11":0,"f12":0,"f13":0,"f14":0,"f15":0,"f16":0,"f17":0,"f18":0,"_size":76,"_field_offsets":[252,256,260,264,268,272,276,280,284,288,292,296,300,304,308,312,316,320,324]},
+    {"_row":4,"_offset":328,"f00":5,"f01":2,"f02":1000,"f03":1000,"f04":1000,"f05":1000,"f06":0,"f07":0,"f08":0,"f09":0,"f10":0,"f11":10,"f12":0,"f13":0,"f14":0,"f15":0,"f16":0,"f17":0,"f18":0,"_size":76,"_field_offsets":[328,332,336,340,344,348,352,356,360,364,368,372,376,380,384,388,392,396,400]},
+    {"_row":5,"_offset":404,"f00":6,"f01":2,"f02":0,"f03":0,"f04":0,"f05":0,"f06":0,"f07":0,"f08":0,"f09":0,"f10":10,"f11":0,"f12":0,"f13":0,"f14":600,"f15":3,"f16":0,"f17":0,"f18":0,"_size":76,"_field_offsets":[404,408,412,416,420,424,428,432,436,440,444,448,452,456,460,464,468,472,476]},
+    {"_row":6,"_offset":480,"f00":7,"f01":2,"f02":1000,"f03":1000,"f04":1000,"f05":1000,"f06":0,"f07":0,"f08":0,"f09":0,"f10":20,"f11":0,"f12":0,"f13":0,"f14":0,"f15":0,"f16":0,"f17":0,"f18":0,"_size":76,"_field_offsets":[480,484,488,492,496,500,504,508,512,516,520,524,528,532,536,540,544,548,552]}
+  ]
+}

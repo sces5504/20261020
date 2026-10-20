@@ -1,0 +1,4323 @@
+{
+  "format": "stella-maiden-ai-handoff-v1",
+  "game_version": "4.3.2",
+  "source_apk_sha256": "213a1630a5e893f4e5c1e17fc292a04aabfe5c865534c997cb90131624837905",
+  "scope": "Research data, original serialized values, decoded scene trees and bounded static mechanics; no APK, binary media, installed toolchains or game execution.",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 30,
+      "sha256": "95ffec7593285f49695ad9cfd63a75a9d050f71a6f8eb8d5b5e2d809632a23cf"
+    },
+    {
+      "path": "START_HERE.md",
+      "bytes": 6376,
+      "sha256": "7df208668162065afc866f93ff4dfe051651d91fcb284846bd73a016e9128b92"
+    },
+    {
+      "path": "asset_strings/Actor_00/Absorb01.act.json",
+      "bytes": 845,
+      "sha256": "794a03886a5cbbf0a9a3b9aab17ff754bdc3bec4d72461a61f7464691e679daa"
+    },
+    {
+      "path": "asset_strings/Actor_00/Absorb02.act.json",
+      "bytes": 845,
+      "sha256": "ff16764aa8d469569d611eddceb63b5e19ff1df34175ed0213c77143a39bba08"
+    },
+    {
+      "path": "asset_strings/Actor_00/AbsorbEnergy01.act.json",
+      "bytes": 2146,
+      "sha256": "ee40b085daf9aacd9857d5d56404358e1bd6fcc7b7a7d105bdc85fd34abcbae2"
+    },
+    {
+      "path": "asset_strings/Actor_00/AbsorbEnergy02.act.json",
+      "bytes": 2156,
+      "sha256": "bc91d5a38338724609eb2f990a3f0f5d7fbca3a72407b32957e042aede29f39b"
+    },
+    {
+      "path": "asset_strings/Actor_00/AllTail01.act.json",
+      "bytes": 1004,
+      "sha256": "c7c7b84765a89903513024392ac7ea10a34b3a720f709568824bcabc1befe607"
+    },
+    {
+      "path": "asset_strings/Actor_00/AncientAura01.act.json",
+      "bytes": 3165,
+      "sha256": "66cd6cb93bd8e7a0b82dd9ff3070f991f5fe0854cd771e446a4c1eec80914e25"
+    },
+    {
+      "path": "asset_strings/Actor_00/AtkCri01.act.json",
+      "bytes": 2145,
+      "sha256": "44344bdfaddae2506aa078f2bc587e3093f0859bc255fa281d9b805c5a20e1f8"
+    },
+    {
+      "path": "asset_strings/Actor_00/Bg_Ray.act.json",
+      "bytes": 1149,
+      "sha256": "9384750e8c15dcc06ddf688b0b47be66cd264a38306d130ff81282934f79aa47"
+    },
+    {
+      "path": "asset_strings/Actor_00/Booster1.act.json",
+      "bytes": 4210,
+      "sha256": "ca102b7af084b17169ada0d30da8c9cc3ba5bdf9513a587904dbe84a3f0c131b"
+    },
+    {
+      "path": "asset_strings/Actor_00/BoosterC.act.json",
+      "bytes": 1137,
+      "sha256": "2c27be60bb4df8bd9d639ac9f857196a0605788faebb545e9f6f893b5c516d9d"
+    },
+    {
+      "path": "asset_strings/Actor_00/BossAura01.act.json",
+      "bytes": 991,
+      "sha256": "835c027c890d38c6db86baecd922e0794a5b8cd263f5fc0d5fd63b7b17647e96"
+    },
+    {
+      "path": "asset_strings/Actor_00/BossAura02.act.json",
+      "bytes": 1133,
+      "sha256": "9f2657abf9dfd8b9a2fe06fabd2e1e3e827935dab93737c3a2b2846311735058"
+    },
+    {
+      "path": "asset_strings/Actor_00/BossAura03.act.json",
+      "bytes": 991,
+      "sha256": "189ff98739b877fde989fe0c981ae1acf9788de22adffe9b29556a0e201990e8"
+    },
+    {
+      "path": "asset_strings/Actor_00/BossAura04.act.json",
+      "bytes": 2126,
+      "sha256": "8f1929ed62bdc76f244b9d3b3ade7836c9cff37172df96fb6dafe1c15e6347d1"
+    },
+    {
+      "path": "asset_strings/Actor_00/BossAura05.act.json",
+      "bytes": 2878,
+      "sha256": "5edbf21b3b4eca58669767bf7849685e4943b036d8e90f62592a4e1b52550dcd"
+    },
+    {
+      "path": "asset_strings/Actor_00/BossAura06.act.json",
+      "bytes": 1113,
+      "sha256": "b8327ace627906d50a38f87ddfb3c827c31f3f47d5e901fa376962d40294a697"
+    },
+    {
+      "path": "asset_strings/Actor_00/BossAura07.act.json",
+      "bytes": 1956,
+      "sha256": "24599bd2b7d644e5def08cdaaf8e9a35c89ca4fd472a3ff9a553041cd044e21a"
+    },
+    {
+      "path": "asset_strings/Actor_00/BossAura08.act.json",
+      "bytes": 1113,
+      "sha256": "193b206713f8fa4ee751d9b22f4d2fd13a5e010da447a189deac81a1a03c63a9"
+    },
+    {
+      "path": "asset_strings/Actor_00/BossAura98.act.json",
+      "bytes": 1112,
+      "sha256": "043436c6aaedaa9d3cf7f56477d766f7be73fe580dc792f548e619c6bb75533f"
+    },
+    {
+      "path": "asset_strings/Actor_00/BossAura99.act.json",
+      "bytes": 1112,
+      "sha256": "d5286bc32c3b8c3d19c8887170dd43f3545ef50e03e50b9d7d5d9c369faef768"
+    },
+    {
+      "path": "asset_strings/Actor_00/BossAura99Loop.act.json",
+      "bytes": 1132,
+      "sha256": "a695469b7f8dafd07313f89f764310d379b97842a38817051cd4684ba93b5a34"
+    },
+    {
+      "path": "asset_strings/Actor_00/BuildClearUI1.act.json",
+      "bytes": 6455,
+      "sha256": "a1cf2663c5908ba0f749c72a74b55e9cd657ce7ed84352c1b959db72d40bed92"
+    },
+    {
+      "path": "asset_strings/Actor_00/BuildStart01.act.json",
+      "bytes": 2214,
+      "sha256": "457a787ee4d22906cc26a8d19619debd9a9a6f0a5a10b026fa92f1cb44fbc5bb"
+    },
+    {
+      "path": "asset_strings/Actor_00/BuildingBreak1.act.json",
+      "bytes": 5355,
+      "sha256": "bd7db29d8c6bd8309d4b4a2e448a16cbfef0dc308d532dee4c6f2f42a0ee7360"
+    },
+    {
+      "path": "asset_strings/Actor_00/Charge01.act.json",
+      "bytes": 2151,
+      "sha256": "8283b0406b39c404a0716c548bea8e49b99d1b1687c0050c69a6c550f3bdf229"
+    },
+    {
+      "path": "asset_strings/Actor_00/Charge02.act.json",
+      "bytes": 2179,
+      "sha256": "bbcd83ac65de0b749b132e7306123adfb43b3fa420a762600f0275b00215c287"
+    },
+    {
+      "path": "asset_strings/Actor_00/CircleRange01.act.json",
+      "bytes": 1137,
+      "sha256": "f6b1f1ca5ef24a2bb2bd469ee1a458fb93bbce22a6b5bb72550ff5bb030299d2"
+    },
+    {
+      "path": "asset_strings/Actor_00/CircleRange02.act.json",
+      "bytes": 1147,
+      "sha256": "fba30bfec582ff6be0d09a7f8a0c442a57264fdc4dbeed37158d8088d68cb50a"
+    },
+    {
+      "path": "asset_strings/Actor_00/CircleRange03.act.json",
+      "bytes": 1157,
+      "sha256": "f16f12554a0f247e02ed0fe1dccabbd3320c3dea99c6f67be75ab9195a1a508e"
+    },
+    {
+      "path": "asset_strings/Actor_00/CircleRange04.act.json",
+      "bytes": 2216,
+      "sha256": "5c34acedb7a341e1f24246336e72026f6c86dd55674e9d55b1b5563a82ce5647"
+    },
+    {
+      "path": "asset_strings/Actor_00/CosUpgarde.act.json",
+      "bytes": 4259,
+      "sha256": "a5dacf51485b76c8be9d3a0e14906130f3f36a079944c19258a4243850c579cd"
+    },
+    {
+      "path": "asset_strings/Actor_00/CrashHit1.act.json",
+      "bytes": 1112,
+      "sha256": "1e5eee71e2e1bed05a230e10efc53065a9a7ac682380df3ff183db3a48cc7920"
+    },
+    {
+      "path": "asset_strings/Actor_00/CubeUp.act.json",
+      "bytes": 3172,
+      "sha256": "88409e4bc7108c24759c40ecadc8c9db4159333a765a3817c8fd01dddebc7663"
+    },
+    {
+      "path": "asset_strings/Actor_00/CutFlash.act.json",
+      "bytes": 1112,
+      "sha256": "de8908a6f7e3328034435836e57baf2cd2c7121038b6db2f7243511678bddf81"
+    },
+    {
+      "path": "asset_strings/Actor_00/CutFull01.act.json",
+      "bytes": 2094,
+      "sha256": "0c0cae15f42eee3095f22f36bff84b650191cca4e8e836590d3b067f566af29d"
+    },
+    {
+      "path": "asset_strings/Actor_00/CutSwing01.act.json",
+      "bytes": 1101,
+      "sha256": "9ec719ac92d75934512ee1a4cf72c57751dfbb71807f4d66b27ebb8d79566d37"
+    },
+    {
+      "path": "asset_strings/Actor_00/CutSwing01L.act.json",
+      "bytes": 1102,
+      "sha256": "a9f8b4de9b7b62e840504b013d35f71b5e553f413eb6e9a7929ecb265d7feeae"
+    },
+    {
+      "path": "asset_strings/Actor_00/CutSwing02.act.json",
+      "bytes": 3133,
+      "sha256": "a7d71cdeba09e481e3aa12ab585d59d86f122b7beec84200a88517f4d12f0edf"
+    },
+    {
+      "path": "asset_strings/Actor_00/CutSwingBig01.act.json",
+      "bytes": 1119,
+      "sha256": "fc8405508737e0c27492586267588c32230677b43fa7cbe56317ccd276acfc66"
+    },
+    {
+      "path": "asset_strings/Actor_00/CutTarget01.act.json",
+      "bytes": 3110,
+      "sha256": "9de087b0398d2663e6ac8cbd90a2d8dfd952ca9c0388c9f8b952608d96e29f1a"
+    },
+    {
+      "path": "asset_strings/Actor_00/CutTarget02.act.json",
+      "bytes": 1126,
+      "sha256": "7b4d8b005c12375ef08373adc573a414265cd7623bf1c05cf19ca823d9fa3e06"
+    },
+    {
+      "path": "asset_strings/Actor_00/DayCube.act.json",
+      "bytes": 3173,
+      "sha256": "f2632904fe2c939a705a7024cd94286f49fabe773618a9d088208fc761bed872"
+    },
+    {
+      "path": "asset_strings/Actor_00/Death01.act.json",
+      "bytes": 1923,
+      "sha256": "10ae946ca091dcf118b5984138698c6cea27c7dad9ff97371d1aa77c400475f8"
+    },
+    {
+      "path": "asset_strings/Actor_00/Death02.act.json",
+      "bytes": 1007,
+      "sha256": "dad8e9d54685515112d1361da0ec2f8c3d85f43fdde6a3d83dbc974545a65107"
+    },
+    {
+      "path": "asset_strings/Actor_00/Discharge01.act.json",
+      "bytes": 1114,
+      "sha256": "9eb4138deea096b02e4a38a6447f39d91a372a80569757790c92812e088e4b49"
+    },
+    {
+      "path": "asset_strings/Actor_00/Downsize01.act.json",
+      "bytes": 1111,
+      "sha256": "0eb2e95f1a175cb42499c4ac1e1eb7d213a06bf65cff393959007443bbc81df8"
+    },
+    {
+      "path": "asset_strings/Actor_00/DroneSpawn01.act.json",
+      "bytes": 849,
+      "sha256": "76b066a2a95900439241a18b86ea9b3c426d70d1af95901761af272c11f4f4af"
+    },
+    {
+      "path": "asset_strings/Actor_00/EmitEnergy01.act.json",
+      "bytes": 2144,
+      "sha256": "cdcad605ec6e34f9869f3f4deb2a5fcb66e9cb0595d2b8ff3a4f73e11199976a"
+    },
+    {
+      "path": "asset_strings/Actor_00/EnemyAura01.act.json",
+      "bytes": 2145,
+      "sha256": "282e88d294bd28b6f032b7b6546923b52a5f49bed90d069c2557907a9a481398"
+    },
+    {
+      "path": "asset_strings/Actor_00/EnemyTail01.act.json",
+      "bytes": 1000,
+      "sha256": "f5105d1bf1672e3f374f46d185ef1996877090714fa704e02a63daa08668d721"
+    },
+    {
+      "path": "asset_strings/Actor_00/EnemyTail02.act.json",
+      "bytes": 1000,
+      "sha256": "481cd4a796edd170168ef44913a0c26b297244e6d88d9281172e461938a7f6d2"
+    },
+    {
+      "path": "asset_strings/Actor_00/EnemyTail03.act.json",
+      "bytes": 1000,
+      "sha256": "e53a2c0b39bffc4d86d8dd798c71f29a59d477ce82d1fee623a60c6596dc5f6b"
+    },
+    {
+      "path": "asset_strings/Actor_00/EnemyTail04.act.json",
+      "bytes": 1935,
+      "sha256": "03216fdb9e29a57968facaa7ad126e860c6fbb55523abeae2bc76af126c6e6d0"
+    },
+    {
+      "path": "asset_strings/Actor_00/EnergyCharge.act.json",
+      "bytes": 2149,
+      "sha256": "9672813ea0cc7a2e7e0e67f3dd80f29838f1a7b3b875a2957fc561e596bf5dbc"
+    },
+    {
+      "path": "asset_strings/Actor_00/EnergyChargeLoop.act.json",
+      "bytes": 2165,
+      "sha256": "83d6cb43a838f89e7741eb9ca46b0225235c9fef9e26f2fb2e95b40d6e9dfe5b"
+    },
+    {
+      "path": "asset_strings/Actor_00/ExplodeE01.act.json",
+      "bytes": 2218,
+      "sha256": "9c47edf3cd329e7c65395e62dc6c63d15b2a8413b6887b3d23cd5bd4dafc56d7"
+    },
+    {
+      "path": "asset_strings/Actor_00/ExplodeEX01.act.json",
+      "bytes": 3188,
+      "sha256": "4ac19f15030aebfe628572bf33c596f663cc02ad789cabb3001cfdf17f8f78d7"
+    },
+    {
+      "path": "asset_strings/Actor_00/ExplodeEX02.act.json",
+      "bytes": 3248,
+      "sha256": "4c38d6817b4694ebe9f4ca2149bc5c6819848cf32932b6db4ec1f564666cf34e"
+    },
+    {
+      "path": "asset_strings/Actor_00/ExplodeEX03.act.json",
+      "bytes": 2220,
+      "sha256": "bfe5aed74dfe172ac7e1b354086864e5bf2f8787ee8823a2ef5729dd82b528b6"
+    },
+    {
+      "path": "asset_strings/Actor_00/ExplodeEX04.act.json",
+      "bytes": 2189,
+      "sha256": "675d3857b071dd1150babf71c1d733faf1477bd67c3968fabbeaa7fdf306307d"
+    },
+    {
+      "path": "asset_strings/Actor_00/Explore01.act.json",
+      "bytes": 1119,
+      "sha256": "598a16389dcb23db3dc165236a487a064764283e19284e01fbfa9d27000f421a"
+    },
+    {
+      "path": "asset_strings/Actor_00/Explore02.act.json",
+      "bytes": 1113,
+      "sha256": "d850b0dd559155a3fd7a81f435340a4155978823da25010b8bc92982981b5c44"
+    },
+    {
+      "path": "asset_strings/Actor_00/Explore03.act.json",
+      "bytes": 1119,
+      "sha256": "c618829c1d74c0dd667e4ba649644b691701cdb78c886e478877c9d99c53a875"
+    },
+    {
+      "path": "asset_strings/Actor_00/Explosion01.act.json",
+      "bytes": 1084,
+      "sha256": "d8b49952e35392d7f7a37cfcc83ac4520bcdfd77dd76255d7472dba1eb833bef"
+    },
+    {
+      "path": "asset_strings/Actor_00/Explosion02.act.json",
+      "bytes": 3142,
+      "sha256": "a0a12f020da487a793f84f7bceaa40274be186492cfccd9477e2a87f625494b8"
+    },
+    {
+      "path": "asset_strings/Actor_00/Explosion03.act.json",
+      "bytes": 5231,
+      "sha256": "6e7c3b46278b4d00a4b393723908880927493232a4f8d1dafb7b77ea29a6b0d0"
+    },
+    {
+      "path": "asset_strings/Actor_00/Explosion04.act.json",
+      "bytes": 5301,
+      "sha256": "5e658871d419e0fc21681de6969e6155e1544175ee5815ed2fcd4103b7ebde74"
+    },
+    {
+      "path": "asset_strings/Actor_00/Explosion05.act.json",
+      "bytes": 4252,
+      "sha256": "18d72a9832d534c2610016c7ef879ddd4a44a1d13f7245d41c3b6fa669090780"
+    },
+    {
+      "path": "asset_strings/Actor_00/Explosion06.act.json",
+      "bytes": 4285,
+      "sha256": "170934fc9986f3b8e58f3e96c9e63499df502686c7bd3f991c765e699169934e"
+    },
+    {
+      "path": "asset_strings/Actor_00/FXGift.act.json",
+      "bytes": 1108,
+      "sha256": "7270d59ef27651b5e906cb37fca3d5b21012a7b5779ba7ccc37c5a541cbe4767"
+    },
+    {
+      "path": "asset_strings/Actor_00/FXTouch01.act.json",
+      "bytes": 1075,
+      "sha256": "73bd502616c0996f1e90d41173a8b074e0c7735b509e569bfeb13bc470771dd4"
+    },
+    {
+      "path": "asset_strings/Actor_00/Flash.act.json",
+      "bytes": 1126,
+      "sha256": "1ea91b5eb278054c77ee87d61d7366b59481dbd8a2a4434bd6092a535d900637"
+    },
+    {
+      "path": "asset_strings/Actor_00/Flash02.act.json",
+      "bytes": 1126,
+      "sha256": "1ea91b5eb278054c77ee87d61d7366b59481dbd8a2a4434bd6092a535d900637"
+    },
+    {
+      "path": "asset_strings/Actor_00/Flash03.act.json",
+      "bytes": 1108,
+      "sha256": "507b2d92c67145315374c63c00f45804ca2e378b019f9f19a4160ab6e62d4923"
+    },
+    {
+      "path": "asset_strings/Actor_00/Flash04.act.json",
+      "bytes": 1121,
+      "sha256": "8ef8eb31c76a793f6d7b67f7f8a8f6aa7523a134fb5cf25023775264e2806d51"
+    },
+    {
+      "path": "asset_strings/Actor_00/Flash99.act.json",
+      "bytes": 1118,
+      "sha256": "cc62471d419f2db2c25ad15b98a51f94c73ebd2f96fbd2c2ca68692a770108ed"
+    },
+    {
+      "path": "asset_strings/Actor_00/FlashDestroy.act.json",
+      "bytes": 1140,
+      "sha256": "25dc70c0bb7b5beb0f5a311107b7c7020e5f92cc0bf77735223859a19e5f8ea5"
+    },
+    {
+      "path": "asset_strings/Actor_00/FlashDestroy2.act.json",
+      "bytes": 1087,
+      "sha256": "3567afe0c12ce98475c648acd91c6129fe60d2a5b3a660236cc958aaea1d243d"
+    },
+    {
+      "path": "asset_strings/Actor_00/FlashFlare.act.json",
+      "bytes": 1108,
+      "sha256": "a202895a24ffaf399d5db7cf56365d0055acc0d97e96302c442eb2b52b0ddfc2"
+    },
+    {
+      "path": "asset_strings/Actor_00/FlashFlare02.act.json",
+      "bytes": 1136,
+      "sha256": "4fa456bf49a726e6837b145a66f2793b9d36f78bdcb56ae1010bc004021527ae"
+    },
+    {
+      "path": "asset_strings/Actor_00/FlashFlare03.act.json",
+      "bytes": 1125,
+      "sha256": "7b734d873d5b6d89b717feed6878dcef830805a81a24fd4e79801136f89b43cd"
+    },
+    {
+      "path": "asset_strings/Actor_00/FlashFlare04.act.json",
+      "bytes": 1125,
+      "sha256": "0acd7af35197bdba9a4ce7b14b16dfd6f9998e2beb0b698f5ea3b5a733e41519"
+    },
+    {
+      "path": "asset_strings/Actor_00/FlashFlare05.act.json",
+      "bytes": 1123,
+      "sha256": "eaa2579ee0b424b03848b49c6da7f806e9561fe9e91d3b2e24fc81cc3bca8171"
+    },
+    {
+      "path": "asset_strings/Actor_00/FlashFlare06.act.json",
+      "bytes": 3197,
+      "sha256": "5740f771734b84c1daa0b0fcdffd6e47606e42228be7c815b16395a551916a39"
+    },
+    {
+      "path": "asset_strings/Actor_00/FlashFlare2.act.json",
+      "bytes": 1123,
+      "sha256": "75edb714251662c931362c2e6ff418ceb0524ae4d0eb393e60c6304de45ec17a"
+    },
+    {
+      "path": "asset_strings/Actor_00/FlashFlare98.act.json",
+      "bytes": 5251,
+      "sha256": "660bf2709ad5fe9a612cfe586392e6484b11ae5910893547aff53d5d12a4f58c"
+    },
+    {
+      "path": "asset_strings/Actor_00/FlashFlare99.act.json",
+      "bytes": 4162,
+      "sha256": "3ec4e073df996d0a36d8f30806f80c9680e8a45126d261168426aa015d291a39"
+    },
+    {
+      "path": "asset_strings/Actor_00/FlashFlareE.act.json",
+      "bytes": 1124,
+      "sha256": "5c9ec8aa83ce0d07762e9123f09ee9d1b1b2a81d5162a699d6a5ab48abac9423"
+    },
+    {
+      "path": "asset_strings/Actor_00/FlashTail.act.json",
+      "bytes": 985,
+      "sha256": "9e9eb4231404a498ffad31e2bc4405d2222039740240a73177964e3831cfdfd7"
+    },
+    {
+      "path": "asset_strings/Actor_00/FlashTail2.act.json",
+      "bytes": 986,
+      "sha256": "c4e6e9322a20343420086a20212827659ef3cde9e5e14d620b76269e90568c31"
+    },
+    {
+      "path": "asset_strings/Actor_00/FlashTailLight.act.json",
+      "bytes": 1004,
+      "sha256": "2d0fa17142b65b3255f333e92a8074e16c92bd560c86851dfd42f1e7c4229c4d"
+    },
+    {
+      "path": "asset_strings/Actor_00/GetCostume.act.json",
+      "bytes": 4166,
+      "sha256": "d76ccd074849816907d9c6c7b1b7f6ef963a379ec9e7460572d436aa11c2d9fe"
+    },
+    {
+      "path": "asset_strings/Actor_00/Giantization1.act.json",
+      "bytes": 1134,
+      "sha256": "fdeab0315b72bddcb97a75b32fdd2ca17e4398f651b20959dac27e5f750b7c77"
+    },
+    {
+      "path": "asset_strings/Actor_00/Giantization2.act.json",
+      "bytes": 1154,
+      "sha256": "1efc44f060e0ef72315b15ae5868103e60404c08981bb779c84e9f5472d64bd8"
+    },
+    {
+      "path": "asset_strings/Actor_00/GirlRecovery01.act.json",
+      "bytes": 2205,
+      "sha256": "341775cf47e9762fc4b91d07843d3ae4d1d0fa6fc245ebc8ec4b4fc701537d9f"
+    },
+    {
+      "path": "asset_strings/Actor_00/GirlRecovery02.act.json",
+      "bytes": 5386,
+      "sha256": "a01cd957011cbbcc6f272a1786079583d12fe8fc708d77e95f114f0dad660ee2"
+    },
+    {
+      "path": "asset_strings/Actor_00/GlowDecay.act.json",
+      "bytes": 1117,
+      "sha256": "174fcbc72103f9d5ebf7edd7302bdc397ec9985a5e0e5c7b2f20bd0278c7cd38"
+    },
+    {
+      "path": "asset_strings/Actor_00/GlowLight.act.json",
+      "bytes": 1112,
+      "sha256": "f289484fecfdb927cab913e3d016dabe95bdb60ae926611a2dd966b36e4362ab"
+    },
+    {
+      "path": "asset_strings/Actor_00/GlowStar.act.json",
+      "bytes": 992,
+      "sha256": "97e3fb12665d8189ab6881e10fc8a738f65b706a3762fd7f12fc90d65ea7ca23"
+    },
+    {
+      "path": "asset_strings/Actor_00/GlowStar2.act.json",
+      "bytes": 1078,
+      "sha256": "b63f934a7f6375faf940bf34dbd3656f710faa5af6f7f33f7cea873d49aeea01"
+    },
+    {
+      "path": "asset_strings/Actor_00/Hit.act.json",
+      "bytes": 1019,
+      "sha256": "a82af2ef5d46760681aa5d18275ad34e75144fa51ef7a4708531539ec1abf367"
+    },
+    {
+      "path": "asset_strings/Actor_00/HitSpark.act.json",
+      "bytes": 1029,
+      "sha256": "173a8885fbb08328608599194060aa6fdd474a919cc1612cde4568ba4d7e0c06"
+    },
+    {
+      "path": "asset_strings/Actor_00/IceBreak01.act.json",
+      "bytes": 5223,
+      "sha256": "a09c646cd859782efeae629a3a33466920bd6e41c0e2712d6ad71c7131f505d7"
+    },
+    {
+      "path": "asset_strings/Actor_00/InfoStart.act.json",
+      "bytes": 2153,
+      "sha256": "47a1ba57df0bfaef577537ea7b8b1d5b7cb0f783ef1bb6c2e2a1e39496e6a4b0"
+    },
+    {
+      "path": "asset_strings/Actor_00/Invincibility01.act.json",
+      "bytes": 2152,
+      "sha256": "4e9915530c3e3316f4c0fa99497a02f12db93823b80e9769b3a25794f2f3fecf"
+    },
+    {
+      "path": "asset_strings/Actor_00/Invisible01.act.json",
+      "bytes": 853,
+      "sha256": "1d28735dc211ab6921ad740b29d9712fca5df2d31a5ab0f489ae30830b468736"
+    },
+    {
+      "path": "asset_strings/Actor_00/InvisibleE1.act.json",
+      "bytes": 1115,
+      "sha256": "ae10758fa0630fdf825db2a1accb6515cb001bb9066287695e7768392ec10e22"
+    },
+    {
+      "path": "asset_strings/Actor_00/ItemBreak.act.json",
+      "bytes": 4208,
+      "sha256": "333dde674ab66256f6dc2f3b9f36b54eec2c4f142dfe0ef5f1863276927f7669"
+    },
+    {
+      "path": "asset_strings/Actor_00/ItemDrapB.act.json",
+      "bytes": 2184,
+      "sha256": "3955b9a23d4f771f3f2595eb148c3f4f57ead4b49d31e8ed2108e1181cdaa26f"
+    },
+    {
+      "path": "asset_strings/Actor_00/ItemDrapM.act.json",
+      "bytes": 3173,
+      "sha256": "d9dfed54bf49a3f0f4223faace5a1cb142e1c748ebd6ad053509801ec2771a13"
+    },
+    {
+      "path": "asset_strings/Actor_00/ItemDrapRareM.act.json",
+      "bytes": 2182,
+      "sha256": "2f79ff32fba9839223ee49a782213306cb8910e924658bca133997b89504a016"
+    },
+    {
+      "path": "asset_strings/Actor_00/ItemDrapRareS.act.json",
+      "bytes": 2162,
+      "sha256": "1ef5e0871331003aa4d6d7fd84d42ead0aea78aa35e9d1a1274c0a1a2cef625a"
+    },
+    {
+      "path": "asset_strings/Actor_00/ItemDrapS.act.json",
+      "bytes": 3209,
+      "sha256": "72989e791bac522f5ab0c45aaa6560f96db9847528ed52d782a36c058555d0ae"
+    },
+    {
+      "path": "asset_strings/Actor_00/ItemFX1.act.json",
+      "bytes": 3185,
+      "sha256": "85ad27b7daa583a7da90c5f820935b1afdce2c45b72a0245190f2568bc81e9c2"
+    },
+    {
+      "path": "asset_strings/Actor_00/ItemRedesign.act.json",
+      "bytes": 4285,
+      "sha256": "216a8fbdacee798bdc288eb25387789182b43ddd351e3cfb6011102c900e4609"
+    },
+    {
+      "path": "asset_strings/Actor_00/ItemSummon01.act.json",
+      "bytes": 4207,
+      "sha256": "7d14299e3b60ac6f2de8e9028a4dc1fd1067bb370b9ca6cf3d0b10fe963aa002"
+    },
+    {
+      "path": "asset_strings/Actor_00/ItemSummon03.act.json",
+      "bytes": 2141,
+      "sha256": "0020539b771697400ffe223b034d94749473b6fdefd16929d42a435abcb74bea"
+    },
+    {
+      "path": "asset_strings/Actor_00/JupiterAura01.act.json",
+      "bytes": 4209,
+      "sha256": "2119f336a11e31a06c705d04d30e649688c5c8700c0b930b3ebe50f83cbfdbc1"
+    },
+    {
+      "path": "asset_strings/Actor_00/LevelUp01.act.json",
+      "bytes": 3908,
+      "sha256": "709feffa30ac4ab470c92207e144d2207a917e3c6adec1e6d4b65e2f94bc7a56"
+    },
+    {
+      "path": "asset_strings/Actor_00/LevelUp02.act.json",
+      "bytes": 845,
+      "sha256": "3677eee4ae062d419cf90f384c0fa46c47625e0796b9d96f9438113246a94e2a"
+    },
+    {
+      "path": "asset_strings/Actor_00/LevelUp03.act.json",
+      "bytes": 858,
+      "sha256": "bbe05a72173f6434f7b4292ac19bbd0e4560b13dcc2ea043cb00f56e9793e298"
+    },
+    {
+      "path": "asset_strings/Actor_00/LevelUpUi01.act.json",
+      "bytes": 5226,
+      "sha256": "52913c38107add6e7bc346c5d916efe587c8e68f3303a5893fb4f7faf8214156"
+    },
+    {
+      "path": "asset_strings/Actor_00/LevelUpUi02.act.json",
+      "bytes": 5226,
+      "sha256": "9c6836a13d33af6f16f25a418a0881c2a8a28045da4e2a6613415c5a0ce08952"
+    },
+    {
+      "path": "asset_strings/Actor_00/Make01.act.json",
+      "bytes": 7258,
+      "sha256": "77c4b608546efa86e1659ee194e303510001eafe2a42854d7e9721ce591506cf"
+    },
+    {
+      "path": "asset_strings/Actor_00/Make02.act.json",
+      "bytes": 4163,
+      "sha256": "184392439ee9481839f9acd35c15e24e54f37d728593c7716c0a904e71dd29b9"
+    },
+    {
+      "path": "asset_strings/Actor_00/MotherShipEX1.act.json",
+      "bytes": 5278,
+      "sha256": "ff553d6f552eb1e0d0e38a3192ca4bb5b484fd7e7951e52997684818ae75fed2"
+    },
+    {
+      "path": "asset_strings/Actor_00/MotherShipEX2.act.json",
+      "bytes": 3190,
+      "sha256": "17c45f5bb23ae5a37ee43a73147ff5513dcd0171f21a8ebabe6864e405606aa3"
+    },
+    {
+      "path": "asset_strings/Actor_00/NailSwing01.act.json",
+      "bytes": 1101,
+      "sha256": "a4ef672b1adf0db04c2331bf823a72a29c9ade3407b5c2bbac016ed95c781ce8"
+    },
+    {
+      "path": "asset_strings/Actor_00/NailTarget01.act.json",
+      "bytes": 1103,
+      "sha256": "78786031fb0ea21df3aaec5ace8412fc4465baa7d9f776981b4f0e3625e41090"
+    },
+    {
+      "path": "asset_strings/Actor_00/NailTarget02.act.json",
+      "bytes": 3157,
+      "sha256": "7e8936206d52e44c9f0c32df88abcff43a24f22685e524fe2366eead2c54c01e"
+    },
+    {
+      "path": "asset_strings/Actor_00/Navigator01.act.json",
+      "bytes": 1114,
+      "sha256": "4dc9cbb4f6f6397a70383ec26e417d1cb39b7efff356633aa606ab2b79c27152"
+    },
+    {
+      "path": "asset_strings/Actor_00/PlanetBoom1.act.json",
+      "bytes": 5895,
+      "sha256": "e7d80e0d8b16c3eeee6e17af15dec12ae72382a5ddaf78ac09ecce66276f7709"
+    },
+    {
+      "path": "asset_strings/Actor_00/PlanetFX_1.act.json",
+      "bytes": 1113,
+      "sha256": "b74132ab156ef72a4a6aad593cf7ff615db16ba9d69be7e4f2e44be8dc919e15"
+    },
+    {
+      "path": "asset_strings/Actor_00/PlanetFX_2.act.json",
+      "bytes": 1118,
+      "sha256": "b678c177ecf0c45e219a6fde22374750b2a1b60679a29fe7fbc96b39a4acd30a"
+    },
+    {
+      "path": "asset_strings/Actor_00/PlanetFX_3.act.json",
+      "bytes": 3177,
+      "sha256": "250d8c086e33ba2c9d51c45c69404de99e559496977e08383d684a42d913b4b2"
+    },
+    {
+      "path": "asset_strings/Actor_00/PlanetHeal2.act.json",
+      "bytes": 4225,
+      "sha256": "e5869381bdfaec53e7052f3ef0be22d07e3746f2a245766f57d4d0aa0fee631d"
+    },
+    {
+      "path": "asset_strings/Actor_00/PlanetHealLoop1.act.json",
+      "bytes": 3150,
+      "sha256": "45e370e1dcc459e9eaa9508931f338bb0138eff386e39386a1340698dc137cd6"
+    },
+    {
+      "path": "asset_strings/Actor_00/PlanetRecovery01.act.json",
+      "bytes": 2197,
+      "sha256": "0a5fef74f8250f2887e4626c3c2cce19cabf93eef7b214e1050d69ff8c6fd3e8"
+    },
+    {
+      "path": "asset_strings/Actor_00/PlanetRecovery02.act.json",
+      "bytes": 5378,
+      "sha256": "feb59b1f4130528d7433732ecc11f5666dc848b52d4888d13441b105ab9b163e"
+    },
+    {
+      "path": "asset_strings/Actor_00/PlanetResFX1.act.json",
+      "bytes": 1125,
+      "sha256": "f00476c0cd8941b2c932446113716c939c1b1764d3d20f6bf50b3c9f40b22ec9"
+    },
+    {
+      "path": "asset_strings/Actor_00/PlanetUnlock1.act.json",
+      "bytes": 3193,
+      "sha256": "3ea551f5e6ef90c4d1073b01e55b32057e8a8755edfec2ea38f74bdaa4634d39"
+    },
+    {
+      "path": "asset_strings/Actor_00/PlanetWork01.act.json",
+      "bytes": 1049,
+      "sha256": "81485a5fb53bf88dbceb2e8b56e25db29aff1c332df0183c4f5bf3f6f3618a05"
+    },
+    {
+      "path": "asset_strings/Actor_00/PlanetWork1.act.json",
+      "bytes": 4262,
+      "sha256": "fdb2b9f7dad68a283f7769ae06c196ec52536d4660a7be890a9200ff9874c1f8"
+    },
+    {
+      "path": "asset_strings/Actor_00/PortraitBlue.act.json",
+      "bytes": 1144,
+      "sha256": "bb1e97c9c6e3e1d9224ab85ab13be168c7d1615861f6b090df57f7d0cc44f6f8"
+    },
+    {
+      "path": "asset_strings/Actor_00/PortraitGreen.act.json",
+      "bytes": 1145,
+      "sha256": "700e131c0c06699b0eb10cd7710722cad5e9121426724d6c3f03024cf70a5331"
+    },
+    {
+      "path": "asset_strings/Actor_00/PortraitRed.act.json",
+      "bytes": 1145,
+      "sha256": "f01b9e3f46c6324a285a42bbce809d2d20aa483854e75f414efc211ffe1250e9"
+    },
+    {
+      "path": "asset_strings/Actor_00/PortraitYellow.act.json",
+      "bytes": 1146,
+      "sha256": "dc9b4094109e457f0c9bc97d663ba577344bef598b05c8af647297b71da854d4"
+    },
+    {
+      "path": "asset_strings/Actor_00/PowerAtk01.act.json",
+      "bytes": 1641,
+      "sha256": "bb79d6be997cfc47ccc4b1f0a62f60183cea59c61aa3240126e478fc5a4b366d"
+    },
+    {
+      "path": "asset_strings/Actor_00/PowerUp.act.json",
+      "bytes": 5309,
+      "sha256": "34fa57c0086cb46ddf19f0384f667104f82ac3da8060f0c0f9411d0ce6e768c6"
+    },
+    {
+      "path": "asset_strings/Actor_00/Provocation01.act.json",
+      "bytes": 850,
+      "sha256": "8d8898c4918ff470ce6990fa69dd43a707990c19cf9d790511ceff81f65de627"
+    },
+    {
+      "path": "asset_strings/Actor_00/Punch01.act.json",
+      "bytes": 855,
+      "sha256": "e4373b697d7811392e3c454d15586ace4b5800326f5496aa0ae0bf0dc39c441b"
+    },
+    {
+      "path": "asset_strings/Actor_00/PunchSwing01.act.json",
+      "bytes": 1103,
+      "sha256": "30f357fc13f4bedd8a63ab0258852babaee64ea9363a2c14ebc646509e77fc23"
+    },
+    {
+      "path": "asset_strings/Actor_00/PunchTarget01.act.json",
+      "bytes": 1105,
+      "sha256": "2b69d33cf1cf649b8d436d27a68c0e8897d75390bef0f18f5258b3b84833d34f"
+    },
+    {
+      "path": "asset_strings/Actor_00/QuasarFX.act.json",
+      "bytes": 4236,
+      "sha256": "f7270504948b39289d88e1fdf04fc4971b2db44d20be1a78e6eaace364b9cec0"
+    },
+    {
+      "path": "asset_strings/Actor_00/QuasarFX2.act.json",
+      "bytes": 3187,
+      "sha256": "d424cd569c20e2a31c470a9fcfdb859a8c509f22a02de67d94b2b49362237708"
+    },
+    {
+      "path": "asset_strings/Actor_00/RefWave01.act.json",
+      "bytes": 4223,
+      "sha256": "edfa13fcae5ad31c3efb257024707e877be98f61b62064f2934df7af087b1e60"
+    },
+    {
+      "path": "asset_strings/Actor_00/ReinforceUI1.act.json",
+      "bytes": 6404,
+      "sha256": "894736d7814184aae5aba1dba5693e49f787a5e59eb2aa5408142f0a9155d83b"
+    },
+    {
+      "path": "asset_strings/Actor_00/ReinforceUI2.act.json",
+      "bytes": 4314,
+      "sha256": "df97b9d2b4f2e1ae709551c74473dcd9b6ee2e9a3ce6c6866a9afc624ee60b45"
+    },
+    {
+      "path": "asset_strings/Actor_00/ReinforceUI3.act.json",
+      "bytes": 2972,
+      "sha256": "66fc0167aa27018ef4189217cb23fe12633869baa36575f4a05f760b27e30e05"
+    },
+    {
+      "path": "asset_strings/Actor_00/ReinforceUI4.act.json",
+      "bytes": 3179,
+      "sha256": "d8d52d33c54537720500d8a9fc0b2f78f6efdbc45dc451bf35eb66bf71cda1d9"
+    },
+    {
+      "path": "asset_strings/Actor_00/ReinforceUI5.act.json",
+      "bytes": 6401,
+      "sha256": "e1b95a6e3825e5cfa3fa6ec76ed18d6cff2802d6bcb5c9c65dd3517a92658c07"
+    },
+    {
+      "path": "asset_strings/Actor_00/ResInput01.act.json",
+      "bytes": 1143,
+      "sha256": "c305e2519f4805862c46516a7bf941aa8c44ddbf130e50cec894528a6f7db495"
+    },
+    {
+      "path": "asset_strings/Actor_00/ResearchStart01.act.json",
+      "bytes": 3246,
+      "sha256": "e81ccd032aa7432759ef82e57fb83fc8aa59a15a269ac832637caa0d21ae3e25"
+    },
+    {
+      "path": "asset_strings/Actor_00/RouletteCharge.act.json",
+      "bytes": 3216,
+      "sha256": "7a8bf24f11b8272ae0191826d40f9b831170204a21d8909b6e7d3d3dd8039291"
+    },
+    {
+      "path": "asset_strings/Actor_00/RouletteCharge2.act.json",
+      "bytes": 3237,
+      "sha256": "8db62575c64a18253a14f001ea1838523302eca03169a706bd8c6a34247af270"
+    },
+    {
+      "path": "asset_strings/Actor_00/RouletteEnd.act.json",
+      "bytes": 1134,
+      "sha256": "01b521f39162a75e6e7fd059bdd5330583242a4dead9a3c62ba7ac13dfe2919c"
+    },
+    {
+      "path": "asset_strings/Actor_00/Rush01.act.json",
+      "bytes": 3177,
+      "sha256": "5657fcb2658860a10d37a7fec475c6c876f8e63a29e538666f274ca28c6fcf86"
+    },
+    {
+      "path": "asset_strings/Actor_00/Rush02.act.json",
+      "bytes": 3176,
+      "sha256": "7643630de62b3fee51771a48ca69ecfa9d82f35cb356db878a206ae31c33badd"
+    },
+    {
+      "path": "asset_strings/Actor_00/SellGirl01.act.json",
+      "bytes": 3234,
+      "sha256": "9852fdf6ac08dc91d3b0826cbd7ff681252ea2c2cd1217fb95607d96e4a9d896"
+    },
+    {
+      "path": "asset_strings/Actor_00/ShadowSpawn01.act.json",
+      "bytes": 852,
+      "sha256": "652c05816e3c7ad78407ab7fd6b15e45fa728f9f84c6e107675320acb3253495"
+    },
+    {
+      "path": "asset_strings/Actor_00/Shield.act.json",
+      "bytes": 977,
+      "sha256": "08ba2ace291fb6469bf0109b3a3d46333f5e8115e04d81dfc020a2922aeec74a"
+    },
+    {
+      "path": "asset_strings/Actor_00/Shield01Blue.act.json",
+      "bytes": 1113,
+      "sha256": "df6079399f231a073ece05959b3ed8ef525cd9c678d79872416159a1e16de099"
+    },
+    {
+      "path": "asset_strings/Actor_00/Shield01W.act.json",
+      "bytes": 1113,
+      "sha256": "3751188525cf32b20681826dfe99e3a3360517016c9d28fb0973b96c1bd6b5b6"
+    },
+    {
+      "path": "asset_strings/Actor_00/Shield02.act.json",
+      "bytes": 1112,
+      "sha256": "b1792be0d5087b5e8a552401b23ba01477909b12af683bcfb90bde6512f4c6d4"
+    },
+    {
+      "path": "asset_strings/Actor_00/Shield02B.act.json",
+      "bytes": 2142,
+      "sha256": "2b0edd333c3b44a974bbe684613dc5939bf046b4199480b3e5053ec1c5442aa4"
+    },
+    {
+      "path": "asset_strings/Actor_00/Shield03.act.json",
+      "bytes": 1055,
+      "sha256": "8a4373bc58998285f1335e4bffd90055502e2971e44aa7b9c53d3436911515f0"
+    },
+    {
+      "path": "asset_strings/Actor_00/Shield04.act.json",
+      "bytes": 1045,
+      "sha256": "35df90cf63a29ae5485824184c4ee56af928417884b9d1e7fd2c19bb28d69814"
+    },
+    {
+      "path": "asset_strings/Actor_00/Shield05.act.json",
+      "bytes": 1112,
+      "sha256": "183f77926ecf0814b2a260deb5d2b5f54cfc089ca7d63a366a84bca1586d9b1c"
+    },
+    {
+      "path": "asset_strings/Actor_00/Shield06.act.json",
+      "bytes": 1056,
+      "sha256": "030f98d0a9711ce6d2082501e595a6f957a01b14ec2393b11c72ab56d89b91c0"
+    },
+    {
+      "path": "asset_strings/Actor_00/Shield07.act.json",
+      "bytes": 1112,
+      "sha256": "c3d00332d4e48bf01792810340710b30d545618eb94aff780f3567a5b9d4ab3d"
+    },
+    {
+      "path": "asset_strings/Actor_00/Shield99.act.json",
+      "bytes": 1097,
+      "sha256": "0cb3d7baaf53441b34f8f1a9c546056312261c5f83d331074c5471435927bd31"
+    },
+    {
+      "path": "asset_strings/Actor_00/ShieldBreak01.act.json",
+      "bytes": 5249,
+      "sha256": "5c3bc5efffb5f749cb79691b2be56fee925f73f6cfaa494d97eb9b225d146162"
+    },
+    {
+      "path": "asset_strings/Actor_00/ShieldBuff01.act.json",
+      "bytes": 1127,
+      "sha256": "f5b54990905a4af042f92970bc357314427373a02703cda8a675c1feec303402"
+    },
+    {
+      "path": "asset_strings/Actor_00/ShieldBuff02.act.json",
+      "bytes": 1136,
+      "sha256": "c83daedcc20055d423644a797eb2b29dc59917d11471c851729048190af44995"
+    },
+    {
+      "path": "asset_strings/Actor_00/ShieldBuff03.act.json",
+      "bytes": 1136,
+      "sha256": "259437dac890bbbea8e24dbfc6afe850137c368e306608a2ff7dc4d42944ebea"
+    },
+    {
+      "path": "asset_strings/Actor_00/ShieldPlanet01.act.json",
+      "bytes": 2147,
+      "sha256": "342952f4bbe154180fdf76bf7ed3e9456b6d9c13708d998de0bf5665d7445c8a"
+    },
+    {
+      "path": "asset_strings/Actor_00/Shock01.act.json",
+      "bytes": 1004,
+      "sha256": "01780737ba3bbec755f5cfbcd8f9ea63c552ba9b731650029874cf48199390bc"
+    },
+    {
+      "path": "asset_strings/Actor_00/ShootSpark.act.json",
+      "bytes": 1136,
+      "sha256": "55aa3613925d708d9aa9d27a0eefc36bfc9bc79bc38dc3dfde1c2d7857920e4c"
+    },
+    {
+      "path": "asset_strings/Actor_00/ShootSpark02.act.json",
+      "bytes": 1135,
+      "sha256": "613362e4583dff17a0862379ac1ac2631510f604d65e7773d164770d568b2323"
+    },
+    {
+      "path": "asset_strings/Actor_00/ShotFlare.act.json",
+      "bytes": 4210,
+      "sha256": "c0397b9713f396af92d9b835b95693d2752a8e707b47258cc7a96ee2870830d1"
+    },
+    {
+      "path": "asset_strings/Actor_00/ShotFlare2.act.json",
+      "bytes": 3178,
+      "sha256": "40f0286002fd3b6f48d83c6d0bd95c8884fb467f2817927eb3695b5cd72a9d29"
+    },
+    {
+      "path": "asset_strings/Actor_00/ShotTail01.act.json",
+      "bytes": 1004,
+      "sha256": "aa7c61bc6c4101dab7d34d848041b51b447df016724e370436e6243fdc65581a"
+    },
+    {
+      "path": "asset_strings/Actor_00/SkillBase01.act.json",
+      "bytes": 857,
+      "sha256": "5b207f767c5a039ee9d424560d88c9e64da519c428b4b3b3ffa1708f904c858e"
+    },
+    {
+      "path": "asset_strings/Actor_00/SkillBase02.act.json",
+      "bytes": 1005,
+      "sha256": "a3bc49523121440b8a7e8210ecdd5518b3bbce880f8d2e1cd0dde7a77c79ffb6"
+    },
+    {
+      "path": "asset_strings/Actor_00/SkillReady.act.json",
+      "bytes": 3142,
+      "sha256": "a72a9e137f5a5be49b64dcc1a5c3e5d0616e6608b8812bcd843529c251e881da"
+    },
+    {
+      "path": "asset_strings/Actor_00/SkillReduction.act.json",
+      "bytes": 6327,
+      "sha256": "c748bb5e43864fa500ab8ae9222efd8899a9532d10753ec5058665283fd094b8"
+    },
+    {
+      "path": "asset_strings/Actor_00/SkillStop.act.json",
+      "bytes": 3300,
+      "sha256": "b74334f018a241d37929d252521b4f12df4da8686f0341aec1628e2f1918eecc"
+    },
+    {
+      "path": "asset_strings/Actor_00/Slow01.act.json",
+      "bytes": 1009,
+      "sha256": "b7e94983b0b4acdc74f99143f02db3d0e56432a90cf4e71ef52d89e3b29c2c2d"
+    },
+    {
+      "path": "asset_strings/Actor_00/SniperHit01.act.json",
+      "bytes": 2148,
+      "sha256": "b3696ba4e20c8c533d5e0a46794acbf48d2e9b608ce0959aa5b91aa178780f6b"
+    },
+    {
+      "path": "asset_strings/Actor_00/SparkDestroy.act.json",
+      "bytes": 1116,
+      "sha256": "a020bc2bd7bf48c287a2a91aae3304e276a8ad6f104fd91fba563a3e1dde8ade"
+    },
+    {
+      "path": "asset_strings/Actor_00/SparkLoop.act.json",
+      "bytes": 1075,
+      "sha256": "a761f8ba05cc67dd922bf2a57565329812a941ffdeb80696bd3bbc78c511278d"
+    },
+    {
+      "path": "asset_strings/Actor_00/SpeedAtk01.act.json",
+      "bytes": 1630,
+      "sha256": "bf208ab7d4515fbef3b8e3496c798bf9bcbee26c4fa8c45ce7b53a24697cb056"
+    },
+    {
+      "path": "asset_strings/Actor_00/StellarWind01.act.json",
+      "bytes": 1114,
+      "sha256": "451d83fbb9dc5fe82613db8427d46258c6cafa6ae7cafea4447d213634419dde"
+    },
+    {
+      "path": "asset_strings/Actor_00/Strengthen01.act.json",
+      "bytes": 1634,
+      "sha256": "91163d30b30f352fe69edc59606cb4e0ffc31b39c5662d81e9c0a27ee93856b3"
+    },
+    {
+      "path": "asset_strings/Actor_00/Strengthen02.act.json",
+      "bytes": 848,
+      "sha256": "3d4af23d12378b97c5fffe3cd11f66c7fc229a5b9f30a72ae94217d617de0c68"
+    },
+    {
+      "path": "asset_strings/Actor_00/StudyClearUI1.act.json",
+      "bytes": 9633,
+      "sha256": "2d1b365a1078f8d0ad5757954a4a16ef9058c28359a55a80203bb712b7bb959d"
+    },
+    {
+      "path": "asset_strings/Actor_00/Summon01.act.json",
+      "bytes": 3226,
+      "sha256": "ef6d2b1a76acf29c40b272c6503db6cf96c44c0e1ef468fb5ab014a4fbc067bf"
+    },
+    {
+      "path": "asset_strings/Actor_00/Summon03.act.json",
+      "bytes": 2134,
+      "sha256": "1b9f8008c6ca77aa63e1a2652591292c13f771401a02e4b08be5e2fa06490b5e"
+    },
+    {
+      "path": "asset_strings/Actor_00/Summon04.act.json",
+      "bytes": 6341,
+      "sha256": "77775ca9a0dd84e50900b3a34ca56ae0265231a44ed54afd3ef7dba17a10a1a8"
+    },
+    {
+      "path": "asset_strings/Actor_00/Summon05.act.json",
+      "bytes": 6341,
+      "sha256": "61f53b6dcae142d10b525c47bd06256204f3f767544d1aed0afe4ac4658b5c4a"
+    },
+    {
+      "path": "asset_strings/Actor_00/SummonEnd.act.json",
+      "bytes": 3189,
+      "sha256": "1aa3cf2a9eabbf7ce7f733ba9fa29a3729802f68cc5a287521297bcd6d12b447"
+    },
+    {
+      "path": "asset_strings/Actor_00/SummonStart01.act.json",
+      "bytes": 4307,
+      "sha256": "e44287735e93f19bab5041c9bc228174b1ce4166c26af1f1c67ca9b81dc264ce"
+    },
+    {
+      "path": "asset_strings/Actor_00/SupplyDone01.act.json",
+      "bytes": 2196,
+      "sha256": "30dcf0b755f95c82a66aaf3b7e65411a7d3f63b0d1047fcc8a07425b655cbb34"
+    },
+    {
+      "path": "asset_strings/Actor_00/Sword01.act.json",
+      "bytes": 843,
+      "sha256": "8559d8244d0119fe3d4b6ee3446995002b4742e43a046bba7215b998cda51bff"
+    },
+    {
+      "path": "asset_strings/Actor_00/Sword02.act.json",
+      "bytes": 845,
+      "sha256": "e402f7e3df0664d25537725916885e4145ff1e0226be0f77b1bc076bf34652e5"
+    },
+    {
+      "path": "asset_strings/Actor_00/TailBasic02.act.json",
+      "bytes": 1113,
+      "sha256": "b318c009fb23ee32a6d5510c98468957cf9c4fe09b9b0e98f6beba1a5c8ad71b"
+    },
+    {
+      "path": "asset_strings/Actor_00/Target.act.json",
+      "bytes": 1060,
+      "sha256": "015143190366acc2717d1615baf003340da924eed1d8e9cf9a59fa0c20448c76"
+    },
+    {
+      "path": "asset_strings/Actor_00/TargetFirst.act.json",
+      "bytes": 1060,
+      "sha256": "015143190366acc2717d1615baf003340da924eed1d8e9cf9a59fa0c20448c76"
+    },
+    {
+      "path": "asset_strings/Actor_00/Thrust01.act.json",
+      "bytes": 3105,
+      "sha256": "d629f9fc596bca32680ffccd5328f992de6a1e122b950d2637fa46ac1f5cbfb3"
+    },
+    {
+      "path": "asset_strings/Actor_00/ThrustE01.act.json",
+      "bytes": 2135,
+      "sha256": "47590894826a894069ad757ff5843cfe52c09fae43b144903cd71023e4cd767a"
+    },
+    {
+      "path": "asset_strings/Actor_00/ThrustE02.act.json",
+      "bytes": 5247,
+      "sha256": "9e5ccd00f0f0039de4dc36cb352d8bf9762e0b73f9ceae2965173865b6ddef17"
+    },
+    {
+      "path": "asset_strings/Actor_00/TimeStopCharge.act.json",
+      "bytes": 2188,
+      "sha256": "d97d142379972a6d0af426cf93c8ab01b214710745f017b575cc25ecfe8f323e"
+    },
+    {
+      "path": "asset_strings/Actor_00/TitleFX1.act.json",
+      "bytes": 3180,
+      "sha256": "2877977278d0627a1fa83ad103a58f165e10b5b2047e96cc9440ecbf9880568c"
+    },
+    {
+      "path": "asset_strings/Actor_00/Touch01.act.json",
+      "bytes": 1111,
+      "sha256": "492db7e35da8159ab27d21b4c9f86e3af27c0236ae766ff5c5e947a9126efbf8"
+    },
+    {
+      "path": "asset_strings/Actor_00/TouchDrag01.act.json",
+      "bytes": 3153,
+      "sha256": "e370425ad8770834dca3cb9eb9dab362ece7d6dcc2c8ce9710c9934ba4c5c1f9"
+    },
+    {
+      "path": "asset_strings/Actor_00/UpArrow01.act.json",
+      "bytes": 1114,
+      "sha256": "cc6e99110d74b7a2c86c8d04e32b104bedd0793c2fe62d08684a1cf357977602"
+    },
+    {
+      "path": "asset_strings/Actor_00/Warning01.act.json",
+      "bytes": 2124,
+      "sha256": "c38c926c0939aff2f34e8465f84f6215286b2f44c09174237bdb229da54d4080"
+    },
+    {
+      "path": "asset_strings/Actor_00/Warning02.act.json",
+      "bytes": 2194,
+      "sha256": "11732221b782ee64ad43d0210dd65ed24c475fb020ee1396324991ac58958a71"
+    },
+    {
+      "path": "asset_strings/Actor_00/WarpBG01.act.json",
+      "bytes": 12744,
+      "sha256": "9a481f4741c6ce687b8c27250c11ea57ee5cf9bdd7210df6e8a50d6811f67a45"
+    },
+    {
+      "path": "asset_strings/Actor_00/WarpBG02.act.json",
+      "bytes": 12762,
+      "sha256": "02b63d22875e3e0d1c18bcaa118a60b5b346e26605810cd6f437eb9958f64d16"
+    },
+    {
+      "path": "asset_strings/Actor_00/WarpEx1.act.json",
+      "bytes": 6281,
+      "sha256": "91b1c98af1988511f93ef064ccd4fac307eae824b43fa93da4270c51a63e9d38"
+    },
+    {
+      "path": "asset_strings/Actor_00/WarpEx2.act.json",
+      "bytes": 1120,
+      "sha256": "9ec5d693d80e9af4826ddd345b3bb412c8a3edf9cea8e5d27511bfacf52474ad"
+    },
+    {
+      "path": "asset_strings/Actor_00/WarpGatrAura01.act.json",
+      "bytes": 2157,
+      "sha256": "598da3a7376176a493efd9387c876d01fa54421c99028a85fcfd1b2cb27cafb3"
+    },
+    {
+      "path": "asset_strings/Actor_00/WarpGatrAura02.act.json",
+      "bytes": 4233,
+      "sha256": "492b54c7d9ccaea37811d19977c7b4547fb179eda4c75327000a9d36c4e149ab"
+    },
+    {
+      "path": "asset_strings/Actor_00/WarpGatrAura03.act.json",
+      "bytes": 6247,
+      "sha256": "59f15878d9620b6dc4dba47e07fe1bf6b169df6c4e9e63cffe5e5536b4c60ccd"
+    },
+    {
+      "path": "asset_strings/Actor_00/Wave01.act.json",
+      "bytes": 2129,
+      "sha256": "fe5e25b2cb92d03725f02e4e556121fc4ed9cac47cc86be330f99e32c3b4f97e"
+    },
+    {
+      "path": "asset_strings/Actor_00/Wave02.act.json",
+      "bytes": 1118,
+      "sha256": "7150259b7ae21a6cfc725cbd1adacfb873f138ab7b042e71beb63dc4009b2cbb"
+    },
+    {
+      "path": "asset_strings/Actor_00/Wave03.act.json",
+      "bytes": 1118,
+      "sha256": "7a5b0f32048fa53b53c7047b6eba472e6fc8f827ab6747a15ce471628151cf16"
+    },
+    {
+      "path": "asset_strings/Actor_00/WaveE01.act.json",
+      "bytes": 2129,
+      "sha256": "866b762f303bd79c230e023604bd77f16545d9fb4d771c328bba753c885df9c0"
+    },
+    {
+      "path": "asset_strings/Actor_00/Whirlwind01.act.json",
+      "bytes": 2165,
+      "sha256": "0e7afda797909049aeb40f301570118387dcf27ea7ad4c776c95f7c7efffeb30"
+    },
+    {
+      "path": "asset_strings/Actor_00/Whirlwind02.act.json",
+      "bytes": 2154,
+      "sha256": "6e46a48e4a68da821a5b4ce7e53f62fcc70ed645323838c516c7f27835841265"
+    },
+    {
+      "path": "asset_strings/Actor_00/Wormhole01.act.json",
+      "bytes": 851,
+      "sha256": "33852f1c00926af400a7d84ea5c17bdd324544fcf3dfdd57d6de1e849d6b72c4"
+    },
+    {
+      "path": "asset_strings/Actor_00/Wormhole02.act.json",
+      "bytes": 2180,
+      "sha256": "9b45fbbaf26054a36b94825c76d99dcf3f232cb9c801525cd8f0f0c160ccbe2b"
+    },
+    {
+      "path": "asset_strings/Actor_00/Wormhole03.act.json",
+      "bytes": 3187,
+      "sha256": "4d8a30a1135e50d73ed3d1fe950a22cbcd5ebdbdcbd9444fd1c2656ba2676fb2"
+    },
+    {
+      "path": "asset_strings/Actor_00/Wormhole03Big.act.json",
+      "bytes": 3178,
+      "sha256": "f71dd82e8e36bb4f9a6320c2886bc5ddd70e90656bc116560b43616d83828b00"
+    },
+    {
+      "path": "asset_strings/Actor_00/Wormhole05.act.json",
+      "bytes": 1075,
+      "sha256": "8edf2d5b398527fcaaa0ce86269a2a0f2ac151138a757f9bc921fb7738929a1c"
+    },
+    {
+      "path": "asset_strings/Actor_00/Wormhole06.act.json",
+      "bytes": 1143,
+      "sha256": "6b21c83cd8440c370986f9198d8d25d50fd75a26a597b8634c9c28d4bd69416d"
+    },
+    {
+      "path": "asset_strings/Actor_00/Wormhole07.act.json",
+      "bytes": 1132,
+      "sha256": "295339c34ab287b899afb57f389f96113667d5c76e65ef437e8fcb3e20ad478f"
+    },
+    {
+      "path": "asset_strings/Actor_00/Wormhole08.act.json",
+      "bytes": 1132,
+      "sha256": "9baadfece31f53e74d3caead0da094b5ab1f466ba1f49c0ec0862fc77adb41a4"
+    },
+    {
+      "path": "asset_strings/Actor_00/Wormhole09.act.json",
+      "bytes": 1145,
+      "sha256": "174519cdbc754cc262ba60a3f5c334ac4c5f05f16d9eafb8e924b676e467bc7a"
+    },
+    {
+      "path": "asset_strings/Actor_00/Wormhole10.act.json",
+      "bytes": 3236,
+      "sha256": "845bddbed15331e23e5a87bc339d35a62d34e72ee378e0b2e449201807673c28"
+    },
+    {
+      "path": "asset_strings/Actor_00/Wormhole100.act.json",
+      "bytes": 1123,
+      "sha256": "7d8663f13d080721f8e3e5e6270a1112fe4b5cee3ec79907c23a572efb0dc629"
+    },
+    {
+      "path": "asset_strings/Actor_00/Wormhole11.act.json",
+      "bytes": 4232,
+      "sha256": "b206f6ac7092b5f38e8d5ca10a4895a41da10d2164a78d27c27362cc2badb5fc"
+    },
+    {
+      "path": "asset_strings/Actor_00/Wormhole12.act.json",
+      "bytes": 5289,
+      "sha256": "b4df99d1955c82850f5f099dfef2ed8cae7e9a5acc3fbb150562ff329816d381"
+    },
+    {
+      "path": "asset_strings/Actor_00/Wormhole13.act.json",
+      "bytes": 6309,
+      "sha256": "40113e1d04c41b9bda8801b1d29b632789fab0df9be80bc35ed796dc63c7bd6a"
+    },
+    {
+      "path": "asset_strings/Actor_00/Wormhole95.act.json",
+      "bytes": 4180,
+      "sha256": "f71c644637f70652feddc91abe507c666afcf71c32470f2694870db9bc78492d"
+    },
+    {
+      "path": "asset_strings/Actor_00/Wormhole96.act.json",
+      "bytes": 3197,
+      "sha256": "bdcc900b913479a4ec0577f3035d8d5f52e2e5df8b1ff072d697ff972754ea9d"
+    },
+    {
+      "path": "asset_strings/Actor_00/Wormhole97.act.json",
+      "bytes": 3175,
+      "sha256": "dd38e965a1ab0a28b1cbcc8a3682ed1b02d80511e66676cc0f515e6876f13f97"
+    },
+    {
+      "path": "asset_strings/Actor_00/Wormhole97Big.act.json",
+      "bytes": 3198,
+      "sha256": "cdeb77c817b21e4224a99921600d96e7c14dd5311d45e5b76a484d68722e7285"
+    },
+    {
+      "path": "asset_strings/Actor_00/Wormhole98.act.json",
+      "bytes": 1138,
+      "sha256": "a02759c02ab445c0d8f1852ddca95f5d4dfe8ee4acb0498a9b47197ab7e35794"
+    },
+    {
+      "path": "asset_strings/Actor_00/Wormhole99.act.json",
+      "bytes": 3177,
+      "sha256": "1e4c86eab44738f35de9eadad98ee54073a7a867b713e438105dfbb32a178a2f"
+    },
+    {
+      "path": "asset_strings/Actor_00/WormholeCharge.act.json",
+      "bytes": 3189,
+      "sha256": "d83cbebfdc306a38674a79cca853579215ffd45d57783ffa0e0fb5bfc209366a"
+    },
+    {
+      "path": "asset_strings/Actor_00/WormholeCharge2.act.json",
+      "bytes": 4209,
+      "sha256": "6f3b4fc9118f6f1bb4c41c4f6ac580e981a390543077b483e4667eb72d3f6603"
+    },
+    {
+      "path": "asset_strings/Actor_00/WormholeCharge3.act.json",
+      "bytes": 5282,
+      "sha256": "33b83046d1d9a421199a7df14fec8ab6e93d323dddf287b62ddfcd67c30faddd"
+    },
+    {
+      "path": "asset_strings/Actor_00/WormholeCharge4.act.json",
+      "bytes": 6398,
+      "sha256": "88e6e89f6778ff0d6155cd99cf9d114b3ae212c3720614da4211278758841e09"
+    },
+    {
+      "path": "asset_strings/Scene_00/CharacterUI.scn.json",
+      "bytes": 709,
+      "sha256": "2503bd339295fc22c3ad02b16ace2d2f90c7e639458cb400cb8280f7fb2e3948"
+    },
+    {
+      "path": "asset_strings/Scene_00/EffectTest.scn.json",
+      "bytes": 7263,
+      "sha256": "312cb85555fe337bb1c6276b08e71f26c7df05120321b0a8e20ca89432dd90e6"
+    },
+    {
+      "path": "asset_strings/Scene_00/Gacha.scn.json",
+      "bytes": 496,
+      "sha256": "05f97a4857a7cb370be5310c3235c704dff0eb3555f2eb2c62b007b42192bfb5"
+    },
+    {
+      "path": "asset_strings/Scene_00/Gacha_test.scn.json",
+      "bytes": 496,
+      "sha256": "05f97a4857a7cb370be5310c3235c704dff0eb3555f2eb2c62b007b42192bfb5"
+    },
+    {
+      "path": "asset_strings/Scene_00/Main_test2.scn.json",
+      "bytes": 3570,
+      "sha256": "00f63d38c825b1083157f61758cc1c7a968be2c12f4d7fa8c6e5d868b50281c7"
+    },
+    {
+      "path": "asset_strings/Scene_00/Space_Aries.scn.json",
+      "bytes": 49525,
+      "sha256": "5fe7de8f688fc030c03c0365e5d4ee082b72ef43a1e0c8adba9db7a4c9a02963"
+    },
+    {
+      "path": "asset_strings/Scene_00/Space_Cancer.scn.json",
+      "bytes": 49574,
+      "sha256": "1dc205d0ae66389158a72b8295ba01e4cc4165e1111689fed95b767c7ab40bd9"
+    },
+    {
+      "path": "asset_strings/Scene_00/Space_CanisMajor.scn.json",
+      "bytes": 37216,
+      "sha256": "d64b1709d33ca1ea8649a9c89fa06ff3c113cf7a833ec2c2882d9d5d1ebcde4c"
+    },
+    {
+      "path": "asset_strings/Scene_00/Space_Cygnus.scn.json",
+      "bytes": 47054,
+      "sha256": "6ce70f107903673c5cc1c0ab079b6deaef2fc8d78745fa5da8246f013a73d62a"
+    },
+    {
+      "path": "asset_strings/Scene_00/Space_Gemini.scn.json",
+      "bytes": 46373,
+      "sha256": "90b66c645eb66cdc4783f62a005468b68922d7fd629ac2109079d529538fdce1"
+    },
+    {
+      "path": "asset_strings/Scene_00/Space_Leo.scn.json",
+      "bytes": 40979,
+      "sha256": "0b8e29448c435fa4188e96b139e6e054f20dcbcb4847c8a083846433673a3af4"
+    },
+    {
+      "path": "asset_strings/Scene_00/Space_Northern.scn.json",
+      "bytes": 46346,
+      "sha256": "8b547c0e491312f431663ad5596750c76b05a92ac205fa636996811efd132f9c"
+    },
+    {
+      "path": "asset_strings/Scene_00/Space_QSolar.scn.json",
+      "bytes": 20507,
+      "sha256": "e1c90e49f12bac92168e4dc9d8cf4d9027b3385b1666c56418ea23451e4228b4"
+    },
+    {
+      "path": "asset_strings/Scene_00/Space_Quasar.scn.json",
+      "bytes": 14167,
+      "sha256": "daf87c4059fa64ad6f1f4d0edd35b02863e5e3f0303ff7330c17691ea0516d46"
+    },
+    {
+      "path": "asset_strings/Scene_00/Space_Quasar2.scn.json",
+      "bytes": 13379,
+      "sha256": "b9bf1a268c2c0159b864bb8e0c197184ad4539d99bb55ce4e594e92f7379d75a"
+    },
+    {
+      "path": "asset_strings/Scene_00/Space_Quasar3.scn.json",
+      "bytes": 13355,
+      "sha256": "38be7473322b087294d5b8ceefb31b0c3301e4c0c3677d766ec17c2022a3cb41"
+    },
+    {
+      "path": "asset_strings/Scene_00/Space_Sagittarius.scn.json",
+      "bytes": 44996,
+      "sha256": "ae56b66f9549a77b048b33db721be110b88dd20d79c9edbdca179f76cc7fab21"
+    },
+    {
+      "path": "asset_strings/Scene_00/Space_Scorpio.scn.json",
+      "bytes": 46667,
+      "sha256": "1c9be73d7596401f29b8bd8decb3f40cf81dea90e9a98a6383ca8dd2761744bc"
+    },
+    {
+      "path": "asset_strings/Scene_00/Space_Solar.scn.json",
+      "bytes": 39711,
+      "sha256": "ee3d4380c6daec4e73d82ab86aca470146870684380b776418461b719377072b"
+    },
+    {
+      "path": "asset_strings/Scene_00/Space_Southern.scn.json",
+      "bytes": 42348,
+      "sha256": "531d64b6dc5db58690cf1dfd5d9dc61eb822a12d33fb29e133d73e5380412628"
+    },
+    {
+      "path": "asset_strings/Scene_00/Space_Taurus.scn.json",
+      "bytes": 45592,
+      "sha256": "c9f73863784b43e2631e2d28595b6bf27804e56f6ee6ff3faf6223b6cf6393a5"
+    },
+    {
+      "path": "asset_strings/Scene_00/Space_Tutorial.scn.json",
+      "bytes": 30133,
+      "sha256": "4602162d3c1debac88937d137011dd04c9b9d1583a18c8d39fe217e0caa61927"
+    },
+    {
+      "path": "asset_strings/Scene_00/Space_Virgo.scn.json",
+      "bytes": 39019,
+      "sha256": "fdf2b2253b09cce8c5b54e019ce94eb75966f2e686f22ab46c7bcc93c051d453"
+    },
+    {
+      "path": "asset_strings/Scene_00/UIWork.scn.json",
+      "bytes": 6640,
+      "sha256": "860d8de678e04e13b9ed3bbb218ba99a1181e577c508930a613dfbc4a3a71b62"
+    },
+    {
+      "path": "asset_strings/Scene_00/main_test.scn.json",
+      "bytes": 1486,
+      "sha256": "cb8a8af3e375d423b1c60276cc3dab50690b33e38afb3596953031dceca5edf3"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Attend.ui.json",
+      "bytes": 24587,
+      "sha256": "aeea2679f395472dc3aa435f3d8800c6b03fc5b31246f68e73848d9341fc7822"
+    },
+    {
+      "path": "asset_strings/UISpr_00/BlinkPopup.uia.json",
+      "bytes": 435,
+      "sha256": "89dc57f8b3724c3ebb2a0ff7275ee81e8f5725270eee5035a937406569d46687"
+    },
+    {
+      "path": "asset_strings/UISpr_00/BlinkPopup2.uia.json",
+      "bytes": 511,
+      "sha256": "c2fd287c42bb79b25ee839041d95be063b44bfe90d406fceba9bdbbb3b93f407"
+    },
+    {
+      "path": "asset_strings/UISpr_00/ButtonAni.uia.json",
+      "bytes": 297,
+      "sha256": "e6c97dad87e545f713f224b4b5251984e74debca50d403b45b05344beaed8e98"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Chat.ui.json",
+      "bytes": 25466,
+      "sha256": "f6308ee8e03d213028eb424de3e3be307c29ab262d5969081806cc22bff3d1fa"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Deck.ui.json",
+      "bytes": 61460,
+      "sha256": "3a2ac42771236486b715c20526552a3f89ade879c820c2be29d4ec89df83cd2c"
+    },
+    {
+      "path": "asset_strings/UISpr_00/EXP.ui.json",
+      "bytes": 13537,
+      "sha256": "6b73599eebdc4ed7229dd87866e1b59bcbe3d3beb95a36343bae2a6557ad1bef"
+    },
+    {
+      "path": "asset_strings/UISpr_00/EXP2.ui.json",
+      "bytes": 17855,
+      "sha256": "0b4283b6dfcfe6d2d70c0bd8063dcf88bc10e7b68edd1470ad881bec7bf816e3"
+    },
+    {
+      "path": "asset_strings/UISpr_00/ExpScale.uia.json",
+      "bytes": 343,
+      "sha256": "4b9cd4b388c17f0eb215621bf8997f9d129a4e9705e15d121964c7123138a784"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Faces.spr.json",
+      "bytes": 12243,
+      "sha256": "0f320cfadde946446ae99439881f3b517ebfc08730ecebdcc7936c01619ea713"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Form.ui.json",
+      "bytes": 17902,
+      "sha256": "a3200fb122f730cc93c874af6844b1d85ca7df46b10792db2984f8e8d4d75710"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Form_Select.uia.json",
+      "bytes": 297,
+      "sha256": "e6c97dad87e545f713f224b4b5251984e74debca50d403b45b05344beaed8e98"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Form_SelectOff.uia.json",
+      "bytes": 159,
+      "sha256": "8bb10f0fa00a7882a6917137f9f1b47cf8fdc1fd167382ba5052b0d213a3c7d1"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Gacha.spr.json",
+      "bytes": 834,
+      "sha256": "4a0087ae0f99552c9552347ddb44bc70e8aa8154d36be5bc9f193d1fe20f2c82"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Gacha.ui.json",
+      "bytes": 10812,
+      "sha256": "6f40aa478662a29f6f22e1fb78ec6ac48c9b62e20f813d7c65a1d53499c060c0"
+    },
+    {
+      "path": "asset_strings/UISpr_00/GachaItem.ui.json",
+      "bytes": 24918,
+      "sha256": "84b3dca04eb9d8a82fa5d53e006aa0230cf954ffad464e7bd398ab41dad152b0"
+    },
+    {
+      "path": "asset_strings/UISpr_00/GirlBook.ui.json",
+      "bytes": 40847,
+      "sha256": "f978f14427e9d265cb3c6b048661171d9c7f2650afc02825c2581f8fb3c3d098"
+    },
+    {
+      "path": "asset_strings/UISpr_00/GirlInfo.ui.json",
+      "bytes": 112555,
+      "sha256": "f5f13f3c1be5935b29ad48b50cad86bdf6f73eff1ff0f3f7d0a92d0e57314c1f"
+    },
+    {
+      "path": "asset_strings/UISpr_00/GirlRate.ui.json",
+      "bytes": 13352,
+      "sha256": "cf8fe80cbd70c7a247b8d8386ce456a417731e1dff82f763c3d5eb1af2c6f23d"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Girls.ui.json",
+      "bytes": 210518,
+      "sha256": "fba147408e6c5228ca78135f9e37b21e65e5eb5a0d3ffc9d10c127d028164a6b"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Inform.ui.json",
+      "bytes": 16961,
+      "sha256": "7ec13a523113e547306dba467068aec12e754a3eadc9df92d3d3ef4f4b300eeb"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Inven.ui.json",
+      "bytes": 39608,
+      "sha256": "7d9aa691d874e98ea56a2ccd2c92bc52568b93c9bf8b058155eb26095e897415"
+    },
+    {
+      "path": "asset_strings/UISpr_00/ItemPreset.ui.json",
+      "bytes": 19036,
+      "sha256": "36eda9b577249199fd07b4c0a706ecc272dc23bcdff6f2770551acbcf2d9f792"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Items.spr.json",
+      "bytes": 2422,
+      "sha256": "2b41d0cd7ad2f113032af9916dab840bd758788740c03e56e04f8a75de9a6d19"
+    },
+    {
+      "path": "asset_strings/UISpr_00/LeftAppear.uia.json",
+      "bytes": 317,
+      "sha256": "e183d573655041a9d1ae5a7b569822ea739ac6b23bbfed378d44555a5691cede"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Loading.ui.json",
+      "bytes": 12118,
+      "sha256": "17b14945b0beceb8456b2e60cb50e7919d25ed927143992ad523aafd2f108121"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Mail.ui.json",
+      "bytes": 26638,
+      "sha256": "cf54ebd66002b53cb1a76d0c8e281f8cdb89ab5dc98b3a91591117095aec35c2"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Main.spr.json",
+      "bytes": 40709,
+      "sha256": "0af986e26cb39501e131d95a37ecf56331d98c6b4e254f84b909f92c622407b3"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Main2.spr.json",
+      "bytes": 12677,
+      "sha256": "230fb427b786570134e30364ea5aa9759337c2cafb683c50ab75bdad3b4531bf"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Main9.spr.json",
+      "bytes": 419,
+      "sha256": "dd44798fba2ea1a84bbd6af03f3e45c680c284b4857acbec4bf5f553c38b40e2"
+    },
+    {
+      "path": "asset_strings/UISpr_00/MainBattle.ui.json",
+      "bytes": 148302,
+      "sha256": "bad5bd97e205f761f0f509b4fda7b92ea58e1a76f443d6ced66dfbf70a523d7f"
+    },
+    {
+      "path": "asset_strings/UISpr_00/MainLobby.ui.json",
+      "bytes": 31270,
+      "sha256": "c14853e8724031b5b8e807e6bb81e6e112c5858edc95ef91a4ceb90d1fde8751"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Main_Earth.uia.json",
+      "bytes": 544,
+      "sha256": "78043060893169efa61c478ba7e0fee3b58e59943df75d3160d509130098d983"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Map.ui.json",
+      "bytes": 19613,
+      "sha256": "f2fc5bdc40051297ab2c3a9cf724f119bdca839726352002ad1fffe2269e54cc"
+    },
+    {
+      "path": "asset_strings/UISpr_00/MapAuto.ui.json",
+      "bytes": 14810,
+      "sha256": "698f11b93d510ec01ac13481859f0209aab558c2187c732d79b9fe3ced543b4c"
+    },
+    {
+      "path": "asset_strings/UISpr_00/MgrBalloon.uia.json",
+      "bytes": 343,
+      "sha256": "4b9cd4b388c17f0eb215621bf8997f9d129a4e9705e15d121964c7123138a784"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Mission.ui.json",
+      "bytes": 10433,
+      "sha256": "70fb99bf1951f9cc8a083b62a303527aa902da62bc54a22874e50b32cdf36dcb"
+    },
+    {
+      "path": "asset_strings/UISpr_00/MsgBox.ui.json",
+      "bytes": 9958,
+      "sha256": "716ad066afa30984210eaacf965707e0a2bb52698ead3e2bbe05c6031e9e42b6"
+    },
+    {
+      "path": "asset_strings/UISpr_00/MsgBox3Star.ui.json",
+      "bytes": 7598,
+      "sha256": "c2da379bf95e3c6912bc19396e9a4f12d117cf25e0da06c0778c190a50b77f36"
+    },
+    {
+      "path": "asset_strings/UISpr_00/MsgBoxBan.ui.json",
+      "bytes": 9808,
+      "sha256": "944eeeca66f3cce769fb19c0d5b3bde76582dd72abb2836c84f8ba1052cb1e6f"
+    },
+    {
+      "path": "asset_strings/UISpr_00/MsgBoxCoord.ui.json",
+      "bytes": 55279,
+      "sha256": "2df0a034ffdfb4d4966d1bc2272f1413abc9ee45a90ad0f09052eaaeeea50c4f"
+    },
+    {
+      "path": "asset_strings/UISpr_00/MsgBoxHonor.ui.json",
+      "bytes": 10281,
+      "sha256": "8563cf8376607a873ad7c18d5be95315ab1b90164ca2956d7e9a17d2f0a9b220"
+    },
+    {
+      "path": "asset_strings/UISpr_00/MsgBoxItem.ui.json",
+      "bytes": 34095,
+      "sha256": "b6adf22c98e178cabf400d0aacffa6e86cacc05de8a7a2f6934654e103e3c39e"
+    },
+    {
+      "path": "asset_strings/UISpr_00/MsgBoxRate.ui.json",
+      "bytes": 8856,
+      "sha256": "a9d2611e5d12f8c9ca112a6176a2e751090233177e1c8f0633c31a6148032a37"
+    },
+    {
+      "path": "asset_strings/UISpr_00/MsgBoxRetry.ui.json",
+      "bytes": 5500,
+      "sha256": "d7bd6db1dbdcb3866374af2d0fd2276225b37c6801d724ca6853403f493ec49f"
+    },
+    {
+      "path": "asset_strings/UISpr_00/MsgBoxReward.ui.json",
+      "bytes": 5331,
+      "sha256": "e03308216dcd9b29ba7006589bfd96b6d8386fef87b533725c764ccf01eab82e"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Number.spr.json",
+      "bytes": 3153,
+      "sha256": "6d2eea4135abf97c06772e62c9ae3436693f650e7e3802e8f330a1caf7a8b62e"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Planet.ui.json",
+      "bytes": 73138,
+      "sha256": "ffcb7050a02f3c892cda903d8f29353e235d3edf1ef33206007796ad219f9ebd"
+    },
+    {
+      "path": "asset_strings/UISpr_00/PopupAlpha.uia.json",
+      "bytes": 251,
+      "sha256": "9a0d6232345a19ecfccda66ab31363eb41f79f2900527abd351d2021417eb6a8"
+    },
+    {
+      "path": "asset_strings/UISpr_00/PopupAlphaJust.uia.json",
+      "bytes": 297,
+      "sha256": "fed88c1463aff78a843b4654d62203c085103a7957af55277ce52404ed195c22"
+    },
+    {
+      "path": "asset_strings/UISpr_00/PopupMVP.uia.json",
+      "bytes": 353,
+      "sha256": "e8a848bd2dc674b35ee82869da79d80c9b62d53d67a4f26545737a16bd689339"
+    },
+    {
+      "path": "asset_strings/UISpr_00/PopupScale.uia.json",
+      "bytes": 343,
+      "sha256": "4b9cd4b388c17f0eb215621bf8997f9d129a4e9705e15d121964c7123138a784"
+    },
+    {
+      "path": "asset_strings/UISpr_00/PopupScaleOut.uia.json",
+      "bytes": 343,
+      "sha256": "4b9cd4b388c17f0eb215621bf8997f9d129a4e9705e15d121964c7123138a784"
+    },
+    {
+      "path": "asset_strings/UISpr_00/PopupScaleXAlpha.uia.json",
+      "bytes": 389,
+      "sha256": "8c1228859e1d25963087ae6f6e1fc352fad7a9f7033ad40fd62ff7f67cbaa2ac"
+    },
+    {
+      "path": "asset_strings/UISpr_00/PopupScaleXY.uia.json",
+      "bytes": 251,
+      "sha256": "db52fd148ec407f12dabbe289f21965b94528b4b14f6fd92a6fa9ff5c6ca856b"
+    },
+    {
+      "path": "asset_strings/UISpr_00/PopupScaleXY2.uia.json",
+      "bytes": 251,
+      "sha256": "db52fd148ec407f12dabbe289f21965b94528b4b14f6fd92a6fa9ff5c6ca856b"
+    },
+    {
+      "path": "asset_strings/UISpr_00/PopupScaleYSmall.uia.json",
+      "bytes": 343,
+      "sha256": "4b9cd4b388c17f0eb215621bf8997f9d129a4e9705e15d121964c7123138a784"
+    },
+    {
+      "path": "asset_strings/UISpr_00/PvP.ui.json",
+      "bytes": 165359,
+      "sha256": "caae8d007f86c631bb22e224c158d12105d2ea8396158b3860668002da4af792"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Quasar.ui.json",
+      "bytes": 11154,
+      "sha256": "7b4d4307e7e84397f9e95d8932ea3e12d578196780db6c5f3b3c9c8635aeb1df"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Quest.ui.json",
+      "bytes": 55269,
+      "sha256": "cdcfbc1591e11c7c01f8243b571ecf6f0021f286ccedd5dd64b78da21d4bcf67"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Rank.ui.json",
+      "bytes": 91204,
+      "sha256": "5dd70c552d5e6a5b114b47a5f7ede3d262a0103a5697b40660b6e8db5a770cdb"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Result.ui.json",
+      "bytes": 12807,
+      "sha256": "309ccaee37ff3c92a1cad6ed6bf8035b12e2eb8c1df7ee678d728990ac2ba615"
+    },
+    {
+      "path": "asset_strings/UISpr_00/RewardBox.ui.json",
+      "bytes": 15273,
+      "sha256": "5487341e817b44583fdd178e9260f5afa225ee75753194fdc9db8a96417c3f5a"
+    },
+    {
+      "path": "asset_strings/UISpr_00/RightAppear.uia.json",
+      "bytes": 317,
+      "sha256": "e183d573655041a9d1ae5a7b569822ea739ac6b23bbfed378d44555a5691cede"
+    },
+    {
+      "path": "asset_strings/UISpr_00/RotLoop.uia.json",
+      "bytes": 225,
+      "sha256": "548f1abf8acf9b618f07ea7bd7aa10150989f4786ab61c9b117866332d8e91f6"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Roulette.spr.json",
+      "bytes": 473,
+      "sha256": "d098bd13fc362259b3f14d6f295ae93ebb65f0c9cc839c2c628b5ebeac5f7bbc"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Roulette.ui.json",
+      "bytes": 45270,
+      "sha256": "47bc25d1d50bbd1ea57125ad4e928ea8eaf9acd4dfa8a23bac7bbd2d5faae7c3"
+    },
+    {
+      "path": "asset_strings/UISpr_00/SeasonEnd.ui.json",
+      "bytes": 12168,
+      "sha256": "4c2b4bcf09c1a14bd9f4d3688c2e36f1721080e29efa1793364381c6b3c453e5"
+    },
+    {
+      "path": "asset_strings/UISpr_00/SetLanguage.ui.json",
+      "bytes": 6374,
+      "sha256": "9620b44d2a106cc915e5c265f2c1820c007c2efcacd0e9da94849b81afbf84af"
+    },
+    {
+      "path": "asset_strings/UISpr_00/SetName.ui.json",
+      "bytes": 6655,
+      "sha256": "c8e5332f18a2c6f8172bea42bc009633c663e208fc43db69dad8bf159f9ba83c"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Settings.ui.json",
+      "bytes": 47473,
+      "sha256": "9a2512df54d726ce748623d7d4c2fd942986f3fa93936ab9c8f12473f0ccdd6a"
+    },
+    {
+      "path": "asset_strings/UISpr_00/ShowRot.uia.json",
+      "bytes": 416,
+      "sha256": "4d49e42662f004f2dc769bac25a1e37a022dcea999ea5baeba27cde8550518e5"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Squad.ui.json",
+      "bytes": 120828,
+      "sha256": "dea95e58447b22425b1c2eacae25362b41e5840f01ddc242b89cc27f5dfacda6"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Store.ui.json",
+      "bytes": 103386,
+      "sha256": "efcb4d964910bfee3badd94e56db1278a20fb0c1d3e6c4e97dd64ec0c341c504"
+    },
+    {
+      "path": "asset_strings/UISpr_00/TopAppear.uia.json",
+      "bytes": 317,
+      "sha256": "e183d573655041a9d1ae5a7b569822ea739ac6b23bbfed378d44555a5691cede"
+    },
+    {
+      "path": "asset_strings/UISpr_00/TopLobby.ui.json",
+      "bytes": 12835,
+      "sha256": "ffb8c658ed44eb26b03544300dbf0de52d8ff98d31d3becc8f2a764e00dc31bf"
+    },
+    {
+      "path": "asset_strings/UISpr_00/Train.ui.json",
+      "bytes": 72029,
+      "sha256": "b33373dac9fab51863f7ecc34aeeb0604a9057acf0405e4bb8e171f8ac417e60"
+    },
+    {
+      "path": "asset_strings/UISpr_00/UnderAppear.uia.json",
+      "bytes": 317,
+      "sha256": "e183d573655041a9d1ae5a7b569822ea739ac6b23bbfed378d44555a5691cede"
+    },
+    {
+      "path": "asset_strings/UISpr_00/UserInfo.ui.json",
+      "bytes": 33982,
+      "sha256": "e5729347fac958e4c014fe8c422e9081de50cf056008e37a89d5774f7c2bb603"
+    },
+    {
+      "path": "asset_strings/UISpr_00/WaitingResp.ui.json",
+      "bytes": 1282,
+      "sha256": "e82bcba4ff915aee7a7093744012656c55126221f40cd1bf7b3eca98f163d1bd"
+    },
+    {
+      "path": "derived/characters.json",
+      "bytes": 513588,
+      "sha256": "a937cec27e77d947581330955b16fb7118ae8fae9813fcf52a53f3c715e26f00"
+    },
+    {
+      "path": "derived/gacha_recipes.json",
+      "bytes": 95750,
+      "sha256": "af3c941b2a20a0178e85e62062246fdf29b251fddd24c4c18b35832a7d0bdf94"
+    },
+    {
+      "path": "derived/skills.json",
+      "bytes": 1319073,
+      "sha256": "4c067845aef6c3a387b7a320fe63e12b52095b6d906abfe52006e5c188c84926"
+    },
+    {
+      "path": "derived/stages.json",
+      "bytes": 360988,
+      "sha256": "1a16f10b2218859d5385dbe0dbdf70cadccb0f3c4121cceddce510e44997c0d0"
+    },
+    {
+      "path": "index/android_facts.json",
+      "bytes": 2726,
+      "sha256": "a27b6091d3d523083e06f6b201d529c8244b2a1e51c76dc364d670cee131cb21"
+    },
+    {
+      "path": "index/apk_manifest.json",
+      "bytes": 174025,
+      "sha256": "70843019ae4c338f8994c2fba71dff2e22dddf629f4dc29002a8eec4f6e87704"
+    },
+    {
+      "path": "index/asset_inventory.json",
+      "bytes": 219226,
+      "sha256": "817d27d819cf17e5d1b8a9466e6df4631519721c6c6f9b0b0918eea0ebe1baa2"
+    },
+    {
+      "path": "index/bxml_schema.json",
+      "bytes": 5342,
+      "sha256": "eb6756aa7caf9efdbdcdb59b8a88dd00871040aa4c03d21bc7a1780d8f092323"
+    },
+    {
+      "path": "index/combat_evidence.json",
+      "bytes": 4351,
+      "sha256": "fb19f8d90f23eec6dc6a797cc31de72d55c14244163c742901d514899b4b0a45"
+    },
+    {
+      "path": "index/combat_formula.asm",
+      "bytes": 14653,
+      "sha256": "e41064215470659b50b67b0a98e402faecc9e403a0a933bd1d1863c0edbab9ac"
+    },
+    {
+      "path": "index/combat_semantics.json",
+      "bytes": 31216,
+      "sha256": "b718587c88fb42e49e65af1bbb3fff38996c4b1745eb0bfa56ca54ebda9ccedc"
+    },
+    {
+      "path": "index/dependency_evidence.json",
+      "bytes": 10040,
+      "sha256": "607a5743ff27e49a32c9a318cccd4d3cccaf0c971012ca28afe58c7e16e0977c"
+    },
+    {
+      "path": "index/event_evidence.json",
+      "bytes": 31136,
+      "sha256": "8157d115abbeb200c9405afb865cf9127919f7d59cb7fe57e53d4a11044eee10"
+    },
+    {
+      "path": "index/event_semantics.json",
+      "bytes": 162744,
+      "sha256": "354fcb04bb2da94d26552ece92237c408e0e45c894702a1eb82e8be20efc336e"
+    },
+    {
+      "path": "index/mechanics_evidence.json",
+      "bytes": 2747,
+      "sha256": "d5db35aba585b924b8d199aab421bfae8cc0e083ba74ba9a360e7d227c9e8aac"
+    },
+    {
+      "path": "index/mechanics_semantics.json",
+      "bytes": 19732,
+      "sha256": "d51ade17250f92f9fe41f0066ed0d7c3ec27dff85a344dc15fd77d4177fde561"
+    },
+    {
+      "path": "index/package_entries.json",
+      "bytes": 227158,
+      "sha256": "530fcba1747f846133b8def7109360843bc3f0d1d0eb0d1654e7e8a681370373"
+    },
+    {
+      "path": "index/pkg_open.asm",
+      "bytes": 21150,
+      "sha256": "55be4a5ac01ca7e21ef3670a4e6a081881b9f46856e6dc9aa08953e52010cba8"
+    },
+    {
+      "path": "index/resource_references.json",
+      "bytes": 1010513,
+      "sha256": "3203907bc30d45b39de70b2ded87264fb824be60908ff3310f2daa0d88711774"
+    },
+    {
+      "path": "index/source_table_checks.json",
+      "bytes": 24904,
+      "sha256": "de86afeb363518d1582c827d356481a848c229d81ed6b48d28c90418eede67be"
+    },
+    {
+      "path": "index/table_catalog.json",
+      "bytes": 20636,
+      "sha256": "43c249da419414f548470cd9c8f07d8c9c7a745c31eb263c265d913e7627e622"
+    },
+    {
+      "path": "index/table_schema.json",
+      "bytes": 445436,
+      "sha256": "671c0405853d409b9c8e6230b01559d1fc2a4d1955800800407c854d1a30a711"
+    },
+    {
+      "path": "index/verification.json",
+      "bytes": 432,
+      "sha256": "cd7c6c255e857d11546b194861f655c5508c3d874d4fe3464568f375a8edde36"
+    },
+    {
+      "path": "rea-evidence/OVERVIEW.md",
+      "bytes": 1762,
+      "sha256": "751cc8afe094e457ae29f3366de2572dba7f4785c47e9b2884b0a9383235caf4"
+    },
+    {
+      "path": "rea-evidence/apk-artifact-occurrences.tsv",
+      "bytes": 314531,
+      "sha256": "80c1e57bf3911ad9b0274ce8e00d5d4de5261cb6f345eadb9622b2206e8d64ac"
+    },
+    {
+      "path": "rea-evidence/apk-artifact.json",
+      "bytes": 1991040,
+      "sha256": "a9ffd0f510950b551ad8e03bb8c88f228b32bb70c485da634f0d6521988d55b3"
+    },
+    {
+      "path": "rea-evidence/arm64-file-headers-elevated.json",
+      "bytes": 2881,
+      "sha256": "66f10667933261f908aa56d17fb7843f5a36ae6ed7bf2d08f80afdc56ac59881"
+    },
+    {
+      "path": "rea-evidence/arm64-section_headers.json",
+      "bytes": 5584,
+      "sha256": "c835ea16ba2a77a6ca69e15b04883dd3594331f6dda27952e7121ab2e9677e24"
+    },
+    {
+      "path": "rea-evidence/arm64-symbols.json",
+      "bytes": 2794,
+      "sha256": "e084a4a7208be6039e20ecbca5a7752ea9d3cde582a5b46e685c0997ed94ccc7"
+    },
+    {
+      "path": "rea-evidence/llvm-arm64-dynamic-symbols.txt",
+      "bytes": 370737,
+      "sha256": "7766e804dc46fc60bca589c0c095639ee0ce58611979e725845319e27baba88b"
+    },
+    {
+      "path": "rea-evidence/public-copy-index.json",
+      "bytes": 1438,
+      "sha256": "fce7a49e545a3606b2b8e4b6edfc4fe25cc55a73ba5e0cab35435206ef524006"
+    },
+    {
+      "path": "reports/character_catalog.md",
+      "bytes": 20808,
+      "sha256": "a1aa1aac98bc7007188abe3425d998477a7457565fc3e486bb0b5aa20e15ecac"
+    },
+    {
+      "path": "reports/combat_native.md",
+      "bytes": 5116,
+      "sha256": "63f4319e7b8f66fdb29869a7f4d0fe63bac6abce484a5cad55ddff18c112ce43"
+    },
+    {
+      "path": "reports/dependencies.md",
+      "bytes": 2081,
+      "sha256": "40c5e3c1d8167d46f441955f600ffadf60615e187349e6ae3158829bf1724888"
+    },
+    {
+      "path": "reports/events_native.md",
+      "bytes": 8991,
+      "sha256": "dc61dc5589d5922185aa024636a9c23121f503bd0cefe1e9e1531d8da6d9af81"
+    },
+    {
+      "path": "reports/gacha_catalog.md",
+      "bytes": 21768,
+      "sha256": "8db017b76d11fd0947a762b84212ee6087998546fce17a62e386d50b74462086"
+    },
+    {
+      "path": "reports/mechanics_native.md",
+      "bytes": 9907,
+      "sha256": "c5221223217865de687fe02c1ca6ecbe998b6afaacfcac14747dc6349e66156a"
+    },
+    {
+      "path": "reports/reconstruction_spec.md",
+      "bytes": 5893,
+      "sha256": "8da4bacc7923f4284f8c08d966f68a46c50306188e80a4098f705f773f4626b2"
+    },
+    {
+      "path": "reports/resource_format.md",
+      "bytes": 7042,
+      "sha256": "43280d15064a0ce67bc8397baa04fdb90c2dbead341fa2602a49dde5b41e5b78"
+    },
+    {
+      "path": "reports/skill_catalog.md",
+      "bytes": 51838,
+      "sha256": "c2e43a701f00ce37b06dd586fb21ba3177b0af8d00ed881f1094f863ab44cd94"
+    },
+    {
+      "path": "reports/stage_catalog.md",
+      "bytes": 64470,
+      "sha256": "19242c015e6e589f75b5d498360cffa2abd5feb87113653bb1e4268e83238033"
+    },
+    {
+      "path": "reports/stages.md",
+      "bytes": 4465,
+      "sha256": "6c8b0cd3fd46d150a0da6b338cc2af9d37e89a514acb046eee1de5671ce53586"
+    },
+    {
+      "path": "reports/stages_native_evidence.txt",
+      "bytes": 12241,
+      "sha256": "a838fdbdec87d60d2c79122de4b59419895aaa13b94c3e0689c4f08b0b2e0b83"
+    },
+    {
+      "path": "reports/table_catalog.md",
+      "bytes": 4499,
+      "sha256": "4b08c766e7c14632083d1f802dbf8cc90df413bab6bb0decb47f1e37ed597836"
+    },
+    {
+      "path": "scenes/Actor_00/Absorb01.act.json",
+      "bytes": 10544,
+      "sha256": "0a21b86ee0f162aa0eca309d4b7cc7145c17e58653d811c037e677816256eeaf"
+    },
+    {
+      "path": "scenes/Actor_00/Absorb02.act.json",
+      "bytes": 10528,
+      "sha256": "0b073e94af58d95decf1e081ad3ad1c236d279dfe85196502302777e1ed4ddc4"
+    },
+    {
+      "path": "scenes/Actor_00/AbsorbEnergy01.act.json",
+      "bytes": 25893,
+      "sha256": "15e2988721cff5eb6aa6dd5d8d7ede28cb6279c8fe3c40f246870141b1942d21"
+    },
+    {
+      "path": "scenes/Actor_00/AbsorbEnergy02.act.json",
+      "bytes": 25919,
+      "sha256": "381e6a83953e00395925be8cd50d965b761242895ef1bad4367e5b1f0028ce3e"
+    },
+    {
+      "path": "scenes/Actor_00/AllTail01.act.json",
+      "bytes": 12086,
+      "sha256": "875977cc2379d9438436da9d1946e32c3cc408e6d45102d4869e941fee1ab729"
+    },
+    {
+      "path": "scenes/Actor_00/AncientAura01.act.json",
+      "bytes": 38303,
+      "sha256": "f680e93583e90a7e4c2d57a34507a1247dc9a92e1a789904a33d09f1fc764496"
+    },
+    {
+      "path": "scenes/Actor_00/AtkCri01.act.json",
+      "bytes": 25898,
+      "sha256": "9968f1a970b220b48979285b51f8305cfcd97edf595bd3f02c0ee6ce434acb5c"
+    },
+    {
+      "path": "scenes/Actor_00/Bg_Ray.act.json",
+      "bytes": 13615,
+      "sha256": "1b4abf324f7fcacabcbba036c4c663178c53a14513b32b8cb87f6ae16c9aa97c"
+    },
+    {
+      "path": "scenes/Actor_00/Booster1.act.json",
+      "bytes": 50535,
+      "sha256": "bbaa07f34c172dec9edad8761106da63805012b3f0f668ba43944a73e8c5b13c"
+    },
+    {
+      "path": "scenes/Actor_00/BoosterC.act.json",
+      "bytes": 13610,
+      "sha256": "45aaebb47cd0150bb56eab51fb4ebc9e8c99da08b3bc70928c760271d0247abb"
+    },
+    {
+      "path": "scenes/Actor_00/BossAura01.act.json",
+      "bytes": 11923,
+      "sha256": "6a0ff97fe5ba4764091d3d1f10755e699a6efeb0d3e7dfb1382df2adb25cb9c5"
+    },
+    {
+      "path": "scenes/Actor_00/BossAura02.act.json",
+      "bytes": 13516,
+      "sha256": "b57ca92d2f41926a035c8d36b1ec7508eaf5503a7129531be2bf17b8ee882ec2"
+    },
+    {
+      "path": "scenes/Actor_00/BossAura03.act.json",
+      "bytes": 11877,
+      "sha256": "84a80dcc2dd10cfa83005a0b3b8888e48dfe7d98fb53b2944d1eb5954ca3d37b"
+    },
+    {
+      "path": "scenes/Actor_00/BossAura04.act.json",
+      "bytes": 25638,
+      "sha256": "b109115474cfd79dfa35d213682b711dd893b2a5ddfe0d589c11cd940ced4685"
+    },
+    {
+      "path": "scenes/Actor_00/BossAura05.act.json",
+      "bytes": 33838,
+      "sha256": "7b596068c45b0894efff49d5c09cc392fd1d180cb0b36b8adf92ec3b168ba271"
+    },
+    {
+      "path": "scenes/Actor_00/BossAura06.act.json",
+      "bytes": 13460,
+      "sha256": "c25a610a38398f7764bf6ed2b47f9506c1b366d7ddf75a36a116281693a23298"
+    },
+    {
+      "path": "scenes/Actor_00/BossAura07.act.json",
+      "bytes": 23292,
+      "sha256": "7382741cebf72f7687fb0ef1aaa99d1423e62da1b8cb699a50e4ed7e4a07258e"
+    },
+    {
+      "path": "scenes/Actor_00/BossAura08.act.json",
+      "bytes": 13474,
+      "sha256": "f410b52a3aa25123bb5a1a2fe70b8b6c615d49b6973b2729c68329cf8b392bbe"
+    },
+    {
+      "path": "scenes/Actor_00/BossAura98.act.json",
+      "bytes": 13440,
+      "sha256": "212f9651b80f1ef3869169af1b76d2f544bb009c92592b888f8fa8709a17dab2"
+    },
+    {
+      "path": "scenes/Actor_00/BossAura99.act.json",
+      "bytes": 13483,
+      "sha256": "b5a20c5004c050b93542138cbde147649eefdb1642d3685af249ee54370b784e"
+    },
+    {
+      "path": "scenes/Actor_00/BossAura99Loop.act.json",
+      "bytes": 13679,
+      "sha256": "73bb01b7869fe5db2d2da8711a23de90bfd69d715a1f1586d9000aa9b9c0daca"
+    },
+    {
+      "path": "scenes/Actor_00/BuildClearUI1.act.json",
+      "bytes": 77069,
+      "sha256": "ac954131690ffc42336e77c4723ee29180eab5f88cbd2921a1e9416d9b13ee25"
+    },
+    {
+      "path": "scenes/Actor_00/BuildStart01.act.json",
+      "bytes": 26334,
+      "sha256": "7e32aa02f79be86149cc89488f9c3ebf14f0faddefcba2279e698f6de358b4b5"
+    },
+    {
+      "path": "scenes/Actor_00/BuildingBreak1.act.json",
+      "bytes": 64007,
+      "sha256": "de81018ace08fd1cbe0b7e582fd235a17a2eeeebe044cfcf745d3efa066cada7"
+    },
+    {
+      "path": "scenes/Actor_00/Charge01.act.json",
+      "bytes": 25831,
+      "sha256": "907d2efc94500a81a84508a25fda15bf4d366f6c00c99f19ec70d68614a9c222"
+    },
+    {
+      "path": "scenes/Actor_00/Charge02.act.json",
+      "bytes": 26183,
+      "sha256": "7a38d8c8f1a735e117d854c7df29a303c306c94c49ad52d3970b380970214609"
+    },
+    {
+      "path": "scenes/Actor_00/CircleRange01.act.json",
+      "bytes": 13473,
+      "sha256": "5af155d383d4a8b9b8a5ecc25b971a733012941cc9a95f97a4b503275556a982"
+    },
+    {
+      "path": "scenes/Actor_00/CircleRange02.act.json",
+      "bytes": 13472,
+      "sha256": "65b2128928ef1e88cdfde79712cd42e12dc2fdb3d62a727776cc4c412e73c1fc"
+    },
+    {
+      "path": "scenes/Actor_00/CircleRange03.act.json",
+      "bytes": 13650,
+      "sha256": "9fdc8751f41a9ac097af3a8fc34f63f4a6385f8f1f5deefebdfc52ebe7bbbb5f"
+    },
+    {
+      "path": "scenes/Actor_00/CircleRange04.act.json",
+      "bytes": 26268,
+      "sha256": "e42bc46a30413569f2892330ddbe40b10819eee433145c3774e5003a4c27c33f"
+    },
+    {
+      "path": "scenes/Actor_00/CosUpgarde.act.json",
+      "bytes": 51385,
+      "sha256": "f925654737b6e56564084e62a94c2dc3537f00748bb3c3e5530ce4f2213db871"
+    },
+    {
+      "path": "scenes/Actor_00/CrashHit1.act.json",
+      "bytes": 13461,
+      "sha256": "d0e992b34a58b45b943d449ff5cbd67fc1603f88e1d6687fed17d84359c7ebce"
+    },
+    {
+      "path": "scenes/Actor_00/CubeUp.act.json",
+      "bytes": 38369,
+      "sha256": "a4a14d568e91fa4b165c943fb3dbcdfc763ff5a0f49d2ebc9e99cf512f1c1d60"
+    },
+    {
+      "path": "scenes/Actor_00/CutFlash.act.json",
+      "bytes": 13413,
+      "sha256": "d7e6a8a25dbe2640a8a51802f66c7211028c940e1fa1cb35ade78980c6064931"
+    },
+    {
+      "path": "scenes/Actor_00/CutFull01.act.json",
+      "bytes": 25443,
+      "sha256": "7b3ce815de938ded4e195aa52939d825a2e67a62454d462ecd49e56031137bc2"
+    },
+    {
+      "path": "scenes/Actor_00/CutSwing01.act.json",
+      "bytes": 13270,
+      "sha256": "0123b8701931535f8002e3d780c392aa3302ad4c5693fd25e1f8806cd7c8bf6f"
+    },
+    {
+      "path": "scenes/Actor_00/CutSwing01L.act.json",
+      "bytes": 13275,
+      "sha256": "e39a64443e3f2b70ede837bfee008f43951688f5df2e3aa37c6b7c7a2718a741"
+    },
+    {
+      "path": "scenes/Actor_00/CutSwing02.act.json",
+      "bytes": 37778,
+      "sha256": "53cd007093ac9e569f9a510b4505626c31b07978a6ae7b95830cf223a86238fd"
+    },
+    {
+      "path": "scenes/Actor_00/CutSwingBig01.act.json",
+      "bytes": 13464,
+      "sha256": "7847ae7fea620517b6c9dddc7393e7c1f0a921d372cb1631bbe49c68d38ee3f9"
+    },
+    {
+      "path": "scenes/Actor_00/CutTarget01.act.json",
+      "bytes": 37722,
+      "sha256": "8b815076f2d1eb21ac9ee61052f898aa0b8ad8a37fbf2b571a3c671829990c14"
+    },
+    {
+      "path": "scenes/Actor_00/CutTarget02.act.json",
+      "bytes": 13474,
+      "sha256": "c63d9b911c567a6804147cb8d1eeb108ba0b262d2c914b1546d08a95320b4d13"
+    },
+    {
+      "path": "scenes/Actor_00/DayCube.act.json",
+      "bytes": 38335,
+      "sha256": "3700b9cc741d6853ddc2156d56d6d837f49f83a1c05b4794bcb2cd10881a3c29"
+    },
+    {
+      "path": "scenes/Actor_00/Death01.act.json",
+      "bytes": 23260,
+      "sha256": "def5e8995c24c7a1bc08cd21d4549f1440314d328de8779eb5cd9763d2836a03"
+    },
+    {
+      "path": "scenes/Actor_00/Death02.act.json",
+      "bytes": 12091,
+      "sha256": "7b90c2bb3dba50dbae36b861eea964b1ef8b49ce5a49c2c453b6c8c02a1b0d1e"
+    },
+    {
+      "path": "scenes/Actor_00/Discharge01.act.json",
+      "bytes": 13445,
+      "sha256": "bb3dbf8b25b5c9b4e8b218393a066c4c033feda6ab1e91baaba7559d2847c94b"
+    },
+    {
+      "path": "scenes/Actor_00/Downsize01.act.json",
+      "bytes": 13522,
+      "sha256": "787556b3d6f7eebae89fac5a3e5f6602ed845fe615f35b87c04fce3ac5e3a5ba"
+    },
+    {
+      "path": "scenes/Actor_00/DroneSpawn01.act.json",
+      "bytes": 10543,
+      "sha256": "d5d16966168fb49aeca63ea264565e26bade097da0b0343ba19bf544d912c241"
+    },
+    {
+      "path": "scenes/Actor_00/EmitEnergy01.act.json",
+      "bytes": 25885,
+      "sha256": "d48b8af9107d87517c96a351dd74828af70090f13e2cea38fa78f6df5b669883"
+    },
+    {
+      "path": "scenes/Actor_00/EnemyAura01.act.json",
+      "bytes": 25934,
+      "sha256": "1508d5e86fc584bc3c5f53e4abe07159e9dcfd758163efdab9bfda7a6b90be9e"
+    },
+    {
+      "path": "scenes/Actor_00/EnemyTail01.act.json",
+      "bytes": 11916,
+      "sha256": "fac0ef720d9352ffec1439d56110f12cdcfc3c17fa483181f2322fd1ebd076cc"
+    },
+    {
+      "path": "scenes/Actor_00/EnemyTail02.act.json",
+      "bytes": 11930,
+      "sha256": "7e3f0b62499dad0686b31546b36cf5b473b20b74c399e3fc5cd33af1517fd811"
+    },
+    {
+      "path": "scenes/Actor_00/EnemyTail03.act.json",
+      "bytes": 11961,
+      "sha256": "7d2c1350c2c2b35f194c250c8efc5855571d2089c45e14d6092800cd93db0007"
+    },
+    {
+      "path": "scenes/Actor_00/EnemyTail04.act.json",
+      "bytes": 23290,
+      "sha256": "9bb8f0c3df551de3ddc44de204cead7350503bb8360b9123a148867347d7ea71"
+    },
+    {
+      "path": "scenes/Actor_00/EnergyCharge.act.json",
+      "bytes": 25882,
+      "sha256": "f3311f7a6516539a66a1c2a6126880d8c6a46ac359b52af8b07e73828ef93d74"
+    },
+    {
+      "path": "scenes/Actor_00/EnergyChargeLoop.act.json",
+      "bytes": 25896,
+      "sha256": "5cc0d749b3a19a70b7672c7856f5f707330abccf541380c5bf5d8bec804ef9d8"
+    },
+    {
+      "path": "scenes/Actor_00/ExplodeE01.act.json",
+      "bytes": 26330,
+      "sha256": "f976a31c69040e91eb90b0cdcdae80771791b13db4f3a3b05a357f2b2a8b4c6f"
+    },
+    {
+      "path": "scenes/Actor_00/ExplodeEX01.act.json",
+      "bytes": 38347,
+      "sha256": "6a3d99b7b6d6c37e2637b6b6d578b0d2ecdd56be0b02f37f30782b10097cb98e"
+    },
+    {
+      "path": "scenes/Actor_00/ExplodeEX02.act.json",
+      "bytes": 38928,
+      "sha256": "cb2119250845a22957fc0896b228d0e4c40557cb9f4d0f1a8548a3a25aab2f9a"
+    },
+    {
+      "path": "scenes/Actor_00/ExplodeEX03.act.json",
+      "bytes": 26331,
+      "sha256": "bbe2a053d3b9f3ea82ff3d6ccec42d4e60b414978d6ad6ffe862eb5d4c9f3a78"
+    },
+    {
+      "path": "scenes/Actor_00/ExplodeEX04.act.json",
+      "bytes": 26261,
+      "sha256": "518985dd9371db9feabe2c88f79c806f306d4ab20628e2991fc07b7148736c3d"
+    },
+    {
+      "path": "scenes/Actor_00/Explore01.act.json",
+      "bytes": 13398,
+      "sha256": "1e7e2edf17c6f3c8cfa2ae300fb16d4640f682ad2f7f37fe7823daac5033bf6c"
+    },
+    {
+      "path": "scenes/Actor_00/Explore02.act.json",
+      "bytes": 13380,
+      "sha256": "f233b0a1cdb9a05409d9c5bc72b376f773c95ddd4609120111508185e0a992c6"
+    },
+    {
+      "path": "scenes/Actor_00/Explore03.act.json",
+      "bytes": 13399,
+      "sha256": "d53e52b2b602f15cd08f72d867e1661696ae9d54a8231f363e22b62861cc33f0"
+    },
+    {
+      "path": "scenes/Actor_00/Explosion01.act.json",
+      "bytes": 13059,
+      "sha256": "4b3eb2eca8ce178b50e8bb4e6ae23386514ebc6f7ec2c888ce512f854189d088"
+    },
+    {
+      "path": "scenes/Actor_00/Explosion02.act.json",
+      "bytes": 37695,
+      "sha256": "69d65a4150e24bfb9a88a4e3f5d94e049faa4ff653480b621ded23f2f76449c0"
+    },
+    {
+      "path": "scenes/Actor_00/Explosion03.act.json",
+      "bytes": 62858,
+      "sha256": "158d5ae987e4bb1e5be3df8dc685c5b2ccb584ca6d111a9de74bd7ae12083782"
+    },
+    {
+      "path": "scenes/Actor_00/Explosion04.act.json",
+      "bytes": 62969,
+      "sha256": "fc80efae23a6d3e95ee884e58821f5f0f6a0db41335e89d8bb7e9860a44fd602"
+    },
+    {
+      "path": "scenes/Actor_00/Explosion05.act.json",
+      "bytes": 50599,
+      "sha256": "3f509498e5b473193bde051a62d083728cf402d2c946c136a6163e739cd38889"
+    },
+    {
+      "path": "scenes/Actor_00/Explosion06.act.json",
+      "bytes": 51481,
+      "sha256": "4fab490a26e4d35464955ef70999debff5557867ecdf700c00bda8d3c3722b6f"
+    },
+    {
+      "path": "scenes/Actor_00/FXGift.act.json",
+      "bytes": 13345,
+      "sha256": "330b988be21d8f3ff46783cadfdaf87cd7cc49f8a29c5d20e897ef4dd0c30a6c"
+    },
+    {
+      "path": "scenes/Actor_00/FXTouch01.act.json",
+      "bytes": 13087,
+      "sha256": "784c5378b9328b73f8ea3781b0d0fbcfadac06b1fe208d68d7e12707a6eefffc"
+    },
+    {
+      "path": "scenes/Actor_00/Flash.act.json",
+      "bytes": 13526,
+      "sha256": "621a8fdf31c913da89e52de044142b8a8a881c480183ab799c65a417e2c2d8b5"
+    },
+    {
+      "path": "scenes/Actor_00/Flash02.act.json",
+      "bytes": 13530,
+      "sha256": "4d7d6b7a9237e746b2e9c4acc3f756bcf093a18f139069924f9fafc379a9a185"
+    },
+    {
+      "path": "scenes/Actor_00/Flash03.act.json",
+      "bytes": 13449,
+      "sha256": "0e4054e426706f4ab478bd0882d588b22319e7f05479a59aa60b9d187f7dbf65"
+    },
+    {
+      "path": "scenes/Actor_00/Flash04.act.json",
+      "bytes": 13461,
+      "sha256": "b9a330017f6e1a81025a127bd1f97d5f43cf728e5452f76cb26f91ecb9c5bdef"
+    },
+    {
+      "path": "scenes/Actor_00/Flash99.act.json",
+      "bytes": 13410,
+      "sha256": "1783158d7a28b42bd911efe495cf55f5440bcf3c3cba77bda1da56be0a9b1ff3"
+    },
+    {
+      "path": "scenes/Actor_00/FlashDestroy.act.json",
+      "bytes": 13450,
+      "sha256": "835feb0fb7ee7a6016c2d83823286f7b66dd6f38c2b662b64132b3a79b68e855"
+    },
+    {
+      "path": "scenes/Actor_00/FlashDestroy2.act.json",
+      "bytes": 13708,
+      "sha256": "2e387b92752d3479713eb01567855f538d8b67866d1dd88c9b0d1e95d8eafa82"
+    },
+    {
+      "path": "scenes/Actor_00/FlashFlare.act.json",
+      "bytes": 13216,
+      "sha256": "30aec05be1f93f4682c2d592c5d337ea99a3dddaf23ce830d3eadffe4bba7298"
+    },
+    {
+      "path": "scenes/Actor_00/FlashFlare02.act.json",
+      "bytes": 13420,
+      "sha256": "cc65e08cc88fa73ae2952839f82159ff900f7eb379948479525e5f22fb6c0dfc"
+    },
+    {
+      "path": "scenes/Actor_00/FlashFlare03.act.json",
+      "bytes": 13421,
+      "sha256": "ddb0b14eadd77d7328bbdbef768228b63729ae36530204f8f7154c892557c30b"
+    },
+    {
+      "path": "scenes/Actor_00/FlashFlare04.act.json",
+      "bytes": 13420,
+      "sha256": "ac0b982214758f99d12f6c529f68680bf598d132bd099bcfffb712910764dce6"
+    },
+    {
+      "path": "scenes/Actor_00/FlashFlare05.act.json",
+      "bytes": 13416,
+      "sha256": "398b4048e8e53b64cbefd12e0369eb183f141f62d97abd5dc83b1213ec428163"
+    },
+    {
+      "path": "scenes/Actor_00/FlashFlare06.act.json",
+      "bytes": 38086,
+      "sha256": "7e210c453f4f832cec98f76ee5a903284711fee4b9f9bf90fbc4507b60359634"
+    },
+    {
+      "path": "scenes/Actor_00/FlashFlare2.act.json",
+      "bytes": 13399,
+      "sha256": "9692c00636ad48aa915bfbc5dffe3b277aa30568a568af9e3e4aef34b985c13f"
+    },
+    {
+      "path": "scenes/Actor_00/FlashFlare98.act.json",
+      "bytes": 63136,
+      "sha256": "d9873a43c049dc5e6827f1814d14ba0dc54590ba6cca61c6f23a770bc3c41c7d"
+    },
+    {
+      "path": "scenes/Actor_00/FlashFlare99.act.json",
+      "bytes": 49909,
+      "sha256": "7ef0330b28ef6d61bc22bc06ef05bb2a5a62eeb91fcee9db0365b49cb9af11ce"
+    },
+    {
+      "path": "scenes/Actor_00/FlashFlareE.act.json",
+      "bytes": 13401,
+      "sha256": "66e1a501fd9106a3d23ad72d99d6add8f5301f2d0b0dbec2bc60ed314f3da0dd"
+    },
+    {
+      "path": "scenes/Actor_00/FlashTail.act.json",
+      "bytes": 12120,
+      "sha256": "8a863ce0f9ab3c759dd8aa16a538a7a17739c7d5e0f93c1064eb1a5af67bffd5"
+    },
+    {
+      "path": "scenes/Actor_00/FlashTail2.act.json",
+      "bytes": 11703,
+      "sha256": "ec5c6361130adac054be3795649386cd3fb9c4c73617d9eaa3a105c54b698647"
+    },
+    {
+      "path": "scenes/Actor_00/FlashTailLight.act.json",
+      "bytes": 11938,
+      "sha256": "6cc3cae55994c32e676bb1439e2bf284456727d85ee0f5e435b628f79902821b"
+    },
+    {
+      "path": "scenes/Actor_00/GetCostume.act.json",
+      "bytes": 50651,
+      "sha256": "72707de33b800a306390279bbcb923b8d4117d03a42c1d23f725cfb665e8464e"
+    },
+    {
+      "path": "scenes/Actor_00/Giantization1.act.json",
+      "bytes": 13640,
+      "sha256": "dc570c9fc918423379dea94ca127b1ba49c5d1bd0899606325d2908da42d90a0"
+    },
+    {
+      "path": "scenes/Actor_00/Giantization2.act.json",
+      "bytes": 13646,
+      "sha256": "a1505a1a3ba3b5d6aeb0d2e66e9b39116253168bfff7aab59461331ad757e5cc"
+    },
+    {
+      "path": "scenes/Actor_00/GirlRecovery01.act.json",
+      "bytes": 26373,
+      "sha256": "669f3bf2922c6354d4c29e7df499fba07aeb8fad524de2ce8e8abe2d33a2af58"
+    },
+    {
+      "path": "scenes/Actor_00/GirlRecovery02.act.json",
+      "bytes": 64331,
+      "sha256": "83cdf65b86ec3528c1c58f119d9ceb9b7dcc28a1516b1242cc910bb0af977a17"
+    },
+    {
+      "path": "scenes/Actor_00/GlowDecay.act.json",
+      "bytes": 13487,
+      "sha256": "7d00951fb74e29f8e25b2596874ffd4d0be0a7098d26ba09b83fb351d7b4428b"
+    },
+    {
+      "path": "scenes/Actor_00/GlowLight.act.json",
+      "bytes": 13461,
+      "sha256": "f67153627c0208613e2cc50e51842f29bea14b55aac3ee985070bf6327dbefea"
+    },
+    {
+      "path": "scenes/Actor_00/GlowStar.act.json",
+      "bytes": 12263,
+      "sha256": "1e4b7226eb5d4bc4f751797b39d52fcf211c0ec748dafd213e3a90ca2bf423e5"
+    },
+    {
+      "path": "scenes/Actor_00/GlowStar2.act.json",
+      "bytes": 13685,
+      "sha256": "7e9ca071b7905ab8a9189885d51c9b0870de22f9793d836564e15a3c861a6187"
+    },
+    {
+      "path": "scenes/Actor_00/Hit.act.json",
+      "bytes": 12063,
+      "sha256": "c0d8bf3c391d03c79109da6eb4eedf2929d163ff6e02fa9fb910bff34120a0c0"
+    },
+    {
+      "path": "scenes/Actor_00/HitSpark.act.json",
+      "bytes": 12163,
+      "sha256": "291ebb2099143c8e999b8b88ab2141dd9f96afc112eefc7d557f5b81c0e76ecd"
+    },
+    {
+      "path": "scenes/Actor_00/IceBreak01.act.json",
+      "bytes": 63244,
+      "sha256": "d5d0a2a410d2f2c3938fa54502832d9db9889749f1dc2e8545ecaaf34467ed21"
+    },
+    {
+      "path": "scenes/Actor_00/InfoStart.act.json",
+      "bytes": 25929,
+      "sha256": "87eeb8094d4a01020a2a2486a64529c2b5b9524e44e01a75b8b3682f48ac0d2c"
+    },
+    {
+      "path": "scenes/Actor_00/Invincibility01.act.json",
+      "bytes": 25963,
+      "sha256": "d943462d7469f7c8da6ac2ffb755b2d25709bd9abea19d951f1ac3b5543d8407"
+    },
+    {
+      "path": "scenes/Actor_00/Invisible01.act.json",
+      "bytes": 10522,
+      "sha256": "2131db71185a43535e23efca0a94cb16bf629ed518581a9854ffeec770cb2425"
+    },
+    {
+      "path": "scenes/Actor_00/InvisibleE1.act.json",
+      "bytes": 13519,
+      "sha256": "82b82b3f461b5a7ccf767276be2daefbf1956d9ebd480c8e3cbb4c72af2614a7"
+    },
+    {
+      "path": "scenes/Actor_00/ItemBreak.act.json",
+      "bytes": 50561,
+      "sha256": "f2f01a5149fb08143bde712f040c1927d8f63392e2284b735b95ffbfd831a76b"
+    },
+    {
+      "path": "scenes/Actor_00/ItemDrapB.act.json",
+      "bytes": 26296,
+      "sha256": "ca78ec0ac6ae0b0569e95b1c9987a0edb8eaba75b12ab29bf5311528ca92e562"
+    },
+    {
+      "path": "scenes/Actor_00/ItemDrapM.act.json",
+      "bytes": 38298,
+      "sha256": "76dc0978755caad678fe5d49aed4fb9f9551969f686c1a578ccd7afdef8261cf"
+    },
+    {
+      "path": "scenes/Actor_00/ItemDrapRareM.act.json",
+      "bytes": 25898,
+      "sha256": "18a8ce9276a997b07663d1d796af84cd1d4ea4a5daba074b1ecce9980d9420fe"
+    },
+    {
+      "path": "scenes/Actor_00/ItemDrapRareS.act.json",
+      "bytes": 25901,
+      "sha256": "a624e3a1de74e06907ac4d91d8b58883e44b1f50e713eff692fd7ca006fbb5ac"
+    },
+    {
+      "path": "scenes/Actor_00/ItemDrapS.act.json",
+      "bytes": 38363,
+      "sha256": "9ef0e4e4bc7a677739fb672954bb84af06470512d6fdb95709498e9975f23327"
+    },
+    {
+      "path": "scenes/Actor_00/ItemFX1.act.json",
+      "bytes": 38351,
+      "sha256": "452ba03500f75e6376a820d9e7262de963635168464aa993142ea503e1fb6301"
+    },
+    {
+      "path": "scenes/Actor_00/ItemRedesign.act.json",
+      "bytes": 51523,
+      "sha256": "28004a75d9295c8a4367517a4150a7b36a855b2de11bcc8b4104f4e32c7a2faf"
+    },
+    {
+      "path": "scenes/Actor_00/ItemSummon01.act.json",
+      "bytes": 50735,
+      "sha256": "3668393bb51e972c55c7b2142aac4f5edfa2eb1f74ef98a6ecae3bc74116533f"
+    },
+    {
+      "path": "scenes/Actor_00/ItemSummon03.act.json",
+      "bytes": 25903,
+      "sha256": "9dfb1ab5577f01208f91861a91c329e36d7b96d1e0cec8fd4239eeec7ec378c5"
+    },
+    {
+      "path": "scenes/Actor_00/JupiterAura01.act.json",
+      "bytes": 50781,
+      "sha256": "f8e4b81399d8c8adec5efe94dba2d87ac05a7ef263c4dabdd0bb35b9e6515177"
+    },
+    {
+      "path": "scenes/Actor_00/LevelUp01.act.json",
+      "bytes": 46816,
+      "sha256": "d726325cd1a8932e968be76c26ba507b537a924e06b008cb4fc841dd9ab0241b"
+    },
+    {
+      "path": "scenes/Actor_00/LevelUp02.act.json",
+      "bytes": 10511,
+      "sha256": "22638dbfd23777e302b98288c70916c451ed968dfbce17590e17333b8cf6613e"
+    },
+    {
+      "path": "scenes/Actor_00/LevelUp03.act.json",
+      "bytes": 10555,
+      "sha256": "79cc39c666ad176f0716d421e42c9cebf3a841652c08a8d79dbc5acc03d4202f"
+    },
+    {
+      "path": "scenes/Actor_00/LevelUpUi01.act.json",
+      "bytes": 63325,
+      "sha256": "94e80c3391f84e5e79963db44a3915bdebfdc37982e061a5cffe629eed21e00d"
+    },
+    {
+      "path": "scenes/Actor_00/LevelUpUi02.act.json",
+      "bytes": 63240,
+      "sha256": "aa3301272b57e5588104e92c88873ca069761fdbce5bb744e0ac60d7167b310b"
+    },
+    {
+      "path": "scenes/Actor_00/Make01.act.json",
+      "bytes": 88288,
+      "sha256": "8b1cc901bcc7a1703c7a410ec6368fb59a35da66e5fbd12e368151e148c441fe"
+    },
+    {
+      "path": "scenes/Actor_00/Make02.act.json",
+      "bytes": 50493,
+      "sha256": "4a3b5b2fc804099157bebd9ebc110c44179d0d9e9933cece99424e7f22ab34e6"
+    },
+    {
+      "path": "scenes/Actor_00/MotherShipEX1.act.json",
+      "bytes": 62949,
+      "sha256": "77d57e115b2ce3e5f5d51ccf31658ac547b1f247aa7e0254bc5b315df46e9f01"
+    },
+    {
+      "path": "scenes/Actor_00/MotherShipEX2.act.json",
+      "bytes": 38231,
+      "sha256": "4ece6f10398643723aadfea9cc0ba44c5b0221c3effba14774e850dddf30e971"
+    },
+    {
+      "path": "scenes/Actor_00/NailSwing01.act.json",
+      "bytes": 13287,
+      "sha256": "5dfad1134681e0a76f3260580a0463f78d33622763216f9a5786e1c009280351"
+    },
+    {
+      "path": "scenes/Actor_00/NailTarget01.act.json",
+      "bytes": 13279,
+      "sha256": "6860d85172a565f013bb5a50f0c8bf105c7e7cffa99ebf58d71cc3a3cdd23472"
+    },
+    {
+      "path": "scenes/Actor_00/NailTarget02.act.json",
+      "bytes": 37764,
+      "sha256": "923f4ec3a9cf0b8dfe1f94f7057d3d1989716608959acbaa8de88e6256342c78"
+    },
+    {
+      "path": "scenes/Actor_00/Navigator01.act.json",
+      "bytes": 13476,
+      "sha256": "e940fdee3f67229f4867e496dc975f0399289589c2dece5ae008d2237ba1fb61"
+    },
+    {
+      "path": "scenes/Actor_00/PlanetBoom1.act.json",
+      "bytes": 69911,
+      "sha256": "689ac6be0864ff7ecc17056eff613d1c893ade3dc21c852dd6514174c5d53f04"
+    },
+    {
+      "path": "scenes/Actor_00/PlanetFX_1.act.json",
+      "bytes": 13474,
+      "sha256": "797a1ff07fbf8cf6ac301a95518965fd58093cac0a286754cd654c321767f8c2"
+    },
+    {
+      "path": "scenes/Actor_00/PlanetFX_2.act.json",
+      "bytes": 13504,
+      "sha256": "772ea5735ac067cf911a4a7d10c9403e7ebbe12dcb7be578ae1feae86419ac7b"
+    },
+    {
+      "path": "scenes/Actor_00/PlanetFX_3.act.json",
+      "bytes": 38438,
+      "sha256": "fe7ff67eb929c82b5f23c7ffe560bb8cc5d45f3528d678887fdbe925d015481e"
+    },
+    {
+      "path": "scenes/Actor_00/PlanetHeal2.act.json",
+      "bytes": 50792,
+      "sha256": "07a867a3ae4b61b1d6d723bf7b320d27f4e84270fdac7d20827329966fe3a7da"
+    },
+    {
+      "path": "scenes/Actor_00/PlanetHealLoop1.act.json",
+      "bytes": 38230,
+      "sha256": "ed4a76c12f97d0d5163ac900fa70bef407d170d3dba9da6a52bfc2c7cac39f12"
+    },
+    {
+      "path": "scenes/Actor_00/PlanetRecovery01.act.json",
+      "bytes": 26398,
+      "sha256": "2d820d729c55d343d76b2ca090a49870cdf0af66f595edd349ee3b65a259c86b"
+    },
+    {
+      "path": "scenes/Actor_00/PlanetRecovery02.act.json",
+      "bytes": 64324,
+      "sha256": "f014c5c8a034c2f8491bd345772eb478ad4feab91ba012c9cd146b095100d30e"
+    },
+    {
+      "path": "scenes/Actor_00/PlanetResFX1.act.json",
+      "bytes": 13419,
+      "sha256": "ea4e8e0e5278a3f33a58a8ba9e85850581d0eb46c39f6531b8a07375101a6099"
+    },
+    {
+      "path": "scenes/Actor_00/PlanetUnlock1.act.json",
+      "bytes": 38477,
+      "sha256": "cf22962e550cdaeefde43def75fd07d144f3f3e7e3fdf89654c6c9c863ec28c5"
+    },
+    {
+      "path": "scenes/Actor_00/PlanetWork01.act.json",
+      "bytes": 12540,
+      "sha256": "82438224d48e11339f24490fcff76c6a11d14f28ef0218056f90343196caae16"
+    },
+    {
+      "path": "scenes/Actor_00/PlanetWork1.act.json",
+      "bytes": 50108,
+      "sha256": "b548bb60d9e9bdd766052417556c2c8d0d40b500ea0db0e14f2b180d229cc0e9"
+    },
+    {
+      "path": "scenes/Actor_00/PortraitBlue.act.json",
+      "bytes": 13668,
+      "sha256": "00676be3734cd1a1f504f43966f5a5e8119bd03b339d42befdfb9798af913bd8"
+    },
+    {
+      "path": "scenes/Actor_00/PortraitGreen.act.json",
+      "bytes": 13657,
+      "sha256": "27830043f6eda0bddde4a122f6c05fce89da8a43bce08b3128eb1b1b2d21d477"
+    },
+    {
+      "path": "scenes/Actor_00/PortraitRed.act.json",
+      "bytes": 13702,
+      "sha256": "66950ab9f73b7f665ab3a183f2db97b88fc815e49357022c50fd04c5a389e1e5"
+    },
+    {
+      "path": "scenes/Actor_00/PortraitYellow.act.json",
+      "bytes": 13691,
+      "sha256": "f2805c27a5156d2d0fedb74186abe8ee2ac2265b93ea97ed397b75447306fea1"
+    },
+    {
+      "path": "scenes/Actor_00/PowerAtk01.act.json",
+      "bytes": 20494,
+      "sha256": "ae257568047a955f6947e0b9b0ab21c6ecf614840f23187a4582d5e19047aabe"
+    },
+    {
+      "path": "scenes/Actor_00/PowerUp.act.json",
+      "bytes": 64075,
+      "sha256": "caf70c35e2be8ff0c4b02525d906e407c1a74f50400b2d02fec2654c7e72d8ba"
+    },
+    {
+      "path": "scenes/Actor_00/Provocation01.act.json",
+      "bytes": 10534,
+      "sha256": "f4ec93d53c7c69c59a790e3f727f569669af275ea6c22e31841685edde7140e2"
+    },
+    {
+      "path": "scenes/Actor_00/Punch01.act.json",
+      "bytes": 10560,
+      "sha256": "b12022c1704626f3c36be7be6ffaa4d575563efa012f192c7750d79632fb9ec2"
+    },
+    {
+      "path": "scenes/Actor_00/PunchSwing01.act.json",
+      "bytes": 13278,
+      "sha256": "f9de07ee70b04ee325beba163067a6264af92ea92f463c2ed7ec20ac4111c28e"
+    },
+    {
+      "path": "scenes/Actor_00/PunchTarget01.act.json",
+      "bytes": 13301,
+      "sha256": "c8d5c07f8be76a345fa9d93828a3c3b96263c1532b7ce218ff632b6ec9b27edd"
+    },
+    {
+      "path": "scenes/Actor_00/QuasarFX.act.json",
+      "bytes": 50622,
+      "sha256": "b42bb40f63af5d8494cd5eb8358f926d811e0578602d1688945a124c6f3fdb24"
+    },
+    {
+      "path": "scenes/Actor_00/QuasarFX2.act.json",
+      "bytes": 38331,
+      "sha256": "0dbd647f2db0965c918bba6611291295ecf4d994ba44b52d712994a51f441d76"
+    },
+    {
+      "path": "scenes/Actor_00/RefWave01.act.json",
+      "bytes": 51577,
+      "sha256": "7794719b0520ddf4a0ff4a3a8fc835e68d5eb25fe710f4246413c72819bfba7c"
+    },
+    {
+      "path": "scenes/Actor_00/ReinforceUI1.act.json",
+      "bytes": 77206,
+      "sha256": "09abc4d6880f8d72923c2ce6703abcb9a4d0e9020d3e2c264a76b15f60863a78"
+    },
+    {
+      "path": "scenes/Actor_00/ReinforceUI2.act.json",
+      "bytes": 51734,
+      "sha256": "2dfbb3c6910b8c54b489f94835d09f9020b2d9b2750755560457e0a66b69aad4"
+    },
+    {
+      "path": "scenes/Actor_00/ReinforceUI3.act.json",
+      "bytes": 35402,
+      "sha256": "ce494b20354bac7ccd3cfea1e3e0a0f74d15db433e4df65c0118090cc8360f09"
+    },
+    {
+      "path": "scenes/Actor_00/ReinforceUI4.act.json",
+      "bytes": 38465,
+      "sha256": "2f1274de3868944b0ac44953a9a8a21b8aaf11bea5fb64efde51d6f7088b723d"
+    },
+    {
+      "path": "scenes/Actor_00/ReinforceUI5.act.json",
+      "bytes": 77134,
+      "sha256": "ece7f23f34e21d35584178f4014f309b0d023a39301ce0fee3926682df5672d3"
+    },
+    {
+      "path": "scenes/Actor_00/ResInput01.act.json",
+      "bytes": 13765,
+      "sha256": "84796641195d840f741bb471880ecb295ccc50f42e931288969b997bbd10bb5b"
+    },
+    {
+      "path": "scenes/Actor_00/ResearchStart01.act.json",
+      "bytes": 39056,
+      "sha256": "b21a9c5bff08089b22809027e88b47481f1e14218faf39fe31a9f63039c3c951"
+    },
+    {
+      "path": "scenes/Actor_00/RouletteCharge.act.json",
+      "bytes": 38773,
+      "sha256": "39e02a1daf7ccea94c2e57cd8b0600baa7510d82cfbf1599e138c5bfb37d0418"
+    },
+    {
+      "path": "scenes/Actor_00/RouletteCharge2.act.json",
+      "bytes": 38761,
+      "sha256": "afa8373b0bd46a2ce5c65565b67dcbbf9b4f08c187996bc49f87112f545aa56d"
+    },
+    {
+      "path": "scenes/Actor_00/RouletteEnd.act.json",
+      "bytes": 13576,
+      "sha256": "9880661a4968174499782f4485eea5872208b993aa5b9d89f12d77df98840489"
+    },
+    {
+      "path": "scenes/Actor_00/Rush01.act.json",
+      "bytes": 38264,
+      "sha256": "1da0039bab755d8f84dea82506a9a019301b7b9a331600620bba47c9be382e3c"
+    },
+    {
+      "path": "scenes/Actor_00/Rush02.act.json",
+      "bytes": 38282,
+      "sha256": "6ff568ae3722cf81ebde2a68b716b736d61f50a0ae1160c656ad5adcfdbf6996"
+    },
+    {
+      "path": "scenes/Actor_00/SellGirl01.act.json",
+      "bytes": 38864,
+      "sha256": "768cf99b25949773719fcb1cf051fdeb16008da7aaa9be93db4846350ee82541"
+    },
+    {
+      "path": "scenes/Actor_00/ShadowSpawn01.act.json",
+      "bytes": 10554,
+      "sha256": "8d949dfe66bc5b7fe881e415d55e845e6f0a97d9fb48a2ce2e1e63694650aa16"
+    },
+    {
+      "path": "scenes/Actor_00/Shield.act.json",
+      "bytes": 11677,
+      "sha256": "325f782611a1be3ca1d30402bf7d1f72d4e210aad392cee8c122df59f7f13626"
+    },
+    {
+      "path": "scenes/Actor_00/Shield01Blue.act.json",
+      "bytes": 13444,
+      "sha256": "c2e75bb01570af4de24b23fc0088e783e291f7e01e06023438bd1b6b85f3a1db"
+    },
+    {
+      "path": "scenes/Actor_00/Shield01W.act.json",
+      "bytes": 13441,
+      "sha256": "790c5574e959d9ab93477204114054e75324d59181633291b0c102057d5467e2"
+    },
+    {
+      "path": "scenes/Actor_00/Shield02.act.json",
+      "bytes": 13425,
+      "sha256": "f7e99363e6a8e4769377e16f4431587e460750b5fd086f2d66b220bf17cfa1ec"
+    },
+    {
+      "path": "scenes/Actor_00/Shield02B.act.json",
+      "bytes": 25918,
+      "sha256": "fdc05fdaad4688bec09bd1a31df5b48203746599ab5dbb40786ea87900f75644"
+    },
+    {
+      "path": "scenes/Actor_00/Shield03.act.json",
+      "bytes": 12536,
+      "sha256": "b193cd5ca8f5c7e01e92ba9555d66e44928bb2780975abd05d6d554353358221"
+    },
+    {
+      "path": "scenes/Actor_00/Shield04.act.json",
+      "bytes": 12474,
+      "sha256": "7726cc3b9e224230c78b27e0d5270f312fd605632388653b5024336fd7277da5"
+    },
+    {
+      "path": "scenes/Actor_00/Shield05.act.json",
+      "bytes": 13487,
+      "sha256": "281ca14cc3a1475aa81f7113881821c7175f72e2387716112cdb37166ea593bd"
+    },
+    {
+      "path": "scenes/Actor_00/Shield06.act.json",
+      "bytes": 12505,
+      "sha256": "9a074e231594d2183949278b91f17f4fd8d8bffc2f52bc1c34601539303723f9"
+    },
+    {
+      "path": "scenes/Actor_00/Shield07.act.json",
+      "bytes": 13409,
+      "sha256": "3be8794ca3decb774ea297c1984e576e12b0deefd35a92484a4a90e85de4ead7"
+    },
+    {
+      "path": "scenes/Actor_00/Shield99.act.json",
+      "bytes": 13214,
+      "sha256": "3406c948cf48a901328525c7b3db761ae8af2c5213974dee4a5d66e0d2110a59"
+    },
+    {
+      "path": "scenes/Actor_00/ShieldBreak01.act.json",
+      "bytes": 63374,
+      "sha256": "152d9ba2f4c911aa2a218b14ba200c7a780187e3b61350ec77d06b4fea608a36"
+    },
+    {
+      "path": "scenes/Actor_00/ShieldBuff01.act.json",
+      "bytes": 13464,
+      "sha256": "14faefe0ebabd2c25e295e39ea047f54ba5799e44495b9beda3518b0122f3afa"
+    },
+    {
+      "path": "scenes/Actor_00/ShieldBuff02.act.json",
+      "bytes": 13657,
+      "sha256": "d1f949527b3c26ddd87e84c17e07fe82600aa2942c12663d275521e3bf0dad00"
+    },
+    {
+      "path": "scenes/Actor_00/ShieldBuff03.act.json",
+      "bytes": 13736,
+      "sha256": "86e3cc57c5634cdfbbd23c716109f7f79687886a96cf7f4ac698d10513c5b2dc"
+    },
+    {
+      "path": "scenes/Actor_00/ShieldPlanet01.act.json",
+      "bytes": 25884,
+      "sha256": "6836d23cc173622b9940cfb8b9035d0b31621715a55a6ac1151d23c772d8f38a"
+    },
+    {
+      "path": "scenes/Actor_00/Shock01.act.json",
+      "bytes": 12467,
+      "sha256": "fa15c73c156e369a684ffe6aee2bcf94a034e00464d971e933b3a8ac5ca32145"
+    },
+    {
+      "path": "scenes/Actor_00/ShootSpark.act.json",
+      "bytes": 13476,
+      "sha256": "b379eb8867774e1e938a952b09c136579f1db2cff8e590fbe05d9940b55fa747"
+    },
+    {
+      "path": "scenes/Actor_00/ShootSpark02.act.json",
+      "bytes": 13687,
+      "sha256": "bdb0a625582cc3151caf66f1ab84250676cdac352e5fc0a536bd7f4dfd58527f"
+    },
+    {
+      "path": "scenes/Actor_00/ShotFlare.act.json",
+      "bytes": 50583,
+      "sha256": "079a0f63b74fc7b862f4b39564747ae4a90a65df07a98084f144843e9f1fb6ac"
+    },
+    {
+      "path": "scenes/Actor_00/ShotFlare2.act.json",
+      "bytes": 38146,
+      "sha256": "278a8dbc5734f51077e9ec63117a28818da02fe98c6cc83b356ba68a9e0bdd7e"
+    },
+    {
+      "path": "scenes/Actor_00/ShotTail01.act.json",
+      "bytes": 12152,
+      "sha256": "cb0e1d28cb6256b7cf4894db5dc8aaeb21bd3f23da883b87c875f14bf6d07677"
+    },
+    {
+      "path": "scenes/Actor_00/SkillBase01.act.json",
+      "bytes": 10553,
+      "sha256": "b991411ff8a084ede6cb9c327769d09f2262dbe1472b5de49baf46f0ee08d0d7"
+    },
+    {
+      "path": "scenes/Actor_00/SkillBase02.act.json",
+      "bytes": 12094,
+      "sha256": "2bed7c636471d23929bf5d1365b4340fc720befc32bda46b460b64196f2a04ca"
+    },
+    {
+      "path": "scenes/Actor_00/SkillReady.act.json",
+      "bytes": 38229,
+      "sha256": "dd7d76017936e94f58778da76724ad61a66eb5070c6bc3e59139b85e87be45a1"
+    },
+    {
+      "path": "scenes/Actor_00/SkillReduction.act.json",
+      "bytes": 75963,
+      "sha256": "ca92943741145ee7308db8f35878f84895af4ccf3d6ec8594ef1470eead7f0e0"
+    },
+    {
+      "path": "scenes/Actor_00/SkillStop.act.json",
+      "bytes": 38840,
+      "sha256": "a73522c6827d9a723baaac819507f56d3abffcc838f0a998c7a94fe7790368b1"
+    },
+    {
+      "path": "scenes/Actor_00/Slow01.act.json",
+      "bytes": 11879,
+      "sha256": "802a7f8fe3e72c282604ec452ca6f7dd474fb3c7dd56f62c9ab5083d57f62aad"
+    },
+    {
+      "path": "scenes/Actor_00/SniperHit01.act.json",
+      "bytes": 25942,
+      "sha256": "ab7f0062ed2922fd70c202a75c71c882f56391647586efcfb3dce66b33a0a800"
+    },
+    {
+      "path": "scenes/Actor_00/SparkDestroy.act.json",
+      "bytes": 13477,
+      "sha256": "9e6f9952d3e55dd8e2faa200a98546a37871c11140b7b2ea28036773e944a83a"
+    },
+    {
+      "path": "scenes/Actor_00/SparkLoop.act.json",
+      "bytes": 13723,
+      "sha256": "bb5a987ee544e836da3ad59ff572b5985af4b0140ec663aa36c626b814844893"
+    },
+    {
+      "path": "scenes/Actor_00/SpeedAtk01.act.json",
+      "bytes": 20487,
+      "sha256": "1afa0cccf0a2f0ac1364182a3550be93ffdff65b61f0e4c9dd0564ba42cb2287"
+    },
+    {
+      "path": "scenes/Actor_00/StellarWind01.act.json",
+      "bytes": 13483,
+      "sha256": "98c0748792c7e06446822dff9c3578a03b7a198f406889f7a15aae2a28e7b494"
+    },
+    {
+      "path": "scenes/Actor_00/Strengthen01.act.json",
+      "bytes": 20589,
+      "sha256": "a0d8c707b2cc32ba636c3c303ea38e338ef0601a6367070f04702d9216d576d7"
+    },
+    {
+      "path": "scenes/Actor_00/Strengthen02.act.json",
+      "bytes": 10583,
+      "sha256": "75e3d919912680ed17a910c7489def4173e06cab41e43c321634e96861561c07"
+    },
+    {
+      "path": "scenes/Actor_00/StudyClearUI1.act.json",
+      "bytes": 115532,
+      "sha256": "828927e2bf885c9eb42146d243a70294e47e0b457f7fd24f7aa5bcab5a69915d"
+    },
+    {
+      "path": "scenes/Actor_00/Summon01.act.json",
+      "bytes": 38911,
+      "sha256": "759916929bca64cc97d820c4a0a661d3290bee543f3591db0e2934f74c5a5db9"
+    },
+    {
+      "path": "scenes/Actor_00/Summon03.act.json",
+      "bytes": 25860,
+      "sha256": "af6533d4888add546be5fcd21c2c08ac0938decfcef96c79836c80d65ae5be50"
+    },
+    {
+      "path": "scenes/Actor_00/Summon04.act.json",
+      "bytes": 76853,
+      "sha256": "625c80abf85871dd6ac5f48fae748c6dbea6486bfae8026d9251e78127aa0c33"
+    },
+    {
+      "path": "scenes/Actor_00/Summon05.act.json",
+      "bytes": 76778,
+      "sha256": "b2f3b8dc7995971efecb6df9ef18f838ef5ffcc47310b8f58477b61c883e51ec"
+    },
+    {
+      "path": "scenes/Actor_00/SummonEnd.act.json",
+      "bytes": 38522,
+      "sha256": "de89dd0a28a7764e375ec307e8c725acdae605c2eef443ad273aeb2a9ccb5654"
+    },
+    {
+      "path": "scenes/Actor_00/SummonStart01.act.json",
+      "bytes": 51652,
+      "sha256": "341a68cba557a37ca65a49e46e26a5c09ac80e51fff24077a7609d8a0f8480cd"
+    },
+    {
+      "path": "scenes/Actor_00/SupplyDone01.act.json",
+      "bytes": 26021,
+      "sha256": "d10aca975b43fc546c0a9b06ce5c10447bfbe4a17bc1d114f2aec4f470b51346"
+    },
+    {
+      "path": "scenes/Actor_00/Sword01.act.json",
+      "bytes": 10553,
+      "sha256": "ae1b80ae051ba7181557e5b8921711a7c94e164082260d602df16ba448459a6c"
+    },
+    {
+      "path": "scenes/Actor_00/Sword02.act.json",
+      "bytes": 10512,
+      "sha256": "5e297d9d6a0373ea61d694bc7ce30eb830ede611bca09542407a757f7785b3ed"
+    },
+    {
+      "path": "scenes/Actor_00/TailBasic02.act.json",
+      "bytes": 13517,
+      "sha256": "23841c262396ed38e3c2aaffe447084c277f09fc65ecf460f00f06b4da564eb3"
+    },
+    {
+      "path": "scenes/Actor_00/Target.act.json",
+      "bytes": 12549,
+      "sha256": "9edcc6c3e67b5c5cdcc6efdfe9b3c24f9e9dc44ed2d8eef0647825bffefa397f"
+    },
+    {
+      "path": "scenes/Actor_00/TargetFirst.act.json",
+      "bytes": 12512,
+      "sha256": "71ae15b17297a257958de7520b1cba26267d4c72b51a527e194938b99076fec7"
+    },
+    {
+      "path": "scenes/Actor_00/Thrust01.act.json",
+      "bytes": 37755,
+      "sha256": "32a2eee37b40dc16d8472effe8610056c127c21934a2adfbd0ec847bc179566b"
+    },
+    {
+      "path": "scenes/Actor_00/ThrustE01.act.json",
+      "bytes": 25834,
+      "sha256": "8763bf0b75be65c4624a135b0d6cdb1ce9ede764269b4dfa6f73ad9058ea7865"
+    },
+    {
+      "path": "scenes/Actor_00/ThrustE02.act.json",
+      "bytes": 63118,
+      "sha256": "1f62c669a6ee8ca395efeb9f9316af42774ed30e7fd6c4fc9ced2e84ca2b6ee7"
+    },
+    {
+      "path": "scenes/Actor_00/TimeStopCharge.act.json",
+      "bytes": 26329,
+      "sha256": "97307866a1c6f2684f733b8ad8714d252d3e205e5a8550e10f318e076610dba6"
+    },
+    {
+      "path": "scenes/Actor_00/TitleFX1.act.json",
+      "bytes": 38171,
+      "sha256": "8901be0e7e7ede4b9cb38dba0d5d37d198a6c4646bfbc5702787341593a44a0b"
+    },
+    {
+      "path": "scenes/Actor_00/Touch01.act.json",
+      "bytes": 13436,
+      "sha256": "ab529b7e32d4c5f758558ec94462457020f8c8343ecfe0dbb7b8e70cac07d90f"
+    },
+    {
+      "path": "scenes/Actor_00/TouchDrag01.act.json",
+      "bytes": 38197,
+      "sha256": "0bae5bec7df434cb5a6f2d84badeb2d8e65480365a2f023b10c2217558cdeab5"
+    },
+    {
+      "path": "scenes/Actor_00/UpArrow01.act.json",
+      "bytes": 13414,
+      "sha256": "c6bdf5f77d53a9ea76bd3dba2db168837d6e850fb12e393421a2b60f2e814e91"
+    },
+    {
+      "path": "scenes/Actor_00/Warning01.act.json",
+      "bytes": 25582,
+      "sha256": "8c1e231bedfdbeb286a0dd05ffe3537476a3731a25460010d578432d41d1c108"
+    },
+    {
+      "path": "scenes/Actor_00/Warning02.act.json",
+      "bytes": 26316,
+      "sha256": "67f841dc7297f4f39d4c54684516300b3aa7715ba7e15a4c3cca9e3fe623e919"
+    },
+    {
+      "path": "scenes/Actor_00/WarpBG01.act.json",
+      "bytes": 153018,
+      "sha256": "1b4ab8ae772604104e9e114c9f66d0eec3014c53bb200800492e684fff6c5734"
+    },
+    {
+      "path": "scenes/Actor_00/WarpBG02.act.json",
+      "bytes": 153238,
+      "sha256": "76ba51c4d467f82206bcf597748cac928785a0ddfcb16e12afa21566d0720ba0"
+    },
+    {
+      "path": "scenes/Actor_00/WarpEx1.act.json",
+      "bytes": 75807,
+      "sha256": "cb7682980060c8384d902ab9b7d133d38ce49dc609d8663542c4b9d5301f75e1"
+    },
+    {
+      "path": "scenes/Actor_00/WarpEx2.act.json",
+      "bytes": 13439,
+      "sha256": "c43bc0c7f8334a42c6e62dcb43cc56da996e7b9edd92e28d7302a3f8a447b11a"
+    },
+    {
+      "path": "scenes/Actor_00/WarpGatrAura01.act.json",
+      "bytes": 25932,
+      "sha256": "e7fcb91cb0a9263548c50f252893fc5519f9f857eb3c005a388a744177e67a8a"
+    },
+    {
+      "path": "scenes/Actor_00/WarpGatrAura02.act.json",
+      "bytes": 50725,
+      "sha256": "2e65c2f549a0fb95d511a90f0d0fe7876fe2884a67442004b432d73ddf0d53ce"
+    },
+    {
+      "path": "scenes/Actor_00/WarpGatrAura03.act.json",
+      "bytes": 75839,
+      "sha256": "1819215d55839b2b6295d1cb8c02ccfcc4e47cd2b4acfaf3bf05c1de6c700b25"
+    },
+    {
+      "path": "scenes/Actor_00/Wave01.act.json",
+      "bytes": 25879,
+      "sha256": "65773b151efc3829c127e683dfcb8a7bfc37c571a79cbaf9b0aea6eea2884e37"
+    },
+    {
+      "path": "scenes/Actor_00/Wave02.act.json",
+      "bytes": 13395,
+      "sha256": "552dadd164e578bdcc5698ab955312493fbaf18ef9b04fff8c6f11185c814d23"
+    },
+    {
+      "path": "scenes/Actor_00/Wave03.act.json",
+      "bytes": 13441,
+      "sha256": "39f5534e247ca9a051659c2884d16c7eaa546acd8dfa5a28d23fa64b99bea46b"
+    },
+    {
+      "path": "scenes/Actor_00/WaveE01.act.json",
+      "bytes": 25880,
+      "sha256": "d3de49e8edd6dcf437d6880105085f907f16b1b722be9b59de6692d66e6bfb62"
+    },
+    {
+      "path": "scenes/Actor_00/Whirlwind01.act.json",
+      "bytes": 26064,
+      "sha256": "12e779f5bfac63acec0314067e4a3e3e00eea2b9a6586e940ce5501fd2f7da77"
+    },
+    {
+      "path": "scenes/Actor_00/Whirlwind02.act.json",
+      "bytes": 26033,
+      "sha256": "30e54ffc494bd75a3997a201062ca998e8df47900955896747c70b0a6ac58979"
+    },
+    {
+      "path": "scenes/Actor_00/Wormhole01.act.json",
+      "bytes": 10596,
+      "sha256": "c793b0c0e71f7fb5902426aed7f49e8c52431c665a7a7433eb0e4f7e7e279a6d"
+    },
+    {
+      "path": "scenes/Actor_00/Wormhole02.act.json",
+      "bytes": 25954,
+      "sha256": "6f6a6e3e0d853fd3c9268405a6cefd16707422ed7e566af5ab139e0bfa591f77"
+    },
+    {
+      "path": "scenes/Actor_00/Wormhole03.act.json",
+      "bytes": 38264,
+      "sha256": "3b01b1cf2877440dbf91e3da787061dc1c901f6a69439db0b024d182829d53ab"
+    },
+    {
+      "path": "scenes/Actor_00/Wormhole03Big.act.json",
+      "bytes": 38246,
+      "sha256": "bf2422bca22c0a66f0c3ee66d87d8697d00296bdbb9aa69829d28b1d741d872c"
+    },
+    {
+      "path": "scenes/Actor_00/Wormhole05.act.json",
+      "bytes": 12548,
+      "sha256": "8436841bbb3fda0b601ecc6b211974230a72ab993b595ff90a714494e9db0486"
+    },
+    {
+      "path": "scenes/Actor_00/Wormhole06.act.json",
+      "bytes": 13542,
+      "sha256": "6e95fdb307bb015308b528c709e25902e97217b249893c11ae241a29f70d59e1"
+    },
+    {
+      "path": "scenes/Actor_00/Wormhole07.act.json",
+      "bytes": 13539,
+      "sha256": "72b9bdddd807fe94d99f157d8a1e48accda9670da38bbf2d0649b83aeb76db4b"
+    },
+    {
+      "path": "scenes/Actor_00/Wormhole08.act.json",
+      "bytes": 13524,
+      "sha256": "e182405ff17b53e47b2c69da66d18f094fc661e9af7cc40faefd37961835ff03"
+    },
+    {
+      "path": "scenes/Actor_00/Wormhole09.act.json",
+      "bytes": 13540,
+      "sha256": "9a9ceb25387758c72895c851f0403863ad5194e6ccf9f9cac5066334e2d5a651"
+    },
+    {
+      "path": "scenes/Actor_00/Wormhole10.act.json",
+      "bytes": 38409,
+      "sha256": "8b2b6691f305f24a19c89147fd84229dd3035f8aa32d5206e463bcc5f5518a69"
+    },
+    {
+      "path": "scenes/Actor_00/Wormhole100.act.json",
+      "bytes": 13372,
+      "sha256": "f11ad6d7876705a070527bc6b34cdddf213277c2b95c37091a1e01c5370e9ef6"
+    },
+    {
+      "path": "scenes/Actor_00/Wormhole11.act.json",
+      "bytes": 50650,
+      "sha256": "ce1b04618fff2701a6dc3e8cd64ee72f4d1d0206fe5358e799a95de1e1200256"
+    },
+    {
+      "path": "scenes/Actor_00/Wormhole12.act.json",
+      "bytes": 63089,
+      "sha256": "0ba46568df1a3cda622254ab1b2290cb7e4391e0dd588b90dbb6ac0a7a9a39a4"
+    },
+    {
+      "path": "scenes/Actor_00/Wormhole13.act.json",
+      "bytes": 75754,
+      "sha256": "3fe17c576c119e9d3175694845481afb4eafe4a3f67faad32dd4685b2da1c9be"
+    },
+    {
+      "path": "scenes/Actor_00/Wormhole95.act.json",
+      "bytes": 50670,
+      "sha256": "21d225845c40e31f622736647c9b44f28698590f09dd138ccef312df9a90a271"
+    },
+    {
+      "path": "scenes/Actor_00/Wormhole96.act.json",
+      "bytes": 38360,
+      "sha256": "a9adf8ac9c560e15ad4fc1a58bd72433112f80136bbf1183abded580f8889fcc"
+    },
+    {
+      "path": "scenes/Actor_00/Wormhole97.act.json",
+      "bytes": 38331,
+      "sha256": "41af65527aa061fd4ab6040e27cd850d2454f4a340b342ced3593c4f1a8bb84f"
+    },
+    {
+      "path": "scenes/Actor_00/Wormhole97Big.act.json",
+      "bytes": 38304,
+      "sha256": "15cf7171f6b9252af5d68cb01198a3a343e58022d0adcc1a3474441f18e91eb1"
+    },
+    {
+      "path": "scenes/Actor_00/Wormhole98.act.json",
+      "bytes": 13545,
+      "sha256": "f3a5807de5b2d49c490e7646faa70fa8cf050168fbddce020ce15ff06026ed55"
+    },
+    {
+      "path": "scenes/Actor_00/Wormhole99.act.json",
+      "bytes": 38259,
+      "sha256": "1f613d4e79727f10e06d0d6e0a596b08f463f4ab5ba34c763729c50eb4e2d2d8"
+    },
+    {
+      "path": "scenes/Actor_00/WormholeCharge.act.json",
+      "bytes": 38344,
+      "sha256": "af4db1dda5046b36b396d758119b8d81bf12a8d5ef3f1abb6dc668eb8a099849"
+    },
+    {
+      "path": "scenes/Actor_00/WormholeCharge2.act.json",
+      "bytes": 50786,
+      "sha256": "81d59a29b3aaf1c9b2c27a96b27099bb27d4a505c1e7625a39ef8b04d1415982"
+    },
+    {
+      "path": "scenes/Actor_00/WormholeCharge3.act.json",
+      "bytes": 63227,
+      "sha256": "2a4e198c6d32304744c119205c9f3445f167255f399f178f2ac8e2d5c1bc7ceb"
+    },
+    {
+      "path": "scenes/Actor_00/WormholeCharge4.act.json",
+      "bytes": 76973,
+      "sha256": "07c59b2354bad8b0c7088fa25888cb570a71df178db49e2ba9497f826c5a4d7a"
+    },
+    {
+      "path": "scenes/Scene_00/CharacterUI.scn.json",
+      "bytes": 8612,
+      "sha256": "727e2962054e3870579350d55f5f38bbe76232dcd7463aba12b8b88a04570b53"
+    },
+    {
+      "path": "scenes/Scene_00/EffectTest.scn.json",
+      "bytes": 113204,
+      "sha256": "4af3d517f80eaf3b5b892b78bed254d13c1f224790bce6a3937654301a85ef99"
+    },
+    {
+      "path": "scenes/Scene_00/Gacha.scn.json",
+      "bytes": 5879,
+      "sha256": "f6a4633926d2911bdf34c7a67e1e6541f50a638e40699a0d710fe840feecd044"
+    },
+    {
+      "path": "scenes/Scene_00/Gacha_test.scn.json",
+      "bytes": 5927,
+      "sha256": "75b2de04b63af80b8c08ca8b8ec0772c145f68bbeaa701d8f8fb51369cda17eb"
+    },
+    {
+      "path": "scenes/Scene_00/Main_test2.scn.json",
+      "bytes": 45335,
+      "sha256": "69cf7345ad5ba978a27e4246f3f328ce3df2c39c5517e8ac242f55292b6389be"
+    },
+    {
+      "path": "scenes/Scene_00/Space_Aries.scn.json",
+      "bytes": 737736,
+      "sha256": "dd2a32b81a143c91027deae6bb2422b41caeb7a8acfc3919999e1b5359f94679"
+    },
+    {
+      "path": "scenes/Scene_00/Space_Cancer.scn.json",
+      "bytes": 737913,
+      "sha256": "d87023379b27b49fa1579089bcba47fab266a9f8011cc247be375f2bbf4b7f61"
+    },
+    {
+      "path": "scenes/Scene_00/Space_CanisMajor.scn.json",
+      "bytes": 552465,
+      "sha256": "7bfe790b36bca5dcd6bc7b25582fa30f9e279b5f3aaeaa355f96f908c5edae26"
+    },
+    {
+      "path": "scenes/Scene_00/Space_Cygnus.scn.json",
+      "bytes": 695040,
+      "sha256": "88631f98d62033034e0010e07c995c7669b5eaf0ac11eab18489156da6cf8a09"
+    },
+    {
+      "path": "scenes/Scene_00/Space_Gemini.scn.json",
+      "bytes": 694998,
+      "sha256": "de7321e7ce44c5f4efdea3166b4670b1bf7e15b74c1af6f336eb01a43a7d62d2"
+    },
+    {
+      "path": "scenes/Scene_00/Space_Leo.scn.json",
+      "bytes": 613511,
+      "sha256": "052780710caa9b899e6821e0fe9bd93b3e64861884593275ab1c2831fd22f9e5"
+    },
+    {
+      "path": "scenes/Scene_00/Space_Northern.scn.json",
+      "bytes": 692520,
+      "sha256": "82048a6fd49c6064b04725c94d09eece0fbb9256e457a6f2990261f41e57dfcb"
+    },
+    {
+      "path": "scenes/Scene_00/Space_QSolar.scn.json",
+      "bytes": 310511,
+      "sha256": "be6a01e9285d7daadc06ac967470d3ae355b57eede022dffa2a2751e3799d67b"
+    },
+    {
+      "path": "scenes/Scene_00/Space_Quasar.scn.json",
+      "bytes": 211563,
+      "sha256": "d20a1ab3e9293a49143b11fe7b15fb095e8bb188a26884c540015c33518ac255"
+    },
+    {
+      "path": "scenes/Scene_00/Space_Quasar2.scn.json",
+      "bytes": 199368,
+      "sha256": "1c16d8711edcc2028de53878172fb70d5789cc85b194bb5ddaf5b89642690190"
+    },
+    {
+      "path": "scenes/Scene_00/Space_Quasar3.scn.json",
+      "bytes": 199200,
+      "sha256": "55a72d5f67ad9350b8978fe7660e9e14ba507ec3766437a7a0672c4eafce4470"
+    },
+    {
+      "path": "scenes/Scene_00/Space_Sagittarius.scn.json",
+      "bytes": 669139,
+      "sha256": "ec76a8e56fd6dd44d5b09f14f6fc90de3c07e895a7d3cc7103ae466e0d56b521"
+    },
+    {
+      "path": "scenes/Scene_00/Space_Scorpio.scn.json",
+      "bytes": 696115,
+      "sha256": "c9f471f3cb77a7411c89c2215a4c8ccecf559b9d2344fb492fb082afc3d7a228"
+    },
+    {
+      "path": "scenes/Scene_00/Space_Solar.scn.json",
+      "bytes": 592864,
+      "sha256": "cb8b3160ccb107fea2d6ece840b3d2dcfb8764d1b6b758ae08ceb868dd54e4a2"
+    },
+    {
+      "path": "scenes/Scene_00/Space_Southern.scn.json",
+      "bytes": 626278,
+      "sha256": "21fabb852ec8de6509825c0b5cc74b35a5bba299f6c30e1b6ead394a5d63ca93"
+    },
+    {
+      "path": "scenes/Scene_00/Space_Taurus.scn.json",
+      "bytes": 682163,
+      "sha256": "3fd81d6adea583e0de6841f3e5129f7ef005f6640ffaadb057d8b5bc83b0d475"
+    },
+    {
+      "path": "scenes/Scene_00/Space_Tutorial.scn.json",
+      "bytes": 489751,
+      "sha256": "abe294bedce98417b9cedc26d38a42b52ecdc36bf184dc45bae16ab7c83084d5"
+    },
+    {
+      "path": "scenes/Scene_00/Space_Virgo.scn.json",
+      "bytes": 582718,
+      "sha256": "16480ae1487fda6636073f57f80654a399dba08545bc0194c8260a1b1a648f51"
+    },
+    {
+      "path": "scenes/Scene_00/UIWork.scn.json",
+      "bytes": 105452,
+      "sha256": "768142711545004396277b75aa214b6337ab5b5d59b8585a22f5d08f06874641"
+    },
+    {
+      "path": "scenes/Scene_00/main_test.scn.json",
+      "bytes": 21728,
+      "sha256": "3cfb102e8fe91cbf67fbca0ed92026fd1a39ec5ee2a911adc5481da6122c540c"
+    },
+    {
+      "path": "scenes/UISpr_00/Attend.ui.json",
+      "bytes": 339202,
+      "sha256": "b3ac792d008c8d49665b8b3333c7dd1debbd529dd852c307c271b0d932a42f2d"
+    },
+    {
+      "path": "scenes/UISpr_00/BlinkPopup.uia.json",
+      "bytes": 6186,
+      "sha256": "72ebc7d2fdaa406dd643602b04b73455ebb40a9c11ca3c7b4d46ac2ffadb6fe6"
+    },
+    {
+      "path": "scenes/UISpr_00/BlinkPopup2.uia.json",
+      "bytes": 7538,
+      "sha256": "5167525372146860e620838cd50d2058672c75f85778b764e06e0403cc638998"
+    },
+    {
+      "path": "scenes/UISpr_00/ButtonAni.uia.json",
+      "bytes": 4227,
+      "sha256": "a62ab1998e55693653f6b664465ab2c4b874e5ff84173568a5fd05a1cf8715a9"
+    },
+    {
+      "path": "scenes/UISpr_00/Chat.ui.json",
+      "bytes": 344501,
+      "sha256": "69c7f06732cda8e59f8728f74c4f0283a2a05dacaeccbf6e6f20f3bcc6e72abd"
+    },
+    {
+      "path": "scenes/UISpr_00/Deck.ui.json",
+      "bytes": 858545,
+      "sha256": "0dcedb2c264fc4e268c683265f69fd140a1f35a0f5285bd8b42843216e458dec"
+    },
+    {
+      "path": "scenes/UISpr_00/EXP.ui.json",
+      "bytes": 187279,
+      "sha256": "ba577e57fad0cf97df39d07eed80363afbc53f41e69b6217495f1364f0c62fd8"
+    },
+    {
+      "path": "scenes/UISpr_00/EXP2.ui.json",
+      "bytes": 243747,
+      "sha256": "2e1205ac90b382ba2d44697a901c4f548a4ce3846e0a88c988b889ea6ec1b42e"
+    },
+    {
+      "path": "scenes/UISpr_00/ExpScale.uia.json",
+      "bytes": 4821,
+      "sha256": "39d9b3fbb04cabb08758898201253e1ae4729cf1f4babd073046432451fb3a19"
+    },
+    {
+      "path": "scenes/UISpr_00/Faces.spr.json",
+      "bytes": 414649,
+      "sha256": "3145d59f204fe7b69b320615f873440cab37b37eb47ac809819152658bb1f9cc"
+    },
+    {
+      "path": "scenes/UISpr_00/Form.ui.json",
+      "bytes": 246513,
+      "sha256": "77a868622e2be5823712e587ef95e486f90343828d92bd4c845c799a471c4218"
+    },
+    {
+      "path": "scenes/UISpr_00/Form_Select.uia.json",
+      "bytes": 4211,
+      "sha256": "6e426968648e732a6ce2860bdad22db9c2c967fc489bab87c303daf1064b2a62"
+    },
+    {
+      "path": "scenes/UISpr_00/Form_SelectOff.uia.json",
+      "bytes": 2138,
+      "sha256": "b318cfbd0c104b39c5bccf13c11c73b395a0b6eb7a03dfe8541586ed903373da"
+    },
+    {
+      "path": "scenes/UISpr_00/Gacha.spr.json",
+      "bytes": 12306,
+      "sha256": "172da0c50dd6f29ef7f583780af5d6d5f5e319b23ce5ac2a11b886e60fbd5d96"
+    },
+    {
+      "path": "scenes/UISpr_00/Gacha.ui.json",
+      "bytes": 149627,
+      "sha256": "e6c0fcf20a175a889f3213a074ad246a648fa3bc575cab4a01f46cf82064ea0a"
+    },
+    {
+      "path": "scenes/UISpr_00/GachaItem.ui.json",
+      "bytes": 333746,
+      "sha256": "b3d7bbfa5263eeaf033d25344ecd5807380c80883408a861f2f92d7ef6fc0a89"
+    },
+    {
+      "path": "scenes/UISpr_00/GirlBook.ui.json",
+      "bytes": 572231,
+      "sha256": "33441fcae38b08bd9b13158e65be500b21bada9f60d7b08a1414cec5b87198f1"
+    },
+    {
+      "path": "scenes/UISpr_00/GirlInfo.ui.json",
+      "bytes": 1577094,
+      "sha256": "76617bd335766f34b44595b4d1430bd9a7412c1a84935d343b585136362d965d"
+    },
+    {
+      "path": "scenes/UISpr_00/GirlRate.ui.json",
+      "bytes": 186010,
+      "sha256": "0d29d715c2b52ea8c74ba3ac2e578adddc9190844599058957e9fa312a86e9db"
+    },
+    {
+      "path": "scenes/UISpr_00/Girls.ui.json",
+      "bytes": 2944536,
+      "sha256": "4f68b8cc199b368f48643d1cfe50c994eeb58cccc129a51e009735272e28f552"
+    },
+    {
+      "path": "scenes/UISpr_00/Inform.ui.json",
+      "bytes": 236133,
+      "sha256": "5c76bc2131fcc8aafe3dd2bb7d420f82999c09dc979b5943a90f84440810380e"
+    },
+    {
+      "path": "scenes/UISpr_00/Inven.ui.json",
+      "bytes": 548676,
+      "sha256": "88421d6c7ce0eca571d2bd844684ce0ab45098cc579931f0af88208a723b3d54"
+    },
+    {
+      "path": "scenes/UISpr_00/ItemPreset.ui.json",
+      "bytes": 265872,
+      "sha256": "64570b78a3cd9f0eb69df46903b6f59490eb616ffc068093a141e8f1ca3b6531"
+    },
+    {
+      "path": "scenes/UISpr_00/Items.spr.json",
+      "bytes": 254743,
+      "sha256": "ca877889cc8cc520abef8739e8741abb6ea48b08bb4a33e3009009c58648e839"
+    },
+    {
+      "path": "scenes/UISpr_00/LeftAppear.uia.json",
+      "bytes": 4806,
+      "sha256": "c86ab24ebbaeeccdd97a0c03d0c697392e5d10ebbb6bc52bae04edc75459e06e"
+    },
+    {
+      "path": "scenes/UISpr_00/Loading.ui.json",
+      "bytes": 167640,
+      "sha256": "be673c26f95682db9f087096dfd9c4ab049b2be6457aa2d17ef9b98d128e49b0"
+    },
+    {
+      "path": "scenes/UISpr_00/Mail.ui.json",
+      "bytes": 367758,
+      "sha256": "a5068d97fd07b1c25c458130698c58940e94c2f3937d8cabc6cdc1042b35f563"
+    },
+    {
+      "path": "scenes/UISpr_00/Main.spr.json",
+      "bytes": 1656676,
+      "sha256": "af74e42c472d340148c4f16dd459eac4854a979dbfbfc4d21196ca79c72ad7ec"
+    },
+    {
+      "path": "scenes/UISpr_00/Main2.spr.json",
+      "bytes": 617527,
+      "sha256": "9d34676b891b06df1e77be83a4dfc86e408dc7a8c760c67d618bac9a28998004"
+    },
+    {
+      "path": "scenes/UISpr_00/Main9.spr.json",
+      "bytes": 5977,
+      "sha256": "8c349803422d84e834808f9112a13a0eddcab933da98ec8fc0327fdaaa8b090d"
+    },
+    {
+      "path": "scenes/UISpr_00/MainBattle.ui.json",
+      "bytes": 2114510,
+      "sha256": "c59793a61a908bd20f9a23c13de385e74c87ab699f7bced759c74f48eeedce0e"
+    },
+    {
+      "path": "scenes/UISpr_00/MainLobby.ui.json",
+      "bytes": 446864,
+      "sha256": "13d7e0438a563e3241566e43ad656f8a07c5bf1842a7a0246d4fd689905a38d4"
+    },
+    {
+      "path": "scenes/UISpr_00/Main_Earth.uia.json",
+      "bytes": 8170,
+      "sha256": "b9a309effc9e51252790a11baa7acb335744fd71469cdacfbfaf76a6516e420d"
+    },
+    {
+      "path": "scenes/UISpr_00/Map.ui.json",
+      "bytes": 269555,
+      "sha256": "6366c65cbd178411b1b0b30732a26ba358af1efa683c299de6d9ef32380f5346"
+    },
+    {
+      "path": "scenes/UISpr_00/MapAuto.ui.json",
+      "bytes": 206249,
+      "sha256": "931bbb74850492e99ba8ca14db35eaed1299e7a9ff4726db950b2b41b7102048"
+    },
+    {
+      "path": "scenes/UISpr_00/MgrBalloon.uia.json",
+      "bytes": 4839,
+      "sha256": "4fc37fe28170ec48540bd131cb48d2a92a2ee57a071b33ac4af1a10cb48853ea"
+    },
+    {
+      "path": "scenes/UISpr_00/Mission.ui.json",
+      "bytes": 142931,
+      "sha256": "1e208e1ecb476df828f562bd41d65b59703417d70140e24684ffcea11c76bda2"
+    },
+    {
+      "path": "scenes/UISpr_00/MsgBox.ui.json",
+      "bytes": 138749,
+      "sha256": "bfc49cc2a10c940da9a401635f2bd49317a5aa13032d63a59707a6c5071d4b44"
+    },
+    {
+      "path": "scenes/UISpr_00/MsgBox3Star.ui.json",
+      "bytes": 106828,
+      "sha256": "cfa42d30fb239bddda6d4ceec8cb14d46143d9d50ea24cbd36fead17ff50872b"
+    },
+    {
+      "path": "scenes/UISpr_00/MsgBoxBan.ui.json",
+      "bytes": 136809,
+      "sha256": "250f8993dbcac6c322e056a361782d86afde5f80caaa1dd3510e8c58170cac0b"
+    },
+    {
+      "path": "scenes/UISpr_00/MsgBoxCoord.ui.json",
+      "bytes": 771786,
+      "sha256": "0e1446ac8492843fbd9bb3ba34d137fe82895032e364815da98aab0895c9aa66"
+    },
+    {
+      "path": "scenes/UISpr_00/MsgBoxHonor.ui.json",
+      "bytes": 139863,
+      "sha256": "56cbc86f4f9190a631f046e1c7c4fe574bd1d6ac662229834bcd05eb0f7acc7a"
+    },
+    {
+      "path": "scenes/UISpr_00/MsgBoxItem.ui.json",
+      "bytes": 468233,
+      "sha256": "e7d27b28b34314a23f7a22e8c4de575164fd8a6153cbdc632a438af01b9ab7ca"
+    },
+    {
+      "path": "scenes/UISpr_00/MsgBoxRate.ui.json",
+      "bytes": 123793,
+      "sha256": "90a606889280b34f667334378c6c10f5de017295f0259a54da36e689b3d74a90"
+    },
+    {
+      "path": "scenes/UISpr_00/MsgBoxRetry.ui.json",
+      "bytes": 77159,
+      "sha256": "a5e58f6a22c5aed4637ad94060332dadbe5738d584f01868b1d1debf144b8efe"
+    },
+    {
+      "path": "scenes/UISpr_00/MsgBoxReward.ui.json",
+      "bytes": 73414,
+      "sha256": "968c01398877dac1a92a3222485467666df027026331718475627b2ab34794ad"
+    },
+    {
+      "path": "scenes/UISpr_00/Number.spr.json",
+      "bytes": 122539,
+      "sha256": "0ce1b3dc027f6918d666789c32142983257b536e4053c6165c09519cc4da9153"
+    },
+    {
+      "path": "scenes/UISpr_00/Planet.ui.json",
+      "bytes": 1017496,
+      "sha256": "d39cc1566597882bbb1ca67598eec1ee514aef5784ca5a77eecbf74cb676b489"
+    },
+    {
+      "path": "scenes/UISpr_00/PopupAlpha.uia.json",
+      "bytes": 3472,
+      "sha256": "b383c40d2bd4326de26edc2888f0dd2e399ce6cf14a38e10fdefa58279369446"
+    },
+    {
+      "path": "scenes/UISpr_00/PopupAlphaJust.uia.json",
+      "bytes": 4145,
+      "sha256": "0dd9f6c3213c5ccfede8c0fe4d25bbc017afedf444c4afe299a989afc9396ca0"
+    },
+    {
+      "path": "scenes/UISpr_00/PopupMVP.uia.json",
+      "bytes": 4821,
+      "sha256": "424d2b32927e6ccea0579aa5088a4a5542e59abbbce251fd460b9bf8041321c8"
+    },
+    {
+      "path": "scenes/UISpr_00/PopupScale.uia.json",
+      "bytes": 4814,
+      "sha256": "baa1d5cc300a750b0fad4cebcd434ded72207d4a2c4d8d17919f807aa12acf70"
+    },
+    {
+      "path": "scenes/UISpr_00/PopupScaleOut.uia.json",
+      "bytes": 4828,
+      "sha256": "ceca174526150a5e881229fe97a54d9d386866f7344ec3e78656ddde5d529e56"
+    },
+    {
+      "path": "scenes/UISpr_00/PopupScaleXAlpha.uia.json",
+      "bytes": 5509,
+      "sha256": "a66b7deea87c7c8a81b5f661d502e5488ff565e409f38da6c18d723f9a8c4a3f"
+    },
+    {
+      "path": "scenes/UISpr_00/PopupScaleXY.uia.json",
+      "bytes": 3500,
+      "sha256": "41410a4b122d684f307d07198186ee1929ee9ee743f67a05501c85d46e9d3d60"
+    },
+    {
+      "path": "scenes/UISpr_00/PopupScaleXY2.uia.json",
+      "bytes": 3496,
+      "sha256": "7d9909cc6f3995f8d277d05fdee7b32aa72b57ec164097c30da0cc734a30306b"
+    },
+    {
+      "path": "scenes/UISpr_00/PopupScaleYSmall.uia.json",
+      "bytes": 4820,
+      "sha256": "924be26f4cf896e0a6a2c3f0e400ab1e6144a3afb50371ee7744d28786267d3e"
+    },
+    {
+      "path": "scenes/UISpr_00/PvP.ui.json",
+      "bytes": 2314990,
+      "sha256": "25da8716774a54da7481686e1524c9c1615167875bf081024e11837f1cf0eac7"
+    },
+    {
+      "path": "scenes/UISpr_00/Quasar.ui.json",
+      "bytes": 156721,
+      "sha256": "3bfc83d1f353ed612ce2ec2bb471e7e8777bf6f5d6ddc5cb3ba6aeea6b3b1896"
+    },
+    {
+      "path": "scenes/UISpr_00/Quest.ui.json",
+      "bytes": 780348,
+      "sha256": "6014ce43c21cf32b4736c8cf710cc6a709eddcbe65426bac628ba929cc5aaa87"
+    },
+    {
+      "path": "scenes/UISpr_00/Rank.ui.json",
+      "bytes": 1302345,
+      "sha256": "94205c3ea792afcc036984a930626c46d6ce8ac1d52a84a5bce35a62398bb96a"
+    },
+    {
+      "path": "scenes/UISpr_00/Result.ui.json",
+      "bytes": 178567,
+      "sha256": "59676d5172ab164a9cfb5a5e85812ec854fa433830bf30372d5850db31082238"
+    },
+    {
+      "path": "scenes/UISpr_00/RewardBox.ui.json",
+      "bytes": 211473,
+      "sha256": "8bcd12a259a59a79dd65a12094d1a10de0996d917847c139875d575bef0b7856"
+    },
+    {
+      "path": "scenes/UISpr_00/RightAppear.uia.json",
+      "bytes": 4821,
+      "sha256": "6ba5c2e9f6b6a9236c57ffd27f3b5463ee44ba3066dfb24711347c498a6492fb"
+    },
+    {
+      "path": "scenes/UISpr_00/RotLoop.uia.json",
+      "bytes": 3475,
+      "sha256": "90bed262dbb29e3b9159d8c2c3b13fa96b956023131b18ffff74d0791bdadf6c"
+    },
+    {
+      "path": "scenes/UISpr_00/Roulette.spr.json",
+      "bytes": 26231,
+      "sha256": "d3faafc4f11bf3e1b595d00911ec0db2b3967c70f3946aff0a01f604e372fb3f"
+    },
+    {
+      "path": "scenes/UISpr_00/Roulette.ui.json",
+      "bytes": 636022,
+      "sha256": "0209a2c552174cb8b620125303ce664d8383196ee2e996af950774eb7a69c9d7"
+    },
+    {
+      "path": "scenes/UISpr_00/SeasonEnd.ui.json",
+      "bytes": 166973,
+      "sha256": "0310c716a0cf1c7dea9e38a01e6f51d50dea25ae3400b160920c8c7b13c9a4c2"
+    },
+    {
+      "path": "scenes/UISpr_00/SetLanguage.ui.json",
+      "bytes": 88682,
+      "sha256": "382c5c4e066b891f585ddca3e0819ba24f806087494e201ec5b87a6a19b42cc9"
+    },
+    {
+      "path": "scenes/UISpr_00/SetName.ui.json",
+      "bytes": 92308,
+      "sha256": "ff4304659f02d89dc5d509ad9cf3aba0b500579d6c93b5eafbd7fba680da2f37"
+    },
+    {
+      "path": "scenes/UISpr_00/Settings.ui.json",
+      "bytes": 654327,
+      "sha256": "2318d079b6bf7a50e0789d33791c310bc9be1f39d43991c7e99c4fb646c0707c"
+    },
+    {
+      "path": "scenes/UISpr_00/ShowRot.uia.json",
+      "bytes": 6805,
+      "sha256": "ad833db1966afd66a4eaaad17c458cd273a158d2213cac61eeb3b6a518b0c13d"
+    },
+    {
+      "path": "scenes/UISpr_00/Squad.ui.json",
+      "bytes": 1687875,
+      "sha256": "b4d1d8596ccdde803cd1aa8b86c89b79a7b7d58b55e03578f5434b23ade2358d"
+    },
+    {
+      "path": "scenes/UISpr_00/Store.ui.json",
+      "bytes": 1444360,
+      "sha256": "b4f727a2242263ed3763aeff29311f2f946d211c237ec78fc47e0a2e2a21f34c"
+    },
+    {
+      "path": "scenes/UISpr_00/TopAppear.uia.json",
+      "bytes": 4807,
+      "sha256": "279df7ca6678dce9fc3dd923b96e8c7ff7d7b7fbf0314cda5c9bd0f362ff6b7b"
+    },
+    {
+      "path": "scenes/UISpr_00/TopLobby.ui.json",
+      "bytes": 179905,
+      "sha256": "66cc4faae242e9ada2917776af3fdb78862cdf465f8b21dee24d76395d5a5bdb"
+    },
+    {
+      "path": "scenes/UISpr_00/Train.ui.json",
+      "bytes": 1019511,
+      "sha256": "c1ca6ba68eb144ca0395b5fccdf35f67eeaf116de89f5bb5c03102840d9a4c05"
+    },
+    {
+      "path": "scenes/UISpr_00/UnderAppear.uia.json",
+      "bytes": 4808,
+      "sha256": "7b095332de8dc63948014e275b8880a76f28f727c757756f163a6b9528298464"
+    },
+    {
+      "path": "scenes/UISpr_00/UserInfo.ui.json",
+      "bytes": 465898,
+      "sha256": "d75499814f768210f75343fccb650cf34f7525319fae4def6e3600b79bb37a5f"
+    },
+    {
+      "path": "scenes/UISpr_00/WaitingResp.ui.json",
+      "bytes": 18315,
+      "sha256": "7eb0ae93a0420a77fdb27223a499360af0b271a26f35375a778328ddfc533b6d"
+    },
+    {
+      "path": "scenes/manifest.json",
+      "bytes": 206297,
+      "sha256": "e195760fd4c0ab92b602679a18fd57475bb071d736e06fdff6fd1be3a377f2f5"
+    },
+    {
+      "path": "scenes/resource_catalog.json",
+      "bytes": 2126882,
+      "sha256": "1ae71c01c8f2743cbe4d362a0a06043313256c2c641c90a3fd0ead4a4a9dd53b"
+    },
+    {
+      "path": "tables/AI.json",
+      "bytes": 5202,
+      "sha256": "4a6546749bbc2e2789e86f3aa4134a67df8bc854b9ac98b43d4f1056f4eb23de"
+    },
+    {
+      "path": "tables/Anim.json",
+      "bytes": 3322,
+      "sha256": "bb227f889b6e57cd968c5c12f82d41521d4b9c9b8b0886d5a7e4bfae0b0be20f"
+    },
+    {
+      "path": "tables/Attack.json",
+      "bytes": 32963,
+      "sha256": "5c6bcde14377568052dbacd50f91e99b937aa7f33191c8cf5abff65514fdd88a"
+    },
+    {
+      "path": "tables/Attend.json",
+      "bytes": 13224,
+      "sha256": "78833a28d560683d3aae07e1718a8fb3c7e268dab944a5a4b09095162f1dfafe"
+    },
+    {
+      "path": "tables/BID.json",
+      "bytes": 18161,
+      "sha256": "d78ae994366aa11fd5969b999e7ba03d4f6747e50871bfec233bd65a676e95d5"
+    },
+    {
+      "path": "tables/Ban.json",
+      "bytes": 1338,
+      "sha256": "4b03918e3ade062fae9a2e8caf6fc5dd1e5a772714db59cb10ef03b47615b769"
+    },
+    {
+      "path": "tables/Banner.json",
+      "bytes": 3061,
+      "sha256": "8e16a0ad98c9de795896da5043560bd1e37a771ef77be1112f4046e646f948c6"
+    },
+    {
+      "path": "tables/Boss.json",
+      "bytes": 4401,
+      "sha256": "6d1d80967543df80a108353822127024b665022bb20120bbde2b95a9d1ba2550"
+    },
+    {
+      "path": "tables/BossReward.json",
+      "bytes": 2285,
+      "sha256": "c5221729fdd17a740c54af5b05495f5e803ae3557fda65fc3379b2f637e7c27a"
+    },
+    {
+      "path": "tables/Bullet.json",
+      "bytes": 19132,
+      "sha256": "18fa7cb276f12ed8251ff96149daa5173fbc84b9c5505b906b4cf87a61ab94bc"
+    },
+    {
+      "path": "tables/Burst.json",
+      "bytes": 8087,
+      "sha256": "134d7b75184dd1083a48e4aecfac5ad2d166a43426e27fd296d3e987cbf100e7"
+    },
+    {
+      "path": "tables/CID.json",
+      "bytes": 852873,
+      "sha256": "757bf7666a8407c57b0d3a81d9e1a13ffd65020940aa455f1dcb4fdf519c60bf"
+    },
+    {
+      "path": "tables/CShake.json",
+      "bytes": 6786,
+      "sha256": "3750c0ff0ab4fd688d89ddc0d7dad97ca8168ab4ce0825ca73f836dac13e0323"
+    },
+    {
+      "path": "tables/Defence.json",
+      "bytes": 32274,
+      "sha256": "a18db56eaa73e48d75aececcd0a58ad10d8953aa2365099388c3aa8d9a5d570a"
+    },
+    {
+      "path": "tables/EXP.json",
+      "bytes": 11363,
+      "sha256": "d8d423442977fb0f26a5a8b2dd0dd0e02e242eca4a4f3bcc8d1328fa222527b9"
+    },
+    {
+      "path": "tables/EventScript.json",
+      "bytes": 7414208,
+      "sha256": "de161d1f31aebe16dae1a553c1f6c48593cf5f2a18644411ae5d6f66fb318096"
+    },
+    {
+      "path": "tables/EventSpot.json",
+      "bytes": 320944,
+      "sha256": "efa7c80b28e624662b6d3c972b380b7f03a51a8d3c4a10b07082fc3747937e8b"
+    },
+    {
+      "path": "tables/ExpPer.json",
+      "bytes": 34925,
+      "sha256": "0c51cf3f31b6720745d6c4f1555ab6045f8d6228309951efcb546300a43e7006"
+    },
+    {
+      "path": "tables/ExpPerHard.json",
+      "bytes": 34816,
+      "sha256": "c8a60045cf88815a8ee94fe41c1f36c477193653ec69e7955ddfa63640bc9338"
+    },
+    {
+      "path": "tables/ExpPerS.json",
+      "bytes": 34929,
+      "sha256": "7c8ae7f306225bf527987bbc05400a6081387da4c087ed5a87432d1f92cc250b"
+    },
+    {
+      "path": "tables/Fx.json",
+      "bytes": 161045,
+      "sha256": "0ce7ee4a805f531e95f9348cde7208eae022327f61fdcc2823594ae8b1782ce6"
+    },
+    {
+      "path": "tables/Gacha.json",
+      "bytes": 78706,
+      "sha256": "0f00403d98c24547497ff2819d105da7f25dbcd47e04535a765faf1a0e847c79"
+    },
+    {
+      "path": "tables/Galaxy.json",
+      "bytes": 12210,
+      "sha256": "eafaa2ff103fb9fda16df54441df39f7143b5ae07b93b01cc3a74f1409da16f1"
+    },
+    {
+      "path": "tables/GalaxyGate.json",
+      "bytes": 13888,
+      "sha256": "456effe446d1ade910205601750cafae2b2392e6c9e5040dc000e65a3e178ccf"
+    },
+    {
+      "path": "tables/Global.json",
+      "bytes": 157917,
+      "sha256": "19026b5b7533cf3220a64ff5ae44b01b4df8ef83ef9c5893d66a5bb897e6f20b"
+    },
+    {
+      "path": "tables/Global2.json",
+      "bytes": 27738,
+      "sha256": "6df7834051db06a03c066f14be7670ee402e90a7741f9987255507de7bfaee86"
+    },
+    {
+      "path": "tables/Item.json",
+      "bytes": 387938,
+      "sha256": "19fd12ee9dbe05886d5692e0457480cee0967a05f3027f0665714ad3c6a7cdd5"
+    },
+    {
+      "path": "tables/ItemEquip.json",
+      "bytes": 3950,
+      "sha256": "a65d12b7a8734a5ca4c99d7d2d6e9b4ff22ebb7f1d0c2ab12762660d6564e492"
+    },
+    {
+      "path": "tables/ItemGacha.json",
+      "bytes": 32773,
+      "sha256": "76b156912cd5d31d03a92d09eff325ae290689f9e2f5bce9726e27a550d70758"
+    },
+    {
+      "path": "tables/ItemReward.json",
+      "bytes": 391859,
+      "sha256": "d3ac547c0111a9048fa748b7da17c656e4dcedbd565daadef95a78929fe0b1db"
+    },
+    {
+      "path": "tables/LocalStr.json",
+      "bytes": 707305,
+      "sha256": "6c72920a72c6f0d667687f864ea746db120a6f9a3bcd7deb6b95e7aa67ca9b2f"
+    },
+    {
+      "path": "tables/PID.json",
+      "bytes": 63534,
+      "sha256": "5222fa751becb2801013d1e15ec789c3749787f57043ca05d94a44d43c3dc406"
+    },
+    {
+      "path": "tables/PSkill.json",
+      "bytes": 8772,
+      "sha256": "ee09bd73010158fa6d5b411278ff274d43fb174b0c515513d61e581796655aa0"
+    },
+    {
+      "path": "tables/Play.json",
+      "bytes": 16747,
+      "sha256": "aec2d4ff6edf07cb2648a83d5b01542479af723c1a23fb8dc20976e6149ae99a"
+    },
+    {
+      "path": "tables/Proj.json",
+      "bytes": 76601,
+      "sha256": "067cc983e05a2f4ec8eadd495f53f0a4e5f0489c6ac41e0587fd5e6d921a326e"
+    },
+    {
+      "path": "tables/PvPReward.json",
+      "bytes": 2301,
+      "sha256": "acaf080d371beeb73e075dbd7780addc7c944dddb95a66cb2dfe90a7db9196f8"
+    },
+    {
+      "path": "tables/PvPTrainExp.json",
+      "bytes": 11566,
+      "sha256": "6e990ad0ea6fe0aa2594d2e1b4fc23f8da8ed15d8542af6953a3d68dfe8f9ed7"
+    },
+    {
+      "path": "tables/Quest.json",
+      "bytes": 24225,
+      "sha256": "e531af5b6ed8c6f0b8b1d1f31744e6d672490c9eadf99a54ce81bdf192a20613"
+    },
+    {
+      "path": "tables/QuestM.json",
+      "bytes": 77320,
+      "sha256": "1ec0aa78e936b7642c8d99c16c2970039964f7efb96b7579429f01a39c15c9a4"
+    },
+    {
+      "path": "tables/QuestS.json",
+      "bytes": 73112,
+      "sha256": "619dbbbe25ea7413aa9b15b3106e4153c16c8ec5c6d4f9be7daac530191fe31a"
+    },
+    {
+      "path": "tables/QuestW.json",
+      "bytes": 12000,
+      "sha256": "d1a645b52ad2b7640ae2c92c6ff910da3dc1b5e25cb9750fc61fe2a9d1a5d80c"
+    },
+    {
+      "path": "tables/Reward.json",
+      "bytes": 338933,
+      "sha256": "ffe73d0701a4552c109c10c5e5426a204b1bedcedf27c822d14c7224710ff3b6"
+    },
+    {
+      "path": "tables/RewardPer.json",
+      "bytes": 33406,
+      "sha256": "0edf1f18e7caf017bb3ff234334b85faff0fb5c857c3c7da4711ae0ec164cc49"
+    },
+    {
+      "path": "tables/RewardPerHard.json",
+      "bytes": 33436,
+      "sha256": "0e6d2f85d21f0f070e94fbcd622ab02a125c0f3ec70877f894a40385f649b20e"
+    },
+    {
+      "path": "tables/RndBox.json",
+      "bytes": 4002,
+      "sha256": "63a85b4df230002b08785835cb3b8e45fb7469165354834b661083f58fe6139d"
+    },
+    {
+      "path": "tables/Roulette.json",
+      "bytes": 3883,
+      "sha256": "4bf1e8d39806fed806baafd1723ff5d3c7b499df3860f53aa9bfcbc4dc3c60a1"
+    },
+    {
+      "path": "tables/Script.json",
+      "bytes": 2356057,
+      "sha256": "24d25a35f0976305691e6fcf89ae42736614311dea179c4530510f79e445ebb0"
+    },
+    {
+      "path": "tables/Shot.json",
+      "bytes": 32509,
+      "sha256": "9556769285f71117db8c7d6949a11a254158d53cb430bdd44167e8fc87ceb804"
+    },
+    {
+      "path": "tables/Skill.json",
+      "bytes": 362392,
+      "sha256": "afaba14f5e6c5602369f0623a1c2da27a6c287caf5cdb3b29bddde9efd4bcbfb"
+    },
+    {
+      "path": "tables/Skin.json",
+      "bytes": 316386,
+      "sha256": "f8b5ec83b9e5c6ec942e98462546b313dfd99cd550a505988012fd55445bcfc1"
+    },
+    {
+      "path": "tables/Slang.json",
+      "bytes": 1724270,
+      "sha256": "b57afb824c6206fe5f5a432496826dc0b128b26c79d09ad1ddb22ffdf695ceaf"
+    },
+    {
+      "path": "tables/Sound.json",
+      "bytes": 70260,
+      "sha256": "c0ec94d23f76d5194474aa69c3b971fbe4415b27cecef67ab09e759e56e35113"
+    },
+    {
+      "path": "tables/SpawnPoint.json",
+      "bytes": 157098,
+      "sha256": "d9053d7530430a32394ed90f9d96c8df3fc5bcf6f7f50e52827241fe2462f5f1"
+    },
+    {
+      "path": "tables/StoreCoord.json",
+      "bytes": 28252,
+      "sha256": "dd7c815cffb223ec4df40bb0c28562109cd144edff68aa93b2e015e57a6d6061"
+    },
+    {
+      "path": "tables/StoreCore.json",
+      "bytes": 7635,
+      "sha256": "cd8a21fc11db9a96d4552e03f2bfe77eddebb4386678b21e6e097bef773db244"
+    },
+    {
+      "path": "tables/StoreCube.json",
+      "bytes": 12426,
+      "sha256": "3e46510b2e17eb8a6fd6342d66ae1e2fbc5ccb968ff254796fac6a9a565f8674"
+    },
+    {
+      "path": "tables/StoreFree.json",
+      "bytes": 2706,
+      "sha256": "8fc52584004ed537752f214d49dc4708930d6025b5e5e265d99ddd173113cf6a"
+    },
+    {
+      "path": "tables/StoreHonor.json",
+      "bytes": 10055,
+      "sha256": "50b59e107315559764d69af9329dc82e96823befa5295934f47ae86caf9129b7"
+    },
+    {
+      "path": "tables/StorePkg.json",
+      "bytes": 13873,
+      "sha256": "a1a78c917303e49c07088df3909b6b4e541e3535ba8894cec34b1d2e4898c5a2"
+    },
+    {
+      "path": "tables/StoreResource.json",
+      "bytes": 7288,
+      "sha256": "33ee1e307a9997068f07942c6c7b18516319b8015413ff74b91698d95d73cbf5"
+    },
+    {
+      "path": "tables/StoreSkin.json",
+      "bytes": 10453,
+      "sha256": "904850ab50d0fb07f454b3adccc6ef3953b7a73239ac35b7c9f0b5a33ecf7dfa"
+    },
+    {
+      "path": "tables/StoreSlot.json",
+      "bytes": 2894,
+      "sha256": "4159bade362c947172445f26b4c0f7439116e46100b3950b516155a8fe41021d"
+    },
+    {
+      "path": "tables/StoreTicket.json",
+      "bytes": 3400,
+      "sha256": "72a0922a01def97c4434544a4d227a2e1827f0931642f29ed40c1b16d77e1b9f"
+    },
+    {
+      "path": "tables/Support.json",
+      "bytes": 6544,
+      "sha256": "143f028abd6a44803974495ef1e7270360ec5401a42943810db67fd44fd48a8f"
+    },
+    {
+      "path": "tables/Trail.json",
+      "bytes": 8060,
+      "sha256": "3750fff69c5c1a085aee4d8d2b687e83bf79da77d2d9d296166e462ce5c5a352"
+    },
+    {
+      "path": "tables/Train.json",
+      "bytes": 14049,
+      "sha256": "1a87ab3dad966492c9474ec3bd2ae1d9824c1e192cfc4b17043e48c775eec78e"
+    },
+    {
+      "path": "tables/Wave.json",
+      "bytes": 512381,
+      "sha256": "c463dfea617665515b3645007fa4b048d1f3af0205487b5326e232626a53bd20"
+    },
+    {
+      "path": "tools/build_database.py",
+      "bytes": 7711,
+      "sha256": "b891185a13d49aea5d15fe5d56f9388480d6fd94aff8397b1e454b93c6ed81a9"
+    },
+    {
+      "path": "tools/check_database.py",
+      "bytes": 1695,
+      "sha256": "e4208b1f17fc7539b0f44bcadc1b38df9e4f65ddc1901829508b7c54ed447ac4"
+    },
+    {
+      "path": "tools/decode_bxml.py",
+      "bytes": 14166,
+      "sha256": "c1b77139f8ab233844059e9111c83d610ae672e6583ed1e943c99f7454d25033"
+    },
+    {
+      "path": "tools/query.py",
+      "bytes": 1215,
+      "sha256": "b70fc504d2b77a4863e0398b8e855ba0bb44fe4f0122770af1a1cdc58b3b482b"
+    },
+    {
+      "path": "tools/reconstruction.py",
+      "bytes": 5070,
+      "sha256": "2e84b2a02a68fbc946bc5096a1295f3eb42b1d096260e024103f65f3b6402187"
+    },
+    {
+      "path": "tools/scene_query.py",
+      "bytes": 962,
+      "sha256": "c92370364f0e5f3a54c2b95020543d7e026528f3d6bfd67fa29abd9eb33af099"
+    },
+    {
+      "path": "tools/update_manifest.py",
+      "bytes": 1109,
+      "sha256": "ff475fb5314055393182a5a57aea9c00cc77915c4bcf9e6988773dcc817ac81f"
+    },
+    {
+      "path": "tools/verify_bundle.py",
+      "bytes": 3506,
+      "sha256": "3f79a50574b50586e94e91770cb6ad13d64319f61cf99c7135c09c435a402a56"
+    }
+  ]
+}

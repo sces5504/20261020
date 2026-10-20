@@ -1,0 +1,1539 @@
+{
+  "address_space": "Original ARM64 ELF virtual addresses",
+  "fields": [
+    {
+      "table": "CID",
+      "field": "f16",
+      "name": "defense_growth_reference",
+      "runtime_offset": "0x68",
+      "consumer_pc": "0x3a36c4",
+      "confidence": "confirmed",
+      "detail": "Target vtable slot0x1f8 invokes growth getter0xa7ee4 using CID offset0x68. Confirms earlier mechanics secondary_stat field is defense."
+    },
+    {
+      "table": "CID",
+      "field": "f18",
+      "name": "base_critical_chance_percent",
+      "runtime_offset": "0x70",
+      "consumer_pc": "0x3a40bc",
+      "confidence": "confirmed",
+      "detail": "Base getter multiplies CID offset0x70 by10 to per-mille, applies modifiers, capped at950."
+    },
+    {
+      "table": "CID",
+      "field": "f19",
+      "name": "base_evasion_chance_percent",
+      "runtime_offset": "0x74",
+      "consumer_pc": "0x3a470c",
+      "confidence": "confirmed",
+      "detail": "Base getter multiplies CID offset0x74 by10 to per-mille, applies modifiers, capped at950."
+    },
+    {
+      "table": "Skill",
+      "field": "f02",
+      "name": "effect_type",
+      "runtime_offset": "0x1c",
+      "consumer_pc": "0x3d69e4",
+      "confidence": "confirmed",
+      "detail": "Native dispatch selector, not skill row id."
+    },
+    {
+      "table": "Skill",
+      "field": "f90",
+      "name": "bypass_evasion",
+      "runtime_offset": "0x18c",
+      "consumer_pc": "0x3f257c",
+      "confidence": "confirmed",
+      "detail": "Nonzero sets the evasion-suppression flag in common damage formula."
+    },
+    {
+      "table": "Skill",
+      "field": "f91",
+      "name": "suppress_critical",
+      "runtime_offset": "0x190",
+      "consumer_pc": "0x3f260c",
+      "confidence": "confirmed",
+      "detail": "Nonzero sets the critical-suppression flag in common damage formula."
+    },
+    {
+      "table": "Skill",
+      "field": "f28",
+      "name": "periodic_effect_power_base",
+      "runtime_offset": "0x88",
+      "consumer_pc": "0x3d74c0",
+      "confidence": "confirmed",
+      "detail": "Skill offset0x88 + (level−1)*offset0x8c; multiplied by actor skill attack then divided100 before target damage call. Specific type36/37 path, not all skills."
+    },
+    {
+      "table": "Skill",
+      "field": "f29",
+      "name": "periodic_effect_power_increment",
+      "runtime_offset": "0x8c",
+      "consumer_pc": "0x3d74c0",
+      "confidence": "confirmed",
+      "detail": "Growth term paired with f28 for type36/37 damage field path."
+    }
+  ],
+  "effect_types": [
+    {
+      "type": 0,
+      "count": 1,
+      "examples": [
+        {
+          "row": 0,
+          "key": "None"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 1,
+      "count": 8,
+      "examples": [
+        {
+          "row": 1,
+          "key": "AtkSpeed11"
+        },
+        {
+          "row": 2,
+          "key": "AtkSpeed12"
+        },
+        {
+          "row": 3,
+          "key": "AtkSpeed13"
+        },
+        {
+          "row": 4,
+          "key": "AtkSpeed21"
+        },
+        {
+          "row": 5,
+          "key": "AtkSpeed22"
+        },
+        {
+          "row": 6,
+          "key": "AtkSpeed61"
+        },
+        {
+          "row": 143,
+          "key": "AtkSpeedE1"
+        },
+        {
+          "row": 181,
+          "key": "AtkSpeedE"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 2,
+      "count": 4,
+      "examples": [
+        {
+          "row": 7,
+          "key": "AtkSpeedRange31"
+        },
+        {
+          "row": 8,
+          "key": "AtkSpeedRange32"
+        },
+        {
+          "row": 9,
+          "key": "AtkSpeedRange33"
+        },
+        {
+          "row": 155,
+          "key": "AtkSpeedRangeE"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 3,
+      "count": 4,
+      "examples": [
+        {
+          "row": 10,
+          "key": "AtkSpeedCri11"
+        },
+        {
+          "row": 11,
+          "key": "AtkSpeedCri12"
+        },
+        {
+          "row": 12,
+          "key": "AtkSpeedCri21"
+        },
+        {
+          "row": 13,
+          "key": "AtkSpeedCri22"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 4,
+      "count": 3,
+      "examples": [
+        {
+          "row": 14,
+          "key": "AtkSpeedCriRange31"
+        },
+        {
+          "row": 15,
+          "key": "AtkSpeedCriRange32"
+        },
+        {
+          "row": 183,
+          "key": "AtkSpeedCriRangeE"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 5,
+      "count": 8,
+      "examples": [
+        {
+          "row": 16,
+          "key": "AtkPower11"
+        },
+        {
+          "row": 17,
+          "key": "AtkPower12"
+        },
+        {
+          "row": 18,
+          "key": "AtkPower13"
+        },
+        {
+          "row": 19,
+          "key": "AtkPower41"
+        },
+        {
+          "row": 20,
+          "key": "AtkPower43"
+        },
+        {
+          "row": 141,
+          "key": "AtkPowerE1"
+        },
+        {
+          "row": 153,
+          "key": "AtkPowerE"
+        },
+        {
+          "row": 188,
+          "key": "AtkPower42"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 6,
+      "count": 4,
+      "examples": [
+        {
+          "row": 21,
+          "key": "AtkPowerRange31"
+        },
+        {
+          "row": 22,
+          "key": "AtkPowerRange32"
+        },
+        {
+          "row": 23,
+          "key": "AtkPowerRange33"
+        },
+        {
+          "row": 146,
+          "key": "AtkPowerRangeE1"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 7,
+      "count": 6,
+      "examples": [
+        {
+          "row": 24,
+          "key": "AtkPowerSpeed11"
+        },
+        {
+          "row": 25,
+          "key": "AtkPowerSpeed12"
+        },
+        {
+          "row": 26,
+          "key": "AtkPowerSpeed13"
+        },
+        {
+          "row": 27,
+          "key": "AtkPowerSpeed21"
+        },
+        {
+          "row": 28,
+          "key": "AtkPowerSpeed22"
+        },
+        {
+          "row": 29,
+          "key": "AtkPowerSpeed23"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 8,
+      "count": 8,
+      "examples": [
+        {
+          "row": 30,
+          "key": "AtkPowerCri11"
+        },
+        {
+          "row": 31,
+          "key": "AtkPowerCri12"
+        },
+        {
+          "row": 32,
+          "key": "AtkPowerCri21"
+        },
+        {
+          "row": 33,
+          "key": "AtkPowerCri22"
+        },
+        {
+          "row": 34,
+          "key": "AtkPowerCri23"
+        },
+        {
+          "row": 35,
+          "key": "AtkPowerCri41"
+        },
+        {
+          "row": 36,
+          "key": "AtkPowerCri42"
+        },
+        {
+          "row": 154,
+          "key": "AtkPowerCriE"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 9,
+      "count": 2,
+      "examples": [
+        {
+          "row": 37,
+          "key": "AtkPowerCriRange31"
+        },
+        {
+          "row": 38,
+          "key": "AtkPowerCriRange32"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 10,
+      "count": 3,
+      "examples": [
+        {
+          "row": 39,
+          "key": "AtkMaxCri21"
+        },
+        {
+          "row": 40,
+          "key": "AtkMaxCri22"
+        },
+        {
+          "row": 148,
+          "key": "AtkMaxCriE1"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 11,
+      "count": 2,
+      "examples": [
+        {
+          "row": 41,
+          "key": "DefPowerRange31"
+        },
+        {
+          "row": 42,
+          "key": "DefPowerRange32"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 12,
+      "count": 3,
+      "examples": [
+        {
+          "row": 44,
+          "key": "DefAtkPowerRange33"
+        },
+        {
+          "row": 45,
+          "key": "DefAtkPowerRange32"
+        },
+        {
+          "row": 200,
+          "key": "AtkUpDefDecRange35"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 13,
+      "count": 3,
+      "examples": [
+        {
+          "row": 46,
+          "key": "AvoidPowerRange31"
+        },
+        {
+          "row": 47,
+          "key": "AvoidPowerRange32"
+        },
+        {
+          "row": 144,
+          "key": "AvoidPowerRangeE1"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 14,
+      "count": 6,
+      "examples": [
+        {
+          "row": 48,
+          "key": "DefPower11"
+        },
+        {
+          "row": 49,
+          "key": "DefPower12"
+        },
+        {
+          "row": 50,
+          "key": "DefPower13"
+        },
+        {
+          "row": 51,
+          "key": "DefPower51"
+        },
+        {
+          "row": 52,
+          "key": "DefPower52"
+        },
+        {
+          "row": 53,
+          "key": "DefPower53"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 15,
+      "count": 3,
+      "examples": [
+        {
+          "row": 55,
+          "key": "AvoidPower11"
+        },
+        {
+          "row": 56,
+          "key": "AvoidPower12"
+        },
+        {
+          "row": 57,
+          "key": "AvoidPower13"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 16,
+      "count": 3,
+      "examples": [
+        {
+          "row": 58,
+          "key": "FrontShield11"
+        },
+        {
+          "row": 59,
+          "key": "FrontShield12"
+        },
+        {
+          "row": 60,
+          "key": "FrontShield13"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 17,
+      "count": 3,
+      "examples": [
+        {
+          "row": 61,
+          "key": "ExpShield61"
+        },
+        {
+          "row": 203,
+          "key": "ExpShieldE"
+        },
+        {
+          "row": 207,
+          "key": "ExpShieldE2"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 18,
+      "count": 3,
+      "examples": [
+        {
+          "row": 62,
+          "key": "InflectShield11"
+        },
+        {
+          "row": 63,
+          "key": "InflectShield31"
+        },
+        {
+          "row": 64,
+          "key": "InflectShield32"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 19,
+      "count": 4,
+      "examples": [
+        {
+          "row": 65,
+          "key": "RefShield51"
+        },
+        {
+          "row": 66,
+          "key": "RefShield52"
+        },
+        {
+          "row": 67,
+          "key": "RefShield53"
+        },
+        {
+          "row": 174,
+          "key": "RefShield99"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 20,
+      "count": 3,
+      "examples": [
+        {
+          "row": 68,
+          "key": "DefPowerStun31"
+        },
+        {
+          "row": 69,
+          "key": "DefPowerStun32"
+        },
+        {
+          "row": 158,
+          "key": "DefPowerStunE"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 21,
+      "count": 3,
+      "examples": [
+        {
+          "row": 70,
+          "key": "DefPowerDot31"
+        },
+        {
+          "row": 71,
+          "key": "DefPowerDot32"
+        },
+        {
+          "row": 182,
+          "key": "DefPowerDotE"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 22,
+      "count": 3,
+      "examples": [
+        {
+          "row": 72,
+          "key": "Invisibility01"
+        },
+        {
+          "row": 73,
+          "key": "Invisibility02"
+        },
+        {
+          "row": 150,
+          "key": "InvisibilityE1"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 23,
+      "count": 2,
+      "examples": [
+        {
+          "row": 74,
+          "key": "Invincibility51"
+        },
+        {
+          "row": 75,
+          "key": "Invincibility52"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 24,
+      "count": 2,
+      "examples": [
+        {
+          "row": 76,
+          "key": "Miniature01"
+        },
+        {
+          "row": 77,
+          "key": "Miniature02"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 25,
+      "count": 5,
+      "examples": [
+        {
+          "row": 78,
+          "key": "Taunt51"
+        },
+        {
+          "row": 79,
+          "key": "Taunt52"
+        },
+        {
+          "row": 147,
+          "key": "TauntE1"
+        },
+        {
+          "row": 185,
+          "key": "TauntE2"
+        },
+        {
+          "row": 194,
+          "key": "TauntE3"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 26,
+      "count": 1,
+      "examples": [
+        {
+          "row": 80,
+          "key": "Blackhole51"
+        }
+      ],
+      "status": "native branch confirmed",
+      "consumer": "0x3d69f0..0x3d69f8",
+      "meaning": "Blackhole family; OR1 comparison selects types26/27; runtime behavior includes pull/area collection and periodic damage."
+    },
+    {
+      "type": 27,
+      "count": 3,
+      "examples": [
+        {
+          "row": 81,
+          "key": "Blackhole11"
+        },
+        {
+          "row": 173,
+          "key": "Blackhole99"
+        },
+        {
+          "row": 175,
+          "key": "Blackhole98"
+        }
+      ],
+      "status": "native branch confirmed",
+      "consumer": "0x3d69f0..0x3d69f8",
+      "meaning": "Blackhole family; OR1 comparison selects types26/27; runtime behavior includes pull/area collection and periodic damage."
+    },
+    {
+      "type": 28,
+      "count": 1,
+      "examples": [
+        {
+          "row": 82,
+          "key": "Avatar01"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 29,
+      "count": 16,
+      "examples": [
+        {
+          "row": 83,
+          "key": "MakeDrone41"
+        },
+        {
+          "row": 84,
+          "key": "MakeDrone42"
+        },
+        {
+          "row": 85,
+          "key": "MakeDrone43"
+        },
+        {
+          "row": 163,
+          "key": "MakeDroneE"
+        },
+        {
+          "row": 164,
+          "key": "MakeDroneE2"
+        },
+        {
+          "row": 165,
+          "key": "MakeDroneE3"
+        },
+        {
+          "row": 166,
+          "key": "MakeDroneE4"
+        },
+        {
+          "row": 167,
+          "key": "MakeDroneE5"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 30,
+      "count": 3,
+      "examples": [
+        {
+          "row": 86,
+          "key": "MakeTurret11"
+        },
+        {
+          "row": 87,
+          "key": "MakeTurret12"
+        },
+        {
+          "row": 88,
+          "key": "MakeTurret13"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 31,
+      "count": 3,
+      "examples": [
+        {
+          "row": 89,
+          "key": "AtkPowerDec01"
+        },
+        {
+          "row": 90,
+          "key": "AtkPowerDec02"
+        },
+        {
+          "row": 91,
+          "key": "AtkPowerDec03"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 32,
+      "count": 4,
+      "examples": [
+        {
+          "row": 92,
+          "key": "DefPowerDec01"
+        },
+        {
+          "row": 93,
+          "key": "DefPowerDec02"
+        },
+        {
+          "row": 211,
+          "key": "EvasionDec01"
+        },
+        {
+          "row": 212,
+          "key": "EvasionDec02"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 33,
+      "count": 4,
+      "examples": [
+        {
+          "row": 94,
+          "key": "StunShot01"
+        },
+        {
+          "row": 95,
+          "key": "StunShot02"
+        },
+        {
+          "row": 151,
+          "key": "StunShotE1"
+        },
+        {
+          "row": 159,
+          "key": "StunShotE"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 34,
+      "count": 2,
+      "examples": [
+        {
+          "row": 96,
+          "key": "DecayShot01"
+        },
+        {
+          "row": 97,
+          "key": "DecayShot02"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 35,
+      "count": 4,
+      "examples": [
+        {
+          "row": 98,
+          "key": "SlowField01"
+        },
+        {
+          "row": 99,
+          "key": "SlowField02"
+        },
+        {
+          "row": 145,
+          "key": "SlowFieldE1"
+        },
+        {
+          "row": 210,
+          "key": "SlowFieldE2"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 36,
+      "count": 3,
+      "examples": [
+        {
+          "row": 100,
+          "key": "DamageZone51"
+        },
+        {
+          "row": 101,
+          "key": "DamageZone52"
+        },
+        {
+          "row": 162,
+          "key": "DamageZoneE"
+        }
+      ],
+      "status": "native branch confirmed",
+      "consumer": "0x3d7314..0x3d752c",
+      "meaning": "DamageZone family; OR1 comparison selects types36/37; area targets receive level-scaled skill damage."
+    },
+    {
+      "type": 37,
+      "count": 3,
+      "examples": [
+        {
+          "row": 102,
+          "key": "DamageZone41"
+        },
+        {
+          "row": 179,
+          "key": "DamageZone99"
+        },
+        {
+          "row": 206,
+          "key": "DamageZoneB"
+        }
+      ],
+      "status": "native branch confirmed",
+      "consumer": "0x3d7314..0x3d752c",
+      "meaning": "DamageZone family; OR1 comparison selects types36/37; area targets receive level-scaled skill damage."
+    },
+    {
+      "type": 38,
+      "count": 2,
+      "examples": [
+        {
+          "row": 103,
+          "key": "DecayField51"
+        },
+        {
+          "row": 104,
+          "key": "DecayField52"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 39,
+      "count": 5,
+      "examples": [
+        {
+          "row": 105,
+          "key": "StellarWhirlwind41"
+        },
+        {
+          "row": 106,
+          "key": "StunWhirlwind41"
+        },
+        {
+          "row": 107,
+          "key": "Whirlwind41"
+        },
+        {
+          "row": 201,
+          "key": "WhirlwindE"
+        },
+        {
+          "row": 225,
+          "key": "WhirlwindE2"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 40,
+      "count": 3,
+      "examples": [
+        {
+          "row": 108,
+          "key": "ShockWave61"
+        },
+        {
+          "row": 109,
+          "key": "ShockWave42"
+        },
+        {
+          "row": 196,
+          "key": "ShockWaveE1"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 41,
+      "count": 2,
+      "examples": [
+        {
+          "row": 110,
+          "key": "Crash41"
+        },
+        {
+          "row": 157,
+          "key": "CrashE"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 42,
+      "count": 3,
+      "examples": [
+        {
+          "row": 111,
+          "key": "Flash11"
+        },
+        {
+          "row": 156,
+          "key": "FlashE"
+        },
+        {
+          "row": 208,
+          "key": "FlashE2"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 43,
+      "count": 2,
+      "examples": [
+        {
+          "row": 112,
+          "key": "FlashDecay41"
+        },
+        {
+          "row": 172,
+          "key": "FlashDecayLeiga"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 44,
+      "count": 5,
+      "examples": [
+        {
+          "row": 113,
+          "key": "Explode21"
+        },
+        {
+          "row": 114,
+          "key": "Explode22"
+        },
+        {
+          "row": 115,
+          "key": "Explode23"
+        },
+        {
+          "row": 116,
+          "key": "Explode61"
+        },
+        {
+          "row": 178,
+          "key": "Explode99"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 46,
+      "count": 6,
+      "examples": [
+        {
+          "row": 119,
+          "key": "GuideShot21"
+        },
+        {
+          "row": 149,
+          "key": "GuideShotE1"
+        },
+        {
+          "row": 177,
+          "key": "GuideShot99"
+        },
+        {
+          "row": 195,
+          "key": "GuideShotE2"
+        },
+        {
+          "row": 209,
+          "key": "GuideShotE3"
+        },
+        {
+          "row": 215,
+          "key": "GuideShotE4"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 47,
+      "count": 1,
+      "examples": [
+        {
+          "row": 120,
+          "key": "MultiStraight61"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 48,
+      "count": 4,
+      "examples": [
+        {
+          "row": 121,
+          "key": "MachineShot21"
+        },
+        {
+          "row": 122,
+          "key": "MachineShot22"
+        },
+        {
+          "row": 123,
+          "key": "MachineShot23"
+        },
+        {
+          "row": 221,
+          "key": "SuperRapid21"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 49,
+      "count": 4,
+      "examples": [
+        {
+          "row": 124,
+          "key": "Laser11"
+        },
+        {
+          "row": 125,
+          "key": "Laser41"
+        },
+        {
+          "row": 176,
+          "key": "Laser99"
+        },
+        {
+          "row": 190,
+          "key": "LaserE2"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 50,
+      "count": 2,
+      "examples": [
+        {
+          "row": 126,
+          "key": "LaserTarget11"
+        },
+        {
+          "row": 127,
+          "key": "LaserTarget61"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 51,
+      "count": 3,
+      "examples": [
+        {
+          "row": 128,
+          "key": "FireworkShot99"
+        },
+        {
+          "row": 129,
+          "key": "FireworkShot100"
+        },
+        {
+          "row": 142,
+          "key": "FireworkShotE1"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 52,
+      "count": 3,
+      "examples": [
+        {
+          "row": 130,
+          "key": "HookShot51"
+        },
+        {
+          "row": 131,
+          "key": "HookShot52"
+        },
+        {
+          "row": 214,
+          "key": "HookShotE"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 53,
+      "count": 6,
+      "examples": [
+        {
+          "row": 132,
+          "key": "SniperShot41"
+        },
+        {
+          "row": 133,
+          "key": "SniperShot42"
+        },
+        {
+          "row": 134,
+          "key": "SniperShot43"
+        },
+        {
+          "row": 135,
+          "key": "PierceShot41"
+        },
+        {
+          "row": 136,
+          "key": "PierceShot42"
+        },
+        {
+          "row": 152,
+          "key": "PierceShotE1"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 54,
+      "count": 3,
+      "examples": [
+        {
+          "row": 137,
+          "key": "StellarPierce41"
+        },
+        {
+          "row": 138,
+          "key": "StellarPierce42"
+        },
+        {
+          "row": 139,
+          "key": "StellarPierce61"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 55,
+      "count": 1,
+      "examples": [
+        {
+          "row": 140,
+          "key": "DecayPierce41"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 57,
+      "count": 2,
+      "examples": [
+        {
+          "row": 160,
+          "key": "SplashShotE"
+        },
+        {
+          "row": 161,
+          "key": "SplashShotE2"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 58,
+      "count": 2,
+      "examples": [
+        {
+          "row": 117,
+          "key": "SniperGuideShot41"
+        },
+        {
+          "row": 118,
+          "key": "SniperGuideShot42"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 59,
+      "count": 1,
+      "examples": [
+        {
+          "row": 54,
+          "key": "DefAtkPower53"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 60,
+      "count": 4,
+      "examples": [
+        {
+          "row": 43,
+          "key": "DamDecRange61"
+        },
+        {
+          "row": 184,
+          "key": "DamDecRange51"
+        },
+        {
+          "row": 186,
+          "key": "DamDecRange99"
+        },
+        {
+          "row": 219,
+          "key": "DamDecRangeE"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 61,
+      "count": 1,
+      "examples": [
+        {
+          "row": 187,
+          "key": "AtkChanger12"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 62,
+      "count": 1,
+      "examples": [
+        {
+          "row": 189,
+          "key": "AtkUpSpeedDown22"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 63,
+      "count": 2,
+      "examples": [
+        {
+          "row": 191,
+          "key": "DefPowerLaser33"
+        },
+        {
+          "row": 202,
+          "key": "DefPowerLaserE"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 64,
+      "count": 1,
+      "examples": [
+        {
+          "row": 193,
+          "key": "Reduction41"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 65,
+      "count": 1,
+      "examples": [
+        {
+          "row": 197,
+          "key": "AtkUpDefThrough21"
+        }
+      ],
+      "status": "native branch confirmed",
+      "consumer": "0x3f296c..0x3f2974",
+      "meaning": "Defense bypass in this damage formula. The extracted member is AtkUpDefThrough21."
+    },
+    {
+      "type": 66,
+      "count": 1,
+      "examples": [
+        {
+          "row": 199,
+          "key": "Sacrifice51"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 67,
+      "count": 1,
+      "examples": [
+        {
+          "row": 205,
+          "key": "SniperGuideShot43"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 68,
+      "count": 1,
+      "examples": [
+        {
+          "row": 204,
+          "key": "Giantization51"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 69,
+      "count": 1,
+      "examples": [
+        {
+          "row": 213,
+          "key": "DefPowerMeleeE"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 70,
+      "count": 1,
+      "examples": [
+        {
+          "row": 216,
+          "key": "MeleeInduce30"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 71,
+      "count": 1,
+      "examples": [
+        {
+          "row": 217,
+          "key": "BasicInduce30"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 72,
+      "count": 1,
+      "examples": [
+        {
+          "row": 218,
+          "key": "LaserGuideInduce30"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 73,
+      "count": 1,
+      "examples": [
+        {
+          "row": 220,
+          "key": "ShockRef61"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 74,
+      "count": 1,
+      "examples": [
+        {
+          "row": 222,
+          "key": "TimeStop51"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 75,
+      "count": 1,
+      "examples": [
+        {
+          "row": 223,
+          "key": "DefPowerTaunt32"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    },
+    {
+      "type": 76,
+      "count": 1,
+      "examples": [
+        {
+          "row": 224,
+          "key": "Bombing51"
+        }
+      ],
+      "status": "table_grouping; effect semantics unresolved"
+    }
+  ],
+  "vtable": {
+    "char": {
+      "address": "0x8dc3b0",
+      "constructor": "0x39646c"
+    },
+    "hero": {
+      "address": "0x8de110",
+      "constructor": "0x3c7f8c"
+    },
+    "slots": {
+      "0x210": {
+        "name": "receive_damage",
+        "char": "0x3b8f20",
+        "hero": "0x3c9bbc"
+      },
+      "0x1e8": {
+        "name": "critical_chance_per_mille",
+        "char": "0x3a4080",
+        "hero": "0x3c87bc"
+      },
+      "0x1f0": {
+        "name": "critical_bonus_per_mille",
+        "char": "0x3a469c",
+        "hero": "0x3c8a10"
+      },
+      "0x178": {
+        "name": "evasion_chance_per_mille",
+        "char": "0x3a46d0",
+        "hero": "0x3c8aa0"
+      },
+      "0x150": {
+        "name": "evasion_reduction_per_mille",
+        "char": "0x3a4d04",
+        "hero": "0x3c8c58"
+      },
+      "0x188": {
+        "name": "armor_penetration_per_mille",
+        "char": "0x3c20a4",
+        "hero": "0x3c8a74"
+      },
+      "0x1f8": {
+        "name": "defense",
+        "char": "0x3a3658",
+        "hero": "0x3c9044"
+      }
+    }
+  },
+  "binary": "raw/apk/lib/arm64-v8a/libStella.so",
+  "binary_sha256": "6883fa9383432c981e86c13b8f01b8f227a51d6cf2298dd6c47d3d3774c53f9a"
+}

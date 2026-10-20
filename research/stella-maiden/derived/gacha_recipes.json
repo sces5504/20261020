@@ -1,0 +1,4541 @@
+{
+  "scope": "Recipe targets/ranges from local table; not per-character probability or proof of production pool availability. Resource slot names remain unresolved.",
+  "recipes": [
+    {
+      "row": 0,
+      "key": "Sun",
+      "character_row": 1,
+      "character_key": "Sun",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        307,
+        733,
+        187,
+        440
+      ],
+      "minimum_total": 1667,
+      "maximum_total": 39996,
+      "source_offset": 24
+    },
+    {
+      "row": 1,
+      "key": "Earth",
+      "character_row": 2,
+      "character_key": "Earth",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        315,
+        158,
+        420,
+        158
+      ],
+      "minimum_total": 1051,
+      "maximum_total": 39996,
+      "source_offset": 85
+    },
+    {
+      "row": 2,
+      "key": "Mercury",
+      "character_row": 3,
+      "character_key": "Mercury",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        315,
+        158,
+        420,
+        158
+      ],
+      "minimum_total": 1051,
+      "maximum_total": 39996,
+      "source_offset": 148
+    },
+    {
+      "row": 3,
+      "key": "Venus",
+      "character_row": 4,
+      "character_key": "Venus",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        315,
+        158,
+        420,
+        158
+      ],
+      "minimum_total": 1051,
+      "maximum_total": 39996,
+      "source_offset": 213
+    },
+    {
+      "row": 4,
+      "key": "Mars",
+      "character_row": 5,
+      "character_key": "Mars",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        300,
+        150,
+        400,
+        150
+      ],
+      "minimum_total": 1000,
+      "maximum_total": 39996,
+      "source_offset": 276
+    },
+    {
+      "row": 5,
+      "key": "Jupiter",
+      "character_row": 6,
+      "character_key": "Jupiter",
+      "rarity": 5,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        413,
+        206,
+        422,
+        160
+      ],
+      "minimum_total": 1201,
+      "maximum_total": 39996,
+      "source_offset": 338
+    },
+    {
+      "row": 6,
+      "key": "Saturn",
+      "character_row": 7,
+      "character_key": "Saturn",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        386,
+        211,
+        440,
+        165
+      ],
+      "minimum_total": 1202,
+      "maximum_total": 39996,
+      "source_offset": 403
+    },
+    {
+      "row": 7,
+      "key": "Uranus",
+      "character_row": 8,
+      "character_key": "Uranus",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        315,
+        158,
+        420,
+        158
+      ],
+      "minimum_total": 1051,
+      "maximum_total": 39996,
+      "source_offset": 467
+    },
+    {
+      "row": 8,
+      "key": "Neptune",
+      "character_row": 9,
+      "character_key": "Neptune",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        409,
+        165,
+        440,
+        211
+      ],
+      "minimum_total": 1225,
+      "maximum_total": 39996,
+      "source_offset": 531
+    },
+    {
+      "row": 9,
+      "key": "Pluto",
+      "character_row": 10,
+      "character_key": "Pluto",
+      "rarity": 5,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        320,
+        160,
+        528,
+        198
+      ],
+      "minimum_total": 1206,
+      "maximum_total": 39996,
+      "source_offset": 596
+    },
+    {
+      "row": 10,
+      "key": "Nemesis",
+      "character_row": 11,
+      "character_key": "Nemesis",
+      "rarity": 5,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        440,
+        275,
+        583,
+        286
+      ],
+      "minimum_total": 1584,
+      "maximum_total": 2376,
+      "source_offset": 659
+    },
+    {
+      "row": 11,
+      "key": "Moon",
+      "character_row": 12,
+      "character_key": "Moon",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        131,
+        131,
+        131,
+        131
+      ],
+      "minimum_total": 524,
+      "maximum_total": 1048,
+      "source_offset": 724
+    },
+    {
+      "row": 12,
+      "key": "Heimdal",
+      "character_row": 13,
+      "character_key": "Heimdal",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        131,
+        131,
+        131,
+        131
+      ],
+      "minimum_total": 524,
+      "maximum_total": 1048,
+      "source_offset": 786
+    },
+    {
+      "row": 13,
+      "key": "Cruithne",
+      "character_row": 14,
+      "character_key": "Cruithne",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        158,
+        127,
+        139,
+        131
+      ],
+      "minimum_total": 555,
+      "maximum_total": 1110,
+      "source_offset": 851
+    },
+    {
+      "row": 14,
+      "key": "Phobos",
+      "character_row": 15,
+      "character_key": "Phobos",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        125,
+        125,
+        125,
+        125
+      ],
+      "minimum_total": 50,
+      "maximum_total": 1000,
+      "source_offset": 917
+    },
+    {
+      "row": 15,
+      "key": "Ganymede",
+      "character_row": 16,
+      "character_key": "Ganymede",
+      "rarity": 5,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        138,
+        168,
+        138,
+        157
+      ],
+      "minimum_total": 601,
+      "maximum_total": 1202,
+      "source_offset": 981
+    },
+    {
+      "row": 16,
+      "key": "Io",
+      "character_row": 17,
+      "character_key": "Io",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        125,
+        125,
+        125,
+        125
+      ],
+      "minimum_total": 50,
+      "maximum_total": 1000,
+      "source_offset": 1047
+    },
+    {
+      "row": 17,
+      "key": "Leah",
+      "character_row": 18,
+      "character_key": "Leah",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        131,
+        131,
+        131,
+        131
+      ],
+      "minimum_total": 524,
+      "maximum_total": 1048,
+      "source_offset": 1107
+    },
+    {
+      "row": 18,
+      "key": "Titania",
+      "character_row": 19,
+      "character_key": "Titania",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        125,
+        125,
+        125,
+        125
+      ],
+      "minimum_total": 50,
+      "maximum_total": 1000,
+      "source_offset": 1169
+    },
+    {
+      "row": 19,
+      "key": "Ariel",
+      "character_row": 20,
+      "character_key": "Ariel",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        160,
+        138,
+        138,
+        164
+      ],
+      "minimum_total": 600,
+      "maximum_total": 1200,
+      "source_offset": 1234
+    },
+    {
+      "row": 20,
+      "key": "Umbriel",
+      "character_row": 21,
+      "character_key": "Umbriel",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        125,
+        125,
+        125,
+        125
+      ],
+      "minimum_total": 50,
+      "maximum_total": 1000,
+      "source_offset": 1297
+    },
+    {
+      "row": 21,
+      "key": "Larissa",
+      "character_row": 22,
+      "character_key": "Larissa",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        158,
+        158,
+        138,
+        138
+      ],
+      "minimum_total": 592,
+      "maximum_total": 1184,
+      "source_offset": 1362
+    },
+    {
+      "row": 22,
+      "key": "Nix",
+      "character_row": 23,
+      "character_key": "Nix",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        125,
+        125,
+        125,
+        125
+      ],
+      "minimum_total": 50,
+      "maximum_total": 1000,
+      "source_offset": 1427
+    },
+    {
+      "row": 23,
+      "key": "Hydra",
+      "character_row": 24,
+      "character_key": "Hydra",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        131,
+        131,
+        131,
+        131
+      ],
+      "minimum_total": 524,
+      "maximum_total": 1048,
+      "source_offset": 1488
+    },
+    {
+      "row": 24,
+      "key": "Gliese",
+      "character_row": 25,
+      "character_key": "Gliese",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        300,
+        150,
+        400,
+        150
+      ],
+      "minimum_total": 1000,
+      "maximum_total": 39996,
+      "source_offset": 1551
+    },
+    {
+      "row": 25,
+      "key": "581E",
+      "character_row": 26,
+      "character_key": "581E",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        300,
+        150,
+        400,
+        150
+      ],
+      "minimum_total": 1000,
+      "maximum_total": 39996,
+      "source_offset": 1615
+    },
+    {
+      "row": 26,
+      "key": "Seginus",
+      "character_row": 27,
+      "character_key": "Seginus",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        315,
+        735,
+        630,
+        420
+      ],
+      "minimum_total": 2100,
+      "maximum_total": 39996,
+      "source_offset": 1677
+    },
+    {
+      "row": 27,
+      "key": "Spica",
+      "character_row": 28,
+      "character_key": "Spica",
+      "rarity": 5,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        347,
+        634,
+        207,
+        475
+      ],
+      "minimum_total": 1663,
+      "maximum_total": 39996,
+      "source_offset": 1742
+    },
+    {
+      "row": 28,
+      "key": "Arcturus",
+      "character_row": 29,
+      "character_key": "Arcturus",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        380,
+        732,
+        614,
+        484
+      ],
+      "minimum_total": 2210,
+      "maximum_total": 39996,
+      "source_offset": 1805
+    },
+    {
+      "row": 29,
+      "key": "Valencia",
+      "character_row": 30,
+      "character_key": "Valencia",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        400,
+        250,
+        500,
+        250
+      ],
+      "minimum_total": 1400,
+      "maximum_total": 2100,
+      "source_offset": 1871
+    },
+    {
+      "row": 30,
+      "key": "Vello",
+      "character_row": 31,
+      "character_key": "Vello",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        400,
+        250,
+        500,
+        250
+      ],
+      "minimum_total": 1400,
+      "maximum_total": 2100,
+      "source_offset": 1937
+    },
+    {
+      "row": 31,
+      "key": "Linda",
+      "character_row": 32,
+      "character_key": "Linda",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        400,
+        250,
+        500,
+        250
+      ],
+      "minimum_total": 1400,
+      "maximum_total": 2100,
+      "source_offset": 2000
+    },
+    {
+      "row": 32,
+      "key": "Izar",
+      "character_row": 33,
+      "character_key": "Izar",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        315,
+        735,
+        630,
+        420
+      ],
+      "minimum_total": 2100,
+      "maximum_total": 39996,
+      "source_offset": 2063
+    },
+    {
+      "row": 33,
+      "key": "Regulus",
+      "character_row": 34,
+      "character_key": "Regulus",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        315,
+        630,
+        210,
+        420
+      ],
+      "minimum_total": 1575,
+      "maximum_total": 39996,
+      "source_offset": 2125
+    },
+    {
+      "row": 34,
+      "key": "Arkas",
+      "character_row": 35,
+      "character_key": "Arkas",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        300,
+        150,
+        400,
+        150
+      ],
+      "minimum_total": 1000,
+      "maximum_total": 39996,
+      "source_offset": 2190
+    },
+    {
+      "row": 35,
+      "key": "Procyon",
+      "character_row": 36,
+      "character_key": "Procyon",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        315,
+        630,
+        210,
+        420
+      ],
+      "minimum_total": 1575,
+      "maximum_total": 39996,
+      "source_offset": 2253
+    },
+    {
+      "row": 36,
+      "key": "Wolf359",
+      "character_row": 37,
+      "character_key": "Wolf359",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        420,
+        263,
+        525,
+        263
+      ],
+      "minimum_total": 1471,
+      "maximum_total": 2207,
+      "source_offset": 2318
+    },
+    {
+      "row": 37,
+      "key": "Luyten",
+      "character_row": 38,
+      "character_key": "Luyten",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        480,
+        281,
+        523,
+        270
+      ],
+      "minimum_total": 1554,
+      "maximum_total": 2331,
+      "source_offset": 2383
+    },
+    {
+      "row": 38,
+      "key": "Regor",
+      "character_row": 39,
+      "character_key": "Regor",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        578,
+        578,
+        578,
+        578
+      ],
+      "minimum_total": 2312,
+      "maximum_total": 39996,
+      "source_offset": 2447
+    },
+    {
+      "row": 39,
+      "key": "TseenKe",
+      "character_row": 40,
+      "character_key": "TseenKe",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        700,
+        300,
+        300,
+        800
+      ],
+      "minimum_total": 2100,
+      "maximum_total": 39996,
+      "source_offset": 2510
+    },
+    {
+      "row": 40,
+      "key": "Suhail",
+      "character_row": 41,
+      "character_key": "Suhail",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        700,
+        300,
+        300,
+        800
+      ],
+      "minimum_total": 2100,
+      "maximum_total": 39996,
+      "source_offset": 2575
+    },
+    {
+      "row": 41,
+      "key": "Alherem",
+      "character_row": 42,
+      "character_key": "Alherem",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        300,
+        700,
+        600,
+        400
+      ],
+      "minimum_total": 2000,
+      "maximum_total": 39996,
+      "source_offset": 2639
+    },
+    {
+      "row": 42,
+      "key": "Musca",
+      "character_row": 43,
+      "character_key": "Musca",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        420,
+        263,
+        525,
+        263
+      ],
+      "minimum_total": 1471,
+      "maximum_total": 2207,
+      "source_offset": 2704
+    },
+    {
+      "row": 43,
+      "key": "Acrux",
+      "character_row": 44,
+      "character_key": "Acrux",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        315,
+        630,
+        210,
+        420
+      ],
+      "minimum_total": 1575,
+      "maximum_total": 39996,
+      "source_offset": 2767
+    },
+    {
+      "row": 44,
+      "key": "Achernar",
+      "character_row": 45,
+      "character_key": "Achernar",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        300,
+        600,
+        200,
+        400
+      ],
+      "minimum_total": 1500,
+      "maximum_total": 39996,
+      "source_offset": 2830
+    },
+    {
+      "row": 45,
+      "key": "Ran",
+      "character_row": 46,
+      "character_key": "Ran",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        497,
+        248,
+        539,
+        297
+      ],
+      "minimum_total": 1581,
+      "maximum_total": 2372,
+      "source_offset": 2896
+    },
+    {
+      "row": 46,
+      "key": "Aegir",
+      "character_row": 47,
+      "character_key": "Aegir",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        399,
+        165,
+        440,
+        196
+      ],
+      "minimum_total": 1200,
+      "maximum_total": 39996,
+      "source_offset": 2957
+    },
+    {
+      "row": 47,
+      "key": "Doradus",
+      "character_row": 48,
+      "character_key": "Doradus",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        578,
+        578,
+        578,
+        578
+      ],
+      "minimum_total": 2312,
+      "maximum_total": 39996,
+      "source_offset": 3020
+    },
+    {
+      "row": 48,
+      "key": "Acamar",
+      "character_row": 49,
+      "character_key": "Acamar",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        315,
+        630,
+        210,
+        420
+      ],
+      "minimum_total": 1575,
+      "maximum_total": 39996,
+      "source_offset": 3085
+    },
+    {
+      "row": 49,
+      "key": "OTS44",
+      "character_row": 50,
+      "character_key": "OTS44",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        420,
+        263,
+        525,
+        263
+      ],
+      "minimum_total": 1471,
+      "maximum_total": 2207,
+      "source_offset": 3149
+    },
+    {
+      "row": 50,
+      "key": "DEN",
+      "character_row": 51,
+      "character_key": "DEN",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        422,
+        267,
+        605,
+        289
+      ],
+      "minimum_total": 1583,
+      "maximum_total": 2375,
+      "source_offset": 3212
+    },
+    {
+      "row": 51,
+      "key": "Sirius",
+      "character_row": 52,
+      "character_key": "Sirius",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        315,
+        630,
+        210,
+        420
+      ],
+      "minimum_total": 1575,
+      "maximum_total": 39996,
+      "source_offset": 3273
+    },
+    {
+      "row": 52,
+      "key": "Bayes",
+      "character_row": 53,
+      "character_key": "Bayes",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        420,
+        263,
+        525,
+        263
+      ],
+      "minimum_total": 1471,
+      "maximum_total": 2207,
+      "source_offset": 3337
+    },
+    {
+      "row": 53,
+      "key": "Rufus",
+      "character_row": 54,
+      "character_key": "Rufus",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        400,
+        250,
+        500,
+        250
+      ],
+      "minimum_total": 1400,
+      "maximum_total": 2100,
+      "source_offset": 3400
+    },
+    {
+      "row": 54,
+      "key": "Asmidiske",
+      "character_row": 55,
+      "character_key": "Asmidiske",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        700,
+        300,
+        300,
+        800
+      ],
+      "minimum_total": 2100,
+      "maximum_total": 2100,
+      "source_offset": 3463
+    },
+    {
+      "row": 55,
+      "key": "Canis",
+      "character_row": 56,
+      "character_key": "Canis",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        732,
+        383,
+        310,
+        915
+      ],
+      "minimum_total": 2340,
+      "maximum_total": 39996,
+      "source_offset": 3530
+    },
+    {
+      "row": 56,
+      "key": "Wezen",
+      "character_row": 57,
+      "character_key": "Wezen",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        700,
+        300,
+        300,
+        800
+      ],
+      "minimum_total": 2100,
+      "maximum_total": 39996,
+      "source_offset": 3593
+    },
+    {
+      "row": 57,
+      "key": "Aludra",
+      "character_row": 58,
+      "character_key": "Aludra",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        770,
+        347,
+        337,
+        862
+      ],
+      "minimum_total": 2316,
+      "maximum_total": 39996,
+      "source_offset": 3656
+    },
+    {
+      "row": 58,
+      "key": "Furud",
+      "character_row": 59,
+      "character_key": "Furud",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        300,
+        600,
+        200,
+        400
+      ],
+      "minimum_total": 1500,
+      "maximum_total": 39996,
+      "source_offset": 3720
+    },
+    {
+      "row": 59,
+      "key": "Naos",
+      "character_row": 60,
+      "character_key": "Naos",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        735,
+        315,
+        315,
+        840
+      ],
+      "minimum_total": 2205,
+      "maximum_total": 39996,
+      "source_offset": 3783
+    },
+    {
+      "row": 60,
+      "key": "Polaris",
+      "character_row": 61,
+      "character_key": "Polaris",
+      "rarity": 5,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        801,
+        310,
+        297,
+        924
+      ],
+      "minimum_total": 2332,
+      "maximum_total": 39996,
+      "source_offset": 3845
+    },
+    {
+      "row": 61,
+      "key": "Mucephei",
+      "character_row": 62,
+      "character_key": "Mucephei",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        578,
+        578,
+        578,
+        578
+      ],
+      "minimum_total": 2312,
+      "maximum_total": 39996,
+      "source_offset": 3910
+    },
+    {
+      "row": 62,
+      "key": "Alrai",
+      "character_row": 63,
+      "character_key": "Alrai",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        360,
+        706,
+        200,
+        405
+      ],
+      "minimum_total": 1671,
+      "maximum_total": 39996,
+      "source_offset": 3976
+    },
+    {
+      "row": 63,
+      "key": "Shedar",
+      "character_row": 64,
+      "character_key": "Shedar",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        300,
+        700,
+        600,
+        400
+      ],
+      "minimum_total": 2000,
+      "maximum_total": 39996,
+      "source_offset": 4039
+    },
+    {
+      "row": 64,
+      "key": "Hypatia",
+      "character_row": 65,
+      "character_key": "Hypatia",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        300,
+        150,
+        400,
+        150
+      ],
+      "minimum_total": 1000,
+      "maximum_total": 39996,
+      "source_offset": 4103
+    },
+    {
+      "row": 65,
+      "key": "Vega",
+      "character_row": 66,
+      "character_key": "Vega",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        297,
+        726,
+        260,
+        396
+      ],
+      "minimum_total": 1679,
+      "maximum_total": 39996,
+      "source_offset": 4168
+    },
+    {
+      "row": 66,
+      "key": "Kruger60",
+      "character_row": 67,
+      "character_key": "Kruger60",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        400,
+        250,
+        500,
+        250
+      ],
+      "minimum_total": 1400,
+      "maximum_total": 2100,
+      "source_offset": 4230
+    },
+    {
+      "row": 67,
+      "key": "Kochab",
+      "character_row": 68,
+      "character_key": "Kochab",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        363,
+        724,
+        752,
+        396
+      ],
+      "minimum_total": 2235,
+      "maximum_total": 39996,
+      "source_offset": 4296
+    },
+    {
+      "row": 68,
+      "key": "Navi",
+      "character_row": 69,
+      "character_key": "Navi",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        304,
+        693,
+        229,
+        418
+      ],
+      "minimum_total": 1644,
+      "maximum_total": 39996,
+      "source_offset": 4360
+    },
+    {
+      "row": 69,
+      "key": "Bellerophon",
+      "character_row": 70,
+      "character_key": "Bellerophon",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        315,
+        158,
+        420,
+        158
+      ],
+      "minimum_total": 1051,
+      "maximum_total": 39996,
+      "source_offset": 4422
+    },
+    {
+      "row": 70,
+      "key": "Cygni",
+      "character_row": 71,
+      "character_key": "Cygni",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        575,
+        635,
+        575,
+        641
+      ],
+      "minimum_total": 2426,
+      "maximum_total": 39996,
+      "source_offset": 4491
+    },
+    {
+      "row": 71,
+      "key": "Sadr",
+      "character_row": 72,
+      "character_key": "Sadr",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        700,
+        300,
+        300,
+        800
+      ],
+      "minimum_total": 2100,
+      "maximum_total": 39996,
+      "source_offset": 4554
+    },
+    {
+      "row": 72,
+      "key": "Deneb",
+      "character_row": 73,
+      "character_key": "Deneb",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        724,
+        347,
+        314,
+        924
+      ],
+      "minimum_total": 2309,
+      "maximum_total": 39996,
+      "source_offset": 4616
+    },
+    {
+      "row": 73,
+      "key": "Enif",
+      "character_row": 74,
+      "character_key": "Enif",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        735,
+        315,
+        315,
+        840
+      ],
+      "minimum_total": 2205,
+      "maximum_total": 39996,
+      "source_offset": 4679
+    },
+    {
+      "row": 74,
+      "key": "Albireo",
+      "character_row": 75,
+      "character_key": "Albireo",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        315,
+        735,
+        630,
+        420
+      ],
+      "minimum_total": 2100,
+      "maximum_total": 39996,
+      "source_offset": 4741
+    },
+    {
+      "row": 75,
+      "key": "Kepler",
+      "character_row": 76,
+      "character_key": "Kepler",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        315,
+        158,
+        420,
+        158
+      ],
+      "minimum_total": 1051,
+      "maximum_total": 39996,
+      "source_offset": 4806
+    },
+    {
+      "row": 76,
+      "key": "Piazzi",
+      "character_row": 77,
+      "character_key": "Piazzi",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        420,
+        263,
+        525,
+        263
+      ],
+      "minimum_total": 1471,
+      "maximum_total": 2207,
+      "source_offset": 4870
+    },
+    {
+      "row": 77,
+      "key": "Jenkins",
+      "character_row": 78,
+      "character_key": "Jenkins",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        125,
+        125,
+        125,
+        125
+      ],
+      "minimum_total": 50,
+      "maximum_total": 1000,
+      "source_offset": 4934
+    },
+    {
+      "row": 78,
+      "key": "Osiris",
+      "character_row": 79,
+      "character_key": "Osiris",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        315,
+        158,
+        420,
+        158
+      ],
+      "minimum_total": 1051,
+      "maximum_total": 39996,
+      "source_offset": 4999
+    },
+    {
+      "row": 79,
+      "key": "Pollux",
+      "character_row": 80,
+      "character_key": "Pollux",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        315,
+        735,
+        630,
+        420
+      ],
+      "minimum_total": 2100,
+      "maximum_total": 39996,
+      "source_offset": 5063
+    },
+    {
+      "row": 80,
+      "key": "Castor",
+      "character_row": 81,
+      "character_key": "Castor",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        300,
+        600,
+        200,
+        400
+      ],
+      "minimum_total": 1500,
+      "maximum_total": 39996,
+      "source_offset": 5127
+    },
+    {
+      "row": 81,
+      "key": "Thestias",
+      "character_row": 82,
+      "character_key": "Thestias",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        300,
+        150,
+        400,
+        150
+      ],
+      "minimum_total": 1000,
+      "maximum_total": 39996,
+      "source_offset": 5191
+    },
+    {
+      "row": 82,
+      "key": "Betelgeuse",
+      "character_row": 83,
+      "character_key": "Betelgeuse",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        735,
+        315,
+        315,
+        840
+      ],
+      "minimum_total": 2205,
+      "maximum_total": 39996,
+      "source_offset": 5257
+    },
+    {
+      "row": 83,
+      "key": "Bellatrix",
+      "character_row": 84,
+      "character_key": "Bellatrix",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        315,
+        735,
+        630,
+        420
+      ],
+      "minimum_total": 2100,
+      "maximum_total": 39996,
+      "source_offset": 5325
+    },
+    {
+      "row": 84,
+      "key": "Tabit",
+      "character_row": 85,
+      "character_key": "Tabit",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        300,
+        600,
+        200,
+        400
+      ],
+      "minimum_total": 1500,
+      "maximum_total": 39996,
+      "source_offset": 5392
+    },
+    {
+      "row": 85,
+      "key": "Rigel",
+      "character_row": 86,
+      "character_key": "Rigel",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        735,
+        315,
+        315,
+        840
+      ],
+      "minimum_total": 2205,
+      "maximum_total": 39996,
+      "source_offset": 5455
+    },
+    {
+      "row": 86,
+      "key": "Saiph",
+      "character_row": 87,
+      "character_key": "Saiph",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        315,
+        630,
+        210,
+        420
+      ],
+      "minimum_total": 1575,
+      "maximum_total": 39996,
+      "source_offset": 5518
+    },
+    {
+      "row": 87,
+      "key": "Alhena",
+      "character_row": 88,
+      "character_key": "Alhena",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        315,
+        630,
+        210,
+        420
+      ],
+      "minimum_total": 1575,
+      "maximum_total": 39996,
+      "source_offset": 5581
+    },
+    {
+      "row": 88,
+      "key": "Aldebaran",
+      "character_row": 89,
+      "character_key": "Aldebaran",
+      "rarity": 5,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        350,
+        708,
+        739,
+        405
+      ],
+      "minimum_total": 2202,
+      "maximum_total": 39996,
+      "source_offset": 5645
+    },
+    {
+      "row": 89,
+      "key": "Teide",
+      "character_row": 90,
+      "character_key": "Teide",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        400,
+        250,
+        500,
+        250
+      ],
+      "minimum_total": 1400,
+      "maximum_total": 2100,
+      "source_offset": 5712
+    },
+    {
+      "row": 90,
+      "key": "Amateru",
+      "character_row": 91,
+      "character_key": "Amateru",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        420,
+        263,
+        525,
+        263
+      ],
+      "minimum_total": 1471,
+      "maximum_total": 2207,
+      "source_offset": 5775
+    },
+    {
+      "row": 91,
+      "key": "Alcyone",
+      "character_row": 92,
+      "character_key": "Alcyone",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        363,
+        732,
+        726,
+        396
+      ],
+      "minimum_total": 2217,
+      "maximum_total": 39996,
+      "source_offset": 5840
+    },
+    {
+      "row": 92,
+      "key": "Electra",
+      "character_row": 93,
+      "character_key": "Electra",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        315,
+        735,
+        630,
+        420
+      ],
+      "minimum_total": 2100,
+      "maximum_total": 39996,
+      "source_offset": 5905
+    },
+    {
+      "row": 93,
+      "key": "Maia",
+      "character_row": 94,
+      "character_key": "Maia",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        315,
+        735,
+        630,
+        420
+      ],
+      "minimum_total": 2100,
+      "maximum_total": 39996,
+      "source_offset": 5970
+    },
+    {
+      "row": 94,
+      "key": "Asterope",
+      "character_row": 95,
+      "character_key": "Asterope",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        300,
+        600,
+        200,
+        400
+      ],
+      "minimum_total": 1500,
+      "maximum_total": 39996,
+      "source_offset": 6032
+    },
+    {
+      "row": 95,
+      "key": "Merope",
+      "character_row": 96,
+      "character_key": "Merope",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        300,
+        700,
+        600,
+        400
+      ],
+      "minimum_total": 2000,
+      "maximum_total": 39996,
+      "source_offset": 6098
+    },
+    {
+      "row": 96,
+      "key": "Celaeno",
+      "character_row": 97,
+      "character_key": "Celaeno",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        300,
+        700,
+        600,
+        400
+      ],
+      "minimum_total": 2000,
+      "maximum_total": 39996,
+      "source_offset": 6162
+    },
+    {
+      "row": 97,
+      "key": "Taygeta",
+      "character_row": 98,
+      "character_key": "Taygeta",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        300,
+        700,
+        600,
+        400
+      ],
+      "minimum_total": 2000,
+      "maximum_total": 39996,
+      "source_offset": 6227
+    },
+    {
+      "row": 98,
+      "key": "Antares",
+      "character_row": 99,
+      "character_key": "Antares",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        747,
+        304,
+        380,
+        871
+      ],
+      "minimum_total": 2302,
+      "maximum_total": 39996,
+      "source_offset": 6292
+    },
+    {
+      "row": 99,
+      "key": "Lesath",
+      "character_row": 100,
+      "character_key": "Lesath",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        300,
+        600,
+        200,
+        400
+      ],
+      "minimum_total": 1500,
+      "maximum_total": 39996,
+      "source_offset": 6357
+    },
+    {
+      "row": 100,
+      "key": "Sargas",
+      "character_row": 101,
+      "character_key": "Sargas",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        315,
+        735,
+        630,
+        420
+      ],
+      "minimum_total": 2100,
+      "maximum_total": 39996,
+      "source_offset": 6421
+    },
+    {
+      "row": 101,
+      "key": "Methuselah",
+      "character_row": 102,
+      "character_key": "Methuselah",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        315,
+        158,
+        420,
+        158
+      ],
+      "minimum_total": 1051,
+      "maximum_total": 39996,
+      "source_offset": 6485
+    },
+    {
+      "row": 102,
+      "key": "Westerlund",
+      "character_row": 103,
+      "character_key": "Westerlund",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        578,
+        578,
+        578,
+        578
+      ],
+      "minimum_total": 2312,
+      "maximum_total": 39996,
+      "source_offset": 6553
+    },
+    {
+      "row": 103,
+      "key": "Sagittarii",
+      "character_row": 104,
+      "character_key": "Sagittarii",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        617,
+        575,
+        653,
+        575
+      ],
+      "minimum_total": 2420,
+      "maximum_total": 39996,
+      "source_offset": 6621
+    },
+    {
+      "row": 104,
+      "key": "Arkab",
+      "character_row": 105,
+      "character_key": "Arkab",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        300,
+        700,
+        600,
+        400
+      ],
+      "minimum_total": 2000,
+      "maximum_total": 39996,
+      "source_offset": 6689
+    },
+    {
+      "row": 105,
+      "key": "Pistolstar",
+      "character_row": 106,
+      "character_key": "Pistolstar",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        629,
+        593,
+        581,
+        617
+      ],
+      "minimum_total": 2420,
+      "maximum_total": 39996,
+      "source_offset": 6752
+    },
+    {
+      "row": 106,
+      "key": "Scuti",
+      "character_row": 107,
+      "character_key": "Scuti",
+      "rarity": 5,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        581,
+        629,
+        575,
+        641
+      ],
+      "minimum_total": 2426,
+      "maximum_total": 39996,
+      "source_offset": 6820
+    },
+    {
+      "row": 107,
+      "key": "Ioannina",
+      "character_row": 108,
+      "character_key": "Ioannina",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        700,
+        300,
+        300,
+        800
+      ],
+      "minimum_total": 2100,
+      "maximum_total": 39996,
+      "source_offset": 6883
+    },
+    {
+      "row": 108,
+      "key": "Hamal",
+      "character_row": 109,
+      "character_key": "Hamal",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        300,
+        700,
+        600,
+        400
+      ],
+      "minimum_total": 2000,
+      "maximum_total": 39996,
+      "source_offset": 6949
+    },
+    {
+      "row": 109,
+      "key": "Dabih",
+      "character_row": 110,
+      "character_key": "Dabih",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        315,
+        630,
+        210,
+        420
+      ],
+      "minimum_total": 1575,
+      "maximum_total": 39996,
+      "source_offset": 7012
+    },
+    {
+      "row": 110,
+      "key": "Alphard",
+      "character_row": 111,
+      "character_key": "Alphard",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        315,
+        735,
+        630,
+        420
+      ],
+      "minimum_total": 2100,
+      "maximum_total": 39996,
+      "source_offset": 7075
+    },
+    {
+      "row": 111,
+      "key": "Graffias",
+      "character_row": 112,
+      "character_key": "Graffias",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        330,
+        660,
+        213,
+        431
+      ],
+      "minimum_total": 1634,
+      "maximum_total": 39996,
+      "source_offset": 7140
+    },
+    {
+      "row": 112,
+      "key": "Wei",
+      "character_row": 113,
+      "character_key": "Wei",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        315,
+        735,
+        630,
+        420
+      ],
+      "minimum_total": 2100,
+      "maximum_total": 39996,
+      "source_offset": 7206
+    },
+    {
+      "row": 113,
+      "key": "Jabbah",
+      "character_row": 114,
+      "character_key": "Jabbah",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        466,
+        275,
+        545,
+        294
+      ],
+      "minimum_total": 1580,
+      "maximum_total": 2370,
+      "source_offset": 7267
+    },
+    {
+      "row": 114,
+      "key": "Elacrab",
+      "character_row": 115,
+      "character_key": "Elacrab",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        440,
+        292,
+        550,
+        292
+      ],
+      "minimum_total": 1574,
+      "maximum_total": 2361,
+      "source_offset": 7331
+    },
+    {
+      "row": 115,
+      "key": "G64",
+      "character_row": 116,
+      "character_key": "G64",
+      "rarity": 5,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        599,
+        599,
+        617,
+        611
+      ],
+      "minimum_total": 2426,
+      "maximum_total": 39996,
+      "source_offset": 7396
+    },
+    {
+      "row": 116,
+      "key": "Denebola",
+      "character_row": 117,
+      "character_key": "Denebola",
+      "rarity": 5,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        327,
+        680,
+        213,
+        444
+      ],
+      "minimum_total": 1664,
+      "maximum_total": 39996,
+      "source_offset": 7457
+    },
+    {
+      "row": 117,
+      "key": "Gienah",
+      "character_row": 118,
+      "character_key": "Gienah",
+      "rarity": 5,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        330,
+        770,
+        660,
+        440
+      ],
+      "minimum_total": 2200,
+      "maximum_total": 39996,
+      "source_offset": 7523
+    },
+    {
+      "row": 118,
+      "key": "Alrami",
+      "character_row": 119,
+      "character_key": "Alrami",
+      "rarity": 5,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        466,
+        275,
+        550,
+        292
+      ],
+      "minimum_total": 1583,
+      "maximum_total": 2375,
+      "source_offset": 7587
+    },
+    {
+      "row": 119,
+      "key": "Alpheratz",
+      "character_row": 120,
+      "character_key": "Alpheratz",
+      "rarity": 5,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        330,
+        660,
+        220,
+        466
+      ],
+      "minimum_total": 1676,
+      "maximum_total": 39996,
+      "source_offset": 7651
+    },
+    {
+      "row": 120,
+      "key": "Algenib",
+      "character_row": 121,
+      "character_key": "Algenib",
+      "rarity": 5,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        801,
+        314,
+        347,
+        880
+      ],
+      "minimum_total": 2342,
+      "maximum_total": 3200,
+      "source_offset": 7718
+    },
+    {
+      "row": 121,
+      "key": "Polis",
+      "character_row": 122,
+      "character_key": "Polis",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        762,
+        347,
+        337,
+        871
+      ],
+      "minimum_total": 2317,
+      "maximum_total": 39996,
+      "source_offset": 7783
+    },
+    {
+      "row": 122,
+      "key": "Posterior",
+      "character_row": 123,
+      "character_key": "Posterior",
+      "rarity": 5,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        337,
+        762,
+        653,
+        458
+      ],
+      "minimum_total": 2210,
+      "maximum_total": 2984,
+      "source_offset": 7846
+    },
+    {
+      "row": 123,
+      "key": "Behemoth",
+      "character_row": 124,
+      "character_key": "Behemoth",
+      "rarity": 5,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        635,
+        605,
+        666,
+        545
+      ],
+      "minimum_total": 2451,
+      "maximum_total": 39996,
+      "source_offset": 7913
+    },
+    {
+      "row": 124,
+      "key": "Dubhe",
+      "character_row": 127,
+      "character_key": "Dubhe",
+      "rarity": 5,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        3366,
+        7623,
+        6534,
+        4576
+      ],
+      "minimum_total": 18563,
+      "maximum_total": 3999996,
+      "source_offset": 7979
+    },
+    {
+      "row": 125,
+      "key": "Mizar",
+      "character_row": 128,
+      "character_key": "Mizar",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        6655,
+        4840,
+        7865,
+        4840
+      ],
+      "minimum_total": 22000,
+      "maximum_total": 27000,
+      "source_offset": 8042
+    },
+    {
+      "row": 126,
+      "key": "Sun2",
+      "character_row": 1,
+      "character_key": "Sun",
+      "rarity": 4,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3069,
+        7326,
+        1870,
+        4400
+      ],
+      "minimum_total": 15165,
+      "maximum_total": 3999996,
+      "source_offset": 8105
+    },
+    {
+      "row": 127,
+      "key": "Earth2",
+      "character_row": 2,
+      "character_key": "Earth",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3150,
+        1575,
+        4200,
+        1575
+      ],
+      "minimum_total": 3675,
+      "maximum_total": 21000,
+      "source_offset": 8167
+    },
+    {
+      "row": 128,
+      "key": "Mercury2",
+      "character_row": 3,
+      "character_key": "Mercury",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3150,
+        1575,
+        4200,
+        1575
+      ],
+      "minimum_total": 3675,
+      "maximum_total": 21000,
+      "source_offset": 8231
+    },
+    {
+      "row": 129,
+      "key": "Venus2",
+      "character_row": 4,
+      "character_key": "Venus",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3150,
+        1575,
+        4200,
+        1575
+      ],
+      "minimum_total": 3675,
+      "maximum_total": 21000,
+      "source_offset": 8297
+    },
+    {
+      "row": 130,
+      "key": "Mars2",
+      "character_row": 5,
+      "character_key": "Mars",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        300,
+        150,
+        400,
+        150
+      ],
+      "minimum_total": 1000,
+      "maximum_total": 39996,
+      "source_offset": 8361
+    },
+    {
+      "row": 131,
+      "key": "Jupiter2",
+      "character_row": 6,
+      "character_key": "Jupiter",
+      "rarity": 5,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        4125,
+        2063,
+        4224,
+        1601
+      ],
+      "minimum_total": 10091,
+      "maximum_total": 24026,
+      "source_offset": 8424
+    },
+    {
+      "row": 132,
+      "key": "Saturn2",
+      "character_row": 7,
+      "character_key": "Saturn",
+      "rarity": 4,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3861,
+        2112,
+        4400,
+        1650
+      ],
+      "minimum_total": 7214,
+      "maximum_total": 24046,
+      "source_offset": 8490
+    },
+    {
+      "row": 133,
+      "key": "Uranus2",
+      "character_row": 8,
+      "character_key": "Uranus",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3150,
+        1575,
+        4200,
+        1575
+      ],
+      "minimum_total": 3675,
+      "maximum_total": 21000,
+      "source_offset": 8555
+    },
+    {
+      "row": 134,
+      "key": "Neptune2",
+      "character_row": 9,
+      "character_key": "Neptune",
+      "rarity": 4,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        4092,
+        1650,
+        4400,
+        2112
+      ],
+      "minimum_total": 7352,
+      "maximum_total": 24508,
+      "source_offset": 8620
+    },
+    {
+      "row": 135,
+      "key": "Pluto2",
+      "character_row": 10,
+      "character_key": "Pluto",
+      "rarity": 5,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3201,
+        1601,
+        5280,
+        1980
+      ],
+      "minimum_total": 10132,
+      "maximum_total": 24124,
+      "source_offset": 8686
+    },
+    {
+      "row": 136,
+      "key": "Nemesis2",
+      "character_row": 11,
+      "character_key": "Nemesis",
+      "rarity": 5,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        4400,
+        2750,
+        5830,
+        2860
+      ],
+      "minimum_total": 13464,
+      "maximum_total": 23760,
+      "source_offset": 8750
+    },
+    {
+      "row": 137,
+      "key": "Moon2",
+      "character_row": 12,
+      "character_key": "Moon",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        131,
+        131,
+        131,
+        131
+      ],
+      "minimum_total": 524,
+      "maximum_total": 1048,
+      "source_offset": 8816
+    },
+    {
+      "row": 138,
+      "key": "Heimdal2",
+      "character_row": 13,
+      "character_key": "Heimdal",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        131,
+        131,
+        131,
+        131
+      ],
+      "minimum_total": 524,
+      "maximum_total": 1048,
+      "source_offset": 8879
+    },
+    {
+      "row": 139,
+      "key": "Cruithne2",
+      "character_row": 14,
+      "character_key": "Cruithne",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        158,
+        127,
+        139,
+        131
+      ],
+      "minimum_total": 555,
+      "maximum_total": 1110,
+      "source_offset": 8945
+    },
+    {
+      "row": 140,
+      "key": "Phobos2",
+      "character_row": 15,
+      "character_key": "Phobos",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        125,
+        125,
+        125,
+        125
+      ],
+      "minimum_total": 50,
+      "maximum_total": 1000,
+      "source_offset": 9012
+    },
+    {
+      "row": 141,
+      "key": "Ganymede2",
+      "character_row": 16,
+      "character_key": "Ganymede",
+      "rarity": 5,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        138,
+        168,
+        138,
+        157
+      ],
+      "minimum_total": 601,
+      "maximum_total": 1202,
+      "source_offset": 9077
+    },
+    {
+      "row": 142,
+      "key": "Io2",
+      "character_row": 17,
+      "character_key": "Io",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        125,
+        125,
+        125,
+        125
+      ],
+      "minimum_total": 50,
+      "maximum_total": 1000,
+      "source_offset": 9144
+    },
+    {
+      "row": 143,
+      "key": "Leah2",
+      "character_row": 18,
+      "character_key": "Leah",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        131,
+        131,
+        131,
+        131
+      ],
+      "minimum_total": 524,
+      "maximum_total": 1048,
+      "source_offset": 9205
+    },
+    {
+      "row": 144,
+      "key": "Titania2",
+      "character_row": 19,
+      "character_key": "Titania",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        125,
+        125,
+        125,
+        125
+      ],
+      "minimum_total": 50,
+      "maximum_total": 1000,
+      "source_offset": 9268
+    },
+    {
+      "row": 145,
+      "key": "Ariel2",
+      "character_row": 20,
+      "character_key": "Ariel",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        160,
+        138,
+        138,
+        164
+      ],
+      "minimum_total": 600,
+      "maximum_total": 1200,
+      "source_offset": 9334
+    },
+    {
+      "row": 146,
+      "key": "Umbriel2",
+      "character_row": 21,
+      "character_key": "Umbriel",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        125,
+        125,
+        125,
+        125
+      ],
+      "minimum_total": 50,
+      "maximum_total": 1000,
+      "source_offset": 9398
+    },
+    {
+      "row": 147,
+      "key": "Larissa2",
+      "character_row": 22,
+      "character_key": "Larissa",
+      "rarity": 4,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        131,
+        131,
+        131,
+        131
+      ],
+      "minimum_total": 524,
+      "maximum_total": 1048,
+      "source_offset": 9464
+    },
+    {
+      "row": 148,
+      "key": "Nix2",
+      "character_row": 23,
+      "character_key": "Nix",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        125,
+        125,
+        125,
+        125
+      ],
+      "minimum_total": 50,
+      "maximum_total": 1000,
+      "source_offset": 9530
+    },
+    {
+      "row": 149,
+      "key": "Hydra2",
+      "character_row": 24,
+      "character_key": "Hydra",
+      "rarity": 3,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        131,
+        131,
+        131,
+        131
+      ],
+      "minimum_total": 524,
+      "maximum_total": 1048,
+      "source_offset": 9592
+    },
+    {
+      "row": 150,
+      "key": "Gliese2",
+      "character_row": 25,
+      "character_key": "Gliese",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        300,
+        150,
+        400,
+        150
+      ],
+      "minimum_total": 1000,
+      "maximum_total": 39996,
+      "source_offset": 9656
+    },
+    {
+      "row": 151,
+      "key": "581E2",
+      "character_row": 26,
+      "character_key": "581E",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        300,
+        150,
+        400,
+        150
+      ],
+      "minimum_total": 1000,
+      "maximum_total": 39996,
+      "source_offset": 9721
+    },
+    {
+      "row": 152,
+      "key": "Seginus2",
+      "character_row": 27,
+      "character_key": "Seginus",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3150,
+        7350,
+        6300,
+        4200
+      ],
+      "minimum_total": 16170,
+      "maximum_total": 3999996,
+      "source_offset": 9784
+    },
+    {
+      "row": 153,
+      "key": "Spica2",
+      "character_row": 28,
+      "character_key": "Spica",
+      "rarity": 5,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3465,
+        6336,
+        2068,
+        4752
+      ],
+      "minimum_total": 15624,
+      "maximum_total": 3999996,
+      "source_offset": 9850
+    },
+    {
+      "row": 154,
+      "key": "Arcturus2",
+      "character_row": 29,
+      "character_key": "Arcturus",
+      "rarity": 4,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3795,
+        7315,
+        6138,
+        4840
+      ],
+      "minimum_total": 17670,
+      "maximum_total": 3999996,
+      "source_offset": 9914
+    },
+    {
+      "row": 155,
+      "key": "Valencia2",
+      "character_row": 30,
+      "character_key": "Valencia",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        400,
+        250,
+        500,
+        250
+      ],
+      "minimum_total": 1400,
+      "maximum_total": 2100,
+      "source_offset": 9981
+    },
+    {
+      "row": 156,
+      "key": "Vello2",
+      "character_row": 31,
+      "character_key": "Vello",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        400,
+        250,
+        500,
+        250
+      ],
+      "minimum_total": 1400,
+      "maximum_total": 2100,
+      "source_offset": 10048
+    },
+    {
+      "row": 157,
+      "key": "Linda2",
+      "character_row": 32,
+      "character_key": "Linda",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        400,
+        250,
+        500,
+        250
+      ],
+      "minimum_total": 1400,
+      "maximum_total": 2100,
+      "source_offset": 10112
+    },
+    {
+      "row": 158,
+      "key": "Izar2",
+      "character_row": 33,
+      "character_key": "Izar",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3150,
+        7350,
+        6300,
+        4200
+      ],
+      "minimum_total": 16170,
+      "maximum_total": 3999996,
+      "source_offset": 10176
+    },
+    {
+      "row": 159,
+      "key": "Regulus2",
+      "character_row": 34,
+      "character_key": "Regulus",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3150,
+        6300,
+        2100,
+        4200
+      ],
+      "minimum_total": 13388,
+      "maximum_total": 3999996,
+      "source_offset": 10239
+    },
+    {
+      "row": 160,
+      "key": "Arkas2",
+      "character_row": 35,
+      "character_key": "Arkas",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        300,
+        150,
+        400,
+        150
+      ],
+      "minimum_total": 1000,
+      "maximum_total": 39996,
+      "source_offset": 10305
+    },
+    {
+      "row": 161,
+      "key": "Procyon2",
+      "character_row": 36,
+      "character_key": "Procyon",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3150,
+        6300,
+        2100,
+        4200
+      ],
+      "minimum_total": 13388,
+      "maximum_total": 3999996,
+      "source_offset": 10369
+    },
+    {
+      "row": 162,
+      "key": "Wolf3592",
+      "character_row": 37,
+      "character_key": "Wolf359",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        4200,
+        2625,
+        5250,
+        2625
+      ],
+      "minimum_total": 10290,
+      "maximum_total": 22050,
+      "source_offset": 10435
+    },
+    {
+      "row": 163,
+      "key": "Luyten2",
+      "character_row": 38,
+      "character_key": "Luyten",
+      "rarity": 4,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        4796,
+        2805,
+        5225,
+        2695
+      ],
+      "minimum_total": 11641,
+      "maximum_total": 23282,
+      "source_offset": 10501
+    },
+    {
+      "row": 164,
+      "key": "Regor2",
+      "character_row": 39,
+      "character_key": "Regor",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        5775,
+        5775,
+        5775,
+        5775
+      ],
+      "minimum_total": 22176,
+      "maximum_total": 3999996,
+      "source_offset": 10566
+    },
+    {
+      "row": 165,
+      "key": "TseenKe2",
+      "character_row": 40,
+      "character_key": "TseenKe",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        700,
+        300,
+        300,
+        800
+      ],
+      "minimum_total": 2100,
+      "maximum_total": 39996,
+      "source_offset": 10630
+    },
+    {
+      "row": 166,
+      "key": "Suhail2",
+      "character_row": 41,
+      "character_key": "Suhail",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        700,
+        300,
+        300,
+        800
+      ],
+      "minimum_total": 2100,
+      "maximum_total": 39996,
+      "source_offset": 10696
+    },
+    {
+      "row": 167,
+      "key": "Alherem2",
+      "character_row": 42,
+      "character_key": "Alherem",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        300,
+        700,
+        600,
+        400
+      ],
+      "minimum_total": 2000,
+      "maximum_total": 39996,
+      "source_offset": 10761
+    },
+    {
+      "row": 168,
+      "key": "Musca2",
+      "character_row": 43,
+      "character_key": "Musca",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        4200,
+        2625,
+        5250,
+        2625
+      ],
+      "minimum_total": 10290,
+      "maximum_total": 22050,
+      "source_offset": 10827
+    },
+    {
+      "row": 169,
+      "key": "Acrux2",
+      "character_row": 44,
+      "character_key": "Acrux",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3150,
+        6300,
+        2100,
+        4200
+      ],
+      "minimum_total": 13388,
+      "maximum_total": 3999996,
+      "source_offset": 10891
+    },
+    {
+      "row": 170,
+      "key": "Achernar2",
+      "character_row": 45,
+      "character_key": "Achernar",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        300,
+        600,
+        200,
+        400
+      ],
+      "minimum_total": 1500,
+      "maximum_total": 39996,
+      "source_offset": 10955
+    },
+    {
+      "row": 171,
+      "key": "Ran2",
+      "character_row": 46,
+      "character_key": "Ran",
+      "rarity": 4,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        4972,
+        2475,
+        5390,
+        2970
+      ],
+      "minimum_total": 11855,
+      "maximum_total": 23711,
+      "source_offset": 11022
+    },
+    {
+      "row": 172,
+      "key": "Aegir2",
+      "character_row": 47,
+      "character_key": "Aegir",
+      "rarity": 4,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3993,
+        1650,
+        4400,
+        1964
+      ],
+      "minimum_total": 7204,
+      "maximum_total": 24014,
+      "source_offset": 11084
+    },
+    {
+      "row": 173,
+      "key": "Doradus2",
+      "character_row": 48,
+      "character_key": "Doradus",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        5775,
+        5775,
+        5775,
+        5775
+      ],
+      "minimum_total": 22176,
+      "maximum_total": 3999996,
+      "source_offset": 11148
+    },
+    {
+      "row": 174,
+      "key": "Acamar2",
+      "character_row": 49,
+      "character_key": "Acamar",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3150,
+        6300,
+        2100,
+        4200
+      ],
+      "minimum_total": 13388,
+      "maximum_total": 3999996,
+      "source_offset": 11214
+    },
+    {
+      "row": 175,
+      "key": "OTS442",
+      "character_row": 50,
+      "character_key": "OTS44",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        4200,
+        2625,
+        5250,
+        2625
+      ],
+      "minimum_total": 10290,
+      "maximum_total": 22050,
+      "source_offset": 11279
+    },
+    {
+      "row": 176,
+      "key": "DEN2",
+      "character_row": 51,
+      "character_key": "DEN",
+      "rarity": 4,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        4224,
+        2668,
+        6050,
+        2888
+      ],
+      "minimum_total": 11873,
+      "maximum_total": 23745,
+      "source_offset": 11343
+    },
+    {
+      "row": 177,
+      "key": "Sirius2",
+      "character_row": 52,
+      "character_key": "Sirius",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3150,
+        6300,
+        2100,
+        4200
+      ],
+      "minimum_total": 13388,
+      "maximum_total": 3999996,
+      "source_offset": 11405
+    },
+    {
+      "row": 178,
+      "key": "Bayes2",
+      "character_row": 53,
+      "character_key": "Bayes",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        4200,
+        2625,
+        5250,
+        2625
+      ],
+      "minimum_total": 10290,
+      "maximum_total": 22050,
+      "source_offset": 11470
+    },
+    {
+      "row": 179,
+      "key": "Rufus2",
+      "character_row": 54,
+      "character_key": "Rufus",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        400,
+        250,
+        500,
+        250
+      ],
+      "minimum_total": 1400,
+      "maximum_total": 2100,
+      "source_offset": 11534
+    },
+    {
+      "row": 180,
+      "key": "Asmidiske2",
+      "character_row": 55,
+      "character_key": "Asmidiske",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        700,
+        300,
+        300,
+        800
+      ],
+      "minimum_total": 2100,
+      "maximum_total": 2100,
+      "source_offset": 11598
+    },
+    {
+      "row": 181,
+      "key": "Canis2",
+      "character_row": 56,
+      "character_key": "Canis",
+      "rarity": 4,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        7315,
+        3828,
+        3102,
+        9152
+      ],
+      "minimum_total": 20589,
+      "maximum_total": 3999996,
+      "source_offset": 11666
+    },
+    {
+      "row": 182,
+      "key": "Wezen2",
+      "character_row": 57,
+      "character_key": "Wezen",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        700,
+        300,
+        300,
+        800
+      ],
+      "minimum_total": 2100,
+      "maximum_total": 39996,
+      "source_offset": 11730
+    },
+    {
+      "row": 183,
+      "key": "Aludra2",
+      "character_row": 58,
+      "character_key": "Aludra",
+      "rarity": 4,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        7700,
+        3465,
+        3366,
+        8624
+      ],
+      "minimum_total": 20840,
+      "maximum_total": 3999996,
+      "source_offset": 11794
+    },
+    {
+      "row": 184,
+      "key": "Furud2",
+      "character_row": 59,
+      "character_key": "Furud",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        300,
+        600,
+        200,
+        400
+      ],
+      "minimum_total": 1500,
+      "maximum_total": 39996,
+      "source_offset": 11859
+    },
+    {
+      "row": 185,
+      "key": "Naos2",
+      "character_row": 60,
+      "character_key": "Naos",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        7350,
+        3150,
+        3150,
+        8400
+      ],
+      "minimum_total": 19404,
+      "maximum_total": 3999996,
+      "source_offset": 11923
+    },
+    {
+      "row": 186,
+      "key": "Polaris2",
+      "character_row": 61,
+      "character_key": "Polaris",
+      "rarity": 5,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        8008,
+        3102,
+        2970,
+        9240
+      ],
+      "minimum_total": 21921,
+      "maximum_total": 3999996,
+      "source_offset": 11986
+    },
+    {
+      "row": 187,
+      "key": "MuCephei2",
+      "character_row": 62,
+      "character_key": "Mucephei",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        5775,
+        5775,
+        5775,
+        5775
+      ],
+      "minimum_total": 22176,
+      "maximum_total": 3999996,
+      "source_offset": 12052
+    },
+    {
+      "row": 188,
+      "key": "Alrai2",
+      "character_row": 63,
+      "character_key": "Alrai",
+      "rarity": 4,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3597,
+        7062,
+        2002,
+        4048
+      ],
+      "minimum_total": 15038,
+      "maximum_total": 3999996,
+      "source_offset": 12119
+    },
+    {
+      "row": 189,
+      "key": "Shedar2",
+      "character_row": 64,
+      "character_key": "Shedar",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        300,
+        700,
+        600,
+        400
+      ],
+      "minimum_total": 2000,
+      "maximum_total": 39996,
+      "source_offset": 12183
+    },
+    {
+      "row": 190,
+      "key": "Hypatia2",
+      "character_row": 65,
+      "character_key": "Hypatia",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        300,
+        150,
+        400,
+        150
+      ],
+      "minimum_total": 1000,
+      "maximum_total": 39996,
+      "source_offset": 12248
+    },
+    {
+      "row": 191,
+      "key": "Vega2",
+      "character_row": 66,
+      "character_key": "Vega",
+      "rarity": 4,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        2970,
+        7260,
+        2596,
+        3960
+      ],
+      "minimum_total": 15107,
+      "maximum_total": 3999996,
+      "source_offset": 12314
+    },
+    {
+      "row": 192,
+      "key": "Kruger602",
+      "character_row": 67,
+      "character_key": "Kruger60",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        400,
+        250,
+        500,
+        250
+      ],
+      "minimum_total": 1400,
+      "maximum_total": 2100,
+      "source_offset": 12377
+    },
+    {
+      "row": 193,
+      "key": "Kochab2",
+      "character_row": 68,
+      "character_key": "Kochab",
+      "rarity": 4,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3630,
+        7238,
+        7524,
+        3960
+      ],
+      "minimum_total": 17882,
+      "maximum_total": 3999996,
+      "source_offset": 12444
+    },
+    {
+      "row": 194,
+      "key": "Navi2",
+      "character_row": 69,
+      "character_key": "Navi",
+      "rarity": 4,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3036,
+        6930,
+        2288,
+        4180
+      ],
+      "minimum_total": 15119,
+      "maximum_total": 3999996,
+      "source_offset": 12509
+    },
+    {
+      "row": 195,
+      "key": "Bellerophon2",
+      "character_row": 70,
+      "character_key": "Bellerophon",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3150,
+        1575,
+        4200,
+        1575
+      ],
+      "minimum_total": 3675,
+      "maximum_total": 21000,
+      "source_offset": 12572
+    },
+    {
+      "row": 196,
+      "key": "Cygni2",
+      "character_row": 71,
+      "character_key": "Cygni",
+      "rarity": 4,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        5748,
+        6353,
+        5748,
+        6413
+      ],
+      "minimum_total": 22321,
+      "maximum_total": 3999996,
+      "source_offset": 12642
+    },
+    {
+      "row": 197,
+      "key": "Sadr2",
+      "character_row": 72,
+      "character_key": "Sadr",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        700,
+        300,
+        300,
+        800
+      ],
+      "minimum_total": 2100,
+      "maximum_total": 39996,
+      "source_offset": 12706
+    },
+    {
+      "row": 198,
+      "key": "Deneb2",
+      "character_row": 73,
+      "character_key": "Deneb",
+      "rarity": 4,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        7238,
+        3465,
+        3135,
+        9240
+      ],
+      "minimum_total": 20770,
+      "maximum_total": 3999996,
+      "source_offset": 12769
+    },
+    {
+      "row": 199,
+      "key": "Enif2",
+      "character_row": 74,
+      "character_key": "Enif",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        7350,
+        3150,
+        3150,
+        8400
+      ],
+      "minimum_total": 19404,
+      "maximum_total": 3999996,
+      "source_offset": 12833
+    },
+    {
+      "row": 200,
+      "key": "Albireo2",
+      "character_row": 75,
+      "character_key": "Albireo",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3150,
+        7350,
+        6300,
+        4200
+      ],
+      "minimum_total": 16170,
+      "maximum_total": 3999996,
+      "source_offset": 12896
+    },
+    {
+      "row": 201,
+      "key": "Kepler2",
+      "character_row": 76,
+      "character_key": "Kepler",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3150,
+        1575,
+        4200,
+        1575
+      ],
+      "minimum_total": 3675,
+      "maximum_total": 21000,
+      "source_offset": 12962
+    },
+    {
+      "row": 202,
+      "key": "Piazzi2",
+      "character_row": 77,
+      "character_key": "Piazzi",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        4200,
+        2625,
+        5250,
+        2625
+      ],
+      "minimum_total": 10290,
+      "maximum_total": 22050,
+      "source_offset": 13027
+    },
+    {
+      "row": 203,
+      "key": "Jenkins2",
+      "character_row": 78,
+      "character_key": "Jenkins",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        125,
+        125,
+        125,
+        125
+      ],
+      "minimum_total": 50,
+      "maximum_total": 1000,
+      "source_offset": 13092
+    },
+    {
+      "row": 204,
+      "key": "Osiris2",
+      "character_row": 79,
+      "character_key": "Osiris",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3150,
+        1575,
+        4200,
+        1575
+      ],
+      "minimum_total": 3675,
+      "maximum_total": 21000,
+      "source_offset": 13158
+    },
+    {
+      "row": 205,
+      "key": "Pollux2",
+      "character_row": 80,
+      "character_key": "Pollux",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3150,
+        7350,
+        6300,
+        4200
+      ],
+      "minimum_total": 16170,
+      "maximum_total": 3999996,
+      "source_offset": 13223
+    },
+    {
+      "row": 206,
+      "key": "Castor2",
+      "character_row": 81,
+      "character_key": "Castor",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        300,
+        600,
+        200,
+        400
+      ],
+      "minimum_total": 1500,
+      "maximum_total": 39996,
+      "source_offset": 13288
+    },
+    {
+      "row": 207,
+      "key": "Thestias2",
+      "character_row": 82,
+      "character_key": "Thestias",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        300,
+        150,
+        400,
+        150
+      ],
+      "minimum_total": 1000,
+      "maximum_total": 39996,
+      "source_offset": 13353
+    },
+    {
+      "row": 208,
+      "key": "Betelgeuse2",
+      "character_row": 83,
+      "character_key": "Betelgeuse",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        7350,
+        3150,
+        3150,
+        8400
+      ],
+      "minimum_total": 19404,
+      "maximum_total": 3999996,
+      "source_offset": 13420
+    },
+    {
+      "row": 209,
+      "key": "Bellatrix2",
+      "character_row": 84,
+      "character_key": "Bellatrix",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3150,
+        7350,
+        6300,
+        4200
+      ],
+      "minimum_total": 16170,
+      "maximum_total": 3999996,
+      "source_offset": 13489
+    },
+    {
+      "row": 210,
+      "key": "Tabit2",
+      "character_row": 85,
+      "character_key": "Tabit",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        300,
+        600,
+        200,
+        400
+      ],
+      "minimum_total": 1500,
+      "maximum_total": 39996,
+      "source_offset": 13557
+    },
+    {
+      "row": 211,
+      "key": "Rigel2",
+      "character_row": 86,
+      "character_key": "Rigel",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        7350,
+        3150,
+        3150,
+        8400
+      ],
+      "minimum_total": 19404,
+      "maximum_total": 3999996,
+      "source_offset": 13621
+    },
+    {
+      "row": 212,
+      "key": "Saiph2",
+      "character_row": 87,
+      "character_key": "Saiph",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3150,
+        6300,
+        2100,
+        4200
+      ],
+      "minimum_total": 13388,
+      "maximum_total": 3999996,
+      "source_offset": 13685
+    },
+    {
+      "row": 213,
+      "key": "Alhena2",
+      "character_row": 88,
+      "character_key": "Alhena",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3150,
+        6300,
+        2100,
+        4200
+      ],
+      "minimum_total": 13388,
+      "maximum_total": 3999996,
+      "source_offset": 13749
+    },
+    {
+      "row": 214,
+      "key": "Aldebaran2",
+      "character_row": 89,
+      "character_key": "Aldebaran",
+      "rarity": 5,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3498,
+        7084,
+        7392,
+        4048
+      ],
+      "minimum_total": 18498,
+      "maximum_total": 3999996,
+      "source_offset": 13814
+    },
+    {
+      "row": 215,
+      "key": "Teide2",
+      "character_row": 90,
+      "character_key": "Teide",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        400,
+        250,
+        500,
+        250
+      ],
+      "minimum_total": 1400,
+      "maximum_total": 2100,
+      "source_offset": 13882
+    },
+    {
+      "row": 216,
+      "key": "Amateru2",
+      "character_row": 91,
+      "character_key": "Amateru",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        4200,
+        2625,
+        5250,
+        2625
+      ],
+      "minimum_total": 10290,
+      "maximum_total": 22050,
+      "source_offset": 13946
+    },
+    {
+      "row": 217,
+      "key": "Alcyone2",
+      "character_row": 92,
+      "character_key": "Alcyone",
+      "rarity": 4,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3630,
+        7315,
+        7260,
+        3960
+      ],
+      "minimum_total": 17732,
+      "maximum_total": 3999996,
+      "source_offset": 14012
+    },
+    {
+      "row": 218,
+      "key": "Electra2",
+      "character_row": 93,
+      "character_key": "Electra",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3150,
+        7350,
+        6300,
+        4200
+      ],
+      "minimum_total": 16170,
+      "maximum_total": 3999996,
+      "source_offset": 14078
+    },
+    {
+      "row": 219,
+      "key": "Maia2",
+      "character_row": 94,
+      "character_key": "Maia",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3150,
+        7350,
+        6300,
+        4200
+      ],
+      "minimum_total": 16170,
+      "maximum_total": 3999996,
+      "source_offset": 14144
+    },
+    {
+      "row": 220,
+      "key": "Asterope2",
+      "character_row": 95,
+      "character_key": "Asterope",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        300,
+        600,
+        200,
+        400
+      ],
+      "minimum_total": 1500,
+      "maximum_total": 39996,
+      "source_offset": 14207
+    },
+    {
+      "row": 221,
+      "key": "Merope2",
+      "character_row": 96,
+      "character_key": "Merope",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        300,
+        700,
+        600,
+        400
+      ],
+      "minimum_total": 2000,
+      "maximum_total": 39996,
+      "source_offset": 14274
+    },
+    {
+      "row": 222,
+      "key": "Celaeno2",
+      "character_row": 97,
+      "character_key": "Celaeno",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        300,
+        700,
+        600,
+        400
+      ],
+      "minimum_total": 2000,
+      "maximum_total": 39996,
+      "source_offset": 14339
+    },
+    {
+      "row": 223,
+      "key": "Taygeta2",
+      "character_row": 98,
+      "character_key": "Taygeta",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        300,
+        700,
+        600,
+        400
+      ],
+      "minimum_total": 2000,
+      "maximum_total": 39996,
+      "source_offset": 14405
+    },
+    {
+      "row": 224,
+      "key": "Antares2",
+      "character_row": 99,
+      "character_key": "Antares",
+      "rarity": 4,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        7469,
+        3036,
+        3795,
+        8712
+      ],
+      "minimum_total": 20711,
+      "maximum_total": 3999996,
+      "source_offset": 14471
+    },
+    {
+      "row": 225,
+      "key": "Lesath2",
+      "character_row": 100,
+      "character_key": "Lesath",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        300,
+        600,
+        200,
+        400
+      ],
+      "minimum_total": 1500,
+      "maximum_total": 39996,
+      "source_offset": 14537
+    },
+    {
+      "row": 226,
+      "key": "Sargas2",
+      "character_row": 101,
+      "character_key": "Sargas",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3150,
+        7350,
+        6300,
+        4200
+      ],
+      "minimum_total": 16170,
+      "maximum_total": 3999996,
+      "source_offset": 14602
+    },
+    {
+      "row": 227,
+      "key": "Methuselah2",
+      "character_row": 102,
+      "character_key": "Methuselah",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3150,
+        1575,
+        4200,
+        1575
+      ],
+      "minimum_total": 3675,
+      "maximum_total": 21000,
+      "source_offset": 14667
+    },
+    {
+      "row": 228,
+      "key": "Westerlund2",
+      "character_row": 103,
+      "character_key": "Westerlund",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        5775,
+        5775,
+        5775,
+        5775
+      ],
+      "minimum_total": 22176,
+      "maximum_total": 3999996,
+      "source_offset": 14736
+    },
+    {
+      "row": 229,
+      "key": "Sagittarii2",
+      "character_row": 104,
+      "character_key": "Sagittarii",
+      "rarity": 4,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        6171,
+        5748,
+        6534,
+        5748
+      ],
+      "minimum_total": 22265,
+      "maximum_total": 3999996,
+      "source_offset": 14805
+    },
+    {
+      "row": 230,
+      "key": "Arkab2",
+      "character_row": 105,
+      "character_key": "Arkab",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        300,
+        700,
+        600,
+        400
+      ],
+      "minimum_total": 2000,
+      "maximum_total": 39996,
+      "source_offset": 14874
+    },
+    {
+      "row": 231,
+      "key": "Pistolstar2",
+      "character_row": 106,
+      "character_key": "Pistolstar",
+      "rarity": 4,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        6292,
+        5929,
+        5808,
+        6171
+      ],
+      "minimum_total": 22264,
+      "maximum_total": 3999996,
+      "source_offset": 14938
+    },
+    {
+      "row": 232,
+      "key": "Scuti2",
+      "character_row": 107,
+      "character_key": "Scuti",
+      "rarity": 5,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        5808,
+        6292,
+        5748,
+        6413
+      ],
+      "minimum_total": 22320,
+      "maximum_total": 3999996,
+      "source_offset": 15007
+    },
+    {
+      "row": 233,
+      "key": "Ioannina2",
+      "character_row": 108,
+      "character_key": "Ioannina",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        700,
+        300,
+        300,
+        800
+      ],
+      "minimum_total": 2100,
+      "maximum_total": 39996,
+      "source_offset": 15071
+    },
+    {
+      "row": 234,
+      "key": "Hamal2",
+      "character_row": 109,
+      "character_key": "Hamal",
+      "rarity": 2,
+      "mode": "ordinary",
+      "excluded_by_local_candidate_filter": true,
+      "resources": [
+        300,
+        700,
+        600,
+        400
+      ],
+      "minimum_total": 2000,
+      "maximum_total": 39996,
+      "source_offset": 15138
+    },
+    {
+      "row": 235,
+      "key": "Dabih2",
+      "character_row": 110,
+      "character_key": "Dabih",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3150,
+        6300,
+        2100,
+        4200
+      ],
+      "minimum_total": 13388,
+      "maximum_total": 3999996,
+      "source_offset": 15202
+    },
+    {
+      "row": 236,
+      "key": "Alphard2",
+      "character_row": 111,
+      "character_key": "Alphard",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3150,
+        7350,
+        6300,
+        4200
+      ],
+      "minimum_total": 16170,
+      "maximum_total": 3999996,
+      "source_offset": 15266
+    },
+    {
+      "row": 237,
+      "key": "Graffias2",
+      "character_row": 112,
+      "character_key": "Graffias",
+      "rarity": 4,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3300,
+        6600,
+        2134,
+        4312
+      ],
+      "minimum_total": 15038,
+      "maximum_total": 3999996,
+      "source_offset": 15332
+    },
+    {
+      "row": 238,
+      "key": "Wei2",
+      "character_row": 113,
+      "character_key": "Wei",
+      "rarity": 3,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3150,
+        7350,
+        6300,
+        4200
+      ],
+      "minimum_total": 21000,
+      "maximum_total": 3999996,
+      "source_offset": 15399
+    },
+    {
+      "row": 239,
+      "key": "Jabbah2",
+      "character_row": 114,
+      "character_key": "Jabbah",
+      "rarity": 4,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        4664,
+        2750,
+        5445,
+        2943
+      ],
+      "minimum_total": 11852,
+      "maximum_total": 23703,
+      "source_offset": 15461
+    },
+    {
+      "row": 240,
+      "key": "Elacrab2",
+      "character_row": 115,
+      "character_key": "Elacrab",
+      "rarity": 4,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        4400,
+        2915,
+        5500,
+        2915
+      ],
+      "minimum_total": 11798,
+      "maximum_total": 23595,
+      "source_offset": 15526
+    },
+    {
+      "row": 241,
+      "key": "G642",
+      "character_row": 116,
+      "character_key": "G64",
+      "rarity": 5,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        5143,
+        5143,
+        7260,
+        6655
+      ],
+      "minimum_total": 22265,
+      "maximum_total": 3999996,
+      "source_offset": 15592
+    },
+    {
+      "row": 242,
+      "key": "Denebola2",
+      "character_row": 117,
+      "character_key": "Denebola",
+      "rarity": 5,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3267,
+        6798,
+        2134,
+        4444
+      ],
+      "minimum_total": 15644,
+      "maximum_total": 3999996,
+      "source_offset": 15654
+    },
+    {
+      "row": 243,
+      "key": "Gienah2",
+      "character_row": 118,
+      "character_key": "Gienah",
+      "rarity": 5,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3300,
+        7700,
+        6600,
+        4400
+      ],
+      "minimum_total": 18480,
+      "maximum_total": 3999996,
+      "source_offset": 15721
+    },
+    {
+      "row": 244,
+      "key": "Alrami2",
+      "character_row": 119,
+      "character_key": "Alrami",
+      "rarity": 5,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        4664,
+        2750,
+        5500,
+        2915
+      ],
+      "minimum_total": 13455,
+      "maximum_total": 23744,
+      "source_offset": 15786
+    },
+    {
+      "row": 245,
+      "key": "Alpheratz2",
+      "character_row": 120,
+      "character_key": "Alpheratz",
+      "rarity": 5,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3300,
+        6600,
+        2200,
+        4664
+      ],
+      "minimum_total": 15758,
+      "maximum_total": 3999996,
+      "source_offset": 15851
+    },
+    {
+      "row": 246,
+      "key": "Algenib2",
+      "character_row": 121,
+      "character_key": "Algenib",
+      "rarity": 5,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        8008,
+        3135,
+        3465,
+        8800
+      ],
+      "minimum_total": 22004,
+      "maximum_total": 3999996,
+      "source_offset": 15919
+    },
+    {
+      "row": 247,
+      "key": "Polis2",
+      "character_row": 122,
+      "character_key": "Polis",
+      "rarity": 4,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        7623,
+        3465,
+        3366,
+        8712
+      ],
+      "minimum_total": 20900,
+      "maximum_total": 27000,
+      "source_offset": 15985
+    },
+    {
+      "row": 248,
+      "key": "Posterior2",
+      "character_row": 123,
+      "character_key": "Posterior",
+      "rarity": 5,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3366,
+        7623,
+        6534,
+        4576
+      ],
+      "minimum_total": 18563,
+      "maximum_total": 3999996,
+      "source_offset": 16049
+    },
+    {
+      "row": 249,
+      "key": "Behemoth2",
+      "character_row": 124,
+      "character_key": "Behemoth",
+      "rarity": 5,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        6655,
+        4840,
+        7865,
+        4840
+      ],
+      "minimum_total": 22000,
+      "maximum_total": 27000,
+      "source_offset": 16117
+    },
+    {
+      "row": 250,
+      "key": "Dubhe2",
+      "character_row": 127,
+      "character_key": "Dubhe",
+      "rarity": 5,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3498,
+        7084,
+        7392,
+        4048
+      ],
+      "minimum_total": 18498,
+      "maximum_total": 25000,
+      "source_offset": 16184
+    },
+    {
+      "row": 251,
+      "key": "Mizar2",
+      "character_row": 128,
+      "character_key": "Mizar",
+      "rarity": 4,
+      "mode": "hyper",
+      "excluded_by_local_candidate_filter": false,
+      "resources": [
+        3069,
+        7326,
+        1870,
+        4400
+      ],
+      "minimum_total": 15165,
+      "maximum_total": 20000,
+      "source_offset": 16248
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "evidence_id": "ev_1cb9ad251e5c0631fd36f01c612c6be0fb0aa6bb5a2aea59dc3dcba566c3f74f",
+  "subject": {
+    "name": "libStella.so",
+    "digest": {
+      "sha256": "6883fa9383432c981e86c13b8f01b8f227a51d6cf2298dd6c47d3d3774c53f9a"
+    },
+    "local_path": "<original-workspace>/research/raw/apk/lib/arm64-v8a/libStella.so",
+    "format": "unknown",
+    "architecture": null
+  },
+  "provider": {
+    "id": "gnu.objdump",
+    "name": "GNU objdump",
+    "version": null
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.reverse-engineering.command-observation",
+  "operation": "inspect_with_objdump",
+  "parameters": {
+    "path": "<original-workspace>/research/raw/apk/lib/arm64-v8a/libStella.so",
+    "operation": "section_headers",
+    "follow_debug_links": false,
+    "provider_executable": "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+    "command_arguments": [
+      "-h",
+      "<original-workspace>/research/raw/apk/lib/arm64-v8a/libStella.so"
+    ]
+  },
+  "raw_result": {
+    "stdout": "\n<original-workspace>/research/raw/apk/lib/arm64-v8a/libStella.so:\tfile format elf64-littleaarch64\n\nSections:\nIdx Name                Size     VMA              Type\n  0                     00000000 0000000000000000 \n  1 .hash               000053c8 00000000000001c8 \n  2 .dynsym             00013608 0000000000005590 \n  3 .dynstr             00028193 0000000000018b98 \n  4 .gnu.version        000019d6 0000000000040d2c \n  5 .gnu.version_r      00000060 0000000000042708 \n  6 .rela.dyn           00057708 0000000000042768 \n  7 .rela.plt           00004c98 0000000000099e70 \n  8 .plt                00003330 000000000009eb10 TEXT\n  9 .text               006b81fc 00000000000a1e40 TEXT\n 10 .rodata             000c895b 000000000075a040 DATA\n 11 .eh_frame_hdr       0001efc4 000000000082299c DATA\n 12 .eh_frame           0007d270 0000000000841960 DATA\n 13 .gcc_except_table   00008c74 00000000008bebd0 DATA\n 14 .note.android.ident 00000098 00000000008c7844 \n 15 .init_array         000000d8 00000000008d8210 \n 16 .fini_array         00000018 00000000008d82e8 \n 17 .data.rel.ro        00021a58 00000000008d8300 DATA\n 18 .dynamic            00000250 00000000008f9d58 \n 19 .got                00003050 00000000008f9fa8 DATA\n 20 .data               00001528 00000000008fd000 DATA\n 21 .bss                0000eb90 00000000008fe530 BSS\n 22 .comment            0000016b 0000000000000000 \n 23 .gnu_debuglink      00000014 0000000000000000 \n 24 .shstrtab           000000f3 0000000000000000 \n",
+    "stderr": "",
+    "exit_code": 0,
+    "signal": null,
+    "output_truncated": false,
+    "completion_status": "complete",
+    "artifact_sha256_after": "6883fa9383432c981e86c13b8f01b8f227a51d6cf2298dd6c47d3d3774c53f9a",
+    "artifact_changed": false
+  },
+  "normalized_result": {
+    "stdout": "\n<original-workspace>/research/raw/apk/lib/arm64-v8a/libStella.so:\tfile format elf64-littleaarch64\n\nSections:\nIdx Name                Size     VMA              Type\n  0                     00000000 0000000000000000 \n  1 .hash               000053c8 00000000000001c8 \n  2 .dynsym             00013608 0000000000005590 \n  3 .dynstr             00028193 0000000000018b98 \n  4 .gnu.version        000019d6 0000000000040d2c \n  5 .gnu.version_r      00000060 0000000000042708 \n  6 .rela.dyn           00057708 0000000000042768 \n  7 .rela.plt           00004c98 0000000000099e70 \n  8 .plt                00003330 000000000009eb10 TEXT\n  9 .text               006b81fc 00000000000a1e40 TEXT\n 10 .rodata             000c895b 000000000075a040 DATA\n 11 .eh_frame_hdr       0001efc4 000000000082299c DATA\n 12 .eh_frame           0007d270 0000000000841960 DATA\n 13 .gcc_except_table   00008c74 00000000008bebd0 DATA\n 14 .note.android.ident 00000098 00000000008c7844 \n 15 .init_array         000000d8 00000000008d8210 \n 16 .fini_array         00000018 00000000008d82e8 \n 17 .data.rel.ro        00021a58 00000000008d8300 DATA\n 18 .dynamic            00000250 00000000008f9d58 \n 19 .got                00003050 00000000008f9fa8 DATA\n 20 .data               00001528 00000000008fd000 DATA\n 21 .bss                0000eb90 00000000008fe530 BSS\n 22 .comment            0000016b 0000000000000000 \n 23 .gnu_debuglink      00000014 0000000000000000 \n 24 .shstrtab           000000f3 0000000000000000 \n",
+    "stderr": "",
+    "exit_code": 0,
+    "signal": null,
+    "output_truncated": false,
+    "completion_status": "complete",
+    "artifact_sha256_after": "6883fa9383432c981e86c13b8f01b8f227a51d6cf2298dd6c47d3d3774c53f9a",
+    "artifact_changed": false
+  },
+  "confidence": "observed",
+  "authority": "shipped-artifact",
+  "environment": null,
+  "limitations": [
+    "The executable version and supported formats are reported as unknown because no reliable version probe was performed.",
+    "A non-zero process exit is preserved as an observed command result.",
+    "When both are available, pre-run and post-run digests detect artifact changes across the provider call but cannot prove the exact bytes consumed during the call."
+  ],
+  "relationship_coverage": null,
+  "locations": [
+    {
+      "kind": "artifact-path",
+      "path": "<original-workspace>/research/raw/apk/lib/arm64-v8a/libStella.so"
+    }
+  ],
+  "evidence_links": [],
+  "_public_handoff_copy": {
+    "original_file_sha256": "e052fc6a1315ad8a3dd36177670414ca335597dc42a47a7d558d8cb83732efa3",
+    "changes": "Local workspace/home paths redacted; original Evidence IDs retained only for historical traceability. This copy is not the byte-identical original Evidence."
+  }
+}

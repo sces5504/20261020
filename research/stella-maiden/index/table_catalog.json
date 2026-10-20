@@ -1,0 +1,538 @@
+[
+  {
+    "table": "AI",
+    "rows": 12,
+    "fields": 11,
+    "source_sha256": "3e10193631fc73fe25ac3e558382c6ed863bffb517d522a877d00ef0da364d6c",
+    "loader": "0x154ecc",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "Anim",
+    "rows": 5,
+    "fields": 9,
+    "source_sha256": "a5e588037678b4d40cbae0de4e669deb2df9041e84de8fa8149310f4648d96cc",
+    "loader": "0x15b738",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "Attack",
+    "rows": 45,
+    "fields": 33,
+    "source_sha256": "0114217f51ea5828be4ef9134e251ba33f538850bd6d1800cbb4ffb63a2c7d6d",
+    "loader": "0x158fa8",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "Attend",
+    "rows": 31,
+    "fields": 18,
+    "source_sha256": "c4a7b4e27fab73aa22e55ddc8e929a32df971671e7370d25d64141e291eb423a",
+    "loader": "0x158a6c",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "BID",
+    "rows": 15,
+    "fields": 40,
+    "source_sha256": "69eeab96911f88e4924628788cf7827cb9690cfb443d9e1e84c0a8a023a065d0",
+    "loader": "0x14c538",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "Ban",
+    "rows": 9,
+    "fields": 3,
+    "source_sha256": "83a6cac733142bdff5feaacc4b4af7ae7f4aa89dec74a9efb9f3c79c34b01fa4",
+    "loader": null,
+    "schema_source": "structural inference: constant row layout, valid strings and exact full-file round trip; no native loader found"
+  },
+  {
+    "table": "Banner",
+    "rows": 6,
+    "fields": 8,
+    "source_sha256": "7fef975990fe0168da23e4372e60a208514eade0d4032ae81241440efca76f09",
+    "loader": "0x164e2c",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "Boss",
+    "rows": 8,
+    "fields": 11,
+    "source_sha256": "e7a7fe966572a08969b4de2fa517556ca49771daf0faa73224778300ab96ae3f",
+    "loader": "0x163c18",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "BossReward",
+    "rows": 17,
+    "fields": 2,
+    "source_sha256": "52462bfb61a67adeab1a9ee5ceb8c331ca4cb65dbe729c5c61c8cf0d0e63b24f",
+    "loader": "0x16427c",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "Bullet",
+    "rows": 39,
+    "fields": 22,
+    "source_sha256": "92787bc8b3d02dcdcc83da302fcd55e90a5630f475e5dc2ba97636ea20ddf7e5",
+    "loader": "0x155c9c",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "Burst",
+    "rows": 4,
+    "fields": 25,
+    "source_sha256": "65344b3b210e1a1e791f60b2dee96d988bd1c838231c742036d577ba4614b9ed",
+    "loader": "0x159640",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "CID",
+    "rows": 342,
+    "fields": 137,
+    "source_sha256": "ff35d32b43058090b22528445dc15ad467fbf4237cc5805ff5c632e375ab37e0",
+    "loader": "0x14b98c",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "CShake",
+    "rows": 22,
+    "fields": 7,
+    "source_sha256": "35b8a544d42e8ab9269c18e50fdeb3366d3771523f665d218c942c604d3929b7",
+    "loader": "0x15a178",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "Defence",
+    "rows": 36,
+    "fields": 42,
+    "source_sha256": "deb1138d2d1e31fe19c0ec34dbd3aef563911679fda35b142379c5200982476d",
+    "loader": "0x1623b4",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "EXP",
+    "rows": 120,
+    "fields": 2,
+    "source_sha256": "dd0b7ac0be761b776695bafa27aa6813963f5764e8c83bb236719851f3b6d7ef",
+    "loader": "0x159cc0",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "EventScript",
+    "rows": 7809,
+    "fields": 47,
+    "source_sha256": "dd8aaa5fe3cb2bb9edd94a1c4c99bf23a1ef978a361fb3d6ae0246104234fd2d",
+    "loader": "0x156eb4",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "EventSpot",
+    "rows": 376,
+    "fields": 51,
+    "source_sha256": "7786b72fdb2c090f2c6c8e30a83b8067de061ef48bf506853abb70e99d3e8a1c",
+    "loader": "0x1575e0",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "ExpPer",
+    "rows": 120,
+    "fields": 15,
+    "source_sha256": "fa091a46e69c94751d90601ad264a27675b161009df0fa6ced3fc47482dc39a4",
+    "loader": "0x15ab9c",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "ExpPerHard",
+    "rows": 120,
+    "fields": 15,
+    "source_sha256": "740d786bb5f81628309571ef2909a95287517da17061211cdb465d0282bd8a5f",
+    "loader": "0x1635bc",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "ExpPerS",
+    "rows": 120,
+    "fields": 15,
+    "source_sha256": "803167b14d8bbc98b011be8b7ba89c82d2f2e07d4a12abcbc8356c6245bf6c86",
+    "loader": "0x15ecfc",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "Fx",
+    "rows": 268,
+    "fields": 30,
+    "source_sha256": "8a1bd7f08f3612047b3fbae21942ec6e48bcd3f2366100765b9ba9bc2a67df41",
+    "loader": "0x1531f4",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "Gacha",
+    "rows": 252,
+    "fields": 15,
+    "source_sha256": "2df215a33744cc412d33b030768942ae4e23d80d88889020cae71a57b9d10185",
+    "loader": "0x14f0f4",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "Galaxy",
+    "rows": 15,
+    "fields": 24,
+    "source_sha256": "3e3e9b85298ae6a1368a8ef795124864089e30e8bd3d7d9d3ca0566b1ee328d8",
+    "loader": "0x151f18",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "GalaxyGate",
+    "rows": 51,
+    "fields": 10,
+    "source_sha256": "606bd20bf05aad691721d39887c4eb1ef1a39269e1560a82478e938fb1ce0f3d",
+    "loader": "0x15258c",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "Global",
+    "rows": 415,
+    "fields": 17,
+    "source_sha256": "900b235cc7730addcbf24851b768650963b3c6c24a3f329433c1de2a6482d555",
+    "loader": "0x1562a0",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "Global2",
+    "rows": 169,
+    "fields": 5,
+    "source_sha256": "679a260d0c057327f679cd71c20be70873eb8557fe5175bbf2e9130e400f6864",
+    "loader": "0x1568f4",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "Item",
+    "rows": 374,
+    "fields": 65,
+    "source_sha256": "aae4031485cc8d2d45233934a1348b368a63e812f2e4e4f3acb5a5df0afebfdb",
+    "loader": "0x14d2fc",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "ItemEquip",
+    "rows": 14,
+    "fields": 7,
+    "source_sha256": "b0a389ec5cc0f88873544beb570a966ad4164b585ed84d8d29581ed06b6966e9",
+    "loader": "0x161650",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "ItemGacha",
+    "rows": 135,
+    "fields": 10,
+    "source_sha256": "71e3af97829816beac87796b268f72172451d02b3a8547d3f423aac8c1eb9d2c",
+    "loader": "0x16100c",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "ItemReward",
+    "rows": 555,
+    "fields": 42,
+    "source_sha256": "d3cd5eb036b0740e05867123cd88e141bbc9643b6984bfc29dbd0719483fb159",
+    "loader": "0x161cbc",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "LocalStr",
+    "rows": 3001,
+    "fields": 5,
+    "source_sha256": "6c27f98f72d3218c27e4bc2c32840efe0ebdf09e4457456412d360cfa9e43e2c",
+    "loader": "0x13edc4",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "PID",
+    "rows": 86,
+    "fields": 34,
+    "source_sha256": "cfe4edcf9d8f057edb7e173879a1447a688dcd10f8abdfe1f8eba6f0b9bbc65f",
+    "loader": "0x14cc14",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "PSkill",
+    "rows": 11,
+    "fields": 21,
+    "source_sha256": "1e1326f60d0bd7c9f42f373297c3924d3175dd66f8262ec10f7dc9f48335182e",
+    "loader": "0x14e494",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "Play",
+    "rows": 47,
+    "fields": 15,
+    "source_sha256": "90c2676f499c4aded70dcc061fff12746b96544a378b1abdcd7920a7fa08b8c1",
+    "loader": "0x15a608",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "Proj",
+    "rows": 107,
+    "fields": 34,
+    "source_sha256": "484b75231466f31b8735ecbf483473b38e02d7b01ea43224450dd5b24c5dac55",
+    "loader": "0x152b30",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "PvPReward",
+    "rows": 17,
+    "fields": 2,
+    "source_sha256": "d5152828c18a0df587f60759325b2c51e5d43ebf2872b90b850229ec121744ff",
+    "loader": "0x162aac",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "PvPTrainExp",
+    "rows": 110,
+    "fields": 3,
+    "source_sha256": "00a0a5dba955e15558afb0fac9febd846a31fc138b2e413707d8403a11d8d2f8",
+    "loader": null,
+    "schema_source": "structural inference: constant row layout, valid strings and exact full-file round trip; no native loader found"
+  },
+  {
+    "table": "Quest",
+    "rows": 13,
+    "fields": 59,
+    "source_sha256": "fa996343901272b75cda06b40f70a6a16d49fed89eec4f1126fe330e13c04120",
+    "loader": "0x150410",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "QuestM",
+    "rows": 137,
+    "fields": 31,
+    "source_sha256": "52f5190a4f302ea0b6e71f913ff053fd075eb16aa3a70a9a58c4c3b7826f2b20",
+    "loader": "0x151198",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "QuestS",
+    "rows": 84,
+    "fields": 47,
+    "source_sha256": "9a5143733ba483501d1e331f34114334afa14545646608791ba8b9fd165f69bd",
+    "loader": "0x1517f4",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "QuestW",
+    "rows": 19,
+    "fields": 22,
+    "source_sha256": "a47dbf93bc78b75120fcb2ba2f0206b1eeef826f5b56238dbb3e55e91932f1d1",
+    "loader": "0x150bac",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "Reward",
+    "rows": 484,
+    "fields": 42,
+    "source_sha256": "46a263399b0503e0271840b8b7ba30698428e0a6f35a6a72bc841f63554a96ef",
+    "loader": "0x158374",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "RewardPer",
+    "rows": 110,
+    "fields": 15,
+    "source_sha256": "cf774b5534bbaf49e3f7598f5132f8a0cd5dde06e7bedac5adf5acb5a2b10183",
+    "loader": "0x160354",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "RewardPerHard",
+    "rows": 110,
+    "fields": 15,
+    "source_sha256": "c130268ed7be53e9303efd53591aee7af29e3e6d2bfc19ba89c145bf95e8f416",
+    "loader": "0x1609b0",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "RndBox",
+    "rows": 7,
+    "fields": 23,
+    "source_sha256": "de7d8a6ee5055b94aaab5d8bd425b99dfdfab49479e417563f02bfaa6e8484ca",
+    "loader": null,
+    "schema_source": "structural inference: constant row layout, valid strings and exact full-file round trip; no native loader found"
+  },
+  {
+    "table": "Roulette",
+    "rows": 16,
+    "fields": 6,
+    "source_sha256": "8c3fb09d47395d44437b03676a7e1e905a885621aefd792e45fee9c61e8e25b9",
+    "loader": "0x1647e8",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "Script",
+    "rows": 6468,
+    "fields": 9,
+    "source_sha256": "9026b8f9ec79276afe3cd755cffc58844226e24bb32693d4bbdddff527a598e7",
+    "loader": "0x14fe80",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "Shot",
+    "rows": 25,
+    "fields": 53,
+    "source_sha256": "ef8c3068273ebd4107836cd1808c45524d3ec2488a4fa8b2d7e5cae15c1250cc",
+    "loader": "0x155530",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "Skill",
+    "rows": 227,
+    "fields": 96,
+    "source_sha256": "fc67e3838c1aa0d18808743ba65161134e3e9448f3642dcc699d72780fc39d92",
+    "loader": "0x14db0c",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "Skin",
+    "rows": 231,
+    "fields": 71,
+    "source_sha256": "e32c774d5106dc307a54516ada85ac8cdd6131196ec7d688e9032fd80b3f3a33",
+    "loader": "0x15bc64",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "Slang",
+    "rows": 12997,
+    "fields": 3,
+    "source_sha256": "c0d28a878de9f7afcf48dff6e3c99970aa88273cf3dcc63eb3b606aed8aa79b9",
+    "loader": "0x15e184",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "Sound",
+    "rows": 195,
+    "fields": 18,
+    "source_sha256": "f2d030b7b1be0e02e8a5c501e71cc77eff0907200839bd8f9a91fe7861c7f876",
+    "loader": "0x14b3f8",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "SpawnPoint",
+    "rows": 530,
+    "fields": 15,
+    "source_sha256": "7dd364ef5115600ce943b8447097473d4e4520f05ef1dc5132014cd84c8b3e6c",
+    "loader": "0x14f784",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "StoreCoord",
+    "rows": 42,
+    "fields": 32,
+    "source_sha256": "2bd599a22020335a6d4a2c4488e711a418336dc00182e7d2f9ef4e2a5748d8f2",
+    "loader": "0x15e6b4",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "StoreCore",
+    "rows": 14,
+    "fields": 16,
+    "source_sha256": "d86a3fa2e4cfb3576ee3621dc8230eefa38650ef673d9ef9b12096d7ce16a285",
+    "loader": "0x153ebc",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "StoreCube",
+    "rows": 12,
+    "fields": 29,
+    "source_sha256": "d842a587d54ae12296701851ca8b4904017ba9c7302ff535badaec2b8a7612a3",
+    "loader": "0x1538ac",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "StoreFree",
+    "rows": 4,
+    "fields": 8,
+    "source_sha256": "8bd71d0d61b124c84a5128f0fe4774118ab2b8b408ab96c8ba1fe91c13093910",
+    "loader": "0x15d0fc",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "StoreHonor",
+    "rows": 19,
+    "fields": 18,
+    "source_sha256": "7b2d7f7620fb47d3d3a88ff750a4d9b89aa70878d03590ca6aaf81c2abc91b4d",
+    "loader": "0x163018",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "StorePkg",
+    "rows": 17,
+    "fields": 28,
+    "source_sha256": "8770996c5119ced21a4a858bd2f463f1863caeb472c87a06e3c79983a9cca022",
+    "loader": "0x15db68",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "StoreResource",
+    "rows": 16,
+    "fields": 14,
+    "source_sha256": "7c255bde0c4229126d7dafaf55dcdc61f2caf5b842b681277e9f7d3badd81ec3",
+    "loader": "0x154444",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "StoreSkin",
+    "rows": 9,
+    "fields": 28,
+    "source_sha256": "ec22d2f5c6c322d9b2bcc5b946b717ec013cb0ef51d0a7aada72fb1366689a90",
+    "loader": "0x15c554",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "StoreSlot",
+    "rows": 9,
+    "fields": 6,
+    "source_sha256": "7062e75644126368186a2d178dbeb7f18887ae521d1a7795b52134956d63254f",
+    "loader": "0x1549b8",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "StoreTicket",
+    "rows": 6,
+    "fields": 9,
+    "source_sha256": "603d2140bd4eba7ffb8cb9f231240e9f17129637961ecaac4e093f958f611c7e",
+    "loader": "0x15cbc8",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "Support",
+    "rows": 7,
+    "fields": 19,
+    "source_sha256": "90e8a767daea26f37c8f84649f1084c77f94927109ca99ce3639183bc113ddb4",
+    "loader": "0x15d624",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "Trail",
+    "rows": 16,
+    "fields": 11,
+    "source_sha256": "a67d6efa0d5ae0d3a9ffdeae4df4f7fdaed6025011db9c8c8c5c13485e6f7e9d",
+    "loader": "0x15b1f8",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "Train",
+    "rows": 20,
+    "fields": 25,
+    "source_sha256": "19591a9eca50dc928f9a9cc8fd782a7d532f6c614203c6f6b98f90642b494728",
+    "loader": "0x157d4c",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  },
+  {
+    "table": "Wave",
+    "rows": 996,
+    "fields": 30,
+    "source_sha256": "4029d12400e6283206a15fa95b6c44a99a9a8f70daecfee096dbd478a44c9901",
+    "loader": "0x14ea8c",
+    "schema_source": "native ARM64 reader calls in serialized order; native offsets checked against a constant x19 row pivot"
+  }
+]

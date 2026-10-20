@@ -1,0 +1,124 @@
+{
+  "_round_trip_exact": true,
+  "_format": "stella-gen-v1",
+  "_header_hex": "c117a55e0000000021f38a5e00000000",
+  "_row_count": 12,
+  "_schema_fingerprint": "0x902ae914",
+  "_size": 608,
+  "_source_sha256": "3e10193631fc73fe25ac3e558382c6ed863bffb517d522a877d00ef0da364d6c",
+  "fields": [
+    {
+      "name": "f00",
+      "type": "str",
+      "reader": "0x453dbc",
+      "call_pc": "0x15528c",
+      "native_destination": "add x1, sp, #0x10",
+      "native_slot_offset": 0,
+      "native_offset": null
+    },
+    {
+      "name": "f01",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15529c",
+      "native_destination": "sub x1, x19, #8",
+      "native_slot_offset": 24,
+      "native_offset": 24
+    },
+    {
+      "name": "f02",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x1552a8",
+      "native_destination": "sub x1, x19, #4",
+      "native_slot_offset": 28,
+      "native_offset": 28
+    },
+    {
+      "name": "f03",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x1552b4",
+      "native_destination": "mov x1, x19",
+      "native_slot_offset": 32,
+      "native_offset": 32
+    },
+    {
+      "name": "f04",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x1552c0",
+      "native_destination": "add x1, x19, #4",
+      "native_slot_offset": 36,
+      "native_offset": 36
+    },
+    {
+      "name": "f05",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x1552cc",
+      "native_destination": "add x1, x19, #8",
+      "native_slot_offset": 40,
+      "native_offset": 40
+    },
+    {
+      "name": "f06",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x1552d8",
+      "native_destination": "add x1, x19, #0xc",
+      "native_slot_offset": 44,
+      "native_offset": 44
+    },
+    {
+      "name": "f07",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x1552e4",
+      "native_destination": "add x1, x19, #0x10",
+      "native_slot_offset": 48,
+      "native_offset": 48
+    },
+    {
+      "name": "f08",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x1552f0",
+      "native_destination": "add x1, x19, #0x14",
+      "native_slot_offset": 52,
+      "native_offset": 52
+    },
+    {
+      "name": "f09",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x1552fc",
+      "native_destination": "add x1, x19, #0x18",
+      "native_slot_offset": 56,
+      "native_offset": 56
+    },
+    {
+      "name": "f10",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x155308",
+      "native_destination": "add x1, x19, #0x1c",
+      "native_slot_offset": 60,
+      "native_offset": 60
+    }
+  ],
+  "rows": [
+    {"_row":0,"_offset":24,"f00":"Base","f01":400,"f02":2250,"f03":0,"f04":25,"f05":100,"f06":450,"f07":0,"f08":0,"f09":0,"f10":0,"_size":46,"_field_offsets":[24,30,34,38,42,46,50,54,58,62,66]},
+    {"_row":1,"_offset":70,"f00":"Drone","f01":2000,"f02":5400,"f03":0,"f04":25,"f05":150,"f06":450,"f07":0,"f08":0,"f09":0,"f10":0,"_size":47,"_field_offsets":[70,77,81,85,89,93,97,101,105,109,113]},
+    {"_row":2,"_offset":117,"f00":"Fast","f01":400,"f02":900,"f03":0,"f04":75,"f05":200,"f06":600,"f07":0,"f08":0,"f09":0,"f10":0,"_size":46,"_field_offsets":[117,123,127,131,135,139,143,147,151,155,159]},
+    {"_row":3,"_offset":163,"f00":"NoSide","f01":400,"f02":2200,"f03":0,"f04":0,"f05":0,"f06":0,"f07":0,"f08":0,"f09":0,"f10":0,"_size":48,"_field_offsets":[163,171,175,179,183,187,191,195,199,203,207]},
+    {"_row":4,"_offset":211,"f00":"SidePingpong","f01":400,"f02":1400,"f03":1,"f04":75,"f05":0,"f06":3000,"f07":1,"f08":1,"f09":0,"f10":0,"_size":54,"_field_offsets":[211,225,229,233,237,241,245,249,253,257,261]},
+    {"_row":5,"_offset":265,"f00":"Rot","f01":400,"f02":2200,"f03":0,"f04":0,"f05":0,"f06":0,"f07":0,"f08":2,"f09":35,"f10":0,"_size":45,"_field_offsets":[265,270,274,278,282,286,290,294,298,302,306]},
+    {"_row":6,"_offset":310,"f00":"Fast2","f01":200,"f02":450,"f03":0,"f04":75,"f05":650,"f06":1500,"f07":0,"f08":0,"f09":0,"f10":0,"_size":47,"_field_offsets":[310,317,321,325,329,333,337,341,345,349,353]},
+    {"_row":7,"_offset":357,"f00":"FastDwarf","f01":700,"f02":1350,"f03":0,"f04":50,"f05":100,"f06":400,"f07":0,"f08":0,"f09":0,"f10":0,"_size":51,"_field_offsets":[357,368,372,376,380,384,388,392,396,400,404]},
+    {"_row":8,"_offset":408,"f00":"FastGaint","f01":900,"f02":1800,"f03":0,"f04":50,"f05":100,"f06":300,"f07":0,"f08":0,"f09":0,"f10":0,"_size":51,"_field_offsets":[408,419,423,427,431,435,439,443,447,451,455]},
+    {"_row":9,"_offset":459,"f00":"Base2","f01":400,"f02":2200,"f03":0,"f04":30,"f05":400,"f06":1000,"f07":0,"f08":0,"f09":0,"f10":0,"_size":47,"_field_offsets":[459,466,470,474,478,482,486,490,494,498,502]},
+    {"_row":10,"_offset":506,"f00":"FastNomal","f01":400,"f02":1350,"f03":0,"f04":50,"f05":200,"f06":600,"f07":0,"f08":0,"f09":0,"f10":0,"_size":51,"_field_offsets":[506,517,521,525,529,533,537,541,545,549,553]},
+    {"_row":11,"_offset":557,"f00":"LongSide1","f01":400,"f02":900,"f03":0,"f04":50,"f05":1000,"f06":2200,"f07":0,"f08":0,"f09":0,"f10":0,"_size":51,"_field_offsets":[557,568,572,576,580,584,588,592,596,600,604]}
+  ]
+}

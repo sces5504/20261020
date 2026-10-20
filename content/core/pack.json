@@ -1,0 +1,696 @@
+{
+  "schemaVersion": 1,
+  "id": "m1:core",
+  "version": "0.1.0",
+  "name": "曙光航跡 · M1",
+  "resources": [
+    {
+      "id": "m1:crystal",
+      "name": "水晶",
+      "description": "",
+      "status": "active",
+      "provenance": "m1-design",
+      "color": "#8ae6ef",
+      "initial": 600,
+      "capacity": 9999
+    },
+    {
+      "id": "m1:gas",
+      "name": "氣體",
+      "description": "",
+      "status": "active",
+      "provenance": "m1-design",
+      "color": "#b8a0ee",
+      "initial": 600,
+      "capacity": 9999
+    },
+    {
+      "id": "m1:metal",
+      "name": "金屬",
+      "description": "",
+      "status": "active",
+      "provenance": "m1-design",
+      "color": "#f2bd7c",
+      "initial": 600,
+      "capacity": 9999
+    },
+    {
+      "id": "m1:ether",
+      "name": "乙太",
+      "description": "",
+      "status": "active",
+      "provenance": "m1-design",
+      "color": "#9ad4a1",
+      "initial": 600,
+      "capacity": 9999
+    }
+  ],
+  "characters": [
+    {
+      "id": "m1:earth",
+      "name": "地球",
+      "description": "4.3.2 研究候選；依使用者明確對應將六張原圖套用M1六角色；保留原圖。能力、成長及配方為 M1 暫定設計。",
+      "status": "active",
+      "provenance": "m1-design",
+      "rarity": 3,
+      "hp": 360,
+      "attack": 28,
+      "defense": 35,
+      "speed": 180,
+      "range": 430,
+      "interval": 0.8,
+      "growth": 0.08,
+      "skill": "m1:deflect",
+      "color": "#62dfce",
+      "portrait": "m1art:asset.maiden-05-original-v1",
+      "avatar": "m1art:asset.maiden-05-original-v1",
+      "sprite": "m1art:asset.maiden-05-original-v1",
+      "recipe": [150, 100, 100, 50],
+      "starter": true,
+      "role": "守護 · 領域護盾",
+      "sourceRow": 2
+    },
+    {
+      "id": "m1:mercury",
+      "name": "水星",
+      "description": "4.3.2 研究候選；依使用者明確對應將六張原圖套用M1六角色；保留原圖。能力、成長及配方為 M1 暫定設計。",
+      "status": "active",
+      "provenance": "m1-design",
+      "rarity": 3,
+      "hp": 260,
+      "attack": 36,
+      "defense": 15,
+      "speed": 180,
+      "range": 430,
+      "interval": 0.8,
+      "growth": 0.08,
+      "skill": "m1:dispersion",
+      "color": "#8dcfff",
+      "portrait": "m1art:asset.maiden-04-original-v1",
+      "avatar": "m1art:asset.maiden-04-original-v1",
+      "sprite": "m1art:asset.maiden-04-original-v1",
+      "recipe": [50, 150, 100, 100],
+      "starter": true,
+      "role": "火力 · 擴散彈幕",
+      "sourceRow": 3
+    },
+    {
+      "id": "m1:venus",
+      "name": "金星",
+      "description": "4.3.2 研究候選；依使用者明確對應將六張原圖套用M1六角色；保留原圖。能力、成長及配方為 M1 暫定設計。",
+      "status": "active",
+      "provenance": "m1-design",
+      "rarity": 3,
+      "hp": 280,
+      "attack": 32,
+      "defense": 20,
+      "speed": 180,
+      "range": 430,
+      "interval": 0.8,
+      "growth": 0.08,
+      "skill": "m1:cannon",
+      "color": "#f3d691",
+      "portrait": "m1art:asset.maiden-01-original-v1",
+      "avatar": "m1art:asset.maiden-01-original-v1",
+      "sprite": "m1art:asset.maiden-01-original-v1",
+      "recipe": [100, 50, 150, 100],
+      "starter": true,
+      "role": "支援 · 定點砲台",
+      "sourceRow": 4
+    },
+    {
+      "id": "m1:mars",
+      "name": "火星",
+      "description": "4.3.2 研究候選；依使用者明確對應將六張原圖套用M1六角色；保留原圖。能力、成長及配方為 M1 暫定設計。",
+      "status": "active",
+      "provenance": "m1-design",
+      "rarity": 2,
+      "hp": 420,
+      "attack": 26,
+      "defense": 42,
+      "speed": 180,
+      "range": 430,
+      "interval": 0.8,
+      "growth": 0.08,
+      "skill": "m1:armor",
+      "color": "#f69781",
+      "portrait": "m1art:asset.maiden-03-original-v1",
+      "avatar": "m1art:asset.maiden-03-original-v1",
+      "sprite": "m1art:asset.maiden-03-original-v1",
+      "recipe": [100, 100, 50, 150],
+      "starter": false,
+      "role": "防衛 · 裝甲增幅",
+      "sourceRow": 5
+    },
+    {
+      "id": "m1:uranus",
+      "name": "天王星",
+      "description": "4.3.2 研究候選；依使用者明確對應將六張原圖套用M1六角色；保留原圖。能力、成長及配方為 M1 暫定設計。",
+      "status": "active",
+      "provenance": "m1-design",
+      "rarity": 3,
+      "hp": 260,
+      "attack": 36,
+      "defense": 16,
+      "speed": 180,
+      "range": 430,
+      "interval": 0.8,
+      "growth": 0.08,
+      "skill": "m1:critical",
+      "color": "#d9b4ff",
+      "portrait": "m1art:asset.maiden-02-original-v1",
+      "avatar": "m1art:asset.maiden-02-original-v1",
+      "sprite": "m1art:asset.maiden-02-original-v1",
+      "recipe": [100, 150, 50, 100],
+      "starter": false,
+      "role": "速射 · 臨界加速",
+      "sourceRow": 8
+    },
+    {
+      "id": "m1:moon",
+      "name": "月球",
+      "description": "4.3.2 研究候選；依使用者明確對應將六張原圖套用M1六角色；保留原圖。能力、成長及配方為 M1 暫定設計。",
+      "status": "active",
+      "provenance": "m1-design",
+      "rarity": 3,
+      "hp": 300,
+      "attack": 24,
+      "defense": 24,
+      "speed": 180,
+      "range": 430,
+      "interval": 0.8,
+      "growth": 0.08,
+      "skill": "m1:eclipse",
+      "color": "#adb8ef",
+      "portrait": "m1art:asset.maiden-06-original-v1",
+      "avatar": "m1art:asset.maiden-06-original-v1",
+      "sprite": "m1art:asset.maiden-06-original-v1",
+      "recipe": [50, 100, 100, 150],
+      "starter": false,
+      "role": "干擾 · 攻擊封鎖",
+      "sourceRow": 12
+    }
+  ],
+  "skills": [
+    {
+      "id": "m1:deflect",
+      "name": "偏折領域",
+      "description": "M1 演示：沿用原作技能主題，效果與數值為可替換的新設計。",
+      "status": "active",
+      "provenance": "m1-design",
+      "effect": "shield",
+      "power": 80,
+      "duration": 5,
+      "cooldown": 12,
+      "color": "#62dfce"
+    },
+    {
+      "id": "m1:dispersion",
+      "name": "擴散能源",
+      "description": "M1 演示：沿用原作技能主題，效果與數值為可替換的新設計。",
+      "status": "active",
+      "provenance": "m1-design",
+      "effect": "barrage",
+      "power": 1.5,
+      "duration": 4,
+      "cooldown": 10,
+      "color": "#8dcfff"
+    },
+    {
+      "id": "m1:cannon",
+      "name": "設置砲台",
+      "description": "M1 演示：沿用原作技能主題，效果與數值為可替換的新設計。",
+      "status": "active",
+      "provenance": "m1-design",
+      "effect": "turret",
+      "power": 0.8,
+      "duration": 8,
+      "cooldown": 16,
+      "color": "#f3d691"
+    },
+    {
+      "id": "m1:armor",
+      "name": "防禦增幅",
+      "description": "M1 演示：沿用原作技能主題，效果與數值為可替換的新設計。",
+      "status": "active",
+      "provenance": "m1-design",
+      "effect": "fortify",
+      "power": 1.8,
+      "duration": 6,
+      "cooldown": 12,
+      "color": "#f69781"
+    },
+    {
+      "id": "m1:critical",
+      "name": "臨界加速",
+      "description": "M1 演示：沿用原作技能主題，效果與數值為可替換的新設計。",
+      "status": "active",
+      "provenance": "m1-design",
+      "effect": "accelerate",
+      "power": 1.8,
+      "duration": 5,
+      "cooldown": 14,
+      "color": "#d9b4ff"
+    },
+    {
+      "id": "m1:eclipse",
+      "name": "月蝕封鎖",
+      "description": "M1 演示：沿用原作技能主題，效果與數值為可替換的新設計。",
+      "status": "active",
+      "provenance": "m1-design",
+      "effect": "weaken",
+      "power": 0.5,
+      "duration": 6,
+      "cooldown": 14,
+      "color": "#adb8ef"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "m1:scout",
+      "name": "游弋偵察機",
+      "description": "",
+      "status": "active",
+      "provenance": "m1-design",
+      "hp": 120,
+      "attack": 15,
+      "defense": 18,
+      "speed": 42,
+      "range": 650,
+      "interval": 1.8,
+      "projectileSpeed": 170,
+      "pattern": "aim",
+      "boss": false,
+      "phaseAt": 0.5,
+      "color": "#ff9a8a",
+      "sprite": ""
+    },
+    {
+      "id": "m1:sentinel",
+      "name": "星門守衛",
+      "description": "",
+      "status": "active",
+      "provenance": "m1-design",
+      "hp": 230,
+      "attack": 22,
+      "defense": 18,
+      "speed": 25,
+      "range": 650,
+      "interval": 1.8,
+      "projectileSpeed": 170,
+      "pattern": "fan",
+      "boss": false,
+      "phaseAt": 0.5,
+      "color": "#ecb08c",
+      "sprite": ""
+    },
+    {
+      "id": "m1:umbra",
+      "name": "黯星核心",
+      "description": "",
+      "status": "active",
+      "provenance": "m1-design",
+      "hp": 1800,
+      "attack": 28,
+      "defense": 38,
+      "speed": 12,
+      "range": 650,
+      "interval": 2.5,
+      "projectileSpeed": 145,
+      "pattern": "ring",
+      "boss": true,
+      "phaseAt": 0.5,
+      "color": "#e1a4fa",
+      "sprite": ""
+    }
+  ],
+  "regions": [
+    {
+      "id": "m1:helios",
+      "name": "曙光星域",
+      "description": "M1 新設計星域；對照原作探索／解放／經營循環。",
+      "status": "active",
+      "provenance": "m1-design",
+      "width": 2400,
+      "height": 1800,
+      "startX": 780,
+      "startY": 1080
+    }
+  ],
+  "planets": [
+    {
+      "id": "m1:haven",
+      "name": "蔚藍前哨",
+      "description": "",
+      "status": "active",
+      "provenance": "m1-design",
+      "region": "m1:helios",
+      "x": 650,
+      "y": 780,
+      "radius": 58,
+      "color": "#70d6d3",
+      "sprite": "",
+      "requires": [],
+      "enemies": [
+        {
+          "enemy": "m1:scout",
+          "count": 3
+        }
+      ],
+      "reward": {
+        "m1:crystal": 120,
+        "m1:gas": 100,
+        "m1:metal": 80,
+        "m1:ether": 60
+      },
+      "activationCost": {
+        "m1:crystal": 35,
+        "m1:gas": 30,
+        "m1:metal": 25,
+        "m1:ether": 20
+      },
+      "production": {
+        "m1:crystal": 1.2,
+        "m1:gas": 0.8,
+        "m1:metal": 0.5,
+        "m1:ether": 0.3
+      },
+      "dropCharacters": []
+    },
+    {
+      "id": "m1:vein",
+      "name": "琥珀礦帶",
+      "description": "",
+      "status": "active",
+      "provenance": "m1-design",
+      "region": "m1:helios",
+      "x": 1250,
+      "y": 620,
+      "radius": 49,
+      "color": "#e9b87d",
+      "sprite": "",
+      "requires": ["m1:haven"],
+      "enemies": [
+        {
+          "enemy": "m1:scout",
+          "count": 3
+        },
+        {
+          "enemy": "m1:sentinel",
+          "count": 2
+        }
+      ],
+      "reward": {
+        "m1:crystal": 150,
+        "m1:gas": 100,
+        "m1:metal": 160,
+        "m1:ether": 80
+      },
+      "activationCost": {
+        "m1:crystal": 35,
+        "m1:gas": 30,
+        "m1:metal": 25,
+        "m1:ether": 20
+      },
+      "production": {
+        "m1:crystal": 0.3,
+        "m1:gas": 0.3,
+        "m1:metal": 1.6,
+        "m1:ether": 0.8
+      },
+      "dropCharacters": ["m1:mars"]
+    },
+    {
+      "id": "m1:umbra-gate",
+      "name": "黯星之門",
+      "description": "",
+      "status": "active",
+      "provenance": "m1-design",
+      "region": "m1:helios",
+      "x": 1700,
+      "y": 1120,
+      "radius": 74,
+      "color": "#b8a0e4",
+      "sprite": "",
+      "requires": ["m1:vein"],
+      "enemies": [
+        {
+          "enemy": "m1:umbra",
+          "count": 1
+        },
+        {
+          "enemy": "m1:sentinel",
+          "count": 2
+        }
+      ],
+      "reward": {
+        "m1:crystal": 220,
+        "m1:gas": 220,
+        "m1:metal": 220,
+        "m1:ether": 220
+      },
+      "activationCost": {
+        "m1:crystal": 35,
+        "m1:gas": 30,
+        "m1:metal": 25,
+        "m1:ether": 20
+      },
+      "production": {
+        "m1:crystal": 0.6,
+        "m1:gas": 0.8,
+        "m1:metal": 0.7,
+        "m1:ether": 1.3
+      },
+      "dropCharacters": ["m1:moon"]
+    }
+  ],
+  "buildings": [
+    {
+      "id": "m1:extractor",
+      "name": "星能採集站",
+      "description": "增加四資源產量。",
+      "status": "active",
+      "provenance": "m1-design",
+      "cost": {
+        "m1:crystal": 40,
+        "m1:gas": 30,
+        "m1:metal": 60,
+        "m1:ether": 20
+      },
+      "seconds": 45,
+      "production": {
+        "m1:crystal": 0.3,
+        "m1:gas": 0.3,
+        "m1:metal": 0.3,
+        "m1:ether": 0.3
+      },
+      "maxLevel": 3
+    }
+  ],
+  "research": [
+    {
+      "id": "m1:weapons",
+      "name": "共振武裝 I",
+      "description": "全隊攻擊 +12%，下場戰鬥生效。",
+      "status": "active",
+      "provenance": "m1-design",
+      "cost": {
+        "m1:crystal": 80,
+        "m1:gas": 60,
+        "m1:metal": 100,
+        "m1:ether": 40
+      },
+      "seconds": 60,
+      "attackBonus": 0.12,
+      "requires": []
+    },
+    {
+      "id": "m1:resonance",
+      "name": "共振武裝 II",
+      "description": "再提升全隊攻擊 15%。",
+      "status": "active",
+      "provenance": "m1-design",
+      "cost": {
+        "m1:crystal": 120,
+        "m1:gas": 120,
+        "m1:metal": 150,
+        "m1:ether": 90
+      },
+      "seconds": 90,
+      "attackBonus": 0.15,
+      "requires": ["m1:weapons"]
+    }
+  ],
+  "quests": [
+    {
+      "id": "m1:first-light",
+      "name": "第一道星光",
+      "description": "",
+      "status": "active",
+      "provenance": "m1-design",
+      "condition": "cleared",
+      "target": "m1:haven",
+      "count": 1,
+      "reward": {
+        "m1:crystal": 60,
+        "m1:gas": 60,
+        "m1:metal": 60,
+        "m1:ether": 60
+      },
+      "character": "",
+      "dialogue": [
+        {
+          "speaker": "航行紀錄",
+          "text": "前哨的訊號重新亮起了。接下來，啟動星球的生產設施，讓這片星海再次流動。"
+        }
+      ]
+    },
+    {
+      "id": "m1:home",
+      "name": "星海中的歸處",
+      "description": "",
+      "status": "active",
+      "provenance": "m1-design",
+      "condition": "activated",
+      "target": "m1:haven",
+      "count": 1,
+      "reward": {
+        "m1:crystal": 60,
+        "m1:gas": 60,
+        "m1:metal": 60,
+        "m1:ether": 60
+      },
+      "character": "",
+      "dialogue": [
+        {
+          "speaker": "地球",
+          "text": "從一個小小的據點開始吧。每一顆重新亮起的星球，都會成為我們前進的力量。"
+        }
+      ]
+    },
+    {
+      "id": "m1:signal",
+      "name": "來自遠方的回聲",
+      "description": "",
+      "status": "active",
+      "provenance": "m1-design",
+      "condition": "summoned",
+      "target": "",
+      "count": 1,
+      "reward": {
+        "m1:crystal": 60,
+        "m1:gas": 60,
+        "m1:metal": 60,
+        "m1:ether": 60
+      },
+      "character": "",
+      "dialogue": [
+        {
+          "speaker": "通訊員",
+          "text": "星體共鳴已穩定。新的航跡，會與我們在這裡相遇。"
+        }
+      ]
+    },
+    {
+      "id": "m1:dawn",
+      "name": "穿越黯星",
+      "description": "",
+      "status": "active",
+      "provenance": "m1-design",
+      "condition": "cleared",
+      "target": "m1:umbra-gate",
+      "count": 1,
+      "reward": {
+        "m1:crystal": 60,
+        "m1:gas": 60,
+        "m1:metal": 60,
+        "m1:ether": 60
+      },
+      "character": "m1:uranus",
+      "dialogue": [
+        {
+          "speaker": "月球",
+          "text": "黑暗沒有消失。但我們已經知道，該往哪裡點亮下一顆星。"
+        }
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "id": "m1art:asset.maiden-01-original-v1",
+      "name": "金星 · 使用者標準原圖",
+      "src": "assets/characters/maiden-01.png",
+      "width": 1024,
+      "height": 1536,
+      "hash": "28d5d2e334598fa52fd18bfcc9cb25c12e76fb58ad0ff0cc367bea0e25f827cf",
+      "review": "approved"
+    },
+    {
+      "id": "m1art:asset.maiden-02-original-v1",
+      "name": "天王星 · 使用者標準原圖",
+      "src": "assets/characters/maiden-02.png",
+      "width": 1024,
+      "height": 1536,
+      "hash": "aef0c54a2d49c289ae11ce73c88e5db2942af192d8b3cbead6e149ea229427f5",
+      "review": "approved"
+    },
+    {
+      "id": "m1art:asset.maiden-03-original-v1",
+      "name": "火星 · 使用者標準原圖",
+      "src": "assets/characters/maiden-03.png",
+      "width": 1024,
+      "height": 1536,
+      "hash": "53b199e4a0fcc5c4c6676fa74e1bc749e98cd427f8c760764b57b89fc5d481cd",
+      "review": "approved"
+    },
+    {
+      "id": "m1art:asset.maiden-04-original-v1",
+      "name": "水星 · 使用者標準原圖",
+      "src": "assets/characters/maiden-04.png",
+      "width": 1024,
+      "height": 1536,
+      "hash": "31cddf5eb8b583995ec7661901450cbf302fe00c7e89914dd84dde4d7e636d8d",
+      "review": "approved"
+    },
+    {
+      "id": "m1art:asset.maiden-05-original-v1",
+      "name": "地球 · 使用者標準原圖",
+      "src": "assets/characters/maiden-05.png",
+      "width": 1024,
+      "height": 1536,
+      "hash": "0c2a068e052d8f1f28b7a9bad6cff64d34634f0e8d8c334ab836b5c8b95ec111",
+      "review": "approved"
+    },
+    {
+      "id": "m1art:asset.maiden-06-original-v1",
+      "name": "月球 · 使用者標準原圖",
+      "src": "assets/characters/maiden-06.png",
+      "width": 1024,
+      "height": 1536,
+      "hash": "ae3d49d2440ae45a819f52a0532406039cf19bc2b9b01e979859300754a21fea",
+      "review": "approved"
+    }
+  ],
+  "rules": {
+    "teamSize": 3,
+    "maxLevel": 20,
+    "offlineCapSeconds": 86400,
+    "raidSeconds": 240,
+    "summonSeconds": 35,
+    "summonSlots": 4,
+    "defenseK": 100,
+    "healSeconds": 20,
+    "healCost": {
+      "m1:crystal": 10,
+      "m1:gas": 10,
+      "m1:metal": 10,
+      "m1:ether": 10
+    },
+    "levelCost": {
+      "m1:crystal": 12,
+      "m1:gas": 12,
+      "m1:metal": 12,
+      "m1:ether": 12
+    }
+  }
+}

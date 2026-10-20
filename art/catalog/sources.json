@@ -1,0 +1,78 @@
+[
+  {
+    "id": "artref:source.bilibili-hairstyles-20231013",
+    "title": "绘画素材｜超全女生发型设计参考大合集！爆肝",
+    "author": "是可乐加冰鸭（頁面署名，彙整內各圖作者未逐一確認）",
+    "url": "https://www.bilibili.com/read/cv27027279/",
+    "publishedAt": "2023-10-13",
+    "receivedAt": "2026-10-20",
+    "path": null,
+    "sha256": "b1859a3c5d781c7f195f1b555a69662ffd67848b5bef13a065ae7dd676a16632",
+    "useStatus": "reference-only",
+    "includeInRuntime": false,
+    "provenance": "使用者上傳 PDF；視覺參考，文件內文不是工作指令。不是全數圖片作者／授權的證明。",
+    "expectedPath": "art/reference-library/hairstyles/source/hairstyle-reference.pdf",
+    "binaryArchived": false,
+    "archiveNote": "2026-10-20 較小重傳ZIP含12張板圖，但缺原PDF；保留原hash作預期來源，不宣稱已驗PDF。"
+  },
+  {
+    "id": "artref:source.character-input-01",
+    "title": "使用者人物參考 01：1.jpg",
+    "originalFilename": "1.jpg",
+    "path": null,
+    "binaryArchived": false,
+    "provenance": "本次使用者貼圖，已目視；雲端未取得可複製的來源實檔，不虛構上傳路徑。",
+    "useStatus": "visual-reference-only",
+    "includeInRuntime": false
+  },
+  {
+    "id": "artref:source.character-input-02",
+    "title": "使用者人物參考 02：2.JPG",
+    "originalFilename": "2.JPG",
+    "path": null,
+    "binaryArchived": false,
+    "provenance": "本次使用者貼圖，已目視；雲端未取得可複製的來源實檔，不虛構上傳路徑。",
+    "useStatus": "visual-reference-only",
+    "includeInRuntime": false
+  },
+  {
+    "id": "artref:source.character-input-03",
+    "title": "使用者人物參考 03：3.JPG",
+    "originalFilename": "3.JPG",
+    "path": null,
+    "binaryArchived": false,
+    "provenance": "本次使用者貼圖，已目視；雲端未取得可複製的來源實檔，不虛構上傳路徑。",
+    "useStatus": "visual-reference-only",
+    "includeInRuntime": false
+  },
+  {
+    "id": "artref:source.character-input-04",
+    "title": "使用者人物參考 04：4.jpg",
+    "originalFilename": "4.jpg",
+    "path": null,
+    "binaryArchived": false,
+    "provenance": "本次使用者貼圖，已目視；雲端未取得可複製的來源實檔，不虛構上傳路徑。",
+    "useStatus": "visual-reference-only",
+    "includeInRuntime": false
+  },
+  {
+    "id": "artref:source.character-input-05",
+    "title": "使用者人物參考 05：5.jpg",
+    "originalFilename": "5.jpg",
+    "path": null,
+    "binaryArchived": false,
+    "provenance": "本次使用者貼圖，已目視；雲端未取得可複製的來源實檔，不虛構上傳路徑。",
+    "useStatus": "visual-reference-only",
+    "includeInRuntime": false
+  },
+  {
+    "id": "artref:source.character-input-06",
+    "title": "使用者人物參考 06：6.png",
+    "originalFilename": "6.png",
+    "path": null,
+    "binaryArchived": false,
+    "provenance": "本次使用者貼圖，已目視；雲端未取得可複製的來源實檔，不虛構上傳路徑。",
+    "useStatus": "visual-reference-only",
+    "includeInRuntime": false
+  }
+]

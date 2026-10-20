@@ -1,6 +1,6 @@
 # 架構設計：讓內容、規則與呈現可以獨立修改
 
-狀態：0.4 提案。依 [產品規格](../spec.md)；技術選擇尚待確認。本文件是實作契約草案，不是已有程式的描述。
+狀態：原0.4架構提案；M1 已開始，實作子集與最新決策見 [實作狀態](m1-implementation.md)。依 [產品規格](../spec.md)；技術選擇尚待確認。本文件是實作契約草案，不是已有程式的描述。
 
 ## 1. 需要防止的耦合
 
@@ -22,7 +22,7 @@
 | TypeScript＋PixiJS＋DOM UI | 精細渲染控制，能保持核心獨立 | 遊戲場景／輸入整合工作較多 | 若切片顯示有需要再選 |
 | Godot Web | 編輯器與遊戲工作流完整 | Web 輸出、載入、瀏覽器整合與手機需另驗證 | 非本輪預設 |
 
-這是方案比較，不是已鎖定版本或已驗證相容性。版本、lockfile、建置命令與測試基線在技術定案後記錄。DOM UI 是否使用 React／其他框架由實作評估，不能把框架狀態當遊戲資料庫。現有 `.template/project.json` 維持未初始化，不填虛假的遊戲命令。
+這是方案比較，不是已鎖定版本或已驗證相容性。版本、lockfile、建置命令與測試基線在技術定案後記錄。DOM UI 是否使用 React／其他框架由實作評估，不能把框架狀態當遊戲資料庫。M1 分支已用真實 install／dev／daily／release 命令初始化 `.template/project.json`；完整 M1 品質門檻未通過時仍阻擋發布。
 
 ## 3. 分層與依賴方向
 
@@ -210,7 +210,7 @@ tools/{content-check,content-diff,migration-preview}/
 tests/{domain,content,migrations,integration,e2e}/
 ```
 
-這是未建立的目標目錄；目前 repo 只有工具範本與規格。
+這是目標分層；M1 已建立 src/domain、application、content、platform、presentation 及內容工具，具體現況以實作狀態與程式為準，未建立的模組仍屬目標。
 
 ## 12. 靜態部署與效能
 

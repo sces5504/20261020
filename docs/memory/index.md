@@ -1,8 +1,10 @@
 # 接力索引
 
-專案狀態：Stella Maiden 規格0.6，AI重繪／AI音效與內容圖鑑／編輯器已要求；已選個人測試後匯出發布、妮姬立繪／UI／特效及碧藍航線／棕色塵埃2立繪參考。遊戲與編輯器尚未實作。
+專案狀態：M1 已由使用者授權開工，功能骨架／工坊實作在 m1/foundation。六張原圖已匯入並保持原樣；SD 重繪已依使用者要求停止、不採用。較新要求已依使用者明確對應套用六角色；完整 M1／商業品質尚未驗收。
 
 - Stella Maiden研究入口：`research/stella-maiden/START_HERE.md`；資料交付接力：`docs/handoffs/stella-research-20261020.md`。先按導覽查局部資料，不需重新逆向或一次載入全部JSON。
+- M1 實作：`docs/design/m1-implementation.md`；後續 AI 起始 prompts：`docs/ai/START_HERE.md`
+- 六張原圖／美術庫：`docs/art/character-standards.md`、`hairstyle-library.md`；映射見content/core/art-bindings.json
 - 已確認規格：`docs/spec.md`
 - 原作研究／證據：`docs/research/stella-maiden.md`
 - 4.3.2接入／簡化分析：`docs/research/apk-spec-integration.md`；有界SQL：`docs/research/stella-maiden-queries.sql`
@@ -18,9 +20,7 @@
 
 新專案第一次開工：確認遠端與分支，開始規格訪談，再建立任務檔。不要把範本建立過程當成新遊戲的已完成工作。
 
-目前任務：`docs/handoffs/stella-ai-collaboration-20261020.md`；素材／編輯器前輪：`docs/handoffs/stella-editor-art-20261020.md`；先前規格／研究接力見 `stella-spec-20261020.md` 與 `stella-spec-research-integration-20261020.md`。branch `main`，0.5在`d8fbca9`；研究來源main為`16e64e5`，備份`backup/stella-spec-v03`。
-已驗證：研究863檔、67表37723列、370份bXML、4個有界傷害樣例、SQLite integrity與關聯；遊戲、真機、效能及部署未驗證。
-下一步：依已確認的個人測試／匯出流程準備共用schema與遊戲＋編輯器；以三款已選參考建立代表角色／UI／特效品質樣本，不先批量生成。素材走AI不等OBB，繼續追四槽映射／成長與切片行為；已確認方向不重問。
+目前任務：`docs/handoffs/m1-implementation-20261020.md`；素材原交接：`docs/handoffs/m1-character-art-20261020.md`（其中較舊 SD／差分指示已被使用者保留原圖要求更新）。
+下一步：完成本輪程式／原圖展示驗證並提交 draft PR；六圖已依原M1順序套用角色，繼續原圖呈現與品質驗證。不得恢復已停止的圖像改造。完整缺口見 m1-implementation，不將功能骨架視為商業品質版本。
 
-
-接力製作安排：使用者希望本 chat AI 做 M1，其他 AI 擴充；已補核心／內容責任、共用契約變更與 M1 擴充演練建議。具體交付仍按主規格確認狀態安排，尚無遊戲實作。
+目前確定的原圖對應：05地球、04水星、01金星、03火星、02天王星、06月球。

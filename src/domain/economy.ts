@@ -1,0 +1,349 @@
+import type { Pack } from "../content/schema";
+import {
+  type Save,
+  type Wallet,
+  stats,
+  money,
+  canAfford,
+  costScale,
+  random,
+  addCharacter,
+} from "./model";
+export function production(p: Pack, s: Save): Wallet {
+  const rates: Wallet = {};
+  for (const [id, c] of Object.entries(s.colonies)) {
+    if (!c.active || c.lost) continue;
+    const def = p.planets.find((v) => v.id === id);
+    if (!def) continue;
+    for (const [r, n] of Object.entries(def.production))
+      rates[r] = (rates[r] ?? 0) + n;
+    for (const [bid, level] of Object.entries(c.buildings)) {
+      const b = p.buildings.find((v) => v.id === bid);
+      if (b)
+        for (const [r, n] of Object.entries(b.production))
+          rates[r] = (rates[r] ?? 0) + n * level * (c.assigned ? 1.2 : 1);
+    }
+  }
+  return rates;
+}
+function accrue(p: Pack, s: Save, seconds: number) {
+  for (const [r, n] of Object.entries(production(p, s))) {
+    const cap = p.resources.find((v) => v.id === r)?.capacity ?? 0;
+    const old = s.wallet[r] ?? 0;
+    s.wallet[r] = Math.max(old, Math.min(cap, old + n * seconds));
+  }
+}
+function complete(p: Pack, s: Save, j: Save["jobs"][number]) {
+  if (s.receipts.includes(j.id)) return;
+  if (j.kind === "build") {
+    const c = s.colonies[j.owner];
+    if (c) {
+      c.buildings[j.definition] = (c.buildings[j.definition] ?? 0) + 1;
+      s.built++;
+    }
+  }
+  if (j.kind === "research" && !s.research.includes(j.definition))
+    s.research.push(j.definition);
+  if (j.kind === "summon") {
+    addCharacter(p, s, j.payload);
+    s.summoned++;
+  }
+  if (j.kind === "heal") {
+    const o = s.roster.find((v) => v.id === j.owner);
+    if (o) o.hp = stats(p, o).hp;
+  }
+  s.receipts.push(j.id);
+}
+export function settle(p: Pack, s: Save, now: number) {
+  if (now <= s.settledAt) return;
+  const limit = s.settledAt + p.rules.offlineCapSeconds * 1000,
+    end = Math.min(now, limit);
+  let cursor = s.settledAt;
+  const due = s.jobs
+    .filter((j) => j.ends <= end)
+    .sort((a, b) => a.ends - b.ends || a.id.localeCompare(b.id));
+  for (const j of due) {
+    const at = Math.max(cursor, j.ends);
+    accrue(p, s, (at - cursor) / 1000);
+    complete(p, s, j);
+    cursor = at;
+  }
+  accrue(p, s, (end - cursor) / 1000);
+  s.jobs = s.jobs.filter((j) => j.ends > end);
+  // Jobs mature even after capped production; no missed-time attack simulation.
+  for (const j of s.jobs
+    .filter((j) => j.ends <= now)
+    .sort((a, b) => a.ends - b.ends || a.id.localeCompare(b.id)))
+    complete(p, s, j);
+  s.jobs = s.jobs.filter((j) => j.ends > now);
+  s.settledAt = now;
+}
+export type Command =
+  | { type: "activate"; planet: string }
+  | { type: "repair"; planet: string }
+  | { type: "build"; planet: string; building: string }
+  | { type: "research"; id: string }
+  | { type: "summon"; recipe: number[]; count: number }
+  | { type: "heal"; owned: string }
+  | { type: "level"; owned: string }
+  | { type: "team"; owned: string }
+  | { type: "assign"; owned: string; planet: string }
+  | { type: "quest"; id: string }
+  | { type: "begin"; planet: string }
+  | {
+      type: "result";
+      planet: string;
+      victory: boolean;
+      hp: Record<string, number>;
+      receipt: string;
+    }
+  | {
+      type: "checkpoint";
+      x: number;
+      y: number;
+      raids: Record<string, number>;
+      losses: string[];
+    };
+export function questReady(s: Save, q: Pack["quests"][number]) {
+  return q.condition === "cleared"
+    ? s.cleared.includes(q.target)
+    : q.condition === "activated"
+      ? !!s.colonies[q.target]?.active
+      : q.condition === "summoned"
+        ? s.summoned >= q.count
+        : s.built >= q.count;
+}
+export function summonCandidates(p: Pack, recipe: number[]) {
+  return p.characters
+    .filter((c) => c.status === "active")
+    .map((c) => ({
+      character: c,
+      distance: c.recipe.reduce((n, v, i) => n + Math.abs(v - recipe[i]), 0),
+    }))
+    .sort(
+      (a, b) =>
+        a.distance - b.distance || a.character.id.localeCompare(b.character.id),
+    )
+    .slice(0, 5);
+}
+export function apply(
+  p: Pack,
+  previous: Save,
+  c: Command,
+  now: number,
+  commandId: string,
+): Save {
+  const s = structuredClone(previous);
+  settle(p, s, now);
+  if (s.receipts.includes(commandId)) return s;
+  const pay = (cost: Wallet) => {
+    if (!canAfford(s, cost)) throw Error("資源不足，尚未扣除費用。");
+    money(s, cost, -1);
+  };
+  const job = (
+    kind: Save["jobs"][number]["kind"],
+    owner: string,
+    definition: string,
+    seconds: number,
+    cost: Wallet,
+    payload = "",
+    suffix = "",
+  ) => {
+    pay(cost);
+    s.jobs.push({
+      id: `job:${commandId}${suffix}`,
+      kind,
+      owner,
+      definition,
+      ends: now + seconds * 1000,
+      payload,
+      production: {},
+      cost,
+    });
+  };
+  const free = (owned: string) => {
+    if (s.encounter && s.team.includes(owned))
+      throw Error("參戰成員在本場結束後才能調整。");
+    if (
+      s.jobs.some((j) => j.owner === owned) ||
+      Object.values(s.colonies).some((v) => v.assigned === owned)
+    )
+      throw Error("角色正在治療或派駐。");
+  };
+  if (c.type === "activate") {
+    const v = p.planets.find((v) => v.id === c.planet);
+    if (!v || !s.cleared.includes(v.id) || s.colonies[v.id]?.active)
+      throw Error("需先解放星球，且不能重複啟動。");
+    pay(v.activationCost);
+    s.colonies[v.id] = {
+      active: true,
+      lost: false,
+      buildings: {},
+      assigned: "",
+      raidRemaining: p.rules.raidSeconds,
+    };
+  }
+  if (c.type === "repair") {
+    const v = p.planets.find((v) => v.id === c.planet),
+      col = s.colonies[c.planet];
+    if (!v || !col?.lost) throw Error("無需修復。");
+    pay(v.activationCost);
+    col.lost = false;
+    col.raidRemaining = p.rules.raidSeconds;
+  }
+  if (c.type === "build") {
+    const b = p.buildings.find(
+        (v) => v.id === c.building && v.status === "active",
+      ),
+      col = s.colonies[c.planet];
+    if (!b || !col?.active || col.lost) throw Error("星球必須正常運轉。");
+    if (s.jobs.some((j) => j.owner === c.planet && j.kind === "build"))
+      throw Error("此星球已有建造工作。");
+    const level = col.buildings[b.id] ?? 0;
+    if (level >= b.maxLevel) throw Error("已達建築上限。");
+    job("build", c.planet, b.id, b.seconds, costScale(b.cost, level + 1));
+  }
+  if (c.type === "research") {
+    const r = p.research.find((v) => v.id === c.id && v.status === "active");
+    if (
+      !r ||
+      s.research.includes(r.id) ||
+      s.jobs.some((j) => j.definition === r.id) ||
+      !r.requires.every((id) => s.research.includes(id))
+    )
+      throw Error("研究尚未解鎖、正在進行或已完成。");
+    job("research", "lab", r.id, r.seconds, r.cost);
+  }
+  if (c.type === "summon") {
+    if (
+      !Number.isInteger(c.count) ||
+      c.count < 1 ||
+      c.count > p.rules.summonSlots ||
+      s.jobs.filter((j) => j.kind === "summon").length + c.count >
+        p.rules.summonSlots
+    )
+      throw Error("召喚槽位不足。");
+    if (
+      c.recipe.length !== 4 ||
+      c.recipe.some((v) => !Number.isInteger(v) || v < 1 || v > 999)
+    )
+      throw Error("每種投入需為 1–999 的整數。");
+    const pool = summonCandidates(p, c.recipe);
+    if (!pool.length) throw Error("召喚候選為空。");
+    const cost = Object.fromEntries(
+      p.resources.map((r, i) => [r.id, c.recipe[i]]),
+    );
+    if (!canAfford(s, costScale(cost, c.count)))
+      throw Error("整批資源不足，未開始召喚。");
+    for (let i = 0; i < c.count; i++) {
+      const weights = pool.map((_, i) => pool.length - i),
+        total = weights.reduce((a, b) => a + b, 0);
+      let roll = random(s) * total,
+        index = 0;
+      while (index < weights.length - 1 && (roll -= weights[index]) >= 0)
+        index++;
+      job(
+        "summon",
+        "forge",
+        "summon",
+        p.rules.summonSeconds,
+        cost,
+        pool[index].character.id,
+        `-${i}`,
+      );
+    }
+  }
+  if (c.type === "heal") {
+    const o = s.roster.find((o) => o.id === c.owned);
+    if (!o) throw Error("角色不存在。");
+    free(o.id);
+    if (o.hp >= stats(p, o).hp) throw Error("生命已滿。");
+    job("heal", o.id, o.definition, p.rules.healSeconds, p.rules.healCost);
+  }
+  if (c.type === "level") {
+    const o = s.roster.find((o) => o.id === c.owned);
+    if (!o) throw Error("角色不存在。");
+    free(o.id);
+    if (o.level >= p.rules.maxLevel) throw Error("已達 M1 等級上限。");
+    pay(costScale(p.rules.levelCost, o.level));
+    const old = stats(p, o).hp;
+    o.level++;
+    o.hp += stats(p, o).hp - old;
+  }
+  if (c.type === "team") {
+    const o = s.roster.find((o) => o.id === c.owned);
+    if (!o) throw Error("角色不存在。");
+    free(o.id);
+    if (s.team.includes(o.id)) {
+      if (s.team.length <= 1) throw Error("至少保留一位成員。");
+      s.team = s.team.filter((id) => id !== o.id);
+    } else {
+      if (s.team.length >= p.rules.teamSize)
+        throw Error("編隊已滿，請先移出一位成員。");
+      s.team.push(o.id);
+    }
+  }
+  if (c.type === "assign") {
+    const col = s.colonies[c.planet],
+      o = s.roster.find((o) => o.id === c.owned);
+    if (!col?.active || col.lost || !o) throw Error("派駐條件不足。");
+    if (col.assigned === o.id) col.assigned = "";
+    else {
+      free(o.id);
+      if (s.team.includes(o.id)) throw Error("請先將角色移出編隊。");
+      if (col.assigned) throw Error("已有派駐角色。");
+      col.assigned = o.id;
+    }
+  }
+  if (c.type === "quest") {
+    const q = p.quests.find((v) => v.id === c.id);
+    if (!q || s.quests.includes(q.id) || !questReady(s, q))
+      throw Error("尚未達成或已領取。");
+    money(s, q.reward);
+    if (q.character) addCharacter(p, s, q.character);
+    s.quests.push(q.id);
+  }
+  if (c.type === "begin") {
+    const v = p.planets.find((v) => v.id === c.planet && v.status === "active");
+    if (!v || !v.requires.every((id) => s.cleared.includes(id)) || s.encounter)
+      throw Error("遭遇尚未解鎖或已在戰鬥中。");
+    if (!s.team.some((id) => (s.roster.find((o) => o.id === id)?.hp ?? 0) > 0))
+      throw Error("請先治療隊伍。");
+    s.encounter = { planet: v.id, seed: Math.floor(random(s) * 4294967296) };
+    s.x = v.x - 300;
+    s.y = v.y + 180;
+  }
+  if (c.type === "result") {
+    if (!s.encounter || s.encounter.planet !== c.planet)
+      throw Error("遭遇狀態不符。");
+    if (s.receipts.includes(c.receipt)) return s;
+    for (const o of s.roster)
+      if (s.team.includes(o.id) && c.hp[o.id] !== undefined)
+        o.hp = Math.max(0, Math.min(stats(p, o).hp, c.hp[o.id]));
+    if (c.victory) {
+      const v = p.planets.find((v) => v.id === c.planet)!;
+      if (!s.cleared.includes(v.id)) {
+        money(s, v.reward);
+        v.dropCharacters.forEach((id) => addCharacter(p, s, id));
+        s.cleared.push(v.id);
+      }
+      const col = s.colonies[v.id];
+      if (col) {
+        col.lost = false;
+        col.raidRemaining = p.rules.raidSeconds;
+      }
+    }
+    s.encounter = null;
+    s.receipts.push(c.receipt);
+  }
+  if (c.type === "checkpoint") {
+    s.x = c.x;
+    s.y = c.y;
+    for (const [id, t] of Object.entries(c.raids))
+      if (s.colonies[id]) s.colonies[id].raidRemaining = t;
+    for (const id of c.losses) if (s.colonies[id]) s.colonies[id].lost = true;
+  }
+  s.receipts.push(commandId);
+  s.revision = previous.revision + 1;
+  return s;
+}

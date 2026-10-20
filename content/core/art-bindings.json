@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "status": "mapped",
+  "policy": "original-images-only; do not adopt generated SD variants",
+  "mappingSource": "使用者明確指定：05地球、04水星、01金星、03火星、02天王星、06月球。",
+  "bindings": [
+    {
+      "artCharacterId": "m1art:character.maiden-01",
+      "gameCharacterId": "m1:venus",
+      "runtimeAssetId": "m1art:asset.maiden-01-original-v1",
+      "standardAssetId": "m1art:asset.maiden-01-standard-v1"
+    },
+    {
+      "artCharacterId": "m1art:character.maiden-02",
+      "gameCharacterId": "m1:uranus",
+      "runtimeAssetId": "m1art:asset.maiden-02-original-v1",
+      "standardAssetId": "m1art:asset.maiden-02-standard-v1"
+    },
+    {
+      "artCharacterId": "m1art:character.maiden-03",
+      "gameCharacterId": "m1:mars",
+      "runtimeAssetId": "m1art:asset.maiden-03-original-v1",
+      "standardAssetId": "m1art:asset.maiden-03-standard-v1"
+    },
+    {
+      "artCharacterId": "m1art:character.maiden-04",
+      "gameCharacterId": "m1:mercury",
+      "runtimeAssetId": "m1art:asset.maiden-04-original-v1",
+      "standardAssetId": "m1art:asset.maiden-04-standard-v1"
+    },
+    {
+      "artCharacterId": "m1art:character.maiden-05",
+      "gameCharacterId": "m1:earth",
+      "runtimeAssetId": "m1art:asset.maiden-05-original-v1",
+      "standardAssetId": "m1art:asset.maiden-05-standard-v1"
+    },
+    {
+      "artCharacterId": "m1art:character.maiden-06",
+      "gameCharacterId": "m1:moon",
+      "runtimeAssetId": "m1art:asset.maiden-06-original-v1",
+      "standardAssetId": "m1art:asset.maiden-06-standard-v1"
+    }
+  ]
+}

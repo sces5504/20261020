@@ -13,3 +13,12 @@ __pycache__/
 *.key
 .DS_Store
 
+
+# Flattened runtime content is rebuilt from the explicit manifest.
+content/generated/
+
+art/catalog/art-library.sqlite3
+art/catalog/art-library.sqlite3.tmp
+
+# Runtime copies of the original art; rebuilt byte-for-byte from art/catalog.
+public/assets/characters/

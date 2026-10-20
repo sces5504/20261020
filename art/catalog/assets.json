@@ -1,0 +1,314 @@
+[
+  {
+    "id": "m1art:asset.maiden-01-standard-v1",
+    "characterId": "m1art:character.maiden-01",
+    "version": "1.0.0",
+    "path": "art/characters/standard/maiden-01/v1.png",
+    "sha256": "28d5d2e334598fa52fd18bfcc9cb25c12e76fb58ad0ff0cc367bea0e25f827cf",
+    "type": "character-standard-full-body",
+    "mimeType": "image/png",
+    "width": 1024,
+    "height": 1536,
+    "colorSpace": "sRGB",
+    "alpha": {
+      "mode": "straight",
+      "channelRange": [
+        0,
+        254
+      ],
+      "opaqueBodyBoundsThreshold": 192,
+      "opaqueBodyBounds": [
+        94,
+        12,
+        935,
+        1519
+      ]
+    },
+    "blend": "normal",
+    "pivot": {
+      "coordinateSpace": "normalized-image-top-left",
+      "x": 0.502441,
+      "y": 0.988932,
+      "purpose": "畫面腳底錨點交換值，遊戲適配時檢視；非碰撞判定"
+    },
+    "atlas": null,
+    "animation": null,
+    "bundle": "m1-character-standards",
+    "source": {
+      "tool": "image_gen.imagegen",
+      "modelVersion": "not-exposed-by-tool",
+      "promptPath": "docs/art/prompts/maiden-01-v1.txt",
+      "references": [
+        "artref:source.character-input-01"
+      ],
+      "method": "依貼圖目視特徵文字化生成新圖，未使用本機原圖作直接影像輸入",
+      "alterations": "生成主檔原樣複製，未修圖；總覽另行縮圖排版"
+    },
+    "reviewStatus": "user-selected-original",
+    "useStatus": "m1-runtime-original",
+    "includeInRuntime": true,
+    "preview": "art/characters/standard/maiden-01/v1.png",
+    "runtimeAssetId": "m1art:asset.maiden-01-original-v1",
+    "reviewScope": "使用者明確要求原樣套用六角色；選用原圖，不代表整體遊戲商業品質驗收。"
+  },
+  {
+    "id": "m1art:asset.maiden-02-standard-v1",
+    "characterId": "m1art:character.maiden-02",
+    "version": "1.0.0",
+    "path": "art/characters/standard/maiden-02/v1.png",
+    "sha256": "aef0c54a2d49c289ae11ce73c88e5db2942af192d8b3cbead6e149ea229427f5",
+    "type": "character-standard-full-body",
+    "mimeType": "image/png",
+    "width": 1024,
+    "height": 1536,
+    "colorSpace": "sRGB",
+    "alpha": {
+      "mode": "straight",
+      "channelRange": [
+        0,
+        254
+      ],
+      "opaqueBodyBoundsThreshold": 192,
+      "opaqueBodyBounds": [
+        205,
+        15,
+        783,
+        1520
+      ]
+    },
+    "blend": "normal",
+    "pivot": {
+      "coordinateSpace": "normalized-image-top-left",
+      "x": 0.482422,
+      "y": 0.989583,
+      "purpose": "畫面腳底錨點交換值，遊戲適配時檢視；非碰撞判定"
+    },
+    "atlas": null,
+    "animation": null,
+    "bundle": "m1-character-standards",
+    "source": {
+      "tool": "image_gen.imagegen",
+      "modelVersion": "not-exposed-by-tool",
+      "promptPath": "docs/art/prompts/maiden-02-v1.txt",
+      "references": [
+        "artref:source.character-input-02"
+      ],
+      "method": "依貼圖目視特徵文字化生成新圖，未使用本機原圖作直接影像輸入",
+      "alterations": "生成主檔原樣複製，未修圖；總覽另行縮圖排版"
+    },
+    "reviewStatus": "user-selected-original",
+    "useStatus": "m1-runtime-original",
+    "includeInRuntime": true,
+    "preview": "art/characters/standard/maiden-02/v1.png",
+    "runtimeAssetId": "m1art:asset.maiden-02-original-v1",
+    "reviewScope": "使用者明確要求原樣套用六角色；選用原圖，不代表整體遊戲商業品質驗收。"
+  },
+  {
+    "id": "m1art:asset.maiden-03-standard-v1",
+    "characterId": "m1art:character.maiden-03",
+    "version": "1.0.0",
+    "path": "art/characters/standard/maiden-03/v1.png",
+    "sha256": "53b199e4a0fcc5c4c6676fa74e1bc749e98cd427f8c760764b57b89fc5d481cd",
+    "type": "character-standard-full-body",
+    "mimeType": "image/png",
+    "width": 1024,
+    "height": 1536,
+    "colorSpace": "sRGB",
+    "alpha": {
+      "mode": "straight",
+      "channelRange": [
+        0,
+        254
+      ],
+      "opaqueBodyBoundsThreshold": 192,
+      "opaqueBodyBounds": [
+        36,
+        11,
+        1016,
+        1515
+      ]
+    },
+    "blend": "normal",
+    "pivot": {
+      "coordinateSpace": "normalized-image-top-left",
+      "x": 0.513672,
+      "y": 0.986328,
+      "purpose": "畫面腳底錨點交換值，遊戲適配時檢視；非碰撞判定"
+    },
+    "atlas": null,
+    "animation": null,
+    "bundle": "m1-character-standards",
+    "source": {
+      "tool": "image_gen.imagegen",
+      "modelVersion": "not-exposed-by-tool",
+      "promptPath": "docs/art/prompts/maiden-03-v1.txt",
+      "references": [
+        "artref:source.character-input-03"
+      ],
+      "method": "依貼圖目視特徵文字化生成新圖，未使用本機原圖作直接影像輸入",
+      "alterations": "生成主檔原樣複製，未修圖；總覽另行縮圖排版"
+    },
+    "reviewStatus": "user-selected-original",
+    "useStatus": "m1-runtime-original",
+    "includeInRuntime": true,
+    "preview": "art/characters/standard/maiden-03/v1.png",
+    "runtimeAssetId": "m1art:asset.maiden-03-original-v1",
+    "reviewScope": "使用者明確要求原樣套用六角色；選用原圖，不代表整體遊戲商業品質驗收。"
+  },
+  {
+    "id": "m1art:asset.maiden-04-standard-v1",
+    "characterId": "m1art:character.maiden-04",
+    "version": "1.0.0",
+    "path": "art/characters/standard/maiden-04/v1.png",
+    "sha256": "31cddf5eb8b583995ec7661901450cbf302fe00c7e89914dd84dde4d7e636d8d",
+    "type": "character-standard-full-body",
+    "mimeType": "image/png",
+    "width": 1024,
+    "height": 1536,
+    "colorSpace": "sRGB",
+    "alpha": {
+      "mode": "straight",
+      "channelRange": [
+        0,
+        254
+      ],
+      "opaqueBodyBoundsThreshold": 192,
+      "opaqueBodyBounds": [
+        223,
+        14,
+        862,
+        1519
+      ]
+    },
+    "blend": "normal",
+    "pivot": {
+      "coordinateSpace": "normalized-image-top-left",
+      "x": 0.529785,
+      "y": 0.988932,
+      "purpose": "畫面腳底錨點交換值，遊戲適配時檢視；非碰撞判定"
+    },
+    "atlas": null,
+    "animation": null,
+    "bundle": "m1-character-standards",
+    "source": {
+      "tool": "image_gen.imagegen",
+      "modelVersion": "not-exposed-by-tool",
+      "promptPath": "docs/art/prompts/maiden-04-v1.txt",
+      "references": [
+        "artref:source.character-input-04"
+      ],
+      "method": "依貼圖目視特徵文字化生成新圖，未使用本機原圖作直接影像輸入",
+      "alterations": "生成主檔原樣複製，未修圖；總覽另行縮圖排版"
+    },
+    "reviewStatus": "user-selected-original",
+    "useStatus": "m1-runtime-original",
+    "includeInRuntime": true,
+    "preview": "art/characters/standard/maiden-04/v1.png",
+    "runtimeAssetId": "m1art:asset.maiden-04-original-v1",
+    "reviewScope": "使用者明確要求原樣套用六角色；選用原圖，不代表整體遊戲商業品質驗收。"
+  },
+  {
+    "id": "m1art:asset.maiden-05-standard-v1",
+    "characterId": "m1art:character.maiden-05",
+    "version": "1.0.0",
+    "path": "art/characters/standard/maiden-05/v1.png",
+    "sha256": "0c2a068e052d8f1f28b7a9bad6cff64d34634f0e8d8c334ab836b5c8b95ec111",
+    "type": "character-standard-full-body",
+    "mimeType": "image/png",
+    "width": 1024,
+    "height": 1536,
+    "colorSpace": "sRGB",
+    "alpha": {
+      "mode": "straight",
+      "channelRange": [
+        0,
+        254
+      ],
+      "opaqueBodyBoundsThreshold": 192,
+      "opaqueBodyBounds": [
+        351,
+        11,
+        751,
+        1519
+      ]
+    },
+    "blend": "normal",
+    "pivot": {
+      "coordinateSpace": "normalized-image-top-left",
+      "x": 0.538086,
+      "y": 0.988932,
+      "purpose": "畫面腳底錨點交換值，遊戲適配時檢視；非碰撞判定"
+    },
+    "atlas": null,
+    "animation": null,
+    "bundle": "m1-character-standards",
+    "source": {
+      "tool": "image_gen.imagegen",
+      "modelVersion": "not-exposed-by-tool",
+      "promptPath": "docs/art/prompts/maiden-05-v1.txt",
+      "references": [
+        "artref:source.character-input-05"
+      ],
+      "method": "依貼圖目視特徵文字化生成新圖，未使用本機原圖作直接影像輸入",
+      "alterations": "生成主檔原樣複製，未修圖；總覽另行縮圖排版"
+    },
+    "reviewStatus": "user-selected-original",
+    "useStatus": "m1-runtime-original",
+    "includeInRuntime": true,
+    "preview": "art/characters/standard/maiden-05/v1.png",
+    "runtimeAssetId": "m1art:asset.maiden-05-original-v1",
+    "reviewScope": "使用者明確要求原樣套用六角色；選用原圖，不代表整體遊戲商業品質驗收。"
+  },
+  {
+    "id": "m1art:asset.maiden-06-standard-v1",
+    "characterId": "m1art:character.maiden-06",
+    "version": "1.0.0",
+    "path": "art/characters/standard/maiden-06/v1.png",
+    "sha256": "ae3d49d2440ae45a819f52a0532406039cf19bc2b9b01e979859300754a21fea",
+    "type": "character-standard-full-body",
+    "mimeType": "image/png",
+    "width": 1024,
+    "height": 1536,
+    "colorSpace": "sRGB",
+    "alpha": {
+      "mode": "straight",
+      "channelRange": [
+        0,
+        254
+      ],
+      "opaqueBodyBoundsThreshold": 192,
+      "opaqueBodyBounds": [
+        272,
+        9,
+        809,
+        1517
+      ]
+    },
+    "blend": "normal",
+    "pivot": {
+      "coordinateSpace": "normalized-image-top-left",
+      "x": 0.527832,
+      "y": 0.98763,
+      "purpose": "畫面腳底錨點交換值，遊戲適配時檢視；非碰撞判定"
+    },
+    "atlas": null,
+    "animation": null,
+    "bundle": "m1-character-standards",
+    "source": {
+      "tool": "image_gen.imagegen",
+      "modelVersion": "not-exposed-by-tool",
+      "promptPath": "docs/art/prompts/maiden-06-v1.txt",
+      "references": [
+        "artref:source.character-input-06"
+      ],
+      "method": "依貼圖目視特徵文字化生成新圖，未使用本機原圖作直接影像輸入",
+      "alterations": "生成主檔原樣複製，未修圖；總覽另行縮圖排版"
+    },
+    "reviewStatus": "user-selected-original",
+    "useStatus": "m1-runtime-original",
+    "includeInRuntime": true,
+    "preview": "art/characters/standard/maiden-06/v1.png",
+    "runtimeAssetId": "m1art:asset.maiden-06-original-v1",
+    "reviewScope": "使用者明確要求原樣套用六角色；選用原圖，不代表整體遊戲商業品質驗收。"
+  }
+]

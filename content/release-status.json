@@ -1,0 +1,17 @@
+{
+  "milestone": "M1",
+  "status": "in-progress",
+  "checks": {
+    "characterMappingConfirmed": true,
+    "originalArtIntegratedInGame": true,
+    "requiredEnemyAndWorldAssetsReady": false,
+    "audioReady": false,
+    "qualitySamplesAccepted": false,
+    "saveMigrationRehearsal": false,
+    "independentExpansionRehearsal": false,
+    "androidChromeVerified": false,
+    "iosSafariVerified": false,
+    "performanceBaselineVerified": false
+  },
+  "notes": "已依使用者明確對應接入：05地球、04水星、01金星、03火星、02天王星、06月球；PNG保持原樣。SD重繪停止且不採用。其餘素材／聲音／品質／真機仍待完成。"
+}

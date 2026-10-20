@@ -48,6 +48,7 @@ const character = z
     starter: z.boolean(),
     role: z.string(),
     sourceRow: z.number().int().nonnegative(),
+    summonable: z.boolean().optional(),
   })
   .strict();
 const enemy = z
@@ -102,7 +103,7 @@ const region = z
 const resource = z
   .object({
     ...base,
-    color: z.string(),
+    color: z.string().regex(/^#[0-9a-f]{6}$/i),
     initial: z.number().finite().nonnegative(),
     capacity: positive,
   })
@@ -158,6 +159,27 @@ const asset = z
     review: z.enum(["candidate", "approved"]),
   })
   .strict();
+const audioCue = z
+  .object({
+    ...base,
+    category: z.enum([
+      "ui",
+      "shot",
+      "hit",
+      "skill",
+      "victory",
+      "defeat",
+      "arrival",
+      "alert",
+    ]),
+    waveform: z.enum(["sine", "triangle", "sawtooth", "square"]),
+    startHz: z.number().min(30).max(6000),
+    endHz: z.number().min(30).max(6000),
+    seconds: z.number().min(0.03).max(3),
+    gain: z.number().min(0).max(0.4),
+    noise: z.number().min(0).max(1),
+  })
+  .strict();
 export const entitySchemas = {
   resources: resource,
   skills: skill,
@@ -169,6 +191,7 @@ export const entitySchemas = {
   research,
   quests: quest,
   assets: asset,
+  audio: audioCue,
 };
 export type Kind = keyof typeof entitySchemas;
 export const kindNames: Record<Kind, string> = {
@@ -182,6 +205,7 @@ export const kindNames: Record<Kind, string> = {
   research: "研究",
   quests: "劇情／任務",
   assets: "素材",
+  audio: "音效",
 };
 export const packSchema = z
   .object({
@@ -199,6 +223,7 @@ export const packSchema = z
     research: z.array(research),
     quests: z.array(quest),
     assets: z.array(asset),
+    audio: z.array(audioCue).optional().default([]),
     rules: z
       .object({
         teamSize: z.number().int().min(1).max(6),
@@ -211,6 +236,8 @@ export const packSchema = z
         healSeconds: positive,
         healCost: amount,
         levelCost: amount,
+        trainingSeconds: z.number().min(5).max(120).optional().default(30),
+        raidWarningSeconds: z.number().min(5).max(120).optional().default(45),
       })
       .strict(),
   })

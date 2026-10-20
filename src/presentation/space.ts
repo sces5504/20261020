@@ -1,9 +1,12 @@
 import Phaser from "phaser";
+import { planetMaterial, enemyMaterial } from "./materials";
+import type { AudioMixer } from "../platform/audio";
 import type { Game } from "../application/game";
 export function mountSpace(
   host: HTMLElement,
   model: Game,
   onPlanet: (id: string) => void,
+  audio?: AudioMixer,
 ) {
   class Space extends Phaser.Scene {
     ink!: Phaser.GameObjects.Graphics;
@@ -15,6 +18,17 @@ export function mountSpace(
     loaded = new Set<string>();
     elapsed = 0;
     acc = 0;
+    zoomFactor = 1;
+    panX = 0;
+    panY = 0;
+    drag: { x: number; y: number; startX: number; startY: number } | null =
+      null;
+    pinch = 0;
+    cancelTap = false;
+    lastBattle = false;
+    lastSequence = 0;
+    lastFlashCount = 0;
+
     create() {
       this.ink = this.add.graphics();
       const r = model.pack.regions.find((v) => v.id === model.save.region)!;
@@ -29,7 +43,68 @@ export function mountSpace(
           a: 0.15 + (i % 6) * 0.08,
         });
       }
+      this.input.addPointer(1);
       this.input.on("pointerdown", (pointer: Phaser.Input.Pointer) => {
+        this.drag = {
+          x: pointer.x,
+          y: pointer.y,
+          startX: pointer.x,
+          startY: pointer.y,
+        };
+        this.cancelTap = false;
+      });
+      this.input.on("pointermove", (pointer: Phaser.Input.Pointer) => {
+        if (!this.drag || !pointer.isDown) return;
+        const pointers = this.input.manager.pointers.filter((p) => p.isDown);
+        if (pointers.length > 1) {
+          const dist = Phaser.Math.Distance.Between(
+            pointers[0].x,
+            pointers[0].y,
+            pointers[1].x,
+            pointers[1].y,
+          );
+          if (this.pinch)
+            this.zoomFactor = Phaser.Math.Clamp(
+              (this.zoomFactor * dist) / this.pinch,
+              0.65,
+              2.8,
+            );
+          this.pinch = dist;
+          this.cancelTap = true;
+          return;
+        }
+        const dx = pointer.x - this.drag.x,
+          dy = pointer.y - this.drag.y;
+        if (
+          Phaser.Math.Distance.Between(
+            pointer.x,
+            pointer.y,
+            this.drag.startX,
+            this.drag.startY,
+          ) > 8
+        ) {
+          this.cancelTap = true;
+          this.panX -= dx / this.cameras.main.zoom;
+          this.panY -= dy / this.cameras.main.zoom;
+        }
+        this.drag.x = pointer.x;
+        this.drag.y = pointer.y;
+      });
+      this.input.on(
+        "wheel",
+        (_pointer: unknown, _targets: unknown, _dx: number, dy: number) => {
+          this.zoomFactor = Phaser.Math.Clamp(
+            this.zoomFactor * (dy > 0 ? 0.9 : 1.1),
+            0.65,
+            2.8,
+          );
+        },
+      );
+      this.input.on("pointerup", (pointer: Phaser.Input.Pointer) => {
+        const cancelled = this.cancelTap;
+        this.drag = null;
+        this.pinch = 0;
+        if (cancelled) return;
         if (model.pause.size) return;
         const p = this.cameras.main.getWorldPoint(pointer.x, pointer.y);
         const enemy = model.combat?.units.find(
@@ -54,17 +129,44 @@ export function mountSpace(
         }
         model.move(p.x, p.y);
       });
-      for (const a of model.pack.assets) {
-        const image = new Image();
-        image.onload = () => {
-          if (this.sys?.isActive() && !this.textures.exists(a.id)) {
-            this.textures.addImage(a.id, image);
-            this.loaded.add(a.id);
-          }
-        };
-        image.src = a.src;
-      }
+      this.game.canvas.addEventListener("pointercancel", () => {
+        this.drag = null;
+        this.pinch = 0;
+        this.cancelTap = true;
+      });
+      for (const [i, p] of model.pack.planets.entries())
+        planetMaterial(this, `planet:${p.id}`, p.color, i * 1751);
+      for (const e of model.pack.enemies)
+        enemyMaterial(this, `enemy:${e.id}`, e.color, e.boss, e.pattern);
+      const used = new Set(
+        model.save.team.map(
+          (id) =>
+            model.pack.characters.find(
+              (c) =>
+                c.id === model.save.roster.find((o) => o.id === id)?.definition,
+            )?.sprite,
+        ),
+      );
+      model.pack.assets
+        .filter((a) => used.has(a.id))
+        .forEach((a) => this.ensureAsset(a.id));
     }
+    private ensureAsset(id: string) {
+      if (this.textures.exists(id) || this.loaded.has(id)) return;
+      const a = model.pack.assets.find((a) => a.id === id);
+      if (!a) return;
+      this.loaded.add(id);
+      const image = new Image();
+      image.onload = () => {
+        if (this.sys?.isActive() && !this.textures.exists(a.id))
+          this.textures.addImage(a.id, image);
+      };
+      image.onerror = () => {
+        model.notice = `素材未能載入：${a.name}`;
+      };
+      image.src = a.src;
+    }
+
     private text(
       x: number,
       y: number,
@@ -83,12 +185,10 @@ export function mountSpace(
         });
         this.labels.push(t);
       }
-      t.setText(text)
-        .setPosition(x, y)
-        .setOrigin(0.5, 0)
-        .setFontSize(size)
-        .setColor(color)
-        .setVisible(true);
+      if (t.text !== text) t.setText(text);
+      if (t.style.fontSize !== `${size}px`) t.setFontSize(size);
+      if (t.style.color !== color) t.setColor(color);
+      t.setPosition(x, y).setOrigin(0.5, 0).setVisible(true);
     }
     private disc(x: number, y: number, r: number, color: number) {
       const g = this.ink;
@@ -123,21 +223,28 @@ export function mountSpace(
       const w = this.scale.width,
         h = this.scale.height,
         battle = !!model.combat;
-      const zoom = battle
-        ? w < 650
-          ? 0.78
-          : 1
-        : Math.min(w / r.width, h / r.height) * 0.9;
+      if (battle !== this.lastBattle) {
+        this.lastBattle = battle;
+        this.panX = 0;
+        this.panY = 0;
+        this.zoomFactor = 1;
+      }
+      const zoom =
+        (battle
+          ? w < 650
+            ? 0.78
+            : 1
+          : Math.min(w / r.width, h / r.height) * 0.9) * this.zoomFactor;
       camera.setZoom(zoom);
       camera.centerOn(
-        battle ? model.x : r.width / 2,
-        battle ? model.y : r.height / 2,
+        (battle ? model.x : r.width / 2) + this.panX,
+        (battle ? model.y : r.height / 2) + this.panY,
       );
       g.clear();
       this.labelIndex = 0;
       this.sprites.forEach((image) => image.setVisible(false));
       // Nebulae and a stable starfield: presentation-only, independent from simulation RNG.
-      for (let i = 8; i > 0; i--) {
+      for (let i = model.lowEffects ? 3 : 8; i > 0; i--) {
         g.fillStyle(0x40335f, 0.012);
         g.fillEllipse(1600, 850, i * 175, i * 92);
         g.fillStyle(0x164f60, 0.014);
@@ -163,7 +270,9 @@ export function mountSpace(
         r.width * 0.5,
         r.height * 0.43,
       );
-      for (const p of model.pack.planets) {
+      for (const p of model.pack.planets.filter(
+        (p) => p.region === model.save.region,
+      )) {
         for (const dep of p.requires) {
           const a = model.pack.planets.find((v) => v.id === dep)!;
           g.lineStyle(
@@ -176,6 +285,13 @@ export function mountSpace(
         const color = Phaser.Display.Color.HexStringToColor(p.color).color;
         const drawR = Math.max(p.radius, 24 / zoom);
         this.disc(p.x, p.y, drawR, color);
+        this.drawAsset(
+          p.id + ":material",
+          `planet:${p.id}`,
+          p.x,
+          p.y,
+          drawR * 2.2,
+        );
         const col = model.save.colonies[p.id];
         const locked = !p.requires.every((id) =>
           model.save.cleared.includes(id),
@@ -186,6 +302,7 @@ export function mountSpace(
           g.lineStyle(1, 0xf4d9a2, 0.3);
           g.strokeCircle(p.x, p.y, drawR + 28);
         }
+        if (p.sprite) this.ensureAsset(p.sprite);
         if (p.sprite && this.textures.exists(p.sprite))
           this.drawAsset(p.id, p.sprite, p.x, p.y, drawR * 2);
         this.text(
@@ -233,6 +350,12 @@ export function mountSpace(
       }
       if (model.combat) {
         const combat = model.combat;
+        if (combat.sequence > this.lastSequence) {
+          audio?.cue("shot");
+          this.lastSequence = combat.sequence;
+        }
+        if (combat.flashes.length > this.lastFlashCount) audio?.cue("hit");
+        this.lastFlashCount = combat.flashes.length;
         for (const b of combat.bullets) {
           g.fillStyle(
             Phaser.Display.Color.HexStringToColor(b.color).color,
@@ -244,22 +367,29 @@ export function mountSpace(
         }
         for (const u of combat.units) {
           if (u.hp <= 0) continue;
+          if (u.sprite) this.ensureAsset(u.sprite);
           const color = Phaser.Display.Color.HexStringToColor(u.color).color;
           const size = u.boss ? 42 : u.turretUntil ? 14 : 18;
           if (u.side === "ally") {
             if (!u.sprite || !this.textures.exists(u.sprite))
               this.ship(u.x, u.y, color, size);
           } else {
-            g.lineStyle(2, color, 1);
-            g.strokeCircle(u.x, u.y, size);
-            g.fillStyle(color, 0.18);
-            g.fillCircle(u.x, u.y, size);
-            g.lineStyle(1, color, 0.5);
-            g.strokeRect(
-              u.x - size * 0.65,
-              u.y - size * 0.65,
-              size * 1.3,
-              size * 1.3,
+            this.drawAsset(
+              u.id + ":hull",
+              `enemy:${u.def}`,
+              u.x,
+              u.y,
+              u.boss ? 150 : 75,
+            );
+          }
+          if (u.side === "enemy" && u.windup > 0) {
+            g.lineStyle(2, 0xffbc85, 0.65);
+            g.strokeCircle(u.x, u.y, 60 + (1 - u.windup / 0.55) * 25);
+            g.lineBetween(
+              u.x,
+              u.y,
+              u.x + Math.cos(u.aim) * 250,
+              u.y + Math.sin(u.aim) * 250,
             );
           }
           if (u.sprite && this.textures.exists(u.sprite))
@@ -333,6 +463,11 @@ export function mountSpace(
         .setVisible(true);
     }
 
+    recenter() {
+      this.panX = 0;
+      this.panY = 0;
+      this.zoomFactor = 1;
+    }
     private ship(x: number, y: number, color: number, size: number) {
       const g = this.ink;
       g.fillStyle(color, 0.08);
@@ -379,5 +514,6 @@ export function mountSpace(
   return {
     select: (id: string) => (scene.selected = id),
     destroy: () => game.destroy(true),
+    recenter: () => scene.recenter(),
   };
 }

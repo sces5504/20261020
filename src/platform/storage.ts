@@ -1,69 +1,8 @@
 import { z } from "zod";
 import type { Save } from "../domain/model";
 import { packSchema, type Pack } from "../content/schema";
-const num = z.number().finite();
-const nonneg = num.nonnegative();
-const owned = z
-  .object({
-    id: z.string(),
-    definition: z.string(),
-    level: z.number().int().min(1).max(120),
-    hp: nonneg,
-  })
-  .strict();
-export const saveSchema = z
-  .object({
-    schemaVersion: z.literal(1),
-    id: z.string(),
-    revision: z.number().int().nonnegative(),
-    contentId: z.string(),
-    contentVersion: z.string(),
-    settledAt: nonneg,
-    rng: z.number().int().nonnegative(),
-    wallet: z.record(nonneg),
-    roster: z.array(owned).min(1),
-    team: z.array(z.string()).min(1),
-    region: z.string(),
-    x: num,
-    y: num,
-    cleared: z.array(z.string()),
-    colonies: z.record(
-      z
-        .object({
-          active: z.boolean(),
-          lost: z.boolean(),
-          buildings: z.record(z.number().int().nonnegative()),
-          assigned: z.string(),
-          raidRemaining: nonneg,
-        })
-        .strict(),
-    ),
-    research: z.array(z.string()),
-    jobs: z.array(
-      z
-        .object({
-          id: z.string(),
-          kind: z.enum(["build", "research", "summon", "heal"]),
-          owner: z.string(),
-          definition: z.string(),
-          ends: nonneg,
-          payload: z.string(),
-          production: z.record(nonneg),
-          cost: z.record(nonneg),
-        })
-        .strict(),
-    ),
-    receipts: z.array(z.string()),
-    quests: z.array(z.string()),
-    summoned: z.number().int().nonnegative(),
-    built: z.number().int().nonnegative(),
-    encounter: z
-      .object({ planet: z.string(), seed: z.number().int().nonnegative() })
-      .strict()
-      .nullable(),
-    orphans: z.array(owned),
-  })
-  .strict();
+import { saveSchema } from "../domain/save-schema";
+export { saveSchema } from "../domain/save-schema";
 export function checkSave(raw: unknown, p: Pack): Save {
   const s = saveSchema.parse(raw);
   if (s.contentId !== p.id) throw Error("存檔屬於不同內容包。");
@@ -86,8 +25,7 @@ export function checkSave(raw: unknown, p: Pack): Save {
   for (const r of Object.keys(s.wallet))
     if (!p.resources.some((v) => v.id === r))
       throw Error("存檔資源缺失，需要明確遷移。");
-  for (const id of s.cleared)
-    if (!p.planets.some((v) => v.id === id)) throw Error("存檔星球缺失。");
+  // Historical clear receipts remain valid even if an optional planet is removed.
   for (const [id, col] of Object.entries(s.colonies)) {
     if (!p.planets.some((v) => v.id === id)) throw Error("領地星球缺失。");
     if (

@@ -79,6 +79,7 @@ export function settle(p: Pack, s: Save, now: number) {
   s.settledAt = now;
 }
 export type Command =
+  | { type: "training"; score: number }
   | { type: "activate"; planet: string }
   | { type: "repair"; planet: string }
   | { type: "build"; planet: string; building: string }
@@ -115,7 +116,7 @@ export function questReady(s: Save, q: Pack["quests"][number]) {
 }
 export function summonCandidates(p: Pack, recipe: number[]) {
   return p.characters
-    .filter((c) => c.status === "active")
+    .filter((c) => c.status === "active" && c.summonable !== false)
     .map((c) => ({
       character: c,
       distance: c.recipe.reduce((n, v, i) => n + Math.abs(v - recipe[i]), 0),
@@ -170,6 +171,11 @@ export function apply(
     )
       throw Error("角色正在治療或派駐。");
   };
+  if (c.type === "training") {
+    if (!Number.isInteger(c.score) || c.score < 0 || c.score > 100)
+      throw Error("訓練分數無效");
+    s.trainingBest = Math.max(s.trainingBest, c.score);
+  }
   if (c.type === "activate") {
     const v = p.planets.find((v) => v.id === c.planet);
     if (!v || !s.cleared.includes(v.id) || s.colonies[v.id]?.active)

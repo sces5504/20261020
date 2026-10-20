@@ -308,3 +308,16 @@ EditorProject包含projectId、baseContentLock、revision、overrides、新defin
 CharacterDef基礎rarity與角色實例level／tier分開；數值表單改基礎／曲線，最終值由共用計算預覽。Acquisition來源以typed relation表示召喚／掉落／任務／商店，不用無法影響遊戲的文字標籤替代。
 
 編輯器更改資料仍走ID、引用、空池、效果支援、素材、前置及遷移校驗。原始SourceTableRef、未知fNN與研究hash唯讀；作者修改是有來源的override，不重寫研究包。完整範圍與ED驗收見 [內容編輯器](content-editor.md)。
+
+## 15. M1 已落地的契約（2026-10-21）
+
+上述完整設計保留為後續目標；當前可執行定義以 `src/content/schema.ts` 為準，避免 AI 依理想 schema 直接寫入 runtime 未支援欄位。
+
+- `Pack` 為完整平坦快照；擴充包透過 `definitions` 新增具命名空間的實體，禁止覆寫既有 ID。`content/generated/runtime.json` 為產物。工坊 `Project` 實際為 `{schemaVersion:1,revision,pack,past,future}`，不是已實作任意 overrides 或 script 系統。
+- `characters[].summonable` 省略時視為 true；與 starter、planets[].dropCharacters、quests[].character 共同定義實際取得來源。工坊關聯勾選會原子修改這些來源，沒有只改顯示字串。
+- `audio[]` 預設空陣列，各 cue 包含共用來源／狀態欄位、category（ui/shot/hit/skill/victory/defeat/arrival/alert）、waveform（sine/triangle/sawtooth/square）、startHz/endHz、seconds、gain、noise。這是 WebAudio 程序配方；不等同可播放任意音訊檔。新音訊能力先交核心擴充。
+- `rules.trainingSeconds` 預設30、`rules.raidWarningSeconds` 預設45，可在工坊調整。視覺及音效不決定碰撞／傷害時序。
+- 存檔仍為 schemaVersion1，加欄位都有預設。contentHash 是 canonical JSON SHA256；缺定義的 held characters／wallet／colonies／jobs 先隔離保留，缺依賴工作取消並退款一次。領地／資源隔離帳本不自行推導跨資源交換率。恢復角色內容時提供恢復預覽。沒有通用 migration DSL，未來 schema 保持拒絕。
+- 媒體匯出／測試／匯入會檢查 SHA256、尺寸、可解碼性與大小。原六圖 build 按 manifest 驗證後複製原位元組。主檔保持不變；顯示頭像視窗不建立新的改圖檔。
+
+當前能力的驗收與限制見 [M1 試玩驗收](m1-acceptance.md)。新增內容作者先交一個小包，核心負責 schema、存檔、通用行為與 manifest；不要在內容包放 JavaScript 或角色 ID 分支。

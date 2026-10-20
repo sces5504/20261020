@@ -1,8 +1,8 @@
 # 後續 AI 的工作入口
 
-使用者已要求開始 M1，並準備後續各 AI 起始 prompt。此頁的「角色」是分工安排，沒有自動啟動多個代理。M1 尚在製作，較小美術附件已匯入，六張原圖保持原樣；使用者停止 SD 重繪，依使用者新要求已套用原先M1六角色；不要把程式骨架當成完整商業品質版本。
+使用者已要求開始 M1，並準備後續各 AI 起始 prompt。此頁的「角色」是分工安排，沒有自動啟動多個代理。M1 功能切片已完成並安排 Pages 試玩驗證，最新證據見 docs/design/m1-acceptance.md；較小美術附件已匯入，六張原圖保持原樣；使用者停止 SD 重繪，依使用者新要求已套用原先M1六角色；不要把程式骨架當成完整商業品質版本。
 
-先讀 repo 的 AGENTS.md、記憶索引及目前交接；進行中的實作在 `m1/foundation`，合併前不要只以 main 的規格檔推測已有程式。由整合者告知已整合的起點 commit，再建立自己的分支／worktree。不要盲目 reset、覆蓋未提交工作或改 README。
+先讀 repo 的 AGENTS.md、記憶索引及目前交接；整合分支為 `m1/foundation`，Pages 從 main 發布；先 fetch 並以最新交接核對實際整合 commit。由整合者告知已整合的起點 commit，再建立自己的分支／worktree。不要盲目 reset、覆蓋未提交工作或改 README。
 
 | 順序／角色 | 起始 prompt | 可改範圍 | 何時可開始 |
 | --- | --- | --- | --- |
@@ -39,7 +39,7 @@ source scripts/env.sh
 npm run test:e2e
 ```
 
-`npm run release:ready` 是完整 M1 發布門檻，缺必要素材／品質證據時應失敗。不能刪閘門讓未完成版本上線。遊戲 `#/play`、工坊 `#/studio`、隔離試玩 `#/test`。
+`npm run release:ready` 是完整商業品質門檻；使用者要求的試玩發布使用 `npm run release:ready -- --target playtest`（兩者不可混稱）。預設商業品質門檻，缺必要素材／品質證據時應失敗。不能刪閘門讓未完成版本上線。遊戲 `#/play`、工坊 `#/studio`、隔離試玩 `#/test`。
 
 ## 內容協作規則
 
@@ -49,4 +49,6 @@ npm run test:e2e
 - `src/content/schema.ts` 是型別／語意校驗來源；`src/domain` 不得 import Phaser、DOM 或 IndexedDB。
 - 目前已註冊技能：shield、barrage、fortify、turret、accelerate、weaken、heal；敵彈 aim、fan、ring。這些是 M1 原語，並非完整原作效果。
 - 未知技能／融合／原生抽選分支保持未知；現行配方為 M1 四維 L1 前五名＋名次權重示範，不能標成完整原生召喚。
-- 作者草稿、測試進度、正式進度分開。匯出 ZIP 不等於發布；內容包移除造成舊檔缺引用時，目前拒絕載入並保留原檔，尚無自動退款／重定位遷移器。
+- 作者草稿、測試進度、正式進度分開。匯出 ZIP 不等於發布；內容包移除造成舊檔缺引用時，先提供修復預覽，再由玩家選擇備份與隔離缺失內容、取消退款工作、重定位；未來 schema 仍拒絕執行。
+
+音效已有 `audio` 資料類型及 WebAudio 程序 cue，可在工坊調音及試聽；新音訊檔接入需由核心擴充契約，不能只放檔案就宣稱遊戲已播放。

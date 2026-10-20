@@ -25,6 +25,12 @@ export type Job = {
 };
 export type Save = {
   schemaVersion: 1;
+  contentHash: string;
+  migrationHistory: string[];
+  trainingBest: number;
+  orphanedJobs: Job[];
+  orphanedColonies: Record<string, Colony>;
+  orphanedWallet: Wallet;
   id: string;
   revision: number;
   contentId: string;
@@ -50,7 +56,7 @@ export type Save = {
 };
 export function stats(p: Pack, o: Owned) {
   const c = p.characters.find((c) => c.id === o.definition)!;
-  const scale = 1 + (o.level - 1) * c.growth;
+  const scale = 1 + (Math.min(p.rules.maxLevel, o.level) - 1) * c.growth;
   return {
     hp: Math.round(c.hp * scale),
     attack: c.attack * scale,
@@ -68,6 +74,12 @@ export function newSave(p: Pack, now: number, id = "voyager"): Save {
     }));
   return {
     schemaVersion: 1,
+    contentHash: "",
+    migrationHistory: [],
+    trainingBest: 0,
+    orphanedJobs: [],
+    orphanedColonies: {},
+    orphanedWallet: {},
     id,
     revision: 0,
     contentId: p.id,

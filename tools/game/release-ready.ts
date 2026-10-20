@@ -2,13 +2,23 @@ import { readFileSync } from "node:fs";
 import { validatePack } from "../../src/content/schema";
 const status = JSON.parse(
   readFileSync("content/release-status.json", "utf8"),
-) as { status: string; checks: Record<string, boolean> };
+) as {
+  status: string;
+  checks: Record<string, boolean>;
+  playtestStatus: string;
+  playtestChecks: Record<string, boolean>;
+};
+const targetIndex = process.argv.indexOf("--target");
+const target = targetIndex < 0 ? "commercial" : process.argv[targetIndex + 1];
+if (!["commercial", "playtest"].includes(target))
+  throw Error("Unknown release target");
+const playtest = target === "playtest";
 const result = validatePack(
   JSON.parse(readFileSync("content/generated/runtime.json", "utf8")),
 );
 const errors = [
   ...result.errors,
-  ...Object.entries(status.checks)
+  ...Object.entries(playtest ? status.playtestChecks : status.checks)
     .filter(([, v]) => v !== true)
     .map(([k]) => `待完成：${k}`),
 ];
@@ -21,12 +31,11 @@ if (result.pack) {
         errors.push(`${c.id}.${slot} 缺少已驗收素材`);
     }
 }
-if (status.status !== "accepted")
+if (playtest && status.playtestStatus !== "ready")
+  errors.push("M1 試玩版尚未通過功能驗收。");
+if (!playtest && status.status !== "accepted")
   errors.push("M1 尚未標記 accepted，請依實際品質證據更新，不得以刪檢查繞過。");
 if (errors.length) {
-  console.error(
-    "M1 release blocked (functional preview may still run):\n" +
-      errors.join("\n"),
-  );
+  console.error(`M1 ${target} release blocked:\n` + errors.join("\n"));
   process.exitCode = 1;
-} else console.log("M1 release readiness passed.");
+} else console.log(`M1 ${target} release readiness passed.`);

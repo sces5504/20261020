@@ -1953,3 +1953,236 @@ summary {
   transform-origin: 50% 10%;
   pointer-events: none;
 }
+.battle-tools {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 3;
+  white-space: nowrap;
+}
+.battle-tools button {
+  background: #0a1925df;
+  font-size: 11px;
+  padding: 9px 13px;
+}
+.battle-tools small {
+  color: var(--gold);
+}
+.training-brief {
+  text-align: center;
+  max-width: 570px;
+  margin: auto;
+}
+.training-brief .resonance-orb {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 25px;
+  font-size: 90px;
+}
+.result-screen {
+  text-align: center;
+  padding: 20px;
+}
+.result-screen > span {
+  display: block;
+  font: 90px serif;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.result-screen button {
+  margin: 10px;
+}
+.guide-steps li {
+  padding: 12px 0 10px 12px;
+  color: var(--gold);
+}
+.guide-steps p {
+  font-size: 13px;
+}
+.collection-heading {
+  margin-top: 30px;
+}
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.collection-card {
+  border: 1px solid var(--line);
+  background: #0b1721;
+}
+.collection-card .large {
+  height: 210px;
+  width: 100%;
+  object-fit: contain;
+}
+.collection-card > div:last-child {
+  padding: 15px;
+}
+.collection-card p {
+  font-size: 10px;
+  margin: 0;
+}
+.collection-card h3 {
+  margin: 6px 0;
+}
+.collection-card.locked img {
+  filter: saturate(0.5);
+  opacity: 0.7;
+}
+.complex-field {
+  border: 1px solid var(--line);
+  padding: 15px;
+  min-width: 0;
+}
+.complex-field legend,
+fieldset.field > legend {
+  font-size: 12px;
+  color: #a6c8cc;
+  padding: 0 8px;
+}
+.resource-fields {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.checkbox-grid label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.checkbox-grid input {
+  width: 18px;
+  min-height: 18px;
+  margin: 0;
+  flex-shrink: 0;
+}
+.spawn-row {
+  display: grid;
+  grid-template-columns: 1fr 70px auto;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.dialogue-row {
+  border: 1px solid var(--line);
+  padding: 12px;
+  margin-bottom: 12px;
+}
+.dialogue-row label {
+  margin-bottom: 9px;
+}
+.field > legend {
+  color: var(--cyan);
+}
+.entity-form > fieldset {
+  border: 1px solid var(--line);
+}
+.recovery li {
+  color: #a6c5ca;
+  line-height: 1.8;
+}
+.recovery section {
+  border-top: 1px solid var(--line);
+  margin-top: 20px;
+  padding-top: 20px;
+}
+@media (max-width: 800px) {
+  .deck-nav button {
+    padding: 3px 6px;
+    min-width: 0;
+    flex: 1;
+    font-size: 9px;
+  }
+  .deck-nav button > span {
+    font-size: 17px;
+    display: block;
+    margin: 0 0 3px;
+  }
+  .battle-tools {
+    bottom: 35px;
+    gap: 5px;
+  }
+  .battle-tools button {
+    font-size: 9px;
+    padding: 9px 8px;
+  }
+  .collection-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .collection-card .large {
+    height: 190px;
+  }
+  .resource-fields {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .checkbox-grid {
+    grid-template-columns: 1fr;
+  }
+  .spawn-row {
+    grid-template-columns: 1fr 55px auto;
+  }
+  .complex-field {
+    padding: 10px;
+  }
+  .studio-header > div > a {
+    font-size: 10px;
+  }
+  .studio-header .inline-actions {
+    justify-content: flex-end;
+    max-width: 140px;
+  }
+}
+@media (max-height: 550px) {
+  .bridge {
+    min-height: 360px;
+  }
+  .topbar {
+    height: 52px;
+    min-height: 52px;
+    padding-block: 5px;
+  }
+  .sector-heading {
+    padding-block: 8px;
+  }
+  .sector-heading h1 {
+    font-size: 18px;
+  }
+  .viewport {
+    min-height: 135px;
+  }
+  .planet-card {
+    max-height: 170px;
+    overflow: auto;
+  }
+  .planet-card .planet-emblem,
+  .planet-card > p {
+    display: none;
+  }
+  .flight-deck {
+    min-height: 90px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .build-note {
+    display: none;
+  }
+  .squad-card,
+  .squad-card > .portrait {
+    height: 62px;
+  }
+  .battle-tools {
+    bottom: 12px;
+  }
+  .mission-rail .rail-bottom {
+    display: none;
+  }
+}

@@ -1,43 +1,16 @@
+import { AudioMixer } from "../platform/audio";
+import { acquisitionSources } from "../content/queries";
 import type { Game } from "../application/game";
 import type { Pack, Character } from "../content/schema";
 import { stats, costScale, type Save } from "../domain/model";
 import { production, questReady, summonCandidates } from "../domain/economy";
 import { download, read } from "../platform/storage";
 import { mountSpace } from "./space";
-export const esc = (v: unknown) =>
-  String(v).replace(
-    /[&<>"']/g,
-    (c) =>
-      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[
-        c
-      ]!,
-  );
-export const button = (
-  label: string,
-  action: string,
-  id = "",
-  cls = "",
-  disabled = false,
-) =>
-  `<button class="${cls}" data-action="${action}" data-id="${esc(id)}" ${disabled ? "disabled" : ""}>${label}</button>`;
-export function amounts(p: Pack, c: Record<string, number>) {
-  return Object.entries(c)
-    .map(
-      ([id, n]) =>
-        `<span class="cost" style="--c:${p.resources.find((r) => r.id === id)?.color ?? "#fff"}">◆ ${esc(p.resources.find((r) => r.id === id)?.name ?? id)} ${Math.ceil(n)}</span>`,
-    )
-    .join("");
-}
-export function portrait(p: Pack, c: Character, large = false) {
-  const a = p.assets.find((a) => a.id === (large ? c.portrait : c.avatar));
-  return a
-    ? large
-      ? `<img class="portrait large" src="${esc(a.src)}" alt="${esc(c.name)}" loading="lazy">`
-      : `<div class="portrait avatar-window"><img src="${esc(a.src)}" alt="${esc(c.name)}" loading="lazy"></div>`
-    : `<div class="portrait celestial ${large ? "large" : ""}" style="--c:${c.color}"><span>✧</span><small>${esc(c.name)}</small></div>`;
-}
+import { esc, button, amounts, portrait } from "./common";
+export { esc } from "./common";
 export function mountGame(root: HTMLElement, g: Game, test: boolean) {
   const p = g.pack;
+  const audio = new AudioMixer(p);
   let selected = p.planets[0].id,
     panel = "",
     sub = "",
@@ -49,15 +22,20 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
   root.innerHTML = `<main class="bridge"><header class="topbar"><a class="brand" href="#/play"><span class="brand-icon">✧</span><span>STELLA MAIDEN<small>星 海 航 跡</small></span></a><div id="wallet" class="wallet"></div><div class="top-actions">${button("◈", "panel", "archive", "icon-button")}<a class="studio-link" href="#/studio">內容工坊 ↗</a></div></header>
  <div class="sector-heading"><div><span class="eyebrow">HELIOS EXPEDITION / 01</span><h1>${esc(p.regions[0].name)}<span>探索航線</span></h1></div><div class="sector-status"><i></i> <span id="save-status">本機自動保存</span>${test ? "<strong>隔離測試</strong>" : ""}</div></div>
  <section class="viewport"><aside class="mission-rail"><div class="section-label">航行目標 <span>MISSION</span></div><div id="mission"></div><div class="rail-bottom"><span class="eyebrow">NAVIGATION</span><p>點擊星球查看情報<br>點擊空間指揮移動</p><div class="signal"><i></i><i></i><i></i><i></i><i></i></div><small>艦隊通訊連線中</small></div></aside>
- <div id="space" class="space" aria-label="星域戰場，點擊空白處移動，點擊星球查看情報" role="application"></div><div class="map-caption"><span>✧ 星域掃描</span><span id="coordinates"></span></div><div id="battle-state" class="battle-state"></div><aside id="planet-card" class="planet-card"></aside></section>
- <footer class="flight-deck"><div class="squad-heading"><span class="eyebrow">YOUR CONSTELLATION</span><strong>航行編隊</strong>${button("編成 ↗", "panel", "roster", "text-button")}</div><div class="squad" id="squad"></div><nav class="deck-nav">${button("<span>✦</span>星體共鳴", "panel", "summon")}${button("<span>⌬</span>共振研究", "panel", "research")}${button("<span>◇</span>航行紀錄", "panel", "quests")}${button("<span>Ⅱ</span>暫停", "pause", "", "pause-button")}</nav></footer>
- <div class="build-note">M1 開發版 · 原圖接入 · 品質驗證中</div><div class="toast" id="toast" role="status" aria-live="polite"></div><div id="overlay"></div></main>`;
+ <div id="space" class="space" aria-label="星域戰場，點擊空白處移動，點擊星球查看情報" role="application"></div><div class="map-caption"><span>✧ 星域掃描</span><span id="coordinates"></span></div><div id="battle-state" class="battle-state"></div><div id="battle-tools" class="battle-tools"></div><aside id="planet-card" class="planet-card"></aside></section>
+ <footer class="flight-deck"><div class="squad-heading"><span class="eyebrow">YOUR CONSTELLATION</span><strong>航行編隊</strong>${button("編成 ↗", "panel", "roster", "text-button")}</div><div class="squad" id="squad"></div><nav class="deck-nav">${button("<span>✦</span>星體共鳴", "panel", "summon")}${button("<span>⌬</span>共振研究", "panel", "research")}${button("<span>◇</span>航行紀錄", "panel", "quests")}${button("<span>⌁</span>訓練", "panel", "training")}${button("<span>Ⅱ</span>暫停", "pause", "", "pause-button")}</nav></footer>
+ <div class="build-note">M1 試玩版 · 六位少女／一個星域</div><div class="toast" id="toast" role="status" aria-live="polite"></div><div id="overlay"></div></main>`;
   const $ = (s: string) => root.querySelector<HTMLElement>(s)!;
-  const space = mountSpace($("#space"), g, (id) => {
-    selected = id;
-    space.select(id);
-    renderPlanet();
-  });
+  const space = mountSpace(
+    $("#space"),
+    g,
+    (id) => {
+      selected = id;
+      space.select(id);
+      renderPlanet();
+    },
+    audio,
+  );
   space.select(selected);
   let planetKey = "";
   function renderPlanet() {
@@ -99,7 +77,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
         v.requires.every((id) => g.save.cleared.includes(id)),
     );
     $("#mission").innerHTML =
-      `<div class="mission-number">${String(g.save.cleared.length + 1).padStart(2, "0")}<span>／ ${String(p.planets.length).padStart(2, "0")}</span></div><h3>${ready ? "新的航行紀錄" : next ? "追尋下一道訊號" : "星域航路已開啟"}</h3><p>${ready ? esc(ready.name) : next ? `解放 ${esc(next.name)}<br>拓展我們的星海航跡` : "發展據點、收集少女，為下一段旅程準備。"}</p>${button(ready ? "查看紀錄 →" : "追蹤航路 →", ready ? "panel" : "track", ready ? "quests" : (next?.id ?? p.planets[0].id), "text-button")}<div id="defense-alerts"></div><div class="progress-track"><span style="width:${(g.save.cleared.length / p.planets.length) * 100}%"></span></div><small>星域解放 ${g.save.cleared.length} / ${p.planets.length}</small>`;
+      `<div class="mission-number">${String(g.save.cleared.length + 1).padStart(2, "0")}<span>／ ${String(p.planets.length).padStart(2, "0")}</span></div><h3>${ready ? "新的航行紀錄" : next ? "追尋下一道訊號" : "星域航路已開啟"}</h3><p>${ready ? esc(ready.name) : next ? `解放 ${esc(next.name)}<br>拓展我們的星海航跡` : "發展據點、收集少女，為下一段旅程準備。"}</p>${button(ready ? "查看紀錄 →" : "追蹤航路 →", ready ? "panel" : "track", ready ? "quests" : (next?.id ?? p.planets[0].id), "text-button")}${button("操作指南 ↗", "panel", "guide", "text-button")}<div id="defense-alerts"></div><div class="progress-track"><span style="width:${(g.save.cleared.length / p.planets.length) * 100}%"></span></div><small>星域解放 ${g.save.cleared.length} / ${p.planets.length}</small>`;
   }
   let squadKey = "";
   function renderSquad() {
@@ -153,7 +131,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       : '<p class="muted">目前沒有進行中的工作。</p>';
   }
   function heading(title: string, kicker: string) {
-    return `<div class="modal-heading"><div><span class="eyebrow">${kicker}</span><h2>${title}</h2></div>${button("✕", "close", "", "icon-button")}</div>`;
+    return `<div class="modal-heading"><div><span class="eyebrow">${kicker}</span><h2>${esc(title)}</h2></div>${button("✕", "close", "", "icon-button")}</div>`;
   }
   function rosterHtml() {
     return `<div class="character-grid">${g.save.roster
@@ -177,7 +155,9 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
                 .join("／")}`
         }</small></div></article>`;
       })
-      .join("")}</div>`;
+      .join(
+        "",
+      )}</div><h3 class="collection-heading">星體圖鑑 · ${new Set(g.save.roster.map((o) => o.definition)).size} / ${p.characters.length}</h3><div class="collection-grid">${p.characters.map((c) => `<article class="collection-card ${g.save.roster.some((o) => o.definition === c.id) ? "owned" : "locked"}">${portrait(p, c, true)}<div><span class="rarity">${"★".repeat(c.rarity)}</span><h3>${esc(c.name)}</h3><p>${acquisitionSources(p, c.id).map(esc).join(" · ") || "目前無取得來源"}</p></div></article>`).join("")}</div>`;
   }
   function drawPanel() {
     if (!panel) {
@@ -231,13 +211,28 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       kick = "VOYAGE JOURNAL";
       body = `<div class="list-cards">${p.quests.map((q) => `<article><span class="eyebrow">${s.quests.includes(q.id) ? "ARCHIVED" : questReady(s, q) ? "SIGNAL RECEIVED" : "AWAITING SIGNAL"}</span><h3>${esc(q.name)}</h3>${q.dialogue.map((d) => `<blockquote><strong>${esc(d.speaker)}</strong><p>${esc(d.text)}</p></blockquote>`).join("")}<div class="costs">${amounts(p, q.reward)}</div>${button(s.quests.includes(q.id) ? "已收錄" : "收錄並領取獎勵", "quest", q.id, "primary", s.quests.includes(q.id) || !questReady(s, q))}</article>`).join("")}</div>`;
     }
+    if (panel === "training") {
+      title = "避彈訓練";
+      kick = "EVASION SIMULATOR";
+      body = `<div class="training-brief"><div class="resonance-orb">⌁</div><h3>穿越彈幕，保持航線。</h3><p>移動閃避 ${p.rules.trainingSeconds} 秒的敵方彈幕。普通攻擊暫停，可使用技能保護隊伍。訓練不扣除正式隊伍生命，也不消耗資源。</p><p>每次有效命中扣 5 分 · 最高紀錄 ${s.trainingBest}／100</p>${button("開始避彈訓練 →", "training-start", "", "primary", !!g.combat)}</div>`;
+    }
+    if (panel === "guide") {
+      title = "航行指南";
+      kick = "FLIGHT MANUAL";
+      body = `<ol class="guide-steps"><li><strong>探索與出擊</strong><p>點選星球，再按出擊。點空白處移動，拖曳平移鏡頭；滾輪或雙指可縮放，「跟隨」返回隊伍。</p></li><li><strong>走位與技能</strong><p>普通攻擊自動進行。點敵人鎖定，點下方角色或鍵盤1～6施放技能。紅色線條是敵方射擊預警，移動避開。</p></li><li><strong>啟動與經營</strong><p>解放星球後啟動生產，再建造採集站與研究。多數工作在數十秒至數分鐘內完成，管理面板只暫停戰鬥。</p></li><li><strong>收集與編成</strong><p>四資源共鳴、首次解放與任務可取得少女。在編成中強化、整補與更換隊伍。</p></li><li><strong>防衛與存檔</strong><p>收到襲擊預警後，點該星球出擊防衛。失守停產可修復；離線不受襲。可於設定匯出／匯入存檔。</p></li></ol>`;
+    }
+    if (panel === "result" && g.report) {
+      title = g.report.title;
+      kick = g.report.victory ? "MISSION COMPLETE" : "FLIGHT REPORT";
+      body = `<div class="result-screen"><span>${g.report.victory ? "✧" : "◇"}</span><p>${esc(g.report.message)}</p>${g.report.planet && g.report.victory && !s.colonies[g.report.planet]?.active ? button("啟動剛解放的星球", "result-activate", g.report.planet, "primary") : ""}${button("返回航線 →", "close", "", "primary")}</div>`;
+    }
     if (panel === "archive") {
       title = "航行設定";
       kick = "SAVE & PREFERENCES";
-      body = `<div class="settings-list"><h3>本機進度</h3><p>進度自動保存在此瀏覽器。跨裝置時，請匯出後在另一裝置匯入。</p><div class="inline-actions">${button("匯出存檔", "export-save", "", "primary")}<label class="file-button">匯入存檔<input id="import-save" type="file" accept="application/json,.json"></label>${button("匯出上一份備份", "export-backup")}</div><h3>戰鬥操作</h3><p>點空白處移動與閃躲；普通攻擊自動進行。點敵人優先鎖定，點下方角色施放技能。</p>${button(g.autoSkills ? "自動技能：開啟" : "自動技能：關閉", "auto")}<h3>內容工坊</h3><p>瀏覽與調整內容，套用至隔離測試遊戲；完成後匯出內容包再發布。</p><a class="primary link-button" href="#/studio">進入內容工坊 ↗</a>${test ? '<p><a href="#/play">退出隔離測試，返回正式進度</a></p>' : ""}<details><summary>開發版狀態</summary><p>六張原始立繪已匯入，已套用原先六角色；原圖展示入口在內容工坊。正式音效與原作全技能仍待接入；目前視覺為導航佔位。平衡及劇情為 M1 可替換設計，尚未達成完整商業品質驗收。</p></details></div>`;
+      body = `<div class="settings-list"><h3>本機進度</h3><p>進度自動保存在此瀏覽器。跨裝置時，請匯出後在另一裝置匯入。</p><div class="inline-actions">${button("匯出存檔", "export-save", "", "primary")}<label class="file-button">匯入存檔<input id="import-save" type="file" accept="application/json,.json"></label>${button("匯出上一份備份", "export-backup")}</div><h3>聲音與畫面</h3><div class="inline-actions">${button(audio.enabled ? "聲音：開啟" : "聲音：關閉", "sound")}${button(g.lowEffects ? "特效：精簡" : "特效：完整", "effects")}</div><label>音效音量<input id="audio-volume" type="range" min="0" max="1" step="0.05" value="${audio.volume}"></label><h3>戰鬥操作</h3><p>點空白處移動與閃躲；普通攻擊自動進行。點敵人優先鎖定，點下方角色施放技能。</p>${button(g.autoSkills ? "自動技能：開啟" : "自動技能：關閉", "auto")}<h3>內容工坊</h3><p>瀏覽與調整內容，套用至隔離測試遊戲；完成後匯出內容包再發布。</p><a class="primary link-button" href="#/studio">進入內容工坊 ↗</a>${test ? '<p><a href="#/play">退出隔離測試，返回正式進度</a></p>' : ""}<details><summary>開發版狀態</summary><p>六張原始立繪已匯入，已套用原先六角色；原圖展示入口在內容工坊。音效採可編輯的程序合成，星球與敵艦為原創程序材質。M1的平衡／劇情與部分技能為明示的新設計；原作未知機制仍保留來源缺口。</p></details></div>`;
     }
     $("#overlay").innerHTML =
-      `<div class="modal-backdrop"><section class="modal ${panel === "roster" ? "wide" : ""}" role="dialog" aria-modal="true" aria-label="${title}">${heading(title, kick)}<div class="modal-body">${body}</div><div class="modal-footer"><i></i> 戰鬥與襲擊已暫停 · 經營計時持續</div></section></div>`;
+      `<div class="modal-backdrop"><section class="modal ${panel === "roster" ? "wide" : ""}" role="dialog" aria-modal="true" aria-label="${esc(title)}">${heading(title, kick)}<div class="modal-body">${body}</div><div class="modal-footer"><i></i> 戰鬥與襲擊已暫停 · 經營計時持續</div></section></div>`;
     if (panel === "summon") recipeInfo();
     refreshTimers();
     $("#overlay")
@@ -254,6 +249,43 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       .join("、")} · 配方不保證取得</small>`;
   }
   async function act(action: string, id: string) {
+    if (action === "sound") {
+      audio.toggle();
+      drawPanel();
+      return;
+    }
+    if (action === "effects") {
+      g.lowEffects = !g.lowEffects;
+      localStorage.setItem("stella:effects", g.lowEffects ? "low" : "full");
+      drawPanel();
+      return;
+    }
+    if (action === "follow") {
+      space.recenter();
+      return;
+    }
+    if (action === "retreat") {
+      if (confirm("撤離目前遭遇？戰鬥中的生命狀態會保留，未完成的獎勵不領取。"))
+        g.retreat();
+      return;
+    }
+    if (action === "training-start") {
+      await g.startTraining();
+      panel = "";
+      drawPanel();
+      renderPlanet();
+      return;
+    }
+    if (action === "result-activate") {
+      await g.command({ type: "activate", planet: id });
+      selected = id;
+      g.report = null;
+      panel = "colony";
+      drawPanel();
+      renderPlanet();
+      return;
+    }
+
     if (action === "panel") {
       panel = id;
       drawPanel();
@@ -261,6 +293,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     }
     if (action === "close") {
       panel = "";
+      g.report = null;
       drawPanel();
       return;
     }
@@ -276,7 +309,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       return;
     }
     if (action === "cast") {
-      if (!g.pause.size) g.combat?.cast(id);
+      if (!g.pause.size && g.combat?.cast(id)) audio.cue("skill");
       return;
     }
     if (action === "character" && g.combat) {
@@ -345,13 +378,16 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
   }
   const click = (e: Event) => {
     const b = (e.target as HTMLElement).closest<HTMLElement>("[data-action]");
-    if (b && !b.hasAttribute("disabled"))
+    if (b && !b.hasAttribute("disabled")) {
+      void audio.unlock().then(() => audio.cue("ui"));
       void act(b.dataset.action!, b.dataset.id ?? "").catch(
         (e) => (g.error = String(e)),
       );
+    }
   };
   const change = async (e: Event) => {
     const t = e.target as HTMLInputElement;
+    if (t.id === "audio-volume") audio.setVolume(Number(t.value));
     if (t.id === "preset") {
       const c = p.characters.find((c) => c.id === t.value)!;
       recipe = c.recipe.slice();
@@ -391,6 +427,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     if (e.key === "Escape") {
       if (panel) {
         panel = "";
+        g.report = null;
         drawPanel();
       } else void act("pause", "");
     }
@@ -400,6 +437,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     }
   };
   const visibility = () => {
+    audio.background(document.hidden);
     if (document.hidden) {
       g.pause.add("background");
       void g.checkpoint();
@@ -425,6 +463,30 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
   timer = window.setInterval(() => {
     if (disposed) return;
     ticks++;
+    for (const event of g.events.splice(0)) audio.cue(event);
+    if (g.report && panel !== "result") {
+      panel = "result";
+      drawPanel();
+    }
+    const battleTools = $("#battle-tools");
+    if (g.combat) {
+      const toolKey = String(g.autoSkills) + String(g.training);
+      if (battleTools.dataset.key !== toolKey) {
+        battleTools.dataset.key = toolKey;
+        battleTools.innerHTML = `${button("◎ 跟隨", "follow")}${button(g.autoSkills ? "自動技能：開" : "自動技能：關", "auto")}${button("撤離", "retreat")}<small id="training-clock"></small>`;
+      }
+      const clock = root.querySelector("#training-clock");
+      if (clock)
+        clock.textContent = g.training
+          ? `訓練 ${Math.ceil(p.rules.trainingSeconds - g.combat.time)}s`
+          : "";
+    } else {
+      if (battleTools.dataset.key !== "idle") {
+        battleTools.innerHTML = button("◎ 重置視角", "follow");
+        battleTools.dataset.key = "idle";
+      }
+    }
+
     const rates = production(p, g.save);
     $("#wallet").innerHTML = p.resources
       .map(
@@ -476,6 +538,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     disposed = true;
     clearInterval(timer);
     space.destroy();
+    audio.destroy();
     root.removeEventListener("click", click);
     root.removeEventListener("change", change);
     document.removeEventListener("keydown", keys);

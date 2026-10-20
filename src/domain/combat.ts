@@ -24,6 +24,8 @@ export type Unit = {
   color: string;
   sprite: string;
   turretUntil: number;
+  windup: number;
+  aim: number;
 };
 export type Bullet = {
   id: number;
@@ -56,10 +58,12 @@ export class Combat {
   autoSkills = false;
   ended = false;
   victory = false;
+  hitsReceived = 0;
   constructor(
     readonly pack: Pack,
     readonly save: Save,
     readonly planetId: string,
+    readonly training = false,
   ) {
     const planet = pack.planets.find((v) => v.id === planetId)!;
     this.rng = save.encounter?.seed ?? 1;
@@ -138,6 +142,8 @@ export class Combat {
       color: c.color,
       sprite: c.sprite,
       turretUntil: 0,
+      windup: 0,
+      aim: 0,
     };
   }
   get allies() {
@@ -213,6 +219,7 @@ export class Combat {
         ...u,
         id: `turret-${this.sequence++}`,
         name: "共鳴砲台",
+        sprite: "",
         x: u.x + 45,
         y: u.y - 45,
         hp: 100,
@@ -270,13 +277,24 @@ export class Combat {
         u.x = Math.max(15, Math.min(r.width - 15, u.x));
         u.y = Math.max(15, Math.min(r.height - 15, u.y));
       }
+      if (this.training && u.side === "ally") continue;
+      if (u.side === "enemy" && t && u.cooldown <= 0) {
+        if (!u.windup) {
+          u.windup = 0.55;
+          u.aim = Math.atan2(t.y - u.y, t.x - u.x);
+        }
+        u.windup -= dt;
+        if (u.windup > 0) continue;
+        u.windup = 0;
+      }
       if (t && Math.hypot(t.x - u.x, t.y - u.y) <= u.range && u.cooldown <= 0) {
         u.cooldown = u.interval;
         const e = this.pack.enemies.find((e) => e.id === u.def);
         let pattern = e?.pattern ?? "aim";
         if (e?.boss && u.hp / u.maxHp < e.phaseAt) pattern = "ring";
         const count = pattern === "ring" ? 14 : pattern === "fan" ? 3 : 1;
-        const angle = Math.atan2(t.y - u.y, t.x - u.x),
+        const angle =
+            u.side === "enemy" ? u.aim : Math.atan2(t.y - u.y, t.x - u.x),
           speed = e?.projectileSpeed ?? 520;
         for (let i = 0; i < count; i++) {
           const a =
@@ -326,6 +344,7 @@ export class Combat {
           const absorb = Math.min(u.shield, hit);
           u.shield -= absorb;
           hit -= absorb;
+          if (u.side === "ally" && hit > 0) this.hitsReceived++;
           u.hp = Math.max(0, u.hp - hit);
           b.life = 0;
           this.flashes.push({

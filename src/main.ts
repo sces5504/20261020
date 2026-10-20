@@ -2,8 +2,9 @@ import "./style.css";
 import { published } from "./content";
 import { validatePack, type Pack } from "./content/schema";
 import { Game } from "./application/game";
-import { read, download } from "./platform/storage";
-import { mountGame, esc } from "./presentation/ui";
+import { compatibilityPlan } from "./domain/migration";
+import { read, download, commit } from "./platform/storage";
+import { esc } from "./presentation/common";
 import { mountArtGallery } from "./presentation/art-gallery";
 import { mountStudio } from "./presentation/studio";
 const root = document.querySelector<HTMLElement>("#app")!;
@@ -31,6 +32,7 @@ async function route() {
       if (!checked.pack)
         throw Error("測試內容無效，請回工坊校驗：" + checked.errors.join("\n"));
       const game = await Game.load(checked.pack, test);
+      const { mountGame } = await import("./presentation/ui");
       dispose = mountGame(root, game, test);
     }
   } catch (e) {
@@ -43,6 +45,43 @@ async function route() {
         );
         download("stella-recovery.json", JSON.stringify(s));
       });
+    try {
+      const key = location.hash.startsWith("#/test")
+        ? "save:test"
+        : "save:main";
+      const original = await read(key);
+      if (original) {
+        const p = location.hash.startsWith("#/test")
+          ? await read<Pack>("content:test")
+          : published;
+        if (p) {
+          const plan = compatibilityPlan(original, p);
+          if (plan.changes.length) {
+            const section = document.createElement("section");
+            section.innerHTML = `<h2>相容性修復預覽</h2><ul>${plan.changes.map((c) => `<li>${esc(c)}</li>`).join("")}</ul><p>原存檔將先備份；隔離資料不會被刪除。</p><button id="accept-migration">備份並套用修復</button>`;
+            root.querySelector("main")?.append(section);
+            section.querySelector("button")!.onclick = async () => {
+              if (
+                !confirm(
+                  "依預覽修復？原存檔會保存在備份，缺失內容會保留於隔離區。",
+                )
+              )
+                return;
+              try {
+                plan.save.revision++;
+                plan.save.migrationHistory.push(`compat:${p.version}`);
+                await commit(key, plan.save, plan.save.revision - 1);
+                location.reload();
+              } catch (e) {
+                section.append(String(e));
+              }
+            };
+          }
+        }
+      }
+    } catch {
+      /* Unknown schemas remain exportable and are never guessed. */
+    }
     root
       .querySelector("#reload")
       ?.addEventListener("click", () => location.reload());

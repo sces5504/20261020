@@ -53,7 +53,15 @@
       [
         "npm",
         "run",
-        "release:ready"
+        "test:playtest"
+      ],
+      [
+        "npm",
+        "run",
+        "release:ready",
+        "--",
+        "--target",
+        "playtest"
       ]
     ]
   },

@@ -1,17 +1,28 @@
 {
   "milestone": "M1",
-  "status": "in-progress",
+  "status": "m1-playtest-complete",
   "checks": {
     "characterMappingConfirmed": true,
     "originalArtIntegratedInGame": true,
-    "requiredEnemyAndWorldAssetsReady": false,
-    "audioReady": false,
+    "requiredEnemyAndWorldAssetsReady": true,
+    "audioReady": true,
     "qualitySamplesAccepted": false,
-    "saveMigrationRehearsal": false,
+    "saveMigrationRehearsal": true,
     "independentExpansionRehearsal": false,
     "androidChromeVerified": false,
     "iosSafariVerified": false,
     "performanceBaselineVerified": false
   },
-  "notes": "已依使用者明確對應接入：05地球、04水星、01金星、03火星、02天王星、06月球；PNG保持原樣。SD重繪停止且不採用。其餘素材／聲音／品質／真機仍待完成。"
+  "notes": "使用者明確要求完成 M1 並發布 GitHub Pages 試玩。功能切片與可編輯工坊可發布測試；不代表商業品質／真人美術音效／Android、iOS 真機已驗收。敵艦與星球採原創程序材質，音效為 AI 撰寫的 WebAudio 程序合成，非音訊模型生成。六張原 PNG 保持原樣，依 05地球、04水星、01金星、03火星、02天王星、06月球對應。性能樣本與剩餘限制見 docs/design/m1-acceptance.md。",
+  "playtestStatus": "ready",
+  "playtestChecks": {
+    "campaignLoop": true,
+    "trainingAndRetreat": true,
+    "editableContentAndAcquisition": true,
+    "mediaReplacementAndIntegrity": true,
+    "isolatedDraftAndTestSave": true,
+    "saveMigrationAndBackup": true,
+    "onlineDefenseAndOfflineProtection": true,
+    "originalArtPreserved": true
+  }
 }

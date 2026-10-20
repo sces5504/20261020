@@ -68,7 +68,8 @@
       "recipe": [150, 100, 100, 50],
       "starter": true,
       "role": "守護 · 領域護盾",
-      "sourceRow": 2
+      "sourceRow": 2,
+      "summonable": true
     },
     {
       "id": "m1:mercury",
@@ -92,7 +93,8 @@
       "recipe": [50, 150, 100, 100],
       "starter": true,
       "role": "火力 · 擴散彈幕",
-      "sourceRow": 3
+      "sourceRow": 3,
+      "summonable": true
     },
     {
       "id": "m1:venus",
@@ -116,7 +118,8 @@
       "recipe": [100, 50, 150, 100],
       "starter": true,
       "role": "支援 · 定點砲台",
-      "sourceRow": 4
+      "sourceRow": 4,
+      "summonable": true
     },
     {
       "id": "m1:mars",
@@ -140,7 +143,8 @@
       "recipe": [100, 100, 50, 150],
       "starter": false,
       "role": "防衛 · 裝甲增幅",
-      "sourceRow": 5
+      "sourceRow": 5,
+      "summonable": true
     },
     {
       "id": "m1:uranus",
@@ -164,7 +168,8 @@
       "recipe": [100, 150, 50, 100],
       "starter": false,
       "role": "速射 · 臨界加速",
-      "sourceRow": 8
+      "sourceRow": 8,
+      "summonable": true
     },
     {
       "id": "m1:moon",
@@ -188,7 +193,8 @@
       "recipe": [50, 100, 100, 150],
       "starter": false,
       "role": "干擾 · 攻擊封鎖",
-      "sourceRow": 12
+      "sourceRow": 12,
+      "summonable": true
     }
   ],
   "skills": [
@@ -691,6 +697,122 @@
       "m1:gas": 12,
       "m1:metal": 12,
       "m1:ether": 12
+    },
+    "trainingSeconds": 30,
+    "raidWarningSeconds": 45
+  },
+  "audio": [
+    {
+      "description": "AI編寫的程序合成音效；音色與混音參數可在工坊調整。",
+      "status": "active",
+      "provenance": "m1-design",
+      "id": "m1:audio.ui",
+      "name": "導航確認",
+      "category": "ui",
+      "waveform": "sine",
+      "startHz": 880,
+      "endHz": 1300,
+      "seconds": 0.09,
+      "gain": 0.08,
+      "noise": 0
+    },
+    {
+      "description": "AI編寫的程序合成音效；音色與混音參數可在工坊調整。",
+      "status": "active",
+      "provenance": "m1-design",
+      "id": "m1:audio.shot",
+      "name": "共鳴脈衝",
+      "category": "shot",
+      "waveform": "triangle",
+      "startHz": 620,
+      "endHz": 180,
+      "seconds": 0.12,
+      "gain": 0.035,
+      "noise": 0.04
+    },
+    {
+      "description": "AI編寫的程序合成音效；音色與混音參數可在工坊調整。",
+      "status": "active",
+      "provenance": "m1-design",
+      "id": "m1:audio.hit",
+      "name": "裝甲命中",
+      "category": "hit",
+      "waveform": "triangle",
+      "startHz": 160,
+      "endHz": 55,
+      "seconds": 0.1,
+      "gain": 0.07,
+      "noise": 0.5
+    },
+    {
+      "description": "AI編寫的程序合成音效；音色與混音參數可在工坊調整。",
+      "status": "active",
+      "provenance": "m1-design",
+      "id": "m1:audio.skill",
+      "name": "技能共振",
+      "category": "skill",
+      "waveform": "sine",
+      "startHz": 280,
+      "endHz": 1400,
+      "seconds": 0.45,
+      "gain": 0.13,
+      "noise": 0.02
+    },
+    {
+      "description": "AI編寫的程序合成音效；音色與混音參數可在工坊調整。",
+      "status": "active",
+      "provenance": "m1-design",
+      "id": "m1:audio.victory",
+      "name": "星球解放",
+      "category": "victory",
+      "waveform": "sine",
+      "startHz": 520,
+      "endHz": 1040,
+      "seconds": 0.7,
+      "gain": 0.16,
+      "noise": 0
+    },
+    {
+      "description": "AI編寫的程序合成音效；音色與混音參數可在工坊調整。",
+      "status": "active",
+      "provenance": "m1-design",
+      "id": "m1:audio.defeat",
+      "name": "撤離訊號",
+      "category": "defeat",
+      "waveform": "triangle",
+      "startHz": 350,
+      "endHz": 120,
+      "seconds": 0.65,
+      "gain": 0.12,
+      "noise": 0.1
+    },
+    {
+      "description": "AI編寫的程序合成音效；音色與混音參數可在工坊調整。",
+      "status": "active",
+      "provenance": "m1-design",
+      "id": "m1:audio.arrival",
+      "name": "星體抵達",
+      "category": "arrival",
+      "waveform": "sine",
+      "startHz": 740,
+      "endHz": 1760,
+      "seconds": 0.6,
+      "gain": 0.14,
+      "noise": 0
+    },
+    {
+      "description": "AI編寫的程序合成音效；音色與混音參數可在工坊調整。",
+      "status": "active",
+      "provenance": "m1-design",
+      "id": "m1:audio.alert",
+      "name": "防衛預警",
+      "category": "alert",
+      "waveform": "triangle",
+      "startHz": 520,
+      "endHz": 700,
+      "seconds": 0.35,
+      "gain": 0.14,
+      "noise": 0
     }
-  }
+  ]
 }

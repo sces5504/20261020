@@ -100,7 +100,7 @@ try {
     ).length,
     1,
   );
-  await page.locator('[data-action="close"]').click();
+  await page.locator('[data-action="close"]').first().click();
   await page.reload();
   await page.waitForSelector(".in-battle");
   assert.ok(
@@ -128,6 +128,20 @@ try {
   await page.reload();
   await page.waitForSelector("#entity-form");
   assert.equal(await page.locator('[data-field="attack"]').inputValue(), "200");
+  const skillBefore = await page.locator('[data-field="skill"]').inputValue();
+  await page.locator('[data-field="skill"]').selectOption("m1:dispersion");
+  await page.locator('[data-get-planet="m1:vein"]').check();
+  await page.locator('[data-action="save-entity"]').click();
+  await page.waitForTimeout(200);
+  project = await getRecord(page, "editor:project");
+  assert.equal(project.pack.characters[0].skill, "m1:dispersion");
+  assert.ok(
+    project.pack.planets
+      .find((v) => v.id === "m1:vein")
+      .dropCharacters.includes("m1:earth"),
+  );
+  await page.locator('[data-field="skill"]').selectOption(skillBefore);
+  await page.locator('[data-action="save-entity"]').click();
   await page.screenshot({ path: ".artifacts/m1/studio.png" });
   const downloadPromise = page.waitForEvent("download");
   await page.locator('[data-action="export-pack"]').click();
@@ -162,7 +176,7 @@ try {
     original,
     "test progress does not alter official roster",
   );
-  await page.locator('[data-action="close"]').click();
+  await page.locator('[data-action="close"]').first().click();
   await page.locator('[data-action="battle"]').click();
   await page.waitForSelector(".in-battle");
   await page.waitForTimeout(500);
@@ -175,6 +189,7 @@ try {
   });
   const mobile = await mobileContext.newPage();
   mobile.on("pageerror", (e) => failures.push(e.message));
+  mobile.on("dialog", (d) => d.accept());
   await mobile.goto(url);
   await mobile.waitForSelector("canvas");
   await mobile.waitForTimeout(500);
@@ -192,6 +207,41 @@ try {
   );
   await mobile.waitForTimeout(400);
   await mobile.screenshot({ path: ".artifacts/m1/mobile.png" });
+  await mobile.locator('[data-id="archive"][data-action="panel"]').click();
+  await mobile.locator('[data-action="sound"]').click();
+  assert.equal(
+    await mobile.evaluate(() => localStorage.getItem("stella:muted")),
+    "true",
+  );
+  await mobile.locator('[data-action="sound"]').click();
+  await mobile.locator('[data-action="effects"]').click();
+  assert.equal(
+    await mobile.evaluate(() => localStorage.getItem("stella:effects")),
+    "low",
+  );
+  await mobile.locator('[data-action="close"]').first().click();
+  const hpBefore = (await getRecord(mobile, "save:main")).roster.map(
+    (o) => o.hp,
+  );
+  await mobile.locator('[data-id="training"][data-action="panel"]').click();
+  await mobile.locator('[data-action="training-start"]').click();
+  await mobile.waitForSelector("#training-clock");
+  await mobile.locator('[data-action="retreat"]').click();
+  await mobile.waitForSelector('[role="dialog"]');
+  assert.deepEqual(
+    (await getRecord(mobile, "save:main")).roster.map((o) => o.hp),
+    hpBefore,
+    "training never changes real HP",
+  );
+  await mobile.locator('[data-action="close"]').first().click();
+  await mobile.setViewportSize({ width: 844, height: 390 });
+  await mobile.waitForTimeout(100);
+  assert.ok(
+    await mobile.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  );
+  await mobile.setViewportSize({ width: 390, height: 844 });
   await mobile.goto(url + "#/studio");
   await mobile.waitForSelector("#entity-form");
   assert.ok(

@@ -1,3 +1,12 @@
+import {
+  complexField,
+  collectComplex,
+  acquisitionFields,
+  spawnRow,
+  dialogueRow,
+} from "./editor-fields";
+import { AudioMixer } from "../platform/audio";
+import { verifyMedia } from "../platform/media";
 import { stats } from "../domain/model";
 import { published } from "../content";
 import {
@@ -18,7 +27,7 @@ import {
   type Project,
 } from "../platform/storage";
 import { exportPack, importPack } from "../platform/packages";
-import { esc, button } from "./ui";
+import { esc, button } from "./common";
 export async function mountStudio(root: HTMLElement) {
   let project = (await read<Project>("editor:project")) ?? {
     schemaVersion: 1 as const,
@@ -27,13 +36,32 @@ export async function mountStudio(root: HTMLElement) {
     past: [],
     future: [],
   };
+  project = parseProject(project);
+  const previewMixers: AudioMixer[] = [];
+  let storageError = false;
   let kind: Kind = "characters",
     selected = project.pack.characters[0].id,
     search = "",
     message = "",
     disposed = false;
   let queue = Promise.resolve();
-  root.innerHTML = `<main class="studio"><header class="studio-header"><a class="brand" href="#/play"><span class="brand-icon">✧</span><span>STELLA STUDIO<small>星 海 內 容 工 坊</small></span></a><div class="inline-actions"><a href="#/art">六位標準原圖 ↗</a><a href="#/play">返回遊戲 ↗</a></div></header><div class="studio-title"><div><span class="eyebrow">CONTENT WORKSPACE / LOCAL DRAFT</span><h1>每一道星光，由你定義。</h1><p>瀏覽、調整、試玩，再將你的星海匯出。</p></div><div class="studio-actions">${button("復原", "undo")}${button("重做", "redo")}${button("套用至測試遊戲 ↗", "test", "", "primary")}</div></div><div class="studio-toolbar"><span id="project-status"></span><div>${button("校驗內容", "validate")}${button("專案備份", "backup-project")}<label class="file-button">匯入專案／內容包<input id="import-project" type="file" accept=".json,.zip"></label>${button("匯出內容 ZIP", "export-pack")}</div></div><div class="studio-grid"><aside class="catalog-nav" id="catalog-nav"></aside><section class="catalog"><label class="search">搜尋內容<input id="catalog-search" type="search" placeholder="名稱或穩定 ID"></label><div id="catalog-list"></div></section><section class="inspector" id="inspector"></section></div><div class="studio-report" id="report" role="status"></div></main>`;
+  let operationPending = false;
+  function busy(on: boolean) {
+    operationPending = on;
+    if (disposed) return;
+    root.setAttribute("aria-busy", String(on));
+    root.querySelectorAll<HTMLButtonElement>("button").forEach((b) => {
+      if (on) {
+        b.dataset.previousDisabled = String(b.disabled);
+        b.disabled = true;
+      } else if (b.dataset.previousDisabled !== undefined) {
+        b.disabled = b.dataset.previousDisabled === "true";
+        delete b.dataset.previousDisabled;
+      }
+    });
+  }
+
+  root.innerHTML = `<main class="studio"><header class="studio-header"><a class="brand" href="#/play"><span class="brand-icon">✧</span><span>STELLA STUDIO<small>星 海 內 容 工 坊</small></span></a><div class="inline-actions"><a href="#/art">六位標準原圖 ↗</a><a href="#/play">返回遊戲 ↗</a></div></header><div class="studio-title"><div><span class="eyebrow">CONTENT WORKSPACE / LOCAL DRAFT</span><h1>每一道星光，由你定義。</h1><p>瀏覽、調整、試玩，再將你的星海匯出。</p></div><div class="studio-actions">${button("復原", "undo")}${button("重做", "redo")}${button("套用至測試遊戲 ↗", "test", "", "primary")}</div></div><div class="studio-toolbar"><span id="project-status"></span><div>${button("新增項目", "new")}${button("校驗內容", "validate")}${button("專案備份", "backup-project")}<label class="file-button">匯入專案／內容包<input id="import-project" type="file" accept=".json,.zip"></label>${button("匯出內容 ZIP", "export-pack")}</div></div><div class="studio-grid"><aside class="catalog-nav" id="catalog-nav"></aside><section class="catalog"><label class="search">搜尋內容<input id="catalog-search" type="search" placeholder="名稱或穩定 ID"></label><div id="catalog-list"></div></section><section class="inspector" id="inspector"></section></div><div class="studio-report" id="report" role="status"></div></main>`;
   const $ = (s: string) => root.querySelector<HTMLElement>(s)!;
   function status() {
     if (disposed) return;
@@ -47,10 +75,12 @@ export async function mountStudio(root: HTMLElement) {
     queue = queue
       .then(() => write("editor:project", value))
       .then(() => {
+        storageError = false;
         message = "草稿已保存，正式遊戲與玩家進度未變更。";
         status();
       })
       .catch((e) => {
+        storageError = true;
         message = `草稿保存失敗：${String(e)}。請匯出專案保留內容。`;
         status();
       });
@@ -59,6 +89,15 @@ export async function mountStudio(root: HTMLElement) {
   function checkpoint() {
     project.past.push(structuredClone(project.pack));
     if (project.past.length > 30) project.past.shift();
+    while (
+      project.past.length > 1 &&
+      project.past.reduce(
+        (n, p) => n + p.assets.reduce((a, b) => a + b.src.length, 0),
+        0,
+      ) >
+        30 * 1024 * 1024
+    )
+      project.past.shift();
     project.future = [];
   }
   function drawList() {
@@ -84,6 +123,13 @@ export async function mountStudio(root: HTMLElement) {
   }
   const labels: Record<string, string> = {
     id: "穩定 ID",
+    summonable: "可透過共鳴取得",
+    category: "音效類別",
+    waveform: "波形",
+    startHz: "起始頻率 Hz",
+    endHz: "結束頻率 Hz",
+    gain: "音量（0～0.4）",
+    noise: "噪音混合（0～1）",
     name: "名稱",
     description: "描述",
     status: "生命週期",
@@ -149,10 +195,16 @@ export async function mountStudio(root: HTMLElement) {
     character: "characters",
   };
   function field(k: string, v: unknown) {
+    const complex = complexField(project.pack, kind, k, v, labels[k] ?? k);
+    if (complex) return complex;
     const attr = `data-field="${k}"`,
-      disabled = ["id", "sourceRow", "hash", "width", "height", "src"].includes(
-        k,
-      )
+      disabled = [
+        "id",
+        "sourceRow",
+        "hash",
+        "src",
+        ...(kind === "assets" ? ["width", "height"] : []),
+      ].includes(k)
         ? "disabled"
         : "";
     let control = "";
@@ -216,13 +268,13 @@ export async function mountStudio(root: HTMLElement) {
           ? p.assets.find((a) => a.id === e.id)
           : undefined;
     $("#inspector").innerHTML =
-      `<div class="inspector-heading"><div><span class="eyebrow">${kindNames[kind]} / INSPECTOR</span><h2>${esc(e.name)}</h2><small>${esc(e.id)}</small></div><div>${button("複製為新項目", "clone", e.id)}${button("移除", "delete", e.id, "danger-button")}</div></div>${asset ? `<div class="asset-preview"><img src="${esc(asset.src)}" alt="${esc(asset.name)}"></div>` : ""}${c ? `<div class="level-preview"><label>能力預覽等級<input id="preview-level" type="number" min="1" max="${p.rules.maxLevel}" value="1"></label><span id="effective-stats">生命 ${c.hp} · 攻擊 ${c.attack} · 防禦 ${c.defense}</span></div>` : ""}<form id="entity-form" class="entity-form">${Object.entries(
+      `<div class="inspector-heading"><div><span class="eyebrow">${kindNames[kind]} / INSPECTOR</span><h2>${esc(e.name)}</h2><small>${esc(e.id)}</small></div><div>${button("複製為新項目", "clone", e.id)}${button("移除", "delete", e.id, "danger-button")}</div></div>${asset ? `<div class="asset-preview"><img src="${esc(asset.src)}" alt="${esc(asset.name)}"></div>` : ""}${c ? `<div class="level-preview"><label>能力預覽等級<input id="preview-level" type="number" min="1" max="${p.rules.maxLevel}" value="1"></label><span id="effective-stats">生命 ${c.hp} · 攻擊 ${c.attack} · 防禦 ${c.defense}</span></div>` : ""}${kind === "audio" ? button("▶ 試聽此音效", "preview-audio") : ""}<form id="entity-form" class="entity-form">${Object.entries(
         e,
       )
         .map(([k, v]) => field(k, v))
         .join(
           "",
-        )}<div class="form-actions full">${button("保存此項調整", "save-entity", "", "primary")}<span>保存草稿後，套用測試才影響試玩。</span></div></form><details><summary>引用影響 · ${refs.length} 項</summary><ul>${refs.map((v) => `<li>${esc(v)}</li>`).join("") || "<li>無其他定義引用</li>"}</ul><p>持有角色、所在星域或進行中工作缺失時，舊存檔會拒絕載入並保留原檔；退休比移除更適合既有內容。</p></details><div class="asset-import"><h3>匯入外觀素材</h3><p>PNG／JPEG／WebP，單張最多 8 MiB；媒體會隨 ZIP 匯出。立繪、頭像及 SD 分別引用，不改變碰撞與戰力。</p><label class="file-button">新增圖片到素材庫<input id="upload-asset" type="file" accept="image/png,image/jpeg,image/webp"></label></div><details><summary>進階：此項 JSON</summary><textarea id="raw-entity" rows="15">${esc(JSON.stringify(e, null, 2))}</textarea>${button("套用 JSON", "apply-json")}</details>`;
+        )}${c ? acquisitionFields(p, c.id) : ""}<div class="form-actions full">${button("保存此項調整", "save-entity", "", "primary")}<span>保存草稿後，套用測試才影響試玩。</span></div></form><details><summary>引用影響 · ${refs.length} 項</summary><ul>${refs.map((v) => `<li>${esc(v)}</li>`).join("") || "<li>無其他定義引用</li>"}</ul><p>持有角色、所在星域或進行中工作缺失時，舊存檔會拒絕載入並保留原檔；退休比移除更適合既有內容。</p></details><div class="asset-import"><h3>匯入外觀素材</h3><p>PNG／JPEG／WebP，單張最多 8 MiB；媒體會隨 ZIP 匯出。立繪、頭像及 SD 分別引用，不改變碰撞與戰力。</p><label class="file-button">新增圖片到素材庫<input id="upload-asset" type="file" accept="image/png,image/jpeg,image/webp"></label></div><details><summary>進階：此項 JSON</summary><textarea id="raw-entity" rows="15">${esc(JSON.stringify(e, null, 2))}</textarea>${button("套用 JSON", "apply-json")}</details>`;
   }
   function draw() {
     drawList();
@@ -245,6 +297,28 @@ export async function mountStudio(root: HTMLElement) {
     checkpoint();
     const list = project.pack[kind] as Entity[];
     list[list.findIndex((v) => v.id === selected)] = parsed.data;
+    if (kind === "characters") {
+      root
+        .querySelectorAll<HTMLInputElement>("[data-get-planet]")
+        .forEach((el) => {
+          const planet = project.pack.planets.find(
+            (v) => v.id === el.dataset.getPlanet,
+          )!;
+          planet.dropCharacters = planet.dropCharacters.filter(
+            (id) => id !== selected,
+          );
+          if (el.checked) planet.dropCharacters.push(selected);
+        });
+      root
+        .querySelectorAll<HTMLInputElement>("[data-get-quest]")
+        .forEach((el) => {
+          const q = project.pack.quests.find(
+            (v) => v.id === el.dataset.getQuest,
+          )!;
+          if (el.checked) q.character = selected;
+          else if (q.character === selected) q.character = "";
+        });
+    }
     await save();
     draw();
   }
@@ -257,6 +331,48 @@ export async function mountStudio(root: HTMLElement) {
     return r.pack;
   }
   async function act(action: string, id: string) {
+    if (action === "add-spawn") {
+      root
+        .querySelector(".spawn-rows")
+        ?.insertAdjacentHTML(
+          "beforeend",
+          spawnRow(project.pack, project.pack.enemies[0]?.id ?? "", 1),
+        );
+      return;
+    }
+    if (action === "add-dialogue") {
+      root
+        .querySelector(".dialogue-rows")
+        ?.insertAdjacentHTML("beforeend", dialogueRow("", ""));
+      return;
+    }
+    if (action === "preview-audio") {
+      const cue = project.pack.audio.find((c) => c.id === selected);
+      if (cue) {
+        const m = new AudioMixer({ ...project.pack, audio: [cue] });
+        m.enabled = true;
+        previewMixers.push(m);
+        await m.unlock();
+        m.cue(cue.category);
+        setTimeout(() => m.destroy(), 3500);
+      }
+      return;
+    }
+    if (action === "new") {
+      const template = project.pack[kind][0] ?? published[kind][0];
+      if (!template) throw Error("請先匯入此分類的資料範本。");
+      checkpoint();
+      const copy = structuredClone(template);
+      copy.id = `${project.pack.id.split(":")[0]}:new-${crypto.randomUUID().slice(0, 8)}`;
+      copy.name = "新增" + kindNames[kind];
+      if ("starter" in copy) copy.starter = false;
+      (project.pack[kind] as Entity[]).push(copy);
+      selected = copy.id;
+      await save();
+      draw();
+      return;
+    }
+
     if (action === "kind") {
       kind = id as Kind;
       selected = project.pack[kind][0]?.id ?? "";
@@ -291,6 +407,7 @@ export async function mountStudio(root: HTMLElement) {
                   ? JSON.parse(t.value)
                   : t.value;
         });
+      collectComplex(root, raw);
       await updateEntity(raw);
       return;
     }
@@ -363,6 +480,7 @@ export async function mountStudio(root: HTMLElement) {
     if (action === "export-pack") {
       const valid = validate();
       if (!valid) return;
+      await verifyMedia(valid);
       const zip = await exportPack(valid);
       download(
         "stella-content.zip",
@@ -376,7 +494,9 @@ export async function mountStudio(root: HTMLElement) {
     if (action === "test") {
       const valid = validate();
       if (!valid) return;
+      await verifyMedia(valid);
       await queue;
+      if (storageError) throw Error("草稿尚未保存，請先匯出專案備份或重試。");
       await write("content:test", valid);
       await write("save:test", undefined);
       location.hash = "#/test";
@@ -423,15 +543,24 @@ export async function mountStudio(root: HTMLElement) {
   }
   const click = (e: Event) => {
     const b = (e.target as HTMLElement).closest<HTMLElement>("[data-action]");
-    if (!b) return;
+    if (!b || operationPending) return;
     e.preventDefault();
-    void act(b.dataset.action!, b.dataset.id ?? "").catch((e) => {
-      message = e instanceof Error ? e.message : String(e);
-      status();
-    });
+    if (b.dataset.action === "remove-row") {
+      b.closest(".spawn-row,.dialogue-row")?.remove();
+      return;
+    }
+    busy(true);
+    void act(b.dataset.action!, b.dataset.id ?? "")
+      .catch((e) => {
+        message = e instanceof Error ? e.message : String(e);
+        status();
+      })
+      .finally(() => busy(false));
   };
   const change = async (e: Event) => {
     const t = e.target as HTMLInputElement;
+    if (operationPending) return;
+    busy(true);
     try {
       if (t.id === "upload-asset" && t.files?.[0]) await upload(t.files[0]);
       if (t.id === "import-project" && t.files?.[0]) {
@@ -443,6 +572,7 @@ export async function mountStudio(root: HTMLElement) {
               pack: importPack(new Uint8Array(await f.arrayBuffer())),
             }
           : parseProject(JSON.parse(await f.text()));
+        await verifyMedia(next.pack);
         if (
           !confirm(
             "將保留目前草稿於復原歷史，再匯入所選專案／內容包。確定繼續？",
@@ -458,6 +588,8 @@ export async function mountStudio(root: HTMLElement) {
     } catch (e) {
       message = e instanceof Error ? e.message : String(e);
       status();
+    } finally {
+      busy(false);
     }
   };
   const input = (e: Event) => {
@@ -490,6 +622,7 @@ export async function mountStudio(root: HTMLElement) {
   draw();
   return () => {
     disposed = true;
+    previewMixers.forEach((m) => m.destroy());
     root.removeEventListener("click", click);
     root.removeEventListener("change", change);
     root.removeEventListener("input", input);

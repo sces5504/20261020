@@ -1,0 +1,36 @@
+name: Checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+concurrency:
+  group: checks-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .node-version
+          cache: npm
+          cache-dependency-path: tools/package-lock.json
+      - name: Install and verify locked tools
+        run: DEV_TEMPLATE_INSTALL_SYSTEM_DEPS=1 bash scripts/setup.sh
+      - name: Check initialized project
+        shell: bash
+        run: |
+          source scripts/env.sh
+          if [[ "$(python3 scripts/project.py status)" == "initialized" ]]; then
+            python3 scripts/project.py install
+            python3 scripts/project.py check daily
+          else
+            echo '::notice::Template tools checked; game uninitialized, no game validation claimed.'
+          fi
+

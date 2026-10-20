@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "initialized": false,
+  "name": "",
+  "site_dir": "dist",
+  "install": [],
+  "start": [],
+  "ready_url": "",
+  "checks": {"daily": [], "release": []},
+  "build": []
+}

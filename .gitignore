@@ -1,0 +1,15 @@
+.cache/
+.artifacts/
+node_modules/
+dist/
+test-results/
+playwright-report/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+

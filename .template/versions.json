@@ -1,0 +1,10 @@
+{
+  "node": "24.21.0",
+  "python_minimum": "3.11",
+  "archives": {
+    "darwin-arm64": {"extension": "tar.gz", "sha256": "bed7eea5325e1108f32ce5228ddd6a5f0f08a499ee42aa7442aea583702f6057"},
+    "darwin-x64": {"extension": "tar.gz", "sha256": "1462cb3b3046b815cf8ea436d3da450ec1a9f11dac7e5a46b0ada5305d7e8097"},
+    "linux-arm64": {"extension": "tar.xz", "sha256": "6ad1325edbdb5649c379b75a237147a666c95d4f9ae8d340fef2d1575d289ad2"},
+    "linux-x64": {"extension": "tar.xz", "sha256": "fd8e59d5a511510f6a298afb548f18c7d2b1be404d8b4a27d94fbe49f56cb2d6"}
+  }
+}

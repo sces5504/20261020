@@ -1,0 +1,8 @@
+{
+  "pnpm_version": "12.11.2",
+  "files": {
+    "install.js": "f176986d8aad7d17c3328178928b9ba72d30b1a1c9edc94d2a279a51d8d6da6e",
+    "native-binary.mjs": "27c6039ef59196ad19cca8915c391b0ec34df2f9a91519717f87c28984787565"
+  },
+  "review": "Native binary linking inside pnpm package; no network fetch. Re-review and update hashes when upgrading pnpm."
+}

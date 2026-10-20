@@ -298,3 +298,13 @@ AssetDef：ID、相對路徑、類型、hash、尺寸、pivot／anchor、atlas f
 | 未知 fNN | 保存原名／值與 unknown；不能當成已知成本、權重或職業 |
 
 來源 archive 不直接成為發布內容。先明確選定切片角色、星域與必要資產／行為，再產正規化資料包；資料結構校驗、語意覆蓋、素材齊備與遊玩驗收分別記錄。
+
+## 14. 內容編輯器契約（0.6新增）
+
+使用者已要求可瀏覽／編輯的額外網頁。可編輯欄位由共用schema補充labelKey、unit、group、範圍、唯讀來源與關聯選擇器等宣告；表單與runtime不能各自定義同名欄位的不同意義。schema註解不是任意可執行腳本。
+
+EditorProject包含projectId、baseContentLock、revision、overrides、新definitions、asset blobs／manifest、操作歷史與校驗結果，獨立於PlayerSave。預覽產生不可變快照及測試存檔，匯出包含媒體實檔。實際包格式／schema版本在工具實作時定案。
+
+CharacterDef基礎rarity與角色實例level／tier分開；數值表單改基礎／曲線，最終值由共用計算預覽。Acquisition來源以typed relation表示召喚／掉落／任務／商店，不用無法影響遊戲的文字標籤替代。
+
+編輯器更改資料仍走ID、引用、空池、效果支援、素材、前置及遷移校驗。原始SourceTableRef、未知fNN與研究hash唯讀；作者修改是有來源的override，不重寫研究包。完整範圍與ED驗收見 [內容編輯器](content-editor.md)。

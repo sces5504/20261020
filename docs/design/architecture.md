@@ -1,6 +1,6 @@
 # 架構設計：讓內容、規則與呈現可以獨立修改
 
-狀態：0.1 提案。依 [產品規格](../spec.md)；技術選擇尚待確認。本文件是實作契約草案，不是已有程式的描述。
+狀態：0.3 提案。依 [產品規格](../spec.md)；技術選擇尚待確認。本文件是實作契約草案，不是已有程式的描述。
 
 ## 1. 需要防止的耦合
 
@@ -61,13 +61,18 @@ flowchart TB
 
 ## 5. 命令、查詢、事件與交易
 
-命令表達意圖，帶 `commandId`、預期存檔 `revision` 與參數。例如：`SetDestination`、`SetPriorityTarget`、`CastSkill`、`AssignFormation`、`ActivatePlanet`、`StartConstruction`、`StartResearch`、`StartSummon`、`ClaimJob`、`UpgradeCharacter`、`ClaimQuest`。
+命令表達意圖，分為兩種通道，不能把每次移動／戰鬥 tick 都寫入資料庫：
 
-每個命令：驗證語意 → 計算影響 → 檢查資源／容量／占用／前置 → 一次提交狀態、RNG、已處理 ID 與領域事件 → 回傳成功與新 revision，或具名失敗原因。不可先扣資源，再等待動畫完成才給角色。
+| 通道 | 例子 | 提交邊界 |
+| --- | --- | --- |
+| 即時模擬輸入 | SetDestination、SetPriorityTarget、CastSkill | 帶 encounter／world session ID、tick、sequence，在記憶體模擬中原子套用，於檢查點／結果持久化 |
+| 持久業務命令 | AssignFormation、ActivatePlanet、StartConstruction、StartResearch、StartSummon、ClaimJob、UpgradeCharacter、ClaimQuest | 帶 commandId 與預期 save revision，以儲存交易提交 |
+
+持久命令：驗證語意 → 計算影響 → 檢查資源／容量／占用／前置 → 一次提交狀態、RNG、已處理 ID 與領域事件 → 回傳成功與新 revision，或具名失敗原因。不可先扣資源，再等待動畫完成才給角色。即時輸入的冷卻、目標與技能費用先在模擬狀態一次變更；不在每次施放時直接改經營錢包。
 
 查詢只產生唯讀模型，如 `GetPlanetSummary`、`PreviewUpgrade`、`GetAvailableRecipes`。所有可操作項目顯示同一份權限／條件結果，不由 UI 另猜。
 
-領域事件描述已發生的事：`EnemyDefeated`、`PlanetActivated`、`JobCompleted`、`CharacterAcquired`、`QuestClaimed`。事件帶來源 ID、邏輯時間及唯一 ID，不夾 UI 元件。任務等衍生狀態在同一交易／同一穩定事件批次內更新；動畫與聲音是提交後觀察者，不能反向決定交易成敗。
+領域事件描述已發生的事：`EnemyDefeated`、`PlanetActivated`、`JobCompleted`、`CharacterAcquired`、`QuestClaimed`。事件帶來源 ID、邏輯時間及唯一 ID，不夾 UI 元件。戰鬥事件在 encounter scope 暫存以驅動即時展示，只有結果提交後才成為持久任務／收益的證據；不能因重播同一遭遇重算任務。任務等持久衍生狀態在同一交易／同一穩定事件批次內更新；動畫與聲音不能反向決定交易成敗。
 
 失敗碼至少包含 `insufficient_resource`、`capacity_exceeded`、`assignment_conflict`、`requirement_unmet`、`stale_revision`、`content_unavailable`、`storage_failed`。前端轉成具體可理解文字。
 
@@ -98,8 +103,13 @@ RNG 依用途分流：世界生成、召喚、戰鬥、掉落；持久抽選時�
 | 戰鬥 simulation time | 固定 tick、單調計時 | 第一版切背景即暫停，不在離線期間模擬戰鬥 |
 | 經營 effective time | 本地時間差＋持久錨點 | 以有界差值補算，無伺服器權威 |
 | 日曆 reset time | 規則指定時區及排程 | 本地判定；是否保留每日系統待決策 |
+| 防衛有效在線時間 | 可操作的前景工作階段累計 | 使用者已確認離線不受襲；不在離線期間推進或補發攻擊 |
 
-提案離線補算上限先設 24 小時，時鐘倒退取零且不倒退錨點；超額不生產，不積欠下次領。這些值皆放 ruleset、待使用者確認。防衛離線政策另設，不和生產補算默認綁定。
+提案離線經營補算上限先設 24 小時，時鐘倒退取零且不倒退錨點；超額不生產，不積欠下次領。這些值皆放 ruleset、待使用者確認。防衛已確定不補算離線，不能跟生產收益共用 wall-clock 到期排程。
+
+防衛排程保存剩餘有效時間或 active-time deadline，不以本地 epoch 到期就判失守。離線／隱藏時保存正在預告或交戰的狀態、停止防衛時鐘，回到前景先提示、再依恢復操作接續；不產生攻擊積欠佇列。使用者已確認管理面板暫停戰鬥與防衛、經營時間繼續。停產星球在離線仍停產，不能用「離線不受襲」自動清掉離線前已提交的失守。
+
+暫停由具名原因集合管理，例如 background、management_panel、user_pause；任何理由存在則不推進相應模擬，關閉一個面板不能清除背景暫停。巢狀確認視窗只增加／移除自己的 token。恢復後重設即時時鐘基準，不補跑暫停期間戰鬥 tick。
 
 結算區間 `[lastSettled, effectiveNow)`，按 job 完工、停產／恢復、容量變更等邊界切段。先依該段有效產能累計，再處理邊界事件；同時事件以穩定排序結算，直到終點。收益與新錨點一次提交，中斷後重算同區間不能重領。
 
@@ -107,7 +117,7 @@ RNG 依用途分流：世界生成、召喚、戰鬥、掉落；持久抽選時�
 
 ## 8. 存檔與恢復
 
-IndexedDB 為提案主儲存；UI 偏好與非關鍵 cache 可另存。持久快照概念包含：
+使用者已確認本機自動保存＋匯出／匯入；IndexedDB 為提案主儲存，JSON 為交換格式；第一版不要求雲同步。UI 偏好與非關鍵 cache 可另存。持久快照概念包含：
 
 ```text
 SaveEnvelope
@@ -131,6 +141,18 @@ SaveEnvelope
 ### 戰鬥中關閉的提案
 
 進場保存隊伍／生命、遭遇 ID／seed、已提交入場費與參戰鎖定。遭遇中的掉落與進度先在 encounter scope 暫存，與結果一次提交後才成為持久獎勵並消除 checkpoint；開放世界連續遭遇則每場各自提交。中斷重開返回此遭遇的起始狀態，入場費不退；召喚與先前已提交獎勵不跟著戰鬥回滾。若需中途精確續打，後續另加完整模擬快照，不用「保存角色 HP」假裝完整續存。
+
+### 面板經營與戰鬥結果併存
+
+管理面板暫停期間工作仍會完成，所以戰鬥結果不能把進場時整份存檔覆寫回去。結果以帶 encounter receipt 的差異交易，驗證目前 revision／參戰占用後，提交本場生命、傷勢、收益與進度，同時保留期間已完成的研究、建造、召喚與錢包變更。過期 revision 重新讀取並驗證，不盲目重送舊快照。
+
+提案參戰能力／技能在進場時固定；遭遇中不重配參戰成員，研究等全域能力變動下場生效。介面清楚提示生效邊界，不讓同一技能 UI 用新數值、戰鬥卻還算舊數值。
+
+### 自動保存與檔案轉移提案
+
+購買／建造／研究／召喚／成長／領獎等持久命令成功即落盤；航行位置以有界間隔與安全點保存，不每幀寫入。隱藏與離開事件只能當額外保存機會，不能依賴最後一次 unload 寫入保住所有收益。
+
+匯出檔含 schema、內容鎖、規則與時間錨點，可在另一裝置校驗、預覽差異、備份後匯入。第一版採「選定一份進度覆蓋」而非合併兩份分歧存檔；顯示存檔名稱、進度與保存時間供辨識，不能只比較裝置時鐘就宣稱較晚的一份必然更新。多備份與本機檔清除的產品提示仍由具體 UI 實作設計。
 
 ## 9. 新增、停用、刪除與魔改
 

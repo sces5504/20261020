@@ -1,0 +1,291 @@
+{
+  "binary": "raw/apk/lib/arm64-v8a/libStella.so",
+  "sha256": "6883fa9383432c981e86c13b8f01b8f227a51d6cf2298dd6c47d3d3774c53f9a",
+  "address_space": "original ELF ARM64 virtual addresses; PT_LOAD mapping required for .data",
+  "name_table_va": "0x8d9b48",
+  "jump_table_va": "0x760b28",
+  "disassembly": {
+    "lookup_label": {
+      "va": "0x207f74",
+      "size": 124,
+      "instructions": "00207f74: adrp     x8, #0x8fb000\n00207f78: ldr      x8, [x8, #0xd18]\n00207f7c: ldrsw    x8, [x8]\n00207f80: cmp      w8, #1\n00207f84: b.lt     #0x207fe4\n00207f88: adrp     x9, #0x8fc000\n00207f8c: ldr      x9, [x9, #0xd28]\n00207f90: adrp     x10, #0x8fc000\n00207f94: adrp     x11, #0x8fc000\n00207f98: mov      x0, xzr\n00207f9c: ldrb     w9, [x9]\n00207fa0: ldr      x10, [x10, #0xb40]\n00207fa4: sub      w9, w9, #0x2a\n00207fa8: ldr      x10, [x10]\n00207fac: ldr      x11, [x11, #0x340]\n00207fb0: and      x9, x9, #0xff\n00207fb4: add      x10, x10, #4\n00207fb8: ldr      w9, [x11, x9, lsl #2]\n00207fbc: ldr      w11, [x10]\n00207fc0: eor      w11, w9, w11\n00207fc4: cmp      w11, w1\n00207fc8: b.eq     #0x207fec\n00207fcc: add      x0, x0, #1\n00207fd0: cmp      x0, x8\n00207fd4: add      x10, x10, #0x158\n00207fd8: b.lt     #0x207fbc\n00207fdc: mov      w0, #-1\n00207fe0: ret      \n00207fe4: mov      w0, #-1\n00207fe8: ret      \n00207fec: ret      "
+    },
+    "opcode_load": {
+      "va": "0x20a224",
+      "size": 104,
+      "instructions": "0020a224: adrp     x29, #0x8fc000\n0020a228: ldr      x29, [x29, #0xb40]\n0020a22c: ldr      x26, [x29]\n0020a230: cbz      x26, #0x20a1bc\n0020a234: add      w9, w8, #0x25\n0020a238: and      x9, x9, #0xff\n0020a23c: ldr      w10, [x19, #0x5f8]\n0020a240: ldr      w9, [x22, x9, lsl #2]\n0020a244: eor      w21, w9, w10\n0020a248: tbnz     w21, #0x1f, #0x20a1bc\n0020a24c: adrp     x9, #0x8fb000\n0020a250: ldr      x9, [x9, #0xd18]\n0020a254: ldr      w9, [x9]\n0020a258: cmp      w9, w21\n0020a25c: b.le     #0x20a1bc\n0020a260: mov      w9, #0x158\n0020a264: smaddl   x20, w21, w9, x26\n0020a268: str      x20, [sp, #0x10]\n0020a26c: ldr      w11, [x20, #8]!\n0020a270: ldr      x9, [x24]\n0020a274: sub      w10, w8, #0x57\n0020a278: and      x10, x10, #0xff\n0020a27c: ldr      w10, [x22, x10, lsl #2]\n0020a280: mov      w12, #0x48b8\n0020a284: ldr      w12, [x9, x12]\n0020a288: eor      w28, w10, w11"
+    },
+    "dispatch": {
+      "va": "0x20adb0",
+      "size": 44,
+      "instructions": "0020adb0: cmp      w28, #0x7b\n0020adb4: b.hi     #0x20c834\n0020adb8: adrp     x9, #0x760000\n0020adbc: mov      w8, w28\n0020adc0: add      x9, x9, #0xb28\n0020adc4: ldrsw    x8, [x9, x8, lsl #2]\n0020adc8: add      x21, x19, #0x5f8\n0020adcc: add      x8, x8, x9\n0020add0: add      x9, x19, #0x168\n0020add4: str      x9, [sp, #8]\n0020add8: br       x8"
+    },
+    "goto": {
+      "va": "0x20c228",
+      "size": 108,
+      "instructions": "0020c228: adrp     x10, #0x8fb000\n0020c22c: ldr      x9, [x24]\n0020c230: ldr      x10, [x10, #0xd18]\n0020c234: mov      w8, #0x158\n0020c238: madd     x8, x27, x8, x26\n0020c23c: ldr      s0, [x8, #0x80]\n0020c240: ldrsw    x12, [x10]\n0020c244: ldr      x8, [x9, #0x3dd8]\n0020c248: fcvtzs   w9, s0\n0020c24c: cmp      w12, #0\n0020c250: b.le     #0x20c758\n0020c254: ldrb     w11, [x23]\n0020c258: ldr      x14, [x29]\n0020c25c: mov      x10, xzr\n0020c260: sub      w13, w11, #0x2a\n0020c264: and      x13, x13, #0xff\n0020c268: ldr      w13, [x22, x13, lsl #2]\n0020c26c: add      x14, x14, #4\n0020c270: ldr      w15, [x14]\n0020c274: eor      w15, w15, w13\n0020c278: cmp      w15, w9\n0020c27c: b.eq     #0x20c760\n0020c280: add      x10, x10, #1\n0020c284: cmp      x10, x12\n0020c288: add      x14, x14, #0x158\n0020c28c: b.lt     #0x20c270\n0020c290: b        #0x20c75c"
+    },
+    "goto_finish": {
+      "va": "0x20c758",
+      "size": 40,
+      "instructions": "0020c758: ldrb     w11, [x23]\n0020c75c: mov      w10, #-1\n0020c760: add      w11, w11, #0x25\n0020c764: str      w10, [x8, #0x5f8]\n0020c768: and      x11, x11, #0xff\n0020c76c: ldr      w11, [x22, x11, lsl #2]\n0020c770: str      w9, [x8, #0x2f4]\n0020c774: eor      w9, w11, w10\n0020c778: str      w9, [x8, #0x5f8]\n0020c77c: b        #0x20c82c"
+    },
+    "general_delay": {
+      "va": "0x20ab4c",
+      "size": 96,
+      "instructions": "0020ab4c: adrp     x10, #0x8fb000\n0020ab50: ldrb     w8, [x23]\n0020ab54: ldr      x10, [x10, #0xef8]\n0020ab58: mov      w9, #0x158\n0020ab5c: madd     x9, x27, x9, x26\n0020ab60: sub      w8, w8, #0x41\n0020ab64: ldr      x10, [x10]\n0020ab68: and      x8, x8, #0xff\n0020ab6c: ldr      w9, [x9, #0xd4]\n0020ab70: ldr      w8, [x22, x8, lsl #2]\n0020ab74: adrp     x11, #0x75e000\n0020ab78: ldr      s8, [x11, #0x6c4]\n0020ab7c: ldr      s0, [x10, #0x382c]\n0020ab80: eor      w9, w8, w9\n0020ab84: ldr      w8, [x19, #0x16c]\n0020ab88: scvtf    s1, w9\n0020ab8c: fmul     s1, s1, s8\n0020ab90: scvtf    s0, s0\n0020ab94: fmul     s1, s1, s0\n0020ab98: fcvtzu   w20, s1\n0020ab9c: cmp      w8, w20\n0020aba0: b.hs     #0x20ac68\n0020aba4: cbz      w28, #0x20ae00\n0020aba8: cmp      w28, #0x78"
+    },
+    "advance": {
+      "va": "0x20c7fc",
+      "size": 56,
+      "instructions": "0020c7fc: ldrb     w8, [x23]\n0020c800: ldr      w9, [x21]\n0020c804: add      w8, w8, #0x25\n0020c808: and      x8, x8, #0xff\n0020c80c: lsl      x8, x8, #2\n0020c810: ldr      w10, [x22, x8]\n0020c814: eor      w9, w10, w9\n0020c818: add      w9, w9, #1\n0020c81c: str      w9, [x21]\n0020c820: ldr      w8, [x22, x8]\n0020c824: eor      w8, w8, w9\n0020c828: str      w8, [x21]\n0020c82c: ldr      x8, [sp, #8]\n0020c830: str      wzr, [x8]"
+    },
+    "loop_start": {
+      "va": "0x211084",
+      "size": 160,
+      "instructions": "00211084: stp      x27, x26, [sp, #-0x50]!\n00211088: stp      x25, x24, [sp, #0x10]\n0021108c: stp      x23, x22, [sp, #0x20]\n00211090: stp      x21, x20, [sp, #0x30]\n00211094: stp      x19, x30, [sp, #0x40]\n00211098: adrp     x25, #0x8fc000\n0021109c: ldr      x25, [x25, #0xd28]\n002110a0: adrp     x24, #0x8fc000\n002110a4: ldr      w9, [x1, #0xd0]\n002110a8: mov      x20, x1\n002110ac: ldrb     w8, [x25]\n002110b0: ldr      x24, [x24, #0x340]\n002110b4: mov      x19, x0\n002110b8: add      w8, w8, #0x54\n002110bc: and      x8, x8, #0xff\n002110c0: ldr      w8, [x24, x8, lsl #2]\n002110c4: eor      w8, w8, w9\n002110c8: cbz      w8, #0x21111c\n002110cc: adrp     x9, #0x8fb000\n002110d0: ldr      x9, [x9, #0xef8]\n002110d4: adrp     x10, #0x75a000\n002110d8: ldr      s0, [x10, #0x40]\n002110dc: scvtf    s2, w8\n002110e0: ldr      x9, [x9]\n002110e4: fdiv     s0, s2, s0\n002110e8: ldr      s1, [x9, #0x382c]\n002110ec: scvtf    s1, s1\n002110f0: fmul     s0, s0, s1\n002110f4: fcvtzs   w23, s0\n002110f8: ldp      x9, x8, [x19, #0x190]\n002110fc: cmp      x9, x8\n00211100: b.eq     #0x21112c\n00211104: stp      x20, xzr, [x9]\n00211108: str      w23, [x9, #0x10]\n0021110c: ldr      x8, [x19, #0x190]\n00211110: add      x8, x8, #0x18\n00211114: str      x8, [x19, #0x190]\n00211118: b        #0x2111f0\n0021111c: mov      w23, #-1\n00211120: ldp      x9, x8, [x19, #0x190]"
+    },
+    "loop_tick": {
+      "va": "0x20ac9c",
+      "size": 276,
+      "instructions": "0020ac9c: ldp      x21, x8, [x19, #0x188]\n0020aca0: cmp      x21, x8\n0020aca4: b.eq     #0x20adb0\n0020aca8: ldr      x8, [x24]\n0020acac: ldr      x8, [x8, #0x3cf0]\n0020acb0: ldr      w8, [x8, #0x3018]\n0020acb4: cbnz     w8, #0x20adb0\n0020acb8: movi     v9.2s, #1\n0020acbc: ldr      d0, [x21, #8]\n0020acc0: ldr      x1, [x21]\n0020acc4: add      v0.2s, v0.2s, v9.2s\n0020acc8: str      d0, [x21, #8]\n0020accc: ldr      x8, [x19, #0x208]\n0020acd0: ldrb     w9, [x23]\n0020acd4: cbz      x8, #0x20acf4\n0020acd8: sub      w9, w9, #0x26\n0020acdc: and      x9, x9, #0xff\n0020ace0: ldr      w8, [x8, #0x34]\n0020ace4: ldr      w9, [x22, x9, lsl #2]\n0020ace8: eor      w8, w9, w8\n0020acec: cbnz     w8, #0x20ad0c\n0020acf0: b        #0x20ad48\n0020acf4: sub      w8, w9, #0x66\n0020acf8: and      x8, x8, #0xff\n0020acfc: ldr      w9, [x1, #0xd8]\n0020ad00: ldr      w8, [x22, x8, lsl #2]\n0020ad04: eor      w8, w8, w9\n0020ad08: cbz      w8, #0x20ad48\n0020ad0c: adrp     x9, #0x8fb000\n0020ad10: ldr      x9, [x9, #0xef8]\n0020ad14: scvtf    s2, w8\n0020ad18: fmul     s2, s2, s8\n0020ad1c: ldr      x9, [x9]\n0020ad20: ldr      s1, [x9, #0x382c]\n0020ad24: fmov     w9, s0\n0020ad28: scvtf    s1, s1\n0020ad2c: fmul     s1, s2, s1\n0020ad30: fcvtzu   w8, s1\n0020ad34: cmp      w9, w8\n0020ad38: b.lo     #0x20ad48\n0020ad3c: mov      x0, x19\n0020ad40: str      wzr, [x21, #8]\n0020ad44: bl       #0x219df4\n0020ad48: ldr      w8, [x21, #0x10]\n0020ad4c: cmn      w8, #1\n0020ad50: b.eq     #0x20ad60\n0020ad54: ldr      w9, [x21, #0xc]\n0020ad58: cmp      w8, w9\n0020ad5c: b.le     #0x20ad74\n0020ad60: ldr      x8, [x19, #0x190]\n0020ad64: add      x21, x21, #0x18\n0020ad68: cmp      x8, x21\n0020ad6c: b.ne     #0x20acbc\n0020ad70: b        #0x20adb0\n0020ad74: ldr      x8, [x19, #0x190]\n0020ad78: add      x1, x21, #0x18\n0020ad7c: mov      x9, #-0x5555555555555556\n0020ad80: movk     x9, #0xaaab\n0020ad84: subs     x2, x8, x1\n0020ad88: asr      x8, x2, #3\n0020ad8c: mul      x20, x8, x9\n0020ad90: b.eq     #0x20ad9c\n0020ad94: mov      x0, x21\n0020ad98: bl       #0xa04e0\n0020ad9c: mov      w8, #0x18\n0020ada0: madd     x8, x20, x8, x21\n0020ada4: str      x8, [x19, #0x190]\n0020ada8: cmp      x8, x21\n0020adac: b.ne     #0x20acbc"
+    },
+    "fade": {
+      "va": "0x20b6dc",
+      "size": 152,
+      "instructions": "0020b6dc: mov      w8, #0x158\n0020b6e0: madd     x8, x27, x8, x26\n0020b6e4: ldr      s0, [x8, #0x80]\n0020b6e8: fmov     s5, wzr\n0020b6ec: fcmp     s0, #0.0\n0020b6f0: cset     w9, ne\n0020b6f4: str      w9, [x19, #0x2a0]\n0020b6f8: ldr      x9, [x24]\n0020b6fc: ldrb     w10, [x23]\n0020b700: ldr      w11, [x8, #0xd0]\n0020b704: ldp      s0, s1, [x8, #0xa4]\n0020b708: ldr      x0, [x9, #0x3cc8]\n0020b70c: add      w9, w10, #0x54\n0020b710: and      x9, x9, #0xff\n0020b714: ldr      w9, [x22, x9, lsl #2]\n0020b718: ldp      s2, s3, [x8, #0xac]\n0020b71c: eor      w8, w9, w11\n0020b720: scvtf    s4, w8\n0020b724: fmul     s4, s4, s8\n0020b728: bl       #0x41ca7c\n0020b72c: b        #0x20c3f0\n0020b730: ldr      x8, [x24]\n0020b734: ldrb     w10, [x23]\n0020b738: mov      w9, #0x158\n0020b73c: madd     x9, x27, x9, x26\n0020b740: ldr      x0, [x8, #0x3cc8]\n0020b744: add      w8, w10, #0x54\n0020b748: and      x8, x8, #0xff\n0020b74c: ldr      w11, [x9, #0xd0]\n0020b750: ldr      w8, [x22, x8, lsl #2]\n0020b754: ldp      s0, s1, [x9, #0xa4]\n0020b758: ldp      s2, s3, [x9, #0xac]\n0020b75c: fmov     s5, wzr\n0020b760: eor      w8, w8, w11\n0020b764: scvtf    s4, w8\n0020b768: fmul     s4, s4, s8\n0020b76c: bl       #0x41c9b0\n0020b770: b        #0x20c7fc"
+    },
+    "start_event_spot": {
+      "va": "0x2151f4",
+      "size": 384,
+      "instructions": "002151f4: stp      x23, x22, [sp, #-0x30]!\n002151f8: stp      x21, x20, [sp, #0x10]\n002151fc: stp      x19, x30, [sp, #0x20]\n00215200: adrp     x22, #0x8fc000\n00215204: ldr      x22, [x22, #0xd28]\n00215208: adrp     x23, #0x8fb000\n0021520c: adrp     x21, #0x8fc000\n00215210: mov      x19, x0\n00215214: ldrb     w8, [x22]\n00215218: ldr      x23, [x23, #0xe98]\n0021521c: ldr      w9, [x1, #0x60]\n00215220: mov      x20, x1\n00215224: sub      w8, w8, #0x3f\n00215228: ldr      x10, [x23]\n0021522c: ldr      x21, [x21, #0x340]\n00215230: and      x8, x8, #0xff\n00215234: ldr      x0, [x10, #0x3ce8]\n00215238: ldr      w8, [x21, x8, lsl #2]\n0021523c: eor      w1, w8, w9\n00215240: bl       #0x2ae5e4\n00215244: ldp      s0, s1, [x20, #0x84]\n00215248: fcmp     s0, #0.0\n0021524c: b.ne     #0x215258\n00215250: fcmp     s1, #0.0\n00215254: b.eq     #0x2152a8\n00215258: adrp     x8, #0x8fb000\n0021525c: ldr      w10, [x0, #0x28]\n00215260: ldr      x8, [x8, #0xd28]\n00215264: fcvtzs   w9, s0, #0x10\n00215268: cmp      w10, w9\n0021526c: ldr      w8, [x8]\n00215270: fcvtzs   w10, s1, #0x10\n00215274: b.ne     #0x215290\n00215278: ldr      w11, [x0, #0x2c]\n0021527c: cmp      w11, w10\n00215280: b.ne     #0x215290\n00215284: ldr      w11, [x0, #0x30]\n00215288: cmp      w11, w8\n0021528c: b.eq     #0x2152a8\n00215290: str      w8, [x0, #0x30]\n00215294: str      w8, [x0, #0x78]\n00215298: mov      w8, #1\n0021529c: stp      w9, w10, [x0, #0x28]\n002152a0: stp      w9, w10, [x0, #0x70]\n002152a4: str      w8, [x0, #0x110]\n002152a8: mov      w8, #1\n002152ac: str      wzr, [x19, #0x1b8]\n002152b0: str      wzr, [x19, #0x1ac]\n002152b4: str      w8, [x19, #0x29c]\n002152b8: ldrb     w9, [x22]\n002152bc: add      w8, w9, #0x70\n002152c0: and      x8, x8, #0xff\n002152c4: ldr      w8, [x21, x8, lsl #2]\n002152c8: str      w8, [x19, #0x1ac]\n002152cc: adrp     x8, #0x8fb000\n002152d0: ldr      x8, [x8, #0xce8]\n002152d4: ldr      x8, [x8]\n002152d8: cbz      x8, #0x215318\n002152dc: sub      w9, w9, #0x3f\n002152e0: and      x9, x9, #0xff\n002152e4: ldr      w10, [x20, #0x60]\n002152e8: ldr      w9, [x21, x9, lsl #2]\n002152ec: eor      w9, w9, w10\n002152f0: tbnz     w9, #0x1f, #0x215318\n002152f4: adrp     x10, #0x8fc000\n002152f8: ldr      x10, [x10, #0x618]\n002152fc: mov      x2, xzr\n00215300: ldr      w10, [x10]\n00215304: cmp      w10, w9\n00215308: b.le     #0x21531c\n0021530c: mov      w10, #0xf8\n00215310: smaddl   x2, w9, w10, x8\n00215314: b        #0x21531c\n00215318: mov      x2, xzr\n0021531c: ldr      x8, [x23]\n00215320: mov      w1, wzr\n00215324: mov      w3, wzr\n00215328: ldr      x0, [x8, #0x3ce8]\n0021532c: bl       #0x2859b0\n00215330: ldrb     w8, [x22]\n00215334: ldr      w9, [x19, #0x5f8]\n00215338: add      w8, w8, #0x25\n0021533c: and      x8, x8, #0xff\n00215340: lsl      x8, x8, #2\n00215344: ldr      w10, [x21, x8]\n00215348: eor      w9, w10, w9\n0021534c: add      w9, w9, #1\n00215350: str      w9, [x19, #0x5f8]\n00215354: ldr      w8, [x21, x8]\n00215358: str      wzr, [x19, #0x168]\n0021535c: eor      w8, w8, w9\n00215360: str      w8, [x19, #0x5f8]\n00215364: ldp      x19, x30, [sp, #0x20]\n00215368: ldp      x21, x20, [sp, #0x10]\n0021536c: ldp      x23, x22, [sp], #0x30\n00215370: ret      "
+    },
+    "spawn_cid": {
+      "va": "0x213210",
+      "size": 256,
+      "instructions": "00213210: sub      sp, sp, #0xa0\n00213214: stp      x28, x27, [sp, #0x40]\n00213218: stp      x26, x25, [sp, #0x50]\n0021321c: stp      x24, x23, [sp, #0x60]\n00213220: stp      x22, x21, [sp, #0x70]\n00213224: stp      x20, x19, [sp, #0x80]\n00213228: stp      x29, x30, [sp, #0x90]\n0021322c: adrp     x28, #0x8fb000\n00213230: adrp     x25, #0x8fc000\n00213234: ldur     d0, [x1, #0x84]\n00213238: ldr      x28, [x28, #0xd28]\n0021323c: ldr      x25, [x25, #0xd28]\n00213240: adrp     x24, #0x8fc000\n00213244: adrp     x23, #0x8fb000\n00213248: ldr      x24, [x24, #0x340]\n0021324c: ldr      x23, [x23, #0xa40]\n00213250: ldr      w9, [x28]\n00213254: ldrb     w8, [x25]\n00213258: fcvtzs   v0.2s, v0.2s, #0x10\n0021325c: str      d0, [sp, #0x30]\n00213260: str      w9, [sp, #0x38]\n00213264: add      w9, w8, #0x15\n00213268: and      x9, x9, #0xff\n0021326c: adrp     x26, #0x8fb000\n00213270: ldr      w10, [x1, #0x50]\n00213274: ldr      w9, [x24, x9, lsl #2]\n00213278: ldr      w11, [x23]\n0021327c: ldr      x26, [x26, #0x9f8]\n00213280: mov      x20, x1\n00213284: eor      w1, w9, w10\n00213288: cmp      w11, w1\n0021328c: ldr      x12, [x26]\n00213290: mov      w9, #0x278\n00213294: sub      w10, w8, #0x18\n00213298: ccmp     w1, #0, #8, gt\n0021329c: smaddl   x9, w1, w9, x12\n002132a0: and      x10, x10, #0xff\n002132a4: csel     x9, xzr, x9, lt\n002132a8: ldr      w9, [x9, #0x54]\n002132ac: ldr      w10, [x24, x10, lsl #2]\n002132b0: mov      x19, x0\n002132b4: cmp      w10, w9\n002132b8: b.eq     #0x21332c\n002132bc: sub      w9, w8, #0x59\n002132c0: and      x9, x9, #0xff\n002132c4: ldr      w10, [x20, #0x98]\n002132c8: ldr      w9, [x24, x9, lsl #2]\n002132cc: cmp      w9, w10\n002132d0: b.ne     #0x21332c\n002132d4: adrp     x9, #0x8fb000\n002132d8: ldr      x9, [x9, #0xe98]\n002132dc: sub      w8, w8, #0x7a\n002132e0: and      x8, x8, #0xff\n002132e4: ldr      s0, [x20, #0x80]\n002132e8: ldr      x9, [x9]\n002132ec: ldr      w10, [x20, #0x9c]\n002132f0: ldr      w8, [x24, x8, lsl #2]\n002132f4: fcvtzs   w3, s0\n002132f8: ldr      x0, [x9, #0x3ce8]\n002132fc: add      x2, sp, #0x30\n00213300: eor      w7, w8, w10\n00213304: mov      w4, wzr\n00213308: mov      x5, xzr\n0021330c: mov      x6, xzr"
+    },
+    "load_scene": {
+      "va": "0x2137ac",
+      "size": 52,
+      "instructions": "002137ac: add      x8, sp, #8\n002137b0: mov      x0, x20\n002137b4: add      x23, sp, #8\n002137b8: bl       #0x16c910\n002137bc: ldr      x8, [x21]\n002137c0: ldrb     w9, [sp, #8]\n002137c4: ldr      x10, [sp, #0x18]\n002137c8: orr      x11, x23, #1\n002137cc: ldr      x8, [x8, #0xd0]\n002137d0: tst      w9, #1\n002137d4: csel     x1, x11, x10, eq\n002137d8: mov      x0, x21\n002137dc: blr      x8"
+    },
+    "scene_accessor": {
+      "va": "0x16c910",
+      "size": 112,
+      "instructions": "0016c910: sub      sp, sp, #0x90\n0016c914: stp      x28, x27, [sp, #0x30]\n0016c918: stp      x26, x25, [sp, #0x40]\n0016c91c: stp      x24, x23, [sp, #0x50]\n0016c920: stp      x22, x21, [sp, #0x60]\n0016c924: stp      x20, x19, [sp, #0x70]\n0016c928: stp      x29, x30, [sp, #0x80]\n0016c92c: str      x8, [sp]\n0016c930: adrp     x9, #0x8fc000\n0016c934: ldr      x9, [x9, #0xd28]\n0016c938: stp      xzr, xzr, [sp, #0x18]\n0016c93c: str      xzr, [sp, #0x28]\n0016c940: adrp     x12, #0x8fc000\n0016c944: ldrb     w9, [x9]\n0016c948: ldr      x12, [x12, #0x340]\n0016c94c: add      x10, sp, #0x18\n0016c950: mov      x20, x0\n0016c954: mov      w8, wzr\n0016c958: add      x25, x0, #0xb8\n0016c95c: add      x11, x0, #0xb9\n0016c960: orr      x10, x10, #1\n0016c964: sub      w29, w9, #0x4b\n0016c968: stp      x11, x10, [sp, #8]\n0016c96c: ldrb     w9, [x25]\n0016c970: mov      w19, w8\n0016c974: tbz      w9, #0, #0x16c9a0\n0016c978: b        #0x16c9ec\n0016c97c: eor      w8, w27, w28"
+    },
+    "audio": {
+      "va": "0x20b7b0",
+      "size": 96,
+      "instructions": "0020b7b0: adrp     x9, #0x8fb000\n0020b7b4: ldrb     w8, [x23]\n0020b7b8: ldr      x9, [x9, #0xef8]\n0020b7bc: mov      w10, #0x158\n0020b7c0: madd     x10, x27, x10, x26\n0020b7c4: sub      w8, w8, #0x19\n0020b7c8: mov      x21, x9\n0020b7cc: ldr      x9, [x9]\n0020b7d0: and      x8, x8, #0xff\n0020b7d4: ldr      w10, [x10, #0xdc]\n0020b7d8: ldr      w8, [x22, x8, lsl #2]\n0020b7dc: ldr      x0, [x9, #0x248]\n0020b7e0: mov      w2, #1\n0020b7e4: mov      w3, #1\n0020b7e8: eor      w1, w8, w10\n0020b7ec: mov      w20, #1\n0020b7f0: bl       #0x422ee8\n0020b7f4: str      w20, [x19, #0x25c]\n0020b7f8: ldr      x8, [x21]\n0020b7fc: ldr      x8, [x8, #0x248]\n0020b800: str      wzr, [x8, #0x2a0]\n0020b804: b        #0x20c3f0\n0020b808: ldr      x1, [sp, #0x10]\n0020b80c: mov      x0, x19"
+    },
+    "sound": {
+      "va": "0x20bc50",
+      "size": 76,
+      "instructions": "0020bc50: adrp     x9, #0x8fb000\n0020bc54: ldrb     w8, [x23]\n0020bc58: ldr      x9, [x9, #0xef8]\n0020bc5c: mov      w10, #0x158\n0020bc60: madd     x10, x27, x10, x26\n0020bc64: sub      w8, w8, #0x19\n0020bc68: ldr      x9, [x9]\n0020bc6c: and      x8, x8, #0xff\n0020bc70: ldr      w10, [x10, #0xdc]\n0020bc74: ldr      w8, [x22, x8, lsl #2]\n0020bc78: ldr      x0, [x9, #0x248]\n0020bc7c: mov      w3, #1\n0020bc80: mov      w2, wzr\n0020bc84: eor      w1, w8, w10\n0020bc88: mov      w4, wzr\n0020bc8c: bl       #0x423344\n0020bc90: b        #0x20c7fc\n0020bc94: ldr      x1, [sp, #0x10]\n0020bc98: mov      x0, x19"
+    },
+    "chat": {
+      "va": "0x20efd0",
+      "size": 232,
+      "instructions": "0020efd0: sub      sp, sp, #0x50\n0020efd4: str      x22, [sp, #0x20]\n0020efd8: stp      x21, x20, [sp, #0x30]\n0020efdc: stp      x19, x30, [sp, #0x40]\n0020efe0: mov      w2, #1\n0020efe4: mov      x19, x1\n0020efe8: mov      x20, x0\n0020efec: bl       #0x21b394\n0020eff0: adrp     x8, #0x8fc000\n0020eff4: ldr      x8, [x8, #0xd28]\n0020eff8: adrp     x10, #0x8fc000\n0020effc: ldrb     w9, [x8]\n0020f000: adrp     x8, #0x8fc000\n0020f004: b        #0x224358\n0020f008: ldr      x8, [x8, #0x8a0]\n0020f00c: sub      w11, w9, #0x27\n0020f010: add      w9, w9, #0x23\n0020f014: and      x11, x11, #0xff\n0020f018: and      x9, x9, #0xff\n0020f01c: ldr      w8, [x8]\n0020f020: ldr      w11, [x10, x11, lsl #2]\n0020f024: ldr      w9, [x10, x9, lsl #2]\n0020f028: ldp      w12, w10, [x19, #0xe4]\n0020f02c: cmp      w8, #3\n0020f030: eor      w21, w11, w12\n0020f034: eor      w22, w9, w10\n0020f038: b.eq     #0x20f05c\n0020f03c: cmp      w8, #2\n0020f040: b.eq     #0x20f05c\n0020f044: cmp      w8, #1\n0020f048: b.ne     #0x20f06c\n0020f04c: add      x8, sp, #8\n0020f050: mov      x0, x19\n0020f054: bl       #0x16ced4\n0020f058: b        #0x20f078\n0020f05c: add      x8, sp, #8\n0020f060: mov      x0, x19\n0020f064: bl       #0x16cafc\n0020f068: b        #0x20f078\n0020f06c: add      x8, sp, #8\n0020f070: mov      x0, x19\n0020f074: bl       #0x16cce8\n0020f078: add      x6, sp, #8\n0020f07c: mov      x0, x20\n0020f080: mov      x1, x19\n0020f084: mov      w2, w21\n0020f088: mov      w3, wzr\n0020f08c: mov      w4, w22\n0020f090: mov      w5, wzr\n0020f094: bl       #0x21bba4\n0020f098: ldrb     w8, [sp, #8]\n0020f09c: tbz      w8, #0, #0x20f0a8\n0020f0a0: ldr      x0, [sp, #0x18]\n0020f0a4: bl       #0x9f6a0\n0020f0a8: ldp      x19, x30, [sp, #0x40]\n0020f0ac: ldp      x21, x20, [sp, #0x30]\n0020f0b0: ldr      x22, [sp, #0x20]\n0020f0b4: add      sp, sp, #0x50"
+    },
+    "text_access": {
+      "va": "0x16cafc",
+      "size": 96,
+      "instructions": "0016cafc: sub      sp, sp, #0x90\n0016cb00: stp      x28, x27, [sp, #0x30]\n0016cb04: stp      x26, x25, [sp, #0x40]\n0016cb08: stp      x24, x23, [sp, #0x50]\n0016cb0c: stp      x22, x21, [sp, #0x60]\n0016cb10: stp      x20, x19, [sp, #0x70]\n0016cb14: stp      x29, x30, [sp, #0x80]\n0016cb18: str      x8, [sp]\n0016cb1c: adrp     x9, #0x8fc000\n0016cb20: ldr      x9, [x9, #0xd28]\n0016cb24: stp      xzr, xzr, [sp, #0x18]\n0016cb28: str      xzr, [sp, #0x28]\n0016cb2c: adrp     x12, #0x8fc000\n0016cb30: ldrb     w9, [x9]\n0016cb34: ldr      x12, [x12, #0x340]\n0016cb38: add      x10, sp, #0x18\n0016cb3c: mov      x20, x0\n0016cb40: mov      w8, wzr\n0016cb44: add      x25, x0, #0x108\n0016cb48: add      x11, x0, #0x109\n0016cb4c: orr      x10, x10, #1\n0016cb50: add      w29, w9, #0x38\n0016cb54: stp      x11, x10, [sp, #8]\n0016cb58: ldrb     w9, [x25]"
+    },
+    "text_access_en": {
+      "va": "0x16cce8",
+      "size": 96,
+      "instructions": "0016cce8: sub      sp, sp, #0x90\n0016ccec: stp      x28, x27, [sp, #0x30]\n0016ccf0: stp      x26, x25, [sp, #0x40]\n0016ccf4: stp      x24, x23, [sp, #0x50]\n0016ccf8: stp      x22, x21, [sp, #0x60]\n0016ccfc: stp      x20, x19, [sp, #0x70]\n0016cd00: stp      x29, x30, [sp, #0x80]\n0016cd04: str      x8, [sp]\n0016cd08: adrp     x9, #0x8fc000\n0016cd0c: ldr      x9, [x9, #0xd28]\n0016cd10: stp      xzr, xzr, [sp, #0x18]\n0016cd14: str      xzr, [sp, #0x28]\n0016cd18: adrp     x12, #0x8fc000\n0016cd1c: ldrb     w9, [x9]\n0016cd20: ldr      x12, [x12, #0x340]\n0016cd24: add      x10, sp, #0x18\n0016cd28: mov      x20, x0\n0016cd2c: mov      w8, wzr\n0016cd30: add      x25, x0, #0x120\n0016cd34: add      x11, x0, #0x121\n0016cd38: orr      x10, x10, #1\n0016cd3c: add      w29, w9, #0x28\n0016cd40: stp      x11, x10, [sp, #8]\n0016cd44: ldrb     w9, [x25]"
+    },
+    "text_access_ko": {
+      "va": "0x16ced4",
+      "size": 112,
+      "instructions": "0016ced4: sub      sp, sp, #0x90\n0016ced8: stp      x28, x27, [sp, #0x30]\n0016cedc: stp      x26, x25, [sp, #0x40]\n0016cee0: stp      x24, x23, [sp, #0x50]\n0016cee4: stp      x22, x21, [sp, #0x60]\n0016cee8: stp      x20, x19, [sp, #0x70]\n0016ceec: stp      x29, x30, [sp, #0x80]\n0016cef0: str      x8, [sp]\n0016cef4: adrp     x9, #0x8fc000\n0016cef8: ldr      x9, [x9, #0xd28]\n0016cefc: stp      xzr, xzr, [sp, #0x18]\n0016cf00: str      xzr, [sp, #0x28]\n0016cf04: adrp     x12, #0x8fc000\n0016cf08: ldrb     w9, [x9]\n0016cf0c: ldr      x12, [x12, #0x340]\n0016cf10: add      x10, sp, #0x18\n0016cf14: mov      x20, x0\n0016cf18: mov      w8, wzr\n0016cf1c: add      x25, x0, #0x138\n0016cf20: add      x11, x0, #0x139\n0016cf24: orr      x10, x10, #1\n0016cf28: sub      w29, w9, #0x2f\n0016cf2c: stp      x11, x10, [sp, #8]\n0016cf30: ldrb     w9, [x25]\n0016cf34: mov      w19, w8\n0016cf38: tbz      w9, #0, #0x16cf64\n0016cf3c: b        #0x16cfb0\n0016cf40: eor      w8, w27, w28"
+    },
+    "activate_spot": {
+      "va": "0x2501e4",
+      "size": 96,
+      "instructions": "002501e4: ldr      x9, [x22]\n002501e8: sub      w8, w8, #0x1f\n002501ec: and      x8, x8, #0xff\n002501f0: ldr      w10, [x20, #0x24]\n002501f4: ldr      w8, [x24, x8, lsl #2]\n002501f8: ldr      x0, [x9, #0x3dd8]\n002501fc: eor      w1, w8, w10\n00250200: bl       #0x207f74\n00250204: cmn      w0, #1\n00250208: b.eq     #0x250130\n0025020c: ldrb     w8, [x23]\n00250210: ldr      w9, [x20, #0x24]\n00250214: mov      x0, x21\n00250218: mov      x2, x20\n0025021c: sub      w8, w8, #0x1f\n00250220: and      x8, x8, #0xff\n00250224: ldr      w8, [x24, x8, lsl #2]\n00250228: mov      w3, w19\n0025022c: ldp      x19, x30, [sp, #0x30]\n00250230: ldp      x21, x20, [sp, #0x20]\n00250234: ldp      x23, x22, [sp, #0x10]\n00250238: eor      w1, w8, w9\n0025023c: ldp      x25, x24, [sp], #0x40\n00250240: b        #0x2859b0"
+    },
+    "spot_trigger": {
+      "va": "0x2867d4",
+      "size": 256,
+      "instructions": "002867d4: ldr      x26, [x11]\n002867d8: cbz      x26, #0x2868d8\n002867dc: ldrb     w8, [x22]\n002867e0: add      x28, x26, x29\n002867e4: ldur     w10, [x28, #-4]\n002867e8: sub      w9, w8, #0x1e\n002867ec: and      x9, x9, #0xff\n002867f0: ldr      w9, [x24, x9, lsl #2]\n002867f4: cmp      w9, w10\n002867f8: b.ne     #0x2868d8\n002867fc: sub      w9, w8, #0x5b\n00286800: and      x9, x9, #0xff\n00286804: ldr      w10, [x26, x29]\n00286808: ldr      w9, [x24, x9, lsl #2]\n0028680c: eor      w9, w9, w10\n00286810: cmp      w9, w12\n00286814: b.ne     #0x2868d8\n00286818: sub      w8, w8, #0x61\n0028681c: add      x9, x26, x29\n00286820: and      x8, x8, #0xff\n00286824: ldur     w9, [x9, #-8]\n00286828: ldr      w8, [x24, x8, lsl #2]\n0028682c: cmp      w8, w9\n00286830: b.ne     #0x2868d8\n00286834: ldr      x0, [x19, #0x3020]\n00286838: mov      w1, w21\n0028683c: bl       #0xfd718\n00286840: adrp     x11, #0x8fb000\n00286844: ldr      x11, [x11, #0xce8]\n00286848: ldr      w12, [sp, #0xc]\n0028684c: tbnz     w0, #0, #0x2868d8\n00286850: ldr      x0, [x25]\n00286854: add      x8, x0, #0x156\n00286858: ldr      w9, [x8]\n0028685c: ldrb     w8, [x22]\n00286860: cmp      w9, #0xb\n00286864: b.hi     #0x28689c\n00286868: add      w9, w8, #0x5e\n0028686c: add      x10, x26, x29\n00286870: and      x9, x9, #0xff\n00286874: ldur     w10, [x10, #-0x28]\n00286878: ldr      w9, [x24, x9, lsl #2]\n0028687c: eor      w9, w9, w10\n00286880: cmp      w9, #7\n00286884: b.hi     #0x28689c\n00286888: mov      w10, #1\n0028688c: lsl      w9, w10, w9\n00286890: mov      w10, #0x87\n00286894: tst      w9, w10\n00286898: b.ne     #0x2868d8\n0028689c: add      w9, w8, #0x47\n002868a0: and      x9, x9, #0xff\n002868a4: lsl      x9, x9, #2\n002868a8: ldrb     w10, [x23]\n002868ac: ldrb     w9, [x24, x9]\n002868b0: cmp      w10, w9\n002868b4: b.ne     #0x286760\n002868b8: sub      x1, x28, #0x44\n002868bc: mov      w2, #1\n002868c0: mov      x0, x19\n002868c4: bl       #0x2500d0\n002868c8: adrp     x11, #0x8fb000\n002868cc: ldr      x11, [x11, #0xce8]\n002868d0: ldr      w12, [sp, #0xc]"
+    }
+  },
+  "xref_candidates": [
+    {
+      "pc": "0xe4f94",
+      "function": "0xe4e2c",
+      "table": "EventSpot"
+    },
+    {
+      "pc": "0xf63b0",
+      "function": "0xf610c",
+      "table": "EventSpot"
+    },
+    {
+      "pc": "0xfb2a8",
+      "function": "0xfb1e8",
+      "table": "EventSpot"
+    },
+    {
+      "pc": "0xfce74",
+      "function": "0xfce70",
+      "table": "EventSpot"
+    },
+    {
+      "pc": "0x102118",
+      "function": "0x1020fc",
+      "table": "EventSpot"
+    },
+    {
+      "pc": "0x157148",
+      "function": "0x156eb4",
+      "table": "EventScript"
+    },
+    {
+      "pc": "0x157874",
+      "function": "0x1575e0",
+      "table": "EventSpot"
+    },
+    {
+      "pc": "0x204ffc",
+      "function": "0x204ef0",
+      "table": "EventScript"
+    },
+    {
+      "pc": "0x207cf0",
+      "function": "0x207c90",
+      "table": "EventScript"
+    },
+    {
+      "pc": "0x207e10",
+      "function": "0x207c90",
+      "table": "EventScript"
+    },
+    {
+      "pc": "0x207fa0",
+      "function": "0x207f74",
+      "table": "EventScript"
+    },
+    {
+      "pc": "0x208b78",
+      "function": "0x208a64",
+      "table": "EventScript"
+    },
+    {
+      "pc": "0x20a228",
+      "function": "0x2098d8",
+      "table": "EventScript"
+    },
+    {
+      "pc": "0x2152d0",
+      "function": "0x2151f4",
+      "table": "EventSpot"
+    },
+    {
+      "pc": "0x217fe4",
+      "function": "0x217fa0",
+      "table": "EventScript"
+    },
+    {
+      "pc": "0x21dd40",
+      "function": "0x21bba4",
+      "table": "EventScript"
+    },
+    {
+      "pc": "0x21f768",
+      "function": "0x21f73c",
+      "table": "EventScript"
+    },
+    {
+      "pc": "0x22189c",
+      "function": "0x2213a0",
+      "table": "EventSpot"
+    },
+    {
+      "pc": "0x24da54",
+      "function": "0x24d9b8",
+      "table": "EventScript"
+    },
+    {
+      "pc": "0x24db04",
+      "function": "0x24d9b8",
+      "table": "EventScript"
+    },
+    {
+      "pc": "0x24de78",
+      "function": "0x24d9b8",
+      "table": "EventScript"
+    },
+    {
+      "pc": "0x24dfac",
+      "function": "0x24d9b8",
+      "table": "EventScript"
+    },
+    {
+      "pc": "0x27b4d8",
+      "function": "0x27a730",
+      "table": "EventSpot"
+    },
+    {
+      "pc": "0x28673c",
+      "function": "0x2865cc",
+      "table": "EventSpot"
+    },
+    {
+      "pc": "0x2867a8",
+      "function": "0x2865cc",
+      "table": "EventSpot"
+    },
+    {
+      "pc": "0x2867c0",
+      "function": "0x2865cc",
+      "table": "EventSpot"
+    },
+    {
+      "pc": "0x2867c0",
+      "function": "0x2865cc",
+      "table": "EventSpot"
+    },
+    {
+      "pc": "0x286844",
+      "function": "0x2865cc",
+      "table": "EventSpot"
+    },
+    {
+      "pc": "0x2868cc",
+      "function": "0x2865cc",
+      "table": "EventSpot"
+    },
+    {
+      "pc": "0x286900",
+      "function": "0x2865cc",
+      "table": "EventSpot"
+    },
+    {
+      "pc": "0x28cb70",
+      "function": "0x28ca08",
+      "table": "EventSpot"
+    },
+    {
+      "pc": "0x28e18c",
+      "function": "0x28e008",
+      "table": "EventSpot"
+    },
+    {
+      "pc": "0x2ad304",
+      "function": "0x2ac1e8",
+      "table": "EventSpot"
+    },
+    {
+      "pc": "0x3c50b4",
+      "function": "0x3c50ac",
+      "table": "EventSpot"
+    }
+  ]
+}

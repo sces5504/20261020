@@ -1,0 +1,34 @@
+{
+  "_round_trip_exact": true,
+  "_format": "stella-gen-v1",
+  "_header_hex": "c117a55e0000000021f38a5e00000000",
+  "_row_count": 9,
+  "_schema_fingerprint": "0x479f5a80",
+  "_size": 132,
+  "_source_sha256": "83a6cac733142bdff5feaacc4b4af7ae7f4aa89dec74a9efb9f3c79c34b01fa4",
+  "fields": [
+    {
+      "name": "f00",
+      "type": "i32"
+    },
+    {
+      "name": "f01",
+      "type": "i32"
+    },
+    {
+      "name": "f02",
+      "type": "i32"
+    }
+  ],
+  "rows": [
+    {"_row":0,"_offset":24,"f00":89,"f01":71,"f02":0,"_size":12,"_field_offsets":[24,28,32]},
+    {"_row":1,"_offset":36,"f00":118,"f01":119,"f02":0,"_size":12,"_field_offsets":[36,40,44]},
+    {"_row":2,"_offset":48,"f00":120,"f01":6,"f02":0,"_size":12,"_field_offsets":[48,52,56]},
+    {"_row":3,"_offset":60,"f00":119,"f01":89,"f02":0,"_size":12,"_field_offsets":[60,64,68]},
+    {"_row":4,"_offset":72,"f00":120,"f01":124,"f02":0,"_size":12,"_field_offsets":[72,76,80]},
+    {"_row":5,"_offset":84,"f00":89,"f01":101,"f02":0,"_size":12,"_field_offsets":[84,88,92]},
+    {"_row":6,"_offset":96,"f00":6,"f01":118,"f02":0,"_size":12,"_field_offsets":[96,100,104]},
+    {"_row":7,"_offset":108,"f00":119,"f01":124,"f02":0,"_size":12,"_field_offsets":[108,112,116]},
+    {"_row":8,"_offset":120,"f00":71,"f01":121,"f02":0,"_size":12,"_field_offsets":[120,124,128]}
+  ]
+}

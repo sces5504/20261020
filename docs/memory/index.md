@@ -2,6 +2,7 @@
 
 專案狀態：Stella Maiden 規格階段，已有 0.3 玩法決策與流程草案；本輪九題均已回答。資源與成長簡化刻意等 APK 盤點，遊戲尚未初始化。
 
+- Stella Maiden研究入口：`research/stella-maiden/START_HERE.md`；資料交付接力：`docs/handoffs/stella-research-20261020.md`。先按導覽查局部資料，不需重新逆向或一次載入全部JSON。
 - 已確認規格：`docs/spec.md`
 - 原作研究／證據：`docs/research/stella-maiden.md`
 - 架構／資料契約／驗收：`docs/design/architecture.md`、`content-contract.md`、`production-plan.md`

@@ -1,0 +1,23 @@
+name: Research integrity
+on:
+  push:
+    branches: [main]
+    paths: ['research/stella-maiden/**', '.github/workflows/research-integrity.yml']
+  pull_request:
+    paths: ['research/stella-maiden/**', '.github/workflows/research-integrity.yml']
+permissions:
+  contents: read
+jobs:
+  research-integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Verify source-derived research records
+        run: python3 research/stella-maiden/tools/verify_bundle.py
+      - name: Build portable research database
+        run: python3 research/stella-maiden/tools/build_database.py
+      - name: Verify database counts and relationships
+        run: python3 research/stella-maiden/tools/check_database.py

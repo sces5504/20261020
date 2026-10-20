@@ -1,0 +1,4 @@
+research/stella-maiden/tables/*.json linguist-generated=true
+research/stella-maiden/scenes/**/*.json linguist-generated=true
+research/stella-maiden/asset_strings/**/*.json linguist-generated=true
+research/stella-maiden/derived/*.json linguist-generated=true

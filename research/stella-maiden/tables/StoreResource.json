@@ -1,0 +1,155 @@
+{
+  "_round_trip_exact": true,
+  "_format": "stella-gen-v1",
+  "_header_hex": "c417a55e0000000021f38a5e00000000",
+  "_row_count": 16,
+  "_schema_fingerprint": "0x8df8ae90",
+  "_size": 1039,
+  "_source_sha256": "7c255bde0c4229126d7dafaf55dcdc61f2caf5b842b681277e9f7d3badd81ec3",
+  "fields": [
+    {
+      "name": "f00",
+      "type": "str",
+      "reader": "0x453dbc",
+      "call_pc": "0x1547f8",
+      "native_destination": "mov x1, sp",
+      "native_slot_offset": 0,
+      "native_offset": null
+    },
+    {
+      "name": "f01",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x154808",
+      "native_destination": "sub x1, x19, #0xc",
+      "native_slot_offset": 24,
+      "native_offset": 24
+    },
+    {
+      "name": "f02",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x154814",
+      "native_destination": "sub x1, x19, #8",
+      "native_slot_offset": 28,
+      "native_offset": 28
+    },
+    {
+      "name": "f03",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x154820",
+      "native_destination": "sub x1, x19, #4",
+      "native_slot_offset": 32,
+      "native_offset": 32
+    },
+    {
+      "name": "f04",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15482c",
+      "native_destination": "mov x1, x19",
+      "native_slot_offset": 36,
+      "native_offset": 36
+    },
+    {
+      "name": "f05",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x154838",
+      "native_destination": "add x1, x19, #4",
+      "native_slot_offset": 40,
+      "native_offset": 40
+    },
+    {
+      "name": "f06",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x154844",
+      "native_destination": "add x1, x19, #8",
+      "native_slot_offset": 44,
+      "native_offset": 44
+    },
+    {
+      "name": "f07",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x154850",
+      "native_destination": "add x1, x19, #0xc",
+      "native_slot_offset": 48,
+      "native_offset": 48
+    },
+    {
+      "name": "f08",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15485c",
+      "native_destination": "add x1, x19, #0x10",
+      "native_slot_offset": 52,
+      "native_offset": 52
+    },
+    {
+      "name": "f09",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x154868",
+      "native_destination": "add x1, x19, #0x14",
+      "native_slot_offset": 56,
+      "native_offset": 56
+    },
+    {
+      "name": "f10",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x154874",
+      "native_destination": "add x1, x19, #0x18",
+      "native_slot_offset": 60,
+      "native_offset": 60
+    },
+    {
+      "name": "f11",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x154880",
+      "native_destination": "add x1, x19, #0x1c",
+      "native_slot_offset": 64,
+      "native_offset": 64
+    },
+    {
+      "name": "f12",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15488c",
+      "native_destination": "add x1, x19, #0x20",
+      "native_slot_offset": 68,
+      "native_offset": 68
+    },
+    {
+      "name": "f13",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x154898",
+      "native_destination": "add x1, x19, #0x24",
+      "native_slot_offset": 72,
+      "native_offset": 72
+    }
+  ],
+  "rows": [
+    {"_row":0,"_offset":24,"f00":"Crystal1800","f01":0,"f02":0,"f03":11,"f04":200,"f05":1900,"f06":0,"f07":0,"f08":0,"f09":0,"f10":0,"f11":0,"f12":0,"f13":1,"_size":65,"_field_offsets":[24,37,41,45,49,53,57,61,65,69,73,77,81,85]},
+    {"_row":1,"_offset":89,"f00":"Crystal5400","f01":1,"f02":0,"f03":205,"f04":510,"f05":5700,"f06":0,"f07":0,"f08":0,"f09":0,"f10":0,"f11":0,"f12":20,"f13":1,"_size":65,"_field_offsets":[89,102,106,110,114,118,122,126,130,134,138,142,146,150]},
+    {"_row":2,"_offset":154,"f00":"Crystal10800","f01":2,"f02":0,"f03":205,"f04":840,"f05":11400,"f06":0,"f07":0,"f08":0,"f09":0,"f10":0,"f11":0,"f12":25,"f13":1,"_size":66,"_field_offsets":[154,168,172,176,180,184,188,192,196,200,204,208,212,216]},
+    {"_row":3,"_offset":220,"f00":"Gas1800","f01":3,"f02":0,"f03":16,"f04":200,"f05":0,"f06":1900,"f07":0,"f08":0,"f09":0,"f10":0,"f11":0,"f12":0,"f13":1,"_size":61,"_field_offsets":[220,229,233,237,241,245,249,253,257,261,265,269,273,277]},
+    {"_row":4,"_offset":281,"f00":"Gas5400","f01":4,"f02":0,"f03":206,"f04":510,"f05":0,"f06":5700,"f07":0,"f08":0,"f09":0,"f10":0,"f11":0,"f12":20,"f13":1,"_size":61,"_field_offsets":[281,290,294,298,302,306,310,314,318,322,326,330,334,338]},
+    {"_row":5,"_offset":342,"f00":"Gas10800","f01":5,"f02":0,"f03":206,"f04":840,"f05":0,"f06":11400,"f07":0,"f08":0,"f09":0,"f10":0,"f11":0,"f12":20,"f13":1,"_size":62,"_field_offsets":[342,352,356,360,364,368,372,376,380,384,388,392,396,400]},
+    {"_row":6,"_offset":404,"f00":"Metal1800","f01":6,"f02":0,"f03":21,"f04":200,"f05":0,"f06":0,"f07":1900,"f08":0,"f09":0,"f10":0,"f11":0,"f12":0,"f13":1,"_size":63,"_field_offsets":[404,415,419,423,427,431,435,439,443,447,451,455,459,463]},
+    {"_row":7,"_offset":467,"f00":"Metal5400","f01":7,"f02":0,"f03":207,"f04":510,"f05":0,"f06":0,"f07":5700,"f08":0,"f09":0,"f10":0,"f11":0,"f12":20,"f13":1,"_size":63,"_field_offsets":[467,478,482,486,490,494,498,502,506,510,514,518,522,526]},
+    {"_row":8,"_offset":530,"f00":"Metal10800","f01":8,"f02":0,"f03":207,"f04":840,"f05":0,"f06":0,"f07":11400,"f08":0,"f09":0,"f10":0,"f11":0,"f12":20,"f13":1,"_size":64,"_field_offsets":[530,542,546,550,554,558,562,566,570,574,578,582,586,590]},
+    {"_row":9,"_offset":594,"f00":"Ether1800","f01":9,"f02":0,"f03":14,"f04":200,"f05":0,"f06":0,"f07":0,"f08":1900,"f09":0,"f10":0,"f11":0,"f12":0,"f13":1,"_size":63,"_field_offsets":[594,605,609,613,617,621,625,629,633,637,641,645,649,653]},
+    {"_row":10,"_offset":657,"f00":"Ether5400","f01":10,"f02":0,"f03":208,"f04":510,"f05":0,"f06":0,"f07":0,"f08":5700,"f09":0,"f10":0,"f11":0,"f12":20,"f13":1,"_size":63,"_field_offsets":[657,668,672,676,680,684,688,692,696,700,704,708,712,716]},
+    {"_row":11,"_offset":720,"f00":"Ether10800","f01":11,"f02":0,"f03":208,"f04":840,"f05":0,"f06":0,"f07":0,"f08":11400,"f09":0,"f10":0,"f11":0,"f12":20,"f13":1,"_size":64,"_field_offsets":[720,732,736,740,744,748,752,756,760,764,768,772,776,780]},
+    {"_row":12,"_offset":784,"f00":"CrstalTrade","f01":12,"f02":0,"f03":11,"f04":0,"f05":1,"f06":0,"f07":0,"f08":0,"f09":0,"f10":3,"f11":300,"f12":0,"f13":1,"_size":65,"_field_offsets":[784,797,801,805,809,813,817,821,825,829,833,837,841,845]},
+    {"_row":13,"_offset":849,"f00":"GasTrade","f01":13,"f02":0,"f03":16,"f04":0,"f05":0,"f06":1,"f07":0,"f08":0,"f09":1,"f10":3,"f11":300,"f12":0,"f13":1,"_size":62,"_field_offsets":[849,859,863,867,871,875,879,883,887,891,895,899,903,907]},
+    {"_row":14,"_offset":911,"f00":"MetalTrade","f01":14,"f02":0,"f03":21,"f04":0,"f05":0,"f06":0,"f07":1,"f08":0,"f09":2,"f10":3,"f11":300,"f12":0,"f13":1,"_size":64,"_field_offsets":[911,923,927,931,935,939,943,947,951,955,959,963,967,971]},
+    {"_row":15,"_offset":975,"f00":"EtherTrade","f01":15,"f02":0,"f03":14,"f04":0,"f05":0,"f06":0,"f07":0,"f08":1,"f09":3,"f10":3,"f11":300,"f12":0,"f13":1,"_size":64,"_field_offsets":[975,987,991,995,999,1003,1007,1011,1015,1019,1023,1027,1031,1035]}
+  ]
+}

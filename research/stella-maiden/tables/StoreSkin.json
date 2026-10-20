@@ -1,0 +1,274 @@
+{
+  "_round_trip_exact": true,
+  "_format": "stella-gen-v1",
+  "_header_hex": "c417a55e0000000021f38a5e00000000",
+  "_row_count": 9,
+  "_schema_fingerprint": "0xc1882d81",
+  "_size": 1174,
+  "_source_sha256": "ec22d2f5c6c322d9b2bcc5b946b717ec013cb0ef51d0a7aada72fb1366689a90",
+  "fields": [
+    {
+      "name": "f00",
+      "type": "str",
+      "reader": "0x453dbc",
+      "call_pc": "0x15c95c",
+      "native_destination": "mov x1, sp",
+      "native_slot_offset": 0,
+      "native_offset": null
+    },
+    {
+      "name": "f01",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15c96c",
+      "native_destination": "sub x1, x19, #0x40",
+      "native_slot_offset": 24,
+      "native_offset": 24
+    },
+    {
+      "name": "f02",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15c978",
+      "native_destination": "sub x1, x19, #0x3c",
+      "native_slot_offset": 28,
+      "native_offset": 28
+    },
+    {
+      "name": "f03",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15c984",
+      "native_destination": "sub x1, x19, #0x38",
+      "native_slot_offset": 32,
+      "native_offset": 32
+    },
+    {
+      "name": "f04",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15c990",
+      "native_destination": "sub x1, x19, #0x34",
+      "native_slot_offset": 36,
+      "native_offset": 36
+    },
+    {
+      "name": "f05",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15c99c",
+      "native_destination": "sub x1, x19, #0x30",
+      "native_slot_offset": 40,
+      "native_offset": 40
+    },
+    {
+      "name": "f06",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15c9a8",
+      "native_destination": "sub x1, x19, #0x2c",
+      "native_slot_offset": 44,
+      "native_offset": 44
+    },
+    {
+      "name": "f07",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15c9b4",
+      "native_destination": "sub x1, x19, #0x28",
+      "native_slot_offset": 48,
+      "native_offset": 48
+    },
+    {
+      "name": "f08",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15c9c0",
+      "native_destination": "sub x1, x19, #0x24",
+      "native_slot_offset": 52,
+      "native_offset": 52
+    },
+    {
+      "name": "f09",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15c9cc",
+      "native_destination": "sub x1, x19, #0x20",
+      "native_slot_offset": 56,
+      "native_offset": 56
+    },
+    {
+      "name": "f10",
+      "type": "str",
+      "reader": "0x453dbc",
+      "call_pc": "0x15c9d8",
+      "native_destination": "sub x1, x19, #0x18",
+      "native_slot_offset": 64,
+      "native_offset": 64
+    },
+    {
+      "name": "f11",
+      "type": "str",
+      "reader": "0x453dbc",
+      "call_pc": "0x15c9e4",
+      "native_destination": "mov x1, x19",
+      "native_slot_offset": 88,
+      "native_offset": 88
+    },
+    {
+      "name": "f12",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15c9f0",
+      "native_destination": "add x1, x19, #0x18",
+      "native_slot_offset": 112,
+      "native_offset": 112
+    },
+    {
+      "name": "f13",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15c9fc",
+      "native_destination": "add x1, x19, #0x1c",
+      "native_slot_offset": 116,
+      "native_offset": 116
+    },
+    {
+      "name": "f14",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15ca08",
+      "native_destination": "add x1, x19, #0x20",
+      "native_slot_offset": 120,
+      "native_offset": 120
+    },
+    {
+      "name": "f15",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15ca14",
+      "native_destination": "add x1, x19, #0x24",
+      "native_slot_offset": 124,
+      "native_offset": 124
+    },
+    {
+      "name": "f16",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15ca20",
+      "native_destination": "add x1, x19, #0x28",
+      "native_slot_offset": 128,
+      "native_offset": 128
+    },
+    {
+      "name": "f17",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15ca2c",
+      "native_destination": "add x1, x19, #0x2c",
+      "native_slot_offset": 132,
+      "native_offset": 132
+    },
+    {
+      "name": "f18",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15ca38",
+      "native_destination": "add x1, x19, #0x30",
+      "native_slot_offset": 136,
+      "native_offset": 136
+    },
+    {
+      "name": "f19",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15ca44",
+      "native_destination": "add x1, x19, #0x34",
+      "native_slot_offset": 140,
+      "native_offset": 140
+    },
+    {
+      "name": "f20",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15ca50",
+      "native_destination": "add x1, x19, #0x38",
+      "native_slot_offset": 144,
+      "native_offset": 144
+    },
+    {
+      "name": "f21",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15ca5c",
+      "native_destination": "add x1, x19, #0x3c",
+      "native_slot_offset": 148,
+      "native_offset": 148
+    },
+    {
+      "name": "f22",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15ca68",
+      "native_destination": "add x1, x19, #0x40",
+      "native_slot_offset": 152,
+      "native_offset": 152
+    },
+    {
+      "name": "f23",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15ca74",
+      "native_destination": "add x1, x19, #0x44",
+      "native_slot_offset": 156,
+      "native_offset": 156
+    },
+    {
+      "name": "f24",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15ca80",
+      "native_destination": "add x1, x19, #0x48",
+      "native_slot_offset": 160,
+      "native_offset": 160
+    },
+    {
+      "name": "f25",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15ca8c",
+      "native_destination": "add x1, x19, #0x4c",
+      "native_slot_offset": 164,
+      "native_offset": 164
+    },
+    {
+      "name": "f26",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15ca98",
+      "native_destination": "add x1, x19, #0x50",
+      "native_slot_offset": 168,
+      "native_offset": 168
+    },
+    {
+      "name": "f27",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15caa4",
+      "native_destination": "add x1, x19, #0x54",
+      "native_slot_offset": 172,
+      "native_offset": 172
+    }
+  ],
+  "rows": [
+    {"_row":0,"_offset":24,"f00":"Jupiter_Swim","f01":0,"f02":4,"f03":6,"f04":164,"f05":47,"f06":1291,"f07":1294,"f08":51,"f09":1400,"f10":"43344","f11":"72929","f12":0,"f13":500,"f14":0,"f15":0,"f16":4,"f17":0,"f18":0,"f19":0,"f20":4,"f21":0,"f22":0,"f23":0,"f24":0,"f25":0,"f26":0,"f27":1,"_size":128,"_field_offsets":[24,38,42,46,50,54,58,62,66,70,74,81,88,92,96,100,104,108,112,116,120,124,128,132,136,140,144,148]},
+    {"_row":1,"_offset":152,"f00":"Saturn_Swim","f01":1,"f02":5,"f03":7,"f04":165,"f05":48,"f06":1292,"f07":1295,"f08":80,"f09":1400,"f10":"43344","f11":"72929","f12":0,"f13":0,"f14":500,"f15":0,"f16":4,"f17":0,"f18":0,"f19":0,"f20":4,"f21":0,"f22":0,"f23":0,"f24":0,"f25":0,"f26":0,"f27":1,"_size":127,"_field_offsets":[152,165,169,173,177,181,185,189,193,197,201,208,215,219,223,227,231,235,239,243,247,251,255,259,263,267,271,275]},
+    {"_row":2,"_offset":279,"f00":"Spica_Swim","f01":2,"f02":6,"f03":28,"f04":166,"f05":49,"f06":1293,"f07":1296,"f08":83,"f09":1400,"f10":"43344","f11":"72929","f12":500,"f13":0,"f14":0,"f15":0,"f16":4,"f17":0,"f18":0,"f19":0,"f20":4,"f21":0,"f22":0,"f23":0,"f24":0,"f25":0,"f26":0,"f27":1,"_size":126,"_field_offsets":[279,291,295,299,303,307,311,315,319,323,327,334,341,345,349,353,357,361,365,369,373,377,381,385,389,393,397,401]},
+    {"_row":3,"_offset":405,"f00":"Earth_Maid","f01":3,"f02":7,"f03":2,"f04":167,"f05":50,"f06":1531,"f07":1533,"f08":33,"f09":1100,"f10":"43344","f11":"72929","f12":300,"f13":0,"f14":0,"f15":0,"f16":3,"f17":0,"f18":0,"f19":0,"f20":3,"f21":0,"f22":0,"f23":0,"f24":0,"f25":0,"f26":0,"f27":1,"_size":126,"_field_offsets":[405,417,421,425,429,433,437,441,445,449,453,460,467,471,475,479,483,487,491,495,499,503,507,511,515,519,523,527]},
+    {"_row":4,"_offset":531,"f00":"Mercury_Maid","f01":4,"f02":8,"f03":3,"f04":168,"f05":51,"f06":1532,"f07":1534,"f08":57,"f09":1100,"f10":"43344","f11":"72929","f12":0,"f13":0,"f14":300,"f15":0,"f16":3,"f17":0,"f18":0,"f19":0,"f20":3,"f21":0,"f22":0,"f23":0,"f24":0,"f25":0,"f26":0,"f27":1,"_size":128,"_field_offsets":[531,545,549,553,557,561,565,569,573,577,581,588,595,599,603,607,611,615,619,623,627,631,635,639,643,647,651,655]},
+    {"_row":5,"_offset":659,"f00":"Electra_Swim","f01":5,"f02":3,"f03":93,"f04":202,"f05":311,"f06":2473,"f07":2474,"f08":35,"f09":1800,"f10":"43344","f11":"72929","f12":0,"f13":0,"f14":0,"f15":0,"f16":10,"f17":0,"f18":0,"f19":0,"f20":0,"f21":0,"f22":0,"f23":0,"f24":0,"f25":10,"f26":0,"f27":1,"_size":128,"_field_offsets":[659,673,677,681,685,689,693,697,701,705,709,716,723,727,731,735,739,743,747,751,755,759,763,767,771,775,779,783]},
+    {"_row":6,"_offset":787,"f00":"Cygni_Swim","f01":6,"f02":2,"f03":71,"f04":205,"f05":312,"f06":2477,"f07":2478,"f08":26,"f09":2300,"f10":"43344","f11":"72929","f12":0,"f13":0,"f14":0,"f15":0,"f16":10,"f17":0,"f18":0,"f19":0,"f20":0,"f21":0,"f22":0,"f23":0,"f24":1,"f25":20,"f26":0,"f27":1,"_size":126,"_field_offsets":[787,799,803,807,811,815,819,823,827,831,835,842,849,853,857,861,865,869,873,877,881,885,889,893,897,901,905,909]},
+    {"_row":7,"_offset":913,"f00":"Aldebaran_Bunny","f01":7,"f02":1,"f03":89,"f04":206,"f05":313,"f06":2561,"f07":2562,"f08":3,"f09":2300,"f10":"43344","f11":"72929","f12":0,"f13":0,"f14":0,"f15":0,"f16":10,"f17":0,"f18":0,"f19":0,"f20":0,"f21":0,"f22":0,"f23":0,"f24":1,"f25":20,"f26":0,"f27":1,"_size":131,"_field_offsets":[913,930,934,938,942,946,950,954,958,962,966,973,980,984,988,992,996,1000,1004,1008,1012,1016,1020,1024,1028,1032,1036,1040]},
+    {"_row":8,"_offset":1044,"f00":"Arcturus_Santa","f01":8,"f02":0,"f03":29,"f04":220,"f05":370,"f06":2709,"f07":2710,"f08":17,"f09":2300,"f10":"43344","f11":"72929","f12":0,"f13":0,"f14":0,"f15":0,"f16":10,"f17":0,"f18":0,"f19":0,"f20":0,"f21":0,"f22":0,"f23":0,"f24":1,"f25":20,"f26":0,"f27":1,"_size":130,"_field_offsets":[1044,1060,1064,1068,1072,1076,1080,1084,1088,1092,1096,1103,1110,1114,1118,1122,1126,1130,1134,1138,1142,1146,1150,1154,1158,1162,1166,1170]}
+  ]
+}

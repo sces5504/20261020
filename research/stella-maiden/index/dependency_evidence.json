@@ -1,0 +1,325 @@
+{
+  "scope": "Offline facts from supplied APK; no OBB or server requests",
+  "expected_obb": {
+    "main": true,
+    "expansion_version": "431",
+    "package": "com.mistgame.smus",
+    "filename": "main.431.com.mistgame.smus.obb",
+    "declared_size": 132565279,
+    "source": "classes.dex com.mistgame.smus.i::<clinit>; Helpers.getExpansionAPKFileName constructs the filename",
+    "present_in_supplied_workspace": false
+  },
+  "dex_evidence": [
+    {
+      "dex": "classes.dex",
+      "class": "Lcom/google/android/vending/expansion/downloader/Helpers;",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "instructions": [
+        {
+          "offset": 0,
+          "name": "new-instance",
+          "operands": "v0, Ljava/util/Random;"
+        },
+        {
+          "offset": 4,
+          "name": "invoke-static",
+          "operands": "Landroid/os/SystemClock;->uptimeMillis()J"
+        },
+        {
+          "offset": 10,
+          "name": "move-result-wide",
+          "operands": "v2"
+        },
+        {
+          "offset": 12,
+          "name": "invoke-direct",
+          "operands": "v0, v2, v3, Ljava/util/Random;-><init>(J)V"
+        },
+        {
+          "offset": 18,
+          "name": "sput-object",
+          "operands": "v0, Lcom/google/android/vending/expansion/downloader/Helpers;->sRandom Ljava/util/Random;"
+        },
+        {
+          "offset": 22,
+          "name": "const-string",
+          "operands": "v0, \"attachment;\\s*filename\\s*=\\s*\"([^\"]*)\"\""
+        },
+        {
+          "offset": 26,
+          "name": "invoke-static",
+          "operands": "v0, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;"
+        },
+        {
+          "offset": 32,
+          "name": "move-result-object",
+          "operands": "v0"
+        },
+        {
+          "offset": 34,
+          "name": "sput-object",
+          "operands": "v0, Lcom/google/android/vending/expansion/downloader/Helpers;->CONTENT_DISPOSITION_PATTERN Ljava/util/regex/Pattern;"
+        },
+        {
+          "offset": 38,
+          "name": "return-void",
+          "operands": ""
+        }
+      ]
+    },
+    {
+      "dex": "classes.dex",
+      "class": "Lcom/google/android/vending/expansion/downloader/Helpers;",
+      "method": "doesFileExist",
+      "descriptor": "(Landroid/content/Context; Ljava/lang/String; J Z)Z",
+      "instructions": [
+        {
+          "offset": 0,
+          "name": "new-instance",
+          "operands": "v0, Ljava/io/File;"
+        },
+        {
+          "offset": 4,
+          "name": "invoke-static",
+          "operands": "v2, v3, Lcom/google/android/vending/expansion/downloader/Helpers;->generateSaveFileName(Landroid/content/Context; Ljava/lang/String;)Ljava/lang/String;"
+        },
+        {
+          "offset": 10,
+          "name": "move-result-object",
+          "operands": "v1"
+        },
+        {
+          "offset": 12,
+          "name": "invoke-direct",
+          "operands": "v0, v1, Ljava/io/File;-><init>(Ljava/lang/String;)V"
+        },
+        {
+          "offset": 18,
+          "name": "invoke-static",
+          "operands": "v2, v0, v4, v5, v6, Lcom/google/android/vending/expansion/downloader/Helpers;->doesFileExistInternal(Landroid/content/Context; Ljava/io/File; J Z)Z"
+        },
+        {
+          "offset": 24,
+          "name": "move-result",
+          "operands": "v0"
+        },
+        {
+          "offset": 26,
+          "name": "return",
+          "operands": "v0"
+        }
+      ]
+    },
+    {
+      "dex": "classes.dex",
+      "class": "Lcom/google/android/vending/expansion/downloader/Helpers;",
+      "method": "getExpansionAPKFileName",
+      "descriptor": "(Landroid/content/Context; Z Ljava/lang/String;)Ljava/lang/String;",
+      "instructions": [
+        {
+          "offset": 0,
+          "name": "new-instance",
+          "operands": "v1, Ljava/lang/StringBuilder;"
+        },
+        {
+          "offset": 4,
+          "name": "invoke-direct",
+          "operands": "v1, Ljava/lang/StringBuilder;-><init>()V"
+        },
+        {
+          "offset": 10,
+          "name": "if-eqz",
+          "operands": "v3, +025h"
+        },
+        {
+          "offset": 14,
+          "name": "const-string",
+          "operands": "v0, \"main.\""
+        },
+        {
+          "offset": 18,
+          "name": "invoke-virtual",
+          "operands": "v1, v0, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+        },
+        {
+          "offset": 24,
+          "name": "move-result-object",
+          "operands": "v0"
+        },
+        {
+          "offset": 26,
+          "name": "invoke-virtual",
+          "operands": "v0, v4, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+        },
+        {
+          "offset": 32,
+          "name": "move-result-object",
+          "operands": "v0"
+        },
+        {
+          "offset": 34,
+          "name": "const-string",
+          "operands": "v1, \".\""
+        },
+        {
+          "offset": 38,
+          "name": "invoke-virtual",
+          "operands": "v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+        },
+        {
+          "offset": 44,
+          "name": "move-result-object",
+          "operands": "v0"
+        },
+        {
+          "offset": 46,
+          "name": "invoke-virtual",
+          "operands": "v2, Landroid/content/Context;->getPackageName()Ljava/lang/String;"
+        },
+        {
+          "offset": 52,
+          "name": "move-result-object",
+          "operands": "v1"
+        },
+        {
+          "offset": 54,
+          "name": "invoke-virtual",
+          "operands": "v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+        },
+        {
+          "offset": 60,
+          "name": "move-result-object",
+          "operands": "v0"
+        },
+        {
+          "offset": 62,
+          "name": "const-string",
+          "operands": "v1, \".obb\""
+        },
+        {
+          "offset": 66,
+          "name": "invoke-virtual",
+          "operands": "v0, v1, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+        },
+        {
+          "offset": 72,
+          "name": "move-result-object",
+          "operands": "v0"
+        },
+        {
+          "offset": 74,
+          "name": "invoke-virtual",
+          "operands": "v0, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+        },
+        {
+          "offset": 80,
+          "name": "move-result-object",
+          "operands": "v0"
+        },
+        {
+          "offset": 82,
+          "name": "return-object",
+          "operands": "v0"
+        },
+        {
+          "offset": 84,
+          "name": "const-string",
+          "operands": "v0, \"patch.\""
+        },
+        {
+          "offset": 88,
+          "name": "goto",
+          "operands": "-23h"
+        }
+      ]
+    },
+    {
+      "dex": "classes.dex",
+      "class": "Lcom/mistgame/smus/i;",
+      "method": "<clinit>",
+      "descriptor": "()V",
+      "instructions": [
+        {
+          "offset": 0,
+          "name": "const/4",
+          "operands": "v6, 1"
+        },
+        {
+          "offset": 2,
+          "name": "new-array",
+          "operands": "v0, v6, [Lcom/mistgame/smus/i$a;"
+        },
+        {
+          "offset": 6,
+          "name": "const/4",
+          "operands": "v1, 0"
+        },
+        {
+          "offset": 8,
+          "name": "new-instance",
+          "operands": "v2, Lcom/mistgame/smus/i$a;"
+        },
+        {
+          "offset": 12,
+          "name": "const-string",
+          "operands": "v3, \"431\""
+        },
+        {
+          "offset": 16,
+          "name": "const-wide/32",
+          "operands": "v4, 132565279"
+        },
+        {
+          "offset": 22,
+          "name": "invoke-direct",
+          "operands": "v2, v6, v3, v4, v5, Lcom/mistgame/smus/i$a;-><init>(Z Ljava/lang/String; J)V"
+        },
+        {
+          "offset": 28,
+          "name": "aput-object",
+          "operands": "v2, v0, v1"
+        },
+        {
+          "offset": 32,
+          "name": "sput-object",
+          "operands": "v0, Lcom/mistgame/smus/i;->b [Lcom/mistgame/smus/i$a;"
+        },
+        {
+          "offset": 36,
+          "name": "return-void",
+          "operands": ""
+        }
+      ]
+    }
+  ],
+  "spine_headers": [
+    {
+      "path": "assets/UISpr_00/Door.skel",
+      "sha256": "cc17ddcbc2c4587fdcfa2ee17f51039f149af3bfc54f96d1f172b5271197b1f6",
+      "declared_version": "3.6.53",
+      "version_file_offset": 29,
+      "header_hex": "1c5045474672354f58574d77346b44362b312b2f2b3462516b61393807332e362e3533456c48f6455539a0000405726f6f740000000000000000000000003f4000003f400000000000000000000000000000000a626f6e655f446f776e000000"
+    },
+    {
+      "path": "assets/UISpr_00/FX_BossAppear.skel",
+      "sha256": "b6a5451fc8d019f60cc04d61aefc77bd5b4937f011c57b493e187720f45ba7e8",
+      "declared_version": "3.6.53",
+      "version_file_offset": 29,
+      "header_hex": "1c5639764151376c2b687235466e386b6a4a7956544e5739397a776f07332e362e353344a00002451ba000000205726f6f740000000000000000000000003f8000003f8000000000000000000000000000000004416c6c000000000000000000"
+    },
+    {
+      "path": "assets/UISpr_00/Title1.skel",
+      "sha256": "59229f1b0308560cd137959d853e3be8c6bee3f8aa925fddf3b61603a29b7655",
+      "declared_version": "3.6.53",
+      "version_file_offset": 29,
+      "header_hex": "1c4d73435a6f554b6b67546c754c30625665684a305a632f534d345107332e362e35334573d00145cf8000005c05726f6f740000000000000000000000003f547ae13f547ae1000000000000000000000000000b45617274685f626f6e650000"
+    }
+  ],
+  "limitations": [
+    "Only one explicit OBB descriptor recovered; it is not the APK version code 432.",
+    "No OBB contents, checksum, URL or current server availability established.",
+    "Spine header version is a stored declaration; full animation runtime compatibility has not been exercised.",
+    "Dynamic character asset naming rules and update caches remain incomplete."
+  ]
+}

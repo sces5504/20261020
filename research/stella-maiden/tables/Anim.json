@@ -1,0 +1,99 @@
+{
+  "_round_trip_exact": true,
+  "_format": "stella-gen-v1",
+  "_header_hex": "c117a55e0000000021f38a5e00000000",
+  "_row_count": 5,
+  "_schema_fingerprint": "0xedbc6462",
+  "_size": 324,
+  "_source_sha256": "a5e588037678b4d40cbae0de4e669deb2df9041e84de8fa8149310f4648d96cc",
+  "fields": [
+    {
+      "name": "f00",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15ba84",
+      "native_destination": "sub x1, x19, #0x1c",
+      "native_slot_offset": 0,
+      "native_offset": 0
+    },
+    {
+      "name": "f01",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15ba90",
+      "native_destination": "sub x1, x19, #0x18",
+      "native_slot_offset": 4,
+      "native_offset": 4
+    },
+    {
+      "name": "f02",
+      "type": "vec2f",
+      "reader": "0x453858",
+      "call_pc": "0x15ba9c",
+      "native_destination": "sub x1, x19, #0x14",
+      "native_slot_offset": 8,
+      "native_offset": 8
+    },
+    {
+      "name": "f03",
+      "type": "vec2f",
+      "reader": "0x453858",
+      "call_pc": "0x15baa8",
+      "native_destination": "sub x1, x19, #0xc",
+      "native_slot_offset": 16,
+      "native_offset": 16
+    },
+    {
+      "name": "f04",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15bab4",
+      "native_destination": "sub x1, x19, #4",
+      "native_slot_offset": 24,
+      "native_offset": 24
+    },
+    {
+      "name": "f05",
+      "type": "vec2f",
+      "reader": "0x453858",
+      "call_pc": "0x15bac0",
+      "native_destination": "mov x1, x19",
+      "native_slot_offset": 28,
+      "native_offset": 28
+    },
+    {
+      "name": "f06",
+      "type": "f32",
+      "reader": "0x4537c8",
+      "call_pc": "0x15bacc",
+      "native_destination": "add x1, x19, #8",
+      "native_slot_offset": 36,
+      "native_offset": 36
+    },
+    {
+      "name": "f07",
+      "type": "vec4f",
+      "reader": "0x453810",
+      "call_pc": "0x15bad8",
+      "native_destination": "add x1, x19, #0xc",
+      "native_slot_offset": 40,
+      "native_offset": 40
+    },
+    {
+      "name": "f08",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15bae4",
+      "native_destination": "add x1, x19, #0x1c",
+      "native_slot_offset": 56,
+      "native_offset": 56
+    }
+  ],
+  "rows": [
+    {"_row":0,"_offset":24,"f00":0,"f01":0,"f02":[0.0,0.0],"f03":[0.0,0.0],"f04":0,"f05":[0.0,0.0],"f06":0.0,"f07":[1.0,1.0,1.0,1.0],"f08":0,"_size":60,"_field_offsets":[24,28,32,40,48,52,60,64,80]},
+    {"_row":1,"_offset":84,"f00":0,"f01":5,"f02":[0.0,1.0],"f03":[3.0,1.0],"f04":20,"f05":[1.0,-1.0],"f06":3.0,"f07":[1.0,1.0,1.0,1.0],"f08":0,"_size":60,"_field_offsets":[84,88,92,100,108,112,120,124,140]},
+    {"_row":2,"_offset":144,"f00":0,"f01":0,"f02":[0.0,0.0],"f03":[0.0,0.0],"f04":40,"f05":[2.0,-1.0],"f06":1.0,"f07":[1.0,1.0,0.0,1.0],"f08":1,"_size":60,"_field_offsets":[144,148,152,160,168,172,180,184,200]},
+    {"_row":3,"_offset":204,"f00":0,"f01":0,"f02":[0.0,0.0],"f03":[0.0,0.0],"f04":60,"f05":[1.0,-1.0],"f06":0.5,"f07":[1.0,1.0,0.0,1.0],"f08":1,"_size":60,"_field_offsets":[204,208,212,220,228,232,240,244,260]},
+    {"_row":4,"_offset":264,"f00":0,"f01":5,"f02":[0.0,1.0],"f03":[3.0,1.0],"f04":20,"f05":[1.0,-1.0],"f06":1.0,"f07":[1.0,1.0,1.0,1.0],"f08":0,"_size":60,"_field_offsets":[264,268,272,280,288,292,300,304,320]}
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "_round_trip_exact": true,
+  "_format": "stella-gen-v1",
+  "_header_hex": "c317a55e0000000021f38a5e00000000",
+  "_row_count": 16,
+  "_schema_fingerprint": "0xfd712ea8",
+  "_size": 511,
+  "_source_sha256": "8c3fb09d47395d44437b03676a7e1e905a885621aefd792e45fee9c61e8e25b9",
+  "fields": [
+    {
+      "name": "f00",
+      "type": "str",
+      "reader": "0x453dbc",
+      "call_pc": "0x164bc4",
+      "native_destination": "mov x1, x25",
+      "native_slot_offset": 0,
+      "native_offset": null
+    },
+    {
+      "name": "f01",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x164bd4",
+      "native_destination": "mov x1, x20",
+      "native_slot_offset": 24,
+      "native_offset": null
+    },
+    {
+      "name": "f02",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x164be4",
+      "native_destination": "mov x1, x21",
+      "native_slot_offset": 28,
+      "native_offset": null
+    },
+    {
+      "name": "f03",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x164bf4",
+      "native_destination": "mov x1, x22",
+      "native_slot_offset": 32,
+      "native_offset": null
+    },
+    {
+      "name": "f04",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x164c04",
+      "native_destination": "mov x1, x23",
+      "native_slot_offset": 36,
+      "native_offset": null
+    },
+    {
+      "name": "f05",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x164c14",
+      "native_destination": "mov x1, x24",
+      "native_slot_offset": 40,
+      "native_offset": null
+    }
+  ],
+  "rows": [
+    {"_row":0,"_offset":24,"f00":"Crystal","f01":400,"f02":12,"f03":3,"f04":8400,"f05":0,"_size":29,"_field_offsets":[24,33,37,41,45,49]},
+    {"_row":1,"_offset":53,"f00":"Gas","f01":400,"f02":12,"f03":2,"f04":900,"f05":6,"_size":25,"_field_offsets":[53,58,62,66,70,74]},
+    {"_row":2,"_offset":78,"f00":"Metal","f01":400,"f02":12,"f03":1,"f04":400,"f05":7,"_size":27,"_field_offsets":[78,85,89,93,97,101]},
+    {"_row":3,"_offset":105,"f00":"Ether","f01":400,"f02":12,"f03":0,"f04":200,"f05":4,"_size":27,"_field_offsets":[105,112,116,120,124,128]},
+    {"_row":4,"_offset":132,"f00":"ProjCore","f01":1,"f02":5,"f03":15,"f04":50,"f05":5,"_size":30,"_field_offsets":[132,142,146,150,154,158]},
+    {"_row":5,"_offset":162,"f00":"ForceData","f01":2,"f02":5,"f03":13,"f04":35,"f05":2,"_size":31,"_field_offsets":[162,173,177,181,185,189]},
+    {"_row":6,"_offset":193,"f00":"Blueprint","f01":1,"f02":5,"f03":12,"f04":10,"f05":3,"_size":31,"_field_offsets":[193,204,208,212,216,220]},
+    {"_row":7,"_offset":224,"f00":"ExpData","f01":2,"f02":5,"f03":6,"f04":5,"f05":1,"_size":29,"_field_offsets":[224,233,237,241,245,249]},
+    {"_row":8,"_offset":253,"f00":"EnergyCore","f01":1,"f02":5,"f03":14,"f04":0,"f05":0,"_size":32,"_field_offsets":[253,265,269,273,277,281]},
+    {"_row":9,"_offset":285,"f00":"RecvCore","f01":2,"f02":5,"f03":8,"f04":0,"f05":0,"_size":30,"_field_offsets":[285,295,299,303,307,311]},
+    {"_row":10,"_offset":315,"f00":"WarpCore","f01":2,"f02":5,"f03":7,"f04":0,"f05":0,"_size":30,"_field_offsets":[315,325,329,333,337,341]},
+    {"_row":11,"_offset":345,"f00":"ResSpeedup","f01":1,"f02":2,"f03":5,"f04":0,"f05":0,"_size":32,"_field_offsets":[345,357,361,365,369,373]},
+    {"_row":12,"_offset":377,"f00":"CanopusFragment","f01":5,"f02":8,"f03":9,"f04":0,"f05":0,"_size":37,"_field_offsets":[377,394,398,402,406,410]},
+    {"_row":13,"_offset":414,"f00":"ResData","f01":200,"f02":3,"f03":4,"f04":0,"f05":0,"_size":29,"_field_offsets":[414,423,427,431,435,439]},
+    {"_row":14,"_offset":443,"f00":"SkinForceCore","f01":2,"f02":2,"f03":10,"f04":0,"f05":0,"_size":35,"_field_offsets":[443,458,462,466,470,474]},
+    {"_row":15,"_offset":478,"f00":"CoordTicket","f01":10,"f02":2,"f03":11,"f04":0,"f05":0,"_size":33,"_field_offsets":[478,491,495,499,503,507]}
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "_round_trip_exact": true,
+  "_format": "stella-gen-v1",
+  "_header_hex": "c417a55e0000000021f38a5e00000000",
+  "_row_count": 6,
+  "_schema_fingerprint": "0xf36d9f7a",
+  "_size": 308,
+  "_source_sha256": "603d2140bd4eba7ffb8cb9f231240e9f17129637961ecaac4e093f958f611c7e",
+  "fields": [
+    {
+      "name": "f00",
+      "type": "str",
+      "reader": "0x453dbc",
+      "call_pc": "0x15cf78",
+      "native_destination": "mov x1, sp",
+      "native_slot_offset": 0,
+      "native_offset": null
+    },
+    {
+      "name": "f01",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15cf88",
+      "native_destination": "sub x1, x19, #0x1c",
+      "native_slot_offset": 24,
+      "native_offset": 24
+    },
+    {
+      "name": "f02",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15cf94",
+      "native_destination": "sub x1, x19, #0x18",
+      "native_slot_offset": 28,
+      "native_offset": 28
+    },
+    {
+      "name": "f03",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15cfa0",
+      "native_destination": "sub x1, x19, #0x14",
+      "native_slot_offset": 32,
+      "native_offset": 32
+    },
+    {
+      "name": "f04",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15cfac",
+      "native_destination": "sub x1, x19, #0x10",
+      "native_slot_offset": 36,
+      "native_offset": 36
+    },
+    {
+      "name": "f05",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15cfb8",
+      "native_destination": "sub x1, x19, #0xc",
+      "native_slot_offset": 40,
+      "native_offset": 40
+    },
+    {
+      "name": "f06",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15cfc4",
+      "native_destination": "sub x1, x19, #8",
+      "native_slot_offset": 44,
+      "native_offset": 44
+    },
+    {
+      "name": "f07",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15cfd0",
+      "native_destination": "sub x1, x19, #4",
+      "native_slot_offset": 48,
+      "native_offset": 48
+    },
+    {
+      "name": "f08",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15cfdc",
+      "native_destination": "mov x1, x19",
+      "native_slot_offset": 52,
+      "native_offset": 52
+    }
+  ],
+  "rows": [
+    {"_row":0,"_offset":24,"f00":"TrainTicket","f01":0,"f02":1242,"f03":1328,"f04":192,"f05":15,"f06":15,"f07":15,"f08":0,"_size":45,"_field_offsets":[24,37,41,45,49,53,57,61,65]},
+    {"_row":1,"_offset":69,"f00":"CoordTicket10","f01":1,"f02":1762,"f03":1773,"f04":34,"f05":50,"f06":0,"f07":0,"f08":0,"_size":47,"_field_offsets":[69,84,88,92,96,100,104,108,112]},
+    {"_row":2,"_offset":116,"f00":"CoordTicket100","f01":2,"f02":1772,"f03":1773,"f04":34,"f05":500,"f06":0,"f07":0,"f08":0,"_size":48,"_field_offsets":[116,132,136,140,144,148,152,156,160]},
+    {"_row":3,"_offset":164,"f00":"QuasarEnergy","f01":3,"f02":2098,"f03":2662,"f04":226,"f05":10,"f06":10,"f07":10,"f08":0,"_size":46,"_field_offsets":[164,178,182,186,190,194,198,202,206]},
+    {"_row":4,"_offset":210,"f00":"RouletteTicket","f01":4,"f02":2824,"f03":0,"f04":506,"f05":45,"f06":1,"f07":0,"f08":0,"_size":48,"_field_offsets":[210,226,230,234,238,242,246,250,254]},
+    {"_row":5,"_offset":258,"f00":"RouletteTicket10","f01":5,"f02":2825,"f03":0,"f04":506,"f05":400,"f06":1,"f07":0,"f08":0,"_size":50,"_field_offsets":[258,276,280,284,288,292,296,300,304]}
+  ]
+}

@@ -1,0 +1,16 @@
+[
+  "bXML",
+  "string",
+  "byte",
+  "word",
+  "bool",
+  "float",
+  "dword",
+  "uint",
+  "ETime",
+  "PlayType",
+  "STime",
+  "Speed",
+  "Spline",
+  "TweenPwr"
+]

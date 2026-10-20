@@ -1,0 +1,6937 @@
+{
+  "apk": "Stella+Maiden+-+Girls+of+the+Stars_4.3.2_APKPure.apk",
+  "size": 101176242,
+  "sha256": "213a1630a5e893f4e5c1e17fc292a04aabfe5c865534c997cb90131624837905",
+  "files": [
+    {
+      "path": "3rdparty_login_library_android_4.1.4_source.jar",
+      "size": 245884,
+      "compressed_size": 234215,
+      "crc32": "ca0c9c75"
+    },
+    {
+      "path": "AndroidManifest.xml",
+      "size": 26032,
+      "compressed_size": 5649,
+      "crc32": "a5fe0c73"
+    },
+    {
+      "path": "META-INF/android.arch.lifecycle_runtime.version",
+      "size": 6,
+      "compressed_size": 8,
+      "crc32": "d653fbab"
+    },
+    {
+      "path": "META-INF/com.android.support_animated-vector-drawable.version",
+      "size": 7,
+      "compressed_size": 9,
+      "crc32": "0a43e351"
+    },
+    {
+      "path": "META-INF/com.android.support_appcompat-v7.version",
+      "size": 7,
+      "compressed_size": 9,
+      "crc32": "0a43e351"
+    },
+    {
+      "path": "META-INF/com.android.support_cardview-v7.version",
+      "size": 7,
+      "compressed_size": 9,
+      "crc32": "0a43e351"
+    },
+    {
+      "path": "META-INF/com.android.support_customtabs.version",
+      "size": 7,
+      "compressed_size": 9,
+      "crc32": "0a43e351"
+    },
+    {
+      "path": "META-INF/com.android.support_support-compat.version",
+      "size": 7,
+      "compressed_size": 9,
+      "crc32": "0a43e351"
+    },
+    {
+      "path": "META-INF/com.android.support_support-core-ui.version",
+      "size": 7,
+      "compressed_size": 9,
+      "crc32": "0a43e351"
+    },
+    {
+      "path": "META-INF/com.android.support_support-core-utils.version",
+      "size": 7,
+      "compressed_size": 9,
+      "crc32": "0a43e351"
+    },
+    {
+      "path": "META-INF/com.android.support_support-fragment.version",
+      "size": 7,
+      "compressed_size": 9,
+      "crc32": "0a43e351"
+    },
+    {
+      "path": "META-INF/com.android.support_support-media-compat.version",
+      "size": 7,
+      "compressed_size": 9,
+      "crc32": "0a43e351"
+    },
+    {
+      "path": "META-INF/com.android.support_support-v4.version",
+      "size": 7,
+      "compressed_size": 9,
+      "crc32": "0a43e351"
+    },
+    {
+      "path": "META-INF/com.android.support_support-vector-drawable.version",
+      "size": 7,
+      "compressed_size": 9,
+      "crc32": "0a43e351"
+    },
+    {
+      "path": "META-INF/eclipse.inf",
+      "size": 76,
+      "compressed_size": 65,
+      "crc32": "afc6027e"
+    },
+    {
+      "path": "README.md",
+      "size": 405,
+      "compressed_size": 270,
+      "crc32": "3a3b13de"
+    },
+    {
+      "path": "about_files/LICENSE.txt",
+      "size": 11358,
+      "compressed_size": 3949,
+      "crc32": "86e2b4b4"
+    },
+    {
+      "path": "about_files/NOTICE.txt",
+      "size": 173,
+      "compressed_size": 125,
+      "crc32": "7a5d9c2b"
+    },
+    {
+      "path": "assets/Actor_00.pkg",
+      "size": 1199503,
+      "compressed_size": 973598,
+      "crc32": "36df4c57"
+    },
+    {
+      "path": "assets/Etc_00.pkg",
+      "size": 3262541,
+      "compressed_size": 3178014,
+      "crc32": "e2f29ac0"
+    },
+    {
+      "path": "assets/Font/ABSTER.ttf",
+      "size": 3800,
+      "compressed_size": 2349,
+      "crc32": "8f6e90d3"
+    },
+    {
+      "path": "assets/Font/Anton-Regular.ttf",
+      "size": 79396,
+      "compressed_size": 38503,
+      "crc32": "0c4fa589"
+    },
+    {
+      "path": "assets/Font/ApexMk2-BoldExtended.ttf",
+      "size": 10884,
+      "compressed_size": 4704,
+      "crc32": "9785ebbc"
+    },
+    {
+      "path": "assets/Font/ApexMk2-Regular.ttf",
+      "size": 11692,
+      "compressed_size": 4756,
+      "crc32": "29712011"
+    },
+    {
+      "path": "assets/Font/NotoKR-Bold.ttf",
+      "size": 11409572,
+      "compressed_size": 6823096,
+      "crc32": "af9ca2e9"
+    },
+    {
+      "path": "assets/Font/NotoNaskhArabic-Bold.ttf",
+      "size": 224128,
+      "compressed_size": 118029,
+      "crc32": "596047e9"
+    },
+    {
+      "path": "assets/Font/NotoSansThai-Bold.ttf",
+      "size": 28864,
+      "compressed_size": 16614,
+      "crc32": "501a53bd"
+    },
+    {
+      "path": "assets/Font/SamsungEmoji.ttf",
+      "size": 518640,
+      "compressed_size": 343582,
+      "crc32": "34cb3b10"
+    },
+    {
+      "path": "assets/Material_00.pkg",
+      "size": 36223,
+      "compressed_size": 35256,
+      "crc32": "386193f4"
+    },
+    {
+      "path": "assets/Scene_00.pkg",
+      "size": 1175161,
+      "compressed_size": 1153013,
+      "crc32": "293161d6"
+    },
+    {
+      "path": "assets/Sound/Alarm1.ogg",
+      "size": 7027,
+      "compressed_size": 7027,
+      "crc32": "5220a46c"
+    },
+    {
+      "path": "assets/Sound/Alarm2.ogg",
+      "size": 7581,
+      "compressed_size": 7581,
+      "crc32": "18086215"
+    },
+    {
+      "path": "assets/Sound/BG_Battle01.ogg",
+      "size": 1001383,
+      "compressed_size": 1001383,
+      "crc32": "b0726acd"
+    },
+    {
+      "path": "assets/Sound/BG_Battle02.ogg",
+      "size": 1139032,
+      "compressed_size": 1139032,
+      "crc32": "a7c17432"
+    },
+    {
+      "path": "assets/Sound/BG_Battle03.ogg",
+      "size": 531177,
+      "compressed_size": 531177,
+      "crc32": "0ea9434c"
+    },
+    {
+      "path": "assets/Sound/BG_Battle04.ogg",
+      "size": 746372,
+      "compressed_size": 746372,
+      "crc32": "5e6f4e4a"
+    },
+    {
+      "path": "assets/Sound/BG_BattleFront01.ogg",
+      "size": 217272,
+      "compressed_size": 217272,
+      "crc32": "f96fcc54"
+    },
+    {
+      "path": "assets/Sound/BG_BigBoss01.ogg",
+      "size": 1018541,
+      "compressed_size": 1018541,
+      "crc32": "fed15680"
+    },
+    {
+      "path": "assets/Sound/BG_Boss01.ogg",
+      "size": 836895,
+      "compressed_size": 836895,
+      "crc32": "7731c410"
+    },
+    {
+      "path": "assets/Sound/BG_Boss02.ogg",
+      "size": 473988,
+      "compressed_size": 473988,
+      "crc32": "7a51b5ef"
+    },
+    {
+      "path": "assets/Sound/BG_Boss03.ogg",
+      "size": 573329,
+      "compressed_size": 573329,
+      "crc32": "c9fa963d"
+    },
+    {
+      "path": "assets/Sound/BG_Boss04.ogg",
+      "size": 1967746,
+      "compressed_size": 1967746,
+      "crc32": "d50b8295"
+    },
+    {
+      "path": "assets/Sound/BG_Boss05.ogg",
+      "size": 1231683,
+      "compressed_size": 1231683,
+      "crc32": "06e0fabf"
+    },
+    {
+      "path": "assets/Sound/BG_BossGirl01.ogg",
+      "size": 914252,
+      "compressed_size": 914252,
+      "crc32": "eeeb9430"
+    },
+    {
+      "path": "assets/Sound/BG_Danger01.ogg",
+      "size": 413604,
+      "compressed_size": 413604,
+      "crc32": "975d83a9"
+    },
+    {
+      "path": "assets/Sound/BG_Ending01.ogg",
+      "size": 730285,
+      "compressed_size": 730285,
+      "crc32": "c773e07e"
+    },
+    {
+      "path": "assets/Sound/BG_Ending3.ogg",
+      "size": 696021,
+      "compressed_size": 696021,
+      "crc32": "3832afaf"
+    },
+    {
+      "path": "assets/Sound/BG_Ending4.ogg",
+      "size": 1135951,
+      "compressed_size": 1135951,
+      "crc32": "b9b7ddff"
+    },
+    {
+      "path": "assets/Sound/BG_Ending5.ogg",
+      "size": 757355,
+      "compressed_size": 757355,
+      "crc32": "b60fa436"
+    },
+    {
+      "path": "assets/Sound/BG_Jupiter01.ogg",
+      "size": 1044731,
+      "compressed_size": 1044731,
+      "crc32": "2347d10d"
+    },
+    {
+      "path": "assets/Sound/BG_Main01.ogg",
+      "size": 1116392,
+      "compressed_size": 1116392,
+      "crc32": "207415a5"
+    },
+    {
+      "path": "assets/Sound/BG_Main02.ogg",
+      "size": 1132459,
+      "compressed_size": 1132459,
+      "crc32": "e137cdf0"
+    },
+    {
+      "path": "assets/Sound/BG_Main03.ogg",
+      "size": 736842,
+      "compressed_size": 736842,
+      "crc32": "98b2c27e"
+    },
+    {
+      "path": "assets/Sound/BG_Main04.ogg",
+      "size": 1457662,
+      "compressed_size": 1457662,
+      "crc32": "16ba0246"
+    },
+    {
+      "path": "assets/Sound/BG_Main05.ogg",
+      "size": 832079,
+      "compressed_size": 832079,
+      "crc32": "6f4ba4e4"
+    },
+    {
+      "path": "assets/Sound/BG_Main20.ogg",
+      "size": 1344143,
+      "compressed_size": 1344143,
+      "crc32": "c3306b67"
+    },
+    {
+      "path": "assets/Sound/BG_Mission01.ogg",
+      "size": 1088586,
+      "compressed_size": 1088586,
+      "crc32": "43dad614"
+    },
+    {
+      "path": "assets/Sound/BG_Mission02.ogg",
+      "size": 725474,
+      "compressed_size": 725474,
+      "crc32": "be383c6c"
+    },
+    {
+      "path": "assets/Sound/BG_Mission03.ogg",
+      "size": 953184,
+      "compressed_size": 953184,
+      "crc32": "1b47026f"
+    },
+    {
+      "path": "assets/Sound/BG_Mission04.ogg",
+      "size": 818019,
+      "compressed_size": 818019,
+      "crc32": "518465db"
+    },
+    {
+      "path": "assets/Sound/BG_MotherShip03.ogg",
+      "size": 727129,
+      "compressed_size": 727129,
+      "crc32": "6b86b3d2"
+    },
+    {
+      "path": "assets/Sound/BG_Nemesis01.ogg",
+      "size": 1095864,
+      "compressed_size": 1095864,
+      "crc32": "d890c011"
+    },
+    {
+      "path": "assets/Sound/BG_Spica01.ogg",
+      "size": 1228402,
+      "compressed_size": 1228402,
+      "crc32": "d7f248b3"
+    },
+    {
+      "path": "assets/Sound/BG_Title01.ogg",
+      "size": 539821,
+      "compressed_size": 539821,
+      "crc32": "eaa6d057"
+    },
+    {
+      "path": "assets/Sound/BG_TitleStart.ogg",
+      "size": 15782,
+      "compressed_size": 15782,
+      "crc32": "b3ad04ec"
+    },
+    {
+      "path": "assets/Sound/BG_Wave01.ogg",
+      "size": 1091245,
+      "compressed_size": 1091245,
+      "crc32": "12b17adf"
+    },
+    {
+      "path": "assets/Sound/BG_Wave02.ogg",
+      "size": 1261486,
+      "compressed_size": 1261486,
+      "crc32": "8c096ae8"
+    },
+    {
+      "path": "assets/Sound/BPDown.ogg",
+      "size": 6979,
+      "compressed_size": 6979,
+      "crc32": "e5ca9ec1"
+    },
+    {
+      "path": "assets/Sound/BPUp.ogg",
+      "size": 8726,
+      "compressed_size": 8726,
+      "crc32": "b881af91"
+    },
+    {
+      "path": "assets/Sound/Behemoth.ogg",
+      "size": 523978,
+      "compressed_size": 523978,
+      "crc32": "3dfac333"
+    },
+    {
+      "path": "assets/Sound/BigReward.ogg",
+      "size": 12276,
+      "compressed_size": 12276,
+      "crc32": "938da19d"
+    },
+    {
+      "path": "assets/Sound/BoosterS.ogg",
+      "size": 19396,
+      "compressed_size": 19396,
+      "crc32": "f2d64835"
+    },
+    {
+      "path": "assets/Sound/BossAppear02.ogg",
+      "size": 26983,
+      "compressed_size": 26983,
+      "crc32": "593e0e55"
+    },
+    {
+      "path": "assets/Sound/BossCoreAck01.ogg",
+      "size": 16550,
+      "compressed_size": 16550,
+      "crc32": "26617b83"
+    },
+    {
+      "path": "assets/Sound/BossExp01.ogg",
+      "size": 57151,
+      "compressed_size": 57151,
+      "crc32": "67ad99e8"
+    },
+    {
+      "path": "assets/Sound/BossExp02.ogg",
+      "size": 54445,
+      "compressed_size": 54445,
+      "crc32": "419f6c35"
+    },
+    {
+      "path": "assets/Sound/BossExp03.ogg",
+      "size": 48995,
+      "compressed_size": 48995,
+      "crc32": "72d78a5b"
+    },
+    {
+      "path": "assets/Sound/ButtonDown.ogg",
+      "size": 15217,
+      "compressed_size": 15217,
+      "crc32": "592b26b8"
+    },
+    {
+      "path": "assets/Sound/ButtonUp.ogg",
+      "size": 16002,
+      "compressed_size": 16002,
+      "crc32": "935f87c1"
+    },
+    {
+      "path": "assets/Sound/ClickClose.ogg",
+      "size": 5846,
+      "compressed_size": 5846,
+      "crc32": "8601e065"
+    },
+    {
+      "path": "assets/Sound/Click_Button.ogg",
+      "size": 5237,
+      "compressed_size": 5237,
+      "crc32": "bc8f1433"
+    },
+    {
+      "path": "assets/Sound/Coin.ogg",
+      "size": 14982,
+      "compressed_size": 14982,
+      "crc32": "2c157688"
+    },
+    {
+      "path": "assets/Sound/Construction.ogg",
+      "size": 19671,
+      "compressed_size": 19671,
+      "crc32": "1b345439"
+    },
+    {
+      "path": "assets/Sound/Construction_Fast.ogg",
+      "size": 35035,
+      "compressed_size": 35035,
+      "crc32": "000246d9"
+    },
+    {
+      "path": "assets/Sound/CosReinforce.ogg",
+      "size": 32469,
+      "compressed_size": 32469,
+      "crc32": "58f4b665"
+    },
+    {
+      "path": "assets/Sound/CostumeReward.ogg",
+      "size": 15007,
+      "compressed_size": 15007,
+      "crc32": "239641d7"
+    },
+    {
+      "path": "assets/Sound/CubeUp.ogg",
+      "size": 21831,
+      "compressed_size": 21831,
+      "crc32": "01ede4e8"
+    },
+    {
+      "path": "assets/Sound/DenebMemory01.ogg",
+      "size": 819608,
+      "compressed_size": 819608,
+      "crc32": "f434d6fb"
+    },
+    {
+      "path": "assets/Sound/DenebMemory02.ogg",
+      "size": 439759,
+      "compressed_size": 439759,
+      "crc32": "841eaf7d"
+    },
+    {
+      "path": "assets/Sound/DenebMemory03.ogg",
+      "size": 1179540,
+      "compressed_size": 1179540,
+      "crc32": "20b8955a"
+    },
+    {
+      "path": "assets/Sound/DenebMemory04.ogg",
+      "size": 207794,
+      "compressed_size": 207794,
+      "crc32": "fbd0a7df"
+    },
+    {
+      "path": "assets/Sound/Destruction.ogg",
+      "size": 13742,
+      "compressed_size": 13742,
+      "crc32": "83453999"
+    },
+    {
+      "path": "assets/Sound/DoorClose.ogg",
+      "size": 10882,
+      "compressed_size": 10882,
+      "crc32": "57608a23"
+    },
+    {
+      "path": "assets/Sound/DoorOpen.ogg",
+      "size": 10219,
+      "compressed_size": 10219,
+      "crc32": "f287198d"
+    },
+    {
+      "path": "assets/Sound/Empty01.ogg",
+      "size": 72569,
+      "compressed_size": 72569,
+      "crc32": "b6d29466"
+    },
+    {
+      "path": "assets/Sound/EquipmentEnd.ogg",
+      "size": 34747,
+      "compressed_size": 34747,
+      "crc32": "9fdd48ef"
+    },
+    {
+      "path": "assets/Sound/EquipmentStart.ogg",
+      "size": 30196,
+      "compressed_size": 30196,
+      "crc32": "416db36f"
+    },
+    {
+      "path": "assets/Sound/Explosion01.ogg",
+      "size": 17783,
+      "compressed_size": 17783,
+      "crc32": "21348fbf"
+    },
+    {
+      "path": "assets/Sound/Explosion02.ogg",
+      "size": 16250,
+      "compressed_size": 16250,
+      "crc32": "a7f42f09"
+    },
+    {
+      "path": "assets/Sound/FormationMove.ogg",
+      "size": 10150,
+      "compressed_size": 10150,
+      "crc32": "73643952"
+    },
+    {
+      "path": "assets/Sound/Fusion_OK.ogg",
+      "size": 32964,
+      "compressed_size": 32964,
+      "crc32": "51bf170d"
+    },
+    {
+      "path": "assets/Sound/GirlHeal.ogg",
+      "size": 27147,
+      "compressed_size": 27147,
+      "crc32": "90806d85"
+    },
+    {
+      "path": "assets/Sound/GirlHealQuick.ogg",
+      "size": 14432,
+      "compressed_size": 14432,
+      "crc32": "c3fce8c5"
+    },
+    {
+      "path": "assets/Sound/GirlMove01.ogg",
+      "size": 19041,
+      "compressed_size": 19041,
+      "crc32": "54da2788"
+    },
+    {
+      "path": "assets/Sound/GirlReinforce.ogg",
+      "size": 31724,
+      "compressed_size": 31724,
+      "crc32": "3340c449"
+    },
+    {
+      "path": "assets/Sound/GirlReturn.ogg",
+      "size": 21445,
+      "compressed_size": 21445,
+      "crc32": "7bee7c60"
+    },
+    {
+      "path": "assets/Sound/GirlSupply.ogg",
+      "size": 30587,
+      "compressed_size": 30587,
+      "crc32": "1fb6328d"
+    },
+    {
+      "path": "assets/Sound/Girl_Touch.ogg",
+      "size": 5668,
+      "compressed_size": 5668,
+      "crc32": "0d356236"
+    },
+    {
+      "path": "assets/Sound/Hit_BlackHole01.ogg",
+      "size": 8136,
+      "compressed_size": 8136,
+      "crc32": "68e06bef"
+    },
+    {
+      "path": "assets/Sound/Holy01.ogg",
+      "size": 49491,
+      "compressed_size": 49491,
+      "crc32": "9fe3390d"
+    },
+    {
+      "path": "assets/Sound/JupiterAck01.ogg",
+      "size": 32504,
+      "compressed_size": 32504,
+      "crc32": "289e7414"
+    },
+    {
+      "path": "assets/Sound/LevelUp.ogg",
+      "size": 14011,
+      "compressed_size": 14011,
+      "crc32": "acc05e69"
+    },
+    {
+      "path": "assets/Sound/LevelUp02.ogg",
+      "size": 27523,
+      "compressed_size": 27523,
+      "crc32": "ccccce75"
+    },
+    {
+      "path": "assets/Sound/Lobby.ogg",
+      "size": 1224198,
+      "compressed_size": 1224198,
+      "crc32": "125ea79f"
+    },
+    {
+      "path": "assets/Sound/Lobby2.ogg",
+      "size": 665879,
+      "compressed_size": 665879,
+      "crc32": "618953f9"
+    },
+    {
+      "path": "assets/Sound/MagellanUnit.ogg",
+      "size": 1276291,
+      "compressed_size": 1276291,
+      "crc32": "b614f82d"
+    },
+    {
+      "path": "assets/Sound/MiniReward.ogg",
+      "size": 9817,
+      "compressed_size": 9817,
+      "crc32": "2c3a048b"
+    },
+    {
+      "path": "assets/Sound/MotherHacking.ogg",
+      "size": 1157037,
+      "compressed_size": 1157037,
+      "crc32": "1f2fd312"
+    },
+    {
+      "path": "assets/Sound/MotherShip03Aura.ogg",
+      "size": 16747,
+      "compressed_size": 16747,
+      "crc32": "74191467"
+    },
+    {
+      "path": "assets/Sound/MotherSummon1.ogg",
+      "size": 264945,
+      "compressed_size": 264945,
+      "crc32": "ede26532"
+    },
+    {
+      "path": "assets/Sound/Mothership.ogg",
+      "size": 34825,
+      "compressed_size": 34825,
+      "crc32": "133ea816"
+    },
+    {
+      "path": "assets/Sound/NoticeMain_Fail.ogg",
+      "size": 6189,
+      "compressed_size": 6189,
+      "crc32": "a4b9340a"
+    },
+    {
+      "path": "assets/Sound/NoticeMain_OK.ogg",
+      "size": 7655,
+      "compressed_size": 7655,
+      "crc32": "b9a4820d"
+    },
+    {
+      "path": "assets/Sound/PlanetHeal.ogg",
+      "size": 37765,
+      "compressed_size": 37765,
+      "crc32": "6f3c7add"
+    },
+    {
+      "path": "assets/Sound/PlanetHealQuick.ogg",
+      "size": 38837,
+      "compressed_size": 38837,
+      "crc32": "82af39ad"
+    },
+    {
+      "path": "assets/Sound/PlanetSound01.ogg",
+      "size": 43374,
+      "compressed_size": 43374,
+      "crc32": "3f32208b"
+    },
+    {
+      "path": "assets/Sound/PlanetSound02.ogg",
+      "size": 47997,
+      "compressed_size": 47997,
+      "crc32": "6ba181f9"
+    },
+    {
+      "path": "assets/Sound/PlanetSound03.ogg",
+      "size": 23919,
+      "compressed_size": 23919,
+      "crc32": "e4cc41ce"
+    },
+    {
+      "path": "assets/Sound/PlanetUnlock01.ogg",
+      "size": 40445,
+      "compressed_size": 40445,
+      "crc32": "72439b57"
+    },
+    {
+      "path": "assets/Sound/PopEnemyS.ogg",
+      "size": 14840,
+      "compressed_size": 14840,
+      "crc32": "8928c6d5"
+    },
+    {
+      "path": "assets/Sound/PopUp01.ogg",
+      "size": 7626,
+      "compressed_size": 7626,
+      "crc32": "0455d19e"
+    },
+    {
+      "path": "assets/Sound/PopUp02.ogg",
+      "size": 20563,
+      "compressed_size": 20563,
+      "crc32": "0f1516c1"
+    },
+    {
+      "path": "assets/Sound/Proj_Ack01.ogg",
+      "size": 7403,
+      "compressed_size": 7403,
+      "crc32": "f9d0e986"
+    },
+    {
+      "path": "assets/Sound/Proj_Ack02.ogg",
+      "size": 7274,
+      "compressed_size": 7274,
+      "crc32": "5aef38e4"
+    },
+    {
+      "path": "assets/Sound/Proj_Ack03.ogg",
+      "size": 6826,
+      "compressed_size": 6826,
+      "crc32": "e2f3e2af"
+    },
+    {
+      "path": "assets/Sound/Proj_Ack04.ogg",
+      "size": 11276,
+      "compressed_size": 11276,
+      "crc32": "7556413e"
+    },
+    {
+      "path": "assets/Sound/Proj_Ack06.ogg",
+      "size": 7201,
+      "compressed_size": 7201,
+      "crc32": "c0d84587"
+    },
+    {
+      "path": "assets/Sound/Proj_Ack07.ogg",
+      "size": 6854,
+      "compressed_size": 6854,
+      "crc32": "9c3c00f4"
+    },
+    {
+      "path": "assets/Sound/Proj_Ack08.ogg",
+      "size": 10814,
+      "compressed_size": 10814,
+      "crc32": "ec7abe80"
+    },
+    {
+      "path": "assets/Sound/Proj_CrashHit01.ogg",
+      "size": 8078,
+      "compressed_size": 8078,
+      "crc32": "649752b1"
+    },
+    {
+      "path": "assets/Sound/Proj_CutFull01.ogg",
+      "size": 10791,
+      "compressed_size": 10791,
+      "crc32": "150cc556"
+    },
+    {
+      "path": "assets/Sound/Proj_CutSwing01.ogg",
+      "size": 7452,
+      "compressed_size": 7452,
+      "crc32": "a958f1c6"
+    },
+    {
+      "path": "assets/Sound/Proj_CutSwingBig01.ogg",
+      "size": 9659,
+      "compressed_size": 9659,
+      "crc32": "f969a446"
+    },
+    {
+      "path": "assets/Sound/Proj_CutTarget01.ogg",
+      "size": 8063,
+      "compressed_size": 8063,
+      "crc32": "21ddaf3e"
+    },
+    {
+      "path": "assets/Sound/Proj_DebuffField01.ogg",
+      "size": 22101,
+      "compressed_size": 22101,
+      "crc32": "c594b6ea"
+    },
+    {
+      "path": "assets/Sound/Proj_Enemy_Ack01.ogg",
+      "size": 8230,
+      "compressed_size": 8230,
+      "crc32": "bb9704d8"
+    },
+    {
+      "path": "assets/Sound/Proj_Enemy_Ack02.ogg",
+      "size": 8224,
+      "compressed_size": 8224,
+      "crc32": "cc90710e"
+    },
+    {
+      "path": "assets/Sound/Proj_Enemy_Ack04.ogg",
+      "size": 7788,
+      "compressed_size": 7788,
+      "crc32": "fa5508ad"
+    },
+    {
+      "path": "assets/Sound/Proj_Enemy_Ack05.ogg",
+      "size": 8220,
+      "compressed_size": 8220,
+      "crc32": "9780fc27"
+    },
+    {
+      "path": "assets/Sound/Proj_Enemy_Ack06.ogg",
+      "size": 7662,
+      "compressed_size": 7662,
+      "crc32": "22b4a83c"
+    },
+    {
+      "path": "assets/Sound/Proj_Enemy_Ack07.ogg",
+      "size": 7023,
+      "compressed_size": 7023,
+      "crc32": "5e6c0ae6"
+    },
+    {
+      "path": "assets/Sound/Proj_Explode01.ogg",
+      "size": 8013,
+      "compressed_size": 8013,
+      "crc32": "8c1ccfdb"
+    },
+    {
+      "path": "assets/Sound/Proj_Explosion02.ogg",
+      "size": 17559,
+      "compressed_size": 17559,
+      "crc32": "707f5458"
+    },
+    {
+      "path": "assets/Sound/Proj_FlashHit01.ogg",
+      "size": 9218,
+      "compressed_size": 9218,
+      "crc32": "8eb6317d"
+    },
+    {
+      "path": "assets/Sound/Proj_GasShot01.ogg",
+      "size": 11326,
+      "compressed_size": 11326,
+      "crc32": "b4a9e2f1"
+    },
+    {
+      "path": "assets/Sound/Proj_GuidedShotE01.ogg",
+      "size": 10496,
+      "compressed_size": 10496,
+      "crc32": "cabc90a9"
+    },
+    {
+      "path": "assets/Sound/Proj_LaserTarget01.ogg",
+      "size": 15122,
+      "compressed_size": 15122,
+      "crc32": "67f09bbe"
+    },
+    {
+      "path": "assets/Sound/Proj_MachineShot01.ogg",
+      "size": 9309,
+      "compressed_size": 9309,
+      "crc32": "64468c2d"
+    },
+    {
+      "path": "assets/Sound/Proj_MachineShot02.ogg",
+      "size": 12160,
+      "compressed_size": 12160,
+      "crc32": "59c947fa"
+    },
+    {
+      "path": "assets/Sound/Proj_Meteor01.ogg",
+      "size": 14944,
+      "compressed_size": 14944,
+      "crc32": "51500db6"
+    },
+    {
+      "path": "assets/Sound/Proj_NailSwing01.ogg",
+      "size": 7227,
+      "compressed_size": 7227,
+      "crc32": "752c8605"
+    },
+    {
+      "path": "assets/Sound/Proj_PunchSwing01.ogg",
+      "size": 10063,
+      "compressed_size": 10063,
+      "crc32": "85dbc562"
+    },
+    {
+      "path": "assets/Sound/Proj_Revolver01.ogg",
+      "size": 7323,
+      "compressed_size": 7323,
+      "crc32": "5ab3533c"
+    },
+    {
+      "path": "assets/Sound/Proj_SniperShot01.ogg",
+      "size": 12235,
+      "compressed_size": 12235,
+      "crc32": "a7c8ad42"
+    },
+    {
+      "path": "assets/Sound/Proj_StunShot01.ogg",
+      "size": 9510,
+      "compressed_size": 9510,
+      "crc32": "8852df0f"
+    },
+    {
+      "path": "assets/Sound/Proj_TageetMelee01.ogg",
+      "size": 6113,
+      "compressed_size": 6113,
+      "crc32": "ed48af7a"
+    },
+    {
+      "path": "assets/Sound/Proj_TageetNail01.ogg",
+      "size": 6771,
+      "compressed_size": 6771,
+      "crc32": "1d4b8905"
+    },
+    {
+      "path": "assets/Sound/Proj_Thrust01.ogg",
+      "size": 7468,
+      "compressed_size": 7468,
+      "crc32": "4874f201"
+    },
+    {
+      "path": "assets/Sound/Proj_ThrustE01.ogg",
+      "size": 8225,
+      "compressed_size": 8225,
+      "crc32": "6fbc8087"
+    },
+    {
+      "path": "assets/Sound/Proj_ThrustE02.ogg",
+      "size": 7564,
+      "compressed_size": 7564,
+      "crc32": "16497f7c"
+    },
+    {
+      "path": "assets/Sound/Quest_Clear.ogg",
+      "size": 22118,
+      "compressed_size": 22118,
+      "crc32": "d32310a2"
+    },
+    {
+      "path": "assets/Sound/Quest_Fail.ogg",
+      "size": 22487,
+      "compressed_size": 22487,
+      "crc32": "614404d4"
+    },
+    {
+      "path": "assets/Sound/Quest_Start.ogg",
+      "size": 17095,
+      "compressed_size": 17095,
+      "crc32": "9a3a4fa2"
+    },
+    {
+      "path": "assets/Sound/Redball.ogg",
+      "size": 8029,
+      "compressed_size": 8029,
+      "crc32": "8f735273"
+    },
+    {
+      "path": "assets/Sound/ReinforceExpUp.ogg",
+      "size": 23283,
+      "compressed_size": 23283,
+      "crc32": "593c821b"
+    },
+    {
+      "path": "assets/Sound/ReinforcePointUp.ogg",
+      "size": 24794,
+      "compressed_size": 24794,
+      "crc32": "77bb2cd3"
+    },
+    {
+      "path": "assets/Sound/ResearchStart.ogg",
+      "size": 29518,
+      "compressed_size": 29518,
+      "crc32": "db7016ae"
+    },
+    {
+      "path": "assets/Sound/Research_Fast.ogg",
+      "size": 36644,
+      "compressed_size": 36644,
+      "crc32": "845f5fbb"
+    },
+    {
+      "path": "assets/Sound/RouletteStart.ogg",
+      "size": 26359,
+      "compressed_size": 26359,
+      "crc32": "b2b16b9d"
+    },
+    {
+      "path": "assets/Sound/SKill_DeElectric.ogg",
+      "size": 18277,
+      "compressed_size": 18277,
+      "crc32": "792a7355"
+    },
+    {
+      "path": "assets/Sound/SKill_DeFire.ogg",
+      "size": 16497,
+      "compressed_size": 16497,
+      "crc32": "2a1e10dc"
+    },
+    {
+      "path": "assets/Sound/SKill_DeGas.ogg",
+      "size": 13595,
+      "compressed_size": 13595,
+      "crc32": "42e93355"
+    },
+    {
+      "path": "assets/Sound/SKill_DeGas02.ogg",
+      "size": 35898,
+      "compressed_size": 35898,
+      "crc32": "38583397"
+    },
+    {
+      "path": "assets/Sound/S_Charging01.ogg",
+      "size": 20333,
+      "compressed_size": 20333,
+      "crc32": "b4f82e76"
+    },
+    {
+      "path": "assets/Sound/S_Charging02.ogg",
+      "size": 16797,
+      "compressed_size": 16797,
+      "crc32": "d447698a"
+    },
+    {
+      "path": "assets/Sound/S_ChargingShot01.ogg",
+      "size": 18129,
+      "compressed_size": 18129,
+      "crc32": "83c7acee"
+    },
+    {
+      "path": "assets/Sound/ScenarioClear01.ogg",
+      "size": 17779,
+      "compressed_size": 17779,
+      "crc32": "74f387a2"
+    },
+    {
+      "path": "assets/Sound/Skill_BlackHole01.ogg",
+      "size": 33098,
+      "compressed_size": 33098,
+      "crc32": "e770a9fc"
+    },
+    {
+      "path": "assets/Sound/Skill_Buff01.ogg",
+      "size": 15320,
+      "compressed_size": 15320,
+      "crc32": "f2e271c0"
+    },
+    {
+      "path": "assets/Sound/Skill_Buff02.ogg",
+      "size": 25352,
+      "compressed_size": 25352,
+      "crc32": "9069fe53"
+    },
+    {
+      "path": "assets/Sound/Skill_Buff03.ogg",
+      "size": 21449,
+      "compressed_size": 21449,
+      "crc32": "e430bbad"
+    },
+    {
+      "path": "assets/Sound/Skill_Debuff01.ogg",
+      "size": 29225,
+      "compressed_size": 29225,
+      "crc32": "4353be01"
+    },
+    {
+      "path": "assets/Sound/Skill_Debuff02.ogg",
+      "size": 26025,
+      "compressed_size": 26025,
+      "crc32": "fc06396c"
+    },
+    {
+      "path": "assets/Sound/Skill_FlameCurtain01.ogg",
+      "size": 26646,
+      "compressed_size": 26646,
+      "crc32": "830a0f9c"
+    },
+    {
+      "path": "assets/Sound/Skill_Laser01.ogg",
+      "size": 24089,
+      "compressed_size": 24089,
+      "crc32": "39a8de82"
+    },
+    {
+      "path": "assets/Sound/Skill_Wave01.ogg",
+      "size": 15436,
+      "compressed_size": 15436,
+      "crc32": "f9287552"
+    },
+    {
+      "path": "assets/Sound/Skill_Whirlwind01.ogg",
+      "size": 23255,
+      "compressed_size": 23255,
+      "crc32": "a6e3a995"
+    },
+    {
+      "path": "assets/Sound/Summon01.ogg",
+      "size": 68371,
+      "compressed_size": 68371,
+      "crc32": "09c0e283"
+    },
+    {
+      "path": "assets/Sound/Summon03.ogg",
+      "size": 19789,
+      "compressed_size": 19789,
+      "crc32": "384f434f"
+    },
+    {
+      "path": "assets/Sound/SummonStart01.ogg",
+      "size": 28900,
+      "compressed_size": 28900,
+      "crc32": "999f7f41"
+    },
+    {
+      "path": "assets/Sound/TalkBox.ogg",
+      "size": 14855,
+      "compressed_size": 14855,
+      "crc32": "ef4c4e47"
+    },
+    {
+      "path": "assets/Sound/Tutor1Simple.ogg",
+      "size": 258780,
+      "compressed_size": 258780,
+      "crc32": "e4424109"
+    },
+    {
+      "path": "assets/Sound/Warning.ogg",
+      "size": 31164,
+      "compressed_size": 31164,
+      "crc32": "c50911ab"
+    },
+    {
+      "path": "assets/Sound/Warp01.ogg",
+      "size": 9606,
+      "compressed_size": 9606,
+      "crc32": "e8562d11"
+    },
+    {
+      "path": "assets/Sound/Warp02.ogg",
+      "size": 18393,
+      "compressed_size": 18393,
+      "crc32": "968ee76e"
+    },
+    {
+      "path": "assets/Sound/Warp03.ogg",
+      "size": 35756,
+      "compressed_size": 35756,
+      "crc32": "15c197e3"
+    },
+    {
+      "path": "assets/Sound/iconclick.ogg",
+      "size": 5109,
+      "compressed_size": 5109,
+      "crc32": "5ad9d093"
+    },
+    {
+      "path": "assets/Sound/item_slot_set.ogg",
+      "size": 7555,
+      "compressed_size": 7555,
+      "crc32": "0bf46e96"
+    },
+    {
+      "path": "assets/Sound/itemmix.ogg",
+      "size": 10730,
+      "compressed_size": 10730,
+      "crc32": "067fd759"
+    },
+    {
+      "path": "assets/Sound/leenssay.ogg",
+      "size": 3969,
+      "compressed_size": 3969,
+      "crc32": "e0a2f1f1"
+    },
+    {
+      "path": "assets/Sound/pisycal_attack1.ogg",
+      "size": 7403,
+      "compressed_size": 7403,
+      "crc32": "f9d0e986"
+    },
+    {
+      "path": "assets/Sound/pisycal_attack11.ogg",
+      "size": 6051,
+      "compressed_size": 6051,
+      "crc32": "7a528c78"
+    },
+    {
+      "path": "assets/Sound/pisycal_attack2.ogg",
+      "size": 7274,
+      "compressed_size": 7274,
+      "crc32": "5aef38e4"
+    },
+    {
+      "path": "assets/Sound/pisycal_attack22.ogg",
+      "size": 6059,
+      "compressed_size": 6059,
+      "crc32": "dd87f81c"
+    },
+    {
+      "path": "assets/Sound/pisycal_attack3.ogg",
+      "size": 6854,
+      "compressed_size": 6854,
+      "crc32": "9c3c00f4"
+    },
+    {
+      "path": "assets/Sound/pisycal_attack33.ogg",
+      "size": 8269,
+      "compressed_size": 8269,
+      "crc32": "dee3528b"
+    },
+    {
+      "path": "assets/UISpr_00.pkg",
+      "size": 32358670,
+      "compressed_size": 32252546,
+      "crc32": "c4959fef"
+    },
+    {
+      "path": "assets/crashlytics-build.properties",
+      "size": 356,
+      "compressed_size": 265,
+      "crc32": "331c1aa6"
+    },
+    {
+      "path": "classes.dex",
+      "size": 8987660,
+      "compressed_size": 3469982,
+      "crc32": "acea4b0c"
+    },
+    {
+      "path": "classes2.dex",
+      "size": 1709064,
+      "compressed_size": 703398,
+      "crc32": "5c95a4f9"
+    },
+    {
+      "path": "fabric/com.crashlytics.sdk.android.answers.properties",
+      "size": 100,
+      "compressed_size": 85,
+      "crc32": "76ce49bc"
+    },
+    {
+      "path": "fabric/com.crashlytics.sdk.android.beta.properties",
+      "size": 98,
+      "compressed_size": 82,
+      "crc32": "4f1c7132"
+    },
+    {
+      "path": "fabric/com.crashlytics.sdk.android.crashlytics-core.properties",
+      "size": 109,
+      "compressed_size": 83,
+      "crc32": "e4561a5d"
+    },
+    {
+      "path": "fabric/com.crashlytics.sdk.android.crashlytics-ndk.properties",
+      "size": 108,
+      "compressed_size": 82,
+      "crc32": "2d1dce46"
+    },
+    {
+      "path": "fabric/com.crashlytics.sdk.android.crashlytics.properties",
+      "size": 105,
+      "compressed_size": 82,
+      "crc32": "e951d998"
+    },
+    {
+      "path": "fabric/io.fabric.sdk.android.fabric.properties",
+      "size": 682,
+      "compressed_size": 427,
+      "crc32": "b47b3cca"
+    },
+    {
+      "path": "firebase-analytics-impl.properties",
+      "size": 84,
+      "compressed_size": 55,
+      "crc32": "f02ec4ff"
+    },
+    {
+      "path": "firebase-analytics.properties",
+      "size": 74,
+      "compressed_size": 50,
+      "crc32": "85bb443f"
+    },
+    {
+      "path": "firebase-common.properties",
+      "size": 68,
+      "compressed_size": 47,
+      "crc32": "d71df402"
+    },
+    {
+      "path": "firebase-core.properties",
+      "size": 64,
+      "compressed_size": 45,
+      "crc32": "0c8db06c"
+    },
+    {
+      "path": "firebase-iid-interop.properties",
+      "size": 78,
+      "compressed_size": 52,
+      "crc32": "9766f0c8"
+    },
+    {
+      "path": "firebase-iid.properties",
+      "size": 62,
+      "compressed_size": 44,
+      "crc32": "5f3a34ca"
+    },
+    {
+      "path": "firebase-measurement-connector-impl.properties",
+      "size": 108,
+      "compressed_size": 66,
+      "crc32": "ba9e4594"
+    },
+    {
+      "path": "firebase-measurement-connector.properties",
+      "size": 98,
+      "compressed_size": 61,
+      "crc32": "65a02cbc"
+    },
+    {
+      "path": "firebase-messaging.properties",
+      "size": 74,
+      "compressed_size": 50,
+      "crc32": "d550a83b"
+    },
+    {
+      "path": "lib/arm64-v8a/libStella.so",
+      "size": 9367008,
+      "compressed_size": 3748927,
+      "crc32": "541be53d"
+    },
+    {
+      "path": "lib/arm64-v8a/libcrashlytics.so",
+      "size": 297064,
+      "compressed_size": 119173,
+      "crc32": "481eb8b4"
+    },
+    {
+      "path": "lib/armeabi-v7a/libStella.so",
+      "size": 8829956,
+      "compressed_size": 3799153,
+      "crc32": "e8177262"
+    },
+    {
+      "path": "lib/armeabi-v7a/libcrashlytics.so",
+      "size": 202580,
+      "compressed_size": 99706,
+      "crc32": "0be57f58"
+    },
+    {
+      "path": "play-services-ads-base.properties",
+      "size": 82,
+      "compressed_size": 54,
+      "crc32": "a6ee5997"
+    },
+    {
+      "path": "play-services-ads-identifier.properties",
+      "size": 94,
+      "compressed_size": 59,
+      "crc32": "bbf05434"
+    },
+    {
+      "path": "play-services-ads-lite.properties",
+      "size": 82,
+      "compressed_size": 54,
+      "crc32": "abf9d04c"
+    },
+    {
+      "path": "play-services-ads.properties",
+      "size": 72,
+      "compressed_size": 49,
+      "crc32": "051b4b18"
+    },
+    {
+      "path": "play-services-audience.properties",
+      "size": 82,
+      "compressed_size": 53,
+      "crc32": "96497b94"
+    },
+    {
+      "path": "play-services-auth-api-phone.properties",
+      "size": 94,
+      "compressed_size": 60,
+      "crc32": "c5c8037c"
+    },
+    {
+      "path": "play-services-auth-base.properties",
+      "size": 84,
+      "compressed_size": 55,
+      "crc32": "09c11d42"
+    },
+    {
+      "path": "play-services-auth.properties",
+      "size": 74,
+      "compressed_size": 50,
+      "crc32": "24d355e2"
+    },
+    {
+      "path": "play-services-base.properties",
+      "size": 74,
+      "compressed_size": 50,
+      "crc32": "7ff6d65a"
+    },
+    {
+      "path": "play-services-basement.properties",
+      "size": 82,
+      "compressed_size": 53,
+      "crc32": "e8d217ce"
+    },
+    {
+      "path": "play-services-drive.properties",
+      "size": 76,
+      "compressed_size": 51,
+      "crc32": "4c76a846"
+    },
+    {
+      "path": "play-services-games.properties",
+      "size": 76,
+      "compressed_size": 51,
+      "crc32": "28e312f9"
+    },
+    {
+      "path": "play-services-gass.properties",
+      "size": 74,
+      "compressed_size": 50,
+      "crc32": "c5094e75"
+    },
+    {
+      "path": "play-services-gcm.properties",
+      "size": 72,
+      "compressed_size": 49,
+      "crc32": "2601a942"
+    },
+    {
+      "path": "play-services-iid.properties",
+      "size": 72,
+      "compressed_size": 49,
+      "crc32": "3cf27a8d"
+    },
+    {
+      "path": "play-services-measurement-api.properties",
+      "size": 96,
+      "compressed_size": 60,
+      "crc32": "23f387e6"
+    },
+    {
+      "path": "play-services-measurement-base.properties",
+      "size": 98,
+      "compressed_size": 61,
+      "crc32": "1e9d8281"
+    },
+    {
+      "path": "play-services-plus.properties",
+      "size": 74,
+      "compressed_size": 50,
+      "crc32": "90c593b4"
+    },
+    {
+      "path": "play-services-stats.properties",
+      "size": 76,
+      "compressed_size": 51,
+      "crc32": "d8b71498"
+    },
+    {
+      "path": "play-services-tasks.properties",
+      "size": 76,
+      "compressed_size": 51,
+      "crc32": "77b27071"
+    },
+    {
+      "path": "plugin.properties",
+      "size": 662,
+      "compressed_size": 336,
+      "crc32": "34f316fa"
+    },
+    {
+      "path": "res/anim/abc_fade_in.xml",
+      "size": 104,
+      "compressed_size": 47,
+      "crc32": "d7e65643"
+    },
+    {
+      "path": "res/anim/abc_fade_out.xml",
+      "size": 104,
+      "compressed_size": 47,
+      "crc32": "d7e65643"
+    },
+    {
+      "path": "res/anim/abc_grow_fade_in_from_bottom.xml",
+      "size": 860,
+      "compressed_size": 383,
+      "crc32": "7badd9b5"
+    },
+    {
+      "path": "res/anim/abc_popup_enter.xml",
+      "size": 512,
+      "compressed_size": 263,
+      "crc32": "0025d9e1"
+    },
+    {
+      "path": "res/anim/abc_popup_exit.xml",
+      "size": 512,
+      "compressed_size": 264,
+      "crc32": "ebaa4f50"
+    },
+    {
+      "path": "res/anim/abc_shrink_fade_out_from_bottom.xml",
+      "size": 860,
+      "compressed_size": 382,
+      "crc32": "de9fe9d7"
+    },
+    {
+      "path": "res/anim/abc_slide_in_bottom.xml",
+      "size": 104,
+      "compressed_size": 47,
+      "crc32": "d7e65643"
+    },
+    {
+      "path": "res/anim/abc_slide_in_top.xml",
+      "size": 104,
+      "compressed_size": 47,
+      "crc32": "d7e65643"
+    },
+    {
+      "path": "res/anim/abc_slide_out_bottom.xml",
+      "size": 104,
+      "compressed_size": 47,
+      "crc32": "d7e65643"
+    },
+    {
+      "path": "res/anim/abc_slide_out_top.xml",
+      "size": 104,
+      "compressed_size": 47,
+      "crc32": "d7e65643"
+    },
+    {
+      "path": "res/anim/fab_scale_down.xml",
+      "size": 552,
+      "compressed_size": 282,
+      "crc32": "0be905f9"
+    },
+    {
+      "path": "res/anim/fab_scale_up.xml",
+      "size": 552,
+      "compressed_size": 283,
+      "crc32": "b203a671"
+    },
+    {
+      "path": "res/anim/fab_slide_in_from_left.xml",
+      "size": 640,
+      "compressed_size": 311,
+      "crc32": "ae468fa3"
+    },
+    {
+      "path": "res/anim/fab_slide_in_from_right.xml",
+      "size": 640,
+      "compressed_size": 310,
+      "crc32": "e5f36f84"
+    },
+    {
+      "path": "res/anim/fab_slide_out_to_left.xml",
+      "size": 640,
+      "compressed_size": 313,
+      "crc32": "69fd2cc9"
+    },
+    {
+      "path": "res/anim/fab_slide_out_to_right.xml",
+      "size": 640,
+      "compressed_size": 310,
+      "crc32": "87a3ee28"
+    },
+    {
+      "path": "res/anim/fade_in.xml",
+      "size": 512,
+      "compressed_size": 243,
+      "crc32": "371adfe2"
+    },
+    {
+      "path": "res/anim/fade_out.xml",
+      "size": 512,
+      "compressed_size": 244,
+      "crc32": "1ccf5eaf"
+    },
+    {
+      "path": "res/anim/record_setting_dialog_enter.xml",
+      "size": 388,
+      "compressed_size": 209,
+      "crc32": "4c7d2443"
+    },
+    {
+      "path": "res/anim/record_setting_dialog_exit.xml",
+      "size": 388,
+      "compressed_size": 209,
+      "crc32": "c7f14df6"
+    },
+    {
+      "path": "res/anim/slide_down.xml",
+      "size": 428,
+      "compressed_size": 229,
+      "crc32": "c00f0679"
+    },
+    {
+      "path": "res/anim/slide_in_from_top.xml",
+      "size": 360,
+      "compressed_size": 203,
+      "crc32": "92d35cc7"
+    },
+    {
+      "path": "res/anim/slide_in_right.xml",
+      "size": 472,
+      "compressed_size": 244,
+      "crc32": "1a42a927"
+    },
+    {
+      "path": "res/anim/slide_left.xml",
+      "size": 472,
+      "compressed_size": 244,
+      "crc32": "6cb03527"
+    },
+    {
+      "path": "res/anim/slide_out_right.xml",
+      "size": 472,
+      "compressed_size": 242,
+      "crc32": "69a43ac2"
+    },
+    {
+      "path": "res/anim/slide_out_to_top.xml",
+      "size": 360,
+      "compressed_size": 203,
+      "crc32": "12e5e73d"
+    },
+    {
+      "path": "res/anim/slide_right.xml",
+      "size": 428,
+      "compressed_size": 225,
+      "crc32": "34797c24"
+    },
+    {
+      "path": "res/anim/slide_up.xml",
+      "size": 428,
+      "compressed_size": 229,
+      "crc32": "57bfbf3e"
+    },
+    {
+      "path": "res/anim/tooltip_enter.xml",
+      "size": 396,
+      "compressed_size": 220,
+      "crc32": "af9c8a64"
+    },
+    {
+      "path": "res/anim/tooltip_exit.xml",
+      "size": 396,
+      "compressed_size": 223,
+      "crc32": "889fd623"
+    },
+    {
+      "path": "res/anim/widget_alpha_right.xml",
+      "size": 1008,
+      "compressed_size": 447,
+      "crc32": "2763ab34"
+    },
+    {
+      "path": "res/anim/widget_enter.xml",
+      "size": 108,
+      "compressed_size": 52,
+      "crc32": "86db5832"
+    },
+    {
+      "path": "res/anim/widget_exit.xml",
+      "size": 748,
+      "compressed_size": 331,
+      "crc32": "71d81639"
+    },
+    {
+      "path": "res/anim/widget_half_left.xml",
+      "size": 1008,
+      "compressed_size": 445,
+      "crc32": "611f9a38"
+    },
+    {
+      "path": "res/anim/widget_half_right.xml",
+      "size": 1008,
+      "compressed_size": 446,
+      "crc32": "ddafd081"
+    },
+    {
+      "path": "res/anim/widget_record_enter.xml",
+      "size": 748,
+      "compressed_size": 346,
+      "crc32": "26d0ec10"
+    },
+    {
+      "path": "res/anim/widget_record_exit.xml",
+      "size": 748,
+      "compressed_size": 335,
+      "crc32": "6e96200b"
+    },
+    {
+      "path": "res/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+      "size": 472,
+      "compressed_size": 232,
+      "crc32": "a5f5af83"
+    },
+    {
+      "path": "res/color-v11/abc_background_cache_hint_selector_material_light.xml",
+      "size": 472,
+      "compressed_size": 232,
+      "crc32": "ffee1fde"
+    },
+    {
+      "path": "res/color-v21/abc_btn_colored_borderless_text_material.xml",
+      "size": 468,
+      "compressed_size": 233,
+      "crc32": "5614a3f4"
+    },
+    {
+      "path": "res/color-v23/abc_btn_colored_borderless_text_material.xml",
+      "size": 504,
+      "compressed_size": 249,
+      "crc32": "e0b40385"
+    },
+    {
+      "path": "res/color-v23/abc_btn_colored_text_material.xml",
+      "size": 504,
+      "compressed_size": 248,
+      "crc32": "3a13dda5"
+    },
+    {
+      "path": "res/color-v23/abc_color_highlight_material.xml",
+      "size": 548,
+      "compressed_size": 262,
+      "crc32": "4b4b6a37"
+    },
+    {
+      "path": "res/color-v23/abc_tint_btn_checkable.xml",
+      "size": 628,
+      "compressed_size": 275,
+      "crc32": "96752bdd"
+    },
+    {
+      "path": "res/color-v23/abc_tint_default.xml",
+      "size": 1128,
+      "compressed_size": 376,
+      "crc32": "945fdba8"
+    },
+    {
+      "path": "res/color-v23/abc_tint_edittext.xml",
+      "size": 672,
+      "compressed_size": 289,
+      "crc32": "ebb52b58"
+    },
+    {
+      "path": "res/color-v23/abc_tint_seek_thumb.xml",
+      "size": 504,
+      "compressed_size": 246,
+      "crc32": "5d142af6"
+    },
+    {
+      "path": "res/color-v23/abc_tint_spinner.xml",
+      "size": 672,
+      "compressed_size": 289,
+      "crc32": "ebb52b58"
+    },
+    {
+      "path": "res/color-v23/abc_tint_switch_track.xml",
+      "size": 668,
+      "compressed_size": 285,
+      "crc32": "dbc5c496"
+    },
+    {
+      "path": "res/color/abc_btn_colored_text_material.xml",
+      "size": 608,
+      "compressed_size": 281,
+      "crc32": "0bc7a652"
+    },
+    {
+      "path": "res/color/abc_hint_foreground_material_dark.xml",
+      "size": 568,
+      "compressed_size": 265,
+      "crc32": "a197c74a"
+    },
+    {
+      "path": "res/color/abc_hint_foreground_material_light.xml",
+      "size": 568,
+      "compressed_size": 266,
+      "crc32": "cd3fdf9d"
+    },
+    {
+      "path": "res/color/abc_primary_text_disable_only_material_dark.xml",
+      "size": 468,
+      "compressed_size": 230,
+      "crc32": "00436a07"
+    },
+    {
+      "path": "res/color/abc_primary_text_disable_only_material_light.xml",
+      "size": 468,
+      "compressed_size": 230,
+      "crc32": "935c157d"
+    },
+    {
+      "path": "res/color/abc_primary_text_material_dark.xml",
+      "size": 468,
+      "compressed_size": 229,
+      "crc32": "8261a10f"
+    },
+    {
+      "path": "res/color/abc_primary_text_material_light.xml",
+      "size": 468,
+      "compressed_size": 229,
+      "crc32": "117ede75"
+    },
+    {
+      "path": "res/color/abc_search_url_text.xml",
+      "size": 596,
+      "compressed_size": 256,
+      "crc32": "f9a929db"
+    },
+    {
+      "path": "res/color/abc_secondary_text_material_dark.xml",
+      "size": 468,
+      "compressed_size": 229,
+      "crc32": "7cceda01"
+    },
+    {
+      "path": "res/color/abc_secondary_text_material_light.xml",
+      "size": 468,
+      "compressed_size": 230,
+      "crc32": "460793f5"
+    },
+    {
+      "path": "res/color/abc_tint_btn_checkable.xml",
+      "size": 732,
+      "compressed_size": 311,
+      "crc32": "ee235982"
+    },
+    {
+      "path": "res/color/abc_tint_default.xml",
+      "size": 1232,
+      "compressed_size": 412,
+      "crc32": "74c98388"
+    },
+    {
+      "path": "res/color/abc_tint_edittext.xml",
+      "size": 776,
+      "compressed_size": 319,
+      "crc32": "6244c2b0"
+    },
+    {
+      "path": "res/color/abc_tint_seek_thumb.xml",
+      "size": 608,
+      "compressed_size": 278,
+      "crc32": "e58b1b8b"
+    },
+    {
+      "path": "res/color/abc_tint_spinner.xml",
+      "size": 776,
+      "compressed_size": 318,
+      "crc32": "bd96b589"
+    },
+    {
+      "path": "res/color/abc_tint_switch_track.xml",
+      "size": 772,
+      "compressed_size": 314,
+      "crc32": "eaf8f1e5"
+    },
+    {
+      "path": "res/color/com_facebook_button_text_color.xml",
+      "size": 512,
+      "compressed_size": 250,
+      "crc32": "af550436"
+    },
+    {
+      "path": "res/color/common_google_signin_btn_text_dark.xml",
+      "size": 716,
+      "compressed_size": 279,
+      "crc32": "a0b102f3"
+    },
+    {
+      "path": "res/color/common_google_signin_btn_text_light.xml",
+      "size": 716,
+      "compressed_size": 279,
+      "crc32": "f5b3fe42"
+    },
+    {
+      "path": "res/color/common_google_signin_btn_tint.xml",
+      "size": 468,
+      "compressed_size": 230,
+      "crc32": "c34887b9"
+    },
+    {
+      "path": "res/color/switch_thumb_material_dark.xml",
+      "size": 468,
+      "compressed_size": 231,
+      "crc32": "28b2bec2"
+    },
+    {
+      "path": "res/color/switch_thumb_material_light.xml",
+      "size": 468,
+      "compressed_size": 231,
+      "crc32": "d97b723d"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png",
+      "size": 287,
+      "compressed_size": 287,
+      "crc32": "64228504"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_000.png",
+      "size": 227,
+      "compressed_size": 227,
+      "crc32": "55e57039"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_015.png",
+      "size": 404,
+      "compressed_size": 404,
+      "crc32": "13296992"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_000.png",
+      "size": 464,
+      "compressed_size": 464,
+      "crc32": "d265c1df"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_015.png",
+      "size": 563,
+      "compressed_size": 563,
+      "crc32": "9b1429bf"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png",
+      "size": 1548,
+      "compressed_size": 1548,
+      "crc32": "11706987"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png",
+      "size": 1748,
+      "compressed_size": 1748,
+      "crc32": "01764993"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_cab_background_top_mtrl_alpha.9.png",
+      "size": 229,
+      "compressed_size": 229,
+      "crc32": "003df2f3"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png",
+      "size": 171,
+      "compressed_size": 171,
+      "crc32": "ce3e1667"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png",
+      "size": 202,
+      "compressed_size": 202,
+      "crc32": "2cb7fb1a"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_ic_menu_cut_mtrl_alpha.png",
+      "size": 404,
+      "compressed_size": 404,
+      "crc32": "3a60c5fb"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png",
+      "size": 226,
+      "compressed_size": 226,
+      "crc32": "77025832"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png",
+      "size": 215,
+      "compressed_size": 215,
+      "crc32": "4d9f4336"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_ic_menu_share_mtrl_alpha.png",
+      "size": 389,
+      "compressed_size": 389,
+      "crc32": "23a419ae"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_ic_star_black_16dp.png",
+      "size": 263,
+      "compressed_size": 263,
+      "crc32": "2423f5f1"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_ic_star_black_36dp.png",
+      "size": 522,
+      "compressed_size": 522,
+      "crc32": "dcf33fba"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_ic_star_black_48dp.png",
+      "size": 668,
+      "compressed_size": 668,
+      "crc32": "b2403ba1"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_ic_star_half_black_16dp.png",
+      "size": 197,
+      "compressed_size": 197,
+      "crc32": "96063905"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_ic_star_half_black_36dp.png",
+      "size": 328,
+      "compressed_size": 328,
+      "crc32": "f93feaa6"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_ic_star_half_black_48dp.png",
+      "size": 431,
+      "compressed_size": 431,
+      "crc32": "f9fe8ea6"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_list_divider_mtrl_alpha.9.png",
+      "size": 167,
+      "compressed_size": 167,
+      "crc32": "9f45a479"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_list_focused_holo.9.png",
+      "size": 244,
+      "compressed_size": 244,
+      "crc32": "8e4da209"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_list_longpressed_holo.9.png",
+      "size": 212,
+      "compressed_size": 212,
+      "crc32": "81b12fde"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_list_pressed_holo_dark.9.png",
+      "size": 212,
+      "compressed_size": 212,
+      "crc32": "62993bc8"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_list_pressed_holo_light.9.png",
+      "size": 212,
+      "compressed_size": 212,
+      "crc32": "7c69f413"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_list_selector_disabled_holo_dark.9.png",
+      "size": 239,
+      "compressed_size": 239,
+      "crc32": "e50f1648"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_list_selector_disabled_holo_light.9.png",
+      "size": 240,
+      "compressed_size": 240,
+      "crc32": "43f655e6"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png",
+      "size": 817,
+      "compressed_size": 817,
+      "crc32": "0bed682a"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_popup_background_mtrl_mult.9.png",
+      "size": 1256,
+      "compressed_size": 1256,
+      "crc32": "da0d75a8"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_scrubber_control_off_mtrl_alpha.png",
+      "size": 201,
+      "compressed_size": 201,
+      "crc32": "86ce55b9"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png",
+      "size": 196,
+      "compressed_size": 196,
+      "crc32": "21171d42"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png",
+      "size": 272,
+      "compressed_size": 272,
+      "crc32": "58089ef9"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png",
+      "size": 214,
+      "compressed_size": 214,
+      "crc32": "415336be"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_scrubber_track_mtrl_alpha.9.png",
+      "size": 201,
+      "compressed_size": 201,
+      "crc32": "65b9786e"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_spinner_mtrl_am_alpha.9.png",
+      "size": 368,
+      "compressed_size": 368,
+      "crc32": "7ab89543"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_switch_track_mtrl_alpha.9.png",
+      "size": 538,
+      "compressed_size": 538,
+      "crc32": "18025bff"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_tab_indicator_mtrl_alpha.9.png",
+      "size": 199,
+      "compressed_size": 199,
+      "crc32": "6c11debe"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_text_select_handle_left_mtrl_dark.png",
+      "size": 277,
+      "compressed_size": 277,
+      "crc32": "9ba397ec"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_text_select_handle_left_mtrl_light.png",
+      "size": 277,
+      "compressed_size": 277,
+      "crc32": "cb635f30"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_text_select_handle_middle_mtrl_dark.png",
+      "size": 398,
+      "compressed_size": 398,
+      "crc32": "e9486929"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_text_select_handle_middle_mtrl_light.png",
+      "size": 396,
+      "compressed_size": 396,
+      "crc32": "be21c0b7"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_text_select_handle_right_mtrl_dark.png",
+      "size": 263,
+      "compressed_size": 263,
+      "crc32": "725a273a"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_text_select_handle_right_mtrl_light.png",
+      "size": 262,
+      "compressed_size": 262,
+      "crc32": "df25bc6b"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_textfield_activated_mtrl_alpha.9.png",
+      "size": 192,
+      "compressed_size": 192,
+      "crc32": "103aeb6a"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_textfield_default_mtrl_alpha.9.png",
+      "size": 198,
+      "compressed_size": 198,
+      "crc32": "aa35a06e"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png",
+      "size": 182,
+      "compressed_size": 182,
+      "crc32": "afd79c5c"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png",
+      "size": 182,
+      "compressed_size": 182,
+      "crc32": "ee0f1fea"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/com_facebook_button_icon_blue.png",
+      "size": 626,
+      "compressed_size": 626,
+      "crc32": "85175ae3"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/com_facebook_button_icon_white.png",
+      "size": 198,
+      "compressed_size": 198,
+      "crc32": "378382d8"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/com_facebook_button_like_icon_selected.png",
+      "size": 179,
+      "compressed_size": 179,
+      "crc32": "aee638c3"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/com_facebook_close.png",
+      "size": 1560,
+      "compressed_size": 1560,
+      "crc32": "ec43f748"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/com_facebook_tooltip_black_background.9.png",
+      "size": 1933,
+      "compressed_size": 1933,
+      "crc32": "9a002e51"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/com_facebook_tooltip_black_bottomnub.png",
+      "size": 657,
+      "compressed_size": 657,
+      "crc32": "96ef297a"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/com_facebook_tooltip_black_topnub.png",
+      "size": 513,
+      "compressed_size": 513,
+      "crc32": "71421f63"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/com_facebook_tooltip_black_xout.png",
+      "size": 193,
+      "compressed_size": 193,
+      "crc32": "d7920596"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/com_facebook_tooltip_blue_background.9.png",
+      "size": 2576,
+      "compressed_size": 2576,
+      "crc32": "0fb638c4"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/com_facebook_tooltip_blue_bottomnub.png",
+      "size": 769,
+      "compressed_size": 769,
+      "crc32": "2bbbf914"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/com_facebook_tooltip_blue_topnub.png",
+      "size": 591,
+      "compressed_size": 591,
+      "crc32": "a104238b"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/com_facebook_tooltip_blue_xout.png",
+      "size": 192,
+      "compressed_size": 192,
+      "crc32": "822c7d2b"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/common_full_open_on_phone.png",
+      "size": 681,
+      "compressed_size": 681,
+      "crc32": "3ae6b82e"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png",
+      "size": 897,
+      "compressed_size": 897,
+      "crc32": "85696478"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png",
+      "size": 817,
+      "compressed_size": 817,
+      "crc32": "d67a9fb9"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png",
+      "size": 960,
+      "compressed_size": 960,
+      "crc32": "d939ee0d"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/common_google_signin_btn_text_light_normal_background.9.png",
+      "size": 854,
+      "compressed_size": 854,
+      "crc32": "2461346b"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/googleg_disabled_color_18.png",
+      "size": 410,
+      "compressed_size": 410,
+      "crc32": "0cb58331"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/googleg_standard_color_18.png",
+      "size": 808,
+      "compressed_size": 808,
+      "crc32": "7d62f5a4"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/ic_arrow_left.png",
+      "size": 312,
+      "compressed_size": 312,
+      "crc32": "63a92177"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/ic_arrow_right.png",
+      "size": 320,
+      "compressed_size": 320,
+      "crc32": "c5e61be3"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/ic_check_normal.png",
+      "size": 840,
+      "compressed_size": 840,
+      "crc32": "8e271982"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/ic_check_pressed.png",
+      "size": 67,
+      "compressed_size": 67,
+      "crc32": "88b2a3b0"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/ic_plusone_medium_off_client.png",
+      "size": 395,
+      "compressed_size": 395,
+      "crc32": "77444459"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/ic_plusone_small_off_client.png",
+      "size": 513,
+      "compressed_size": 513,
+      "crc32": "c95f4d78"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/ic_plusone_standard_off_client.png",
+      "size": 403,
+      "compressed_size": 403,
+      "crc32": "3cd89685"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/ic_plusone_tall_off_client.png",
+      "size": 403,
+      "compressed_size": 403,
+      "crc32": "62af0479"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/ico_poll_a.png",
+      "size": 423,
+      "compressed_size": 423,
+      "crc32": "64af6798"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/ico_poll_check_w.png",
+      "size": 319,
+      "compressed_size": 319,
+      "crc32": "d879dbc1"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/icon.png",
+      "size": 12624,
+      "compressed_size": 12624,
+      "crc32": "0abf48d7"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/icon_s.png",
+      "size": 2386,
+      "compressed_size": 2386,
+      "crc32": "64f8dc27"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/notification_bg_low_normal.9.png",
+      "size": 212,
+      "compressed_size": 212,
+      "crc32": "378c117e"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/notification_bg_low_pressed.9.png",
+      "size": 225,
+      "compressed_size": 225,
+      "crc32": "5059e725"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/notification_bg_normal.9.png",
+      "size": 212,
+      "compressed_size": 212,
+      "crc32": "c22cbe9f"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png",
+      "size": 225,
+      "compressed_size": 225,
+      "crc32": "a1d68cd0"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png",
+      "size": 93,
+      "compressed_size": 93,
+      "crc32": "85453014"
+    },
+    {
+      "path": "res/drawable-hdpi-v4/oval_3.png",
+      "size": 77,
+      "compressed_size": 77,
+      "crc32": "e1a71e86"
+    },
+    {
+      "path": "res/drawable-land/gl_btn_profile_modify_ok.xml",
+      "size": 556,
+      "compressed_size": 245,
+      "crc32": "ee4a9c7c"
+    },
+    {
+      "path": "res/drawable-ldpi-v4/icon.png",
+      "size": 3015,
+      "compressed_size": 3015,
+      "crc32": "9b04ac99"
+    },
+    {
+      "path": "res/drawable-ldpi-v4/icon_s.png",
+      "size": 1371,
+      "compressed_size": 1371,
+      "crc32": "5739770a"
+    },
+    {
+      "path": "res/drawable-ldrtl-hdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png",
+      "size": 199,
+      "compressed_size": 199,
+      "crc32": "d0282950"
+    },
+    {
+      "path": "res/drawable-ldrtl-hdpi-v17/abc_ic_menu_cut_mtrl_alpha.png",
+      "size": 400,
+      "compressed_size": 400,
+      "crc32": "d879d837"
+    },
+    {
+      "path": "res/drawable-ldrtl-hdpi-v17/abc_spinner_mtrl_am_alpha.9.png",
+      "size": 367,
+      "compressed_size": 367,
+      "crc32": "a596c3d0"
+    },
+    {
+      "path": "res/drawable-ldrtl-mdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png",
+      "size": 127,
+      "compressed_size": 127,
+      "crc32": "0dd761e3"
+    },
+    {
+      "path": "res/drawable-ldrtl-mdpi-v17/abc_ic_menu_cut_mtrl_alpha.png",
+      "size": 253,
+      "compressed_size": 253,
+      "crc32": "1e7c3912"
+    },
+    {
+      "path": "res/drawable-ldrtl-mdpi-v17/abc_spinner_mtrl_am_alpha.9.png",
+      "size": 342,
+      "compressed_size": 342,
+      "crc32": "b1c14ea7"
+    },
+    {
+      "path": "res/drawable-ldrtl-xhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png",
+      "size": 178,
+      "compressed_size": 178,
+      "crc32": "549df8db"
+    },
+    {
+      "path": "res/drawable-ldrtl-xhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png",
+      "size": 494,
+      "compressed_size": 494,
+      "crc32": "fd3b518e"
+    },
+    {
+      "path": "res/drawable-ldrtl-xhdpi-v17/abc_spinner_mtrl_am_alpha.9.png",
+      "size": 483,
+      "compressed_size": 483,
+      "crc32": "64a842b9"
+    },
+    {
+      "path": "res/drawable-ldrtl-xxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png",
+      "size": 260,
+      "compressed_size": 260,
+      "crc32": "ccbf9f8a"
+    },
+    {
+      "path": "res/drawable-ldrtl-xxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png",
+      "size": 705,
+      "compressed_size": 705,
+      "crc32": "7ab4d01c"
+    },
+    {
+      "path": "res/drawable-ldrtl-xxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png",
+      "size": 593,
+      "compressed_size": 593,
+      "crc32": "48f4c207"
+    },
+    {
+      "path": "res/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png",
+      "size": 325,
+      "compressed_size": 325,
+      "crc32": "3fa87e1c"
+    },
+    {
+      "path": "res/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png",
+      "size": 905,
+      "compressed_size": 905,
+      "crc32": "0f2326e1"
+    },
+    {
+      "path": "res/drawable-ldrtl-xxxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png",
+      "size": 518,
+      "compressed_size": 518,
+      "crc32": "02ff6ecc"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png",
+      "size": 274,
+      "compressed_size": 274,
+      "crc32": "a852580c"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_000.png",
+      "size": 214,
+      "compressed_size": 214,
+      "crc32": "6a5cd9b8"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_015.png",
+      "size": 321,
+      "compressed_size": 321,
+      "crc32": "18e8038a"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_000.png",
+      "size": 324,
+      "compressed_size": 324,
+      "crc32": "fe749af3"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_015.png",
+      "size": 356,
+      "compressed_size": 356,
+      "crc32": "1cd824d4"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png",
+      "size": 1047,
+      "compressed_size": 1047,
+      "crc32": "a7483509"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png",
+      "size": 1124,
+      "compressed_size": 1124,
+      "crc32": "d76b7b1e"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_cab_background_top_mtrl_alpha.9.png",
+      "size": 225,
+      "compressed_size": 225,
+      "crc32": "b6857dd0"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png",
+      "size": 173,
+      "compressed_size": 173,
+      "crc32": "0b399ef9"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png",
+      "size": 133,
+      "compressed_size": 133,
+      "crc32": "c7100f0b"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_ic_menu_cut_mtrl_alpha.png",
+      "size": 251,
+      "compressed_size": 251,
+      "crc32": "70e50370"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png",
+      "size": 152,
+      "compressed_size": 152,
+      "crc32": "ec79a2d0"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png",
+      "size": 139,
+      "compressed_size": 139,
+      "crc32": "b5ab766d"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_ic_menu_share_mtrl_alpha.png",
+      "size": 270,
+      "compressed_size": 270,
+      "crc32": "b6dc9c3c"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_ic_star_black_16dp.png",
+      "size": 193,
+      "compressed_size": 193,
+      "crc32": "89a28d10"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_ic_star_black_36dp.png",
+      "size": 364,
+      "compressed_size": 364,
+      "crc32": "22b6d27f"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_ic_star_black_48dp.png",
+      "size": 467,
+      "compressed_size": 467,
+      "crc32": "595e2d54"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_ic_star_half_black_16dp.png",
+      "size": 146,
+      "compressed_size": 146,
+      "crc32": "4f0bbca5"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_ic_star_half_black_36dp.png",
+      "size": 253,
+      "compressed_size": 253,
+      "crc32": "42ad22b7"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_ic_star_half_black_48dp.png",
+      "size": 310,
+      "compressed_size": 310,
+      "crc32": "cf24b77b"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_list_divider_mtrl_alpha.9.png",
+      "size": 167,
+      "compressed_size": 167,
+      "crc32": "9f45a479"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_list_focused_holo.9.png",
+      "size": 222,
+      "compressed_size": 222,
+      "crc32": "b1ab9d03"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_list_longpressed_holo.9.png",
+      "size": 211,
+      "compressed_size": 211,
+      "crc32": "78c37895"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_list_pressed_holo_dark.9.png",
+      "size": 211,
+      "compressed_size": 211,
+      "crc32": "686b7a66"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_list_pressed_holo_light.9.png",
+      "size": 211,
+      "compressed_size": 211,
+      "crc32": "032efca3"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_list_selector_disabled_holo_dark.9.png",
+      "size": 226,
+      "compressed_size": 226,
+      "crc32": "551f7c98"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_list_selector_disabled_holo_light.9.png",
+      "size": 227,
+      "compressed_size": 227,
+      "crc32": "d6426851"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png",
+      "size": 589,
+      "compressed_size": 589,
+      "crc32": "e2078e4d"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_popup_background_mtrl_mult.9.png",
+      "size": 850,
+      "compressed_size": 850,
+      "crc32": "3c2b73c5"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_scrubber_control_off_mtrl_alpha.png",
+      "size": 159,
+      "compressed_size": 159,
+      "crc32": "52c2e8e3"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png",
+      "size": 145,
+      "compressed_size": 145,
+      "crc32": "2df95774"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png",
+      "size": 197,
+      "compressed_size": 197,
+      "crc32": "a759a25f"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png",
+      "size": 208,
+      "compressed_size": 208,
+      "crc32": "3a0eb435"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_scrubber_track_mtrl_alpha.9.png",
+      "size": 197,
+      "compressed_size": 197,
+      "crc32": "d393324b"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_spinner_mtrl_am_alpha.9.png",
+      "size": 340,
+      "compressed_size": 340,
+      "crc32": "e9abec02"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_switch_track_mtrl_alpha.9.png",
+      "size": 428,
+      "compressed_size": 428,
+      "crc32": "d6b37a0c"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_tab_indicator_mtrl_alpha.9.png",
+      "size": 192,
+      "compressed_size": 192,
+      "crc32": "b58b040f"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_text_select_handle_left_mtrl_dark.png",
+      "size": 203,
+      "compressed_size": 203,
+      "crc32": "8303c87d"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_text_select_handle_left_mtrl_light.png",
+      "size": 203,
+      "compressed_size": 203,
+      "crc32": "214dfcbe"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_text_select_handle_middle_mtrl_dark.png",
+      "size": 311,
+      "compressed_size": 311,
+      "crc32": "1d985902"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_text_select_handle_middle_mtrl_light.png",
+      "size": 310,
+      "compressed_size": 310,
+      "crc32": "40bc4240"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_text_select_handle_right_mtrl_dark.png",
+      "size": 187,
+      "compressed_size": 187,
+      "crc32": "3eb4a280"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_text_select_handle_right_mtrl_light.png",
+      "size": 186,
+      "compressed_size": 186,
+      "crc32": "5910e5d8"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_textfield_activated_mtrl_alpha.9.png",
+      "size": 186,
+      "compressed_size": 186,
+      "crc32": "4f16ccfc"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_textfield_default_mtrl_alpha.9.png",
+      "size": 182,
+      "compressed_size": 182,
+      "crc32": "143aeb6c"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png",
+      "size": 181,
+      "compressed_size": 181,
+      "crc32": "fb4249d4"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png",
+      "size": 180,
+      "compressed_size": 180,
+      "crc32": "19a0052e"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/bg_td_logo.png",
+      "size": 67,
+      "compressed_size": 67,
+      "crc32": "88b2a3b0"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/com_facebook_button_icon_blue.png",
+      "size": 475,
+      "compressed_size": 475,
+      "crc32": "bb8d93f1"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/com_facebook_button_icon_white.png",
+      "size": 173,
+      "compressed_size": 173,
+      "crc32": "ca377840"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/com_facebook_button_like_icon_selected.png",
+      "size": 163,
+      "compressed_size": 163,
+      "crc32": "f5f0ab87"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/com_facebook_close.png",
+      "size": 1448,
+      "compressed_size": 1448,
+      "crc32": "c64d27e6"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/com_facebook_profile_picture_blank_portrait.png",
+      "size": 1553,
+      "compressed_size": 1553,
+      "crc32": "c57ff406"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/com_facebook_profile_picture_blank_square.png",
+      "size": 1476,
+      "compressed_size": 1476,
+      "crc32": "471636c1"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/com_facebook_tooltip_black_background.9.png",
+      "size": 1331,
+      "compressed_size": 1331,
+      "crc32": "d9b82b0f"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/com_facebook_tooltip_black_bottomnub.png",
+      "size": 402,
+      "compressed_size": 402,
+      "crc32": "9f0cb2c3"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/com_facebook_tooltip_black_topnub.png",
+      "size": 264,
+      "compressed_size": 264,
+      "crc32": "526f06df"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/com_facebook_tooltip_black_xout.png",
+      "size": 158,
+      "compressed_size": 158,
+      "crc32": "5964c60e"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/com_facebook_tooltip_blue_background.9.png",
+      "size": 1560,
+      "compressed_size": 1560,
+      "crc32": "8cd40b8c"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/com_facebook_tooltip_blue_bottomnub.png",
+      "size": 438,
+      "compressed_size": 438,
+      "crc32": "c1104db6"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/com_facebook_tooltip_blue_topnub.png",
+      "size": 329,
+      "compressed_size": 329,
+      "crc32": "694289fd"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/com_facebook_tooltip_blue_xout.png",
+      "size": 159,
+      "compressed_size": 159,
+      "crc32": "9eb4dd20"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png",
+      "size": 610,
+      "compressed_size": 610,
+      "crc32": "88698600"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png",
+      "size": 564,
+      "compressed_size": 564,
+      "crc32": "53af027d"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png",
+      "size": 615,
+      "compressed_size": 615,
+      "crc32": "4199e4d9"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/common_google_signin_btn_text_light_normal_background.9.png",
+      "size": 558,
+      "compressed_size": 558,
+      "crc32": "cc58eaf7"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/cooljam_logo.png",
+      "size": 4073,
+      "compressed_size": 4073,
+      "crc32": "dd1365ef"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/googleg_disabled_color_18.png",
+      "size": 281,
+      "compressed_size": 281,
+      "crc32": "fa60669e"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/googleg_standard_color_18.png",
+      "size": 562,
+      "compressed_size": 562,
+      "crc32": "76065920"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/ic_plusone_medium_off_client.png",
+      "size": 307,
+      "compressed_size": 307,
+      "crc32": "b31c397d"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/ic_plusone_small_off_client.png",
+      "size": 277,
+      "compressed_size": 277,
+      "crc32": "1b9a7f76"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/ic_plusone_standard_off_client.png",
+      "size": 343,
+      "compressed_size": 343,
+      "crc32": "e986002f"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/ic_plusone_tall_off_client.png",
+      "size": 320,
+      "compressed_size": 320,
+      "crc32": "9fda6da2"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/ico_poll_a.png",
+      "size": 293,
+      "compressed_size": 293,
+      "crc32": "a8248488"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/ico_poll_check_w.png",
+      "size": 223,
+      "compressed_size": 223,
+      "crc32": "8095322d"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/icon.png",
+      "size": 5301,
+      "compressed_size": 5301,
+      "crc32": "32000697"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/icon_s.png",
+      "size": 1798,
+      "compressed_size": 1798,
+      "crc32": "6cb46c9e"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/mist_logo.png",
+      "size": 67,
+      "compressed_size": 67,
+      "crc32": "88b2a3b0"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/notification_bg_low_normal.9.png",
+      "size": 215,
+      "compressed_size": 215,
+      "crc32": "d9fa55b7"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/notification_bg_low_pressed.9.png",
+      "size": 223,
+      "compressed_size": 223,
+      "crc32": "b80ede38"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/notification_bg_normal.9.png",
+      "size": 215,
+      "compressed_size": 215,
+      "crc32": "c135d194"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png",
+      "size": 223,
+      "compressed_size": 223,
+      "crc32": "ed1fee6a"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png",
+      "size": 93,
+      "compressed_size": 93,
+      "crc32": "29233959"
+    },
+    {
+      "path": "res/drawable-mdpi-v4/oval_3.png",
+      "size": 71,
+      "compressed_size": 71,
+      "crc32": "edb1da3e"
+    },
+    {
+      "path": "res/drawable-tvdpi-v4/ic_plusone_medium_off_client.png",
+      "size": 372,
+      "compressed_size": 372,
+      "crc32": "2b3efa5d"
+    },
+    {
+      "path": "res/drawable-tvdpi-v4/ic_plusone_small_off_client.png",
+      "size": 399,
+      "compressed_size": 399,
+      "crc32": "f9c8ad94"
+    },
+    {
+      "path": "res/drawable-tvdpi-v4/ic_plusone_standard_off_client.png",
+      "size": 386,
+      "compressed_size": 386,
+      "crc32": "795ef827"
+    },
+    {
+      "path": "res/drawable-tvdpi-v4/ic_plusone_tall_off_client.png",
+      "size": 402,
+      "compressed_size": 402,
+      "crc32": "175eedc0"
+    },
+    {
+      "path": "res/drawable-v21/abc_action_bar_item_background_material.xml",
+      "size": 336,
+      "compressed_size": 172,
+      "crc32": "b794af16"
+    },
+    {
+      "path": "res/drawable-v21/abc_btn_colored_material.xml",
+      "size": 1908,
+      "compressed_size": 592,
+      "crc32": "99afe007"
+    },
+    {
+      "path": "res/drawable-v21/abc_edit_text_material.xml",
+      "size": 1360,
+      "compressed_size": 503,
+      "crc32": "42edab2b"
+    },
+    {
+      "path": "res/drawable-v21/notification_action_background.xml",
+      "size": 1352,
+      "compressed_size": 498,
+      "crc32": "9fb0e9db"
+    },
+    {
+      "path": "res/drawable-v23/abc_control_background_material.xml",
+      "size": 380,
+      "compressed_size": 195,
+      "crc32": "96c5ceab"
+    },
+    {
+      "path": "res/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml",
+      "size": 1028,
+      "compressed_size": 399,
+      "crc32": "d15ead0c"
+    },
+    {
+      "path": "res/drawable-watch-v20/common_google_signin_btn_text_disabled.xml",
+      "size": 1172,
+      "compressed_size": 435,
+      "crc32": "991883c1"
+    },
+    {
+      "path": "res/drawable-watch-v20/common_google_signin_btn_text_light_normal.xml",
+      "size": 992,
+      "compressed_size": 388,
+      "crc32": "16258063"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png",
+      "size": 297,
+      "compressed_size": 297,
+      "crc32": "cf127e45"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_000.png",
+      "size": 281,
+      "compressed_size": 281,
+      "crc32": "ead36c57"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_015.png",
+      "size": 432,
+      "compressed_size": 432,
+      "crc32": "0c6db123"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_000.png",
+      "size": 651,
+      "compressed_size": 651,
+      "crc32": "22f95d51"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_015.png",
+      "size": 785,
+      "compressed_size": 785,
+      "crc32": "b236fd62"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png",
+      "size": 2259,
+      "compressed_size": 2259,
+      "crc32": "cd563567"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png",
+      "size": 2606,
+      "compressed_size": 2606,
+      "crc32": "3e9a5317"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png",
+      "size": 234,
+      "compressed_size": 234,
+      "crc32": "f70ddcc0"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png",
+      "size": 228,
+      "compressed_size": 228,
+      "crc32": "a0cfd3d4"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png",
+      "size": 178,
+      "compressed_size": 178,
+      "crc32": "7c36cc60"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png",
+      "size": 492,
+      "compressed_size": 492,
+      "crc32": "879b4472"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png",
+      "size": 243,
+      "compressed_size": 243,
+      "crc32": "03daacdd"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png",
+      "size": 183,
+      "compressed_size": 183,
+      "crc32": "1dc5daa5"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_ic_menu_share_mtrl_alpha.png",
+      "size": 480,
+      "compressed_size": 480,
+      "crc32": "b9af7f4f"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_ic_star_black_16dp.png",
+      "size": 333,
+      "compressed_size": 333,
+      "crc32": "3f8a65d1"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_ic_star_black_36dp.png",
+      "size": 652,
+      "compressed_size": 652,
+      "crc32": "8e8d8274"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_ic_star_black_48dp.png",
+      "size": 887,
+      "compressed_size": 887,
+      "crc32": "ced98925"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_ic_star_half_black_16dp.png",
+      "size": 235,
+      "compressed_size": 235,
+      "crc32": "fab97236"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_ic_star_half_black_36dp.png",
+      "size": 421,
+      "compressed_size": 421,
+      "crc32": "5c88f962"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_ic_star_half_black_48dp.png",
+      "size": 548,
+      "compressed_size": 548,
+      "crc32": "a981f321"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_list_divider_mtrl_alpha.9.png",
+      "size": 167,
+      "compressed_size": 167,
+      "crc32": "9f45a479"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_list_focused_holo.9.png",
+      "size": 244,
+      "compressed_size": 244,
+      "crc32": "bde23956"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_list_longpressed_holo.9.png",
+      "size": 214,
+      "compressed_size": 214,
+      "crc32": "84a788a6"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_list_pressed_holo_dark.9.png",
+      "size": 214,
+      "compressed_size": 214,
+      "crc32": "98f7c81a"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_list_pressed_holo_light.9.png",
+      "size": 214,
+      "compressed_size": 214,
+      "crc32": "5314692b"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_list_selector_disabled_holo_dark.9.png",
+      "size": 254,
+      "compressed_size": 254,
+      "crc32": "41748705"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_list_selector_disabled_holo_light.9.png",
+      "size": 253,
+      "compressed_size": 253,
+      "crc32": "1c2ff2be"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png",
+      "size": 1122,
+      "compressed_size": 1122,
+      "crc32": "63ee6937"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_popup_background_mtrl_mult.9.png",
+      "size": 1785,
+      "compressed_size": 1785,
+      "crc32": "05343eaf"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_scrubber_control_off_mtrl_alpha.png",
+      "size": 267,
+      "compressed_size": 267,
+      "crc32": "f1f6a033"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png",
+      "size": 267,
+      "compressed_size": 267,
+      "crc32": "6a20e5ff"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png",
+      "size": 391,
+      "compressed_size": 391,
+      "crc32": "4fcf3d5b"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png",
+      "size": 219,
+      "compressed_size": 219,
+      "crc32": "bf40ca92"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_scrubber_track_mtrl_alpha.9.png",
+      "size": 207,
+      "compressed_size": 207,
+      "crc32": "1a186496"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_spinner_mtrl_am_alpha.9.png",
+      "size": 489,
+      "compressed_size": 489,
+      "crc32": "458f09df"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_switch_track_mtrl_alpha.9.png",
+      "size": 741,
+      "compressed_size": 741,
+      "crc32": "4ebe0617"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png",
+      "size": 205,
+      "compressed_size": 205,
+      "crc32": "361544c6"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_text_select_handle_left_mtrl_dark.png",
+      "size": 336,
+      "compressed_size": 336,
+      "crc32": "c1258581"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_text_select_handle_left_mtrl_light.png",
+      "size": 335,
+      "compressed_size": 335,
+      "crc32": "6d48e543"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_text_select_handle_middle_mtrl_dark.png",
+      "size": 583,
+      "compressed_size": 583,
+      "crc32": "852892ff"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_text_select_handle_middle_mtrl_light.png",
+      "size": 585,
+      "compressed_size": 585,
+      "crc32": "1361e44f"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_text_select_handle_right_mtrl_dark.png",
+      "size": 319,
+      "compressed_size": 319,
+      "crc32": "2038073f"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_text_select_handle_right_mtrl_light.png",
+      "size": 318,
+      "compressed_size": 318,
+      "crc32": "5390d72d"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png",
+      "size": 198,
+      "compressed_size": 198,
+      "crc32": "4853c2d6"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_textfield_default_mtrl_alpha.9.png",
+      "size": 197,
+      "compressed_size": 197,
+      "crc32": "7a6dbe65"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png",
+      "size": 190,
+      "compressed_size": 190,
+      "crc32": "eaa0434b"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png",
+      "size": 190,
+      "compressed_size": 190,
+      "crc32": "4cfa2def"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_blt_arrow_down3_w.png",
+      "size": 163,
+      "compressed_size": 163,
+      "crc32": "d494957f"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_blt_arrow_down4.png",
+      "size": 137,
+      "compressed_size": 137,
+      "crc32": "712d3941"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_blt_arrow_down_normal.png",
+      "size": 351,
+      "compressed_size": 351,
+      "crc32": "4d99fcb3"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_blt_arrow_down_pressed.png",
+      "size": 270,
+      "compressed_size": 270,
+      "crc32": "c002cfad"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_blt_check2_normal.png",
+      "size": 571,
+      "compressed_size": 571,
+      "crc32": "b088e8d8"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_blt_check2_pressed.png",
+      "size": 327,
+      "compressed_size": 327,
+      "crc32": "80f2d0aa"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_blt_check2cafe_pressed.png",
+      "size": 595,
+      "compressed_size": 595,
+      "crc32": "d207b0aa"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_blt_go.png",
+      "size": 292,
+      "compressed_size": 292,
+      "crc32": "7b5b034e"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_blt_go_w.png",
+      "size": 144,
+      "compressed_size": 144,
+      "crc32": "dcd5ef18"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_blt_info.png",
+      "size": 581,
+      "compressed_size": 581,
+      "crc32": "b4535335"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_blt_tag_live.png",
+      "size": 754,
+      "compressed_size": 754,
+      "crc32": "fdbea00a"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_blt_tag_new.png",
+      "size": 459,
+      "compressed_size": 459,
+      "crc32": "d261c3e0"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_flback_normal.png",
+      "size": 2913,
+      "compressed_size": 2913,
+      "crc32": "59f016c4"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_flback_pressed.png",
+      "size": 2913,
+      "compressed_size": 2913,
+      "crc32": "8ce1afb3"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_flcomment_normal.png",
+      "size": 3081,
+      "compressed_size": 3081,
+      "crc32": "b33f63c4"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_flcomment_pressed.png",
+      "size": 3158,
+      "compressed_size": 3158,
+      "crc32": "061fb642"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_flphoto_normal.png",
+      "size": 2001,
+      "compressed_size": 2001,
+      "crc32": "674fcc88"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_flphoto_pressed.png",
+      "size": 2085,
+      "compressed_size": 2085,
+      "crc32": "30d12cd4"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_flrecplay_normal.png",
+      "size": 4213,
+      "compressed_size": 4213,
+      "crc32": "f93dc528"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_flrecplay_pressed.png",
+      "size": 4199,
+      "compressed_size": 4199,
+      "crc32": "1dea155a"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_flrecstop_normal.png",
+      "size": 3105,
+      "compressed_size": 3105,
+      "crc32": "6cd44465"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_flrecstop_pressed.png",
+      "size": 3100,
+      "compressed_size": 3100,
+      "crc32": "8710b27b"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_flvideo_normal.png",
+      "size": 2396,
+      "compressed_size": 2396,
+      "crc32": "e6eceed7"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_flvideo_pressed.png",
+      "size": 2463,
+      "compressed_size": 2463,
+      "crc32": "14e453e1"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_flwrite_normal.png",
+      "size": 1924,
+      "compressed_size": 1924,
+      "crc32": "9d1a16de"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_flwrite_pressed.png",
+      "size": 1979,
+      "compressed_size": 1979,
+      "crc32": "62393f66"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_more_best.png",
+      "size": 650,
+      "compressed_size": 650,
+      "crc32": "87c04418"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_navi1_normal.png",
+      "size": 542,
+      "compressed_size": 542,
+      "crc32": "699cdb9a"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_navi1_pressed.png",
+      "size": 658,
+      "compressed_size": 658,
+      "crc32": "c89fc631"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_navi2_normal.png",
+      "size": 495,
+      "compressed_size": 495,
+      "crc32": "26fba391"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_navi2_pressed.png",
+      "size": 474,
+      "compressed_size": 474,
+      "crc32": "d894f406"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_navi3_normal.png",
+      "size": 577,
+      "compressed_size": 577,
+      "crc32": "cd7e984d"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_navi3_pressed.png",
+      "size": 675,
+      "compressed_size": 675,
+      "crc32": "8f13862c"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_navi4_normal.png",
+      "size": 587,
+      "compressed_size": 587,
+      "crc32": "5c4a8a6d"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_navi4_pressed.png",
+      "size": 814,
+      "compressed_size": 814,
+      "crc32": "dd09771a"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_navi5_normal.png",
+      "size": 470,
+      "compressed_size": 470,
+      "crc32": "34d2e32e"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_navi5_pressed.png",
+      "size": 328,
+      "compressed_size": 328,
+      "crc32": "b382b993"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_opacity_normal.png",
+      "size": 1210,
+      "compressed_size": 1210,
+      "crc32": "7abbf223"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_wdcapture_normal.png",
+      "size": 3087,
+      "compressed_size": 3087,
+      "crc32": "d249fdb7"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_wdclose_normal.png",
+      "size": 2539,
+      "compressed_size": 2539,
+      "crc32": "b0890eb3"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_wddel_normal.png",
+      "size": 2945,
+      "compressed_size": 2945,
+      "crc32": "74e65562"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_wdhome_normal.png",
+      "size": 3014,
+      "compressed_size": 3014,
+      "crc32": "e5dd4989"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_wdlive_normal.png",
+      "size": 2868,
+      "compressed_size": 2868,
+      "crc32": "9e740f42"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_btn_wdvideo_normal.png",
+      "size": 2934,
+      "compressed_size": 2934,
+      "crc32": "9c1b25ed"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_alert_s.png",
+      "size": 340,
+      "compressed_size": 340,
+      "crc32": "bfb63750"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_attach_del_normal.png",
+      "size": 272,
+      "compressed_size": 272,
+      "crc32": "a815d105"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_attach_del_pressed.png",
+      "size": 267,
+      "compressed_size": 267,
+      "crc32": "ea646347"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_bdall_s.png",
+      "size": 495,
+      "compressed_size": 495,
+      "crc32": "6b2c2413"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_bdrecent_s.png",
+      "size": 534,
+      "compressed_size": 534,
+      "crc32": "c66b50a3"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_chanel_s.png",
+      "size": 875,
+      "compressed_size": 875,
+      "crc32": "cf6c13db"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_close_w.png",
+      "size": 394,
+      "compressed_size": 394,
+      "crc32": "036b7f00"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_comment.png",
+      "size": 1108,
+      "compressed_size": 1108,
+      "crc32": "eeda9b77"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_comment_s.png",
+      "size": 669,
+      "compressed_size": 669,
+      "crc32": "29b1f68c"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_del_s.png",
+      "size": 193,
+      "compressed_size": 193,
+      "crc32": "b9086c48"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_edit_s.png",
+      "size": 620,
+      "compressed_size": 620,
+      "crc32": "2b8e35d0"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_error_info.png",
+      "size": 1809,
+      "compressed_size": 1809,
+      "crc32": "06148945"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_error_post.png",
+      "size": 1922,
+      "compressed_size": 1922,
+      "crc32": "41f8315f"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_gif.png",
+      "size": 3438,
+      "compressed_size": 3438,
+      "crc32": "6519bbb3"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_gif_s.png",
+      "size": 1547,
+      "compressed_size": 1547,
+      "crc32": "89da6b61"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_golink_s.png",
+      "size": 511,
+      "compressed_size": 511,
+      "crc32": "5f1d9f3c"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_golink_ws.png",
+      "size": 511,
+      "compressed_size": 511,
+      "crc32": "34212f07"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_home_s.png",
+      "size": 390,
+      "compressed_size": 390,
+      "crc32": "4645661f"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_inputdel_normal.png",
+      "size": 558,
+      "compressed_size": 558,
+      "crc32": "0dbed673"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_inputdel_pressed.png",
+      "size": 613,
+      "compressed_size": 613,
+      "crc32": "f6824b5c"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_inputsearch.png",
+      "size": 814,
+      "compressed_size": 814,
+      "crc32": "9490bc78"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_like1_normal.png",
+      "size": 747,
+      "compressed_size": 747,
+      "crc32": "31e3f819"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_like1_pressed.png",
+      "size": 499,
+      "compressed_size": 499,
+      "crc32": "3288d422"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_listdel.png",
+      "size": 209,
+      "compressed_size": 209,
+      "crc32": "ee71d475"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_logout_s.png",
+      "size": 714,
+      "compressed_size": 714,
+      "crc32": "997dc465"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_more.png",
+      "size": 140,
+      "compressed_size": 140,
+      "crc32": "658f91c2"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_more2.png",
+      "size": 140,
+      "compressed_size": 140,
+      "crc32": "1860615f"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_nophoto.png",
+      "size": 1168,
+      "compressed_size": 1168,
+      "crc32": "0852e40e"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_novideo.png",
+      "size": 878,
+      "compressed_size": 878,
+      "crc32": "d0359487"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_open_board.png",
+      "size": 464,
+      "compressed_size": 464,
+      "crc32": "88e16516"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_option_mic_s.png",
+      "size": 644,
+      "compressed_size": 644,
+      "crc32": "b627d79c"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_option_quality.png",
+      "size": 383,
+      "compressed_size": 383,
+      "crc32": "0f8b6c6e"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_option_size.png",
+      "size": 194,
+      "compressed_size": 194,
+      "crc32": "e575d9c7"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_pause_l_normal.png",
+      "size": 1810,
+      "compressed_size": 1810,
+      "crc32": "1ae12fb3"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_pause_l_pressed.png",
+      "size": 1771,
+      "compressed_size": 1771,
+      "crc32": "a3796021"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_pfedit_s.png",
+      "size": 711,
+      "compressed_size": 711,
+      "crc32": "3fecc32d"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_play_l_normal.png",
+      "size": 2223,
+      "compressed_size": 2223,
+      "crc32": "65451fdc"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_play_l_pressed.png",
+      "size": 2259,
+      "compressed_size": 2259,
+      "crc32": "a9a75b5f"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_play_s.png",
+      "size": 788,
+      "compressed_size": 788,
+      "crc32": "cb3c23d2"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_radio_button_off.png",
+      "size": 559,
+      "compressed_size": 559,
+      "crc32": "3f2ff10a"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_radio_button_on.png",
+      "size": 664,
+      "compressed_size": 664,
+      "crc32": "ae0606ed"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_read_s.png",
+      "size": 667,
+      "compressed_size": 667,
+      "crc32": "ff29406a"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_reply_s.png",
+      "size": 828,
+      "compressed_size": 828,
+      "crc32": "16ca3f70"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_report_b.png",
+      "size": 67,
+      "compressed_size": 67,
+      "crc32": "88b2a3b0"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_setting.png",
+      "size": 1263,
+      "compressed_size": 1263,
+      "crc32": "a1d7e477"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_win_close.png",
+      "size": 1466,
+      "compressed_size": 1466,
+      "crc32": "00921d71"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_icon_win_minimize.png",
+      "size": 1671,
+      "compressed_size": 1671,
+      "crc32": "82547b58"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_img_alphabar_off.9.png",
+      "size": 320,
+      "compressed_size": 320,
+      "crc32": "f905d1c3"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_img_alphabar_on.9.png",
+      "size": 291,
+      "compressed_size": 291,
+      "crc32": "58e48dc1"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_img_alphabar_video_off.9.png",
+      "size": 336,
+      "compressed_size": 336,
+      "crc32": "62689d2a"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_img_alphabar_video_on.9.png",
+      "size": 320,
+      "compressed_size": 320,
+      "crc32": "87aca581"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_img_alphabar_videodownloard.9.png",
+      "size": 319,
+      "compressed_size": 319,
+      "crc32": "09ba9cf3"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_img_pfdefault.png",
+      "size": 2301,
+      "compressed_size": 2301,
+      "crc32": "b4b35b88"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_img_pfstroke.png",
+      "size": 1158,
+      "compressed_size": 1158,
+      "crc32": "6d37e111"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/cf_img_thumb_none.png",
+      "size": 717,
+      "compressed_size": 717,
+      "crc32": "dc8b4254"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/com_facebook_button_icon_blue.png",
+      "size": 904,
+      "compressed_size": 904,
+      "crc32": "105011fb"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/com_facebook_button_icon_white.png",
+      "size": 231,
+      "compressed_size": 231,
+      "crc32": "30bdaef6"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/com_facebook_button_like_icon_selected.png",
+      "size": 197,
+      "compressed_size": 197,
+      "crc32": "8032bfde"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/com_facebook_close.png",
+      "size": 1919,
+      "compressed_size": 1919,
+      "crc32": "11af31c2"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/com_facebook_tooltip_black_background.9.png",
+      "size": 3156,
+      "compressed_size": 3156,
+      "crc32": "8dae3c34"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/com_facebook_tooltip_black_bottomnub.png",
+      "size": 776,
+      "compressed_size": 776,
+      "crc32": "005eb1f6"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/com_facebook_tooltip_black_topnub.png",
+      "size": 581,
+      "compressed_size": 581,
+      "crc32": "f288a5d5"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/com_facebook_tooltip_black_xout.png",
+      "size": 204,
+      "compressed_size": 204,
+      "crc32": "4a4ea510"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/com_facebook_tooltip_blue_background.9.png",
+      "size": 3842,
+      "compressed_size": 3842,
+      "crc32": "27354f0e"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/com_facebook_tooltip_blue_bottomnub.png",
+      "size": 973,
+      "compressed_size": 973,
+      "crc32": "ce2cbc6d"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/com_facebook_tooltip_blue_topnub.png",
+      "size": 706,
+      "compressed_size": 706,
+      "crc32": "aac77446"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/com_facebook_tooltip_blue_xout.png",
+      "size": 222,
+      "compressed_size": 222,
+      "crc32": "2959d020"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/common_full_open_on_phone.png",
+      "size": 489,
+      "compressed_size": 489,
+      "crc32": "cc7eabe9"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png",
+      "size": 1032,
+      "compressed_size": 1032,
+      "crc32": "f4f0cee1"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png",
+      "size": 935,
+      "compressed_size": 935,
+      "crc32": "ed0b02f9"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png",
+      "size": 1086,
+      "compressed_size": 1086,
+      "crc32": "fecc21a4"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/common_google_signin_btn_text_light_normal_background.9.png",
+      "size": 976,
+      "compressed_size": 976,
+      "crc32": "61da4416"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/gl_btn_keypad_dimmed.9.png",
+      "size": 338,
+      "compressed_size": 338,
+      "crc32": "2af83158"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/gl_btn_keypad_normal.9.png",
+      "size": 339,
+      "compressed_size": 339,
+      "crc32": "24ca50ec"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/gl_btn_keypad_pressed.9.png",
+      "size": 339,
+      "compressed_size": 339,
+      "crc32": "f8dadf2a"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/gl_btn_photo_crop_normal.png",
+      "size": 132,
+      "compressed_size": 132,
+      "crc32": "b54e59fb"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/gl_btn_photo_crop_press.png",
+      "size": 132,
+      "compressed_size": 132,
+      "crc32": "63efcad4"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/gl_btn_photo_done.png",
+      "size": 576,
+      "compressed_size": 576,
+      "crc32": "fe01d9b6"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/gl_btn_photo_rotation_normal.png",
+      "size": 703,
+      "compressed_size": 703,
+      "crc32": "289ab802"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/gl_btn_photo_rotation_press.png",
+      "size": 703,
+      "compressed_size": 703,
+      "crc32": "ae6887f0"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/gl_btn_popuplistclose_normal.png",
+      "size": 275,
+      "compressed_size": 275,
+      "crc32": "9e81652d"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/gl_btn_popuplistclose_pressed.png",
+      "size": 241,
+      "compressed_size": 241,
+      "crc32": "96e36f95"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/gl_btn_trash.png",
+      "size": 2297,
+      "compressed_size": 2297,
+      "crc32": "aac38c0e"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/gl_cafe_icon.png",
+      "size": 2215,
+      "compressed_size": 2215,
+      "crc32": "3be14083"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/gl_img_fullboard_gradient.9.png",
+      "size": 3805,
+      "compressed_size": 3805,
+      "crc32": "53b7944d"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/gl_img_imagethumbmov_gradient.png",
+      "size": 1159,
+      "compressed_size": 1159,
+      "crc32": "76c15f0b"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/gl_img_plate_shadow.9.png",
+      "size": 6706,
+      "compressed_size": 6706,
+      "crc32": "af96e87e"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/gl_ls_btn_login_back.png",
+      "size": 1680,
+      "compressed_size": 1680,
+      "crc32": "1e3dfc0e"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/gl_ls_icon_cafeimgst.png",
+      "size": 2700,
+      "compressed_size": 2700,
+      "crc32": "c793a314"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/gl_ls_icon_fullplay_normal.png",
+      "size": 323,
+      "compressed_size": 323,
+      "crc32": "96381780"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/googleg_disabled_color_18.png",
+      "size": 516,
+      "compressed_size": 516,
+      "crc32": "edf1a67b"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/googleg_standard_color_18.png",
+      "size": 982,
+      "compressed_size": 982,
+      "crc32": "bc0a585a"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/ic_plusone_medium_off_client.png",
+      "size": 628,
+      "compressed_size": 628,
+      "crc32": "ab7a6d7f"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/ic_plusone_small_off_client.png",
+      "size": 667,
+      "compressed_size": 667,
+      "crc32": "85862b17"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/ic_plusone_standard_off_client.png",
+      "size": 667,
+      "compressed_size": 667,
+      "crc32": "f84d26a1"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/ic_plusone_tall_off_client.png",
+      "size": 635,
+      "compressed_size": 635,
+      "crc32": "5f811903"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/ico_pic_meme.png",
+      "size": 670,
+      "compressed_size": 670,
+      "crc32": "e1aa6937"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/ico_poll_a.png",
+      "size": 533,
+      "compressed_size": 533,
+      "crc32": "80a1874e"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/ico_poll_check_off.png",
+      "size": 1048,
+      "compressed_size": 1048,
+      "crc32": "a64c2964"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/ico_poll_check_w.png",
+      "size": 420,
+      "compressed_size": 420,
+      "crc32": "5e76ea2c"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/icon.png",
+      "size": 20919,
+      "compressed_size": 20919,
+      "crc32": "7be86567"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/icon_s.png",
+      "size": 3244,
+      "compressed_size": 3244,
+      "crc32": "00d09f87"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/loading_000.png",
+      "size": 1618,
+      "compressed_size": 1618,
+      "crc32": "581afd32"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/loading_004.png",
+      "size": 1933,
+      "compressed_size": 1933,
+      "crc32": "b11535b6"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/loading_008.png",
+      "size": 1730,
+      "compressed_size": 1730,
+      "crc32": "6e7cd053"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/loading_012.png",
+      "size": 1839,
+      "compressed_size": 1839,
+      "crc32": "a5f0decd"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/loading_016.png",
+      "size": 1843,
+      "compressed_size": 1843,
+      "crc32": "542978b4"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/loading_020.png",
+      "size": 1852,
+      "compressed_size": 1852,
+      "crc32": "0084b8ac"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/loading_024.png",
+      "size": 1842,
+      "compressed_size": 1842,
+      "crc32": "c04256f5"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/loading_028.png",
+      "size": 1807,
+      "compressed_size": 1807,
+      "crc32": "4d5d59c6"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/loading_032.png",
+      "size": 1851,
+      "compressed_size": 1851,
+      "crc32": "ac96717c"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/loading_036.png",
+      "size": 1848,
+      "compressed_size": 1848,
+      "crc32": "247f6734"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/loading_040.png",
+      "size": 1845,
+      "compressed_size": 1845,
+      "crc32": "449ac5a1"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/loading_044.png",
+      "size": 1820,
+      "compressed_size": 1820,
+      "crc32": "ee46d52f"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/loading_048.png",
+      "size": 1997,
+      "compressed_size": 1997,
+      "crc32": "c9b2b99e"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/loading_052.png",
+      "size": 1831,
+      "compressed_size": 1831,
+      "crc32": "b4dfabe4"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/loading_056.png",
+      "size": 1618,
+      "compressed_size": 1618,
+      "crc32": "581afd32"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/loading_060.png",
+      "size": 1831,
+      "compressed_size": 1831,
+      "crc32": "b4dfabe4"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/loading_064.png",
+      "size": 1622,
+      "compressed_size": 1622,
+      "crc32": "3565dcc0"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/loading_068.png",
+      "size": 1831,
+      "compressed_size": 1831,
+      "crc32": "b4dfabe4"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/notification_bg_low_normal.9.png",
+      "size": 221,
+      "compressed_size": 221,
+      "crc32": "3ad03275"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png",
+      "size": 252,
+      "compressed_size": 252,
+      "crc32": "c8900a8e"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/notification_bg_normal.9.png",
+      "size": 221,
+      "compressed_size": 221,
+      "crc32": "9944f31a"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png",
+      "size": 247,
+      "compressed_size": 247,
+      "crc32": "c29ac558"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png",
+      "size": 99,
+      "compressed_size": 99,
+      "crc32": "63396df1"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/oval_3.png",
+      "size": 85,
+      "compressed_size": 85,
+      "crc32": "496f262b"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/pl_btn_wdplug_normal.png",
+      "size": 2800,
+      "compressed_size": 2800,
+      "crc32": "2840358e"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/pl_icon_pfmaster.png",
+      "size": 809,
+      "compressed_size": 809,
+      "crc32": "ac518674"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/pl_icon_pfstaff.png",
+      "size": 850,
+      "compressed_size": 850,
+      "crc32": "5e53f522"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/pl_icon_share.png",
+      "size": 325,
+      "compressed_size": 325,
+      "crc32": "bcb30a45"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/pl_icon_translate_off.png",
+      "size": 994,
+      "compressed_size": 994,
+      "crc32": "b53839bc"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/pl_img_logo.png",
+      "size": 950,
+      "compressed_size": 950,
+      "crc32": "a94853c3"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/pl_img_logo_ws.png",
+      "size": 462,
+      "compressed_size": 462,
+      "crc32": "b5d8de4c"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/pl_img_pluglogo.png",
+      "size": 1647,
+      "compressed_size": 1647,
+      "crc32": "87af4657"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/pl_img_pluglogo_w.png",
+      "size": 1733,
+      "compressed_size": 1733,
+      "crc32": "fb96a64a"
+    },
+    {
+      "path": "res/drawable-xhdpi-v4/pl_img_thumb_none.png",
+      "size": 748,
+      "compressed_size": 748,
+      "crc32": "15c100b9"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png",
+      "size": 305,
+      "compressed_size": 305,
+      "crc32": "7758fe71"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_000.png",
+      "size": 307,
+      "compressed_size": 307,
+      "crc32": "33d55ad0"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_015.png",
+      "size": 593,
+      "compressed_size": 593,
+      "crc32": "c02d00e1"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png",
+      "size": 984,
+      "compressed_size": 984,
+      "crc32": "f7245981"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png",
+      "size": 1208,
+      "compressed_size": 1208,
+      "crc32": "b3414d08"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png",
+      "size": 3755,
+      "compressed_size": 3755,
+      "crc32": "e3ff53b2"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png",
+      "size": 2804,
+      "compressed_size": 2804,
+      "crc32": "b888b755"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png",
+      "size": 246,
+      "compressed_size": 246,
+      "crc32": "7cd87445"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png",
+      "size": 224,
+      "compressed_size": 224,
+      "crc32": "5d9d5f1a"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png",
+      "size": 263,
+      "compressed_size": 263,
+      "crc32": "e432e225"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png",
+      "size": 710,
+      "compressed_size": 710,
+      "crc32": "ab0f1725"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png",
+      "size": 348,
+      "compressed_size": 348,
+      "crc32": "dbb1c6ea"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png",
+      "size": 262,
+      "compressed_size": 262,
+      "crc32": "c3d9aa33"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png",
+      "size": 700,
+      "compressed_size": 700,
+      "crc32": "d57b1a17"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_ic_star_black_16dp.png",
+      "size": 459,
+      "compressed_size": 459,
+      "crc32": "22030140"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_ic_star_black_36dp.png",
+      "size": 983,
+      "compressed_size": 983,
+      "crc32": "6e9ee550"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_ic_star_black_48dp.png",
+      "size": 1291,
+      "compressed_size": 1291,
+      "crc32": "5d04e88f"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_ic_star_half_black_16dp.png",
+      "size": 309,
+      "compressed_size": 309,
+      "crc32": "5f323132"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_ic_star_half_black_36dp.png",
+      "size": 577,
+      "compressed_size": 577,
+      "crc32": "0bddd926"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_ic_star_half_black_48dp.png",
+      "size": 789,
+      "compressed_size": 789,
+      "crc32": "c8ecac15"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_list_divider_mtrl_alpha.9.png",
+      "size": 171,
+      "compressed_size": 171,
+      "crc32": "19b7f846"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_list_focused_holo.9.png",
+      "size": 245,
+      "compressed_size": 245,
+      "crc32": "19c09c27"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_list_longpressed_holo.9.png",
+      "size": 221,
+      "compressed_size": 221,
+      "crc32": "236b6e98"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_list_pressed_holo_dark.9.png",
+      "size": 221,
+      "compressed_size": 221,
+      "crc32": "823780d0"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_list_pressed_holo_light.9.png",
+      "size": 221,
+      "compressed_size": 221,
+      "crc32": "813ae23c"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_dark.9.png",
+      "size": 307,
+      "compressed_size": 307,
+      "crc32": "dddaae2e"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_light.9.png",
+      "size": 305,
+      "compressed_size": 305,
+      "crc32": "1ff1856f"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png",
+      "size": 1779,
+      "compressed_size": 1779,
+      "crc32": "e97125d2"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_popup_background_mtrl_mult.9.png",
+      "size": 2774,
+      "compressed_size": 2774,
+      "crc32": "478db1d1"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_scrubber_control_off_mtrl_alpha.png",
+      "size": 322,
+      "compressed_size": 322,
+      "crc32": "6761bc02"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png",
+      "size": 403,
+      "compressed_size": 403,
+      "crc32": "f0997f1b"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png",
+      "size": 595,
+      "compressed_size": 595,
+      "crc32": "01847edd"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png",
+      "size": 218,
+      "compressed_size": 218,
+      "crc32": "5902ed5c"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_scrubber_track_mtrl_alpha.9.png",
+      "size": 212,
+      "compressed_size": 212,
+      "crc32": "a028728e"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png",
+      "size": 595,
+      "compressed_size": 595,
+      "crc32": "bba9274f"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_switch_track_mtrl_alpha.9.png",
+      "size": 1060,
+      "compressed_size": 1060,
+      "crc32": "f785991a"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png",
+      "size": 210,
+      "compressed_size": 210,
+      "crc32": "d6692ce7"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_text_select_handle_left_mtrl_dark.png",
+      "size": 420,
+      "compressed_size": 420,
+      "crc32": "1b683074"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_text_select_handle_left_mtrl_light.png",
+      "size": 420,
+      "compressed_size": 420,
+      "crc32": "ab2a1853"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_text_select_handle_middle_mtrl_dark.png",
+      "size": 752,
+      "compressed_size": 752,
+      "crc32": "0832c1b4"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_text_select_handle_middle_mtrl_light.png",
+      "size": 753,
+      "compressed_size": 753,
+      "crc32": "9313e5c2"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_text_select_handle_right_mtrl_dark.png",
+      "size": 422,
+      "compressed_size": 422,
+      "crc32": "d63e53e1"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_text_select_handle_right_mtrl_light.png",
+      "size": 422,
+      "compressed_size": 422,
+      "crc32": "394ef93c"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png",
+      "size": 202,
+      "compressed_size": 202,
+      "crc32": "2fa093c4"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_textfield_default_mtrl_alpha.9.png",
+      "size": 204,
+      "compressed_size": 204,
+      "crc32": "4d07b4a9"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png",
+      "size": 193,
+      "compressed_size": 193,
+      "crc32": "77c42d34"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png",
+      "size": 196,
+      "compressed_size": 196,
+      "crc32": "09e0d73d"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/com_facebook_button_icon_blue.png",
+      "size": 1045,
+      "compressed_size": 1045,
+      "crc32": "3646b49d"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/com_facebook_button_icon_white.png",
+      "size": 284,
+      "compressed_size": 284,
+      "crc32": "c96498f0"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/com_facebook_button_like_icon_selected.png",
+      "size": 232,
+      "compressed_size": 232,
+      "crc32": "241c74c2"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png",
+      "size": 1510,
+      "compressed_size": 1510,
+      "crc32": "30b789c3"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png",
+      "size": 1412,
+      "compressed_size": 1412,
+      "crc32": "c465906a"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png",
+      "size": 1638,
+      "compressed_size": 1638,
+      "crc32": "89e3a379"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/common_google_signin_btn_text_light_normal_background.9.png",
+      "size": 1545,
+      "compressed_size": 1545,
+      "crc32": "77381bff"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/googleg_disabled_color_18.png",
+      "size": 727,
+      "compressed_size": 727,
+      "crc32": "2c75d16b"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/googleg_standard_color_18.png",
+      "size": 1615,
+      "compressed_size": 1615,
+      "crc32": "1c8ecffd"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/ic_plusone_medium_off_client.png",
+      "size": 837,
+      "compressed_size": 837,
+      "crc32": "beee6ffa"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/ic_plusone_small_off_client.png",
+      "size": 530,
+      "compressed_size": 530,
+      "crc32": "f4296b13"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/ic_plusone_standard_off_client.png",
+      "size": 827,
+      "compressed_size": 827,
+      "crc32": "cb0be57d"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/ic_plusone_tall_off_client.png",
+      "size": 720,
+      "compressed_size": 720,
+      "crc32": "15537324"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/ico_poll_a.png",
+      "size": 750,
+      "compressed_size": 750,
+      "crc32": "c8c8920c"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/ico_poll_check_w.png",
+      "size": 597,
+      "compressed_size": 597,
+      "crc32": "9d1550ef"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/icon.png",
+      "size": 40916,
+      "compressed_size": 40916,
+      "crc32": "bd94e890"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/icon_s.png",
+      "size": 5157,
+      "compressed_size": 5157,
+      "crc32": "229960a8"
+    },
+    {
+      "path": "res/drawable-xxhdpi-v4/oval_3.png",
+      "size": 99,
+      "compressed_size": 99,
+      "crc32": "861b2d3d"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_000.png",
+      "size": 275,
+      "compressed_size": 275,
+      "crc32": "96d1317c"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_015.png",
+      "size": 476,
+      "compressed_size": 476,
+      "crc32": "c4de743b"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png",
+      "size": 785,
+      "compressed_size": 785,
+      "crc32": "1cea0e0c"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png",
+      "size": 946,
+      "compressed_size": 946,
+      "crc32": "600e5975"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png",
+      "size": 3524,
+      "compressed_size": 3524,
+      "crc32": "4f6e087d"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png",
+      "size": 3853,
+      "compressed_size": 3853,
+      "crc32": "a817850a"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png",
+      "size": 327,
+      "compressed_size": 327,
+      "crc32": "da3cb045"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png",
+      "size": 910,
+      "compressed_size": 910,
+      "crc32": "566244db"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png",
+      "size": 461,
+      "compressed_size": 461,
+      "crc32": "ad44ee65"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png",
+      "size": 305,
+      "compressed_size": 305,
+      "crc32": "bca76b79"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png",
+      "size": 899,
+      "compressed_size": 899,
+      "crc32": "53e8c861"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/abc_ic_star_black_16dp.png",
+      "size": 599,
+      "compressed_size": 599,
+      "crc32": "249e7a2f"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/abc_ic_star_black_36dp.png",
+      "size": 1269,
+      "compressed_size": 1269,
+      "crc32": "97f27b0b"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/abc_ic_star_black_48dp.png",
+      "size": 1680,
+      "compressed_size": 1680,
+      "crc32": "15621716"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/abc_ic_star_half_black_16dp.png",
+      "size": 376,
+      "compressed_size": 376,
+      "crc32": "87f6eadc"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/abc_ic_star_half_black_36dp.png",
+      "size": 760,
+      "compressed_size": 760,
+      "crc32": "9c922b43"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/abc_ic_star_half_black_48dp.png",
+      "size": 991,
+      "compressed_size": 991,
+      "crc32": "f4d6e8d9"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png",
+      "size": 415,
+      "compressed_size": 415,
+      "crc32": "ec058f9b"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png",
+      "size": 631,
+      "compressed_size": 631,
+      "crc32": "83a904b8"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png",
+      "size": 513,
+      "compressed_size": 513,
+      "crc32": "3bd11453"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/abc_switch_track_mtrl_alpha.9.png",
+      "size": 1025,
+      "compressed_size": 1025,
+      "crc32": "1a7d6c07"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png",
+      "size": 208,
+      "compressed_size": 208,
+      "crc32": "74529d2e"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/abc_text_select_handle_left_mtrl_dark.png",
+      "size": 513,
+      "compressed_size": 513,
+      "crc32": "50866cd3"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/abc_text_select_handle_left_mtrl_light.png",
+      "size": 513,
+      "compressed_size": 513,
+      "crc32": "c4f21d8f"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/abc_text_select_handle_right_mtrl_dark.png",
+      "size": 513,
+      "compressed_size": 513,
+      "crc32": "faa98882"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/abc_text_select_handle_right_mtrl_light.png",
+      "size": 513,
+      "compressed_size": 513,
+      "crc32": "6eddf9de"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/ico_poll_a.png",
+      "size": 1020,
+      "compressed_size": 1020,
+      "crc32": "2606723e"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/ico_poll_check_w.png",
+      "size": 811,
+      "compressed_size": 811,
+      "crc32": "63248366"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/icon.png",
+      "size": 65441,
+      "compressed_size": 65441,
+      "crc32": "ede37cf8"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/icon_s.png",
+      "size": 5087,
+      "compressed_size": 5087,
+      "crc32": "a7f422ec"
+    },
+    {
+      "path": "res/drawable-xxxhdpi-v4/oval_3.png",
+      "size": 122,
+      "compressed_size": 122,
+      "crc32": "f45036c4"
+    },
+    {
+      "path": "res/drawable/abc_btn_borderless_material.xml",
+      "size": 700,
+      "compressed_size": 277,
+      "crc32": "f341af1c"
+    },
+    {
+      "path": "res/drawable/abc_btn_check_material.xml",
+      "size": 560,
+      "compressed_size": 249,
+      "crc32": "e2f70d0a"
+    },
+    {
+      "path": "res/drawable/abc_btn_default_mtrl_shape.xml",
+      "size": 1092,
+      "compressed_size": 425,
+      "crc32": "a6bbeb7a"
+    },
+    {
+      "path": "res/drawable/abc_btn_radio_material.xml",
+      "size": 560,
+      "compressed_size": 249,
+      "crc32": "2960f785"
+    },
+    {
+      "path": "res/drawable/abc_cab_background_internal_bg.xml",
+      "size": 436,
+      "compressed_size": 197,
+      "crc32": "9c5b1555"
+    },
+    {
+      "path": "res/drawable/abc_cab_background_top_material.xml",
+      "size": 412,
+      "compressed_size": 193,
+      "crc32": "789cac73"
+    },
+    {
+      "path": "res/drawable/abc_dialog_material_background.xml",
+      "size": 844,
+      "compressed_size": 336,
+      "crc32": "7a5fb308"
+    },
+    {
+      "path": "res/drawable/abc_ic_ab_back_material.xml",
+      "size": 908,
+      "compressed_size": 412,
+      "crc32": "e406a2dd"
+    },
+    {
+      "path": "res/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
+      "size": 1248,
+      "compressed_size": 527,
+      "crc32": "d1e0fa33"
+    },
+    {
+      "path": "res/drawable/abc_ic_clear_material.xml",
+      "size": 924,
+      "compressed_size": 389,
+      "crc32": "f7650e20"
+    },
+    {
+      "path": "res/drawable/abc_ic_go_search_api_material.xml",
+      "size": 832,
+      "compressed_size": 373,
+      "crc32": "f21500dc"
+    },
+    {
+      "path": "res/drawable/abc_ic_menu_overflow_material.xml",
+      "size": 1132,
+      "compressed_size": 425,
+      "crc32": "beda61f3"
+    },
+    {
+      "path": "res/drawable/abc_ic_search_api_material.xml",
+      "size": 1172,
+      "compressed_size": 493,
+      "crc32": "95d3a5f8"
+    },
+    {
+      "path": "res/drawable/abc_ic_voice_search_api_material.xml",
+      "size": 1208,
+      "compressed_size": 509,
+      "crc32": "d5074916"
+    },
+    {
+      "path": "res/drawable/abc_item_background_holo_dark.xml",
+      "size": 1136,
+      "compressed_size": 336,
+      "crc32": "d1b21c63"
+    },
+    {
+      "path": "res/drawable/abc_item_background_holo_light.xml",
+      "size": 1136,
+      "compressed_size": 336,
+      "crc32": "5c0f0b25"
+    },
+    {
+      "path": "res/drawable/abc_list_selector_background_transition_holo_dark.xml",
+      "size": 508,
+      "compressed_size": 217,
+      "crc32": "ad127204"
+    },
+    {
+      "path": "res/drawable/abc_list_selector_background_transition_holo_light.xml",
+      "size": 508,
+      "compressed_size": 217,
+      "crc32": "ff8319d8"
+    },
+    {
+      "path": "res/drawable/abc_list_selector_holo_dark.xml",
+      "size": 1208,
+      "compressed_size": 358,
+      "crc32": "d3230273"
+    },
+    {
+      "path": "res/drawable/abc_list_selector_holo_light.xml",
+      "size": 1208,
+      "compressed_size": 358,
+      "crc32": "4ca62f47"
+    },
+    {
+      "path": "res/drawable/abc_ratingbar_indicator_material.xml",
+      "size": 812,
+      "compressed_size": 319,
+      "crc32": "8cdfb644"
+    },
+    {
+      "path": "res/drawable/abc_ratingbar_material.xml",
+      "size": 812,
+      "compressed_size": 319,
+      "crc32": "637d12ed"
+    },
+    {
+      "path": "res/drawable/abc_ratingbar_small_material.xml",
+      "size": 812,
+      "compressed_size": 320,
+      "crc32": "ad310175"
+    },
+    {
+      "path": "res/drawable/abc_seekbar_thumb_material.xml",
+      "size": 1232,
+      "compressed_size": 378,
+      "crc32": "f5569f09"
+    },
+    {
+      "path": "res/drawable/abc_seekbar_tick_mark_material.xml",
+      "size": 600,
+      "compressed_size": 258,
+      "crc32": "4c8efabc"
+    },
+    {
+      "path": "res/drawable/abc_seekbar_track_material.xml",
+      "size": 1532,
+      "compressed_size": 444,
+      "crc32": "d86c6936"
+    },
+    {
+      "path": "res/drawable/abc_spinner_textfield_background_material.xml",
+      "size": 1328,
+      "compressed_size": 437,
+      "crc32": "24b610a6"
+    },
+    {
+      "path": "res/drawable/abc_switch_thumb_material.xml",
+      "size": 560,
+      "compressed_size": 249,
+      "crc32": "a1583620"
+    },
+    {
+      "path": "res/drawable/abc_tab_indicator_material.xml",
+      "size": 564,
+      "compressed_size": 251,
+      "crc32": "3d35ff46"
+    },
+    {
+      "path": "res/drawable/abc_text_cursor_material.xml",
+      "size": 600,
+      "compressed_size": 256,
+      "crc32": "9fd1fc63"
+    },
+    {
+      "path": "res/drawable/abc_textfield_search_material.xml",
+      "size": 880,
+      "compressed_size": 311,
+      "crc32": "1aef7417"
+    },
+    {
+      "path": "res/drawable/abc_vector_test.xml",
+      "size": 812,
+      "compressed_size": 365,
+      "crc32": "67828ff8"
+    },
+    {
+      "path": "res/drawable/alert_dialog_button_background.xml",
+      "size": 700,
+      "compressed_size": 279,
+      "crc32": "fe98c936"
+    },
+    {
+      "path": "res/drawable/bg_article_video_gradient.xml",
+      "size": 560,
+      "compressed_size": 258,
+      "crc32": "0229909d"
+    },
+    {
+      "path": "res/drawable/bg_articles_article.xml",
+      "size": 564,
+      "compressed_size": 255,
+      "crc32": "e55915a8"
+    },
+    {
+      "path": "res/drawable/bg_articles_menu_selector.xml",
+      "size": 1048,
+      "compressed_size": 384,
+      "crc32": "7d3c75cd"
+    },
+    {
+      "path": "res/drawable/bg_articles_menu_selector_new.xml",
+      "size": 600,
+      "compressed_size": 257,
+      "crc32": "3071f84c"
+    },
+    {
+      "path": "res/drawable/bg_cafe_info_manager.xml",
+      "size": 808,
+      "compressed_size": 331,
+      "crc32": "d0981e1e"
+    },
+    {
+      "path": "res/drawable/bg_record_start_animation.xml",
+      "size": 704,
+      "compressed_size": 285,
+      "crc32": "d6693923"
+    },
+    {
+      "path": "res/drawable/cf_blt_arrow_down.xml",
+      "size": 560,
+      "compressed_size": 249,
+      "crc32": "220769f7"
+    },
+    {
+      "path": "res/drawable/cf_blt_check2cafe.xml",
+      "size": 560,
+      "compressed_size": 248,
+      "crc32": "7be17c17"
+    },
+    {
+      "path": "res/drawable/cf_btn_flback.xml",
+      "size": 560,
+      "compressed_size": 249,
+      "crc32": "5054fd69"
+    },
+    {
+      "path": "res/drawable/cf_btn_flcomment.xml",
+      "size": 560,
+      "compressed_size": 249,
+      "crc32": "25511105"
+    },
+    {
+      "path": "res/drawable/cf_btn_flphoto.xml",
+      "size": 560,
+      "compressed_size": 249,
+      "crc32": "697d3726"
+    },
+    {
+      "path": "res/drawable/cf_btn_flrecplay.xml",
+      "size": 700,
+      "compressed_size": 277,
+      "crc32": "cc20cb3c"
+    },
+    {
+      "path": "res/drawable/cf_btn_flrecstop.xml",
+      "size": 700,
+      "compressed_size": 278,
+      "crc32": "f7f5d771"
+    },
+    {
+      "path": "res/drawable/cf_btn_flvideo.xml",
+      "size": 560,
+      "compressed_size": 250,
+      "crc32": "83043a82"
+    },
+    {
+      "path": "res/drawable/cf_btn_flwrite.xml",
+      "size": 560,
+      "compressed_size": 250,
+      "crc32": "0b4e2e5b"
+    },
+    {
+      "path": "res/drawable/cf_btn_navi1.xml",
+      "size": 564,
+      "compressed_size": 252,
+      "crc32": "3550ba98"
+    },
+    {
+      "path": "res/drawable/cf_btn_navi2.xml",
+      "size": 564,
+      "compressed_size": 254,
+      "crc32": "95e218f3"
+    },
+    {
+      "path": "res/drawable/cf_btn_navi3.xml",
+      "size": 564,
+      "compressed_size": 254,
+      "crc32": "a115b711"
+    },
+    {
+      "path": "res/drawable/cf_btn_navi4.xml",
+      "size": 564,
+      "compressed_size": 254,
+      "crc32": "4143cf1c"
+    },
+    {
+      "path": "res/drawable/cf_btn_navi5.xml",
+      "size": 564,
+      "compressed_size": 254,
+      "crc32": "c6aba7cb"
+    },
+    {
+      "path": "res/drawable/cf_icon_attach_del.xml",
+      "size": 560,
+      "compressed_size": 250,
+      "crc32": "c263a7f6"
+    },
+    {
+      "path": "res/drawable/cf_icon_inputdel.xml",
+      "size": 560,
+      "compressed_size": 249,
+      "crc32": "913b6ebb"
+    },
+    {
+      "path": "res/drawable/cf_icon_more_bg.xml",
+      "size": 560,
+      "compressed_size": 250,
+      "crc32": "fcf9bfb3"
+    },
+    {
+      "path": "res/drawable/cf_icon_pause_l.xml",
+      "size": 560,
+      "compressed_size": 251,
+      "crc32": "426ba950"
+    },
+    {
+      "path": "res/drawable/cf_icon_play_l.xml",
+      "size": 560,
+      "compressed_size": 251,
+      "crc32": "63855e7b"
+    },
+    {
+      "path": "res/drawable/channel_name_background.xml",
+      "size": 868,
+      "compressed_size": 341,
+      "crc32": "c13746bf"
+    },
+    {
+      "path": "res/drawable/com_facebook_auth_dialog_background.xml",
+      "size": 744,
+      "compressed_size": 305,
+      "crc32": "2b806fae"
+    },
+    {
+      "path": "res/drawable/com_facebook_auth_dialog_cancel_background.xml",
+      "size": 1080,
+      "compressed_size": 359,
+      "crc32": "fcfde89f"
+    },
+    {
+      "path": "res/drawable/com_facebook_auth_dialog_header_background.xml",
+      "size": 744,
+      "compressed_size": 308,
+      "crc32": "c933f481"
+    },
+    {
+      "path": "res/drawable/com_facebook_button_background.xml",
+      "size": 2300,
+      "compressed_size": 553,
+      "crc32": "6109bc1a"
+    },
+    {
+      "path": "res/drawable/com_facebook_button_icon.xml",
+      "size": 620,
+      "compressed_size": 267,
+      "crc32": "6ff9c33a"
+    },
+    {
+      "path": "res/drawable/com_facebook_button_like_background.xml",
+      "size": 2516,
+      "compressed_size": 547,
+      "crc32": "06ce9048"
+    },
+    {
+      "path": "res/drawable/com_facebook_button_login_background.xml",
+      "size": 2300,
+      "compressed_size": 552,
+      "crc32": "12212da1"
+    },
+    {
+      "path": "res/drawable/com_facebook_button_login_logo.xml",
+      "size": 1352,
+      "compressed_size": 544,
+      "crc32": "532bfb39"
+    },
+    {
+      "path": "res/drawable/com_facebook_button_login_silver_background.xml",
+      "size": 1440,
+      "compressed_size": 407,
+      "crc32": "7447cc86"
+    },
+    {
+      "path": "res/drawable/com_facebook_favicon_blue.xml",
+      "size": 1248,
+      "compressed_size": 532,
+      "crc32": "f9eac230"
+    },
+    {
+      "path": "res/drawable/common_google_signin_btn_icon_dark.xml",
+      "size": 700,
+      "compressed_size": 284,
+      "crc32": "46655d62"
+    },
+    {
+      "path": "res/drawable/common_google_signin_btn_icon_dark_focused.xml",
+      "size": 1016,
+      "compressed_size": 403,
+      "crc32": "1df4bb46"
+    },
+    {
+      "path": "res/drawable/common_google_signin_btn_icon_dark_normal.xml",
+      "size": 652,
+      "compressed_size": 287,
+      "crc32": "55bdda82"
+    },
+    {
+      "path": "res/drawable/common_google_signin_btn_icon_disabled.xml",
+      "size": 1276,
+      "compressed_size": 468,
+      "crc32": "97cef7e6"
+    },
+    {
+      "path": "res/drawable/common_google_signin_btn_icon_light.xml",
+      "size": 700,
+      "compressed_size": 284,
+      "crc32": "f70683f4"
+    },
+    {
+      "path": "res/drawable/common_google_signin_btn_icon_light_focused.xml",
+      "size": 1016,
+      "compressed_size": 399,
+      "crc32": "13192599"
+    },
+    {
+      "path": "res/drawable/common_google_signin_btn_icon_light_normal.xml",
+      "size": 652,
+      "compressed_size": 287,
+      "crc32": "5f9a3f0b"
+    },
+    {
+      "path": "res/drawable/common_google_signin_btn_text_dark.xml",
+      "size": 700,
+      "compressed_size": 283,
+      "crc32": "bf4a2e03"
+    },
+    {
+      "path": "res/drawable/common_google_signin_btn_text_dark_focused.xml",
+      "size": 1016,
+      "compressed_size": 403,
+      "crc32": "7467cc9e"
+    },
+    {
+      "path": "res/drawable/common_google_signin_btn_text_dark_normal.xml",
+      "size": 692,
+      "compressed_size": 300,
+      "crc32": "6cc4e63f"
+    },
+    {
+      "path": "res/drawable/common_google_signin_btn_text_disabled.xml",
+      "size": 1296,
+      "compressed_size": 474,
+      "crc32": "b702b81b"
+    },
+    {
+      "path": "res/drawable/common_google_signin_btn_text_light.xml",
+      "size": 700,
+      "compressed_size": 284,
+      "crc32": "4f58f599"
+    },
+    {
+      "path": "res/drawable/common_google_signin_btn_text_light_focused.xml",
+      "size": 1016,
+      "compressed_size": 401,
+      "crc32": "346808d1"
+    },
+    {
+      "path": "res/drawable/common_google_signin_btn_text_light_normal.xml",
+      "size": 692,
+      "compressed_size": 300,
+      "crc32": "22cee33e"
+    },
+    {
+      "path": "res/drawable/empty_rectangle_corner_background.xml",
+      "size": 704,
+      "compressed_size": 289,
+      "crc32": "7c6e315e"
+    },
+    {
+      "path": "res/drawable/empty_rectangle_corner_trans_background.xml",
+      "size": 704,
+      "compressed_size": 285,
+      "crc32": "1dfdcf9f"
+    },
+    {
+      "path": "res/drawable/empty_rectangle_fill_corner_background.xml",
+      "size": 564,
+      "compressed_size": 244,
+      "crc32": "b2ce2c74"
+    },
+    {
+      "path": "res/drawable/floating_button_background.xml",
+      "size": 600,
+      "compressed_size": 256,
+      "crc32": "db0be063"
+    },
+    {
+      "path": "res/drawable/gl_btn_keypad.xml",
+      "size": 700,
+      "compressed_size": 280,
+      "crc32": "0b5df2d3"
+    },
+    {
+      "path": "res/drawable/gl_btn_photo_crop.xml",
+      "size": 560,
+      "compressed_size": 249,
+      "crc32": "b5a06c31"
+    },
+    {
+      "path": "res/drawable/gl_btn_photo_rotate.xml",
+      "size": 560,
+      "compressed_size": 250,
+      "crc32": "3d7d076c"
+    },
+    {
+      "path": "res/drawable/gl_btn_popuplistclose.xml",
+      "size": 560,
+      "compressed_size": 249,
+      "crc32": "c0402aa5"
+    },
+    {
+      "path": "res/drawable/gl_list_selector.xml",
+      "size": 700,
+      "compressed_size": 278,
+      "crc32": "ccc9b7b7"
+    },
+    {
+      "path": "res/drawable/gl_profile_modify_cancel_selector.xml",
+      "size": 700,
+      "compressed_size": 283,
+      "crc32": "6e9aa0e5"
+    },
+    {
+      "path": "res/drawable/gradation_background.xml",
+      "size": 516,
+      "compressed_size": 248,
+      "crc32": "44dcd0b2"
+    },
+    {
+      "path": "res/drawable/layerlist_progress_vote.xml",
+      "size": 840,
+      "compressed_size": 348,
+      "crc32": "3d812f29"
+    },
+    {
+      "path": "res/drawable/loading_progress.xml",
+      "size": 2228,
+      "compressed_size": 391,
+      "crc32": "ef00fb27"
+    },
+    {
+      "path": "res/drawable/menu_item_check_icon.xml",
+      "size": 564,
+      "compressed_size": 253,
+      "crc32": "a21419e9"
+    },
+    {
+      "path": "res/drawable/more_replies_background.xml",
+      "size": 580,
+      "compressed_size": 249,
+      "crc32": "9251e8d3"
+    },
+    {
+      "path": "res/drawable/notification_bg.xml",
+      "size": 644,
+      "compressed_size": 283,
+      "crc32": "4bc50da1"
+    },
+    {
+      "path": "res/drawable/notification_bg_low.xml",
+      "size": 644,
+      "compressed_size": 282,
+      "crc32": "0d0b89c6"
+    },
+    {
+      "path": "res/drawable/notification_icon_background.xml",
+      "size": 436,
+      "compressed_size": 197,
+      "crc32": "73640aef"
+    },
+    {
+      "path": "res/drawable/notification_tile_bg.xml",
+      "size": 380,
+      "compressed_size": 192,
+      "crc32": "f720a53f"
+    },
+    {
+      "path": "res/drawable/oval_gray.xml",
+      "size": 600,
+      "compressed_size": 257,
+      "crc32": "255548b9"
+    },
+    {
+      "path": "res/drawable/oval_gray_2dp.xml",
+      "size": 600,
+      "compressed_size": 257,
+      "crc32": "506104ab"
+    },
+    {
+      "path": "res/drawable/rounded_background_gray.xml",
+      "size": 1396,
+      "compressed_size": 393,
+      "crc32": "c435c19d"
+    },
+    {
+      "path": "res/drawable/rounded_btn.xml",
+      "size": 1396,
+      "compressed_size": 403,
+      "crc32": "ab4fbc78"
+    },
+    {
+      "path": "res/drawable/rounded_btn2.xml",
+      "size": 832,
+      "compressed_size": 345,
+      "crc32": "3e7c1fd2"
+    },
+    {
+      "path": "res/drawable/seekbar_control_selector.xml",
+      "size": 424,
+      "compressed_size": 205,
+      "crc32": "f8f2e938"
+    },
+    {
+      "path": "res/drawable/seekbar_progress_background.xml",
+      "size": 888,
+      "compressed_size": 323,
+      "crc32": "cf5b0649"
+    },
+    {
+      "path": "res/drawable/seekbar_video_background.xml",
+      "size": 888,
+      "compressed_size": 326,
+      "crc32": "c2466e65"
+    },
+    {
+      "path": "res/drawable/shape_round_vote_complete.xml",
+      "size": 436,
+      "compressed_size": 195,
+      "crc32": "443bbc92"
+    },
+    {
+      "path": "res/drawable/small_icon.xml",
+      "size": 492,
+      "compressed_size": 215,
+      "crc32": "baf6ab8b"
+    },
+    {
+      "path": "res/drawable/tb_profile_name.xml",
+      "size": 692,
+      "compressed_size": 274,
+      "crc32": "5728b73d"
+    },
+    {
+      "path": "res/drawable/tooltip_frame_dark.xml",
+      "size": 564,
+      "compressed_size": 242,
+      "crc32": "6064df09"
+    },
+    {
+      "path": "res/drawable/tooltip_frame_light.xml",
+      "size": 564,
+      "compressed_size": 242,
+      "crc32": "32f5b4d5"
+    },
+    {
+      "path": "res/drawable/viewer_bottom_gradient.xml",
+      "size": 560,
+      "compressed_size": 260,
+      "crc32": "24d8a560"
+    },
+    {
+      "path": "res/drawable/viewer_top_gradient.xml",
+      "size": 560,
+      "compressed_size": 258,
+      "crc32": "fe82ee13"
+    },
+    {
+      "path": "res/drawable/widget_record_setting_button.xml",
+      "size": 564,
+      "compressed_size": 241,
+      "crc32": "d70721fd"
+    },
+    {
+      "path": "res/drawable/widget_record_setting_radio.xml",
+      "size": 1676,
+      "compressed_size": 503,
+      "crc32": "01233cac"
+    },
+    {
+      "path": "res/drawable/widget_record_setting_radio_text.xml",
+      "size": 576,
+      "compressed_size": 242,
+      "crc32": "046985c0"
+    },
+    {
+      "path": "res/drawable/widget_record_timer.xml",
+      "size": 564,
+      "compressed_size": 242,
+      "crc32": "c57f3fb7"
+    },
+    {
+      "path": "res/drawable/widget_trash_rectangle.xml",
+      "size": 724,
+      "compressed_size": 307,
+      "crc32": "fe4469f9"
+    },
+    {
+      "path": "res/layout-land/fragment_cafe_info.xml",
+      "size": 6944,
+      "compressed_size": 1548,
+      "crc32": "7135a9e3"
+    },
+    {
+      "path": "res/layout-land/fragment_profile_main.xml",
+      "size": 6596,
+      "compressed_size": 1358,
+      "crc32": "b64d203c"
+    },
+    {
+      "path": "res/layout-land/fragment_profile_modify.xml",
+      "size": 4304,
+      "compressed_size": 1165,
+      "crc32": "1d0020d4"
+    },
+    {
+      "path": "res/layout-land/fragment_tabs.xml",
+      "size": 1400,
+      "compressed_size": 519,
+      "crc32": "41daed68"
+    },
+    {
+      "path": "res/layout-land/item_article_comment_etc_items.xml",
+      "size": 1224,
+      "compressed_size": 510,
+      "crc32": "1a8d3d1c"
+    },
+    {
+      "path": "res/layout-land/item_articles_article_infos_moot.xml",
+      "size": 1296,
+      "compressed_size": 499,
+      "crc32": "dd077cbf"
+    },
+    {
+      "path": "res/layout-land/item_media_viewer_article_details.xml",
+      "size": 1584,
+      "compressed_size": 644,
+      "crc32": "7bfe8dff"
+    },
+    {
+      "path": "res/layout-land/item_profile_cafe_info.xml",
+      "size": 4332,
+      "compressed_size": 1235,
+      "crc32": "619ded97"
+    },
+    {
+      "path": "res/layout-land/item_profile_cafe_join.xml",
+      "size": 6668,
+      "compressed_size": 1697,
+      "crc32": "ed204af0"
+    },
+    {
+      "path": "res/layout-land/item_shome_cafe_infos.xml",
+      "size": 2716,
+      "compressed_size": 899,
+      "crc32": "16453d98"
+    },
+    {
+      "path": "res/layout-land/widget_dialog.xml",
+      "size": 2272,
+      "compressed_size": 801,
+      "crc32": "eca4cba4"
+    },
+    {
+      "path": "res/layout-land/widget_record_setting_layout.xml",
+      "size": 8236,
+      "compressed_size": 1462,
+      "crc32": "098af942"
+    },
+    {
+      "path": "res/layout-v21/notification_action.xml",
+      "size": 1164,
+      "compressed_size": 552,
+      "crc32": "834ca3e1"
+    },
+    {
+      "path": "res/layout-v21/notification_action_tombstone.xml",
+      "size": 1340,
+      "compressed_size": 605,
+      "crc32": "13683e05"
+    },
+    {
+      "path": "res/layout-v21/notification_template_custom_big.xml",
+      "size": 2500,
+      "compressed_size": 829,
+      "crc32": "eebea79a"
+    },
+    {
+      "path": "res/layout-v21/notification_template_icon_group.xml",
+      "size": 996,
+      "compressed_size": 431,
+      "crc32": "68aea26a"
+    },
+    {
+      "path": "res/layout-v22/abc_alert_dialog_button_bar_material.xml",
+      "size": 1752,
+      "compressed_size": 691,
+      "crc32": "180f8347"
+    },
+    {
+      "path": "res/layout-v26/abc_screen_toolbar.xml",
+      "size": 1688,
+      "compressed_size": 734,
+      "crc32": "b855800c"
+    },
+    {
+      "path": "res/layout/abc_action_bar_title_item.xml",
+      "size": 940,
+      "compressed_size": 452,
+      "crc32": "fe2babc1"
+    },
+    {
+      "path": "res/layout/abc_action_bar_up_container.xml",
+      "size": 104,
+      "compressed_size": 47,
+      "crc32": "d7e65643"
+    },
+    {
+      "path": "res/layout/abc_action_menu_item_layout.xml",
+      "size": 804,
+      "compressed_size": 427,
+      "crc32": "c7b3b93f"
+    },
+    {
+      "path": "res/layout/abc_action_menu_layout.xml",
+      "size": 584,
+      "compressed_size": 309,
+      "crc32": "4c8bea97"
+    },
+    {
+      "path": "res/layout/abc_action_mode_bar.xml",
+      "size": 500,
+      "compressed_size": 292,
+      "crc32": "2d305231"
+    },
+    {
+      "path": "res/layout/abc_action_mode_close_item_material.xml",
+      "size": 884,
+      "compressed_size": 467,
+      "crc32": "ce349c13"
+    },
+    {
+      "path": "res/layout/abc_activity_chooser_view.xml",
+      "size": 1728,
+      "compressed_size": 616,
+      "crc32": "d5fcb821"
+    },
+    {
+      "path": "res/layout/abc_activity_chooser_view_list_item.xml",
+      "size": 1312,
+      "compressed_size": 568,
+      "crc32": "1fd81917"
+    },
+    {
+      "path": "res/layout/abc_alert_dialog_button_bar_material.xml",
+      "size": 1704,
+      "compressed_size": 663,
+      "crc32": "eca1a0e5"
+    },
+    {
+      "path": "res/layout/abc_alert_dialog_material.xml",
+      "size": 2640,
+      "compressed_size": 864,
+      "crc32": "4925c4cd"
+    },
+    {
+      "path": "res/layout/abc_alert_dialog_title_material.xml",
+      "size": 1572,
+      "compressed_size": 668,
+      "crc32": "f2ddb485"
+    },
+    {
+      "path": "res/layout/abc_dialog_title_material.xml",
+      "size": 1156,
+      "compressed_size": 565,
+      "crc32": "bd1309c1"
+    },
+    {
+      "path": "res/layout/abc_expanded_menu_layout.xml",
+      "size": 396,
+      "compressed_size": 238,
+      "crc32": "31d07b62"
+    },
+    {
+      "path": "res/layout/abc_list_menu_item_checkbox.xml",
+      "size": 536,
+      "compressed_size": 293,
+      "crc32": "1330554b"
+    },
+    {
+      "path": "res/layout/abc_list_menu_item_icon.xml",
+      "size": 688,
+      "compressed_size": 358,
+      "crc32": "0eb33b6f"
+    },
+    {
+      "path": "res/layout/abc_list_menu_item_layout.xml",
+      "size": 1404,
+      "compressed_size": 600,
+      "crc32": "14d60af4"
+    },
+    {
+      "path": "res/layout/abc_list_menu_item_radio.xml",
+      "size": 536,
+      "compressed_size": 294,
+      "crc32": "70e27920"
+    },
+    {
+      "path": "res/layout/abc_popup_menu_header_item_layout.xml",
+      "size": 856,
+      "compressed_size": 439,
+      "crc32": "c051b875"
+    },
+    {
+      "path": "res/layout/abc_popup_menu_item_layout.xml",
+      "size": 1884,
+      "compressed_size": 777,
+      "crc32": "93e23af3"
+    },
+    {
+      "path": "res/layout/abc_screen_content_include.xml",
+      "size": 556,
+      "compressed_size": 299,
+      "crc32": "d03029b2"
+    },
+    {
+      "path": "res/layout/abc_screen_simple.xml",
+      "size": 872,
+      "compressed_size": 425,
+      "crc32": "94370374"
+    },
+    {
+      "path": "res/layout/abc_screen_simple_overlay_action_mode.xml",
+      "size": 828,
+      "compressed_size": 407,
+      "crc32": "86cc897b"
+    },
+    {
+      "path": "res/layout/abc_screen_toolbar.xml",
+      "size": 1632,
+      "compressed_size": 706,
+      "crc32": "d6500a73"
+    },
+    {
+      "path": "res/layout/abc_search_dropdown_item_icons_2line.xml",
+      "size": 2204,
+      "compressed_size": 783,
+      "crc32": "9887cd56"
+    },
+    {
+      "path": "res/layout/abc_search_view.xml",
+      "size": 3568,
+      "compressed_size": 1175,
+      "crc32": "3488b5a1"
+    },
+    {
+      "path": "res/layout/abc_select_dialog_material.xml",
+      "size": 1020,
+      "compressed_size": 553,
+      "crc32": "a5e6f4c3"
+    },
+    {
+      "path": "res/layout/activity_request.xml",
+      "size": 372,
+      "compressed_size": 207,
+      "crc32": "e1f2159f"
+    },
+    {
+      "path": "res/layout/agreement.xml",
+      "size": 1508,
+      "compressed_size": 509,
+      "crc32": "b165bbae"
+    },
+    {
+      "path": "res/layout/alert_dialog.xml",
+      "size": 2216,
+      "compressed_size": 740,
+      "crc32": "ba3f1abb"
+    },
+    {
+      "path": "res/layout/alert_permission_dialog.xml",
+      "size": 2464,
+      "compressed_size": 825,
+      "crc32": "ef776e6f"
+    },
+    {
+      "path": "res/layout/com_facebook_activity_layout.xml",
+      "size": 360,
+      "compressed_size": 211,
+      "crc32": "332d820c"
+    },
+    {
+      "path": "res/layout/com_facebook_device_auth_dialog_fragment.xml",
+      "size": 3392,
+      "compressed_size": 1227,
+      "crc32": "cef83256"
+    },
+    {
+      "path": "res/layout/com_facebook_login_fragment.xml",
+      "size": 668,
+      "compressed_size": 339,
+      "crc32": "eb5bdbb0"
+    },
+    {
+      "path": "res/layout/com_facebook_smart_device_dialog_fragment.xml",
+      "size": 3728,
+      "compressed_size": 1354,
+      "crc32": "a07e1f78"
+    },
+    {
+      "path": "res/layout/com_facebook_tooltip_bubble.xml",
+      "size": 1844,
+      "compressed_size": 686,
+      "crc32": "f383d302"
+    },
+    {
+      "path": "res/layout/dialog_loading.xml",
+      "size": 704,
+      "compressed_size": 368,
+      "crc32": "e9efeff1"
+    },
+    {
+      "path": "res/layout/downloader_progress.xml",
+      "size": 4396,
+      "compressed_size": 1096,
+      "crc32": "8a14b3e4"
+    },
+    {
+      "path": "res/layout/fragment_all_media.xml",
+      "size": 2444,
+      "compressed_size": 929,
+      "crc32": "f8ce5005"
+    },
+    {
+      "path": "res/layout/fragment_article.xml",
+      "size": 2056,
+      "compressed_size": 797,
+      "crc32": "24ec29d5"
+    },
+    {
+      "path": "res/layout/fragment_articles.xml",
+      "size": 1976,
+      "compressed_size": 815,
+      "crc32": "3bde6726"
+    },
+    {
+      "path": "res/layout/fragment_articles_main.xml",
+      "size": 2036,
+      "compressed_size": 848,
+      "crc32": "7688c013"
+    },
+    {
+      "path": "res/layout/fragment_banners.xml",
+      "size": 2304,
+      "compressed_size": 921,
+      "crc32": "04b4bda9"
+    },
+    {
+      "path": "res/layout/fragment_cafe_info.xml",
+      "size": 7092,
+      "compressed_size": 1595,
+      "crc32": "ea40695e"
+    },
+    {
+      "path": "res/layout/fragment_game_popup.xml",
+      "size": 1772,
+      "compressed_size": 703,
+      "crc32": "43361700"
+    },
+    {
+      "path": "res/layout/fragment_game_text_popup.xml",
+      "size": 2524,
+      "compressed_size": 987,
+      "crc32": "3bbf5071"
+    },
+    {
+      "path": "res/layout/fragment_image_edit.xml",
+      "size": 3368,
+      "compressed_size": 945,
+      "crc32": "6964e698"
+    },
+    {
+      "path": "res/layout/fragment_input.xml",
+      "size": 1448,
+      "compressed_size": 617,
+      "crc32": "81b940ba"
+    },
+    {
+      "path": "res/layout/fragment_input_for_canceled_on_touch_outside.xml",
+      "size": 1560,
+      "compressed_size": 641,
+      "crc32": "67c7f6ba"
+    },
+    {
+      "path": "res/layout/fragment_items_dialog.xml",
+      "size": 2244,
+      "compressed_size": 838,
+      "crc32": "b1607fde"
+    },
+    {
+      "path": "res/layout/fragment_main.xml",
+      "size": 4936,
+      "compressed_size": 1429,
+      "crc32": "31fe066a"
+    },
+    {
+      "path": "res/layout/fragment_main_banner.xml",
+      "size": 984,
+      "compressed_size": 403,
+      "crc32": "fcb6c190"
+    },
+    {
+      "path": "res/layout/fragment_media_tab.xml",
+      "size": 1396,
+      "compressed_size": 521,
+      "crc32": "43da0df8"
+    },
+    {
+      "path": "res/layout/fragment_media_viewer.xml",
+      "size": 2960,
+      "compressed_size": 989,
+      "crc32": "80471226"
+    },
+    {
+      "path": "res/layout/fragment_profile_articles.xml",
+      "size": 1624,
+      "compressed_size": 721,
+      "crc32": "ceaaa606"
+    },
+    {
+      "path": "res/layout/fragment_profile_articles_tab.xml",
+      "size": 2896,
+      "compressed_size": 801,
+      "crc32": "b7cd96bc"
+    },
+    {
+      "path": "res/layout/fragment_profile_main.xml",
+      "size": 6952,
+      "compressed_size": 1418,
+      "crc32": "d9204ae0"
+    },
+    {
+      "path": "res/layout/fragment_profile_modify.xml",
+      "size": 4344,
+      "compressed_size": 1171,
+      "crc32": "8c6539f4"
+    },
+    {
+      "path": "res/layout/fragment_search_articles.xml",
+      "size": 1492,
+      "compressed_size": 639,
+      "crc32": "16423609"
+    },
+    {
+      "path": "res/layout/fragment_shome.xml",
+      "size": 1932,
+      "compressed_size": 780,
+      "crc32": "50cdc2fd"
+    },
+    {
+      "path": "res/layout/fragment_tabs.xml",
+      "size": 1400,
+      "compressed_size": 514,
+      "crc32": "3eb9bfcd"
+    },
+    {
+      "path": "res/layout/fragment_web_view_article.xml",
+      "size": 1864,
+      "compressed_size": 718,
+      "crc32": "a12078c4"
+    },
+    {
+      "path": "res/layout/fragment_web_view_article_popup.xml",
+      "size": 1640,
+      "compressed_size": 718,
+      "crc32": "55bd4fac"
+    },
+    {
+      "path": "res/layout/fragment_write.xml",
+      "size": 1648,
+      "compressed_size": 674,
+      "crc32": "3a58f2ba"
+    },
+    {
+      "path": "res/layout/image_view.xml",
+      "size": 564,
+      "compressed_size": 270,
+      "crc32": "5b0395e0"
+    },
+    {
+      "path": "res/layout/item_all_media_item.xml",
+      "size": 2660,
+      "compressed_size": 822,
+      "crc32": "d4efd6cc"
+    },
+    {
+      "path": "res/layout/item_all_media_row.xml",
+      "size": 412,
+      "compressed_size": 233,
+      "crc32": "a7c2bf4a"
+    },
+    {
+      "path": "res/layout/item_article_comment.xml",
+      "size": 3996,
+      "compressed_size": 1127,
+      "crc32": "1483cc32"
+    },
+    {
+      "path": "res/layout/item_article_comment_deleted_moot.xml",
+      "size": 1608,
+      "compressed_size": 658,
+      "crc32": "518fb4d6"
+    },
+    {
+      "path": "res/layout/item_article_comment_etc_items.xml",
+      "size": 1248,
+      "compressed_size": 482,
+      "crc32": "bddc44eb"
+    },
+    {
+      "path": "res/layout/item_article_comment_moot.xml",
+      "size": 5292,
+      "compressed_size": 1387,
+      "crc32": "17217b19"
+    },
+    {
+      "path": "res/layout/item_article_comments_header.xml",
+      "size": 1248,
+      "compressed_size": 540,
+      "crc32": "74e1225e"
+    },
+    {
+      "path": "res/layout/item_article_contents_footer.xml",
+      "size": 3288,
+      "compressed_size": 1010,
+      "crc32": "b2ced14d"
+    },
+    {
+      "path": "res/layout/item_article_empty_comments.xml",
+      "size": 860,
+      "compressed_size": 437,
+      "crc32": "56bd35fd"
+    },
+    {
+      "path": "res/layout/item_article_header.xml",
+      "size": 2276,
+      "compressed_size": 785,
+      "crc32": "2bf456cf"
+    },
+    {
+      "path": "res/layout/item_article_image.xml",
+      "size": 1428,
+      "compressed_size": 558,
+      "crc32": "99ceca4f"
+    },
+    {
+      "path": "res/layout/item_article_image_moot.xml",
+      "size": 1236,
+      "compressed_size": 494,
+      "crc32": "3c2f1e7a"
+    },
+    {
+      "path": "res/layout/item_article_not_support_moot.xml",
+      "size": 888,
+      "compressed_size": 434,
+      "crc32": "61a06730"
+    },
+    {
+      "path": "res/layout/item_article_snippet_small.xml",
+      "size": 2780,
+      "compressed_size": 1012,
+      "crc32": "2118bf29"
+    },
+    {
+      "path": "res/layout/item_article_text.xml",
+      "size": 692,
+      "compressed_size": 373,
+      "crc32": "69f8180b"
+    },
+    {
+      "path": "res/layout/item_article_video.xml",
+      "size": 1164,
+      "compressed_size": 494,
+      "crc32": "4aa03909"
+    },
+    {
+      "path": "res/layout/item_article_video_moot.xml",
+      "size": 1164,
+      "compressed_size": 494,
+      "crc32": "30a1242a"
+    },
+    {
+      "path": "res/layout/item_article_vote.xml",
+      "size": 3252,
+      "compressed_size": 1001,
+      "crc32": "f07891d3"
+    },
+    {
+      "path": "res/layout/item_article_vote_subject_close.xml",
+      "size": 2408,
+      "compressed_size": 954,
+      "crc32": "a6387cef"
+    },
+    {
+      "path": "res/layout/item_article_vote_subject_open.xml",
+      "size": 1992,
+      "compressed_size": 781,
+      "crc32": "d3ddae7e"
+    },
+    {
+      "path": "res/layout/item_articles_article.xml",
+      "size": 2664,
+      "compressed_size": 934,
+      "crc32": "d65718bf"
+    },
+    {
+      "path": "res/layout/item_articles_article_infos.xml",
+      "size": 1296,
+      "compressed_size": 499,
+      "crc32": "dd077cbf"
+    },
+    {
+      "path": "res/layout/item_articles_article_infos_moot.xml",
+      "size": 1396,
+      "compressed_size": 537,
+      "crc32": "09bd8d25"
+    },
+    {
+      "path": "res/layout/item_articles_article_moot.xml",
+      "size": 2828,
+      "compressed_size": 965,
+      "crc32": "9f893075"
+    },
+    {
+      "path": "res/layout/item_articles_deleted_article.xml",
+      "size": 1464,
+      "compressed_size": 605,
+      "crc32": "97352b72"
+    },
+    {
+      "path": "res/layout/item_articles_header.xml",
+      "size": 2020,
+      "compressed_size": 784,
+      "crc32": "6372f515"
+    },
+    {
+      "path": "res/layout/item_articles_main_header.xml",
+      "size": 860,
+      "compressed_size": 452,
+      "crc32": "15d4d207"
+    },
+    {
+      "path": "res/layout/item_articles_menu_selector.xml",
+      "size": 3392,
+      "compressed_size": 990,
+      "crc32": "bbbea47d"
+    },
+    {
+      "path": "res/layout/item_articles_notice.xml",
+      "size": 2068,
+      "compressed_size": 781,
+      "crc32": "6b40ff94"
+    },
+    {
+      "path": "res/layout/item_articles_search_header.xml",
+      "size": 3648,
+      "compressed_size": 1161,
+      "crc32": "a1ea5a9d"
+    },
+    {
+      "path": "res/layout/item_articles_search_history.xml",
+      "size": 1500,
+      "compressed_size": 593,
+      "crc32": "a7621bd2"
+    },
+    {
+      "path": "res/layout/item_empty.xml",
+      "size": 860,
+      "compressed_size": 392,
+      "crc32": "b4b9630e"
+    },
+    {
+      "path": "res/layout/item_empty_space.xml",
+      "size": 404,
+      "compressed_size": 233,
+      "crc32": "b1e16de5"
+    },
+    {
+      "path": "res/layout/item_home_banner.xml",
+      "size": 644,
+      "compressed_size": 326,
+      "crc32": "4634d0ee"
+    },
+    {
+      "path": "res/layout/item_home_main_banner.xml",
+      "size": 476,
+      "compressed_size": 262,
+      "crc32": "2f46c352"
+    },
+    {
+      "path": "res/layout/item_items_dialog_item.xml",
+      "size": 1444,
+      "compressed_size": 569,
+      "crc32": "19afdd39"
+    },
+    {
+      "path": "res/layout/item_items_dialog_more.xml",
+      "size": 1284,
+      "compressed_size": 537,
+      "crc32": "852edbeb"
+    },
+    {
+      "path": "res/layout/item_items_dialog_section.xml",
+      "size": 1280,
+      "compressed_size": 541,
+      "crc32": "f86ac49a"
+    },
+    {
+      "path": "res/layout/item_media_header.xml",
+      "size": 404,
+      "compressed_size": 237,
+      "crc32": "2518e3b0"
+    },
+    {
+      "path": "res/layout/item_media_menu_selector.xml",
+      "size": 1740,
+      "compressed_size": 635,
+      "crc32": "aa5354d9"
+    },
+    {
+      "path": "res/layout/item_media_viewer_article_details.xml",
+      "size": 1712,
+      "compressed_size": 670,
+      "crc32": "b29889c7"
+    },
+    {
+      "path": "res/layout/item_photo_media_viewer.xml",
+      "size": 2056,
+      "compressed_size": 779,
+      "crc32": "a30f5e95"
+    },
+    {
+      "path": "res/layout/item_popular_article.xml",
+      "size": 1644,
+      "compressed_size": 643,
+      "crc32": "c296481e"
+    },
+    {
+      "path": "res/layout/item_popular_footer.xml",
+      "size": 872,
+      "compressed_size": 404,
+      "crc32": "39957d1f"
+    },
+    {
+      "path": "res/layout/item_popular_header.xml",
+      "size": 1568,
+      "compressed_size": 643,
+      "crc32": "3963cbe1"
+    },
+    {
+      "path": "res/layout/item_profile_articles_empty.xml",
+      "size": 724,
+      "compressed_size": 387,
+      "crc32": "a44a156d"
+    },
+    {
+      "path": "res/layout/item_profile_articles_header.xml",
+      "size": 1180,
+      "compressed_size": 515,
+      "crc32": "72adf490"
+    },
+    {
+      "path": "res/layout/item_profile_cafe_info.xml",
+      "size": 4052,
+      "compressed_size": 1175,
+      "crc32": "3f48c658"
+    },
+    {
+      "path": "res/layout/item_profile_cafe_join.xml",
+      "size": 5744,
+      "compressed_size": 1564,
+      "crc32": "6e0b9e18"
+    },
+    {
+      "path": "res/layout/item_profile_myinfo.xml",
+      "size": 2912,
+      "compressed_size": 888,
+      "crc32": "0e78d643"
+    },
+    {
+      "path": "res/layout/item_profile_pending_message.xml",
+      "size": 524,
+      "compressed_size": 296,
+      "crc32": "6ca1511e"
+    },
+    {
+      "path": "res/layout/item_shome_cafe_infos.xml",
+      "size": 2696,
+      "compressed_size": 893,
+      "crc32": "990a23d3"
+    },
+    {
+      "path": "res/layout/item_tab.xml",
+      "size": 728,
+      "compressed_size": 349,
+      "crc32": "4a6fe0a2"
+    },
+    {
+      "path": "res/layout/item_video_media_viewer.xml",
+      "size": 504,
+      "compressed_size": 281,
+      "crc32": "3608a6b2"
+    },
+    {
+      "path": "res/layout/item_video_view.xml",
+      "size": 3752,
+      "compressed_size": 1027,
+      "crc32": "6abb4383"
+    },
+    {
+      "path": "res/layout/item_view_videocontrols.xml",
+      "size": 2400,
+      "compressed_size": 836,
+      "crc32": "a212d88b"
+    },
+    {
+      "path": "res/layout/item_write_attachments.xml",
+      "size": 5424,
+      "compressed_size": 1016,
+      "crc32": "03872318"
+    },
+    {
+      "path": "res/layout/item_write_header.xml",
+      "size": 1464,
+      "compressed_size": 586,
+      "crc32": "1fe5eb9d"
+    },
+    {
+      "path": "res/layout/item_write_navigation.xml",
+      "size": 1652,
+      "compressed_size": 644,
+      "crc32": "eb81f326"
+    },
+    {
+      "path": "res/layout/item_write_text.xml",
+      "size": 768,
+      "compressed_size": 414,
+      "crc32": "433e6507"
+    },
+    {
+      "path": "res/layout/main.xml",
+      "size": 640,
+      "compressed_size": 324,
+      "crc32": "497c77f3"
+    },
+    {
+      "path": "res/layout/notification_media_action.xml",
+      "size": 616,
+      "compressed_size": 335,
+      "crc32": "81b311dd"
+    },
+    {
+      "path": "res/layout/notification_media_cancel_action.xml",
+      "size": 792,
+      "compressed_size": 405,
+      "crc32": "29fb7181"
+    },
+    {
+      "path": "res/layout/notification_template_big_media.xml",
+      "size": 1844,
+      "compressed_size": 715,
+      "crc32": "919507c9"
+    },
+    {
+      "path": "res/layout/notification_template_big_media_custom.xml",
+      "size": 3144,
+      "compressed_size": 1054,
+      "crc32": "78f20d75"
+    },
+    {
+      "path": "res/layout/notification_template_big_media_narrow.xml",
+      "size": 1924,
+      "compressed_size": 729,
+      "crc32": "1dcd4c19"
+    },
+    {
+      "path": "res/layout/notification_template_big_media_narrow_custom.xml",
+      "size": 3268,
+      "compressed_size": 1084,
+      "crc32": "de49edba"
+    },
+    {
+      "path": "res/layout/notification_template_lines_media.xml",
+      "size": 2880,
+      "compressed_size": 813,
+      "crc32": "f8d49608"
+    },
+    {
+      "path": "res/layout/notification_template_media.xml",
+      "size": 1440,
+      "compressed_size": 580,
+      "crc32": "8a99fcbf"
+    },
+    {
+      "path": "res/layout/notification_template_media_custom.xml",
+      "size": 2856,
+      "compressed_size": 960,
+      "crc32": "fac57fb7"
+    },
+    {
+      "path": "res/layout/notification_template_part_chronometer.xml",
+      "size": 448,
+      "compressed_size": 261,
+      "crc32": "c4c7dacb"
+    },
+    {
+      "path": "res/layout/notification_template_part_time.xml",
+      "size": 448,
+      "compressed_size": 263,
+      "crc32": "59530988"
+    },
+    {
+      "path": "res/layout/pop_up_bar.xml",
+      "size": 1604,
+      "compressed_size": 616,
+      "crc32": "1eb07dac"
+    },
+    {
+      "path": "res/layout/pop_up_carousel.xml",
+      "size": 1772,
+      "compressed_size": 624,
+      "crc32": "3ffc46bb"
+    },
+    {
+      "path": "res/layout/pop_up_full_image.xml",
+      "size": 1780,
+      "compressed_size": 633,
+      "crc32": "b29e5d7b"
+    },
+    {
+      "path": "res/layout/pop_up_full_webview.xml",
+      "size": 2064,
+      "compressed_size": 659,
+      "crc32": "a187478b"
+    },
+    {
+      "path": "res/layout/pop_up_in_app.xml",
+      "size": 2536,
+      "compressed_size": 910,
+      "crc32": "910cab0f"
+    },
+    {
+      "path": "res/layout/select_dialog_item_material.xml",
+      "size": 648,
+      "compressed_size": 351,
+      "crc32": "b691fa7f"
+    },
+    {
+      "path": "res/layout/select_dialog_multichoice_material.xml",
+      "size": 872,
+      "compressed_size": 453,
+      "crc32": "7188ca7b"
+    },
+    {
+      "path": "res/layout/select_dialog_singlechoice_material.xml",
+      "size": 872,
+      "compressed_size": 453,
+      "crc32": "c6092118"
+    },
+    {
+      "path": "res/layout/status_bar_ongoing_event_progress_bar.xml",
+      "size": 2720,
+      "compressed_size": 933,
+      "crc32": "80821dab"
+    },
+    {
+      "path": "res/layout/support_simple_spinner_dropdown_item.xml",
+      "size": 508,
+      "compressed_size": 303,
+      "crc32": "24dec1e4"
+    },
+    {
+      "path": "res/layout/tooltip.xml",
+      "size": 1060,
+      "compressed_size": 504,
+      "crc32": "9613fd38"
+    },
+    {
+      "path": "res/layout/video_loading_progress.xml",
+      "size": 712,
+      "compressed_size": 363,
+      "crc32": "dc6683b8"
+    },
+    {
+      "path": "res/layout/view_floating_button.xml",
+      "size": 656,
+      "compressed_size": 302,
+      "crc32": "8f8d1c43"
+    },
+    {
+      "path": "res/layout/view_fragment_error.xml",
+      "size": 1968,
+      "compressed_size": 633,
+      "crc32": "ade6d951"
+    },
+    {
+      "path": "res/layout/view_home_main_banner.xml",
+      "size": 936,
+      "compressed_size": 396,
+      "crc32": "3510a30a"
+    },
+    {
+      "path": "res/layout/widget_dialog.xml",
+      "size": 2276,
+      "compressed_size": 802,
+      "crc32": "b60c2fdc"
+    },
+    {
+      "path": "res/layout/widget_floating_layout.xml",
+      "size": 736,
+      "compressed_size": 356,
+      "crc32": "9258dd33"
+    },
+    {
+      "path": "res/layout/widget_record_ani_view.xml",
+      "size": 1668,
+      "compressed_size": 650,
+      "crc32": "10e4d2b6"
+    },
+    {
+      "path": "res/layout/widget_record_layout.xml",
+      "size": 2388,
+      "compressed_size": 823,
+      "crc32": "5d1557cf"
+    },
+    {
+      "path": "res/layout/widget_record_setting_layout.xml",
+      "size": 8216,
+      "compressed_size": 1471,
+      "crc32": "c2ac1e0e"
+    },
+    {
+      "path": "res/layout/widget_trash_layout.xml",
+      "size": 748,
+      "compressed_size": 356,
+      "crc32": "7e296bed"
+    },
+    {
+      "path": "res/menu/article_more_actions.xml",
+      "size": 648,
+      "compressed_size": 260,
+      "crc32": "3e4ac727"
+    },
+    {
+      "path": "res/xml/network_security_config.xml",
+      "size": 436,
+      "compressed_size": 220,
+      "crc32": "2ff1768a"
+    },
+    {
+      "path": "resources.arsc",
+      "size": 806228,
+      "compressed_size": 806228,
+      "crc32": "d9680ce2"
+    },
+    {
+      "path": "META-INF/GOOGPLAY.SF",
+      "size": 133418,
+      "compressed_size": 47846,
+      "crc32": "31e00336"
+    },
+    {
+      "path": "META-INF/GOOGPLAY.RSA",
+      "size": 2180,
+      "compressed_size": 1901,
+      "crc32": "3e1ecba5"
+    },
+    {
+      "path": "META-INF/MANIFEST.MF",
+      "size": 133353,
+      "compressed_size": 46896,
+      "crc32": "201f8df2"
+    }
+  ]
+}

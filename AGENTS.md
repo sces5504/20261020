@@ -14,6 +14,12 @@
 - 以單機網頁遊戲為起點。美術工作先讀 `docs/art/style-guide.md` 和 `docs/art/asset-contract.md`；接手維持同一品質、尺寸、風格，畫面變更只驗證受影響畫面。
 - 實作遵循 `docs/spec.md`。新功能先有可驗收條件，重要決策與來源寫入 `docs/memory/decisions.md`。
 
+## Stella Maiden 研究資料
+- 本repo已收錄APK研究資料；入口為 `research/stella-maiden/START_HERE.md`，接力任務為 `docs/handoffs/stella-research-20261020.md`。
+- 先讀導覽並驗證研究包，再用SQLite或場景索引查目前功能所需資料；不一次載入全部大型JSON。
+- 已抽出資料不等於整款原版遊戲已重現；已知／推論／未知及缺OBB、未實機驗證等界線依研究報告保留。
+- 研究資料不是已核定玩法或架構；遊戲實作仍依 `docs/spec.md` 的規格狀態與確認流程。
+
 ## 工具與驗證
 - 安裝通用工具：`bash scripts/setup.sh`。新終端先 `source scripts/env.sh`。
 - 專案開始時填 `.template/project.json`；指令是參數陣列，工作目錄為 repo root。準備、啟动指令必須先審閱。範本未初始化不能宣稱遊戲測試或上線通過。

@@ -1,0 +1,7365 @@
+{
+  "version": 1,
+  "source": "APK native code + losslessly decoded embedded tables",
+  "scope": "opcode names and dispatch confirmed; only listed field/behavior bindings verified; unlisted opcode operands remain to be implemented",
+  "counts": {
+    "eventscript_rows": 7809,
+    "eventspot_rows": 376,
+    "native_opcodes": 124,
+    "used_opcodes": 102,
+    "entry_labels": 185
+  },
+  "verified_field_bindings": [
+    {
+      "table": "EventScript",
+      "field": "f01",
+      "native_offset": "0x4",
+      "meaning": "global entry/jump label; first matching row is selected",
+      "evidence": [
+        "lookup_label",
+        "goto"
+      ]
+    },
+    {
+      "table": "EventScript",
+      "field": "f02",
+      "native_offset": "0x8",
+      "meaning": "opcode 0..123 indexing native 124-case dispatch and native name table",
+      "evidence": [
+        "opcode_load",
+        "dispatch"
+      ]
+    },
+    {
+      "table": "EventScript",
+      "field": "f21",
+      "native_offset": "0x80",
+      "meaning": "opcode-dependent numeric operand; Goto truncates to integer label, not row index",
+      "applies_to_opcodes": [
+        107
+      ],
+      "evidence": [
+        "goto"
+      ]
+    },
+    {
+      "table": "EventScript",
+      "field": "f30",
+      "native_offset": "0xd4",
+      "meaning": "general pre-command delay in milliseconds; threshold=uint(f30*0.001*runtime_tick_rate)",
+      "evidence": [
+        "general_delay"
+      ]
+    },
+    {
+      "table": "EventScript",
+      "field": "f29",
+      "native_offset": "0xd0",
+      "meaning": "SpawnLoopStart lifetime milliseconds; 0 -> no lifetime limit; fade duration operand for FadeShow/FadeHide",
+      "applies_to_opcodes": [
+        18,
+        43,
+        44
+      ],
+      "evidence": [
+        "loop_start",
+        "fade"
+      ]
+    },
+    {
+      "table": "EventScript",
+      "field": "f31",
+      "native_offset": "0xd8",
+      "meaning": "repeat spawn interval milliseconds used by active spawn-loop entries",
+      "evidence": [
+        "loop_tick"
+      ]
+    },
+    {
+      "table": "EventScript",
+      "field": "f13",
+      "native_offset": "0x60",
+      "meaning": "EventSpot row index for StartEventSpot",
+      "applies_to_opcodes": [
+        66
+      ],
+      "evidence": [
+        "start_event_spot"
+      ]
+    },
+    {
+      "table": "EventScript",
+      "field": "f22",
+      "native_offset": "0x84",
+      "meaning": "XY override for StartEventSpot; if both components zero retains configured position; SpawnCID XY position converted to 16.16 fixed point",
+      "applies_to_opcodes": [
+        66,
+        47
+      ],
+      "evidence": [
+        "start_event_spot",
+        "spawn_cid"
+      ]
+    },
+    {
+      "table": "EventScript",
+      "field": "f09",
+      "native_offset": "0x50",
+      "meaning": "CID row index for SpawnCID",
+      "applies_to_opcodes": [
+        47
+      ],
+      "evidence": [
+        "spawn_cid"
+      ]
+    },
+    {
+      "table": "EventScript",
+      "field": "f28",
+      "native_offset": "0xb8",
+      "meaning": "scene path/name operand for LoadScn",
+      "applies_to_opcodes": [
+        48
+      ],
+      "evidence": [
+        "load_scene"
+      ]
+    },
+    {
+      "table": "EventScript",
+      "field": "f32",
+      "native_offset": "0xdc",
+      "meaning": "sound index passed to audio manager for PlayBGM and PlaySound",
+      "applies_to_opcodes": [
+        49,
+        73
+      ],
+      "evidence": [
+        "audio"
+      ]
+    },
+    {
+      "table": "EventScript",
+      "field": "f42/f43/f44",
+      "native_offset": "0x108/0x120/0x138",
+      "meaning": "Japanese/English/Korean inline dialogue text (language identity verified from payload; native selects locale and accesses these slots)",
+      "evidence": [
+        "chat",
+        "text_access"
+      ]
+    },
+    {
+      "table": "EventSpot",
+      "field": "f04",
+      "native_offset": "0x24",
+      "meaning": "EventScript global entry label; must be resolved by f01 lookup, not array indexing",
+      "evidence": [
+        "activate_spot",
+        "lookup_label"
+      ]
+    },
+    {
+      "table": "EventSpot",
+      "field": "f11/f12",
+      "native_offset": "0x40/0x44",
+      "meaning": "trigger mode/target SpawnPoint number; mode checks 1 or 2, target compared against selected SpawnPoint.f01",
+      "evidence": [
+        "spot_trigger"
+      ],
+      "limitations": "full mode names and every trigger eligibility rule not yet recovered"
+    }
+  ],
+  "opcodes": [
+    {
+      "opcode": 0,
+      "native_name": "Chat",
+      "native_name_pointer": "0x761341",
+      "name_table_slot": "0x8d9b48",
+      "dispatch_target": "0x20b128",
+      "rows_using_opcode": 3304,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x20efd0"
+      ]
+    },
+    {
+      "opcode": 1,
+      "native_name": "CheckTabUI",
+      "native_name_pointer": "0x76146a",
+      "name_table_slot": "0x8d9b50",
+      "dispatch_target": "0x20addc",
+      "rows_using_opcode": 186,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x20ea98",
+        "0x21b394"
+      ]
+    },
+    {
+      "opcode": 2,
+      "native_name": "CheckSummon",
+      "native_name_pointer": "0x761475",
+      "name_table_slot": "0x8d9b58",
+      "dispatch_target": "0x20b138",
+      "rows_using_opcode": 3,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x20f0e8"
+      ]
+    },
+    {
+      "opcode": 3,
+      "native_name": "CheckNearPlanet",
+      "native_name_pointer": "0x761481",
+      "name_table_slot": "0x8d9b60",
+      "dispatch_target": "0x20b148",
+      "rows_using_opcode": 1,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x20f23c"
+      ]
+    },
+    {
+      "opcode": 4,
+      "native_name": "Spawn",
+      "native_name_pointer": "0x761491",
+      "name_table_slot": "0x8d9b68",
+      "dispatch_target": "0x20b158",
+      "rows_using_opcode": 165,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x219df4",
+        "0x423344"
+      ]
+    },
+    {
+      "opcode": 5,
+      "native_name": "CheckBattleEnd",
+      "native_name_pointer": "0x761497",
+      "name_table_slot": "0x8d9b70",
+      "dispatch_target": "0x20b1ac",
+      "rows_using_opcode": 0,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x20f44c"
+      ]
+    },
+    {
+      "opcode": 6,
+      "native_name": "CheckNearMyPlanet",
+      "native_name_pointer": "0x7614a6",
+      "name_table_slot": "0x8d9b78",
+      "dispatch_target": "0x20b1bc",
+      "rows_using_opcode": 0,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x20ea98"
+      ]
+    },
+    {
+      "opcode": 7,
+      "native_name": "CheckHPDn",
+      "native_name_pointer": "0x7614b8",
+      "name_table_slot": "0x8d9b80",
+      "dispatch_target": "0x20b1e4",
+      "rows_using_opcode": 0,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x20f71c"
+      ]
+    },
+    {
+      "opcode": 8,
+      "native_name": "CheckCCDn",
+      "native_name_pointer": "0x7614c2",
+      "name_table_slot": "0x8d9b88",
+      "dispatch_target": "0x20b1f4",
+      "rows_using_opcode": 0,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 9,
+      "native_name": "Delay",
+      "native_name_pointer": "0x7614cc",
+      "name_table_slot": "0x8d9b90",
+      "dispatch_target": "0x20c7fc",
+      "rows_using_opcode": 586,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 10,
+      "native_name": "End",
+      "native_name_pointer": "0x7b3bf4",
+      "name_table_slot": "0x8d9b98",
+      "dispatch_target": "0x20b2c4",
+      "rows_using_opcode": 139,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x20f9bc"
+      ]
+    },
+    {
+      "opcode": 11,
+      "native_name": "CheckWaveEnd",
+      "native_name_pointer": "0x7614d2",
+      "name_table_slot": "0x8d9ba0",
+      "dispatch_target": "0x20b2d0",
+      "rows_using_opcode": 81,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x20fea4"
+      ]
+    },
+    {
+      "opcode": 12,
+      "native_name": "GetGirl",
+      "native_name_pointer": "0x7614df",
+      "name_table_slot": "0x8d9ba8",
+      "dispatch_target": "0x20b2dc",
+      "rows_using_opcode": 2,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x210010"
+      ]
+    },
+    {
+      "opcode": 13,
+      "native_name": "CheckNearDist",
+      "native_name_pointer": "0x7614e7",
+      "name_table_slot": "0x8d9bb0",
+      "dispatch_target": "0x20b2ec",
+      "rows_using_opcode": 121,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x210208"
+      ]
+    },
+    {
+      "opcode": 14,
+      "native_name": "Sleep",
+      "native_name_pointer": "0x7614f5",
+      "name_table_slot": "0x8d9bb8",
+      "dispatch_target": "0x20c7fc",
+      "rows_using_opcode": 45,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 15,
+      "native_name": "EventStart",
+      "native_name_pointer": "0x7614fb",
+      "name_table_slot": "0x8d9bc0",
+      "dispatch_target": "0x20b2fc",
+      "rows_using_opcode": 28,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x2104fc"
+      ]
+    },
+    {
+      "opcode": 16,
+      "native_name": "CheckEventEnd",
+      "native_name_pointer": "0x761506",
+      "name_table_slot": "0x8d9bc8",
+      "dispatch_target": "0x20b308",
+      "rows_using_opcode": 54,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x21092c"
+      ]
+    },
+    {
+      "opcode": 17,
+      "native_name": "RetreatSpawned",
+      "native_name_pointer": "0x761514",
+      "name_table_slot": "0x8d9bd0",
+      "dispatch_target": "0x20b314",
+      "rows_using_opcode": 2,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x21fa94"
+      ]
+    },
+    {
+      "opcode": 18,
+      "native_name": "SpawnLoopStart",
+      "native_name_pointer": "0x761523",
+      "name_table_slot": "0x8d9bd8",
+      "dispatch_target": "0x20b320",
+      "rows_using_opcode": 38,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x211084"
+      ]
+    },
+    {
+      "opcode": 19,
+      "native_name": "SpawnLoopStop",
+      "native_name_pointer": "0x761532",
+      "name_table_slot": "0x8d9be0",
+      "dispatch_target": "0x20b330",
+      "rows_using_opcode": 0,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 20,
+      "native_name": "EventStop",
+      "native_name_pointer": "0x761540",
+      "name_table_slot": "0x8d9be8",
+      "dispatch_target": "0x20b33c",
+      "rows_using_opcode": 15,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 21,
+      "native_name": "CheckSpawnDestroyed",
+      "native_name_pointer": "0x76154a",
+      "name_table_slot": "0x8d9bf0",
+      "dispatch_target": "0x20b370",
+      "rows_using_opcode": 32,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 22,
+      "native_name": "CheckEventPercent",
+      "native_name_pointer": "0x76155e",
+      "name_table_slot": "0x8d9bf8",
+      "dispatch_target": "0x20b3ec",
+      "rows_using_opcode": 18,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 23,
+      "native_name": "CheckNearDest",
+      "native_name_pointer": "0x761570",
+      "name_table_slot": "0x8d9c00",
+      "dispatch_target": "0x20b43c",
+      "rows_using_opcode": 1,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x211428"
+      ]
+    },
+    {
+      "opcode": 24,
+      "native_name": "ShowNotice",
+      "native_name_pointer": "0x76157e",
+      "name_table_slot": "0x8d9c08",
+      "dispatch_target": "0x20b448",
+      "rows_using_opcode": 0,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x2115b4"
+      ]
+    },
+    {
+      "opcode": 25,
+      "native_name": "CheckNearEventSpot",
+      "native_name_pointer": "0x761589",
+      "name_table_slot": "0x8d9c10",
+      "dispatch_target": "0x20b458",
+      "rows_using_opcode": 36,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x21167c"
+      ]
+    },
+    {
+      "opcode": 26,
+      "native_name": "GetName",
+      "native_name_pointer": "0x76159c",
+      "name_table_slot": "0x8d9c18",
+      "dispatch_target": "0x20b464",
+      "rows_using_opcode": 1,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 27,
+      "native_name": "WaitNextStep",
+      "native_name_pointer": "0x7615a4",
+      "name_table_slot": "0x8d9c20",
+      "dispatch_target": "0x20c7fc",
+      "rows_using_opcode": 0,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 28,
+      "native_name": "ChatScriptS",
+      "native_name_pointer": "0x7615b1",
+      "name_table_slot": "0x8d9c28",
+      "dispatch_target": "0x20b48c",
+      "rows_using_opcode": 19,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x211868"
+      ]
+    },
+    {
+      "opcode": 29,
+      "native_name": "ChatScriptM",
+      "native_name_pointer": "0x7615bd",
+      "name_table_slot": "0x8d9c30",
+      "dispatch_target": "0x20b49c",
+      "rows_using_opcode": 3,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x211a68"
+      ]
+    },
+    {
+      "opcode": 30,
+      "native_name": "ChatScriptE",
+      "native_name_pointer": "0x7615c9",
+      "name_table_slot": "0x8d9c38",
+      "dispatch_target": "0x20b4ac",
+      "rows_using_opcode": 10,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x211b84"
+      ]
+    },
+    {
+      "opcode": 31,
+      "native_name": "ChatScriptF",
+      "native_name_pointer": "0x7615d5",
+      "name_table_slot": "0x8d9c40",
+      "dispatch_target": "0x20b4bc",
+      "rows_using_opcode": 1,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x211d60"
+      ]
+    },
+    {
+      "opcode": 32,
+      "native_name": "CheckScienceLv",
+      "native_name_pointer": "0x7615e1",
+      "name_table_slot": "0x8d9c48",
+      "dispatch_target": "0x20c834",
+      "rows_using_opcode": 0,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 33,
+      "native_name": "CheckDragHero",
+      "native_name_pointer": "0x7615f0",
+      "name_table_slot": "0x8d9c50",
+      "dispatch_target": "0x20b4cc",
+      "rows_using_opcode": 0,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x20ea98"
+      ]
+    },
+    {
+      "opcode": 34,
+      "native_name": "CheckTouchEnemy",
+      "native_name_pointer": "0x7615fe",
+      "name_table_slot": "0x8d9c58",
+      "dispatch_target": "0x20b514",
+      "rows_using_opcode": 2,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x211ff8"
+      ]
+    },
+    {
+      "opcode": 35,
+      "native_name": "CheckDragEnemy",
+      "native_name_pointer": "0x76160e",
+      "name_table_slot": "0x8d9c60",
+      "dispatch_target": "0x20b524",
+      "rows_using_opcode": 0,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x20ea98",
+        "0x2b866c"
+      ]
+    },
+    {
+      "opcode": 36,
+      "native_name": "CheckBattleStart",
+      "native_name_pointer": "0x76161d",
+      "name_table_slot": "0x8d9c68",
+      "dispatch_target": "0x20b59c",
+      "rows_using_opcode": 1,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x2123ec"
+      ]
+    },
+    {
+      "opcode": 37,
+      "native_name": "ChatScriptForce",
+      "native_name_pointer": "0x76162e",
+      "name_table_slot": "0x8d9c70",
+      "dispatch_target": "0x20b5ac",
+      "rows_using_opcode": 1,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 38,
+      "native_name": "ChatScriptLimit",
+      "native_name_pointer": "0x76163e",
+      "name_table_slot": "0x8d9c78",
+      "dispatch_target": "0x20b5c8",
+      "rows_using_opcode": 1,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x21fc4c"
+      ]
+    },
+    {
+      "opcode": 39,
+      "native_name": "Move",
+      "native_name_pointer": "0x76189a",
+      "name_table_slot": "0x8d9c80",
+      "dispatch_target": "0x20b5f4",
+      "rows_using_opcode": 123,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x2125e4"
+      ]
+    },
+    {
+      "opcode": 40,
+      "native_name": "MoveTarget",
+      "native_name_pointer": "0x76164e",
+      "name_table_slot": "0x8d9c88",
+      "dispatch_target": "0x20b604",
+      "rows_using_opcode": 3,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x212748"
+      ]
+    },
+    {
+      "opcode": 41,
+      "native_name": "CamZoom",
+      "native_name_pointer": "0x761659",
+      "name_table_slot": "0x8d9c90",
+      "dispatch_target": "0x20b614",
+      "rows_using_opcode": 0,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 42,
+      "native_name": "CamFocus",
+      "native_name_pointer": "0x761661",
+      "name_table_slot": "0x8d9c98",
+      "dispatch_target": "0x20b6cc",
+      "rows_using_opcode": 139,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x212a48"
+      ]
+    },
+    {
+      "opcode": 43,
+      "native_name": "FadeShow",
+      "native_name_pointer": "0x76166a",
+      "name_table_slot": "0x8d9ca0",
+      "dispatch_target": "0x20b6dc",
+      "rows_using_opcode": 183,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x41ca7c"
+      ]
+    },
+    {
+      "opcode": 44,
+      "native_name": "FadeHide",
+      "native_name_pointer": "0x761673",
+      "name_table_slot": "0x8d9ca8",
+      "dispatch_target": "0x20b730",
+      "rows_using_opcode": 176,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x41c9b0"
+      ]
+    },
+    {
+      "opcode": 45,
+      "native_name": "SpawnHero",
+      "native_name_pointer": "0x76167c",
+      "name_table_slot": "0x8d9cb0",
+      "dispatch_target": "0x20b774",
+      "rows_using_opcode": 7,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x212d74"
+      ]
+    },
+    {
+      "opcode": 46,
+      "native_name": "ClearHero",
+      "native_name_pointer": "0x761686",
+      "name_table_slot": "0x8d9cb8",
+      "dispatch_target": "0x20b784",
+      "rows_using_opcode": 0,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x2130c0"
+      ]
+    },
+    {
+      "opcode": 47,
+      "native_name": "SpawnCID",
+      "native_name_pointer": "0x761690",
+      "name_table_slot": "0x8d9cc0",
+      "dispatch_target": "0x20b790",
+      "rows_using_opcode": 570,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x213210"
+      ]
+    },
+    {
+      "opcode": 48,
+      "native_name": "LoadScn",
+      "native_name_pointer": "0x761699",
+      "name_table_slot": "0x8d9cc8",
+      "dispatch_target": "0x20b7a0",
+      "rows_using_opcode": 89,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x2136e0"
+      ]
+    },
+    {
+      "opcode": 49,
+      "native_name": "PlayBGM",
+      "native_name_pointer": "0x7616a1",
+      "name_table_slot": "0x8d9cd0",
+      "dispatch_target": "0x20b7b0",
+      "rows_using_opcode": 287,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x422ee8"
+      ]
+    },
+    {
+      "opcode": 50,
+      "native_name": "Attack",
+      "native_name_pointer": "0x761915",
+      "name_table_slot": "0x8d9cd8",
+      "dispatch_target": "0x20b808",
+      "rows_using_opcode": 2,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x213948"
+      ]
+    },
+    {
+      "opcode": 51,
+      "native_name": "HideSkillUI",
+      "native_name_pointer": "0x7616a9",
+      "name_table_slot": "0x8d9ce0",
+      "dispatch_target": "0x20b818",
+      "rows_using_opcode": 4,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x4bc564",
+        "0x4bc564"
+      ]
+    },
+    {
+      "opcode": 52,
+      "native_name": "CheckMoveHero",
+      "native_name_pointer": "0x7616b5",
+      "name_table_slot": "0x8d9ce8",
+      "dispatch_target": "0x20b87c",
+      "rows_using_opcode": 9,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x213bfc"
+      ]
+    },
+    {
+      "opcode": 53,
+      "native_name": "DeleteHero",
+      "native_name_pointer": "0x7616c3",
+      "name_table_slot": "0x8d9cf0",
+      "dispatch_target": "0x20b88c",
+      "rows_using_opcode": 28,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x213e60"
+      ]
+    },
+    {
+      "opcode": 54,
+      "native_name": "DeleteDeathHero",
+      "native_name_pointer": "0x7616ce",
+      "name_table_slot": "0x8d9cf8",
+      "dispatch_target": "0x20b89c",
+      "rows_using_opcode": 0,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 55,
+      "native_name": "NewHero",
+      "native_name_pointer": "0x7616de",
+      "name_table_slot": "0x8d9d00",
+      "dispatch_target": "0x20b8c4",
+      "rows_using_opcode": 2,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x214304"
+      ]
+    },
+    {
+      "opcode": 56,
+      "native_name": "AddHeroToDeck",
+      "native_name_pointer": "0x7616e6",
+      "name_table_slot": "0x8d9d08",
+      "dispatch_target": "0x20b8d4",
+      "rows_using_opcode": 3,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x214414"
+      ]
+    },
+    {
+      "opcode": 57,
+      "native_name": "SetAutoSkill",
+      "native_name_pointer": "0x7616f4",
+      "name_table_slot": "0x8d9d10",
+      "dispatch_target": "0x20b8e4",
+      "rows_using_opcode": 13,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x214644"
+      ]
+    },
+    {
+      "opcode": 58,
+      "native_name": "DeleteHeroAll",
+      "native_name_pointer": "0x761701",
+      "name_table_slot": "0x8d9d18",
+      "dispatch_target": "0x20b8f4",
+      "rows_using_opcode": 18,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x214774"
+      ]
+    },
+    {
+      "opcode": 59,
+      "native_name": "SpawnFx",
+      "native_name_pointer": "0x76170f",
+      "name_table_slot": "0x8d9d20",
+      "dispatch_target": "0x20b904",
+      "rows_using_opcode": 176,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x214a10"
+      ]
+    },
+    {
+      "opcode": 60,
+      "native_name": "CamShake",
+      "native_name_pointer": "0x761717",
+      "name_table_slot": "0x8d9d28",
+      "dispatch_target": "0x20b914",
+      "rows_using_opcode": 19,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x41c8ec"
+      ]
+    },
+    {
+      "opcode": 61,
+      "native_name": "SpawnPlanets",
+      "native_name_pointer": "0x761720",
+      "name_table_slot": "0x8d9d30",
+      "dispatch_target": "0x20b990",
+      "rows_using_opcode": 23,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x2ae7d0"
+      ]
+    },
+    {
+      "opcode": 62,
+      "native_name": "SpawnSpawnPoints",
+      "native_name_pointer": "0x76172d",
+      "name_table_slot": "0x8d9d38",
+      "dispatch_target": "0x20ba18",
+      "rows_using_opcode": 68,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x214d8c"
+      ]
+    },
+    {
+      "opcode": 63,
+      "native_name": "SpawnGalaxyGates",
+      "native_name_pointer": "0x76173e",
+      "name_table_slot": "0x8d9d40",
+      "dispatch_target": "0x20ba28",
+      "rows_using_opcode": 0,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x2ae368"
+      ]
+    },
+    {
+      "opcode": 64,
+      "native_name": "SpawnMyHeroes",
+      "native_name_pointer": "0x76174f",
+      "name_table_slot": "0x8d9d48",
+      "dispatch_target": "0x20badc",
+      "rows_using_opcode": 85,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0xdf9f0",
+        "0x2b2f94"
+      ]
+    },
+    {
+      "opcode": 65,
+      "native_name": "ClearMyHeroes",
+      "native_name_pointer": "0x76175d",
+      "name_table_slot": "0x8d9d50",
+      "dispatch_target": "0x20bb40",
+      "rows_using_opcode": 6,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x2ad50c",
+        "0xdf9f0"
+      ]
+    },
+    {
+      "opcode": 66,
+      "native_name": "StartEventSpot",
+      "native_name_pointer": "0x76176b",
+      "name_table_slot": "0x8d9d58",
+      "dispatch_target": "0x20bba8",
+      "rows_using_opcode": 42,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x2151f4"
+      ]
+    },
+    {
+      "opcode": 67,
+      "native_name": "EndEventSpot",
+      "native_name_pointer": "0x76177a",
+      "name_table_slot": "0x8d9d60",
+      "dispatch_target": "0x20bbb8",
+      "rows_using_opcode": 42,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 68,
+      "native_name": "CheckSpawnPointDestroyed",
+      "native_name_pointer": "0x761787",
+      "name_table_slot": "0x8d9d68",
+      "dispatch_target": "0x20bbf0",
+      "rows_using_opcode": 13,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x2153dc"
+      ]
+    },
+    {
+      "opcode": 69,
+      "native_name": "HideEscort",
+      "native_name_pointer": "0x7617a0",
+      "name_table_slot": "0x8d9d70",
+      "dispatch_target": "0x20bc00",
+      "rows_using_opcode": 3,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 70,
+      "native_name": "CheckHPBelow",
+      "native_name_pointer": "0x7617ab",
+      "name_table_slot": "0x8d9d78",
+      "dispatch_target": "0x20bc20",
+      "rows_using_opcode": 61,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x215608"
+      ]
+    },
+    {
+      "opcode": 71,
+      "native_name": "SetDisable",
+      "native_name_pointer": "0x7617b8",
+      "name_table_slot": "0x8d9d80",
+      "dispatch_target": "0x20bc30",
+      "rows_using_opcode": 11,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x2157ec"
+      ]
+    },
+    {
+      "opcode": 72,
+      "native_name": "ChangeTeam",
+      "native_name_pointer": "0x7617c3",
+      "name_table_slot": "0x8d9d88",
+      "dispatch_target": "0x20bc40",
+      "rows_using_opcode": 24,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x215934"
+      ]
+    },
+    {
+      "opcode": 73,
+      "native_name": "PlaySound",
+      "native_name_pointer": "0x7617ce",
+      "name_table_slot": "0x8d9d90",
+      "dispatch_target": "0x20bc50",
+      "rows_using_opcode": 6,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x423344"
+      ]
+    },
+    {
+      "opcode": 74,
+      "native_name": "SpawnUIFx",
+      "native_name_pointer": "0x7617d8",
+      "name_table_slot": "0x8d9d98",
+      "dispatch_target": "0x20bc94",
+      "rows_using_opcode": 6,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x215bec"
+      ]
+    },
+    {
+      "opcode": 75,
+      "native_name": "ShowNotice2",
+      "native_name_pointer": "0x7617e2",
+      "name_table_slot": "0x8d9da0",
+      "dispatch_target": "0x20bca4",
+      "rows_using_opcode": 0,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x215d58"
+      ]
+    },
+    {
+      "opcode": 76,
+      "native_name": "HideTargetArrow",
+      "native_name_pointer": "0x7617ee",
+      "name_table_slot": "0x8d9da8",
+      "dispatch_target": "0x20bcb4",
+      "rows_using_opcode": 22,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 77,
+      "native_name": "HideUI",
+      "native_name_pointer": "0x7617fe",
+      "name_table_slot": "0x8d9db0",
+      "dispatch_target": "0x20bcd0",
+      "rows_using_opcode": 86,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 78,
+      "native_name": "DisableUserInput",
+      "native_name_pointer": "0x761805",
+      "name_table_slot": "0x8d9db8",
+      "dispatch_target": "0x20bce8",
+      "rows_using_opcode": 191,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 79,
+      "native_name": "FollowCID",
+      "native_name_pointer": "0x761816",
+      "name_table_slot": "0x8d9dc0",
+      "dispatch_target": "0x20bd04",
+      "rows_using_opcode": 16,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x215f68"
+      ]
+    },
+    {
+      "opcode": 80,
+      "native_name": "CheckNearDistCID",
+      "native_name_pointer": "0x761820",
+      "name_table_slot": "0x8d9dc8",
+      "dispatch_target": "0x20bd14",
+      "rows_using_opcode": 1,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x20930c"
+      ]
+    },
+    {
+      "opcode": 81,
+      "native_name": "FollowMyHero",
+      "native_name_pointer": "0x761831",
+      "name_table_slot": "0x8d9dd0",
+      "dispatch_target": "0x20bd7c",
+      "rows_using_opcode": 102,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x21625c"
+      ]
+    },
+    {
+      "opcode": 82,
+      "native_name": "DeleteFx",
+      "native_name_pointer": "0x76183e",
+      "name_table_slot": "0x8d9dd8",
+      "dispatch_target": "0x20bd8c",
+      "rows_using_opcode": 52,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x40e1fc"
+      ]
+    },
+    {
+      "opcode": 83,
+      "native_name": "CamReset",
+      "native_name_pointer": "0x761847",
+      "name_table_slot": "0x8d9de0",
+      "dispatch_target": "0x20be40",
+      "rows_using_opcode": 2,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x2164a8"
+      ]
+    },
+    {
+      "opcode": 84,
+      "native_name": "SetHP",
+      "native_name_pointer": "0x761850",
+      "name_table_slot": "0x8d9de8",
+      "dispatch_target": "0x20be50",
+      "rows_using_opcode": 1,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x2165d8"
+      ]
+    },
+    {
+      "opcode": 85,
+      "native_name": "UnlockPlanet",
+      "native_name_pointer": "0x761856",
+      "name_table_slot": "0x8d9df0",
+      "dispatch_target": "0x20be60",
+      "rows_using_opcode": 48,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x216714"
+      ]
+    },
+    {
+      "opcode": 86,
+      "native_name": "InitMgrNavi",
+      "native_name_pointer": "0x761863",
+      "name_table_slot": "0x8d9df8",
+      "dispatch_target": "0x20be70",
+      "rows_using_opcode": 1,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 87,
+      "native_name": "StopBGM",
+      "native_name_pointer": "0x76186f",
+      "name_table_slot": "0x8d9e00",
+      "dispatch_target": "0x20be88",
+      "rows_using_opcode": 10,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x422bf4"
+      ]
+    },
+    {
+      "opcode": 88,
+      "native_name": "ShowQuestUI",
+      "native_name_pointer": "0x761877",
+      "name_table_slot": "0x8d9e08",
+      "dispatch_target": "0x20beb8",
+      "rows_using_opcode": 1,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x265d9c"
+      ]
+    },
+    {
+      "opcode": 89,
+      "native_name": "HideQuestUI",
+      "native_name_pointer": "0x761883",
+      "name_table_slot": "0x8d9e10",
+      "dispatch_target": "0x20bed0",
+      "rows_using_opcode": 1,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 90,
+      "native_name": "CheckCameraMove",
+      "native_name_pointer": "0x76188f",
+      "name_table_slot": "0x8d9e18",
+      "dispatch_target": "0x20bed8",
+      "rows_using_opcode": 1,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x216e28"
+      ]
+    },
+    {
+      "opcode": 91,
+      "native_name": "WarpPos",
+      "native_name_pointer": "0x76189f",
+      "name_table_slot": "0x8d9e20",
+      "dispatch_target": "0x20bee8",
+      "rows_using_opcode": 3,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x217328"
+      ]
+    },
+    {
+      "opcode": 92,
+      "native_name": "ClearTarget",
+      "native_name_pointer": "0x7618a7",
+      "name_table_slot": "0x8d9e28",
+      "dispatch_target": "0x20bef8",
+      "rows_using_opcode": 0,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 93,
+      "native_name": "CheckTabUIForce",
+      "native_name_pointer": "0x7618b3",
+      "name_table_slot": "0x8d9e30",
+      "dispatch_target": "0x20addc",
+      "rows_using_opcode": 1,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x20ea98",
+        "0x21b394"
+      ]
+    },
+    {
+      "opcode": 94,
+      "native_name": "CheckTabUISkill",
+      "native_name_pointer": "0x7618c3",
+      "name_table_slot": "0x8d9e38",
+      "dispatch_target": "0x20addc",
+      "rows_using_opcode": 1,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x20ea98",
+        "0x21b394"
+      ]
+    },
+    {
+      "opcode": 95,
+      "native_name": "CheckTabUIBuild",
+      "native_name_pointer": "0x7618d3",
+      "name_table_slot": "0x8d9e40",
+      "dispatch_target": "0x20addc",
+      "rows_using_opcode": 0,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x20ea98",
+        "0x21b394"
+      ]
+    },
+    {
+      "opcode": 96,
+      "native_name": "SetRetreat",
+      "native_name_pointer": "0x7618e3",
+      "name_table_slot": "0x8d9e48",
+      "dispatch_target": "0x20bf60",
+      "rows_using_opcode": 2,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x217588"
+      ]
+    },
+    {
+      "opcode": 97,
+      "native_name": "HideMenu",
+      "native_name_pointer": "0x7618ee",
+      "name_table_slot": "0x8d9e50",
+      "dispatch_target": "0x20bf70",
+      "rows_using_opcode": 2,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 98,
+      "native_name": "SetCamDist",
+      "native_name_pointer": "0x7618f7",
+      "name_table_slot": "0x8d9e58",
+      "dispatch_target": "0x20bf8c",
+      "rows_using_opcode": 46,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 99,
+      "native_name": "SpawnPID",
+      "native_name_pointer": "0x761902",
+      "name_table_slot": "0x8d9e60",
+      "dispatch_target": "0x20c018",
+      "rows_using_opcode": 33,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x2177c4"
+      ]
+    },
+    {
+      "opcode": 100,
+      "native_name": "SetDisableAttack",
+      "native_name_pointer": "0x76190b",
+      "name_table_slot": "0x8d9e68",
+      "dispatch_target": "0x20c028",
+      "rows_using_opcode": 15,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x20930c"
+      ]
+    },
+    {
+      "opcode": 101,
+      "native_name": "StopSound",
+      "native_name_pointer": "0x76191c",
+      "name_table_slot": "0x8d9e70",
+      "dispatch_target": "0x20c090",
+      "rows_using_opcode": 0,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x423a14"
+      ]
+    },
+    {
+      "opcode": 102,
+      "native_name": "DisableMenu",
+      "native_name_pointer": "0x761926",
+      "name_table_slot": "0x8d9e78",
+      "dispatch_target": "0x20c0cc",
+      "rows_using_opcode": 0,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 103,
+      "native_name": "PatrolFullRangeOp",
+      "native_name_pointer": "0x761932",
+      "name_table_slot": "0x8d9e80",
+      "dispatch_target": "0x20c174",
+      "rows_using_opcode": 0,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 104,
+      "native_name": "SkillPlayOff",
+      "native_name_pointer": "0x761944",
+      "name_table_slot": "0x8d9e88",
+      "dispatch_target": "0x20c190",
+      "rows_using_opcode": 6,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 105,
+      "native_name": "CheckCIDNumBelow",
+      "native_name_pointer": "0x761951",
+      "name_table_slot": "0x8d9e90",
+      "dispatch_target": "0x20c1c8",
+      "rows_using_opcode": 4,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x217e38"
+      ]
+    },
+    {
+      "opcode": 106,
+      "native_name": "PatrolZeroRangeOp",
+      "native_name_pointer": "0x761962",
+      "name_table_slot": "0x8d9e98",
+      "dispatch_target": "0x20c1d8",
+      "rows_using_opcode": 2,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 107,
+      "native_name": "Goto",
+      "native_name_pointer": "0x761974",
+      "name_table_slot": "0x8d9ea0",
+      "dispatch_target": "0x20c228",
+      "rows_using_opcode": 1,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 108,
+      "native_name": "CheckTabUIDeploy",
+      "native_name_pointer": "0x761979",
+      "name_table_slot": "0x8d9ea8",
+      "dispatch_target": "0x20addc",
+      "rows_using_opcode": 4,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x20ea98",
+        "0x21b394"
+      ]
+    },
+    {
+      "opcode": 109,
+      "native_name": "CheckTabUIRecovery",
+      "native_name_pointer": "0x76198a",
+      "name_table_slot": "0x8d9eb0",
+      "dispatch_target": "0x20addc",
+      "rows_using_opcode": 1,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x20ea98",
+        "0x21b394"
+      ]
+    },
+    {
+      "opcode": 110,
+      "native_name": "CheckTabUIMap",
+      "native_name_pointer": "0x76199d",
+      "name_table_slot": "0x8d9eb8",
+      "dispatch_target": "0x20c294",
+      "rows_using_opcode": 1,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x2180b8"
+      ]
+    },
+    {
+      "opcode": 111,
+      "native_name": "SpawnCoord",
+      "native_name_pointer": "0x7619ab",
+      "name_table_slot": "0x8d9ec0",
+      "dispatch_target": "0x20c2a4",
+      "rows_using_opcode": 1,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x2bbe48"
+      ]
+    },
+    {
+      "opcode": 112,
+      "native_name": "CheckCoord",
+      "native_name_pointer": "0x7619b6",
+      "name_table_slot": "0x8d9ec8",
+      "dispatch_target": "0x20c30c",
+      "rows_using_opcode": 1,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x2184a8"
+      ]
+    },
+    {
+      "opcode": 113,
+      "native_name": "CheckAddSummon",
+      "native_name_pointer": "0x7619c1",
+      "name_table_slot": "0x8d9ed0",
+      "dispatch_target": "0x20c318",
+      "rows_using_opcode": 3,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 114,
+      "native_name": "StartDefence",
+      "native_name_pointer": "0x7619d0",
+      "name_table_slot": "0x8d9ed8",
+      "dispatch_target": "0x20c35c",
+      "rows_using_opcode": 1,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x2187b4"
+      ]
+    },
+    {
+      "opcode": 115,
+      "native_name": "CheckDefenceEnd",
+      "native_name_pointer": "0x7619dd",
+      "name_table_slot": "0x8d9ee0",
+      "dispatch_target": "0x20c36c",
+      "rows_using_opcode": 1,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x218bac"
+      ]
+    },
+    {
+      "opcode": 116,
+      "native_name": "PushHeroSort",
+      "native_name_pointer": "0x7619ed",
+      "name_table_slot": "0x8d9ee8",
+      "dispatch_target": "0x20c37c",
+      "rows_using_opcode": 2,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 117,
+      "native_name": "PopHeroSort",
+      "native_name_pointer": "0x7619fa",
+      "name_table_slot": "0x8d9ef0",
+      "dispatch_target": "0x20c3e0",
+      "rows_using_opcode": 2,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 118,
+      "native_name": "StartBoss",
+      "native_name_pointer": "0x761a06",
+      "name_table_slot": "0x8d9ef8",
+      "dispatch_target": "0x20c428",
+      "rows_using_opcode": 1,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x219148"
+      ]
+    },
+    {
+      "opcode": 119,
+      "native_name": "CheckBossEnd",
+      "native_name_pointer": "0x761a10",
+      "name_table_slot": "0x8d9f00",
+      "dispatch_target": "0x20c438",
+      "rows_using_opcode": 1,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x2194e8"
+      ]
+    },
+    {
+      "opcode": 120,
+      "native_name": "ChatLocal",
+      "native_name_pointer": "0x75d781",
+      "name_table_slot": "0x8d9f08",
+      "dispatch_target": "0x20c448",
+      "rows_using_opcode": 1,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x21b394",
+        "0x21bba4"
+      ]
+    },
+    {
+      "opcode": 121,
+      "native_name": "OpenTask",
+      "native_name_pointer": "0x761a1d",
+      "name_table_slot": "0x8d9f10",
+      "dispatch_target": "0x20c4a8",
+      "rows_using_opcode": 1,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": []
+    },
+    {
+      "opcode": 122,
+      "native_name": "CloseTask",
+      "native_name_pointer": "0x761a26",
+      "name_table_slot": "0x8d9f18",
+      "dispatch_target": "0x20c4ec",
+      "rows_using_opcode": 0,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x24fe00"
+      ]
+    },
+    {
+      "opcode": 123,
+      "native_name": "CloseAllWnd",
+      "native_name_pointer": "0x761a30",
+      "name_table_slot": "0x8d9f20",
+      "dispatch_target": "0x20c548",
+      "rows_using_opcode": 0,
+      "name_confidence": "native enum/debug name; parameter behavior separately verified",
+      "direct_helpers": [
+        "0x219cb0",
+        "0x2cd3c0",
+        "0x4b21a0",
+        "0x20930c",
+        "0x20930c",
+        "0x20930c",
+        "0x3f5c54",
+        "0x20930c",
+        "0x3971ec"
+      ]
+    }
+  ],
+  "entry_labels": [
+    {
+      "label": 1,
+      "rows": [
+        309
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 2,
+      "rows": [
+        334
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 3,
+      "rows": [
+        338
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 4,
+      "rows": [
+        344
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 5,
+      "rows": [
+        370
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6,
+      "rows": [
+        378
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 12,
+      "rows": [
+        405
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 14,
+      "rows": [
+        429
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 15,
+      "rows": [
+        444
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 16,
+      "rows": [
+        449
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 17,
+      "rows": [
+        458
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 19,
+      "rows": [
+        417
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 20,
+      "rows": [
+        387
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 100,
+      "rows": [
+        486
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 130,
+      "rows": [
+        860
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 131,
+      "rows": [
+        839
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 132,
+      "rows": [
+        824
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 133,
+      "rows": [
+        826
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 134,
+      "rows": [
+        480
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 135,
+      "rows": [
+        473
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 136,
+      "rows": [
+        819
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 137,
+      "rows": [
+        828
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 138,
+      "rows": [
+        832
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 139,
+      "rows": [
+        836
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 140,
+      "rows": [
+        671
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 141,
+      "rows": [
+        679
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 142,
+      "rows": [
+        712
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 143,
+      "rows": [
+        788
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 144,
+      "rows": [
+        735
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 145,
+      "rows": [
+        742
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 146,
+      "rows": [
+        756
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 147,
+      "rows": [
+        768
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 148,
+      "rows": [
+        799
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 149,
+      "rows": [
+        815
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 150,
+      "rows": [
+        845
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 151,
+      "rows": [
+        852
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 152,
+      "rows": [
+        858
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 160,
+      "rows": [
+        496
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 200,
+      "rows": [
+        508
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 300,
+      "rows": [
+        531
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 350,
+      "rows": [
+        537
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 400,
+      "rows": [
+        543
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 500,
+      "rows": [
+        551
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 600,
+      "rows": [
+        557
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 700,
+      "rows": [
+        565
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 800,
+      "rows": [
+        571
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 900,
+      "rows": [
+        577
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 1000,
+      "rows": [
+        580
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 2000,
+      "rows": [
+        583
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 4000,
+      "rows": [
+        589
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 4100,
+      "rows": [
+        595
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 4500,
+      "rows": [
+        601
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 4600,
+      "rows": [
+        604
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 4700,
+      "rows": [
+        606
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 4800,
+      "rows": [
+        615
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 5000,
+      "rows": [
+        622
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 5001,
+      "rows": [
+        624
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6000,
+      "rows": [
+        0
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6001,
+      "rows": [
+        868
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6002,
+      "rows": [
+        943
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6003,
+      "rows": [
+        1018
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6004,
+      "rows": [
+        1104
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6005,
+      "rows": [
+        1204
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6006,
+      "rows": [
+        1305
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6007,
+      "rows": [
+        1387
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6008,
+      "rows": [
+        1473
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6009,
+      "rows": [
+        1619
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6010,
+      "rows": [
+        1746
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6011,
+      "rows": [
+        1874
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6012,
+      "rows": [
+        2013
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6013,
+      "rows": [
+        2056
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6014,
+      "rows": [
+        2145
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6015,
+      "rows": [
+        2217
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6016,
+      "rows": [
+        2281
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6017,
+      "rows": [
+        2395
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6018,
+      "rows": [
+        2466
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6019,
+      "rows": [
+        2516
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6020,
+      "rows": [
+        2596
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6021,
+      "rows": [
+        2649
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6022,
+      "rows": [
+        2750
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6023,
+      "rows": [
+        2957
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6024,
+      "rows": [
+        3019
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6025,
+      "rows": [
+        3076
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6026,
+      "rows": [
+        3148
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6027,
+      "rows": [
+        3214
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6028,
+      "rows": [
+        3295
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6029,
+      "rows": [
+        3383
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6030,
+      "rows": [
+        3467
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6031,
+      "rows": [
+        3562
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6032,
+      "rows": [
+        3627
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6033,
+      "rows": [
+        3719
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6034,
+      "rows": [
+        3834
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6035,
+      "rows": [
+        3984
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6036,
+      "rows": [
+        4064
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6037,
+      "rows": [
+        4156
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6038,
+      "rows": [
+        4213
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6039,
+      "rows": [
+        4298
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6040,
+      "rows": [
+        4383
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6041,
+      "rows": [
+        4480
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6042,
+      "rows": [
+        4562
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6043,
+      "rows": [
+        4657
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6044,
+      "rows": [
+        4740
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6045,
+      "rows": [
+        4831
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6046,
+      "rows": [
+        4920
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6047,
+      "rows": [
+        5069
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6048,
+      "rows": [
+        5175
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6049,
+      "rows": [
+        5246
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6050,
+      "rows": [
+        5291
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6051,
+      "rows": [
+        5369
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6052,
+      "rows": [
+        5435
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6053,
+      "rows": [
+        5494
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6054,
+      "rows": [
+        5552
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6055,
+      "rows": [
+        5645
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6056,
+      "rows": [
+        5702
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6057,
+      "rows": [
+        5783
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6058,
+      "rows": [
+        5899
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6059,
+      "rows": [
+        5946
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6060,
+      "rows": [
+        5994
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6061,
+      "rows": [
+        6073
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6062,
+      "rows": [
+        6170
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6063,
+      "rows": [
+        6246
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6064,
+      "rows": [
+        6343
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6065,
+      "rows": [
+        6441
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6066,
+      "rows": [
+        6501
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6067,
+      "rows": [
+        6574
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6068,
+      "rows": [
+        6626
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6069,
+      "rows": [
+        6679
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6070,
+      "rows": [
+        6785
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6071,
+      "rows": [
+        7000
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6072,
+      "rows": [
+        7049
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6073,
+      "rows": [
+        7119
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6074,
+      "rows": [
+        7190
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6075,
+      "rows": [
+        7255
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6076,
+      "rows": [
+        7321
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6077,
+      "rows": [
+        7396
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6078,
+      "rows": [
+        7475
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6079,
+      "rows": [
+        7534
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6080,
+      "rows": [
+        7597
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6081,
+      "rows": [
+        7658
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6082,
+      "rows": [
+        7752
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6301,
+      "rows": [
+        5160
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6302,
+      "rows": [
+        6893
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 6350,
+      "rows": [
+        6913
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7002,
+      "rows": [
+        976
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7003,
+      "rows": [
+        982
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7004,
+      "rows": [
+        1518
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7005,
+      "rows": [
+        1526
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7006,
+      "rows": [
+        1699
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7007,
+      "rows": [
+        1704
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7008,
+      "rows": [
+        1768
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7009,
+      "rows": [
+        2552
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7010,
+      "rows": [
+        2557
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7011,
+      "rows": [
+        2563
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7012,
+      "rows": [
+        3598
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7013,
+      "rows": [
+        3607
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7014,
+      "rows": [
+        3617
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7015,
+      "rows": [
+        4104
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7016,
+      "rows": [
+        4117
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7017,
+      "rows": [
+        4594
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7018,
+      "rows": [
+        4605
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7019,
+      "rows": [
+        4787
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7020,
+      "rows": [
+        4797
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7021,
+      "rows": [
+        4807
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7022,
+      "rows": [
+        5265
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7023,
+      "rows": [
+        5271
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7024,
+      "rows": [
+        5404
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7025,
+      "rows": [
+        5411
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7026,
+      "rows": [
+        5418
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7027,
+      "rows": [
+        5522
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7028,
+      "rows": [
+        5530
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7029,
+      "rows": [
+        5678
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7030,
+      "rows": [
+        5684
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7031,
+      "rows": [
+        5689
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7032,
+      "rows": [
+        5827
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7033,
+      "rows": [
+        5833
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7034,
+      "rows": [
+        6595
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7035,
+      "rows": [
+        6605
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7036,
+      "rows": [
+        6610
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7100,
+      "rows": [
+        1131
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7101,
+      "rows": [
+        1580
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7102,
+      "rows": [
+        2104
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7103,
+      "rows": [
+        2708
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7104,
+      "rows": [
+        2769
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7105,
+      "rows": [
+        6386
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    },
+    {
+      "label": 7106,
+      "rows": [
+        6418
+      ],
+      "lookup_rule": "first matching EventScript.f01; not direct row index"
+    }
+  ],
+  "eventspot_entry_links": [
+    {
+      "eventspot_row": 0,
+      "name": "None",
+      "entry_label": 0,
+      "entry_script_rows": [],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 1,
+      "name": "Test",
+      "entry_label": 500,
+      "entry_script_rows": [
+        551
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 2,
+      "name": "Wrecked1_1",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 3,
+      "name": "Wrecked1_2",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 4,
+      "name": "Wrecked1_3",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 5,
+      "name": "Wrecked2_1",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 6,
+      "name": "Wrecked2_2",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 7,
+      "name": "Wrecked2_3",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 8,
+      "name": "Wrecked3_1",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 9,
+      "name": "Wrecked3_2",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 10,
+      "name": "Wrecked3_3",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 11,
+      "name": "Wrecked4_1",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 12,
+      "name": "Wrecked4_2",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 13,
+      "name": "Wrecked4_3",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 14,
+      "name": "Wrecked5_1",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 15,
+      "name": "Wrecked5_2",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 16,
+      "name": "Wrecked5_3",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 17,
+      "name": "Wrecked6_1",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 18,
+      "name": "Wrecked6_2",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 19,
+      "name": "Wrecked6_3",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 20,
+      "name": "Wrecked7_1",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 21,
+      "name": "Wrecked7_2",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 22,
+      "name": "Wrecked7_3",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 23,
+      "name": "Wrecked8_1",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 24,
+      "name": "Wrecked8_2",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 25,
+      "name": "Wrecked8_3",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 26,
+      "name": "Wrecked9_1",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 27,
+      "name": "Wrecked9_2",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 28,
+      "name": "Wrecked9_3",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 29,
+      "name": "FoundRes1_1",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 30,
+      "name": "FoundRes1_2",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 31,
+      "name": "FoundRes1_3",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 32,
+      "name": "FoundRes1_4",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 33,
+      "name": "FoundRes1_5",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 34,
+      "name": "FoundRes2_1",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 35,
+      "name": "FoundRes2_2",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 36,
+      "name": "FoundRes2_3",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 37,
+      "name": "FoundRes2_4",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 38,
+      "name": "FoundRes2_5",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 39,
+      "name": "FoundRes3_1",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 40,
+      "name": "FoundRes3_2",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 41,
+      "name": "FoundRes3_3",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 42,
+      "name": "FoundRes3_4",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 43,
+      "name": "FoundRes3_5",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 44,
+      "name": "FoundRes4_1",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 45,
+      "name": "FoundRes4_2",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 46,
+      "name": "FoundRes4_3",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 47,
+      "name": "FoundRes4_4",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 48,
+      "name": "FoundRes4_5",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 49,
+      "name": "FoundRes5_1",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 50,
+      "name": "FoundRes5_2",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 51,
+      "name": "FoundRes5_3",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 52,
+      "name": "FoundRes5_4",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 53,
+      "name": "FoundRes5_5",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 54,
+      "name": "FoundRes6_1",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 55,
+      "name": "FoundRes6_2",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 56,
+      "name": "FoundRes6_3",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 57,
+      "name": "FoundRes6_4",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 58,
+      "name": "FoundRes6_5",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 59,
+      "name": "FoundRes7_1",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 60,
+      "name": "FoundRes7_2",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 61,
+      "name": "FoundRes7_3",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 62,
+      "name": "FoundRes7_4",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 63,
+      "name": "FoundRes7_5",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 64,
+      "name": "FoundRes8_1",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 65,
+      "name": "FoundRes8_2",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 66,
+      "name": "FoundRes8_3",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 67,
+      "name": "FoundRes8_4",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 68,
+      "name": "FoundRes8_5",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 69,
+      "name": "FoundRes9_1",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 70,
+      "name": "FoundRes9_2",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 71,
+      "name": "FoundRes9_3",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 72,
+      "name": "FoundRes9_4",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 73,
+      "name": "FoundRes9_5",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 74,
+      "name": "Rescue1_1",
+      "entry_label": 800,
+      "entry_script_rows": [
+        571
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 75,
+      "name": "Rescue1_2",
+      "entry_label": 800,
+      "entry_script_rows": [
+        571
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 76,
+      "name": "Rescue1_3",
+      "entry_label": 800,
+      "entry_script_rows": [
+        571
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 77,
+      "name": "Rescue2_1",
+      "entry_label": 800,
+      "entry_script_rows": [
+        571
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 78,
+      "name": "Rescue2_2",
+      "entry_label": 800,
+      "entry_script_rows": [
+        571
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 79,
+      "name": "Rescue2_3",
+      "entry_label": 800,
+      "entry_script_rows": [
+        571
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 80,
+      "name": "Rescue3_1",
+      "entry_label": 800,
+      "entry_script_rows": [
+        571
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 81,
+      "name": "Rescue3_2",
+      "entry_label": 800,
+      "entry_script_rows": [
+        571
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 82,
+      "name": "Rescue3_3",
+      "entry_label": 800,
+      "entry_script_rows": [
+        571
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 83,
+      "name": "Rescue4_1",
+      "entry_label": 800,
+      "entry_script_rows": [
+        571
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 84,
+      "name": "Rescue4_2",
+      "entry_label": 800,
+      "entry_script_rows": [
+        571
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 85,
+      "name": "Rescue4_3",
+      "entry_label": 800,
+      "entry_script_rows": [
+        571
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 86,
+      "name": "Rescue5_1",
+      "entry_label": 800,
+      "entry_script_rows": [
+        571
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 87,
+      "name": "Rescue5_2",
+      "entry_label": 800,
+      "entry_script_rows": [
+        571
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 88,
+      "name": "Rescue5_3",
+      "entry_label": 800,
+      "entry_script_rows": [
+        571
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 89,
+      "name": "Rescue6_1",
+      "entry_label": 800,
+      "entry_script_rows": [
+        571
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 90,
+      "name": "Rescue6_2",
+      "entry_label": 800,
+      "entry_script_rows": [
+        571
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 91,
+      "name": "Rescue6_3",
+      "entry_label": 800,
+      "entry_script_rows": [
+        571
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 92,
+      "name": "Rescue7_1",
+      "entry_label": 800,
+      "entry_script_rows": [
+        571
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 93,
+      "name": "Rescue7_2",
+      "entry_label": 800,
+      "entry_script_rows": [
+        571
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 94,
+      "name": "Rescue7_3",
+      "entry_label": 800,
+      "entry_script_rows": [
+        571
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 95,
+      "name": "Rescue8_1",
+      "entry_label": 800,
+      "entry_script_rows": [
+        571
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 96,
+      "name": "Rescue8_2",
+      "entry_label": 800,
+      "entry_script_rows": [
+        571
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 97,
+      "name": "Rescue8_3",
+      "entry_label": 800,
+      "entry_script_rows": [
+        571
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 98,
+      "name": "Rescue9_1",
+      "entry_label": 800,
+      "entry_script_rows": [
+        571
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 99,
+      "name": "Rescue9_2",
+      "entry_label": 800,
+      "entry_script_rows": [
+        571
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 100,
+      "name": "Rescue9_3",
+      "entry_label": 800,
+      "entry_script_rows": [
+        571
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 101,
+      "name": "ItemC1_1",
+      "entry_label": 400,
+      "entry_script_rows": [
+        543
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 102,
+      "name": "ItemC1_2",
+      "entry_label": 400,
+      "entry_script_rows": [
+        543
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 103,
+      "name": "ItemC1_3",
+      "entry_label": 400,
+      "entry_script_rows": [
+        543
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 104,
+      "name": "ItemC2_1",
+      "entry_label": 400,
+      "entry_script_rows": [
+        543
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 105,
+      "name": "ItemC2_2",
+      "entry_label": 400,
+      "entry_script_rows": [
+        543
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 106,
+      "name": "ItemC2_3",
+      "entry_label": 400,
+      "entry_script_rows": [
+        543
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 107,
+      "name": "ItemC3_1",
+      "entry_label": 400,
+      "entry_script_rows": [
+        543
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 108,
+      "name": "ItemC3_2",
+      "entry_label": 400,
+      "entry_script_rows": [
+        543
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 109,
+      "name": "ItemC3_3",
+      "entry_label": 400,
+      "entry_script_rows": [
+        543
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 110,
+      "name": "ItemC4_1",
+      "entry_label": 400,
+      "entry_script_rows": [
+        543
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 111,
+      "name": "ItemC4_2",
+      "entry_label": 400,
+      "entry_script_rows": [
+        543
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 112,
+      "name": "ItemC4_3",
+      "entry_label": 400,
+      "entry_script_rows": [
+        543
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 113,
+      "name": "ItemC5_1",
+      "entry_label": 400,
+      "entry_script_rows": [
+        543
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 114,
+      "name": "ItemC5_2",
+      "entry_label": 400,
+      "entry_script_rows": [
+        543
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 115,
+      "name": "ItemC5_3",
+      "entry_label": 400,
+      "entry_script_rows": [
+        543
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 116,
+      "name": "ItemC6_1",
+      "entry_label": 400,
+      "entry_script_rows": [
+        543
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 117,
+      "name": "ItemC6_2",
+      "entry_label": 400,
+      "entry_script_rows": [
+        543
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 118,
+      "name": "ItemC6_3",
+      "entry_label": 400,
+      "entry_script_rows": [
+        543
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 119,
+      "name": "ItemC7_1",
+      "entry_label": 400,
+      "entry_script_rows": [
+        543
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 120,
+      "name": "ItemC7_2",
+      "entry_label": 400,
+      "entry_script_rows": [
+        543
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 121,
+      "name": "ItemC7_3",
+      "entry_label": 400,
+      "entry_script_rows": [
+        543
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 122,
+      "name": "ItemC8_1",
+      "entry_label": 400,
+      "entry_script_rows": [
+        543
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 123,
+      "name": "ItemC8_2",
+      "entry_label": 400,
+      "entry_script_rows": [
+        543
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 124,
+      "name": "ItemC8_3",
+      "entry_label": 400,
+      "entry_script_rows": [
+        543
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 125,
+      "name": "ItemC9_1",
+      "entry_label": 400,
+      "entry_script_rows": [
+        543
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 126,
+      "name": "ItemC9_2",
+      "entry_label": 400,
+      "entry_script_rows": [
+        543
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 127,
+      "name": "ItemC9_3",
+      "entry_label": 400,
+      "entry_script_rows": [
+        543
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 128,
+      "name": "ItemD1_1",
+      "entry_label": 500,
+      "entry_script_rows": [
+        551
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 129,
+      "name": "ItemD1_2",
+      "entry_label": 500,
+      "entry_script_rows": [
+        551
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 130,
+      "name": "ItemD1_3",
+      "entry_label": 500,
+      "entry_script_rows": [
+        551
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 131,
+      "name": "ItemD2_1",
+      "entry_label": 500,
+      "entry_script_rows": [
+        551
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 132,
+      "name": "ItemD2_2",
+      "entry_label": 500,
+      "entry_script_rows": [
+        551
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 133,
+      "name": "ItemD2_3",
+      "entry_label": 500,
+      "entry_script_rows": [
+        551
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 134,
+      "name": "ItemD3_1",
+      "entry_label": 500,
+      "entry_script_rows": [
+        551
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 135,
+      "name": "ItemD3_2",
+      "entry_label": 500,
+      "entry_script_rows": [
+        551
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 136,
+      "name": "ItemD3_3",
+      "entry_label": 500,
+      "entry_script_rows": [
+        551
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 137,
+      "name": "ItemD4_1",
+      "entry_label": 500,
+      "entry_script_rows": [
+        551
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 138,
+      "name": "ItemD4_2",
+      "entry_label": 500,
+      "entry_script_rows": [
+        551
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 139,
+      "name": "ItemD4_3",
+      "entry_label": 500,
+      "entry_script_rows": [
+        551
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 140,
+      "name": "ItemD5_1",
+      "entry_label": 500,
+      "entry_script_rows": [
+        551
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 141,
+      "name": "ItemD5_2",
+      "entry_label": 500,
+      "entry_script_rows": [
+        551
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 142,
+      "name": "ItemD5_3",
+      "entry_label": 500,
+      "entry_script_rows": [
+        551
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 143,
+      "name": "ItemD6_1",
+      "entry_label": 500,
+      "entry_script_rows": [
+        551
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 144,
+      "name": "ItemD6_2",
+      "entry_label": 500,
+      "entry_script_rows": [
+        551
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 145,
+      "name": "ItemD6_3",
+      "entry_label": 500,
+      "entry_script_rows": [
+        551
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 146,
+      "name": "ItemD7_1",
+      "entry_label": 500,
+      "entry_script_rows": [
+        551
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 147,
+      "name": "ItemD7_2",
+      "entry_label": 500,
+      "entry_script_rows": [
+        551
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 148,
+      "name": "ItemD7_3",
+      "entry_label": 500,
+      "entry_script_rows": [
+        551
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 149,
+      "name": "ItemD8_1",
+      "entry_label": 500,
+      "entry_script_rows": [
+        551
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 150,
+      "name": "ItemD8_2",
+      "entry_label": 500,
+      "entry_script_rows": [
+        551
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 151,
+      "name": "ItemD8_3",
+      "entry_label": 500,
+      "entry_script_rows": [
+        551
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 152,
+      "name": "ItemD9_1",
+      "entry_label": 500,
+      "entry_script_rows": [
+        551
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 153,
+      "name": "ItemD9_2",
+      "entry_label": 500,
+      "entry_script_rows": [
+        551
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 154,
+      "name": "ItemD9_3",
+      "entry_label": 500,
+      "entry_script_rows": [
+        551
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 155,
+      "name": "ItemP1_1",
+      "entry_label": 600,
+      "entry_script_rows": [
+        557
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 156,
+      "name": "ItemP1_2",
+      "entry_label": 600,
+      "entry_script_rows": [
+        557
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 157,
+      "name": "ItemP1_3",
+      "entry_label": 600,
+      "entry_script_rows": [
+        557
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 158,
+      "name": "ItemP2_1",
+      "entry_label": 600,
+      "entry_script_rows": [
+        557
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 159,
+      "name": "ItemP2_2",
+      "entry_label": 600,
+      "entry_script_rows": [
+        557
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 160,
+      "name": "ItemP2_3",
+      "entry_label": 600,
+      "entry_script_rows": [
+        557
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 161,
+      "name": "ItemP3_1",
+      "entry_label": 600,
+      "entry_script_rows": [
+        557
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 162,
+      "name": "ItemP3_2",
+      "entry_label": 600,
+      "entry_script_rows": [
+        557
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 163,
+      "name": "ItemP3_3",
+      "entry_label": 600,
+      "entry_script_rows": [
+        557
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 164,
+      "name": "ItemP4_1",
+      "entry_label": 600,
+      "entry_script_rows": [
+        557
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 165,
+      "name": "ItemP4_2",
+      "entry_label": 600,
+      "entry_script_rows": [
+        557
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 166,
+      "name": "ItemP4_3",
+      "entry_label": 600,
+      "entry_script_rows": [
+        557
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 167,
+      "name": "ItemP5_1",
+      "entry_label": 600,
+      "entry_script_rows": [
+        557
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 168,
+      "name": "ItemP5_2",
+      "entry_label": 600,
+      "entry_script_rows": [
+        557
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 169,
+      "name": "ItemP5_3",
+      "entry_label": 600,
+      "entry_script_rows": [
+        557
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 170,
+      "name": "ItemP6_1",
+      "entry_label": 600,
+      "entry_script_rows": [
+        557
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 171,
+      "name": "ItemP6_2",
+      "entry_label": 600,
+      "entry_script_rows": [
+        557
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 172,
+      "name": "ItemP6_3",
+      "entry_label": 600,
+      "entry_script_rows": [
+        557
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 173,
+      "name": "ItemP7_1",
+      "entry_label": 600,
+      "entry_script_rows": [
+        557
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 174,
+      "name": "ItemP7_2",
+      "entry_label": 600,
+      "entry_script_rows": [
+        557
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 175,
+      "name": "ItemP7_3",
+      "entry_label": 600,
+      "entry_script_rows": [
+        557
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 176,
+      "name": "ItemP8_1",
+      "entry_label": 600,
+      "entry_script_rows": [
+        557
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 177,
+      "name": "ItemP8_2",
+      "entry_label": 600,
+      "entry_script_rows": [
+        557
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 178,
+      "name": "ItemP8_3",
+      "entry_label": 600,
+      "entry_script_rows": [
+        557
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 179,
+      "name": "ItemP9_1",
+      "entry_label": 600,
+      "entry_script_rows": [
+        557
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 180,
+      "name": "ItemP9_2",
+      "entry_label": 600,
+      "entry_script_rows": [
+        557
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 181,
+      "name": "ItemP9_3",
+      "entry_label": 600,
+      "entry_script_rows": [
+        557
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 182,
+      "name": "Meteor1_1",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 183,
+      "name": "Meteor1_2",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 184,
+      "name": "Meteor1_3",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 185,
+      "name": "Meteor2_1",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 186,
+      "name": "Meteor2_2",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 187,
+      "name": "Meteor2_3",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 188,
+      "name": "Meteor3_1",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 189,
+      "name": "Meteor3_2",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 190,
+      "name": "Meteor3_3",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 191,
+      "name": "Meteor4_1",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 192,
+      "name": "Meteor4_2",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 193,
+      "name": "Meteor4_3",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 194,
+      "name": "Meteor5_1",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 195,
+      "name": "Meteor5_2",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 196,
+      "name": "Meteor5_3",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 197,
+      "name": "Meteor6_1",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 198,
+      "name": "Meteor6_2",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 199,
+      "name": "Meteor6_3",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 200,
+      "name": "Meteor7_1",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 201,
+      "name": "Meteor7_2",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 202,
+      "name": "Meteor7_3",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 203,
+      "name": "Meteor8_1",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 204,
+      "name": "Meteor8_2",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 205,
+      "name": "Meteor8_3",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 206,
+      "name": "Meteor9_1",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 207,
+      "name": "Meteor9_2",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 208,
+      "name": "Meteor9_3",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 209,
+      "name": "AtkNomal1_1",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 210,
+      "name": "AtkNomal1_2",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 211,
+      "name": "AtkNomal1_3",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 212,
+      "name": "AtkNomal2_1",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 213,
+      "name": "AtkNomal2_2",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 214,
+      "name": "AtkNomal2_3",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 215,
+      "name": "AtkNomal3_1",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 216,
+      "name": "AtkNomal3_2",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 217,
+      "name": "AtkNomal3_3",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 218,
+      "name": "AtkNomal4_1",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 219,
+      "name": "AtkNomal4_2",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 220,
+      "name": "AtkNomal4_3",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 221,
+      "name": "AtkNomal5_1",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 222,
+      "name": "AtkNomal5_2",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 223,
+      "name": "AtkNomal5_3",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 224,
+      "name": "AtkNomal6_1",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 225,
+      "name": "AtkNomal6_2",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 226,
+      "name": "AtkNomal6_3",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 227,
+      "name": "AtkNomal7_1",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 228,
+      "name": "AtkNomal7_2",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 229,
+      "name": "AtkNomal7_3",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 230,
+      "name": "AtkNomal8_1",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 231,
+      "name": "AtkNomal8_2",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 232,
+      "name": "AtkNomal8_3",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 233,
+      "name": "AtkNomal9_1",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 234,
+      "name": "AtkNomal9_2",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 235,
+      "name": "AtkNomal9_3",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 236,
+      "name": "AttBoss1_1",
+      "entry_label": 350,
+      "entry_script_rows": [
+        537
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 237,
+      "name": "AttBoss1_2",
+      "entry_label": 350,
+      "entry_script_rows": [
+        537
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 238,
+      "name": "AttBoss2_1",
+      "entry_label": 350,
+      "entry_script_rows": [
+        537
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 239,
+      "name": "AttBoss2_2",
+      "entry_label": 350,
+      "entry_script_rows": [
+        537
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 240,
+      "name": "AttBoss3_1",
+      "entry_label": 350,
+      "entry_script_rows": [
+        537
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 241,
+      "name": "AttBoss3_2",
+      "entry_label": 350,
+      "entry_script_rows": [
+        537
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 242,
+      "name": "AttBoss4_1",
+      "entry_label": 350,
+      "entry_script_rows": [
+        537
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 243,
+      "name": "AttBoss4_2",
+      "entry_label": 350,
+      "entry_script_rows": [
+        537
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 244,
+      "name": "AttBoss5_1",
+      "entry_label": 350,
+      "entry_script_rows": [
+        537
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 245,
+      "name": "AttBoss5_2",
+      "entry_label": 350,
+      "entry_script_rows": [
+        537
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 246,
+      "name": "AttBoss6_1",
+      "entry_label": 350,
+      "entry_script_rows": [
+        537
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 247,
+      "name": "AttBoss6_2",
+      "entry_label": 350,
+      "entry_script_rows": [
+        537
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 248,
+      "name": "AttBoss7_1",
+      "entry_label": 350,
+      "entry_script_rows": [
+        537
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 249,
+      "name": "AttBoss7_2",
+      "entry_label": 350,
+      "entry_script_rows": [
+        537
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 250,
+      "name": "AttBoss8_1",
+      "entry_label": 350,
+      "entry_script_rows": [
+        537
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 251,
+      "name": "AttBoss8_2",
+      "entry_label": 350,
+      "entry_script_rows": [
+        537
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 252,
+      "name": "AttBoss9_1",
+      "entry_label": 350,
+      "entry_script_rows": [
+        537
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 253,
+      "name": "AttBoss9_2",
+      "entry_label": 350,
+      "entry_script_rows": [
+        537
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 254,
+      "name": "Chapter1_2_1",
+      "entry_label": 7002,
+      "entry_script_rows": [
+        976
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 255,
+      "name": "Chapter1_2_2",
+      "entry_label": 7003,
+      "entry_script_rows": [
+        982
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 256,
+      "name": "Chapter1_4_Escort",
+      "entry_label": 7100,
+      "entry_script_rows": [
+        1131
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 257,
+      "name": "Chapter1_8_1",
+      "entry_label": 7004,
+      "entry_script_rows": [
+        1518
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 258,
+      "name": "Chapter1_8_2",
+      "entry_label": 7005,
+      "entry_script_rows": [
+        1526
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 259,
+      "name": "Chapter1_8_Escort",
+      "entry_label": 7101,
+      "entry_script_rows": [
+        1580
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 260,
+      "name": "Chapter1_9_1",
+      "entry_label": 7006,
+      "entry_script_rows": [
+        1699
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 261,
+      "name": "Chapter1_9_2",
+      "entry_label": 7007,
+      "entry_script_rows": [
+        1704
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 262,
+      "name": "Chapter1_10_1",
+      "entry_label": 7008,
+      "entry_script_rows": [
+        1768
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 263,
+      "name": "Chapter2_1_Escort",
+      "entry_label": 7102,
+      "entry_script_rows": [
+        2104
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 264,
+      "name": "Chapter2_7_1",
+      "entry_label": 7009,
+      "entry_script_rows": [
+        2552
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 265,
+      "name": "Chapter2_7_2",
+      "entry_label": 7010,
+      "entry_script_rows": [
+        2557
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 266,
+      "name": "Chapter2_7_3",
+      "entry_label": 7011,
+      "entry_script_rows": [
+        2563
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 267,
+      "name": "Chapter2_9_Escort",
+      "entry_label": 7103,
+      "entry_script_rows": [
+        2708
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 268,
+      "name": "Chapter2_10_Escort",
+      "entry_label": 7104,
+      "entry_script_rows": [
+        2769
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 269,
+      "name": "Wave1_1",
+      "entry_label": 2000,
+      "entry_script_rows": [
+        583
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 270,
+      "name": "Wave2_1",
+      "entry_label": 2000,
+      "entry_script_rows": [
+        583
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 271,
+      "name": "Wave3_1",
+      "entry_label": 2000,
+      "entry_script_rows": [
+        583
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 272,
+      "name": "Wave4_1",
+      "entry_label": 2000,
+      "entry_script_rows": [
+        583
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 273,
+      "name": "Wave5_1",
+      "entry_label": 2000,
+      "entry_script_rows": [
+        583
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 274,
+      "name": "Wave6_1",
+      "entry_label": 2000,
+      "entry_script_rows": [
+        583
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 275,
+      "name": "Wave7_1",
+      "entry_label": 2000,
+      "entry_script_rows": [
+        583
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 276,
+      "name": "Wave8_1",
+      "entry_label": 2000,
+      "entry_script_rows": [
+        583
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 277,
+      "name": "Wave9_1",
+      "entry_label": 2000,
+      "entry_script_rows": [
+        583
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 278,
+      "name": "Chapter3_8_1",
+      "entry_label": 7012,
+      "entry_script_rows": [
+        3598
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 279,
+      "name": "Chapter3_8_2",
+      "entry_label": 7013,
+      "entry_script_rows": [
+        3607
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 280,
+      "name": "Chapter3_8_3",
+      "entry_label": 7014,
+      "entry_script_rows": [
+        3617
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 281,
+      "name": "Chapter4_1_1",
+      "entry_label": 7015,
+      "entry_script_rows": [
+        4104
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 282,
+      "name": "Chapter4_1_2",
+      "entry_label": 7016,
+      "entry_script_rows": [
+        4117
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 283,
+      "name": "Chapter4_7_1",
+      "entry_label": 7017,
+      "entry_script_rows": [
+        4594
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 284,
+      "name": "Chapter4_7_2",
+      "entry_label": 7018,
+      "entry_script_rows": [
+        4605
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 285,
+      "name": "Chapter4_9_1",
+      "entry_label": 7019,
+      "entry_script_rows": [
+        4787
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 286,
+      "name": "Chapter4_9_2",
+      "entry_label": 7020,
+      "entry_script_rows": [
+        4797
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 287,
+      "name": "Chapter4_9_3",
+      "entry_label": 7021,
+      "entry_script_rows": [
+        4807
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 288,
+      "name": "Wrecked10_1",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 289,
+      "name": "Wrecked10_2",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 290,
+      "name": "Wrecked10_3",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 291,
+      "name": "Wrecked10_4",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 292,
+      "name": "Wrecked10_5",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 293,
+      "name": "FoundRes10_1",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 294,
+      "name": "FoundRes10_2",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 295,
+      "name": "FoundRes10_3",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 296,
+      "name": "FoundRes10_4",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 297,
+      "name": "FoundRes10_5",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 298,
+      "name": "FoundRes10_6",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 299,
+      "name": "Meteor10_1",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 300,
+      "name": "Meteor10_2",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 301,
+      "name": "Meteor10_3",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 302,
+      "name": "Meteor10_4",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 303,
+      "name": "AtkNomal10_1",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 304,
+      "name": "AtkNomal10_2",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 305,
+      "name": "AtkNomal10_3",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 306,
+      "name": "AtkNomal10_4",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 307,
+      "name": "AtkNomal10_5",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 308,
+      "name": "AttBoss10_1",
+      "entry_label": 350,
+      "entry_script_rows": [
+        537
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 309,
+      "name": "AttBoss10_2",
+      "entry_label": 350,
+      "entry_script_rows": [
+        537
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 310,
+      "name": "AttBoss10_3",
+      "entry_label": 350,
+      "entry_script_rows": [
+        537
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 311,
+      "name": "AttBoss10_4",
+      "entry_label": 350,
+      "entry_script_rows": [
+        537
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 312,
+      "name": "Wave10_1",
+      "entry_label": 2000,
+      "entry_script_rows": [
+        583
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 313,
+      "name": "Wrecked11_1",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 314,
+      "name": "Wrecked11_2",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 315,
+      "name": "Wrecked11_3",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 316,
+      "name": "Wrecked11_4",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 317,
+      "name": "FoundRes11_1",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 318,
+      "name": "FoundRes11_2",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 319,
+      "name": "FoundRes11_3",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 320,
+      "name": "FoundRes11_4",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 321,
+      "name": "FoundRes11_5",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 322,
+      "name": "FoundRes11_6",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 323,
+      "name": "Meteor11_1",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 324,
+      "name": "Meteor11_2",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 325,
+      "name": "Meteor11_3",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 326,
+      "name": "Meteor11_4",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 327,
+      "name": "AtkNomal11_1",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 328,
+      "name": "AtkNomal11_2",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 329,
+      "name": "AtkNomal11_3",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 330,
+      "name": "AtkNomal11_4",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 331,
+      "name": "AtkNomal11_5",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 332,
+      "name": "AttBoss11_1",
+      "entry_label": 350,
+      "entry_script_rows": [
+        537
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 333,
+      "name": "AttBoss11_2",
+      "entry_label": 350,
+      "entry_script_rows": [
+        537
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 334,
+      "name": "AttBoss11_3",
+      "entry_label": 350,
+      "entry_script_rows": [
+        537
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 335,
+      "name": "AttBoss11_4",
+      "entry_label": 350,
+      "entry_script_rows": [
+        537
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 336,
+      "name": "Wave11_1",
+      "entry_label": 2000,
+      "entry_script_rows": [
+        583
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 337,
+      "name": "Chapter5_2_1",
+      "entry_label": 7022,
+      "entry_script_rows": [
+        5265
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 338,
+      "name": "Chapter5_2_2",
+      "entry_label": 7023,
+      "entry_script_rows": [
+        5271
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 339,
+      "name": "Chapter5_4_1",
+      "entry_label": 7024,
+      "entry_script_rows": [
+        5404
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 340,
+      "name": "Chapter5_4_2",
+      "entry_label": 7025,
+      "entry_script_rows": [
+        5411
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 341,
+      "name": "Chapter5_4_3",
+      "entry_label": 7026,
+      "entry_script_rows": [
+        5418
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 342,
+      "name": "Chapter5_6_1",
+      "entry_label": 7027,
+      "entry_script_rows": [
+        5522
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 343,
+      "name": "Chapter5_6_2",
+      "entry_label": 7028,
+      "entry_script_rows": [
+        5530
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 344,
+      "name": "Chapter5_8_1",
+      "entry_label": 7029,
+      "entry_script_rows": [
+        5678
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 345,
+      "name": "Chapter5_8_2",
+      "entry_label": 7030,
+      "entry_script_rows": [
+        5684
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 346,
+      "name": "Chapter5_8_3",
+      "entry_label": 7031,
+      "entry_script_rows": [
+        5689
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 347,
+      "name": "Chapter5_10_1",
+      "entry_label": 7032,
+      "entry_script_rows": [
+        5827
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 348,
+      "name": "Chapter5_10_2",
+      "entry_label": 7033,
+      "entry_script_rows": [
+        5833
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 349,
+      "name": "Wrecked12_1",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 350,
+      "name": "Wrecked12_2",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 351,
+      "name": "Wrecked12_3",
+      "entry_label": 200,
+      "entry_script_rows": [
+        508
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 352,
+      "name": "FoundRes12_1",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 353,
+      "name": "FoundRes12_2",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 354,
+      "name": "FoundRes12_3",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 355,
+      "name": "FoundRes12_4",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 356,
+      "name": "FoundRes12_5",
+      "entry_label": 900,
+      "entry_script_rows": [
+        577
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 357,
+      "name": "Meteor12_1",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 358,
+      "name": "Meteor12_2",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 359,
+      "name": "Meteor12_3",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 360,
+      "name": "Meteor12_4",
+      "entry_label": 700,
+      "entry_script_rows": [
+        565
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 361,
+      "name": "AtkNomal12_1",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 362,
+      "name": "AtkNomal12_2",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 363,
+      "name": "AtkNomal12_3",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 364,
+      "name": "AtkNomal12_4",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 365,
+      "name": "AtkNomal12_5",
+      "entry_label": 300,
+      "entry_script_rows": [
+        531
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 366,
+      "name": "AttBoss12_1",
+      "entry_label": 350,
+      "entry_script_rows": [
+        537
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 367,
+      "name": "AttBoss12_2",
+      "entry_label": 350,
+      "entry_script_rows": [
+        537
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 368,
+      "name": "AttBoss12_3",
+      "entry_label": 350,
+      "entry_script_rows": [
+        537
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 369,
+      "name": "AttBoss12_4",
+      "entry_label": 350,
+      "entry_script_rows": [
+        537
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 370,
+      "name": "Wave12_1",
+      "entry_label": 2000,
+      "entry_script_rows": [
+        583
+      ],
+      "secondary_label_candidate": 1000,
+      "secondary_rows": [
+        580
+      ]
+    },
+    {
+      "eventspot_row": 371,
+      "name": "Chapter6_5_Escort1",
+      "entry_label": 7105,
+      "entry_script_rows": [
+        6386
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 372,
+      "name": "Chapter6_5_Escort2",
+      "entry_label": 7106,
+      "entry_script_rows": [
+        6418
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 373,
+      "name": "Chapter6_8_1",
+      "entry_label": 7034,
+      "entry_script_rows": [
+        6595
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 374,
+      "name": "Chapter6_8_2",
+      "entry_label": 7035,
+      "entry_script_rows": [
+        6605
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    },
+    {
+      "eventspot_row": 375,
+      "name": "Chapter6_8_3",
+      "entry_label": 7036,
+      "entry_script_rows": [
+        6610
+      ],
+      "secondary_label_candidate": 0,
+      "secondary_rows": []
+    }
+  ],
+  "goto_links": [
+    {
+      "row": 711,
+      "float_operand": 144.0,
+      "target_label": 144,
+      "target_rows": [
+        735
+      ]
+    }
+  ],
+  "candidate_fields": [
+    {
+      "table": "EventScript",
+      "field": "f00",
+      "meaning": "local line ordinal; resets to zero across segments; not global row ID",
+      "confidence": "data pattern only"
+    },
+    {
+      "table": "EventSpot",
+      "field": "f05",
+      "meaning": "secondary/fallback/end label candidate; 333 rows refer label1000",
+      "confidence": "data relation; activation branch semantics not fully recovered"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "file": "arm64-section_headers.json",
+    "original_file_sha256": "e052fc6a1315ad8a3dd36177670414ca335597dc42a47a7d558d8cb83732efa3",
+    "public_copy_sha256": "c835ea16ba2a77a6ca69e15b04883dd3594331f6dda27952e7121ab2e9677e24"
+  },
+  {
+    "file": "arm64-symbols.json",
+    "original_file_sha256": "5a6e95f54f381fb6216891d32a1803bd278ad7945ada5e30ead33a3ae3643441",
+    "public_copy_sha256": "e084a4a7208be6039e20ecbca5a7752ea9d3cde582a5b46e685c0997ed94ccc7"
+  },
+  {
+    "file": "apk-artifact.json",
+    "original_file_sha256": "94c9505b9e0070f7d5c942e8c3782f54eb57f1f0e661605318379b325f816f9b",
+    "public_copy_sha256": "a9ffd0f510950b551ad8e03bb8c88f228b32bb70c485da634f0d6521988d55b3"
+  },
+  {
+    "file": "apk-artifact-occurrences.tsv",
+    "original_file_sha256": "bc76eff0dab294937ceb6e4361271f88e84a493909c2b2839140f9eb96ae1b79",
+    "public_copy_sha256": "80c1e57bf3911ad9b0274ce8e00d5d4de5261cb6f345eadb9622b2206e8d64ac"
+  },
+  {
+    "file": "llvm-arm64-dynamic-symbols.txt",
+    "original_file_sha256": "7766e804dc46fc60bca589c0c095639ee0ce58611979e725845319e27baba88b",
+    "public_copy_sha256": "7766e804dc46fc60bca589c0c095639ee0ce58611979e725845319e27baba88b"
+  },
+  {
+    "file": "arm64-file-headers-elevated.json",
+    "original_file_sha256": "0a8f148fb15264197fc0014f345ffa92cd6f4f935cd918b661d46f7adba309ee",
+    "public_copy_sha256": "66f10667933261f908aa56d17fb7843f5a36ae6ed7bf2d08f80afdc56ac59881"
+  }
+]

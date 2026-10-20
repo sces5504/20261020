@@ -1,0 +1,155 @@
+{
+  "call_chain": [
+    "HeroActor constructor0x3c7f8c sets vptr0x8de110",
+    "vptr slot0x210 -> 0x3c9bbc",
+    "0x3c9c94 calls0x3b8f20",
+    "0x3b8f64 calls0x3f2d70",
+    "0x3f2fcc calls0x3f236c"
+  ],
+  "formula_function": "0x3f236c (size0x6e8)",
+  "fixed_point": {
+    "Q": 65536,
+    "constant_addr": "0x770254",
+    "per_mille_multiplier": 65
+  },
+  "initial_constants": [
+    {
+      "name": "armor_K",
+      "got": "0x8fc3e8",
+      "va": "0x8fd02c",
+      "file_offset": "0x8ed02c",
+      "value": 100
+    },
+    {
+      "name": "critical_bonus",
+      "got": "0x8fbdf0",
+      "va": "0x8fd034",
+      "file_offset": "0x8ed034",
+      "value": 1500
+    },
+    {
+      "name": "critical_bonus_hero_cap",
+      "got": "0x8fbe48",
+      "va": "0x8fd038",
+      "file_offset": "0x8ed038",
+      "value": 2000
+    },
+    {
+      "name": "critical_chance_cap",
+      "got": "0x8fc148",
+      "va": "0x8fd03c",
+      "file_offset": "0x8ed03c",
+      "value": 950
+    },
+    {
+      "name": "evasion_damage_reduction",
+      "got": "0x8fc380",
+      "va": "0x8fd040",
+      "file_offset": "0x8ed040",
+      "value": 750
+    },
+    {
+      "name": "evasion_reduction_hero_cap",
+      "got": "0x8fc518",
+      "va": "0x8fd044",
+      "file_offset": "0x8ed044",
+      "value": 1000
+    },
+    {
+      "name": "evasion_chance_cap",
+      "got": "0x8fc138",
+      "va": "0x8fd048",
+      "file_offset": "0x8ed048",
+      "value": 950
+    }
+  ],
+  "constant_initialization": "0x14627c encodes constants with process XOR key; no baseline subtraction in observed getter path.",
+  "formula_blocks": {
+    "variation": "0x3f243c..0x3f2518",
+    "additional_reduction": "0x3f2528..0x3f2568",
+    "bypass_flags": "0x3f256c..0x3f2628",
+    "random_evasion": "0x3f2634..0x3f2710",
+    "random_critical": "0x3f2714..0x3f27f4",
+    "deterministic_evasion_critical": "0x3f2808..0x3f28e8",
+    "armor_penetration": "0x3f28ec..0x3f2938",
+    "armor_bypass_type65": "0x3f296c..0x3f2974",
+    "defense_hyperbola": "0x3f2978..0x3f29e4",
+    "minimum_one": "0x3f29fc..0x3f2a04",
+    "absorption_and_HP_write": "0x3f330c..0x3f33a0"
+  },
+  "constant_getter_caveat": "Defaults in the packaged .data are not universal effective battle stats. Hero equipment, buffs, active effects, penetration, bypass and mode flags affect getter results.",
+  "examples": [
+    {
+      "input_damage": 100,
+      "defense": 100,
+      "armor_K": 100,
+      "variation": false,
+      "evasion_event": false,
+      "critical_event": false,
+      "crit_bonus_getter": 1500,
+      "evade_reduction_getter": 750,
+      "q16_after_each_step": [
+        6553600,
+        3276800
+      ],
+      "return_damage": 50
+    },
+    {
+      "input_damage": 100,
+      "defense": 100,
+      "armor_K": 100,
+      "variation": false,
+      "evasion_event": false,
+      "critical_event": true,
+      "crit_bonus_getter": 1500,
+      "evade_reduction_getter": 750,
+      "q16_after_each_step": [
+        6553600,
+        16303600,
+        8151800
+      ],
+      "return_damage": 124
+    },
+    {
+      "input_damage": 100,
+      "defense": 100,
+      "armor_K": 100,
+      "variation": false,
+      "evasion_event": true,
+      "critical_event": false,
+      "crit_bonus_getter": 1500,
+      "evade_reduction_getter": 750,
+      "q16_after_each_step": [
+        6553600,
+        1678600,
+        839300
+      ],
+      "return_damage": 12
+    },
+    {
+      "input_damage": 100,
+      "defense": 100,
+      "armor_K": 100,
+      "variation": false,
+      "evasion_event": true,
+      "critical_event": true,
+      "crit_bonus_getter": 1500,
+      "evade_reduction_getter": 750,
+      "q16_after_each_step": [
+        6553600,
+        1678600,
+        4175906,
+        2087953
+      ],
+      "return_damage": 31
+    }
+  ],
+  "limits": [
+    "Static reconstruction; no ARM64 instruction emulator or original-game execution comparison yet.",
+    "Exact overflow and float32 rounding require instruction-width emulation; simplified formulas assume ordinary nonnegative stats without overflow.",
+    "Armor bypass type65 does not imply bypass of all preceding mitigation.",
+    "Only native-confirmed type branches get semantic labels; remaining groups retain examples only."
+  ],
+  "binary": "raw/apk/lib/arm64-v8a/libStella.so",
+  "binary_sha256": "6883fa9383432c981e86c13b8f01b8f227a51d6cf2298dd6c47d3d3774c53f9a"
+}

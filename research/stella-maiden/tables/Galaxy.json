@@ -1,0 +1,244 @@
+{
+  "_round_trip_exact": true,
+  "_format": "stella-gen-v1",
+  "_header_hex": "c317a55e0000000021f38a5e00000000",
+  "_row_count": 15,
+  "_schema_fingerprint": "0xd0073177",
+  "_size": 1933,
+  "_source_sha256": "3e3e9b85298ae6a1368a8ef795124864089e30e8bd3d7d9d3ca0566b1ee328d8",
+  "fields": [
+    {
+      "name": "f00",
+      "type": "str",
+      "reader": "0x453dbc",
+      "call_pc": "0x152328",
+      "native_destination": "mov x1, sp",
+      "native_slot_offset": 0,
+      "native_offset": null
+    },
+    {
+      "name": "f01",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x152334",
+      "native_destination": "add x1, x19, #0x18",
+      "native_slot_offset": 24,
+      "native_offset": 24
+    },
+    {
+      "name": "f02",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x152340",
+      "native_destination": "add x1, x19, #0x1c",
+      "native_slot_offset": 28,
+      "native_offset": 28
+    },
+    {
+      "name": "f03",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15234c",
+      "native_destination": "add x1, x19, #0x20",
+      "native_slot_offset": 32,
+      "native_offset": 32
+    },
+    {
+      "name": "f04",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x152358",
+      "native_destination": "add x1, x19, #0x24",
+      "native_slot_offset": 36,
+      "native_offset": 36
+    },
+    {
+      "name": "f05",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x152364",
+      "native_destination": "add x1, x19, #0x28",
+      "native_slot_offset": 40,
+      "native_offset": 40
+    },
+    {
+      "name": "f06",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x152370",
+      "native_destination": "add x1, x19, #0x2c",
+      "native_slot_offset": 44,
+      "native_offset": 44
+    },
+    {
+      "name": "f07",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15237c",
+      "native_destination": "add x1, x19, #0x30",
+      "native_slot_offset": 48,
+      "native_offset": 48
+    },
+    {
+      "name": "f08",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x152388",
+      "native_destination": "add x1, x19, #0x34",
+      "native_slot_offset": 52,
+      "native_offset": 52
+    },
+    {
+      "name": "f09",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x152394",
+      "native_destination": "add x1, x19, #0x38",
+      "native_slot_offset": 56,
+      "native_offset": 56
+    },
+    {
+      "name": "f10",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x1523a0",
+      "native_destination": "add x1, x19, #0x3c",
+      "native_slot_offset": 60,
+      "native_offset": 60
+    },
+    {
+      "name": "f11",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x1523ac",
+      "native_destination": "add x1, x19, #0x40",
+      "native_slot_offset": 64,
+      "native_offset": 64
+    },
+    {
+      "name": "f12",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x1523b8",
+      "native_destination": "add x1, x19, #0x44",
+      "native_slot_offset": 68,
+      "native_offset": 68
+    },
+    {
+      "name": "f13",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x1523c4",
+      "native_destination": "add x1, x19, #0x48",
+      "native_slot_offset": 72,
+      "native_offset": 72
+    },
+    {
+      "name": "f14",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x1523d0",
+      "native_destination": "add x1, x19, #0x4c",
+      "native_slot_offset": 76,
+      "native_offset": 76
+    },
+    {
+      "name": "f15",
+      "type": "str",
+      "reader": "0x453dbc",
+      "call_pc": "0x1523dc",
+      "native_destination": "add x1, x19, #0x50",
+      "native_slot_offset": 80,
+      "native_offset": 80
+    },
+    {
+      "name": "f16",
+      "type": "str",
+      "reader": "0x453dbc",
+      "call_pc": "0x1523e8",
+      "native_destination": "add x1, x19, #0x68",
+      "native_slot_offset": 104,
+      "native_offset": 104
+    },
+    {
+      "name": "f17",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x1523f4",
+      "native_destination": "add x1, x19, #0x80",
+      "native_slot_offset": 128,
+      "native_offset": 128
+    },
+    {
+      "name": "f18",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x152400",
+      "native_destination": "add x1, x19, #0x84",
+      "native_slot_offset": 132,
+      "native_offset": 132
+    },
+    {
+      "name": "f19",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15240c",
+      "native_destination": "add x1, x19, #0x88",
+      "native_slot_offset": 136,
+      "native_offset": 136
+    },
+    {
+      "name": "f20",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x152418",
+      "native_destination": "add x1, x19, #0x8c",
+      "native_slot_offset": 140,
+      "native_offset": 140
+    },
+    {
+      "name": "f21",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x152424",
+      "native_destination": "add x1, x19, #0x90",
+      "native_slot_offset": 144,
+      "native_offset": 144
+    },
+    {
+      "name": "f22",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x152430",
+      "native_destination": "add x1, x19, #0x94",
+      "native_slot_offset": 148,
+      "native_offset": 148
+    },
+    {
+      "name": "f23",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x15243c",
+      "native_destination": "add x1, x19, #0x98",
+      "native_slot_offset": 152,
+      "native_offset": 152
+    }
+  ],
+  "rows": [
+    {"_row":0,"_offset":24,"f00":"None","f01":0,"f02":0,"f03":0,"f04":0,"f05":0,"f06":0,"f07":0,"f08":0,"f09":0,"f10":0,"f11":0,"f12":0,"f13":0,"f14":0,"f15":"","f16":"","f17":0,"f18":0,"f19":0,"f20":0,"f21":0,"f22":0,"f23":0,"_size":94,"_field_offsets":[24,30,34,38,42,46,50,54,58,62,66,70,74,78,82,86,88,90,94,98,102,106,110,114]},
+    {"_row":1,"_offset":118,"f00":"SolarSystem","f01":1,"f02":210,"f03":62,"f04":420,"f05":1,"f06":10,"f07":31,"f08":40,"f09":380,"f10":2200,"f11":35000,"f12":70000,"f13":43,"f14":50,"f15":"Space_Solar.scn","f16":"Space_QSolar.scn","f17":0,"f18":189,"f19":15,"f20":20,"f21":21,"f22":24,"f23":24,"_size":132,"_field_offsets":[118,131,135,139,143,147,151,155,159,163,167,171,175,179,183,187,204,222,226,230,234,238,242,246]},
+    {"_row":2,"_offset":250,"f00":"Virgo","f01":2,"f02":581,"f03":131,"f04":421,"f05":11,"f06":20,"f07":41,"f08":50,"f09":4040,"f10":9000,"f11":73000,"f12":107000,"f13":81,"f14":75,"f15":"Space_Virgo.scn","f16":"Space_QSolar.scn","f17":189,"f18":190,"f19":34,"f20":29,"f21":36,"f22":24,"f23":46,"_size":126,"_field_offsets":[250,257,261,265,269,273,277,281,285,289,293,297,301,305,309,313,330,348,352,356,360,364,368,372]},
+    {"_row":3,"_offset":376,"f00":"Leo","f01":3,"f02":579,"f03":129,"f04":422,"f05":21,"f06":30,"f07":51,"f08":60,"f09":16100,"f10":27000,"f11":110000,"f12":160000,"f13":120,"f14":100,"f15":"Space_Leo.scn","f16":"Space_QSolar.scn","f17":190,"f18":191,"f19":53,"f20":36,"f21":150,"f22":46,"f23":46,"_size":122,"_field_offsets":[376,381,385,389,393,397,401,405,409,413,417,421,425,429,433,437,452,470,474,478,482,486,490,494]},
+    {"_row":4,"_offset":498,"f00":"Southern","f01":4,"f02":576,"f03":126,"f04":423,"f05":31,"f06":40,"f07":61,"f08":70,"f09":30000,"f10":50000,"f11":160000,"f12":255000,"f13":158,"f14":100,"f15":"Space_Southern.scn","f16":"Space_QSolar.scn","f17":191,"f18":192,"f19":72,"f20":36,"f21":150,"f22":46,"f23":46,"_size":132,"_field_offsets":[498,508,512,516,520,524,528,532,536,540,544,548,552,556,560,564,584,602,606,610,614,618,622,626]},
+    {"_row":5,"_offset":630,"f00":"CanisMajor","f01":5,"f02":582,"f03":132,"f04":424,"f05":41,"f06":50,"f07":71,"f08":80,"f09":62300,"f10":80000,"f11":260000,"f12":380000,"f13":195,"f14":100,"f15":"Space_CanisMajor.scn","f16":"Space_QSolar.scn","f17":192,"f18":194,"f19":91,"f20":29,"f21":36,"f22":24,"f23":46,"_size":136,"_field_offsets":[630,642,646,650,654,658,662,666,670,674,678,682,686,690,694,698,720,738,742,746,750,754,758,762]},
+    {"_row":6,"_offset":766,"f00":"Northern","f01":6,"f02":578,"f03":128,"f04":425,"f05":51,"f06":60,"f07":81,"f08":90,"f09":94300,"f10":126000,"f11":385000,"f12":505000,"f13":232,"f14":100,"f15":"Space_Northern.scn","f16":"Space_QSolar.scn","f17":194,"f18":193,"f19":110,"f20":29,"f21":36,"f22":24,"f23":46,"_size":132,"_field_offsets":[766,776,780,784,788,792,796,800,804,808,812,816,820,824,828,832,852,870,874,878,882,886,890,894]},
+    {"_row":7,"_offset":898,"f00":"Cygnus","f01":7,"f02":577,"f03":127,"f04":426,"f05":61,"f06":70,"f07":91,"f08":100,"f09":141500,"f10":200000,"f11":525000,"f12":890000,"f13":268,"f14":100,"f15":"Space_Cygnus.scn","f16":"Space_QSolar.scn","f17":193,"f18":196,"f19":129,"f20":29,"f21":36,"f22":24,"f23":46,"_size":128,"_field_offsets":[898,906,910,914,918,922,926,930,934,938,942,946,950,954,958,962,980,998,1002,1006,1010,1014,1018,1022]},
+    {"_row":8,"_offset":1026,"f00":"Gemini","f01":8,"f02":580,"f03":130,"f04":427,"f05":71,"f06":80,"f07":101,"f08":110,"f09":200500,"f10":350000,"f11":200500,"f12":107000,"f13":305,"f14":100,"f15":"Space_Gemini.scn","f16":"Space_QSolar.scn","f17":196,"f18":195,"f19":148,"f20":29,"f21":36,"f22":24,"f23":46,"_size":128,"_field_offsets":[1026,1034,1038,1042,1046,1050,1054,1058,1062,1066,1070,1074,1078,1082,1086,1090,1108,1126,1130,1134,1138,1142,1146,1150]},
+    {"_row":9,"_offset":1154,"f00":"Taurus","f01":9,"f02":583,"f03":133,"f04":428,"f05":81,"f06":90,"f07":111,"f08":120,"f09":275000,"f10":514000,"f11":275000,"f12":107000,"f13":342,"f14":100,"f15":"Space_Taurus.scn","f16":"Space_QSolar.scn","f17":195,"f18":197,"f19":194,"f20":29,"f21":36,"f22":24,"f23":46,"_size":128,"_field_offsets":[1154,1162,1166,1170,1174,1178,1182,1186,1190,1194,1198,1202,1206,1210,1214,1218,1236,1254,1258,1262,1266,1270,1274,1278]},
+    {"_row":10,"_offset":1282,"f00":"Scorpio","f01":10,"f02":587,"f03":124,"f04":429,"f05":91,"f06":100,"f07":121,"f08":130,"f09":371000,"f10":805000,"f11":371000,"f12":107000,"f13":413,"f14":100,"f15":"Space_Scorpio.scn","f16":"Space_QSolar.scn","f17":197,"f18":292,"f19":224,"f20":29,"f21":36,"f22":24,"f23":46,"_size":130,"_field_offsets":[1282,1291,1295,1299,1303,1307,1311,1315,1319,1323,1327,1331,1335,1339,1343,1347,1366,1384,1388,1392,1396,1400,1404,1408]},
+    {"_row":11,"_offset":1412,"f00":"Sagittarius","f01":11,"f02":586,"f03":114,"f04":430,"f05":101,"f06":110,"f07":131,"f08":140,"f09":620000,"f10":1000000,"f11":620000,"f12":107000,"f13":413,"f14":100,"f15":"Space_Sagittarius.scn","f16":"Space_QSolar.scn","f17":292,"f18":296,"f19":259,"f20":29,"f21":36,"f22":24,"f23":46,"_size":138,"_field_offsets":[1412,1425,1429,1433,1437,1441,1445,1449,1453,1457,1461,1465,1469,1473,1477,1481,1504,1522,1526,1530,1534,1538,1542,1546]},
+    {"_row":12,"_offset":1550,"f00":"Cancer","f01":12,"f02":2342,"f03":380,"f04":431,"f05":111,"f06":120,"f07":141,"f08":150,"f09":830000,"f10":1350000,"f11":830000,"f12":107000,"f13":413,"f14":100,"f15":"Space_Cancer.scn","f16":"Space_QSolar.scn","f17":296,"f18":339,"f19":303,"f20":29,"f21":36,"f22":24,"f23":46,"_size":128,"_field_offsets":[1550,1558,1562,1566,1570,1574,1578,1582,1586,1590,1594,1598,1602,1606,1610,1614,1632,1650,1654,1658,1662,1666,1670,1674]},
+    {"_row":13,"_offset":1678,"f00":"Aries","f01":13,"f02":589,"f03":567,"f04":166,"f05":111,"f06":120,"f07":141,"f08":150,"f09":1350000,"f10":1900000,"f11":1450000,"f12":107000,"f13":413,"f14":100,"f15":"Space_Aries.scn","f16":"Space_QSolar.scn","f17":0,"f18":0,"f19":0,"f20":29,"f21":36,"f22":24,"f23":46,"_size":126,"_field_offsets":[1678,1685,1689,1693,1697,1701,1705,1709,1713,1717,1721,1725,1729,1733,1737,1741,1758,1776,1780,1784,1788,1792,1796,1800]},
+    {"_row":14,"_offset":1804,"f00":"Pisces ","f01":14,"f02":2380,"f03":166,"f04":166,"f05":100,"f06":100,"f07":161,"f08":170,"f09":1000,"f10":2000000,"f11":1000,"f12":107000,"f13":0,"f14":100,"f15":"Space_Taurus.scn","f16":"Space_QSolar.scn","f17":0,"f18":0,"f19":0,"f20":29,"f21":36,"f22":24,"f23":46,"_size":129,"_field_offsets":[1804,1813,1817,1821,1825,1829,1833,1837,1841,1845,1849,1853,1857,1861,1865,1869,1887,1905,1909,1913,1917,1921,1925,1929]}
+  ]
+}

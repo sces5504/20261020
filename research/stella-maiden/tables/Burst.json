@@ -1,0 +1,242 @@
+{
+  "_round_trip_exact": true,
+  "_format": "stella-gen-v1",
+  "_header_hex": "c117a55e0000000021f38a5e00000000",
+  "_row_count": 4,
+  "_schema_fingerprint": "0xb445ec1d",
+  "_size": 677,
+  "_source_sha256": "65344b3b210e1a1e791f60b2dee96d988bd1c838231c742036d577ba4614b9ed",
+  "fields": [
+    {
+      "name": "f00",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x159a8c",
+      "native_destination": "sub x1, x19, #0x78",
+      "native_slot_offset": 0,
+      "native_offset": 0
+    },
+    {
+      "name": "f01",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x159a98",
+      "native_destination": "sub x1, x19, #0x74",
+      "native_slot_offset": 4,
+      "native_offset": 4
+    },
+    {
+      "name": "f02",
+      "type": "str",
+      "reader": "0x453dbc",
+      "call_pc": "0x159aa4",
+      "native_destination": "sub x1, x19, #0x70",
+      "native_slot_offset": 8,
+      "native_offset": 8
+    },
+    {
+      "name": "f03",
+      "type": "vec2f",
+      "reader": "0x453858",
+      "call_pc": "0x159ab0",
+      "native_destination": "sub x1, x19, #0x58",
+      "native_slot_offset": 32,
+      "native_offset": 32
+    },
+    {
+      "name": "f04",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x159abc",
+      "native_destination": "sub x1, x19, #0x50",
+      "native_slot_offset": 40,
+      "native_offset": 40
+    },
+    {
+      "name": "f05",
+      "type": "str",
+      "reader": "0x453dbc",
+      "call_pc": "0x159ac8",
+      "native_destination": "sub x1, x19, #0x48",
+      "native_slot_offset": 48,
+      "native_offset": 48
+    },
+    {
+      "name": "f06",
+      "type": "vec2f",
+      "reader": "0x453858",
+      "call_pc": "0x159ad4",
+      "native_destination": "sub x1, x19, #0x30",
+      "native_slot_offset": 72,
+      "native_offset": 72
+    },
+    {
+      "name": "f07",
+      "type": "vec2f",
+      "reader": "0x453858",
+      "call_pc": "0x159ae0",
+      "native_destination": "sub x1, x19, #0x28",
+      "native_slot_offset": 80,
+      "native_offset": 80
+    },
+    {
+      "name": "f08",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x159aec",
+      "native_destination": "sub x1, x19, #0x20",
+      "native_slot_offset": 88,
+      "native_offset": 88
+    },
+    {
+      "name": "f09",
+      "type": "str",
+      "reader": "0x453dbc",
+      "call_pc": "0x159af8",
+      "native_destination": "sub x1, x19, #0x18",
+      "native_slot_offset": 96,
+      "native_offset": 96
+    },
+    {
+      "name": "f10",
+      "type": "f32",
+      "reader": "0x4537c8",
+      "call_pc": "0x159b04",
+      "native_destination": "mov x1, x19",
+      "native_slot_offset": 120,
+      "native_offset": 120
+    },
+    {
+      "name": "f11",
+      "type": "vec2i",
+      "reader": "0x4538f4",
+      "call_pc": "0x159b10",
+      "native_destination": "add x1, x19, #4",
+      "native_slot_offset": 124,
+      "native_offset": 124
+    },
+    {
+      "name": "f12",
+      "type": "f32",
+      "reader": "0x4537c8",
+      "call_pc": "0x159b1c",
+      "native_destination": "add x1, x19, #0xc",
+      "native_slot_offset": 132,
+      "native_offset": 132
+    },
+    {
+      "name": "f13",
+      "type": "vec2f",
+      "reader": "0x453858",
+      "call_pc": "0x159b28",
+      "native_destination": "add x1, x19, #0x10",
+      "native_slot_offset": 136,
+      "native_offset": 136
+    },
+    {
+      "name": "f14",
+      "type": "vec2f",
+      "reader": "0x453858",
+      "call_pc": "0x159b34",
+      "native_destination": "add x1, x19, #0x18",
+      "native_slot_offset": 144,
+      "native_offset": 144
+    },
+    {
+      "name": "f15",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x159b40",
+      "native_destination": "add x1, x19, #0x20",
+      "native_slot_offset": 152,
+      "native_offset": 152
+    },
+    {
+      "name": "f16",
+      "type": "str",
+      "reader": "0x453dbc",
+      "call_pc": "0x159b4c",
+      "native_destination": "add x1, x19, #0x28",
+      "native_slot_offset": 160,
+      "native_offset": 160
+    },
+    {
+      "name": "f17",
+      "type": "f32",
+      "reader": "0x4537c8",
+      "call_pc": "0x159b58",
+      "native_destination": "add x1, x19, #0x40",
+      "native_slot_offset": 184,
+      "native_offset": 184
+    },
+    {
+      "name": "f18",
+      "type": "vec2i",
+      "reader": "0x4538f4",
+      "call_pc": "0x159b64",
+      "native_destination": "add x1, x19, #0x44",
+      "native_slot_offset": 188,
+      "native_offset": 188
+    },
+    {
+      "name": "f19",
+      "type": "vec2i",
+      "reader": "0x4538f4",
+      "call_pc": "0x159b70",
+      "native_destination": "add x1, x19, #0x4c",
+      "native_slot_offset": 196,
+      "native_offset": 196
+    },
+    {
+      "name": "f20",
+      "type": "f32",
+      "reader": "0x4537c8",
+      "call_pc": "0x159b7c",
+      "native_destination": "add x1, x19, #0x54",
+      "native_slot_offset": 204,
+      "native_offset": 204
+    },
+    {
+      "name": "f21",
+      "type": "vec2f",
+      "reader": "0x453858",
+      "call_pc": "0x159b88",
+      "native_destination": "add x1, x19, #0x58",
+      "native_slot_offset": 208,
+      "native_offset": 208
+    },
+    {
+      "name": "f22",
+      "type": "vec2f",
+      "reader": "0x453858",
+      "call_pc": "0x159b94",
+      "native_destination": "add x1, x19, #0x60",
+      "native_slot_offset": 216,
+      "native_offset": 216
+    },
+    {
+      "name": "f23",
+      "type": "f32",
+      "reader": "0x4537c8",
+      "call_pc": "0x159ba0",
+      "native_destination": "add x1, x19, #0x68",
+      "native_slot_offset": 224,
+      "native_offset": 224
+    },
+    {
+      "name": "f24",
+      "type": "f32",
+      "reader": "0x4537c8",
+      "call_pc": "0x159bac",
+      "native_destination": "add x1, x19, #0x6c",
+      "native_slot_offset": 228,
+      "native_offset": 228
+    }
+  ],
+  "rows": [
+    {"_row":0,"_offset":24,"f00":0,"f01":0,"f02":"","f03":[0.0,0.0],"f04":0,"f05":"","f06":[0.0,0.0],"f07":[0.0,0.0],"f08":0,"f09":"","f10":0.0,"f11":[0,0],"f12":0.0,"f13":[0.0,0.0],"f14":[0.0,0.0],"f15":0,"f16":"","f17":0.0,"f18":[0,0],"f19":[0,0],"f20":0.0,"f21":[0.0,0.0],"f22":[0.0,0.0],"f23":0.0,"f24":0.0,"_size":132,"_field_offsets":[24,28,32,34,42,46,48,56,64,68,70,74,82,86,94,102,106,108,112,120,128,132,140,148,152]},
+    {"_row":1,"_offset":156,"f00":0,"f01":1,"f02":"SparkDestroy.act","f03":[0.004000000189989805,0.006000000052154064],"f04":1,"f05":"FlashFlare2.act","f06":[0.10000000149011612,0.125],"f07":[1.0,0.699999988079071],"f08":1,"f09":"FlashDestroy.act","f10":1.0,"f11":[4,5],"f12":0.05000000074505806,"f13":[0.6499999761581421,0.800000011920929],"f14":[0.029999999329447746,0.05999999865889549],"f15":1,"f16":"","f17":0.0,"f18":[0,0],"f19":[0,0],"f20":0.0,"f21":[0.0,0.0],"f22":[0.0,0.0],"f23":0.0,"f24":0.0,"_size":179,"_field_offsets":[156,160,164,182,190,194,211,219,227,231,249,253,261,265,273,281,285,287,291,299,307,311,319,327,331]},
+    {"_row":2,"_offset":335,"f00":1,"f01":1,"f02":"SparkDestroy.act","f03":[0.004000000189989805,0.006000000052154064],"f04":1,"f05":"FlashFlare2.act","f06":[0.10000000149011612,0.125],"f07":[1.0,0.699999988079071],"f08":1,"f09":"FlashDestroy.act","f10":1.0,"f11":[4,5],"f12":0.05000000074505806,"f13":[0.6499999761581421,0.800000011920929],"f14":[0.029999999329447746,0.05999999865889549],"f15":1,"f16":"","f17":0.0,"f18":[0,0],"f19":[0,0],"f20":0.0,"f21":[0.0,0.0],"f22":[0.0,0.0],"f23":0.0,"f24":0.0,"_size":179,"_field_offsets":[335,339,343,361,369,373,390,398,406,410,428,432,440,444,452,460,464,466,470,478,486,490,498,506,510]},
+    {"_row":3,"_offset":514,"f00":0,"f01":1,"f02":"SparkDestroy.act","f03":[0.004000000189989805,0.006000000052154064],"f04":1,"f05":"FlashFlare2.act","f06":[0.10000000149011612,0.125],"f07":[1.0,0.699999988079071],"f08":1,"f09":"","f10":0.0,"f11":[0,0],"f12":0.0,"f13":[0.0,0.0],"f14":[0.0,0.0],"f15":0,"f16":"","f17":0.0,"f18":[0,0],"f19":[0,0],"f20":0.0,"f21":[0.0,0.0],"f22":[0.0,0.0],"f23":0.0,"f24":0.0,"_size":163,"_field_offsets":[514,518,522,540,548,552,569,577,585,589,591,595,603,607,615,623,627,629,633,641,649,653,661,669,673]}
+  ]
+}

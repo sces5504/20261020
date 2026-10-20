@@ -1,0 +1,76 @@
+{
+  "_round_trip_exact": true,
+  "_format": "stella-gen-v1",
+  "_header_hex": "c417a55e0000000021f38a5e00000000",
+  "_row_count": 9,
+  "_schema_fingerprint": "0xb4813b40",
+  "_size": 290,
+  "_source_sha256": "7062e75644126368186a2d178dbeb7f18887ae521d1a7795b52134956d63254f",
+  "fields": [
+    {
+      "name": "f00",
+      "type": "str",
+      "reader": "0x453dbc",
+      "call_pc": "0x154d6c",
+      "native_destination": "mov x1, sp",
+      "native_slot_offset": 0,
+      "native_offset": null
+    },
+    {
+      "name": "f01",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x154d7c",
+      "native_destination": "mov x1, x19",
+      "native_slot_offset": 24,
+      "native_offset": 24
+    },
+    {
+      "name": "f02",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x154d88",
+      "native_destination": "add x1, x19, #4",
+      "native_slot_offset": 28,
+      "native_offset": 28
+    },
+    {
+      "name": "f03",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x154d94",
+      "native_destination": "add x1, x19, #8",
+      "native_slot_offset": 32,
+      "native_offset": 32
+    },
+    {
+      "name": "f04",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x154da0",
+      "native_destination": "add x1, x19, #0xc",
+      "native_slot_offset": 36,
+      "native_offset": 36
+    },
+    {
+      "name": "f05",
+      "type": "i32",
+      "reader": "0x453b40",
+      "call_pc": "0x154dac",
+      "native_destination": "add x1, x19, #0x10",
+      "native_slot_offset": 40,
+      "native_offset": 40
+    }
+  ],
+  "rows": [
+    {"_row":0,"_offset":24,"f00":"Group","f01":0,"f02":773,"f03":153,"f04":1,"f05":0,"_size":27,"_field_offsets":[24,31,35,39,43,47]},
+    {"_row":1,"_offset":51,"f00":"Summon","f01":1,"f02":774,"f03":154,"f04":1,"f05":1,"_size":28,"_field_offsets":[51,59,63,67,71,75]},
+    {"_row":2,"_offset":79,"f00":"Recover","f01":2,"f02":775,"f03":155,"f04":1,"f05":1,"_size":29,"_field_offsets":[79,88,92,96,100,104]},
+    {"_row":3,"_offset":108,"f00":"MaxGirl","f01":3,"f02":776,"f03":92,"f04":10,"f05":1,"_size":29,"_field_offsets":[108,117,121,125,129,133]},
+    {"_row":4,"_offset":137,"f00":"Research","f01":4,"f02":777,"f03":158,"f04":1,"f05":1,"_size":30,"_field_offsets":[137,147,151,155,159,163]},
+    {"_row":5,"_offset":167,"f00":"Skill","f01":5,"f02":778,"f03":157,"f04":1,"f05":1,"_size":27,"_field_offsets":[167,174,178,182,186,190]},
+    {"_row":6,"_offset":194,"f00":"PlantResearch","f01":6,"f02":779,"f03":156,"f04":1,"f05":0,"_size":35,"_field_offsets":[194,209,213,217,221,225]},
+    {"_row":7,"_offset":229,"f00":"ItemSummon","f01":7,"f02":2010,"f03":212,"f04":1,"f05":1,"_size":32,"_field_offsets":[229,241,245,249,253,257]},
+    {"_row":8,"_offset":261,"f00":"MaxItem","f01":8,"f02":2030,"f03":93,"f04":10,"f05":1,"_size":29,"_field_offsets":[261,270,274,278,282,286]}
+  ]
+}

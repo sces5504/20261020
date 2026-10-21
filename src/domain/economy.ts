@@ -80,6 +80,7 @@ export function settle(p: Pack, s: Save, now: number) {
   s.settledAt = now;
 }
 export type Command =
+  | { type: "travel"; region: string }
   | { type: "feed"; target: string; source: string }
   | { type: "seen-story"; id: string }
   | { type: "ack-acquisition"; id: string }
@@ -182,6 +183,20 @@ export function apply(
     )
       throw Error("角色正在治療或派駐。");
   };
+  if (c.type === "travel") {
+    if (s.encounter) throw Error("請先結束交戰，再進行星域躍遷。");
+    const from = p.regions.find((r) => r.id === s.region)!;
+    const route = from.routes.find((r) => r.to === c.region);
+    const to = p.regions.find(
+      (r) => r.id === c.region && r.status === "active",
+    );
+    if (!route || !to || !route.requires.every((id) => s.cleared.includes(id)))
+      throw Error("此星域航路尚未開放。");
+    s.region = to.id;
+    s.x = to.startX;
+    s.y = to.startY;
+    s.heading = 0;
+  }
   if (c.type === "feed") {
     const target = s.roster.find((o) => o.id === c.target),
       source = s.roster.find((o) => o.id === c.source);

@@ -132,7 +132,8 @@ test("followers turn along their travel history in all directions without positi
       f.advance(dest, 180, 1 / 60);
       for (const [id, p] of f.positions)
         assert.ok(
-          Math.hypot(p.x - old.get(id)!.x, p.y - old.get(id)!.y) <= 5.11,
+          Math.hypot(p.x - old.get(id)!.x, p.y - old.get(id)!.y) <=
+            (180 * 2.2) / 60 + 0.01,
           "no teleport on turns",
         );
     }

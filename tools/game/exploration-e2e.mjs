@@ -1,3 +1,4 @@
+import { unlockStudio } from "./studio-access.mjs";
 import assert from "node:assert/strict";
 import { readFile, mkdir } from "node:fs/promises";
 import { chromium } from "../node_modules/playwright/index.mjs";
@@ -174,6 +175,8 @@ try {
       s.x = x - 230;
       s.y = y;
       s.encounter = null;
+      // Keep this dedicated retreat/input fixture alive while inspecting combat panels.
+      s.team = s.team.slice(0, 1);
       s.revision++;
       store.put(s, "save:main");
     };
@@ -245,7 +248,20 @@ try {
   await page.locator('[data-action="retreat"]').click();
   await page.getByRole("alertdialog").waitFor();
   await page.locator('[data-answer="yes"]').click();
-  await page.getByRole("heading", { name: "已撤離交戰區" }).waitFor();
+  try {
+    await page.getByRole("heading", { name: "已撤離交戰區" }).waitFor();
+  } catch (e) {
+    console.log(
+      "Retreat failure",
+      JSON.stringify({
+        save: await record(page),
+        overlay: await page.locator("#overlay").innerText(),
+        toast: await page.locator("#toast").innerText(),
+      }),
+    );
+    await page.screenshot({ path: ".artifacts/v5/retreat-failure.png" });
+    throw e;
+  }
   assert.equal((await record(page)).cleared.length, 0);
   await page.goto(server.url + "#/catalog");
   await page.waitForSelector("#roster-rows tr");
@@ -254,6 +270,7 @@ try {
   assert.equal(await page.locator("#roster-rows tr").count(), 12);
   await page.screenshot({ path: ".artifacts/v2/roster.png" });
   await page.goto(server.url + "#/studio");
+  await unlockStudio(page);
   for (const kind of [
     "enemies",
     "planets",

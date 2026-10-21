@@ -125,6 +125,21 @@ export class Game {
       this.storageRevision = s.revision;
       this.fleet.setMembers(s.team);
       this.conversionNotice(base, s);
+      if (c.type === "travel") {
+        this.x = s.x;
+        this.y = s.y;
+        this.destination = { x: s.x, y: s.y };
+        this.movement = { x: 0, y: 0 };
+        this.fleet = new FleetMotion(
+          s.x,
+          s.y,
+          s.heading,
+          s.team,
+          this.pack.rules.formationSpacing,
+        );
+        this.report = null;
+        this.notice = `已抵達 ${this.pack.regions.find((r) => r.id === s.region)!.name}`;
+      }
       if (c.type === "begin" || c.type === "patrol") {
         this.viewMode = "explore";
         this.combat = new Combat(
@@ -264,6 +279,7 @@ export class Game {
         this.disengagedPlanets.delete(p.id);
     if (
       !this.combat &&
+      !this.report &&
       !this.encounterPending &&
       this.save.team.some(
         (id) => (this.save.roster.find((o) => o.id === id)?.hp ?? 0) > 0,

@@ -61,6 +61,8 @@ const enemy = z
     range: positive,
     interval: positive,
     projectileSpeed: positive,
+    orbitSpeed: z.number().min(0).max(2).default(0.45),
+    strafeSpeed: z.number().min(0).max(300).default(14),
     pattern: z.enum(["aim", "fan", "ring"]),
     boss: z.boolean(),
     phaseAt: z.number().min(0).max(1),
@@ -110,6 +112,17 @@ const region = z
     height: positive,
     startX: z.number().finite(),
     startY: z.number().finite(),
+    routes: z
+      .array(
+        z
+          .object({
+            to: id,
+            label: z.string().min(1).max(100).default("星門躍遷"),
+            requires: z.array(id).default([]),
+          })
+          .strict(),
+      )
+      .default([]),
     discoveryRadius: z.number().min(100).max(1000).default(450),
     patrols: z
       .array(
@@ -352,6 +365,23 @@ export function validatePack(input: unknown): {
     if (e.sprite) has("assets", e.sprite, e.id);
   for (const r of p.regions)
     if (r.background) has("assets", r.background, r.id);
+  for (const r of p.regions) {
+    const targets = new Set<string>();
+    for (const route of r.routes) {
+      has("regions", route.to, r.id);
+      if (route.to === r.id || targets.has(route.to))
+        errors.push(`${r.id}: 星域航路重複或指向自身`);
+      targets.add(route.to);
+      route.requires.forEach((v) => has("planets", v, r.id));
+    }
+    if (
+      r.startX < 20 ||
+      r.startY < 20 ||
+      r.startX > r.width - 20 ||
+      r.startY > r.height - 20
+    )
+      errors.push(`${r.id}: 星域起點超出航行範圍`);
+  }
   const patrolIds = new Set<string>();
   for (const r of p.regions)
     for (const v of r.patrols) {

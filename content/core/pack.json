@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "m1:core",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "name": "星河戰姬 · 太陽系探索",
   "resources": [
     {
@@ -289,7 +289,9 @@
       "boss": false,
       "phaseAt": 0.5,
       "color": "#ff9a8a",
-      "sprite": "m1art:scout-v1"
+      "sprite": "m1art:scout-v1",
+      "orbitSpeed": 0.45,
+      "strafeSpeed": 14
     },
     {
       "id": "m1:sentinel",
@@ -308,7 +310,9 @@
       "boss": false,
       "phaseAt": 0.5,
       "color": "#ecb08c",
-      "sprite": "m1art:sentinel-v1"
+      "sprite": "m1art:sentinel-v1",
+      "orbitSpeed": 0.45,
+      "strafeSpeed": 14
     },
     {
       "id": "m1:umbra",
@@ -327,7 +331,9 @@
       "boss": true,
       "phaseAt": 0.5,
       "color": "#e1a4fa",
-      "sprite": "m1art:destroyer-v1"
+      "sprite": "m1art:destroyer-v1",
+      "orbitSpeed": 0.25,
+      "strafeSpeed": 6
     }
   ],
   "regions": [
@@ -411,7 +417,36 @@
         }
       ],
       "sprite": "m1art:bridge-v1",
-      "background": "m1art:cosmos-v1"
+      "background": "m1art:cosmos-v1",
+      "routes": [
+        {
+          "to": "m1:frontier-test",
+          "label": "前往第二星域 · 測試",
+          "requires": []
+        }
+      ]
+    },
+    {
+      "status": "active",
+      "provenance": "m1-design",
+      "sprite": "m1art:bridge-v1",
+      "background": "m1art:cosmos-v1",
+      "id": "m1:frontier-test",
+      "name": "第二星域 · 測試空域",
+      "description": "空白測試星域，沒有星球、敵人或獎勵。用來驗證跨星域往返，未來可直接擴充正式內容。",
+      "width": 2800,
+      "height": 2000,
+      "startX": 600,
+      "startY": 1000,
+      "discoveryRadius": 540,
+      "patrols": [],
+      "routes": [
+        {
+          "to": "m1:helios",
+          "label": "返回曙光星域",
+          "requires": []
+        }
+      ]
     }
   ],
   "planets": [
@@ -634,13 +669,18 @@
     {
       "id": "m1:awakening",
       "name": "星海甦醒",
-      "description": "序章：建立第一條航線。",
+      "description": "完成序章可取得前線補給，支援初始三人強化與第一階武裝研究。",
       "status": "active",
       "provenance": "m1-design",
       "condition": "intro",
       "target": "",
       "count": 1,
-      "reward": {},
+      "reward": {
+        "m1:crystal": 150,
+        "m1:gas": 120,
+        "m1:metal": 180,
+        "m1:ether": 100
+      },
       "character": "",
       "dialogue": [
         {
@@ -657,7 +697,7 @@
         },
         {
           "speaker": "地球",
-          "text": "先尋找蔚藍前哨，再解放並啟動它。穩定的產能會讓我們走得更遠。準備好了，就一起出發吧。"
+          "text": "指揮官，前線補給已就位。可以先到「角色」強化三位夥伴，或啟動共振研究，再前往蔚藍前哨。解放並啟動它，讓新的產能支援我們走得更遠。"
         }
       ],
       "background": "m1art:bridge-v1"
@@ -672,10 +712,10 @@
       "target": "m1:haven",
       "count": 1,
       "reward": {
-        "m1:crystal": 20,
-        "m1:gas": 20,
-        "m1:metal": 20,
-        "m1:ether": 20
+        "m1:crystal": 160,
+        "m1:gas": 140,
+        "m1:metal": 190,
+        "m1:ether": 120
       },
       "character": "",
       "dialogue": [
@@ -700,10 +740,10 @@
       "target": "m1:haven",
       "count": 1,
       "reward": {
-        "m1:crystal": 20,
-        "m1:gas": 20,
-        "m1:metal": 20,
-        "m1:ether": 20
+        "m1:crystal": 160,
+        "m1:gas": 140,
+        "m1:metal": 180,
+        "m1:ether": 120
       },
       "character": "",
       "dialogue": [
@@ -724,10 +764,10 @@
       "target": "",
       "count": 1,
       "reward": {
-        "m1:crystal": 20,
-        "m1:gas": 20,
-        "m1:metal": 20,
-        "m1:ether": 20
+        "m1:crystal": 140,
+        "m1:gas": 120,
+        "m1:metal": 160,
+        "m1:ether": 100
       },
       "character": "",
       "dialogue": [
@@ -748,10 +788,10 @@
       "target": "m1:umbra-gate",
       "count": 1,
       "reward": {
-        "m1:crystal": 20,
-        "m1:gas": 20,
-        "m1:metal": 20,
-        "m1:ether": 20
+        "m1:crystal": 300,
+        "m1:gas": 280,
+        "m1:metal": 350,
+        "m1:ether": 240
       },
       "character": "m1:uranus",
       "dialogue": [

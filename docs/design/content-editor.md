@@ -1,3 +1,5 @@
+> 最新0.5契約見[補給、隊形與星域往返](galaxy-angel-v5.md)：regions.routes＋travel已實作空第二區往返，工坊加入session入口鎖，掉頭先等隊長再跟。下方舊版未實作／單星域限制同名條目以0.5為準。
+
 # 內容圖鑑與網頁編輯器
 
 > 目前生效：Galaxy Angel 0.3，先讀 [0.3契約](galaxy-angel-v3.md)、[0.2探索](exploration-v2.md)及[最新交接](../handoffs/galaxy-angel-v3-20261021.md)。本文件較早的防衛／訓練／舊分支／未有Q圖等敘述為歷史狀態，以新版明確契約與實際程式為準。

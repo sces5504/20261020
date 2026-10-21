@@ -332,18 +332,41 @@ export class Combat {
       const priority = foes.find((v) => v.id === this.target);
       const t = priority && u.side === "ally" ? priority : foes[0];
       let dest = this.destination;
+      let enemySpeed = u.speed;
       if (u.side === "ally" && !u.turretUntil) {
         const pos = this.fleet.positions.get(u.id)!;
         u.x = pos.x;
         u.y = pos.y;
         dest = { x: u.x, y: u.y };
       }
-      if (u.side === "enemy" && t) dest = { x: t.x, y: t.y };
+      if (u.side === "enemy" && t) {
+        const e = this.pack.enemies.find((e) => e.id === u.def)!;
+        const distance = Math.hypot(u.x - t.x, u.y - t.y);
+        if (e.orbitSpeed > 0 && distance <= u.range * 0.9) {
+          enemySpeed = Math.min(u.speed, e.strafeSpeed);
+          const direction = this.units.indexOf(u) % 2 ? 1 : -1;
+          const a =
+            Math.atan2(u.y - t.y, u.x - t.x) +
+            e.orbitSpeed *
+              Math.cos(this.time * 0.8 + this.units.indexOf(u) * 1.6) *
+              dt *
+              direction;
+          const radius = Math.min(distance, u.range * 0.65);
+          dest = {
+            x: t.x + Math.cos(a) * radius,
+            y: t.y + Math.sin(a) * radius,
+          };
+        } else dest = { x: t.x, y: t.y };
+      }
       const d = Math.hypot(dest.x - u.x, dest.y - u.y),
         move =
           u.side === "ally"
             ? !u.turretUntil && d > 0.05
-            : t && d > u.range * 0.65;
+            : t &&
+              d >
+                (this.pack.enemies.find((e) => e.id === u.def)!.orbitSpeed > 0
+                  ? 0.05
+                  : u.range * 0.65);
       if (move && d > 0) {
         u.x +=
           ((dest.x - u.x) / d) *
@@ -354,7 +377,7 @@ export class Combat {
                   u.speed * 1.65,
                   d / (0.12 + this.allies.indexOf(u) * 0.055),
                 ) * dt
-              : u.speed * dt,
+              : enemySpeed * dt,
           );
         u.y +=
           ((dest.y - u.y) / d) *
@@ -365,7 +388,7 @@ export class Combat {
                   u.speed * 1.65,
                   d / (0.12 + this.allies.indexOf(u) * 0.055),
                 ) * dt
-              : u.speed * dt,
+              : enemySpeed * dt,
           );
         const r = this.pack.regions.find((r) => r.id === this.save.region)!;
         u.x = Math.max(15, Math.min(r.width - 15, u.x));

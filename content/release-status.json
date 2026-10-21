@@ -1,5 +1,5 @@
 {
-  "milestone": "M1-galaxy-angel-0.4",
+  "milestone": "M1-galaxy-angel-0.5",
   "status": "m1-playtest-complete",
   "checks": {
     "characterMappingConfirmed": true,
@@ -13,7 +13,7 @@
     "iosSafariVerified": false,
     "performanceBaselineVerified": false
   },
-  "notes": "星河戰姬 Galaxy Angel 0.4：五次手動同調／紫星，滿階按實際共鳴配方退25%四資源；方向航跡跟隨、星球單波自動接敵／越界重置、巡邏即時接觸／非modal勝利、等待任務、巡航加速與命中回饋。38項核心與四組瀏覽器流程；六原圖hash不變。商業品質／真機／硬體效能／獨立AI接力仍待驗。詳見docs/handoffs/galaxy-angel-v4-20261021.md及本輪PR最後發布證據。",
+  "notes": "星河戰姬0.5：任務補給100–350／序章成長引導；掉頭等待隊長與掉隊追趕；工坊session入口鎖（非後端權限）；M快捷鍵；敵人有界側移；技能即時熄滅就緒提示；等待圖案；通用跨域航線與空第二區往返。43項核心、五組瀏覽器及完整check release通過；原圖hash與SQLite庫、範本10項通過。六原圖不變，商業品質／真機／硬體效能／獨立AI接力仍待驗。發布SHA／CI／Pages及公開站證據以本輪PR最後留言為準。",
   "playtestStatus": "ready",
   "playtestChecks": {
     "campaignLoop": true,
@@ -34,6 +34,14 @@
     "directionalTrailFormation": true,
     "automaticSingleWavePlanetAndLeash": true,
     "immediatePatrolAndNonblockingVictory": true,
-    "jobWaitingAndSkillReadyFeedback": true
+    "jobWaitingAndSkillReadyFeedback": true,
+    "meaningfulQuestSupplies": true,
+    "captainFirstReversalAndCatchup": true,
+    "studioSessionEntryGate": true,
+    "mapKeyboardShortcut": true,
+    "movingEnemiesAndImmediateSkillFeedback": true,
+    "pendingJobArtwork": true,
+    "interstellarTravelAndEmptySector": true,
+    "pendingResultPreventsOverlappingEncounters": true
   }
 }

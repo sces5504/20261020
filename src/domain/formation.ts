@@ -6,6 +6,7 @@ export class FleetMotion {
   members: string[] = [];
   positions = new Map<string, Point>();
   private trail: Point[] = [];
+  readonly waiting = new Set<string>();
   constructor(
     x: number,
     y: number,
@@ -25,7 +26,10 @@ export class FleetMotion {
   setMembers(ids: string[]) {
     this.members = [...ids];
     for (const [id] of this.positions)
-      if (!ids.includes(id)) this.positions.delete(id);
+      if (!ids.includes(id)) {
+        this.positions.delete(id);
+        this.waiting.delete(id);
+      }
     ids.forEach((id, i) => {
       if (!this.positions.has(id)) this.positions.set(id, this.target(i));
     });
@@ -55,7 +59,10 @@ export class FleetMotion {
       dy = destination.y - this.anchor.y,
       d = Math.hypot(dx, dy);
     if (d > 0.001) {
-      this.heading = Math.atan2(dy, dx);
+      const nextHeading = Math.atan2(dy, dx);
+      if (Math.cos(nextHeading - this.heading) < -0.35)
+        this.members.slice(1).forEach((id) => this.waiting.add(id));
+      this.heading = nextHeading;
       const step = Math.min(d, speed * dt);
       this.anchor.x += (dx / d) * step;
       this.anchor.y += (dy / d) * step;
@@ -70,10 +77,30 @@ export class FleetMotion {
       const target = this.target(i),
         pos = this.positions.get(id)!,
         gap = Math.hypot(target.x - pos.x, target.y - pos.y);
+      if (this.waiting.has(id)) {
+        const leader = this.positions.get(this.members[0])!;
+        const lead =
+          (leader.x - pos.x) * Math.cos(this.heading) +
+          (leader.y - pos.y) * Math.sin(this.heading);
+        const forward =
+          (target.x - pos.x) * Math.cos(this.heading) +
+          (target.y - pos.y) * Math.sin(this.heading);
+        if (lead < i * this.spacing * 0.7 || forward < -this.spacing * 0.08)
+          return;
+        this.waiting.delete(id);
+      }
       if (gap > 0.025) {
+        const catchup =
+          i === 0
+            ? 1.7
+            : 1.12 +
+              Math.min(
+                1.08,
+                Math.max(0, gap - this.spacing * 0.25) / this.spacing,
+              );
         const step = Math.min(
           gap,
-          Math.min(speed * 1.7, gap / (0.1 + i * 0.035)) * dt,
+          Math.min(speed * catchup, gap / (0.14 + i * 0.045)) * dt,
         );
         pos.x += ((target.x - pos.x) / gap) * step;
         pos.y += ((target.y - pos.y) / gap) * step;

@@ -1,3 +1,4 @@
+import { lockStudio } from "./studio-access";
 import { ask } from "./dialog";
 import {
   complexField,
@@ -62,7 +63,7 @@ export async function mountStudio(root: HTMLElement) {
     });
   }
 
-  root.innerHTML = `<main class="studio"><header class="studio-header"><a class="brand" href="#/play"><span class="brand-icon">✧</span><span>GALAXY ANGEL STUDIO<small>星 河 戰 姬 · 內 容 工 坊</small></span></a><div class="inline-actions"><a href="#/art">六位標準原圖 ↗</a><a href="#/play">返回遊戲 ↗</a></div></header><div class="studio-title"><div><span class="eyebrow">CONTENT WORKSPACE / LOCAL DRAFT</span><h1>每一道星光，由你定義。</h1><p>瀏覽、調整、試玩，再將你的星海匯出。</p></div><div class="studio-actions">${button("復原", "undo")}${button("重做", "redo")}${button("套用至測試遊戲 ↗", "test", "", "primary")}</div></div><div class="studio-toolbar"><span id="project-status"></span><div>${button("從新版正式內容建立草稿", "use-published")}${button("新增項目", "new")}${button("校驗內容", "validate")}${button("專案備份", "backup-project")}<label class="file-button">匯入專案／內容包<input id="import-project" type="file" accept=".json,.zip"></label>${button("匯出內容 ZIP", "export-pack")}</div></div><div class="studio-grid"><aside class="catalog-nav" id="catalog-nav"></aside><section class="catalog"><label class="search">搜尋內容<input id="catalog-search" type="search" placeholder="名稱或穩定 ID"></label><div id="catalog-list"></div></section><section class="inspector" id="inspector"></section></div><div class="studio-report" id="report" role="status"></div></main>`;
+  root.innerHTML = `<main class="studio"><header class="studio-header"><a class="brand" href="#/play"><span class="brand-icon">✧</span><span>GALAXY ANGEL STUDIO<small>星 河 戰 姬 · 內 容 工 坊</small></span></a><div class="inline-actions"><a href="#/art">六位標準原圖 ↗</a><a href="#/play">返回遊戲 ↗</a></div></header><div class="studio-title"><div><span class="eyebrow">CONTENT WORKSPACE / LOCAL DRAFT</span><h1>每一道星光，由你定義。</h1><p>瀏覽、調整、試玩，再將你的星海匯出。</p></div><div class="studio-actions">${button("復原", "undo")}${button("重做", "redo")}${button("套用至測試遊戲 ↗", "test", "", "primary")}</div></div><div class="studio-toolbar"><span id="project-status"></span><div>${button("從新版正式內容建立草稿", "use-published")}${button("新增項目", "new")}${button("校驗內容", "validate")}${button("鎖定工坊", "lock-studio")}${button("專案備份", "backup-project")}<label class="file-button">匯入專案／內容包<input id="import-project" type="file" accept=".json,.zip"></label>${button("匯出內容 ZIP", "export-pack")}</div></div><div class="studio-grid"><aside class="catalog-nav" id="catalog-nav"></aside><section class="catalog"><label class="search">搜尋內容<input id="catalog-search" type="search" placeholder="名稱或穩定 ID"></label><div id="catalog-list"></div></section><section class="inspector" id="inspector"></section></div><div class="studio-report" id="report" role="status"></div></main>`;
   const $ = (s: string) => root.querySelector<HTMLElement>(s)!;
   function status() {
     if (disposed) return;
@@ -190,6 +191,14 @@ export async function mountStudio(root: HTMLElement) {
     character: "獎勵角色 ID",
     dialogue: "劇情對白",
     projectileSpeed: "彈速",
+    orbitSpeed: "敵人側移角速上限（0為停止射擊）",
+    strafeSpeed: "射程內側移速度上限",
+    routes: "星域航線（目的地 to／顯示 label／前置 requires）",
+    engageRadius: "星球自動交戰半徑",
+    guardRadius: "守軍初始分布半徑",
+    leashWarningRadius: "交戰邊界警告半徑",
+    leashRadius: "守軍重置半徑",
+    resetSeconds: "越界重置倒數（秒）",
     pattern: "彈幕模式",
     boss: "首領",
     phaseAt: "第二階段生命比例",
@@ -356,6 +365,15 @@ export async function mountStudio(root: HTMLElement) {
     return r.pack;
   }
   async function act(action: string, id: string) {
+    if (action === "lock-studio") {
+      if (
+        await ask("鎖定工坊？已保存的草稿會保留，尚未保存的表單調整會放棄。")
+      ) {
+        lockStudio();
+        location.reload();
+      }
+      return;
+    }
     if (action === "add-spawn") {
       root
         .querySelector(".spawn-rows")

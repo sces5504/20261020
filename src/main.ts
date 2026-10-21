@@ -8,6 +8,10 @@ import { compatibilityPlan } from "./domain/migration";
 import { read, download, commit } from "./platform/storage";
 import { esc } from "./presentation/common";
 import { mountArtGallery } from "./presentation/art-gallery";
+import {
+  studioUnlocked,
+  mountStudioAccess,
+} from "./presentation/studio-access";
 import { mountStudio } from "./presentation/studio";
 const root = document.querySelector<HTMLElement>("#app")!;
 let dispose: (() => void | Promise<void>) | undefined,
@@ -28,7 +32,9 @@ async function route() {
       dispose = await mountCharacterRoster(root);
     else if (location.hash.startsWith("#/art")) dispose = mountArtGallery(root);
     else if (location.hash.startsWith("#/studio"))
-      dispose = await mountStudio(root);
+      dispose = studioUnlocked()
+        ? await mountStudio(root)
+        : mountStudioAccess(root, () => void route());
     else {
       const test = location.hash.startsWith("#/test");
       const candidate = test ? await read<Pack>("content:test") : published;

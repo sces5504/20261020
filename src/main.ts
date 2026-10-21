@@ -74,7 +74,7 @@ async function route() {
               try {
                 plan.save.revision++;
                 plan.save.migrationHistory.push(`compat:${p.version}`);
-                await commit(key, plan.save, plan.save.revision - 1);
+                await commit(key, plan.save, plan.save.revision - 1, true);
                 location.reload();
               } catch (e) {
                 section.append(String(e));

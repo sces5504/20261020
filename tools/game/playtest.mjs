@@ -125,11 +125,21 @@ try {
   );
   await page.clock.resume();
   await page.locator('[data-action="close"]').first().click();
-  for (let i = 0; i < 5; i++) {
-    await page.waitForTimeout(300);
-    const skip = page.locator('[data-action="story-skip"]');
-    if (await skip.isVisible()) await skip.click();
-    else break;
+  // Both first-liberation and activation dialogues become available here.
+  // Read each scene and wait for its durable receipt rather than racing a 250ms UI tick.
+  const readyStories = project.pack.quests.filter(
+    (q) =>
+      ["cleared", "activated"].includes(q.condition) && q.target === "m1:haven",
+  );
+  for (const q of readyStories) {
+    if ((await record(page, "save:test")).storySeen.includes(q.id)) continue;
+    await page.locator('[data-action="story-skip"]').waitFor();
+    await page.locator('[data-action="story-skip"]').click();
+    await waitSave(
+      page,
+      (s) => s.storySeen.includes(q.id),
+      "dialogue must be acknowledged before continuing",
+    );
   }
   console.log("Playtest: character profile, dialogue and content acquisition");
   await page.locator(".squad-card").first().click();

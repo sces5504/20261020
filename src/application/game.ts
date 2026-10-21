@@ -51,7 +51,10 @@ export class Game {
     this.destination = { x: s.x, y: s.y };
     this.discovered = new Set(s.discovered);
     this.voyageSeconds = s.voyageSeconds;
-    if (s.encounter) this.combat = new Combat(this.pack, s, s.encounter.planet);
+    if (s.encounter) {
+      this.combat = new Combat(this.pack, s, s.encounter.planet);
+      this.viewMode = "explore";
+    }
   }
   static async load(p: Pack, test = false) {
     const key = test ? "save:test" : "save:main",
@@ -104,6 +107,7 @@ export class Game {
       this.save = s;
       this.storageRevision = s.revision;
       if (c.type === "begin" || c.type === "patrol") {
+        this.viewMode = "explore";
         this.combat = new Combat(
           this.pack,
           s,
@@ -253,7 +257,7 @@ export class Game {
     await this.enqueue(async () => {
       const s = checkSave(raw, this.pack);
       s.revision = this.save.revision + 1;
-      await commit(this.key, s, this.storageRevision);
+      await commit(this.key, s, this.storageRevision, true);
       this.save = s;
       this.storageRevision = s.revision;
       this.x = s.x;

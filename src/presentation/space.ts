@@ -12,12 +12,13 @@ export function mountSpace(
   const held = new Set<string>();
   const directional = (e: KeyboardEvent, down: boolean) => {
     if (
-      (e.target as HTMLElement)?.closest(
+      down &&
+      ((e.target as HTMLElement)?.closest(
         "input,textarea,select,[contenteditable=true]",
       ) ||
-      e.ctrlKey ||
-      e.metaKey ||
-      e.altKey
+        e.ctrlKey ||
+        e.metaKey ||
+        e.altKey)
     )
       return;
     const key = e.key.toLowerCase();
@@ -281,17 +282,15 @@ export function mountSpace(
         this.zoomFactor = 1;
       }
       const zoom =
-        (battle || model.viewMode === "explore"
+        (model.viewMode === "explore"
           ? w < 650
             ? 0.72
             : 0.95
           : Math.min(w / r.width, h / r.height) * 0.88) * this.zoomFactor;
       camera.setZoom(zoom * density);
       camera.centerOn(
-        (battle || model.viewMode === "explore" ? model.x : r.width / 2) +
-          this.panX,
-        (battle || model.viewMode === "explore" ? model.y : r.height / 2) +
-          this.panY,
+        (model.viewMode === "explore" ? model.x : r.width / 2) + this.panX,
+        (model.viewMode === "explore" ? model.y : r.height / 2) + this.panY,
       );
       g.clear();
       this.hud.clear();

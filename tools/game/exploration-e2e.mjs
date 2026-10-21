@@ -86,6 +86,11 @@ try {
   );
   await page.screenshot({ path: ".artifacts/v2/explore.png" });
   await page.locator('[data-action="view"]').click();
+  await page.waitForFunction(() =>
+    document
+      .querySelector('[data-action="view"]')
+      ?.textContent.includes("銀河航行"),
+  );
   assert.ok(
     (await page.locator('[data-action="view"]').innerText()).includes(
       "銀河航行",
@@ -166,17 +171,43 @@ try {
   });
   await page.goto(server.url + "#/play");
   await page.waitForSelector("canvas");
-  for (let i = 0; i < 4; i++) {
-    await page.waitForTimeout(300);
-    const skip = page.locator('[data-action="story-skip"]');
-    if (await skip.isVisible()) await skip.click();
-    else break;
+  const arrived = await record(page);
+  for (const q of pack.quests.filter(
+    (q) =>
+      q.condition === "summoned" &&
+      q.count <= arrived.summoned &&
+      !arrived.storySeen.includes(q.id),
+  )) {
+    await page.locator('[data-action="story-skip"]').waitFor();
+    await page.locator('[data-action="story-skip"]').click();
+    await waitSave(
+      page,
+      (s) => s.storySeen.includes(q.id),
+      "arrival dialogue must finish before resuming patrol travel",
+    );
   }
   await page.keyboard.down("d");
   await page.waitForSelector(".in-battle", { timeout: 60000 });
   await page.keyboard.up("d");
   assert.equal((await record(page)).encounter.kind, "patrol");
   await page.screenshot({ path: ".artifacts/v2/patrol.png" });
+  await page.locator('[data-action="view"]').click();
+  await page.waitForFunction(() =>
+    document
+      .querySelector('[data-action="view"]')
+      ?.textContent.includes("銀河航行"),
+  );
+  assert.ok(
+    (await page.locator('[data-action="view"]').innerText()).includes(
+      "銀河航行",
+    ),
+  );
+  await page.screenshot({ path: ".artifacts/v2/patrol-map.png" });
+  await page.locator('[data-action="view"]').click();
+  await page.locator('[data-action="panel"][data-id="roster"]').click();
+  await page.locator('.modal [data-action="character"]').first().click();
+  await page.waitForSelector(".character-detail");
+  await page.locator('[data-action="close"]').first().click();
   await page.locator('[data-action="retreat"]').click();
   await page.getByRole("alertdialog").waitFor();
   await page.locator('[data-answer="yes"]').click();
@@ -188,6 +219,27 @@ try {
   await page.locator("#roster-filter").selectOption("priority");
   assert.equal(await page.locator("#roster-rows tr").count(), 12);
   await page.screenshot({ path: ".artifacts/v2/roster.png" });
+  await page.goto(server.url + "#/play");
+  await page.waitForSelector("canvas");
+  const beforeReset = await record(page);
+  await page.locator('[data-id="archive"][data-action="panel"]').click();
+  await page.locator('[data-action="new-voyage"]').click();
+  await page.locator('[data-answer="yes"]').click();
+  await page.waitForSelector(".story-scene");
+  const reset = await record(page);
+  assert.equal(reset.summoned, 0);
+  await waitSave(
+    page,
+    (s) => s.revision > reset.revision,
+    "new voyage must autosave",
+  );
+  const protectedBackup = await record(page, "save:main:restore-point");
+  assert.equal(protectedBackup.summoned, beforeReset.summoned);
+  assert.equal(
+    protectedBackup.roster.length,
+    beforeReset.roster.length,
+    "autosave must not overwrite the protected pre-reset progress",
+  );
   assert.deepEqual(errors, []);
   const mobileContext = await browser.newContext({
       viewport: { width: 390, height: 844 },
@@ -199,7 +251,7 @@ try {
   m.on("pageerror", (e) => errors.push(e.message));
   await m.goto(server.url);
   await m.locator('[data-action="story-skip"]').click();
-  await m.waitForTimeout(400);
+  await m.waitForSelector(".story-scene", { state: "hidden" });
   await m.screenshot({ path: ".artifacts/v2/mobile.png" });
   assert.ok(
     await m.evaluate(() => document.documentElement.scrollWidth <= innerWidth),

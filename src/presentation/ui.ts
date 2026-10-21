@@ -305,7 +305,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     if (panel === "archive") {
       title = "航行設定";
       kick = "SAVE & PREFERENCES";
-      body = `<div class="settings-list"><h3>本機進度</h3><p>進度自動保存在此瀏覽器。跨裝置時，請匯出後在另一裝置匯入。</p><div class="inline-actions">${button("匯出存檔", "export-save", "", "primary")}<label class="file-button">匯入存檔<input id="import-save" type="file" accept="application/json,.json"></label>${button("匯出上一份備份", "export-backup")}</div>${button("開始新航跡（先備份）", "new-voyage")}<h3>聲音與畫面</h3><div class="inline-actions">${button(audio.enabled ? "聲音：開啟" : "聲音：關閉", "sound")}${button(g.lowEffects ? "特效：精簡" : "特效：完整", "effects")}</div><label>音效音量<input id="audio-volume" type="range" min="0" max="1" step="0.05" value="${audio.volume}"></label><h3>戰鬥操作</h3><p>點空白處移動與閃躲；普通攻擊自動進行。點敵人優先鎖定，點下方角色施放技能。</p>${button(g.autoSkills ? "自動技能：開啟" : "自動技能：關閉", "auto")}<h3>角色製作表</h3><a href="#/catalog">查看未來角色清單／下載 CSV ↗</a><h3>內容工坊</h3><p>瀏覽與調整內容，套用至隔離測試遊戲；完成後匯出內容包再發布。</p><a class="primary link-button" href="#/studio">進入內容工坊 ↗</a>${test ? '<p><a href="#/play">退出隔離測試，返回正式進度</a></p>' : ""}<details><summary>開發版狀態</summary><p>六張原始立繪已匯入，已套用原先六角色；原圖展示入口在內容工坊。音效採可編輯的程序合成，星球與敵艦為原創程序材質。M1的平衡／劇情與部分技能為明示的新設計；原作未知機制仍保留來源缺口。</p></details></div>`;
+      body = `<div class="settings-list"><h3>本機進度</h3><p>進度自動保存在此瀏覽器。跨裝置時，請匯出後在另一裝置匯入。</p><div class="inline-actions">${button("匯出存檔", "export-save", "", "primary")}<label class="file-button">匯入存檔<input id="import-save" type="file" accept="application/json,.json"></label>${button("匯出還原備份", "export-backup")}</div>${button("開始新航跡（先備份）", "new-voyage")}<h3>聲音與畫面</h3><div class="inline-actions">${button(audio.enabled ? "聲音：開啟" : "聲音：關閉", "sound")}${button(g.lowEffects ? "特效：精簡" : "特效：完整", "effects")}</div><label>音效音量<input id="audio-volume" type="range" min="0" max="1" step="0.05" value="${audio.volume}"></label><h3>戰鬥操作</h3><p>點空白處移動與閃躲；普通攻擊自動進行。點敵人優先鎖定，點下方角色施放技能。</p>${button(g.autoSkills ? "自動技能：開啟" : "自動技能：關閉", "auto")}<h3>角色製作表</h3><a href="#/catalog">查看未來角色清單／下載 CSV ↗</a><h3>內容工坊</h3><p>瀏覽與調整內容，套用至隔離測試遊戲；完成後匯出內容包再發布。</p><a class="primary link-button" href="#/studio">進入內容工坊 ↗</a>${test ? '<p><a href="#/play">退出隔離測試，返回正式進度</a></p>' : ""}<details><summary>開發版狀態</summary><p>六張原始立繪已匯入，已套用原先六角色；原圖展示入口在內容工坊。音效採可編輯的程序合成，星球與敵艦為原創程序材質。M1的平衡／劇情與部分技能為明示的新設計；原作未知機制仍保留來源缺口。</p></details></div>`;
     }
     $("#overlay").innerHTML =
       `<div class="modal-backdrop"><section class="modal ${["roster", "formation", "character", "acquisition"].includes(panel) ? "wide" : ""}" role="dialog" aria-modal="true" aria-label="${esc(title)}">${heading(title, kick)}<div class="modal-body">${body}</div><div class="modal-footer"><i></i> 戰鬥已暫停 · 經營計時持續</div></section></div>`;
@@ -443,10 +443,6 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       if (!g.pause.size && g.combat?.cast(id)) audio.cue("skill");
       return;
     }
-    if (action === "character" && g.combat) {
-      if (!g.pause.size) g.combat.cast(id);
-      return;
-    }
     if (action === "character") {
       sub = id;
       panel = "character";
@@ -477,7 +473,9 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       return;
     }
     if (action === "export-backup") {
-      const backup = await read<Save>(`${g.key}:backup`);
+      const backup =
+        (await read<Save>(`${g.key}:restore-point`)) ??
+        (await read<Save>(`${g.key}:backup`));
       if (backup)
         download("stella-backup.json", JSON.stringify(backup, null, 2));
       else g.notice = "尚無上一份備份。";

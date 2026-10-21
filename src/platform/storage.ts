@@ -89,7 +89,12 @@ export async function write(key: string, value: unknown) {
     tx.onabort = () => reject(tx.error ?? Error("儲存已中止"));
   });
 }
-export async function commit(key: string, next: Save, expected: number | null) {
+export async function commit(
+  key: string,
+  next: Save,
+  expected: number | null,
+  preserveRestorePoint = false,
+) {
   const d = await db();
   return new Promise<void>((resolve, reject) => {
     const tx = d.transaction("records", "readwrite"),
@@ -103,7 +108,10 @@ export async function commit(key: string, next: Save, expected: number | null) {
         tx.abort();
         return;
       }
-      if (old) store.put(old, `${key}:backup`);
+      if (old) {
+        store.put(old, `${key}:backup`);
+        if (preserveRestorePoint) store.put(old, `${key}:restore-point`);
+      }
       store.put(next, key);
     };
     tx.oncomplete = () => resolve();

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "solar10:package.first-ten",
+  "version": "0.1.0",
+  "requires": [
+    {
+      "id": "m1:core",
+      "version": "0.5.0"
+    }
+  ],
+  "definitions": {
+    "characters": [
+      {
+        "id": "solar10:character.sun",
+        "name": "太陽",
+        "description": "擅長穩住航線的前鋒。以防禦增幅承受連續火力，輸出低於地球，適合放在編隊首位。此為M1自身防禦改編；沒有原作全隊增防或異常抗性。美術待補。",
+        "status": "active",
+        "provenance": "m1-design",
+        "rarity": 4,
+        "hp": 640,
+        "attack": 24,
+        "defense": 40,
+        "speed": 180,
+        "range": 410,
+        "interval": 0.9,
+        "growth": 0.08,
+        "skill": "m1:armor",
+        "color": "#ffcc66",
+        "portrait": "",
+        "avatar": "",
+        "sprite": "",
+        "recipe": [
+          180,
+          100,
+          120,
+          80
+        ],
+        "starter": false,
+        "role": "前鋒 · 自身防禦",
+        "sourceRow": 1,
+        "summonable": true
+      }
+    ]
+  }
+}

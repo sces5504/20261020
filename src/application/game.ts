@@ -3,6 +3,7 @@ import { snapshot } from "../content/schema";
 import { newSave, stats, type Save } from "../domain/model";
 import { apply, settle, type Command } from "../domain/economy";
 import { patrolPosition } from "../domain/navigation";
+import { FleetMotion } from "../domain/formation";
 import { Combat } from "../domain/combat";
 import { fingerprint } from "../content/fingerprint";
 import { compatibilityPlan } from "../domain/migration";
@@ -20,7 +21,9 @@ export class Game {
   discovered = new Set<string>();
   voyageSeconds = 0;
   encounterPending = false;
-  safeUntil = 0;
+  safeUntil = 0; // legacy only; encounter cooldowns are per target
+  fleet: FleetMotion;
+  disengagedPlanets = new Set<string>();
   movement = { x: 0, y: 0 };
   error = "";
   notice = "";
@@ -52,9 +55,17 @@ export class Game {
     this.y = s.y;
     this.destination = { x: s.x, y: s.y };
     this.discovered = new Set(s.discovered);
+    this.disengagedPlanets = new Set(s.disengagedPlanets ?? []);
     this.voyageSeconds = s.voyageSeconds;
+    this.fleet = new FleetMotion(
+      s.x,
+      s.y,
+      s.heading ?? 0,
+      s.team,
+      p.rules.formationSpacing,
+    );
     if (s.encounter) {
-      this.combat = new Combat(this.pack, s, s.encounter.planet);
+      this.combat = new Combat(this.pack, s, s.encounter.planet, this.fleet);
       this.viewMode = "explore";
     }
   }
@@ -104,18 +115,23 @@ export class Game {
       base.voyageSeconds = this.voyageSeconds;
       base.x = this.x;
       base.y = this.y;
+      base.heading = this.fleet.heading;
+      base.disengagedPlanets = [...this.disengagedPlanets];
       const s = apply(this.pack, base, c, Date.now(), crypto.randomUUID());
       s.contentHash = this.contentHash;
       s.contentVersion = this.pack.version;
       await commit(this.key, s, this.storageRevision);
       this.save = s;
       this.storageRevision = s.revision;
+      this.fleet.setMembers(s.team);
+      this.conversionNotice(base, s);
       if (c.type === "begin" || c.type === "patrol") {
         this.viewMode = "explore";
         this.combat = new Combat(
           this.pack,
           s,
           c.type === "begin" ? c.planet : c.id,
+          this.fleet,
         );
         this.combat.autoSkills = this.autoSkills;
         this.x = s.x;
@@ -124,26 +140,41 @@ export class Game {
       if (c.type === "result") {
         const patrol = base.encounter?.kind === "patrol";
         this.events.push(c.victory ? "victory" : "defeat");
-        this.report = {
-          title: c.victory
-            ? patrol
-              ? "航路已肅清"
-              : "航跡已開拓"
-            : "已撤離交戰區",
-          message: c.victory
-            ? patrol
-              ? "巡邏敵艦已擊退，取得補給。繼續探索，尋找新的星球訊號。"
-              : "全波次敵群已排除。啟動星球，建立新的生產據點。"
-            : "角色生命已保存。可在編隊中整補，完成後再挑戰。",
-          victory: c.victory,
-          planet: patrol ? "" : c.planet,
-        };
-        this.safeUntil = this.voyageSeconds + 8;
+        this.report =
+          (patrol && c.victory) || c.reset
+            ? null
+            : {
+                title: c.victory ? "航跡已開拓" : "已撤離交戰區",
+                message: c.victory
+                  ? "星球守軍已全部清除。啟動星球，建立新的生產據點。"
+                  : "角色生命已保存，可整補後再挑戰。",
+                victory: c.victory,
+                planet: patrol ? "" : c.planet,
+              };
+        this.disengagedPlanets = new Set(s.disengagedPlanets);
         this.combat = null;
-        this.destination = { x: this.x, y: this.y };
-        this.notice = c.victory
-          ? "星球已解放 · 航跡更新"
-          : "已撤回安全航線，請整補後再出發。";
+        if (!(patrol && c.victory)) this.destination = { x: this.x, y: this.y };
+        if (c.reset)
+          this.notice =
+            "已離開交戰範圍 · 守軍生命與位置已重置，重新靠近即可再戰。";
+        else if (patrol && c.victory) {
+          const patrol = this.pack.regions
+            .find((r) => r.id === s.region)!
+            .patrols.find((v) => v.id === c.planet)!;
+          this.notice =
+            "巡邏隊已擊破 · " +
+            Object.entries(patrol.reward)
+              .map(
+                ([id, n]) =>
+                  (this.pack.resources.find((r) => r.id === id)?.name ?? id) +
+                  " +" +
+                  n,
+              )
+              .join(" ／ ");
+        } else
+          this.notice = c.victory
+            ? "星球已解放 · 航跡更新"
+            : "已撤離交戰區，整補後可再出發。";
       }
       this.dirty = true;
     }, c.type !== "checkpoint");
@@ -153,6 +184,7 @@ export class Game {
       const s = structuredClone(this.save);
       s.contentHash = this.contentHash;
       s.contentVersion = this.pack.version;
+      const before = this.save;
       const ownedCount = s.roster.length;
       settle(this.pack, s, Date.now());
       s.revision = this.save.revision + 1;
@@ -163,6 +195,7 @@ export class Game {
         this.events.push("arrival");
         this.notice = `共鳴完成 · 新增 ${s.roster.length - ownedCount} 位少女，前往編成查看。`;
       }
+      this.conversionNotice(before, s);
       this.dirty = true;
     }, false);
   }
@@ -173,15 +206,20 @@ export class Game {
       y: this.y,
       discovered: [...this.discovered],
       voyageSeconds: this.voyageSeconds,
+      heading: this.fleet.heading,
     });
   }
   step(dt: number) {
     if (this.pause.size || this.simulationLocked || this.error) return;
+    this.fleet.setMembers(this.save.team);
+    const speed = this.movementSpeed;
     if (this.movement.x || this.movement.y) {
       const n = Math.hypot(this.movement.x, this.movement.y);
       this.move(
-        (this.combat?.anchor.x ?? this.x) + (this.movement.x / n) * 190 * dt,
-        (this.combat?.anchor.y ?? this.y) + (this.movement.y / n) * 190 * dt,
+        (this.combat?.anchor.x ?? this.x) +
+          (this.movement.x / n) * (speed + 10) * dt,
+        (this.combat?.anchor.y ?? this.y) +
+          (this.movement.y / n) * (speed + 10) * dt,
       );
     }
     if (this.combat) {
@@ -198,19 +236,15 @@ export class Game {
           type: "result",
           planet: c.planetId,
           victory: c.victory,
+          reset: c.reset,
           hp: c.result(),
           receipt: `encounter-${this.save.encounter?.seed}`,
         }).finally(() => (this.encounterPending = false));
       }
     } else {
-      const d = Math.hypot(
-        this.destination.x - this.x,
-        this.destination.y - this.y,
-      );
-      if (d > 2) {
-        this.x += ((this.destination.x - this.x) / d) * Math.min(d, 180 * dt);
-        this.y += ((this.destination.y - this.y) / d) * Math.min(d, 180 * dt);
-      }
+      this.fleet.advance(this.destination, speed, dt);
+      this.x = this.fleet.anchor.x;
+      this.y = this.fleet.anchor.y;
     }
     this.voyageSeconds += dt;
     const r = this.pack.regions.find((r) => r.id === this.save.region)!;
@@ -225,26 +259,94 @@ export class Game {
         this.dirty = true;
       }
     }
+    for (const p of this.pack.planets)
+      if (Math.hypot(p.x - this.x, p.y - this.y) > p.engageRadius + 30)
+        this.disengagedPlanets.delete(p.id);
     if (
       !this.combat &&
       !this.encounterPending &&
-      this.voyageSeconds >= this.safeUntil
+      this.save.team.some(
+        (id) => (this.save.roster.find((o) => o.id === id)?.hp ?? 0) > 0,
+      )
     ) {
-      const patrol = r.patrols.find(
-        (v) =>
-          Math.hypot(
-            patrolPosition(v, this.voyageSeconds).x - this.x,
-            patrolPosition(v, this.voyageSeconds).y - this.y,
-          ) < v.detectionRadius &&
-          (this.save.patrolCooldowns[v.id] ?? 0) <= this.voyageSeconds,
-      );
-      if (patrol) {
+      const contacts = [
+        ...r.patrols
+          .filter(
+            (v) => (this.save.patrolCooldowns[v.id] ?? 0) <= this.voyageSeconds,
+          )
+          .map((v) => {
+            const pos = patrolPosition(v, this.voyageSeconds);
+            return {
+              kind: "patrol" as const,
+              id: v.id,
+              d: Math.hypot(pos.x - this.x, pos.y - this.y),
+              radius: v.detectionRadius,
+            };
+          }),
+        ...this.pack.planets
+          .filter(
+            (p) =>
+              p.region === r.id &&
+              p.status === "active" &&
+              !this.save.cleared.includes(p.id) &&
+              !this.disengagedPlanets.has(p.id) &&
+              p.requires.every((id) => this.save.cleared.includes(id)),
+          )
+          .map((p) => ({
+            kind: "begin" as const,
+            id: p.id,
+            d: Math.hypot(p.x - this.x, p.y - this.y),
+            radius: p.engageRadius,
+          })),
+      ]
+        .filter((c) => c.d <= c.radius)
+        .sort((a, b) => a.d / a.radius - b.d / b.radius);
+      const contact = contacts[0];
+      if (contact) {
         this.encounterPending = true;
-        this.command({ type: "patrol", id: patrol.id }).finally(
-          () => (this.encounterPending = false),
-        );
+        this.notice =
+          contact.kind === "patrol"
+            ? "巡邏敵艦接觸 · 進入交戰"
+            : "接近星球守軍 · 進入交戰";
+        this.command(
+          contact.kind === "patrol"
+            ? { type: "patrol", id: contact.id }
+            : { type: "begin", planet: contact.id },
+        ).finally(() => (this.encounterPending = false));
       }
     }
+  }
+  get movementSpeed() {
+    if (this.combat) return this.pack.rules.travelSpeed;
+    const r = this.pack.regions.find((r) => r.id === this.save.region)!;
+    const threat =
+      r.patrols.some((v) => {
+        const pos = patrolPosition(v, this.voyageSeconds);
+        return (
+          (this.save.patrolCooldowns[v.id] ?? 0) <= this.voyageSeconds &&
+          Math.hypot(pos.x - this.x, pos.y - this.y) < 700
+        );
+      }) ||
+      this.pack.planets.some(
+        (p) =>
+          p.region === r.id &&
+          !this.save.cleared.includes(p.id) &&
+          Math.hypot(p.x - this.x, p.y - this.y) < p.engageRadius + 250,
+      );
+    return threat ? this.pack.rules.travelSpeed : this.pack.rules.cruiseSpeed;
+  }
+  private conversionNotice(before: Save, after: Save) {
+    const count = after.duplicateConversions - before.duplicateConversions;
+    if (count <= 0) return;
+    this.events.push("arrival");
+    this.notice =
+      `${count} 位滿同調重複角色已轉換 · ` +
+      this.pack.resources
+        .map(
+          (r) =>
+            `${r.name} +${Number(((after.duplicateRefunds[r.id] ?? 0) - (before.duplicateRefunds[r.id] ?? 0)).toFixed(2))}`,
+        )
+        .join(" ／ ");
   }
   retreat() {
     if (!this.combat) return;
@@ -273,8 +375,16 @@ export class Game {
       this.destination = { x: s.x, y: s.y };
       this.discovered = new Set(s.discovered);
       this.voyageSeconds = s.voyageSeconds;
+      this.fleet = new FleetMotion(
+        s.x,
+        s.y,
+        s.heading ?? 0,
+        s.team,
+        this.pack.rules.formationSpacing,
+      );
+      this.disengagedPlanets = new Set(s.disengagedPlanets ?? []);
       this.combat = s.encounter
-        ? new Combat(this.pack, s, s.encounter.planet)
+        ? new Combat(this.pack, s, s.encounter.planet, this.fleet)
         : null;
       this.dirty = true;
     });

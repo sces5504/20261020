@@ -26,3 +26,22 @@ export function formationOffset(index: number, count: number, spacing: number) {
   const p = raw(index);
   return { x: p.x - mean.x, y: p.y - mean.y };
 }
+
+/** Stable world positions are shared by the ambient guardians and the encounter, without entry teleports. */
+export function guardianPositions(planet: Pack["planets"][number]) {
+  const total = planet.enemies.reduce((n, g) => n + g.count, 0);
+  let index = 0;
+  return planet.enemies.flatMap((group) =>
+    Array.from({ length: group.count }, () => {
+      const i = index++,
+        angle = (i / Math.max(1, total)) * Math.PI * 2 + 0.35;
+      const radius = planet.guardRadius * (0.8 + (i % 2) * 0.25);
+      return {
+        enemy: group.enemy,
+        id: `guard-${planet.id}-${i}`,
+        x: planet.x + Math.cos(angle) * radius,
+        y: planet.y + Math.sin(angle) * radius,
+      };
+    }),
+  );
+}

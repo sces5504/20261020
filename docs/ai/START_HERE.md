@@ -1,6 +1,6 @@
 # Galaxy Angel：後續 AI 擴充入口
 
-最新產品契約：[0.3航行與呈現](../design/galaxy-angel-v3.md) → [0.2經濟與探索](../design/exploration-v2.md) → [內容契約](../design/content-contract.md)。最新交接：[galaxy-angel-v3-20261021](../handoffs/galaxy-angel-v3-20261021.md)。先讀 AGENTS.md、記憶索引與本輪交接，再 fetch 核對 main／HEAD；從最新 main 建立自己的分支。**不再使用舊 m1/foundation 作整合入口**。不改 README，也不直接編輯生成檔。
+最新產品契約：[0.4同調與連續遭遇](../design/galaxy-angel-v4.md) → [0.3航行與呈現](../design/galaxy-angel-v3.md) → [0.2經濟與探索](../design/exploration-v2.md) → [內容契約](../design/content-contract.md)。最新交接：[galaxy-angel-v4-20261021](../handoffs/galaxy-angel-v4-20261021.md)。先讀 AGENTS.md、記憶索引與本輪交接，再 fetch 核對 main／HEAD；從最新 main 建立自己的分支。**不再使用舊 m1/foundation 作整合入口**。不改 README，也不直接編輯生成檔。
 
 M1 已可試玩並有可編輯工坊，商業品質尚未核准。後續可以逐批擴充既有能力的內容；真機／效能／玩家手感審閱與獨立 AI 接力演練仍待完成。防衛／失守／修復／訓練已取消。產品改名不更動 m1:core、原作研究資料與舊存檔ID。
 
@@ -24,7 +24,7 @@ M1 已可試玩並有可編輯工坊，商業品質尚未核准。後續可以�
 起點：origin/main 的 <實際 SHA>；自己的分支：content/<任務名>。
 任務：<具體角色／星球／故事及數量>，先交一個完整代表項再擴量。
 包命名空間：<唯一前綴>；擴充檔：content/extensions/<任務名>.json。
-依賴：m1:core@0.3.0（開工再核對實際 pack 版本）。
+依賴：m1:core@0.4.0（開工再核對實際 pack 版本）。
 可改：<確切路徑>。共用 schema／引擎／根manifest／既有六張原圖不改。
 品質：docs/art/style-guide.md、asset-contract.md、已整合代表畫面。
 驗收：內容校驗、取得／觸發可達、桌機與手機預覽、引用／媒體／舊檔相容。
@@ -36,7 +36,7 @@ M1 已可試玩並有可編輯工坊，商業品質尚未核准。後續可以�
 - `src/content/schema.ts` 是執行契約；`content/core/pack.json`／`content/manifest.json` 僅核心整合者改。自己的 extension 使用自己命名空間的定義；requires 是**精確版本**，不是 semver 範圍。`comet.example.json` 是未啟用的可校驗範例。
 - 擴充包只能新增定義，不能以載入順序覆寫基底。修改既有角色／星球的掉落、造型等需交整合變更單，或用工坊完整快照匯出，不能假稱 extension 自動覆寫。
 - 目前支援技能 shield／barrage／fortify／turret／accelerate／weaken／heal；敵彈 aim／fan／ring。新機制先交最小資料例、預期行為與相容需求，不寫角色ID分支／eval。
-- `domain/navigation.ts` 共用巡邏和隊形公式；敵艦位置用模擬時間，不用 Date.now。前鋒／後衛由 team 順序決定，不依角色名字決定。
+- `domain/navigation.ts` 共用巡邏／守軍座標，`domain/formation.ts` 共用航跡跟隨；敵艦位置用模擬時間，不用 Date.now。前鋒／後衛由 team 順序決定，不依角色名字決定。
 - 角色 portrait／avatar／sprite 分開；世界物件 sprite、劇情／星域 background 指向 assets。每項可見實體都交圖片及hash，工坊可預覽／替換；圖片不決定碰撞。新素材放自己命名空間，附媒體檔；**僅加入 assets 欄位不會自動複製新檔，需核心整合建置複製步驟**。工坊 ZIP 匯出則已含實檔。
 - 六張 standard 原始PNG不可覆寫，映射05地球／04水星／01金星／03火星／02天王星／06月球。另有已授權的六張候選Q圖，不再沿用舊的全面禁止SD敘述。新增角色／造型依任務授權，以同角色單張標準圖為參考並先實際開圖；candidate 不自行改 approved。
 - 原作未來角色表：`docs/art/future-characters.md/.csv`、網站 `#/catalog`；126召喚目標中120待做，含造型變體，不能當342名已證實可玩角色。研究先讀 research/stella-maiden/START_HERE.md，再局部SQL；未知原生公式不自行補作已知。

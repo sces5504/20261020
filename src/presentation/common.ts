@@ -1,3 +1,4 @@
+import type { Owned } from "../domain/model";
 import type { Pack, Character } from "../content/schema";
 export const esc = (v: unknown) =>
   String(v).replace(
@@ -43,4 +44,13 @@ export function entityImage(
   return a
     ? `<img class="${esc(cls)}" src="${esc(a.src)}" alt="${esc(e.name)}" loading="lazy">`
     : "";
+}
+
+export function stars(c: Character, o?: Owned) {
+  return (
+    "★".repeat(c.rarity) +
+    ((o?.resonance ?? 0) >= 5
+      ? '<b class="awakened-star" aria-label="同調升星">★</b>'
+      : "")
+  );
 }

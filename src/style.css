@@ -2898,3 +2898,87 @@ button:not(:disabled):hover {
     height: 22px;
   }
 }
+/* 星河戰姬 0.4: clear readiness, transactional duplicate feeding and contextual waiting. */
+.awakened-star {
+  color: #d3a4ff;
+  text-shadow: 0 0 9px #b67fff;
+  font-weight: inherit;
+}
+.squad-card.skill-ready {
+  border-color: #f7d296;
+  box-shadow:
+    inset 0 0 18px #f2bd4c35,
+    0 0 12px #eac48238;
+  animation: skill-ready-glow 1.6s ease-in-out infinite;
+}
+.squad-card.skill-ready .skill-label {
+  color: #ffe0a5;
+  font-weight: 700;
+}
+@keyframes skill-ready-glow {
+  50% {
+    box-shadow:
+      inset 0 0 24px #f2bd4c50,
+      0 0 20px #eac48265;
+  }
+}
+.mission-waiting {
+  display: grid;
+  gap: 5px;
+  border-left: 2px solid #e6c58d;
+  background: #dbc18b0c;
+  padding: 10px 12px;
+  margin-top: 14px;
+  font-size: 12px;
+}
+.mission-waiting strong {
+  color: #e8cb96;
+}
+.mission-waiting span,
+.mission-waiting small {
+  color: #a1bcc5;
+}
+.resonance-info {
+  border-left: 2px solid #b997e8;
+  padding: 8px 12px;
+  background: #a77be90c;
+  color: #c8b6e1;
+  font-size: 12px;
+  line-height: 1.9;
+}
+.leash-warning {
+  background: #431f21ed !important;
+  color: #ffe0b7 !important;
+  border: 1px solid #f9a27c !important;
+  max-width: min(90vw, 600px);
+  text-align: center;
+}
+.space.under-fire {
+  box-shadow: inset 0 0 60px #e9675a55;
+}
+@media (prefers-reduced-motion: reduce) {
+  .squad-card.skill-ready {
+    animation: none;
+  }
+}
+.mission-jobs {
+  max-height: 200px;
+  overflow: auto;
+  scrollbar-width: thin;
+}
+@media (max-width: 800px) {
+  .mission-jobs {
+    max-height: 105px;
+    pointer-events: auto;
+  }
+  .mission-waiting {
+    font-size: 10px;
+    padding: 6px 8px;
+    gap: 3px;
+    margin-top: 8px;
+  }
+  .mission-rail .mission-waiting small {
+    display: block;
+    font-size: 10px;
+  }
+}

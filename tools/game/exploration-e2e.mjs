@@ -57,7 +57,7 @@ try {
   await page.goto(server.url);
   await page.waitForSelector(".story-scene");
   await page.screenshot({ path: ".artifacts/v2/story.png" });
-  assert.equal(await page.title(), "Galaxy Angel · 星海航跡");
+  assert.equal(await page.title(), "Galaxy Angel · 星河戰姬");
   await page.locator(".story-background").evaluate(async (im) => {
     await im.decode();
     if (im.naturalWidth < 1000) throw Error("story artwork did not load");
@@ -69,19 +69,20 @@ try {
   await page.waitForSelector(".story-scene", { state: "hidden" });
   assert.equal(await page.locator('[data-id="training"]').count(), 0);
   assert.equal(await page.locator("#defense-alerts").count(), 0);
+  // Move away from the first planet: approaching it now intentionally starts combat.
   const initial = await record(page);
-  await page.keyboard.down("d");
+  await page.keyboard.down("a");
   let moved;
   try {
     moved = await waitSave(
       page,
-      (s) => s.x > initial.x + 35,
+      (s) => s.x < initial.x - 35,
       "WASD must move and persist the party",
     );
   } finally {
-    await page.keyboard.up("d");
+    await page.keyboard.up("a");
   }
-  assert.ok(moved.x > initial.x + 35, "WASD must move the actual saved party");
+  assert.ok(moved.x < initial.x - 35, "WASD must move the actual saved party");
   const density = await page
     .locator("canvas")
     .evaluate((c) => c.width / c.clientWidth);

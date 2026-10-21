@@ -19,6 +19,8 @@ test("fresh campaign reaches the boss, starts production, resolves research and 
     }
     now += 120000;
     settle(p, s, now);
+    s.x = v.x - v.engageRadius + 30;
+    s.y = v.y; // Arrival fixture; begin must preserve this position.
     cmd({ type: "begin", planet: v.id });
     const battle = new Combat(p, s, v.id);
     battle.autoSkills = true;
@@ -40,7 +42,7 @@ test("fresh campaign reaches the boss, starts production, resolves research and 
     assert.ok(battle.victory, v.name + " must be beatable");
     assert.ok(
       battle.time >= 25,
-      "planet liberation must require multiple waves, not a few seconds",
+      "a single-wave liberation must still have meaningful duration",
     );
     console.log(
       `${v.name}: ${battle.time.toFixed(1)}s / ${battle.waveGroups.length} waves`,
@@ -71,20 +73,26 @@ test("fresh campaign reaches the boss, starts production, resolves research and 
   assert.equal(s.built, 1);
   assert.ok(Object.values(s.wallet).every((n) => n >= 0));
 });
-test("multi-wave planet encounters survive the first group and have meaningful combat duration", () => {
+test("all planet guardians exist on entry and liberation waits for the final surviving enemy", () => {
   const s = newSave(p, 1),
     v = p.planets[0];
-  s.x = v.x - 250;
-  s.y = v.y + 100;
+  s.x = v.x - 320;
+  s.y = v.y;
   const c = new Combat(p, s, v.id);
-  for (const u of c.units.filter((u) => u.side === "enemy")) u.hp = 0;
+  assert.equal(c.waveGroups.length, 1);
+  assert.equal(
+    c.units.filter((u) => u.side === "enemy").length,
+    v.enemies.reduce((n, g) => n + g.count, 0),
+  );
+  const enemies = c.units.filter((u) => u.side === "enemy");
+  enemies.slice(0, -1).forEach((u) => (u.hp = 0));
   c.step(1 / 60);
   assert.equal(c.ended, false);
-  assert.ok(c.nextWaveAt > c.time);
-  for (let i = 0; i < 300; i++) c.step(1 / 60);
-  assert.equal(c.waveIndex, 1);
-  assert.ok(c.units.some((u) => u.side === "enemy" && u.hp > 0));
+  enemies.at(-1)!.hp = 0;
+  c.step(1 / 60);
+  assert.equal(c.victory, true);
 });
+
 test("retired or summon-disabled maidens leave the summon pool without deleting owned instances", async () => {
   const { summonCandidates } = await import("../src/domain/economy");
   const q = structuredClone(p),

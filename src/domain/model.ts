@@ -5,6 +5,7 @@ export type Owned = {
   definition: string;
   level: number;
   hp: number;
+  resonance?: number;
 };
 export type Colony = {
   active: boolean;
@@ -33,6 +34,11 @@ export type Save = {
   acquisitionQueue: string[];
   voyageSeconds: number;
   patrolCooldowns: Record<string, number>;
+  disengagedPlanets: string[];
+  heading: number;
+  duplicateConversions: number;
+  ownedSequence: number;
+  duplicateRefunds: Wallet;
   orphanedJobs: Job[];
   orphanedColonies: Record<string, Colony>;
   orphanedWallet: Wallet;
@@ -65,7 +71,9 @@ export type Save = {
 };
 export function stats(p: Pack, o: Owned) {
   const c = p.characters.find((c) => c.id === o.definition)!;
-  const scale = 1 + (Math.min(p.rules.maxLevel, o.level) - 1) * c.growth;
+  const scale =
+    (1 + (Math.min(p.rules.maxLevel, o.level) - 1) * c.growth) *
+    (1 + (o.resonance ?? 0) * p.rules.duplicateStatBonus);
   return {
     hp: Math.round(c.hp * scale),
     attack: c.attack * scale,
@@ -80,6 +88,7 @@ export function newSave(p: Pack, now: number, id = "voyager"): Save {
       definition: c.id,
       level: 1,
       hp: c.hp,
+      resonance: 0,
     }));
   return {
     schemaVersion: 1,
@@ -91,6 +100,11 @@ export function newSave(p: Pack, now: number, id = "voyager"): Save {
     acquisitionQueue: [],
     voyageSeconds: 0,
     patrolCooldowns: {},
+    disengagedPlanets: [],
+    heading: 0,
+    duplicateConversions: 0,
+    ownedSequence: 0,
+    duplicateRefunds: {},
     orphanedJobs: [],
     orphanedColonies: {},
     orphanedWallet: {},
@@ -132,15 +146,40 @@ export function money(s: Save, c: Wallet, sign = 1) {
   for (const [k, v] of Object.entries(c))
     s.wallet[k] = (s.wallet[k] ?? 0) + v * sign;
 }
-export function addCharacter(p: Pack, s: Save, id: string) {
+export function addCharacter(p: Pack, s: Save, id: string, invested?: Wallet) {
   const c = p.characters.find((c) => c.id === id);
   if (!c) throw Error("角色內容不存在");
-  s.roster.push({
-    id: `owned-${s.rng}-${s.roster.length}`,
+  if (s.roster.some((o) => o.definition === id && (o.resonance ?? 0) >= 5)) {
+    const basis =
+      invested ??
+      Object.fromEntries(p.resources.map((r, i) => [r.id, c.recipe[i]]));
+    const refund = Object.fromEntries(
+      Object.entries(basis).map(([r, n]) => [
+        r,
+        n * p.rules.duplicateRefundRate,
+      ]),
+    );
+    money(s, refund);
+    s.duplicateConversions = (s.duplicateConversions ?? 0) + 1;
+    s.duplicateRefunds ??= {};
+    for (const [r, n] of Object.entries(refund))
+      s.duplicateRefunds[r] = (s.duplicateRefunds[r] ?? 0) + n;
+    return null;
+  }
+  s.ownedSequence ??= 0;
+  let ownedId = "";
+  do {
+    ownedId = `owned-extra-${++s.ownedSequence}`;
+  } while ([...s.roster, ...s.orphans].some((o) => o.id === ownedId));
+  const o: Owned = {
+    id: ownedId,
     definition: id,
     level: 1,
     hp: c.hp,
-  });
+    resonance: 0,
+  };
+  s.roster.push(o);
+  return o;
 }
 /** 4.3.2 bounded Q16 path, not the entire native hit/RNG/modifier pipeline. */
 export function damage(

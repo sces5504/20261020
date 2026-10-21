@@ -7,6 +7,7 @@ const owned = z
     definition: z.string(),
     level: z.number().int().min(1).max(120),
     hp: nonneg,
+    resonance: z.number().int().min(0).max(5).default(0),
   })
   .strict();
 export const saveSchema = z
@@ -18,7 +19,12 @@ export const saveSchema = z
     storySeen: z.array(z.string()).default([]),
     acquisitionQueue: z.array(z.string()).default([]),
     voyageSeconds: nonneg.default(0),
+    disengagedPlanets: z.array(z.string()).default([]),
     patrolCooldowns: z.record(nonneg).default({}),
+    heading: num.default(0),
+    ownedSequence: z.number().int().nonnegative().default(0),
+    duplicateConversions: z.number().int().nonnegative().default(0),
+    duplicateRefunds: z.record(nonneg).default({}),
     trainingBest: z.number().int().min(0).max(100).default(0),
     orphanedJobs: z.array(z.any()).default([]),
     orphanedColonies: z.record(z.any()).default({}),

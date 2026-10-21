@@ -1,6 +1,6 @@
 # 角色／技能內容 AI：起始 prompt
 
-目前產品：星河戰姬 Galaxy Angel，核心包0.4.0。先讀 docs/design/galaxy-angel-v4.md 與 docs/handoffs/galaxy-angel-v4-20261021.md；同名舊規則以0.4為準。五次手動同調＋紫星、滿階按實際共鳴配方返還25%既有四資源；方向航跡編隊、星球守軍單波自動接敵／越界重置、巡邏非阻斷結算，不重加三波或新碎片。
+目前產品：星河戰姬 Galaxy Angel，核心包0.5.0。先讀 docs/design/galaxy-angel-v5.md 與 docs/handoffs/galaxy-angel-v5-20261021.md；同名舊規則以0.5為準。掉頭後排先等待隊長，掉隊加速；敵人orbitSpeed、regions.routes與travel可配置。工坊需前端入口碼，完整發布含test:polish第五組瀏覽器流程。五次手動同調＋紫星、滿階按實際共鳴配方返還25%既有四資源；方向航跡編隊、星球守軍單波自動接敵／越界重置、巡邏非阻斷結算，不重加三波或新碎片。
 請擴充整合者指定的少女內容包。先讀 AGENTS.md、docs/memory/index.md、目前交接、docs/ai/START_HERE.md、docs/design/content-contract.md 及 m1-implementation。確認任務起點 commit、包命名空間、角色清單、品質／平衡基準及已支援技能；不要自行重選初始六人。
 
 只在自己的 content/extensions/<task>.json、角色簡報及交接檔工作。參考 comet.example.json，用穩定命名空間 ID、明確 requires 版本，沿用共用技能與成長計算。新增少女、調基礎數值／星級、配方、角色定位、素材引用與取得關聯；資料真的影響遊戲，不能只改說明。造型引用素材，不複製一套角色戰力。

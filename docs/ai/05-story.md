@@ -1,6 +1,6 @@
 # 劇情／任務 AI：起始 prompt
 
-目前產品：星河戰姬 Galaxy Angel，核心包0.4.0。先讀 docs/design/galaxy-angel-v4.md 與 docs/handoffs/galaxy-angel-v4-20261021.md；同名舊規則以0.4為準。五次手動同調＋紫星、滿階按實際共鳴配方返還25%既有四資源；方向航跡編隊、星球守軍單波自動接敵／越界重置、巡邏非阻斷結算，不重加三波或新碎片。
+目前產品：星河戰姬 Galaxy Angel，核心包0.5.0。先讀 docs/design/galaxy-angel-v5.md 與 docs/handoffs/galaxy-angel-v5-20261021.md；同名舊規則以0.5為準。掉頭後排先等待隊長，掉隊加速；敵人orbitSpeed、regions.routes與travel可配置。工坊需前端入口碼，完整發布含test:polish第五組瀏覽器流程。五次手動同調＋紫星、滿階按實際共鳴配方返還25%既有四資源；方向航跡編隊、星球守軍單波自動接敵／越界重置、巡邏非阻斷結算，不重加三波或新碎片。
 請製作指定故事章節與任務內容。先讀 AGENTS.md、記憶索引、目前交接、docs/ai/START_HERE.md、主規格與角色／世界觀資料庫。先確認正史、角色語氣、時間線、繁中詞彙表、任務預算與已支援觸發條件；缺少核定設定時先整理待定，不把自行創作標成原作。
 
 只改自己的故事內容包、章節簡報與交接。現行任務條件為 intro／cleared／activated／summoned／built，整章 background 指向背景素材ID，對白為 speaker／text；新增劇情與獎勵透過資料關聯，不能任意寫玩家欄位。新分支／旗標／演出／回看需求先交核心 AI 加通用支援，不能把未支援選項寫進資料後默默略過。

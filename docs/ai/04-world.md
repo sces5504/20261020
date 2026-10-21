@@ -1,6 +1,6 @@
 # 世界／地圖／敵人／Boss AI：起始 prompt
 
-目前產品：星河戰姬 Galaxy Angel，核心包0.4.0。先讀 docs/design/galaxy-angel-v4.md 與 docs/handoffs/galaxy-angel-v4-20261021.md；同名舊規則以0.4為準。五次手動同調＋紫星、滿階按實際共鳴配方返還25%既有四資源；方向航跡編隊、星球守軍單波自動接敵／越界重置、巡邏非阻斷結算，不重加三波或新碎片。
+目前產品：星河戰姬 Galaxy Angel，核心包0.5.0。先讀 docs/design/galaxy-angel-v5.md 與 docs/handoffs/galaxy-angel-v5-20261021.md；同名舊規則以0.5為準。掉頭後排先等待隊長，掉隊加速；敵人orbitSpeed、regions.routes與travel可配置。工坊需前端入口碼，完整發布含test:polish第五組瀏覽器流程。五次手動同調＋紫星、滿階按實際共鳴配方返還25%既有四資源；方向航跡編隊、星球守軍單波自動接敵／越界重置、巡邏非阻斷結算，不重加三波或新碎片。
 請擴充指定星域的世界與敵群內容包。先讀 AGENTS.md、記憶索引、目前交接、docs/ai/START_HERE.md、docs/design/content-contract.md、interaction-flows.md、m1-implementation。確認命名空間、起點 commit、目標隊伍／等級／戰力、資源收益預算與已有行為清單。
 
 只改自己的 content/extensions/<task>.json、區域設計與交接。定義星域尺度／起點、星球座標／依賴、遭遇敵群、解放獎勵、啟動成本、每秒產量、掉落角色與素材引用。先交一顆星球＋一場遭遇確認節奏，再擴量。
@@ -13,4 +13,6 @@
 
 0.3追加：先讀 docs/design/galaxy-angel-v3.md。巡邏路線中心x/y、patrolRadius、patrolSpeed、phase、detectionRadius可配置；用domain/navigation.ts作唯一位置計算，不另寫碰撞公式。星球／敵人／建築／研究／星域sprite與星域background都須可預覽／替換。前鋒沿移動方向，後衛沿實際航跡追隨；安排遭遇時測試轉彎與坦克接敵。
 
-目前M1只開放一個星域的航行與星球探索，可資料擴充同星域的星球／巡邏／敵群。schema可容納新星域，但跨星域旅行入口與流程尚未實作；需要第二星域時由核心先加通用旅行命令、UI與存檔測試，不能只加新region就聲稱可達。
+0.5已提供星域航路選單與通用travel命令；regions.routes指定to／label／requires，雙向回程需明確配置。現有空測試第二星域可往返；新增星域仍須接上可達航線、驗前置／保存／返回。修改基底routes交唯一核心整合者，不以extension偷偷覆寫。
+
+0.5世界新增欄位：enemies.orbitSpeed為往返側移角速上限，strafeSpeed為近距側移速限（普通14／Boss6）；遠距追擊仍用speed。新增敵人要實測普通攻擊可命中，不能只增加移動速度造成玩家無法有效攻擊。regions.routes為to／label／requires，回程需另配；目前從航路選單躍遷到目的地入口，沒有實際星門碰撞觸發。正式第二區沿用m1:frontier-test或另作明確遷移，不能刪除正在使用的區域而不給回復路徑。

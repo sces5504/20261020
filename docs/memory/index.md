@@ -1,3 +1,7 @@
+> 0.5最終本機驗證：43項核心與五組瀏覽器、完整check release、原圖hash／美術庫、範本10項成功。整合／部署SHA與公開站結果請核對本輪PR最後留言及version.json，不能把本機通過當已上線。
+
+> 最新：星河戰姬0.5八項修正，生效規格[0.5](../design/galaxy-angel-v5.md)，目前交接[galaxy-angel-v5-20261021](../handoffs/galaxy-angel-v5-20261021.md)。後續請從最新main核對公開SHA；下方0.4／0.3為前輪歷史。
+
 > 最新生效：星河戰姬 Galaxy Angel 0.4；[規格](../design/galaxy-angel-v4.md)、[目前交接](../handoffs/galaxy-angel-v4-20261021.md)。38項核心／四組瀏覽器驗收；發布SHA與流程以本輪PR最後證據及公開version.json核對。以下0.3紀錄為前輪歷史。
 
 > 最新：產品改名Galaxy Angel；0.3任務／實際驗證見目前交接，歷史名稱保留為研究來源。

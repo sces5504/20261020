@@ -91,8 +91,8 @@ export function mountSpace(
           frac = n - Math.floor(n),
           m = Math.sin(i * 311.7 + 27) * 17319.24;
         this.starfield.push({
-          x: frac * r.width,
-          y: (m - Math.floor(m)) * r.height,
+          x: frac,
+          y: m - Math.floor(m),
           r: i % 11 === 0 ? 1.8 : 0.7,
           a: 0.15 + (i % 6) * 0.08,
         });
@@ -173,8 +173,9 @@ export function mountSpace(
         }
         const planet = model.pack.planets.find(
           (v) =>
+            v.region === model.save.region &&
             Math.hypot(v.x - p.x, v.y - p.y) <
-            Math.max(v.radius + 35, 24 / this.cameras.main.zoom),
+              Math.max(v.radius + 35, 24 / this.cameras.main.zoom),
         );
         if (planet && !model.combat) {
           this.selected = planet.id;
@@ -351,7 +352,7 @@ export function mountSpace(
         r.background ? (model.lowEffects ? 60 : 120) : this.starfield.length,
       )) {
         g.fillStyle(0xc3deeb, s.a);
-        g.fillCircle(s.x, s.y, (s.r / zoom) * 0.6);
+        g.fillCircle(s.x * r.width, s.y * r.height, (s.r / zoom) * 0.6);
       }
       g.lineStyle(1, 0x79a3ae, 0.16);
       g.strokeEllipse(
@@ -373,6 +374,7 @@ export function mountSpace(
       )) {
         for (const dep of p.requires) {
           const a = model.pack.planets.find((v) => v.id === dep)!;
+          if (a.region !== p.region) continue;
           g.lineStyle(
             1.2,
             0x83c9cb,
@@ -514,6 +516,7 @@ export function mountSpace(
         if (model.viewMode === "explore") {
           const next = model.pack.planets.find(
             (v) =>
+              v.region === r.id &&
               !model.save.cleared.includes(v.id) &&
               v.requires.every((id) => model.save.cleared.includes(id)),
           );

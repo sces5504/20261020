@@ -68,6 +68,11 @@
       [
         "npm",
         "run",
+        "test:polish"
+      ],
+      [
+        "npm",
+        "run",
         "release:ready",
         "--",
         "--target",

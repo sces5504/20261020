@@ -1,6 +1,6 @@
 # Galaxy Angel：後續 AI 擴充入口
 
-最新產品契約：[0.4同調與連續遭遇](../design/galaxy-angel-v4.md) → [0.3航行與呈現](../design/galaxy-angel-v3.md) → [0.2經濟與探索](../design/exploration-v2.md) → [內容契約](../design/content-contract.md)。最新交接：[galaxy-angel-v4-20261021](../handoffs/galaxy-angel-v4-20261021.md)。先讀 AGENTS.md、記憶索引與本輪交接，再 fetch 核對 main／HEAD；從最新 main 建立自己的分支。**不再使用舊 m1/foundation 作整合入口**。不改 README，也不直接編輯生成檔。
+最新產品契約：[0.5補給／隊形／跨區](../design/galaxy-angel-v5.md) → [0.4同調與連續遭遇](../design/galaxy-angel-v4.md) → [0.3航行與呈現](../design/galaxy-angel-v3.md) → [0.2經濟與探索](../design/exploration-v2.md) → [內容契約](../design/content-contract.md)。最新交接：[galaxy-angel-v5-20261021](../handoffs/galaxy-angel-v5-20261021.md)。先讀 AGENTS.md、記憶索引與本輪交接，再 fetch 核對 main／HEAD；從最新 main 建立自己的分支。**不再使用舊 m1/foundation 作整合入口**。不改 README，也不直接編輯生成檔。
 
 M1 已可試玩並有可編輯工坊，商業品質尚未核准。後續可以逐批擴充既有能力的內容；真機／效能／玩家手感審閱與獨立 AI 接力演練仍待完成。防衛／失守／修復／訓練已取消。產品改名不更動 m1:core、原作研究資料與舊存檔ID。
 
@@ -24,7 +24,7 @@ M1 已可試玩並有可編輯工坊，商業品質尚未核准。後續可以�
 起點：origin/main 的 <實際 SHA>；自己的分支：content/<任務名>。
 任務：<具體角色／星球／故事及數量>，先交一個完整代表項再擴量。
 包命名空間：<唯一前綴>；擴充檔：content/extensions/<任務名>.json。
-依賴：m1:core@0.4.0（開工再核對實際 pack 版本）。
+依賴：m1:core@0.5.0（開工再核對實際 pack 版本）。
 可改：<確切路徑>。共用 schema／引擎／根manifest／既有六張原圖不改。
 品質：docs/art/style-guide.md、asset-contract.md、已整合代表畫面。
 驗收：內容校驗、取得／觸發可達、桌機與手機預覽、引用／媒體／舊檔相容。
@@ -60,4 +60,4 @@ npm run test:exploration
 
 完整發布：`python3 scripts/project.py check release`。`release:ready -- --target playtest` 是使用者授權的試玩門檻；預設 commercial 仍保留真機／品質未驗項，不能刪閘門或捏造通過。入口：`#/play`、`#/studio`、`#/test`、`#/art`、`#/catalog`。
 
-目前M1只開放一個星域的航行與星球探索，可資料擴充同星域的星球／巡邏／敵群。schema可容納新星域，但跨星域旅行入口與流程尚未實作；需要第二星域時由核心先加通用旅行命令、UI與存檔測試，不能只加新region就聲稱可達。
+0.5已提供星域航路選單與通用travel命令；regions.routes指定to／label／requires，雙向回程需明確配置。現有空測試第二星域可往返；新增星域仍須接上可達航線、驗前置／保存／返回。修改基底routes交唯一核心整合者，不以extension偷偷覆寫。

@@ -1,6 +1,6 @@
 # 音效 AI：起始 prompt
 
-目前產品：星河戰姬 Galaxy Angel，核心包0.4.0。先讀 docs/design/galaxy-angel-v4.md 與 docs/handoffs/galaxy-angel-v4-20261021.md；同名舊規則以0.4為準。五次手動同調＋紫星、滿階按實際共鳴配方返還25%既有四資源；方向航跡編隊、星球守軍單波自動接敵／越界重置、巡邏非阻斷結算，不重加三波或新碎片。
+目前產品：星河戰姬 Galaxy Angel，核心包0.5.0。先讀 docs/design/galaxy-angel-v5.md 與 docs/handoffs/galaxy-angel-v5-20261021.md；同名舊規則以0.5為準。掉頭後排先等待隊長，掉隊加速；敵人orbitSpeed、regions.routes與travel可配置。工坊需前端入口碼，完整發布含test:polish第五組瀏覽器流程。五次手動同調＋紫星、滿階按實際共鳴配方返還25%既有四資源；方向航跡編隊、星球守軍單波自動接敵／越界重置、巡邏非阻斷結算，不重加三波或新碎片。
 請製作 M1 指定音效。先讀 AGENTS.md、記憶索引、目前交接、docs/art/style-guide.md、asset-contract.md、核定技能演出與音色樣本。使用者要求 AI 製作 SFX；BGM／完整配音不自動包含。確認目前可用生成工具與費用，新增費用先由使用者授權，不能自己購買。
 
 先交 UI 確認、普通射擊、命中、技能啟動各一個候選，核對科幻音色、尾音、噪音、瞬態、響度與多角色混音後再擴量。每個 cue 記功能、角色／通用用途、變體、重複頻率、音量與優先級。不能只做單獨好聽、疊播後刺耳的音檔。

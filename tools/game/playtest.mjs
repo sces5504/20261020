@@ -1,3 +1,4 @@
+import { unlockStudio } from "./studio-access.mjs";
 import assert from "node:assert/strict";
 import { mkdir, writeFile } from "node:fs/promises";
 import { chromium } from "../node_modules/playwright/index.mjs";
@@ -45,6 +46,7 @@ try {
     void d.dismiss();
   });
   await page.goto(server.url + "#/studio");
+  await unlockStudio(page);
   await page.waitForSelector("#entity-form");
   console.log("Playtest: image replacement + content-only seventh maiden");
   await page
@@ -89,6 +91,38 @@ try {
   await page.locator('[data-action="view"]').click();
   await page.locator('[data-action="navigate"]').first().click();
   await page.locator('[data-action="auto"]').click();
+  // Proximity starts at the guard perimeter; use real WASD to enter weapon range.
+  await page.waitForSelector(".in-battle");
+  const haven = project.pack.planets.find((v) => v.id === "m1:haven");
+  await page.keyboard.down("d");
+  try {
+    await page.waitForFunction(
+      (x) =>
+        Number(
+          document
+            .querySelector("#coordinates")
+            ?.textContent?.match(/X ([\d.]+)/)?.[1],
+        ) >= x,
+      haven.x - 30,
+    );
+  } finally {
+    await page.keyboard.up("d");
+  }
+  await page.keyboard.down("w");
+  try {
+    await page.waitForFunction(
+      (y) =>
+        Number(
+          document
+            .querySelector("#coordinates")
+            ?.textContent?.match(/Y ([\d.]+)/)?.[1],
+        ) <= y,
+      haven.y + 30,
+    );
+  } finally {
+    await page.keyboard.up("w");
+  }
+
   const progress = setInterval(async () => {
     try {
       console.log(

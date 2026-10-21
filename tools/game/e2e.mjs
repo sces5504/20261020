@@ -1,3 +1,4 @@
+import { unlockStudio } from "./studio-access.mjs";
 import assert from "node:assert/strict";
 import { createServer } from "node:http";
 import { readFile, stat, mkdir } from "node:fs/promises";
@@ -119,6 +120,7 @@ try {
   );
   console.log("E2E: studio");
   await page.locator('a[href="#/studio"]').first().click();
+  await unlockStudio(page);
   await page.waitForSelector("#entity-form");
   await page.locator('[data-field="attack"]').fill("200");
   await page.locator('[data-field="rarity"]').fill("4");
@@ -256,6 +258,7 @@ try {
   );
   await mobile.setViewportSize({ width: 390, height: 844 });
   await mobile.goto(url + "#/studio");
+  await unlockStudio(mobile);
   await mobile.waitForSelector("#entity-form");
   assert.ok(
     await mobile.evaluate(

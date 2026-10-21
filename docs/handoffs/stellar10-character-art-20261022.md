@@ -1,11 +1,12 @@
 # 十位星體角色美術交付
 
-日期：2026-10-22 Asia/Taipei。起點 `4610e8a`，分支 `work`，開工時乾淨；本輪未同步或推送遠端。
+日期：2026-10-22 Asia/Taipei。起點 `4610e8a`，開工時分支 `work` 且乾淨。美術提交 `313f835`。使用者後續要求交付固定放在 repo 供整合者取得，因此補固定入口並以 `art/stellar10-handoff` 分支交付；實際遠端結果以 Git／PR 為準。
 
 使用者直接要求套用附件十位既有立繪、由 AI 製作 Q 圖；先審太陽代表稿後曾同意沿用，後續再要求「更像第一里程碑的比例」。最新直接答覆為「先交美術包與試套，遊戲接入交整合者」。因此本輪僅新增自己的素材目錄與本交接，不改核心、全域 manifest、技能、數值或 README。
 
 ## 入口與交付
 
+- 固定入口：`art/characters/stellar10/START_HERE.md`；整合者直接從此讀取，不需索取聊天附件。
 - 素材根目錄：`art/characters/stellar10/`。
 - `catalog.json`：十位身分、髮型／臉型／配色／衣裝／配件目視紀錄、原圖版本與 hash、50 項素材技術參數與審閱狀態；既有六位的不可變特徵／hash 另存 legacyStandards。
 - `library.sqlite3`：本批獨立美術資料庫；characters.record_json 保存完整角色特徵，assets 表保存原立繪、立繪網頁版、頭像、SD 主檔、SD 網頁版。

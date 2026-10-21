@@ -210,8 +210,22 @@ export function mountSpace(
       this.loaded.add(id);
       const image = new Image();
       image.onload = () => {
-        if (this.sys?.isActive() && !this.textures.exists(a.id))
-          this.textures.addImage(a.id, image);
+        if (!this.sys?.isActive() || this.textures.exists(a.id)) return;
+        // Render sprites at a bounded texture density; source art and studio previews stay intact.
+        const background = model.pack.regions.some(
+          (r) => r.background === a.id,
+        );
+        const limit = background ? (model.lowEffects ? 1024 : 1800) : 512;
+        if (Math.max(image.width, image.height) > limit) {
+          const canvas = document.createElement("canvas");
+          const ratio = limit / Math.max(image.width, image.height);
+          canvas.width = Math.round(image.width * ratio);
+          canvas.height = Math.round(image.height * ratio);
+          const ctx = canvas.getContext("2d")!;
+          ctx.imageSmoothingQuality = "high";
+          ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+          this.textures.addCanvas(a.id, canvas);
+        } else this.textures.addImage(a.id, image);
       };
       image.onerror = () => {
         model.notice = `素材未能載入：${a.name}`;
@@ -321,7 +335,7 @@ export function mountSpace(
       this.hud.clear();
       this.labelIndex = 0;
       // Nebulae and a stable starfield: presentation-only, independent from simulation RNG.
-      for (let i = model.lowEffects ? 3 : 8; i > 0; i--) {
+      for (let i = r.background ? 0 : model.lowEffects ? 3 : 8; i > 0; i--) {
         g.fillStyle(0x40335f, 0.012);
         g.fillEllipse(1600, 850, i * 175, i * 92);
         g.fillStyle(0x164f60, 0.014);
@@ -330,7 +344,10 @@ export function mountSpace(
       g.lineStyle(0.7, 0x638b9c, 0.1);
       for (let x = 0; x <= r.width; x += 200) g.lineBetween(x, 0, x, r.height);
       for (let y = 0; y <= r.height; y += 200) g.lineBetween(0, y, r.width, y);
-      for (const s of this.starfield) {
+      for (const s of this.starfield.slice(
+        0,
+        r.background ? (model.lowEffects ? 60 : 120) : this.starfield.length,
+      )) {
         g.fillStyle(0xc3deeb, s.a);
         g.fillCircle(s.x, s.y, (s.r / zoom) * 0.6);
       }
@@ -530,7 +547,7 @@ export function mountSpace(
           if (u.side === "ally") {
             if (!u.sprite || !this.textures.exists(u.sprite))
               this.ship(u.x, u.y, color, size);
-          } else {
+          } else if (!u.sprite || !this.textures.exists(u.sprite)) {
             this.drawAsset(
               u.id + ":hull",
               `enemy:${u.def}`,

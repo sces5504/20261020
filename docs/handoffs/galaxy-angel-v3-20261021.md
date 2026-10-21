@@ -25,3 +25,5 @@
 角色表網站#/catalog及docs/art/future-characters.csv，120待做含變體。研究依research/stella-maiden/START_HERE.md做局部SQL，已知／推論／未知分開。不能將程序SFX稱為已導入AI音檔；音檔／骨架／自由腳本／任意Boss階段仍需核心能力。
 
 商業品質未宣稱完成：Android／iOS真機、硬體效能、使用者美術／手感審閱與獨立AI接力演練仍待驗。保留commercial門檻，試玩採playtest profile。
+
+首輪完整發布檢查：核心27項及一般E2E通過；playtest基礎隊首戰120秒逾時。純模擬確認同隊可勝、實際畫面採樣顯示50秒wall僅推進約33秒simulation，原因為軟體繪圖負擔而非放寬測試條件。已限制Phaser小型sprite貼圖至512（原檔與工坊不動），有星空圖時取消重複大型星雲／過多星點，敵人只在正式圖未載入時畫程序後備。完整profile正在原條件重跑，未把首輪失敗當通過。

@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "id": "beacon:package.frontier",
+  "version": "0.1.0",
+  "requires": [
+    {
+      "id": "m1:core",
+      "version": "0.5.0"
+    }
+  ],
+  "definitions": {
+    "enemies": [
+      {
+        "status": "active",
+        "provenance": "m1-design",
+        "id": "beacon:enemy.scout",
+        "name": "邊境游弋機",
+        "description": "邊境信標單波守軍；本案新設計。近距側移沿用核心行為，保留普攻命中窗口。",
+        "hp": 480,
+        "attack": 8,
+        "defense": 18,
+        "speed": 42,
+        "range": 600,
+        "interval": 1.8,
+        "projectileSpeed": 160,
+        "orbitSpeed": 0.45,
+        "strafeSpeed": 14,
+        "pattern": "aim",
+        "boss": false,
+        "phaseAt": 0.5,
+        "color": "#ff9a8a",
+        "sprite": "m1art:scout-v1"
+      },
+      {
+        "status": "active",
+        "provenance": "m1-design",
+        "id": "beacon:enemy.warden",
+        "name": "信標護衛艦",
+        "description": "邊境信標單波守軍；本案新設計。近距側移沿用核心行為，保留普攻命中窗口。",
+        "hp": 820,
+        "attack": 11,
+        "defense": 20,
+        "speed": 25,
+        "range": 600,
+        "interval": 2.0,
+        "projectileSpeed": 160,
+        "orbitSpeed": 0.45,
+        "strafeSpeed": 14,
+        "pattern": "fan",
+        "boss": false,
+        "phaseAt": 0.5,
+        "color": "#ff9a8a",
+        "sprite": "m1art:sentinel-v1"
+      },
+      {
+        "status": "active",
+        "provenance": "m1-design",
+        "id": "beacon:enemy.anchor",
+        "name": "錨定指揮艦",
+        "description": "邊境信標單波守軍；本案新設計。生命低於45%時沿用核心切換環形彈幕，沒有額外階段技能。",
+        "hp": 1800,
+        "attack": 12,
+        "defense": 28,
+        "speed": 12,
+        "range": 600,
+        "interval": 2.8,
+        "projectileSpeed": 145,
+        "orbitSpeed": 0.25,
+        "strafeSpeed": 6,
+        "pattern": "fan",
+        "boss": true,
+        "phaseAt": 0.45,
+        "color": "#e1a4fa",
+        "sprite": "m1art:destroyer-v1"
+      }
+    ],
+    "planets": [
+      {
+        "status": "active",
+        "provenance": "m1-design",
+        "id": "beacon:planet.signal",
+        "name": "邊境信標",
+        "description": "黯星之門解放後可探索的補給信標。守軍一次到齊；先清除游弋機，再應對指揮艦低血量環形射擊。首次解放取得天王星，啟動後側重氣體與乙太。外觀暫用現有候選素材。",
+        "region": "m1:frontier-test",
+        "x": 1600,
+        "y": 1000,
+        "radius": 58,
+        "color": "#70d6d3",
+        "sprite": "m1art:haven-v1",
+        "requires": [
+          "m1:umbra-gate"
+        ],
+        "enemies": [
+          {
+            "enemy": "beacon:enemy.scout",
+            "count": 4
+          },
+          {
+            "enemy": "beacon:enemy.warden",
+            "count": 2
+          },
+          {
+            "enemy": "beacon:enemy.anchor",
+            "count": 1
+          }
+        ],
+        "waves": [],
+        "waveDelay": 4,
+        "engageRadius": 360,
+        "guardRadius": 180,
+        "leashWarningRadius": 640,
+        "leashRadius": 780,
+        "resetSeconds": 3,
+        "reward": {
+          "m1:crystal": 110,
+          "m1:gas": 90,
+          "m1:metal": 100,
+          "m1:ether": 80
+        },
+        "activationCost": {
+          "m1:crystal": 80,
+          "m1:gas": 70,
+          "m1:metal": 90,
+          "m1:ether": 60
+        },
+        "production": {
+          "m1:crystal": 0.06,
+          "m1:gas": 0.1,
+          "m1:metal": 0.08,
+          "m1:ether": 0.08
+        },
+        "dropCharacters": [
+          "m1:uranus"
+        ]
+      }
+    ]
+  }
+}

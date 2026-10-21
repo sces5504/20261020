@@ -1,0 +1,1583 @@
+{
+  "format": "art-only-integration-map-not-runtime-content-pack",
+  "requires": "m1:core@0.5.0",
+  "reviewStatus": "awaiting-user-review",
+  "characters": [
+    {
+      "artCharacterId": "stellaart:character.sun",
+      "proposedContentId": "future:sun",
+      "originalKey": "Sun",
+      "originalCidRow": 1,
+      "portrait": {
+        "assetId": "stellaart:asset.sun-portrait-web",
+        "characterId": "stellaart:character.sun",
+        "path": "web/sun.webp",
+        "preview": "web/sun.webp",
+        "sha256": "a10286c83ab37676bb4955cf576f251bfaf2282d2df43b76553dd38005965f9e",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "163be021f75a7b1f8b1ebc7b17f6f622476a0553456ed9e2cebae1bf812bb318",
+        "sourceOriginalVersion": "v1-user-retained",
+        "sourceAssetSha256": "163be021f75a7b1f8b1ebc7b17f6f622476a0553456ed9e2cebae1bf812bb318",
+        "sourcePath": "standards/sun.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.5032552083333334,
+          "y": 0.9852430555555556
+        },
+        "safeArea": {
+          "bodyBounds": [
+            29,
+            9,
+            744,
+            1135
+          ],
+          "marginPx": [
+            29,
+            9,
+            24,
+            17
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.sun-avatar-web",
+        "characterId": "stellaart:character.sun",
+        "path": "avatars/sun.webp",
+        "preview": "avatars/sun.webp",
+        "sha256": "ce6e6c96f6bb56b06c712b79da9be8158b13a6b7abc12a46416fd7c5e949ede2",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "163be021f75a7b1f8b1ebc7b17f6f622476a0553456ed9e2cebae1bf812bb318",
+        "sourceOriginalVersion": "v1-user-retained",
+        "sourceAssetSha256": "163be021f75a7b1f8b1ebc7b17f6f622476a0553456ed9e2cebae1bf812bb318",
+        "sourcePath": "standards/sun.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              350,
+              0,
+              340,
+              340
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            9,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            9,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.sun-battle-v2-web",
+        "characterId": "stellaart:character.sun",
+        "path": "web/sun-battle.webp",
+        "preview": "web/sun-battle.webp",
+        "sha256": "09724c32d79cc1d2ca9aa6f209ca0c32f46d749090fdc741f518a9b7d99d2e48",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "163be021f75a7b1f8b1ebc7b17f6f622476a0553456ed9e2cebae1bf812bb318",
+        "sourceOriginalVersion": "v1-user-retained",
+        "sourceAssetSha256": "bbd04d64e3fa80646bc588c316f6cd060e9cc4df96186b8afab67dd9bbee79f9",
+        "sourcePath": "battle/sun-v2-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 98.150234741784,
+            "y": 81.99999999999994,
+            "scale": 0.672926447574335
+          }
+        },
+        "pivot": {
+          "x": 0.50439453125,
+          "y": 0.9111328125
+        },
+        "safeArea": {
+          "bodyBounds": [
+            114,
+            93,
+            919,
+            933
+          ],
+          "marginPx": [
+            114,
+            93,
+            105,
+            91
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "runtimeCharacterDefinition": null
+    },
+    {
+      "artCharacterId": "stellaart:character.jupiter",
+      "proposedContentId": "future:jupiter",
+      "originalKey": "Jupiter",
+      "originalCidRow": 6,
+      "portrait": {
+        "assetId": "stellaart:asset.jupiter-portrait-web",
+        "characterId": "stellaart:character.jupiter",
+        "path": "web/jupiter.webp",
+        "preview": "web/jupiter.webp",
+        "sha256": "8858ba0e3a8ef72e5e859432e9fd456bbc63adfdf3806926efbcdb3629173263",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "28a0ea518363f7b51665db089f99b45805d7a867dec2d36d77724db8a6b4900a",
+        "sourceOriginalVersion": "v3-fair-skin-layered-hair",
+        "sourceAssetSha256": "28a0ea518363f7b51665db089f99b45805d7a867dec2d36d77724db8a6b4900a",
+        "sourcePath": "standards/jupiter.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.560546875,
+          "y": 0.9913194444444444
+        },
+        "safeArea": {
+          "bodyBounds": [
+            203,
+            8,
+            658,
+            1142
+          ],
+          "marginPx": [
+            203,
+            8,
+            110,
+            10
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.jupiter-avatar-web",
+        "characterId": "stellaart:character.jupiter",
+        "path": "avatars/jupiter.webp",
+        "preview": "avatars/jupiter.webp",
+        "sha256": "b472eb897c407153141ddaf46b09ea33218891ed5593aa6d06e2d79da7c8141b",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "28a0ea518363f7b51665db089f99b45805d7a867dec2d36d77724db8a6b4900a",
+        "sourceOriginalVersion": "v3-fair-skin-layered-hair",
+        "sourceAssetSha256": "28a0ea518363f7b51665db089f99b45805d7a867dec2d36d77724db8a6b4900a",
+        "sourcePath": "standards/jupiter.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              340,
+              0,
+              340,
+              340
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            3,
+            8,
+            256,
+            256
+          ],
+          "marginPx": [
+            3,
+            8,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.jupiter-battle-v2-web",
+        "characterId": "stellaart:character.jupiter",
+        "path": "web/jupiter-battle.webp",
+        "preview": "web/jupiter-battle.webp",
+        "sha256": "7f7858cb95f32377c0c1d3245f55582a536c787a85c14aa37656bb703b8e40ba",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "28a0ea518363f7b51665db089f99b45805d7a867dec2d36d77724db8a6b4900a",
+        "sourceOriginalVersion": "v3-fair-skin-layered-hair",
+        "sourceAssetSha256": "ddb0be8d57e547dbd839ab87ff191b4b96b8d31ac535ed4e7054ed77245742d9",
+        "sourcePath": "battle/jupiter-v2-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 103.71717171717177,
+            "y": 82.00000000000006,
+            "scale": 0.6682206682206682
+          }
+        },
+        "pivot": {
+          "x": 0.50634765625,
+          "y": 0.9150390625
+        },
+        "safeArea": {
+          "bodyBounds": [
+            243,
+            89,
+            794,
+            937
+          ],
+          "marginPx": [
+            243,
+            89,
+            230,
+            87
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "runtimeCharacterDefinition": null
+    },
+    {
+      "artCharacterId": "stellaart:character.saturn",
+      "proposedContentId": "future:saturn",
+      "originalKey": "Saturn",
+      "originalCidRow": 7,
+      "portrait": {
+        "assetId": "stellaart:asset.saturn-portrait-web",
+        "characterId": "stellaart:character.saturn",
+        "path": "web/saturn.webp",
+        "preview": "web/saturn.webp",
+        "sha256": "a043e17eaebf8e746665d8fe7813b51a7287cabb054039867eadf87addccc370",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "c6889620e0eaf2e4920b56afff338a5510fffca1542565a3fbfd6355594fec83",
+        "sourceOriginalVersion": "v2-redesigned",
+        "sourceAssetSha256": "c6889620e0eaf2e4920b56afff338a5510fffca1542565a3fbfd6355594fec83",
+        "sourcePath": "standards/saturn.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.5462239583333334,
+          "y": 0.9878472222222222
+        },
+        "safeArea": {
+          "bodyBounds": [
+            134,
+            12,
+            705,
+            1138
+          ],
+          "marginPx": [
+            134,
+            12,
+            63,
+            14
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.saturn-avatar-web",
+        "characterId": "stellaart:character.saturn",
+        "path": "avatars/saturn.webp",
+        "preview": "avatars/saturn.webp",
+        "sha256": "8833b37c73b3d91ed534d574b91db80eb73b8b9f917c5ff52fd9e764de37fd91",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "c6889620e0eaf2e4920b56afff338a5510fffca1542565a3fbfd6355594fec83",
+        "sourceOriginalVersion": "v2-redesigned",
+        "sourceAssetSha256": "c6889620e0eaf2e4920b56afff338a5510fffca1542565a3fbfd6355594fec83",
+        "sourcePath": "standards/saturn.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              360,
+              0,
+              340,
+              340
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            12,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            12,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.saturn-battle-v2-web",
+        "characterId": "stellaart:character.saturn",
+        "path": "web/saturn-battle.webp",
+        "preview": "web/saturn-battle.webp",
+        "sha256": "b73cc4de7028a3613eabd1615e07a568e8c08e48a5549129305c2ad28c151545",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "c6889620e0eaf2e4920b56afff338a5510fffca1542565a3fbfd6355594fec83",
+        "sourceOriginalVersion": "v2-redesigned",
+        "sourceAssetSha256": "14592cac06bd1ee670d31cbfce978406f078b951028b5af1f7f5f84b4fa24bda",
+        "sourcePath": "battle/saturn-v2-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 103.06531881804045,
+            "y": 82,
+            "scale": 0.6687402799377916
+          }
+        },
+        "pivot": {
+          "x": 0.56494140625,
+          "y": 0.9072265625
+        },
+        "safeArea": {
+          "bodyBounds": [
+            275,
+            100,
+            882,
+            929
+          ],
+          "marginPx": [
+            275,
+            100,
+            142,
+            95
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "runtimeCharacterDefinition": null
+    },
+    {
+      "artCharacterId": "stellaart:character.neptune",
+      "proposedContentId": "future:neptune",
+      "originalKey": "Neptune",
+      "originalCidRow": 9,
+      "portrait": {
+        "assetId": "stellaart:asset.neptune-portrait-web",
+        "characterId": "stellaart:character.neptune",
+        "path": "web/neptune.webp",
+        "preview": "web/neptune.webp",
+        "sha256": "dbaabeb302e4d8caaa6a6adb6044b7ceb6b63c21614d397103e83960a4343426",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "f35d3c8b9894c15966258ea0dd4973fa46c79a10adc32bfabe3d92cedd96a76a",
+        "sourceOriginalVersion": "v4-user-corrected",
+        "sourceAssetSha256": "f35d3c8b9894c15966258ea0dd4973fa46c79a10adc32bfabe3d92cedd96a76a",
+        "sourcePath": "standards/neptune.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.5013020833333334,
+          "y": 0.9939236111111112
+        },
+        "safeArea": {
+          "bodyBounds": [
+            13,
+            4,
+            757,
+            1145
+          ],
+          "marginPx": [
+            13,
+            4,
+            11,
+            7
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.neptune-avatar-web",
+        "characterId": "stellaart:character.neptune",
+        "path": "avatars/neptune.webp",
+        "preview": "avatars/neptune.webp",
+        "sha256": "020e493ae9db2c8bd6cef69561e07ef375e934f09ca97fbdeabcdb1f6c99a86b",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "f35d3c8b9894c15966258ea0dd4973fa46c79a10adc32bfabe3d92cedd96a76a",
+        "sourceOriginalVersion": "v4-user-corrected",
+        "sourceAssetSha256": "f35d3c8b9894c15966258ea0dd4973fa46c79a10adc32bfabe3d92cedd96a76a",
+        "sourcePath": "standards/neptune.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              340,
+              0,
+              340,
+              340
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            5,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            5,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.neptune-battle-v2-web",
+        "characterId": "stellaart:character.neptune",
+        "path": "web/neptune-battle.webp",
+        "preview": "web/neptune-battle.webp",
+        "sha256": "965c1477eb6a366e082f2520a4ef1ef9568d4c941cc26673066d38c89f2cc35e",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "f35d3c8b9894c15966258ea0dd4973fa46c79a10adc32bfabe3d92cedd96a76a",
+        "sourceOriginalVersion": "v4-user-corrected",
+        "sourceAssetSha256": "88f80ef669414e105925ebda3af5163a5c83abd35852357f02508755b7c37d0e",
+        "sourcePath": "battle/neptune-v2-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 101.10366328916604,
+            "y": 82,
+            "scale": 0.6703039750584567
+          }
+        },
+        "pivot": {
+          "x": 0.501953125,
+          "y": 0.9130859375
+        },
+        "safeArea": {
+          "bodyBounds": [
+            107,
+            86,
+            921,
+            935
+          ],
+          "marginPx": [
+            107,
+            86,
+            103,
+            89
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "runtimeCharacterDefinition": null
+    },
+    {
+      "artCharacterId": "stellaart:character.pluto",
+      "proposedContentId": "future:pluto",
+      "originalKey": "Pluto",
+      "originalCidRow": 10,
+      "portrait": {
+        "assetId": "stellaart:asset.pluto-portrait-web",
+        "characterId": "stellaart:character.pluto",
+        "path": "web/pluto.webp",
+        "preview": "web/pluto.webp",
+        "sha256": "0e1408234e1cf31fa65e20e825e19b3f6a9d569b47d639e350ecaa978549d922",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "c2f7558cd18319fe512fd8f967d315ae7f13b6b73abb2719abb2df006126b349",
+        "sourceOriginalVersion": "v2-redesigned",
+        "sourceAssetSha256": "c2f7558cd18319fe512fd8f967d315ae7f13b6b73abb2719abb2df006126b349",
+        "sourcePath": "standards/pluto.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.5455729166666666,
+          "y": 0.9878472222222222
+        },
+        "safeArea": {
+          "bodyBounds": [
+            165,
+            8,
+            673,
+            1138
+          ],
+          "marginPx": [
+            165,
+            8,
+            95,
+            14
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.pluto-avatar-web",
+        "characterId": "stellaart:character.pluto",
+        "path": "avatars/pluto.webp",
+        "preview": "avatars/pluto.webp",
+        "sha256": "65c39cb6297fd829bf697f33d1710096996f6cc036a0bfb5479cf5e4fa7d69f2",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "c2f7558cd18319fe512fd8f967d315ae7f13b6b73abb2719abb2df006126b349",
+        "sourceOriginalVersion": "v2-redesigned",
+        "sourceAssetSha256": "c2f7558cd18319fe512fd8f967d315ae7f13b6b73abb2719abb2df006126b349",
+        "sourcePath": "standards/pluto.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              345,
+              0,
+              340,
+              340
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            8,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            8,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.pluto-battle-v2-web",
+        "characterId": "stellaart:character.pluto",
+        "path": "web/pluto-battle.webp",
+        "preview": "web/pluto-battle.webp",
+        "sha256": "b80491ae7c77036279641dfd022bb3657c7cc2778368e01de2f5834a9e544d45",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "c2f7558cd18319fe512fd8f967d315ae7f13b6b73abb2719abb2df006126b349",
+        "sourceOriginalVersion": "v2-redesigned",
+        "sourceAssetSha256": "547903dbb8e85af3bbe6d792cb3225f4d4416da039e5bebe9466e150a8b89688",
+        "sourcePath": "battle/pluto-v2-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 119.03506097560972,
+            "y": 82,
+            "scale": 0.6554878048780488
+          }
+        },
+        "pivot": {
+          "x": 0.55078125,
+          "y": 0.90234375
+        },
+        "safeArea": {
+          "bodyBounds": [
+            268,
+            93,
+            860,
+            924
+          ],
+          "marginPx": [
+            268,
+            93,
+            164,
+            100
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "runtimeCharacterDefinition": null
+    },
+    {
+      "artCharacterId": "stellaart:character.nemesis",
+      "proposedContentId": "future:nemesis",
+      "originalKey": "Nemesis",
+      "originalCidRow": 11,
+      "portrait": {
+        "assetId": "stellaart:asset.nemesis-portrait-web",
+        "characterId": "stellaart:character.nemesis",
+        "path": "web/nemesis.webp",
+        "preview": "web/nemesis.webp",
+        "sha256": "db0ccbda9233ac08dc4e2d4c8b996d97ab25ac82ac2001a6b3f98536c642d5d8",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "bc479c41c99f06227512e5a1bd12ebde50fddf1ad476372fab5901191ce2ac8d",
+        "sourceOriginalVersion": "v6-loose-hair-orbit-accents",
+        "sourceAssetSha256": "bc479c41c99f06227512e5a1bd12ebde50fddf1ad476372fab5901191ce2ac8d",
+        "sourcePath": "standards/nemesis.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.486328125,
+          "y": 0.9947916666666666
+        },
+        "safeArea": {
+          "bodyBounds": [
+            20,
+            4,
+            727,
+            1146
+          ],
+          "marginPx": [
+            20,
+            4,
+            41,
+            6
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.nemesis-avatar-web",
+        "characterId": "stellaart:character.nemesis",
+        "path": "avatars/nemesis.webp",
+        "preview": "avatars/nemesis.webp",
+        "sha256": "8e40fc22084afd814f145918e6b6ba6425569e3a290c9baa4a0f278f4bbbfc32",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "bc479c41c99f06227512e5a1bd12ebde50fddf1ad476372fab5901191ce2ac8d",
+        "sourceOriginalVersion": "v6-loose-hair-orbit-accents",
+        "sourceAssetSha256": "bc479c41c99f06227512e5a1bd12ebde50fddf1ad476372fab5901191ce2ac8d",
+        "sourcePath": "standards/nemesis.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              345,
+              0,
+              340,
+              340
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            4,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            4,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.nemesis-battle-v3-web",
+        "characterId": "stellaart:character.nemesis",
+        "path": "web/nemesis-battle.webp",
+        "preview": "web/nemesis-battle.webp",
+        "sha256": "a8ad6ccad1c33907fc1608effcf65bd23fa29f0ca356453dee68962b39a55c82",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "bc479c41c99f06227512e5a1bd12ebde50fddf1ad476372fab5901191ce2ac8d",
+        "sourceOriginalVersion": "v6-loose-hair-orbit-accents",
+        "sourceAssetSha256": "880abcde4c217803bd7cc27526cb3f61e2c81fb667349c38ddbe596b1e8edb8b",
+        "sourcePath": "battle/nemesis-v3-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 96.1647058823529,
+            "y": 81.99999999999994,
+            "scale": 0.6745098039215687
+          }
+        },
+        "pivot": {
+          "x": 0.50048828125,
+          "y": 0.8798828125
+        },
+        "safeArea": {
+          "bodyBounds": [
+            151,
+            155,
+            874,
+            901
+          ],
+          "marginPx": [
+            151,
+            155,
+            150,
+            123
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "runtimeCharacterDefinition": null
+    },
+    {
+      "artCharacterId": "stellaart:character.ganymede",
+      "proposedContentId": "future:ganymede",
+      "originalKey": "Ganymede",
+      "originalCidRow": 16,
+      "portrait": {
+        "assetId": "stellaart:asset.ganymede-portrait-web",
+        "characterId": "stellaart:character.ganymede",
+        "path": "web/ganymede.webp",
+        "preview": "web/ganymede.webp",
+        "sha256": "e105db557dcd879b79a172af8bffbe02c16236b744302384fb69f593b5457db7",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "2faf0de006ee302b817668a70d12755c55070743eb13a6fc855b5c0e9ccbb775",
+        "sourceOriginalVersion": "v2-redesigned",
+        "sourceAssetSha256": "2faf0de006ee302b817668a70d12755c55070743eb13a6fc855b5c0e9ccbb775",
+        "sourcePath": "standards/ganymede.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.5013020833333334,
+          "y": 0.9809027777777778
+        },
+        "safeArea": {
+          "bodyBounds": [
+            193,
+            13,
+            577,
+            1130
+          ],
+          "marginPx": [
+            193,
+            13,
+            191,
+            22
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.ganymede-avatar-web",
+        "characterId": "stellaart:character.ganymede",
+        "path": "avatars/ganymede.webp",
+        "preview": "avatars/ganymede.webp",
+        "sha256": "52d3e343223f391dd2ee83206fd1c6e038e3362d38d65a0af16c8cc974f85298",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "2faf0de006ee302b817668a70d12755c55070743eb13a6fc855b5c0e9ccbb775",
+        "sourceOriginalVersion": "v2-redesigned",
+        "sourceAssetSha256": "2faf0de006ee302b817668a70d12755c55070743eb13a6fc855b5c0e9ccbb775",
+        "sourcePath": "standards/ganymede.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              340,
+              0,
+              340,
+              340
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            13,
+            236,
+            256
+          ],
+          "marginPx": [
+            0,
+            13,
+            20,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.ganymede-battle-v2-web",
+        "characterId": "stellaart:character.ganymede",
+        "path": "web/ganymede-battle.webp",
+        "preview": "web/ganymede-battle.webp",
+        "sha256": "cbf7f9f6bd1bc711041b3f075c4d8ce1c3da950ea01e7794bdab0da2b11f6d62",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "2faf0de006ee302b817668a70d12755c55070743eb13a6fc855b5c0e9ccbb775",
+        "sourceOriginalVersion": "v2-redesigned",
+        "sourceAssetSha256": "f809e03d852f0010d07e0e8b0fc1c22b78a2d9c738962da4e40d2c47286238d1",
+        "sourcePath": "battle/ganymede-v2-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 98.150234741784,
+            "y": 81.99999999999994,
+            "scale": 0.672926447574335
+          }
+        },
+        "pivot": {
+          "x": 0.49951171875,
+          "y": 0.9091796875
+        },
+        "safeArea": {
+          "bodyBounds": [
+            301,
+            105,
+            722,
+            931
+          ],
+          "marginPx": [
+            301,
+            105,
+            302,
+            93
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "runtimeCharacterDefinition": null
+    },
+    {
+      "artCharacterId": "stellaart:character.io",
+      "proposedContentId": "future:io",
+      "originalKey": "Io",
+      "originalCidRow": 17,
+      "portrait": {
+        "assetId": "stellaart:asset.io-portrait-web",
+        "characterId": "stellaart:character.io",
+        "path": "web/io.webp",
+        "preview": "web/io.webp",
+        "sha256": "b813da28d3a99123d8d752740956b8533903d810b8c74e35d8281f939db2ac5e",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "81adb3d27327499da9db3e391feab7425c6314e7b897d28c1627824d363c1833",
+        "sourceOriginalVersion": "v2-redesigned",
+        "sourceAssetSha256": "81adb3d27327499da9db3e391feab7425c6314e7b897d28c1627824d363c1833",
+        "sourcePath": "standards/io.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.5475260416666666,
+          "y": 0.9791666666666666
+        },
+        "safeArea": {
+          "bodyBounds": [
+            144,
+            6,
+            697,
+            1128
+          ],
+          "marginPx": [
+            144,
+            6,
+            71,
+            24
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.io-avatar-web",
+        "characterId": "stellaart:character.io",
+        "path": "avatars/io.webp",
+        "preview": "avatars/io.webp",
+        "sha256": "db7ddf8dbc542ccd86b087c1f7aa5949d172c16df0839a19060591b8f4d70bca",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "81adb3d27327499da9db3e391feab7425c6314e7b897d28c1627824d363c1833",
+        "sourceOriginalVersion": "v2-redesigned",
+        "sourceAssetSha256": "81adb3d27327499da9db3e391feab7425c6314e7b897d28c1627824d363c1833",
+        "sourcePath": "standards/io.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              340,
+              0,
+              340,
+              340
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            6,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            6,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.io-battle-v2-web",
+        "characterId": "stellaart:character.io",
+        "path": "web/io-battle.webp",
+        "preview": "web/io-battle.webp",
+        "sha256": "3fc11db4820a147d15e232138e6f63943b245f1927638f7aac675ae90ae25628",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "81adb3d27327499da9db3e391feab7425c6314e7b897d28c1627824d363c1833",
+        "sourceOriginalVersion": "v2-redesigned",
+        "sourceAssetSha256": "c0c557d1dad0142137a413ca78b5473a4e0bd6e25d48a8c623e2ebde05f40226",
+        "sourcePath": "battle/io-v2-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 103.71717171717177,
+            "y": 82.00000000000006,
+            "scale": 0.6682206682206682
+          }
+        },
+        "pivot": {
+          "x": 0.5390625,
+          "y": 0.9091796875
+        },
+        "safeArea": {
+          "bodyBounds": [
+            246,
+            92,
+            858,
+            931
+          ],
+          "marginPx": [
+            246,
+            92,
+            166,
+            93
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "runtimeCharacterDefinition": null
+    },
+    {
+      "artCharacterId": "stellaart:character.titania",
+      "proposedContentId": "future:titania",
+      "originalKey": "Titania",
+      "originalCidRow": 19,
+      "portrait": {
+        "assetId": "stellaart:asset.titania-portrait-web",
+        "characterId": "stellaart:character.titania",
+        "path": "web/titania.webp",
+        "preview": "web/titania.webp",
+        "sha256": "e1ec272b5c364efa7dfd573cfc5435fce8f8baadec36c1896ab3f885a318f449",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "1ed00a42fbf8f440aabaca79ba38d9d45597adf897acc6d3eda533000105c875",
+        "sourceOriginalVersion": "v4-user-corrected",
+        "sourceAssetSha256": "1ed00a42fbf8f440aabaca79ba38d9d45597adf897acc6d3eda533000105c875",
+        "sourcePath": "standards/titania.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.5026041666666666,
+          "y": 0.9930555555555556
+        },
+        "safeArea": {
+          "bodyBounds": [
+            150,
+            10,
+            622,
+            1144
+          ],
+          "marginPx": [
+            150,
+            10,
+            146,
+            8
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.titania-avatar-web",
+        "characterId": "stellaart:character.titania",
+        "path": "avatars/titania.webp",
+        "preview": "avatars/titania.webp",
+        "sha256": "535eb4e9af4fd77312e17386a9d0d066f0d8f77eb2729e9e7c9433685c72fcdf",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "1ed00a42fbf8f440aabaca79ba38d9d45597adf897acc6d3eda533000105c875",
+        "sourceOriginalVersion": "v4-user-corrected",
+        "sourceAssetSha256": "1ed00a42fbf8f440aabaca79ba38d9d45597adf897acc6d3eda533000105c875",
+        "sourcePath": "standards/titania.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              340,
+              0,
+              340,
+              340
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            2,
+            10,
+            254,
+            256
+          ],
+          "marginPx": [
+            2,
+            10,
+            2,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.titania-battle-v2-web",
+        "characterId": "stellaart:character.titania",
+        "path": "web/titania-battle.webp",
+        "preview": "web/titania-battle.webp",
+        "sha256": "bf37b0a409ede27466141e00d4f9b6f5e799f1137c9a99c78fc64bf079e7ac70",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "1ed00a42fbf8f440aabaca79ba38d9d45597adf897acc6d3eda533000105c875",
+        "sourceOriginalVersion": "v4-user-corrected",
+        "sourceAssetSha256": "f55faa8425126fe58a4657e4dd1b195edf664f9b1db8d398d381519b8ceaff2f",
+        "sourcePath": "battle/titania-v2-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 153.66666666666663,
+            "y": 81.99999999999994,
+            "scale": 0.6259097525473072
+          }
+        },
+        "pivot": {
+          "x": 0.50732421875,
+          "y": 0.9072265625
+        },
+        "safeArea": {
+          "bodyBounds": [
+            266,
+            101,
+            773,
+            929
+          ],
+          "marginPx": [
+            266,
+            101,
+            251,
+            95
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "runtimeCharacterDefinition": null
+    },
+    {
+      "artCharacterId": "stellaart:character.ariel",
+      "proposedContentId": "future:ariel",
+      "originalKey": "Ariel",
+      "originalCidRow": 20,
+      "portrait": {
+        "assetId": "stellaart:asset.ariel-portrait-web",
+        "characterId": "stellaart:character.ariel",
+        "path": "web/ariel.webp",
+        "preview": "web/ariel.webp",
+        "sha256": "bde80af081f7cf7b762514959d530afd3ccd6a4aa2df58a5673c13dedec16a2d",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "eb659e4a7293de2b4a37e53f630d35475b9fb5959dd422cbcd9980c322176a22",
+        "sourceOriginalVersion": "v4-user-corrected",
+        "sourceAssetSha256": "eb659e4a7293de2b4a37e53f630d35475b9fb5959dd422cbcd9980c322176a22",
+        "sourcePath": "standards/ariel.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.5358072916666666,
+          "y": 0.9913194444444444
+        },
+        "safeArea": {
+          "bodyBounds": [
+            187,
+            4,
+            636,
+            1142
+          ],
+          "marginPx": [
+            187,
+            4,
+            132,
+            10
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.ariel-avatar-web",
+        "characterId": "stellaart:character.ariel",
+        "path": "avatars/ariel.webp",
+        "preview": "avatars/ariel.webp",
+        "sha256": "13c0256872e99867aaa7972b037e295d503fbae55ad94f72fb62133b69aca818",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "eb659e4a7293de2b4a37e53f630d35475b9fb5959dd422cbcd9980c322176a22",
+        "sourceOriginalVersion": "v4-user-corrected",
+        "sourceAssetSha256": "eb659e4a7293de2b4a37e53f630d35475b9fb5959dd422cbcd9980c322176a22",
+        "sourcePath": "standards/ariel.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              340,
+              0,
+              340,
+              340
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            4,
+            252,
+            256
+          ],
+          "marginPx": [
+            0,
+            4,
+            4,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.ariel-battle-v2-web",
+        "characterId": "stellaart:character.ariel",
+        "path": "web/ariel-battle.webp",
+        "preview": "web/ariel-battle.webp",
+        "sha256": "6fea27557144d34075207494f062aea6151cd55f0abfebd19afa74bc36de6a48",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "eb659e4a7293de2b4a37e53f630d35475b9fb5959dd422cbcd9980c322176a22",
+        "sourceOriginalVersion": "v4-user-corrected",
+        "sourceAssetSha256": "fe319d146c9926837efb0311ed5f056ed72ccbd9485636ac8eb1e7a16b02cd41",
+        "sourcePath": "battle/ariel-v2-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 108.89575289575288,
+            "y": 82,
+            "scale": 0.6640926640926641
+          }
+        },
+        "pivot": {
+          "x": 0.5234375,
+          "y": 0.9072265625
+        },
+        "safeArea": {
+          "bodyBounds": [
+            263,
+            116,
+            809,
+            929
+          ],
+          "marginPx": [
+            263,
+            116,
+            215,
+            95
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "runtimeCharacterDefinition": null
+    }
+  ],
+  "integrationNotes": [
+    "整合者需建立角色定義、核定能力／星級／配方／取得途徑；此包未指定數值。",
+    "建立一般資產複製步驟，明確納入內容包與全域manifest；不可假稱放檔即啟用。",
+    "portrait/avatar/sprite分開；sprite為單張靜態Q圖，無atlas或動作幀。",
+    "先在隔離試玩接入，完成適當檢查；正式發布需完整release含test:polish。"
+  ]
+}

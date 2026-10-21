@@ -1,0 +1,137 @@
+[
+  {
+    "key": "sun",
+    "name": "太陽",
+    "body": "熟女",
+    "cid": 1,
+    "original": "Sun",
+    "version": "v1-user-retained",
+    "approved": true,
+    "generationRefs": [],
+    "generationPromptArchived": false,
+    "promptWhitespaceNormalized": true
+  },
+  {
+    "key": "jupiter",
+    "name": "木星",
+    "body": "熟女",
+    "cid": 6,
+    "original": "Jupiter",
+    "version": "v3-fair-skin-layered-hair",
+    "approved": false,
+    "generationRefs": [
+      "exec-2c51d312-8d7e-4126-b0bf-1b7e61b483dd.png"
+    ],
+    "generationPromptArchived": true,
+    "promptWhitespaceNormalized": true
+  },
+  {
+    "key": "saturn",
+    "name": "土星",
+    "body": "熟女",
+    "cid": 7,
+    "original": "Saturn",
+    "version": "v2-redesigned",
+    "approved": false,
+    "generationRefs": [
+      "exec-29cd93bb-5f02-415c-ba05-0c473245ba31.png"
+    ],
+    "generationPromptArchived": true,
+    "promptWhitespaceNormalized": true
+  },
+  {
+    "key": "neptune",
+    "name": "海王星",
+    "body": "熟女",
+    "cid": 9,
+    "original": "Neptune",
+    "version": "v4-user-corrected",
+    "approved": false,
+    "generationRefs": [],
+    "generationPromptArchived": true,
+    "promptWhitespaceNormalized": true
+  },
+  {
+    "key": "pluto",
+    "name": "冥王星",
+    "body": "少女",
+    "cid": 10,
+    "original": "Pluto",
+    "version": "v2-redesigned",
+    "approved": true,
+    "generationRefs": [
+      "exec-83c5662b-cb4c-4585-8a63-01138b99285c.png"
+    ],
+    "generationPromptArchived": true,
+    "promptWhitespaceNormalized": true
+  },
+  {
+    "key": "nemesis",
+    "name": "涅墨西斯",
+    "body": "熟女",
+    "cid": 11,
+    "original": "Nemesis",
+    "version": "v6-loose-hair-orbit-accents",
+    "approved": false,
+    "generationRefs": [
+      "exec-87e370b7-dc65-4a82-84ba-e01c4086440a.png",
+      "exec-5c90ac26-9a93-40ce-97ea-e059b1f5e5da.png"
+    ],
+    "generationPromptArchived": true,
+    "promptWhitespaceNormalized": true
+  },
+  {
+    "key": "ganymede",
+    "name": "木衛三",
+    "body": "少女",
+    "cid": 16,
+    "original": "Ganymede",
+    "version": "v2-redesigned",
+    "approved": false,
+    "generationRefs": [],
+    "generationPromptArchived": true,
+    "promptWhitespaceNormalized": true
+  },
+  {
+    "key": "io",
+    "name": "木衛一",
+    "body": "少女",
+    "cid": 17,
+    "original": "Io",
+    "version": "v2-redesigned",
+    "approved": false,
+    "generationRefs": [],
+    "generationPromptArchived": true,
+    "promptWhitespaceNormalized": true
+  },
+  {
+    "key": "titania",
+    "name": "天衛三",
+    "body": "蘿莉",
+    "cid": 19,
+    "original": "Titania",
+    "version": "v4-user-corrected",
+    "approved": false,
+    "generationRefs": [
+      "exec-49147a9e-1897-4b61-b958-233638bb1f58.png",
+      "exec-0af274e5-92f0-428e-9b8a-0b484418d80d.png"
+    ],
+    "generationPromptArchived": true,
+    "promptWhitespaceNormalized": true
+  },
+  {
+    "key": "ariel",
+    "name": "天衛一",
+    "body": "蘿莉",
+    "cid": 20,
+    "original": "Ariel",
+    "version": "v4-user-corrected",
+    "approved": false,
+    "generationRefs": [
+      "exec-83cb7fac-cdd7-4b4f-982c-07dcb3de11d8.png",
+      "exec-0af274e5-92f0-428e-9b8a-0b484418d80d.png"
+    ],
+    "generationPromptArchived": true,
+    "promptWhitespaceNormalized": true
+  }
+]

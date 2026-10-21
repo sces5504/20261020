@@ -1,59 +1,61 @@
-# 後續 AI 的工作入口
+# Galaxy Angel：後續 AI 擴充入口
 
-使用者已要求開始 M1，並準備後續各 AI 起始 prompt。此頁的「角色」是分工安排，沒有自動啟動多個代理。M1 功能切片已完成並安排 Pages 試玩驗證，最新證據見 docs/design/m1-acceptance.md；較小美術附件已匯入，六張原圖保持原樣；使用者停止 SD 重繪，依使用者新要求已套用原先M1六角色；不要把程式骨架當成完整商業品質版本。
+最新產品契約：[0.3航行與呈現](../design/galaxy-angel-v3.md) → [0.2經濟與探索](../design/exploration-v2.md) → [內容契約](../design/content-contract.md)。最新交接：[galaxy-angel-v3-20261021](../handoffs/galaxy-angel-v3-20261021.md)。先讀 AGENTS.md、記憶索引與本輪交接，再 fetch 核對 main／HEAD；從最新 main 建立自己的分支。**不再使用舊 m1/foundation 作整合入口**。不改 README，也不直接編輯生成檔。
 
-先讀 repo 的 AGENTS.md、記憶索引及目前交接；整合分支為 `m1/foundation`，Pages 從 main 發布；先 fetch 並以最新交接核對實際整合 commit。由整合者告知已整合的起點 commit，再建立自己的分支／worktree。不要盲目 reset、覆蓋未提交工作或改 README。
+M1 已可試玩並有可編輯工坊，商業品質尚未核准。後續可以逐批擴充既有能力的內容；真機／效能／玩家手感審閱與獨立 AI 接力演練仍待完成。防衛／失守／修復／訓練已取消。產品改名不更動 m1:core、原作研究資料與舊存檔ID。
 
-| 順序／角色 | 起始 prompt | 可改範圍 | 何時可開始 |
-| --- | --- | --- | --- |
-| 0 核心整合 | [01-core](01-core.md) | src、工具、契約、存檔與整合清單 | 持續保留一位負責人 |
-| 1 角色美術維護 | [02-character-art](02-character-art.md) | 個別角色素材與美術資料庫／自己的交接 | 原圖維護可做；重新生成須有使用者新的具體要求 |
-| 2 角色／技能內容 | [03-characters](03-characters.md) | 自己的 content/extensions 包 | 代表角色／能力清單穩定後 |
-| 3 地圖／敵人／Boss | [04-world](04-world.md) | 自己的區域／敵人包及交接 | 世界與敵群契約穩定後 |
-| 4 劇情／任務 | [05-story](05-story.md) | 自己的故事包與詞彙提案 | 核定世界觀與角色設定後 |
-| 5 造型／VFX／UI | [06-presentation](06-presentation.md) | 自己的素材包；程式呈現改動單獨分派 | 核定代表畫面與角色基準後 |
-| 6 音效 | [07-audio](07-audio.md) | 自己的音效檔／cue 規格 | 核定聲音樣本與可用工具後 |
-| 7 獨立驗收／平衡 | [08-qa](08-qa.md) | 測試、證據與缺陷報告；平衡另分派 | 每個可執行整合版本 |
+| 分工 | 可直接提供的起始 prompt | 可改範圍 |
+| --- | --- | --- |
+| 核心整合（保留一位） | [01-core](01-core.md) | schema、domain、存檔、工坊能力、發布與整合 |
+| 角色美術 | [02-character-art](02-character-art.md) | 指定角色新素材／美術資料庫／交接 |
+| 角色／技能內容 | [03-characters](03-characters.md) | 自己的擴充包、角色簡報 |
+| 地圖／敵人／Boss | [04-world](04-world.md) | 自己的世界擴充包、難度與收益表 |
+| 劇情／任務 | [05-story](05-story.md) | 自己的故事擴充包、角色語氣與背景引用 |
+| 造型／VFX／UI | [06-presentation](06-presentation.md) | 指定素材；呈現程式另授範圍 |
+| 音效 | [07-audio](07-audio.md) | cue參數、音色樣本；音檔能力另交核心 |
+| 獨立驗收 | [08-qa](08-qa.md) | 測試、證據與缺陷；平衡另分派 |
 
-起始 prompt 檔可直接交給另一個 chat。每個任務還須由整合者附上：起點 commit、任務包命名空間、角色／區域與數量、可改路徑、依賴版本、品質樣本、驗收範圍。未提供時先查 repo 可確定的項目，剩餘列待定，不自行擴大工作。
+這是給後續各 chat 的分工，沒有自動啟動多個代理。建議先同時進行核心、指定角色美術、一個小內容包三路，避免多人競改共用檔。
 
-初期建議同時跑整合、角色美術、單一內容包三路；劇情與音效可排在品質樣本後。不需要一次開八個 chat。
+## 每次分派都填這張任務卡
 
-最新美術要求優先：保留六張原圖，不採用本輪 SD 重繪；映射已依使用者明確指定套用：05 地球、04 水星、01 金星、03 火星、02 天王星、06 月球。`#/art` 展示未改動的六張標準圖。
+```
+請依 docs/ai/<角色prompt>.md 工作，先讀 AGENTS.md 與最新交接。
+起點：origin/main 的 <實際 SHA>；自己的分支：content/<任務名>。
+任務：<具體角色／星球／故事及數量>，先交一個完整代表項再擴量。
+包命名空間：<唯一前綴>；擴充檔：content/extensions/<任務名>.json。
+依賴：m1:core@0.3.0（開工再核對實際 pack 版本）。
+可改：<確切路徑>。共用 schema／引擎／根manifest／既有六張原圖不改。
+品質：docs/art/style-guide.md、asset-contract.md、已整合代表畫面。
+驗收：內容校驗、取得／觸發可達、桌機與手機預覽、引用／媒體／舊檔相容。
+交付：小批 commit／PR、自己的 docs/handoffs/<任務>.md，附已知／推論／未知、素材hash、測試與限制。
+```
 
-## 現在已存在的工具
+## 內容與美術規則
+
+- `src/content/schema.ts` 是執行契約；`content/core/pack.json`／`content/manifest.json` 僅核心整合者改。自己的 extension 使用自己命名空間的定義；requires 是**精確版本**，不是 semver 範圍。`comet.example.json` 是未啟用的可校驗範例。
+- 擴充包只能新增定義，不能以載入順序覆寫基底。修改既有角色／星球的掉落、造型等需交整合變更單，或用工坊完整快照匯出，不能假稱 extension 自動覆寫。
+- 目前支援技能 shield／barrage／fortify／turret／accelerate／weaken／heal；敵彈 aim／fan／ring。新機制先交最小資料例、預期行為與相容需求，不寫角色ID分支／eval。
+- `domain/navigation.ts` 共用巡邏和隊形公式；敵艦位置用模擬時間，不用 Date.now。前鋒／後衛由 team 順序決定，不依角色名字決定。
+- 角色 portrait／avatar／sprite 分開；世界物件 sprite、劇情／星域 background 指向 assets。每項可見實體都交圖片及hash，工坊可預覽／替換；圖片不決定碰撞。新素材放自己命名空間，附媒體檔；**僅加入 assets 欄位不會自動複製新檔，需核心整合建置複製步驟**。工坊 ZIP 匯出則已含實檔。
+- 六張 standard 原始PNG不可覆寫，映射05地球／04水星／01金星／03火星／02天王星／06月球。另有已授權的六張候選Q圖，不再沿用舊的全面禁止SD敘述。新增角色／造型依任務授權，以同角色單張標準圖為參考並先實際開圖；candidate 不自行改 approved。
+- 原作未來角色表：`docs/art/future-characters.md/.csv`、網站 `#/catalog`；126召喚目標中120待做，含造型變體，不能當342名已證實可玩角色。研究先讀 research/stella-maiden/START_HERE.md，再局部SQL；未知原生公式不自行補作已知。
+
+## 工坊與驗收流程
+
+1. `#/studio` 查看／編輯自己的草稿；舊草稿不會被正式更新覆蓋，要新版預設圖片先備份，再按「從新版正式內容建立草稿」。
+2. 改數值、技能、星級、取得方式、sprite／background引用；上傳PNG／JPEG／WebP後保存。
+3. 套用 `#/test` 做隔離試玩，測試進度與 `#/play` 分開。
+4. 匯出 ZIP 交整合者，或交 repo extension＋媒體＋交接。匯出不等於發布。
+5. 核心校驗、適當流程測試、舊檔相容檢查後才啟用 manifest／部署。刪包先修復預覽與備份；不能自動丟棄舊收藏。
 
 ```bash
-npm ci --ignore-scripts
+source scripts/env.sh
 npm run content:check
 npm run typecheck
 npm test
-npm run dev
-```
-
-建置後瀏覽器驗證（先依 repo 工具安裝說明準備 Chromium）：
-
-```bash
 npm run build
-source scripts/env.sh
-npm run test:e2e
+npm run test:exploration
 ```
 
-`npm run release:ready` 是完整商業品質門檻；使用者要求的試玩發布使用 `npm run release:ready -- --target playtest`（兩者不可混稱）。預設商業品質門檻，缺必要素材／品質證據時應失敗。不能刪閘門讓未完成版本上線。遊戲 `#/play`、工坊 `#/studio`、隔離試玩 `#/test`。
-
-## 內容協作規則
-
-- 基底 `content/core/pack.json` 由整合者維護；各 AI 建立自己的 `content/extensions/<task>.json`。參考 `comet.example.json`，它目前未啟用。
-- 每包宣告 id、版本、requires 及 definitions；定義只能使用所屬命名空間。整合者統一更新 `content/manifest.json`。不編輯 `content/generated/runtime.json`，它由工具生成。
-- 現行套件是新增定義的擴充，不支援暗中覆寫基底。調整既有內容透過工坊完整快照匯出，或明確分派整合變更；不要靠載入順序覆蓋。
-- `src/content/schema.ts` 是型別／語意校驗來源；`src/domain` 不得 import Phaser、DOM 或 IndexedDB。
-- 目前已註冊技能：shield、barrage、fortify、turret、accelerate、weaken、heal；敵彈 aim、fan、ring。這些是 M1 原語，並非完整原作效果。
-- 未知技能／融合／原生抽選分支保持未知；現行配方為 M1 四維 L1 前五名＋名次權重示範，不能標成完整原生召喚。
-- 作者草稿、測試進度、正式進度分開。匯出 ZIP 不等於發布；內容包移除造成舊檔缺引用時，先提供修復預覽，再由玩家選擇備份與隔離缺失內容、取消退款工作、重定位；未來 schema 仍拒絕執行。
-
-音效已有 `audio` 資料類型及 WebAudio 程序 cue，可在工坊調音及試聽；新音訊檔接入需由核心擴充契約，不能只放檔案就宣稱遊戲已播放。
-
-
-## 2026-10-21 直接要求更新
-
-使用者新要求銀河／戰鬥使用Q版。已另外以六張各自原立繪生成獨立battle/v1.png，來源與hash見art/catalog/battle-assets.json；原始standard原圖保持不變。此新指示僅取代舊的禁止Q圖要求，不授權改寫立繪。新圖目前候選試玩，非真人品質核定。最新玩法已取消防衛／訓練，接力先讀docs/design/exploration-v2.md。
+完整發布：`python3 scripts/project.py check release`。`release:ready -- --target playtest` 是使用者授權的試玩門檻；預設 commercial 仍保留真機／品質未驗項，不能刪閘門或捏造通過。入口：`#/play`、`#/studio`、`#/test`、`#/art`、`#/catalog`。

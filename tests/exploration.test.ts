@@ -91,3 +91,87 @@ test("battle formation stays centered during horizontal movement instead of drif
     "WASD horizontal travel must preserve the fleet center",
   );
 });
+
+test("sub-five-unit keyboard steps move living allies in combat, and movement stops at release", async () => {
+  const { Combat } = await import("../src/domain/combat");
+  const s = newSave(p, t),
+    c = new Combat(p, s, p.planets[0].id);
+  const start = c.allies.map((u) => ({ x: u.x, y: u.y }));
+  for (let i = 0; i < 90; i++) {
+    c.destination = { x: c.anchor.x + 190 / 60, y: c.anchor.y };
+    c.step(1 / 60);
+  }
+  c.allies.forEach((u, i) =>
+    assert.ok(
+      u.x > start[i].x + 180,
+      "each ally must actually move, not only the camera",
+    ),
+  );
+  assert.ok(c.allies[0].x > c.allies[1].x + 40, "vanguard remains ahead");
+  assert.ok(
+    Math.abs(c.allies[1].y - c.allies[2].y) > 140,
+    "rear slots remain separated",
+  );
+  const at = c.anchor.x;
+  for (let i = 0; i < 60; i++) c.step(1 / 60);
+  assert.ok(c.anchor.x - at < 4, "released input must stop the fleet anchor");
+});
+test("patrols travel within bounds and detect at their visible position, with configurable radius", async () => {
+  const { patrolPosition } = await import("../src/domain/navigation");
+  const v = p.regions[0].patrols[0],
+    a = patrolPosition(v, 0),
+    b = patrolPosition(v, 4);
+  assert.ok(Math.hypot(a.x - b.x, a.y - b.y) > 50);
+  for (let t = 0; t < 300; t++) {
+    const pos = patrolPosition(v, t);
+    assert.ok(Math.abs(pos.x - v.x) <= v.patrolRadius + 0.001);
+    assert.ok(Math.abs(pos.y - v.y) <= v.patrolRadius * 0.62 + 0.001);
+  }
+  assert.ok(v.detectionRadius >= 260);
+  const q = structuredClone(p);
+  q.regions[0].patrols[0].patrolRadius = 500;
+  q.regions[0].patrols[0].x = 10;
+  assert.ok(validatePack(q).errors.some((x) => x.includes("路線超出")));
+});
+test("formation order persists, changes the front unit, and cannot be edited in combat", () => {
+  let s = newSave(p, t),
+    original = [...s.team];
+  s = apply(
+    p,
+    s,
+    { type: "reorder-team", owned: original[1], direction: -1 },
+    t,
+    "reorder",
+  );
+  assert.equal(s.team[0], original[1]);
+  assert.deepEqual(new Set(s.team), new Set(original));
+  s = apply(p, s, { type: "begin", planet: p.planets[0].id }, t, "begin");
+  assert.throws(
+    () =>
+      apply(
+        p,
+        s,
+        { type: "reorder-team", owned: original[1], direction: 1 },
+        t,
+        "bad",
+      ),
+    /遭遇結束/,
+  );
+});
+
+test("shipped expansion example assembles against the current core and all new visual references validate", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const { assemble } = await import("../src/content/loader");
+  const example = JSON.parse(
+    await readFile("content/extensions/comet.example.json", "utf8"),
+  );
+  const full = assemble(p, [example]);
+  assert.equal(full.characters.length, p.characters.length + 1);
+  const q = structuredClone(p);
+  q.buildings[0].sprite = "bad:building";
+  q.quests[0].background = "bad:background";
+  q.regions[0].background = "bad:cosmos";
+  const errors = validatePack(q).errors;
+  for (const id of ["bad:building", "bad:background", "bad:cosmos"])
+    assert.ok(errors.some((e) => e.includes(id)));
+});

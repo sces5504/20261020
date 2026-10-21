@@ -1,3 +1,4 @@
+import { formationOffset, patrolPosition } from "./navigation";
 import type { Pack, Character, Enemy, Skill } from "../content/schema";
 import { type Save, stats, damage, random } from "./model";
 export type Unit = {
@@ -54,6 +55,7 @@ export class Combat {
   rng: number;
   sequence = 0;
   destination: { x: number; y: number };
+  anchor: { x: number; y: number };
   target = "";
   autoSkills = false;
   ended = false;
@@ -71,7 +73,10 @@ export class Combat {
     const region = pack.regions.find((r) => r.id === save.region)!;
     const planet =
       save.encounter?.kind === "patrol"
-        ? region.patrols.find((v) => v.id === planetId)!
+        ? (() => {
+            const v = region.patrols.find((v) => v.id === planetId)!;
+            return { ...v, ...patrolPosition(v, save.voyageSeconds) };
+          })()
         : pack.planets.find((v) => v.id === planetId)!;
     this.waveGroups = [
       planet.enemies,
@@ -80,6 +85,7 @@ export class Combat {
     this.waveDelay = "waveDelay" in planet ? planet.waveDelay : 3;
     this.rng = save.encounter?.seed ?? 1;
     this.destination = { x: save.x, y: save.y };
+    this.anchor = { ...this.destination };
     const bonus = pack.research
       .filter((r) => save.research.includes(r.id))
       .reduce((n, r) => n + r.attackBonus, 1);
@@ -92,10 +98,10 @@ export class Combat {
           c,
           id,
           "ally",
-          save.x + (i - (save.team.length - 1) / 2) * 48,
+          save.x +
+            formationOffset(i, save.team.length, pack.rules.formationSpacing).x,
           save.y +
-            ((i % 2) - Math.floor(save.team.length / 2) / save.team.length) *
-              50,
+            formationOffset(i, save.team.length, pack.rules.formationSpacing).y,
           o.hp,
           st.hp,
           st.attack * bonus,
@@ -167,12 +173,9 @@ export class Combat {
     return this.units.filter((u) => u.side === "ally" && !u.turretUntil);
   }
   get center() {
-    const a = this.allies.filter((u) => u.hp > 0);
-    return {
-      x: a.reduce((s, u) => s + u.x, 0) / (a.length || 1),
-      y: a.reduce((s, u) => s + u.y, 0) / (a.length || 1),
-    };
+    return { ...this.anchor };
   }
+
   skillFor(u: Unit) {
     return this.pack.skills.find(
       (s) => s.id === this.pack.characters.find((c) => c.id === u.def)?.skill,
@@ -253,6 +256,19 @@ export class Combat {
   step(dt: number) {
     if (this.ended) return;
     this.time += dt;
+    const travel = Math.hypot(
+      this.destination.x - this.anchor.x,
+      this.destination.y - this.anchor.y,
+    );
+    const speed = Math.min(
+      ...this.allies.filter((u) => u.hp > 0).map((u) => u.speed),
+      180,
+    );
+    if (travel > 0) {
+      const step = Math.min(travel, speed * dt);
+      this.anchor.x += ((this.destination.x - this.anchor.x) / travel) * step;
+      this.anchor.y += ((this.destination.y - this.anchor.y) / travel) * step;
+    }
     for (const u of this.units) {
       if (u.hp <= 0) continue;
       if (u.turretUntil && this.time >= u.turretUntil) {
@@ -278,20 +294,43 @@ export class Combat {
       const t = priority && u.side === "ally" ? priority : foes[0];
       let dest = this.destination;
       if (u.side === "ally" && !u.turretUntil) {
-        const live = this.allies.filter((a) => a.hp > 0),
-          i = live.indexOf(u),
-          n = live.length;
-        dest = {
-          x: this.destination.x + (i - (n - 1) / 2) * 48,
-          y: this.destination.y + ((i % 2) - Math.floor(n / 2) / n) * 50,
-        };
+        const i = this.allies.indexOf(u);
+        const offset = formationOffset(
+          i,
+          this.allies.length,
+          this.pack.rules.formationSpacing,
+        );
+        dest = { x: this.anchor.x + offset.x, y: this.anchor.y + offset.y };
       }
       if (u.side === "enemy" && t) dest = { x: t.x, y: t.y };
       const d = Math.hypot(dest.x - u.x, dest.y - u.y),
-        move = u.side === "ally" ? d > 5 : t && d > u.range * 0.65;
+        move =
+          u.side === "ally"
+            ? !u.turretUntil && d > 0.05
+            : t && d > u.range * 0.65;
       if (move && d > 0) {
-        u.x += ((dest.x - u.x) / d) * Math.min(d, u.speed * dt);
-        u.y += ((dest.y - u.y) / d) * Math.min(d, u.speed * dt);
+        u.x +=
+          ((dest.x - u.x) / d) *
+          Math.min(
+            d,
+            u.side === "ally"
+              ? Math.min(
+                  u.speed * 1.65,
+                  d / (0.12 + this.allies.indexOf(u) * 0.055),
+                ) * dt
+              : u.speed * dt,
+          );
+        u.y +=
+          ((dest.y - u.y) / d) *
+          Math.min(
+            d,
+            u.side === "ally"
+              ? Math.min(
+                  u.speed * 1.65,
+                  d / (0.12 + this.allies.indexOf(u) * 0.055),
+                ) * dt
+              : u.speed * dt,
+          );
         const r = this.pack.regions.find((r) => r.id === this.save.region)!;
         u.x = Math.max(15, Math.min(r.width - 15, u.x));
         u.y = Math.max(15, Math.min(r.height - 15, u.y));

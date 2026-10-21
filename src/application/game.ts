@@ -2,6 +2,7 @@ import type { Pack } from "../content/schema";
 import { snapshot } from "../content/schema";
 import { newSave, stats, type Save } from "../domain/model";
 import { apply, settle, type Command } from "../domain/economy";
+import { patrolPosition } from "../domain/navigation";
 import { Combat } from "../domain/combat";
 import { fingerprint } from "../content/fingerprint";
 import { compatibilityPlan } from "../domain/migration";
@@ -176,8 +177,8 @@ export class Game {
     if (this.movement.x || this.movement.y) {
       const n = Math.hypot(this.movement.x, this.movement.y);
       this.move(
-        this.x + (this.movement.x / n) * 190 * dt,
-        this.y + (this.movement.y / n) * 190 * dt,
+        (this.combat?.anchor.x ?? this.x) + (this.movement.x / n) * 190 * dt,
+        (this.combat?.anchor.y ?? this.y) + (this.movement.y / n) * 190 * dt,
       );
     }
     if (this.combat) {
@@ -228,7 +229,10 @@ export class Game {
     ) {
       const patrol = r.patrols.find(
         (v) =>
-          Math.hypot(v.x - this.x, v.y - this.y) < 130 &&
+          Math.hypot(
+            patrolPosition(v, this.voyageSeconds).x - this.x,
+            patrolPosition(v, this.voyageSeconds).y - this.y,
+          ) < v.detectionRadius &&
           (this.save.patrolCooldowns[v.id] ?? 0) <= this.voyageSeconds,
       );
       if (patrol) {

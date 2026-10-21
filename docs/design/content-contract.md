@@ -334,3 +334,9 @@ CharacterDef基礎rarity與角色實例level／tier分開；數值表單改基�
 - 工坊已有完整快照及新波次／巡邏JSON欄位，舊草稿保留不暗合併。使用「從新版正式內容建立草稿」會先保留復原歷史，再切換新版基底。
 
 詳細已確認需求見 [探索版0.2](exploration-v2.md)。
+
+## 17. Galaxy Angel 0.3 執行增量
+
+現行原始契約仍為schemaVersion1，新增欄位皆有預設，不更動舊存檔ID。精確欄位／範圍／站位行為見 [0.3契約](galaxy-angel-v3.md)：region的sprite／background、building／research的sprite、quest的background、patrol的detectionRadius／patrolRadius／patrolSpeed／phase，以及rules的隊距／顯示尺寸。所有非空圖片引用均檢查assets存在；巡邏路線完整在星域範圍內。只用畫面縮放改大小，不改碰撞。
+
+擴充requires為精確版本；目前core 0.3.0，comet.example.json已有實際assemble測試，未自動啟用。新媒體須交實檔與來源／hash，整合者接入build複製與完整性檢查；原六圖、Q圖、世界圖分別由各manifest驗證。工坊完整ZIP包括WebP bytes，可離開原機器匯入；不准依賴本機路徑／objectURL。現行25MiB壓縮／60MiB總解壓預算不放寬。

@@ -23,7 +23,7 @@ test("exported package contains media bytes and can be imported without original
   const expected = structuredClone(p);
   for (const a of expected.assets)
     if (!a.src.startsWith("data:"))
-      a.src = `data:image/png;base64,${(await readFile(`public/${a.src}`)).toString("base64")}`;
+      a.src = `data:image/${a.src.endsWith(".webp") ? "webp" : a.src.endsWith(".jpg") ? "jpeg" : "png"};base64,${(await readFile(`public/${a.src}`)).toString("base64")}`;
   assert.deepEqual(roundtrip, expected);
   assert.ok(zip.byteLength > 0);
 });

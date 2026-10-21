@@ -99,6 +99,8 @@ const planet = z
 const region = z
   .object({
     ...base,
+    background: z.string().default(""),
+    sprite: z.string().default(""),
     width: positive,
     height: positive,
     startX: z.number().finite(),
@@ -113,6 +115,10 @@ const region = z
             y: z.number().finite(),
             enemies: z.array(group).min(1),
             reward: amount,
+            detectionRadius: z.number().min(100).max(600).default(290),
+            patrolRadius: z.number().min(0).max(500).default(0),
+            patrolSpeed: z.number().min(5).max(120).default(38),
+            phase: z.number().min(0).max(6.284).default(0),
             respawnSeconds: z.number().min(30).max(3600),
           })
           .strict(),
@@ -131,6 +137,7 @@ const resource = z
 const building = z
   .object({
     ...base,
+    sprite: z.string().default(""),
     cost: amount,
     seconds: positive,
     production: amount,
@@ -140,6 +147,7 @@ const building = z
 const research = z
   .object({
     ...base,
+    sprite: z.string().default(""),
     cost: amount,
     seconds: positive,
     attackBonus: z.number().min(0).max(2),
@@ -149,6 +157,7 @@ const research = z
 const quest = z
   .object({
     ...base,
+    background: z.string().default(""),
     condition: z.enum(["cleared", "activated", "summoned", "built", "intro"]),
     target: z.string(),
     count: z.number().int().min(1),
@@ -246,6 +255,10 @@ export const packSchema = z
     audio: z.array(audioCue).optional().default([]),
     rules: z
       .object({
+        formationSpacing: z.number().min(60).max(180).default(106),
+        allySpriteSize: z.number().min(40).max(120).default(78),
+        enemySpriteSize: z.number().min(30).max(120).default(55),
+        bossSpriteSize: z.number().min(60).max(220).default(112),
         teamSize: z.number().int().min(1).max(6),
         maxLevel: z.number().int().min(1).max(120),
         offlineCapSeconds: positive,
@@ -315,6 +328,10 @@ export function validatePack(input: unknown): {
     if (r && (v.x < 0 || v.y < 0 || v.x > r.width || v.y > r.height))
       errors.push(`${v.id}: 座標超出星域`);
   });
+  for (const e of [...p.regions, ...p.research])
+    if (e.sprite) has("assets", e.sprite, e.id);
+  for (const r of p.regions)
+    if (r.background) has("assets", r.background, r.id);
   const patrolIds = new Set<string>();
   for (const r of p.regions)
     for (const v of r.patrols) {
@@ -323,16 +340,25 @@ export function validatePack(input: unknown): {
       patrolIds.add(v.id);
       v.enemies.forEach((e) => has("enemies", e.enemy, v.id));
       money(v.reward, v.id);
-      if (v.x < 0 || v.y < 0 || v.x > r.width || v.y > r.height)
-        errors.push(`${v.id}: 巡邏座標超出星域`);
+      if (
+        v.x - v.patrolRadius < 0 ||
+        v.y - v.patrolRadius * 0.62 < 0 ||
+        v.x + v.patrolRadius > r.width ||
+        v.y + v.patrolRadius * 0.62 > r.height
+      )
+        errors.push(`${v.id}: 巡邏路線超出星域`);
     }
   for (const e of [...p.buildings, ...p.research]) money(e.cost, e.id);
-  p.buildings.forEach((b) => money(b.production, b.id));
+  p.buildings.forEach((b) => {
+    money(b.production, b.id);
+    if (b.sprite) has("assets", b.sprite, b.id);
+  });
   p.research.forEach((r) =>
     r.requires.forEach((v) => has("research", v, r.id)),
   );
   p.quests.forEach((q) => {
     money(q.reward, q.id);
+    if (q.background) has("assets", q.background, q.id);
     if (q.character) has("characters", q.character, q.id);
     if (["cleared", "activated"].includes(q.condition))
       has("planets", q.target, q.id);

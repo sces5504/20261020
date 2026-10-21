@@ -152,6 +152,23 @@ try {
     (await page.locator(".modal-body").innerText()).includes("蔚藍前哨"),
   );
   await page.locator('[data-action="close"]').first().click();
+  await page.locator('[data-id="planets"][data-action="panel"]').click();
+  await page
+    .locator(".territory-card .entity-image")
+    .first()
+    .evaluate(async (im) => {
+      await im.decode();
+      if (!im.naturalWidth) throw Error("territory image missing");
+    });
+  await page.locator('[data-action="manage-planet"]').first().click();
+  await page
+    .locator(".building-card .entity-image")
+    .first()
+    .evaluate(async (im) => {
+      await im.decode();
+      if (!im.naturalWidth) throw Error("building image missing");
+    });
+  await page.screenshot({ path: ".artifacts/v2/building-management.png" });
   assert.deepEqual(errors, []);
   console.log(
     "PASS: original media replacement, seventh character/skill/star/acquisition edit, multi-wave battle win/drop, colony build while paused, character profile and planet management; official save isolated.",

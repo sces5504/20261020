@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "id": "m1:core",
-  "version": "0.2.0",
-  "name": "曙光航跡 · 探索篇",
+  "version": "0.3.0",
+  "name": "Galaxy Angel · 太陽系探索",
   "resources": [
     {
       "id": "m1:crystal",
@@ -289,7 +289,7 @@
       "boss": false,
       "phaseAt": 0.5,
       "color": "#ff9a8a",
-      "sprite": ""
+      "sprite": "m1art:scout-v1"
     },
     {
       "id": "m1:sentinel",
@@ -308,7 +308,7 @@
       "boss": false,
       "phaseAt": 0.5,
       "color": "#ecb08c",
-      "sprite": ""
+      "sprite": "m1art:sentinel-v1"
     },
     {
       "id": "m1:umbra",
@@ -327,7 +327,7 @@
       "boss": true,
       "phaseAt": 0.5,
       "color": "#e1a4fa",
-      "sprite": ""
+      "sprite": "m1art:destroyer-v1"
     }
   ],
   "regions": [
@@ -359,7 +359,11 @@
             "m1:metal": 10,
             "m1:ether": 10
           },
-          "respawnSeconds": 180
+          "respawnSeconds": 180,
+          "detectionRadius": 290,
+          "patrolRadius": 180,
+          "patrolSpeed": 38,
+          "phase": 0
         },
         {
           "id": "m1:patrol-2",
@@ -377,7 +381,11 @@
             "m1:metal": 10,
             "m1:ether": 10
           },
-          "respawnSeconds": 180
+          "respawnSeconds": 180,
+          "detectionRadius": 290,
+          "patrolRadius": 180,
+          "patrolSpeed": 38,
+          "phase": 1.6
         },
         {
           "id": "m1:patrol-3",
@@ -395,9 +403,15 @@
             "m1:metal": 10,
             "m1:ether": 10
           },
-          "respawnSeconds": 180
+          "respawnSeconds": 180,
+          "detectionRadius": 290,
+          "patrolRadius": 180,
+          "patrolSpeed": 38,
+          "phase": 3.2
         }
-      ]
+      ],
+      "sprite": "m1art:bridge-v1",
+      "background": "m1art:cosmos-v1"
     }
   ],
   "planets": [
@@ -412,7 +426,7 @@
       "y": 1530,
       "radius": 58,
       "color": "#70d6d3",
-      "sprite": "",
+      "sprite": "m1art:haven-v1",
       "requires": [],
       "enemies": [
         {
@@ -470,7 +484,7 @@
       "y": 820,
       "radius": 49,
       "color": "#e9b87d",
-      "sprite": "",
+      "sprite": "m1art:vein-v1",
       "requires": ["m1:haven"],
       "enemies": [
         {
@@ -528,7 +542,7 @@
       "y": 1610,
       "radius": 74,
       "color": "#b8a0e4",
-      "sprite": "",
+      "sprite": "m1art:umbra-gate-v1",
       "requires": ["m1:vein"],
       "enemies": [
         {
@@ -596,7 +610,8 @@
         "m1:metal": 0.035,
         "m1:ether": 0.035
       },
-      "maxLevel": 3
+      "maxLevel": 3,
+      "sprite": "m1art:refinery-v1"
     }
   ],
   "research": [
@@ -614,7 +629,8 @@
       },
       "seconds": 60,
       "attackBonus": 0.12,
-      "requires": []
+      "requires": [],
+      "sprite": "m1art:refinery-v1"
     },
     {
       "id": "m1:resonance",
@@ -630,7 +646,8 @@
       },
       "seconds": 90,
       "attackBonus": 0.15,
-      "requires": ["m1:weapons"]
+      "requires": ["m1:weapons"],
+      "sprite": "m1art:refinery-v1"
     }
   ],
   "quests": [
@@ -662,7 +679,8 @@
           "speaker": "地球",
           "text": "先尋找蔚藍前哨，再解放並啟動它。穩定的產能會讓我們走得更遠。準備好了，就一起出發吧。"
         }
-      ]
+      ],
+      "background": "m1art:bridge-v1"
     },
     {
       "id": "m1:first-light",
@@ -689,7 +707,8 @@
           "speaker": "地球",
           "text": "先啟動設施吧。新的星球是穩定的補給來源；建造採集站和派駐少女，也能進一步提升產量。"
         }
-      ]
+      ],
+      "background": "m1art:surface-v1"
     },
     {
       "id": "m1:home",
@@ -712,7 +731,8 @@
           "speaker": "地球",
           "text": "從一個小小的據點開始吧。每一顆重新亮起的星球，都會成為我們前進的力量。"
         }
-      ]
+      ],
+      "background": "m1art:surface-v1"
     },
     {
       "id": "m1:signal",
@@ -735,7 +755,8 @@
           "speaker": "通訊員",
           "text": "星體共鳴已穩定。新的航跡，會與我們在這裡相遇。"
         }
-      ]
+      ],
+      "background": "m1art:bridge-v1"
     },
     {
       "id": "m1:dawn",
@@ -758,7 +779,8 @@
           "speaker": "月球",
           "text": "黑暗沒有消失。但我們已經知道，該往哪裡點亮下一顆星。"
         }
-      ]
+      ],
+      "background": "m1art:surface-v1"
     }
   ],
   "assets": [
@@ -869,6 +891,96 @@
       "height": 1278,
       "hash": "be70ff09e4668c529cf47529437357c4fdbcd6fff23bd59f944f86d81a0fc507",
       "review": "candidate"
+    },
+    {
+      "id": "m1art:bridge-v1",
+      "name": "星海艦橋",
+      "src": "assets/world/bridge.webp",
+      "width": 1672,
+      "height": 941,
+      "hash": "764498afe3cd29eac398ae1f49e474b6e8fc5447eadb85dbda8d7cc26ec1aeab",
+      "review": "candidate"
+    },
+    {
+      "id": "m1art:surface-v1",
+      "name": "蔚藍前哨地表",
+      "src": "assets/world/surface.webp",
+      "width": 1672,
+      "height": 941,
+      "hash": "4cbd450f44ec90f6e534061b7cd379d0561d99bc34789b59f2a2d3eaed7b9a23",
+      "review": "candidate"
+    },
+    {
+      "id": "m1art:refinery-v1",
+      "name": "軌道採集站",
+      "src": "assets/world/refinery.webp",
+      "width": 1374,
+      "height": 1145,
+      "hash": "7d2ddcae571509038265dd4a6bc6fa6ad659c54c9568eae62bbc81026a70fe0f",
+      "review": "candidate"
+    },
+    {
+      "id": "m1art:destroyer-v1",
+      "name": "黯星毀滅艦",
+      "src": "assets/world/destroyer.webp",
+      "width": 1536,
+      "height": 1024,
+      "hash": "60f8ac8866ce279c6acdad5d3310118ec9389fc2b2b22ecd0906d1c5ed892fb0",
+      "review": "candidate"
+    },
+    {
+      "id": "m1art:haven-v1",
+      "name": "蔚藍前哨外觀",
+      "src": "assets/world/haven.webp",
+      "width": 256,
+      "height": 256,
+      "hash": "f938c2546b79ac11db08e5d8a421493590dbaea3a74f254e9a9bc0957ea1b498",
+      "review": "candidate"
+    },
+    {
+      "id": "m1art:vein-v1",
+      "name": "琥珀礦帶外觀",
+      "src": "assets/world/vein.webp",
+      "width": 256,
+      "height": 256,
+      "hash": "2deab2819b4842b1c1958c39780c52055af1f93dd59ee3f8f983c2aa2ea6accb",
+      "review": "candidate"
+    },
+    {
+      "id": "m1art:umbra-gate-v1",
+      "name": "黯星之門外觀",
+      "src": "assets/world/umbra-gate.webp",
+      "width": 256,
+      "height": 256,
+      "hash": "d34aebe4f0078fd53ab883ad1881e9d30611c7b9b8617a0a3571c914c20593a7",
+      "review": "candidate"
+    },
+    {
+      "id": "m1art:scout-v1",
+      "name": "游弋偵察機外觀",
+      "src": "assets/world/scout-ai.webp",
+      "width": 1536,
+      "height": 1024,
+      "hash": "48397e89c319a756f259268cab51a4fdd630d1c437e68e2e24c930d16fefe147",
+      "review": "candidate"
+    },
+    {
+      "id": "m1art:sentinel-v1",
+      "name": "星門守衛外觀",
+      "src": "assets/world/sentinel-ai.webp",
+      "width": 1536,
+      "height": 1024,
+      "hash": "378eb9a2164d36697dad51e7c46213beba27a565fcb16c6a389e5c4980671383",
+      "review": "candidate"
+    },
+    {
+      "id": "m1art:cosmos-v1",
+      "name": "遠航星雲",
+      "src": "assets/world/cosmos.webp",
+      "width": 1672,
+      "height": 941,
+      "hash": "dfc9583ea50a21849f04f564ce0ed4886ec41ff0bb0554d01c438aaf2398d767",
+      "review": "candidate"
     }
   ],
   "rules": {
@@ -890,7 +1002,11 @@
       "m1:gas": 12,
       "m1:metal": 12,
       "m1:ether": 12
-    }
+    },
+    "formationSpacing": 106,
+    "allySpriteSize": 78,
+    "enemySpriteSize": 55,
+    "bossSpriteSize": 112
   },
   "audio": [
     {
@@ -996,7 +1112,7 @@
       "status": "active",
       "provenance": "m1-design",
       "id": "m1:audio.alert",
-      "name": "防衛預警",
+      "name": "航路威脅提示",
       "category": "alert",
       "waveform": "triangle",
       "startHz": 520,

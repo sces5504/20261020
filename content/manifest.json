@@ -1,1 +1,79 @@
-{ "base": "core/pack.json", "extensions": [] }
+{
+  "base": "core/pack.json",
+  "extensions": [
+    "extensions/frontier-beacon.json",
+    "extensions/solar10.json",
+    "extensions/stellar10-art.json"
+  ],
+  "regionPresentation": [
+    {
+      "region": "m1:frontier-test",
+      "name": "第二星域 · 邊境信標",
+      "description": "沿信標訊號探索邊境；解放黯星之門後可挑戰信標守軍，清空後解放並啟動生產。可沿航路返回曙光星域。",
+      "sprite": "beacon:asset.signal-v1",
+      "background": "beacon:asset.frontier-v1"
+    }
+  ],
+  "characterPresentation": [
+    {
+      "character": "solar10:character.sun",
+      "portrait": "stellaart:asset.sun-portrait-web",
+      "avatar": "stellaart:asset.sun-avatar-web",
+      "sprite": "stellaart:asset.sun-battle-v2-web"
+    },
+    {
+      "character": "solar10:character.jupiter",
+      "portrait": "stellaart:asset.jupiter-portrait-web",
+      "avatar": "stellaart:asset.jupiter-avatar-web",
+      "sprite": "stellaart:asset.jupiter-battle-v2-web"
+    },
+    {
+      "character": "solar10:character.saturn",
+      "portrait": "stellaart:asset.saturn-portrait-web",
+      "avatar": "stellaart:asset.saturn-avatar-web",
+      "sprite": "stellaart:asset.saturn-battle-v2-web"
+    },
+    {
+      "character": "solar10:character.neptune",
+      "portrait": "stellaart:asset.neptune-portrait-web",
+      "avatar": "stellaart:asset.neptune-avatar-web",
+      "sprite": "stellaart:asset.neptune-battle-v2-web"
+    },
+    {
+      "character": "solar10:character.pluto",
+      "portrait": "stellaart:asset.pluto-portrait-web",
+      "avatar": "stellaart:asset.pluto-avatar-web",
+      "sprite": "stellaart:asset.pluto-battle-v2-web"
+    },
+    {
+      "character": "solar10:character.nemesis",
+      "portrait": "stellaart:asset.nemesis-portrait-web",
+      "avatar": "stellaart:asset.nemesis-avatar-web",
+      "sprite": "stellaart:asset.nemesis-battle-v3-web"
+    },
+    {
+      "character": "solar10:character.ganymede",
+      "portrait": "stellaart:asset.ganymede-portrait-web",
+      "avatar": "stellaart:asset.ganymede-avatar-web",
+      "sprite": "stellaart:asset.ganymede-battle-v2-web"
+    },
+    {
+      "character": "solar10:character.io",
+      "portrait": "stellaart:asset.io-portrait-web",
+      "avatar": "stellaart:asset.io-avatar-web",
+      "sprite": "stellaart:asset.io-battle-v2-web"
+    },
+    {
+      "character": "solar10:character.titania",
+      "portrait": "stellaart:asset.titania-portrait-web",
+      "avatar": "stellaart:asset.titania-avatar-web",
+      "sprite": "stellaart:asset.titania-battle-v2-web"
+    },
+    {
+      "character": "solar10:character.ariel",
+      "portrait": "stellaart:asset.ariel-portrait-web",
+      "avatar": "stellaart:asset.ariel-avatar-web",
+      "sprite": "stellaart:asset.ariel-battle-v2-web"
+    }
+  ]
+}

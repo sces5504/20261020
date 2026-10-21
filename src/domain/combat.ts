@@ -50,6 +50,8 @@ export type Flash = {
   life: number;
   label: string;
   side?: Unit["side"];
+  skillId?: string;
+  sourceDefinition?: string;
 };
 export class Combat {
   units: Unit[] = [];
@@ -233,6 +235,8 @@ export class Combat {
       color: s.color,
       life: 0.65,
       label: s.name,
+      skillId: s.id,
+      sourceDefinition: u.def,
     });
     if (s.effect === "shield")
       friends.forEach((v) => {

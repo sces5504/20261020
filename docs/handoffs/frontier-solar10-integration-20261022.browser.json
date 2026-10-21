@@ -1,0 +1,45 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "dpr": 1,
+      "seed": 77,
+      "characters": 10,
+      "sharedSkillCasters": 2,
+      "frontier": true
+    },
+    {
+      "width": 390,
+      "dpr": 2,
+      "seed": 77,
+      "characters": 10,
+      "sharedSkillCasters": 2,
+      "frontier": true
+    }
+  ],
+  "errors": [],
+  "build": {
+    "commit": "7799c6287e700016a3ff846016935095e11f3873",
+    "target": "exploration-playtest",
+    "contentVersion": "0.5.0",
+    "contentHash": "07798ea20b5af667b1478bd7070072eb61abf80acac4e80ee786787adcb9e6a4",
+    "packs": [
+      {
+        "id": "m1:core",
+        "version": "0.5.0"
+      },
+      {
+        "id": "beacon:package.frontier",
+        "version": "0.2.0"
+      },
+      {
+        "id": "solar10:package.first-ten",
+        "version": "0.1.1"
+      },
+      {
+        "id": "stellaart:package.stellar10",
+        "version": "0.1.0"
+      }
+    ]
+  }
+}

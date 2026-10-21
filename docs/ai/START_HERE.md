@@ -1,3 +1,5 @@
+> 最新內容整合：[第二區與十人交接](../handoffs/frontier-solar10-integration-20261022.md)／PR #11。啟用beacon0.2.0、solar10 0.1.1與stellaart0.1.0，16角色／2區／4星球，核心仍0.5.0；根manifest呈現綁定與安全媒體複製由核心整合者維護。下方六人等為首個切片歷史。
+
 # Galaxy Angel：後續 AI 擴充入口
 
 最新產品契約：[0.5補給／隊形／跨區](../design/galaxy-angel-v5.md) → [0.4同調與連續遭遇](../design/galaxy-angel-v4.md) → [0.3航行與呈現](../design/galaxy-angel-v3.md) → [0.2經濟與探索](../design/exploration-v2.md) → [內容契約](../design/content-contract.md)。最新交接：[galaxy-angel-v5-20261021](../handoffs/galaxy-angel-v5-20261021.md)。先讀 AGENTS.md、記憶索引與本輪交接，再 fetch 核對 main／HEAD；從最新 main 建立自己的分支。**不再使用舊 m1/foundation 作整合入口**。不改 README，也不直接編輯生成檔。

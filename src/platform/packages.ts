@@ -10,22 +10,44 @@ export async function exportPack(
 ): Promise<Uint8Array> {
   const p = structuredClone(pack),
     files: Record<string, Uint8Array> = {};
+  const media = new Map<string, string>();
   for (const a of p.assets) {
+    let bytes: Uint8Array;
+    let ext: string;
     if (a.src.startsWith("data:")) {
-      const [head, data] = a.src.split(","),
-        ext = head.includes("jpeg")
-          ? "jpg"
-          : head.includes("webp")
-            ? "webp"
-            : "png";
-      const path = `assets/${a.hash}.${ext}`;
-      files[path] = Uint8Array.from(atob(data), (c) => c.charCodeAt(0));
-      a.src = path;
+      const [head, data] = a.src.split(",");
+      ext = head.includes("jpeg")
+        ? "jpg"
+        : head.includes("webp")
+          ? "webp"
+          : "png";
+      bytes = Uint8Array.from(atob(data), (c) => c.charCodeAt(0));
     } else {
-      files[a.src.replace(/^\.\//, "")] = await loadAsset(a.src);
+      bytes = await loadAsset(a.src);
+      ext = a.src.endsWith(".webp")
+        ? "webp"
+        : a.src.endsWith(".jpg")
+          ? "jpg"
+          : "png";
     }
+    // Deduplicate by actual bytes, including uploaded copies of shipped artwork.
+    // Short archive-local names leave the fixed media budget for artwork, not paths.
+    const digest = Array.from(
+      new Uint8Array(
+        await crypto.subtle.digest("SHA-256", bytes as Uint8Array<ArrayBuffer>),
+      ),
+      (n) => n.toString(16).padStart(2, "0"),
+    ).join("");
+    const key = `${digest}.${ext}`;
+    let path = media.get(key);
+    if (!path) {
+      path = `assets/${media.size}.${ext}`;
+      media.set(key, path);
+      files[path] = bytes;
+    }
+    a.src = path;
   }
-  files["pack.json"] = strToU8(JSON.stringify(p, null, 2));
+  files["pack.json"] = strToU8(JSON.stringify(p));
   return zipSync(files, { level: 6 });
 }
 export function importPack(bytes: Uint8Array): Pack {

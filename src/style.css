@@ -3066,3 +3066,17 @@ button:not(:disabled):hover {
     padding-inline: 7px;
   }
 }
+
+/* Separate avatar artwork already contains its face framing. Legacy portrait reuse keeps the original crop. */
+.avatar-window.avatar-cropped img {
+  transform: none;
+  object-position: center;
+}
+@media (max-width: 800px) {
+  .planet-card > p.intel-guidance {
+    display: block;
+    font-size: 11px;
+    line-height: 1.5;
+    margin: 8px 0;
+  }
+}

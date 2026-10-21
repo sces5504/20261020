@@ -122,6 +122,10 @@ try {
   // Keep both pending across UI checks; no fake combat clock.
   for (const j of s.jobs) j.ends = Date.now() + 180000;
   const editable = structuredClone(pack);
+  // The published second sector now has content; explicitly retain the empty-sector fixture.
+  editable.planets = editable.planets.filter(
+    (v) => v.region !== editable.regions[1].id,
+  );
   editable.regions[0].routes[0].label = "<em>前往測試空域</em>";
   await install(page, editable, s);
   await page.locator(".mission-waiting .job-art img").waitFor();

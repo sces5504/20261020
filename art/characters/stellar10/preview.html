@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>星河戰姬｜十位角色美術試套</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#091321;color:#e9eff9;font:16px/1.6 system-ui,sans-serif}header,main{max-width:1280px;margin:auto;padding:24px}h1{font-size:28px;margin:0}p{color:#b7c6dc}button{background:#19334a;color:#ecfaff;border:1px solid #5a93aa;border-radius:8px;padding:10px 16px;cursor:pointer;font:inherit}button[aria-pressed=true]{background:#426477}nav{display:flex;flex-wrap:wrap;gap:8px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}article{min-width:0;padding:16px;border:1px solid #344c66;border-radius:12px;background:#0e1e32}h2{margin:0;font-size:20px}.art{height:310px;display:flex;align-items:center;justify-content:center;background-color:#14263d;background-image:conic-gradient(#ffffff08 25%,transparent 0 50%,#ffffff08 0 75%,transparent 0);background-size:24px 24px;border-radius:8px}.art img{width:100%;height:100%;object-fit:contain}.avatar{width:64px;height:64px;object-fit:contain;border-radius:50%;border:1px solid #a3b9cd}.info{display:flex;gap:12px;align-items:center;margin:12px 0}.note{font-size:13px;color:#b7c6dc}.battle-row{display:flex;align-items:flex-end;flex-wrap:wrap;gap:12px;padding:16px;border:1px solid #536b8a;border-radius:12px;margin-bottom:24px;background:#071322}.mini{height:78px;width:78px;object-fit:contain}.sample{max-width:100%;padding:10px}.mini-label{font-size:12px;text-align:center}.light{background:#dce3ee!important}.light .mini-label{color:#203149}.light .art{background-color:#dce3ee}a{color:#a7e9ed}details{margin-top:10px}summary{cursor:pointer}#status{margin:12px 0}@media(max-width:500px){header,main{padding:16px}h1{font-size:23px}.grid{grid-template-columns:1fr}.art{height:340px}.battle-row{gap:4px}.mini{width:64px;height:78px}}
+</style>
+<header><h1>星河戰姬 · 十位角色美術試套</h1><p>Q 版依第一里程碑比例調整。全數為待審候選；此頁為素材尺寸試套，遊戲接入另交整合者。</p><nav><button id="battle" aria-pressed="true">Q 版戰鬥候選</button><button id="portrait" aria-pressed="false">原立繪網頁版</button><button id="background">切換明暗背景</button></nav><div id="status" role="status">載入素材…</div></header>
+<main><h2>78px 顯示尺寸</h2><p class="note">與第一里程碑相同顯示高度的靜態試套；不是遊戲戰鬥或動畫驗收。</p><div id="minis" class="battle-row"></div><div id="cards" class="grid"></div></main>
+<script type="module">
+const catalog=await fetch('./catalog.json').then(r=>{if(!r.ok)throw Error('catalog');return r.json()});
+let mode='battle'; const cards=document.querySelector('#cards'),minis=document.querySelector('#minis');
+function render(){cards.replaceChildren();minis.replaceChildren();for(const c of catalog.characters){
+ const article=document.createElement('article');article.dataset.character=c.id;
+ const info=document.createElement('div');info.className='info';
+ const avatar=new Image();avatar.src=c.avatarAsset.path;avatar.alt=c.nameZhHant+'頭像';avatar.className='avatar';
+ const h=document.createElement('h2');h.textContent=c.nameZhHant;info.append(avatar,h);
+ const stage=document.createElement('div');stage.className='art';const im=new Image();im.src=mode==='battle'?c.battleAsset.webAsset.path:c.webAsset.path;im.alt=c.nameZhHant+(mode==='battle'?' Q版候選':'立繪');stage.append(im);
+ const note=document.createElement('p');note.className='note';note.textContent='待使用者審閱 · 靜態素材';
+ const details=document.createElement('details'),summary=document.createElement('summary'),text=document.createElement('p');summary.textContent='角色特徵與來源';text.className='note';text.textContent=c.id+'｜'+c.sourceOriginalVersion+'｜'+c.visualInspection;
+ const link=document.createElement('a');link.href=c.path;link.textContent='開啟保留原圖';details.append(summary,text,link);article.append(info,stage,note,details);cards.append(article);
+ const item=document.createElement('div'),small=new Image(),label=document.createElement('div');small.src=c.battleAsset.webAsset.path;small.alt=c.nameZhHant+' 78px';small.className='mini';label.className='mini-label';label.textContent=c.nameZhHant;item.append(small,label);minis.append(item);
+ }document.querySelector('#status').textContent='10 位角色 · 10 張立繪 · 10 張頭像 · 10 張靜態 Q 圖';}
+for(const name of ['battle','portrait'])document.querySelector('#'+name).onclick=()=>{mode=name;for(const key of ['battle','portrait'])document.querySelector('#'+key).setAttribute('aria-pressed',String(key===name));render()};
+document.querySelector('#background').onclick=()=>{document.querySelector('#minis').classList.toggle('light');document.querySelector('#cards').classList.toggle('light')};render();
+</script></html>

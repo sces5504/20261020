@@ -1,0 +1,289 @@
+{
+  "schemaVersion": 1,
+  "id": "stellaart:package.stellar10",
+  "version": "0.1.0",
+  "requires": [
+    {
+      "id": "m1:core",
+      "version": "0.5.0"
+    },
+    {
+      "id": "solar10:package.first-ten",
+      "version": "0.1.1"
+    }
+  ],
+  "definitions": {
+    "assets": [
+      {
+        "id": "stellaart:asset.sun-portrait-web",
+        "name": "太陽 · portrait",
+        "src": "assets/extensions/stellar10/web/sun.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "a10286c83ab37676bb4955cf576f251bfaf2282d2df43b76553dd38005965f9e",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.sun-avatar-web",
+        "name": "太陽 · avatar",
+        "src": "assets/extensions/stellar10/avatars/sun.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "ce6e6c96f6bb56b06c712b79da9be8158b13a6b7abc12a46416fd7c5e949ede2",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.sun-battle-v2-web",
+        "name": "太陽 · sprite",
+        "src": "assets/extensions/stellar10/web/sun-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "09724c32d79cc1d2ca9aa6f209ca0c32f46d749090fdc741f518a9b7d99d2e48",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.jupiter-portrait-web",
+        "name": "木星 · portrait",
+        "src": "assets/extensions/stellar10/web/jupiter.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "8858ba0e3a8ef72e5e859432e9fd456bbc63adfdf3806926efbcdb3629173263",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.jupiter-avatar-web",
+        "name": "木星 · avatar",
+        "src": "assets/extensions/stellar10/avatars/jupiter.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "b472eb897c407153141ddaf46b09ea33218891ed5593aa6d06e2d79da7c8141b",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.jupiter-battle-v2-web",
+        "name": "木星 · sprite",
+        "src": "assets/extensions/stellar10/web/jupiter-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "7f7858cb95f32377c0c1d3245f55582a536c787a85c14aa37656bb703b8e40ba",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.saturn-portrait-web",
+        "name": "土星 · portrait",
+        "src": "assets/extensions/stellar10/web/saturn.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "a043e17eaebf8e746665d8fe7813b51a7287cabb054039867eadf87addccc370",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.saturn-avatar-web",
+        "name": "土星 · avatar",
+        "src": "assets/extensions/stellar10/avatars/saturn.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "8833b37c73b3d91ed534d574b91db80eb73b8b9f917c5ff52fd9e764de37fd91",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.saturn-battle-v2-web",
+        "name": "土星 · sprite",
+        "src": "assets/extensions/stellar10/web/saturn-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "b73cc4de7028a3613eabd1615e07a568e8c08e48a5549129305c2ad28c151545",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.neptune-portrait-web",
+        "name": "海王星 · portrait",
+        "src": "assets/extensions/stellar10/web/neptune.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "dbaabeb302e4d8caaa6a6adb6044b7ceb6b63c21614d397103e83960a4343426",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.neptune-avatar-web",
+        "name": "海王星 · avatar",
+        "src": "assets/extensions/stellar10/avatars/neptune.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "020e493ae9db2c8bd6cef69561e07ef375e934f09ca97fbdeabcdb1f6c99a86b",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.neptune-battle-v2-web",
+        "name": "海王星 · sprite",
+        "src": "assets/extensions/stellar10/web/neptune-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "965c1477eb6a366e082f2520a4ef1ef9568d4c941cc26673066d38c89f2cc35e",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.pluto-portrait-web",
+        "name": "冥王星 · portrait",
+        "src": "assets/extensions/stellar10/web/pluto.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "0e1408234e1cf31fa65e20e825e19b3f6a9d569b47d639e350ecaa978549d922",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.pluto-avatar-web",
+        "name": "冥王星 · avatar",
+        "src": "assets/extensions/stellar10/avatars/pluto.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "65c39cb6297fd829bf697f33d1710096996f6cc036a0bfb5479cf5e4fa7d69f2",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.pluto-battle-v2-web",
+        "name": "冥王星 · sprite",
+        "src": "assets/extensions/stellar10/web/pluto-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "b80491ae7c77036279641dfd022bb3657c7cc2778368e01de2f5834a9e544d45",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.nemesis-portrait-web",
+        "name": "涅墨西斯 · portrait",
+        "src": "assets/extensions/stellar10/web/nemesis.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "db0ccbda9233ac08dc4e2d4c8b996d97ab25ac82ac2001a6b3f98536c642d5d8",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.nemesis-avatar-web",
+        "name": "涅墨西斯 · avatar",
+        "src": "assets/extensions/stellar10/avatars/nemesis.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "8e40fc22084afd814f145918e6b6ba6425569e3a290c9baa4a0f278f4bbbfc32",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.nemesis-battle-v3-web",
+        "name": "涅墨西斯 · sprite",
+        "src": "assets/extensions/stellar10/web/nemesis-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "a8ad6ccad1c33907fc1608effcf65bd23fa29f0ca356453dee68962b39a55c82",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.ganymede-portrait-web",
+        "name": "木衛三 · portrait",
+        "src": "assets/extensions/stellar10/web/ganymede.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "e105db557dcd879b79a172af8bffbe02c16236b744302384fb69f593b5457db7",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.ganymede-avatar-web",
+        "name": "木衛三 · avatar",
+        "src": "assets/extensions/stellar10/avatars/ganymede.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "52d3e343223f391dd2ee83206fd1c6e038e3362d38d65a0af16c8cc974f85298",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.ganymede-battle-v2-web",
+        "name": "木衛三 · sprite",
+        "src": "assets/extensions/stellar10/web/ganymede-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "cbf7f9f6bd1bc711041b3f075c4d8ce1c3da950ea01e7794bdab0da2b11f6d62",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.io-portrait-web",
+        "name": "木衛一 · portrait",
+        "src": "assets/extensions/stellar10/web/io.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "b813da28d3a99123d8d752740956b8533903d810b8c74e35d8281f939db2ac5e",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.io-avatar-web",
+        "name": "木衛一 · avatar",
+        "src": "assets/extensions/stellar10/avatars/io.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "db7ddf8dbc542ccd86b087c1f7aa5949d172c16df0839a19060591b8f4d70bca",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.io-battle-v2-web",
+        "name": "木衛一 · sprite",
+        "src": "assets/extensions/stellar10/web/io-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "3fc11db4820a147d15e232138e6f63943b245f1927638f7aac675ae90ae25628",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.titania-portrait-web",
+        "name": "天衛三 · portrait",
+        "src": "assets/extensions/stellar10/web/titania.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "e1ec272b5c364efa7dfd573cfc5435fce8f8baadec36c1896ab3f885a318f449",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.titania-avatar-web",
+        "name": "天衛三 · avatar",
+        "src": "assets/extensions/stellar10/avatars/titania.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "535eb4e9af4fd77312e17386a9d0d066f0d8f77eb2729e9e7c9433685c72fcdf",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.titania-battle-v2-web",
+        "name": "天衛三 · sprite",
+        "src": "assets/extensions/stellar10/web/titania-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "bf37b0a409ede27466141e00d4f9b6f5e799f1137c9a99c78fc64bf079e7ac70",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.ariel-portrait-web",
+        "name": "天衛一 · portrait",
+        "src": "assets/extensions/stellar10/web/ariel.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "bde80af081f7cf7b762514959d530afd3ccd6a4aa2df58a5673c13dedec16a2d",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.ariel-avatar-web",
+        "name": "天衛一 · avatar",
+        "src": "assets/extensions/stellar10/avatars/ariel.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "13c0256872e99867aaa7972b037e295d503fbae55ad94f72fb62133b69aca818",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.ariel-battle-v2-web",
+        "name": "天衛一 · sprite",
+        "src": "assets/extensions/stellar10/web/ariel-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "6fea27557144d34075207494f062aea6151cd55f0abfebd19afa74bc36de6a48",
+        "review": "candidate"
+      }
+    ]
+  }
+}

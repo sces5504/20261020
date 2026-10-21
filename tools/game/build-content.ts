@@ -5,6 +5,8 @@ const root = resolve("content"),
   manifest = JSON.parse(readFileSync("content/manifest.json", "utf8")) as {
     base: string;
     extensions: string[];
+    regionPresentation?: unknown;
+    characterPresentation?: unknown;
   };
 const load = (file: string) => {
   const path = resolve(root, file);
@@ -12,7 +14,12 @@ const load = (file: string) => {
     throw Error("內容檔路徑必須在 content 內");
   return JSON.parse(readFileSync(path, "utf8"));
 };
-const merged = assemble(load(manifest.base), manifest.extensions.map(load));
+const merged = assemble(
+  load(manifest.base),
+  manifest.extensions.map(load),
+  manifest.regionPresentation,
+  manifest.characterPresentation,
+);
 mkdirSync("content/generated", { recursive: true });
 writeFileSync("content/generated/runtime.json", JSON.stringify(merged));
 console.log(
@@ -96,5 +103,36 @@ for (const entry of worldAssets) {
   if (!output.startsWith(resolve("public/assets/world") + "/"))
     throw Error("世界素材路徑越界");
   mkdirSync(resolve("public/assets/world"), { recursive: true });
+  writeFileSync(output, bytes);
+}
+
+// Explicit integrator-owned media manifest; never infer files from asset IDs.
+const extensionAssets = JSON.parse(
+  readFileSync("art/catalog/extension-assets.json", "utf8"),
+) as typeof worldAssets;
+rmSync("public/assets/extensions", { recursive: true, force: true });
+for (const entry of extensionAssets) {
+  const source = resolve(entry.path);
+  const master = entry.master && resolve(entry.master);
+  const output = resolve("public", entry.runtime);
+  if (
+    !source.startsWith(resolve("art") + "/") ||
+    (master && !master.startsWith(resolve("art") + "/")) ||
+    !output.startsWith(resolve("public/assets/extensions") + "/")
+  )
+    throw Error("擴充素材路徑越界");
+  const bytes = readFileSync(source);
+  const asset = merged.assets.find((a) => a.id === entry.id);
+  if (
+    !asset ||
+    asset.src !== entry.runtime ||
+    asset.hash !== entry.sha256 ||
+    createHash("sha256").update(bytes).digest("hex") !== entry.sha256 ||
+    (master &&
+      createHash("sha256").update(readFileSync(master)).digest("hex") !==
+        entry.masterSha256)
+  )
+    throw Error(`擴充素材hash或映射不符：${entry.id}`);
+  mkdirSync(resolve(output, ".."), { recursive: true });
   writeFileSync(output, bytes);
 }

@@ -29,7 +29,7 @@ export function portrait(p: Pack, c: Character, large = false) {
   return a
     ? large
       ? `<img class="portrait large" src="${esc(a.src)}" alt="${esc(c.name)}" loading="lazy">`
-      : `<div class="portrait avatar-window"><img src="${esc(a.src)}" alt="${esc(c.name)}" loading="lazy"></div>`
+      : `<div class="portrait avatar-window${c.avatar !== c.portrait ? " avatar-cropped" : ""}"><img src="${esc(a.src)}" alt="${esc(c.name)}" loading="lazy"></div>`
     : `<div class="portrait celestial ${large ? "large" : ""}" style="--c:${c.color}"><span>✧</span><small>${esc(c.name)}</small></div>`;
 }
 

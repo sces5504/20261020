@@ -1,0 +1,13 @@
+# 探索版 0.2 接力（試玩16項修正）
+
+起點 main a785566，分支 polish/exploration-v2。使用者要求改善經濟／戰鬥／Q圖／技能／取得／互動／清晰度、完全移除防衛訓練、加入領地總覽、持續銀河探索和大星圖切換、WASD、角色／編隊詳情、對話引導、未來角色表、禁止瀏覽器彈窗並以商業品質打磨。直接授權這些變更，不重問舊玩法確認。
+
+實作與驗收入口：`docs/design/exploration-v2.md`。舊Q圖禁止由較新Q圖要求更新：僅新增獨立戰鬥Q圖；原六立繪不動，對應仍05地球、04水星、01金星、03火星、02天王星、06月球。
+
+已重驗863研究檔／67表37723列／370場景，建立SQLite；角色表僅取126個Gacha CID目標（不是全342CID）。`tools/game/build-character-roster.py`產生公開可下載CSV／JSON與docs/art/future-characters.csv，120後續候選包含造型變體。研究原包未修改。
+
+程式主要入口：schema 的 waves／waveDelay／patrols／intro；Game 持續導航／探索／巡邏；Combat 多波次；UI 對話／取得佇列／角色和編隊／領地；dialog.ts全程取代native confirm。舊save schema1加預設欄位，舊失守領地載入恢復，舊貨幣不刪。工坊有保留復原歷史後重建新版草稿，不能暗覆寫使用者自訂包。
+
+測試入口：`npm test`、`npm run test:e2e`、`npm run test:playtest`、新增 `npm run test:exploration`，release profile已納入。本輪完整 `python3 scripts/project.py check release` 通過：23項核心測試、TypeScript／內容校驗、build、三組Chromium瀏覽器流程。`template-check.py`10項通過，stage成功；原六圖hash／SQLite美術庫重驗通過。實際部署commit以整合PR與Pages workflow及公開version.json為準。當前核心模擬三場約41／52／70秒。Q圖為imagegen衍生候選，已逐張檢視與接入，沒有擅稱使用者批准。
+
+瀏覽器回歸與結果已完成；發布驗證記於整合PR描述，需核對Pages公開遊戲／工坊／catalog及version.json。README不動。尚未做Android／iOS真機或真人商業視聽品質審閱，不能宣稱完成。

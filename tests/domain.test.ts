@@ -21,6 +21,7 @@ function colony() {
 }
 test("batch summon is atomic, persists results at start, and duplicate command cannot debit twice", () => {
   const s = newSave(p, t);
+  for (const r of p.resources) s.wallet[r.id] = 600; // transaction fixture, independent of live opening budget
   const c = { type: "summon", recipe: [100, 100, 100, 100], count: 2 } as const;
   const a = cmd(s, { ...c, recipe: [...c.recipe] }, "repeatable");
   assert.equal(a.jobs.length, 2);
@@ -53,7 +54,9 @@ test("construction splits offline production at completion; fragmented settlemen
     assert.ok(Math.abs(one.wallet[id] - b.wallet[id]) < 1e-7);
   const id = p.resources[0].id;
   assert.ok(
-    Math.abs(one.wallet[id] - (a.wallet[id] + 1.2 * 45 + 1.5 * 15)) < 1e-7,
+    Math.abs(
+      one.wallet[id] - (a.wallet[id] + p.planets[0].production[id] * 60),
+    ) < 1e-7,
   );
   assert.equal(one.built, 1);
 });

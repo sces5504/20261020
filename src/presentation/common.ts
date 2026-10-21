@@ -19,7 +19,7 @@ export function amounts(p: Pack, c: Record<string, number>) {
   return Object.entries(c)
     .map(
       ([id, n]) =>
-        `<span class="cost" style="--c:${p.resources.find((r) => r.id === id)?.color ?? "#fff"}">◆ ${esc(p.resources.find((r) => r.id === id)?.name ?? id)} ${Math.ceil(n)}</span>`,
+        `<span class="cost" style="--c:${p.resources.find((r) => r.id === id)?.color ?? "#fff"}">◆ ${esc(p.resources.find((r) => r.id === id)?.name ?? id)} ${Number(n.toFixed(3)).toLocaleString("zh-TW", { maximumFractionDigits: 3 })}</span>`,
     )
     .join("");
 }

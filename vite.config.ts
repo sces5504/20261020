@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { defineConfig } from "vite";
 export default defineConfig({
   base: "./",
@@ -10,7 +11,10 @@ export default defineConfig({
           fileName: "version.json",
           source: JSON.stringify({
             commit: process.env.GITHUB_SHA || "local-worktree",
-            target: "m1-playtest",
+            target: "exploration-playtest",
+            contentVersion: JSON.parse(
+              readFileSync("content/core/pack.json", "utf8"),
+            ).version,
           }),
         });
       },

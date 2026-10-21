@@ -50,7 +50,14 @@ export function checkSave(raw: unknown, p: Pack): Save {
     if (j.kind === "heal" && !s.roster.some((o) => o.id === j.owner))
       throw Error("治療工作缺失。");
   }
-  if (s.encounter && !p.planets.some((v) => v.id === s.encounter!.planet))
+  if (
+    s.encounter &&
+    !(s.encounter.kind === "patrol"
+      ? p.regions.some((r) =>
+          r.patrols.some((v) => v.id === s.encounter!.planet),
+        )
+      : p.planets.some((v) => v.id === s.encounter!.planet))
+  )
     throw Error("戰鬥星球缺失。");
   return s;
 }

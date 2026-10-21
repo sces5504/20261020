@@ -100,7 +100,14 @@ export function compatibilityPlan(raw: unknown, p: Pack): CompatibilityPlan {
     s.y = Math.min(region.height - 20, Math.max(20, s.y));
   }
   // Cleared/quest/research receipts may outlive content and remain as historical progress.
-  if (s.encounter && !p.planets.some((v) => v.id === s.encounter!.planet)) {
+  if (
+    s.encounter &&
+    !(s.encounter.kind === "patrol"
+      ? p.regions.some((r) =>
+          r.patrols.some((v) => v.id === s.encounter!.planet),
+        )
+      : p.planets.some((v) => v.id === s.encounter!.planet))
+  ) {
     s.encounter = null;
     changes.push("舊遭遇已移除，返回安全航線。");
   }

@@ -68,6 +68,9 @@ const enemy = z
     sprite: z.string(),
   })
   .strict();
+const group = z
+  .object({ enemy: id, count: z.number().int().min(1).max(30) })
+  .strict();
 const planet = z
   .object({
     ...base,
@@ -85,6 +88,8 @@ const planet = z
           .strict(),
       )
       .min(1),
+    waves: z.array(z.array(group).min(1)).default([]),
+    waveDelay: z.number().min(1).max(20).default(4),
     reward: amount,
     activationCost: amount,
     production: amount,
@@ -98,6 +103,21 @@ const region = z
     height: positive,
     startX: z.number().finite(),
     startY: z.number().finite(),
+    discoveryRadius: z.number().min(100).max(1000).default(450),
+    patrols: z
+      .array(
+        z
+          .object({
+            id,
+            x: z.number().finite(),
+            y: z.number().finite(),
+            enemies: z.array(group).min(1),
+            reward: amount,
+            respawnSeconds: z.number().min(30).max(3600),
+          })
+          .strict(),
+      )
+      .default([]),
   })
   .strict();
 const resource = z
@@ -129,7 +149,7 @@ const research = z
 const quest = z
   .object({
     ...base,
-    condition: z.enum(["cleared", "activated", "summoned", "built"]),
+    condition: z.enum(["cleared", "activated", "summoned", "built", "intro"]),
     target: z.string(),
     count: z.number().int().min(1),
     reward: amount,
@@ -229,7 +249,7 @@ export const packSchema = z
         teamSize: z.number().int().min(1).max(6),
         maxLevel: z.number().int().min(1).max(120),
         offlineCapSeconds: positive,
-        raidSeconds: positive,
+        raidSeconds: positive.optional().default(240),
         summonSeconds: positive,
         summonSlots: z.number().int().min(1).max(20),
         defenseK: positive,
@@ -284,7 +304,8 @@ export function validatePack(input: unknown): {
   p.planets.forEach((v) => {
     has("regions", v.region, v.id);
     v.requires.forEach((x) => has("planets", x, v.id));
-    v.enemies.forEach((e) => has("enemies", e.enemy, v.id));
+    for (const wave of [v.enemies, ...v.waves])
+      wave.forEach((e) => has("enemies", e.enemy, v.id));
     v.dropCharacters.forEach((x) => has("characters", x, v.id));
     money(v.reward, v.id);
     money(v.activationCost, v.id);
@@ -294,6 +315,17 @@ export function validatePack(input: unknown): {
     if (r && (v.x < 0 || v.y < 0 || v.x > r.width || v.y > r.height))
       errors.push(`${v.id}: 座標超出星域`);
   });
+  const patrolIds = new Set<string>();
+  for (const r of p.regions)
+    for (const v of r.patrols) {
+      if (patrolIds.has(v.id) || ids.has(v.id))
+        errors.push(`${v.id}: 巡邏ID重複`);
+      patrolIds.add(v.id);
+      v.enemies.forEach((e) => has("enemies", e.enemy, v.id));
+      money(v.reward, v.id);
+      if (v.x < 0 || v.y < 0 || v.x > r.width || v.y > r.height)
+        errors.push(`${v.id}: 巡邏座標超出星域`);
+    }
   for (const e of [...p.buildings, ...p.research]) money(e.cost, e.id);
   p.buildings.forEach((b) => money(b.production, b.id));
   p.research.forEach((r) =>

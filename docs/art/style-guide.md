@@ -101,3 +101,8 @@ AI重繪後不以取得完整OBB為製作必要條件；缺OBB仍保留為原作
 ### 較新映射指示已套用
 
 使用者要求不再等待對應，直接將原先M1六角色套用六圖。依使用者明確指定：05 地球、04 水星、01 金星、03 火星、02 天王星、06 月球。`content/core/art-bindings.json` 與美術庫已記錄；保留原PNG，runtime只複製原位元組，未採用SD重繪。較早的mapping pending敘述為歷史狀態，已由本段取代。
+
+
+## 2026-10-21 直接要求更新
+
+使用者新要求銀河／戰鬥使用Q版。已另外以六張各自原立繪生成獨立battle/v1.png，來源與hash見art/catalog/battle-assets.json；原始standard原圖保持不變。此新指示僅取代舊的禁止Q圖要求，不授權改寫立繪。新圖目前候選試玩，非真人品質核定。最新玩法已取消防衛／訓練，接力先讀docs/design/exploration-v2.md。

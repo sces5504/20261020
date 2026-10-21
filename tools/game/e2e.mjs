@@ -59,16 +59,26 @@ const getRecord = async (page, key) =>
       }),
     key,
   );
+async function skipIntro(page) {
+  await page.waitForSelector('[data-action="story-skip"]');
+  await page.locator('[data-action="story-skip"]').click();
+  await page.waitForSelector(".story-scene", { state: "hidden" });
+}
 try {
   const context = await browser.newContext({
     viewport: { width: 1440, height: 1000 },
   });
+  await context.addInitScript(() => localStorage.setItem("stella:view", "map"));
   const page = await context.newPage();
   page.setDefaultTimeout(8000);
   page.on("pageerror", (e) => failures.push(e.message));
-  page.on("dialog", (d) => d.accept());
+  page.on("dialog", (d) => {
+    failures.push("Unexpected native browser dialog");
+    void d.dismiss();
+  });
   await page.goto(url);
   await page.waitForSelector(".bridge canvas");
+  await skipIntro(page);
   await page.waitForTimeout(500);
   assert.equal(await page.locator(".resource").count(), 4);
   assert.equal(await page.locator(".squad-card").count(), 3);
@@ -150,7 +160,10 @@ try {
   await page
     .locator("#import-project")
     .setInputFiles(".artifacts/m1/content.zip");
-  await page.waitForTimeout(300);
+  await page.locator('[data-answer="yes"]').click();
+  await page.waitForFunction(
+    () => document.querySelector('[aria-busy="true"]') === null,
+  );
   assert.equal(
     (await getRecord(page, "editor:project")).pack.characters[0].attack,
     200,
@@ -159,12 +172,14 @@ try {
   const original = (await getRecord(page, "save:main")).roster;
   await page.locator('[data-action="test"]').click();
   await page.waitForSelector(".bridge canvas");
+  await skipIntro(page);
   assert.ok(
     (await page.locator(".sector-status").innerText()).includes("隔離測試"),
   );
   assert.equal((await getRecord(page, "save:test")).roster.length, 3);
   await page.locator('[data-id="summon"][data-action="panel"]').click();
   await page.locator('[data-action="summon"]').click();
+  await page.locator('[data-answer="yes"]').click();
   await page.waitForTimeout(400);
   assert.equal(
     (await getRecord(page, "save:test")).jobs.filter((j) => j.kind === "summon")
@@ -187,11 +202,18 @@ try {
     hasTouch: true,
     deviceScaleFactor: 1,
   });
+  await mobileContext.addInitScript(() =>
+    localStorage.setItem("stella:view", "map"),
+  );
   const mobile = await mobileContext.newPage();
   mobile.on("pageerror", (e) => failures.push(e.message));
-  mobile.on("dialog", (d) => d.accept());
+  mobile.on("dialog", (d) => {
+    failures.push("Unexpected native mobile browser dialog");
+    void d.dismiss();
+  });
   await mobile.goto(url);
   await mobile.waitForSelector("canvas");
+  await skipIntro(mobile);
   await mobile.waitForTimeout(500);
   assert.ok(
     await mobile.evaluate(
@@ -220,20 +242,11 @@ try {
     "low",
   );
   await mobile.locator('[data-action="close"]').first().click();
-  const hpBefore = (await getRecord(mobile, "save:main")).roster.map(
-    (o) => o.hp,
-  );
-  await mobile.locator('[data-id="training"][data-action="panel"]').click();
-  await mobile.locator('[data-action="training-start"]').click();
-  await mobile.waitForSelector("#training-clock");
-  await mobile.locator('[data-action="retreat"]').click();
-  await mobile.waitForSelector('[role="dialog"]');
-  assert.deepEqual(
-    (await getRecord(mobile, "save:main")).roster.map((o) => o.hp),
-    hpBefore,
-    "training never changes real HP",
-  );
+  await mobile.locator('[data-id="planets"][data-action="panel"]').click();
+  await mobile.getByRole("heading", { name: "領地總覽" }).waitFor();
   await mobile.locator('[data-action="close"]').first().click();
+  assert.equal(await mobile.locator('[data-id="training"]').count(), 0);
+  assert.equal(await mobile.locator("#defense-alerts").count(), 0);
   await mobile.setViewportSize({ width: 844, height: 390 });
   await mobile.waitForTimeout(100);
   assert.ok(

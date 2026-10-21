@@ -1,0 +1,62 @@
+[
+  {
+    "id": "m1art:maiden-01-battle-v1",
+    "path": "art/characters/battle/maiden-01/v1.png",
+    "sha256": "24508cad11015e09b5cdfebdccc001b56f521b6ee92495c82344c09976c4892a",
+    "reference": "art/characters/standard/maiden-01/v1.png",
+    "tool": "image_gen",
+    "intent": "2026-10-21 user requested separate chibi battle art",
+    "review": "candidate",
+    "runtime": "assets/battle/maiden-01.png"
+  },
+  {
+    "id": "m1art:maiden-02-battle-v1",
+    "path": "art/characters/battle/maiden-02/v1.png",
+    "sha256": "a8ad0e565c1d52941ec3969421edb4bd6613cedccd61a6f0f6bc3fdeea28f999",
+    "reference": "art/characters/standard/maiden-02/v1.png",
+    "tool": "image_gen",
+    "intent": "2026-10-21 user requested separate chibi battle art",
+    "review": "candidate",
+    "runtime": "assets/battle/maiden-02.png"
+  },
+  {
+    "id": "m1art:maiden-03-battle-v1",
+    "path": "art/characters/battle/maiden-03/v1.png",
+    "sha256": "577e8847d9d6cd85de63498935f04006647c4f1d31e7ecfff03adeed86874781",
+    "reference": "art/characters/standard/maiden-03/v1.png",
+    "tool": "image_gen",
+    "intent": "2026-10-21 user requested separate chibi battle art",
+    "review": "candidate",
+    "runtime": "assets/battle/maiden-03.png"
+  },
+  {
+    "id": "m1art:maiden-04-battle-v1",
+    "path": "art/characters/battle/maiden-04/v1.png",
+    "sha256": "78ff967258d0318e9f2e0c4a56a2746ba36582f0c51e4783e6b9e8b6f14a2f25",
+    "reference": "art/characters/standard/maiden-04/v1.png",
+    "tool": "image_gen",
+    "intent": "2026-10-21 user requested separate chibi battle art",
+    "review": "candidate",
+    "runtime": "assets/battle/maiden-04.png"
+  },
+  {
+    "id": "m1art:maiden-05-battle-v1",
+    "path": "art/characters/battle/maiden-05/v1.png",
+    "sha256": "8c731507495a671e58cea6aaf68779f6f788a2eaeb317b4f8bda3e74a0cfc229",
+    "reference": "art/characters/standard/maiden-05/v1.png",
+    "tool": "image_gen",
+    "intent": "2026-10-21 user requested separate chibi battle art",
+    "review": "candidate",
+    "runtime": "assets/battle/maiden-05.png"
+  },
+  {
+    "id": "m1art:maiden-06-battle-v1",
+    "path": "art/characters/battle/maiden-06/v1.png",
+    "sha256": "be70ff09e4668c529cf47529437357c4fdbcd6fff23bd59f944f86d81a0fc507",
+    "reference": "art/characters/standard/maiden-06/v1.png",
+    "tool": "image_gen",
+    "intent": "2026-10-21 user requested separate chibi battle art",
+    "review": "candidate",
+    "runtime": "assets/battle/maiden-06.png"
+  }
+]

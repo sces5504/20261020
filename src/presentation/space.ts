@@ -8,8 +8,56 @@ export function mountSpace(
   onPlanet: (id: string) => void,
   audio?: AudioMixer,
 ) {
+  const density = Math.min(window.devicePixelRatio || 1, 2);
+  const held = new Set<string>();
+  const directional = (e: KeyboardEvent, down: boolean) => {
+    if (
+      (e.target as HTMLElement)?.closest(
+        "input,textarea,select,[contenteditable=true]",
+      ) ||
+      e.ctrlKey ||
+      e.metaKey ||
+      e.altKey
+    )
+      return;
+    const key = e.key.toLowerCase();
+    if (
+      ![
+        "w",
+        "a",
+        "s",
+        "d",
+        "arrowup",
+        "arrowdown",
+        "arrowleft",
+        "arrowright",
+      ].includes(key)
+    )
+      return;
+    e.preventDefault();
+    if (down) held.add(key);
+    else held.delete(key);
+    model.movement = {
+      x:
+        Number(held.has("d") || held.has("arrowright")) -
+        Number(held.has("a") || held.has("arrowleft")),
+      y:
+        Number(held.has("s") || held.has("arrowdown")) -
+        Number(held.has("w") || held.has("arrowup")),
+    };
+  };
+  const keydown = (e: KeyboardEvent) => directional(e, true),
+    keyup = (e: KeyboardEvent) => directional(e, false);
+  const blur = () => {
+    held.clear();
+    model.movement = { x: 0, y: 0 };
+  };
+  document.addEventListener("keydown", keydown);
+  document.addEventListener("keyup", keyup);
+  window.addEventListener("blur", blur);
   class Space extends Phaser.Scene {
     ink!: Phaser.GameObjects.Graphics;
+    hud!: Phaser.GameObjects.Graphics;
     labels: Phaser.GameObjects.Text[] = [];
     labelIndex = 0;
     selected = "";
@@ -31,6 +79,7 @@ export function mountSpace(
 
     create() {
       this.ink = this.add.graphics();
+      this.hud = this.add.graphics().setDepth(20);
       const r = model.pack.regions.find((v) => v.id === model.save.region)!;
       for (let i = 0; i < 420; i++) {
         const n = Math.sin(i * 127.1 + 77) * 43758.5453,
@@ -178,11 +227,13 @@ export function mountSpace(
       let t = this.labels[this.labelIndex++];
       if (!t) {
         t = this.add.text(x, y, text, {
+          resolution: density,
           fontFamily: '"Noto Sans TC", "PingFang TC", sans-serif',
           fontSize: size,
           color,
           align,
         });
+        t.setDepth(21);
         this.labels.push(t);
       }
       if (t.text !== text) t.setText(text);
@@ -210,9 +261,9 @@ export function mountSpace(
       g.strokePath();
     }
     update(_time: number, delta: number) {
-      const dt = Math.min(delta / 1000, 0.08);
+      const dt = Math.min(delta / 1000, 0.25);
       this.elapsed += dt;
-      this.acc = Math.min(this.acc + dt, 0.15);
+      this.acc = Math.min(this.acc + dt, 0.25);
       while (this.acc >= 1 / 60) {
         model.step(1 / 60);
         this.acc -= 1 / 60;
@@ -220,8 +271,8 @@ export function mountSpace(
       const g = this.ink,
         camera = this.cameras.main,
         r = model.pack.regions.find((v) => v.id === model.save.region)!;
-      const w = this.scale.width,
-        h = this.scale.height,
+      const w = this.scale.width / density,
+        h = this.scale.height / density,
         battle = !!model.combat;
       if (battle !== this.lastBattle) {
         this.lastBattle = battle;
@@ -230,17 +281,20 @@ export function mountSpace(
         this.zoomFactor = 1;
       }
       const zoom =
-        (battle
+        (battle || model.viewMode === "explore"
           ? w < 650
-            ? 0.78
-            : 1
-          : Math.min(w / r.width, h / r.height) * 0.9) * this.zoomFactor;
-      camera.setZoom(zoom);
+            ? 0.72
+            : 0.95
+          : Math.min(w / r.width, h / r.height) * 0.88) * this.zoomFactor;
+      camera.setZoom(zoom * density);
       camera.centerOn(
-        (battle ? model.x : r.width / 2) + this.panX,
-        (battle ? model.y : r.height / 2) + this.panY,
+        (battle || model.viewMode === "explore" ? model.x : r.width / 2) +
+          this.panX,
+        (battle || model.viewMode === "explore" ? model.y : r.height / 2) +
+          this.panY,
       );
       g.clear();
+      this.hud.clear();
       this.labelIndex = 0;
       this.sprites.forEach((image) => image.setVisible(false));
       // Nebulae and a stable starfield: presentation-only, independent from simulation RNG.
@@ -271,7 +325,9 @@ export function mountSpace(
         r.height * 0.43,
       );
       for (const p of model.pack.planets.filter(
-        (p) => p.region === model.save.region,
+        (p) =>
+          p.region === model.save.region &&
+          (model.viewMode === "map" || model.discovered.has(p.id)),
       )) {
         for (const dep of p.requires) {
           const a = model.pack.planets.find((v) => v.id === dep)!;
@@ -309,21 +365,21 @@ export function mountSpace(
           p.x,
           p.y + drawR + 12 / zoom,
           p.name,
-          13 / zoom,
+          (w < 650 ? 11 : 13) / zoom,
           locked ? "#637983" : "#dce8e8",
         );
         this.text(
           p.x,
           p.y + drawR + 29 / zoom,
           locked
-            ? "◇ 航路未解鎖"
+            ? "◇ 未解鎖"
             : col?.lost
-              ? "⚠ 防線失守"
+              ? "◈ 生產中"
               : col?.active
                 ? "◈ 生產中"
                 : model.save.cleared.includes(p.id)
                   ? "◇ 已解放"
-                  : "◆ 敵方訊號",
+                  : "◆ 敵方",
           10 / zoom,
           col?.lost ? "#ffab91" : "#81a8ae",
         );
@@ -333,13 +389,72 @@ export function mountSpace(
         g.lineStyle(1.2, 0x87d8d5, 0.4);
         g.lineBetween(model.x, model.y, d.x, d.y);
         g.strokeCircle(d.x, d.y, 12);
-        for (let i = 0; i < model.save.team.length; i++)
-          this.ship(
-            model.x + (i - 1) * 40,
-            model.y + (i % 2) * 45,
-            0x9bdfd4,
-            16,
+        for (let i = 0; i < model.save.team.length; i++) {
+          const o = model.save.roster.find((o) => o.id === model.save.team[i])!;
+          const c = model.pack.characters.find((c) => c.id === o.definition)!;
+          this.ensureAsset(c.sprite);
+          if (this.textures.exists(c.sprite))
+            this.drawAsset(
+              o.id,
+              c.sprite,
+              model.x + (i - 1) * 58,
+              model.y + (i % 2) * 35,
+              120,
+            );
+          else
+            this.ship(
+              model.x + (i - 1) * 45,
+              model.y + (i % 2) * 35,
+              0x9bdfd4,
+              16,
+            );
+        }
+        for (const v of r.patrols) {
+          if ((model.save.patrolCooldowns[v.id] ?? 0) > model.voyageSeconds)
+            continue;
+          const e = model.pack.enemies.find(
+            (e) => e.id === v.enemies[0].enemy,
+          )!;
+          this.drawAsset(
+            v.id,
+            `enemy:${e.id}`,
+            v.x,
+            v.y + Math.sin(this.elapsed * 1.3) * 12,
+            70,
           );
+          g.lineStyle(1, 0xff9a8a, 0.4);
+          g.strokeCircle(v.x, v.y, 85);
+          this.text(v.x, v.y + 55, "巡邏敵艦", 11 / zoom, "#ffb39e");
+        }
+        if (model.viewMode === "explore") {
+          const next = model.pack.planets.find(
+            (v) =>
+              !model.save.cleared.includes(v.id) &&
+              v.requires.every((id) => model.save.cleared.includes(id)),
+          );
+          if (next && !camera.worldView.contains(next.x, next.y)) {
+            const b = camera.worldView,
+              cx = Phaser.Math.Clamp(
+                next.x,
+                b.left + 55 / zoom,
+                b.right - 55 / zoom,
+              ),
+              cy = Phaser.Math.Clamp(
+                next.y,
+                b.top + 45 / zoom,
+                b.bottom - 80 / zoom,
+              );
+            g.lineStyle(1.5, 0xf1d39e, 0.8);
+            g.strokeCircle(cx, cy, 15 / zoom);
+            this.text(
+              cx,
+              cy + 22 / zoom,
+              `${model.discovered.has(next.id) ? next.name : "未知星體"} · ${Math.round(Math.hypot(next.x - model.x, next.y - model.y))}u`,
+              10 / zoom,
+              "#f1d39e",
+            );
+          }
+        }
         this.text(
           model.x,
           model.y + 75,
@@ -393,18 +508,24 @@ export function mountSpace(
             );
           }
           if (u.sprite && this.textures.exists(u.sprite))
-            this.drawAsset(u.id, u.sprite, u.x, u.y, 96);
+            this.drawAsset(
+              u.id,
+              u.sprite,
+              u.x,
+              u.y + Math.sin(this.elapsed * 3 + u.x) * 2,
+              125,
+            );
           if (u.shield > 0) {
-            g.lineStyle(1.5, 0x87ede1, 0.8);
-            g.strokeCircle(u.x, u.y, size + 10);
+            this.hud.lineStyle(1.5, 0x87ede1, 0.8);
+            this.hud.strokeCircle(u.x, u.y, size + 10);
           }
-          g.fillStyle(0x172c36);
-          g.fillRect(u.x - 25, u.y - size - 15, 50, 3);
-          g.fillStyle(color);
-          g.fillRect(u.x - 25, u.y - size - 15, (50 * u.hp) / u.maxHp, 3);
+          this.hud.fillStyle(0x172c36);
+          this.hud.fillRect(u.x - 25, u.y + 64, 50, 3);
+          this.hud.fillStyle(color);
+          this.hud.fillRect(u.x - 25, u.y + 64, (50 * u.hp) / u.maxHp, 3);
           if (combat.target === u.id) {
-            g.lineStyle(1, 0xf0d3a2);
-            g.strokeCircle(u.x, u.y, size + 12);
+            this.hud.lineStyle(1, 0xf0d3a2);
+            this.hud.strokeCircle(u.x, u.y, size + 12);
           }
           if (u.boss) this.text(u.x, u.y - 80, u.name, 15, "#e8c2ff");
         }
@@ -504,16 +625,29 @@ export function mountSpace(
     transparent: false,
     antialias: true,
     scale: {
-      mode: Phaser.Scale.RESIZE,
-      width: host.clientWidth,
-      height: host.clientHeight,
+      mode: Phaser.Scale.NONE,
+      zoom: 1 / density,
+      width: host.clientWidth * density,
+      height: host.clientHeight * density,
     },
     scene,
-    render: { powerPreference: "low-power" },
+    render: { powerPreference: "high-performance", roundPixels: false },
   });
+  const resize = new ResizeObserver(() => {
+    game.scale.resize(host.clientWidth * density, host.clientHeight * density);
+    game.canvas.style.width = `${host.clientWidth}px`;
+    game.canvas.style.height = `${host.clientHeight}px`;
+  });
+  resize.observe(host);
   return {
     select: (id: string) => (scene.selected = id),
-    destroy: () => game.destroy(true),
+    destroy: () => {
+      resize.disconnect();
+      document.removeEventListener("keydown", keydown);
+      document.removeEventListener("keyup", keyup);
+      window.removeEventListener("blur", blur);
+      game.destroy(true);
+    },
     recenter: () => scene.recenter(),
   };
 }

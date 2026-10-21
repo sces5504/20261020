@@ -14,8 +14,13 @@ export class Game {
   x: number;
   y: number;
   destination: { x: number; y: number };
-  raids: Record<string, number> = {};
-  losses = new Set<string>();
+  viewMode: "explore" | "map" =
+    localStorage.getItem("stella:view") === "map" ? "map" : "explore";
+  discovered = new Set<string>();
+  voyageSeconds = 0;
+  encounterPending = false;
+  safeUntil = 0;
+  movement = { x: 0, y: 0 };
   error = "";
   notice = "";
   busy = false;
@@ -23,14 +28,14 @@ export class Game {
   autoSkills = false;
   lowEffects = localStorage.getItem("stella:effects") === "low";
   contentHash = "";
-  training = false;
+
   report: {
     title: string;
     message: string;
     victory: boolean;
     planet: string;
   } | null = null;
-  raidWarned = new Set<string>();
+
   events: string[] = [];
   private serial = Promise.resolve();
   private storageRevision: number | null = null;
@@ -44,7 +49,8 @@ export class Game {
     this.x = s.x;
     this.y = s.y;
     this.destination = { x: s.x, y: s.y };
-    this.resetRaids();
+    this.discovered = new Set(s.discovered);
+    this.voyageSeconds = s.voyageSeconds;
     if (s.encounter) this.combat = new Combat(this.pack, s, s.encounter.planet);
   }
   static async load(p: Pack, test = false) {
@@ -55,6 +61,7 @@ export class Game {
       : newSave(p, Date.now(), test ? "test" : "voyager");
     if (old && compatibilityPlan(old, p).changes.length)
       throw Error("內容更新需要確認相容性修復，請先查看下方預覽。");
+    for (const col of Object.values(s.colonies)) col.lost = false;
     const g = new Game(p, key, s);
     g.storageRevision = old?.revision ?? null;
     g.contentHash = await fingerprint(p);
@@ -65,14 +72,6 @@ export class Game {
 
     await g.tickEconomy();
     return g;
-  }
-  private resetRaids() {
-    this.raids = Object.fromEntries(
-      Object.entries(this.save.colonies).map(([id, c]) => [
-        id,
-        c.raidRemaining,
-      ]),
-    );
   }
   private enqueue(fn: () => Promise<void>) {
     this.serial = this.serial
@@ -94,36 +93,44 @@ export class Game {
   command(c: Command) {
     return this.enqueue(async () => {
       const base = structuredClone(this.save);
-      for (const [id, t] of Object.entries(this.raids))
-        if (base.colonies[id]) base.colonies[id].raidRemaining = t;
-      for (const id of this.losses)
-        if (base.colonies[id]) base.colonies[id].lost = true;
+      base.discovered = [...this.discovered];
+      base.voyageSeconds = this.voyageSeconds;
+      base.x = this.x;
+      base.y = this.y;
       const s = apply(this.pack, base, c, Date.now(), crypto.randomUUID());
       s.contentHash = this.contentHash;
       s.contentVersion = this.pack.version;
       await commit(this.key, s, this.storageRevision);
       this.save = s;
       this.storageRevision = s.revision;
-      if (c.type === "repair") this.losses.delete(c.planet);
-      if (c.type === "result" && c.victory) this.losses.delete(c.planet);
-      if (c.type !== "checkpoint") this.resetRaids();
-      if (c.type === "begin") {
-        this.combat = new Combat(this.pack, s, c.planet);
+      if (c.type === "begin" || c.type === "patrol") {
+        this.combat = new Combat(
+          this.pack,
+          s,
+          c.type === "begin" ? c.planet : c.id,
+        );
         this.combat.autoSkills = this.autoSkills;
         this.x = s.x;
         this.y = s.y;
       }
       if (c.type === "result") {
+        const patrol = base.encounter?.kind === "patrol";
         this.events.push(c.victory ? "victory" : "defeat");
         this.report = {
-          title: c.victory ? "航跡已開拓" : "已撤離交戰區",
+          title: c.victory
+            ? patrol
+              ? "航路已肅清"
+              : "航跡已開拓"
+            : "已撤離交戰區",
           message: c.victory
-            ? "敵方訊號已排除。啟動星球，建立新的生產與防衛據點。"
+            ? patrol
+              ? "巡邏敵艦已擊退，取得補給。繼續探索，尋找新的星球訊號。"
+              : "全波次敵群已排除。啟動星球，建立新的生產據點。"
             : "角色生命已保存。可在編隊中整補，完成後再挑戰。",
           victory: c.victory,
-          planet: c.planet,
+          planet: patrol ? "" : c.planet,
         };
-        this.raidWarned.delete(c.planet);
+        this.safeUntil = this.voyageSeconds + 8;
         this.combat = null;
         this.destination = { x: this.x, y: this.y };
         this.notice = c.victory
@@ -156,12 +163,19 @@ export class Game {
       type: "checkpoint",
       x: this.x,
       y: this.y,
-      raids: { ...this.raids },
-      losses: [...this.losses],
+      discovered: [...this.discovered],
+      voyageSeconds: this.voyageSeconds,
     });
   }
   step(dt: number) {
     if (this.pause.size || this.busy || this.error) return;
+    if (this.movement.x || this.movement.y) {
+      const n = Math.hypot(this.movement.x, this.movement.y);
+      this.move(
+        this.x + (this.movement.x / n) * 190 * dt,
+        this.y + (this.movement.y / n) * 190 * dt,
+      );
+    }
     if (this.combat) {
       this.combat.step(dt);
       const center = this.combat.center;
@@ -169,40 +183,16 @@ export class Game {
         this.x = center.x;
         this.y = center.y;
       }
-      if (
-        this.training &&
-        this.combat.time >= this.pack.rules.trainingSeconds
-      ) {
-        this.combat.ended = true;
-        this.combat.victory = true;
-      }
-      if (this.combat.ended) {
+      if (this.combat.ended && !this.encounterPending) {
         const c = this.combat;
-        if (this.training) {
-          const score = c.victory ? Math.max(0, 100 - c.hitsReceived * 5) : 0;
-          this.training = false;
-          this.combat = null;
-          this.command({ type: "training", score });
-          this.report = {
-            title: "避彈訓練完成",
-            message: `持續 ${c.time.toFixed(1)} 秒，受到 ${c.hitsReceived} 次有效命中。評分 ${score}／100，最好紀錄會保留。`,
-            victory: c.victory,
-            planet: "",
-          };
-          this.events.push(c.victory ? "victory" : "defeat");
-          this.x = this.save.x;
-          this.y = this.save.y;
-          this.destination = { x: this.x, y: this.y };
-          return;
-        }
-
+        this.encounterPending = true;
         this.command({
           type: "result",
           planet: c.planetId,
           victory: c.victory,
           hp: c.result(),
           receipt: `encounter-${this.save.encounter?.seed}`,
-        });
+        }).finally(() => (this.encounterPending = false));
       }
     } else {
       const d = Math.hypot(
@@ -214,40 +204,36 @@ export class Game {
         this.y += ((this.destination.y - this.y) / d) * Math.min(d, 180 * dt);
       }
     }
-    for (const [id, col] of Object.entries(this.save.colonies)) {
-      if (!col.active || col.lost || this.losses.has(id)) continue;
-      this.raids[id] = Math.max(0, (this.raids[id] ?? col.raidRemaining) - dt);
+    this.voyageSeconds += dt;
+    const r = this.pack.regions.find((r) => r.id === this.save.region)!;
+    for (const p of this.pack.planets.filter((p) => p.region === r.id)) {
       if (
-        this.raids[id] <= this.pack.rules.raidWarningSeconds &&
-        !this.raidWarned.has(id)
+        !this.discovered.has(p.id) &&
+        Math.hypot(p.x - this.x, p.y - this.y) < r.discoveryRadius
       ) {
-        this.raidWarned.add(id);
-        this.events.push("alert");
-        this.notice = `${this.pack.planets.find((v) => v.id === id)?.name} 偵測到襲擊！請在倒數結束前出擊防衛。`;
-      }
-      if (this.combat?.planetId === id && !this.training) continue;
-      if (this.raids[id] === 0) {
-        this.losses.add(id);
-        this.notice = `${this.pack.planets.find((v) => v.id === id)?.name} 防線失守，生產暫停，可修復。`;
-        this.checkpoint();
+        this.discovered.add(p.id);
+        this.notice = `發現星球 · ${p.name}`;
+        this.events.push("arrival");
+        this.dirty = true;
       }
     }
-  }
-  startTraining() {
-    return this.enqueue(async () => {
-      if (this.combat) throw Error("請先結束目前遭遇。");
-      const s = structuredClone(this.save),
-        p = this.pack.planets[0];
-      s.x = p.x - 220;
-      s.y = p.y + 170;
-      s.encounter = { planet: p.id, seed: 71623 };
-      for (const o of s.roster) o.hp = stats(this.pack, o).hp;
-      this.combat = new Combat(this.pack, s, p.id, true);
-      this.combat.autoSkills = this.autoSkills;
-      this.training = true;
-      this.report = null;
-      this.dirty = true;
-    });
+    if (
+      !this.combat &&
+      !this.encounterPending &&
+      this.voyageSeconds >= this.safeUntil
+    ) {
+      const patrol = r.patrols.find(
+        (v) =>
+          Math.hypot(v.x - this.x, v.y - this.y) < 130 &&
+          (this.save.patrolCooldowns[v.id] ?? 0) <= this.voyageSeconds,
+      );
+      if (patrol) {
+        this.encounterPending = true;
+        this.command({ type: "patrol", id: patrol.id }).finally(
+          () => (this.encounterPending = false),
+        );
+      }
+    }
   }
   retreat() {
     if (!this.combat) return;
@@ -273,8 +259,8 @@ export class Game {
       this.x = s.x;
       this.y = s.y;
       this.destination = { x: s.x, y: s.y };
-      this.resetRaids();
-      this.losses.clear();
+      this.discovered = new Set(s.discovered);
+      this.voyageSeconds = s.voyageSeconds;
       this.combat = s.encounter
         ? new Combat(this.pack, s, s.encounter.planet)
         : null;

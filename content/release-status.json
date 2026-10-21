@@ -1,5 +1,5 @@
 {
-  "milestone": "M1",
+  "milestone": "M1-exploration-0.2",
   "status": "m1-playtest-complete",
   "checks": {
     "characterMappingConfirmed": true,
@@ -13,16 +13,19 @@
     "iosSafariVerified": false,
     "performanceBaselineVerified": false
   },
-  "notes": "使用者明確要求完成 M1 並發布 GitHub Pages 試玩。功能切片與可編輯工坊可發布測試；不代表商業品質／真人美術音效／Android、iOS 真機已驗收。敵艦與星球採原創程序材質，音效為 AI 撰寫的 WebAudio 程序合成，非音訊模型生成。六張原 PNG 保持原樣，依 05地球、04水星、01金星、03火星、02天王星、06月球對應。性能樣本與剩餘限制見 docs/design/m1-acceptance.md。",
+  "notes": "0.2探索版依使用者16項試玩回饋：移除防衛及訓練、降低經濟餘裕、多波次解放、持續航行／大星圖／巡邏、WASD／觸控、高密度畫面、技能／人物／編隊／領地、對話／取得演出、全站遊戲內確認與未來角色表。原六圖不改寫，另外生成獨立Q版候選戰鬥圖，未宣稱真人核定。完整功能與限制見docs/design/exploration-v2.md。",
   "playtestStatus": "ready",
   "playtestChecks": {
     "campaignLoop": true,
-    "trainingAndRetreat": true,
     "editableContentAndAcquisition": true,
     "mediaReplacementAndIntegrity": true,
     "isolatedDraftAndTestSave": true,
     "saveMigrationAndBackup": true,
-    "onlineDefenseAndOfflineProtection": true,
-    "originalArtPreserved": true
+    "originalArtPreserved": true,
+    "explorationAndPatrol": true,
+    "wasdAndHighDensityCanvas": true,
+    "customDialogsAndSummonReveal": true,
+    "characterFormationStoryAndPlanetManagement": true,
+    "futureCharacterArtRoster": true
   }
 }

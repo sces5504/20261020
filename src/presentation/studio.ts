@@ -1,3 +1,4 @@
+import { ask } from "./dialog";
 import {
   complexField,
   collectComplex,
@@ -61,7 +62,7 @@ export async function mountStudio(root: HTMLElement) {
     });
   }
 
-  root.innerHTML = `<main class="studio"><header class="studio-header"><a class="brand" href="#/play"><span class="brand-icon">✧</span><span>STELLA STUDIO<small>星 海 內 容 工 坊</small></span></a><div class="inline-actions"><a href="#/art">六位標準原圖 ↗</a><a href="#/play">返回遊戲 ↗</a></div></header><div class="studio-title"><div><span class="eyebrow">CONTENT WORKSPACE / LOCAL DRAFT</span><h1>每一道星光，由你定義。</h1><p>瀏覽、調整、試玩，再將你的星海匯出。</p></div><div class="studio-actions">${button("復原", "undo")}${button("重做", "redo")}${button("套用至測試遊戲 ↗", "test", "", "primary")}</div></div><div class="studio-toolbar"><span id="project-status"></span><div>${button("新增項目", "new")}${button("校驗內容", "validate")}${button("專案備份", "backup-project")}<label class="file-button">匯入專案／內容包<input id="import-project" type="file" accept=".json,.zip"></label>${button("匯出內容 ZIP", "export-pack")}</div></div><div class="studio-grid"><aside class="catalog-nav" id="catalog-nav"></aside><section class="catalog"><label class="search">搜尋內容<input id="catalog-search" type="search" placeholder="名稱或穩定 ID"></label><div id="catalog-list"></div></section><section class="inspector" id="inspector"></section></div><div class="studio-report" id="report" role="status"></div></main>`;
+  root.innerHTML = `<main class="studio"><header class="studio-header"><a class="brand" href="#/play"><span class="brand-icon">✧</span><span>STELLA STUDIO<small>星 海 內 容 工 坊</small></span></a><div class="inline-actions"><a href="#/art">六位標準原圖 ↗</a><a href="#/play">返回遊戲 ↗</a></div></header><div class="studio-title"><div><span class="eyebrow">CONTENT WORKSPACE / LOCAL DRAFT</span><h1>每一道星光，由你定義。</h1><p>瀏覽、調整、試玩，再將你的星海匯出。</p></div><div class="studio-actions">${button("復原", "undo")}${button("重做", "redo")}${button("套用至測試遊戲 ↗", "test", "", "primary")}</div></div><div class="studio-toolbar"><span id="project-status"></span><div>${button("從新版正式內容建立草稿", "use-published")}${button("新增項目", "new")}${button("校驗內容", "validate")}${button("專案備份", "backup-project")}<label class="file-button">匯入專案／內容包<input id="import-project" type="file" accept=".json,.zip"></label>${button("匯出內容 ZIP", "export-pack")}</div></div><div class="studio-grid"><aside class="catalog-nav" id="catalog-nav"></aside><section class="catalog"><label class="search">搜尋內容<input id="catalog-search" type="search" placeholder="名稱或穩定 ID"></label><div id="catalog-list"></div></section><section class="inspector" id="inspector"></section></div><div class="studio-report" id="report" role="status"></div></main>`;
   const $ = (s: string) => root.querySelector<HTMLElement>(s)!;
   function status() {
     if (disposed) return;
@@ -150,6 +151,10 @@ export async function mountStudio(root: HTMLElement) {
     recipe: "四資源配方（依資源列表順序）",
     starter: "新存檔起始角色",
     role: "定位",
+    waves: "後續波次（每波敵群列表）",
+    waveDelay: "增援間隔（秒）",
+    discoveryRadius: "探索掃描半徑",
+    patrols: "航路巡邏（座標、敵群、獎勵、再出現時間）",
     sourceRow: "來源 CID row（唯讀）",
     effect: "效果原語",
     power: "效果強度",
@@ -242,7 +247,7 @@ export async function mountStudio(root: HTMLElement) {
                   ]
                 : k === "pattern"
                   ? ["aim", "fan", "ring"]
-                  : ["cleared", "activated", "summoned", "built"];
+                  : ["intro", "cleared", "activated", "summoned", "built"];
       control = `<select ${attr}>${vals.map((x) => `<option ${x === v ? "selected" : ""}>${x}</option>`).join("")}</select>`;
     } else if (typeof v === "object" || k === "description")
       control = `<textarea ${attr} rows="${typeof v === "object" ? Math.min(10, JSON.stringify(v, null, 2).split("\n").length) : 3}">${esc(typeof v === "object" ? JSON.stringify(v, null, 2) : v)}</textarea>`;
@@ -358,6 +363,21 @@ export async function mountStudio(root: HTMLElement) {
       }
       return;
     }
+    if (action === "use-published") {
+      if (
+        !(await ask(
+          `先保留目前草稿於復原歷史，再改用正式內容 v${published.version}。自訂資料不會自動合併；可用復原取回。`,
+          "更新草稿基底",
+        ))
+      )
+        return;
+      checkpoint();
+      project.pack = structuredClone(published);
+      selected = project.pack[kind][0]?.id ?? "";
+      await save();
+      draw();
+      return;
+    }
     if (action === "new") {
       const template = project.pack[kind][0] ?? published[kind][0];
       if (!template) throw Error("請先匯入此分類的資料範本。");
@@ -440,9 +460,9 @@ export async function mountStudio(root: HTMLElement) {
       if (refs.length)
         throw Error("此內容仍被引用，請先處理：\n" + refs.join("\n"));
       if (
-        !confirm(
+        !(await ask(
           `移除「${e.name}」？持有此內容的舊存檔將需要恢復內容或提供遷移；建議優先改為 retired。`,
-        )
+        ))
       )
         return;
       checkpoint();
@@ -574,9 +594,9 @@ export async function mountStudio(root: HTMLElement) {
           : parseProject(JSON.parse(await f.text()));
         await verifyMedia(next.pack);
         if (
-          !confirm(
+          !(await ask(
             "將保留目前草稿於復原歷史，再匯入所選專案／內容包。確定繼續？",
-          )
+          ))
         )
           return;
         checkpoint();

@@ -1,0 +1,573 @@
+{
+  "schemaVersion": 1,
+  "packId": "stellaart.stellar10-standards-20261021",
+  "date": "2026-10-21",
+  "characterOrder": [
+    "太陽",
+    "木星",
+    "土星",
+    "海王星",
+    "冥王星",
+    "涅墨西斯",
+    "木衛三",
+    "木衛一",
+    "天衛三",
+    "天衛一"
+  ],
+  "scope": "ten-full-body-standard-images-and-art-reference-index",
+  "reviewNote": "太陽、冥王星使用者已明確喜歡並保留，其餘待審。此狀態不等同遊戲發布驗收。",
+  "characters": [
+    {
+      "id": "stellaart:character.sun",
+      "nameZhHant": "太陽",
+      "originalGameKey": "Sun",
+      "originalCidRow": 1,
+      "gameCharacterId": null,
+      "bodyType": "熟女",
+      "bodyTypeAssignment": "AI視覺分工方案，可由使用者調整；不決定年齡／玩法數值。",
+      "assetId": "stellaart:asset.sun-standard",
+      "assetVersion": "v1-user-retained",
+      "path": "立繪/太陽.png",
+      "sha256": "163be021f75a7b1f8b1ebc7b17f6f622476a0553456ed9e2cebae1bf812bb318",
+      "width": 1024,
+      "height": 1536,
+      "mimeType": "image/png",
+      "colorSpace": "sRGB",
+      "alpha": {
+        "mode": "straight",
+        "channelRange": [
+          0,
+          254
+        ],
+        "bodyBoundsThreshold": 192,
+        "bodyBounds": [
+          39,
+          11,
+          993,
+          1513
+        ]
+      },
+      "pivot": {
+        "coordinateSpace": "normalized-image-top-left",
+        "x": 0.503906,
+        "y": 0.985026,
+        "purpose": "視覺腳底交換錨點，非世界碰撞判定"
+      },
+      "recommendedDisplayScale": 1.0,
+      "bundle": "stellar10-standards-20261021",
+      "atlas": null,
+      "animation": null,
+      "promptPath": "prompts/太陽.txt",
+      "source": {
+        "tool": "image_gen.imagegen",
+        "modelVersion": "not-exposed",
+        "referenceWorkingFileNames": [],
+        "generationPromptArchived": false,
+        "notes": "來源工作圖不隨本包當作可用主檔；只以path指定最終立繪為準。"
+      },
+      "appearanceLocks": "金色長直髮、綠眼、精靈尖耳、白金綠寶石女神裝；使用者明確保留原圖。",
+      "reviewStatus": "user-likes-and-retains-image",
+      "releaseStatus": "game-adaptation-not-validated",
+      "preview": "立繪/太陽.png"
+    },
+    {
+      "id": "stellaart:character.jupiter",
+      "nameZhHant": "木星",
+      "originalGameKey": "Jupiter",
+      "originalCidRow": 6,
+      "gameCharacterId": null,
+      "bodyType": "熟女",
+      "bodyTypeAssignment": "AI視覺分工方案，可由使用者調整；不決定年齡／玩法數值。",
+      "assetId": "stellaart:asset.jupiter-standard",
+      "assetVersion": "v3-fair-skin-layered-hair",
+      "path": "立繪/木星.png",
+      "sha256": "28a0ea518363f7b51665db089f99b45805d7a867dec2d36d77724db8a6b4900a",
+      "width": 1024,
+      "height": 1536,
+      "mimeType": "image/png",
+      "colorSpace": "sRGB",
+      "alpha": {
+        "mode": "straight",
+        "channelRange": [
+          0,
+          254
+        ],
+        "bodyBoundsThreshold": 192,
+        "bodyBounds": [
+          271,
+          8,
+          878,
+          1523
+        ]
+      },
+      "pivot": {
+        "coordinateSpace": "normalized-image-top-left",
+        "x": 0.561035,
+        "y": 0.991536,
+        "purpose": "視覺腳底交換錨點，非世界碰撞判定"
+      },
+      "recommendedDisplayScale": 1.0,
+      "bundle": "stellar10-standards-20261021",
+      "atlas": null,
+      "animation": null,
+      "promptPath": "prompts/木星.txt",
+      "source": {
+        "tool": "image_gen.imagegen",
+        "modelVersion": "not-exposed",
+        "referenceWorkingFileNames": [
+          "exec-2c51d312-8d7e-4126-b0bf-1b7e61b483dd.png"
+        ],
+        "generationPromptArchived": true,
+        "notes": "來源工作圖不隨本包當作可用主檔；只以path指定最終立繪為準。"
+      },
+      "appearanceLocks": "白皙膚色、橘色及肩蓬鬆層次髮、棕金眼、藍綠銅色航行裝、短褲與長靴；不用辮髮／泳裝／牛仔褲／刺青。",
+      "reviewStatus": "awaiting-user-review",
+      "releaseStatus": "game-adaptation-not-validated",
+      "preview": "立繪/木星.png"
+    },
+    {
+      "id": "stellaart:character.saturn",
+      "nameZhHant": "土星",
+      "originalGameKey": "Saturn",
+      "originalCidRow": 7,
+      "gameCharacterId": null,
+      "bodyType": "熟女",
+      "bodyTypeAssignment": "AI視覺分工方案，可由使用者調整；不決定年齡／玩法數值。",
+      "assetId": "stellaart:asset.saturn-standard",
+      "assetVersion": "v2-redesigned",
+      "path": "立繪/土星.png",
+      "sha256": "c6889620e0eaf2e4920b56afff338a5510fffca1542565a3fbfd6355594fec83",
+      "width": 1024,
+      "height": 1536,
+      "mimeType": "image/png",
+      "colorSpace": "sRGB",
+      "alpha": {
+        "mode": "straight",
+        "channelRange": [
+          0,
+          254
+        ],
+        "bodyBoundsThreshold": 192,
+        "bodyBounds": [
+          179,
+          16,
+          940,
+          1518
+        ]
+      },
+      "pivot": {
+        "coordinateSpace": "normalized-image-top-left",
+        "x": 0.546387,
+        "y": 0.988281,
+        "purpose": "視覺腳底交換錨點，非世界碰撞判定"
+      },
+      "recommendedDisplayScale": 1.0,
+      "bundle": "stellar10-standards-20261021",
+      "atlas": null,
+      "animation": null,
+      "promptPath": "prompts/土星.txt",
+      "source": {
+        "tool": "image_gen.imagegen",
+        "modelVersion": "not-exposed",
+        "referenceWorkingFileNames": [
+          "exec-29cd93bb-5f02-415c-ba05-0c473245ba31.png"
+        ],
+        "generationPromptArchived": true,
+        "notes": "來源工作圖不隨本包當作可用主檔；只以path指定最終立繪為準。"
+      },
+      "appearanceLocks": "奶金不對稱短髮、藍眼、成熟眼型、深紫長版背心與香檳寬褲、環帶胸針；不用金長捲髮白長裙。",
+      "reviewStatus": "awaiting-user-review",
+      "releaseStatus": "game-adaptation-not-validated",
+      "preview": "立繪/土星.png"
+    },
+    {
+      "id": "stellaart:character.neptune",
+      "nameZhHant": "海王星",
+      "originalGameKey": "Neptune",
+      "originalCidRow": 9,
+      "gameCharacterId": null,
+      "bodyType": "熟女",
+      "bodyTypeAssignment": "AI視覺分工方案，可由使用者調整；不決定年齡／玩法數值。",
+      "assetId": "stellaart:asset.neptune-standard",
+      "assetVersion": "v4-user-corrected",
+      "path": "立繪/海王星.png",
+      "sha256": "f35d3c8b9894c15966258ea0dd4973fa46c79a10adc32bfabe3d92cedd96a76a",
+      "width": 1024,
+      "height": 1536,
+      "mimeType": "image/png",
+      "colorSpace": "sRGB",
+      "alpha": {
+        "mode": "straight",
+        "channelRange": [
+          0,
+          254
+        ],
+        "bodyBoundsThreshold": 192,
+        "bodyBounds": [
+          17,
+          6,
+          1009,
+          1527
+        ]
+      },
+      "pivot": {
+        "coordinateSpace": "normalized-image-top-left",
+        "x": 0.500977,
+        "y": 0.994141,
+        "purpose": "視覺腳底交換錨點，非世界碰撞判定"
+      },
+      "recommendedDisplayScale": 1.0,
+      "bundle": "stellar10-standards-20261021",
+      "atlas": null,
+      "animation": null,
+      "promptPath": "prompts/海王星.txt",
+      "source": {
+        "tool": "image_gen.imagegen",
+        "modelVersion": "not-exposed",
+        "referenceWorkingFileNames": [],
+        "generationPromptArchived": true,
+        "notes": "來源工作圖不隨本包當作可用主檔；只以path指定最終立繪為準。"
+      },
+      "appearanceLocks": "亮藍長髮、柔美女性臉、藍紫眼、白色海軍短裙制服與披肩、白手套長靴、新環帶頭飾／機械配件；不用深藍褲裝與肌肉肩。",
+      "reviewStatus": "awaiting-user-review",
+      "releaseStatus": "game-adaptation-not-validated",
+      "preview": "立繪/海王星.png"
+    },
+    {
+      "id": "stellaart:character.pluto",
+      "nameZhHant": "冥王星",
+      "originalGameKey": "Pluto",
+      "originalCidRow": 10,
+      "gameCharacterId": null,
+      "bodyType": "少女",
+      "bodyTypeAssignment": "AI視覺分工方案，可由使用者調整；不決定年齡／玩法數值。",
+      "assetId": "stellaart:asset.pluto-standard",
+      "assetVersion": "v2-redesigned",
+      "path": "立繪/冥王星.png",
+      "sha256": "c2f7558cd18319fe512fd8f967d315ae7f13b6b73abb2719abb2df006126b349",
+      "width": 1024,
+      "height": 1536,
+      "mimeType": "image/png",
+      "colorSpace": "sRGB",
+      "alpha": {
+        "mode": "straight",
+        "channelRange": [
+          0,
+          254
+        ],
+        "bodyBoundsThreshold": 192,
+        "bodyBounds": [
+          220,
+          10,
+          898,
+          1518
+        ]
+      },
+      "pivot": {
+        "coordinateSpace": "normalized-image-top-left",
+        "x": 0.545898,
+        "y": 0.988281,
+        "purpose": "視覺腳底交換錨點，非世界碰撞判定"
+      },
+      "recommendedDisplayScale": 0.94,
+      "bundle": "stellar10-standards-20261021",
+      "atlas": null,
+      "animation": null,
+      "promptPath": "prompts/冥王星.txt",
+      "source": {
+        "tool": "image_gen.imagegen",
+        "modelVersion": "not-exposed",
+        "referenceWorkingFileNames": [
+          "exec-83c5662b-cb4c-4585-8a63-01138b99285c.png"
+        ],
+        "generationPromptArchived": true,
+        "notes": "來源工作圖不隨本包當作可用主檔；只以path指定最終立繪為準。"
+      },
+      "appearanceLocks": "銀白帶冰藍髮束的低側馬尾、紅眼、黑紫銀色科幻探索裝；移除巨角／臉部黑紋／羽狀裝甲；使用者明確喜歡重設版。",
+      "reviewStatus": "user-likes-and-retains-image",
+      "releaseStatus": "game-adaptation-not-validated",
+      "preview": "立繪/冥王星.png"
+    },
+    {
+      "id": "stellaart:character.nemesis",
+      "nameZhHant": "涅墨西斯",
+      "originalGameKey": "Nemesis",
+      "originalCidRow": 11,
+      "gameCharacterId": null,
+      "bodyType": "熟女",
+      "bodyTypeAssignment": "AI視覺分工方案，可由使用者調整；不決定年齡／玩法數值。",
+      "assetId": "stellaart:asset.nemesis-standard",
+      "assetVersion": "v6-loose-hair-orbit-accents",
+      "path": "立繪/涅墨西斯.png",
+      "sha256": "bc479c41c99f06227512e5a1bd12ebde50fddf1ad476372fab5901191ce2ac8d",
+      "width": 1024,
+      "height": 1536,
+      "mimeType": "image/png",
+      "colorSpace": "sRGB",
+      "alpha": {
+        "mode": "straight",
+        "channelRange": [
+          0,
+          254
+        ],
+        "bodyBoundsThreshold": 192,
+        "bodyBounds": [
+          26,
+          5,
+          970,
+          1528
+        ]
+      },
+      "pivot": {
+        "coordinateSpace": "normalized-image-top-left",
+        "x": 0.486328,
+        "y": 0.994792,
+        "purpose": "視覺腳底交換錨點，非世界碰撞判定"
+      },
+      "recommendedDisplayScale": 1.0,
+      "bundle": "stellar10-standards-20261021",
+      "atlas": null,
+      "animation": null,
+      "promptPath": "prompts/涅墨西斯.txt",
+      "source": {
+        "tool": "image_gen.imagegen",
+        "modelVersion": "not-exposed",
+        "referenceWorkingFileNames": [
+          "exec-87e370b7-dc65-4a82-84ba-e01c4086440a.png",
+          "exec-5c90ac26-9a93-40ce-97ea-e059b1f5e5da.png"
+        ],
+        "generationPromptArchived": true,
+        "notes": "來源工作圖不隨本包當作可用主檔；只以path指定最終立繪為準。"
+      },
+      "appearanceLocks": "保留原本紫黑色長披髮與瀏海，僅加小型行星環髮飾、暗紅細挑染與髮尾點綴；不綁馬尾。紅眼凝視／執著甜笑、黑紅短戰鬥裝、機械臂甲、行星陀螺儀及浮游刃。",
+      "reviewStatus": "awaiting-user-review",
+      "releaseStatus": "game-adaptation-not-validated",
+      "preview": "立繪/涅墨西斯.png"
+    },
+    {
+      "id": "stellaart:character.ganymede",
+      "nameZhHant": "木衛三",
+      "originalGameKey": "Ganymede",
+      "originalCidRow": 16,
+      "gameCharacterId": null,
+      "bodyType": "少女",
+      "bodyTypeAssignment": "AI視覺分工方案，可由使用者調整；不決定年齡／玩法數值。",
+      "assetId": "stellaart:asset.ganymede-standard",
+      "assetVersion": "v2-redesigned",
+      "path": "立繪/木衛三.png",
+      "sha256": "2faf0de006ee302b817668a70d12755c55070743eb13a6fc855b5c0e9ccbb775",
+      "width": 1024,
+      "height": 1536,
+      "mimeType": "image/png",
+      "colorSpace": "sRGB",
+      "alpha": {
+        "mode": "straight",
+        "channelRange": [
+          0,
+          254
+        ],
+        "bodyBoundsThreshold": 192,
+        "bodyBounds": [
+          257,
+          17,
+          769,
+          1506
+        ]
+      },
+      "pivot": {
+        "coordinateSpace": "normalized-image-top-left",
+        "x": 0.500977,
+        "y": 0.980469,
+        "purpose": "視覺腳底交換錨點，非世界碰撞判定"
+      },
+      "recommendedDisplayScale": 0.94,
+      "bundle": "stellar10-standards-20261021",
+      "atlas": null,
+      "animation": null,
+      "promptPath": "prompts/木衛三.txt",
+      "source": {
+        "tool": "image_gen.imagegen",
+        "modelVersion": "not-exposed",
+        "referenceWorkingFileNames": [],
+        "generationPromptArchived": true,
+        "notes": "來源工作圖不隨本包當作可用主檔；只以path指定最終立繪為準。"
+      },
+      "appearanceLocks": "沙金雙低編圈髮髻、琥珀眼、奶白橙色背心、深綠高領、及膝機能下裝與平底靴；不用水手服粉外套。",
+      "reviewStatus": "awaiting-user-review",
+      "releaseStatus": "game-adaptation-not-validated",
+      "preview": "立繪/木衛三.png"
+    },
+    {
+      "id": "stellaart:character.io",
+      "nameZhHant": "木衛一",
+      "originalGameKey": "Io",
+      "originalCidRow": 17,
+      "gameCharacterId": null,
+      "bodyType": "少女",
+      "bodyTypeAssignment": "AI視覺分工方案，可由使用者調整；不決定年齡／玩法數值。",
+      "assetId": "stellaart:asset.io-standard",
+      "assetVersion": "v2-redesigned",
+      "path": "立繪/木衛一.png",
+      "sha256": "81adb3d27327499da9db3e391feab7425c6314e7b897d28c1627824d363c1833",
+      "width": 1024,
+      "height": 1536,
+      "mimeType": "image/png",
+      "colorSpace": "sRGB",
+      "alpha": {
+        "mode": "straight",
+        "channelRange": [
+          0,
+          254
+        ],
+        "bodyBoundsThreshold": 192,
+        "bodyBounds": [
+          192,
+          8,
+          929,
+          1504
+        ]
+      },
+      "pivot": {
+        "coordinateSpace": "normalized-image-top-left",
+        "x": 0.547363,
+        "y": 0.979167,
+        "purpose": "視覺腳底交換錨點，非世界碰撞判定"
+      },
+      "recommendedDisplayScale": 0.94,
+      "bundle": "stellar10-standards-20261021",
+      "atlas": null,
+      "animation": null,
+      "promptPath": "prompts/木衛一.txt",
+      "source": {
+        "tool": "image_gen.imagegen",
+        "modelVersion": "not-exposed",
+        "referenceWorkingFileNames": [],
+        "generationPromptArchived": true,
+        "notes": "來源工作圖不隨本包當作可用主檔；只以path指定最終立繪為準。"
+      },
+      "appearanceLocks": "蜂蜜金短高分段馬尾、粉紅眼、酒紅飛行外套、橙色機能下裝與白銅短靴；不用巨紅蝴蝶結／紅圍巾。",
+      "reviewStatus": "awaiting-user-review",
+      "releaseStatus": "game-adaptation-not-validated",
+      "preview": "立繪/木衛一.png"
+    },
+    {
+      "id": "stellaart:character.titania",
+      "nameZhHant": "天衛三",
+      "originalGameKey": "Titania",
+      "originalCidRow": 19,
+      "gameCharacterId": null,
+      "bodyType": "蘿莉",
+      "bodyTypeAssignment": "AI視覺分工方案，可由使用者調整；不決定年齡／玩法數值。",
+      "assetId": "stellaart:asset.titania-standard",
+      "assetVersion": "v4-user-corrected",
+      "path": "立繪/天衛三.png",
+      "sha256": "1ed00a42fbf8f440aabaca79ba38d9d45597adf897acc6d3eda533000105c875",
+      "width": 1024,
+      "height": 1536,
+      "mimeType": "image/png",
+      "colorSpace": "sRGB",
+      "alpha": {
+        "mode": "straight",
+        "channelRange": [
+          0,
+          254
+        ],
+        "bodyBoundsThreshold": 192,
+        "bodyBounds": [
+          200,
+          13,
+          829,
+          1525
+        ]
+      },
+      "pivot": {
+        "coordinateSpace": "normalized-image-top-left",
+        "x": 0.502441,
+        "y": 0.992839,
+        "purpose": "視覺腳底交換錨點，非世界碰撞判定"
+      },
+      "recommendedDisplayScale": 0.8,
+      "bundle": "stellar10-standards-20261021",
+      "atlas": null,
+      "animation": null,
+      "promptPath": "prompts/天衛三.txt",
+      "source": {
+        "tool": "image_gen.imagegen",
+        "modelVersion": "not-exposed",
+        "referenceWorkingFileNames": [
+          "exec-49147a9e-1897-4b61-b958-233638bb1f58.png",
+          "exec-0af274e5-92f0-428e-9b8a-0b484418d80d.png"
+        ],
+        "generationPromptArchived": true,
+        "notes": "來源工作圖不隨本包當作可用主檔；只以path指定最終立繪為準。"
+      },
+      "appearanceLocks": "青藍齊瀏海及肩短髮、紫眼、海軍藍披肩長外套、星圖書、全長褲和平底靴；正常約六頭身的嬌小立繪，非Q版。",
+      "reviewStatus": "awaiting-user-review",
+      "releaseStatus": "game-adaptation-not-validated",
+      "preview": "立繪/天衛三.png"
+    },
+    {
+      "id": "stellaart:character.ariel",
+      "nameZhHant": "天衛一",
+      "originalGameKey": "Ariel",
+      "originalCidRow": 20,
+      "gameCharacterId": null,
+      "bodyType": "蘿莉",
+      "bodyTypeAssignment": "AI視覺分工方案，可由使用者調整；不決定年齡／玩法數值。",
+      "assetId": "stellaart:asset.ariel-standard",
+      "assetVersion": "v4-user-corrected",
+      "path": "立繪/天衛一.png",
+      "sha256": "eb659e4a7293de2b4a37e53f630d35475b9fb5959dd422cbcd9980c322176a22",
+      "width": 1024,
+      "height": 1536,
+      "mimeType": "image/png",
+      "colorSpace": "sRGB",
+      "alpha": {
+        "mode": "straight",
+        "channelRange": [
+          0,
+          254
+        ],
+        "bodyBoundsThreshold": 192,
+        "bodyBounds": [
+          249,
+          6,
+          848,
+          1523
+        ]
+      },
+      "pivot": {
+        "coordinateSpace": "normalized-image-top-left",
+        "x": 0.535645,
+        "y": 0.991536,
+        "purpose": "視覺腳底交換錨點，非世界碰撞判定"
+      },
+      "recommendedDisplayScale": 0.8,
+      "bundle": "stellar10-standards-20261021",
+      "atlas": null,
+      "animation": null,
+      "promptPath": "prompts/天衛一.txt",
+      "source": {
+        "tool": "image_gen.imagegen",
+        "modelVersion": "not-exposed",
+        "referenceWorkingFileNames": [
+          "exec-83cb7fac-cdd7-4b4f-982c-07dcb3de11d8.png",
+          "exec-0af274e5-92f0-428e-9b8a-0b484418d80d.png"
+        ],
+        "generationPromptArchived": true,
+        "notes": "來源工作圖不隨本包當作可用主檔；只以path指定最終立繪為準。"
+      },
+      "appearanceLocks": "冰藍低雙短馬尾、灰紫眼、貝雷帽、奶白機械工作服、黃色膝片、扳手；正常約六頭身的嬌小立繪，非Q版。",
+      "reviewStatus": "awaiting-user-review",
+      "releaseStatus": "game-adaptation-not-validated",
+      "preview": "立繪/天衛一.png"
+    }
+  ],
+  "referenceOnlyFiles": [
+    "references/Pluto.jpg",
+    "references/Io.jpg",
+    "references/Titania.jpg",
+    "references/Ariel.jpg"
+  ],
+  "sourcePage": "https://gamerch.com/mist-smjp/147857"
+}

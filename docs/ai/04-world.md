@@ -11,3 +11,5 @@
 來源盤點用 SQLite 局部查詢，已知／推論／新設計分開。驗收內容校驗、入口／出口、先後解鎖、首勝不重領、正常與較弱隊伍試玩、桌機與手機預警。交付小批 commit／PR、地圖示意、難度／收益對照、測試 seed 與缺口。根 manifest 與刪包遷移交整合者處理。
 
 0.3追加：先讀 docs/design/galaxy-angel-v3.md。巡邏路線中心x/y、patrolRadius、patrolSpeed、phase、detectionRadius可配置；用domain/navigation.ts作唯一位置計算，不另寫碰撞公式。星球／敵人／建築／研究／星域sprite與星域background都須可預覽／替換。前鋒固定+X，安排敵人接近方向時記錄對坦克站位影響。
+
+目前M1只開放一個星域的航行與星球探索，可資料擴充同星域的星球／巡邏／敵群。schema可容納新星域，但跨星域旅行入口與流程尚未實作；需要第二星域時由核心先加通用旅行命令、UI與存檔測試，不能只加新region就聲稱可達。

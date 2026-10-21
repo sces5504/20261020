@@ -30,6 +30,24 @@ if (result.pack) {
       if (!a || (a.review !== "approved" && !(playtest && slot === "sprite")))
         errors.push(`${c.id}.${slot} 缺少已驗收素材`);
     }
+  // Visible world entities must carry the same portable artwork that the studio previews.
+  for (const [kind, list, slots] of [
+    ["enemies", p.enemies, ["sprite"]],
+    ["planets", p.planets, ["sprite"]],
+    ["buildings", p.buildings, ["sprite"]],
+    ["research", p.research, ["sprite"]],
+    ["regions", p.regions, ["sprite", "background"]],
+    ["quests", p.quests, ["background"]],
+  ] as const)
+    for (const e of list.filter((e) => e.status === "active"))
+      for (const slot of slots) {
+        const ref = (e as unknown as Record<string, unknown>)[slot];
+        const a = p.assets.find((a) => a.id === ref);
+        if (!a || (!playtest && a.review !== "approved"))
+          errors.push(
+            `${kind}.${e.id}.${slot} 缺少${playtest ? "試玩圖片" : "已驗收素材"}`,
+          );
+      }
 }
 if (playtest && status.playtestStatus !== "ready")
   errors.push("M1 試玩版尚未通過功能驗收。");

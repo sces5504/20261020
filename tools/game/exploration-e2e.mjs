@@ -327,6 +327,19 @@ try {
     m = await mobileContext.newPage();
   m.on("pageerror", (e) => errors.push(e.message));
   await m.goto(server.url);
+  await m.locator(".story-background").evaluate(async (im) => {
+    await im.decode();
+    if (!im.naturalWidth) throw Error("mobile scenario background missing");
+  });
+  await m.evaluate(async () => {
+    await Promise.all(
+      document
+        .getAnimations()
+        .filter((a) => a.effect?.getComputedTiming().iterations !== Infinity)
+        .map((a) => a.finished.catch(() => {})),
+    );
+  });
+  await m.screenshot({ path: ".artifacts/v2/mobile-story.png" });
   await m.locator('[data-action="story-skip"]').click();
   await m.waitForSelector(".story-scene", { state: "hidden" });
   await m.screenshot({ path: ".artifacts/v2/mobile.png" });

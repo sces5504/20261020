@@ -190,6 +190,14 @@ try {
       await im.decode();
       if (!im.naturalWidth) throw Error("building image missing");
     });
+  await page.evaluate(async () => {
+    await Promise.all(
+      document
+        .getAnimations()
+        .filter((a) => a.effect?.getComputedTiming().iterations !== Infinity)
+        .map((a) => a.finished.catch(() => {})),
+    );
+  });
   await page.screenshot({ path: ".artifacts/v2/building-management.png" });
   assert.deepEqual(errors, []);
   console.log(

@@ -59,3 +59,5 @@ npm run test:exploration
 ```
 
 完整發布：`python3 scripts/project.py check release`。`release:ready -- --target playtest` 是使用者授權的試玩門檻；預設 commercial 仍保留真機／品質未驗項，不能刪閘門或捏造通過。入口：`#/play`、`#/studio`、`#/test`、`#/art`、`#/catalog`。
+
+目前M1只開放一個星域的航行與星球探索，可資料擴充同星域的星球／巡邏／敵群。schema可容納新星域，但跨星域旅行入口與流程尚未實作；需要第二星域時由核心先加通用旅行命令、UI與存檔測試，不能只加新region就聲稱可達。

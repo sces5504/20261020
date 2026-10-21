@@ -14,7 +14,9 @@
 
 ## 驗證與發布
 
-進行中；收尾以實際本機release、CI／Pages及公開SHA補記。不得將進行中視為通過。
+本機最終完整 `python3 scripts/project.py check release` 已通過（實作5de9b9c，後續只有測試截圖等待、發布圖片門檻與文件更新）；29項核心、typecheck、內容校驗、三組瀏覽器流程及playtest readiness均成功。原圖hash／SQLite美術庫與範本10項測試亦通過。
+
+整合PR：https://github.com/sces5504/20261020/pull/5 。**公開main SHA、CI／Pages workflow與實際公開頁驗證，以此PR最後的發布證據留言及網站version.json為準**，不把本機成功冒充已部署。
 
 已有核心測試覆蓋：小步輸入讓每位實際隊員移動、放開停止、站位間距／順序、巡邏移動與越界校驗、資產引用與範例包整合。瀏覽器已補實際進戰按住WASD、編隊重排持久化、圖片解碼／工坊分類／星球建設圖；最終以收尾結果為準。
 
@@ -31,3 +33,5 @@
 第二輪完整profile仍在首戰逾時；持續觀察顯示120秒wall僅約70秒simulation，無面板攔住。追到Phaser TimeStep.smoothDelta會用舊值取代過慢畫格；改用rawDelta＋共用SimulationClock固定1/60步長，每畫格最多補1秒／60步，visibilitychange重設，背景／面板不補打。新增慢畫格等時、暫停與回前景丟棄隱藏時間測試；保留120秒首戰條件。最終重跑結果另補，不能把前兩次失敗當通過。
 
 rawDelta版本已在原120秒條件完成首戰及完整playtest。另修正例行自存／經濟I/O不應每秒暫停模擬：保持串行與CAS，僅遭遇轉換／替換存檔等命令鎖定；新增忙碌自存仍可移動、明確面板仍暫停的測試。29項核心已過，最終完整profile須以此後續版本再驗。
+
+最終受影響截圖已實際檢視：.artifacts/v2/mobile-story.png（390×844、DPR2）、studio-enemy.png、building-management.png；等待有限入場動畫完成後截圖，不沿用過期0.2圖片。內容ZIP實測20.89MiB，新世界WebP合計約2.7MB；原始主檔與六原圖保持不動。發布門檻現要求所有啟用的敵人／星球／建築／研究／星域／劇情必要圖片，candidate僅試玩可用。

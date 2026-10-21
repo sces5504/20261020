@@ -51,3 +51,11 @@
 ## 2026-10-21 直接要求更新
 
 使用者新要求銀河／戰鬥使用Q版。已另外以六張各自原立繪生成獨立battle/v1.png，來源與hash見art/catalog/battle-assets.json；原始standard原圖保持不變。此新指示僅取代舊的禁止Q圖要求，不授權改寫立繪。新圖目前候選試玩，非真人品質核定。最新玩法已取消防衛／訓練，接力先讀docs/design/exploration-v2.md。
+
+## Galaxy Angel 0.3 世界圖／情境背景
+
+權威入口：art/catalog/world-assets.json。主檔 art/world/*.png，網頁輸出同名WebP，保留像素尺寸／alpha，來源及主檔、輸出SHA各記錄。image_gen候選與原創Canvas星球均明示來源；不自行宣稱使用者核定。六張standard不經此編碼流程。
+
+sprite由敵人／星球／建築／研究／星域共用於遊戲與工坊；quest.background為整章情境圖，region.background為星空背景。未來作者交自己的命名空間圖片及metadata，不覆寫既有assetID；替換前檢查引用範圍。背景主檔建議至少1600×900，物件以透明底完整輪廓、寬鬆留白、可讀小尺寸為基準；本次星球256×256為原創程序插畫，後續可逐張提升，不能假稱完整商業美術已驗收。
+
+輸出工具：`node tools/game/encode-world-art.mjs`（已準備Chromium），只處理world-assets清單；`export-world-art.mjs`需開5176的本機dev server，用於重建原創Canvas物件，不是讀取／修改人物圖。新媒體整合時必須擴充安全的build複製步驟；不要只加JSON卻漏檔。

@@ -23,3 +23,5 @@ art/catalog/art-library.sqlite3.tmp
 # Runtime copies of the original art; rebuilt byte-for-byte from art/catalog.
 public/assets/characters/
 public/assets/battle/
+
+public/assets/world/

@@ -2711,3 +2711,190 @@ button:not(:disabled):hover {
   z-index: 2;
   min-height: 28px;
 }
+/* Galaxy Angel visual system: shared artwork, calm information hierarchy, deliberate actions. */
+.entity-image {
+  width: 128px;
+  height: 128px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 8px 18px #0006);
+}
+.territory-card,
+.building-card {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 85% 12%, #1d566355, transparent 65%),
+    linear-gradient(145deg, #142733, #0b1620);
+  border: 1px solid #395363;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px #0002;
+}
+.territory-card > .entity-image,
+.building-card > .entity-image {
+  float: right;
+  margin: -12px -6px 0 12px;
+  width: 132px;
+  height: 132px;
+}
+.colony-summary {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 22px;
+  border-radius: 14px;
+  background: linear-gradient(110deg, #193c4a, #101c2a);
+  border: 1px solid #42616f;
+}
+.colony-summary > .entity-image {
+  width: 150px;
+  height: 150px;
+}
+.story-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+.story-sky:after {
+  background:
+    linear-gradient(0deg, #040d18dd, transparent 65%),
+    linear-gradient(90deg, #08132277, transparent 75%);
+  opacity: 1;
+}
+.story-chapter {
+  padding: 14px 22px;
+  background: linear-gradient(90deg, #081322bb, transparent);
+  border-left: 2px solid #e4c894;
+  backdrop-filter: blur(6px);
+}
+.story-box {
+  background: linear-gradient(115deg, #0a1828f5, #102735ec);
+  border-top: 1px solid #a6dfe078;
+  box-shadow: 0 -12px 50px #0004;
+}
+.formation-slots > div {
+  background:
+    radial-gradient(ellipse at top, #28545b55, transparent 75%), #0c1b25;
+  border: 1px solid #3d626b;
+  border-radius: 12px;
+  padding: 16px;
+  gap: 8px;
+}
+.formation-slots > div:first-child {
+  border-color: #d4b47a;
+  background:
+    radial-gradient(ellipse at top, #9c784b33, transparent 75%), #0c1b25;
+}
+.formation-slots small {
+  display: block;
+  color: #9ebfc7;
+  font-size: 11px;
+}
+.catalog-item > .entity-image {
+  width: 54px;
+  height: 62px;
+  flex: none;
+  margin: -6px 0;
+}
+.catalog-item:has(> .entity-image) > .catalog-dot {
+  display: none;
+}
+.asset-preview {
+  background:
+    radial-gradient(ellipse at center, #244d5f77, transparent 75%),
+    repeating-conic-gradient(#10202b 0% 25%, #132530 0% 50%) 0/24px 24px;
+  border: 1px solid #3c5864;
+  border-radius: 12px;
+}
+.asset-preview img {
+  max-height: 320px;
+  max-width: 100%;
+  object-fit: contain;
+}
+.topbar .brand small {
+  letter-spacing: 0.28em;
+  color: #9dbbc5;
+}
+.deck-nav button {
+  border-radius: 10px;
+  transition:
+    background 0.15s,
+    border-color 0.15s,
+    transform 0.15s;
+}
+.deck-nav button:hover {
+  background: linear-gradient(135deg, #285761, #182e3e);
+  border-color: #9bd0d4;
+}
+.panel {
+  box-shadow: 0 30px 100px #0008;
+}
+@media (max-width: 650px) {
+  .colony-summary {
+    padding: 14px;
+    gap: 12px;
+  }
+  .colony-summary > .entity-image {
+    width: 90px;
+    height: 110px;
+  }
+  .territory-card > .entity-image,
+  .building-card > .entity-image {
+    width: 96px;
+    height: 108px;
+  }
+  .story-background {
+    object-position: 57% center;
+  }
+  .story-chapter {
+    padding: 8px 14px;
+  }
+  .catalog-item > .entity-image {
+    width: 42px;
+    height: 50px;
+  }
+  .formation-slots > div {
+    padding: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .deck-nav button {
+    transition: none;
+  }
+}
+.intel-planet-art {
+  display: block;
+  float: right;
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  margin: 0 -5px 6px 8px;
+  filter: drop-shadow(0 0 15px #8cccd533);
+}
+.deck-nav .nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 8px;
+  width: 30px;
+  height: 30px;
+}
+.nav-icon svg {
+  width: 28px;
+  height: 28px;
+  overflow: visible;
+  filter: drop-shadow(0 0 6px #eccb8e22);
+}
+@media (max-width: 800px) {
+  .deck-nav .nav-icon {
+    width: 22px;
+    height: 22px;
+    margin-bottom: 4px;
+  }
+  .nav-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+}

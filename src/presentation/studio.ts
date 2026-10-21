@@ -28,7 +28,7 @@ import {
   type Project,
 } from "../platform/storage";
 import { exportPack, importPack } from "../platform/packages";
-import { esc, button } from "./common";
+import { esc, button, entityImage } from "./common";
 export async function mountStudio(root: HTMLElement) {
   let project = (await read<Project>("editor:project")) ?? {
     schemaVersion: 1 as const,
@@ -62,13 +62,17 @@ export async function mountStudio(root: HTMLElement) {
     });
   }
 
-  root.innerHTML = `<main class="studio"><header class="studio-header"><a class="brand" href="#/play"><span class="brand-icon">✧</span><span>STELLA STUDIO<small>星 海 內 容 工 坊</small></span></a><div class="inline-actions"><a href="#/art">六位標準原圖 ↗</a><a href="#/play">返回遊戲 ↗</a></div></header><div class="studio-title"><div><span class="eyebrow">CONTENT WORKSPACE / LOCAL DRAFT</span><h1>每一道星光，由你定義。</h1><p>瀏覽、調整、試玩，再將你的星海匯出。</p></div><div class="studio-actions">${button("復原", "undo")}${button("重做", "redo")}${button("套用至測試遊戲 ↗", "test", "", "primary")}</div></div><div class="studio-toolbar"><span id="project-status"></span><div>${button("從新版正式內容建立草稿", "use-published")}${button("新增項目", "new")}${button("校驗內容", "validate")}${button("專案備份", "backup-project")}<label class="file-button">匯入專案／內容包<input id="import-project" type="file" accept=".json,.zip"></label>${button("匯出內容 ZIP", "export-pack")}</div></div><div class="studio-grid"><aside class="catalog-nav" id="catalog-nav"></aside><section class="catalog"><label class="search">搜尋內容<input id="catalog-search" type="search" placeholder="名稱或穩定 ID"></label><div id="catalog-list"></div></section><section class="inspector" id="inspector"></section></div><div class="studio-report" id="report" role="status"></div></main>`;
+  root.innerHTML = `<main class="studio"><header class="studio-header"><a class="brand" href="#/play"><span class="brand-icon">✧</span><span>GALAXY ANGEL STUDIO<small>星 海 內 容 工 坊</small></span></a><div class="inline-actions"><a href="#/art">六位標準原圖 ↗</a><a href="#/play">返回遊戲 ↗</a></div></header><div class="studio-title"><div><span class="eyebrow">CONTENT WORKSPACE / LOCAL DRAFT</span><h1>每一道星光，由你定義。</h1><p>瀏覽、調整、試玩，再將你的星海匯出。</p></div><div class="studio-actions">${button("復原", "undo")}${button("重做", "redo")}${button("套用至測試遊戲 ↗", "test", "", "primary")}</div></div><div class="studio-toolbar"><span id="project-status"></span><div>${button("從新版正式內容建立草稿", "use-published")}${button("新增項目", "new")}${button("校驗內容", "validate")}${button("專案備份", "backup-project")}<label class="file-button">匯入專案／內容包<input id="import-project" type="file" accept=".json,.zip"></label>${button("匯出內容 ZIP", "export-pack")}</div></div><div class="studio-grid"><aside class="catalog-nav" id="catalog-nav"></aside><section class="catalog"><label class="search">搜尋內容<input id="catalog-search" type="search" placeholder="名稱或穩定 ID"></label><div id="catalog-list"></div></section><section class="inspector" id="inspector"></section></div><div class="studio-report" id="report" role="status"></div></main>`;
   const $ = (s: string) => root.querySelector<HTMLElement>(s)!;
   function status() {
     if (disposed) return;
     $("#project-status").textContent =
       `${project.pack.name} · v${project.pack.version} · 草稿修訂 ${project.revision} · 僅保存在本機`;
-    $("#report").textContent = message;
+    $("#report").textContent =
+      message ||
+      (project.pack.version !== published.version
+        ? `目前是 v${project.pack.version} 舊草稿；正式版 v${published.version} 已有新圖片與巡邏設定。請先備份，再選「從新版正式內容建立草稿」，不會自動覆蓋你的修改。`
+        : "選擇內容可檢視外觀，修改後先套用至隔離測試遊戲。");
   }
   async function save() {
     project.revision++;
@@ -118,7 +122,7 @@ export async function mountStudio(root: HTMLElement) {
     $("#catalog-list").innerHTML = list
       .map(
         (e) =>
-          `<button data-action="select" data-id="${esc(e.id)}" class="catalog-item ${selected === e.id ? "selected" : ""}"><span class="catalog-dot" style="--c:${"color" in e ? esc(e.color) : "#a5c7ce"}">${kind === "characters" ? "✧" : kind === "planets" ? "◉" : "◇"}</span><span><strong>${esc(e.name)}</strong><small>${esc(e.id)}</small></span><span class="entity-status">${"status" in e && e.status === "retired" ? "退休" : "素材" in e ? "素材" : "配置"}</span></button>`,
+          `<button data-action="select" data-id="${esc(e.id)}" class="catalog-item ${selected === e.id ? "selected" : ""}">${entityImage(project.pack, e)}<span class="catalog-dot" style="--c:${"color" in e ? esc(e.color) : "#a5c7ce"}">${kind === "characters" ? "✧" : kind === "planets" ? "◉" : "◇"}</span><span><strong>${esc(e.name)}</strong><small>${esc(e.id)}</small></span><span class="entity-status">${"status" in e && e.status === "retired" ? "退休" : "素材" in e ? "素材" : "配置"}</span></button>`,
       )
       .join("");
   }
@@ -154,7 +158,13 @@ export async function mountStudio(root: HTMLElement) {
     waves: "後續波次（每波敵群列表）",
     waveDelay: "增援間隔（秒）",
     discoveryRadius: "探索掃描半徑",
-    patrols: "航路巡邏（座標、敵群、獎勵、再出現時間）",
+    patrols:
+      "巡邏：座標、半徑 patrolRadius、速度 patrolSpeed、偵測 detectionRadius、相位 phase、敵群與獎勵",
+    background: "對話情境背景",
+    formationSpacing: "編隊間距（世界單位）",
+    allySpriteSize: "少女顯示大小",
+    enemySpriteSize: "敵人顯示大小",
+    bossSpriteSize: "Boss 顯示大小",
     sourceRow: "來源 CID row（唯讀）",
     effect: "效果原語",
     power: "效果強度",
@@ -196,6 +206,7 @@ export async function mountStudio(root: HTMLElement) {
     portrait: "assets",
     avatar: "assets",
     sprite: "assets",
+    background: "assets",
     region: "regions",
     character: "characters",
   };
@@ -271,7 +282,15 @@ export async function mountStudio(root: HTMLElement) {
         ? p.assets.find((a) => a.id === c.portrait)
         : kind === "assets"
           ? p.assets.find((a) => a.id === e.id)
-          : undefined;
+          : p.assets.find(
+              (a) =>
+                a.id ===
+                ("sprite" in e
+                  ? e.sprite
+                  : "background" in e
+                    ? e.background
+                    : ""),
+            );
     $("#inspector").innerHTML =
       `<div class="inspector-heading"><div><span class="eyebrow">${kindNames[kind]} / INSPECTOR</span><h2>${esc(e.name)}</h2><small>${esc(e.id)}</small></div><div>${button("複製為新項目", "clone", e.id)}${button("移除", "delete", e.id, "danger-button")}</div></div>${asset ? `<div class="asset-preview"><img src="${esc(asset.src)}" alt="${esc(asset.name)}"></div>` : ""}${c ? `<div class="level-preview"><label>能力預覽等級<input id="preview-level" type="number" min="1" max="${p.rules.maxLevel}" value="1"></label><span id="effective-stats">生命 ${c.hp} · 攻擊 ${c.attack} · 防禦 ${c.defense}</span></div>` : ""}${kind === "audio" ? button("▶ 試聽此音效", "preview-audio") : ""}<form id="entity-form" class="entity-form">${Object.entries(
         e,

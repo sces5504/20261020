@@ -1,4 +1,6 @@
 import Phaser from "phaser";
+import { SimulationClock } from "../application/simulation-clock";
+import { formationOffset, patrolPosition } from "../domain/navigation";
 import { planetMaterial, enemyMaterial } from "./materials";
 import type { AudioMixer } from "../platform/audio";
 import type { Game } from "../application/game";
@@ -66,7 +68,7 @@ export function mountSpace(
     starfield: { x: number; y: number; r: number; a: number }[] = [];
     loaded = new Set<string>();
     elapsed = 0;
-    acc = 0;
+    clock = new SimulationClock();
     zoomFactor = 1;
     panX = 0;
     panY = 0;
@@ -77,6 +79,7 @@ export function mountSpace(
     lastBattle = false;
     lastSequence = 0;
     lastFlashCount = 0;
+    fleet = new Map<string, { x: number; y: number }>();
 
     create() {
       this.ink = this.add.graphics();
@@ -208,8 +211,22 @@ export function mountSpace(
       this.loaded.add(id);
       const image = new Image();
       image.onload = () => {
-        if (this.sys?.isActive() && !this.textures.exists(a.id))
-          this.textures.addImage(a.id, image);
+        if (!this.sys?.isActive() || this.textures.exists(a.id)) return;
+        // Render sprites at a bounded texture density; source art and studio previews stay intact.
+        const background = model.pack.regions.some(
+          (r) => r.background === a.id,
+        );
+        const limit = background ? (model.lowEffects ? 1024 : 1800) : 512;
+        if (Math.max(image.width, image.height) > limit) {
+          const canvas = document.createElement("canvas");
+          const ratio = limit / Math.max(image.width, image.height);
+          canvas.width = Math.round(image.width * ratio);
+          canvas.height = Math.round(image.height * ratio);
+          const ctx = canvas.getContext("2d")!;
+          ctx.imageSmoothingQuality = "high";
+          ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+          this.textures.addCanvas(a.id, canvas);
+        } else this.textures.addImage(a.id, image);
       };
       image.onerror = () => {
         model.notice = `素材未能載入：${a.name}`;
@@ -261,14 +278,14 @@ export function mountSpace(
       g.arc(x, y, r - 3, Math.PI * 1.05, Math.PI * 1.6);
       g.strokePath();
     }
-    update(_time: number, delta: number) {
-      const dt = Math.min(delta / 1000, 0.25);
+    update() {
+      // Phaser smoothDelta replaces slow frames with old values. Use its raw elapsed time instead.
+      const dt = this.clock.advance(
+        this.game.loop.rawDelta,
+        !!model.pause.size,
+        (dt) => model.step(dt),
+      );
       this.elapsed += dt;
-      this.acc = Math.min(this.acc + dt, 0.25);
-      while (this.acc >= 1 / 60) {
-        model.step(1 / 60);
-        this.acc -= 1 / 60;
-      }
       const g = this.ink,
         camera = this.cameras.main,
         r = model.pack.regions.find((v) => v.id === model.save.region)!;
@@ -277,6 +294,7 @@ export function mountSpace(
         battle = !!model.combat;
       if (battle !== this.lastBattle) {
         this.lastBattle = battle;
+        this.fleet.clear();
         this.panX = 0;
         this.panY = 0;
         this.zoomFactor = 1;
@@ -292,12 +310,33 @@ export function mountSpace(
         (model.viewMode === "explore" ? model.x : r.width / 2) + this.panX,
         (model.viewMode === "explore" ? model.y : r.height / 2) + this.panY,
       );
+      this.sprites.forEach((image) => image.setVisible(false));
       g.clear();
+      if (r.background) {
+        this.ensureAsset(r.background);
+        if (this.textures.exists(r.background)) {
+          this.drawAsset(
+            "region-background",
+            r.background,
+            r.width / 2,
+            r.height / 2,
+            Math.max(r.width, r.height),
+          );
+          const im = this.sprites.get("region-background")!;
+          const asset = model.pack.assets.find((a) => a.id === r.background)!;
+          const scale = Math.max(
+            r.width / asset.width,
+            r.height / asset.height,
+          );
+          im.setDisplaySize(asset.width * scale, asset.height * scale)
+            .setDepth(-2)
+            .setAlpha(0.58);
+        }
+      }
       this.hud.clear();
       this.labelIndex = 0;
-      this.sprites.forEach((image) => image.setVisible(false));
       // Nebulae and a stable starfield: presentation-only, independent from simulation RNG.
-      for (let i = model.lowEffects ? 3 : 8; i > 0; i--) {
+      for (let i = r.background ? 0 : model.lowEffects ? 3 : 8; i > 0; i--) {
         g.fillStyle(0x40335f, 0.012);
         g.fillEllipse(1600, 850, i * 175, i * 92);
         g.fillStyle(0x164f60, 0.014);
@@ -306,7 +345,10 @@ export function mountSpace(
       g.lineStyle(0.7, 0x638b9c, 0.1);
       for (let x = 0; x <= r.width; x += 200) g.lineBetween(x, 0, x, r.height);
       for (let y = 0; y <= r.height; y += 200) g.lineBetween(0, y, r.width, y);
-      for (const s of this.starfield) {
+      for (const s of this.starfield.slice(
+        0,
+        r.background ? (model.lowEffects ? 60 : 120) : this.starfield.length,
+      )) {
         g.fillStyle(0xc3deeb, s.a);
         g.fillCircle(s.x, s.y, (s.r / zoom) * 0.6);
       }
@@ -392,21 +434,32 @@ export function mountSpace(
           const o = model.save.roster.find((o) => o.id === model.save.team[i])!;
           const c = model.pack.characters.find((c) => c.id === o.definition)!;
           this.ensureAsset(c.sprite);
-          if (this.textures.exists(c.sprite))
+          const offset = formationOffset(
+            i,
+            model.save.team.length,
+            model.pack.rules.formationSpacing,
+          );
+          const target = { x: model.x + offset.x, y: model.y + offset.y };
+          const position = this.fleet.get(o.id) ?? { ...target };
+          const smoothing = 1 - Math.exp(-dt / (0.1 + i * 0.07));
+          if (!model.pause.size) {
+            position.x += (target.x - position.x) * smoothing;
+            position.y += (target.y - position.y) * smoothing;
+          }
+          this.fleet.set(o.id, position);
+          const bob = Math.sin(this.elapsed * 2.2 + i * 1.7) * 3;
+          if (this.textures.exists(c.sprite)) {
             this.drawAsset(
               o.id,
               c.sprite,
-              model.x + (i - 1) * 58,
-              model.y + (i % 2) * 35,
-              120,
+              position.x,
+              position.y + bob,
+              model.pack.rules.allySpriteSize,
             );
-          else
-            this.ship(
-              model.x + (i - 1) * 45,
-              model.y + (i % 2) * 35,
-              0x9bdfd4,
-              16,
-            );
+            this.sprites
+              .get(o.id)
+              ?.setRotation(Math.sin(this.elapsed * 1.6 + i) * 0.025);
+          } else this.ship(position.x, position.y, 0x9bdfd4, 12);
         }
         for (const v of r.patrols) {
           if ((model.save.patrolCooldowns[v.id] ?? 0) > model.voyageSeconds)
@@ -414,16 +467,24 @@ export function mountSpace(
           const e = model.pack.enemies.find(
             (e) => e.id === v.enemies[0].enemy,
           )!;
+          const pos = patrolPosition(v, model.voyageSeconds);
+          if (e.sprite) this.ensureAsset(e.sprite);
+          const texture =
+            e.sprite && this.textures.exists(e.sprite)
+              ? e.sprite
+              : `enemy:${e.id}`;
           this.drawAsset(
             v.id,
-            `enemy:${e.id}`,
-            v.x,
-            v.y + Math.sin(this.elapsed * 1.3) * 12,
-            70,
+            texture,
+            pos.x,
+            pos.y,
+            model.pack.rules.enemySpriteSize,
           );
-          g.lineStyle(1, 0xff9a8a, 0.4);
-          g.strokeCircle(v.x, v.y, 85);
-          this.text(v.x, v.y + 55, "巡邏敵艦", 11 / zoom, "#ffb39e");
+          g.lineStyle(1, 0xff9a8a, 0.18);
+          g.strokeEllipse(v.x, v.y, v.patrolRadius * 2, v.patrolRadius * 1.24);
+          g.lineStyle(1, 0xff9a8a, 0.22);
+          g.strokeCircle(pos.x, pos.y, v.detectionRadius);
+          this.text(pos.x, pos.y + 42, "巡邏敵艦", 11 / zoom, "#ffb39e");
         }
         if (model.viewMode === "explore") {
           const next = model.pack.planets.find(
@@ -487,13 +548,15 @@ export function mountSpace(
           if (u.side === "ally") {
             if (!u.sprite || !this.textures.exists(u.sprite))
               this.ship(u.x, u.y, color, size);
-          } else {
+          } else if (!u.sprite || !this.textures.exists(u.sprite)) {
             this.drawAsset(
               u.id + ":hull",
               `enemy:${u.def}`,
               u.x,
               u.y,
-              u.boss ? 150 : 75,
+              u.boss
+                ? model.pack.rules.bossSpriteSize
+                : model.pack.rules.enemySpriteSize,
             );
           }
           if (u.side === "enemy" && u.windup > 0) {
@@ -511,17 +574,35 @@ export function mountSpace(
               u.id,
               u.sprite,
               u.x,
-              u.y + Math.sin(this.elapsed * 3 + u.x) * 2,
-              125,
+              u.y +
+                Math.sin(this.elapsed * 2.2 + combat.units.indexOf(u) * 1.7) *
+                  3,
+              u.side === "ally"
+                ? model.pack.rules.allySpriteSize
+                : u.boss
+                  ? model.pack.rules.bossSpriteSize
+                  : model.pack.rules.enemySpriteSize,
             );
+          this.sprites
+            .get(u.id)
+            ?.setRotation(
+              Math.sin(this.elapsed * 1.6 + combat.units.indexOf(u)) * 0.025,
+            );
+          if (u.side === "enemy")
+            this.sprites.get(u.id)?.setFlipX(u.x > combat.center.x);
           if (u.shield > 0) {
             this.hud.lineStyle(1.5, 0x87ede1, 0.8);
             this.hud.strokeCircle(u.x, u.y, size + 10);
           }
           this.hud.fillStyle(0x172c36);
-          this.hud.fillRect(u.x - 25, u.y + 64, 50, 3);
+          this.hud.fillRect(u.x - 25, u.y + (u.boss ? 64 : 43), 50, 3);
           this.hud.fillStyle(color);
-          this.hud.fillRect(u.x - 25, u.y + 64, (50 * u.hp) / u.maxHp, 3);
+          this.hud.fillRect(
+            u.x - 25,
+            u.y + (u.boss ? 64 : 43),
+            (50 * u.hp) / u.maxHp,
+            3,
+          );
           if (combat.target === u.id) {
             this.hud.lineStyle(1, 0xf0d3a2);
             this.hud.strokeCircle(u.x, u.y, size + 12);
@@ -617,6 +698,8 @@ export function mountSpace(
     }
   }
   const scene = new Space();
+  const resetClock = () => scene.clock.reset();
+  document.addEventListener("visibilitychange", resetClock);
   const game = new Phaser.Game({
     type: Phaser.AUTO,
     parent: host,
@@ -642,6 +725,7 @@ export function mountSpace(
     select: (id: string) => (scene.selected = id),
     destroy: () => {
       resize.disconnect();
+      document.removeEventListener("visibilitychange", resetClock);
       document.removeEventListener("keydown", keydown);
       document.removeEventListener("keyup", keyup);
       window.removeEventListener("blur", blur);

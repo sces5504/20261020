@@ -1,5 +1,5 @@
 {
-  "milestone": "M1-exploration-0.2",
+  "milestone": "M1-galaxy-angel-0.3",
   "status": "m1-playtest-complete",
   "checks": {
     "characterMappingConfirmed": true,
@@ -13,7 +13,7 @@
     "iosSafariVerified": false,
     "performanceBaselineVerified": false
   },
-  "notes": "0.2探索版依使用者16項試玩回饋：移除防衛及訓練、降低經濟餘裕、多波次解放、持續航行／大星圖／巡邏、WASD／觸控、高密度畫面、技能／人物／編隊／領地、對話／取得演出、全站遊戲內確認與未來角色表。原六圖不改寫，另外生成獨立Q版候選戰鬥圖，未宣稱真人核定。完整功能與限制見docs/design/exploration-v2.md。",
+  "notes": "Galaxy Angel 0.3：移動巡邏／偵測、戰中WASD、前鋒後衛與重排、柔順跟隨／idle、情境與星空背景、工坊及領地共用圖片、原創UI圖示；rawDelta固定步長及例行I/O不暫停。29項核心與三組瀏覽器流程通過。六原圖不變；新增美術candidate，商業品質／真機／硬體效能／獨立AI接力仍待驗。詳見docs/handoffs/galaxy-angel-v3-20261021.md及PR #5最後發布證據。",
   "playtestStatus": "ready",
   "playtestChecks": {
     "campaignLoop": true,
@@ -26,6 +26,9 @@
     "wasdAndHighDensityCanvas": true,
     "customDialogsAndSummonReveal": true,
     "characterFormationStoryAndPlanetManagement": true,
-    "futureCharacterArtRoster": true
+    "futureCharacterArtRoster": true,
+    "movingPatrolAndCombatKeyboard": true,
+    "formationOrderAndForegroundClock": true,
+    "entityArtAndScenarioBackgrounds": true
   }
 }

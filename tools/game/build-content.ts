@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, rmSync } from "node:fs";
 import { resolve } from "node:path";
 import { assemble } from "../../src/content/loader";
 const root = resolve("content"),
@@ -61,5 +61,40 @@ for (const entry of battleAssets) {
   if (!output.startsWith(resolve("public/assets/battle") + "/"))
     throw Error("Q版素材路徑越界");
   mkdirSync(resolve("public/assets/battle"), { recursive: true });
+  writeFileSync(output, bytes);
+}
+
+// Portable world and scenario artwork shared by the game and studio.
+const worldAssets = JSON.parse(
+  readFileSync("art/catalog/world-assets.json", "utf8"),
+) as {
+  id: string;
+  path: string;
+  runtime: string;
+  sha256: string;
+  master?: string;
+  masterSha256?: string;
+}[];
+rmSync("public/assets/world", { recursive: true, force: true });
+for (const entry of worldAssets) {
+  if (
+    entry.master &&
+    createHash("sha256").update(readFileSync(entry.master)).digest("hex") !==
+      entry.masterSha256
+  )
+    throw Error("世界素材主檔hash不符");
+  const bytes = readFileSync(entry.path),
+    asset = merged.assets.find((a) => a.id === entry.id);
+  if (
+    !asset ||
+    asset.src !== entry.runtime ||
+    createHash("sha256").update(bytes).digest("hex") !== entry.sha256 ||
+    asset.hash !== entry.sha256
+  )
+    throw Error("世界素材hash或映射不符");
+  const output = resolve("public", entry.runtime);
+  if (!output.startsWith(resolve("public/assets/world") + "/"))
+    throw Error("世界素材路徑越界");
+  mkdirSync(resolve("public/assets/world"), { recursive: true });
   writeFileSync(output, bytes);
 }

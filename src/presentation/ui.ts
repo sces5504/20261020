@@ -1,3 +1,4 @@
+import { icon } from "./icons";
 import { skillMechanic } from "../content/descriptions";
 import { ask } from "./dialog";
 import { AudioMixer } from "../platform/audio";
@@ -8,7 +9,7 @@ import { stats, costScale, newSave, type Save } from "../domain/model";
 import { production, questReady, summonCandidates } from "../domain/economy";
 import { download, read } from "../platform/storage";
 import { mountSpace } from "./space";
-import { esc, button, amounts, portrait } from "./common";
+import { esc, button, amounts, portrait, entityImage } from "./common";
 export { esc } from "./common";
 export function mountGame(root: HTMLElement, g: Game, test: boolean) {
   const p = g.pack;
@@ -26,11 +27,11 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     count = 1;
   let cleanup: () => void | Promise<void> = () => {};
   let disposed = false;
-  root.innerHTML = `<main class="bridge"><header class="topbar"><a class="brand" href="#/play"><span class="brand-icon">✧</span><span>STELLA MAIDEN<small>星 海 航 跡</small></span></a><div id="wallet" class="wallet"></div><div class="top-actions">${button("◈", "panel", "archive", "icon-button")}<a class="studio-link" href="#/studio">內容工坊 ↗</a></div></header>
+  root.innerHTML = `<main class="bridge"><header class="topbar"><a class="brand" href="#/play"><span class="brand-icon">✧</span><span>GALAXY ANGEL<small>星 海 航 跡</small></span></a><div id="wallet" class="wallet"></div><div class="top-actions">${button("設定", "panel", "archive", "icon-button")}<a class="studio-link" href="#/studio">內容工坊 ↗</a></div></header>
  <div class="sector-heading"><div><span class="eyebrow">HELIOS EXPEDITION / 01</span><h1>${esc(p.regions[0].name)}<span>探索航線</span></h1></div><div class="sector-status"><i></i> <span id="save-status">本機自動保存</span>${test ? "<strong>隔離測試</strong>" : ""}</div></div>
  <section class="viewport"><aside class="mission-rail"><div class="section-label">航行目標 <span>MISSION</span></div><div id="mission"></div><div class="rail-bottom"><span class="eyebrow">NAVIGATION</span><p>WASD／點擊星海航行<br>靠近星球自動掃描</p><div class="signal"><i></i><i></i><i></i><i></i><i></i></div><small>艦隊通訊連線中</small></div></aside>
  <div id="space" class="space" aria-label="星域戰場，點擊空白處移動，點擊星球查看情報" role="application"></div><div class="map-caption"><span>✧ 星域掃描</span><span id="coordinates"></span></div><div id="battle-state" class="battle-state"></div><div id="battle-tools" class="battle-tools"></div><aside id="planet-card" class="planet-card"></aside></section>
- <footer class="flight-deck"><div class="squad-heading"><span class="eyebrow">YOUR CONSTELLATION</span><strong>航行編隊</strong>${button("編隊 ↗", "panel", "formation", "text-button")}</div><div class="squad" id="squad"></div><nav class="deck-nav">${button("<span>✦</span>星體共鳴", "panel", "summon")}${button("<span>⌬</span>共振研究", "panel", "research")}${button("<span>◇</span>航行紀錄", "panel", "quests")}${button("<span>◉</span>領地", "panel", "planets")}${button("<span>♧</span>角色", "panel", "roster")}${button("<span>Ⅱ</span>暫停", "pause", "", "pause-button")}</nav></footer>
+ <footer class="flight-deck"><div class="squad-heading"><span class="eyebrow">YOUR CONSTELLATION</span><strong>航行編隊</strong>${button("編隊 ↗", "panel", "formation", "text-button")}</div><div class="squad" id="squad"></div><nav class="deck-nav">${button(icon("resonance") + "星體共鳴", "panel", "summon")}${button(icon("research") + "共振研究", "panel", "research")}${button(icon("journal") + "航行紀錄", "panel", "quests")}${button(icon("planet") + "領地", "panel", "planets")}${button(icon("crew") + "角色", "panel", "roster")}${button(icon("pause") + "暫停", "pause", "", "pause-button")}</nav></footer>
  <div class="build-note">M1 試玩版 · 六位少女／一個星域</div><div class="toast" id="toast" role="status" aria-live="polite"></div><div id="skill-splash" class="skill-splash" aria-live="polite"></div><div id="overlay"></div></main>`;
   const $ = (s: string) => root.querySelector<HTMLElement>(s)!;
   const space = mountSpace(
@@ -73,7 +74,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     if (key === planetKey) return;
     planetKey = key;
     $("#planet-card").innerHTML =
-      `${button("✕", "intel-close", "", "intel-dismiss")}<div class="section-label">星球情報 <span>INTEL</span></div><div class="planet-emblem" style="--c:${v.color}"><span></span></div><span class="eyebrow">${col?.active ? "COLONY" : "UNEXPLORED SIGNAL"}</span><h2>${esc(v.name)}</h2><div class="tags"><span>${locked ? "航線未開放" : col?.lost ? "生產待恢復" : cleared ? "已解放" : "敵方佔領"}</span><span>${v.enemies.some((e) => p.enemies.find((v) => v.id === e.enemy)?.boss) ? "首領訊號" : "一般據點"}</span></div><p>${locked ? "解放前一個據點以開啟航路。" : col?.lost ? "設施已停產。修復後即可恢復生產。" : col?.active ? "生產設施運作中。可於領地總覽統一管理全部星球。" : "追蹤陌生的星體訊號，建立新的前進據點。"}</p><div class="intel-row"><span>偵測敵群</span><strong>${v.enemies.reduce((a, b) => a + b.count, 0)} 組訊號</strong></div><div class="intel-row"><span>${col?.active ? "每分鐘產量" : "首次解放獎勵"}</span></div><div class="costs">${amounts(p, col?.active ? Object.fromEntries(Object.entries(v.production).map(([id, n]) => [id, n * 60])) : v.reward)}</div>${col?.active ? button("管理星球 →", "panel", "colony", "primary") : cleared ? button("啟動星球 →", "activate", v.id, "primary") : button("出擊 · 解放星球 →", "battle", v.id, "primary", locked || !!g.combat)}${cleared && !col?.active ? `<div class="costs">${amounts(p, v.activationCost)}</div>` : ""}`;
+      `${button("✕", "intel-close", "", "intel-dismiss")}<div class="section-label">星球情報 <span>INTEL</span></div>${entityImage(p, v, "intel-planet-art")}<span class="eyebrow">${col?.active ? "COLONY" : "UNEXPLORED SIGNAL"}</span><h2>${esc(v.name)}</h2><div class="tags"><span>${locked ? "航線未開放" : col?.lost ? "生產待恢復" : cleared ? "已解放" : "敵方佔領"}</span><span>${v.enemies.some((e) => p.enemies.find((v) => v.id === e.enemy)?.boss) ? "首領訊號" : "一般據點"}</span></div><p>${locked ? "解放前一個據點以開啟航路。" : col?.lost ? "設施已停產。修復後即可恢復生產。" : col?.active ? "生產設施運作中。可於領地總覽統一管理全部星球。" : "追蹤陌生的星體訊號，建立新的前進據點。"}</p><div class="intel-row"><span>偵測敵群</span><strong>${v.enemies.reduce((a, b) => a + b.count, 0)} 組訊號</strong></div><div class="intel-row"><span>${col?.active ? "每分鐘產量" : "首次解放獎勵"}</span></div><div class="costs">${amounts(p, col?.active ? Object.fromEntries(Object.entries(v.production).map(([id, n]) => [id, n * 60])) : v.reward)}</div>${col?.active ? button("管理星球 →", "panel", "colony", "primary") : cleared ? button("啟動星球 →", "activate", v.id, "primary") : button("出擊 · 解放星球 →", "battle", v.id, "primary", locked || !!g.combat)}${cleared && !col?.active ? `<div class="costs">${amounts(p, v.activationCost)}</div>` : ""}`;
   }
   let missionKey = "";
   function renderMission() {
@@ -189,7 +190,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
         (c) => c.name === line.speaker || c.id === line.speaker,
       );
       $("#overlay").innerHTML =
-        `<div class="story-scene" role="dialog" aria-modal="true" aria-label="劇情對話"><div class="story-sky"></div><div class="story-chapter"><span class="eyebrow">VOYAGE CHRONICLE</span><h2>${esc(q.name)}</h2></div>${actor ? portrait(p, actor, true) : '<div class="story-signal">✧</div>'}<div class="story-box"><div class="story-speaker">${esc(line.speaker)}</div><p class="story-line">${esc(line.text)}</p><div class="story-controls"><small>${storyIndex + 1} / ${q.dialogue.length}</small>${button("略過", "story-skip", "", "text-button")}${button(storyIndex === q.dialogue.length - 1 ? "開始航行 →" : "繼續對話 →", "story-next", "", "primary")}</div></div></div>`;
+        `<div class="story-scene" role="dialog" aria-modal="true" aria-label="劇情對話"><div class="story-sky">${entityImage(p, q, "story-background")}</div><div class="story-chapter"><span class="eyebrow">VOYAGE CHRONICLE</span><h2>${esc(q.name)}</h2></div>${actor ? portrait(p, actor, true) : '<div class="story-signal">✧</div>'}<div class="story-box"><div class="story-speaker">${esc(line.speaker)}</div><p class="story-line">${esc(line.text)}</p><div class="story-controls"><small>${storyIndex + 1} / ${q.dialogue.length}</small>${button("略過", "story-skip", "", "text-button")}${button(storyIndex === q.dialogue.length - 1 ? "開始航行 →" : "繼續對話 →", "story-next", "", "primary")}</div></div></div>`;
       return;
     }
     let body = "",
@@ -213,11 +214,11 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     if (panel === "formation") {
       title = "航行編隊";
       kick = "FLEET FORMATION";
-      body = `<p class="muted">點選加入／移出，最多 ${p.rules.teamSize} 人。戰鬥中的編隊在遭遇結束後可調整。</p><div class="formation-slots">${s.team
+      body = `<p class="muted">最多 ${p.rules.teamSize} 人。01 為前鋒，較容易先接敵，建議配置坦克；後續站位為錯開的後衛。使用前移／後移調整順序，戰鬥中鎖定編隊。</p><div class="formation-slots">${s.team
         .map((id, i) => {
           const o = s.roster.find((o) => o.id === id)!;
           const c = p.characters.find((c) => c.id === o.definition)!;
-          return `<div><span>0${i + 1}</span>${portrait(p, c)}<strong>${esc(c.name)}</strong>${button("詳細", "character", id, "text-button")}</div>`;
+          return `<div><span>0${i + 1}</span>${portrait(p, c)}<strong>${esc(c.name)}</strong>${button("詳細", "character", id, "text-button")}<small>${i === 0 ? "前鋒 · 優先接敵" : "後衛 · 支援火力"}</small><div class="inline-actions">${button("前移", "team-forward", id, "text-button", !!g.combat || i === 0)}${button("後移", "team-back", id, "text-button", !!g.combat || i === s.team.length - 1)}</div></div>`;
         })
         .join("")}</div>${rosterHtml()}`;
     }
@@ -241,7 +242,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
           .filter((v) => s.cleared.includes(v.id) || s.colonies[v.id])
           .map((v) => {
             const col = s.colonies[v.id];
-            return `<article><span class="eyebrow">${col?.active ? "PRODUCTION ONLINE" : "AWAITING ACTIVATION"}</span><h3>${esc(v.name)}</h3><p>${esc(v.description)}</p><div class="costs">${amounts(p, Object.fromEntries(Object.entries(v.production).map(([id, n]) => [id, n * 60])))}</div>${button(col?.active ? "管理建設 →" : "啟動星球 →", col?.active ? "manage-planet" : "activate", v.id, "primary")}${button("導航至星球", "navigate", v.id, "text-button")}</article>`;
+            return `<article class="territory-card">${entityImage(p, v)}<span class="eyebrow">${col?.active ? "PRODUCTION ONLINE" : "AWAITING ACTIVATION"}</span><h3>${esc(v.name)}</h3><p>${esc(v.description)}</p><div class="costs">${amounts(p, Object.fromEntries(Object.entries(v.production).map(([id, n]) => [id, n * 60])))}</div>${button(col?.active ? "管理建設 →" : "啟動星球 →", col?.active ? "manage-planet" : "activate", v.id, "primary")}${button("導航至星球", "navigate", v.id, "text-button")}</article>`;
           })
           .join("") ||
         '<p class="empty-state">尚無領地。探索並解放第一顆星球後，便能在這裡管理。</p>'
@@ -273,7 +274,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       kick = "PLANETARY OPERATIONS";
       body = !col
         ? "<p>請先啟動星球。</p>"
-        : `<div class="colony-summary"><div><span class="eyebrow">${col.lost ? "PRODUCTION SUSPENDED" : "PRODUCTION ONLINE"}</span><h3>${col.lost ? "生產待恢復 · 停產中" : "生產運作中"}</h3><p>星球持續提供資源；可建造、升級與派駐，增加產能。</p></div></div><div class="costs">${amounts(p, Object.fromEntries(Object.entries(production(p, { ...s, colonies: { [selected]: col } })).map(([id, n]) => [id, n * 60])))}<small>／分鐘，此星球目前產量</small></div><div class="list-cards">${p.buildings.map((b) => `<article><span class="eyebrow">LEVEL ${col.buildings[b.id] ?? 0} / ${b.maxLevel}</span><h3>${esc(b.name)}</h3><p>${esc(b.description)} · ${b.seconds}s</p><div class="costs">${amounts(p, costScale(b.cost, (col.buildings[b.id] ?? 0) + 1))}</div>${button("建造／升級", "build", b.id, "primary", col.lost || (col.buildings[b.id] ?? 0) >= b.maxLevel || s.jobs.some((j) => j.kind === "build" && j.owner === selected))}</article>`).join("")}</div><h3>派駐少女 <small>採集站產出 +20%</small></h3><div class="inline-actions">${
+        : `<div class="colony-summary">${entityImage(p, v)}<div><span class="eyebrow">${col.lost ? "PRODUCTION SUSPENDED" : "PRODUCTION ONLINE"}</span><h3>${col.lost ? "生產待恢復 · 停產中" : "生產運作中"}</h3><p>星球持續提供資源；可建造、升級與派駐，增加產能。</p></div></div><div class="costs">${amounts(p, Object.fromEntries(Object.entries(production(p, { ...s, colonies: { [selected]: col } })).map(([id, n]) => [id, n * 60])))}<small>／分鐘，此星球目前產量</small></div><div class="list-cards">${p.buildings.map((b) => `<article class="building-card">${entityImage(p, b)}<span class="eyebrow">LEVEL ${col.buildings[b.id] ?? 0} / ${b.maxLevel}</span><h3>${esc(b.name)}</h3><p>${esc(b.description)} · ${b.seconds}s</p><div class="costs">${amounts(p, costScale(b.cost, (col.buildings[b.id] ?? 0) + 1))}</div>${button("建造／升級", "build", b.id, "primary", col.lost || (col.buildings[b.id] ?? 0) >= b.maxLevel || s.jobs.some((j) => j.kind === "build" && j.owner === selected))}</article>`).join("")}</div><h3>派駐少女 <small>採集站產出 +20%</small></h3><div class="inline-actions">${
             s.roster
               .filter((o) => !s.team.includes(o.id))
               .map((o) =>
@@ -497,6 +498,12 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     if (action === "build")
       await g.command({ type: "build", planet: selected, building: id });
     if (action === "research") await g.command({ type: "research", id });
+    if (action === "team-forward" || action === "team-back")
+      await g.command({
+        type: "reorder-team",
+        owned: id,
+        direction: action === "team-forward" ? -1 : 1,
+      });
     if (action === "team") await g.command({ type: "team", owned: id });
     if (action === "level") await g.command({ type: "level", owned: id });
     if (action === "heal") await g.command({ type: "heal", owned: id });
@@ -697,7 +704,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     $("#battle-state").innerHTML = g.pause.size
       ? `<span>Ⅱ ${panel ? "管理中" : g.pause.has("background") ? "背景暫停" : "已暫停"}</span>`
       : g.combat
-        ? '<span class="danger">◆ 交戰中 · 點空地閃躲</span>'
+        ? '<span class="danger">◆ 交戰中 · WASD／點擊閃躲</span>'
         : "";
     renderSquad();
     refreshTimers();

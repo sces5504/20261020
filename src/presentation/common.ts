@@ -31,3 +31,16 @@ export function portrait(p: Pack, c: Character, large = false) {
       : `<div class="portrait avatar-window"><img src="${esc(a.src)}" alt="${esc(c.name)}" loading="lazy"></div>`
     : `<div class="portrait celestial ${large ? "large" : ""}" style="--c:${c.color}"><span>✧</span><small>${esc(c.name)}</small></div>`;
 }
+
+export function entityImage(
+  p: Pack,
+  e: { name: string; sprite?: string; background?: string; portrait?: string },
+  cls = "entity-image",
+) {
+  const a = p.assets.find(
+    (a) => a.id === (e.portrait || e.sprite || e.background),
+  );
+  return a
+    ? `<img class="${esc(cls)}" src="${esc(a.src)}" alt="${esc(e.name)}" loading="lazy">`
+    : "";
+}

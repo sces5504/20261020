@@ -2,6 +2,7 @@ import type { Pack } from "../content/schema";
 import { snapshot } from "../content/schema";
 import { newSave, stats, type Save } from "../domain/model";
 import { apply, settle, type Command } from "../domain/economy";
+import { patrolPosition } from "../domain/navigation";
 import { Combat } from "../domain/combat";
 import { fingerprint } from "../content/fingerprint";
 import { compatibilityPlan } from "../domain/migration";
@@ -24,6 +25,7 @@ export class Game {
   error = "";
   notice = "";
   busy = false;
+  private simulationLocked = false;
   dirty = false;
   autoSkills = false;
   lowEffects = localStorage.getItem("stella:effects") === "low";
@@ -76,10 +78,11 @@ export class Game {
     await g.tickEconomy();
     return g;
   }
-  private enqueue(fn: () => Promise<void>) {
+  private enqueue(fn: () => Promise<void>, blocksSimulation = true) {
     this.serial = this.serial
       .then(async () => {
         this.busy = true;
+        this.simulationLocked = blocksSimulation;
         try {
           await fn();
           this.error = "";
@@ -88,6 +91,7 @@ export class Game {
           throw e;
         } finally {
           this.busy = false;
+          this.simulationLocked = false;
         }
       })
       .catch(() => {});
@@ -142,7 +146,7 @@ export class Game {
           : "已撤回安全航線，請整補後再出發。";
       }
       this.dirty = true;
-    });
+    }, c.type !== "checkpoint");
   }
   tickEconomy() {
     return this.enqueue(async () => {
@@ -160,7 +164,7 @@ export class Game {
         this.notice = `共鳴完成 · 新增 ${s.roster.length - ownedCount} 位少女，前往編成查看。`;
       }
       this.dirty = true;
-    });
+    }, false);
   }
   checkpoint() {
     return this.command({
@@ -172,12 +176,12 @@ export class Game {
     });
   }
   step(dt: number) {
-    if (this.pause.size || this.busy || this.error) return;
+    if (this.pause.size || this.simulationLocked || this.error) return;
     if (this.movement.x || this.movement.y) {
       const n = Math.hypot(this.movement.x, this.movement.y);
       this.move(
-        this.x + (this.movement.x / n) * 190 * dt,
-        this.y + (this.movement.y / n) * 190 * dt,
+        (this.combat?.anchor.x ?? this.x) + (this.movement.x / n) * 190 * dt,
+        (this.combat?.anchor.y ?? this.y) + (this.movement.y / n) * 190 * dt,
       );
     }
     if (this.combat) {
@@ -228,7 +232,10 @@ export class Game {
     ) {
       const patrol = r.patrols.find(
         (v) =>
-          Math.hypot(v.x - this.x, v.y - this.y) < 130 &&
+          Math.hypot(
+            patrolPosition(v, this.voyageSeconds).x - this.x,
+            patrolPosition(v, this.voyageSeconds).y - this.y,
+          ) < v.detectionRadius &&
           (this.save.patrolCooldowns[v.id] ?? 0) <= this.voyageSeconds,
       );
       if (patrol) {

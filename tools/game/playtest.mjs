@@ -89,9 +89,31 @@ try {
   await page.locator('[data-action="view"]').click();
   await page.locator('[data-action="battle"]').click();
   await page.locator('[data-action="auto"]').click();
-  await page
-    .getByRole("heading", { name: "航跡已開拓" })
-    .waitFor({ timeout: 120000 });
+  const progress = setInterval(async () => {
+    try {
+      console.log(
+        "Playtest battle:",
+        await page.locator("#battle-tools").innerText(),
+        "overlay:",
+        await page.locator("#overlay").innerText(),
+      );
+    } catch {}
+  }, 15000);
+  try {
+    await page
+      .getByRole("heading", { name: "航跡已開拓" })
+      .waitFor({ timeout: 120000 });
+  } catch (e) {
+    console.log(
+      "Battle failure:",
+      await record(page, "save:test"),
+      await page.locator("#squad").innerText(),
+    );
+    await page.screenshot({ path: ".artifacts/v2/playtest-failure.png" });
+    throw e;
+  } finally {
+    clearInterval(progress);
+  }
   let s = await record(page, "save:test");
   assert.ok(s.cleared.includes("m1:haven"));
   assert.ok(
@@ -152,6 +174,31 @@ try {
     (await page.locator(".modal-body").innerText()).includes("蔚藍前哨"),
   );
   await page.locator('[data-action="close"]').first().click();
+  await page.locator('[data-id="planets"][data-action="panel"]').click();
+  await page
+    .locator(".territory-card .entity-image")
+    .first()
+    .evaluate(async (im) => {
+      await im.decode();
+      if (!im.naturalWidth) throw Error("territory image missing");
+    });
+  await page.locator('[data-action="manage-planet"]').first().click();
+  await page
+    .locator(".building-card .entity-image")
+    .first()
+    .evaluate(async (im) => {
+      await im.decode();
+      if (!im.naturalWidth) throw Error("building image missing");
+    });
+  await page.evaluate(async () => {
+    await Promise.all(
+      document
+        .getAnimations()
+        .filter((a) => a.effect?.getComputedTiming().iterations !== Infinity)
+        .map((a) => a.finished.catch(() => {})),
+    );
+  });
+  await page.screenshot({ path: ".artifacts/v2/building-management.png" });
   assert.deepEqual(errors, []);
   console.log(
     "PASS: original media replacement, seventh character/skill/star/acquisition edit, multi-wave battle win/drop, colony build while paused, character profile and planet management; official save isolated.",

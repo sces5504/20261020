@@ -57,6 +57,11 @@ try {
   await page.goto(server.url);
   await page.waitForSelector(".story-scene");
   await page.screenshot({ path: ".artifacts/v2/story.png" });
+  assert.equal(await page.title(), "Galaxy Angel · 星海航跡");
+  await page.locator(".story-background").evaluate(async (im) => {
+    await im.decode();
+    if (im.naturalWidth < 1000) throw Error("story artwork did not load");
+  });
   const first = await page.locator(".story-line").innerText();
   await page.locator('[data-action="story-next"]').click();
   assert.notEqual(await page.locator(".story-line").innerText(), first);
@@ -108,6 +113,19 @@ try {
     .click();
   await page.waitForSelector(".formation-slots");
   assert.equal(await page.locator(".formation-slots > div").count(), 3);
+  const order = (await record(page)).team;
+  await page.locator('[data-action="team-forward"]').nth(1).click();
+  await waitSave(
+    page,
+    (s) => s.team[0] === order[1],
+    "formation reorder must persist",
+  );
+  await page.locator('[data-action="team-back"]').first().click();
+  await waitSave(
+    page,
+    (s) => s.team[0] === order[0],
+    "restore original vanguard",
+  );
   await page.locator('[data-action="close"]').first().click();
   await page.locator('[data-id="summon"][data-action="panel"]').click();
   const before = await record(page);
@@ -191,6 +209,21 @@ try {
   await page.keyboard.up("d");
   assert.equal((await record(page)).encounter.kind, "patrol");
   await page.screenshot({ path: ".artifacts/v2/patrol.png" });
+  const combatStart = await record(page);
+  await page.keyboard.down("s");
+  try {
+    await waitSave(
+      page,
+      (s) => !!s.encounter && s.y > combatStart.y + 45,
+      "WASD must move in actual combat",
+    );
+  } finally {
+    await page.keyboard.up("s");
+  }
+  assert.ok(
+    (await record(page)).encounter,
+    "movement check must happen during an encounter",
+  );
   await page.locator('[data-action="view"]').click();
   await page.waitForFunction(() =>
     document
@@ -219,6 +252,27 @@ try {
   await page.locator("#roster-filter").selectOption("priority");
   assert.equal(await page.locator("#roster-rows tr").count(), 12);
   await page.screenshot({ path: ".artifacts/v2/roster.png" });
+  await page.goto(server.url + "#/studio");
+  for (const kind of [
+    "enemies",
+    "planets",
+    "buildings",
+    "regions",
+    "research",
+    "quests",
+  ]) {
+    await page.locator(`[data-action="kind"][data-id="${kind}"]`).click();
+    await page.locator(".asset-preview img").evaluate(async (im) => {
+      await im.decode();
+      if (!im.naturalWidth) throw Error("entity artwork missing");
+    });
+    assert.ok(
+      (await page.locator(".catalog-item .entity-image").count()) > 0,
+      "catalog thumbnails " + kind,
+    );
+  }
+  await page.locator('[data-action="kind"][data-id="enemies"]').click();
+  await page.screenshot({ path: ".artifacts/v2/studio-enemy.png" });
   await page.goto(server.url + "#/play");
   await page.waitForSelector("canvas");
   await page.locator('[data-id="archive"][data-action="panel"]').click();
@@ -233,13 +287,11 @@ try {
     assigned: "",
     raidRemaining: 0,
   };
-  await page
-    .locator("#import-save")
-    .setInputFiles({
-      name: "legacy-save.json",
-      mimeType: "application/json",
-      buffer: Buffer.from(JSON.stringify(legacy)),
-    });
+  await page.locator("#import-save").setInputFiles({
+    name: "legacy-save.json",
+    mimeType: "application/json",
+    buffer: Buffer.from(JSON.stringify(legacy)),
+  });
   await page.locator('[data-answer="yes"]').click();
   await waitSave(
     page,
@@ -275,6 +327,19 @@ try {
     m = await mobileContext.newPage();
   m.on("pageerror", (e) => errors.push(e.message));
   await m.goto(server.url);
+  await m.locator(".story-background").evaluate(async (im) => {
+    await im.decode();
+    if (!im.naturalWidth) throw Error("mobile scenario background missing");
+  });
+  await m.evaluate(async () => {
+    await Promise.all(
+      document
+        .getAnimations()
+        .filter((a) => a.effect?.getComputedTiming().iterations !== Infinity)
+        .map((a) => a.finished.catch(() => {})),
+    );
+  });
+  await m.screenshot({ path: ".artifacts/v2/mobile-story.png" });
   await m.locator('[data-action="story-skip"]').click();
   await m.waitForSelector(".story-scene", { state: "hidden" });
   await m.screenshot({ path: ".artifacts/v2/mobile.png" });

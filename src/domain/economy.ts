@@ -91,6 +91,7 @@ export type Command =
   | { type: "heal"; owned: string }
   | { type: "level"; owned: string }
   | { type: "team"; owned: string }
+  | { type: "reorder-team"; owned: string; direction: -1 | 1 }
   | { type: "assign"; owned: string; planet: string }
   | { type: "quest"; id: string }
   | { type: "begin"; planet: string }
@@ -285,6 +286,13 @@ export function apply(
     const old = stats(p, o).hp;
     o.level++;
     o.hp += stats(p, o).hp - old;
+  }
+  if (c.type === "reorder-team") {
+    if (s.encounter) throw Error("請於遭遇結束後調整站位。");
+    const i = s.team.indexOf(c.owned),
+      j = i + c.direction;
+    if (i < 0 || j < 0 || j >= s.team.length) throw Error("無法移動至此站位。");
+    [s.team[i], s.team[j]] = [s.team[j], s.team[i]];
   }
   if (c.type === "team") {
     const o = s.roster.find((o) => o.id === c.owned);

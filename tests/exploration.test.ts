@@ -175,3 +175,34 @@ test("shipped expansion example assembles against the current core and all new v
   for (const id of ["bad:building", "bad:background", "bad:cosmos"])
     assert.ok(errors.some((e) => e.includes(id)));
 });
+
+test("foreground fixed-step clock preserves elapsed time across slow frames and discards paused or hidden time", async () => {
+  const { SimulationClock } = await import(
+    "../src/application/simulation-clock"
+  );
+  const run = (frames: number[]) => {
+    const c = new SimulationClock();
+    let ticks = 0;
+    c.advance(0, false, () => ticks++);
+    for (const ms of frames) c.advance(ms, false, () => ticks++);
+    return ticks;
+  };
+  assert.equal(run([500, 500]), 60);
+  assert.equal(run(Array(10).fill(100)), 60);
+  const c = new SimulationClock();
+  let ticks = 0;
+  c.advance(0, false, () => ticks++);
+  c.advance(500, true, () => ticks++);
+  assert.equal(ticks, 0);
+  c.reset();
+  c.advance(60000, false, () => ticks++);
+  assert.equal(ticks, 0, "visibility resume must discard the hidden interval");
+  c.advance(100, false, () => ticks++);
+  assert.equal(ticks, 6);
+  c.advance(20000, false, () => ticks++);
+  assert.equal(
+    ticks,
+    66,
+    "foreground stalls remain bounded to 60 catch-up steps",
+  );
+});

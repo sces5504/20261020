@@ -89,9 +89,31 @@ try {
   await page.locator('[data-action="view"]').click();
   await page.locator('[data-action="battle"]').click();
   await page.locator('[data-action="auto"]').click();
-  await page
-    .getByRole("heading", { name: "航跡已開拓" })
-    .waitFor({ timeout: 120000 });
+  const progress = setInterval(async () => {
+    try {
+      console.log(
+        "Playtest battle:",
+        await page.locator("#battle-tools").innerText(),
+        "overlay:",
+        await page.locator("#overlay").innerText(),
+      );
+    } catch {}
+  }, 15000);
+  try {
+    await page
+      .getByRole("heading", { name: "航跡已開拓" })
+      .waitFor({ timeout: 120000 });
+  } catch (e) {
+    console.log(
+      "Battle failure:",
+      await record(page, "save:test"),
+      await page.locator("#squad").innerText(),
+    );
+    await page.screenshot({ path: ".artifacts/v2/playtest-failure.png" });
+    throw e;
+  } finally {
+    clearInterval(progress);
+  }
   let s = await record(page, "save:test");
   assert.ok(s.cleared.includes("m1:haven"));
   assert.ok(

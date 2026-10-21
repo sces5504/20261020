@@ -1,4 +1,5 @@
 import Phaser from "phaser";
+import { SimulationClock } from "../application/simulation-clock";
 import { formationOffset, patrolPosition } from "../domain/navigation";
 import { planetMaterial, enemyMaterial } from "./materials";
 import type { AudioMixer } from "../platform/audio";
@@ -67,7 +68,7 @@ export function mountSpace(
     starfield: { x: number; y: number; r: number; a: number }[] = [];
     loaded = new Set<string>();
     elapsed = 0;
-    acc = 0;
+    clock = new SimulationClock();
     zoomFactor = 1;
     panX = 0;
     panY = 0;
@@ -277,14 +278,14 @@ export function mountSpace(
       g.arc(x, y, r - 3, Math.PI * 1.05, Math.PI * 1.6);
       g.strokePath();
     }
-    update(_time: number, delta: number) {
-      const dt = Math.min(delta / 1000, 0.25);
-      if (!model.pause.size) this.elapsed += dt;
-      this.acc = Math.min(this.acc + dt, 0.25);
-      while (this.acc >= 1 / 60) {
-        model.step(1 / 60);
-        this.acc -= 1 / 60;
-      }
+    update() {
+      // Phaser smoothDelta replaces slow frames with old values. Use its raw elapsed time instead.
+      const dt = this.clock.advance(
+        this.game.loop.rawDelta,
+        !!model.pause.size,
+        (dt) => model.step(dt),
+      );
+      this.elapsed += dt;
       const g = this.ink,
         camera = this.cameras.main,
         r = model.pack.regions.find((v) => v.id === model.save.region)!;
@@ -697,6 +698,8 @@ export function mountSpace(
     }
   }
   const scene = new Space();
+  const resetClock = () => scene.clock.reset();
+  document.addEventListener("visibilitychange", resetClock);
   const game = new Phaser.Game({
     type: Phaser.AUTO,
     parent: host,
@@ -722,6 +725,7 @@ export function mountSpace(
     select: (id: string) => (scene.selected = id),
     destroy: () => {
       resize.disconnect();
+      document.removeEventListener("visibilitychange", resetClock);
       document.removeEventListener("keydown", keydown);
       document.removeEventListener("keyup", keyup);
       window.removeEventListener("blur", blur);

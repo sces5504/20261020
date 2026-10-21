@@ -21,6 +21,18 @@ async function record(page, key) {
     key,
   );
 }
+async function waitSave(page, ready, description) {
+  const deadline = Date.now() + 10000;
+  while (Date.now() < deadline) {
+    const save = await record(page, "save:test");
+    if (save && ready(save)) return save;
+    await page.waitForTimeout(100);
+  }
+  const save = await record(page, "save:test");
+  throw Error(
+    `${description}: ${JSON.stringify({ jobs: save?.jobs, colonies: save?.colonies, wallet: save?.wallet, feedback: await page.locator("#toast").textContent() })}`,
+  );
+}
 try {
   const context = await browser.newContext({
       viewport: { width: 1440, height: 1000 },
@@ -93,14 +105,20 @@ try {
   );
   await page.locator('[data-action="result-activate"]').click();
   await page.locator('[data-action="build"]').click();
-  await page.waitForTimeout(100);
-  s = await record(page, "save:test");
+  s = await waitSave(
+    page,
+    (s) => s.jobs.filter((j) => j.kind === "build").length === 1,
+    "construction must be durably queued",
+  );
   assert.equal(s.jobs.filter((j) => j.kind === "build").length, 1);
   assert.ok(s.colonies["m1:haven"].active);
   await page.clock.install();
   await page.clock.fastForward(65000);
-  await page.waitForTimeout(350);
-  s = await record(page, "save:test");
+  s = await waitSave(
+    page,
+    (s) => (s.colonies["m1:haven"].buildings["m1:extractor"] ?? 0) >= 1,
+    "construction must finish while the management panel is open",
+  );
   assert.ok(
     s.colonies["m1:haven"].buildings["m1:extractor"] >= 1,
     "management panel must allow timed construction",

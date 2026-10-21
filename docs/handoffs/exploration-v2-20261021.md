@@ -13,3 +13,5 @@
 瀏覽器回歸與結果已完成；發布驗證記於整合PR描述，需核對Pages公開遊戲／工坊／catalog及version.json。README不動。尚未做Android／iOS真機或真人商業視聽品質審閱，不能宣稱完成。
 
 整合PR：https://github.com/sces5504/20261020/pull/4 ，功能提交44a22aa。全部實作的release驗證已完成；合併後以main為起點。公開部署SHA／驗證結果於PR描述追加，網站version.json含contentVersion 0.2.0與精確commit。
+
+第一次GitHub Pages發布在playtest的建造工作斷言被擋下：點擊後僅等待100ms就讀IndexedDB，得到0件而非1件。已把固定短等待改成輪詢實際持久化狀態（最多10秒，逾時輸出工作／領地／餘額及畫面訊息），完工也等待真正寫入；不略過斷言或放寬通過條件。最終以後續Pages成功與公開SHA核對為發布證據。

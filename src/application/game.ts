@@ -256,6 +256,7 @@ export class Game {
   async replaceSave(raw: unknown) {
     await this.enqueue(async () => {
       const s = checkSave(raw, this.pack);
+      for (const col of Object.values(s.colonies)) col.lost = false;
       s.revision = this.save.revision + 1;
       await commit(this.key, s, this.storageRevision, true);
       this.save = s;

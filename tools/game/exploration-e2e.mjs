@@ -221,8 +221,33 @@ try {
   await page.screenshot({ path: ".artifacts/v2/roster.png" });
   await page.goto(server.url + "#/play");
   await page.waitForSelector("canvas");
-  const beforeReset = await record(page);
   await page.locator('[data-id="archive"][data-action="panel"]').click();
+  const legacy = await record(page),
+    firstPlanet = pack.planets[0];
+  legacy.cleared = [firstPlanet.id];
+  legacy.storySeen = pack.quests.map((q) => q.id);
+  legacy.colonies[firstPlanet.id] = {
+    active: true,
+    lost: true,
+    buildings: {},
+    assigned: "",
+    raidRemaining: 0,
+  };
+  await page
+    .locator("#import-save")
+    .setInputFiles({
+      name: "legacy-save.json",
+      mimeType: "application/json",
+      buffer: Buffer.from(JSON.stringify(legacy)),
+    });
+  await page.locator('[data-answer="yes"]').click();
+  await waitSave(
+    page,
+    (s) =>
+      s.colonies[firstPlanet.id]?.active && !s.colonies[firstPlanet.id].lost,
+    "imported legacy colonies must recover without defense or repair fees",
+  );
+  const beforeReset = await record(page);
   await page.locator('[data-action="new-voyage"]').click();
   await page.locator('[data-answer="yes"]').click();
   await page.waitForSelector(".story-scene");

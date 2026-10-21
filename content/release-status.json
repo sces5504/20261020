@@ -1,5 +1,5 @@
 {
-  "milestone": "M1-galaxy-angel-0.3",
+  "milestone": "M1-galaxy-angel-0.4",
   "status": "m1-playtest-complete",
   "checks": {
     "characterMappingConfirmed": true,
@@ -13,7 +13,7 @@
     "iosSafariVerified": false,
     "performanceBaselineVerified": false
   },
-  "notes": "Galaxy Angel 0.3：移動巡邏／偵測、戰中WASD、前鋒後衛與重排、柔順跟隨／idle、情境與星空背景、工坊及領地共用圖片、原創UI圖示；rawDelta固定步長及例行I/O不暫停。29項核心與三組瀏覽器流程通過。六原圖不變；新增美術candidate，商業品質／真機／硬體效能／獨立AI接力仍待驗。詳見docs/handoffs/galaxy-angel-v3-20261021.md及PR #5最後發布證據。",
+  "notes": "星河戰姬 Galaxy Angel 0.4：五次手動同調／紫星，滿階按實際共鳴配方退25%四資源；方向航跡跟隨、星球單波自動接敵／越界重置、巡邏即時接觸／非modal勝利、等待任務、巡航加速與命中回饋。38項核心與四組瀏覽器流程；六原圖hash不變。商業品質／真機／硬體效能／獨立AI接力仍待驗。詳見docs/handoffs/galaxy-angel-v4-20261021.md及本輪PR最後發布證據。",
   "playtestStatus": "ready",
   "playtestChecks": {
     "campaignLoop": true,
@@ -29,6 +29,11 @@
     "futureCharacterArtRoster": true,
     "movingPatrolAndCombatKeyboard": true,
     "formationOrderAndForegroundClock": true,
-    "entityArtAndScenarioBackgrounds": true
+    "entityArtAndScenarioBackgrounds": true,
+    "duplicateFeedPurpleStarAndRecipeRefund": true,
+    "directionalTrailFormation": true,
+    "automaticSingleWavePlanetAndLeash": true,
+    "immediatePatrolAndNonblockingVictory": true,
+    "jobWaitingAndSkillReadyFeedback": true
   }
 }

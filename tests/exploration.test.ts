@@ -69,7 +69,7 @@ test("new colonies noticeably expand scarce production; resources do not fill wi
 });
 test("additional waves and roaming definitions reject missing enemy references", () => {
   const q = structuredClone(p);
-  q.planets[0].waves[0][0].enemy = "bad:missing";
+  q.planets[0].waves = [[{ enemy: "bad:missing", count: 1 }]];
   assert.ok(validatePack(q).errors.some((e) => e.includes("bad:missing")));
   const r = structuredClone(p);
   r.regions[0].patrols[0].enemies[0].enemy = "bad:patrol";
@@ -109,7 +109,8 @@ test("sub-five-unit keyboard steps move living allies in combat, and movement st
   );
   assert.ok(c.allies[0].x > c.allies[1].x + 40, "vanguard remains ahead");
   assert.ok(
-    Math.abs(c.allies[1].y - c.allies[2].y) > 140,
+    Math.hypot(c.allies[1].x - c.allies[2].x, c.allies[1].y - c.allies[2].y) >
+      100,
     "rear slots remain separated",
   );
   const at = c.anchor.x;

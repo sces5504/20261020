@@ -87,7 +87,7 @@ try {
   await page.waitForSelector("canvas");
   await page.locator('[data-action="story-skip"]').click();
   await page.locator('[data-action="view"]').click();
-  await page.locator('[data-action="battle"]').click();
+  await page.locator('[data-action="navigate"]').first().click();
   await page.locator('[data-action="auto"]').click();
   const progress = setInterval(async () => {
     try {
@@ -133,6 +133,10 @@ try {
     "construction must be durably queued",
   );
   assert.equal(s.jobs.filter((j) => j.kind === "build").length, 1);
+  await page
+    .locator(".mission-waiting strong")
+    .filter({ hasText: "等待建設中" })
+    .waitFor();
   assert.ok(s.colonies["m1:haven"].active);
   await page.clock.install();
   await page.clock.fastForward(65000);
@@ -201,7 +205,7 @@ try {
   await page.screenshot({ path: ".artifacts/v2/building-management.png" });
   assert.deepEqual(errors, []);
   console.log(
-    "PASS: original media replacement, seventh character/skill/star/acquisition edit, multi-wave battle win/drop, colony build while paused, character profile and planet management; official save isolated.",
+    "PASS: original media replacement, seventh character/skill/star/acquisition edit, single-wave proximity battle win/drop, colony build while paused, character profile and planet management; official save isolated.",
   );
 } finally {
   await browser.close();

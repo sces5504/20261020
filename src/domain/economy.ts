@@ -45,8 +45,8 @@ function complete(p: Pack, s: Save, j: Save["jobs"][number]) {
   if (j.kind === "research" && !s.research.includes(j.definition))
     s.research.push(j.definition);
   if (j.kind === "summon") {
-    addCharacter(p, s, j.payload);
-    s.acquisitionQueue.push(s.roster.at(-1)!.id);
+    const acquired = addCharacter(p, s, j.payload, j.cost);
+    if (acquired) s.acquisitionQueue.push(acquired.id);
     s.summoned++;
   }
   if (j.kind === "heal") {
@@ -80,6 +80,7 @@ export function settle(p: Pack, s: Save, now: number) {
   s.settledAt = now;
 }
 export type Command =
+  | { type: "feed"; target: string; source: string }
   | { type: "seen-story"; id: string }
   | { type: "ack-acquisition"; id: string }
   | { type: "patrol"; id: string }
@@ -100,6 +101,7 @@ export type Command =
       planet: string;
       victory: boolean;
       hp: Record<string, number>;
+      reset?: boolean;
       receipt: string;
     }
   | {
@@ -110,6 +112,7 @@ export type Command =
       losses?: string[];
       discovered?: string[];
       voyageSeconds?: number;
+      heading?: number;
     };
 export function questReady(s: Save, q: Pack["quests"][number]) {
   return q.condition === "intro"
@@ -179,6 +182,32 @@ export function apply(
     )
       throw Error("角色正在治療或派駐。");
   };
+  if (c.type === "feed") {
+    const target = s.roster.find((o) => o.id === c.target),
+      source = s.roster.find((o) => o.id === c.source);
+    if (s.encounter) throw Error("請於戰鬥結束後進行同調。");
+    if (
+      !target ||
+      !source ||
+      target.id === source.id ||
+      target.definition !== source.definition
+    )
+      throw Error("需要另一位相同角色。");
+    if ((target.resonance ?? 0) >= 5) throw Error("已達5次同調上限。");
+    if (
+      s.team.includes(source.id) ||
+      source.level > 1 ||
+      (source.resonance ?? 0) > 0
+    )
+      throw Error("不能消耗編隊或已培養的角色，請選未培養的重複角色。");
+    free(target.id);
+    free(source.id);
+    const old = stats(p, target).hp;
+    target.resonance = (target.resonance ?? 0) + 1;
+    target.hp += stats(p, target).hp - old;
+    s.roster = s.roster.filter((o) => o.id !== source.id);
+    s.acquisitionQueue = s.acquisitionQueue.filter((id) => id !== source.id);
+  }
   if (c.type === "seen-story" && !s.storySeen.includes(c.id))
     s.storySeen.push(c.id);
   if (c.type === "ack-acquisition")
@@ -334,8 +363,6 @@ export function apply(
     if (!s.team.some((id) => (s.roster.find((o) => o.id === id)?.hp ?? 0) > 0))
       throw Error("請先治療隊伍。");
     s.encounter = { planet: v.id, seed: Math.floor(random(s) * 4294967296) };
-    s.x = v.x - 300;
-    s.y = v.y + 180;
   }
   if (c.type === "result") {
     if (!s.encounter || s.encounter.planet !== c.planet)
@@ -365,12 +392,19 @@ export function apply(
         col.raidRemaining = p.rules.raidSeconds;
       }
     }
+    if (
+      s.encounter.kind !== "patrol" &&
+      !c.victory &&
+      !s.disengagedPlanets.includes(c.planet)
+    )
+      s.disengagedPlanets.push(c.planet);
     s.encounter = null;
     s.receipts.push(c.receipt);
   }
   if (c.type === "checkpoint") {
     s.x = c.x;
     s.y = c.y;
+    if (c.heading !== undefined) s.heading = c.heading;
     if (c.discovered)
       s.discovered = [...new Set([...s.discovered, ...c.discovered])];
     if (c.voyageSeconds !== undefined)

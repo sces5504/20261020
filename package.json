@@ -1,6 +1,6 @@
 {
   "name": "galaxy-angel",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -18,7 +18,8 @@
     "release:ready": "npm run content:build && node --import tsx tools/game/release-ready.ts",
     "format": "prettier --write src tests/*.test.ts tools/game content/core/pack.json content/manifest.json package.json tsconfig.json vite.config.ts index.html",
     "test:playtest": "node tools/game/playtest.mjs",
-    "test:exploration": "node tools/game/exploration-e2e.mjs"
+    "test:exploration": "node tools/game/exploration-e2e.mjs",
+    "test:refinement": "node --import tsx tools/game/refinement-e2e.mjs"
   },
   "dependencies": {
     "fflate": "0.8.3",

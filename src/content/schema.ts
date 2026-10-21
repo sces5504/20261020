@@ -89,6 +89,11 @@ const planet = z
       )
       .min(1),
     waves: z.array(z.array(group).min(1)).default([]),
+    engageRadius: z.number().min(180).max(700).default(360),
+    guardRadius: z.number().min(60).max(320).default(180),
+    leashRadius: z.number().min(400).max(1400).default(780),
+    leashWarningRadius: z.number().min(300).max(1300).default(640),
+    resetSeconds: z.number().min(1).max(10).default(3),
     waveDelay: z.number().min(1).max(20).default(4),
     reward: amount,
     activationCost: amount,
@@ -255,6 +260,10 @@ export const packSchema = z
     audio: z.array(audioCue).optional().default([]),
     rules: z
       .object({
+        duplicateStatBonus: z.number().min(0.001).max(0.1).default(0.02),
+        duplicateRefundRate: z.number().min(0).max(1).default(0.25),
+        cruiseSpeed: z.number().min(180).max(500).default(255),
+        travelSpeed: z.number().min(100).max(300).default(180),
         formationSpacing: z.number().min(60).max(180).default(106),
         allySpriteSize: z.number().min(40).max(120).default(78),
         enemySpriteSize: z.number().min(30).max(120).default(55),
@@ -293,6 +302,11 @@ export function validatePack(input: unknown): {
         (i) => `${i.path.join(".")}: ${i.message}`,
       ),
     };
+  for (const planet of parsed.data.planets)
+    if (planet.waves.length) {
+      planet.enemies.push(...planet.waves.flat());
+      planet.waves = [];
+    }
   const p = parsed.data,
     errors: string[] = [],
     ids = new Set<string>();
@@ -316,6 +330,12 @@ export function validatePack(input: unknown): {
   });
   p.planets.forEach((v) => {
     has("regions", v.region, v.id);
+    if (
+      v.leashRadius <= v.engageRadius ||
+      v.leashWarningRadius >= v.leashRadius ||
+      v.leashWarningRadius <= v.engageRadius
+    )
+      errors.push(`${v.id}: 交戰／警告／重置半徑必須依序增加`);
     v.requires.forEach((x) => has("planets", x, v.id));
     for (const wave of [v.enemies, ...v.waves])
       wave.forEach((e) => has("enemies", e.enemy, v.id));
@@ -366,10 +386,12 @@ export function validatePack(input: unknown): {
   money(p.rules.healCost, "rules.healCost");
   money(p.rules.levelCost, "rules.levelCost");
 
-  const maxGrowth = Math.max(
-    1,
-    ...p.characters.map((c) => 1 + (p.rules.maxLevel - 1) * c.growth),
-  );
+  const maxGrowth =
+    (1 + 5 * p.rules.duplicateStatBonus) *
+    Math.max(
+      1,
+      ...p.characters.map((c) => 1 + (p.rules.maxLevel - 1) * c.growth),
+    );
   const researchScale = 1 + p.research.reduce((n, r) => n + r.attackBonus, 0);
   const maxPower = Math.max(
     1,

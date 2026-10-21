@@ -1,3 +1,5 @@
+> 最新生效：星河戰姬 Galaxy Angel 0.4；[規格](../design/galaxy-angel-v4.md)、[目前交接](../handoffs/galaxy-angel-v4-20261021.md)。38項核心／四組瀏覽器驗收；發布SHA與流程以本輪PR最後證據及公開version.json核對。以下0.3紀錄為前輪歷史。
+
 > 最新：產品改名Galaxy Angel；0.3任務／實際驗證見目前交接，歷史名稱保留為研究來源。
 
 # 接力索引
@@ -22,7 +24,7 @@
 
 新專案第一次開工：確認遠端與分支，開始規格訪談，再建立任務檔。不要把範本建立過程當成新遊戲的已完成工作。
 
-目前任務：`docs/handoffs/galaxy-angel-v3-20261021.md`（八項巡邏／編隊／圖片／改名修正）；生效規格 `docs/design/galaxy-angel-v3.md`，搭配 `docs/design/exploration-v2.md`。前輪：`docs/handoffs/m1-playtest-20261021.md`；驗收證據與限制：`docs/design/m1-acceptance.md`。舊實作紀錄：`docs/handoffs/m1-implementation-20261020.md`；素材原交接的 SD／差分指示已被使用者保留原圖要求取代。
+前輪任務：`docs/handoffs/galaxy-angel-v3-20261021.md`（八項巡邏／編隊／圖片／改名修正）；生效規格 `docs/design/galaxy-angel-v3.md`，搭配 `docs/design/exploration-v2.md`。前輪：`docs/handoffs/m1-playtest-20261021.md`；驗收證據與限制：`docs/design/m1-acceptance.md`。舊實作紀錄：`docs/handoffs/m1-implementation-20261020.md`；素材原交接的 SD／差分指示已被使用者保留原圖要求取代。
 
 目前確定原圖對應：05地球、04水星、01金星、03火星、02天王星、06月球。原 PNG 位元組不變。
 

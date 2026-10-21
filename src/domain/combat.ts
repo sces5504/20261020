@@ -1,4 +1,5 @@
-import { formationOffset, patrolPosition } from "./navigation";
+import { FleetMotion } from "./formation";
+import { guardianPositions, patrolPosition } from "./navigation";
 import type { Pack, Character, Enemy, Skill } from "../content/schema";
 import { type Save, stats, damage, random } from "./model";
 export type Unit = {
@@ -27,6 +28,8 @@ export type Unit = {
   turretUntil: number;
   windup: number;
   aim: number;
+  hurtUntil: number;
+  shotAt: number;
 };
 export type Bullet = {
   id: number;
@@ -46,6 +49,7 @@ export type Flash = {
   color: string;
   life: number;
   label: string;
+  side?: Unit["side"];
 };
 export class Combat {
   units: Unit[] = [];
@@ -65,10 +69,14 @@ export class Combat {
   nextWaveAt = 0;
   waveGroups: { enemy: string; count: number }[][] = [];
   waveDelay = 4;
+  reset = false;
+  outsideSeconds = 0;
+  fleet: FleetMotion;
   constructor(
     readonly pack: Pack,
     readonly save: Save,
     readonly planetId: string,
+    fleet?: FleetMotion,
   ) {
     const region = pack.regions.find((r) => r.id === save.region)!;
     const planet =
@@ -78,14 +86,20 @@ export class Combat {
             return { ...v, ...patrolPosition(v, save.voyageSeconds) };
           })()
         : pack.planets.find((v) => v.id === planetId)!;
-    this.waveGroups = [
-      planet.enemies,
-      ...("waves" in planet ? planet.waves : []),
-    ];
+    this.waveGroups = [planet.enemies];
     this.waveDelay = "waveDelay" in planet ? planet.waveDelay : 3;
     this.rng = save.encounter?.seed ?? 1;
     this.destination = { x: save.x, y: save.y };
-    this.anchor = { ...this.destination };
+    this.fleet =
+      fleet ??
+      new FleetMotion(
+        save.x,
+        save.y,
+        save.heading ?? 0,
+        save.team,
+        pack.rules.formationSpacing,
+      );
+    this.anchor = this.fleet.anchor;
     const bonus = pack.research
       .filter((r) => save.research.includes(r.id))
       .reduce((n, r) => n + r.attackBonus, 1);
@@ -98,10 +112,8 @@ export class Combat {
           c,
           id,
           "ally",
-          save.x +
-            formationOffset(i, save.team.length, pack.rules.formationSpacing).x,
-          save.y +
-            formationOffset(i, save.team.length, pack.rules.formationSpacing).y,
+          this.fleet.positions.get(id)!.x,
+          this.fleet.positions.get(id)!.y,
           o.hp,
           st.hp,
           st.attack * bonus,
@@ -109,7 +121,26 @@ export class Combat {
         ),
       );
     });
-    this.spawnWave(planet.x, planet.y);
+    if (save.encounter?.kind === "patrol") this.spawnWave(planet.x, planet.y);
+    else
+      for (const guard of guardianPositions(
+        planet as Pack["planets"][number],
+      )) {
+        const e = pack.enemies.find((e) => e.id === guard.enemy)!;
+        this.units.push(
+          this.unit(
+            e,
+            guard.id,
+            "enemy",
+            guard.x,
+            guard.y,
+            e.hp,
+            e.hp,
+            e.attack,
+            e.defense,
+          ),
+        );
+      }
   }
   private spawnWave(x: number, y: number) {
     for (const g of this.waveGroups[this.waveIndex]) {
@@ -120,8 +151,8 @@ export class Combat {
             e,
             `enemy-${this.sequence++}`,
             "enemy",
-            x + 140 + (random(this) - 0.5) * 260,
-            y + (random(this) - 0.5) * 280,
+            x + (i === 0 ? 0 : (random(this) - 0.5) * 150),
+            y + (i === 0 ? 0 : (random(this) - 0.5) * 150),
             e.hp,
             e.hp,
             e.attack,
@@ -167,6 +198,8 @@ export class Combat {
       turretUntil: 0,
       windup: 0,
       aim: 0,
+      hurtUntil: 0,
+      shotAt: -1,
     };
   }
   get allies() {
@@ -256,18 +289,24 @@ export class Combat {
   step(dt: number) {
     if (this.ended) return;
     this.time += dt;
-    const travel = Math.hypot(
-      this.destination.x - this.anchor.x,
-      this.destination.y - this.anchor.y,
-    );
     const speed = Math.min(
       ...this.allies.filter((u) => u.hp > 0).map((u) => u.speed),
-      180,
+      this.pack.rules.travelSpeed,
     );
-    if (travel > 0) {
-      const step = Math.min(travel, speed * dt);
-      this.anchor.x += ((this.destination.x - this.anchor.x) / travel) * step;
-      this.anchor.y += ((this.destination.y - this.anchor.y) / travel) * step;
+    this.fleet.advance(this.destination, speed, dt);
+    if (this.save.encounter?.kind !== "patrol") {
+      const planet = this.pack.planets.find((p) => p.id === this.planetId)!;
+      this.outsideSeconds =
+        Math.hypot(this.anchor.x - planet.x, this.anchor.y - planet.y) >
+        planet.leashRadius
+          ? this.outsideSeconds + dt
+          : 0;
+      if (this.outsideSeconds >= planet.resetSeconds) {
+        this.reset = true;
+        this.ended = true;
+        this.victory = false;
+        return;
+      }
     }
     for (const u of this.units) {
       if (u.hp <= 0) continue;
@@ -294,13 +333,10 @@ export class Combat {
       const t = priority && u.side === "ally" ? priority : foes[0];
       let dest = this.destination;
       if (u.side === "ally" && !u.turretUntil) {
-        const i = this.allies.indexOf(u);
-        const offset = formationOffset(
-          i,
-          this.allies.length,
-          this.pack.rules.formationSpacing,
-        );
-        dest = { x: this.anchor.x + offset.x, y: this.anchor.y + offset.y };
+        const pos = this.fleet.positions.get(u.id)!;
+        u.x = pos.x;
+        u.y = pos.y;
+        dest = { x: u.x, y: u.y };
       }
       if (u.side === "enemy" && t) dest = { x: t.x, y: t.y };
       const d = Math.hypot(dest.x - u.x, dest.y - u.y),
@@ -346,6 +382,7 @@ export class Combat {
       }
       if (t && Math.hypot(t.x - u.x, t.y - u.y) <= u.range && u.cooldown <= 0) {
         u.cooldown = u.interval;
+        u.shotAt = this.time;
         const e = this.pack.enemies.find((e) => e.id === u.def);
         let pattern = e?.pattern ?? "aim";
         if (e?.boss && u.hp / u.maxHp < e.phaseAt) pattern = "ring";
@@ -403,6 +440,7 @@ export class Combat {
           hit -= absorb;
           if (u.side === "ally" && hit > 0) this.hitsReceived++;
           u.hp = Math.max(0, u.hp - hit);
+          u.hurtUntil = this.time + 0.2;
           b.life = 0;
           this.flashes.push({
             x: u.x,
@@ -411,6 +449,7 @@ export class Combat {
             color: b.color,
             life: 0.2,
             label: hit ? String(hit) : "格擋",
+            side: u.side,
           });
           break;
         }

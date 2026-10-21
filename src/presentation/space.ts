@@ -1,6 +1,6 @@
 import Phaser from "phaser";
 import { SimulationClock } from "../application/simulation-clock";
-import { formationOffset, patrolPosition } from "../domain/navigation";
+import { guardianPositions, patrolPosition } from "../domain/navigation";
 import { planetMaterial, enemyMaterial } from "./materials";
 import type { AudioMixer } from "../platform/audio";
 import type { Game } from "../application/game";
@@ -79,7 +79,8 @@ export function mountSpace(
     lastBattle = false;
     lastSequence = 0;
     lastFlashCount = 0;
-    fleet = new Map<string, { x: number; y: number }>();
+    lastHits = 0;
+    lastShake = 0;
 
     create() {
       this.ink = this.add.graphics();
@@ -294,7 +295,7 @@ export function mountSpace(
         battle = !!model.combat;
       if (battle !== this.lastBattle) {
         this.lastBattle = battle;
-        this.fleet.clear();
+
         this.panX = 0;
         this.panY = 0;
         this.zoomFactor = 1;
@@ -425,6 +426,42 @@ export function mountSpace(
           col?.lost ? "#ffab91" : "#81a8ae",
         );
       }
+      if (!battle)
+        for (const p of model.pack.planets.filter(
+          (p) =>
+            p.region === r.id &&
+            !model.save.cleared.includes(p.id) &&
+            (model.viewMode === "map" || model.discovered.has(p.id)),
+        )) {
+          const active = p.requires.every((id) =>
+            model.save.cleared.includes(id),
+          );
+          for (const guard of guardianPositions(p)) {
+            const e = model.pack.enemies.find((e) => e.id === guard.enemy)!;
+            if (e.sprite) this.ensureAsset(e.sprite);
+            const texture =
+              e.sprite && this.textures.exists(e.sprite)
+                ? e.sprite
+                : `enemy:${e.id}`;
+            this.drawAsset(
+              "ambient:" + guard.id,
+              texture,
+              guard.x,
+              guard.y + Math.sin(this.elapsed * 1.8 + guard.x) * 2,
+              e.boss
+                ? model.pack.rules.bossSpriteSize
+                : model.pack.rules.enemySpriteSize,
+            );
+            this.sprites
+              .get("ambient:" + guard.id)
+              ?.setAlpha(active ? 1 : 0.3)
+              .setFlipX(guard.x > model.x);
+          }
+          if (active) {
+            g.lineStyle(1, 0xffb18c, 0.12);
+            g.strokeCircle(p.x, p.y, p.engageRadius);
+          }
+        }
       if (!battle) {
         const d = model.destination;
         g.lineStyle(1.2, 0x87d8d5, 0.4);
@@ -434,19 +471,7 @@ export function mountSpace(
           const o = model.save.roster.find((o) => o.id === model.save.team[i])!;
           const c = model.pack.characters.find((c) => c.id === o.definition)!;
           this.ensureAsset(c.sprite);
-          const offset = formationOffset(
-            i,
-            model.save.team.length,
-            model.pack.rules.formationSpacing,
-          );
-          const target = { x: model.x + offset.x, y: model.y + offset.y };
-          const position = this.fleet.get(o.id) ?? { ...target };
-          const smoothing = 1 - Math.exp(-dt / (0.1 + i * 0.07));
-          if (!model.pause.size) {
-            position.x += (target.x - position.x) * smoothing;
-            position.y += (target.y - position.y) * smoothing;
-          }
-          this.fleet.set(o.id, position);
+          const position = model.fleet.positions.get(o.id)!;
           const bob = Math.sin(this.elapsed * 2.2 + i * 1.7) * 3;
           if (this.textures.exists(c.sprite)) {
             this.drawAsset(
@@ -523,6 +548,10 @@ export function mountSpace(
           "#a4dbd7",
         );
       }
+      if (!model.combat) {
+        host.classList.remove("under-fire");
+        this.lastHits = 0;
+      }
       if (model.combat) {
         const combat = model.combat;
         if (combat.sequence > this.lastSequence) {
@@ -531,7 +560,43 @@ export function mountSpace(
         }
         if (combat.flashes.length > this.lastFlashCount) audio?.cue("hit");
         this.lastFlashCount = combat.flashes.length;
+        if (combat.hitsReceived > this.lastHits) {
+          if (
+            !model.lowEffects &&
+            !matchMedia("(prefers-reduced-motion: reduce)").matches &&
+            this.elapsed - this.lastShake > 0.15
+          ) {
+            camera.shake(90, 0.0018);
+            this.lastShake = this.elapsed;
+          }
+          this.lastHits = combat.hitsReceived;
+        }
+        const hurt = combat.allies.some((u) => u.hurtUntil > combat.time);
+        host.classList.toggle("under-fire", hurt);
+        if (model.save.encounter?.kind !== "patrol") {
+          const p = model.pack.planets.find((p) => p.id === combat.planetId)!;
+          const near =
+            Math.hypot(model.x - p.x, model.y - p.y) > p.leashWarningRadius;
+          g.lineStyle(
+            near ? 3 : 1,
+            near ? 0xff916e : 0xddbb77,
+            near ? 0.65 : 0.16,
+          );
+          g.strokeCircle(p.x, p.y, p.leashRadius);
+        }
         for (const b of combat.bullets) {
+          const speed = Math.hypot(b.vx, b.vy) || 1;
+          g.lineStyle(
+            b.side === "ally" ? 2 : 3,
+            Phaser.Display.Color.HexStringToColor(b.color).color,
+            0.55,
+          );
+          g.lineBetween(
+            b.x,
+            b.y,
+            b.x - (b.vx / speed) * 16,
+            b.y - (b.vy / speed) * 16,
+          );
           g.fillStyle(
             Phaser.Display.Color.HexStringToColor(b.color).color,
             0.2,
@@ -590,6 +655,16 @@ export function mountSpace(
             );
           if (u.side === "enemy")
             this.sprites.get(u.id)?.setFlipX(u.x > combat.center.x);
+          const sprite =
+            this.sprites.get(u.id) ?? this.sprites.get(u.id + ":hull");
+          if (sprite) {
+            if (u.hurtUntil > combat.time)
+              sprite
+                .setTint(0xffb6aa)
+                .setAlpha(0.75 + Math.sin(combat.time * 65) * 0.25);
+            else sprite.clearTint().setAlpha(1);
+            if (combat.time - u.shotAt < 0.12) sprite.x -= Math.cos(u.aim) * 2;
+          }
           if (u.shield > 0) {
             this.hud.lineStyle(1.5, 0x87ede1, 0.8);
             this.hud.strokeCircle(u.x, u.y, size + 10);
@@ -610,6 +685,22 @@ export function mountSpace(
           if (u.boss) this.text(u.x, u.y - 80, u.name, 15, "#e8c2ff");
         }
         for (const f of combat.flashes) {
+          if (f.side) {
+            const color = Phaser.Display.Color.HexStringToColor(f.color).color;
+            g.fillStyle(0xffffff, Math.min(0.7, f.life * 3));
+            g.fillCircle(f.x, f.y, Math.max(2, f.life * 30));
+            g.lineStyle(1.6, color, Math.min(1, f.life * 5));
+            for (let i = 0; i < 6; i++) {
+              const a = (i * Math.PI) / 3;
+              const radius = (0.25 - f.life) * 110;
+              g.lineBetween(
+                f.x + Math.cos(a) * radius,
+                f.y + Math.sin(a) * radius,
+                f.x + Math.cos(a) * (radius + 9),
+                f.y + Math.sin(a) * (radius + 9),
+              );
+            }
+          }
           g.lineStyle(
             2,
             Phaser.Display.Color.HexStringToColor(f.color).color,
@@ -659,6 +750,9 @@ export function mountSpace(
       const ratio = a ? a.width / a.height : 1;
       if (image.texture.key !== id) image.setTexture(id);
       image
+        .clearTint()
+        .setAlpha(1)
+        .setFlipX(false)
         .setPosition(x, y)
         .setDisplaySize(size * Math.min(1, ratio), size / Math.max(1, ratio))
         .setVisible(true);

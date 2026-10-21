@@ -84,7 +84,7 @@ try {
   assert.equal(await page.locator(".squad-card").count(), 3);
   await page.screenshot({ path: ".artifacts/m1/desktop.png" });
   console.log("E2E: battle");
-  await page.locator('[data-action="battle"]').click();
+  await page.locator('[data-action="navigate"]').first().click();
   await page.waitForFunction(() =>
     document.querySelector(".bridge")?.classList.contains("in-battle"),
   );
@@ -192,7 +192,7 @@ try {
     "test progress does not alter official roster",
   );
   await page.locator('[data-action="close"]').first().click();
-  await page.locator('[data-action="battle"]').click();
+  await page.locator('[data-action="navigate"]').first().click();
   await page.waitForSelector(".in-battle");
   await page.waitForTimeout(500);
   await page.screenshot({ path: ".artifacts/m1/battle.png" });

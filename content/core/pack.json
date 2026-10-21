@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "id": "m1:core",
-  "version": "0.3.0",
-  "name": "Galaxy Angel · 太陽系探索",
+  "version": "0.4.0",
+  "name": "星河戰姬 · 太陽系探索",
   "resources": [
     {
       "id": "m1:crystal",
@@ -431,7 +431,11 @@
       "enemies": [
         {
           "enemy": "m1:scout",
-          "count": 3
+          "count": 8
+        },
+        {
+          "enemy": "m1:sentinel",
+          "count": 1
         }
       ],
       "reward": {
@@ -454,24 +458,12 @@
       },
       "dropCharacters": [],
       "waveDelay": 4,
-      "waves": [
-        [
-          {
-            "enemy": "m1:scout",
-            "count": 3
-          }
-        ],
-        [
-          {
-            "enemy": "m1:sentinel",
-            "count": 1
-          },
-          {
-            "enemy": "m1:scout",
-            "count": 2
-          }
-        ]
-      ]
+      "waves": [],
+      "engageRadius": 360,
+      "guardRadius": 180,
+      "leashRadius": 780,
+      "leashWarningRadius": 640,
+      "resetSeconds": 3
     },
     {
       "id": "m1:vein",
@@ -489,7 +481,11 @@
       "enemies": [
         {
           "enemy": "m1:scout",
-          "count": 3
+          "count": 6
+        },
+        {
+          "enemy": "m1:sentinel",
+          "count": 4
         }
       ],
       "reward": {
@@ -512,24 +508,12 @@
       },
       "dropCharacters": ["m1:mars"],
       "waveDelay": 4,
-      "waves": [
-        [
-          {
-            "enemy": "m1:sentinel",
-            "count": 2
-          },
-          {
-            "enemy": "m1:scout",
-            "count": 3
-          }
-        ],
-        [
-          {
-            "enemy": "m1:sentinel",
-            "count": 2
-          }
-        ]
-      ]
+      "waves": [],
+      "engageRadius": 360,
+      "guardRadius": 180,
+      "leashRadius": 780,
+      "leashWarningRadius": 640,
+      "resetSeconds": 3
     },
     {
       "id": "m1:umbra-gate",
@@ -547,7 +531,15 @@
       "enemies": [
         {
           "enemy": "m1:scout",
-          "count": 4
+          "count": 6
+        },
+        {
+          "enemy": "m1:sentinel",
+          "count": 2
+        },
+        {
+          "enemy": "m1:umbra",
+          "count": 1
         }
       ],
       "reward": {
@@ -570,24 +562,12 @@
       },
       "dropCharacters": ["m1:moon"],
       "waveDelay": 4,
-      "waves": [
-        [
-          {
-            "enemy": "m1:sentinel",
-            "count": 2
-          }
-        ],
-        [
-          {
-            "enemy": "m1:umbra",
-            "count": 1
-          },
-          {
-            "enemy": "m1:scout",
-            "count": 2
-          }
-        ]
-      ]
+      "waves": [],
+      "engageRadius": 360,
+      "guardRadius": 180,
+      "leashRadius": 780,
+      "leashWarningRadius": 640,
+      "resetSeconds": 3
     }
   ],
   "buildings": [
@@ -1006,7 +986,11 @@
     "formationSpacing": 106,
     "allySpriteSize": 78,
     "enemySpriteSize": 55,
-    "bossSpriteSize": 112
+    "bossSpriteSize": 112,
+    "duplicateStatBonus": 0.02,
+    "duplicateRefundRate": 0.25,
+    "travelSpeed": 180,
+    "cruiseSpeed": 255
   },
   "audio": [
     {

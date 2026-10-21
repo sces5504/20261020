@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "initialized": true,
-  "name": "Galaxy Angel M1",
+  "name": "星河戰姬 Galaxy Angel M1",
   "site_dir": "dist",
   "install": [
     [
@@ -59,6 +59,11 @@
         "npm",
         "run",
         "test:exploration"
+      ],
+      [
+        "npm",
+        "run",
+        "test:refinement"
       ],
       [
         "npm",

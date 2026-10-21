@@ -25,6 +25,22 @@ async function record(page, key = "save:main") {
     key,
   );
 }
+async function waitSave(page, ready, description) {
+  const end = Date.now() + 15000;
+  while (Date.now() < end) {
+    const save = await record(page);
+    if (save && ready(save)) return save;
+    await page.waitForTimeout(100);
+  }
+  throw Error(
+    description +
+      ": " +
+      JSON.stringify({
+        save: await record(page),
+        feedback: await page.locator("#toast").textContent(),
+      }),
+  );
+}
 try {
   const context = await browser.newContext({
     viewport: { width: 1440, height: 1000 },
@@ -50,10 +66,16 @@ try {
   assert.equal(await page.locator("#defense-alerts").count(), 0);
   const initial = await record(page);
   await page.keyboard.down("d");
-  await page.waitForTimeout(800);
-  await page.keyboard.up("d");
-  await page.waitForTimeout(3200);
-  const moved = await record(page);
+  let moved;
+  try {
+    moved = await waitSave(
+      page,
+      (s) => s.x > initial.x + 35,
+      "WASD must move and persist the party",
+    );
+  } finally {
+    await page.keyboard.up("d");
+  }
   assert.ok(moved.x > initial.x + 35, "WASD must move the actual saved party");
   const density = await page
     .locator("canvas")
@@ -88,13 +110,17 @@ try {
   await page.getByRole("alertdialog").waitFor();
   await page.screenshot({ path: ".artifacts/v2/confirmation.png" });
   await page.keyboard.press("Escape");
-  await page.getByRole("alertdialog").waitFor({state:"hidden"});
+  await page.getByRole("alertdialog").waitFor({ state: "hidden" });
   await page.locator('[data-action="summon"]').click();
   await page.locator('[data-answer="no"]').click();
   assert.deepEqual((await record(page)).wallet, before.wallet);
   await page.locator('[data-action="summon"]').click();
   await page.locator('[data-answer="yes"]').click();
-  await page.waitForTimeout(150);
+  await waitSave(
+    page,
+    (s) => s.jobs.filter((j) => j.kind === "summon").length === 1,
+    "summon must be durably queued",
+  );
   assert.equal(
     (await record(page)).jobs.filter((j) => j.kind === "summon").length,
     1,
@@ -105,6 +131,7 @@ try {
   await page.screenshot({ path: ".artifacts/v2/acquisition.png" });
   assert.equal((await record(page)).acquisitionQueue.length, 1);
   await page.locator('[data-action="acquisition-next"]').click();
+  await page.waitForSelector(".acquisition-screen", { state: "hidden" });
   assert.equal((await record(page)).acquisitionQueue.length, 0);
   await page.clock.resume();
   await page.locator('[data-action="close"]').first().click();
@@ -184,8 +211,11 @@ try {
   );
   const box = await m.locator("canvas").boundingBox();
   await m.touchscreen.tap(box.x + box.width * 0.75, box.y + box.height * 0.3);
-  await m.waitForTimeout(3200);
-  const ms = await record(m);
+  const ms = await waitSave(
+    m,
+    (s) => s.x !== pack.regions[0].startX || s.y !== pack.regions[0].startY,
+    "touch must move and persist the party",
+  );
   assert.ok(
     ms.x !== pack.regions[0].startX || ms.y !== pack.regions[0].startY,
     "touch must move actual party at DPR2",

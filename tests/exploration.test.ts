@@ -206,3 +206,34 @@ test("foreground fixed-step clock preserves elapsed time across slow frames and 
     "foreground stalls remain bounded to 60 catch-up steps",
   );
 });
+
+test("ordinary asynchronous autosave does not freeze foreground navigation; explicit panels still pause", async () => {
+  const descriptor = Object.getOwnPropertyDescriptor(
+    globalThis,
+    "localStorage",
+  );
+  Object.defineProperty(globalThis, "localStorage", {
+    value: { getItem: () => null },
+    configurable: true,
+  });
+  try {
+    const { Game } = await import("../src/application/game");
+    const g = new Game(p, "test:clock", newSave(p, t));
+    const x = g.x;
+    g.busy = true;
+    g.movement = { x: 1, y: 0 };
+    g.step(1 / 60);
+    assert.ok(
+      g.x > x,
+      "an in-flight routine save must not discard movement time",
+    );
+    const moved = g.x;
+    g.pause.add("panel");
+    g.step(1 / 60);
+    assert.equal(g.x, moved);
+  } finally {
+    if (descriptor)
+      Object.defineProperty(globalThis, "localStorage", descriptor);
+    else Reflect.deleteProperty(globalThis, "localStorage");
+  }
+});

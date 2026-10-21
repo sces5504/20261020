@@ -25,6 +25,7 @@ export class Game {
   error = "";
   notice = "";
   busy = false;
+  private simulationLocked = false;
   dirty = false;
   autoSkills = false;
   lowEffects = localStorage.getItem("stella:effects") === "low";
@@ -77,10 +78,11 @@ export class Game {
     await g.tickEconomy();
     return g;
   }
-  private enqueue(fn: () => Promise<void>) {
+  private enqueue(fn: () => Promise<void>, blocksSimulation = true) {
     this.serial = this.serial
       .then(async () => {
         this.busy = true;
+        this.simulationLocked = blocksSimulation;
         try {
           await fn();
           this.error = "";
@@ -89,6 +91,7 @@ export class Game {
           throw e;
         } finally {
           this.busy = false;
+          this.simulationLocked = false;
         }
       })
       .catch(() => {});
@@ -143,7 +146,7 @@ export class Game {
           : "已撤回安全航線，請整補後再出發。";
       }
       this.dirty = true;
-    });
+    }, c.type !== "checkpoint");
   }
   tickEconomy() {
     return this.enqueue(async () => {
@@ -161,7 +164,7 @@ export class Game {
         this.notice = `共鳴完成 · 新增 ${s.roster.length - ownedCount} 位少女，前往編成查看。`;
       }
       this.dirty = true;
-    });
+    }, false);
   }
   checkpoint() {
     return this.command({
@@ -173,7 +176,7 @@ export class Game {
     });
   }
   step(dt: number) {
-    if (this.pause.size || this.busy || this.error) return;
+    if (this.pause.size || this.simulationLocked || this.error) return;
     if (this.movement.x || this.movement.y) {
       const n = Math.hypot(this.movement.x, this.movement.y);
       this.move(

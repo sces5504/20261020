@@ -1,0 +1,196 @@
+[
+  {
+    "id": "beacon:asset.scout-v1",
+    "entity": "beacon:enemy.scout",
+    "kind": "sprite",
+    "version": 1,
+    "master": "art/world/beacon/scout-v1.png",
+    "masterSha256": "07a8d28f062819ca3d0392d671a3ea6c4c21e1a56c7b1d2348e3687beb1173b6",
+    "masterWidth": 1536,
+    "masterHeight": 1024,
+    "path": "art/world/beacon/scout-v1.webp",
+    "sha256": "5f7944e674005167a95de75a78d2f85d0c42d7bbaaf7183beb395a2f4a4c3d71",
+    "width": 768,
+    "height": 512,
+    "bytes": 44324,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "blend": "normal",
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animation": null,
+    "atlas": null,
+    "bundle": "beacon:package.frontier",
+    "source": "image_gen; original Galaxy Angel frontier art; 2026-10-21",
+    "promptVersion": "beacon-v1-distinct-silhouettes",
+    "brief": "窄長叉形艇首、單引擎、後置小翼；深紫黑金屬與橙紅感測器，輪廓區別於既有寬翼偵察機。",
+    "references": [
+      {
+        "path": "art/world/scout-ai.png",
+        "sha256": "2fd203cc17fe458220319b4dc12497b9724c2685c1181b853910bb96ae3a7327"
+      }
+    ],
+    "processing": "master preserved; browser Canvas resize and WebP quality 0.9 delivery encoding only",
+    "review": "candidate",
+    "preview": "art/world/beacon/scout-v1.webp",
+    "binding": "extension entity sprite"
+  },
+  {
+    "id": "beacon:asset.warden-v1",
+    "entity": "beacon:enemy.warden",
+    "kind": "sprite",
+    "version": 1,
+    "master": "art/world/beacon/warden-v1.png",
+    "masterSha256": "026be55f550f1ff8bb101bf9b06a6d3685c32a9efa18735b12c7de9dba330666",
+    "masterWidth": 1374,
+    "masterHeight": 1145,
+    "path": "art/world/beacon/warden-v1.webp",
+    "sha256": "8e49c57aa0f2f4aa61f0b1d0d590dd7a58eac28ff8ad5f7c4ff3b5dfef4d099a",
+    "width": 768,
+    "height": 640,
+    "bytes": 143136,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "blend": "normal",
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animation": null,
+    "atlas": null,
+    "bundle": "beacon:package.frontier",
+    "source": "image_gen; original Galaxy Angel frontier art; 2026-10-21",
+    "promptVersion": "beacon-v1-distinct-silhouettes",
+    "brief": "厚重六角中心艙、兩根前鉗砲臂、四後推進器；寬身輪廓，橙紅能量槽。",
+    "references": [
+      {
+        "path": "art/world/sentinel-ai.png",
+        "sha256": "8332a1ededfec0cba505e0ffe3de8cb17750bd497755b48d9f5c43a060e366a2"
+      }
+    ],
+    "processing": "master preserved; browser Canvas resize and WebP quality 0.9 delivery encoding only",
+    "review": "candidate",
+    "preview": "art/world/beacon/warden-v1.webp",
+    "binding": "extension entity sprite"
+  },
+  {
+    "id": "beacon:asset.anchor-v1",
+    "entity": "beacon:enemy.anchor",
+    "kind": "sprite",
+    "version": 1,
+    "master": "art/world/beacon/anchor-v1.png",
+    "masterSha256": "c5c6e6be235c137de8db55ee59f77ab8a0377b1516ca687df0e3343b7bbf8f04",
+    "masterWidth": 1457,
+    "masterHeight": 1080,
+    "path": "art/world/beacon/anchor-v1.webp",
+    "sha256": "22a0a4720d555dee3ae53faf68320226db1692633fc3f1ed5cd15f8c486d413d",
+    "width": 1024,
+    "height": 759,
+    "bytes": 203256,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "blend": "normal",
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animation": null,
+    "atlas": null,
+    "bundle": "beacon:package.frontier",
+    "source": "image_gen; original Galaxy Angel frontier art; 2026-10-21",
+    "promptVersion": "beacon-v1-distinct-silhouettes",
+    "brief": "中央尖塔艦體、斷開六角環架、四錨定外支架；紫色核心與洋紅能量，獨立Boss輪廓。",
+    "references": [
+      {
+        "path": "art/world/destroyer.png",
+        "sha256": "44538c5023afff83d05e7c1b4f3f9c3f5902506edc04c125b0dd0922af37f890"
+      }
+    ],
+    "processing": "master preserved; browser Canvas resize and WebP quality 0.9 delivery encoding only",
+    "review": "candidate",
+    "preview": "art/world/beacon/anchor-v1.webp",
+    "binding": "extension entity sprite"
+  },
+  {
+    "id": "beacon:asset.signal-v1",
+    "entity": "beacon:planet.signal",
+    "kind": "sprite",
+    "version": 1,
+    "master": "art/world/beacon/signal-v1.png",
+    "masterSha256": "146c7370cfc686bc28f2e38c8deb447841f8ac6b544e71d2c6ef598b2074a1c5",
+    "masterWidth": 1254,
+    "masterHeight": 1254,
+    "path": "art/world/beacon/signal-v1.webp",
+    "sha256": "0301327504da80da50009fdd4135ea8f9eed0fcfc3e78c06d4038702e083a075",
+    "width": 768,
+    "height": 768,
+    "bytes": 108586,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "blend": "normal",
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animation": null,
+    "atlas": null,
+    "bundle": "beacon:package.frontier",
+    "source": "image_gen; original Galaxy Angel frontier art; 2026-10-21",
+    "promptVersion": "beacon-v1-distinct-silhouettes",
+    "brief": "藍色條帶星球、上左光源、下右暗面，單圈通訊環與三個暖金信標；保持圖形化日系星圖材質。",
+    "references": [
+      {
+        "path": "art/world/haven.png",
+        "sha256": "95230c95ac90e9f683717c337cd35a6ddc4473e8679242cf8d49ed2cac864e18"
+      },
+      {
+        "path": "art/world/vein.png",
+        "sha256": "5a907a50da65fa63d0f75134361eac5610c808d22f56b03717e432f349fa0d8e"
+      }
+    ],
+    "processing": "master preserved; browser Canvas resize and WebP quality 0.9 delivery encoding only",
+    "review": "candidate",
+    "preview": "art/world/beacon/signal-v1.webp",
+    "binding": "extension entity sprite"
+  },
+  {
+    "id": "beacon:asset.frontier-v1",
+    "entity": "m1:frontier-test",
+    "kind": "background",
+    "version": 1,
+    "master": "art/world/beacon/frontier-v1.png",
+    "masterSha256": "0b895a52f07dbef641862180fe1d14cee971c6f17cb740f72398ee1d13bca9ac",
+    "masterWidth": 1672,
+    "masterHeight": 941,
+    "path": "art/world/beacon/frontier-v1.webp",
+    "sha256": "0b570f5da35538d1c150bbd4ef5c0b4fe5f96c355a56e78037f7f2a2f74a675c",
+    "width": 1672,
+    "height": 941,
+    "bytes": 203510,
+    "colorSpace": "sRGB",
+    "alpha": false,
+    "blend": "normal",
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "animation": null,
+    "atlas": null,
+    "bundle": "beacon:package.frontier",
+    "source": "image_gen; original Galaxy Angel frontier art; 2026-10-21",
+    "promptVersion": "beacon-v1-distinct-silhouettes",
+    "brief": "低亮度深海軍藍、左右藍紫星雲、細金塵弧；中央留暗，手機中央裁切仍能讀取敵彈。",
+    "references": [
+      {
+        "path": "art/world/cosmos.png",
+        "sha256": "940f02ab63890dc3368af5720a6c0a159984a83671ae5c221b51d302277d255e"
+      }
+    ],
+    "processing": "master preserved; browser Canvas resize and WebP quality 0.9 delivery encoding only",
+    "review": "candidate",
+    "preview": "art/world/beacon/frontier-v1.webp",
+    "binding": "prepared; core integrator assigns existing region background"
+  }
+]

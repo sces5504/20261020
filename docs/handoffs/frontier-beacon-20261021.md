@@ -2,8 +2,16 @@
 
 - 使用者授權：先補第一區缺件，再做第二區一顆星球／一場遭遇代表包。本批先交代表關節奏供審閱，再擴量。
 - 基底 `4610e8ab24360cdff39473befc5b37a0d1298c0f`，fetch後與origin/main一致。分支 `content/frontier-beacon`。內容／設計commit `0c59bd4`，測試針對該內容與本交接的驗證夾具，不當成基底已含新包。
-- 自有包 `beacon:package.frontier@0.1.0`，requires精確 `m1:core@0.5.0`，檔案 `content/extensions/frontier-beacon.json`。
-- 僅修改本包、自己的區域設計／驗證文件及本交接。未修改核心、根manifest、共享Combat、既有資產或生成檔。
+- 自有包 `beacon:package.frontier@0.2.0`，requires精確 `m1:core@0.5.0`，檔案 `content/extensions/frontier-beacon.json`。
+- 修改本包、自己的區域設計／驗證文件、美術目錄與本交接；本輪美術範圍由使用者直接追加。未修改核心、根manifest、共享Combat、既有資產或生成檔。
+
+## 本輪美術追加
+
+使用者直接指出世界／敵人／Boss美術也由本分工負責，要求沿現有遊戲風格，並強調不同種類不同長相、同一種類不要亂改。新增五張自己的asset，綁定自己的三敵／一星球；沒有改第一區敵人、原六圖、共享schema、素材loader或根manifest。背景asset隨包交付；既有region.background與縮圖由核心整合者明確綁定，沒有在extension放同ID區域覆寫。
+
+PNG／WebP及來源／hash／alpha／pivot在 `art/world/beacon/`；總覽 `preview.png`，重建與驗證見 [美術交接](../art/frontier-beacon.md)。`prepare.mjs`只做自己新圖交付編碼，`verify.mts`驗固定引用／原圖未動與ZIP往返，`preview.mts`經真實工坊入口匯入ZIP驗預覽／替換／undo。完整美術試玩ZIP為22,609,435 bytes，符合既有預算，未新增費用或依賴。
+
+12組戰鬥模擬在新sprite綁定後重跑，時間／命中／血量與上一批一致，沒有因美術改動碰撞／難度。實際完整ZIP匯入工坊通過所有媒體hash與解碼檢查，四實體預覽與替換／復原成功，背景素材預覽及手機無溢出通過。完整美術快照的1440×1000桌機與390×844 DPR2手機戰鬥、轉彎、畫外威脅／邊界預警、重載／回程及正式檔隔離全部通過；已開圖檢視。截圖為.artifacts/frontier-beacon/art-desktop-battle.png與art-mobile-warning.png等，非真機證據。
 
 ## 已完成
 
@@ -30,11 +38,11 @@
 
 ## 核心整合者的下一步
 
-1. 審閱代表關與第一區共享UI缺口。若接受本包，再啟用manifest；更新基底第二區空域說明／測試航路文案，保留 `m1:frontier-test` ID和雙向routes，不以extension覆寫。
+1. 審閱代表關與第一區共享UI缺口。若接受本包，再啟用manifest；更新基底第二區空域說明／測試航路文案，保留 `m1:frontier-test` ID和雙向routes，background明確設為 `beacon:asset.frontier-v1`、sprite可設 `beacon:asset.signal-v1`，不以extension覆寫。
 2. 基底空域測試中「第二區0星球」斷言在正式啟用時須依新契約更新，保留空區案例為獨立fixture；不能直接刪掉空區支援測試。
 3. 如需試玩ZIP，按驗證文件產生assembled.json，經工坊完整快照匯入／隔離試玩再匯出；不要把extension JSON誤當完整工坊包，既有草稿先備份。
 4. 解決或重驗exploration截圖超時，執行完整check release（五組瀏覽器含polish）才發布。公開version.json與實際CI結果另外核對。
-5. 取得代表關節奏回饋後再擴星球／巡邏；本包尚無專屬新美術，只引用既有candidate圖。刪包／遷移交整合者做修復預覽及備份，不可無保護移除已有領地。
+5. 取得代表關節奏回饋後再擴星球／巡邏；本包已補五張專屬candidate美術（兩普通敵／Boss／星球／背景），詳見美術交接；不要改同ID既有外觀或把同類實例隨機換圖。刪包／遷移交整合者做修復預覽及備份，不可無保護移除已有領地。
 
 ## 回復與限制
 

@@ -103,7 +103,7 @@ import { readFileSync } from 'node:fs';
 import { chromium } from '../../tools/node_modules/playwright/index.mjs';
 import { serveBuilt } from '../../tools/game/serve-built.mjs';
 import { newSave, stats } from '../../src/domain/model';
-const p=JSON.parse(readFileSync('.artifacts/frontier-beacon/assembled.json','utf8'));
+const p=JSON.parse(readFileSync(process.env.BEACON_ART_PREVIEW ? '.artifacts/frontier-beacon/art-preview.json' : '.artifacts/frontier-beacon/assembled.json','utf8'));
 const v=p.planets.at(-1), server=await serveBuilt();
 const browser=await chromium.launch({headless:true,args:['--no-sandbox']});
 const errors:string[]=[];
@@ -119,7 +119,7 @@ try {
  const page=await ctx.newPage();page.setDefaultTimeout(12000);page.on('pageerror',e=>errors.push(e.message));
  const s=newSave(p,Date.now(),'test');s.region=v.region;s.x=v.x-330;s.y=v.y;s.rng=42;s.storySeen=p.quests.map(q=>q.id);s.cleared=p.planets.slice(0,-1).map(x=>x.id);s.roster.forEach(o=>{o.level=3;o.hp=stats(p,o).hp;});
  await install(page,s);await page.waitForSelector('.in-battle');await page.waitForTimeout(1200);
- await page.screenshot({path:`.artifacts/frontier-beacon/${mobile?'mobile':'desktop'}-battle.png`});
+ await page.screenshot({path:`.artifacts/frontier-beacon/${process.env.BEACON_ART_PREVIEW?'art-':''}${mobile?'mobile':'desktop'}-battle.png`});
  assert.ok(!(await record(page,'save:main')));
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
  // Turns exercise the real directional fleet and ordinary auto-attacks, no stat changes.
@@ -128,7 +128,7 @@ try {
  const warning=structuredClone(s);warning.x=v.x+660;warning.y=v.y;warning.heading=Math.PI;warning.encounter={planet:v.id,seed:42};
  await install(page,warning);await page.waitForSelector('.leash-warning');
  assert.ok((await page.locator('.leash-warning').innerText()).includes('邊界'));
- await page.screenshot({path:`.artifacts/frontier-beacon/${mobile?'mobile':'desktop'}-warning.png`});
+ await page.screenshot({path:`.artifacts/frontier-beacon/${process.env.BEACON_ART_PREVIEW?'art-':''}${mobile?'mobile':'desktop'}-warning.png`});
  // Entry is safe; reload keeps current region; existing exit remains usable.
  const entry=structuredClone(s);entry.x=600;entry.y=1000;entry.encounter=null;
  await install(page,entry);await page.reload();await page.waitForSelector('canvas');assert.equal((await record(page)).region,v.region);

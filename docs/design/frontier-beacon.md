@@ -3,9 +3,9 @@
 2026-10-21。任務範圍：先盤點第一區缺口，再交一顆星球、一場單波遭遇，等待節奏回饋再擴量。依核心0.5.0；本文件數值全為本案新設計。
 
 - 基底：`4610e8ab24360cdff39473befc5b37a0d1298c0f`，fetch 後與 origin/main 相同。
-- 分支：`content/frontier-beacon`；包：`beacon:package.frontier@0.1.0`。
+- 分支：`content/frontier-beacon`；包：`beacon:package.frontier@0.2.0`。
 - 檔案：`content/extensions/frontier-beacon.json`，精確依賴 `m1:core@0.5.0`。
-- 命名空間：`beacon:`；只新增三敵、一星球，不覆寫區域或修改共享程式。
+- 命名空間：`beacon:`；新增三敵、一星球與五張專屬美術；不覆寫區域或修改共享程式。
 - 延用 `m1:frontier-test`，不刪除或更換已有存檔所在區域。根 manifest 啟用由核心整合者處理。
 
 ## 第一區盤點
@@ -76,18 +76,23 @@ flowchart LR
 
 ## 素材引用與狀態
 
-全部沿用已存在且可在工坊預覽／替換的資產，不新增媒體複製需求；每個hash已由content build與世界資產清單核驗。候選狀態不升格approved，不宣稱原作外觀復刻。
+0.2.0依使用者本輪直接要求補齊本分工美術，沿現有遊戲風格。三種新敵人各自有固定且不同的輪廓；同一ID全部實例共用同一asset，不依出現次數／血量／關卡隨機換圖。第一區三敵、原六角色及既有素材保持原樣。
 
-| 用途／資產 | SHA256 | 狀態 |
+| 定義 | 固定素材 | 形象 |
 | --- | --- | --- |
-| 星球 m1art:haven-v1 | f938c2546b79ac11db08e5d8a421493590dbaea3a74f254e9a9bc0957ea1b498 | candidate，共用外觀 |
-| 游弋 m1art:scout-v1 | 48397e89c319a756f259268cab51a4fdd630d1c437e68e2e24c930d16fefe147 | candidate，共用外觀 |
-| 護衛 m1art:sentinel-v1 | 378eb9a2164d36697dad51e7c46213beba27a565fcb16c6a389e5c4980671383 | candidate，共用外觀 |
-| 指揮 m1art:destroyer-v1 | 60f8ac8866ce279c6acdad5d3310118ec9389fc2b2b22ecd0906d1c5ed892fb0 | candidate，共用外觀 |
-| 既有區域 m1art:bridge-v1 | 764498afe3cd29eac398ae1f49e474b6e8fc5447eadb85dbda8d7cc26ec1aeab | candidate |
-| 既有背景 m1art:cosmos-v1 | dfc9583ea50a21849f04f564ce0ed4886ec41ff0bb0554d01c438aaf2398d767 | candidate |
+| beacon:enemy.scout | beacon:asset.scout-v1 | 叉形細長艇首、單引擎、後置短翼，橙紅感測器 |
+| beacon:enemy.warden | beacon:asset.warden-v1 | 寬身六角裝甲、雙鉗砲臂、四引擎 |
+| beacon:enemy.anchor | beacon:asset.anchor-v1 | 中央尖塔、環架與四錨定支架，紫色核心 |
+| beacon:planet.signal | beacon:asset.signal-v1 | 藍色條帶星球、通訊環、三個暖金信標 |
+| m1:frontier-test（整合待綁） | beacon:asset.frontier-v1 | 低亮度藍紫星雲、中央暗區 |
 
-缺件狀態：執行需要的引用齊全；專屬信標星球／敵艦美術尚未製作，現在用共用候選圖。原作OBB仍缺，不臆造原作貼圖。
+五張均為image_gen新設計，參考已檢視的現有物件材質與線條，不是原作素材復刻。PNG主檔、WebP輸出、來源參考及雙hash、尺寸／alpha／pivot／bundle在 `art/world/beacon/assets.json`；完整交付與重建指令見 [美術交接](../art/frontier-beacon.md)。維持candidate，不自行升格approved。各敵新圖綁自己的assetID，未改既有assetID。
+
+WebP用現有AssetDef支援的data URI直接隨自己的extension交付，因此工坊與隔離試玩可直接解碼，不依賴新建置複製規則或本機路徑。擴充檔體積增加約0.94MB，五張WebP合計702812 bytes。完整試玩ZIP為22609435 bytes，仍在既有25MiB／60MiB預算內；不放寬上限。
+
+區域本身屬核心，extension沒有定義同ID區域或覆寫background。背景已作為可預覽／替換的資產交付；唯一核心整合者將既有星域background設為 `beacon:asset.frontier-v1`。明確完整工坊快照已用這個綁定驗背景，該快照不冒充extension自動覆寫。
+
+缺件狀態：本批新敵、Boss、星球、背景主檔及執行素材齊全。原作OBB仍缺；未製作新的動畫幀或任意Boss階段演出，既有浮動／攻擊預警與碰撞規則沿用核心。
 
 ## 研究來源分界
 
@@ -104,7 +109,7 @@ python3 research/stella-maiden/tools/query.py --sql 'SELECT _row,f01,f10,f11,f12
 
 ## 核心整合變更單與擴量門檻
 
-1. 根manifest加入本包；不自動從檔名載入。啟用前把既有 `m1:frontier-test` 的「空白、沒有星球敵人獎勵」說明與航路的「測試」文案更新為內容實況，保留ID與既有雙向routes。此文案位於基底，交唯一核心整合者，extension不覆寫。
+1. 根manifest加入本包；不自動從檔名載入。同時將該區background設為 `beacon:asset.frontier-v1`；區域縮圖可用 `beacon:asset.signal-v1`。啟用前把既有 `m1:frontier-test` 的「空白、沒有星球敵人獎勵」說明與航路的「測試」文案更新為內容實況，保留ID與既有雙向routes。此文案位於基底，交唯一核心整合者，extension不覆寫。
 2. 第一區星球情報resetSeconds插值與具名跨區前置提示交共享UI修正；不在此包加入程式。
 3. 正式啟用後舊草稿先備份，再從新版正式內容建立；不要覆蓋玩家工坊資料。刪包須先做領地與待處理遭遇修復預覽／備份，不能只從manifest移除。
 4. 正式發布跑完整 `check release`，含test:polish第五組；本內容PR不自行部署。測試空域數量斷言在啟用後應由核心更新，不能把既有「第二區必為空」測試原封不動當作新包驗收。

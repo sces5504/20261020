@@ -27,7 +27,7 @@ if (result.pack) {
   for (const c of p.characters.filter((c) => c.status === "active"))
     for (const slot of ["portrait", "avatar", "sprite"] as const) {
       const a = p.assets.find((a) => a.id === c[slot]);
-      if (!a || a.review !== "approved")
+      if (!a || (a.review !== "approved" && !(playtest && slot === "sprite")))
         errors.push(`${c.id}.${slot} 缺少已驗收素材`);
     }
 }

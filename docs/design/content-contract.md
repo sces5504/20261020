@@ -321,3 +321,16 @@ CharacterDef基礎rarity與角色實例level／tier分開；數值表單改基�
 - 媒體匯出／測試／匯入會檢查 SHA256、尺寸、可解碼性與大小。原六圖 build 按 manifest 驗證後複製原位元組。主檔保持不變；顯示頭像視窗不建立新的改圖檔。
 
 當前能力的驗收與限制見 [M1 試玩驗收](m1-acceptance.md)。新增內容作者先交一個小包，核心負責 schema、存檔、通用行為與 manifest；不要在內容包放 JavaScript 或角色 ID 分支。
+
+
+## 16. 探索版0.2可執行增量
+
+使用者直接取消防衛／訓練。`raidSeconds`／`trainingSeconds` 等舊欄位保留解碼相容，runtime不再讀它們執行玩法，不能新增防衛事件。領地舊lost載入即恢復。
+
+- `planets[].enemies` 第一波、`waves` 後續波次陣列，`waveDelay` 增援秒數；所有enemy引用共用校驗。
+- `regions[].discoveryRadius` 掃描距離；`patrols[]` 包含命名空間id、x/y、enemies、reward、respawnSeconds。巡邏不寫星球clear／首次掉落。`encounter.kind` 省略時仍為舊星球戰，新增patrol型。
+- save新增`discovered`／`storySeen`／`acquisitionQueue`／`voyageSeconds`／`patrolCooldowns`，皆有預設；取得佇列用持有實例ID，確認才移除。`voyageSeconds`只在有效前景模擬前進，非牆鐘離線攻擊。
+- `quests.condition="intro"` 為序章；其餘條件仍由舊命令驗證。dialogue每句speaker可用角色名／ID對應立繪，未對應則用通訊訊號，不推測出不存在的人物圖。
+- 工坊已有完整快照及新波次／巡邏JSON欄位，舊草稿保留不暗合併。使用「從新版正式內容建立草稿」會先保留復原歷史，再切換新版基底。
+
+詳細已確認需求見 [探索版0.2](exploration-v2.md)。

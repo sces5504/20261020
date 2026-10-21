@@ -14,6 +14,11 @@ export const saveSchema = z
     schemaVersion: z.literal(1),
     contentHash: z.string().default(""),
     migrationHistory: z.array(z.string()).default([]),
+    discovered: z.array(z.string()).default([]),
+    storySeen: z.array(z.string()).default([]),
+    acquisitionQueue: z.array(z.string()).default([]),
+    voyageSeconds: nonneg.default(0),
+    patrolCooldowns: z.record(nonneg).default({}),
     trainingBest: z.number().int().min(0).max(100).default(0),
     orphanedJobs: z.array(z.any()).default([]),
     orphanedColonies: z.record(z.any()).default({}),
@@ -62,7 +67,11 @@ export const saveSchema = z
     summoned: z.number().int().nonnegative(),
     built: z.number().int().nonnegative(),
     encounter: z
-      .object({ planet: z.string(), seed: z.number().int().nonnegative() })
+      .object({
+        planet: z.string(),
+        seed: z.number().int().nonnegative(),
+        kind: z.enum(["planet", "patrol"]).optional(),
+      })
       .strict()
       .nullable(),
     orphans: z.array(owned),

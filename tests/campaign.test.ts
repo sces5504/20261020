@@ -12,11 +12,12 @@ test("fresh campaign reaches the boss, starts production, resolves research and 
     (s = apply(p, s, c, now, `campaign-${n++}`));
   for (const v of p.planets) {
     for (const o of [...s.roster]) {
-      if (s.team.includes(o.id)) cmd({ type: "level", owned: o.id });
+      if (s.team.includes(o.id) && o.level === 1)
+        cmd({ type: "level", owned: o.id });
       const current = s.roster.find((v) => v.id === o.id)!;
       if (current.hp < stats(p, current).hp) cmd({ type: "heal", owned: o.id });
     }
-    now += 30000;
+    now += 120000;
     settle(p, s, now);
     cmd({ type: "begin", planet: v.id });
     const battle = new Combat(p, s, v.id);
@@ -37,6 +38,13 @@ test("fresh campaign reaches the boss, starts production, resolves research and 
       battle.step(1 / 60);
     }
     assert.ok(battle.victory, v.name + " must be beatable");
+    assert.ok(
+      battle.time >= 25,
+      "planet liberation must require multiple waves, not a few seconds",
+    );
+    console.log(
+      `${v.name}: ${battle.time.toFixed(1)}s / ${battle.waveGroups.length} waves`,
+    );
     now += battle.time * 1000;
     cmd({
       type: "result",
@@ -63,14 +71,19 @@ test("fresh campaign reaches the boss, starts production, resolves research and 
   assert.equal(s.built, 1);
   assert.ok(Object.values(s.wallet).every((n) => n >= 0));
 });
-test("training combat never edits its input save and ally normal attacks are disabled", () => {
+test("multi-wave planet encounters survive the first group and have meaningful combat duration", () => {
   const s = newSave(p, 1),
-    original = structuredClone(s),
-    c = new Combat(p, s, p.planets[0].id, true);
-  for (let i = 0; i < 180; i++) c.step(1 / 60);
-  assert.deepEqual(s, original);
-  assert.ok(c.bullets.every((b) => b.side === "enemy"));
-  assert.ok(c.units.every((u) => u.side === "ally" || u.hp === u.maxHp));
+    v = p.planets[0];
+  s.x = v.x - 250;
+  s.y = v.y + 100;
+  const c = new Combat(p, s, v.id);
+  for (const u of c.units.filter((u) => u.side === "enemy")) u.hp = 0;
+  c.step(1 / 60);
+  assert.equal(c.ended, false);
+  assert.ok(c.nextWaveAt > c.time);
+  for (let i = 0; i < 300; i++) c.step(1 / 60);
+  assert.equal(c.waveIndex, 1);
+  assert.ok(c.units.some((u) => u.side === "enemy" && u.hp > 0));
 });
 test("retired or summon-disabled maidens leave the summon pool without deleting owned instances", async () => {
   const { summonCandidates } = await import("../src/domain/economy");

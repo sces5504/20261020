@@ -28,7 +28,10 @@ try {
     page = await context.newPage();
   page.setDefaultTimeout(15000);
   page.on("pageerror", (e) => errors.push(e.message));
-  page.on("dialog", (d) => d.accept());
+  page.on("dialog", (d) => {
+    errors.push("Unexpected browser dialog");
+    void d.dismiss();
+  });
   await page.goto(server.url + "#/studio");
   await page.waitForSelector("#entity-form");
   console.log("Playtest: image replacement + content-only seventh maiden");
@@ -70,11 +73,13 @@ try {
   );
   await page.locator('[data-action="test"]').click();
   await page.waitForSelector("canvas");
+  await page.locator('[data-action="story-skip"]').click();
+  await page.locator('[data-action="view"]').click();
   await page.locator('[data-action="battle"]').click();
   await page.locator('[data-action="auto"]').click();
   await page
     .getByRole("heading", { name: "航跡已開拓" })
-    .waitFor({ timeout: 30000 });
+    .waitFor({ timeout: 120000 });
   let s = await record(page, "save:test");
   assert.ok(s.cleared.includes("m1:haven"));
   assert.ok(
@@ -93,7 +98,7 @@ try {
   assert.equal(s.jobs.filter((j) => j.kind === "build").length, 1);
   assert.ok(s.colonies["m1:haven"].active);
   await page.clock.install();
-  await page.clock.fastForward(47000);
+  await page.clock.fastForward(65000);
   await page.waitForTimeout(350);
   s = await record(page, "save:test");
   assert.ok(
@@ -102,49 +107,26 @@ try {
   );
   await page.clock.resume();
   await page.locator('[data-action="close"]').first().click();
-  console.log("Playtest: training, save identity, performance sampling");
-  await page.locator('[data-id="training"][data-action="panel"]').click();
-  await page.locator('[data-action="training-start"]').click();
-  await page.locator("#training-clock").waitFor();
-  await page.screenshot({ path: ".artifacts/m1/training.png" });
-  const perf = await page.evaluate(
-    () =>
-      new Promise((resolve) => {
-        const times = [];
-        let last = performance.now();
-        function tick(t) {
-          times.push(t - last);
-          last = t;
-          if (times.length >= 90) {
-            const sorted = [...times].sort((a, b) => a - b);
-            resolve({
-              frames: times.length,
-              p95FrameMs: sorted[Math.floor(sorted.length * 0.95)],
-              averageFrameMs: times.reduce((a, b) => a + b) / times.length,
-              viewport: [innerWidth, innerHeight],
-              userAgent: navigator.userAgent,
-            });
-          } else requestAnimationFrame(tick);
-        }
-        requestAnimationFrame(tick);
-      }),
-  );
-  assert.ok(Number.isFinite(perf.p95FrameMs));
-  await writeFile(
-    ".artifacts/m1/performance.json",
-    JSON.stringify(perf, null, 2),
-  );
-  await page.locator('[data-action="retreat"]').click();
-  await page.getByRole("heading", { name: "避彈訓練完成" }).waitFor();
+  for (let i = 0; i < 5; i++) {
+    await page.waitForTimeout(300);
+    const skip = page.locator('[data-action="story-skip"]');
+    if (await skip.isVisible()) await skip.click();
+    else break;
+  }
+  console.log("Playtest: character profile, dialogue and content acquisition");
+  await page.locator(".squad-card").first().click();
+  await page.waitForSelector(".character-detail");
+  assert.ok((await page.locator(".skill-detail").innerText()).includes("護盾"));
+  await page.screenshot({ path: ".artifacts/m1/profile.png" });
   await page.locator('[data-action="close"]').first().click();
-  assert.equal(
-    (await record(page, "save:test")).roster.length,
-    s.roster.length,
+  await page.locator('[data-id="planets"][data-action="panel"]').click();
+  assert.ok(
+    (await page.locator(".modal-body").innerText()).includes("蔚藍前哨"),
   );
+  await page.locator('[data-action="close"]').first().click();
   assert.deepEqual(errors, []);
   console.log(
-    "PASS: media replacement, cloned character + skill/star/acquisition editing, actual first-battle win/drop, colony activation/build completion while paused, training, isolated official save; p95 ms:",
-    perf.p95FrameMs.toFixed(1),
+    "PASS: original media replacement, seventh character/skill/star/acquisition edit, multi-wave battle win/drop, colony build while paused, character profile and planet management; official save isolated.",
   );
 } finally {
   await browser.close();

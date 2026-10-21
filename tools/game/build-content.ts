@@ -43,3 +43,23 @@ for (const binding of artBindings.bindings) {
   mkdirSync(resolve("public/assets/characters"), { recursive: true });
   writeFileSync(output, bytes);
 }
+
+// Derived chibi sprites are separate from immutable standard portraits.
+const battleAssets = JSON.parse(
+  readFileSync("art/catalog/battle-assets.json", "utf8"),
+) as { id: string; path: string; sha256: string; runtime: string }[];
+for (const entry of battleAssets) {
+  const bytes = readFileSync(entry.path),
+    asset = merged.assets.find((a) => a.id === entry.id);
+  if (
+    !asset ||
+    createHash("sha256").update(bytes).digest("hex") !== entry.sha256 ||
+    asset.hash !== entry.sha256
+  )
+    throw Error("Q版素材hash不符");
+  const output = resolve("public", entry.runtime);
+  if (!output.startsWith(resolve("public/assets/battle") + "/"))
+    throw Error("Q版素材路徑越界");
+  mkdirSync(resolve("public/assets/battle"), { recursive: true });
+  writeFileSync(output, bytes);
+}

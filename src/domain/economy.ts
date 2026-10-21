@@ -46,6 +46,7 @@ function complete(p: Pack, s: Save, j: Save["jobs"][number]) {
     s.research.push(j.definition);
   if (j.kind === "summon") {
     addCharacter(p, s, j.payload);
+    s.acquisitionQueue.push(s.roster.at(-1)!.id);
     s.summoned++;
   }
   if (j.kind === "heal") {
@@ -79,7 +80,9 @@ export function settle(p: Pack, s: Save, now: number) {
   s.settledAt = now;
 }
 export type Command =
-  | { type: "training"; score: number }
+  | { type: "seen-story"; id: string }
+  | { type: "ack-acquisition"; id: string }
+  | { type: "patrol"; id: string }
   | { type: "activate"; planet: string }
   | { type: "repair"; planet: string }
   | { type: "build"; planet: string; building: string }
@@ -102,17 +105,21 @@ export type Command =
       type: "checkpoint";
       x: number;
       y: number;
-      raids: Record<string, number>;
-      losses: string[];
+      raids?: Record<string, number>;
+      losses?: string[];
+      discovered?: string[];
+      voyageSeconds?: number;
     };
 export function questReady(s: Save, q: Pack["quests"][number]) {
-  return q.condition === "cleared"
-    ? s.cleared.includes(q.target)
-    : q.condition === "activated"
-      ? !!s.colonies[q.target]?.active
-      : q.condition === "summoned"
-        ? s.summoned >= q.count
-        : s.built >= q.count;
+  return q.condition === "intro"
+    ? true
+    : q.condition === "cleared"
+      ? s.cleared.includes(q.target)
+      : q.condition === "activated"
+        ? !!s.colonies[q.target]?.active
+        : q.condition === "summoned"
+          ? s.summoned >= q.count
+          : s.built >= q.count;
 }
 export function summonCandidates(p: Pack, recipe: number[]) {
   return p.characters
@@ -171,10 +178,20 @@ export function apply(
     )
       throw Error("角色正在治療或派駐。");
   };
-  if (c.type === "training") {
-    if (!Number.isInteger(c.score) || c.score < 0 || c.score > 100)
-      throw Error("訓練分數無效");
-    s.trainingBest = Math.max(s.trainingBest, c.score);
+  if (c.type === "seen-story" && !s.storySeen.includes(c.id))
+    s.storySeen.push(c.id);
+  if (c.type === "ack-acquisition")
+    s.acquisitionQueue = s.acquisitionQueue.filter((id) => id !== c.id);
+  if (c.type === "patrol") {
+    const r = p.regions.find((r) => r.id === s.region)!;
+    const v = r.patrols.find((v) => v.id === c.id);
+    if (!v || s.encounter || (s.patrolCooldowns[v.id] ?? 0) > s.voyageSeconds)
+      throw Error("巡邏訊號已消散。");
+    s.encounter = {
+      planet: v.id,
+      kind: "patrol",
+      seed: Math.floor(random(s) * 4294967296),
+    };
   }
   if (c.type === "activate") {
     const v = p.planets.find((v) => v.id === c.planet);
@@ -189,14 +206,7 @@ export function apply(
       raidRemaining: p.rules.raidSeconds,
     };
   }
-  if (c.type === "repair") {
-    const v = p.planets.find((v) => v.id === c.planet),
-      col = s.colonies[c.planet];
-    if (!v || !col?.lost) throw Error("無需修復。");
-    pay(v.activationCost);
-    col.lost = false;
-    col.raidRemaining = p.rules.raidSeconds;
-  }
+  if (c.type === "repair") throw Error("防衛系統已移除；領地不再失守。");
   if (c.type === "build") {
     const b = p.buildings.find(
         (v) => v.id === c.building && v.status === "active",
@@ -326,7 +336,15 @@ export function apply(
     for (const o of s.roster)
       if (s.team.includes(o.id) && c.hp[o.id] !== undefined)
         o.hp = Math.max(0, Math.min(stats(p, o).hp, c.hp[o.id]));
-    if (c.victory) {
+    if (s.encounter.kind === "patrol") {
+      const v = p.regions
+        .find((r) => r.id === s.region)!
+        .patrols.find((v) => v.id === c.planet);
+      if (v) {
+        if (c.victory) money(s, v.reward);
+        s.patrolCooldowns[v.id] = s.voyageSeconds + v.respawnSeconds;
+      }
+    } else if (c.victory) {
       const v = p.planets.find((v) => v.id === c.planet)!;
       if (!s.cleared.includes(v.id)) {
         money(s, v.reward);
@@ -345,9 +363,11 @@ export function apply(
   if (c.type === "checkpoint") {
     s.x = c.x;
     s.y = c.y;
-    for (const [id, t] of Object.entries(c.raids))
-      if (s.colonies[id]) s.colonies[id].raidRemaining = t;
-    for (const id of c.losses) if (s.colonies[id]) s.colonies[id].lost = true;
+    if (c.discovered)
+      s.discovered = [...new Set([...s.discovered, ...c.discovered])];
+    if (c.voyageSeconds !== undefined)
+      s.voyageSeconds = Math.max(s.voyageSeconds, c.voyageSeconds);
+    for (const col of Object.values(s.colonies)) col.lost = false;
   }
   s.receipts.push(commandId);
   s.revision = previous.revision + 1;

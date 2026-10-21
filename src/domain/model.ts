@@ -27,7 +27,12 @@ export type Save = {
   schemaVersion: 1;
   contentHash: string;
   migrationHistory: string[];
-  trainingBest: number;
+  trainingBest: number; // legacy save field; feature removed
+  discovered: string[];
+  storySeen: string[];
+  acquisitionQueue: string[];
+  voyageSeconds: number;
+  patrolCooldowns: Record<string, number>;
   orphanedJobs: Job[];
   orphanedColonies: Record<string, Colony>;
   orphanedWallet: Wallet;
@@ -51,7 +56,11 @@ export type Save = {
   quests: string[];
   summoned: number;
   built: number;
-  encounter: { planet: string; seed: number } | null;
+  encounter: {
+    planet: string;
+    seed: number;
+    kind?: "planet" | "patrol";
+  } | null;
   orphans: Owned[];
 };
 export function stats(p: Pack, o: Owned) {
@@ -77,6 +86,11 @@ export function newSave(p: Pack, now: number, id = "voyager"): Save {
     contentHash: "",
     migrationHistory: [],
     trainingBest: 0,
+    discovered: [],
+    storySeen: [],
+    acquisitionQueue: [],
+    voyageSeconds: 0,
+    patrolCooldowns: {},
     orphanedJobs: [],
     orphanedColonies: {},
     orphanedWallet: {},

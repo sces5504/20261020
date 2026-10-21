@@ -59,13 +59,25 @@ export class Combat {
   ended = false;
   victory = false;
   hitsReceived = 0;
+  waveIndex = 0;
+  nextWaveAt = 0;
+  waveGroups: { enemy: string; count: number }[][] = [];
+  waveDelay = 4;
   constructor(
     readonly pack: Pack,
     readonly save: Save,
     readonly planetId: string,
-    readonly training = false,
   ) {
-    const planet = pack.planets.find((v) => v.id === planetId)!;
+    const region = pack.regions.find((r) => r.id === save.region)!;
+    const planet =
+      save.encounter?.kind === "patrol"
+        ? region.patrols.find((v) => v.id === planetId)!
+        : pack.planets.find((v) => v.id === planetId)!;
+    this.waveGroups = [
+      planet.enemies,
+      ...("waves" in planet ? planet.waves : []),
+    ];
+    this.waveDelay = "waveDelay" in planet ? planet.waveDelay : 3;
     this.rng = save.encounter?.seed ?? 1;
     this.destination = { x: save.x, y: save.y };
     const bonus = pack.research
@@ -80,8 +92,10 @@ export class Combat {
           c,
           id,
           "ally",
-          save.x + (i - 1) * 48,
-          save.y + (i % 2) * 55,
+          save.x + (i - (save.team.length - 1) / 2) * 48,
+          save.y +
+            ((i % 2) - Math.floor(save.team.length / 2) / save.team.length) *
+              50,
           o.hp,
           st.hp,
           st.attack * bonus,
@@ -89,23 +103,26 @@ export class Combat {
         ),
       );
     });
-    planet.enemies.forEach((g) => {
-      const e = pack.enemies.find((e) => e.id === g.enemy)!;
+    this.spawnWave(planet.x, planet.y);
+  }
+  private spawnWave(x: number, y: number) {
+    for (const g of this.waveGroups[this.waveIndex]) {
+      const e = this.pack.enemies.find((e) => e.id === g.enemy)!;
       for (let i = 0; i < g.count; i++)
         this.units.push(
           this.unit(
             e,
             `enemy-${this.sequence++}`,
             "enemy",
-            planet.x + 120 + (random(this) - 0.5) * 280,
-            planet.y + (random(this) - 0.5) * 220,
+            x + 140 + (random(this) - 0.5) * 260,
+            y + (random(this) - 0.5) * 280,
             e.hp,
             e.hp,
             e.attack,
             e.defense,
           ),
         );
-    });
+    }
   }
   private unit(
     c: Character | Enemy,
@@ -261,10 +278,12 @@ export class Combat {
       const t = priority && u.side === "ally" ? priority : foes[0];
       let dest = this.destination;
       if (u.side === "ally" && !u.turretUntil) {
-        const i = this.allies.indexOf(u);
+        const live = this.allies.filter((a) => a.hp > 0),
+          i = live.indexOf(u),
+          n = live.length;
         dest = {
-          x: this.destination.x + (i - 1) * 48,
-          y: this.destination.y + (i % 2) * 50,
+          x: this.destination.x + (i - (n - 1) / 2) * 48,
+          y: this.destination.y + ((i % 2) - Math.floor(n / 2) / n) * 50,
         };
       }
       if (u.side === "enemy" && t) dest = { x: t.x, y: t.y };
@@ -277,7 +296,6 @@ export class Combat {
         u.x = Math.max(15, Math.min(r.width - 15, u.x));
         u.y = Math.max(15, Math.min(r.height - 15, u.y));
       }
-      if (this.training && u.side === "ally") continue;
       if (u.side === "enemy" && t && u.cooldown <= 0) {
         if (!u.windup) {
           u.windup = 0.55;
@@ -362,12 +380,30 @@ export class Combat {
     this.bullets = this.bullets.filter((b) => b.life > 0);
     this.flashes.forEach((f) => (f.life -= dt));
     this.flashes = this.flashes.filter((f) => f.life > 0);
-    if (!this.units.some((u) => u.side === "enemy" && u.hp > 0)) {
-      this.ended = true;
-      this.victory = true;
-    } else if (!this.allies.some((u) => u.hp > 0)) {
+    if (!this.allies.some((u) => u.hp > 0)) {
       this.ended = true;
       this.victory = false;
+    } else if (!this.units.some((u) => u.side === "enemy" && u.hp > 0)) {
+      if (this.waveIndex < this.waveGroups.length - 1) {
+        if (!this.nextWaveAt) this.nextWaveAt = this.time + this.waveDelay;
+        if (this.time >= this.nextWaveAt) {
+          this.waveIndex++;
+          this.nextWaveAt = 0;
+          const pos = this.center;
+          this.spawnWave(pos.x + 180, pos.y - 60);
+          this.flashes.push({
+            x: pos.x,
+            y: pos.y - 150,
+            radius: 130,
+            color: "#f2bf82",
+            life: 1.2,
+            label: `增援抵達 · ${this.waveIndex + 1}/${this.waveGroups.length}`,
+          });
+        }
+      } else {
+        this.ended = true;
+        this.victory = true;
+      }
     }
   }
   result() {

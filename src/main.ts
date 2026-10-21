@@ -1,3 +1,5 @@
+import { mountCharacterRoster } from "./presentation/character-roster";
+import { ask } from "./presentation/dialog";
 import "./style.css";
 import { published } from "./content";
 import { validatePack, type Pack } from "./content/schema";
@@ -22,7 +24,9 @@ async function route() {
   root.innerHTML =
     '<div class="loading"><span>✧</span><p>正在連接星海航跡…</p></div>';
   try {
-    if (location.hash.startsWith("#/art")) dispose = mountArtGallery(root);
+    if (location.hash.startsWith("#/catalog"))
+      dispose = await mountCharacterRoster(root);
+    else if (location.hash.startsWith("#/art")) dispose = mountArtGallery(root);
     else if (location.hash.startsWith("#/studio"))
       dispose = await mountStudio(root);
     else {
@@ -62,9 +66,9 @@ async function route() {
             root.querySelector("main")?.append(section);
             section.querySelector("button")!.onclick = async () => {
               if (
-                !confirm(
+                !(await ask(
                   "依預覽修復？原存檔會保存在備份，缺失內容會保留於隔離區。",
-                )
+                ))
               )
                 return;
               try {

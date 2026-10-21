@@ -30,8 +30,20 @@
 
 遊戲內實際開圖發現獨立裁切頭像被舊CSS再放大、手機前置與重置說明被舊CSS隱藏；已修正並增加真實CSS／可見文字斷言。原五組瀏覽器保留，新增第六組test:content-integration，含十人詳情／30圖解碼／四組真實Q圖編隊／Sun與Mars共技能實際施法者／具名前置／插值／第二區接敵與回程／正式檔隔離。桌機1440×1000 DPR1及觸控390×844 DPR2、seed77。製作表與CSV更新16已整合／110待製作。
 
-仍需跑最終完整check release與合併後CI／Pages／公開version.json，成功前不記為已上線。
+本機完整發布已通過，見下方最終證據；正式main／Pages與公開站SHA以整合PR #11的最後部署證據為準，不把本機通過當已上線。
 
 現有真機／真人品質／效能限制保留；候選素材不升 approved。不要把 Chromium 觸控 viewport 當真機。
 
 最終本機整合檢查點：49/49核心通過。新增整合瀏覽器桌機／觸控兩種viewport皆通過，已實際開啟修正後頭像／手機前置／新編隊／信標戰鬥截圖。完整正式工坊快照ZIP 26,211,963 bytes，低於25MiB；餘量僅2,437 bytes，未來新增媒體前須另外規劃分包／交付預算，不能直接提高匯入上限或默改原圖。
+
+## 最終本機發布證據
+
+- 驗證實作 SHA `7799c6287e700016a3ff846016935095e11f3873`，check release開始／結束工作樹乾淨；正式主線合併SHA由PR #11記錄。本次後續提交僅補交接／驗證JSON。
+- `GITHUB_SHA=<上列SHA> python3 scripts/project.py check release` exit0。11項命令全部exit0，49核心、原五組瀏覽器含polish與新增第六組、playtest readiness全數完成；原exploration截圖超時本輪未再現。
+- 633.16秒，超過8分鐘時間目標：保留原五組完整流程，增加雙viewport十角色詳情／30圖解碼／四編隊實際Q圖與第二區往返的第六組；沒有以時間目標跳過檢查、放寬timeout或記失敗為通過。
+- 版本與裝置：Node24.21.0／Linux headless Chrome for Testing156.0.8078.4／Playwright1.64.0（工具鎖檔），1440×1000 DPR1、390×844觸控DPR2，整合seed77；世界平衡另以seed1／7／42、Lv1／3、純普攻／自動技能12組完成。
+- 有效內容hash `07798ea20b5af667b1478bd7070072eb61abf80acac4e80ee786787adcb9e6a4`；core0.5.0、beacon0.2.0、solar10 0.1.1、stellaart0.1.0。版本build已帶精確SHA與四包清單。
+- 同名 `.validation.json` 保存完整命令與exit code，`.browser.json` 保存build／viewport／seed，`.snapshot.json` 保存乾淨實作起點。原圖／媒體hash與美術SQLite、ZIP roundtrip、範本10項另通過。
+- commercial dry-run預期exit1，確認candidate立繪、qualitySamplesAccepted、Android與iOS真機、accepted狀態仍阻擋。沒有自行批准任何新圖或品質旗標。
+
+合併與部署證據集中在 https://github.com/sces5504/20261020/pull/11 的最新描述，避免每次補部署SHA再次觸發新一輪Pages。後續以公開version.json核對SHA／內容hash；使用者試玩代表關與新角色，再依回饋推進真機、硬體效能與動畫品質。舊工坊草稿先備份，再從新版正式內容建立，不默覆寫本機草稿。

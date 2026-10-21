@@ -1,0 +1,100 @@
+{
+  "mode": "release",
+  "time_utc": "2026-10-21T17:03:39.460345+00:00",
+  "head": "7799c6287e700016a3ff846016935095e11f3873",
+  "dirty": false,
+  "elapsed_seconds": 633.16,
+  "results": [
+    {
+      "argv": [
+        "npm",
+        "run",
+        "content:check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "npm",
+        "test"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:e2e"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:playtest"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:exploration"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:refinement"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:polish"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:content-integration"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "release:ready",
+        "--",
+        "--target",
+        "playtest"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "passed": true
+}

@@ -1,3 +1,5 @@
+> 整合驗收：PR #11；實作7799c62，49核心＋六組瀏覽器＋完整release通過，四包有效內容hash07798ea2。真機／commercial仍待驗；main／Pages精確SHA以PR #11最新描述及公開version.json為準。
+
 > 本輪整合：第二區邊境信標＋十人內容／美術，交接 [frontier-solar10-integration-20261022](../handoffs/frontier-solar10-integration-20261022.md)。核心0.5.0；發布狀態以該交接與整合PR最後SHA／CI證據為準。
 
 > 0.5最終本機驗證：43項核心與五組瀏覽器、完整check release、原圖hash／美術庫、範本10項成功。整合／部署SHA與公開站結果請核對本輪PR最後留言及version.json，不能把本機通過當已上線。

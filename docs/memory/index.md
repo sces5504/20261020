@@ -1,6 +1,6 @@
 # 接力索引
 
-專案狀態（2026-10-21）：M1 已發布（PR #3）；使用者16項回饋已實作為0.2探索版，23項核心測試和三組瀏覽器流程通過。整合分支polish/exploration-v2，main為發布分支；發布結果見最新交接／PR／version.json。六張原圖已匯入並保持原樣；原批 SD 重繪停止；2026-10-21新的直接要求已授權另外生成六張Q版戰鬥圖，原立繪不動。較新要求已依使用者明確對應套用六角色；完整 M1／商業品質尚未驗收。
+專案狀態（2026-10-21）：M1 已發布（PR #3）；使用者16項回饋已實作為0.2探索版，23項核心測試和三組瀏覽器流程通過。整合PR #4（polish/exploration-v2），main為發布分支；發布結果見最新交接／PR／version.json。六張原圖已匯入並保持原樣；原批 SD 重繪停止；2026-10-21新的直接要求已授權另外生成六張Q版戰鬥圖，原立繪不動。較新要求已依使用者明確對應套用六角色；完整 M1／商業品質尚未驗收。
 
 - Stella Maiden研究入口：`research/stella-maiden/START_HERE.md`；資料交付接力：`docs/handoffs/stella-research-20261020.md`。先按導覽查局部資料，不需重新逆向或一次載入全部JSON。
 - M1 實作：`docs/design/m1-implementation.md`；後續 AI 起始 prompts：`docs/ai/START_HERE.md`

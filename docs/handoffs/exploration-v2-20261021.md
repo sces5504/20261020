@@ -11,3 +11,5 @@
 測試入口：`npm test`、`npm run test:e2e`、`npm run test:playtest`、新增 `npm run test:exploration`，release profile已納入。本輪完整 `python3 scripts/project.py check release` 通過：23項核心測試、TypeScript／內容校驗、build、三組Chromium瀏覽器流程。`template-check.py`10項通過，stage成功；原六圖hash／SQLite美術庫重驗通過。實際部署commit以整合PR與Pages workflow及公開version.json為準。當前核心模擬三場約41／52／70秒。Q圖為imagegen衍生候選，已逐張檢視與接入，沒有擅稱使用者批准。
 
 瀏覽器回歸與結果已完成；發布驗證記於整合PR描述，需核對Pages公開遊戲／工坊／catalog及version.json。README不動。尚未做Android／iOS真機或真人商業視聽品質審閱，不能宣稱完成。
+
+整合PR：https://github.com/sces5504/20261020/pull/4 ，功能提交44a22aa。全部實作的release驗證已完成；合併後以main為起點。公開部署SHA／驗證結果於PR描述追加，網站version.json含contentVersion 0.2.0與精確commit。

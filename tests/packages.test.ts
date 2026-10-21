@@ -27,3 +27,42 @@ test("exported package contains media bytes and can be imported without original
   assert.deepEqual(roundtrip, expected);
   assert.ok(zip.byteLength > 0);
 });
+
+test("workshop ZIP deduplicates real bytes across local and uploaded paths, never trusting a declared hash collision", async () => {
+  const { unzipSync, strFromU8 } = await import("fflate");
+  const p = structuredClone(published);
+  const source = p.assets.find(
+    (a) => !a.src.startsWith("data:") && a.src.endsWith(".png"),
+  )!;
+  const bytes = await readFile(`public/${source.src}`);
+  const other = p.assets.find(
+    (a) => !a.src.startsWith("data:") && a.hash !== source.hash,
+  )!;
+  p.assets.push(
+    {
+      ...source,
+      id: "addon:uploaded",
+      src: `data:image/png;base64,${bytes.toString("base64")}`,
+    },
+    { ...other, id: "addon:collision", hash: source.hash },
+  );
+  const zip = await exportPack(
+    p,
+    async (path) => new Uint8Array(await readFile(`public/${path}`)),
+  );
+  assert.ok(
+    zip.length <= 25 * 1024 * 1024,
+    `fixed 25 MiB budget: ${zip.length}`,
+  );
+  const files = unzipSync(zip);
+  const archived = JSON.parse(strFromU8(files["pack.json"]));
+  const ref = (id: string) =>
+    archived.assets.find((a: { id: string }) => a.id === id).src;
+  assert.equal(ref(source.id), ref("addon:uploaded"));
+  assert.notEqual(ref(source.id), ref("addon:collision"));
+  const imported = importPack(zip);
+  assert.equal(
+    imported.assets.find((a) => a.id === source.id)!.src,
+    imported.assets.find((a) => a.id === "addon:uploaded")!.src,
+  );
+});

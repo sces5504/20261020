@@ -32,7 +32,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
  <section class="viewport"><aside class="mission-rail"><div class="section-label">航行目標 <span>MISSION</span></div><div id="mission"></div><div class="rail-bottom"><span class="eyebrow">NAVIGATION</span><p>WASD／點擊星海航行<br>M 切換大星圖</p><div class="signal"><i></i><i></i><i></i><i></i><i></i></div><small>艦隊通訊連線中</small></div></aside>
  <div id="space" class="space" aria-label="星域戰場，點擊空白處移動，點擊星球查看情報" role="application"></div><div class="map-caption"><span>✧ 星域掃描</span><span id="coordinates"></span></div><div id="battle-state" class="battle-state"></div><div id="battle-tools" class="battle-tools"></div><aside id="planet-card" class="planet-card"></aside></section>
  <footer class="flight-deck"><div class="squad-heading"><span class="eyebrow">YOUR CONSTELLATION</span><strong>航行編隊</strong>${button("編隊 ↗", "panel", "formation", "text-button")}</div><div class="squad" id="squad"></div><nav class="deck-nav">${button(icon("resonance") + "星體共鳴", "panel", "summon")}${button(icon("research") + "共振研究", "panel", "research")}${button(icon("journal") + "航行紀錄", "panel", "quests")}${button(icon("planet") + "領地", "panel", "planets")}${button(icon("crew") + "角色", "panel", "roster")}${button(icon("pause") + "暫停", "pause", "", "pause-button")}</nav></footer>
- <div class="build-note">M1 試玩版 · 六位少女／第二星域測試</div><div class="toast" id="toast" role="status" aria-live="polite"></div><div id="skill-splash" class="skill-splash" aria-live="polite"></div><div id="overlay"></div></main>`;
+ <div class="build-note">M1 試玩版 · ${p.characters.filter((c) => c.status === "active").length} 位少女／${p.regions.filter((r) => r.status === "active").length} 個星域</div><div class="toast" id="toast" role="status" aria-live="polite"></div><div id="skill-splash" class="skill-splash" aria-live="polite"></div><div id="overlay"></div></main>`;
   const $ = (s: string) => root.querySelector<HTMLElement>(s)!;
   const space = mountSpace(
     $("#space"),
@@ -84,7 +84,18 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     if (key === planetKey) return;
     planetKey = key;
     $("#planet-card").innerHTML =
-      `${button("✕", "intel-close", "", "intel-dismiss")}<div class="section-label">星球情報 <span>INTEL</span></div>${entityImage(p, v, "intel-planet-art")}<span class="eyebrow">${col?.active ? "COLONY" : "UNEXPLORED SIGNAL"}</span><h2>${esc(v.name)}</h2><div class="tags"><span>${locked ? "航線未開放" : col?.lost ? "生產待恢復" : cleared ? "已解放" : "敵方佔領"}</span><span>${v.enemies.some((e) => p.enemies.find((v) => v.id === e.enemy)?.boss) ? "首領訊號" : "一般據點"}</span></div><p>${locked ? "解放前一個據點以開啟航路。" : col?.lost ? "設施已停產。修復後即可恢復生產。" : col?.active ? "生產設施運作中。可於領地總覽統一管理全部星球。" : "靠近守軍自動交戰；清除所有守軍即可解放。離開交戰邊界${v.resetSeconds}秒會重置，畫面會事先警告。"}</p><div class="intel-row"><span>偵測敵群</span><strong>${v.enemies.reduce((a, b) => a + b.count, 0)} 組訊號</strong></div><div class="intel-row"><span>${col?.active ? "每分鐘產量" : "首次解放獎勵"}</span></div><div class="costs">${amounts(p, col?.active ? Object.fromEntries(Object.entries(v.production).map(([id, n]) => [id, n * 60])) : v.reward)}</div>${col?.active ? button("管理星球 →", "panel", "colony", "primary") : cleared ? button("啟動星球 →", "activate", v.id, "primary") : button("導航接近 · 自動交戰 →", "navigate", v.id, "primary", locked || !!g.combat)}${cleared && !col?.active ? `<div class="costs">${amounts(p, v.activationCost)}</div>` : ""}`;
+      `${button("✕", "intel-close", "", "intel-dismiss")}<div class="section-label">星球情報 <span>INTEL</span></div>${entityImage(p, v, "intel-planet-art")}<span class="eyebrow">${col?.active ? "COLONY" : "UNEXPLORED SIGNAL"}</span><h2>${esc(v.name)}</h2><div class="tags"><span>${locked ? "航線未開放" : col?.lost ? "生產待恢復" : cleared ? "已解放" : "敵方佔領"}</span><span>${v.enemies.some((e) => p.enemies.find((v) => v.id === e.enemy)?.boss) ? "首領訊號" : "一般據點"}</span></div><p class="${locked || !col?.active ? "intel-guidance" : ""}">${
+        locked
+          ? `解放 ${v.requires
+              .filter((id) => !s.cleared.includes(id))
+              .map((id) => esc(p.planets.find((p) => p.id === id)?.name ?? id))
+              .join("、")} 以開啟航路。`
+          : col?.lost
+            ? "設施已停產。修復後即可恢復生產。"
+            : col?.active
+              ? "生產設施運作中。可於領地總覽統一管理全部星球。"
+              : `靠近守軍自動交戰；清除所有守軍即可解放。離開交戰邊界${v.resetSeconds}秒會重置，畫面會事先警告。`
+      }</p><div class="intel-row"><span>偵測敵群</span><strong>${v.enemies.reduce((a, b) => a + b.count, 0)} 組訊號</strong></div><div class="intel-row"><span>${col?.active ? "每分鐘產量" : "首次解放獎勵"}</span></div><div class="costs">${amounts(p, col?.active ? Object.fromEntries(Object.entries(v.production).map(([id, n]) => [id, n * 60])) : v.reward)}</div>${col?.active ? button("管理星球 →", "panel", "colony", "primary") : cleared ? button("啟動星球 →", "activate", v.id, "primary") : button("導航接近 · 自動交戰 →", "navigate", v.id, "primary", locked || !!g.combat)}${cleared && !col?.active ? `<div class="costs">${amounts(p, v.activationCost)}</div>` : ""}`;
   }
   let missionKey = "";
   function renderMission() {
@@ -394,7 +405,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     if (panel === "guide") {
       title = "航行指南";
       kick = "FLIGHT MANUAL";
-      body = `<ol class="guide-steps"><li><strong>探索與出擊</strong><p>在銀河裡航行並靠近星球，或按 M 切換大星圖規劃航路。WASD／點空白處移動，拖曳平移鏡頭；滾輪或雙指可縮放，「跟隨」返回隊伍。</p></li><li><strong>走位與技能</strong><p>普通攻擊自動進行。將守護角色排第一，轉向時讓隊長先走到前方。點敵人鎖定，點下方角色或鍵盤1～6施放技能。紅色線條是敵方射擊預警，移動避開。</p></li><li><strong>啟動與經營</strong><p>解放星球後啟動生產，再建造採集站與研究。多數工作在數十秒至數分鐘內完成，管理面板只暫停戰鬥。序章與航行任務會提供額外補給，可先強化角色、開始研究。</p></li><li><strong>收集與編成</strong><p>四資源共鳴、首次解放與任務可取得少女。在編成中強化、整補與更換隊伍。</p></li><li><strong>領地與存檔</strong><p>領地總覽可管理所有星球、查看產能與進行建設。可於設定匯出／匯入存檔。</p></li><li><strong>星域航路</strong><p>銀河下方的「星域航路」可選擇目的地並躍遷。目前第二星域是測試空域，可以自由前往與返回，原有領地與工作不受影響。</p></li></ol>`;
+      body = `<ol class="guide-steps"><li><strong>探索與出擊</strong><p>在銀河裡航行並靠近星球，或按 M 切換大星圖規劃航路。WASD／點空白處移動，拖曳平移鏡頭；滾輪或雙指可縮放，「跟隨」返回隊伍。</p></li><li><strong>走位與技能</strong><p>普通攻擊自動進行。將守護角色排第一，轉向時讓隊長先走到前方。點敵人鎖定，點下方角色或鍵盤1～6施放技能。紅色線條是敵方射擊預警，移動避開。</p></li><li><strong>啟動與經營</strong><p>解放星球後啟動生產，再建造採集站與研究。多數工作在數十秒至數分鐘內完成，管理面板只暫停戰鬥。序章與航行任務會提供額外補給，可先強化角色、開始研究。</p></li><li><strong>收集與編成</strong><p>四資源共鳴、首次解放與任務可取得少女。在編成中強化、整補與更換隊伍。</p></li><li><strong>領地與存檔</strong><p>領地總覽可管理所有星球、查看產能與進行建設。可於設定匯出／匯入存檔。</p></li><li><strong>星域航路</strong><p>銀河下方的「星域航路」可選擇目的地並躍遷。各星域的據點與解放前置可在情報中查看；原有領地與工作在跨區後仍會保留。</p></li></ol>`;
     }
     if (panel === "result" && g.report) {
       title = g.report.title;
@@ -787,11 +798,11 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     ticks++;
     for (const event of g.events.splice(0)) audio.cue(event);
     for (const flash of g.combat?.flashes ?? []) {
-      const sk = p.skills.find((s) => s.name === flash.label);
+      const sk = p.skills.find((s) => s.id === flash.skillId);
       if (!sk || seenSkillFlashes.has(flash)) continue;
       seenSkillFlashes.add(flash);
       audio.cue("skill");
-      const c = p.characters.find((c) => c.skill === sk.id);
+      const c = p.characters.find((c) => c.id === flash.sourceDefinition);
       const splash = $("#skill-splash");
       splash.innerHTML = `${c ? portrait(p, c) : ""}<div><small>SKILL ACTIVATED</small><strong>${esc(sk.name)}</strong></div>`;
       splash.classList.remove("show");

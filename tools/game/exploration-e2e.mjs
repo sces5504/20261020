@@ -265,9 +265,9 @@ try {
   assert.equal((await record(page)).cleared.length, 0);
   await page.goto(server.url + "#/catalog");
   await page.waitForSelector("#roster-rows tr");
-  assert.equal(await page.locator("#roster-rows tr").count(), 120);
+  assert.equal(await page.locator("#roster-rows tr").count(), 110);
   await page.locator("#roster-filter").selectOption("priority");
-  assert.equal(await page.locator("#roster-rows tr").count(), 12);
+  assert.equal(await page.locator("#roster-rows tr").count(), 2);
   await page.screenshot({ path: ".artifacts/v2/roster.png" });
   await page.goto(server.url + "#/studio");
   await unlockStudio(page);
@@ -382,7 +382,7 @@ try {
   );
   assert.deepEqual(errors, []);
   console.log(
-    "PASS exploration: dialogue, WASD/touch, DPR2 canvas, map toggle, character/formation/skill descriptions, custom confirmations, cancel atomicity, persistent summon reveal, natural patrol collision/retreat, 120 future art targets and 12 priority entries, no native dialogs or mobile obstruction.",
+    "PASS exploration: dialogue, WASD/touch, DPR2 canvas, map toggle, character/formation/skill descriptions, custom confirmations, cancel atomicity, persistent summon reveal, natural patrol collision/retreat, 110 future art targets and 2 remaining priority entries, no native dialogs or mobile obstruction.",
   );
 } finally {
   await browser.close();

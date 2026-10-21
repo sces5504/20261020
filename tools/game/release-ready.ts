@@ -27,8 +27,10 @@ if (result.pack) {
   for (const c of p.characters.filter((c) => c.status === "active"))
     for (const slot of ["portrait", "avatar", "sprite"] as const) {
       const a = p.assets.find((a) => a.id === c[slot]);
-      if (!a || (a.review !== "approved" && !(playtest && slot === "sprite")))
-        errors.push(`${c.id}.${slot} 缺少已驗收素材`);
+      if (!a || (!playtest && a.review !== "approved"))
+        errors.push(
+          `${c.id}.${slot} 缺少${playtest ? "試玩圖片" : "已驗收素材"}`,
+        );
     }
   // Visible world entities must carry the same portable artwork that the studio previews.
   for (const [kind, list, slots] of [

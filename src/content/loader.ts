@@ -25,7 +25,35 @@ const extensionSchema = z
       .strict(),
   })
   .strict();
-export function assemble(base: unknown, extensions: unknown[]): Pack {
+// Only the root integration manifest may bind presentation across author packs.
+// Extensions remain additive; these fields cannot alter gameplay or stable IDs.
+const regionPresentationSchema = z.array(
+  z
+    .object({
+      region: z.string(),
+      name: z.string().min(1).optional(),
+      description: z.string().optional(),
+      sprite: z.string().optional(),
+      background: z.string().optional(),
+    })
+    .strict(),
+);
+const characterPresentationSchema = z.array(
+  z
+    .object({
+      character: z.string(),
+      portrait: z.string(),
+      avatar: z.string(),
+      sprite: z.string(),
+    })
+    .strict(),
+);
+export function assemble(
+  base: unknown,
+  extensions: unknown[],
+  regionPresentation: unknown = [],
+  characterPresentation: unknown = [],
+): Pack {
   const parsed = validatePack(base);
   if (!parsed.pack) throw Error(parsed.errors.join("\n"));
   const core = parsed.pack;
@@ -60,6 +88,27 @@ export function assemble(base: unknown, extensions: unknown[]): Pack {
     done.add(e.id);
   };
   list.forEach(visit);
+  const bound = new Set<string>();
+  for (const { region, ...presentation } of regionPresentationSchema.parse(
+    regionPresentation,
+  )) {
+    const target = core.regions.find((r) => r.id === region);
+    if (!target || bound.has(region))
+      throw Error(`星域呈現綁定缺失或重複：${region}`);
+    bound.add(region);
+    Object.assign(target, presentation);
+  }
+  const characters = new Set<string>();
+  for (const {
+    character,
+    ...presentation
+  } of characterPresentationSchema.parse(characterPresentation)) {
+    const target = core.characters.find((c) => c.id === character);
+    if (!target || characters.has(character))
+      throw Error(`角色呈現綁定缺失或重複：${character}`);
+    characters.add(character);
+    Object.assign(target, presentation);
+  }
   const checked = validatePack(core);
   if (!checked.pack) throw Error(checked.errors.join("\n"));
   return checked.pack;

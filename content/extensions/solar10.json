@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "solar10:package.first-ten",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "requires": [
     {
       "id": "m1:core",
@@ -13,7 +13,7 @@
       {
         "id": "solar10:character.sun",
         "name": "太陽",
-        "description": "擅長穩住航線的前鋒。以防禦增幅承受連續火力，輸出低於地球，適合放在編隊首位。此為M1自身防禦改編；沒有原作全隊增防或異常抗性。美術待補。",
+        "description": "擅長穩住航線的前鋒。以防禦增幅承受連續火力，輸出低於地球，適合放在編隊首位。此為M1自身防禦改編；沒有原作全隊增防或異常抗性。",
         "status": "active",
         "provenance": "m1-design",
         "rarity": 4,
@@ -29,12 +29,7 @@
         "portrait": "",
         "avatar": "",
         "sprite": "",
-        "recipe": [
-          180,
-          100,
-          120,
-          80
-        ],
+        "recipe": [180, 100, 120, 80],
         "starter": false,
         "role": "前鋒 · 自身防禦",
         "sourceRow": 1,
@@ -43,7 +38,7 @@
       {
         "id": "solar10:character.jupiter",
         "name": "木星",
-        "description": "擅長承受火力的重砲手。放在前鋒可藉自身防禦增幅穩住陣線，普攻射程較短。M1改編不含黑洞、牽引或範圍傷害。美術待補。",
+        "description": "擅長承受火力的重砲手。放在前鋒可藉自身防禦增幅穩住陣線，普攻射程較短。M1改編不含黑洞、牽引或範圍傷害。",
         "status": "active",
         "provenance": "m1-design",
         "rarity": 5,
@@ -59,12 +54,7 @@
         "portrait": "",
         "avatar": "",
         "sprite": "",
-        "recipe": [
-          200,
-          90,
-          180,
-          80
-        ],
+        "recipe": [200, 90, 180, 80],
         "starter": false,
         "role": "前鋒 · 裝甲重砲",
         "sourceRow": 6,
@@ -73,7 +63,7 @@
       {
         "id": "solar10:character.saturn",
         "name": "土星",
-        "description": "以全隊護盾掩護同伴的前鋒。生命與防禦略低於火星，適合在彈幕到來前施放。M1改編為全隊定額護盾，不是原作定向減傷屏障。美術待補。",
+        "description": "以全隊護盾掩護同伴的前鋒。生命與防禦略低於火星，適合在彈幕到來前施放。M1改編為全隊定額護盾，不是原作定向減傷屏障。",
         "status": "active",
         "provenance": "m1-design",
         "rarity": 4,
@@ -89,12 +79,7 @@
         "portrait": "",
         "avatar": "",
         "sprite": "",
-        "recipe": [
-          190,
-          110,
-          170,
-          90
-        ],
+        "recipe": [190, 110, 170, 90],
         "starter": false,
         "role": "前鋒 · 全隊護盾",
         "sourceRow": 7,
@@ -103,7 +88,7 @@
       {
         "id": "solar10:character.neptune",
         "name": "海王星",
-        "description": "適合後衛的持續射手，以臨界加速縮短普攻等待。生命偏低，需前鋒掩護。M1改編只加快普攻冷卻，不額外提升攻擊力。美術待補。",
+        "description": "適合後衛的持續射手，以臨界加速縮短普攻等待。生命偏低，需前鋒掩護。M1改編只加快普攻冷卻，不額外提升攻擊力。",
         "status": "active",
         "provenance": "m1-design",
         "rarity": 4,
@@ -119,12 +104,7 @@
         "portrait": "",
         "avatar": "",
         "sprite": "",
-        "recipe": [
-          120,
-          190,
-          110,
-          140
-        ],
+        "recipe": [120, 190, 110, 140],
         "starter": false,
         "role": "後衛 · 持續速射",
         "sourceRow": 9,
@@ -133,7 +113,7 @@
       {
         "id": "solar10:character.pluto",
         "name": "冥王星",
-        "description": "射程較長、射擊間隔也較長的後衛。擴散能源可應對近身威脅，低生命不適合帶隊承傷。M1改編發射環形彈幕，不是原作雷射。美術待補。",
+        "description": "射程較長、射擊間隔也較長的後衛。擴散能源可應對近身威脅，低生命不適合帶隊承傷。M1改編發射環形彈幕，不是原作雷射。",
         "status": "active",
         "provenance": "m1-design",
         "rarity": 5,
@@ -149,12 +129,7 @@
         "portrait": "",
         "avatar": "",
         "sprite": "",
-        "recipe": [
-          170,
-          100,
-          210,
-          120
-        ],
+        "recipe": [170, 100, 210, 120],
         "starter": false,
         "role": "後衛 · 遠程重砲",
         "sourceRow": 10,
@@ -163,7 +138,7 @@
       {
         "id": "solar10:character.nemesis",
         "name": "涅墨西斯（暫譯）",
-        "description": "低生命的快速射手，適合後衛；遇包圍時可使用擴散能源。M1改編為十二枚直線環形能源彈，不具原作追蹤導彈效果。美術待補。",
+        "description": "低生命的快速射手，適合後衛；遇包圍時可使用擴散能源。M1改編為十二枚直線環形能源彈，不具原作追蹤導彈效果。",
         "status": "active",
         "provenance": "m1-design",
         "rarity": 5,
@@ -179,12 +154,7 @@
         "portrait": "",
         "avatar": "",
         "sprite": "",
-        "recipe": [
-          180,
-          150,
-          200,
-          140
-        ],
+        "recipe": [180, 150, 200, 140],
         "starter": false,
         "role": "後衛 · 快速彈幕",
         "sourceRow": 11,
@@ -193,7 +163,7 @@
       {
         "id": "solar10:character.ganymede",
         "name": "木衛三",
-        "description": "適合後衛的支援射手，設置砲台補足固定位置的火力。M1改編為共鳴砲台，不會複製自身角色或生成另一名持有少女。美術待補。",
+        "description": "適合後衛的支援射手，設置砲台補足固定位置的火力。M1改編為共鳴砲台，不會複製自身角色或生成另一名持有少女。",
         "status": "active",
         "provenance": "m1-design",
         "rarity": 5,
@@ -209,12 +179,7 @@
         "portrait": "",
         "avatar": "",
         "sprite": "",
-        "recipe": [
-          130,
-          160,
-          140,
-          150
-        ],
+        "recipe": [130, 160, 140, 150],
         "starter": false,
         "role": "後衛 · 定點支援",
         "sourceRow": 16,
@@ -223,7 +188,7 @@
       {
         "id": "solar10:character.io",
         "name": "木衛一",
-        "description": "適合後衛的干擾手，削弱場上敵人攻擊以降低隊伍壓力。M1改編不含原作移速或攻速降低；生命較低，需避免承受集中火力。美術待補。",
+        "description": "適合後衛的干擾手，削弱場上敵人攻擊以降低隊伍壓力。M1改編不含原作移速或攻速降低；生命較低，需避免承受集中火力。",
         "status": "active",
         "provenance": "m1-design",
         "rarity": 2,
@@ -239,12 +204,7 @@
         "portrait": "",
         "avatar": "",
         "sprite": "",
-        "recipe": [
-          100,
-          130,
-          120,
-          110
-        ],
+        "recipe": [100, 130, 120, 110],
         "starter": false,
         "role": "後衛 · 火力干擾",
         "sourceRow": 17,
@@ -253,7 +213,7 @@
       {
         "id": "solar10:character.titania",
         "name": "天衛三",
-        "description": "可作副前鋒或後衛的干擾手，耐久高於木衛一但普攻輸出較低。技能削弱場上敵人攻擊；M1改編不包含原作暴擊率降低。美術待補。",
+        "description": "可作副前鋒或後衛的干擾手，耐久高於木衛一但普攻輸出較低。技能削弱場上敵人攻擊；M1改編不包含原作暴擊率降低。",
         "status": "active",
         "provenance": "m1-design",
         "rarity": 2,
@@ -269,12 +229,7 @@
         "portrait": "",
         "avatar": "",
         "sprite": "",
-        "recipe": [
-          110,
-          120,
-          100,
-          140
-        ],
+        "recipe": [110, 120, 100, 140],
         "starter": false,
         "role": "前鋒／後衛 · 攻擊削弱",
         "sourceRow": 19,
@@ -283,7 +238,7 @@
       {
         "id": "solar10:character.ariel",
         "name": "天衛一",
-        "description": "適合後衛的彈幕射手，靠射程保持輸出；敵人接近時可施放擴散能源。M1改編為環形能源彈，不包含原作三連射或暈眩。美術待補。",
+        "description": "適合後衛的彈幕射手，靠射程保持輸出；敵人接近時可施放擴散能源。M1改編為環形能源彈，不包含原作三連射或暈眩。",
         "status": "active",
         "provenance": "m1-design",
         "rarity": 4,
@@ -299,12 +254,7 @@
         "portrait": "",
         "avatar": "",
         "sprite": "",
-        "recipe": [
-          140,
-          170,
-          130,
-          160
-        ],
+        "recipe": [140, 170, 130, 160],
         "starter": false,
         "role": "後衛 · 擴散火力",
         "sourceRow": 20,

@@ -344,3 +344,13 @@ CharacterDef基礎rarity與角色實例level／tier分開；數值表單改基�
 現行原始契約仍為schemaVersion1，新增欄位皆有預設，不更動舊存檔ID。精確欄位／範圍／站位行為見 [0.3契約](galaxy-angel-v3.md)：region的sprite／background、building／research的sprite、quest的background、patrol的detectionRadius／patrolRadius／patrolSpeed／phase，以及rules的隊距／顯示尺寸。所有非空圖片引用均檢查assets存在；巡邏路線完整在星域範圍內。只用畫面縮放改大小，不改碰撞。
 
 擴充requires為精確版本；目前core 0.3.0，comet.example.json已有實際assemble測試，未自動啟用。新媒體須交實檔與來源／hash，整合者接入build複製與完整性檢查；原六圖、Q圖、世界圖分別由各manifest驗證。工坊完整ZIP包括WebP bytes，可離開原機器匯入；不准依賴本機路徑／objectURL。現行25MiB壓縮／60MiB總解壓預算不放寬。
+
+## 2026-10-22 跨包美術整合
+
+根 `content/manifest.json` 由唯一核心整合者維護：`regionPresentation` 可明確指定已存在區域的 `region/name/description/sprite/background`；`characterPresentation` 以 `character` 指向已存在角色，綁定 `portrait/avatar/sprite`。所有綁定在擴充包新增完成後做嚴格 schema 與最終引用校驗，未知欄位、重複／缺目標、缺圖一律拒絕。這不是 extension override、戰力覆寫或 migration DSL；獨立核心包仍可單獨組裝。
+
+本輪啟用 `beacon:package.frontier@0.2.0`、`solar10:package.first-ten@0.1.1`、`stellaart:package.stellar10@0.1.0`，核心維持 `m1:core@0.5.0`。solar10 0.1.1 只移除過期缺圖文字，數值與取得配方不改；美術包精確依賴 solar10 0.1.1。原作者美術表與原圖保留，runtime 綁定在根manifest與獨立 art extension，不改素材身分。
+
+`art/catalog/extension-assets.json` 明列來源、runtime路徑、主檔／輸出SHA；建置只容許 art 來源和 public/assets/extensions 輸出，校驗快照中的src／hash，再複製原位元組。該目錄為忽略產物，非手改內容。角色 avatar 與 portrait 引用不同時，視為獨立頭像構圖；同圖重用才沿用舊版面部放大框。
+
+工坊 ZIP 以實際 bytes 的SHA去重（不信任宣告hash來決定合併），使用短的封裝相對路徑；包格式與舊 ZIP 匯入仍相容，所有媒體原位元組不變。維持25MiB壓縮／60MiB解壓限制，不以放寬上限通過新增素材。試玩允許候選三種角色圖，commercial仍需approved與既有品質／真機門檻，候選metadata不自動升格。version.json記錄精確包清單與有效內容fingerprint。

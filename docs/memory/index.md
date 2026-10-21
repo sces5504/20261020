@@ -1,3 +1,5 @@
+> 本輪整合：第二區邊境信標＋十人內容／美術，交接 [frontier-solar10-integration-20261022](../handoffs/frontier-solar10-integration-20261022.md)。核心0.5.0；發布狀態以該交接與整合PR最後SHA／CI證據為準。
+
 > 0.5最終本機驗證：43項核心與五組瀏覽器、完整check release、原圖hash／美術庫、範本10項成功。整合／部署SHA與公開站結果請核對本輪PR最後留言及version.json，不能把本機通過當已上線。
 
 > 最新：星河戰姬0.5八項修正，生效規格[0.5](../design/galaxy-angel-v5.md)，目前交接[galaxy-angel-v5-20261021](../handoffs/galaxy-angel-v5-20261021.md)。後續請從最新main核對公開SHA；下方0.4／0.3為前輪歷史。

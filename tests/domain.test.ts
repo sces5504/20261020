@@ -189,8 +189,8 @@ test("multiple content packages resolve declared dependencies and reject cycles 
     },
   };
   const merged = assemble(p, [addon]);
-  assert.equal(merged.characters.length, 7);
-  assert.equal(p.characters.length, 6);
+  assert.equal(merged.characters.length, p.characters.length + 1);
+  assert.ok(!p.characters.some((c) => c.id === "addon:new"));
   assert.throws(
     () =>
       assemble(p, [{ ...addon, requires: [{ id: p.id, version: "9.0.0" }] }]),

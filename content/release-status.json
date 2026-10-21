@@ -1,5 +1,5 @@
 {
-  "milestone": "M1-galaxy-angel-0.5",
+  "milestone": "M1-galaxy-angel-0.5-content-expansion",
   "status": "m1-playtest-complete",
   "checks": {
     "characterMappingConfirmed": true,
@@ -13,7 +13,7 @@
     "iosSafariVerified": false,
     "performanceBaselineVerified": false
   },
-  "notes": "星河戰姬0.5：任務補給100–350／序章成長引導；掉頭等待隊長與掉隊追趕；工坊session入口鎖（非後端權限）；M快捷鍵；敵人有界側移；技能即時熄滅就緒提示；等待圖案；通用跨域航線與空第二區往返。43項核心、五組瀏覽器及完整check release通過；原圖hash與SQLite庫、範本10項通過。六原圖不變，商業品質／真機／硬體效能／獨立AI接力仍待驗。發布SHA／CI／Pages及公開站證據以本輪PR最後留言為準。",
+  "notes": "核心0.5.0，啟用邊境信標0.2.0、solar10角色0.1.1與stellar10美術0.1.0；16位角色／2區／4星球。原始立繪與素材候選狀態保留。49核心與桌機／觸控viewport整合流程已驗，新增第六組整合流程並保留前五組含test:polish；完整發布與main／Pages公開SHA以本輪交接和整合PR最後證據為準。商業品質、真機及硬體效能仍待驗。",
   "playtestStatus": "ready",
   "playtestChecks": {
     "campaignLoop": true,
@@ -42,6 +42,9 @@
     "movingEnemiesAndImmediateSkillFeedback": true,
     "pendingJobArtwork": true,
     "interstellarTravelAndEmptySector": true,
-    "pendingResultPreventsOverlappingEncounters": true
+    "pendingResultPreventsOverlappingEncounters": true,
+    "frontierAndTenCharacterIntegration": true,
+    "sharedSkillCasterPortrait": true,
+    "portableFullSnapshotWithinBudget": true
   }
 }

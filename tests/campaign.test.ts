@@ -4,7 +4,7 @@ import { published as p } from "../src/content";
 import { newSave, stats } from "../src/domain/model";
 import { apply, settle, questReady } from "../src/domain/economy";
 import { Combat } from "../src/domain/combat";
-test("fresh campaign reaches the boss, starts production, resolves research and collects all six maidens", () => {
+test("fresh campaign reaches the boss, starts production, resolves research and collects the original six maidens across regions", () => {
   let now = 1700000000000,
     s = newSave(p, now),
     n = 0;
@@ -19,6 +19,7 @@ test("fresh campaign reaches the boss, starts production, resolves research and 
     }
     now += 120000;
     settle(p, s, now);
+    if (s.region !== v.region) cmd({ type: "travel", region: v.region });
     s.x = v.x - v.engageRadius + 30;
     s.y = v.y; // Arrival fixture; begin must preserve this position.
     cmd({ type: "begin", planet: v.id });
@@ -66,8 +67,11 @@ test("fresh campaign reaches the boss, starts production, resolves research and 
   }
   now += 100000;
   settle(p, s, now);
-  assert.equal(s.cleared.length, 3);
-  assert.equal(Object.values(s.colonies).filter((c) => c.active).length, 3);
+  assert.equal(s.cleared.length, p.planets.length);
+  assert.equal(
+    Object.values(s.colonies).filter((c) => c.active).length,
+    p.planets.length,
+  );
   assert.equal(new Set(s.roster.map((o) => o.definition)).size, 6);
   assert.ok(s.research.includes(p.research[0].id));
   assert.equal(s.built, 1);

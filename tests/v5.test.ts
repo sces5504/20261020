@@ -97,7 +97,19 @@ test("data-driven travel works both ways, persists position and keeps economy; l
   assert.deepEqual(s.jobs, jobs);
   assert.deepEqual(s.wallet, wallet);
   assert.equal(checkSave(JSON.parse(JSON.stringify(s)), p).region, second.id);
-  assert.equal(p.planets.filter((v) => v.region === second.id).length, 0);
+  // Retain empty-region compatibility as a separate valid content fixture.
+  const empty = structuredClone(p);
+  empty.planets = empty.planets.filter((v) => v.region !== second.id);
+  assert.ok(validatePack(empty).pack);
+  const emptyArrival = apply(
+    empty,
+    newSave(empty, 1),
+    { type: "travel", region: second.id },
+    1,
+    "empty",
+  );
+  assert.equal(checkSave(emptyArrival, empty).region, second.id);
+  assert.equal(empty.planets.filter((v) => v.region === second.id).length, 0);
   assert.equal(second.patrols.length, 0);
   s = apply(p, s, { type: "travel", region: first.id }, 1, "return");
   assert.equal(s.region, first.id);

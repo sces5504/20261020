@@ -421,7 +421,7 @@
       "routes": [
         {
           "to": "m1:frontier-test",
-          "label": "前往第二星域 · 測試",
+          "label": "前往第二星域",
           "requires": []
         }
       ]

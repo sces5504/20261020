@@ -1,0 +1,242 @@
+[
+  {
+    "id": "stellaart:asset.sun-portrait-web",
+    "path": "art/characters/stellar10/web/sun.webp",
+    "runtime": "assets/extensions/stellar10/web/sun.webp",
+    "sha256": "a10286c83ab37676bb4955cf576f251bfaf2282d2df43b76553dd38005965f9e",
+    "master": "art/characters/stellar10/standards/sun.png",
+    "masterSha256": "163be021f75a7b1f8b1ebc7b17f6f622476a0553456ed9e2cebae1bf812bb318"
+  },
+  {
+    "id": "stellaart:asset.sun-avatar-web",
+    "path": "art/characters/stellar10/avatars/sun.webp",
+    "runtime": "assets/extensions/stellar10/avatars/sun.webp",
+    "sha256": "ce6e6c96f6bb56b06c712b79da9be8158b13a6b7abc12a46416fd7c5e949ede2",
+    "master": "art/characters/stellar10/standards/sun.png",
+    "masterSha256": "163be021f75a7b1f8b1ebc7b17f6f622476a0553456ed9e2cebae1bf812bb318"
+  },
+  {
+    "id": "stellaart:asset.sun-battle-v2-web",
+    "path": "art/characters/stellar10/web/sun-battle.webp",
+    "runtime": "assets/extensions/stellar10/web/sun-battle.webp",
+    "sha256": "09724c32d79cc1d2ca9aa6f209ca0c32f46d749090fdc741f518a9b7d99d2e48",
+    "master": "art/characters/stellar10/battle/sun-v2-candidate.png",
+    "masterSha256": "bbd04d64e3fa80646bc588c316f6cd060e9cc4df96186b8afab67dd9bbee79f9"
+  },
+  {
+    "id": "stellaart:asset.jupiter-portrait-web",
+    "path": "art/characters/stellar10/web/jupiter.webp",
+    "runtime": "assets/extensions/stellar10/web/jupiter.webp",
+    "sha256": "8858ba0e3a8ef72e5e859432e9fd456bbc63adfdf3806926efbcdb3629173263",
+    "master": "art/characters/stellar10/standards/jupiter.png",
+    "masterSha256": "28a0ea518363f7b51665db089f99b45805d7a867dec2d36d77724db8a6b4900a"
+  },
+  {
+    "id": "stellaart:asset.jupiter-avatar-web",
+    "path": "art/characters/stellar10/avatars/jupiter.webp",
+    "runtime": "assets/extensions/stellar10/avatars/jupiter.webp",
+    "sha256": "b472eb897c407153141ddaf46b09ea33218891ed5593aa6d06e2d79da7c8141b",
+    "master": "art/characters/stellar10/standards/jupiter.png",
+    "masterSha256": "28a0ea518363f7b51665db089f99b45805d7a867dec2d36d77724db8a6b4900a"
+  },
+  {
+    "id": "stellaart:asset.jupiter-battle-v2-web",
+    "path": "art/characters/stellar10/web/jupiter-battle.webp",
+    "runtime": "assets/extensions/stellar10/web/jupiter-battle.webp",
+    "sha256": "7f7858cb95f32377c0c1d3245f55582a536c787a85c14aa37656bb703b8e40ba",
+    "master": "art/characters/stellar10/battle/jupiter-v2-candidate.png",
+    "masterSha256": "ddb0be8d57e547dbd839ab87ff191b4b96b8d31ac535ed4e7054ed77245742d9"
+  },
+  {
+    "id": "stellaart:asset.saturn-portrait-web",
+    "path": "art/characters/stellar10/web/saturn.webp",
+    "runtime": "assets/extensions/stellar10/web/saturn.webp",
+    "sha256": "a043e17eaebf8e746665d8fe7813b51a7287cabb054039867eadf87addccc370",
+    "master": "art/characters/stellar10/standards/saturn.png",
+    "masterSha256": "c6889620e0eaf2e4920b56afff338a5510fffca1542565a3fbfd6355594fec83"
+  },
+  {
+    "id": "stellaart:asset.saturn-avatar-web",
+    "path": "art/characters/stellar10/avatars/saturn.webp",
+    "runtime": "assets/extensions/stellar10/avatars/saturn.webp",
+    "sha256": "8833b37c73b3d91ed534d574b91db80eb73b8b9f917c5ff52fd9e764de37fd91",
+    "master": "art/characters/stellar10/standards/saturn.png",
+    "masterSha256": "c6889620e0eaf2e4920b56afff338a5510fffca1542565a3fbfd6355594fec83"
+  },
+  {
+    "id": "stellaart:asset.saturn-battle-v2-web",
+    "path": "art/characters/stellar10/web/saturn-battle.webp",
+    "runtime": "assets/extensions/stellar10/web/saturn-battle.webp",
+    "sha256": "b73cc4de7028a3613eabd1615e07a568e8c08e48a5549129305c2ad28c151545",
+    "master": "art/characters/stellar10/battle/saturn-v2-candidate.png",
+    "masterSha256": "14592cac06bd1ee670d31cbfce978406f078b951028b5af1f7f5f84b4fa24bda"
+  },
+  {
+    "id": "stellaart:asset.neptune-portrait-web",
+    "path": "art/characters/stellar10/web/neptune.webp",
+    "runtime": "assets/extensions/stellar10/web/neptune.webp",
+    "sha256": "dbaabeb302e4d8caaa6a6adb6044b7ceb6b63c21614d397103e83960a4343426",
+    "master": "art/characters/stellar10/standards/neptune.png",
+    "masterSha256": "f35d3c8b9894c15966258ea0dd4973fa46c79a10adc32bfabe3d92cedd96a76a"
+  },
+  {
+    "id": "stellaart:asset.neptune-avatar-web",
+    "path": "art/characters/stellar10/avatars/neptune.webp",
+    "runtime": "assets/extensions/stellar10/avatars/neptune.webp",
+    "sha256": "020e493ae9db2c8bd6cef69561e07ef375e934f09ca97fbdeabcdb1f6c99a86b",
+    "master": "art/characters/stellar10/standards/neptune.png",
+    "masterSha256": "f35d3c8b9894c15966258ea0dd4973fa46c79a10adc32bfabe3d92cedd96a76a"
+  },
+  {
+    "id": "stellaart:asset.neptune-battle-v2-web",
+    "path": "art/characters/stellar10/web/neptune-battle.webp",
+    "runtime": "assets/extensions/stellar10/web/neptune-battle.webp",
+    "sha256": "965c1477eb6a366e082f2520a4ef1ef9568d4c941cc26673066d38c89f2cc35e",
+    "master": "art/characters/stellar10/battle/neptune-v2-candidate.png",
+    "masterSha256": "88f80ef669414e105925ebda3af5163a5c83abd35852357f02508755b7c37d0e"
+  },
+  {
+    "id": "stellaart:asset.pluto-portrait-web",
+    "path": "art/characters/stellar10/web/pluto.webp",
+    "runtime": "assets/extensions/stellar10/web/pluto.webp",
+    "sha256": "0e1408234e1cf31fa65e20e825e19b3f6a9d569b47d639e350ecaa978549d922",
+    "master": "art/characters/stellar10/standards/pluto.png",
+    "masterSha256": "c2f7558cd18319fe512fd8f967d315ae7f13b6b73abb2719abb2df006126b349"
+  },
+  {
+    "id": "stellaart:asset.pluto-avatar-web",
+    "path": "art/characters/stellar10/avatars/pluto.webp",
+    "runtime": "assets/extensions/stellar10/avatars/pluto.webp",
+    "sha256": "65c39cb6297fd829bf697f33d1710096996f6cc036a0bfb5479cf5e4fa7d69f2",
+    "master": "art/characters/stellar10/standards/pluto.png",
+    "masterSha256": "c2f7558cd18319fe512fd8f967d315ae7f13b6b73abb2719abb2df006126b349"
+  },
+  {
+    "id": "stellaart:asset.pluto-battle-v2-web",
+    "path": "art/characters/stellar10/web/pluto-battle.webp",
+    "runtime": "assets/extensions/stellar10/web/pluto-battle.webp",
+    "sha256": "b80491ae7c77036279641dfd022bb3657c7cc2778368e01de2f5834a9e544d45",
+    "master": "art/characters/stellar10/battle/pluto-v2-candidate.png",
+    "masterSha256": "547903dbb8e85af3bbe6d792cb3225f4d4416da039e5bebe9466e150a8b89688"
+  },
+  {
+    "id": "stellaart:asset.nemesis-portrait-web",
+    "path": "art/characters/stellar10/web/nemesis.webp",
+    "runtime": "assets/extensions/stellar10/web/nemesis.webp",
+    "sha256": "db0ccbda9233ac08dc4e2d4c8b996d97ab25ac82ac2001a6b3f98536c642d5d8",
+    "master": "art/characters/stellar10/standards/nemesis.png",
+    "masterSha256": "bc479c41c99f06227512e5a1bd12ebde50fddf1ad476372fab5901191ce2ac8d"
+  },
+  {
+    "id": "stellaart:asset.nemesis-avatar-web",
+    "path": "art/characters/stellar10/avatars/nemesis.webp",
+    "runtime": "assets/extensions/stellar10/avatars/nemesis.webp",
+    "sha256": "8e40fc22084afd814f145918e6b6ba6425569e3a290c9baa4a0f278f4bbbfc32",
+    "master": "art/characters/stellar10/standards/nemesis.png",
+    "masterSha256": "bc479c41c99f06227512e5a1bd12ebde50fddf1ad476372fab5901191ce2ac8d"
+  },
+  {
+    "id": "stellaart:asset.nemesis-battle-v3-web",
+    "path": "art/characters/stellar10/web/nemesis-battle.webp",
+    "runtime": "assets/extensions/stellar10/web/nemesis-battle.webp",
+    "sha256": "a8ad6ccad1c33907fc1608effcf65bd23fa29f0ca356453dee68962b39a55c82",
+    "master": "art/characters/stellar10/battle/nemesis-v3-candidate.png",
+    "masterSha256": "880abcde4c217803bd7cc27526cb3f61e2c81fb667349c38ddbe596b1e8edb8b"
+  },
+  {
+    "id": "stellaart:asset.ganymede-portrait-web",
+    "path": "art/characters/stellar10/web/ganymede.webp",
+    "runtime": "assets/extensions/stellar10/web/ganymede.webp",
+    "sha256": "e105db557dcd879b79a172af8bffbe02c16236b744302384fb69f593b5457db7",
+    "master": "art/characters/stellar10/standards/ganymede.png",
+    "masterSha256": "2faf0de006ee302b817668a70d12755c55070743eb13a6fc855b5c0e9ccbb775"
+  },
+  {
+    "id": "stellaart:asset.ganymede-avatar-web",
+    "path": "art/characters/stellar10/avatars/ganymede.webp",
+    "runtime": "assets/extensions/stellar10/avatars/ganymede.webp",
+    "sha256": "52d3e343223f391dd2ee83206fd1c6e038e3362d38d65a0af16c8cc974f85298",
+    "master": "art/characters/stellar10/standards/ganymede.png",
+    "masterSha256": "2faf0de006ee302b817668a70d12755c55070743eb13a6fc855b5c0e9ccbb775"
+  },
+  {
+    "id": "stellaart:asset.ganymede-battle-v2-web",
+    "path": "art/characters/stellar10/web/ganymede-battle.webp",
+    "runtime": "assets/extensions/stellar10/web/ganymede-battle.webp",
+    "sha256": "cbf7f9f6bd1bc711041b3f075c4d8ce1c3da950ea01e7794bdab0da2b11f6d62",
+    "master": "art/characters/stellar10/battle/ganymede-v2-candidate.png",
+    "masterSha256": "f809e03d852f0010d07e0e8b0fc1c22b78a2d9c738962da4e40d2c47286238d1"
+  },
+  {
+    "id": "stellaart:asset.io-portrait-web",
+    "path": "art/characters/stellar10/web/io.webp",
+    "runtime": "assets/extensions/stellar10/web/io.webp",
+    "sha256": "b813da28d3a99123d8d752740956b8533903d810b8c74e35d8281f939db2ac5e",
+    "master": "art/characters/stellar10/standards/io.png",
+    "masterSha256": "81adb3d27327499da9db3e391feab7425c6314e7b897d28c1627824d363c1833"
+  },
+  {
+    "id": "stellaart:asset.io-avatar-web",
+    "path": "art/characters/stellar10/avatars/io.webp",
+    "runtime": "assets/extensions/stellar10/avatars/io.webp",
+    "sha256": "db7ddf8dbc542ccd86b087c1f7aa5949d172c16df0839a19060591b8f4d70bca",
+    "master": "art/characters/stellar10/standards/io.png",
+    "masterSha256": "81adb3d27327499da9db3e391feab7425c6314e7b897d28c1627824d363c1833"
+  },
+  {
+    "id": "stellaart:asset.io-battle-v2-web",
+    "path": "art/characters/stellar10/web/io-battle.webp",
+    "runtime": "assets/extensions/stellar10/web/io-battle.webp",
+    "sha256": "3fc11db4820a147d15e232138e6f63943b245f1927638f7aac675ae90ae25628",
+    "master": "art/characters/stellar10/battle/io-v2-candidate.png",
+    "masterSha256": "c0c557d1dad0142137a413ca78b5473a4e0bd6e25d48a8c623e2ebde05f40226"
+  },
+  {
+    "id": "stellaart:asset.titania-portrait-web",
+    "path": "art/characters/stellar10/web/titania.webp",
+    "runtime": "assets/extensions/stellar10/web/titania.webp",
+    "sha256": "e1ec272b5c364efa7dfd573cfc5435fce8f8baadec36c1896ab3f885a318f449",
+    "master": "art/characters/stellar10/standards/titania.png",
+    "masterSha256": "1ed00a42fbf8f440aabaca79ba38d9d45597adf897acc6d3eda533000105c875"
+  },
+  {
+    "id": "stellaart:asset.titania-avatar-web",
+    "path": "art/characters/stellar10/avatars/titania.webp",
+    "runtime": "assets/extensions/stellar10/avatars/titania.webp",
+    "sha256": "535eb4e9af4fd77312e17386a9d0d066f0d8f77eb2729e9e7c9433685c72fcdf",
+    "master": "art/characters/stellar10/standards/titania.png",
+    "masterSha256": "1ed00a42fbf8f440aabaca79ba38d9d45597adf897acc6d3eda533000105c875"
+  },
+  {
+    "id": "stellaart:asset.titania-battle-v2-web",
+    "path": "art/characters/stellar10/web/titania-battle.webp",
+    "runtime": "assets/extensions/stellar10/web/titania-battle.webp",
+    "sha256": "bf37b0a409ede27466141e00d4f9b6f5e799f1137c9a99c78fc64bf079e7ac70",
+    "master": "art/characters/stellar10/battle/titania-v2-candidate.png",
+    "masterSha256": "f55faa8425126fe58a4657e4dd1b195edf664f9b1db8d398d381519b8ceaff2f"
+  },
+  {
+    "id": "stellaart:asset.ariel-portrait-web",
+    "path": "art/characters/stellar10/web/ariel.webp",
+    "runtime": "assets/extensions/stellar10/web/ariel.webp",
+    "sha256": "bde80af081f7cf7b762514959d530afd3ccd6a4aa2df58a5673c13dedec16a2d",
+    "master": "art/characters/stellar10/standards/ariel.png",
+    "masterSha256": "eb659e4a7293de2b4a37e53f630d35475b9fb5959dd422cbcd9980c322176a22"
+  },
+  {
+    "id": "stellaart:asset.ariel-avatar-web",
+    "path": "art/characters/stellar10/avatars/ariel.webp",
+    "runtime": "assets/extensions/stellar10/avatars/ariel.webp",
+    "sha256": "13c0256872e99867aaa7972b037e295d503fbae55ad94f72fb62133b69aca818",
+    "master": "art/characters/stellar10/standards/ariel.png",
+    "masterSha256": "eb659e4a7293de2b4a37e53f630d35475b9fb5959dd422cbcd9980c322176a22"
+  },
+  {
+    "id": "stellaart:asset.ariel-battle-v2-web",
+    "path": "art/characters/stellar10/web/ariel-battle.webp",
+    "runtime": "assets/extensions/stellar10/web/ariel-battle.webp",
+    "sha256": "6fea27557144d34075207494f062aea6151cd55f0abfebd19afa74bc36de6a48",
+    "master": "art/characters/stellar10/battle/ariel-v2-candidate.png",
+    "masterSha256": "fe319d146c9926837efb0311ed5f056ed72ccbd9485636ac8eb1e7a16b02cd41"
+  }
+]

@@ -92,6 +92,13 @@ try {
     page.setDefaultTimeout(15000);
     let f = fixture("original:planet.2");
     await install(page, f.p, f.s);
+    await page.locator('[data-action="panel"][data-id="planets"]').click();
+    assert((await page.locator(".modal").innerText()).includes("Earth"));
+    assert(
+      !(await page.locator(".modal").innerText()).includes("Moon"),
+      "locked empty Moon does not leak into territory management",
+    );
+    await page.locator('.modal [data-action="close"]').first().click();
     await page
       .locator('[data-action="activate"][data-id="original:planet.2"]')
       .click();
@@ -176,6 +183,19 @@ try {
       false,
       "no horizontal overflow",
     );
+    await page.locator('[data-action="panel"][data-id="archive"]').click();
+    await page
+      .locator('[data-action="new-voyage"][data-id="original:region.solar"]')
+      .click();
+    await page.locator('[data-answer="yes"]').click();
+    const restarted = await waitSave(
+      page,
+      (s) =>
+        s.region === "original:region.solar" &&
+        !s.colonies["original:planet.2"],
+    );
+    assert.equal(restarted.x, 5970);
+    assert.equal(restarted.y, 5530);
     await context.close();
     console.log(
       name,

@@ -434,7 +434,12 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
         p.planets
           .filter(
             (v) =>
-              v.kind === "planet" && (nodeCleared(s, v) || s.colonies[v.id]),
+              v.kind === "planet" &&
+              (s.cleared.includes(v.id) ||
+                s.colonies[v.id] ||
+                (v.initiallyCleared &&
+                  v.region === s.region &&
+                  nodeUnlocked(s, v, p))),
           )
           .map((v) => {
             const col = s.colonies[v.id];

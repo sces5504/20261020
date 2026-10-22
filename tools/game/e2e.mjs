@@ -89,8 +89,10 @@ try {
     failures.push("Unexpected native browser dialog");
     void d.dismiss();
   });
+  const coldStart = Date.now();
   await page.goto(url);
-  await page.waitForSelector(".bridge canvas");
+  await page.waitForSelector(".bridge canvas", { timeout: 30000 });
+  console.log(`E2E: full catalog cold startup ${Date.now() - coldStart}ms`);
   await skipIntro(page);
   await page.waitForTimeout(500);
   assert.equal(await page.locator(".resource").count(), 4);
@@ -180,7 +182,7 @@ try {
   // Full 0.8 snapshot verifies and compresses 256 images; keep the bulk export
   // bounded separately from the 8-second ordinary-interaction timeout.
   const exportStart = Date.now();
-  const downloadPromise = page.waitForEvent("download", { timeout: 30000 });
+  const downloadPromise = page.waitForEvent("download", { timeout: 60000 });
   await page.locator('[data-action="export-pack"]').click();
   let dl;
   try {

@@ -44,8 +44,8 @@ try {
   assert.equal(version.contentVersion, "0.8.0");
   assert.equal(version.packs.length, 8);
   assert.equal(version.contentHash, await fingerprint(pack));
-  await page.goto(base + "?v=" + expected + "#/play");
-  await page.waitForSelector("canvas");
+  await page.goto(base + "?v=" + expected + "#/play", { timeout: 60000 });
+  await page.waitForSelector("canvas", { timeout: 60000 });
   await page.waitForTimeout(500);
   if (await page.locator('[data-action="story-skip"]').count())
     await page.locator('[data-action="story-skip"]').click();

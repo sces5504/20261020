@@ -15,11 +15,62 @@ import {
 } from "../src/domain/world";
 import { Combat } from "../src/domain/combat";
 import { checkSave } from "../src/platform/storage";
+import { assemble } from "../src/content/loader";
 const source = (name: string) =>
   JSON.parse(
     readFileSync(`content/source/original-world/${name}.json`, "utf8"),
   );
 const nodes = p.planets.filter((v) => v.id.startsWith("original:"));
+test("only root integration can add cross-pack routes, and every target/repetition is validated", () => {
+  const base = JSON.parse(readFileSync("content/core/pack.json", "utf8"));
+  const manifest = JSON.parse(readFileSync("content/manifest.json", "utf8"));
+  const extensions = manifest.extensions.map((path: string) =>
+    JSON.parse(readFileSync("content/" + path, "utf8")),
+  );
+  const q = assemble(base, extensions, [], [], manifest.regionRoutes);
+  assert(
+    q.regions
+      .find((r) => r.id === "m1:frontier-test")!
+      .routes.some((r) => r.to === "original:region.solar"),
+  );
+  assert.throws(() =>
+    assemble(
+      base,
+      extensions,
+      [],
+      [],
+      [{ region: "unknown:region", routes: [] }],
+    ),
+  );
+  assert.throws(() =>
+    assemble(
+      base,
+      extensions,
+      [],
+      [],
+      [
+        {
+          region: "m1:frontier-test",
+          routes: [{ to: "unknown:region", label: "missing", requires: [] }],
+        },
+      ],
+    ),
+  );
+  assert.throws(() =>
+    assemble(
+      base,
+      extensions,
+      [],
+      [],
+      [
+        {
+          region: "m1:frontier-test",
+          routes: [{ to: "m1:helios", label: "duplicate", requires: [] }],
+        },
+      ],
+    ),
+  );
+});
 const now = Date.parse("2026-10-22T03:00:00Z"); // Thursday KST
 function fresh() {
   return newSave(p, now);

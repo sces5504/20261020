@@ -14,6 +14,7 @@ import {
   nodeAvailability,
   nodeKindNames,
   nodeVisible,
+  nodePeriod,
 } from "../domain/world";
 import { download, read } from "../platform/storage";
 import { mountSpace } from "./space";
@@ -154,13 +155,16 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
   }
   let missionKey = "";
   function renderMission() {
+    const scheduled = p.planets.find(
+      (v) => v.region === g.save.region && v.schedule,
+    );
     const key = JSON.stringify([
       g.save.region,
       g.save.jobs.map((j) => [j.id, j.ends]),
       g.save.quests,
       g.save.cleared,
       g.save.dailyAttempts,
-      Math.floor((Date.now() + 540 * 60000) / 86400000),
+      scheduled ? nodePeriod(scheduled, Date.now()) : "",
       Object.entries(g.save.colonies).map(([id, c]) => [id, c.active, c.lost]),
     ]);
     if (key === missionKey) return;

@@ -398,7 +398,13 @@ export function mountSpace(
           g.lineStyle(
             1.2,
             0x83c9cb,
-            model.save.cleared.includes(dep) ? 0.4 : 0.12,
+            (
+              p.requiresActive.includes(dep)
+                ? model.save.colonies[dep]?.active
+                : nodeCleared(model.save, a)
+            )
+              ? 0.4
+              : 0.12,
           );
           g.lineBetween(a.x, a.y, p.x, p.y);
         }

@@ -691,6 +691,8 @@ export async function mountStudio(root: HTMLElement) {
       if (t.id === "import-project" && t.files?.[0]) {
         const f = t.files[0];
         if (f.size > ARCHIVE_BYTES) throw Error("匯入檔案超過 64 MiB。");
+        message = "正在讀取並驗證完整內容與圖片，完成後會顯示匯入確認。";
+        status();
         const next = f.name.endsWith(".zip")
           ? {
               ...project,

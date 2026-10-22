@@ -1,0 +1,211 @@
+{
+  "dateUTC": "2026-10-22",
+  "implementationCommit": "aaa465873c3ad4fa628dbfab6dda3d794ea743d1",
+  "pullRequest": "https://github.com/sces5504/20261020/pull/15",
+  "coreTests": {
+    "passed": 106,
+    "failed": 0
+  },
+  "release": {
+    "mode": "release",
+    "time_utc": "2026-10-22T11:18:28.291552+00:00",
+    "head": "aaa465873c3ad4fa628dbfab6dda3d794ea743d1",
+    "dirty": false,
+    "elapsed_seconds": 979.49,
+    "results": [
+      {
+        "argv": [
+          "npm",
+          "run",
+          "content:check"
+        ],
+        "exit_code": 0
+      },
+      {
+        "argv": [
+          "npm",
+          "run",
+          "typecheck"
+        ],
+        "exit_code": 0
+      },
+      {
+        "argv": [
+          "npm",
+          "test"
+        ],
+        "exit_code": 0
+      },
+      {
+        "argv": [
+          "npm",
+          "run",
+          "build"
+        ],
+        "exit_code": 0
+      },
+      {
+        "argv": [
+          "npm",
+          "run",
+          "test:e2e"
+        ],
+        "exit_code": 0
+      },
+      {
+        "argv": [
+          "npm",
+          "run",
+          "test:playtest"
+        ],
+        "exit_code": 0
+      },
+      {
+        "argv": [
+          "npm",
+          "run",
+          "test:exploration"
+        ],
+        "exit_code": 0
+      },
+      {
+        "argv": [
+          "npm",
+          "run",
+          "test:refinement"
+        ],
+        "exit_code": 0
+      },
+      {
+        "argv": [
+          "npm",
+          "run",
+          "test:polish"
+        ],
+        "exit_code": 0
+      },
+      {
+        "argv": [
+          "npm",
+          "run",
+          "test:content-integration"
+        ],
+        "exit_code": 0
+      },
+      {
+        "argv": [
+          "npm",
+          "run",
+          "test:skills"
+        ],
+        "exit_code": 0
+      },
+      {
+        "argv": [
+          "npm",
+          "run",
+          "test:world"
+        ],
+        "exit_code": 0
+      },
+      {
+        "argv": [
+          "npm",
+          "run",
+          "release:ready",
+          "--",
+          "--target",
+          "playtest"
+        ],
+        "exit_code": 0
+      }
+    ],
+    "passed": true
+  },
+  "worldBrowser": {
+    "viewports": [
+      "1440x1000",
+      "390x844"
+    ],
+    "errors": [],
+    "checks": [
+      "activation-chain",
+      "real-route-locks",
+      "material-shortage",
+      "free-camp-recovery",
+      "six-readable-skill-cards",
+      "management-controls-not-covered",
+      "enemy-threat-intel",
+      "native-campaign-restart-with-backup",
+      "daily-entry",
+      "countdown",
+      "management-pause",
+      "first-claim",
+      "portable-art-preview"
+    ]
+  },
+  "battles": {
+    "encounters": 671,
+    "threePersonWins": 650,
+    "sixPersonCounterCases": 21,
+    "counterAttempts": 23,
+    "combinedWins": 671
+  },
+  "representativeBattles": {
+    "seed": 42,
+    "normalWins": 40,
+    "normalRuns": 40,
+    "weakerWins": 21,
+    "weakerRuns": 40
+  },
+  "content": {
+    "nativeGalaxyDefinitions": 14,
+    "sourcePlanets": 85,
+    "enemyCIDs": 65,
+    "fixedEnemyModels": 62,
+    "newRegions": 48,
+    "newNodes": 754,
+    "playableSourceWaves": 671,
+    "excludedWaves": 269,
+    "freeCamps": 53,
+    "supplyPatrols": 13,
+    "newArtwork": 165
+  },
+  "build": {
+    "commit": "aaa465873c3ad4fa628dbfab6dda3d794ea743d1",
+    "target": "exploration-playtest",
+    "contentVersion": "0.7.0",
+    "contentHash": "b045aa86a86e099aa0f851344a2bfb84a1ed030cbd91da7c10139c278db8f1b6",
+    "packs": [
+      {
+        "id": "m1:core",
+        "version": "0.7.0"
+      },
+      {
+        "id": "beacon:package.frontier",
+        "version": "0.3.0"
+      },
+      {
+        "id": "solar10:package.first-ten",
+        "version": "0.2.0"
+      },
+      {
+        "id": "stellaart:package.stellar10",
+        "version": "0.1.1"
+      },
+      {
+        "id": "stella:package.skills",
+        "version": "0.1.0"
+      },
+      {
+        "id": "original:package.world",
+        "version": "0.1.0"
+      }
+    ]
+  },
+  "limits": [
+    "Original event VM and full Shot controllers not recovered; replay routing and registered mechanics are explicit adaptations",
+    "Daily four mother templates are separate damage challenges; original mother-part flow not claimed",
+    "Candidate art and desktop/touch Chromium verified; commercial approval and physical Android/iOS not claimed"
+  ]
+}

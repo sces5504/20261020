@@ -76,3 +76,5 @@ flowchart LR
 ## 驗收
 
 必要：來源覆蓋、數值截斷、星球與航路前置無循環且可達、返回／舊存檔、初始空守軍、首勝不重領、無非星球產能、缺素材狀態、三次每日額度／跨換日／時鐘回退、零傷害／暫停／離線不補打、一般及較弱三人隊、後期六人對策隊、手機與桌面倒數／畫外預警、工坊媒體與可攜ZIP。執行證據與最終缺口寫入交接與驗收，不把本頁規格文字當完成證明。
+
+最終完整驗收：106核心、八組瀏覽器、playtest發布門檻通過；全671場有seed42勝利證據。完整收據與來源缺口見 [0.7驗收](../verification/original-world-0.7.json)，[桌機截圖](../verification/original-world-desktop.png)／[手機截圖](../verification/original-world-mobile.png)。

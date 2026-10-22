@@ -182,6 +182,25 @@ export function mountLaboratory(parent: HTMLElement, pack: Pack) {
     $("#lab-debug").textContent = JSON.stringify(
       {
         time: c.time,
+        units: c.units.map((u) => ({
+          id: u.id,
+          definition: u.def,
+          hp: u.hp,
+          maxHp: u.maxHp,
+          x: u.x,
+          y: u.y,
+          attack: u.attack * c.mechanics.stat(u, "attack"),
+          defense: u.defense * c.mechanics.stat(u, "defense"),
+          cooldown: u.skillCooldown,
+        })),
+        storedDamage: Object.fromEntries(c.mechanics.storedDamage),
+        dashes: c.mechanics.dashes,
+        pending: c.mechanics.pending.map((p) => ({
+          at: p.at,
+          owner: p.owner,
+          kind: p.action.kind,
+          target: p.target,
+        })),
         statuses: Object.fromEntries(c.mechanics.statuses),
         fields: c.mechanics.fields.map((f) => ({
           kind: f.action.kind,
@@ -239,12 +258,17 @@ export function mountLaboratory(parent: HTMLElement, pack: Pack) {
         beam.addColorStop(0.65, f.color + "55");
         beam.addColorStop(1, f.color + "00");
         ctx.fillStyle = beam;
-        ctx.fillRect(0, -f.action.width / 2, f.action.radius, f.action.width);
+        ctx.fillRect(
+          0,
+          -f.action.width / 2,
+          f.reach ?? f.action.radius,
+          f.action.width,
+        );
 
         ctx.fillStyle = "#ffffff";
-        ctx.fillRect(0, -2, f.action.radius, 4);
+        ctx.fillRect(0, -2, f.reach ?? f.action.radius, 4);
       } else {
-        ctx.arc(f.x, f.y, f.action.radius, 0, Math.PI * 2);
+        ctx.arc(f.x, f.y, f.radius ?? f.action.radius, 0, Math.PI * 2);
         ctx.fill();
         ctx.stroke();
         if (f.action.pull) {
@@ -282,6 +306,18 @@ export function mountLaboratory(parent: HTMLElement, pack: Pack) {
         }
       }
       ctx.restore();
+    }
+    for (const d of c.mechanics.dashes) {
+      const u = c.units.find((u) => u.id === d.owner);
+      if (!u) continue;
+      ctx.strokeStyle = u.color;
+      ctx.globalAlpha = 0.15;
+      ctx.lineWidth = d.action.width;
+      ctx.beginPath();
+      ctx.moveTo(d.from.x, d.from.y);
+      ctx.lineTo(u.x, u.y);
+      ctx.stroke();
+      ctx.globalAlpha = 1;
     }
     for (const b of c.bullets) {
       ctx.strokeStyle = b.color;

@@ -47,3 +47,9 @@
 完整驗證命令增加第七組 `test:skills`，既有第5組test:polish保留。下一步：核對最後日常測試、commit封存程式，再以實際HEAD執行完整check release；收集瀏覽器build／版本／viewport／seed／60敵壓力FPS、保存視覺證據；完成PR／main與公開版檢查。commercial旗標不能假冒實機／真人接受。
 
 首次完整release（21688e2）通過內容、typecheck、83核心與第一組瀏覽器，在test:playtest停止：舊流程仍要求地球顯示固定護盾，與本次原作40%偏折／3秒相反。已把playtest與exploration兩處舊斷言換成獨立的原作數值驗收，未降低條件。另補舊草稿barrage的施放次數／傷害歸屬及舊砲台召喚歸屬，預算估算涵蓋舊effect。最新typecheck與84項核心測試全通過（約10.8秒），新完整release尚待重跑。
+
+## 最終驗證候選（PR #12）
+
+已建立 https://github.com/sces5504/20261020/pull/12 ，ccdd9c7已完整通過check release：84核心與全部七組瀏覽器、playtest readiness。其後補齊連續衝撞／瞬移區別、光束扇面與旋轉／目標距離截斷、連鎖完整次數、分裂避免重傷同目標、擴散單次震波／蓄傷反擊波、來源DoT週期，工坊依動作隱藏無效欄位；最新92核心全過，typecheck/build過，需以後述最終發布結果為準。這些改動均有實際命中測試，並非僅增加schema。原始人物素材bytes未改。
+
+四資源圖集已在錢包／成本／配方顯示；五個啟用包依上表，總16角色／2區／4星球。使用者要求本次完成、不安排「後續校正」。本版已採用的推定數值與幾何是明確設計，來源界線寫在證據文件，不是未實作清單。候選素材review與Android／iOS真機旗標不造假；完整release採既有playtest profile，commercial檢查不等同功能完成。

@@ -1,5 +1,9 @@
 import projectilePresets from "../../content/source/stella-projectiles.json";
-import { mechanicRow, modifierRow } from "./skill-editor";
+import {
+  mechanicRow,
+  modifierRow,
+  refreshMechanicFields,
+} from "./skill-editor";
 import { ARCHIVE_BYTES } from "../platform/budgets";
 import { mountLaboratory } from "./laboratory";
 import { patternTypes } from "../content/mechanics";
@@ -210,7 +214,7 @@ export async function mountStudio(root: HTMLElement) {
     phasePattern: "第二階段彈幕",
     critical: "基礎暴擊率（0–0.95）",
     evasion: "基礎迴避率（0–0.95）",
-    actions: "技能動作",
+    actions: "技能動作（第1級）",
     levels: "技能等級2–10覆寫",
     volleyCount: "每次齊射數量",
     volleySpread: "彈體夾角（弧度）",
@@ -311,7 +315,16 @@ export async function mountStudio(root: HTMLElement) {
       `<div class="inspector-heading"><div><span class="eyebrow">${kindNames[kind]} / INSPECTOR</span><h2>${esc(e.name)}</h2><small>${esc(e.id)}</small></div><div>${button("複製為新項目", "clone", e.id)}${button("移除", "delete", e.id, "danger-button")}</div></div>${asset ? `<div class="asset-preview"><img src="${esc(asset.src)}" alt="${esc(asset.name)}"></div>` : ""}${c ? `<div class="level-preview"><label>能力預覽等級<input id="preview-level" type="number" min="1" max="${p.rules.maxLevel}" value="1"></label><span id="effective-stats">生命 ${c.hp} · 攻擊 ${c.attack} · 防禦 ${c.defense}</span></div>` : ""}${kind === "audio" ? button("▶ 試聽此音效", "preview-audio") : ""}<form id="entity-form" class="entity-form">${Object.entries(
         e,
       )
-        .filter(([k]) => !["waves", "waveDelay"].includes(k))
+        .filter(
+          ([k]) =>
+            ![
+              "waves",
+              "waveDelay",
+              ...(kind === "skills" && "effect" in e && e.effect === "program"
+                ? ["power", "duration"]
+                : []),
+            ].includes(k),
+        )
         .map(([k, v]) => field(k, v))
         .join(
           "",
@@ -647,6 +660,14 @@ export async function mountStudio(root: HTMLElement) {
   const change = async (e: Event) => {
     const t = e.target as HTMLInputElement;
     if (operationPending) return;
+    if (
+      t.dataset.actionProp === "kind" ||
+      t.dataset.actionProp === "pattern" ||
+      t.dataset.modifier === "stat"
+    ) {
+      refreshMechanicFields(root);
+      return;
+    }
     if (t.dataset.projectilePreset !== undefined && t.value) {
       const preset = projectilePresets.find((p) => p.id === t.value);
       if (preset)

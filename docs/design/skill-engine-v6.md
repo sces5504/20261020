@@ -53,3 +53,5 @@ ZIP快照為既有16位原圖／Q圖與新增完整技能庫保留位元組；�
 表單可新增／移除動作、附加狀態與抗性，載入82種彈幕模板；同一schema保存後進同一Combat執行。原版未知不允許自動回退為其他已知效果。
 
 回歸命令：`npm run typecheck`、`npm run content:check`、`npm test`、`npm run build`、`npm run test:skills`；完整發布 `python3 scripts/project.py check release`，保留既有六組瀏覽器（含第五組test:polish），新增第七組技能／工坊流程。桌機／手機尺寸模擬與真機證據分開記錄，不虛報Android／iOS或真人品質審閱。
+
+最終幾何：dash.travelTime=0為瞬移，大於0為可中斷的連續衝撞（時間停止暫停），沿途每目標一次；隊長位移記入航跡，後排仍正常追隨。beam支援扇面多束、旋轉與目標距離截斷；zone.expanding依生存時間展開、once控制每目標單次傷害，salvos控制多波。分裂繼承已命中集合，連鎖在實際命中後遞減次數並重新導向。前述皆由資料參數控制，無角色ID特判。

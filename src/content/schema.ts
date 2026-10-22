@@ -479,7 +479,10 @@ export function validatePack(input: unknown): {
             bullets += a.count * copies * Math.ceil(5 / interval);
           }
           if (a.kind === "beam" || a.kind === "zone" || a.kind === "bomb")
-            fields += (a.kind === "bomb" ? a.count : 1) * copies;
+            fields +=
+              (a.kind === "bomb" || a.kind === "beam" ? a.count : 1) *
+              a.salvos *
+              copies;
         }
         return {
           bullets: Math.max(max.bullets, bullets),

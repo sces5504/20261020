@@ -22,6 +22,22 @@ export type Field = {
   nextTick: number;
   action: Action;
   target?: string;
+  offset?: number;
+  spin?: number;
+  reach?: number;
+  born?: number;
+  radius?: number;
+  hitIds?: string[];
+  flatDamage?: number;
+};
+export type Dash = {
+  owner: string;
+  from: { x: number; y: number };
+  to: { x: number; y: number };
+  last: { x: number; y: number };
+  started: number;
+  action: Action;
+  hitIds: string[];
 };
 const distance = (a: { x: number; y: number }, b: { x: number; y: number }) =>
   Math.hypot(a.x - b.x, a.y - b.y);
@@ -30,6 +46,10 @@ const angular = (a: number, b: number) =>
 export class Mechanics {
   statuses = new Map<string, Status[]>();
   fields: Field[] = [];
+  dashes: Dash[] = [];
+  moving(u: Unit) {
+    return this.dashes.some((d) => d.owner === u.id);
+  }
   pending: {
     at: number;
     owner: string;
@@ -66,8 +86,11 @@ export class Mechanics {
     return this.active(u).some((s) => s.nullify.includes(kind));
   }
   decoy(u: Unit, kind: string) {
-    const category =
-      kind === "aim" || kind === "fan" || kind === "ring" ? "normal" : kind;
+    const category = kind.startsWith("melee")
+      ? "melee"
+      : ["piercing", "splash", "homing", "laser"].includes(kind)
+        ? kind
+        : "normal";
     return this.c.units.find(
       (v) =>
         v.hp > 0 &&
@@ -242,20 +265,19 @@ export class Mechanics {
       } else
         this.fire(u, t, shot.pattern, shot.count, shot, 520, undefined, color);
     }
-    if (a.kind === "zone" || a.kind === "beam")
-      this.fields.push({
-        id: this.c.sequence++,
-        owner: u.id,
-        side: u.side,
-        x: a.origin === "target" && t ? t.x : u.x,
-        y: a.origin === "target" && t ? t.y : u.y,
-        target: t?.id,
-        angle: t ? Math.atan2(t.y - u.y, t.x - u.x) : u.aim,
-        color,
-        until: this.c.time + a.duration,
-        nextTick: this.c.time,
-        action: a,
-      });
+    if (a.kind === "zone" || a.kind === "beam") {
+      if (a.salvos > 1) {
+        for (let i = 1; i < a.salvos; i++)
+          this.pending.push({
+            at: this.c.time + i * a.salvoInterval,
+            owner: u.id,
+            action: { ...a, salvos: 1 },
+            key,
+            target: t?.id,
+          });
+      }
+      this.createField(u, t, a, color);
+    }
     if (a.kind === "bomb") {
       const pool = [...targets];
       for (let i = 0; i < a.count && pool.length; i++) {
@@ -264,6 +286,8 @@ export class Mechanics {
           id: this.c.sequence++,
           owner: u.id,
           side: u.side,
+          born: this.c.time,
+          hitIds: [],
           x: chosen.x,
           y: chosen.y,
           angle: 0,
@@ -320,43 +344,152 @@ export class Mechanics {
         for (const m of a.modifiers) this.add(summon, m, u, key);
       }
     if (a.kind === "dash") {
-      const angle = t ? Math.atan2(t.y - u.y, t.x - u.x) : u.aim;
-      const x = u.x + Math.cos(angle) * a.radius,
-        y = u.y + Math.sin(angle) * a.radius;
-      for (const v of this.c.units.filter((v) => v.side !== u.side && v.hp > 0))
-        if (segmentDistance(u.x, u.y, x, y, v.x, v.y) < a.width)
-          this.hit(u, v, u.attack * a.power, "melee", a.modifiers);
+      const angle =
+        t && t.id !== u.id ? Math.atan2(t.y - u.y, t.x - u.x) : u.aim;
+      u.aim = angle;
       const r = this.c.pack.regions.find((r) => r.id === this.c.save.region)!;
-      u.x = Math.max(20, Math.min(r.width - 20, x));
-      u.y = Math.max(20, Math.min(r.height - 20, y));
-      if (u.side === "ally" && !u.turretUntil) {
-        this.c.fleet.positions.set(u.id, { x: u.x, y: u.y });
-        if (this.c.allies[0] === u) {
-          this.c.anchor.x = u.x;
-          this.c.anchor.y = u.y;
-          this.c.destination = { x: u.x, y: u.y };
-        }
+      const to = {
+        x: Math.max(
+          20,
+          Math.min(r.width - 20, u.x + Math.cos(angle) * a.radius),
+        ),
+        y: Math.max(
+          20,
+          Math.min(r.height - 20, u.y + Math.sin(angle) * a.radius),
+        ),
+      };
+      const dash: Dash = {
+        owner: u.id,
+        from: { x: u.x, y: u.y },
+        last: { x: u.x, y: u.y },
+        to,
+        started: this.c.time,
+        action: a,
+        hitIds: [],
+      };
+      if (this.c.allies[0] === u) this.c.destination = { ...to };
+      if (a.travelTime > 0) this.dashes.push(dash);
+      else {
+        this.sweepDash(dash, u, to);
+        this.displace(u, to.x - u.x, to.y - u.y);
       }
     }
     if (a.kind === "detonate") {
       const stored = this.storedDamage.get(u.id) ?? 0;
       this.storedDamage.delete(u.id);
-      for (const v of targets)
+      if (a.expanding)
+        this.createField(
+          u,
+          t,
+          { ...a, kind: "zone", once: true },
+          color,
+          stored,
+        );
+      else if (a.power > 0 || stored > 0)
+        for (const v of targets)
+          this.hit(
+            u,
+            v,
+            u.attack * a.power + stored,
+            "splash",
+            a.modifiers,
+            false,
+            undefined,
+            a,
+          );
+    }
+  }
+  private createField(
+    u: Unit,
+    t: Unit | undefined,
+    a: Action,
+    color: string,
+    flatDamage?: number,
+  ) {
+    const count = a.kind === "beam" ? a.count : 1;
+    if (this.fields.length + count > 128) throw Error("持續場預算超過128。");
+    for (let i = 0; i < count; i++) {
+      const offset = a.startAngle + (i - (count - 1) / 2) * a.spread;
+      this.fields.push({
+        id: this.c.sequence++,
+        owner: u.id,
+        side: u.side,
+        x: a.origin === "target" && t ? t.x : u.x,
+        y: a.origin === "target" && t ? t.y : u.y,
+        angle: (t ? Math.atan2(t.y - u.y, t.x - u.x) : u.aim) + offset,
+        offset,
+        spin: 0,
+        reach: a.track && t ? Math.min(a.radius, distance(u, t)) : a.radius,
+        born: this.c.time,
+        radius: a.expanding ? 0 : a.radius,
+        hitIds: [],
+        flatDamage,
+        color,
+        until: this.c.time + a.duration,
+        nextTick: this.c.time,
+        action: a,
+        target: t?.id,
+      });
+    }
+  }
+  private sweepDash(d: Dash, u: Unit, to: { x: number; y: number }) {
+    const a = d.action;
+    for (const v of this.c.units.filter(
+      (v) => v.side !== u.side && v.hp > 0 && !d.hitIds.includes(v.id),
+    )) {
+      if (
+        segmentDistance(d.last.x, d.last.y, to.x, to.y, v.x, v.y) <=
+        a.width / 2 + (v.boss ? 45 : 17) * this.stat(v, "scale")
+      ) {
         this.hit(
           u,
           v,
-          u.attack * a.power + stored,
-          "splash",
+          u.attack * this.stat(u, "attack") * a.power,
+          "melee",
           a.modifiers,
           false,
-          undefined,
+          d.last,
           a,
         );
-      this.statuses.set(
-        u.id,
-        this.active(u).filter((s) => s.stat !== "charge"),
-      );
+        d.hitIds.push(v.id);
+      }
     }
+    d.last = { ...to };
+  }
+  private advanceDashes(dt: number) {
+    const live: Dash[] = [];
+    for (const d of this.dashes) {
+      const u = this.c.units.find((v) => v.id === d.owner);
+      if (!u || u.hp <= 0 || (this.has(u, "stun") && d.action.interruptible)) {
+        if (
+          u &&
+          this.c.allies[0] === u &&
+          distance(this.c.destination, d.to) < 0.01
+        )
+          this.c.destination = { ...this.c.anchor };
+        continue;
+      }
+      if (this.c.time < this.stoppedUntil && u.side === this.stoppedSide) {
+        d.started += dt;
+        live.push(d);
+        continue;
+      }
+      const q = Math.min(1, (this.c.time - d.started) / d.action.travelTime),
+        to = {
+          x: d.from.x + (d.to.x - d.from.x) * q,
+          y: d.from.y + (d.to.y - d.from.y) * q,
+        };
+      this.sweepDash(d, u, to);
+      this.displace(u, to.x - u.x, to.y - u.y);
+      if (this.c.allies[0] === u)
+        this.c.fleet.advance(
+          to,
+          Math.min(this.c.pack.rules.travelSpeed, u.speed),
+          dt,
+        );
+      if (q < 1) live.push(d);
+    }
+    this.dashes = live;
   }
   fire(
     u: Unit,
@@ -460,18 +593,12 @@ export class Mechanics {
           width: 24,
           follow: true,
         });
-      this.fields.push({
-        id: this.c.sequence++,
-        owner: u.id,
-        side: u.side,
-        x: u.x,
-        y: u.y,
-        angle: base,
-        color: u.color,
-        until: this.c.time + a.duration,
-        nextTick: this.c.time,
-        action: { ...a, kind: "beam" },
-      });
+      this.createField(
+        u,
+        t,
+        { ...a, kind: "beam", count },
+        visualColor ?? u.color,
+      );
       return;
     }
     for (let i = 0; i < count; i++) {
@@ -525,7 +652,7 @@ export class Mechanics {
         pattern,
         target: chosen?.id,
         age: 0,
-        angle: a,
+        angle: a + (action?.inward ? Math.PI : 0),
         speed: velocity,
         pierce: action?.pierce ?? (pattern === "piercing" ? 8 : 0),
         splash: action?.splash ?? (pattern === "splash" ? 100 : 0),
@@ -668,6 +795,7 @@ export class Mechanics {
       const u = c.units.find((u) => u.id === p.owner && u.hp > 0);
       if (u) this.execute(u, p.action, p.key, p.target);
     }
+    this.advanceDashes(dt);
     for (const u of c.units) {
       const list = (this.statuses.get(u.id) ?? []).filter(
         (s) => s.until > c.time - dt,
@@ -710,13 +838,14 @@ export class Mechanics {
     for (const f of this.fields) {
       const owner = c.units.find((u) => u.id === f.owner),
         a = f.action;
-      if (!owner || owner.hp <= 0 || f.until === 0) {
+      if (!owner || (owner.hp <= 0 && a.follow) || f.until === 0) {
         f.until = 0;
         continue;
       }
       if (c.time < this.stoppedUntil && owner.side === this.stoppedSide) {
         f.until += dt;
         f.nextTick += dt;
+        if (f.born !== undefined) f.born += dt;
         continue;
       }
       const target = c.units.find((v) => v.id === f.target && v.hp > 0);
@@ -724,12 +853,21 @@ export class Mechanics {
         f.until = 0;
         continue;
       }
-      if (a.track && target)
-        f.angle = Math.atan2(target.y - f.y, target.x - f.x);
       if (a.follow) {
         f.x = owner.x;
         f.y = owner.y;
       }
+      f.spin = (f.spin ?? 0) + a.rotation * dt;
+      if (a.track && target)
+        f.angle =
+          Math.atan2(target.y - f.y, target.x - f.x) + (f.offset ?? 0) + f.spin;
+      else f.angle += a.rotation * dt;
+      f.reach =
+        a.track && target ? Math.min(a.radius, distance(f, target)) : a.radius;
+      f.radius = a.expanding
+        ? a.radius *
+          Math.min(1, Math.max(0, (c.time - (f.born ?? c.time)) / a.duration))
+        : a.radius;
       const foes = c.units.filter((v) => v.side !== f.side && v.hp > 0);
       if (a.pull)
         for (const v of foes) {
@@ -741,29 +879,31 @@ export class Mechanics {
           }
         }
       if (c.time < f.nextTick) continue;
-      while (f.nextTick <= c.time && f.nextTick < f.until - 1e-8) {
+      while (
+        f.nextTick <= c.time &&
+        (f.nextTick < f.until - 1e-8 ||
+          (a.expanding && a.once && f.nextTick <= f.until + 1e-8))
+      ) {
         f.nextTick += a.interval;
         const targets =
           a.kind === "beam"
-            ? foes.filter(
-                (v) =>
-                  segmentDistance(
-                    f.x,
-                    f.y,
-                    f.x + Math.cos(f.angle) * a.radius,
-                    f.y + Math.sin(f.angle) * a.radius,
-                    v.x,
-                    v.y,
-                  ) <=
-                  a.width / 2 + (v.boss ? 45 : 17) * this.stat(v, "scale"),
+            ? foes.filter((v) =>
+                beamIntersects(
+                  f,
+                  v,
+                  (v.boss ? 45 : 17) * this.stat(v, "scale"),
+                ),
               )
-            : this.targets(owner, a, f);
+            : this.targets(owner, { ...a, radius: f.radius ?? a.radius }, f);
         for (const v of targets) {
-          if (a.power)
+          if (a.once && f.hitIds?.includes(v.id)) continue;
+          if (a.once) (f.hitIds ??= []).push(v.id);
+          if (a.power || (f.flatDamage ?? 0) > 0)
             this.hit(
               owner,
               v,
-              owner.attack * this.stat(owner, "attack") * a.power,
+              owner.attack * this.stat(owner, "attack") * a.power +
+                (f.flatDamage ?? 0),
               a.kind === "beam" ? "laser" : "splash",
               a.modifiers,
               false,
@@ -840,8 +980,7 @@ export class Mechanics {
     if (u.side === "ally" && !u.turretUntil) {
       this.c.fleet.positions.set(u.id, { x: u.x, y: u.y });
       if (this.c.allies[0] === u) {
-        this.c.anchor.x = u.x;
-        this.c.anchor.y = u.y;
+        this.c.fleet.relocate({ x: u.x, y: u.y });
       }
     }
   }
@@ -861,7 +1000,7 @@ export class Mechanics {
         pattern: "aim",
         life: 2,
         age: 0,
-        hitIds: [],
+        hitIds: [...(b.hitIds ?? [])],
         split: true,
         chain: 0,
       });
@@ -984,10 +1123,27 @@ export class Mechanics {
           b.chain--;
           b.hitIds = [];
           b.nextHitAt = c.time + 0.15;
-          b.vx = -b.vx;
-          b.vy = -b.vy;
-          b.x -= Math.cos(angle) * 40;
-          b.y -= Math.sin(angle) * 40;
+          const next =
+            c.units.find(
+              (v) => v.hp > 0 && v.side !== b.side && v.id !== u.id,
+            ) ?? (u.hp > 0 ? u : undefined);
+          if (!next) {
+            b.life = 0;
+            break;
+          }
+          b.target = next.id;
+          const direction = Math.atan2(next.y - b.y, next.x - b.x),
+            velocity = b.speed ?? 520;
+          if (next.id === u.id) {
+            b.x = next.x - Math.cos(angle) * 100;
+            b.y = next.y - Math.sin(angle) * 100;
+            b.vx = Math.cos(angle) * velocity;
+            b.vy = Math.sin(angle) * velocity;
+          } else {
+            b.vx = Math.cos(direction) * velocity;
+            b.vy = Math.sin(direction) * velocity;
+          }
+          b.life = Math.max(b.life, b.action?.duration ?? 5);
           break;
         }
         if (b.pierce && !this.nullifies(u, "piercing")) b.pierce--;
@@ -1076,4 +1232,25 @@ export function crossesBarrier(
     ix = from.x + (to.x - from.x) * q - x,
     iy = from.y + (to.y - from.y) * q - y;
   return Math.abs(-ix * fy + iy * fx) <= width / 2;
+}
+
+export function beamIntersects(
+  f: Field,
+  v: { x: number; y: number },
+  radius: number,
+) {
+  const dx = v.x - f.x,
+    dy = v.y - f.y,
+    c = Math.cos(f.angle),
+    s = Math.sin(f.angle),
+    x = dx * c + dy * s,
+    y = -dx * s + dy * c;
+  const reach = f.reach ?? f.action.radius,
+    half = f.action.width / 2;
+  return (
+    Math.hypot(
+      x - Math.max(0, Math.min(reach, x)),
+      y - Math.max(-half, Math.min(half, y)),
+    ) <= radius
+  );
 }

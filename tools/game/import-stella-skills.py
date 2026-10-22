@@ -11,11 +11,11 @@ def actions(r,L):
  k=L-1
  v=lambda n:(r[f'f{n:02d}']+k*r.get(f'f{n+1:02d}',0))
  time=max(.05,v(12)/1000);life=max(.05,v(52)/1000);rad=v(56) or 800
- def m(stat,value,duration=time,immune=[]):return dict(stat=stat,value=value,duration=duration,immune=immune)
+ def m(stat,value,duration=time,immune=[]):return dict(stat=stat,value=value,duration=duration,immune=immune,**(dict(tick=max(.05,r['f30']/1000)) if stat in ('corrosion','blaze') and r['f30'] else {}))
  def status(target,mods):return dict(kind='status',target=target,radius=rad,modifiers=mods)
  row=r['_row']
  if row==71:return [status('allies',[m('defense',v(33)/100,immune=['corrosion','blaze'])])]
- if row==81:return [status('self',[m('damageTaken',1-v(43)/100,life)]),dict(kind='zone',target='enemies',radius=v(49),duration=life,interval=.2,power=v(31)*r['f51']/10000,pull=r['f30'],follow=True)]
+ if row==81:return [status('self',[m('damageTaken',1-v(43)/100,life)]),dict(kind='zone',target='enemies',radius=v(49),duration=life,interval=.2,power=v(31)*r['f51']/10000,pull=200,follow=True)]
  if row==60:return [status('self',[dict(m('directional',1-v(43)/100),interceptRadius=rad)])]
  if row==26:return [status('self',[m('attack',v(31)/100),m('attackSpeed',v(45)/100)])]
  if row==124:return [dict(kind='beam',target='enemies',radius=1200,width=rad,duration=time,power=v(31)/100,interval=.2,follow=True,delay=r['f75']/1000)]
@@ -41,20 +41,20 @@ def actions(r,L):
  if t==23:return buff('self',[m('invincible',1,duration)])
  if t==24:return buff('self',[mod('defense',33),mod('evasion',37),mod('scale',54)])
  if t==25:return buff('self',[mod('defense',33)])+buff('enemies',[m('taunt',1,duration)])
- if t in (26,27):return [dict(kind='zone',target='enemies',radius=v(49),duration=life,interval=.2,power=v(31)*r['f51']/10000,pull=r['f30'] or 200,follow=True)]+(buff('self',[m('damageTaken',max(0,1-v(43)/100),life)]) if t==27 else [])
+ if t in (26,27):return [dict(kind='zone',target='enemies',radius=v(49),duration=life,interval=.2,power=v(31)*r['f51']/10000,pull=200,follow=True)]+(buff('self',[m('damageTaken',max(0,1-v(43)/100),life)]) if t==27 else [])
  if t in (28,29,30):return [dict(kind='summon',summon={28:'clone',29:'drone',30:'turret'}[t],power=ratio(54) if t==28 else .5,count=max(1,r['f79']),duration=life,delay=r['f75']/1000)]
  if t==31:return buff('enemies',[mod('attack',31),mod('critical',35)])
  if t==32:return buff('enemies',[mod('defense',33),mod('evasion',37)])
  if t==33:return [dict(shot(pattern='burst',interval=.2,modifiers=[m('stun',1,max(.05,v(39)/1000))]),count=3)]
- if t in (34,55):return [shot(pattern='piercing' if t==55 else 'aim',pierce=8 if t==55 else 0,modifiers=[dict(m('corrosion',max(.01,ratio(28,10)),max(.05,v(41)/1000)),tick=.5)])]
+ if t in (34,55):return [dict(shot(pattern='piercing' if t==55 else 'aim',pierce=8 if t==55 else 0,modifiers=[dict(m('corrosion',max(.01,ratio(28,10)),max(.05,v(41)/1000)),tick=max(.05,r['f30']/1000) if r['f30'] else .5)]),power=0)]
  if t==35:return buff('enemies',[mod('attackSpeed',45),mod('moveSpeed',47)])
  if t in (36,37,38,39):
   modifiers=[]
   if r['f39']:modifiers.append(m('stun',1,v(39)/1000))
-  if r['f41']:modifiers.append(dict(m('corrosion' if t==38 or 'Stellar' in r['f00'] else 'blaze',max(.01,ratio(28,10)),v(41)/1000),tick=.5))
-  return [dict(kind='zone',target='enemies',radius=rad,duration=duration,power=0 if t==38 else ratio(28) if r['f28'] else ratio(31),interval=.25,follow=t in (37,39),origin='owner' if t in (37,39) else 'target',modifiers=modifiers)]
- if t==40:return [dict(kind='zone',target='enemies',radius=rad,duration=.1,power=ratio(31),interval=.2,modifiers=[m('stun',1,max(.05,v(39)/1000))])]
- if t in (41,42,43):return [dict(kind='dash',target='target',radius=450,width=60,power=ratio(31),modifiers=([m('stun',1,max(.05,v(39)/1000))] if t==41 else [m('corrosion',ratio(28,10),max(.05,v(41)/1000))] if t==43 else []))]+buff('self',[m('damageTaken',max(0,1-v(43)/100),.3)])
+  if r['f41']:modifiers.append(dict(m('corrosion' if t==38 or 'Stellar' in r['f00'] else 'blaze',max(.01,ratio(28,10)),v(41)/1000),tick=max(.05,r['f30']/1000) if r['f30'] else .5))
+  return [dict(kind='zone',target='enemies',radius=rad,duration=duration,power=0 if t==38 or (t==39 and r['f28'] and r['f41']) else ratio(28) if r['f28'] else ratio(31),interval=max(.05,r['f30']/1000) if t in (36,37) and r['f30'] else .25,follow=t in (37,39),origin='owner' if t in (37,39) else 'target',modifiers=modifiers)]
+ if t==40:return [dict(kind='zone',target='enemies',radius=rad,duration=max(.1,life),power=ratio(31),interval=.05,expanding=True,once=True,salvos=2 if 'two shock' in r['description_en'].lower() else 1,salvoInterval=.2,modifiers=[m('stun',1,max(.05,v(39)/1000))])]
+ if t in (41,42,43):return [dict(kind='dash',target='target',radius=450,width=60,travelTime=.3 if t==41 else 0,power=ratio(31),modifiers=([m('stun',1,max(.05,v(39)/1000))] if t==41 else [m('corrosion',ratio(28,10),max(.05,v(41)/1000))] if t==43 else []))]+buff('self',[m('damageTaken',max(0,1-v(43)/100),.3)])
  if t in (44,57):return [dict(shot(pattern='splash',splash=v(49) or 300,splashPower=ratio(51),knockback=60 if t==44 else 0),count=max(1,r['f17'],2 if '2 bullets' in r['description_en'] else 1))]
  if t==46:return [shot(pattern='homing',targeting='single',cancelOnTargetDeath=True,cadence=.08)]
  if t in (47,48):return [shot(pattern='burst' if t==47 else 'shotgun',cadence=.08 if t==47 else 0,spread=.2)]
@@ -70,7 +70,7 @@ def actions(r,L):
  if t==67:return [dict(shot(pattern='homing'),count=8)]
  if t==68:return buff('self',[mod('defense',33),dict(mod('scale',54),nullify=['piercing','splash'])])+buff('enemies',[m('taunt',1,duration)])
  if t in (70,71,72):return [dict(kind='summon',summon='decoy',power=1,duration=life,modifiers=[dict(m('decoy',1,life),categories={70:['melee'],71:['normal','piercing','splash'],72:['homing','laser']}[t])])]
- if t==73:return buff('allies',[m('charge',ratio(31),duration)])+[dict(kind='detonate',target='enemies',radius=rad,delay=duration,power=0)]
+ if t==73:return buff('allies',[m('charge',ratio(31),duration)])+[dict(kind='detonate',target='enemies',radius=rad,delay=duration,power=0,duration=life,expanding=True,once=True,interval=.05)]
  if t==74:return [dict(kind='timeStop',duration=duration)]
  if t==76:return [dict(kind='bomb',target='enemies',radius=v(49) or 600,duration=life,power=v(31)*r['f51']/10000,count=5,interval=.2)]
  raise ValueError(('untranslated effect family',t,row))

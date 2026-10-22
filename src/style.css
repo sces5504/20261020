@@ -3287,3 +3287,7 @@ button:not(:disabled):hover {
     top: -12px;
   }
 }
+.mechanic-row [data-action-control][hidden],
+.modifier-row [data-modifier-control][hidden] {
+  display: none !important;
+}

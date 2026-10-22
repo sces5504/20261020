@@ -290,6 +290,7 @@ export class Combat {
       u.skillCooldown > 0 ||
       this.ended ||
       this.mechanics.frozen(u) ||
+      this.mechanics.moving(u) ||
       u.turretUntil
     )
       return false;
@@ -374,7 +375,9 @@ export class Combat {
     if (this.ended) return;
     this.time += dt;
     const leaderFrozen =
-      this.allies[0] && this.mechanics.frozen(this.allies[0]);
+      this.allies[0] &&
+      (this.mechanics.frozen(this.allies[0]) ||
+        this.mechanics.moving(this.allies[0]));
     const speed = leaderFrozen
       ? 0
       : Math.min(
@@ -423,6 +426,7 @@ export class Combat {
         u.skillCooldown = Math.max(0, u.skillCooldown - dt);
       if ((this.autoSkills || u.side === "enemy") && !u.turretUntil)
         this.cast(u.id);
+      if (this.mechanics.moving(u)) continue;
       const foes = this.units
         .filter(
           (v) =>
@@ -509,6 +513,7 @@ export class Combat {
         u.x = Math.max(15, Math.min(r.width - 15, u.x));
         u.y = Math.max(15, Math.min(r.height - 15, u.y));
       }
+      if (u.attack <= 0) continue;
       if (u.side === "enemy" && t && u.cooldown <= 0) {
         if (!u.windup) {
           u.windup = 0.55;

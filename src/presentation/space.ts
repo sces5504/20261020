@@ -595,8 +595,8 @@ export function mountSpace(
           g.lineStyle(2, color, 0.7);
           g.fillStyle(color, 0.035);
           if (a.kind === "beam") {
-            const dx = Math.cos(f.angle) * a.radius,
-              dy = Math.sin(f.angle) * a.radius;
+            const dx = Math.cos(f.angle) * (f.reach ?? a.radius),
+              dy = Math.sin(f.angle) * (f.reach ?? a.radius);
             g.lineStyle(a.width, color, 0.2);
             g.lineBetween(f.x, f.y, f.x + dx, f.y + dy);
             g.lineStyle(a.width * 0.45, color, 0.14);
@@ -604,8 +604,8 @@ export function mountSpace(
             g.lineStyle(Math.max(3, a.width * 0.08), 0xffffff, 0.9);
             g.lineBetween(f.x, f.y, f.x + dx, f.y + dy);
           } else {
-            g.fillCircle(f.x, f.y, a.radius);
-            g.strokeCircle(f.x, f.y, a.radius);
+            g.fillCircle(f.x, f.y, f.radius ?? a.radius);
+            g.strokeCircle(f.x, f.y, f.radius ?? a.radius);
             if (a.pull) {
               g.fillStyle(0x030617, 0.95);
               g.fillCircle(f.x, f.y, 50);
@@ -634,6 +634,15 @@ export function mountSpace(
               }
             }
           }
+        }
+        for (const d of combat.mechanics.dashes) {
+          const u = combat.units.find((u) => u.id === d.owner);
+          if (!u) continue;
+          const color = Phaser.Display.Color.HexStringToColor(u.color).color;
+          g.lineStyle(d.action.width, color, 0.08);
+          g.lineBetween(d.from.x, d.from.y, u.x, u.y);
+          g.lineStyle(3, color, 0.7);
+          g.lineBetween(d.from.x, d.from.y, u.x, u.y);
         }
         for (const b of combat.bullets) {
           const speed = Math.hypot(b.vx, b.vy) || 1;

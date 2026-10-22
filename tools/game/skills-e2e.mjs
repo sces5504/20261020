@@ -135,6 +135,20 @@ try {
     // Friendly action/status editors round trip through the actual draft store.
     await page.locator("[data-action=kind][data-id=skills]").click();
     await page.locator('[data-action=select][data-id="m1:dispersion"]').click();
+    assert.equal(
+      await page.locator('[data-field="power"]').count(),
+      0,
+      "programs must not offer ignored legacy power",
+    );
+    const kindControl = page.locator('[data-action-prop="kind"]').first();
+    await kindControl.selectOption("heal");
+    assert(
+      await page.locator('[data-action-prop="power"]').first().isVisible(),
+    );
+    assert(await page.locator('[data-action-prop="speed"]').first().isHidden());
+    assert(await page.locator(".mechanic-row details").first().isHidden());
+    await kindControl.selectOption("status");
+    assert(await page.locator('[data-action-prop="power"]').first().isHidden());
     await page
       .locator(".modifier-row [data-modifier=value]")
       .first()

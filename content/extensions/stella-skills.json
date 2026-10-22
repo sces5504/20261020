@@ -22692,7 +22692,7 @@
           {
             "kind": "projectile",
             "target": "target",
-            "power": 1.0,
+            "power": 0,
             "duration": 6,
             "count": 1,
             "delay": 0.0,
@@ -22704,7 +22704,7 @@
                 "value": 0.25,
                 "duration": 3.0,
                 "immune": [],
-                "tick": 0.5
+                "tick": 0.25
               }
             ],
             "bypassEvasion": false,
@@ -22718,7 +22718,7 @@
               {
                 "kind": "projectile",
                 "target": "target",
-                "power": 1.0,
+                "power": 0,
                 "duration": 6,
                 "count": 1,
                 "delay": 0.0,
@@ -22730,7 +22730,7 @@
                     "value": 0.25,
                     "duration": 3.1,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -22744,7 +22744,7 @@
               {
                 "kind": "projectile",
                 "target": "target",
-                "power": 1.0,
+                "power": 0,
                 "duration": 6,
                 "count": 1,
                 "delay": 0.0,
@@ -22756,7 +22756,7 @@
                     "value": 0.25,
                     "duration": 3.2,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -22770,7 +22770,7 @@
               {
                 "kind": "projectile",
                 "target": "target",
-                "power": 1.0,
+                "power": 0,
                 "duration": 6,
                 "count": 1,
                 "delay": 0.0,
@@ -22782,7 +22782,7 @@
                     "value": 0.25,
                     "duration": 3.3,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -22796,7 +22796,7 @@
               {
                 "kind": "projectile",
                 "target": "target",
-                "power": 1.0,
+                "power": 0,
                 "duration": 6,
                 "count": 1,
                 "delay": 0.0,
@@ -22808,7 +22808,7 @@
                     "value": 0.25,
                     "duration": 3.4,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -22822,7 +22822,7 @@
               {
                 "kind": "projectile",
                 "target": "target",
-                "power": 1.0,
+                "power": 0,
                 "duration": 6,
                 "count": 1,
                 "delay": 0.0,
@@ -22834,7 +22834,7 @@
                     "value": 0.25,
                     "duration": 3.5,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -22848,7 +22848,7 @@
               {
                 "kind": "projectile",
                 "target": "target",
-                "power": 1.0,
+                "power": 0,
                 "duration": 6,
                 "count": 1,
                 "delay": 0.0,
@@ -22860,7 +22860,7 @@
                     "value": 0.25,
                     "duration": 3.6,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -22874,7 +22874,7 @@
               {
                 "kind": "projectile",
                 "target": "target",
-                "power": 1.0,
+                "power": 0,
                 "duration": 6,
                 "count": 1,
                 "delay": 0.0,
@@ -22886,7 +22886,7 @@
                     "value": 0.25,
                     "duration": 3.7,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -22900,7 +22900,7 @@
               {
                 "kind": "projectile",
                 "target": "target",
-                "power": 1.0,
+                "power": 0,
                 "duration": 6,
                 "count": 1,
                 "delay": 0.0,
@@ -22912,7 +22912,7 @@
                     "value": 0.25,
                     "duration": 3.8,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -22926,7 +22926,7 @@
               {
                 "kind": "projectile",
                 "target": "target",
-                "power": 1.0,
+                "power": 0,
                 "duration": 6,
                 "count": 1,
                 "delay": 0.0,
@@ -22938,7 +22938,7 @@
                     "value": 0.25,
                     "duration": 3.9,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -22965,7 +22965,7 @@
           {
             "kind": "projectile",
             "target": "target",
-            "power": 1.0,
+            "power": 0,
             "duration": 6,
             "count": 1,
             "delay": 0.0,
@@ -22977,7 +22977,7 @@
                 "value": 0.25,
                 "duration": 4.0,
                 "immune": [],
-                "tick": 0.5
+                "tick": 0.25
               }
             ],
             "bypassEvasion": false,
@@ -22991,7 +22991,7 @@
               {
                 "kind": "projectile",
                 "target": "target",
-                "power": 1.0,
+                "power": 0,
                 "duration": 6,
                 "count": 1,
                 "delay": 0.0,
@@ -23003,7 +23003,7 @@
                     "value": 0.25,
                     "duration": 4.2,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -23017,7 +23017,7 @@
               {
                 "kind": "projectile",
                 "target": "target",
-                "power": 1.0,
+                "power": 0,
                 "duration": 6,
                 "count": 1,
                 "delay": 0.0,
@@ -23029,7 +23029,7 @@
                     "value": 0.25,
                     "duration": 4.4,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -23043,7 +23043,7 @@
               {
                 "kind": "projectile",
                 "target": "target",
-                "power": 1.0,
+                "power": 0,
                 "duration": 6,
                 "count": 1,
                 "delay": 0.0,
@@ -23055,7 +23055,7 @@
                     "value": 0.25,
                     "duration": 4.6,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -23069,7 +23069,7 @@
               {
                 "kind": "projectile",
                 "target": "target",
-                "power": 1.0,
+                "power": 0,
                 "duration": 6,
                 "count": 1,
                 "delay": 0.0,
@@ -23081,7 +23081,7 @@
                     "value": 0.25,
                     "duration": 4.8,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -23095,7 +23095,7 @@
               {
                 "kind": "projectile",
                 "target": "target",
-                "power": 1.0,
+                "power": 0,
                 "duration": 6,
                 "count": 1,
                 "delay": 0.0,
@@ -23107,7 +23107,7 @@
                     "value": 0.25,
                     "duration": 5.0,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -23121,7 +23121,7 @@
               {
                 "kind": "projectile",
                 "target": "target",
-                "power": 1.0,
+                "power": 0,
                 "duration": 6,
                 "count": 1,
                 "delay": 0.0,
@@ -23133,7 +23133,7 @@
                     "value": 0.25,
                     "duration": 5.2,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -23147,7 +23147,7 @@
               {
                 "kind": "projectile",
                 "target": "target",
-                "power": 1.0,
+                "power": 0,
                 "duration": 6,
                 "count": 1,
                 "delay": 0.0,
@@ -23159,7 +23159,7 @@
                     "value": 0.25,
                     "duration": 5.4,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -23173,7 +23173,7 @@
               {
                 "kind": "projectile",
                 "target": "target",
-                "power": 1.0,
+                "power": 0,
                 "duration": 6,
                 "count": 1,
                 "delay": 0.0,
@@ -23185,7 +23185,7 @@
                     "value": 0.25,
                     "duration": 5.6,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -23199,7 +23199,7 @@
               {
                 "kind": "projectile",
                 "target": "target",
-                "power": 1.0,
+                "power": 0,
                 "duration": 6,
                 "count": 1,
                 "delay": 0.0,
@@ -23211,7 +23211,7 @@
                     "value": 0.25,
                     "duration": 5.8,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -24375,7 +24375,7 @@
                 "value": 0.09,
                 "duration": 1.5,
                 "immune": [],
-                "tick": 0.5
+                "tick": 0.333
               }
             ],
             "bypassEvasion": true,
@@ -24401,7 +24401,7 @@
                     "value": 0.09,
                     "duration": 1.65,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.333
                   }
                 ],
                 "bypassEvasion": true,
@@ -24427,7 +24427,7 @@
                     "value": 0.09,
                     "duration": 1.8,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.333
                   }
                 ],
                 "bypassEvasion": true,
@@ -24453,7 +24453,7 @@
                     "value": 0.09,
                     "duration": 1.95,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.333
                   }
                 ],
                 "bypassEvasion": true,
@@ -24479,7 +24479,7 @@
                     "value": 0.09,
                     "duration": 2.1,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.333
                   }
                 ],
                 "bypassEvasion": true,
@@ -24505,7 +24505,7 @@
                     "value": 0.09,
                     "duration": 2.25,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.333
                   }
                 ],
                 "bypassEvasion": true,
@@ -24531,7 +24531,7 @@
                     "value": 0.09,
                     "duration": 2.4,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.333
                   }
                 ],
                 "bypassEvasion": true,
@@ -24557,7 +24557,7 @@
                     "value": 0.09,
                     "duration": 2.55,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.333
                   }
                 ],
                 "bypassEvasion": true,
@@ -24583,7 +24583,7 @@
                     "value": 0.09,
                     "duration": 2.7,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.333
                   }
                 ],
                 "bypassEvasion": true,
@@ -24609,7 +24609,7 @@
                     "value": 0.09,
                     "duration": 2.85,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.333
                   }
                 ],
                 "bypassEvasion": true,
@@ -24648,7 +24648,7 @@
                 "value": 0.14,
                 "duration": 1.5,
                 "immune": [],
-                "tick": 0.5
+                "tick": 0.333
               }
             ],
             "bypassEvasion": true,
@@ -24674,7 +24674,7 @@
                     "value": 0.14,
                     "duration": 1.65,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.333
                   }
                 ],
                 "bypassEvasion": true,
@@ -24700,7 +24700,7 @@
                     "value": 0.14,
                     "duration": 1.8,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.333
                   }
                 ],
                 "bypassEvasion": true,
@@ -24726,7 +24726,7 @@
                     "value": 0.14,
                     "duration": 1.95,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.333
                   }
                 ],
                 "bypassEvasion": true,
@@ -24752,7 +24752,7 @@
                     "value": 0.14,
                     "duration": 2.1,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.333
                   }
                 ],
                 "bypassEvasion": true,
@@ -24778,7 +24778,7 @@
                     "value": 0.14,
                     "duration": 2.25,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.333
                   }
                 ],
                 "bypassEvasion": true,
@@ -24804,7 +24804,7 @@
                     "value": 0.14,
                     "duration": 2.4,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.333
                   }
                 ],
                 "bypassEvasion": true,
@@ -24830,7 +24830,7 @@
                     "value": 0.14,
                     "duration": 2.55,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.333
                   }
                 ],
                 "bypassEvasion": true,
@@ -24856,7 +24856,7 @@
                     "value": 0.14,
                     "duration": 2.7,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.333
                   }
                 ],
                 "bypassEvasion": true,
@@ -24882,7 +24882,7 @@
                     "value": 0.14,
                     "duration": 2.85,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.333
                   }
                 ],
                 "bypassEvasion": true,
@@ -24911,7 +24911,7 @@
             "target": "enemies",
             "radius": 450,
             "duration": 2.0,
-            "power": 0.15,
+            "power": 0,
             "interval": 0.25,
             "follow": true,
             "origin": "owner",
@@ -24921,7 +24921,7 @@
                 "value": 0.15,
                 "duration": 0.5,
                 "immune": [],
-                "tick": 0.5
+                "tick": 0.2
               }
             ],
             "bypassEvasion": false,
@@ -24937,7 +24937,7 @@
                 "target": "enemies",
                 "radius": 480,
                 "duration": 2.2,
-                "power": 0.15,
+                "power": 0,
                 "interval": 0.25,
                 "follow": true,
                 "origin": "owner",
@@ -24947,7 +24947,7 @@
                     "value": 0.15,
                     "duration": 0.55,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.2
                   }
                 ],
                 "bypassEvasion": false,
@@ -24963,7 +24963,7 @@
                 "target": "enemies",
                 "radius": 510,
                 "duration": 2.4,
-                "power": 0.15,
+                "power": 0,
                 "interval": 0.25,
                 "follow": true,
                 "origin": "owner",
@@ -24973,7 +24973,7 @@
                     "value": 0.15,
                     "duration": 0.6,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.2
                   }
                 ],
                 "bypassEvasion": false,
@@ -24989,7 +24989,7 @@
                 "target": "enemies",
                 "radius": 540,
                 "duration": 2.6,
-                "power": 0.15,
+                "power": 0,
                 "interval": 0.25,
                 "follow": true,
                 "origin": "owner",
@@ -24999,7 +24999,7 @@
                     "value": 0.15,
                     "duration": 0.65,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.2
                   }
                 ],
                 "bypassEvasion": false,
@@ -25015,7 +25015,7 @@
                 "target": "enemies",
                 "radius": 570,
                 "duration": 2.8,
-                "power": 0.15,
+                "power": 0,
                 "interval": 0.25,
                 "follow": true,
                 "origin": "owner",
@@ -25025,7 +25025,7 @@
                     "value": 0.15,
                     "duration": 0.7,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.2
                   }
                 ],
                 "bypassEvasion": false,
@@ -25041,7 +25041,7 @@
                 "target": "enemies",
                 "radius": 600,
                 "duration": 3.0,
-                "power": 0.15,
+                "power": 0,
                 "interval": 0.25,
                 "follow": true,
                 "origin": "owner",
@@ -25051,7 +25051,7 @@
                     "value": 0.15,
                     "duration": 0.75,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.2
                   }
                 ],
                 "bypassEvasion": false,
@@ -25067,7 +25067,7 @@
                 "target": "enemies",
                 "radius": 630,
                 "duration": 3.2,
-                "power": 0.15,
+                "power": 0,
                 "interval": 0.25,
                 "follow": true,
                 "origin": "owner",
@@ -25077,7 +25077,7 @@
                     "value": 0.15,
                     "duration": 0.8,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.2
                   }
                 ],
                 "bypassEvasion": false,
@@ -25093,7 +25093,7 @@
                 "target": "enemies",
                 "radius": 660,
                 "duration": 3.4,
-                "power": 0.15,
+                "power": 0,
                 "interval": 0.25,
                 "follow": true,
                 "origin": "owner",
@@ -25103,7 +25103,7 @@
                     "value": 0.15,
                     "duration": 0.85,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.2
                   }
                 ],
                 "bypassEvasion": false,
@@ -25119,7 +25119,7 @@
                 "target": "enemies",
                 "radius": 690,
                 "duration": 3.6,
-                "power": 0.15,
+                "power": 0,
                 "interval": 0.25,
                 "follow": true,
                 "origin": "owner",
@@ -25129,7 +25129,7 @@
                     "value": 0.15,
                     "duration": 0.9,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.2
                   }
                 ],
                 "bypassEvasion": false,
@@ -25145,7 +25145,7 @@
                 "target": "enemies",
                 "radius": 720,
                 "duration": 3.8,
-                "power": 0.15,
+                "power": 0,
                 "interval": 0.25,
                 "follow": true,
                 "origin": "owner",
@@ -25155,7 +25155,7 @@
                     "value": 0.15,
                     "duration": 0.95,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.2
                   }
                 ],
                 "bypassEvasion": false,
@@ -25639,9 +25639,13 @@
             "kind": "zone",
             "target": "enemies",
             "radius": 1000,
-            "duration": 0.1,
+            "duration": 0.8,
             "power": 1.7,
-            "interval": 0.2,
+            "interval": 0.05,
+            "expanding": true,
+            "once": true,
+            "salvos": 1,
+            "salvoInterval": 0.2,
             "modifiers": [
               {
                 "stat": "stun",
@@ -25662,9 +25666,13 @@
                 "kind": "zone",
                 "target": "enemies",
                 "radius": 1030,
-                "duration": 0.1,
+                "duration": 0.8,
                 "power": 1.8,
-                "interval": 0.2,
+                "interval": 0.05,
+                "expanding": true,
+                "once": true,
+                "salvos": 1,
+                "salvoInterval": 0.2,
                 "modifiers": [
                   {
                     "stat": "stun",
@@ -25685,9 +25693,13 @@
                 "kind": "zone",
                 "target": "enemies",
                 "radius": 1060,
-                "duration": 0.1,
+                "duration": 0.8,
                 "power": 1.9,
-                "interval": 0.2,
+                "interval": 0.05,
+                "expanding": true,
+                "once": true,
+                "salvos": 1,
+                "salvoInterval": 0.2,
                 "modifiers": [
                   {
                     "stat": "stun",
@@ -25708,9 +25720,13 @@
                 "kind": "zone",
                 "target": "enemies",
                 "radius": 1090,
-                "duration": 0.1,
+                "duration": 0.8,
                 "power": 2.0,
-                "interval": 0.2,
+                "interval": 0.05,
+                "expanding": true,
+                "once": true,
+                "salvos": 1,
+                "salvoInterval": 0.2,
                 "modifiers": [
                   {
                     "stat": "stun",
@@ -25731,9 +25747,13 @@
                 "kind": "zone",
                 "target": "enemies",
                 "radius": 1120,
-                "duration": 0.1,
+                "duration": 0.8,
                 "power": 2.1,
-                "interval": 0.2,
+                "interval": 0.05,
+                "expanding": true,
+                "once": true,
+                "salvos": 1,
+                "salvoInterval": 0.2,
                 "modifiers": [
                   {
                     "stat": "stun",
@@ -25754,9 +25774,13 @@
                 "kind": "zone",
                 "target": "enemies",
                 "radius": 1150,
-                "duration": 0.1,
+                "duration": 0.8,
                 "power": 2.2,
-                "interval": 0.2,
+                "interval": 0.05,
+                "expanding": true,
+                "once": true,
+                "salvos": 1,
+                "salvoInterval": 0.2,
                 "modifiers": [
                   {
                     "stat": "stun",
@@ -25777,9 +25801,13 @@
                 "kind": "zone",
                 "target": "enemies",
                 "radius": 1180,
-                "duration": 0.1,
+                "duration": 0.8,
                 "power": 2.3,
-                "interval": 0.2,
+                "interval": 0.05,
+                "expanding": true,
+                "once": true,
+                "salvos": 1,
+                "salvoInterval": 0.2,
                 "modifiers": [
                   {
                     "stat": "stun",
@@ -25800,9 +25828,13 @@
                 "kind": "zone",
                 "target": "enemies",
                 "radius": 1210,
-                "duration": 0.1,
+                "duration": 0.8,
                 "power": 2.4,
-                "interval": 0.2,
+                "interval": 0.05,
+                "expanding": true,
+                "once": true,
+                "salvos": 1,
+                "salvoInterval": 0.2,
                 "modifiers": [
                   {
                     "stat": "stun",
@@ -25823,9 +25855,13 @@
                 "kind": "zone",
                 "target": "enemies",
                 "radius": 1240,
-                "duration": 0.1,
+                "duration": 0.8,
                 "power": 2.5,
-                "interval": 0.2,
+                "interval": 0.05,
+                "expanding": true,
+                "once": true,
+                "salvos": 1,
+                "salvoInterval": 0.2,
                 "modifiers": [
                   {
                     "stat": "stun",
@@ -25846,9 +25882,13 @@
                 "kind": "zone",
                 "target": "enemies",
                 "radius": 1270,
-                "duration": 0.1,
+                "duration": 0.8,
                 "power": 2.6,
-                "interval": 0.2,
+                "interval": 0.05,
+                "expanding": true,
+                "once": true,
+                "salvos": 1,
+                "salvoInterval": 0.2,
                 "modifiers": [
                   {
                     "stat": "stun",
@@ -25882,9 +25922,13 @@
             "kind": "zone",
             "target": "enemies",
             "radius": 450,
-            "duration": 0.1,
+            "duration": 0.5,
             "power": 1.05,
-            "interval": 0.2,
+            "interval": 0.05,
+            "expanding": true,
+            "once": true,
+            "salvos": 2,
+            "salvoInterval": 0.2,
             "modifiers": [
               {
                 "stat": "stun",
@@ -25905,9 +25949,13 @@
                 "kind": "zone",
                 "target": "enemies",
                 "radius": 480,
-                "duration": 0.1,
+                "duration": 0.5,
                 "power": 1.08,
-                "interval": 0.2,
+                "interval": 0.05,
+                "expanding": true,
+                "once": true,
+                "salvos": 2,
+                "salvoInterval": 0.2,
                 "modifiers": [
                   {
                     "stat": "stun",
@@ -25928,9 +25976,13 @@
                 "kind": "zone",
                 "target": "enemies",
                 "radius": 510,
-                "duration": 0.1,
+                "duration": 0.5,
                 "power": 1.11,
-                "interval": 0.2,
+                "interval": 0.05,
+                "expanding": true,
+                "once": true,
+                "salvos": 2,
+                "salvoInterval": 0.2,
                 "modifiers": [
                   {
                     "stat": "stun",
@@ -25951,9 +26003,13 @@
                 "kind": "zone",
                 "target": "enemies",
                 "radius": 540,
-                "duration": 0.1,
+                "duration": 0.5,
                 "power": 1.14,
-                "interval": 0.2,
+                "interval": 0.05,
+                "expanding": true,
+                "once": true,
+                "salvos": 2,
+                "salvoInterval": 0.2,
                 "modifiers": [
                   {
                     "stat": "stun",
@@ -25974,9 +26030,13 @@
                 "kind": "zone",
                 "target": "enemies",
                 "radius": 570,
-                "duration": 0.1,
+                "duration": 0.5,
                 "power": 1.17,
-                "interval": 0.2,
+                "interval": 0.05,
+                "expanding": true,
+                "once": true,
+                "salvos": 2,
+                "salvoInterval": 0.2,
                 "modifiers": [
                   {
                     "stat": "stun",
@@ -25997,9 +26057,13 @@
                 "kind": "zone",
                 "target": "enemies",
                 "radius": 600,
-                "duration": 0.1,
+                "duration": 0.5,
                 "power": 1.2,
-                "interval": 0.2,
+                "interval": 0.05,
+                "expanding": true,
+                "once": true,
+                "salvos": 2,
+                "salvoInterval": 0.2,
                 "modifiers": [
                   {
                     "stat": "stun",
@@ -26020,9 +26084,13 @@
                 "kind": "zone",
                 "target": "enemies",
                 "radius": 630,
-                "duration": 0.1,
+                "duration": 0.5,
                 "power": 1.23,
-                "interval": 0.2,
+                "interval": 0.05,
+                "expanding": true,
+                "once": true,
+                "salvos": 2,
+                "salvoInterval": 0.2,
                 "modifiers": [
                   {
                     "stat": "stun",
@@ -26043,9 +26111,13 @@
                 "kind": "zone",
                 "target": "enemies",
                 "radius": 660,
-                "duration": 0.1,
+                "duration": 0.5,
                 "power": 1.26,
-                "interval": 0.2,
+                "interval": 0.05,
+                "expanding": true,
+                "once": true,
+                "salvos": 2,
+                "salvoInterval": 0.2,
                 "modifiers": [
                   {
                     "stat": "stun",
@@ -26066,9 +26138,13 @@
                 "kind": "zone",
                 "target": "enemies",
                 "radius": 690,
-                "duration": 0.1,
+                "duration": 0.5,
                 "power": 1.29,
-                "interval": 0.2,
+                "interval": 0.05,
+                "expanding": true,
+                "once": true,
+                "salvos": 2,
+                "salvoInterval": 0.2,
                 "modifiers": [
                   {
                     "stat": "stun",
@@ -26089,9 +26165,13 @@
                 "kind": "zone",
                 "target": "enemies",
                 "radius": 720,
-                "duration": 0.1,
+                "duration": 0.5,
                 "power": 1.32,
-                "interval": 0.2,
+                "interval": 0.05,
+                "expanding": true,
+                "once": true,
+                "salvos": 2,
+                "salvoInterval": 0.2,
                 "modifiers": [
                   {
                     "stat": "stun",
@@ -26126,6 +26206,7 @@
             "target": "target",
             "radius": 450,
             "width": 60,
+            "travelTime": 0.3,
             "power": 1.4,
             "modifiers": [
               {
@@ -26163,6 +26244,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0.3,
                 "power": 1.44,
                 "modifiers": [
                   {
@@ -26200,6 +26282,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0.3,
                 "power": 1.48,
                 "modifiers": [
                   {
@@ -26237,6 +26320,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0.3,
                 "power": 1.52,
                 "modifiers": [
                   {
@@ -26274,6 +26358,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0.3,
                 "power": 1.56,
                 "modifiers": [
                   {
@@ -26311,6 +26396,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0.3,
                 "power": 1.6,
                 "modifiers": [
                   {
@@ -26348,6 +26434,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0.3,
                 "power": 1.64,
                 "modifiers": [
                   {
@@ -26385,6 +26472,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0.3,
                 "power": 1.68,
                 "modifiers": [
                   {
@@ -26422,6 +26510,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0.3,
                 "power": 1.72,
                 "modifiers": [
                   {
@@ -26459,6 +26548,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0.3,
                 "power": 1.76,
                 "modifiers": [
                   {
@@ -26509,6 +26599,7 @@
             "target": "target",
             "radius": 450,
             "width": 60,
+            "travelTime": 0,
             "power": 0.4,
             "modifiers": [],
             "bypassEvasion": false,
@@ -26539,6 +26630,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.43,
                 "modifiers": [],
                 "bypassEvasion": false,
@@ -26569,6 +26661,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.46,
                 "modifiers": [],
                 "bypassEvasion": false,
@@ -26599,6 +26692,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.49,
                 "modifiers": [],
                 "bypassEvasion": false,
@@ -26629,6 +26723,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.52,
                 "modifiers": [],
                 "bypassEvasion": false,
@@ -26659,6 +26754,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.55,
                 "modifiers": [],
                 "bypassEvasion": false,
@@ -26689,6 +26785,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.58,
                 "modifiers": [],
                 "bypassEvasion": false,
@@ -26719,6 +26816,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.61,
                 "modifiers": [],
                 "bypassEvasion": false,
@@ -26749,6 +26847,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.64,
                 "modifiers": [],
                 "bypassEvasion": false,
@@ -26779,6 +26878,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.67,
                 "modifiers": [],
                 "bypassEvasion": false,
@@ -26822,13 +26922,15 @@
             "target": "target",
             "radius": 450,
             "width": 60,
+            "travelTime": 0,
             "power": 0.1,
             "modifiers": [
               {
                 "stat": "corrosion",
                 "value": 0.1,
                 "duration": 1.0,
-                "immune": []
+                "immune": [],
+                "tick": 0.25
               }
             ],
             "bypassEvasion": false,
@@ -26859,13 +26961,15 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.11,
                 "modifiers": [
                   {
                     "stat": "corrosion",
                     "value": 0.1,
                     "duration": 1.1,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -26896,13 +27000,15 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.12,
                 "modifiers": [
                   {
                     "stat": "corrosion",
                     "value": 0.1,
                     "duration": 1.2,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -26933,13 +27039,15 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.13,
                 "modifiers": [
                   {
                     "stat": "corrosion",
                     "value": 0.1,
                     "duration": 1.3,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -26970,13 +27078,15 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.14,
                 "modifiers": [
                   {
                     "stat": "corrosion",
                     "value": 0.1,
                     "duration": 1.4,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -27007,13 +27117,15 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.15,
                 "modifiers": [
                   {
                     "stat": "corrosion",
                     "value": 0.1,
                     "duration": 1.5,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -27044,13 +27156,15 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.16,
                 "modifiers": [
                   {
                     "stat": "corrosion",
                     "value": 0.1,
                     "duration": 1.6,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -27081,13 +27195,15 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.17,
                 "modifiers": [
                   {
                     "stat": "corrosion",
                     "value": 0.1,
                     "duration": 1.7,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -27118,13 +27234,15 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.18,
                 "modifiers": [
                   {
                     "stat": "corrosion",
                     "value": 0.1,
                     "duration": 1.8,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -27155,13 +27273,15 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.19,
                 "modifiers": [
                   {
                     "stat": "corrosion",
                     "value": 0.1,
                     "duration": 1.9,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -31886,7 +32006,8 @@
                 "stat": "blaze",
                 "value": 0.2,
                 "duration": 2.0,
-                "immune": []
+                "immune": [],
+                "tick": 0.2
               }
             ],
             "bypassEvasion": false,
@@ -31911,7 +32032,8 @@
                     "stat": "blaze",
                     "value": 0.2,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.2
                   }
                 ],
                 "bypassEvasion": false,
@@ -31936,7 +32058,8 @@
                     "stat": "blaze",
                     "value": 0.2,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.2
                   }
                 ],
                 "bypassEvasion": false,
@@ -31961,7 +32084,8 @@
                     "stat": "blaze",
                     "value": 0.2,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.2
                   }
                 ],
                 "bypassEvasion": false,
@@ -31986,7 +32110,8 @@
                     "stat": "blaze",
                     "value": 0.2,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.2
                   }
                 ],
                 "bypassEvasion": false,
@@ -32011,7 +32136,8 @@
                     "stat": "blaze",
                     "value": 0.2,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.2
                   }
                 ],
                 "bypassEvasion": false,
@@ -32036,7 +32162,8 @@
                     "stat": "blaze",
                     "value": 0.2,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.2
                   }
                 ],
                 "bypassEvasion": false,
@@ -32061,7 +32188,8 @@
                     "stat": "blaze",
                     "value": 0.2,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.2
                   }
                 ],
                 "bypassEvasion": false,
@@ -32086,7 +32214,8 @@
                     "stat": "blaze",
                     "value": 0.2,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.2
                   }
                 ],
                 "bypassEvasion": false,
@@ -32111,7 +32240,8 @@
                     "stat": "blaze",
                     "value": 0.2,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.2
                   }
                 ],
                 "bypassEvasion": false,
@@ -32149,7 +32279,8 @@
                 "stat": "blaze",
                 "value": 0.2,
                 "duration": 2.0,
-                "immune": []
+                "immune": [],
+                "tick": 0.2
               }
             ],
             "bypassEvasion": false,
@@ -32174,7 +32305,8 @@
                     "stat": "blaze",
                     "value": 0.2,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.2
                   }
                 ],
                 "bypassEvasion": false,
@@ -32199,7 +32331,8 @@
                     "stat": "blaze",
                     "value": 0.2,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.2
                   }
                 ],
                 "bypassEvasion": false,
@@ -32224,7 +32357,8 @@
                     "stat": "blaze",
                     "value": 0.2,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.2
                   }
                 ],
                 "bypassEvasion": false,
@@ -32249,7 +32383,8 @@
                     "stat": "blaze",
                     "value": 0.2,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.2
                   }
                 ],
                 "bypassEvasion": false,
@@ -32274,7 +32409,8 @@
                     "stat": "blaze",
                     "value": 0.2,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.2
                   }
                 ],
                 "bypassEvasion": false,
@@ -32299,7 +32435,8 @@
                     "stat": "blaze",
                     "value": 0.2,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.2
                   }
                 ],
                 "bypassEvasion": false,
@@ -32324,7 +32461,8 @@
                     "stat": "blaze",
                     "value": 0.2,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.2
                   }
                 ],
                 "bypassEvasion": false,
@@ -32349,7 +32487,8 @@
                     "stat": "blaze",
                     "value": 0.2,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.2
                   }
                 ],
                 "bypassEvasion": false,
@@ -32374,7 +32513,8 @@
                     "stat": "blaze",
                     "value": 0.2,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.2
                   }
                 ],
                 "bypassEvasion": false,
@@ -32412,7 +32552,8 @@
                 "stat": "blaze",
                 "value": 0.2,
                 "duration": 2.0,
-                "immune": []
+                "immune": [],
+                "tick": 0.25
               }
             ],
             "bypassEvasion": false,
@@ -32437,7 +32578,8 @@
                     "stat": "blaze",
                     "value": 0.2,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -32462,7 +32604,8 @@
                     "stat": "blaze",
                     "value": 0.2,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -32487,7 +32630,8 @@
                     "stat": "blaze",
                     "value": 0.2,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -32512,7 +32656,8 @@
                     "stat": "blaze",
                     "value": 0.2,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -32537,7 +32682,8 @@
                     "stat": "blaze",
                     "value": 0.2,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -32562,7 +32708,8 @@
                     "stat": "blaze",
                     "value": 0.2,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -32587,7 +32734,8 @@
                     "stat": "blaze",
                     "value": 0.2,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -32612,7 +32760,8 @@
                     "stat": "blaze",
                     "value": 0.2,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -32637,7 +32786,8 @@
                     "stat": "blaze",
                     "value": 0.2,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -32664,7 +32814,7 @@
           {
             "kind": "projectile",
             "target": "target",
-            "power": 1.4,
+            "power": 0,
             "duration": 6,
             "count": 1,
             "delay": 0.0,
@@ -32676,7 +32826,7 @@
                 "value": 0.25,
                 "duration": 2.0,
                 "immune": [],
-                "tick": 0.5
+                "tick": 0.25
               }
             ],
             "bypassEvasion": false,
@@ -32690,7 +32840,7 @@
               {
                 "kind": "projectile",
                 "target": "target",
-                "power": 1.45,
+                "power": 0,
                 "duration": 6,
                 "count": 1,
                 "delay": 0.0,
@@ -32702,7 +32852,7 @@
                     "value": 0.25,
                     "duration": 2.0,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -32716,7 +32866,7 @@
               {
                 "kind": "projectile",
                 "target": "target",
-                "power": 1.5,
+                "power": 0,
                 "duration": 6,
                 "count": 1,
                 "delay": 0.0,
@@ -32728,7 +32878,7 @@
                     "value": 0.25,
                     "duration": 2.0,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -32742,7 +32892,7 @@
               {
                 "kind": "projectile",
                 "target": "target",
-                "power": 1.55,
+                "power": 0,
                 "duration": 6,
                 "count": 1,
                 "delay": 0.0,
@@ -32754,7 +32904,7 @@
                     "value": 0.25,
                     "duration": 2.0,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -32768,7 +32918,7 @@
               {
                 "kind": "projectile",
                 "target": "target",
-                "power": 1.6,
+                "power": 0,
                 "duration": 6,
                 "count": 1,
                 "delay": 0.0,
@@ -32780,7 +32930,7 @@
                     "value": 0.25,
                     "duration": 2.0,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -32794,7 +32944,7 @@
               {
                 "kind": "projectile",
                 "target": "target",
-                "power": 1.65,
+                "power": 0,
                 "duration": 6,
                 "count": 1,
                 "delay": 0.0,
@@ -32806,7 +32956,7 @@
                     "value": 0.25,
                     "duration": 2.0,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -32820,7 +32970,7 @@
               {
                 "kind": "projectile",
                 "target": "target",
-                "power": 1.7,
+                "power": 0,
                 "duration": 6,
                 "count": 1,
                 "delay": 0.0,
@@ -32832,7 +32982,7 @@
                     "value": 0.25,
                     "duration": 2.0,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -32846,7 +32996,7 @@
               {
                 "kind": "projectile",
                 "target": "target",
-                "power": 1.75,
+                "power": 0,
                 "duration": 6,
                 "count": 1,
                 "delay": 0.0,
@@ -32858,7 +33008,7 @@
                     "value": 0.25,
                     "duration": 2.0,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -32872,7 +33022,7 @@
               {
                 "kind": "projectile",
                 "target": "target",
-                "power": 1.8,
+                "power": 0,
                 "duration": 6,
                 "count": 1,
                 "delay": 0.0,
@@ -32884,7 +33034,7 @@
                     "value": 0.25,
                     "duration": 2.0,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -32898,7 +33048,7 @@
               {
                 "kind": "projectile",
                 "target": "target",
-                "power": 1.85,
+                "power": 0,
                 "duration": 6,
                 "count": 1,
                 "delay": 0.0,
@@ -32910,7 +33060,7 @@
                     "value": 0.25,
                     "duration": 2.0,
                     "immune": [],
-                    "tick": 0.5
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -36484,6 +36634,7 @@
             "target": "target",
             "radius": 450,
             "width": 60,
+            "travelTime": 0,
             "power": 0.75,
             "modifiers": [],
             "bypassEvasion": false,
@@ -36514,6 +36665,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.75,
                 "modifiers": [],
                 "bypassEvasion": false,
@@ -36544,6 +36696,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.75,
                 "modifiers": [],
                 "bypassEvasion": false,
@@ -36574,6 +36727,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.75,
                 "modifiers": [],
                 "bypassEvasion": false,
@@ -36604,6 +36758,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.75,
                 "modifiers": [],
                 "bypassEvasion": false,
@@ -36634,6 +36789,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.75,
                 "modifiers": [],
                 "bypassEvasion": false,
@@ -36664,6 +36820,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.75,
                 "modifiers": [],
                 "bypassEvasion": false,
@@ -36694,6 +36851,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.75,
                 "modifiers": [],
                 "bypassEvasion": false,
@@ -36724,6 +36882,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.75,
                 "modifiers": [],
                 "bypassEvasion": false,
@@ -36754,6 +36913,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.75,
                 "modifiers": [],
                 "bypassEvasion": false,
@@ -36797,6 +36957,7 @@
             "target": "target",
             "radius": 450,
             "width": 60,
+            "travelTime": 0.3,
             "power": 0.35,
             "modifiers": [
               {
@@ -36834,6 +36995,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0.3,
                 "power": 0.35,
                 "modifiers": [
                   {
@@ -36871,6 +37033,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0.3,
                 "power": 0.35,
                 "modifiers": [
                   {
@@ -36908,6 +37071,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0.3,
                 "power": 0.35,
                 "modifiers": [
                   {
@@ -36945,6 +37109,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0.3,
                 "power": 0.35,
                 "modifiers": [
                   {
@@ -36982,6 +37147,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0.3,
                 "power": 0.35,
                 "modifiers": [
                   {
@@ -37019,6 +37185,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0.3,
                 "power": 0.35,
                 "modifiers": [
                   {
@@ -37056,6 +37223,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0.3,
                 "power": 0.35,
                 "modifiers": [
                   {
@@ -37093,6 +37261,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0.3,
                 "power": 0.35,
                 "modifiers": [
                   {
@@ -37130,6 +37299,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0.3,
                 "power": 0.35,
                 "modifiers": [
                   {
@@ -39742,13 +39912,15 @@
             "target": "target",
             "radius": 450,
             "width": 60,
+            "travelTime": 0,
             "power": 0.4,
             "modifiers": [
               {
                 "stat": "corrosion",
                 "value": 0.02,
                 "duration": 2.0,
-                "immune": []
+                "immune": [],
+                "tick": 0.25
               }
             ],
             "bypassEvasion": false,
@@ -39779,13 +39951,15 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.4,
                 "modifiers": [
                   {
                     "stat": "corrosion",
                     "value": 0.02,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -39816,13 +39990,15 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.4,
                 "modifiers": [
                   {
                     "stat": "corrosion",
                     "value": 0.02,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -39853,13 +40029,15 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.4,
                 "modifiers": [
                   {
                     "stat": "corrosion",
                     "value": 0.02,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -39890,13 +40068,15 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.4,
                 "modifiers": [
                   {
                     "stat": "corrosion",
                     "value": 0.02,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -39927,13 +40107,15 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.4,
                 "modifiers": [
                   {
                     "stat": "corrosion",
                     "value": 0.02,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -39964,13 +40146,15 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.4,
                 "modifiers": [
                   {
                     "stat": "corrosion",
                     "value": 0.02,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -40001,13 +40185,15 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.4,
                 "modifiers": [
                   {
                     "stat": "corrosion",
                     "value": 0.02,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -40038,13 +40224,15 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.4,
                 "modifiers": [
                   {
                     "stat": "corrosion",
                     "value": 0.02,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -40075,13 +40263,15 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.4,
                 "modifiers": [
                   {
                     "stat": "corrosion",
                     "value": 0.02,
                     "duration": 2.0,
-                    "immune": []
+                    "immune": [],
+                    "tick": 0.25
                   }
                 ],
                 "bypassEvasion": false,
@@ -41624,7 +41814,7 @@
             "radius": 250,
             "duration": 4.0,
             "power": 0.1,
-            "interval": 0.25,
+            "interval": 0.2,
             "follow": true,
             "origin": "owner",
             "modifiers": [],
@@ -41642,7 +41832,7 @@
                 "radius": 275,
                 "duration": 4.3,
                 "power": 0.11,
-                "interval": 0.25,
+                "interval": 0.2,
                 "follow": true,
                 "origin": "owner",
                 "modifiers": [],
@@ -41660,7 +41850,7 @@
                 "radius": 300,
                 "duration": 4.6,
                 "power": 0.12,
-                "interval": 0.25,
+                "interval": 0.2,
                 "follow": true,
                 "origin": "owner",
                 "modifiers": [],
@@ -41678,7 +41868,7 @@
                 "radius": 325,
                 "duration": 4.9,
                 "power": 0.13,
-                "interval": 0.25,
+                "interval": 0.2,
                 "follow": true,
                 "origin": "owner",
                 "modifiers": [],
@@ -41696,7 +41886,7 @@
                 "radius": 350,
                 "duration": 5.2,
                 "power": 0.14,
-                "interval": 0.25,
+                "interval": 0.2,
                 "follow": true,
                 "origin": "owner",
                 "modifiers": [],
@@ -41714,7 +41904,7 @@
                 "radius": 375,
                 "duration": 5.5,
                 "power": 0.15,
-                "interval": 0.25,
+                "interval": 0.2,
                 "follow": true,
                 "origin": "owner",
                 "modifiers": [],
@@ -41732,7 +41922,7 @@
                 "radius": 400,
                 "duration": 5.8,
                 "power": 0.16,
-                "interval": 0.25,
+                "interval": 0.2,
                 "follow": true,
                 "origin": "owner",
                 "modifiers": [],
@@ -41750,7 +41940,7 @@
                 "radius": 425,
                 "duration": 6.1,
                 "power": 0.17,
-                "interval": 0.25,
+                "interval": 0.2,
                 "follow": true,
                 "origin": "owner",
                 "modifiers": [],
@@ -41768,7 +41958,7 @@
                 "radius": 450,
                 "duration": 6.4,
                 "power": 0.18,
-                "interval": 0.25,
+                "interval": 0.2,
                 "follow": true,
                 "origin": "owner",
                 "modifiers": [],
@@ -41786,7 +41976,7 @@
                 "radius": 475,
                 "duration": 6.7,
                 "power": 0.19,
-                "interval": 0.25,
+                "interval": 0.2,
                 "follow": true,
                 "origin": "owner",
                 "modifiers": [],
@@ -45513,9 +45703,13 @@
             "kind": "zone",
             "target": "enemies",
             "radius": 1500,
-            "duration": 0.1,
+            "duration": 0.8,
             "power": 1.0,
-            "interval": 0.2,
+            "interval": 0.05,
+            "expanding": true,
+            "once": true,
+            "salvos": 1,
+            "salvoInterval": 0.2,
             "modifiers": [
               {
                 "stat": "stun",
@@ -45536,9 +45730,13 @@
                 "kind": "zone",
                 "target": "enemies",
                 "radius": 1500,
-                "duration": 0.1,
+                "duration": 0.8,
                 "power": 1.0,
-                "interval": 0.2,
+                "interval": 0.05,
+                "expanding": true,
+                "once": true,
+                "salvos": 1,
+                "salvoInterval": 0.2,
                 "modifiers": [
                   {
                     "stat": "stun",
@@ -45559,9 +45757,13 @@
                 "kind": "zone",
                 "target": "enemies",
                 "radius": 1500,
-                "duration": 0.1,
+                "duration": 0.8,
                 "power": 1.0,
-                "interval": 0.2,
+                "interval": 0.05,
+                "expanding": true,
+                "once": true,
+                "salvos": 1,
+                "salvoInterval": 0.2,
                 "modifiers": [
                   {
                     "stat": "stun",
@@ -45582,9 +45784,13 @@
                 "kind": "zone",
                 "target": "enemies",
                 "radius": 1500,
-                "duration": 0.1,
+                "duration": 0.8,
                 "power": 1.0,
-                "interval": 0.2,
+                "interval": 0.05,
+                "expanding": true,
+                "once": true,
+                "salvos": 1,
+                "salvoInterval": 0.2,
                 "modifiers": [
                   {
                     "stat": "stun",
@@ -45605,9 +45811,13 @@
                 "kind": "zone",
                 "target": "enemies",
                 "radius": 1500,
-                "duration": 0.1,
+                "duration": 0.8,
                 "power": 1.0,
-                "interval": 0.2,
+                "interval": 0.05,
+                "expanding": true,
+                "once": true,
+                "salvos": 1,
+                "salvoInterval": 0.2,
                 "modifiers": [
                   {
                     "stat": "stun",
@@ -45628,9 +45838,13 @@
                 "kind": "zone",
                 "target": "enemies",
                 "radius": 1500,
-                "duration": 0.1,
+                "duration": 0.8,
                 "power": 1.0,
-                "interval": 0.2,
+                "interval": 0.05,
+                "expanding": true,
+                "once": true,
+                "salvos": 1,
+                "salvoInterval": 0.2,
                 "modifiers": [
                   {
                     "stat": "stun",
@@ -45651,9 +45865,13 @@
                 "kind": "zone",
                 "target": "enemies",
                 "radius": 1500,
-                "duration": 0.1,
+                "duration": 0.8,
                 "power": 1.0,
-                "interval": 0.2,
+                "interval": 0.05,
+                "expanding": true,
+                "once": true,
+                "salvos": 1,
+                "salvoInterval": 0.2,
                 "modifiers": [
                   {
                     "stat": "stun",
@@ -45674,9 +45892,13 @@
                 "kind": "zone",
                 "target": "enemies",
                 "radius": 1500,
-                "duration": 0.1,
+                "duration": 0.8,
                 "power": 1.0,
-                "interval": 0.2,
+                "interval": 0.05,
+                "expanding": true,
+                "once": true,
+                "salvos": 1,
+                "salvoInterval": 0.2,
                 "modifiers": [
                   {
                     "stat": "stun",
@@ -45697,9 +45919,13 @@
                 "kind": "zone",
                 "target": "enemies",
                 "radius": 1500,
-                "duration": 0.1,
+                "duration": 0.8,
                 "power": 1.0,
-                "interval": 0.2,
+                "interval": 0.05,
+                "expanding": true,
+                "once": true,
+                "salvos": 1,
+                "salvoInterval": 0.2,
                 "modifiers": [
                   {
                     "stat": "stun",
@@ -45720,9 +45946,13 @@
                 "kind": "zone",
                 "target": "enemies",
                 "radius": 1500,
-                "duration": 0.1,
+                "duration": 0.8,
                 "power": 1.0,
-                "interval": 0.2,
+                "interval": 0.05,
+                "expanding": true,
+                "once": true,
+                "salvos": 1,
+                "salvoInterval": 0.2,
                 "modifiers": [
                   {
                     "stat": "stun",
@@ -48440,6 +48670,7 @@
             "target": "target",
             "radius": 450,
             "width": 60,
+            "travelTime": 0,
             "power": 0.35,
             "modifiers": [],
             "bypassEvasion": false,
@@ -48470,6 +48701,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.35,
                 "modifiers": [],
                 "bypassEvasion": false,
@@ -48500,6 +48732,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.35,
                 "modifiers": [],
                 "bypassEvasion": false,
@@ -48530,6 +48763,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.35,
                 "modifiers": [],
                 "bypassEvasion": false,
@@ -48560,6 +48794,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.35,
                 "modifiers": [],
                 "bypassEvasion": false,
@@ -48590,6 +48825,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.35,
                 "modifiers": [],
                 "bypassEvasion": false,
@@ -48620,6 +48856,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.35,
                 "modifiers": [],
                 "bypassEvasion": false,
@@ -48650,6 +48887,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.35,
                 "modifiers": [],
                 "bypassEvasion": false,
@@ -48680,6 +48918,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.35,
                 "modifiers": [],
                 "bypassEvasion": false,
@@ -48710,6 +48949,7 @@
                 "target": "target",
                 "radius": 450,
                 "width": 60,
+                "travelTime": 0,
                 "power": 0.35,
                 "modifiers": [],
                 "bypassEvasion": false,
@@ -51412,6 +51652,10 @@
             "radius": 1000,
             "delay": 5.0,
             "power": 0,
+            "duration": 0.8,
+            "expanding": true,
+            "once": true,
+            "interval": 0.05,
             "bypassEvasion": false,
             "suppressCritical": true
           }
@@ -51441,6 +51685,10 @@
                 "radius": 1000,
                 "delay": 5.0,
                 "power": 0,
+                "duration": 0.8,
+                "expanding": true,
+                "once": true,
+                "interval": 0.05,
                 "bypassEvasion": false,
                 "suppressCritical": true
               }
@@ -51470,6 +51718,10 @@
                 "radius": 1000,
                 "delay": 5.0,
                 "power": 0,
+                "duration": 0.8,
+                "expanding": true,
+                "once": true,
+                "interval": 0.05,
                 "bypassEvasion": false,
                 "suppressCritical": true
               }
@@ -51499,6 +51751,10 @@
                 "radius": 1000,
                 "delay": 5.0,
                 "power": 0,
+                "duration": 0.8,
+                "expanding": true,
+                "once": true,
+                "interval": 0.05,
                 "bypassEvasion": false,
                 "suppressCritical": true
               }
@@ -51528,6 +51784,10 @@
                 "radius": 1000,
                 "delay": 5.0,
                 "power": 0,
+                "duration": 0.8,
+                "expanding": true,
+                "once": true,
+                "interval": 0.05,
                 "bypassEvasion": false,
                 "suppressCritical": true
               }
@@ -51557,6 +51817,10 @@
                 "radius": 1000,
                 "delay": 5.0,
                 "power": 0,
+                "duration": 0.8,
+                "expanding": true,
+                "once": true,
+                "interval": 0.05,
                 "bypassEvasion": false,
                 "suppressCritical": true
               }
@@ -51586,6 +51850,10 @@
                 "radius": 1000,
                 "delay": 5.0,
                 "power": 0,
+                "duration": 0.8,
+                "expanding": true,
+                "once": true,
+                "interval": 0.05,
                 "bypassEvasion": false,
                 "suppressCritical": true
               }
@@ -51615,6 +51883,10 @@
                 "radius": 1000,
                 "delay": 5.0,
                 "power": 0,
+                "duration": 0.8,
+                "expanding": true,
+                "once": true,
+                "interval": 0.05,
                 "bypassEvasion": false,
                 "suppressCritical": true
               }
@@ -51644,6 +51916,10 @@
                 "radius": 1000,
                 "delay": 5.0,
                 "power": 0,
+                "duration": 0.8,
+                "expanding": true,
+                "once": true,
+                "interval": 0.05,
                 "bypassEvasion": false,
                 "suppressCritical": true
               }
@@ -51673,6 +51949,10 @@
                 "radius": 1000,
                 "delay": 5.0,
                 "power": 0,
+                "duration": 0.8,
+                "expanding": true,
+                "once": true,
+                "interval": 0.05,
                 "bypassEvasion": false,
                 "suppressCritical": true
               }

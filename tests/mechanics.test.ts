@@ -686,3 +686,181 @@ test("legacy draft barrage retains real hits, caster attribution and laboratory 
   assert(foes[0].hp < 10000);
   assert(c.mechanics.damageDealt[u.id] > 0);
 });
+
+test("induction devices never attack, and melee/normal category variants use the proper decoy", () => {
+  const { c, u, foes } = scene(undefined, 1);
+  c.mechanics.execute(
+    u,
+    act({
+      kind: "summon",
+      summon: "decoy",
+      duration: 5,
+      modifiers: [
+        {
+          stat: "decoy",
+          value: 1,
+          duration: 5,
+          categories: ["normal", "melee"],
+        },
+      ],
+    }),
+    "decoy",
+  );
+  const decoy = c.units.find((v) => v.summonKind === "decoy")!;
+  advance(c, 1);
+  assert.equal(c.bullets.filter((b) => b.owner === decoy.id).length, 0);
+  assert.equal(c.mechanics.damageDealt[decoy.id] ?? 0, 0);
+  assert.equal(c.mechanics.decoy(foes[0], "meleeSpear")?.id, decoy.id);
+  assert.equal(c.mechanics.decoy(foes[0], "spiral")?.id, decoy.id);
+});
+
+test("player-facing slow descriptions state a reduction and match the actual modifier", async () => {
+  const { skillMechanic } = await import("../src/content/descriptions");
+  const s = published.skills.find((s) => s.id === "solar10:skill.io")!;
+  assert.match(skillMechanic(s), /移速降至70%/);
+  assert.match(skillMechanic(s), /攻速降至80%/);
+});
+
+test("charge traverses its path over time and hits each enemy once; blink relocates immediately", () => {
+  const { c, u, foes } = scene(undefined, 1);
+  foes[0].x = u.x + 250;
+  const start = u.x;
+  c.mechanics.execute(
+    u,
+    act({ kind: "dash", radius: 450, width: 60, travelTime: 0.3, power: 1 }),
+    "charge",
+  );
+  assert.equal(u.x, start);
+  advance(c, 0.1);
+  assert(u.x > start && u.x < start + 200);
+  assert.equal(foes[0].hp, 10000);
+  advance(c, 0.25);
+  assert.equal(Math.round(u.x - start), 450);
+  assert.equal(foes[0].hp, 10000 - Math.floor(u.attack));
+  assert(!c.mechanics.moving(u));
+  const b = scene(undefined, 1),
+    x = b.u.x;
+  b.c.mechanics.execute(
+    b.u,
+    act({ kind: "dash", radius: 450, power: 1, travelTime: 0 }),
+    "blink",
+  );
+  assert.equal(b.u.x, x + 450);
+  assert.equal(b.c.fleet.positions.get(b.u.id)!.x, b.u.x);
+  assert(!b.c.mechanics.moving(b.u));
+});
+test("a chain projectile completes eight real impacts without expiring halfway", () => {
+  const { c, u, foes } = scene(undefined, 1);
+  c.mechanics.execute(
+    u,
+    act({
+      kind: "projectile",
+      pattern: "homing",
+      chain: 7,
+      speed: 600,
+      power: 1,
+      duration: 2,
+    }),
+    "chain8",
+  );
+  advance(c, 3);
+  assert.equal(10000 - foes[0].hp, 8 * Math.floor(u.attack));
+  assert.equal(c.bullets.length, 0);
+});
+test("split children do not immediately hit their parent's existing victim", () => {
+  const { c, u, foes } = scene(undefined, 2);
+  c.mechanics.execute(
+    u,
+    act({
+      kind: "projectile",
+      speed: 800,
+      power: 1,
+      splitCount: 6,
+      splitPower: 0.5,
+      width: 1,
+    }),
+    "split-hit",
+  );
+  advance(c, 1);
+  assert.equal(10000 - foes[0].hp, Math.floor(u.attack));
+  assert(foes[1].hp < 10000);
+});
+test("beam fans have separate rotating rays; targeted beams stop at their target", () => {
+  const { c, u, foes } = scene(undefined, 2);
+  c.mechanics.execute(
+    u,
+    act({
+      kind: "beam",
+      count: 3,
+      spread: 0.4,
+      rotation: 1,
+      duration: 1,
+      radius: 800,
+      power: 1,
+      width: 10,
+    }),
+    "fan-beam",
+  );
+  assert.equal(c.mechanics.fields.length, 3);
+  const angle = c.mechanics.fields[0].angle;
+  advance(c, 0.1);
+  assert(c.mechanics.fields[0].angle > angle + 0.09);
+  const t = scene(undefined, 2);
+  t.c.mechanics.execute(
+    t.u,
+    act({
+      kind: "beam",
+      track: true,
+      duration: 1,
+      interval: 1,
+      radius: 800,
+      width: 10,
+      power: 1,
+    }),
+    "target-beam",
+  );
+  advance(t.c, 0.1);
+  assert(t.foes[0].hp < 10000);
+  assert.equal(t.foes[1].hp, 10000);
+});
+
+test("shock waves expand over their lifetime and damage each victim once", () => {
+  const { c, u, foes } = scene(undefined, 2);
+  foes[0].x = u.x + 100;
+  foes[1].x = u.x + 450;
+  c.mechanics.execute(
+    u,
+    act({
+      kind: "zone",
+      target: "enemies",
+      radius: 500,
+      duration: 0.5,
+      interval: 0.05,
+      power: 1,
+      expanding: true,
+      once: true,
+    }),
+    "wave",
+  );
+  advance(c, 0.12);
+  assert(foes[0].hp < 10000);
+  assert.equal(foes[1].hp, 10000);
+  advance(c, 0.5);
+  assert.equal(foes[0].hp, 10000 - Math.floor(u.attack));
+  assert.equal(foes[1].hp, 10000 - Math.floor(u.attack));
+});
+test("source DoT recipes use their recovered 250/333ms table intervals", () => {
+  const corrosion = published.skills.find((s) => s.id === "stella:skill.96")!
+    .actions![0];
+  assert.equal(corrosion.modifiers[0].tick, 0.25);
+  assert.equal(corrosion.power, 0);
+  const field = published.skills.find((s) => s.id === "stella:skill.103")!
+    .actions![0];
+  assert.equal(field.modifiers[0].tick, 0.333);
+  const charge = published.skills.find((s) => s.id === "stella:skill.110")!
+    .actions![0];
+  assert.equal(charge.travelTime, 0.3);
+  const blink = published.skills.find((s) => s.id === "stella:skill.111")!
+    .actions![0];
+  assert.equal(blink.travelTime, 0);
+});

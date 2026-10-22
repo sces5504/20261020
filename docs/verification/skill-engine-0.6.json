@@ -133,5 +133,16 @@
       "physical iOS Safari",
       "physical-device performance baseline"
     ]
+  },
+  "postMergeCorrection": {
+    "baseMain": "7fe51c115e257903e047e4f42800d6571301d56e",
+    "problem": "Normal-weapon attackPattern scaling leaked into active projectiles and was inconsistent for delayed normal bursts, melee and lasers.",
+    "regression": "100 !== 200 reproduced before fix; fixed fixture passes for active projectile/beam plus normal projectile/burst/melee/laser.",
+    "coreTests": {
+      "passed": 93,
+      "failed": 0
+    },
+    "typecheck": "passed",
+    "finalReleaseEvidence": "Final merge SHA and full Pages workflow recorded on correction PR."
   }
 }

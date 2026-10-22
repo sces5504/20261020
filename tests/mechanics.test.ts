@@ -864,3 +864,46 @@ test("source DoT recipes use their recovered 250/333ms table intervals", () => {
     .actions![0];
   assert.equal(blink.travelTime, 0);
 });
+
+test("basic-weapon multipliers affect normal bursts, melee and lasers without changing active skills", () => {
+  const { c, u, foes } = scene();
+  u.attack = 100;
+  c.mechanics.add(
+    u,
+    mod({ stat: "attackPattern", value: 0.5, duration: 10, pattern: "fan" }),
+    u,
+    "weapon-change",
+  );
+  c.mechanics.fire(u, foes[0], "aim", 1);
+  assert.equal(c.bullets.pop()!.attack, 50);
+  c.mechanics.execute(
+    u,
+    act({ kind: "projectile", power: 2 }),
+    "active-projectile",
+  );
+  assert.equal(c.bullets.pop()!.attack, 200);
+  c.mechanics.fire(u, foes[0], "burst", 3);
+  advance(c, 0.25);
+  assert.equal(c.bullets.length, 3);
+  assert(c.bullets.every((b) => b.attack === 50));
+  c.bullets = [];
+  const hp = foes[0].hp;
+  c.mechanics.fire(u, foes[0], "melee", 1);
+  assert.equal(foes[0].hp, hp - 50);
+  c.mechanics.fire(
+    u,
+    foes[0],
+    "melee",
+    1,
+    act({ kind: "projectile", pattern: "melee", power: 2 }),
+  );
+  assert.equal(foes[0].hp, hp - 250);
+  c.mechanics.fire(u, foes[0], "laser", 1);
+  assert.equal(c.mechanics.fields.at(-1)!.action.power, 0.5);
+  c.mechanics.execute(
+    u,
+    act({ kind: "beam", power: 2, duration: 1 }),
+    "active-beam",
+  );
+  assert.equal(c.mechanics.fields.at(-1)!.action.power, 2);
+});

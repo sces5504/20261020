@@ -56,6 +56,7 @@ export class Mechanics {
     action: Action;
     key: string;
     target?: string;
+    basic?: boolean;
   }[] = [];
   stoppedUntil = 0;
   stoppedSide: Unit["side"] = "enemy";
@@ -537,7 +538,9 @@ export class Mechanics {
         this.hit(
           u,
           v,
-          u.attack * this.stat(u, "attack") * (action?.power ?? 1),
+          u.attack *
+            this.stat(u, "attack") *
+            (action?.power ?? this.stat(u, "attackPattern")),
           "melee",
           action?.modifiers,
           false,
@@ -562,6 +565,7 @@ export class Mechanics {
           at: this.c.time + i * 0.12,
           owner: u.id,
           key: "basic-burst",
+          basic: true,
           target: t?.id,
           action: actionSchema.parse({
             kind: "projectile",
@@ -588,7 +592,7 @@ export class Mechanics {
           target: "enemies",
           radius: u.range,
           duration: 0.65,
-          power: 1,
+          power: this.stat(u, "attackPattern"),
           interval: 0.2,
           width: 24,
           follow: true,
@@ -645,7 +649,7 @@ export class Mechanics {
           this.stat(u, "attack") *
           (u.buff === "weaken" ? u.power : 1) *
           (action?.power ?? 1) *
-          this.stat(u, "attackPattern"),
+          (action ? 1 : this.stat(u, "attackPattern")),
         life: action?.duration ?? 5,
         color: visualColor ?? (u.side === "ally" ? u.color : "#ff8e7e"),
         owner: u.id,
@@ -793,7 +797,19 @@ export class Mechanics {
     this.pending = this.pending.filter((p) => p.at > c.time);
     for (const p of ready) {
       const u = c.units.find((u) => u.id === p.owner && u.hp > 0);
-      if (u) this.execute(u, p.action, p.key, p.target);
+      if (u && p.basic) {
+        if (this.frozen(u)) this.pending.push({ ...p, at: c.time + 0.05 });
+        else
+          this.fire(
+            u,
+            c.units.find((v) => v.id === p.target && v.hp > 0),
+            p.action.pattern,
+            p.action.count,
+            undefined,
+            p.action.speed,
+            p.action.spread,
+          );
+      } else if (u) this.execute(u, p.action, p.key, p.target);
     }
     this.advanceDashes(dt);
     for (const u of c.units) {

@@ -214,6 +214,7 @@ try {
       .locator('[data-action="new-voyage"][data-id="original:region.solar"]')
       .click();
     await page.locator('[data-answer="yes"]').click();
+    await page.waitForSelector(".story-scene");
     const restarted = await waitSave(
       page,
       (s) =>

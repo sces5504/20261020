@@ -236,7 +236,7 @@ try {
       .locator('[data-action="panel"][data-id="regions"]')
       .first()
       .click();
-    await page.locator('[data-action="travel"]').click();
+    await page.locator('[data-action="travel"][data-id="m1:helios"]').click();
     await page.locator('[data-answer="yes"]').click();
     await page.waitForFunction(
       () => document.querySelector("#region-title")?.textContent === "曙光星域",

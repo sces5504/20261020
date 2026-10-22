@@ -1,0 +1,1487 @@
+[
+  {
+    "id": "original:asset.enemy-147",
+    "name": "Enemy_Probe01",
+    "src": "assets/extensions/original-world/enemy-147.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "bae01befcd84c69169ad2692f52cf593351d98fe2183c9c0890ed08b2be254cd",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-148",
+    "name": "Enemy_Scout01",
+    "src": "assets/extensions/original-world/enemy-148.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "5a51ff44738daf99a92f0703889d2062ef00660dac9e9f43c33a2f9487fd90a7",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-149",
+    "name": "Enemy_Fighter01",
+    "src": "assets/extensions/original-world/enemy-149.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "333bf7a5703c5ab33b1b6eb53a1259233a20f5872f9f1fc6e271d5bb878e2043",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-150",
+    "name": "Enemy_Fighter02",
+    "src": "assets/extensions/original-world/enemy-150.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "beb35345cb8d182d64a279f4d79dada56a1df2c771f40dba7070fb3925bf20a7",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-151",
+    "name": "Enemy_Bomber01",
+    "src": "assets/extensions/original-world/enemy-151.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "b3e62228d24be2bd7e76998a3c3dcee1aba2bade120395670f5d9eb1f16bf5e8",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-152",
+    "name": "Enemy_Bomber02",
+    "src": "assets/extensions/original-world/enemy-152.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "a6b28b18bcc97a427328d9b6471d7e664d94c91eea91c4a1907b111521ac45ef",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-153",
+    "name": "Enemy_PTBoat01",
+    "src": "assets/extensions/original-world/enemy-153.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "1f2c085566e32ac584d8ab2cbba1792d38c3a5091744fa6d3ec44ae6e62f37f9",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-154",
+    "name": "Enemy_PTBoat02",
+    "src": "assets/extensions/original-world/enemy-154.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "8ba46fa9fc37beb00fcb6751acc4b583cb35620740880eeb5ac55455392e6c1b",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-155",
+    "name": "Enemy_PatrolKiller01",
+    "src": "assets/extensions/original-world/enemy-155.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "b20bc1ca642620f5bf602e0028f670bb6d50bcb03175915eebea33bedf3f9931",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-156",
+    "name": "Enemy_PatrolKiller02",
+    "src": "assets/extensions/original-world/enemy-156.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "399b87040978dcc37e710bccbc2158c89b00a7a2f6d75d7742c0cffd2209081b",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-157",
+    "name": "Enemy_Corvette01",
+    "src": "assets/extensions/original-world/enemy-157.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "99991de6d9120f2319bc67d1df0a3ed6d90e35a88e6c0432f4969aaaa9d5fe85",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-158",
+    "name": "Enemy_Corvette02",
+    "src": "assets/extensions/original-world/enemy-158.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "95f7c29e4ffc7dc12a8d837141f6579ef586c1defd2732d517584dd23aca0e82",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-159",
+    "name": "Enemy_Breacher01",
+    "src": "assets/extensions/original-world/enemy-159.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "960d7fd9cc9127564b08fc5c2414a136d79d6aff77b8674c111c113d6732fd03",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-160",
+    "name": "Enemy_Breacher02",
+    "src": "assets/extensions/original-world/enemy-160.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "ebc61657e8a4fa85aaf4c55daf568080eaf06eb0f4aa4de618082ffb71c0b1fe",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-161",
+    "name": "Enemy_Frigate01",
+    "src": "assets/extensions/original-world/enemy-161.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "4c166cb5b72d7f034af73f1c54c22bf642c36cdda2e1700e40a32b19fbe0749f",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-162",
+    "name": "Enemy_Frigate02",
+    "src": "assets/extensions/original-world/enemy-162.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "ed12cfff41497d15c480e478b4e8f6fb58fd103c18b8f416540812a2a7de413f",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-163",
+    "name": "Enemy_Destroyer01",
+    "src": "assets/extensions/original-world/enemy-163.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "fd429ab494f8b39e1e2906c730b5072c460ac1ec01e27c0897e1c79d877cdb27",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-164",
+    "name": "Enemy_Destroyer02",
+    "src": "assets/extensions/original-world/enemy-164.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "61ab7529ab00671c5028a4c9e08271f7114583047dfbf4d49c0d7583cd4e7a61",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-165",
+    "name": "Enemy_Cruiser01",
+    "src": "assets/extensions/original-world/enemy-165.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "9d92c21ab0a9a26417b267740caa4beff0b9d556f1adf35ceb0c511966521f63",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-166",
+    "name": "Enemy_Cruiser02",
+    "src": "assets/extensions/original-world/enemy-166.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "a779bf16f375786f1a0e6d13ad02ef702ef41dad30e454f39c8bde9fe4a45d8f",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-167",
+    "name": "Enemy_Ramer01",
+    "src": "assets/extensions/original-world/enemy-167.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "c36181998655946e98d90e18d31a7d9146bf18e47d4766f93d9ba0228db82852",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-168",
+    "name": "Enemy_Ramer02",
+    "src": "assets/extensions/original-world/enemy-168.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "8e97c6ef6dcb0a6b3284775aa413c885c8d999d447d06e5f02db4eb3091281c4",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-169",
+    "name": "Enemy_TorpedoCruiser01",
+    "src": "assets/extensions/original-world/enemy-169.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "45d85fe259d75c66eed41f2b96932d589ccb886432827cd90710988865018105",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-170",
+    "name": "Enemy_TorpedoCruiser02",
+    "src": "assets/extensions/original-world/enemy-170.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "60a7c8c897ea42baf030d3b408a22073fa1fbf18d21f17af780b6ee9c37fa05f",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-171",
+    "name": "Enemy_BattleCruiser01",
+    "src": "assets/extensions/original-world/enemy-171.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "de8a9d07da12ffd69703781bb27106c7a32d0dab0af899f2eabd385e53d41548",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-172",
+    "name": "Enemy_BattleCruiser02",
+    "src": "assets/extensions/original-world/enemy-172.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "689474eda8e23596f8f924fe337f16738091d7614541c4fcb6d8dc02a63b1d31",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-173",
+    "name": "Enemy_Battleship01",
+    "src": "assets/extensions/original-world/enemy-173.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "a5f25e051f81d77d85f05a10dae6c1998e51f57b29c583ca3994cf33f39a7a7c",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-174",
+    "name": "Enemy_Battleship02",
+    "src": "assets/extensions/original-world/enemy-174.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "f824f0adfdd6df1012b274dcf48ed2445f6389a9893fff3ef4d1a206131e461e",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-175",
+    "name": "Enemy_Battleship03",
+    "src": "assets/extensions/original-world/enemy-175.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "c3e775ae9b43bc57edacd08d291f79a269851f3111014895cd7d8702b3537d8e",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-176",
+    "name": "Enemy_Battleship04",
+    "src": "assets/extensions/original-world/enemy-176.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "eda0829d9d5a994629bbe3b07853c65470479b6b69b379abf8a8d54d042a4694",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-177",
+    "name": "Enemy_Battleship05",
+    "src": "assets/extensions/original-world/enemy-177.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "8a121c60c9fa4ed3ce8cd42e200bd6d041b707e740899223af4cf2dd9354d951",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-178",
+    "name": "Enemy_Mothership01",
+    "src": "assets/extensions/original-world/enemy-178.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "7ae68adb2feb2cf47cd773205cb86ec2593cf9552a738a4218a33858daa1dc0e",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-189",
+    "name": "Kiraba",
+    "src": "assets/extensions/original-world/enemy-189.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "72609bf4ed1d72c7c1f182ffd129ab8756dfb84c7fb08095d56aceeb68e34d96",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-190",
+    "name": "Mitsuba",
+    "src": "assets/extensions/original-world/enemy-190.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "08daf8c200b9b88d6b16277407bfff0708546ae70fcfc1829a08e3bd431558f1",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-191",
+    "name": "Aitsu",
+    "src": "assets/extensions/original-world/enemy-191.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "04b317ef07490f731d7e0087b7a0b4d114a96dc7775d3625da1c6d245975de77",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-192",
+    "name": "Haitsu",
+    "src": "assets/extensions/original-world/enemy-192.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "6e289d9bbc554e585446e1c6dee6a9b4fde3ab12ac6ef193d6961a0e7b2d9cef",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-193",
+    "name": "Morugo",
+    "src": "assets/extensions/original-world/enemy-193.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "6c23c3ddfb15a28844b7bc033f52ba8ff755d177faa71aa8c14b84f03a3e1f24",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-194",
+    "name": "Moruba",
+    "src": "assets/extensions/original-world/enemy-194.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "ec15d4de4fd25ea0b44dbfec02f506e30a2a3e5c38dad4d468923d5d85a74654",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-195",
+    "name": "Zeruga",
+    "src": "assets/extensions/original-world/enemy-195.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "fcca947bc964c90148edc2adb031b8732692616bb3a876bd5d3ec720b1ef4ba1",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-196",
+    "name": "Shiruga",
+    "src": "assets/extensions/original-world/enemy-196.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "5314a53c94e6d37ae090968db1c277fb3f10c42042dbf955b1b9e44e111ef0f2",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-197",
+    "name": "Leiga",
+    "src": "assets/extensions/original-world/enemy-197.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "536a95cd1b4e75fad04872069f6af80b6396525559386b396d6437a6667d6b33",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-280",
+    "name": "DoradusBoss",
+    "src": "assets/extensions/original-world/enemy-280.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "0984a7c836853e32345490fe2026201d0c9ba0ebd2f0ca90bc261c512fcdf61d",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-281",
+    "name": "OTS44Boss",
+    "src": "assets/extensions/original-world/enemy-281.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "d0499ab7cf3bcc5a65b1e522c286fb70cc905054e61ef92f0a4788595b24628d",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-282",
+    "name": "DENBoss",
+    "src": "assets/extensions/original-world/enemy-282.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "2fd1701e5b09ff459dc7d17c4b5bfd42df859a8c17baed20cf7217d61fda0f90",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-288",
+    "name": "Enemy_Fighter03",
+    "src": "assets/extensions/original-world/enemy-288.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "842ae8a37706a56bbe9b765909a895142dea6837802b332b2807d011d4eb2f60",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-290",
+    "name": "Enemy_SignalDisturbance",
+    "src": "assets/extensions/original-world/enemy-290.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "4a09b61eb947284b4390441e99d3da79d0ad938d669452311e7263972a91017c",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-291",
+    "name": "Enemy_ShockCruiser01",
+    "src": "assets/extensions/original-world/enemy-291.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "8d145c11b628113d339f878753be0f36ae9eb374316da7ff1594a5c4f0903020",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-292",
+    "name": "Saiga",
+    "src": "assets/extensions/original-world/enemy-292.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "eeb31ca3dca46e4334be2db76d89b8ef6f36ff9f7653232af5bef4e63e2be7d0",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-293",
+    "name": "Enemy_Grinder01",
+    "src": "assets/extensions/original-world/enemy-293.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "a9ee9ee5610a3e9e1a37f353a46c205c48196e5ccfc9fee025910f5c33db8e3a",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-294",
+    "name": "Enemy_BarrageDefender01",
+    "src": "assets/extensions/original-world/enemy-294.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "f62d927a0b45e0a699194ae3163192c641bb470b27161024df22be5a749313e6",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-295",
+    "name": "Enemy_LaserDefender01",
+    "src": "assets/extensions/original-world/enemy-295.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "0107057eaa5fc6f481fc70dca51e30fbbe281e1a54bb6e25bf2004d898dbc0c9",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-296",
+    "name": "Giria",
+    "src": "assets/extensions/original-world/enemy-296.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "b9e83fdd84e44891915472a20f0e26dd390830828d254f620a096ac6f8a37432",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-297",
+    "name": "Enemy_Battleship06",
+    "src": "assets/extensions/original-world/enemy-297.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "c1c646aeafc4220eecea956c7c4e38c333e49ca786e2501fbdd737dea6574e9b",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-309",
+    "name": "Enemy_Capture01",
+    "src": "assets/extensions/original-world/enemy-309.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "afa14d8eedeacad9917188c49d929a922060016540fefb4863de3d2c7a0e3c4e",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-310",
+    "name": "Enemy_MeleeDefender01",
+    "src": "assets/extensions/original-world/enemy-310.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "5ab2a93173bb1ec6c403cab505aeae1136d66ce32ef2c40edd599baded8028d7",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-311",
+    "name": "Enemy_Incinerator01",
+    "src": "assets/extensions/original-world/enemy-311.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "11a8e84546d032f9e13ae7dc47b843d697a30163ff60ae055233c3b41da39908",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-328",
+    "name": "Enemy_MothershipQ01",
+    "src": "assets/extensions/original-world/enemy-328.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "23601b54cc0f84f0325aef9d1a6c0da794b60b39bb81ea696fcbdf48eb5eefa3",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-329",
+    "name": "Enemy_MothershipQ02",
+    "src": "assets/extensions/original-world/enemy-329.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "dde160469521bc8f10a5bea82fd7e3f0fa8c858ef634f449318275ba01a85473",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-330",
+    "name": "Enemy_MothershipQ03",
+    "src": "assets/extensions/original-world/enemy-330.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "4b9836621968fb2904bc4d8ff815be7d7aff88738bc8c4c8f215b9d1b5614126",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-331",
+    "name": "Enemy_MothershipQ04",
+    "src": "assets/extensions/original-world/enemy-331.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "196007af121806941e9c854032eab3268aef8e2373caa4a38d3ee526d941353d",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-339",
+    "name": "Girija",
+    "src": "assets/extensions/original-world/enemy-339.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "9e218bc90ac66790f8d53a3c1e5921ae45facb91d07addc2e58cb2568da0f9f4",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.enemy-340",
+    "name": "Enemy_LightCarrier01",
+    "src": "assets/extensions/original-world/enemy-340.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "1febb39a5a0b276e8850a896198039539f34c9b3c16b8b409a3cdd0066ffabbe",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-1",
+    "name": "Sun",
+    "src": "assets/extensions/original-world/planet-1.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "ad33290dc6b8fb619612f6cb46289991e59cc573277f42f22943b103e8b13f0e",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-2",
+    "name": "Earth",
+    "src": "assets/extensions/original-world/planet-2.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "003ff9c360c44bdbbb57a1816ae6a61a94f720370412a9da17f2bfdc75742972",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-3",
+    "name": "Moon",
+    "src": "assets/extensions/original-world/planet-3.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "33f4462e9dff7a6f2fd6042a0cf26643a29271e2af14be13d12234c121a2b069",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-4",
+    "name": "Mercury",
+    "src": "assets/extensions/original-world/planet-4.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "821e881603f7a990bddd4cd24f011852930b6ea730bd51d061dd8cb22161f2fe",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-5",
+    "name": "Venus",
+    "src": "assets/extensions/original-world/planet-5.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "31a77b4aac749c4bacb014b1fa45684ddcc5b3884b6b15ade9ced079e9258aea",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-6",
+    "name": "Mars",
+    "src": "assets/extensions/original-world/planet-6.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "d9d45878b7f0a8e00886130de267c316cfa2b41b0b03622ac776c9c23653123d",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-7",
+    "name": "Jupiter",
+    "src": "assets/extensions/original-world/planet-7.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "122443c466254fe3ce9237e3f47ae2346432860fb52dc6b33411623a52a91dbe",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-8",
+    "name": "Saturn",
+    "src": "assets/extensions/original-world/planet-8.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "b0ff80009d63aedd005c2ce6e3d8e1ce4942cc80ec10c0e01b369a27c8337bf7",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-9",
+    "name": "Uranus",
+    "src": "assets/extensions/original-world/planet-9.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "b9bb853012c313e6e24d67c2c9baeea45345cebc0264ea309cb4b55f34bc1805",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-10",
+    "name": "Neptune",
+    "src": "assets/extensions/original-world/planet-10.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "69cc4c84927908048007b460cdbe5398d783493b690be2e224d0782afcd8a094",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-11",
+    "name": "Pluto",
+    "src": "assets/extensions/original-world/planet-11.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "395b27bf1dc9f5beaac6e7aff5e2d4f325cd4f6324a0db03d3bff87a38486dd3",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-12",
+    "name": "Nemesis",
+    "src": "assets/extensions/original-world/planet-12.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "d79b3458aed748edf14b61432206827d9c02f9949b0e360f4612e9651425e6f5",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-13",
+    "name": "581E",
+    "src": "assets/extensions/original-world/planet-13.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "ba850c8c704e87717fdb717022da5048811a995b9bb3eac57b0abe08625775ff",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-14",
+    "name": "Seginus",
+    "src": "assets/extensions/original-world/planet-14.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "1f3fe12c886d69563ab12beaf3d6f7fb0f5fae06e6a75bb189076f9ae40dca1e",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-15",
+    "name": "Spica",
+    "src": "assets/extensions/original-world/planet-15.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "ba646dd87c2ecdc27d42cdcbd7dc14ae628dcacff2a370f623c38e9322e79bb2",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-16",
+    "name": "Gliese",
+    "src": "assets/extensions/original-world/planet-16.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "e5f1fed937ce22201d45a4dd20500383689d60c556e9c76e4b4ade9f705af7b4",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-17",
+    "name": "Izar",
+    "src": "assets/extensions/original-world/planet-17.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "cd7847f710ef8d228ec9c3c01633d09195a9defbea7b91f584f3956be9553ef1",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-18",
+    "name": "Arcturus",
+    "src": "assets/extensions/original-world/planet-18.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "865d8562dbc44febfe4d4e8c6b05d9a4e091b6fa3117998538e5466052e34167",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-19",
+    "name": "Valencia",
+    "src": "assets/extensions/original-world/planet-19.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "ea6eaa8fc1a676193e53b672770a6c9d0a83b73159f17bcdf2a6f5c9450e8429",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-20",
+    "name": "Vello",
+    "src": "assets/extensions/original-world/planet-20.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "8c42d56becf75d9251b9ea2fe5b4a9f1dd44fa3ebcbabeda08c742ae75f6de6e",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-21",
+    "name": "Linda",
+    "src": "assets/extensions/original-world/planet-21.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "ee9002a2f45eb739621942e080a579e764373de958a683dfe751a53a77e2af27",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-22",
+    "name": "Regulus",
+    "src": "assets/extensions/original-world/planet-22.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "249c26a9cddafcf1d3205d275d5c0b44b079d002b471d836c2bfe88fb4084c48",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-23",
+    "name": "Arkas",
+    "src": "assets/extensions/original-world/planet-23.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "e68e3d005b90206253d6adb3772b4adaf19c1fb9599bf76204aeb3cc416a5e57",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-24",
+    "name": "Procyon",
+    "src": "assets/extensions/original-world/planet-24.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "7ae24e7e0ba6f7f696e0718a05fc43745684f529ecc32992b56724bf67ecfe6c",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-25",
+    "name": "Wolf359",
+    "src": "assets/extensions/original-world/planet-25.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "237ebc7a03fab63faa9b901ab667c60116075813556402cd71a2191c7a52a255",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-26",
+    "name": "Luyten",
+    "src": "assets/extensions/original-world/planet-26.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "c24c1c3c01c14719857fd92cb6137429098b81af15aa0b1841e54baab790179e",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-27",
+    "name": "Regor",
+    "src": "assets/extensions/original-world/planet-27.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "4b9475babe09ef6ac8c11097ba9f676635c3c4b8ffec8af4fd4570c4d6c07c17",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-28",
+    "name": "TseenKe",
+    "src": "assets/extensions/original-world/planet-28.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "2178167745242c4afccd046a4eb41938be20b33b034fc69f4dd366de2795d6e9",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-29",
+    "name": "Suhail",
+    "src": "assets/extensions/original-world/planet-29.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "f7654aa3ff9c34c60ae0f7729b7b1cdae72c0a16ba918acc1d7068efaddc3148",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-30",
+    "name": "Alherem",
+    "src": "assets/extensions/original-world/planet-30.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "b3d5c065d5f5440347b5b696e28d46af3d2aadf97636144754232f5dc8ab927f",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-31",
+    "name": "Musca",
+    "src": "assets/extensions/original-world/planet-31.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "5185dd0962b96295b116bdc20eaa74c0d674771e5ae7f28f8bb08f768fd0db93",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-32",
+    "name": "Acrux",
+    "src": "assets/extensions/original-world/planet-32.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "b525beccc4e934d2da871957e86720e6f2cb02170635a140c94865ae89a21a40",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-33",
+    "name": "Achernar",
+    "src": "assets/extensions/original-world/planet-33.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "35c57369c954d28c9df9dd44f2c351797a859a48d48957bcb7798b765b8af756",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-34",
+    "name": "Ran",
+    "src": "assets/extensions/original-world/planet-34.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "0b059fcfdbde4fffb1aa90fd7bdac66cb317a402dab15aa31c6bd5bea3a85b6a",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-35",
+    "name": "Aegir",
+    "src": "assets/extensions/original-world/planet-35.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "f429f4989f8b5357b1cd49063a93e2ccd7902bd1ec4a72dd1429b3be877b3932",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-36",
+    "name": "Doradus",
+    "src": "assets/extensions/original-world/planet-36.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "67fff30c5025938749ceffb6819d1a82ce5794ca8290c5133648629ab2a0335c",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-37",
+    "name": "Acamar",
+    "src": "assets/extensions/original-world/planet-37.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "38db76e79289b839f1f33dcaa1a59f4f30a7e04ef784323e209df063ff23f93c",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-38",
+    "name": "OTS44",
+    "src": "assets/extensions/original-world/planet-38.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "16db206bb94b8729eb4e8e213059a23bcf1465b1096dac5d019d106945b204d1",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-39",
+    "name": "DEN",
+    "src": "assets/extensions/original-world/planet-39.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "c60bbca389bb70f30115b4e395d14bca78d32b33a7bb08725fd37a1ebd78f1ad",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-40",
+    "name": "Sirius",
+    "src": "assets/extensions/original-world/planet-40.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "8504b45df07db156443539cf23ee2fda5602b3e06c13d125b4809c8405a32b85",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-41",
+    "name": "Bayes",
+    "src": "assets/extensions/original-world/planet-41.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "f2c431b292a2c2b462f8226ffca3b712afd7f4c26edcd1d29855f515c8d090ea",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-42",
+    "name": "Rufus",
+    "src": "assets/extensions/original-world/planet-42.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "0c15fe0a215b6ac5d7c3c71c320ae0d7bc25be77c4f5f7240bf1311d8b59ff27",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-43",
+    "name": "Asmidiske",
+    "src": "assets/extensions/original-world/planet-43.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "83d28630cb5786e186c65fbe1786314848b6d3fc604ad2f4f570060371fbd06c",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-44",
+    "name": "Canis",
+    "src": "assets/extensions/original-world/planet-44.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "9b0e30f2c30fba1659d6c8ef2fe68c3132aae6007228abd33e26ea1bd4427398",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-45",
+    "name": "Wezen",
+    "src": "assets/extensions/original-world/planet-45.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "b2a22f8a9f795b11162825f0ef602aac8a1167522b277036810ccd7664c29793",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-46",
+    "name": "Aludra",
+    "src": "assets/extensions/original-world/planet-46.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "0f0e6839df4a2cb618b9d4bcb4957698d64a201fb1cb8673208f7d3b48d78347",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-47",
+    "name": "Furud",
+    "src": "assets/extensions/original-world/planet-47.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "0d8edd257831c8a11b71ffa295cffb41084e65651c225ae6502e4aed46881773",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-48",
+    "name": "Naos",
+    "src": "assets/extensions/original-world/planet-48.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "c50dfed62a1e689a4f53840101f91a70d5b20dea3b94f017701c5f1d044877c1",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-49",
+    "name": "Polaris",
+    "src": "assets/extensions/original-world/planet-49.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "757252c545045b8aaf72dd8e52af24f568db09d4a05151911a33f9eabfe167df",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-50",
+    "name": "Mucephei",
+    "src": "assets/extensions/original-world/planet-50.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "e73c925588221ddeed7771096c383f34cf4c68e186ecc57c8bf26a43a8c95b49",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-51",
+    "name": "Alrai",
+    "src": "assets/extensions/original-world/planet-51.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "ea930717f4662b9e58b9b20d7ba023af396ecba9e36d700fe8d947f365353e66",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-52",
+    "name": "Shedar",
+    "src": "assets/extensions/original-world/planet-52.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "b1006644ec2ac673cdeac54d0fcfb6399b6c161de17f25bafffb2f2a05752998",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-53",
+    "name": "Hypatia",
+    "src": "assets/extensions/original-world/planet-53.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "0729a421e2bb842d4fe62e793d4b03fb83bedcca0a8428a18825338191ba2965",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-54",
+    "name": "Vega",
+    "src": "assets/extensions/original-world/planet-54.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "1b2d55af1197d26cd4efbcda2bdfed848b83880f9caf0d38801ff5587370ec3a",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-55",
+    "name": "Kruger60",
+    "src": "assets/extensions/original-world/planet-55.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "fbf65aff535e1130cef217cc3145d02ca544f97444a6b17735d07eb2a847b115",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-56",
+    "name": "Kochab",
+    "src": "assets/extensions/original-world/planet-56.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "97d22a47a22fed9a13735bb9f086403c2a169a1b9a9acbf2ac2f63c51f8a3ad2",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-57",
+    "name": "Navi",
+    "src": "assets/extensions/original-world/planet-57.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "37aef99e3b0d738e4d7a619156508ac5f19ff158b3b1bffc2f68496445a1956d",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-58",
+    "name": "Bellerophon",
+    "src": "assets/extensions/original-world/planet-58.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "228ab282c91bc216553d46845c2389e69b838cda87c51b7d38e9aaa5da517c01",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-59",
+    "name": "Cygni",
+    "src": "assets/extensions/original-world/planet-59.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "28387d5686f9dd2727a3840b269150cb59f15bb78a5f8ede0328f32b2f072452",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-60",
+    "name": "Sadr",
+    "src": "assets/extensions/original-world/planet-60.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "5f89533a6cca3844385b912b1c29644412bc079b9296fc30696e0e93a8ab18c7",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-61",
+    "name": "Deneb",
+    "src": "assets/extensions/original-world/planet-61.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "0eca79cba5fc81cb4fe38f60e1cf23ea48968babe2fb7a3af211691f5cb0854c",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-62",
+    "name": "Enif",
+    "src": "assets/extensions/original-world/planet-62.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "1d4c23aa40fa4931be5a3103800da7b616a316397a23064456fb45f90a7627ee",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-63",
+    "name": "Albireo",
+    "src": "assets/extensions/original-world/planet-63.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "03dc0b03ba8f29b46ab30acb1aeaa1ceab804440146291d0ff7661811ce28e10",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-64",
+    "name": "Kepler",
+    "src": "assets/extensions/original-world/planet-64.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "d459d0f87b68844e883f2e172cf08e71f4489c139813b4044593fdb8ddabcd9c",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-65",
+    "name": "Piazzi",
+    "src": "assets/extensions/original-world/planet-65.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "ecc2d6f4d6843ccc391361b7dd487bdee67f0f31cefe748444f2cf330f154c42",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-66",
+    "name": "Osiris",
+    "src": "assets/extensions/original-world/planet-66.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "812fb7e211372d0f29725f825e03dd795182d67e172faa35bdbf8d321e993753",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-67",
+    "name": "Pollux",
+    "src": "assets/extensions/original-world/planet-67.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "f04ff7dc9851322035e0ead8fbfd12e5f5ef2db4749b0b403e05bf49ae324d9c",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-68",
+    "name": "Thestias",
+    "src": "assets/extensions/original-world/planet-68.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "c5d40f423972a193391d45793b7f1dfbc75daa9bd13fbee64fc3ad5d67284b7d",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-69",
+    "name": "Betelgeuse",
+    "src": "assets/extensions/original-world/planet-69.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "f06fa48c2e0d8b503c7dd518d4b04daf320b266991ac972dfd1d88c3915d1f5b",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-70",
+    "name": "Bellatrix",
+    "src": "assets/extensions/original-world/planet-70.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "294cdf43530544a65d598d2b2e995a70b7f5f777c8e49bb7a9e616f0be6a760c",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-71",
+    "name": "Tabit",
+    "src": "assets/extensions/original-world/planet-71.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "a34487911d7391c7c86806d51f8189b49a42575d3b0339e23cc61f3fb13d651b",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-72",
+    "name": "Rigel",
+    "src": "assets/extensions/original-world/planet-72.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "50443b45983ef3cede4c661a090546ba6c28441fd6b996bc2ad6e0c67deb4f09",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-73",
+    "name": "Saiph",
+    "src": "assets/extensions/original-world/planet-73.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "e7570ea4fd2c05f62f98306b411a44006729c3e48164cd2b7c1fb6cd180ea150",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-74",
+    "name": "Alhena",
+    "src": "assets/extensions/original-world/planet-74.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "103736c02c50bb87ae4d9b2891e8e158f1fa299cfa78afc2c1761e0de7c30d11",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-75",
+    "name": "Castor",
+    "src": "assets/extensions/original-world/planet-75.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "fd09949ca3f4297cb8ad76a7af764bb763bce3f81570a7483e104d33674f8d60",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-76",
+    "name": "Aldebaran",
+    "src": "assets/extensions/original-world/planet-76.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "d91e06535a6545eda936106fbf2e66ea8d60e403093caafcf333ba2f266db290",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-77",
+    "name": "Teide",
+    "src": "assets/extensions/original-world/planet-77.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "6ad6ea4f972e2ca4aad189557a4de6d514ba9964cfd328165b140f41227a4862",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-78",
+    "name": "Amateru",
+    "src": "assets/extensions/original-world/planet-78.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "da5e3c227b78ac5cbc19ed95b5d40b35a3c947b1e80366211a37d346df8a988f",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-79",
+    "name": "Alcyone",
+    "src": "assets/extensions/original-world/planet-79.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "3dc11449b6ec6c5c4c4533d82d2253b7c9121421dae35716d4f23a10970d8193",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-80",
+    "name": "Electra",
+    "src": "assets/extensions/original-world/planet-80.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "bf74b5517c136fb11f201c24edec97ee559db9006640227c032b33f4bc9851d0",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-81",
+    "name": "Maia",
+    "src": "assets/extensions/original-world/planet-81.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "40cbb9c0c2b9aedf31509ccae22e84cb742fc5ac71b0b25067b18e1faf54645c",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-82",
+    "name": "Celaeno",
+    "src": "assets/extensions/original-world/planet-82.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "2b27066a8e724967dcb9ee1f70bc520b36984ffadffdc329e63c7138134352ca",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-83",
+    "name": "Asterope",
+    "src": "assets/extensions/original-world/planet-83.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "49151f86dfa8cf5ecf81186d2840aa91cff1605ccbec751a1a75c7b4823441db",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-84",
+    "name": "Merope",
+    "src": "assets/extensions/original-world/planet-84.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "3ecd59201ea2f58f015472ba6a52b1d64e98cdd61c56d88a53fad22a55564226",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.planet-85",
+    "name": "Taygeta",
+    "src": "assets/extensions/original-world/planet-85.webp",
+    "width": 384,
+    "height": 384,
+    "hash": "d4d22b23511687ea9024cf4056b1e800ee6f1897129d83ba8f53174e01298422",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.background-solar",
+    "name": "solar",
+    "src": "assets/extensions/original-world/background-solar.webp",
+    "width": 1672,
+    "height": 941,
+    "hash": "3619ba81af17220ecf8c067daace61f8c90b11328d667c5c6f5ded525876d104",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.background-virgo",
+    "name": "virgo",
+    "src": "assets/extensions/original-world/background-virgo.webp",
+    "width": 1672,
+    "height": 941,
+    "hash": "1212052cc6dd65278b50119e15b2135ec821ed2b20ea29bb46091cae2d707d63",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.background-leo",
+    "name": "leo",
+    "src": "assets/extensions/original-world/background-leo.webp",
+    "width": 1672,
+    "height": 940,
+    "hash": "fc2c002faa44930db3090ab364316640ef74715e994fcc385a7977446028dd88",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.background-southern",
+    "name": "southern",
+    "src": "assets/extensions/original-world/background-southern.webp",
+    "width": 1672,
+    "height": 941,
+    "hash": "41ebbffea970e289f76fe383529aef2470244d57f4419221f923ea6758c97481",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.background-canis",
+    "name": "canis",
+    "src": "assets/extensions/original-world/background-canis.webp",
+    "width": 1672,
+    "height": 940,
+    "hash": "2c3d61bf1360131e1c118ae4a7f692ff64acafd8ca7c7f1c5eaa57316eff5cd0",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.background-northern",
+    "name": "northern",
+    "src": "assets/extensions/original-world/background-northern.webp",
+    "width": 1672,
+    "height": 941,
+    "hash": "24af7051aa31fc2dda9bf4e0a1e6710010f668b6be35a617a7ee2df1ae179eae",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.background-cygnus",
+    "name": "cygnus",
+    "src": "assets/extensions/original-world/background-cygnus.webp",
+    "width": 1672,
+    "height": 941,
+    "hash": "780845ace88badac3c640805853c07fcd50b51e7a9a688efe1e287ea186fa551",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.background-gemini",
+    "name": "gemini",
+    "src": "assets/extensions/original-world/background-gemini.webp",
+    "width": 1672,
+    "height": 941,
+    "hash": "8cc687a4d2f339fef1a82f3476a836373ddfc87428fb5cd9b1e1becc17972a05",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.background-taurus",
+    "name": "taurus",
+    "src": "assets/extensions/original-world/background-taurus.webp",
+    "width": 1672,
+    "height": 941,
+    "hash": "79c73ee336d7cd1e4b3d41edb010e1f8da89b475035daf2126c7e883b5e99c53",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.background-scorpio",
+    "name": "scorpio",
+    "src": "assets/extensions/original-world/background-scorpio.webp",
+    "width": 1672,
+    "height": 941,
+    "hash": "a6309e430ceb62b9fa30218a92d0cb9d480f28d0a360247047bb0c15295c140c",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.background-sagittarius",
+    "name": "sagittarius",
+    "src": "assets/extensions/original-world/background-sagittarius.webp",
+    "width": 1672,
+    "height": 941,
+    "hash": "ab3acb036ea431124404bea0a73c4104212261f665d256b2601a0794095583c2",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.background-cancer",
+    "name": "cancer",
+    "src": "assets/extensions/original-world/background-cancer.webp",
+    "width": 1672,
+    "height": 941,
+    "hash": "70f91a2d92008fbb7ef67495d09ccf8f3dbb415d8da306eac7b6a87ffaa34c94",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.background-aries",
+    "name": "aries",
+    "src": "assets/extensions/original-world/background-aries.webp",
+    "width": 1672,
+    "height": 940,
+    "hash": "5da6127f2f8c5e58c7b2e6c229fffff23004c8f0bc095e98f3975ab09fc433c2",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.background-pisces",
+    "name": "pisces",
+    "src": "assets/extensions/original-world/background-pisces.webp",
+    "width": 1672,
+    "height": 941,
+    "hash": "bf735d8c41f484cdfb5dd84cd6f807492b8833faea42fa07b961506980b64527",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.node-stronghold",
+    "name": "stronghold",
+    "src": "assets/extensions/original-world/node-stronghold.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "f9de3ba7f47a8ce1d3f4477b6628347639e8b16b0fb64488793067880212673e",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.node-camp",
+    "name": "camp",
+    "src": "assets/extensions/original-world/node-camp.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "316232757d524743d13641b951fee82771c41e9a2e0f4629f3b3a3b1f5aca0b5",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.node-event",
+    "name": "event",
+    "src": "assets/extensions/original-world/node-event.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "f635182c52beb0ec7313a2ba2ad18afe5a5e3a45ce19e74c797022c5ddb32d80",
+    "review": "candidate"
+  },
+  {
+    "id": "original:asset.node-gate",
+    "name": "gate",
+    "src": "assets/extensions/original-world/node-gate.webp",
+    "width": 512,
+    "height": 512,
+    "hash": "507975dd3e47235f316db4cdd10e2b1ed7ef5e11b80b52c797155ab1a912bc1c",
+    "review": "candidate"
+  }
+]

@@ -1,0 +1,5282 @@
+[
+  {
+    "id": "original:asset.enemy-147",
+    "path": "art/world/original-world/web/enemy-147.webp",
+    "runtime": "assets/extensions/original-world/enemy-147.webp",
+    "sha256": "bae01befcd84c69169ad2692f52cf593351d98fe2183c9c0890ed08b2be254cd",
+    "master": "art/world/original-world/masters/enemy-atlas-00.png",
+    "masterSha256": "e883d997c2ddc5e671e834e552d865392160eb10dcd7b7db768b674c7a406c71",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-147.webp"
+  },
+  {
+    "id": "original:asset.enemy-148",
+    "path": "art/world/original-world/web/enemy-148.webp",
+    "runtime": "assets/extensions/original-world/enemy-148.webp",
+    "sha256": "5a51ff44738daf99a92f0703889d2062ef00660dac9e9f43c33a2f9487fd90a7",
+    "master": "art/world/original-world/masters/enemy-atlas-00.png",
+    "masterSha256": "e883d997c2ddc5e671e834e552d865392160eb10dcd7b7db768b674c7a406c71",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 1,
+      "crop": [
+        418,
+        0,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-148.webp"
+  },
+  {
+    "id": "original:asset.enemy-149",
+    "path": "art/world/original-world/web/enemy-149.webp",
+    "runtime": "assets/extensions/original-world/enemy-149.webp",
+    "sha256": "333bf7a5703c5ab33b1b6eb53a1259233a20f5872f9f1fc6e271d5bb878e2043",
+    "master": "art/world/original-world/masters/enemy-atlas-00.png",
+    "masterSha256": "e883d997c2ddc5e671e834e552d865392160eb10dcd7b7db768b674c7a406c71",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 2,
+      "crop": [
+        836,
+        0,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-149.webp"
+  },
+  {
+    "id": "original:asset.enemy-150",
+    "path": "art/world/original-world/web/enemy-150.webp",
+    "runtime": "assets/extensions/original-world/enemy-150.webp",
+    "sha256": "beb35345cb8d182d64a279f4d79dada56a1df2c771f40dba7070fb3925bf20a7",
+    "master": "art/world/original-world/masters/enemy-atlas-00.png",
+    "masterSha256": "e883d997c2ddc5e671e834e552d865392160eb10dcd7b7db768b674c7a406c71",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 3,
+      "crop": [
+        0,
+        418,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-150.webp"
+  },
+  {
+    "id": "original:asset.enemy-151",
+    "path": "art/world/original-world/web/enemy-151.webp",
+    "runtime": "assets/extensions/original-world/enemy-151.webp",
+    "sha256": "b3e62228d24be2bd7e76998a3c3dcee1aba2bade120395670f5d9eb1f16bf5e8",
+    "master": "art/world/original-world/masters/enemy-atlas-00.png",
+    "masterSha256": "e883d997c2ddc5e671e834e552d865392160eb10dcd7b7db768b674c7a406c71",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 4,
+      "crop": [
+        418,
+        418,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-151.webp"
+  },
+  {
+    "id": "original:asset.enemy-152",
+    "path": "art/world/original-world/web/enemy-152.webp",
+    "runtime": "assets/extensions/original-world/enemy-152.webp",
+    "sha256": "a6b28b18bcc97a427328d9b6471d7e664d94c91eea91c4a1907b111521ac45ef",
+    "master": "art/world/original-world/masters/enemy-atlas-00.png",
+    "masterSha256": "e883d997c2ddc5e671e834e552d865392160eb10dcd7b7db768b674c7a406c71",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 5,
+      "crop": [
+        836,
+        418,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-152.webp"
+  },
+  {
+    "id": "original:asset.enemy-153",
+    "path": "art/world/original-world/web/enemy-153.webp",
+    "runtime": "assets/extensions/original-world/enemy-153.webp",
+    "sha256": "1f2c085566e32ac584d8ab2cbba1792d38c3a5091744fa6d3ec44ae6e62f37f9",
+    "master": "art/world/original-world/masters/enemy-atlas-00.png",
+    "masterSha256": "e883d997c2ddc5e671e834e552d865392160eb10dcd7b7db768b674c7a406c71",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 6,
+      "crop": [
+        0,
+        836,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-153.webp"
+  },
+  {
+    "id": "original:asset.enemy-154",
+    "path": "art/world/original-world/web/enemy-154.webp",
+    "runtime": "assets/extensions/original-world/enemy-154.webp",
+    "sha256": "8ba46fa9fc37beb00fcb6751acc4b583cb35620740880eeb5ac55455392e6c1b",
+    "master": "art/world/original-world/masters/enemy-atlas-00.png",
+    "masterSha256": "e883d997c2ddc5e671e834e552d865392160eb10dcd7b7db768b674c7a406c71",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 7,
+      "crop": [
+        418,
+        836,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-154.webp"
+  },
+  {
+    "id": "original:asset.enemy-155",
+    "path": "art/world/original-world/web/enemy-155.webp",
+    "runtime": "assets/extensions/original-world/enemy-155.webp",
+    "sha256": "b20bc1ca642620f5bf602e0028f670bb6d50bcb03175915eebea33bedf3f9931",
+    "master": "art/world/original-world/masters/enemy-atlas-00.png",
+    "masterSha256": "e883d997c2ddc5e671e834e552d865392160eb10dcd7b7db768b674c7a406c71",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 8,
+      "crop": [
+        836,
+        836,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-155.webp"
+  },
+  {
+    "id": "original:asset.enemy-156",
+    "path": "art/world/original-world/web/enemy-156.webp",
+    "runtime": "assets/extensions/original-world/enemy-156.webp",
+    "sha256": "399b87040978dcc37e710bccbc2158c89b00a7a2f6d75d7742c0cffd2209081b",
+    "master": "art/world/original-world/masters/enemy-atlas-01.png",
+    "masterSha256": "0099dcc17f8c2c13c9278317d53a87a9e47dbf9c019f99a98eada9acaa3463cb",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-156.webp"
+  },
+  {
+    "id": "original:asset.enemy-157",
+    "path": "art/world/original-world/web/enemy-157.webp",
+    "runtime": "assets/extensions/original-world/enemy-157.webp",
+    "sha256": "99991de6d9120f2319bc67d1df0a3ed6d90e35a88e6c0432f4969aaaa9d5fe85",
+    "master": "art/world/original-world/masters/enemy-atlas-01.png",
+    "masterSha256": "0099dcc17f8c2c13c9278317d53a87a9e47dbf9c019f99a98eada9acaa3463cb",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 1,
+      "crop": [
+        418,
+        0,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-157.webp"
+  },
+  {
+    "id": "original:asset.enemy-158",
+    "path": "art/world/original-world/web/enemy-158.webp",
+    "runtime": "assets/extensions/original-world/enemy-158.webp",
+    "sha256": "95f7c29e4ffc7dc12a8d837141f6579ef586c1defd2732d517584dd23aca0e82",
+    "master": "art/world/original-world/masters/enemy-atlas-01.png",
+    "masterSha256": "0099dcc17f8c2c13c9278317d53a87a9e47dbf9c019f99a98eada9acaa3463cb",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 2,
+      "crop": [
+        836,
+        0,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-158.webp"
+  },
+  {
+    "id": "original:asset.enemy-159",
+    "path": "art/world/original-world/web/enemy-159.webp",
+    "runtime": "assets/extensions/original-world/enemy-159.webp",
+    "sha256": "960d7fd9cc9127564b08fc5c2414a136d79d6aff77b8674c111c113d6732fd03",
+    "master": "art/world/original-world/masters/enemy-atlas-01.png",
+    "masterSha256": "0099dcc17f8c2c13c9278317d53a87a9e47dbf9c019f99a98eada9acaa3463cb",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 3,
+      "crop": [
+        0,
+        418,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-159.webp"
+  },
+  {
+    "id": "original:asset.enemy-160",
+    "path": "art/world/original-world/web/enemy-160.webp",
+    "runtime": "assets/extensions/original-world/enemy-160.webp",
+    "sha256": "ebc61657e8a4fa85aaf4c55daf568080eaf06eb0f4aa4de618082ffb71c0b1fe",
+    "master": "art/world/original-world/masters/enemy-atlas-01.png",
+    "masterSha256": "0099dcc17f8c2c13c9278317d53a87a9e47dbf9c019f99a98eada9acaa3463cb",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 4,
+      "crop": [
+        418,
+        418,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-160.webp"
+  },
+  {
+    "id": "original:asset.enemy-161",
+    "path": "art/world/original-world/web/enemy-161.webp",
+    "runtime": "assets/extensions/original-world/enemy-161.webp",
+    "sha256": "4c166cb5b72d7f034af73f1c54c22bf642c36cdda2e1700e40a32b19fbe0749f",
+    "master": "art/world/original-world/masters/enemy-atlas-01.png",
+    "masterSha256": "0099dcc17f8c2c13c9278317d53a87a9e47dbf9c019f99a98eada9acaa3463cb",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 5,
+      "crop": [
+        836,
+        418,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-161.webp"
+  },
+  {
+    "id": "original:asset.enemy-162",
+    "path": "art/world/original-world/web/enemy-162.webp",
+    "runtime": "assets/extensions/original-world/enemy-162.webp",
+    "sha256": "ed12cfff41497d15c480e478b4e8f6fb58fd103c18b8f416540812a2a7de413f",
+    "master": "art/world/original-world/masters/enemy-atlas-01.png",
+    "masterSha256": "0099dcc17f8c2c13c9278317d53a87a9e47dbf9c019f99a98eada9acaa3463cb",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 6,
+      "crop": [
+        0,
+        836,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-162.webp"
+  },
+  {
+    "id": "original:asset.enemy-163",
+    "path": "art/world/original-world/web/enemy-163.webp",
+    "runtime": "assets/extensions/original-world/enemy-163.webp",
+    "sha256": "fd429ab494f8b39e1e2906c730b5072c460ac1ec01e27c0897e1c79d877cdb27",
+    "master": "art/world/original-world/masters/enemy-atlas-01.png",
+    "masterSha256": "0099dcc17f8c2c13c9278317d53a87a9e47dbf9c019f99a98eada9acaa3463cb",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 7,
+      "crop": [
+        418,
+        836,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-163.webp"
+  },
+  {
+    "id": "original:asset.enemy-164",
+    "path": "art/world/original-world/web/enemy-164.webp",
+    "runtime": "assets/extensions/original-world/enemy-164.webp",
+    "sha256": "61ab7529ab00671c5028a4c9e08271f7114583047dfbf4d49c0d7583cd4e7a61",
+    "master": "art/world/original-world/masters/enemy-atlas-01.png",
+    "masterSha256": "0099dcc17f8c2c13c9278317d53a87a9e47dbf9c019f99a98eada9acaa3463cb",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 8,
+      "crop": [
+        836,
+        836,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-164.webp"
+  },
+  {
+    "id": "original:asset.enemy-165",
+    "path": "art/world/original-world/web/enemy-165.webp",
+    "runtime": "assets/extensions/original-world/enemy-165.webp",
+    "sha256": "9d92c21ab0a9a26417b267740caa4beff0b9d556f1adf35ceb0c511966521f63",
+    "master": "art/world/original-world/masters/enemy-atlas-02.png",
+    "masterSha256": "40edbd77bd480133deba626bbd4b1de3257d7da1f52863df45d72f0d9031d4a4",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-165.webp"
+  },
+  {
+    "id": "original:asset.enemy-166",
+    "path": "art/world/original-world/web/enemy-166.webp",
+    "runtime": "assets/extensions/original-world/enemy-166.webp",
+    "sha256": "a779bf16f375786f1a0e6d13ad02ef702ef41dad30e454f39c8bde9fe4a45d8f",
+    "master": "art/world/original-world/masters/enemy-atlas-02.png",
+    "masterSha256": "40edbd77bd480133deba626bbd4b1de3257d7da1f52863df45d72f0d9031d4a4",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 1,
+      "crop": [
+        418,
+        0,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-166.webp"
+  },
+  {
+    "id": "original:asset.enemy-167",
+    "path": "art/world/original-world/web/enemy-167.webp",
+    "runtime": "assets/extensions/original-world/enemy-167.webp",
+    "sha256": "c36181998655946e98d90e18d31a7d9146bf18e47d4766f93d9ba0228db82852",
+    "master": "art/world/original-world/masters/enemy-atlas-02.png",
+    "masterSha256": "40edbd77bd480133deba626bbd4b1de3257d7da1f52863df45d72f0d9031d4a4",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 2,
+      "crop": [
+        836,
+        0,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-167.webp"
+  },
+  {
+    "id": "original:asset.enemy-168",
+    "path": "art/world/original-world/web/enemy-168.webp",
+    "runtime": "assets/extensions/original-world/enemy-168.webp",
+    "sha256": "8e97c6ef6dcb0a6b3284775aa413c885c8d999d447d06e5f02db4eb3091281c4",
+    "master": "art/world/original-world/masters/enemy-atlas-02.png",
+    "masterSha256": "40edbd77bd480133deba626bbd4b1de3257d7da1f52863df45d72f0d9031d4a4",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 3,
+      "crop": [
+        0,
+        418,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-168.webp"
+  },
+  {
+    "id": "original:asset.enemy-169",
+    "path": "art/world/original-world/web/enemy-169.webp",
+    "runtime": "assets/extensions/original-world/enemy-169.webp",
+    "sha256": "45d85fe259d75c66eed41f2b96932d589ccb886432827cd90710988865018105",
+    "master": "art/world/original-world/masters/enemy-atlas-02.png",
+    "masterSha256": "40edbd77bd480133deba626bbd4b1de3257d7da1f52863df45d72f0d9031d4a4",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 4,
+      "crop": [
+        418,
+        418,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-169.webp"
+  },
+  {
+    "id": "original:asset.enemy-170",
+    "path": "art/world/original-world/web/enemy-170.webp",
+    "runtime": "assets/extensions/original-world/enemy-170.webp",
+    "sha256": "60a7c8c897ea42baf030d3b408a22073fa1fbf18d21f17af780b6ee9c37fa05f",
+    "master": "art/world/original-world/masters/enemy-atlas-02.png",
+    "masterSha256": "40edbd77bd480133deba626bbd4b1de3257d7da1f52863df45d72f0d9031d4a4",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 5,
+      "crop": [
+        836,
+        418,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-170.webp"
+  },
+  {
+    "id": "original:asset.enemy-171",
+    "path": "art/world/original-world/web/enemy-171.webp",
+    "runtime": "assets/extensions/original-world/enemy-171.webp",
+    "sha256": "de8a9d07da12ffd69703781bb27106c7a32d0dab0af899f2eabd385e53d41548",
+    "master": "art/world/original-world/masters/enemy-atlas-02.png",
+    "masterSha256": "40edbd77bd480133deba626bbd4b1de3257d7da1f52863df45d72f0d9031d4a4",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 6,
+      "crop": [
+        0,
+        836,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-171.webp"
+  },
+  {
+    "id": "original:asset.enemy-172",
+    "path": "art/world/original-world/web/enemy-172.webp",
+    "runtime": "assets/extensions/original-world/enemy-172.webp",
+    "sha256": "689474eda8e23596f8f924fe337f16738091d7614541c4fcb6d8dc02a63b1d31",
+    "master": "art/world/original-world/masters/enemy-atlas-02.png",
+    "masterSha256": "40edbd77bd480133deba626bbd4b1de3257d7da1f52863df45d72f0d9031d4a4",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 7,
+      "crop": [
+        418,
+        836,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-172.webp"
+  },
+  {
+    "id": "original:asset.enemy-173",
+    "path": "art/world/original-world/web/enemy-173.webp",
+    "runtime": "assets/extensions/original-world/enemy-173.webp",
+    "sha256": "a5f25e051f81d77d85f05a10dae6c1998e51f57b29c583ca3994cf33f39a7a7c",
+    "master": "art/world/original-world/masters/enemy-atlas-02.png",
+    "masterSha256": "40edbd77bd480133deba626bbd4b1de3257d7da1f52863df45d72f0d9031d4a4",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 8,
+      "crop": [
+        836,
+        836,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-173.webp"
+  },
+  {
+    "id": "original:asset.enemy-174",
+    "path": "art/world/original-world/web/enemy-174.webp",
+    "runtime": "assets/extensions/original-world/enemy-174.webp",
+    "sha256": "f824f0adfdd6df1012b274dcf48ed2445f6389a9893fff3ef4d1a206131e461e",
+    "master": "art/world/original-world/masters/enemy-atlas-03.png",
+    "masterSha256": "5e980e71ef2737210086b0fa0815a834c0e40efbb5d003fe541ae23ceaeb8353",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-174.webp"
+  },
+  {
+    "id": "original:asset.enemy-175",
+    "path": "art/world/original-world/web/enemy-175.webp",
+    "runtime": "assets/extensions/original-world/enemy-175.webp",
+    "sha256": "c3e775ae9b43bc57edacd08d291f79a269851f3111014895cd7d8702b3537d8e",
+    "master": "art/world/original-world/masters/enemy-atlas-03.png",
+    "masterSha256": "5e980e71ef2737210086b0fa0815a834c0e40efbb5d003fe541ae23ceaeb8353",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 1,
+      "crop": [
+        418,
+        0,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-175.webp"
+  },
+  {
+    "id": "original:asset.enemy-176",
+    "path": "art/world/original-world/web/enemy-176.webp",
+    "runtime": "assets/extensions/original-world/enemy-176.webp",
+    "sha256": "eda0829d9d5a994629bbe3b07853c65470479b6b69b379abf8a8d54d042a4694",
+    "master": "art/world/original-world/masters/enemy-atlas-03.png",
+    "masterSha256": "5e980e71ef2737210086b0fa0815a834c0e40efbb5d003fe541ae23ceaeb8353",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 2,
+      "crop": [
+        836,
+        0,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-176.webp"
+  },
+  {
+    "id": "original:asset.enemy-177",
+    "path": "art/world/original-world/web/enemy-177.webp",
+    "runtime": "assets/extensions/original-world/enemy-177.webp",
+    "sha256": "8a121c60c9fa4ed3ce8cd42e200bd6d041b707e740899223af4cf2dd9354d951",
+    "master": "art/world/original-world/masters/enemy-atlas-03.png",
+    "masterSha256": "5e980e71ef2737210086b0fa0815a834c0e40efbb5d003fe541ae23ceaeb8353",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 3,
+      "crop": [
+        0,
+        418,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-177.webp"
+  },
+  {
+    "id": "original:asset.enemy-178",
+    "path": "art/world/original-world/web/enemy-178.webp",
+    "runtime": "assets/extensions/original-world/enemy-178.webp",
+    "sha256": "7ae68adb2feb2cf47cd773205cb86ec2593cf9552a738a4218a33858daa1dc0e",
+    "master": "art/world/original-world/masters/enemy-atlas-03.png",
+    "masterSha256": "5e980e71ef2737210086b0fa0815a834c0e40efbb5d003fe541ae23ceaeb8353",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 4,
+      "crop": [
+        418,
+        418,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-178.webp"
+  },
+  {
+    "id": "original:asset.enemy-189",
+    "path": "art/world/original-world/web/enemy-189.webp",
+    "runtime": "assets/extensions/original-world/enemy-189.webp",
+    "sha256": "72609bf4ed1d72c7c1f182ffd129ab8756dfb84c7fb08095d56aceeb68e34d96",
+    "master": "art/world/original-world/masters/enemy-atlas-03.png",
+    "masterSha256": "5e980e71ef2737210086b0fa0815a834c0e40efbb5d003fe541ae23ceaeb8353",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 5,
+      "crop": [
+        836,
+        418,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-189.webp"
+  },
+  {
+    "id": "original:asset.enemy-190",
+    "path": "art/world/original-world/web/enemy-190.webp",
+    "runtime": "assets/extensions/original-world/enemy-190.webp",
+    "sha256": "08daf8c200b9b88d6b16277407bfff0708546ae70fcfc1829a08e3bd431558f1",
+    "master": "art/world/original-world/masters/enemy-atlas-03.png",
+    "masterSha256": "5e980e71ef2737210086b0fa0815a834c0e40efbb5d003fe541ae23ceaeb8353",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 6,
+      "crop": [
+        0,
+        836,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-190.webp"
+  },
+  {
+    "id": "original:asset.enemy-191",
+    "path": "art/world/original-world/web/enemy-191.webp",
+    "runtime": "assets/extensions/original-world/enemy-191.webp",
+    "sha256": "04b317ef07490f731d7e0087b7a0b4d114a96dc7775d3625da1c6d245975de77",
+    "master": "art/world/original-world/masters/enemy-atlas-03.png",
+    "masterSha256": "5e980e71ef2737210086b0fa0815a834c0e40efbb5d003fe541ae23ceaeb8353",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 7,
+      "crop": [
+        418,
+        836,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-191.webp"
+  },
+  {
+    "id": "original:asset.enemy-192",
+    "path": "art/world/original-world/web/enemy-192.webp",
+    "runtime": "assets/extensions/original-world/enemy-192.webp",
+    "sha256": "6e289d9bbc554e585446e1c6dee6a9b4fde3ab12ac6ef193d6961a0e7b2d9cef",
+    "master": "art/world/original-world/masters/enemy-atlas-03.png",
+    "masterSha256": "5e980e71ef2737210086b0fa0815a834c0e40efbb5d003fe541ae23ceaeb8353",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 8,
+      "crop": [
+        836,
+        836,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-192.webp"
+  },
+  {
+    "id": "original:asset.enemy-193",
+    "path": "art/world/original-world/web/enemy-193.webp",
+    "runtime": "assets/extensions/original-world/enemy-193.webp",
+    "sha256": "6c23c3ddfb15a28844b7bc033f52ba8ff755d177faa71aa8c14b84f03a3e1f24",
+    "master": "art/world/original-world/masters/enemy-atlas-04.png",
+    "masterSha256": "8469a2e4ab175144f007af9ec9e2ad80f493018af04c8e6b37dacab5fe6fc385",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-193.webp"
+  },
+  {
+    "id": "original:asset.enemy-194",
+    "path": "art/world/original-world/web/enemy-194.webp",
+    "runtime": "assets/extensions/original-world/enemy-194.webp",
+    "sha256": "ec15d4de4fd25ea0b44dbfec02f506e30a2a3e5c38dad4d468923d5d85a74654",
+    "master": "art/world/original-world/masters/enemy-atlas-04.png",
+    "masterSha256": "8469a2e4ab175144f007af9ec9e2ad80f493018af04c8e6b37dacab5fe6fc385",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 1,
+      "crop": [
+        418,
+        0,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-194.webp"
+  },
+  {
+    "id": "original:asset.enemy-195",
+    "path": "art/world/original-world/web/enemy-195.webp",
+    "runtime": "assets/extensions/original-world/enemy-195.webp",
+    "sha256": "fcca947bc964c90148edc2adb031b8732692616bb3a876bd5d3ec720b1ef4ba1",
+    "master": "art/world/original-world/masters/enemy-atlas-04.png",
+    "masterSha256": "8469a2e4ab175144f007af9ec9e2ad80f493018af04c8e6b37dacab5fe6fc385",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 2,
+      "crop": [
+        836,
+        0,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-195.webp"
+  },
+  {
+    "id": "original:asset.enemy-196",
+    "path": "art/world/original-world/web/enemy-196.webp",
+    "runtime": "assets/extensions/original-world/enemy-196.webp",
+    "sha256": "5314a53c94e6d37ae090968db1c277fb3f10c42042dbf955b1b9e44e111ef0f2",
+    "master": "art/world/original-world/masters/enemy-atlas-04.png",
+    "masterSha256": "8469a2e4ab175144f007af9ec9e2ad80f493018af04c8e6b37dacab5fe6fc385",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 3,
+      "crop": [
+        0,
+        418,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-196.webp"
+  },
+  {
+    "id": "original:asset.enemy-197",
+    "path": "art/world/original-world/web/enemy-197.webp",
+    "runtime": "assets/extensions/original-world/enemy-197.webp",
+    "sha256": "536a95cd1b4e75fad04872069f6af80b6396525559386b396d6437a6667d6b33",
+    "master": "art/world/original-world/masters/enemy-atlas-04.png",
+    "masterSha256": "8469a2e4ab175144f007af9ec9e2ad80f493018af04c8e6b37dacab5fe6fc385",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 4,
+      "crop": [
+        418,
+        418,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-197.webp"
+  },
+  {
+    "id": "original:asset.enemy-280",
+    "path": "art/world/original-world/web/enemy-280.webp",
+    "runtime": "assets/extensions/original-world/enemy-280.webp",
+    "sha256": "0984a7c836853e32345490fe2026201d0c9ba0ebd2f0ca90bc261c512fcdf61d",
+    "master": "art/world/original-world/masters/enemy-atlas-04.png",
+    "masterSha256": "8469a2e4ab175144f007af9ec9e2ad80f493018af04c8e6b37dacab5fe6fc385",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 5,
+      "crop": [
+        836,
+        418,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-280.webp"
+  },
+  {
+    "id": "original:asset.enemy-281",
+    "path": "art/world/original-world/web/enemy-281.webp",
+    "runtime": "assets/extensions/original-world/enemy-281.webp",
+    "sha256": "d0499ab7cf3bcc5a65b1e522c286fb70cc905054e61ef92f0a4788595b24628d",
+    "master": "art/world/original-world/masters/enemy-atlas-04.png",
+    "masterSha256": "8469a2e4ab175144f007af9ec9e2ad80f493018af04c8e6b37dacab5fe6fc385",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 6,
+      "crop": [
+        0,
+        836,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-281.webp"
+  },
+  {
+    "id": "original:asset.enemy-282",
+    "path": "art/world/original-world/web/enemy-282.webp",
+    "runtime": "assets/extensions/original-world/enemy-282.webp",
+    "sha256": "2fd1701e5b09ff459dc7d17c4b5bfd42df859a8c17baed20cf7217d61fda0f90",
+    "master": "art/world/original-world/masters/enemy-atlas-04.png",
+    "masterSha256": "8469a2e4ab175144f007af9ec9e2ad80f493018af04c8e6b37dacab5fe6fc385",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 7,
+      "crop": [
+        418,
+        836,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-282.webp"
+  },
+  {
+    "id": "original:asset.enemy-288",
+    "path": "art/world/original-world/web/enemy-288.webp",
+    "runtime": "assets/extensions/original-world/enemy-288.webp",
+    "sha256": "842ae8a37706a56bbe9b765909a895142dea6837802b332b2807d011d4eb2f60",
+    "master": "art/world/original-world/masters/enemy-atlas-04.png",
+    "masterSha256": "8469a2e4ab175144f007af9ec9e2ad80f493018af04c8e6b37dacab5fe6fc385",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 8,
+      "crop": [
+        836,
+        836,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-288.webp"
+  },
+  {
+    "id": "original:asset.enemy-290",
+    "path": "art/world/original-world/web/enemy-290.webp",
+    "runtime": "assets/extensions/original-world/enemy-290.webp",
+    "sha256": "4a09b61eb947284b4390441e99d3da79d0ad938d669452311e7263972a91017c",
+    "master": "art/world/original-world/masters/enemy-atlas-05.png",
+    "masterSha256": "6b22692c5e91b988e15defc429526cd10aca6744adea92edba787ff781ebd17f",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-290.webp"
+  },
+  {
+    "id": "original:asset.enemy-291",
+    "path": "art/world/original-world/web/enemy-291.webp",
+    "runtime": "assets/extensions/original-world/enemy-291.webp",
+    "sha256": "8d145c11b628113d339f878753be0f36ae9eb374316da7ff1594a5c4f0903020",
+    "master": "art/world/original-world/masters/enemy-atlas-05.png",
+    "masterSha256": "6b22692c5e91b988e15defc429526cd10aca6744adea92edba787ff781ebd17f",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 1,
+      "crop": [
+        418,
+        0,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-291.webp"
+  },
+  {
+    "id": "original:asset.enemy-292",
+    "path": "art/world/original-world/web/enemy-292.webp",
+    "runtime": "assets/extensions/original-world/enemy-292.webp",
+    "sha256": "eeb31ca3dca46e4334be2db76d89b8ef6f36ff9f7653232af5bef4e63e2be7d0",
+    "master": "art/world/original-world/masters/enemy-atlas-05.png",
+    "masterSha256": "6b22692c5e91b988e15defc429526cd10aca6744adea92edba787ff781ebd17f",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 2,
+      "crop": [
+        836,
+        0,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-292.webp"
+  },
+  {
+    "id": "original:asset.enemy-293",
+    "path": "art/world/original-world/web/enemy-293.webp",
+    "runtime": "assets/extensions/original-world/enemy-293.webp",
+    "sha256": "a9ee9ee5610a3e9e1a37f353a46c205c48196e5ccfc9fee025910f5c33db8e3a",
+    "master": "art/world/original-world/masters/enemy-atlas-05.png",
+    "masterSha256": "6b22692c5e91b988e15defc429526cd10aca6744adea92edba787ff781ebd17f",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 3,
+      "crop": [
+        0,
+        418,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-293.webp"
+  },
+  {
+    "id": "original:asset.enemy-294",
+    "path": "art/world/original-world/web/enemy-294.webp",
+    "runtime": "assets/extensions/original-world/enemy-294.webp",
+    "sha256": "f62d927a0b45e0a699194ae3163192c641bb470b27161024df22be5a749313e6",
+    "master": "art/world/original-world/masters/enemy-atlas-05.png",
+    "masterSha256": "6b22692c5e91b988e15defc429526cd10aca6744adea92edba787ff781ebd17f",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 4,
+      "crop": [
+        418,
+        418,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-294.webp"
+  },
+  {
+    "id": "original:asset.enemy-295",
+    "path": "art/world/original-world/web/enemy-295.webp",
+    "runtime": "assets/extensions/original-world/enemy-295.webp",
+    "sha256": "0107057eaa5fc6f481fc70dca51e30fbbe281e1a54bb6e25bf2004d898dbc0c9",
+    "master": "art/world/original-world/masters/enemy-atlas-05.png",
+    "masterSha256": "6b22692c5e91b988e15defc429526cd10aca6744adea92edba787ff781ebd17f",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 5,
+      "crop": [
+        836,
+        418,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-295.webp"
+  },
+  {
+    "id": "original:asset.enemy-296",
+    "path": "art/world/original-world/web/enemy-296.webp",
+    "runtime": "assets/extensions/original-world/enemy-296.webp",
+    "sha256": "b9e83fdd84e44891915472a20f0e26dd390830828d254f620a096ac6f8a37432",
+    "master": "art/world/original-world/masters/enemy-atlas-05.png",
+    "masterSha256": "6b22692c5e91b988e15defc429526cd10aca6744adea92edba787ff781ebd17f",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 6,
+      "crop": [
+        0,
+        836,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-296.webp"
+  },
+  {
+    "id": "original:asset.enemy-297",
+    "path": "art/world/original-world/web/enemy-297.webp",
+    "runtime": "assets/extensions/original-world/enemy-297.webp",
+    "sha256": "c1c646aeafc4220eecea956c7c4e38c333e49ca786e2501fbdd737dea6574e9b",
+    "master": "art/world/original-world/masters/enemy-atlas-05.png",
+    "masterSha256": "6b22692c5e91b988e15defc429526cd10aca6744adea92edba787ff781ebd17f",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 7,
+      "crop": [
+        418,
+        836,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-297.webp"
+  },
+  {
+    "id": "original:asset.enemy-309",
+    "path": "art/world/original-world/web/enemy-309.webp",
+    "runtime": "assets/extensions/original-world/enemy-309.webp",
+    "sha256": "afa14d8eedeacad9917188c49d929a922060016540fefb4863de3d2c7a0e3c4e",
+    "master": "art/world/original-world/masters/enemy-atlas-05.png",
+    "masterSha256": "6b22692c5e91b988e15defc429526cd10aca6744adea92edba787ff781ebd17f",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 8,
+      "crop": [
+        836,
+        836,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-309.webp"
+  },
+  {
+    "id": "original:asset.enemy-310",
+    "path": "art/world/original-world/web/enemy-310.webp",
+    "runtime": "assets/extensions/original-world/enemy-310.webp",
+    "sha256": "5ab2a93173bb1ec6c403cab505aeae1136d66ce32ef2c40edd599baded8028d7",
+    "master": "art/world/original-world/masters/enemy-atlas-06.png",
+    "masterSha256": "2eb153851470f49d686a31f4cef4d953451612193dcd85f329f41f3b71927a0c",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-310.webp"
+  },
+  {
+    "id": "original:asset.enemy-311",
+    "path": "art/world/original-world/web/enemy-311.webp",
+    "runtime": "assets/extensions/original-world/enemy-311.webp",
+    "sha256": "11a8e84546d032f9e13ae7dc47b843d697a30163ff60ae055233c3b41da39908",
+    "master": "art/world/original-world/masters/enemy-atlas-06.png",
+    "masterSha256": "2eb153851470f49d686a31f4cef4d953451612193dcd85f329f41f3b71927a0c",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 1,
+      "crop": [
+        418,
+        0,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-311.webp"
+  },
+  {
+    "id": "original:asset.enemy-328",
+    "path": "art/world/original-world/web/enemy-328.webp",
+    "runtime": "assets/extensions/original-world/enemy-328.webp",
+    "sha256": "23601b54cc0f84f0325aef9d1a6c0da794b60b39bb81ea696fcbdf48eb5eefa3",
+    "master": "art/world/original-world/masters/enemy-atlas-06.png",
+    "masterSha256": "2eb153851470f49d686a31f4cef4d953451612193dcd85f329f41f3b71927a0c",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 2,
+      "crop": [
+        836,
+        0,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-328.webp"
+  },
+  {
+    "id": "original:asset.enemy-329",
+    "path": "art/world/original-world/web/enemy-329.webp",
+    "runtime": "assets/extensions/original-world/enemy-329.webp",
+    "sha256": "dde160469521bc8f10a5bea82fd7e3f0fa8c858ef634f449318275ba01a85473",
+    "master": "art/world/original-world/masters/enemy-atlas-06.png",
+    "masterSha256": "2eb153851470f49d686a31f4cef4d953451612193dcd85f329f41f3b71927a0c",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 3,
+      "crop": [
+        0,
+        418,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-329.webp"
+  },
+  {
+    "id": "original:asset.enemy-330",
+    "path": "art/world/original-world/web/enemy-330.webp",
+    "runtime": "assets/extensions/original-world/enemy-330.webp",
+    "sha256": "4b9836621968fb2904bc4d8ff815be7d7aff88738bc8c4c8f215b9d1b5614126",
+    "master": "art/world/original-world/masters/enemy-atlas-06.png",
+    "masterSha256": "2eb153851470f49d686a31f4cef4d953451612193dcd85f329f41f3b71927a0c",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 4,
+      "crop": [
+        418,
+        418,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-330.webp"
+  },
+  {
+    "id": "original:asset.enemy-331",
+    "path": "art/world/original-world/web/enemy-331.webp",
+    "runtime": "assets/extensions/original-world/enemy-331.webp",
+    "sha256": "196007af121806941e9c854032eab3268aef8e2373caa4a38d3ee526d941353d",
+    "master": "art/world/original-world/masters/enemy-atlas-06.png",
+    "masterSha256": "2eb153851470f49d686a31f4cef4d953451612193dcd85f329f41f3b71927a0c",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 5,
+      "crop": [
+        836,
+        418,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-331.webp"
+  },
+  {
+    "id": "original:asset.enemy-339",
+    "path": "art/world/original-world/web/enemy-339.webp",
+    "runtime": "assets/extensions/original-world/enemy-339.webp",
+    "sha256": "9e218bc90ac66790f8d53a3c1e5921ae45facb91d07addc2e58cb2568da0f9f4",
+    "master": "art/world/original-world/masters/enemy-atlas-06.png",
+    "masterSha256": "2eb153851470f49d686a31f4cef4d953451612193dcd85f329f41f3b71927a0c",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 6,
+      "crop": [
+        0,
+        836,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-339.webp"
+  },
+  {
+    "id": "original:asset.enemy-340",
+    "path": "art/world/original-world/web/enemy-340.webp",
+    "runtime": "assets/extensions/original-world/enemy-340.webp",
+    "sha256": "1febb39a5a0b276e8850a896198039539f34c9b3c16b8b409a3cdd0066ffabbe",
+    "master": "art/world/original-world/masters/enemy-atlas-06.png",
+    "masterSha256": "2eb153851470f49d686a31f4cef4d953451612193dcd85f329f41f3b71927a0c",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 3,
+      "cell": 7,
+      "crop": [
+        418,
+        836,
+        418,
+        418
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/enemy-340.webp"
+  },
+  {
+    "id": "original:asset.planet-1",
+    "path": "art/world/original-world/web/planet-1.webp",
+    "runtime": "assets/extensions/original-world/planet-1.webp",
+    "sha256": "ad33290dc6b8fb619612f6cb46289991e59cc573277f42f22943b103e8b13f0e",
+    "master": "art/world/original-world/masters/planet-atlas-00.png",
+    "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        314,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-1.webp"
+  },
+  {
+    "id": "original:asset.planet-2",
+    "path": "art/world/original-world/web/planet-2.webp",
+    "runtime": "assets/extensions/original-world/planet-2.webp",
+    "sha256": "003ff9c360c44bdbbb57a1816ae6a61a94f720370412a9da17f2bfdc75742972",
+    "master": "art/world/original-world/masters/planet-atlas-00.png",
+    "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 1,
+      "crop": [
+        314,
+        0,
+        313,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-2.webp"
+  },
+  {
+    "id": "original:asset.planet-3",
+    "path": "art/world/original-world/web/planet-3.webp",
+    "runtime": "assets/extensions/original-world/planet-3.webp",
+    "sha256": "33f4462e9dff7a6f2fd6042a0cf26643a29271e2af14be13d12234c121a2b069",
+    "master": "art/world/original-world/masters/planet-atlas-00.png",
+    "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 2,
+      "crop": [
+        627,
+        0,
+        314,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-3.webp"
+  },
+  {
+    "id": "original:asset.planet-4",
+    "path": "art/world/original-world/web/planet-4.webp",
+    "runtime": "assets/extensions/original-world/planet-4.webp",
+    "sha256": "821e881603f7a990bddd4cd24f011852930b6ea730bd51d061dd8cb22161f2fe",
+    "master": "art/world/original-world/masters/planet-atlas-00.png",
+    "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 3,
+      "crop": [
+        941,
+        0,
+        313,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-4.webp"
+  },
+  {
+    "id": "original:asset.planet-5",
+    "path": "art/world/original-world/web/planet-5.webp",
+    "runtime": "assets/extensions/original-world/planet-5.webp",
+    "sha256": "31a77b4aac749c4bacb014b1fa45684ddcc5b3884b6b15ade9ced079e9258aea",
+    "master": "art/world/original-world/masters/planet-atlas-00.png",
+    "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 4,
+      "crop": [
+        0,
+        314,
+        314,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-5.webp"
+  },
+  {
+    "id": "original:asset.planet-6",
+    "path": "art/world/original-world/web/planet-6.webp",
+    "runtime": "assets/extensions/original-world/planet-6.webp",
+    "sha256": "d9d45878b7f0a8e00886130de267c316cfa2b41b0b03622ac776c9c23653123d",
+    "master": "art/world/original-world/masters/planet-atlas-00.png",
+    "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 5,
+      "crop": [
+        314,
+        314,
+        313,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-6.webp"
+  },
+  {
+    "id": "original:asset.planet-7",
+    "path": "art/world/original-world/web/planet-7.webp",
+    "runtime": "assets/extensions/original-world/planet-7.webp",
+    "sha256": "122443c466254fe3ce9237e3f47ae2346432860fb52dc6b33411623a52a91dbe",
+    "master": "art/world/original-world/masters/planet-atlas-00.png",
+    "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 6,
+      "crop": [
+        627,
+        314,
+        314,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-7.webp"
+  },
+  {
+    "id": "original:asset.planet-8",
+    "path": "art/world/original-world/web/planet-8.webp",
+    "runtime": "assets/extensions/original-world/planet-8.webp",
+    "sha256": "b0ff80009d63aedd005c2ce6e3d8e1ce4942cc80ec10c0e01b369a27c8337bf7",
+    "master": "art/world/original-world/masters/planet-atlas-00.png",
+    "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 7,
+      "crop": [
+        941,
+        314,
+        313,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-8.webp"
+  },
+  {
+    "id": "original:asset.planet-9",
+    "path": "art/world/original-world/web/planet-9.webp",
+    "runtime": "assets/extensions/original-world/planet-9.webp",
+    "sha256": "b9bb853012c313e6e24d67c2c9baeea45345cebc0264ea309cb4b55f34bc1805",
+    "master": "art/world/original-world/masters/planet-atlas-00.png",
+    "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 8,
+      "crop": [
+        0,
+        627,
+        314,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-9.webp"
+  },
+  {
+    "id": "original:asset.planet-10",
+    "path": "art/world/original-world/web/planet-10.webp",
+    "runtime": "assets/extensions/original-world/planet-10.webp",
+    "sha256": "69cc4c84927908048007b460cdbe5398d783493b690be2e224d0782afcd8a094",
+    "master": "art/world/original-world/masters/planet-atlas-00.png",
+    "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 9,
+      "crop": [
+        314,
+        627,
+        313,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-10.webp"
+  },
+  {
+    "id": "original:asset.planet-11",
+    "path": "art/world/original-world/web/planet-11.webp",
+    "runtime": "assets/extensions/original-world/planet-11.webp",
+    "sha256": "395b27bf1dc9f5beaac6e7aff5e2d4f325cd4f6324a0db03d3bff87a38486dd3",
+    "master": "art/world/original-world/masters/planet-atlas-00.png",
+    "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 10,
+      "crop": [
+        627,
+        627,
+        314,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-11.webp"
+  },
+  {
+    "id": "original:asset.planet-12",
+    "path": "art/world/original-world/web/planet-12.webp",
+    "runtime": "assets/extensions/original-world/planet-12.webp",
+    "sha256": "d79b3458aed748edf14b61432206827d9c02f9949b0e360f4612e9651425e6f5",
+    "master": "art/world/original-world/masters/planet-atlas-00.png",
+    "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 11,
+      "crop": [
+        941,
+        627,
+        313,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-12.webp"
+  },
+  {
+    "id": "original:asset.planet-13",
+    "path": "art/world/original-world/web/planet-13.webp",
+    "runtime": "assets/extensions/original-world/planet-13.webp",
+    "sha256": "ba850c8c704e87717fdb717022da5048811a995b9bb3eac57b0abe08625775ff",
+    "master": "art/world/original-world/masters/planet-atlas-00.png",
+    "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 12,
+      "crop": [
+        0,
+        941,
+        314,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-13.webp"
+  },
+  {
+    "id": "original:asset.planet-14",
+    "path": "art/world/original-world/web/planet-14.webp",
+    "runtime": "assets/extensions/original-world/planet-14.webp",
+    "sha256": "1f3fe12c886d69563ab12beaf3d6f7fb0f5fae06e6a75bb189076f9ae40dca1e",
+    "master": "art/world/original-world/masters/planet-atlas-00.png",
+    "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 13,
+      "crop": [
+        314,
+        941,
+        313,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-14.webp"
+  },
+  {
+    "id": "original:asset.planet-15",
+    "path": "art/world/original-world/web/planet-15.webp",
+    "runtime": "assets/extensions/original-world/planet-15.webp",
+    "sha256": "ba646dd87c2ecdc27d42cdcbd7dc14ae628dcacff2a370f623c38e9322e79bb2",
+    "master": "art/world/original-world/masters/planet-atlas-00.png",
+    "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 14,
+      "crop": [
+        627,
+        941,
+        314,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-15.webp"
+  },
+  {
+    "id": "original:asset.planet-16",
+    "path": "art/world/original-world/web/planet-16.webp",
+    "runtime": "assets/extensions/original-world/planet-16.webp",
+    "sha256": "e5f1fed937ce22201d45a4dd20500383689d60c556e9c76e4b4ade9f705af7b4",
+    "master": "art/world/original-world/masters/planet-atlas-00.png",
+    "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 15,
+      "crop": [
+        941,
+        941,
+        313,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-16.webp"
+  },
+  {
+    "id": "original:asset.planet-17",
+    "path": "art/world/original-world/web/planet-17.webp",
+    "runtime": "assets/extensions/original-world/planet-17.webp",
+    "sha256": "cd7847f710ef8d228ec9c3c01633d09195a9defbea7b91f584f3956be9553ef1",
+    "master": "art/world/original-world/masters/planet-atlas-01.png",
+    "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        314,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-17.webp"
+  },
+  {
+    "id": "original:asset.planet-18",
+    "path": "art/world/original-world/web/planet-18.webp",
+    "runtime": "assets/extensions/original-world/planet-18.webp",
+    "sha256": "865d8562dbc44febfe4d4e8c6b05d9a4e091b6fa3117998538e5466052e34167",
+    "master": "art/world/original-world/masters/planet-atlas-01.png",
+    "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 1,
+      "crop": [
+        314,
+        0,
+        313,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-18.webp"
+  },
+  {
+    "id": "original:asset.planet-19",
+    "path": "art/world/original-world/web/planet-19.webp",
+    "runtime": "assets/extensions/original-world/planet-19.webp",
+    "sha256": "ea6eaa8fc1a676193e53b672770a6c9d0a83b73159f17bcdf2a6f5c9450e8429",
+    "master": "art/world/original-world/masters/planet-atlas-01.png",
+    "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 2,
+      "crop": [
+        627,
+        0,
+        314,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-19.webp"
+  },
+  {
+    "id": "original:asset.planet-20",
+    "path": "art/world/original-world/web/planet-20.webp",
+    "runtime": "assets/extensions/original-world/planet-20.webp",
+    "sha256": "8c42d56becf75d9251b9ea2fe5b4a9f1dd44fa3ebcbabeda08c742ae75f6de6e",
+    "master": "art/world/original-world/masters/planet-atlas-01.png",
+    "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 3,
+      "crop": [
+        941,
+        0,
+        313,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-20.webp"
+  },
+  {
+    "id": "original:asset.planet-21",
+    "path": "art/world/original-world/web/planet-21.webp",
+    "runtime": "assets/extensions/original-world/planet-21.webp",
+    "sha256": "ee9002a2f45eb739621942e080a579e764373de958a683dfe751a53a77e2af27",
+    "master": "art/world/original-world/masters/planet-atlas-01.png",
+    "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 4,
+      "crop": [
+        0,
+        314,
+        314,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-21.webp"
+  },
+  {
+    "id": "original:asset.planet-22",
+    "path": "art/world/original-world/web/planet-22.webp",
+    "runtime": "assets/extensions/original-world/planet-22.webp",
+    "sha256": "249c26a9cddafcf1d3205d275d5c0b44b079d002b471d836c2bfe88fb4084c48",
+    "master": "art/world/original-world/masters/planet-atlas-01.png",
+    "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 5,
+      "crop": [
+        314,
+        314,
+        313,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-22.webp"
+  },
+  {
+    "id": "original:asset.planet-23",
+    "path": "art/world/original-world/web/planet-23.webp",
+    "runtime": "assets/extensions/original-world/planet-23.webp",
+    "sha256": "e68e3d005b90206253d6adb3772b4adaf19c1fb9599bf76204aeb3cc416a5e57",
+    "master": "art/world/original-world/masters/planet-atlas-01.png",
+    "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 6,
+      "crop": [
+        627,
+        314,
+        314,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-23.webp"
+  },
+  {
+    "id": "original:asset.planet-24",
+    "path": "art/world/original-world/web/planet-24.webp",
+    "runtime": "assets/extensions/original-world/planet-24.webp",
+    "sha256": "7ae24e7e0ba6f7f696e0718a05fc43745684f529ecc32992b56724bf67ecfe6c",
+    "master": "art/world/original-world/masters/planet-atlas-01.png",
+    "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 7,
+      "crop": [
+        941,
+        314,
+        313,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-24.webp"
+  },
+  {
+    "id": "original:asset.planet-25",
+    "path": "art/world/original-world/web/planet-25.webp",
+    "runtime": "assets/extensions/original-world/planet-25.webp",
+    "sha256": "237ebc7a03fab63faa9b901ab667c60116075813556402cd71a2191c7a52a255",
+    "master": "art/world/original-world/masters/planet-atlas-01.png",
+    "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 8,
+      "crop": [
+        0,
+        627,
+        314,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-25.webp"
+  },
+  {
+    "id": "original:asset.planet-26",
+    "path": "art/world/original-world/web/planet-26.webp",
+    "runtime": "assets/extensions/original-world/planet-26.webp",
+    "sha256": "c24c1c3c01c14719857fd92cb6137429098b81af15aa0b1841e54baab790179e",
+    "master": "art/world/original-world/masters/planet-atlas-01.png",
+    "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 9,
+      "crop": [
+        314,
+        627,
+        313,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-26.webp"
+  },
+  {
+    "id": "original:asset.planet-27",
+    "path": "art/world/original-world/web/planet-27.webp",
+    "runtime": "assets/extensions/original-world/planet-27.webp",
+    "sha256": "4b9475babe09ef6ac8c11097ba9f676635c3c4b8ffec8af4fd4570c4d6c07c17",
+    "master": "art/world/original-world/masters/planet-atlas-01.png",
+    "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 10,
+      "crop": [
+        627,
+        627,
+        314,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-27.webp"
+  },
+  {
+    "id": "original:asset.planet-28",
+    "path": "art/world/original-world/web/planet-28.webp",
+    "runtime": "assets/extensions/original-world/planet-28.webp",
+    "sha256": "2178167745242c4afccd046a4eb41938be20b33b034fc69f4dd366de2795d6e9",
+    "master": "art/world/original-world/masters/planet-atlas-01.png",
+    "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 11,
+      "crop": [
+        941,
+        627,
+        313,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-28.webp"
+  },
+  {
+    "id": "original:asset.planet-29",
+    "path": "art/world/original-world/web/planet-29.webp",
+    "runtime": "assets/extensions/original-world/planet-29.webp",
+    "sha256": "f7654aa3ff9c34c60ae0f7729b7b1cdae72c0a16ba918acc1d7068efaddc3148",
+    "master": "art/world/original-world/masters/planet-atlas-01.png",
+    "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 12,
+      "crop": [
+        0,
+        941,
+        314,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-29.webp"
+  },
+  {
+    "id": "original:asset.planet-30",
+    "path": "art/world/original-world/web/planet-30.webp",
+    "runtime": "assets/extensions/original-world/planet-30.webp",
+    "sha256": "b3d5c065d5f5440347b5b696e28d46af3d2aadf97636144754232f5dc8ab927f",
+    "master": "art/world/original-world/masters/planet-atlas-01.png",
+    "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 13,
+      "crop": [
+        314,
+        941,
+        313,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-30.webp"
+  },
+  {
+    "id": "original:asset.planet-31",
+    "path": "art/world/original-world/web/planet-31.webp",
+    "runtime": "assets/extensions/original-world/planet-31.webp",
+    "sha256": "5185dd0962b96295b116bdc20eaa74c0d674771e5ae7f28f8bb08f768fd0db93",
+    "master": "art/world/original-world/masters/planet-atlas-01.png",
+    "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 14,
+      "crop": [
+        627,
+        941,
+        314,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-31.webp"
+  },
+  {
+    "id": "original:asset.planet-32",
+    "path": "art/world/original-world/web/planet-32.webp",
+    "runtime": "assets/extensions/original-world/planet-32.webp",
+    "sha256": "b525beccc4e934d2da871957e86720e6f2cb02170635a140c94865ae89a21a40",
+    "master": "art/world/original-world/masters/planet-atlas-01.png",
+    "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 15,
+      "crop": [
+        941,
+        941,
+        313,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-32.webp"
+  },
+  {
+    "id": "original:asset.planet-33",
+    "path": "art/world/original-world/web/planet-33.webp",
+    "runtime": "assets/extensions/original-world/planet-33.webp",
+    "sha256": "35c57369c954d28c9df9dd44f2c351797a859a48d48957bcb7798b765b8af756",
+    "master": "art/world/original-world/masters/planet-atlas-02.png",
+    "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        314,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-33.webp"
+  },
+  {
+    "id": "original:asset.planet-34",
+    "path": "art/world/original-world/web/planet-34.webp",
+    "runtime": "assets/extensions/original-world/planet-34.webp",
+    "sha256": "0b059fcfdbde4fffb1aa90fd7bdac66cb317a402dab15aa31c6bd5bea3a85b6a",
+    "master": "art/world/original-world/masters/planet-atlas-02.png",
+    "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 1,
+      "crop": [
+        314,
+        0,
+        313,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-34.webp"
+  },
+  {
+    "id": "original:asset.planet-35",
+    "path": "art/world/original-world/web/planet-35.webp",
+    "runtime": "assets/extensions/original-world/planet-35.webp",
+    "sha256": "f429f4989f8b5357b1cd49063a93e2ccd7902bd1ec4a72dd1429b3be877b3932",
+    "master": "art/world/original-world/masters/planet-atlas-02.png",
+    "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 2,
+      "crop": [
+        627,
+        0,
+        314,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-35.webp"
+  },
+  {
+    "id": "original:asset.planet-36",
+    "path": "art/world/original-world/web/planet-36.webp",
+    "runtime": "assets/extensions/original-world/planet-36.webp",
+    "sha256": "67fff30c5025938749ceffb6819d1a82ce5794ca8290c5133648629ab2a0335c",
+    "master": "art/world/original-world/masters/planet-atlas-02.png",
+    "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 3,
+      "crop": [
+        941,
+        0,
+        313,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-36.webp"
+  },
+  {
+    "id": "original:asset.planet-37",
+    "path": "art/world/original-world/web/planet-37.webp",
+    "runtime": "assets/extensions/original-world/planet-37.webp",
+    "sha256": "38db76e79289b839f1f33dcaa1a59f4f30a7e04ef784323e209df063ff23f93c",
+    "master": "art/world/original-world/masters/planet-atlas-02.png",
+    "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 4,
+      "crop": [
+        0,
+        314,
+        314,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-37.webp"
+  },
+  {
+    "id": "original:asset.planet-38",
+    "path": "art/world/original-world/web/planet-38.webp",
+    "runtime": "assets/extensions/original-world/planet-38.webp",
+    "sha256": "16db206bb94b8729eb4e8e213059a23bcf1465b1096dac5d019d106945b204d1",
+    "master": "art/world/original-world/masters/planet-atlas-02.png",
+    "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 5,
+      "crop": [
+        314,
+        314,
+        313,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-38.webp"
+  },
+  {
+    "id": "original:asset.planet-39",
+    "path": "art/world/original-world/web/planet-39.webp",
+    "runtime": "assets/extensions/original-world/planet-39.webp",
+    "sha256": "c60bbca389bb70f30115b4e395d14bca78d32b33a7bb08725fd37a1ebd78f1ad",
+    "master": "art/world/original-world/masters/planet-atlas-02.png",
+    "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 6,
+      "crop": [
+        627,
+        314,
+        314,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-39.webp"
+  },
+  {
+    "id": "original:asset.planet-40",
+    "path": "art/world/original-world/web/planet-40.webp",
+    "runtime": "assets/extensions/original-world/planet-40.webp",
+    "sha256": "8504b45df07db156443539cf23ee2fda5602b3e06c13d125b4809c8405a32b85",
+    "master": "art/world/original-world/masters/planet-atlas-02.png",
+    "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 7,
+      "crop": [
+        941,
+        314,
+        313,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-40.webp"
+  },
+  {
+    "id": "original:asset.planet-41",
+    "path": "art/world/original-world/web/planet-41.webp",
+    "runtime": "assets/extensions/original-world/planet-41.webp",
+    "sha256": "f2c431b292a2c2b462f8226ffca3b712afd7f4c26edcd1d29855f515c8d090ea",
+    "master": "art/world/original-world/masters/planet-atlas-02.png",
+    "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 8,
+      "crop": [
+        0,
+        627,
+        314,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-41.webp"
+  },
+  {
+    "id": "original:asset.planet-42",
+    "path": "art/world/original-world/web/planet-42.webp",
+    "runtime": "assets/extensions/original-world/planet-42.webp",
+    "sha256": "0c15fe0a215b6ac5d7c3c71c320ae0d7bc25be77c4f5f7240bf1311d8b59ff27",
+    "master": "art/world/original-world/masters/planet-atlas-02.png",
+    "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 9,
+      "crop": [
+        314,
+        627,
+        313,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-42.webp"
+  },
+  {
+    "id": "original:asset.planet-43",
+    "path": "art/world/original-world/web/planet-43.webp",
+    "runtime": "assets/extensions/original-world/planet-43.webp",
+    "sha256": "83d28630cb5786e186c65fbe1786314848b6d3fc604ad2f4f570060371fbd06c",
+    "master": "art/world/original-world/masters/planet-atlas-02.png",
+    "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 10,
+      "crop": [
+        627,
+        627,
+        314,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-43.webp"
+  },
+  {
+    "id": "original:asset.planet-44",
+    "path": "art/world/original-world/web/planet-44.webp",
+    "runtime": "assets/extensions/original-world/planet-44.webp",
+    "sha256": "9b0e30f2c30fba1659d6c8ef2fe68c3132aae6007228abd33e26ea1bd4427398",
+    "master": "art/world/original-world/masters/planet-atlas-02.png",
+    "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 11,
+      "crop": [
+        941,
+        627,
+        313,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-44.webp"
+  },
+  {
+    "id": "original:asset.planet-45",
+    "path": "art/world/original-world/web/planet-45.webp",
+    "runtime": "assets/extensions/original-world/planet-45.webp",
+    "sha256": "b2a22f8a9f795b11162825f0ef602aac8a1167522b277036810ccd7664c29793",
+    "master": "art/world/original-world/masters/planet-atlas-02.png",
+    "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 12,
+      "crop": [
+        0,
+        941,
+        314,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-45.webp"
+  },
+  {
+    "id": "original:asset.planet-46",
+    "path": "art/world/original-world/web/planet-46.webp",
+    "runtime": "assets/extensions/original-world/planet-46.webp",
+    "sha256": "0f0e6839df4a2cb618b9d4bcb4957698d64a201fb1cb8673208f7d3b48d78347",
+    "master": "art/world/original-world/masters/planet-atlas-02.png",
+    "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 13,
+      "crop": [
+        314,
+        941,
+        313,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-46.webp"
+  },
+  {
+    "id": "original:asset.planet-47",
+    "path": "art/world/original-world/web/planet-47.webp",
+    "runtime": "assets/extensions/original-world/planet-47.webp",
+    "sha256": "0d8edd257831c8a11b71ffa295cffb41084e65651c225ae6502e4aed46881773",
+    "master": "art/world/original-world/masters/planet-atlas-02.png",
+    "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 14,
+      "crop": [
+        627,
+        941,
+        314,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-47.webp"
+  },
+  {
+    "id": "original:asset.planet-48",
+    "path": "art/world/original-world/web/planet-48.webp",
+    "runtime": "assets/extensions/original-world/planet-48.webp",
+    "sha256": "c50dfed62a1e689a4f53840101f91a70d5b20dea3b94f017701c5f1d044877c1",
+    "master": "art/world/original-world/masters/planet-atlas-02.png",
+    "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 15,
+      "crop": [
+        941,
+        941,
+        313,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-48.webp"
+  },
+  {
+    "id": "original:asset.planet-49",
+    "path": "art/world/original-world/web/planet-49.webp",
+    "runtime": "assets/extensions/original-world/planet-49.webp",
+    "sha256": "757252c545045b8aaf72dd8e52af24f568db09d4a05151911a33f9eabfe167df",
+    "master": "art/world/original-world/masters/planet-atlas-03.png",
+    "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        314,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-49.webp"
+  },
+  {
+    "id": "original:asset.planet-50",
+    "path": "art/world/original-world/web/planet-50.webp",
+    "runtime": "assets/extensions/original-world/planet-50.webp",
+    "sha256": "e73c925588221ddeed7771096c383f34cf4c68e186ecc57c8bf26a43a8c95b49",
+    "master": "art/world/original-world/masters/planet-atlas-03.png",
+    "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 1,
+      "crop": [
+        314,
+        0,
+        313,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-50.webp"
+  },
+  {
+    "id": "original:asset.planet-51",
+    "path": "art/world/original-world/web/planet-51.webp",
+    "runtime": "assets/extensions/original-world/planet-51.webp",
+    "sha256": "ea930717f4662b9e58b9b20d7ba023af396ecba9e36d700fe8d947f365353e66",
+    "master": "art/world/original-world/masters/planet-atlas-03.png",
+    "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 2,
+      "crop": [
+        627,
+        0,
+        314,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-51.webp"
+  },
+  {
+    "id": "original:asset.planet-52",
+    "path": "art/world/original-world/web/planet-52.webp",
+    "runtime": "assets/extensions/original-world/planet-52.webp",
+    "sha256": "b1006644ec2ac673cdeac54d0fcfb6399b6c161de17f25bafffb2f2a05752998",
+    "master": "art/world/original-world/masters/planet-atlas-03.png",
+    "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 3,
+      "crop": [
+        941,
+        0,
+        313,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-52.webp"
+  },
+  {
+    "id": "original:asset.planet-53",
+    "path": "art/world/original-world/web/planet-53.webp",
+    "runtime": "assets/extensions/original-world/planet-53.webp",
+    "sha256": "0729a421e2bb842d4fe62e793d4b03fb83bedcca0a8428a18825338191ba2965",
+    "master": "art/world/original-world/masters/planet-atlas-03.png",
+    "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 4,
+      "crop": [
+        0,
+        314,
+        314,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-53.webp"
+  },
+  {
+    "id": "original:asset.planet-54",
+    "path": "art/world/original-world/web/planet-54.webp",
+    "runtime": "assets/extensions/original-world/planet-54.webp",
+    "sha256": "1b2d55af1197d26cd4efbcda2bdfed848b83880f9caf0d38801ff5587370ec3a",
+    "master": "art/world/original-world/masters/planet-atlas-03.png",
+    "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 5,
+      "crop": [
+        314,
+        314,
+        313,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-54.webp"
+  },
+  {
+    "id": "original:asset.planet-55",
+    "path": "art/world/original-world/web/planet-55.webp",
+    "runtime": "assets/extensions/original-world/planet-55.webp",
+    "sha256": "fbf65aff535e1130cef217cc3145d02ca544f97444a6b17735d07eb2a847b115",
+    "master": "art/world/original-world/masters/planet-atlas-03.png",
+    "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 6,
+      "crop": [
+        627,
+        314,
+        314,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-55.webp"
+  },
+  {
+    "id": "original:asset.planet-56",
+    "path": "art/world/original-world/web/planet-56.webp",
+    "runtime": "assets/extensions/original-world/planet-56.webp",
+    "sha256": "97d22a47a22fed9a13735bb9f086403c2a169a1b9a9acbf2ac2f63c51f8a3ad2",
+    "master": "art/world/original-world/masters/planet-atlas-03.png",
+    "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 7,
+      "crop": [
+        941,
+        314,
+        313,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-56.webp"
+  },
+  {
+    "id": "original:asset.planet-57",
+    "path": "art/world/original-world/web/planet-57.webp",
+    "runtime": "assets/extensions/original-world/planet-57.webp",
+    "sha256": "37aef99e3b0d738e4d7a619156508ac5f19ff158b3b1bffc2f68496445a1956d",
+    "master": "art/world/original-world/masters/planet-atlas-03.png",
+    "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 8,
+      "crop": [
+        0,
+        627,
+        314,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-57.webp"
+  },
+  {
+    "id": "original:asset.planet-58",
+    "path": "art/world/original-world/web/planet-58.webp",
+    "runtime": "assets/extensions/original-world/planet-58.webp",
+    "sha256": "228ab282c91bc216553d46845c2389e69b838cda87c51b7d38e9aaa5da517c01",
+    "master": "art/world/original-world/masters/planet-atlas-03.png",
+    "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 9,
+      "crop": [
+        314,
+        627,
+        313,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-58.webp"
+  },
+  {
+    "id": "original:asset.planet-59",
+    "path": "art/world/original-world/web/planet-59.webp",
+    "runtime": "assets/extensions/original-world/planet-59.webp",
+    "sha256": "28387d5686f9dd2727a3840b269150cb59f15bb78a5f8ede0328f32b2f072452",
+    "master": "art/world/original-world/masters/planet-atlas-03.png",
+    "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 10,
+      "crop": [
+        627,
+        627,
+        314,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-59.webp"
+  },
+  {
+    "id": "original:asset.planet-60",
+    "path": "art/world/original-world/web/planet-60.webp",
+    "runtime": "assets/extensions/original-world/planet-60.webp",
+    "sha256": "5f89533a6cca3844385b912b1c29644412bc079b9296fc30696e0e93a8ab18c7",
+    "master": "art/world/original-world/masters/planet-atlas-03.png",
+    "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 11,
+      "crop": [
+        941,
+        627,
+        313,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-60.webp"
+  },
+  {
+    "id": "original:asset.planet-61",
+    "path": "art/world/original-world/web/planet-61.webp",
+    "runtime": "assets/extensions/original-world/planet-61.webp",
+    "sha256": "0eca79cba5fc81cb4fe38f60e1cf23ea48968babe2fb7a3af211691f5cb0854c",
+    "master": "art/world/original-world/masters/planet-atlas-03.png",
+    "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 12,
+      "crop": [
+        0,
+        941,
+        314,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-61.webp"
+  },
+  {
+    "id": "original:asset.planet-62",
+    "path": "art/world/original-world/web/planet-62.webp",
+    "runtime": "assets/extensions/original-world/planet-62.webp",
+    "sha256": "1d4c23aa40fa4931be5a3103800da7b616a316397a23064456fb45f90a7627ee",
+    "master": "art/world/original-world/masters/planet-atlas-03.png",
+    "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 13,
+      "crop": [
+        314,
+        941,
+        313,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-62.webp"
+  },
+  {
+    "id": "original:asset.planet-63",
+    "path": "art/world/original-world/web/planet-63.webp",
+    "runtime": "assets/extensions/original-world/planet-63.webp",
+    "sha256": "03dc0b03ba8f29b46ab30acb1aeaa1ceab804440146291d0ff7661811ce28e10",
+    "master": "art/world/original-world/masters/planet-atlas-03.png",
+    "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 14,
+      "crop": [
+        627,
+        941,
+        314,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-63.webp"
+  },
+  {
+    "id": "original:asset.planet-64",
+    "path": "art/world/original-world/web/planet-64.webp",
+    "runtime": "assets/extensions/original-world/planet-64.webp",
+    "sha256": "d459d0f87b68844e883f2e172cf08e71f4489c139813b4044593fdb8ddabcd9c",
+    "master": "art/world/original-world/masters/planet-atlas-03.png",
+    "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 15,
+      "crop": [
+        941,
+        941,
+        313,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-64.webp"
+  },
+  {
+    "id": "original:asset.planet-65",
+    "path": "art/world/original-world/web/planet-65.webp",
+    "runtime": "assets/extensions/original-world/planet-65.webp",
+    "sha256": "ecc2d6f4d6843ccc391361b7dd487bdee67f0f31cefe748444f2cf330f154c42",
+    "master": "art/world/original-world/masters/planet-atlas-04.png",
+    "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        314,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-65.webp"
+  },
+  {
+    "id": "original:asset.planet-66",
+    "path": "art/world/original-world/web/planet-66.webp",
+    "runtime": "assets/extensions/original-world/planet-66.webp",
+    "sha256": "812fb7e211372d0f29725f825e03dd795182d67e172faa35bdbf8d321e993753",
+    "master": "art/world/original-world/masters/planet-atlas-04.png",
+    "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 1,
+      "crop": [
+        314,
+        0,
+        313,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-66.webp"
+  },
+  {
+    "id": "original:asset.planet-67",
+    "path": "art/world/original-world/web/planet-67.webp",
+    "runtime": "assets/extensions/original-world/planet-67.webp",
+    "sha256": "f04ff7dc9851322035e0ead8fbfd12e5f5ef2db4749b0b403e05bf49ae324d9c",
+    "master": "art/world/original-world/masters/planet-atlas-04.png",
+    "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 2,
+      "crop": [
+        627,
+        0,
+        314,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-67.webp"
+  },
+  {
+    "id": "original:asset.planet-68",
+    "path": "art/world/original-world/web/planet-68.webp",
+    "runtime": "assets/extensions/original-world/planet-68.webp",
+    "sha256": "c5d40f423972a193391d45793b7f1dfbc75daa9bd13fbee64fc3ad5d67284b7d",
+    "master": "art/world/original-world/masters/planet-atlas-04.png",
+    "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 3,
+      "crop": [
+        941,
+        0,
+        313,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-68.webp"
+  },
+  {
+    "id": "original:asset.planet-69",
+    "path": "art/world/original-world/web/planet-69.webp",
+    "runtime": "assets/extensions/original-world/planet-69.webp",
+    "sha256": "f06fa48c2e0d8b503c7dd518d4b04daf320b266991ac972dfd1d88c3915d1f5b",
+    "master": "art/world/original-world/masters/planet-atlas-04.png",
+    "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 4,
+      "crop": [
+        0,
+        314,
+        314,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-69.webp"
+  },
+  {
+    "id": "original:asset.planet-70",
+    "path": "art/world/original-world/web/planet-70.webp",
+    "runtime": "assets/extensions/original-world/planet-70.webp",
+    "sha256": "294cdf43530544a65d598d2b2e995a70b7f5f777c8e49bb7a9e616f0be6a760c",
+    "master": "art/world/original-world/masters/planet-atlas-04.png",
+    "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 5,
+      "crop": [
+        314,
+        314,
+        313,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-70.webp"
+  },
+  {
+    "id": "original:asset.planet-71",
+    "path": "art/world/original-world/web/planet-71.webp",
+    "runtime": "assets/extensions/original-world/planet-71.webp",
+    "sha256": "a34487911d7391c7c86806d51f8189b49a42575d3b0339e23cc61f3fb13d651b",
+    "master": "art/world/original-world/masters/planet-atlas-04.png",
+    "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 6,
+      "crop": [
+        627,
+        314,
+        314,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-71.webp"
+  },
+  {
+    "id": "original:asset.planet-72",
+    "path": "art/world/original-world/web/planet-72.webp",
+    "runtime": "assets/extensions/original-world/planet-72.webp",
+    "sha256": "50443b45983ef3cede4c661a090546ba6c28441fd6b996bc2ad6e0c67deb4f09",
+    "master": "art/world/original-world/masters/planet-atlas-04.png",
+    "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 7,
+      "crop": [
+        941,
+        314,
+        313,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-72.webp"
+  },
+  {
+    "id": "original:asset.planet-73",
+    "path": "art/world/original-world/web/planet-73.webp",
+    "runtime": "assets/extensions/original-world/planet-73.webp",
+    "sha256": "e7570ea4fd2c05f62f98306b411a44006729c3e48164cd2b7c1fb6cd180ea150",
+    "master": "art/world/original-world/masters/planet-atlas-04.png",
+    "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 8,
+      "crop": [
+        0,
+        627,
+        314,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-73.webp"
+  },
+  {
+    "id": "original:asset.planet-74",
+    "path": "art/world/original-world/web/planet-74.webp",
+    "runtime": "assets/extensions/original-world/planet-74.webp",
+    "sha256": "103736c02c50bb87ae4d9b2891e8e158f1fa299cfa78afc2c1761e0de7c30d11",
+    "master": "art/world/original-world/masters/planet-atlas-04.png",
+    "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 9,
+      "crop": [
+        314,
+        627,
+        313,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-74.webp"
+  },
+  {
+    "id": "original:asset.planet-75",
+    "path": "art/world/original-world/web/planet-75.webp",
+    "runtime": "assets/extensions/original-world/planet-75.webp",
+    "sha256": "fd09949ca3f4297cb8ad76a7af764bb763bce3f81570a7483e104d33674f8d60",
+    "master": "art/world/original-world/masters/planet-atlas-04.png",
+    "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 10,
+      "crop": [
+        627,
+        627,
+        314,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-75.webp"
+  },
+  {
+    "id": "original:asset.planet-76",
+    "path": "art/world/original-world/web/planet-76.webp",
+    "runtime": "assets/extensions/original-world/planet-76.webp",
+    "sha256": "d91e06535a6545eda936106fbf2e66ea8d60e403093caafcf333ba2f266db290",
+    "master": "art/world/original-world/masters/planet-atlas-04.png",
+    "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 11,
+      "crop": [
+        941,
+        627,
+        313,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-76.webp"
+  },
+  {
+    "id": "original:asset.planet-77",
+    "path": "art/world/original-world/web/planet-77.webp",
+    "runtime": "assets/extensions/original-world/planet-77.webp",
+    "sha256": "6ad6ea4f972e2ca4aad189557a4de6d514ba9964cfd328165b140f41227a4862",
+    "master": "art/world/original-world/masters/planet-atlas-04.png",
+    "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 12,
+      "crop": [
+        0,
+        941,
+        314,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-77.webp"
+  },
+  {
+    "id": "original:asset.planet-78",
+    "path": "art/world/original-world/web/planet-78.webp",
+    "runtime": "assets/extensions/original-world/planet-78.webp",
+    "sha256": "da5e3c227b78ac5cbc19ed95b5d40b35a3c947b1e80366211a37d346df8a988f",
+    "master": "art/world/original-world/masters/planet-atlas-04.png",
+    "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 13,
+      "crop": [
+        314,
+        941,
+        313,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-78.webp"
+  },
+  {
+    "id": "original:asset.planet-79",
+    "path": "art/world/original-world/web/planet-79.webp",
+    "runtime": "assets/extensions/original-world/planet-79.webp",
+    "sha256": "3dc11449b6ec6c5c4c4533d82d2253b7c9121421dae35716d4f23a10970d8193",
+    "master": "art/world/original-world/masters/planet-atlas-04.png",
+    "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 14,
+      "crop": [
+        627,
+        941,
+        314,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-79.webp"
+  },
+  {
+    "id": "original:asset.planet-80",
+    "path": "art/world/original-world/web/planet-80.webp",
+    "runtime": "assets/extensions/original-world/planet-80.webp",
+    "sha256": "bf74b5517c136fb11f201c24edec97ee559db9006640227c032b33f4bc9851d0",
+    "master": "art/world/original-world/masters/planet-atlas-04.png",
+    "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 15,
+      "crop": [
+        941,
+        941,
+        313,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-80.webp"
+  },
+  {
+    "id": "original:asset.planet-81",
+    "path": "art/world/original-world/web/planet-81.webp",
+    "runtime": "assets/extensions/original-world/planet-81.webp",
+    "sha256": "40cbb9c0c2b9aedf31509ccae22e84cb742fc5ac71b0b25067b18e1faf54645c",
+    "master": "art/world/original-world/masters/planet-atlas-05.png",
+    "masterSha256": "a3c2408ce97675263c8acf12752d21bf0de36e24910df730774171013c46b2af",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        314,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-81.webp"
+  },
+  {
+    "id": "original:asset.planet-82",
+    "path": "art/world/original-world/web/planet-82.webp",
+    "runtime": "assets/extensions/original-world/planet-82.webp",
+    "sha256": "2b27066a8e724967dcb9ee1f70bc520b36984ffadffdc329e63c7138134352ca",
+    "master": "art/world/original-world/masters/planet-atlas-05.png",
+    "masterSha256": "a3c2408ce97675263c8acf12752d21bf0de36e24910df730774171013c46b2af",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 1,
+      "crop": [
+        314,
+        0,
+        313,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-82.webp"
+  },
+  {
+    "id": "original:asset.planet-83",
+    "path": "art/world/original-world/web/planet-83.webp",
+    "runtime": "assets/extensions/original-world/planet-83.webp",
+    "sha256": "49151f86dfa8cf5ecf81186d2840aa91cff1605ccbec751a1a75c7b4823441db",
+    "master": "art/world/original-world/masters/planet-atlas-05.png",
+    "masterSha256": "a3c2408ce97675263c8acf12752d21bf0de36e24910df730774171013c46b2af",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 2,
+      "crop": [
+        627,
+        0,
+        314,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-83.webp"
+  },
+  {
+    "id": "original:asset.planet-84",
+    "path": "art/world/original-world/web/planet-84.webp",
+    "runtime": "assets/extensions/original-world/planet-84.webp",
+    "sha256": "3ecd59201ea2f58f015472ba6a52b1d64e98cdd61c56d88a53fad22a55564226",
+    "master": "art/world/original-world/masters/planet-atlas-05.png",
+    "masterSha256": "a3c2408ce97675263c8acf12752d21bf0de36e24910df730774171013c46b2af",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 3,
+      "crop": [
+        941,
+        0,
+        313,
+        314
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-84.webp"
+  },
+  {
+    "id": "original:asset.planet-85",
+    "path": "art/world/original-world/web/planet-85.webp",
+    "runtime": "assets/extensions/original-world/planet-85.webp",
+    "sha256": "d4d22b23511687ea9024cf4056b1e800ee6f1897129d83ba8f53174e01298422",
+    "master": "art/world/original-world/masters/planet-atlas-05.png",
+    "masterSha256": "a3c2408ce97675263c8acf12752d21bf0de36e24910df730774171013c46b2af",
+    "type": "sprite",
+    "width": 384,
+    "height": 384,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 4,
+      "cell": 4,
+      "crop": [
+        0,
+        314,
+        314,
+        313
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/planet-85.webp"
+  },
+  {
+    "id": "original:asset.background-solar",
+    "path": "art/world/original-world/web/background-solar.webp",
+    "runtime": "assets/extensions/original-world/background-solar.webp",
+    "sha256": "3619ba81af17220ecf8c067daace61f8c90b11328d667c5c6f5ded525876d104",
+    "master": "art/world/original-world/masters/background-solar.png",
+    "masterSha256": "072495d716b44ff96ece6c4eaa2b2f3fe5a2911e2525dc5562e9d20acf4f3ff8",
+    "type": "background",
+    "width": 1672,
+    "height": 941,
+    "colorSpace": "sRGB",
+    "alpha": false,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 1,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        1672,
+        941
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/background-solar.webp"
+  },
+  {
+    "id": "original:asset.background-virgo",
+    "path": "art/world/original-world/web/background-virgo.webp",
+    "runtime": "assets/extensions/original-world/background-virgo.webp",
+    "sha256": "1212052cc6dd65278b50119e15b2135ec821ed2b20ea29bb46091cae2d707d63",
+    "master": "art/world/original-world/masters/background-virgo.png",
+    "masterSha256": "19f895c6686ed7093055e1ee15ae334d5cdca109f8ef9d5b23a62d67e66816e6",
+    "type": "background",
+    "width": 1672,
+    "height": 941,
+    "colorSpace": "sRGB",
+    "alpha": false,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 1,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        1672,
+        941
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/background-virgo.webp"
+  },
+  {
+    "id": "original:asset.background-leo",
+    "path": "art/world/original-world/web/background-leo.webp",
+    "runtime": "assets/extensions/original-world/background-leo.webp",
+    "sha256": "fc2c002faa44930db3090ab364316640ef74715e994fcc385a7977446028dd88",
+    "master": "art/world/original-world/masters/background-leo.png",
+    "masterSha256": "25536ae4de1d9f89881804bf30e372f3bb3f850310bb94b3c7eede6ec0bb8224",
+    "type": "background",
+    "width": 1672,
+    "height": 940,
+    "colorSpace": "sRGB",
+    "alpha": false,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 1,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        1672,
+        940
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/background-leo.webp"
+  },
+  {
+    "id": "original:asset.background-southern",
+    "path": "art/world/original-world/web/background-southern.webp",
+    "runtime": "assets/extensions/original-world/background-southern.webp",
+    "sha256": "41ebbffea970e289f76fe383529aef2470244d57f4419221f923ea6758c97481",
+    "master": "art/world/original-world/masters/background-southern.png",
+    "masterSha256": "80cef21411c7c02beb24d8e28975d56524e8acc7c18b773fb08b00f45da09f4e",
+    "type": "background",
+    "width": 1672,
+    "height": 941,
+    "colorSpace": "sRGB",
+    "alpha": false,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 1,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        1672,
+        941
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/background-southern.webp"
+  },
+  {
+    "id": "original:asset.background-canis",
+    "path": "art/world/original-world/web/background-canis.webp",
+    "runtime": "assets/extensions/original-world/background-canis.webp",
+    "sha256": "2c3d61bf1360131e1c118ae4a7f692ff64acafd8ca7c7f1c5eaa57316eff5cd0",
+    "master": "art/world/original-world/masters/background-canis.png",
+    "masterSha256": "965d240d8c27eda0f2477bf6735146be2f126010905e43f84263556c1f243c26",
+    "type": "background",
+    "width": 1672,
+    "height": 940,
+    "colorSpace": "sRGB",
+    "alpha": false,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 1,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        1672,
+        940
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/background-canis.webp"
+  },
+  {
+    "id": "original:asset.background-northern",
+    "path": "art/world/original-world/web/background-northern.webp",
+    "runtime": "assets/extensions/original-world/background-northern.webp",
+    "sha256": "24af7051aa31fc2dda9bf4e0a1e6710010f668b6be35a617a7ee2df1ae179eae",
+    "master": "art/world/original-world/masters/background-northern.png",
+    "masterSha256": "b33a8a017f3ee8189c5f6bbbb9c284881c852e9d3f00f6fde104f6a87c4d1290",
+    "type": "background",
+    "width": 1672,
+    "height": 941,
+    "colorSpace": "sRGB",
+    "alpha": false,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 1,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        1672,
+        941
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/background-northern.webp"
+  },
+  {
+    "id": "original:asset.background-cygnus",
+    "path": "art/world/original-world/web/background-cygnus.webp",
+    "runtime": "assets/extensions/original-world/background-cygnus.webp",
+    "sha256": "780845ace88badac3c640805853c07fcd50b51e7a9a688efe1e287ea186fa551",
+    "master": "art/world/original-world/masters/background-cygnus.png",
+    "masterSha256": "56062128bd998cbb4adf8d515c5519417ccbd1a6c2327e38218a36ce6ee11c2f",
+    "type": "background",
+    "width": 1672,
+    "height": 941,
+    "colorSpace": "sRGB",
+    "alpha": false,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 1,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        1672,
+        941
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/background-cygnus.webp"
+  },
+  {
+    "id": "original:asset.background-gemini",
+    "path": "art/world/original-world/web/background-gemini.webp",
+    "runtime": "assets/extensions/original-world/background-gemini.webp",
+    "sha256": "8cc687a4d2f339fef1a82f3476a836373ddfc87428fb5cd9b1e1becc17972a05",
+    "master": "art/world/original-world/masters/background-gemini.png",
+    "masterSha256": "29fb1963daaa7ea4e4e494d64456149fe3dc0cd21a6994b3345d64321dcef73f",
+    "type": "background",
+    "width": 1672,
+    "height": 941,
+    "colorSpace": "sRGB",
+    "alpha": false,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 1,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        1672,
+        941
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/background-gemini.webp"
+  },
+  {
+    "id": "original:asset.background-taurus",
+    "path": "art/world/original-world/web/background-taurus.webp",
+    "runtime": "assets/extensions/original-world/background-taurus.webp",
+    "sha256": "79c73ee336d7cd1e4b3d41edb010e1f8da89b475035daf2126c7e883b5e99c53",
+    "master": "art/world/original-world/masters/background-taurus.png",
+    "masterSha256": "02742fc9b4959dcf540ae24acc393b1c710687765cb86ced37df9cde64f74bd0",
+    "type": "background",
+    "width": 1672,
+    "height": 941,
+    "colorSpace": "sRGB",
+    "alpha": false,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 1,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        1672,
+        941
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/background-taurus.webp"
+  },
+  {
+    "id": "original:asset.background-scorpio",
+    "path": "art/world/original-world/web/background-scorpio.webp",
+    "runtime": "assets/extensions/original-world/background-scorpio.webp",
+    "sha256": "a6309e430ceb62b9fa30218a92d0cb9d480f28d0a360247047bb0c15295c140c",
+    "master": "art/world/original-world/masters/background-scorpio.png",
+    "masterSha256": "2df5f48e3b155044467889871ebd0753b5a987274c3799cd87b3b0a6c4c97498",
+    "type": "background",
+    "width": 1672,
+    "height": 941,
+    "colorSpace": "sRGB",
+    "alpha": false,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 1,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        1672,
+        941
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/background-scorpio.webp"
+  },
+  {
+    "id": "original:asset.background-sagittarius",
+    "path": "art/world/original-world/web/background-sagittarius.webp",
+    "runtime": "assets/extensions/original-world/background-sagittarius.webp",
+    "sha256": "ab3acb036ea431124404bea0a73c4104212261f665d256b2601a0794095583c2",
+    "master": "art/world/original-world/masters/background-sagittarius.png",
+    "masterSha256": "cfbfc1f87c84e60aa49f4190e768d66af6e876a8a9203cd673e7bc05ff4c30f4",
+    "type": "background",
+    "width": 1672,
+    "height": 941,
+    "colorSpace": "sRGB",
+    "alpha": false,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 1,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        1672,
+        941
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/background-sagittarius.webp"
+  },
+  {
+    "id": "original:asset.background-cancer",
+    "path": "art/world/original-world/web/background-cancer.webp",
+    "runtime": "assets/extensions/original-world/background-cancer.webp",
+    "sha256": "70f91a2d92008fbb7ef67495d09ccf8f3dbb415d8da306eac7b6a87ffaa34c94",
+    "master": "art/world/original-world/masters/background-cancer.png",
+    "masterSha256": "33e9649ba0b644523725e55d02f98da4d20a0e2a369be97102c3fce52e516828",
+    "type": "background",
+    "width": 1672,
+    "height": 941,
+    "colorSpace": "sRGB",
+    "alpha": false,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 1,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        1672,
+        941
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/background-cancer.webp"
+  },
+  {
+    "id": "original:asset.background-aries",
+    "path": "art/world/original-world/web/background-aries.webp",
+    "runtime": "assets/extensions/original-world/background-aries.webp",
+    "sha256": "5da6127f2f8c5e58c7b2e6c229fffff23004c8f0bc095e98f3975ab09fc433c2",
+    "master": "art/world/original-world/masters/background-aries.png",
+    "masterSha256": "cd2327f134e6d61b5fddde20461edc2dd365c5b73da856da20d1ebf28a71647b",
+    "type": "background",
+    "width": 1672,
+    "height": 940,
+    "colorSpace": "sRGB",
+    "alpha": false,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 1,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        1672,
+        940
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/background-aries.webp"
+  },
+  {
+    "id": "original:asset.background-pisces",
+    "path": "art/world/original-world/web/background-pisces.webp",
+    "runtime": "assets/extensions/original-world/background-pisces.webp",
+    "sha256": "bf735d8c41f484cdfb5dd84cd6f807492b8833faea42fa07b961506980b64527",
+    "master": "art/world/original-world/masters/background-pisces.png",
+    "masterSha256": "47aecaa9ce865eededfae2567c96d8f3d480cf7775a87f63f13b0e1438f709ae",
+    "type": "background",
+    "width": 1672,
+    "height": 941,
+    "colorSpace": "sRGB",
+    "alpha": false,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 1,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        1672,
+        941
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/background-pisces.webp"
+  },
+  {
+    "id": "original:asset.node-stronghold",
+    "path": "art/world/original-world/web/node-stronghold.webp",
+    "runtime": "assets/extensions/original-world/node-stronghold.webp",
+    "sha256": "f9de3ba7f47a8ce1d3f4477b6628347639e8b16b0fb64488793067880212673e",
+    "master": "art/world/original-world/masters/node-stronghold.png",
+    "masterSha256": "cf5ddf9a8a582779f8cd9fa4a17780c1e4ba2789930c4c5840c6d94b8206e8cd",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 1,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        1254,
+        1254
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/node-stronghold.webp"
+  },
+  {
+    "id": "original:asset.node-camp",
+    "path": "art/world/original-world/web/node-camp.webp",
+    "runtime": "assets/extensions/original-world/node-camp.webp",
+    "sha256": "316232757d524743d13641b951fee82771c41e9a2e0f4629f3b3a3b1f5aca0b5",
+    "master": "art/world/original-world/masters/node-camp.png",
+    "masterSha256": "baa8329842ae8a3d858860dc7522a696c9e3743c794110085aed6873b1dd91a8",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 1,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        1254,
+        1254
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/node-camp.webp"
+  },
+  {
+    "id": "original:asset.node-event",
+    "path": "art/world/original-world/web/node-event.webp",
+    "runtime": "assets/extensions/original-world/node-event.webp",
+    "sha256": "f635182c52beb0ec7313a2ba2ad18afe5a5e3a45ce19e74c797022c5ddb32d80",
+    "master": "art/world/original-world/masters/node-event.png",
+    "masterSha256": "499979371643d68f6cefeedcfad1424204a311c91410df3b79b40649a5329a3b",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 1,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        1254,
+        1254
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/node-event.webp"
+  },
+  {
+    "id": "original:asset.node-gate",
+    "path": "art/world/original-world/web/node-gate.webp",
+    "runtime": "assets/extensions/original-world/node-gate.webp",
+    "sha256": "507975dd3e47235f316db4cdd10e2b1ed7ef5e11b80b52c797155ab1a912bc1c",
+    "master": "art/world/original-world/masters/node-gate.png",
+    "masterSha256": "44476a6618d20a878bf1909d7d441f5eb47d6ba8ab237da9fc0d6fa94ec1a5c7",
+    "type": "sprite",
+    "width": 512,
+    "height": 512,
+    "colorSpace": "sRGB",
+    "alpha": true,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": {
+      "grid": 1,
+      "cell": 0,
+      "crop": [
+        0,
+        0,
+        1254,
+        1254
+      ]
+    },
+    "version": "1",
+    "bundle": "original:package.world",
+    "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
+    "review": "candidate",
+    "preview": "art/world/original-world/web/node-gate.webp"
+  }
+]

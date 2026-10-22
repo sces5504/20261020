@@ -1,0 +1,501 @@
+[
+  {
+    "model": "Enemy_Probe01",
+    "cidRows": [
+      147,
+      206
+    ],
+    "assetId": "original:asset.enemy-147",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_Scout01",
+    "cidRows": [
+      148,
+      207
+    ],
+    "assetId": "original:asset.enemy-148",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_Fighter01",
+    "cidRows": [
+      149,
+      208
+    ],
+    "assetId": "original:asset.enemy-149",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_Fighter02",
+    "cidRows": [
+      150
+    ],
+    "assetId": "original:asset.enemy-150",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_Bomber01",
+    "cidRows": [
+      151
+    ],
+    "assetId": "original:asset.enemy-151",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_Bomber02",
+    "cidRows": [
+      152
+    ],
+    "assetId": "original:asset.enemy-152",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_PTBoat01",
+    "cidRows": [
+      153
+    ],
+    "assetId": "original:asset.enemy-153",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_PTBoat02",
+    "cidRows": [
+      154
+    ],
+    "assetId": "original:asset.enemy-154",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_PatrolKiller01",
+    "cidRows": [
+      155
+    ],
+    "assetId": "original:asset.enemy-155",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_PatrolKiller02",
+    "cidRows": [
+      156
+    ],
+    "assetId": "original:asset.enemy-156",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_Corvette01",
+    "cidRows": [
+      157
+    ],
+    "assetId": "original:asset.enemy-157",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_Corvette02",
+    "cidRows": [
+      158
+    ],
+    "assetId": "original:asset.enemy-158",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_Breacher01",
+    "cidRows": [
+      159
+    ],
+    "assetId": "original:asset.enemy-159",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_Breacher02",
+    "cidRows": [
+      160
+    ],
+    "assetId": "original:asset.enemy-160",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_Frigate01",
+    "cidRows": [
+      161
+    ],
+    "assetId": "original:asset.enemy-161",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_Frigate02",
+    "cidRows": [
+      162
+    ],
+    "assetId": "original:asset.enemy-162",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_Destroyer01",
+    "cidRows": [
+      163
+    ],
+    "assetId": "original:asset.enemy-163",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_Destroyer02",
+    "cidRows": [
+      164
+    ],
+    "assetId": "original:asset.enemy-164",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_Cruiser01",
+    "cidRows": [
+      165
+    ],
+    "assetId": "original:asset.enemy-165",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_Cruiser02",
+    "cidRows": [
+      166
+    ],
+    "assetId": "original:asset.enemy-166",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_Ramer01",
+    "cidRows": [
+      167
+    ],
+    "assetId": "original:asset.enemy-167",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_Ramer02",
+    "cidRows": [
+      168
+    ],
+    "assetId": "original:asset.enemy-168",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_TorpedoCruiser01",
+    "cidRows": [
+      169
+    ],
+    "assetId": "original:asset.enemy-169",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_TorpedoCruiser02",
+    "cidRows": [
+      170
+    ],
+    "assetId": "original:asset.enemy-170",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_BattleCruiser01",
+    "cidRows": [
+      171
+    ],
+    "assetId": "original:asset.enemy-171",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_BattleCruiser02",
+    "cidRows": [
+      172
+    ],
+    "assetId": "original:asset.enemy-172",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_Battleship01",
+    "cidRows": [
+      173
+    ],
+    "assetId": "original:asset.enemy-173",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_Battleship02",
+    "cidRows": [
+      174
+    ],
+    "assetId": "original:asset.enemy-174",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_Battleship03",
+    "cidRows": [
+      175
+    ],
+    "assetId": "original:asset.enemy-175",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_Battleship04",
+    "cidRows": [
+      176
+    ],
+    "assetId": "original:asset.enemy-176",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_Battleship05",
+    "cidRows": [
+      177
+    ],
+    "assetId": "original:asset.enemy-177",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_Mothership01",
+    "cidRows": [
+      178
+    ],
+    "assetId": "original:asset.enemy-178",
+    "review": "planned"
+  },
+  {
+    "model": "Kiraba",
+    "cidRows": [
+      189
+    ],
+    "assetId": "original:asset.enemy-189",
+    "review": "planned"
+  },
+  {
+    "model": "Mitsuba",
+    "cidRows": [
+      190
+    ],
+    "assetId": "original:asset.enemy-190",
+    "review": "planned"
+  },
+  {
+    "model": "Aitsu",
+    "cidRows": [
+      191
+    ],
+    "assetId": "original:asset.enemy-191",
+    "review": "planned"
+  },
+  {
+    "model": "Haitsu",
+    "cidRows": [
+      192
+    ],
+    "assetId": "original:asset.enemy-192",
+    "review": "planned"
+  },
+  {
+    "model": "Morugo",
+    "cidRows": [
+      193
+    ],
+    "assetId": "original:asset.enemy-193",
+    "review": "planned"
+  },
+  {
+    "model": "Moruba",
+    "cidRows": [
+      194
+    ],
+    "assetId": "original:asset.enemy-194",
+    "review": "planned"
+  },
+  {
+    "model": "Zeruga",
+    "cidRows": [
+      195
+    ],
+    "assetId": "original:asset.enemy-195",
+    "review": "planned"
+  },
+  {
+    "model": "Shiruga",
+    "cidRows": [
+      196
+    ],
+    "assetId": "original:asset.enemy-196",
+    "review": "planned"
+  },
+  {
+    "model": "Leiga",
+    "cidRows": [
+      197
+    ],
+    "assetId": "original:asset.enemy-197",
+    "review": "planned"
+  },
+  {
+    "model": "DoradusBoss",
+    "cidRows": [
+      280
+    ],
+    "assetId": "original:asset.enemy-280",
+    "review": "planned"
+  },
+  {
+    "model": "OTS44Boss",
+    "cidRows": [
+      281
+    ],
+    "assetId": "original:asset.enemy-281",
+    "review": "planned"
+  },
+  {
+    "model": "DENBoss",
+    "cidRows": [
+      282
+    ],
+    "assetId": "original:asset.enemy-282",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_Fighter03",
+    "cidRows": [
+      288
+    ],
+    "assetId": "original:asset.enemy-288",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_SignalDisturbance",
+    "cidRows": [
+      290
+    ],
+    "assetId": "original:asset.enemy-290",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_ShockCruiser01",
+    "cidRows": [
+      291
+    ],
+    "assetId": "original:asset.enemy-291",
+    "review": "planned"
+  },
+  {
+    "model": "Saiga",
+    "cidRows": [
+      292
+    ],
+    "assetId": "original:asset.enemy-292",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_Grinder01",
+    "cidRows": [
+      293
+    ],
+    "assetId": "original:asset.enemy-293",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_BarrageDefender01",
+    "cidRows": [
+      294
+    ],
+    "assetId": "original:asset.enemy-294",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_LaserDefender01",
+    "cidRows": [
+      295
+    ],
+    "assetId": "original:asset.enemy-295",
+    "review": "planned"
+  },
+  {
+    "model": "Giria",
+    "cidRows": [
+      296
+    ],
+    "assetId": "original:asset.enemy-296",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_Battleship06",
+    "cidRows": [
+      297
+    ],
+    "assetId": "original:asset.enemy-297",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_Capture01",
+    "cidRows": [
+      309
+    ],
+    "assetId": "original:asset.enemy-309",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_MeleeDefender01",
+    "cidRows": [
+      310
+    ],
+    "assetId": "original:asset.enemy-310",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_Incinerator01",
+    "cidRows": [
+      311
+    ],
+    "assetId": "original:asset.enemy-311",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_MothershipQ01",
+    "cidRows": [
+      328
+    ],
+    "assetId": "original:asset.enemy-328",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_MothershipQ02",
+    "cidRows": [
+      329
+    ],
+    "assetId": "original:asset.enemy-329",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_MothershipQ03",
+    "cidRows": [
+      330
+    ],
+    "assetId": "original:asset.enemy-330",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_MothershipQ04",
+    "cidRows": [
+      331
+    ],
+    "assetId": "original:asset.enemy-331",
+    "review": "planned"
+  },
+  {
+    "model": "Girija",
+    "cidRows": [
+      339
+    ],
+    "assetId": "original:asset.enemy-339",
+    "review": "planned"
+  },
+  {
+    "model": "Enemy_LightCarrier01",
+    "cidRows": [
+      340
+    ],
+    "assetId": "original:asset.enemy-340",
+    "review": "planned"
+  }
+]

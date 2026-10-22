@@ -7,6 +7,7 @@ const root = resolve("content"),
     extensions: string[];
     regionPresentation?: unknown;
     characterPresentation?: unknown;
+    regionRoutes?: unknown;
   };
 const load = (file: string) => {
   const path = resolve(root, file);
@@ -19,6 +20,7 @@ const merged = assemble(
   manifest.extensions.map(load),
   manifest.regionPresentation,
   manifest.characterPresentation,
+  manifest.regionRoutes,
 );
 mkdirSync("content/generated", { recursive: true });
 writeFileSync("content/generated/runtime.json", JSON.stringify(merged));

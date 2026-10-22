@@ -30,7 +30,10 @@ export function complexField(
     return wrap(
       `<div class="resource-fields">${p.resources.map((r, i) => `<label>${esc(r.name)}<input type="number" min="1" max="999" data-index="${i}" value="${v[i]}"></label>`).join("")}</div>`,
     );
-  if ((k === "requires" || k === "requiresActive" || k === "dropCharacters") && Array.isArray(v)) {
+  if (
+    (k === "requires" || k === "requiresActive" || k === "dropCharacters") &&
+    Array.isArray(v)
+  ) {
     const list =
       k === "dropCharacters"
         ? p.characters
@@ -77,7 +80,11 @@ export function collectComplex(
       raw[k] = [
         ...group.querySelectorAll<HTMLInputElement>("[data-index]"),
       ].map((i) => Number(i.value));
-    else if (k === "requires" || k === "requiresActive" || k === "dropCharacters")
+    else if (
+      k === "requires" ||
+      k === "requiresActive" ||
+      k === "dropCharacters"
+    )
       raw[k] = [
         ...group.querySelectorAll<HTMLInputElement>("[data-reference]:checked"),
       ].map((i) => i.dataset.reference);
@@ -89,7 +96,10 @@ export function collectComplex(
           count: Number(
             row.querySelector<HTMLInputElement>("[data-spawn-count]")!.value,
           ),
-          level: Number(row.querySelector<HTMLInputElement>("[data-spawn-level]")?.value ?? 1),
+          level: Number(
+            row.querySelector<HTMLInputElement>("[data-spawn-level]")?.value ??
+              1,
+          ),
         }),
       );
     else if (k === "dialogue")

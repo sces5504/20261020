@@ -14,6 +14,16 @@
 
 ## 盤點檢查點（尚在實作）
 
+### 2026-10-22 實作檢查點
+
+- `e5267b1` 已記錄使用者對核心欄位／流程的單次特殊授權；`b40f95b` 新美術主檔與165個固定網頁資產；`2c64780` 核心0.7.0新增世界節點、CID原生成長、啟動前置、基地整補、每日排程／三次共用額度／傷害目標與舊存檔預設。
+- 新 `original:package.world`：65 CID／62外觀、85星球、754節點、48區域；來源940非空Wave中671入可玩內容、269明示排除。`coverage.json` 含逐列映射；每日4模板×7日為28節點，不算原Wave覆蓋數。
+- 元件沿用既有Combat／Mechanics／navigation；Kiraba／Mitsuba以原主動增益＋已註冊dash／fan重建，不以phaseAt模擬任意階段。未還原的Shot控制器／事件VM／母艦部件流程已列 `docs/design/original-world.md`，不可宣稱原版全機制已實機重現。
+- 核心單元／回歸104項通過；新增普通敵人自動攻擊可命中、原生成長與資料覆蓋、可達性、每日換日與重領、三次額度、基地原子交易等。正常／弱隊40+40代表戰鬥：正常40勝、弱隊21勝，seed42，無越界重置；後期正常隊Lv90起同調5與研究完成。完整671場批次試跑仍在執行。
+- 第一輪桌機世界流程通過；手機發現既有CSS隱藏素材不足訊息，已改用可見intel-guidance，重跑中。曾同時build／瀏覽器／全關卡模擬，造成資源競爭及檔案替換干擾，發布驗證失敗未計通過；後續固定建置、停止重試期間的CPU批次，依序跑瀏覽器。
+- `tools/world/e2e.mjs` 桌機／手機驗空守軍啟動、前置、缺料、基地、每日進場／倒數／管理暫停／領取，完成後產生全敵人與全星球預覽圖。正式release清單加第八組 `test:world`，既有七組（含test:polish）保留。
+- 此檢查點新增內容／根manifest／媒體registry／工具／驗收尚有未提交項，接力勿reset；最終測試與部署結果須以下方後續紀錄為準。沒有修改README。
+
 `tools/world/inventory.py`可重建 `content/source/original-world/`。來源14個非None星域、85顆PID星球、529個非None SpawnPoint、940個非空Wave。所有Wave與每日Boss用65個CID，按來源model欄可分62個外觀識別；Probe／Scout／Fighter的01與99共用原來源model，不隨等級重新畫圖。529節點包含None-region、Dummy與事件／未啟用佔位，不等於529個正式星球。
 
 原生確證：Wave七組CID/count與主要Wave行索引；CID.f15／f16／f17逐級ATK/DEF/HP整數取整。PID.f05→GalaxyN_M波次與f12/f13座標、四資源欄序為跨列及wiki交叉推定。Galaxy／PID／Wave原列與索引完整保留。

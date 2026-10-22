@@ -1,0 +1,3463 @@
+{
+  "runtimeWaves": {
+    "96": [
+      "original:spawn.1"
+    ],
+    "97": [
+      "original:spawn.2"
+    ],
+    "98": [
+      "original:spawn.3"
+    ],
+    "99": [
+      "original:spawn.4"
+    ],
+    "100": [
+      "original:spawn.5"
+    ],
+    "101": [
+      "original:spawn.6"
+    ],
+    "102": [
+      "original:spawn.7"
+    ],
+    "103": [
+      "original:spawn.8"
+    ],
+    "104": [
+      "original:spawn.9"
+    ],
+    "105": [
+      "original:spawn.10"
+    ],
+    "106": [
+      "original:spawn.11"
+    ],
+    "107": [
+      "original:spawn.12"
+    ],
+    "108": [
+      "original:spawn.13"
+    ],
+    "109": [
+      "original:spawn.14"
+    ],
+    "110": [
+      "original:spawn.15"
+    ],
+    "753": [
+      "original:spawn.312"
+    ],
+    "754": [
+      "original:spawn.313"
+    ],
+    "755": [
+      "original:spawn.314"
+    ],
+    "756": [
+      "original:spawn.315"
+    ],
+    "757": [
+      "original:spawn.316"
+    ],
+    "758": [
+      "original:spawn.317"
+    ],
+    "759": [
+      "original:spawn.318"
+    ],
+    "760": [
+      "original:spawn.319"
+    ],
+    "761": [
+      "original:spawn.320"
+    ],
+    "762": [
+      "original:spawn.321"
+    ],
+    "763": [
+      "original:spawn.322"
+    ],
+    "764": [
+      "original:spawn.323"
+    ],
+    "765": [
+      "original:spawn.324"
+    ],
+    "766": [
+      "original:spawn.325"
+    ],
+    "767": [
+      "original:spawn.326"
+    ],
+    "768": [
+      "original:spawn.327"
+    ],
+    "769": [
+      "original:spawn.328"
+    ],
+    "770": [
+      "original:spawn.329"
+    ],
+    "771": [
+      "original:spawn.330"
+    ],
+    "772": [
+      "original:spawn.331"
+    ],
+    "773": [
+      "original:spawn.332"
+    ],
+    "774": [
+      "original:spawn.333"
+    ],
+    "775": [
+      "original:spawn.334"
+    ],
+    "776": [
+      "original:spawn.335"
+    ],
+    "777": [
+      "original:spawn.336"
+    ],
+    "126": [
+      "original:spawn.20"
+    ],
+    "127": [
+      "original:spawn.21"
+    ],
+    "128": [
+      "original:spawn.22"
+    ],
+    "129": [
+      "original:spawn.23"
+    ],
+    "130": [
+      "original:spawn.24"
+    ],
+    "131": [
+      "original:spawn.25"
+    ],
+    "132": [
+      "original:spawn.26"
+    ],
+    "133": [
+      "original:spawn.27"
+    ],
+    "134": [
+      "original:spawn.28"
+    ],
+    "135": [
+      "original:spawn.29"
+    ],
+    "136": [
+      "original:spawn.30"
+    ],
+    "137": [
+      "original:spawn.31"
+    ],
+    "138": [
+      "original:spawn.32"
+    ],
+    "139": [
+      "original:spawn.33"
+    ],
+    "140": [
+      "original:spawn.34"
+    ],
+    "778": [
+      "original:spawn.337"
+    ],
+    "779": [
+      "original:spawn.338"
+    ],
+    "780": [
+      "original:spawn.339"
+    ],
+    "781": [
+      "original:spawn.340"
+    ],
+    "782": [
+      "original:spawn.341"
+    ],
+    "783": [
+      "original:spawn.342"
+    ],
+    "784": [
+      "original:spawn.343"
+    ],
+    "785": [
+      "original:spawn.344"
+    ],
+    "786": [
+      "original:spawn.345"
+    ],
+    "787": [
+      "original:spawn.346"
+    ],
+    "788": [
+      "original:spawn.347"
+    ],
+    "789": [
+      "original:spawn.348"
+    ],
+    "790": [
+      "original:spawn.349"
+    ],
+    "791": [
+      "original:spawn.350"
+    ],
+    "792": [
+      "original:spawn.351"
+    ],
+    "793": [
+      "original:spawn.352"
+    ],
+    "794": [
+      "original:spawn.353"
+    ],
+    "795": [
+      "original:spawn.354"
+    ],
+    "796": [
+      "original:spawn.355"
+    ],
+    "797": [
+      "original:spawn.356"
+    ],
+    "798": [
+      "original:spawn.357"
+    ],
+    "799": [
+      "original:spawn.358"
+    ],
+    "800": [
+      "original:spawn.359"
+    ],
+    "801": [
+      "original:spawn.360"
+    ],
+    "802": [
+      "original:spawn.361"
+    ],
+    "156": [
+      "original:spawn.39"
+    ],
+    "157": [
+      "original:spawn.40"
+    ],
+    "158": [
+      "original:spawn.41"
+    ],
+    "159": [
+      "original:spawn.42"
+    ],
+    "160": [
+      "original:spawn.43"
+    ],
+    "161": [
+      "original:spawn.44"
+    ],
+    "162": [
+      "original:spawn.45"
+    ],
+    "163": [
+      "original:spawn.46"
+    ],
+    "164": [
+      "original:spawn.47"
+    ],
+    "165": [
+      "original:spawn.48"
+    ],
+    "166": [
+      "original:spawn.49"
+    ],
+    "167": [
+      "original:spawn.50"
+    ],
+    "168": [
+      "original:spawn.51"
+    ],
+    "169": [
+      "original:spawn.52"
+    ],
+    "170": [
+      "original:spawn.53"
+    ],
+    "803": [
+      "original:spawn.362"
+    ],
+    "804": [
+      "original:spawn.363"
+    ],
+    "805": [
+      "original:spawn.364"
+    ],
+    "806": [
+      "original:spawn.365"
+    ],
+    "807": [
+      "original:spawn.366"
+    ],
+    "808": [
+      "original:spawn.367"
+    ],
+    "809": [
+      "original:spawn.368"
+    ],
+    "810": [
+      "original:spawn.369"
+    ],
+    "811": [
+      "original:spawn.370"
+    ],
+    "812": [
+      "original:spawn.371"
+    ],
+    "813": [
+      "original:spawn.372"
+    ],
+    "814": [
+      "original:spawn.373"
+    ],
+    "815": [
+      "original:spawn.374"
+    ],
+    "816": [
+      "original:spawn.375"
+    ],
+    "817": [
+      "original:spawn.376"
+    ],
+    "818": [
+      "original:spawn.377"
+    ],
+    "819": [
+      "original:spawn.378"
+    ],
+    "820": [
+      "original:spawn.379"
+    ],
+    "821": [
+      "original:spawn.380"
+    ],
+    "822": [
+      "original:spawn.381"
+    ],
+    "823": [
+      "original:spawn.382"
+    ],
+    "824": [
+      "original:spawn.383"
+    ],
+    "825": [
+      "original:spawn.384"
+    ],
+    "826": [
+      "original:spawn.385"
+    ],
+    "827": [
+      "original:spawn.386"
+    ],
+    "186": [
+      "original:spawn.58"
+    ],
+    "187": [
+      "original:spawn.59"
+    ],
+    "188": [
+      "original:spawn.60"
+    ],
+    "189": [
+      "original:spawn.61"
+    ],
+    "190": [
+      "original:spawn.62"
+    ],
+    "191": [
+      "original:spawn.63"
+    ],
+    "192": [
+      "original:spawn.64"
+    ],
+    "193": [
+      "original:spawn.65"
+    ],
+    "194": [
+      "original:spawn.66"
+    ],
+    "195": [
+      "original:spawn.67"
+    ],
+    "196": [
+      "original:spawn.68"
+    ],
+    "197": [
+      "original:spawn.69"
+    ],
+    "198": [
+      "original:spawn.70"
+    ],
+    "199": [
+      "original:spawn.71"
+    ],
+    "200": [
+      "original:spawn.72"
+    ],
+    "828": [
+      "original:spawn.387"
+    ],
+    "829": [
+      "original:spawn.388"
+    ],
+    "830": [
+      "original:spawn.389"
+    ],
+    "831": [
+      "original:spawn.390"
+    ],
+    "832": [
+      "original:spawn.391"
+    ],
+    "833": [
+      "original:spawn.392"
+    ],
+    "834": [
+      "original:spawn.393"
+    ],
+    "835": [
+      "original:spawn.394"
+    ],
+    "836": [
+      "original:spawn.395"
+    ],
+    "837": [
+      "original:spawn.396"
+    ],
+    "838": [
+      "original:spawn.397"
+    ],
+    "839": [
+      "original:spawn.398"
+    ],
+    "840": [
+      "original:spawn.399"
+    ],
+    "841": [
+      "original:spawn.400"
+    ],
+    "842": [
+      "original:spawn.401"
+    ],
+    "843": [
+      "original:spawn.402"
+    ],
+    "844": [
+      "original:spawn.403"
+    ],
+    "845": [
+      "original:spawn.404"
+    ],
+    "846": [
+      "original:spawn.405"
+    ],
+    "847": [
+      "original:spawn.406"
+    ],
+    "848": [
+      "original:spawn.407"
+    ],
+    "849": [
+      "original:spawn.408"
+    ],
+    "850": [
+      "original:spawn.409"
+    ],
+    "851": [
+      "original:spawn.410"
+    ],
+    "852": [
+      "original:spawn.411"
+    ],
+    "216": [
+      "original:spawn.77"
+    ],
+    "217": [
+      "original:spawn.78"
+    ],
+    "218": [
+      "original:spawn.79"
+    ],
+    "219": [
+      "original:spawn.80"
+    ],
+    "220": [
+      "original:spawn.81"
+    ],
+    "221": [
+      "original:spawn.82"
+    ],
+    "222": [
+      "original:spawn.83"
+    ],
+    "223": [
+      "original:spawn.84"
+    ],
+    "224": [
+      "original:spawn.85"
+    ],
+    "225": [
+      "original:spawn.86"
+    ],
+    "226": [
+      "original:spawn.87"
+    ],
+    "227": [
+      "original:spawn.88"
+    ],
+    "228": [
+      "original:spawn.89"
+    ],
+    "229": [
+      "original:spawn.90"
+    ],
+    "230": [
+      "original:spawn.91"
+    ],
+    "891": [
+      "original:spawn.421"
+    ],
+    "892": [
+      "original:spawn.422"
+    ],
+    "893": [
+      "original:spawn.423"
+    ],
+    "894": [
+      "original:spawn.424"
+    ],
+    "895": [
+      "original:spawn.425"
+    ],
+    "896": [
+      "original:spawn.426"
+    ],
+    "897": [
+      "original:spawn.427"
+    ],
+    "898": [
+      "original:spawn.428"
+    ],
+    "899": [
+      "original:spawn.429"
+    ],
+    "900": [
+      "original:spawn.430"
+    ],
+    "901": [
+      "original:spawn.431"
+    ],
+    "902": [
+      "original:spawn.432"
+    ],
+    "903": [
+      "original:spawn.433"
+    ],
+    "904": [
+      "original:spawn.434"
+    ],
+    "905": [
+      "original:spawn.435"
+    ],
+    "906": [
+      "original:spawn.436"
+    ],
+    "907": [
+      "original:spawn.437"
+    ],
+    "908": [
+      "original:spawn.438"
+    ],
+    "909": [
+      "original:spawn.439"
+    ],
+    "910": [
+      "original:spawn.440"
+    ],
+    "911": [
+      "original:spawn.441"
+    ],
+    "912": [
+      "original:spawn.442"
+    ],
+    "913": [
+      "original:spawn.443"
+    ],
+    "914": [
+      "original:spawn.444"
+    ],
+    "915": [
+      "original:spawn.445"
+    ],
+    "246": [
+      "original:spawn.96"
+    ],
+    "247": [
+      "original:spawn.97"
+    ],
+    "248": [
+      "original:spawn.98"
+    ],
+    "249": [
+      "original:spawn.99"
+    ],
+    "250": [
+      "original:spawn.100"
+    ],
+    "251": [
+      "original:spawn.101"
+    ],
+    "252": [
+      "original:spawn.102"
+    ],
+    "253": [
+      "original:spawn.103"
+    ],
+    "254": [
+      "original:spawn.104"
+    ],
+    "255": [
+      "original:spawn.105"
+    ],
+    "256": [
+      "original:spawn.106"
+    ],
+    "257": [
+      "original:spawn.107"
+    ],
+    "258": [
+      "original:spawn.108"
+    ],
+    "259": [
+      "original:spawn.109"
+    ],
+    "260": [
+      "original:spawn.110"
+    ],
+    "916": [
+      "original:spawn.446"
+    ],
+    "917": [
+      "original:spawn.447"
+    ],
+    "918": [
+      "original:spawn.448"
+    ],
+    "919": [
+      "original:spawn.449"
+    ],
+    "920": [
+      "original:spawn.450"
+    ],
+    "921": [
+      "original:spawn.451"
+    ],
+    "922": [
+      "original:spawn.452"
+    ],
+    "923": [
+      "original:spawn.453"
+    ],
+    "924": [
+      "original:spawn.454"
+    ],
+    "925": [
+      "original:spawn.455"
+    ],
+    "926": [
+      "original:spawn.456"
+    ],
+    "927": [
+      "original:spawn.457"
+    ],
+    "928": [
+      "original:spawn.458"
+    ],
+    "929": [
+      "original:spawn.459"
+    ],
+    "930": [
+      "original:spawn.460"
+    ],
+    "931": [
+      "original:spawn.461"
+    ],
+    "932": [
+      "original:spawn.462"
+    ],
+    "933": [
+      "original:spawn.463"
+    ],
+    "934": [
+      "original:spawn.464"
+    ],
+    "935": [
+      "original:spawn.465"
+    ],
+    "936": [
+      "original:spawn.466"
+    ],
+    "937": [
+      "original:spawn.467"
+    ],
+    "938": [
+      "original:spawn.468"
+    ],
+    "939": [
+      "original:spawn.469"
+    ],
+    "940": [
+      "original:spawn.470"
+    ],
+    "276": [
+      "original:spawn.115"
+    ],
+    "277": [
+      "original:spawn.116"
+    ],
+    "278": [
+      "original:spawn.117"
+    ],
+    "279": [
+      "original:spawn.118"
+    ],
+    "280": [
+      "original:spawn.119"
+    ],
+    "281": [
+      "original:spawn.120"
+    ],
+    "282": [
+      "original:spawn.121"
+    ],
+    "283": [
+      "original:spawn.122"
+    ],
+    "284": [
+      "original:spawn.123"
+    ],
+    "285": [
+      "original:spawn.124"
+    ],
+    "286": [
+      "original:spawn.125"
+    ],
+    "287": [
+      "original:spawn.126"
+    ],
+    "288": [
+      "original:spawn.127"
+    ],
+    "289": [
+      "original:spawn.128"
+    ],
+    "290": [
+      "original:spawn.129"
+    ],
+    "971": [
+      "original:spawn.505"
+    ],
+    "972": [
+      "original:spawn.506"
+    ],
+    "973": [
+      "original:spawn.507"
+    ],
+    "974": [
+      "original:spawn.508"
+    ],
+    "975": [
+      "original:spawn.509"
+    ],
+    "976": [
+      "original:spawn.510"
+    ],
+    "977": [
+      "original:spawn.511"
+    ],
+    "978": [
+      "original:spawn.512"
+    ],
+    "979": [
+      "original:spawn.513"
+    ],
+    "980": [
+      "original:spawn.514"
+    ],
+    "981": [
+      "original:spawn.515"
+    ],
+    "982": [
+      "original:spawn.516"
+    ],
+    "983": [
+      "original:spawn.517"
+    ],
+    "984": [
+      "original:spawn.518"
+    ],
+    "985": [
+      "original:spawn.519"
+    ],
+    "986": [
+      "original:spawn.520"
+    ],
+    "987": [
+      "original:spawn.521"
+    ],
+    "988": [
+      "original:spawn.522"
+    ],
+    "989": [
+      "original:spawn.523"
+    ],
+    "990": [
+      "original:spawn.524"
+    ],
+    "991": [
+      "original:spawn.525"
+    ],
+    "992": [
+      "original:spawn.526"
+    ],
+    "993": [
+      "original:spawn.527"
+    ],
+    "994": [
+      "original:spawn.528"
+    ],
+    "995": [
+      "original:spawn.529"
+    ],
+    "306": [
+      "original:spawn.134"
+    ],
+    "307": [
+      "original:spawn.135"
+    ],
+    "308": [
+      "original:spawn.136"
+    ],
+    "309": [
+      "original:spawn.137"
+    ],
+    "310": [
+      "original:spawn.138"
+    ],
+    "311": [
+      "original:spawn.139"
+    ],
+    "312": [
+      "original:spawn.140"
+    ],
+    "313": [
+      "original:spawn.141"
+    ],
+    "314": [
+      "original:spawn.142"
+    ],
+    "315": [
+      "original:spawn.143"
+    ],
+    "316": [
+      "original:spawn.144"
+    ],
+    "317": [
+      "original:spawn.145"
+    ],
+    "318": [
+      "original:spawn.146"
+    ],
+    "319": [
+      "original:spawn.147"
+    ],
+    "320": [
+      "original:spawn.148"
+    ],
+    "337": [
+      "original:spawn.153"
+    ],
+    "338": [
+      "original:spawn.154"
+    ],
+    "339": [
+      "original:spawn.155"
+    ],
+    "340": [
+      "original:spawn.156"
+    ],
+    "341": [
+      "original:spawn.157"
+    ],
+    "342": [
+      "original:spawn.158"
+    ],
+    "343": [
+      "original:spawn.159"
+    ],
+    "344": [
+      "original:spawn.160"
+    ],
+    "345": [
+      "original:spawn.161"
+    ],
+    "346": [
+      "original:spawn.162"
+    ],
+    "347": [
+      "original:spawn.163"
+    ],
+    "348": [
+      "original:spawn.164"
+    ],
+    "349": [
+      "original:spawn.165"
+    ],
+    "350": [
+      "original:spawn.166"
+    ],
+    "351": [
+      "original:spawn.167"
+    ],
+    "352": [
+      "original:spawn.190"
+    ],
+    "353": [
+      "original:spawn.191"
+    ],
+    "354": [
+      "original:spawn.192"
+    ],
+    "355": [
+      "original:spawn.193"
+    ],
+    "356": [
+      "original:spawn.194"
+    ],
+    "386": [
+      "original:spawn.195"
+    ],
+    "387": [
+      "original:spawn.196"
+    ],
+    "388": [
+      "original:spawn.197"
+    ],
+    "389": [
+      "original:spawn.198"
+    ],
+    "390": [
+      "original:spawn.199"
+    ],
+    "391": [
+      "original:spawn.200"
+    ],
+    "392": [
+      "original:spawn.201"
+    ],
+    "393": [
+      "original:spawn.202"
+    ],
+    "394": [
+      "original:spawn.203"
+    ],
+    "395": [
+      "original:spawn.204"
+    ],
+    "396": [
+      "original:spawn.205"
+    ],
+    "397": [
+      "original:spawn.206"
+    ],
+    "398": [
+      "original:spawn.207"
+    ],
+    "399": [
+      "original:spawn.208"
+    ],
+    "400": [
+      "original:spawn.209"
+    ],
+    "401": [
+      "original:spawn.210"
+    ],
+    "402": [
+      "original:spawn.211"
+    ],
+    "403": [
+      "original:spawn.212"
+    ],
+    "404": [
+      "original:spawn.213"
+    ],
+    "405": [
+      "original:spawn.214"
+    ],
+    "406": [
+      "original:spawn.215"
+    ],
+    "407": [
+      "original:spawn.216"
+    ],
+    "408": [
+      "original:spawn.217"
+    ],
+    "409": [
+      "original:spawn.218"
+    ],
+    "410": [
+      "original:spawn.219"
+    ],
+    "411": [
+      "original:spawn.220"
+    ],
+    "412": [
+      "original:spawn.221"
+    ],
+    "413": [
+      "original:spawn.222"
+    ],
+    "414": [
+      "original:spawn.223"
+    ],
+    "415": [
+      "original:spawn.224"
+    ],
+    "610": [
+      "original:spawn.230"
+    ],
+    "611": [
+      "original:spawn.231"
+    ],
+    "612": [
+      "original:spawn.232"
+    ],
+    "613": [
+      "original:spawn.233"
+    ],
+    "614": [
+      "original:spawn.234"
+    ],
+    "615": [
+      "original:spawn.235"
+    ],
+    "616": [
+      "original:spawn.236"
+    ],
+    "617": [
+      "original:spawn.237"
+    ],
+    "618": [
+      "original:spawn.238"
+    ],
+    "619": [
+      "original:spawn.239"
+    ],
+    "620": [
+      "original:spawn.240"
+    ],
+    "621": [
+      "original:spawn.241"
+    ],
+    "622": [
+      "original:spawn.242"
+    ],
+    "623": [
+      "original:spawn.243"
+    ],
+    "624": [
+      "original:spawn.244"
+    ],
+    "625": [
+      "original:spawn.245"
+    ],
+    "626": [
+      "original:spawn.246"
+    ],
+    "627": [
+      "original:spawn.247"
+    ],
+    "628": [
+      "original:spawn.248"
+    ],
+    "629": [
+      "original:spawn.249"
+    ],
+    "630": [
+      "original:spawn.250"
+    ],
+    "631": [
+      "original:spawn.251"
+    ],
+    "632": [
+      "original:spawn.252"
+    ],
+    "633": [
+      "original:spawn.253"
+    ],
+    "634": [
+      "original:spawn.254"
+    ],
+    "635": [
+      "original:spawn.255"
+    ],
+    "636": [
+      "original:spawn.256"
+    ],
+    "637": [
+      "original:spawn.257"
+    ],
+    "638": [
+      "original:spawn.258"
+    ],
+    "639": [
+      "original:spawn.259"
+    ],
+    "691": [
+      "original:spawn.274"
+    ],
+    "692": [
+      "original:spawn.275"
+    ],
+    "693": [
+      "original:spawn.276"
+    ],
+    "694": [
+      "original:spawn.277"
+    ],
+    "695": [
+      "original:spawn.278"
+    ],
+    "696": [
+      "original:spawn.279"
+    ],
+    "697": [
+      "original:spawn.280"
+    ],
+    "698": [
+      "original:spawn.281"
+    ],
+    "699": [
+      "original:spawn.282"
+    ],
+    "700": [
+      "original:spawn.283"
+    ],
+    "701": [
+      "original:spawn.284"
+    ],
+    "702": [
+      "original:spawn.285"
+    ],
+    "703": [
+      "original:spawn.286"
+    ],
+    "704": [
+      "original:spawn.287"
+    ],
+    "705": [
+      "original:spawn.288"
+    ],
+    "706": [
+      "original:spawn.289"
+    ],
+    "707": [
+      "original:spawn.290"
+    ],
+    "708": [
+      "original:spawn.291"
+    ],
+    "709": [
+      "original:spawn.292"
+    ],
+    "710": [
+      "original:spawn.293"
+    ],
+    "711": [
+      "original:spawn.294"
+    ],
+    "712": [
+      "original:spawn.295"
+    ],
+    "713": [
+      "original:spawn.296"
+    ],
+    "714": [
+      "original:spawn.297"
+    ],
+    "715": [
+      "original:spawn.298"
+    ],
+    "716": [
+      "original:spawn.299"
+    ],
+    "717": [
+      "original:spawn.300"
+    ],
+    "718": [
+      "original:spawn.301"
+    ],
+    "719": [
+      "original:spawn.302"
+    ],
+    "720": [
+      "original:spawn.303"
+    ],
+    "941": [
+      "original:spawn.471"
+    ],
+    "942": [
+      "original:spawn.472"
+    ],
+    "943": [
+      "original:spawn.473"
+    ],
+    "944": [
+      "original:spawn.474"
+    ],
+    "945": [
+      "original:spawn.475"
+    ],
+    "946": [
+      "original:spawn.476"
+    ],
+    "947": [
+      "original:spawn.477"
+    ],
+    "948": [
+      "original:spawn.478"
+    ],
+    "949": [
+      "original:spawn.479"
+    ],
+    "950": [
+      "original:spawn.480"
+    ],
+    "951": [
+      "original:spawn.481"
+    ],
+    "952": [
+      "original:spawn.482"
+    ],
+    "953": [
+      "original:spawn.483"
+    ],
+    "954": [
+      "original:spawn.484"
+    ],
+    "955": [
+      "original:spawn.485"
+    ],
+    "956": [
+      "original:spawn.486"
+    ],
+    "957": [
+      "original:spawn.487"
+    ],
+    "958": [
+      "original:spawn.488"
+    ],
+    "959": [
+      "original:spawn.489"
+    ],
+    "960": [
+      "original:spawn.490"
+    ],
+    "961": [
+      "original:spawn.491"
+    ],
+    "962": [
+      "original:spawn.492"
+    ],
+    "963": [
+      "original:spawn.493"
+    ],
+    "964": [
+      "original:spawn.494"
+    ],
+    "965": [
+      "original:spawn.495"
+    ],
+    "966": [
+      "original:spawn.496"
+    ],
+    "967": [
+      "original:spawn.497"
+    ],
+    "968": [
+      "original:spawn.498"
+    ],
+    "969": [
+      "original:spawn.499"
+    ],
+    "970": [
+      "original:spawn.500"
+    ],
+    "79": [
+      "original:planet.1"
+    ],
+    "81": [
+      "original:planet.4"
+    ],
+    "82": [
+      "original:planet.5"
+    ],
+    "83": [
+      "original:planet.6"
+    ],
+    "84": [
+      "original:planet.7"
+    ],
+    "85": [
+      "original:planet.8"
+    ],
+    "86": [
+      "original:planet.9"
+    ],
+    "87": [
+      "original:planet.10"
+    ],
+    "88": [
+      "original:planet.11"
+    ],
+    "89": [
+      "original:planet.12"
+    ],
+    "111": [
+      "original:planet.13"
+    ],
+    "112": [
+      "original:planet.14"
+    ],
+    "113": [
+      "original:planet.15"
+    ],
+    "114": [
+      "original:planet.16"
+    ],
+    "115": [
+      "original:planet.17"
+    ],
+    "116": [
+      "original:planet.18"
+    ],
+    "117": [
+      "original:planet.19"
+    ],
+    "118": [
+      "original:planet.20"
+    ],
+    "119": [
+      "original:planet.21"
+    ],
+    "141": [
+      "original:planet.22"
+    ],
+    "142": [
+      "original:planet.23"
+    ],
+    "143": [
+      "original:planet.24"
+    ],
+    "144": [
+      "original:planet.25"
+    ],
+    "145": [
+      "original:planet.26"
+    ],
+    "146": [
+      "original:planet.27"
+    ],
+    "147": [
+      "original:planet.28"
+    ],
+    "148": [
+      "original:planet.29"
+    ],
+    "149": [
+      "original:planet.30"
+    ],
+    "171": [
+      "original:planet.31"
+    ],
+    "172": [
+      "original:planet.32"
+    ],
+    "173": [
+      "original:planet.33"
+    ],
+    "174": [
+      "original:planet.34"
+    ],
+    "175": [
+      "original:planet.35"
+    ],
+    "176": [
+      "original:planet.36"
+    ],
+    "177": [
+      "original:planet.37"
+    ],
+    "178": [
+      "original:planet.38"
+    ],
+    "179": [
+      "original:planet.39"
+    ],
+    "201": [
+      "original:planet.40"
+    ],
+    "202": [
+      "original:planet.41"
+    ],
+    "203": [
+      "original:planet.42"
+    ],
+    "204": [
+      "original:planet.43"
+    ],
+    "205": [
+      "original:planet.44"
+    ],
+    "206": [
+      "original:planet.45"
+    ],
+    "207": [
+      "original:planet.46"
+    ],
+    "208": [
+      "original:planet.47"
+    ],
+    "209": [
+      "original:planet.48"
+    ],
+    "231": [
+      "original:planet.49"
+    ],
+    "232": [
+      "original:planet.50"
+    ],
+    "233": [
+      "original:planet.51"
+    ],
+    "234": [
+      "original:planet.52"
+    ],
+    "235": [
+      "original:planet.53"
+    ],
+    "236": [
+      "original:planet.54"
+    ],
+    "237": [
+      "original:planet.55"
+    ],
+    "238": [
+      "original:planet.56"
+    ],
+    "239": [
+      "original:planet.57"
+    ],
+    "261": [
+      "original:planet.58"
+    ],
+    "262": [
+      "original:planet.59"
+    ],
+    "263": [
+      "original:planet.60"
+    ],
+    "264": [
+      "original:planet.61"
+    ],
+    "265": [
+      "original:planet.62"
+    ],
+    "266": [
+      "original:planet.63"
+    ],
+    "267": [
+      "original:planet.64"
+    ],
+    "268": [
+      "original:planet.65"
+    ],
+    "269": [
+      "original:planet.66"
+    ],
+    "291": [
+      "original:planet.67"
+    ],
+    "292": [
+      "original:planet.68"
+    ],
+    "293": [
+      "original:planet.69"
+    ],
+    "294": [
+      "original:planet.70"
+    ],
+    "295": [
+      "original:planet.71"
+    ],
+    "296": [
+      "original:planet.72"
+    ],
+    "297": [
+      "original:planet.73"
+    ],
+    "298": [
+      "original:planet.74"
+    ],
+    "299": [
+      "original:planet.75"
+    ],
+    "321": [
+      "original:planet.76"
+    ],
+    "322": [
+      "original:planet.77"
+    ],
+    "323": [
+      "original:planet.78"
+    ],
+    "324": [
+      "original:planet.79"
+    ],
+    "325": [
+      "original:planet.80"
+    ],
+    "326": [
+      "original:planet.81"
+    ],
+    "327": [
+      "original:planet.82"
+    ],
+    "328": [
+      "original:planet.83"
+    ],
+    "329": [
+      "original:planet.84"
+    ],
+    "330": [
+      "original:planet.85"
+    ],
+    "52": [
+      "original:wave.52"
+    ],
+    "53": [
+      "original:wave.53"
+    ],
+    "54": [
+      "original:wave.54"
+    ],
+    "55": [
+      "original:wave.55"
+    ],
+    "56": [
+      "original:wave.56"
+    ],
+    "57": [
+      "original:wave.57"
+    ],
+    "58": [
+      "original:wave.58"
+    ],
+    "59": [
+      "original:wave.59"
+    ],
+    "60": [
+      "original:wave.60"
+    ],
+    "61": [
+      "original:wave.61"
+    ],
+    "62": [
+      "original:wave.62"
+    ],
+    "63": [
+      "original:wave.63"
+    ],
+    "64": [
+      "original:wave.64"
+    ],
+    "65": [
+      "original:wave.65"
+    ],
+    "66": [
+      "original:wave.66"
+    ],
+    "67": [
+      "original:wave.67"
+    ],
+    "68": [
+      "original:wave.68"
+    ],
+    "69": [
+      "original:wave.69"
+    ],
+    "70": [
+      "original:wave.70"
+    ],
+    "71": [
+      "original:wave.71"
+    ],
+    "72": [
+      "original:wave.72"
+    ],
+    "73": [
+      "original:wave.73"
+    ],
+    "74": [
+      "original:wave.74"
+    ],
+    "75": [
+      "original:wave.75"
+    ],
+    "76": [
+      "original:wave.76"
+    ],
+    "77": [
+      "original:wave.77"
+    ],
+    "78": [
+      "original:wave.78"
+    ],
+    "362": [
+      "original:wave.362"
+    ],
+    "363": [
+      "original:wave.363"
+    ],
+    "364": [
+      "original:wave.364"
+    ],
+    "365": [
+      "original:wave.365"
+    ],
+    "366": [
+      "original:wave.366"
+    ],
+    "367": [
+      "original:wave.367"
+    ],
+    "368": [
+      "original:wave.368"
+    ],
+    "369": [
+      "original:wave.369"
+    ],
+    "370": [
+      "original:wave.370"
+    ],
+    "371": [
+      "original:wave.371"
+    ],
+    "372": [
+      "original:wave.372"
+    ],
+    "373": [
+      "original:wave.373"
+    ],
+    "374": [
+      "original:wave.374"
+    ],
+    "375": [
+      "original:wave.375"
+    ],
+    "376": [
+      "original:wave.376"
+    ],
+    "377": [
+      "original:wave.377"
+    ],
+    "378": [
+      "original:wave.378"
+    ],
+    "379": [
+      "original:wave.379"
+    ],
+    "380": [
+      "original:wave.380"
+    ],
+    "381": [
+      "original:wave.381"
+    ],
+    "421": [
+      "original:wave.421"
+    ],
+    "422": [
+      "original:wave.422"
+    ],
+    "423": [
+      "original:wave.423"
+    ],
+    "424": [
+      "original:wave.424"
+    ],
+    "382": [
+      "original:wave.382"
+    ],
+    "383": [
+      "original:wave.383"
+    ],
+    "384": [
+      "original:wave.384"
+    ],
+    "385": [
+      "original:wave.385"
+    ],
+    "416": [
+      "original:wave.416"
+    ],
+    "417": [
+      "original:wave.417"
+    ],
+    "418": [
+      "original:wave.418"
+    ],
+    "419": [
+      "original:wave.419"
+    ],
+    "420": [
+      "original:wave.420"
+    ],
+    "433": [
+      "original:wave.433"
+    ],
+    "434": [
+      "original:wave.434"
+    ],
+    "640": [
+      "original:wave.640"
+    ],
+    "641": [
+      "original:wave.641"
+    ],
+    "642": [
+      "original:wave.642"
+    ],
+    "643": [
+      "original:wave.643"
+    ],
+    "644": [
+      "original:wave.644"
+    ],
+    "645": [
+      "original:wave.645"
+    ],
+    "646": [
+      "original:wave.646"
+    ],
+    "647": [
+      "original:wave.647"
+    ],
+    "648": [
+      "original:wave.648"
+    ],
+    "726": [
+      "original:wave.726"
+    ],
+    "727": [
+      "original:wave.727"
+    ],
+    "728": [
+      "original:wave.728"
+    ],
+    "729": [
+      "original:wave.729"
+    ],
+    "679": [
+      "original:wave.679"
+    ],
+    "680": [
+      "original:wave.680"
+    ],
+    "681": [
+      "original:wave.681"
+    ],
+    "682": [
+      "original:wave.682"
+    ],
+    "683": [
+      "original:wave.683"
+    ],
+    "684": [
+      "original:wave.684"
+    ],
+    "685": [
+      "original:wave.685"
+    ],
+    "686": [
+      "original:wave.686"
+    ],
+    "687": [
+      "original:wave.687"
+    ],
+    "688": [
+      "original:wave.688"
+    ],
+    "689": [
+      "original:wave.689"
+    ],
+    "690": [
+      "original:wave.690"
+    ],
+    "721": [
+      "original:wave.721"
+    ],
+    "722": [
+      "original:wave.722"
+    ],
+    "723": [
+      "original:wave.723"
+    ],
+    "724": [
+      "original:wave.724"
+    ],
+    "725": [
+      "original:wave.725"
+    ],
+    "730": [
+      "original:wave.730"
+    ],
+    "731": [
+      "original:wave.731"
+    ],
+    "732": [
+      "original:wave.732"
+    ],
+    "733": [
+      "original:wave.733"
+    ],
+    "734": [
+      "original:wave.734"
+    ],
+    "735": [
+      "original:wave.735"
+    ],
+    "736": [
+      "original:wave.736"
+    ],
+    "737": [
+      "original:wave.737"
+    ],
+    "738": [
+      "original:wave.738"
+    ],
+    "739": [
+      "original:wave.739"
+    ],
+    "740": [
+      "original:wave.740"
+    ],
+    "741": [
+      "original:wave.741"
+    ],
+    "742": [
+      "original:wave.742"
+    ],
+    "743": [
+      "original:wave.743"
+    ],
+    "744": [
+      "original:wave.744"
+    ],
+    "745": [
+      "original:wave.745"
+    ],
+    "746": [
+      "original:wave.746"
+    ],
+    "747": [
+      "original:wave.747"
+    ],
+    "748": [
+      "original:wave.748"
+    ],
+    "749": [
+      "original:wave.749"
+    ],
+    "750": [
+      "original:wave.750"
+    ],
+    "751": [
+      "original:wave.751"
+    ],
+    "752": [
+      "original:wave.752"
+    ],
+    "853": [
+      "original:wave.853"
+    ],
+    "854": [
+      "original:wave.854"
+    ],
+    "855": [
+      "original:wave.855"
+    ],
+    "856": [
+      "original:wave.856"
+    ],
+    "857": [
+      "original:wave.857"
+    ],
+    "858": [
+      "original:wave.858"
+    ],
+    "859": [
+      "original:wave.859"
+    ],
+    "860": [
+      "original:wave.860"
+    ],
+    "861": [
+      "original:wave.861"
+    ],
+    "862": [
+      "original:wave.862"
+    ],
+    "863": [
+      "original:wave.863"
+    ],
+    "864": [
+      "original:wave.864"
+    ],
+    "865": [
+      "original:wave.865"
+    ],
+    "866": [
+      "original:wave.866"
+    ],
+    "867": [
+      "original:wave.867"
+    ],
+    "868": [
+      "original:wave.868"
+    ],
+    "869": [
+      "original:wave.869"
+    ],
+    "870": [
+      "original:wave.870"
+    ],
+    "871": [
+      "original:wave.871"
+    ],
+    "872": [
+      "original:wave.872"
+    ],
+    "873": [
+      "original:wave.873"
+    ],
+    "874": [
+      "original:wave.874"
+    ],
+    "875": [
+      "original:wave.875"
+    ],
+    "876": [
+      "original:wave.876"
+    ],
+    "877": [
+      "original:wave.877"
+    ],
+    "878": [
+      "original:wave.878"
+    ],
+    "879": [
+      "original:wave.879"
+    ],
+    "880": [
+      "original:wave.880"
+    ],
+    "881": [
+      "original:wave.881"
+    ],
+    "882": [
+      "original:wave.882"
+    ],
+    "883": [
+      "original:wave.883"
+    ],
+    "884": [
+      "original:wave.884"
+    ],
+    "885": [
+      "original:wave.885"
+    ],
+    "886": [
+      "original:wave.886"
+    ],
+    "887": [
+      "original:wave.887"
+    ],
+    "888": [
+      "original:wave.888"
+    ],
+    "889": [
+      "original:wave.889"
+    ],
+    "890": [
+      "original:wave.890"
+    ],
+    "-11": [
+      "original:daily.1-1"
+    ],
+    "-12": [
+      "original:daily.1-2"
+    ],
+    "-13": [
+      "original:daily.1-3"
+    ],
+    "-14": [
+      "original:daily.1-4"
+    ],
+    "-21": [
+      "original:daily.2-1"
+    ],
+    "-22": [
+      "original:daily.2-2"
+    ],
+    "-23": [
+      "original:daily.2-3"
+    ],
+    "-24": [
+      "original:daily.2-4"
+    ],
+    "-31": [
+      "original:daily.3-1"
+    ],
+    "-32": [
+      "original:daily.3-2"
+    ],
+    "-33": [
+      "original:daily.3-3"
+    ],
+    "-34": [
+      "original:daily.3-4"
+    ],
+    "-41": [
+      "original:daily.4-1"
+    ],
+    "-42": [
+      "original:daily.4-2"
+    ],
+    "-43": [
+      "original:daily.4-3"
+    ],
+    "-44": [
+      "original:daily.4-4"
+    ],
+    "-51": [
+      "original:daily.5-1"
+    ],
+    "-52": [
+      "original:daily.5-2"
+    ],
+    "-53": [
+      "original:daily.5-3"
+    ],
+    "-54": [
+      "original:daily.5-4"
+    ],
+    "-61": [
+      "original:daily.6-1"
+    ],
+    "-62": [
+      "original:daily.6-2"
+    ],
+    "-63": [
+      "original:daily.6-3"
+    ],
+    "-64": [
+      "original:daily.6-4"
+    ],
+    "-71": [
+      "original:daily.0-1"
+    ],
+    "-72": [
+      "original:daily.0-2"
+    ],
+    "-73": [
+      "original:daily.0-3"
+    ],
+    "-74": [
+      "original:daily.0-4"
+    ]
+  },
+  "excludedWaves": [
+    {
+      "waveRow": 1,
+      "key": "Tutor",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 2,
+      "key": "1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 3,
+      "key": "2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 4,
+      "key": "3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 5,
+      "key": "4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 6,
+      "key": "5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 7,
+      "key": "10",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 8,
+      "key": "11",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 9,
+      "key": "12",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 10,
+      "key": "13",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 11,
+      "key": "14",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 12,
+      "key": "20",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 13,
+      "key": "21",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 14,
+      "key": "22",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 15,
+      "key": "23",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 16,
+      "key": "24",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 17,
+      "key": "30",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 18,
+      "key": "31",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 19,
+      "key": "32",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 20,
+      "key": "33",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 21,
+      "key": "34",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 22,
+      "key": "40",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 23,
+      "key": "41",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 24,
+      "key": "42",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 25,
+      "key": "43",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 26,
+      "key": "44",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 27,
+      "key": "50",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 28,
+      "key": "51",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 29,
+      "key": "52",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 30,
+      "key": "53",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 31,
+      "key": "54",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 32,
+      "key": "60",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 33,
+      "key": "61",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 34,
+      "key": "62",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 35,
+      "key": "63",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 36,
+      "key": "64",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 37,
+      "key": "70",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 38,
+      "key": "71",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 39,
+      "key": "72",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 40,
+      "key": "73",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 41,
+      "key": "74",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 42,
+      "key": "80",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 43,
+      "key": "81",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 44,
+      "key": "82",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 45,
+      "key": "83",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 46,
+      "key": "84",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 47,
+      "key": "90",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 48,
+      "key": "91",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 49,
+      "key": "92",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 50,
+      "key": "93",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 51,
+      "key": "94",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 357,
+      "key": "Dummy01",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 358,
+      "key": "Dummy02",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 359,
+      "key": "Dummy03",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 360,
+      "key": "Dummy04",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 361,
+      "key": "Dummy05",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 425,
+      "key": "Test1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 426,
+      "key": "Test2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 427,
+      "key": "Test3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 428,
+      "key": "Test4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 429,
+      "key": "Test5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 430,
+      "key": "Test6",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 431,
+      "key": "Test7",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 432,
+      "key": "Test8",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 435,
+      "key": "Defense1_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 436,
+      "key": "Defense1_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 437,
+      "key": "Defense1_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 438,
+      "key": "Defense1_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 439,
+      "key": "Defense1_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 440,
+      "key": "Defense2_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 441,
+      "key": "Defense2_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 442,
+      "key": "Defense2_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 443,
+      "key": "Defense2_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 444,
+      "key": "Defense2_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 445,
+      "key": "Defense3_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 446,
+      "key": "Defense3_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 447,
+      "key": "Defense3_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 448,
+      "key": "Defense3_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 449,
+      "key": "Defense3_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 450,
+      "key": "Defense4_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 451,
+      "key": "Defense4_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 452,
+      "key": "Defense4_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 453,
+      "key": "Defense4_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 454,
+      "key": "Defense4_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 455,
+      "key": "Defense5_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 456,
+      "key": "Defense5_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 457,
+      "key": "Defense5_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 458,
+      "key": "Defense5_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 459,
+      "key": "Defense5_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 460,
+      "key": "Defense6_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 461,
+      "key": "Defense6_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 462,
+      "key": "Defense6_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 463,
+      "key": "Defense6_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 464,
+      "key": "Defense6_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 465,
+      "key": "Defense6_6",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 466,
+      "key": "Defense7_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 467,
+      "key": "Defense7_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 468,
+      "key": "Defense7_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 469,
+      "key": "Defense7_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 470,
+      "key": "Defense7_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 471,
+      "key": "Defense7_6",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 472,
+      "key": "Defense8_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 473,
+      "key": "Defense8_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 474,
+      "key": "Defense8_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 475,
+      "key": "Defense8_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 476,
+      "key": "Defense8_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 477,
+      "key": "Defense8_6",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 478,
+      "key": "Defense9_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 479,
+      "key": "Defense9_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 480,
+      "key": "Defense9_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 481,
+      "key": "Defense9_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 482,
+      "key": "Defense9_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 483,
+      "key": "Defense9_6",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 484,
+      "key": "Defense10_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 485,
+      "key": "Defense10_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 486,
+      "key": "Defense10_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 487,
+      "key": "Defense10_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 488,
+      "key": "Defense10_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 489,
+      "key": "Defense10_6",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 490,
+      "key": "Defense11_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 491,
+      "key": "Defense11_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 492,
+      "key": "Defense11_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 493,
+      "key": "Defense11_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 494,
+      "key": "Defense11_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 495,
+      "key": "Defense11_6",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 496,
+      "key": "Defense12_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 497,
+      "key": "Defense12_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 498,
+      "key": "Defense12_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 499,
+      "key": "Defense12_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 500,
+      "key": "Defense12_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 501,
+      "key": "Defense12_6",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 502,
+      "key": "Defense13_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 503,
+      "key": "Defense13_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 504,
+      "key": "Defense13_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 505,
+      "key": "Defense13_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 506,
+      "key": "Defense13_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 507,
+      "key": "Defense13_6",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 508,
+      "key": "Defense14_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 509,
+      "key": "Defense14_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 510,
+      "key": "Defense14_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 511,
+      "key": "Defense14_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 512,
+      "key": "Defense14_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 513,
+      "key": "Defense14_6",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 514,
+      "key": "Defense15_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 515,
+      "key": "Defense15_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 516,
+      "key": "Defense15_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 517,
+      "key": "Defense15_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 518,
+      "key": "Defense15_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 519,
+      "key": "Defense15_6",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 520,
+      "key": "Defense16_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 521,
+      "key": "Defense16_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 522,
+      "key": "Defense16_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 523,
+      "key": "Defense16_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 524,
+      "key": "Defense16_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 525,
+      "key": "Defense16_6",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 526,
+      "key": "Defense17_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 527,
+      "key": "Defense17_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 528,
+      "key": "Defense17_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 529,
+      "key": "Defense17_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 530,
+      "key": "Defense17_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 531,
+      "key": "Defense17_6",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 532,
+      "key": "Defense18_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 533,
+      "key": "Defense18_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 534,
+      "key": "Defense18_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 535,
+      "key": "Defense18_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 536,
+      "key": "Defense18_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 537,
+      "key": "Defense18_6",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 538,
+      "key": "Defense19_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 539,
+      "key": "Defense19_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 540,
+      "key": "Defense19_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 541,
+      "key": "Defense19_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 542,
+      "key": "Defense19_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 543,
+      "key": "Defense19_6",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 544,
+      "key": "Defense20_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 545,
+      "key": "Defense20_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 546,
+      "key": "Defense20_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 547,
+      "key": "Defense20_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 548,
+      "key": "Defense20_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 549,
+      "key": "Defense20_6",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 550,
+      "key": "Defense21_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 551,
+      "key": "Defense21_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 552,
+      "key": "Defense21_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 553,
+      "key": "Defense21_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 554,
+      "key": "Defense21_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 555,
+      "key": "Defense21_6",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 556,
+      "key": "Defense22_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 557,
+      "key": "Defense22_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 558,
+      "key": "Defense22_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 559,
+      "key": "Defense22_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 560,
+      "key": "Defense22_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 561,
+      "key": "Defense22_6",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 562,
+      "key": "Defense23_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 563,
+      "key": "Defense23_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 564,
+      "key": "Defense23_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 565,
+      "key": "Defense23_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 566,
+      "key": "Defense23_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 567,
+      "key": "Defense23_6",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 568,
+      "key": "Defense24_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 569,
+      "key": "Defense24_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 570,
+      "key": "Defense24_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 571,
+      "key": "Defense24_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 572,
+      "key": "Defense24_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 573,
+      "key": "Defense24_6",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 574,
+      "key": "Defense25_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 575,
+      "key": "Defense25_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 576,
+      "key": "Defense25_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 577,
+      "key": "Defense25_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 578,
+      "key": "Defense25_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 579,
+      "key": "Defense25_6",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 580,
+      "key": "Defense26_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 581,
+      "key": "Defense26_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 582,
+      "key": "Defense26_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 583,
+      "key": "Defense26_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 584,
+      "key": "Defense26_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 585,
+      "key": "Defense26_6",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 586,
+      "key": "Defense27_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 587,
+      "key": "Defense27_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 588,
+      "key": "Defense27_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 589,
+      "key": "Defense27_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 590,
+      "key": "Defense27_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 591,
+      "key": "Defense27_6",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 592,
+      "key": "Defense28_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 593,
+      "key": "Defense28_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 594,
+      "key": "Defense28_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 595,
+      "key": "Defense28_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 596,
+      "key": "Defense28_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 597,
+      "key": "Defense28_6",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 598,
+      "key": "Defense29_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 599,
+      "key": "Defense29_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 600,
+      "key": "Defense29_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 601,
+      "key": "Defense29_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 602,
+      "key": "Defense29_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 603,
+      "key": "Defense29_6",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 604,
+      "key": "Defense30_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 605,
+      "key": "Defense30_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 606,
+      "key": "Defense30_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 607,
+      "key": "Defense30_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 608,
+      "key": "Defense30_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 609,
+      "key": "Defense30_6",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 649,
+      "key": "Defense31_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 650,
+      "key": "Defense31_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 651,
+      "key": "Defense31_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 652,
+      "key": "Defense31_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 653,
+      "key": "Defense31_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 654,
+      "key": "Defense31_6",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 655,
+      "key": "Defense32_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 656,
+      "key": "Defense32_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 657,
+      "key": "Defense32_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 658,
+      "key": "Defense32_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 659,
+      "key": "Defense32_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 660,
+      "key": "Defense32_6",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 661,
+      "key": "Defense33_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 662,
+      "key": "Defense33_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 663,
+      "key": "Defense33_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 664,
+      "key": "Defense33_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 665,
+      "key": "Defense33_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 666,
+      "key": "Defense33_6",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 667,
+      "key": "Defense34_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 668,
+      "key": "Defense34_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 669,
+      "key": "Defense34_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 670,
+      "key": "Defense34_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 671,
+      "key": "Defense34_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 672,
+      "key": "Defense34_6",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 673,
+      "key": "Defense35_1",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 674,
+      "key": "Defense35_2",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 675,
+      "key": "Defense35_3",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 676,
+      "key": "Defense35_4",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 677,
+      "key": "Defense35_5",
+      "reason": "cancelled system or debug fixture"
+    },
+    {
+      "waveRow": 678,
+      "key": "Defense35_6",
+      "reason": "cancelled system or debug fixture"
+    }
+  ],
+  "counts": {
+    "enemies": 65,
+    "regions": 48,
+    "nodes": 754,
+    "planetCount": 85,
+    "remainingReplayWaves": 153
+  },
+  "adaptation": {
+    "coordinateScale": 10,
+    "planetProductionDivisor": 600,
+    "firstWinPerResource": "18 + 2*level (minimum 12)",
+    "dailyRewardPerResource": 1200,
+    "sourceGateReturnPolicy": "explicit safe return to lower tier",
+    "sourceEventVM": "not recovered; combat replay entry/layout reconstructed"
+  }
+}

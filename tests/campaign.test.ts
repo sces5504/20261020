@@ -10,7 +10,8 @@ test("fresh campaign reaches the boss, starts production, resolves research and 
     n = 0;
   const cmd = (c: Parameters<typeof apply>[2]) =>
     (s = apply(p, s, c, now, `campaign-${n++}`));
-  for (const v of p.planets) {
+  const legacy = p.planets.filter(v => !v.id.startsWith("original:"));
+  for (const v of legacy) {
     for (const o of [...s.roster]) {
       if (s.team.includes(o.id) && o.level === 1)
         cmd({ type: "level", owned: o.id });
@@ -67,10 +68,10 @@ test("fresh campaign reaches the boss, starts production, resolves research and 
   }
   now += 100000;
   settle(p, s, now);
-  assert.equal(s.cleared.length, p.planets.length);
+  assert.equal(s.cleared.length, legacy.length);
   assert.equal(
     Object.values(s.colonies).filter((c) => c.active).length,
-    p.planets.length,
+    legacy.length,
   );
   assert.equal(new Set(s.roster.map((o) => o.definition)).size, 6);
   assert.ok(s.research.includes(p.research[0].id));

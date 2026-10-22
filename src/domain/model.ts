@@ -122,9 +122,13 @@ export function newSave(p: Pack, now: number, id = "voyager"): Save {
     wallet: Object.fromEntries(p.resources.map((r) => [r.id, r.initial])),
     roster,
     team: roster.slice(0, p.rules.teamSize).map((c) => c.id),
-    region: (p.regions.find(r => r.id === p.rules.startRegion) ?? p.regions[0]).id,
-    x: (p.regions.find(r => r.id === p.rules.startRegion) ?? p.regions[0]).startX,
-    y: (p.regions.find(r => r.id === p.rules.startRegion) ?? p.regions[0]).startY,
+    region: (
+      p.regions.find((r) => r.id === p.rules.startRegion) ?? p.regions[0]
+    ).id,
+    x: (p.regions.find((r) => r.id === p.rules.startRegion) ?? p.regions[0])
+      .startX,
+    y: (p.regions.find((r) => r.id === p.rules.startRegion) ?? p.regions[0])
+      .startY,
     cleared: [],
     colonies: {},
     research: [],

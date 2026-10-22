@@ -78,7 +78,14 @@ const enemy = z
   .object({
     ...base,
     hp: positive,
-    growthReference: z.object({ attack: positive, defense: z.number().finite().nonnegative(), hp: positive }).strict().optional(),
+    growthReference: z
+      .object({
+        attack: positive,
+        defense: z.number().finite().nonnegative(),
+        hp: positive,
+      })
+      .strict()
+      .optional(),
     attack: positive,
     defense: z.number().finite().nonnegative(),
     speed: positive,
@@ -101,7 +108,11 @@ const enemy = z
   })
   .strict();
 const group = z
-  .object({ enemy: id, count: z.number().int().min(1).max(30), level: z.number().int().min(1).max(150).optional() })
+  .object({
+    enemy: id,
+    count: z.number().int().min(1).max(30),
+    level: z.number().int().min(1).max(150).optional(),
+  })
   .strict();
 const planet = z
   .object({
@@ -112,14 +123,24 @@ const planet = z
     radius: positive,
     color: z.string().regex(/^#[0-9a-f]{6}$/i),
     sprite: z.string(),
-    kind: z.enum(["planet", "stronghold", "camp", "event", "dailyBoss", "gate"]).default("planet"),
+    kind: z
+      .enum(["planet", "stronghold", "camp", "event", "dailyBoss", "gate"])
+      .default("planet"),
     initiallyCleared: z.boolean().default(false),
     requiresActive: z.array(id).default([]),
     hiddenUntilUnlocked: z.boolean().default(false),
     encounterPolicy: z.enum(["auto", "manual"]).default("auto"),
     timeLimitSeconds: z.number().finite().min(0).max(3600).default(0),
     objective: z.enum(["eliminate", "damage"]).default("eliminate"),
-    schedule: z.object({ weekdays: z.array(z.number().int().min(0).max(6)).min(1).max(7), utcOffsetMinutes: z.number().int().min(-720).max(840).default(540), resetHour: z.number().int().min(0).max(23).default(0), attemptLimit: z.number().int().min(1).max(20).default(3) }).strict().optional(),
+    schedule: z
+      .object({
+        weekdays: z.array(z.number().int().min(0).max(6)).min(1).max(7),
+        utcOffsetMinutes: z.number().int().min(-720).max(840).default(540),
+        resetHour: z.number().int().min(0).max(23).default(0),
+        attemptLimit: z.number().int().min(1).max(20).default(3),
+      })
+      .strict()
+      .optional(),
     requires: z.array(id),
     enemies: z.array(group),
     waves: z.array(z.array(group).min(1)).default([]),
@@ -387,11 +408,27 @@ export function validatePack(input: unknown): {
       errors.push(`${v.id}: 交戰／警告／重置半徑必須依序增加`);
     v.requires.forEach((x) => has("planets", x, v.id));
     v.requiresActive.forEach((x) => has("planets", x, v.id));
-    if (!v.enemies.length && !v.initiallyCleared && v.kind !== "camp") errors.push(`${v.id}: 無守軍節點必須明示初始解放或臨時基地`);
-    if (v.kind !== "planet" && (Object.values(v.production).some(n => n > 0) || Object.values(v.activationCost).some(n => n > 0))) errors.push(`${v.id}: 非生產星球不能設定啟動費或產能`);
-    if (v.requiresActive.some(id => p.planets.find(v => v.id === id)?.kind !== "planet")) errors.push(`${v.id}: 啟動前置必須引用生產星球`);
-    if ((v.kind === "dailyBoss") !== !!v.schedule) errors.push(`${v.id}: 每日 Boss 必須配置排程，其他節點不能配置每日排程`);
-    if (v.objective === "damage" && (!v.timeLimitSeconds || v.kind !== "dailyBoss")) errors.push(`${v.id}: 累積傷害目標需要限時每日 Boss`);
+    if (!v.enemies.length && !v.initiallyCleared && v.kind !== "camp")
+      errors.push(`${v.id}: 無守軍節點必須明示初始解放或臨時基地`);
+    if (
+      v.kind !== "planet" &&
+      (Object.values(v.production).some((n) => n > 0) ||
+        Object.values(v.activationCost).some((n) => n > 0))
+    )
+      errors.push(`${v.id}: 非生產星球不能設定啟動費或產能`);
+    if (
+      v.requiresActive.some(
+        (id) => p.planets.find((v) => v.id === id)?.kind !== "planet",
+      )
+    )
+      errors.push(`${v.id}: 啟動前置必須引用生產星球`);
+    if ((v.kind === "dailyBoss") !== !!v.schedule)
+      errors.push(`${v.id}: 每日 Boss 必須配置排程，其他節點不能配置每日排程`);
+    if (
+      v.objective === "damage" &&
+      (!v.timeLimitSeconds || v.kind !== "dailyBoss")
+    )
+      errors.push(`${v.id}: 累積傷害目標需要限時每日 Boss`);
     for (const wave of [v.enemies, ...v.waves])
       wave.forEach((e) => has("enemies", e.enemy, v.id));
     v.dropCharacters.forEach((x) => has("characters", x, v.id));
@@ -597,7 +634,8 @@ export function validatePack(input: unknown): {
     errors.push("召喚池為空");
   if (!p.planets.some((v) => v.status === "active" && !v.requires.length))
     errors.push("沒有可進入的星球");
-  if (p.rules.startRegion) has("regions", p.rules.startRegion, "rules.startRegion");
+  if (p.rules.startRegion)
+    has("regions", p.rules.startRegion, "rules.startRegion");
   for (const [name, list] of [
     ["planets", p.planets],
     ["research", p.research],
@@ -611,7 +649,10 @@ export function validatePack(input: unknown): {
       }
       if (done.has(v.id)) return;
       visiting.add(v.id);
-      [...v.requires, ...("requiresActive" in v ? v.requiresActive : [])].forEach((x) => {
+      [
+        ...v.requires,
+        ...("requiresActive" in v ? v.requiresActive : []),
+      ].forEach((x) => {
         const n = list.find((e) => e.id === x);
         if (n) visit(n);
       });

@@ -98,9 +98,20 @@ export class Combat {
   victory = false;
   timedOut = false;
   get damageRatio() {
-    const enemies = this.units.filter(u => u.side === "enemy" && !u.turretUntil);
+    const enemies = this.units.filter(
+      (u) => u.side === "enemy" && !u.turretUntil,
+    );
     const total = enemies.reduce((n, u) => n + u.maxHp, 0);
-    return total ? Math.min(1, Math.max(0, enemies.reduce((n, u) => n + u.maxHp - Math.max(0, u.hp), 0) / total)) : 0;
+    return total
+      ? Math.min(
+          1,
+          Math.max(
+            0,
+            enemies.reduce((n, u) => n + u.maxHp - Math.max(0, u.hp), 0) /
+              total,
+          ),
+        )
+      : 0;
   }
   hitsReceived = 0;
   waveIndex = 0;
@@ -550,11 +561,17 @@ export class Combat {
     this.mechanics.bullets(dt);
     this.flashes.forEach((f) => (f.life -= dt));
     this.flashes = this.flashes.filter((f) => f.life > 0);
-    const arena = this.save.encounter?.kind !== "patrol" ? this.pack.planets.find(p => p.id === this.planetId) : undefined;
+    const arena =
+      this.save.encounter?.kind !== "patrol"
+        ? this.pack.planets.find((p) => p.id === this.planetId)
+        : undefined;
     if (arena?.timeLimitSeconds && this.time >= arena.timeLimitSeconds) {
       this.timedOut = true;
       this.ended = true;
-      this.victory = arena.objective === "damage" && this.damageRatio > 0 && this.allies.some(u => u.hp > 0);
+      this.victory =
+        arena.objective === "damage" &&
+        this.damageRatio > 0 &&
+        this.allies.some((u) => u.hp > 0);
       return;
     }
     if (!this.allies.some((u) => u.hp > 0)) {

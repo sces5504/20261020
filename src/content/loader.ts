@@ -91,9 +91,19 @@ export function assemble(
   list.forEach(visit);
   // Integration-owned links only: author extensions cannot overwrite base routes.
   const linked = new Set<string>();
-  for (const binding of z.array(z.object({ region: z.string(), routes: entitySchemas.regions.shape.routes }).strict()).parse(regionRoutes)) {
-    const target = core.regions.find(r => r.id === binding.region);
-    if (!target || linked.has(binding.region)) throw Error(`星域航路綁定缺失或重複：${binding.region}`);
+  for (const binding of z
+    .array(
+      z
+        .object({
+          region: z.string(),
+          routes: entitySchemas.regions.shape.routes,
+        })
+        .strict(),
+    )
+    .parse(regionRoutes)) {
+    const target = core.regions.find((r) => r.id === binding.region);
+    if (!target || linked.has(binding.region))
+      throw Error(`星域航路綁定缺失或重複：${binding.region}`);
     linked.add(binding.region);
     target.routes.push(...binding.routes);
   }

@@ -245,7 +245,13 @@ export function apply(
   }
   if (c.type === "activate") {
     const v = p.planets.find((v) => v.id === c.planet);
-    if (!v || v.kind !== "planet" || !nodeCleared(s, v) || !nodeUnlocked(s, v, p) || s.colonies[v.id]?.active)
+    if (
+      !v ||
+      v.kind !== "planet" ||
+      !nodeCleared(s, v) ||
+      !nodeUnlocked(s, v, p) ||
+      s.colonies[v.id]?.active
+    )
       throw Error("需先解放星球，且不能重複啟動。");
     pay(v.activationCost);
     s.colonies[v.id] = {
@@ -258,18 +264,46 @@ export function apply(
   }
   if (c.type === "repair") throw Error("防衛系統已移除；領地不再失守。");
   if (c.type === "resupply") {
-    const v = p.planets.find(v => v.id === c.planet);
-    if (!v || v.kind !== "camp" || v.region !== s.region || s.encounter || !nodeUnlocked(s, v, p) || Math.hypot(s.x-v.x, s.y-v.y) > v.engageRadius) throw Error("請先抵達已開放的臨時基地，並結束交戰。");
-    const injured = s.roster.filter(o => s.team.includes(o.id) && o.hp < stats(p, o).hp && !s.jobs.some(j => j.owner === o.id));
+    const v = p.planets.find((v) => v.id === c.planet);
+    if (
+      !v ||
+      v.kind !== "camp" ||
+      v.region !== s.region ||
+      s.encounter ||
+      !nodeUnlocked(s, v, p) ||
+      Math.hypot(s.x - v.x, s.y - v.y) > v.engageRadius
+    )
+      throw Error("請先抵達已開放的臨時基地，並結束交戰。");
+    const injured = s.roster.filter(
+      (o) =>
+        s.team.includes(o.id) &&
+        o.hp < stats(p, o).hp &&
+        !s.jobs.some((j) => j.owner === o.id),
+    );
     if (!injured.length) throw Error("隊伍生命已滿，或已在治療中。");
-    for (const o of injured) job("heal", o.id, o.definition, p.rules.healSeconds, p.rules.healCost, "", `-${o.id}`);
+    for (const o of injured)
+      job(
+        "heal",
+        o.id,
+        o.definition,
+        p.rules.healSeconds,
+        p.rules.healCost,
+        "",
+        `-${o.id}`,
+      );
   }
   if (c.type === "build") {
     const b = p.buildings.find(
         (v) => v.id === c.building && v.status === "active",
       ),
       col = s.colonies[c.planet];
-    if (!b || !col?.active || col.lost || p.planets.find(v => v.id === c.planet)?.kind !== "planet") throw Error("星球必須正常運轉。");
+    if (
+      !b ||
+      !col?.active ||
+      col.lost ||
+      p.planets.find((v) => v.id === c.planet)?.kind !== "planet"
+    )
+      throw Error("星球必須正常運轉。");
     if (s.jobs.some((j) => j.owner === c.planet && j.kind === "build"))
       throw Error("此星球已有建造工作。");
     const level = col.buildings[b.id] ?? 0;
@@ -385,17 +419,34 @@ export function apply(
   }
   if (c.type === "begin") {
     const v = p.planets.find((v) => v.id === c.planet && v.status === "active");
-    if (!v || !nodeUnlocked(s, v, p) || s.encounter || !v.enemies.length || !nodeAvailability(s, v, now).open)
+    if (
+      !v ||
+      !nodeUnlocked(s, v, p) ||
+      s.encounter ||
+      !v.enemies.length ||
+      !nodeAvailability(s, v, now).open
+    )
       throw Error("遭遇尚未解鎖或已在戰鬥中。");
     if (v.region !== s.region) throw Error("請先前往遭遇所在星域。");
-    if (v.encounterPolicy === "manual" && Math.hypot(s.x-v.x, s.y-v.y) > v.engageRadius) throw Error("請先抵達挑戰入口。");
+    if (
+      v.encounterPolicy === "manual" &&
+      Math.hypot(s.x - v.x, s.y - v.y) > v.engageRadius
+    )
+      throw Error("請先抵達挑戰入口。");
     if (!s.team.some((id) => (s.roster.find((o) => o.id === id)?.hp ?? 0) > 0))
       throw Error("請先治療隊伍。");
-    s.encounter = { planet: v.id, seed: Math.floor(random(s) * 4294967296), ...(v.schedule ? { period: nodeAvailability(s, v, now).period } : {}) };
+    s.encounter = {
+      planet: v.id,
+      seed: Math.floor(random(s) * 4294967296),
+      ...(v.schedule ? { period: nodeAvailability(s, v, now).period } : {}),
+    };
     if (v.schedule) {
       const period = s.encounter.period!;
       const prior = s.dailyAttempts[v.region];
-      s.dailyAttempts[v.region] = { period, count: (prior?.period === period ? prior.count : 0) + 1 };
+      s.dailyAttempts[v.region] = {
+        period,
+        count: (prior?.period === period ? prior.count : 0) + 1,
+      };
     }
   }
   if (c.type === "result") {
@@ -416,11 +467,22 @@ export function apply(
     } else if (c.victory) {
       const v = p.planets.find((v) => v.id === c.planet)!;
       const period = s.encounter.period;
-      const eligible = v.schedule ? !!period && (s.dailyClaims[v.id] ?? "") < period : !s.cleared.includes(v.id);
+      const eligible = v.schedule
+        ? !!period && (s.dailyClaims[v.id] ?? "") < period
+        : !s.cleared.includes(v.id);
       if (eligible) {
-        const ratio = v.objective === "damage" ? Math.min(1, Math.max(0, c.scoreRatio ?? 0)) : 1;
-        if (!Number.isFinite(ratio) || ratio <= 0) throw Error("無效的挑戰分數。");
-        money(s, Object.fromEntries(Object.entries(v.reward).map(([id, n]) => [id, n * ratio])));
+        const ratio =
+          v.objective === "damage"
+            ? Math.min(1, Math.max(0, c.scoreRatio ?? 0))
+            : 1;
+        if (!Number.isFinite(ratio) || ratio <= 0)
+          throw Error("無效的挑戰分數。");
+        money(
+          s,
+          Object.fromEntries(
+            Object.entries(v.reward).map(([id, n]) => [id, n * ratio]),
+          ),
+        );
         v.dropCharacters.forEach((id) => addCharacter(p, s, id));
         if (v.schedule) s.dailyClaims[v.id] = period!;
         if (!s.cleared.includes(v.id)) s.cleared.push(v.id);

@@ -27,7 +27,8 @@ export function checkSave(raw: unknown, p: Pack): Save {
       throw Error("存檔資源缺失，需要明確遷移。");
   // Historical clear receipts remain valid even if an optional planet is removed.
   for (const [id, col] of Object.entries(s.colonies)) {
-    if (!p.planets.some((v) => v.id === id && v.kind === "planet")) throw Error("領地星球缺失或不是生產星球。");
+    if (!p.planets.some((v) => v.id === id && v.kind === "planet"))
+      throw Error("領地星球缺失或不是生產星球。");
     if (
       col.assigned &&
       (!s.roster.some((o) => o.id === col.assigned) ||

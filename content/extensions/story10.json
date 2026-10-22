@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "id": "story10:package.virgo-vanguard",
+  "version": "0.1.0",
+  "requires": [
+    {
+      "id": "m1:core",
+      "version": "0.6.0"
+    },
+    {
+      "id": "stella:package.skills",
+      "version": "0.1.0"
+    }
+  ],
+  "definitions": {
+    "characters": [
+      {
+        "id": "story10:character.arcturus",
+        "name": "大角星",
+        "description": "召喚四架跟隨無人機，提供額外火力。建議後衛；依玩家編隊順序站位。技能使用原作來源庫對應列，數值依原作差異換算，美術待補。",
+        "status": "active",
+        "provenance": "inferred",
+        "rarity": 4,
+        "hp": 460,
+        "attack": 96,
+        "defense": 10,
+        "speed": 180,
+        "range": 430,
+        "interval": 0.8,
+        "growth": 0.08,
+        "critical": 0.19,
+        "evasion": 0.0,
+        "skill": "stella:skill.85",
+        "color": "#ebbe87",
+        "portrait": "",
+        "avatar": "",
+        "sprite": "",
+        "recipe": [
+          380,
+          732,
+          614,
+          484
+        ],
+        "starter": false,
+        "role": "後衛 · 無人機指揮",
+        "sourceRow": 29,
+        "summonable": true
+      }
+    ]
+  }
+}

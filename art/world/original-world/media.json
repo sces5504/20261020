@@ -3,7 +3,7 @@
     "id": "original:asset.enemy-147",
     "path": "art/world/original-world/web/enemy-147.webp",
     "runtime": "assets/extensions/original-world/enemy-147.webp",
-    "sha256": "bae01befcd84c69169ad2692f52cf593351d98fe2183c9c0890ed08b2be254cd",
+    "sha256": "ce920ca1c478a93f19959bfe6f93e74ab0b11ccdb2e75a50673c139398cccd3e",
     "master": "art/world/original-world/masters/enemy-atlas-00.png",
     "masterSha256": "e883d997c2ddc5e671e834e552d865392160eb10dcd7b7db768b674c7a406c71",
     "type": "sprite",
@@ -19,10 +19,10 @@
       "grid": 3,
       "cell": 0,
       "crop": [
-        0,
-        0,
-        418,
-        418
+        29,
+        49,
+        386,
+        371
       ]
     },
     "version": "1",
@@ -35,7 +35,7 @@
     "id": "original:asset.enemy-148",
     "path": "art/world/original-world/web/enemy-148.webp",
     "runtime": "assets/extensions/original-world/enemy-148.webp",
-    "sha256": "5a51ff44738daf99a92f0703889d2062ef00660dac9e9f43c33a2f9487fd90a7",
+    "sha256": "02ab9c736cca6163f6942da107a92f9c5781812bfd21ec3716e4038a238d947a",
     "master": "art/world/original-world/masters/enemy-atlas-00.png",
     "masterSha256": "e883d997c2ddc5e671e834e552d865392160eb10dcd7b7db768b674c7a406c71",
     "type": "sprite",
@@ -51,10 +51,10 @@
       "grid": 3,
       "cell": 1,
       "crop": [
-        418,
-        0,
-        418,
-        418
+        438,
+        89,
+        403,
+        293
       ]
     },
     "version": "1",
@@ -67,7 +67,7 @@
     "id": "original:asset.enemy-149",
     "path": "art/world/original-world/web/enemy-149.webp",
     "runtime": "assets/extensions/original-world/enemy-149.webp",
-    "sha256": "333bf7a5703c5ab33b1b6eb53a1259233a20f5872f9f1fc6e271d5bb878e2043",
+    "sha256": "3729c4a1344630cacb0649e867b6953c0fb8cdc64382c29d677cb0e453153439",
     "master": "art/world/original-world/masters/enemy-atlas-00.png",
     "masterSha256": "e883d997c2ddc5e671e834e552d865392160eb10dcd7b7db768b674c7a406c71",
     "type": "sprite",
@@ -83,10 +83,10 @@
       "grid": 3,
       "cell": 2,
       "crop": [
-        836,
-        0,
-        418,
-        418
+        861,
+        82,
+        372,
+        311
       ]
     },
     "version": "1",
@@ -99,7 +99,7 @@
     "id": "original:asset.enemy-150",
     "path": "art/world/original-world/web/enemy-150.webp",
     "runtime": "assets/extensions/original-world/enemy-150.webp",
-    "sha256": "beb35345cb8d182d64a279f4d79dada56a1df2c771f40dba7070fb3925bf20a7",
+    "sha256": "4d016e1f12ccb7453b90cef74107ce550bb522703e52a68e93f342778375eb42",
     "master": "art/world/original-world/masters/enemy-atlas-00.png",
     "masterSha256": "e883d997c2ddc5e671e834e552d865392160eb10dcd7b7db768b674c7a406c71",
     "type": "sprite",
@@ -115,10 +115,10 @@
       "grid": 3,
       "cell": 3,
       "crop": [
-        0,
-        418,
-        418,
-        418
+        28,
+        455,
+        388,
+        359
       ]
     },
     "version": "1",
@@ -131,7 +131,7 @@
     "id": "original:asset.enemy-151",
     "path": "art/world/original-world/web/enemy-151.webp",
     "runtime": "assets/extensions/original-world/enemy-151.webp",
-    "sha256": "b3e62228d24be2bd7e76998a3c3dcee1aba2bade120395670f5d9eb1f16bf5e8",
+    "sha256": "7c5c78cebeb0e5aa0a3ed99470934f42cc324e09dbe18af82be234caff7731a3",
     "master": "art/world/original-world/masters/enemy-atlas-00.png",
     "masterSha256": "e883d997c2ddc5e671e834e552d865392160eb10dcd7b7db768b674c7a406c71",
     "type": "sprite",
@@ -147,10 +147,10 @@
       "grid": 3,
       "cell": 4,
       "crop": [
-        418,
-        418,
-        418,
-        418
+        433,
+        475,
+        401,
+        319
       ]
     },
     "version": "1",
@@ -163,7 +163,7 @@
     "id": "original:asset.enemy-152",
     "path": "art/world/original-world/web/enemy-152.webp",
     "runtime": "assets/extensions/original-world/enemy-152.webp",
-    "sha256": "a6b28b18bcc97a427328d9b6471d7e664d94c91eea91c4a1907b111521ac45ef",
+    "sha256": "03fe900419f55973164c9b4ef6f060ada90aa4af69bba20c1d2546a93930d9fa",
     "master": "art/world/original-world/masters/enemy-atlas-00.png",
     "masterSha256": "e883d997c2ddc5e671e834e552d865392160eb10dcd7b7db768b674c7a406c71",
     "type": "sprite",
@@ -179,10 +179,10 @@
       "grid": 3,
       "cell": 5,
       "crop": [
-        836,
-        418,
-        418,
-        418
+        845,
+        494,
+        386,
+        283
       ]
     },
     "version": "1",
@@ -195,7 +195,7 @@
     "id": "original:asset.enemy-153",
     "path": "art/world/original-world/web/enemy-153.webp",
     "runtime": "assets/extensions/original-world/enemy-153.webp",
-    "sha256": "1f2c085566e32ac584d8ab2cbba1792d38c3a5091744fa6d3ec44ae6e62f37f9",
+    "sha256": "e2a82e52ef2d2d09495effaf13db713e4be2e7b6094e40df863b48adc64757b5",
     "master": "art/world/original-world/masters/enemy-atlas-00.png",
     "masterSha256": "e883d997c2ddc5e671e834e552d865392160eb10dcd7b7db768b674c7a406c71",
     "type": "sprite",
@@ -211,10 +211,10 @@
       "grid": 3,
       "cell": 6,
       "crop": [
-        0,
-        836,
-        418,
-        418
+        29,
+        924,
+        387,
+        202
       ]
     },
     "version": "1",
@@ -227,7 +227,7 @@
     "id": "original:asset.enemy-154",
     "path": "art/world/original-world/web/enemy-154.webp",
     "runtime": "assets/extensions/original-world/enemy-154.webp",
-    "sha256": "8ba46fa9fc37beb00fcb6751acc4b583cb35620740880eeb5ac55455392e6c1b",
+    "sha256": "74defa90aa54e174b9dae08f21308a49bb71734e44863a97c122371b2f2f56bc",
     "master": "art/world/original-world/masters/enemy-atlas-00.png",
     "masterSha256": "e883d997c2ddc5e671e834e552d865392160eb10dcd7b7db768b674c7a406c71",
     "type": "sprite",
@@ -243,10 +243,10 @@
       "grid": 3,
       "cell": 7,
       "crop": [
-        418,
-        836,
-        418,
-        418
+        429,
+        878,
+        395,
+        290
       ]
     },
     "version": "1",
@@ -259,7 +259,7 @@
     "id": "original:asset.enemy-155",
     "path": "art/world/original-world/web/enemy-155.webp",
     "runtime": "assets/extensions/original-world/enemy-155.webp",
-    "sha256": "b20bc1ca642620f5bf602e0028f670bb6d50bcb03175915eebea33bedf3f9931",
+    "sha256": "96926b23fe56337b5c06a97f3eba9a9c2d770c265b2b51797d1c9b6d09b50298",
     "master": "art/world/original-world/masters/enemy-atlas-00.png",
     "masterSha256": "e883d997c2ddc5e671e834e552d865392160eb10dcd7b7db768b674c7a406c71",
     "type": "sprite",
@@ -275,10 +275,10 @@
       "grid": 3,
       "cell": 8,
       "crop": [
-        836,
-        836,
-        418,
-        418
+        830,
+        877,
+        406,
+        327
       ]
     },
     "version": "1",
@@ -291,7 +291,7 @@
     "id": "original:asset.enemy-156",
     "path": "art/world/original-world/web/enemy-156.webp",
     "runtime": "assets/extensions/original-world/enemy-156.webp",
-    "sha256": "399b87040978dcc37e710bccbc2158c89b00a7a2f6d75d7742c0cffd2209081b",
+    "sha256": "62cc4988e3fd60fe1ce15db553be2069e496164b52fe36871b7efbbaedf40901",
     "master": "art/world/original-world/masters/enemy-atlas-01.png",
     "masterSha256": "0099dcc17f8c2c13c9278317d53a87a9e47dbf9c019f99a98eada9acaa3463cb",
     "type": "sprite",
@@ -307,10 +307,10 @@
       "grid": 3,
       "cell": 0,
       "crop": [
-        0,
-        0,
-        418,
-        418
+        26,
+        50,
+        380,
+        365
       ]
     },
     "version": "1",
@@ -323,7 +323,7 @@
     "id": "original:asset.enemy-157",
     "path": "art/world/original-world/web/enemy-157.webp",
     "runtime": "assets/extensions/original-world/enemy-157.webp",
-    "sha256": "99991de6d9120f2319bc67d1df0a3ed6d90e35a88e6c0432f4969aaaa9d5fe85",
+    "sha256": "8583c6e4980a85abfd29b89c6c2bb5b679007a64c177eab163325b83d2d093f4",
     "master": "art/world/original-world/masters/enemy-atlas-01.png",
     "masterSha256": "0099dcc17f8c2c13c9278317d53a87a9e47dbf9c019f99a98eada9acaa3463cb",
     "type": "sprite",
@@ -339,10 +339,10 @@
       "grid": 3,
       "cell": 1,
       "crop": [
-        418,
-        0,
-        418,
-        418
+        450,
+        58,
+        365,
+        332
       ]
     },
     "version": "1",
@@ -355,7 +355,7 @@
     "id": "original:asset.enemy-158",
     "path": "art/world/original-world/web/enemy-158.webp",
     "runtime": "assets/extensions/original-world/enemy-158.webp",
-    "sha256": "95f7c29e4ffc7dc12a8d837141f6579ef586c1defd2732d517584dd23aca0e82",
+    "sha256": "ab341b9e9ca45acff069b524a459ef546388ba1ce85c4f454d1b7e1bda031bbe",
     "master": "art/world/original-world/masters/enemy-atlas-01.png",
     "masterSha256": "0099dcc17f8c2c13c9278317d53a87a9e47dbf9c019f99a98eada9acaa3463cb",
     "type": "sprite",
@@ -371,10 +371,10 @@
       "grid": 3,
       "cell": 2,
       "crop": [
-        836,
-        0,
-        418,
-        418
+        842,
+        60,
+        392,
+        347
       ]
     },
     "version": "1",
@@ -387,7 +387,7 @@
     "id": "original:asset.enemy-159",
     "path": "art/world/original-world/web/enemy-159.webp",
     "runtime": "assets/extensions/original-world/enemy-159.webp",
-    "sha256": "960d7fd9cc9127564b08fc5c2414a136d79d6aff77b8674c111c113d6732fd03",
+    "sha256": "eb638c65b2e3ec92cba41b76053210c7768a81ba69d8144bdd428d1c1da960bb",
     "master": "art/world/original-world/masters/enemy-atlas-01.png",
     "masterSha256": "0099dcc17f8c2c13c9278317d53a87a9e47dbf9c019f99a98eada9acaa3463cb",
     "type": "sprite",
@@ -403,10 +403,10 @@
       "grid": 3,
       "cell": 3,
       "crop": [
-        0,
-        418,
-        418,
-        418
+        16,
+        487,
+        402,
+        278
       ]
     },
     "version": "1",
@@ -419,7 +419,7 @@
     "id": "original:asset.enemy-160",
     "path": "art/world/original-world/web/enemy-160.webp",
     "runtime": "assets/extensions/original-world/enemy-160.webp",
-    "sha256": "ebc61657e8a4fa85aaf4c55daf568080eaf06eb0f4aa4de618082ffb71c0b1fe",
+    "sha256": "6cda8c98b48aed2641a1547079c3cd260b93404bdb06692c26e162a64821af5e",
     "master": "art/world/original-world/masters/enemy-atlas-01.png",
     "masterSha256": "0099dcc17f8c2c13c9278317d53a87a9e47dbf9c019f99a98eada9acaa3463cb",
     "type": "sprite",
@@ -435,10 +435,10 @@
       "grid": 3,
       "cell": 4,
       "crop": [
-        418,
-        418,
-        418,
-        418
+        442,
+        456,
+        372,
+        334
       ]
     },
     "version": "1",
@@ -451,7 +451,7 @@
     "id": "original:asset.enemy-161",
     "path": "art/world/original-world/web/enemy-161.webp",
     "runtime": "assets/extensions/original-world/enemy-161.webp",
-    "sha256": "4c166cb5b72d7f034af73f1c54c22bf642c36cdda2e1700e40a32b19fbe0749f",
+    "sha256": "450e9f2fc2a5e9c0c2411ff0f4229ca9a387cbc0a70bb1f32a0c64171fe33c9c",
     "master": "art/world/original-world/masters/enemy-atlas-01.png",
     "masterSha256": "0099dcc17f8c2c13c9278317d53a87a9e47dbf9c019f99a98eada9acaa3463cb",
     "type": "sprite",
@@ -467,10 +467,10 @@
       "grid": 3,
       "cell": 5,
       "crop": [
-        836,
-        418,
-        418,
-        418
+        842,
+        502,
+        396,
+        246
       ]
     },
     "version": "1",
@@ -483,7 +483,7 @@
     "id": "original:asset.enemy-162",
     "path": "art/world/original-world/web/enemy-162.webp",
     "runtime": "assets/extensions/original-world/enemy-162.webp",
-    "sha256": "ed12cfff41497d15c480e478b4e8f6fb58fd103c18b8f416540812a2a7de413f",
+    "sha256": "99e94e90aec86148154d9f72fa8c9f48f6d643d690a9c3cd9adcf45efbaf6987",
     "master": "art/world/original-world/masters/enemy-atlas-01.png",
     "masterSha256": "0099dcc17f8c2c13c9278317d53a87a9e47dbf9c019f99a98eada9acaa3463cb",
     "type": "sprite",
@@ -499,10 +499,10 @@
       "grid": 3,
       "cell": 6,
       "crop": [
-        0,
-        836,
-        418,
-        418
+        15,
+        837,
+        398,
+        346
       ]
     },
     "version": "1",
@@ -515,7 +515,7 @@
     "id": "original:asset.enemy-163",
     "path": "art/world/original-world/web/enemy-163.webp",
     "runtime": "assets/extensions/original-world/enemy-163.webp",
-    "sha256": "fd429ab494f8b39e1e2906c730b5072c460ac1ec01e27c0897e1c79d877cdb27",
+    "sha256": "d8a121e0f1d7e83383a0051e5a8409bd8631de41ede4ce38d6eb01391ab9e1ef",
     "master": "art/world/original-world/masters/enemy-atlas-01.png",
     "masterSha256": "0099dcc17f8c2c13c9278317d53a87a9e47dbf9c019f99a98eada9acaa3463cb",
     "type": "sprite",
@@ -531,10 +531,10 @@
       "grid": 3,
       "cell": 7,
       "crop": [
-        418,
-        836,
-        418,
-        418
+        425,
+        862,
+        402,
+        294
       ]
     },
     "version": "1",
@@ -547,7 +547,7 @@
     "id": "original:asset.enemy-164",
     "path": "art/world/original-world/web/enemy-164.webp",
     "runtime": "assets/extensions/original-world/enemy-164.webp",
-    "sha256": "61ab7529ab00671c5028a4c9e08271f7114583047dfbf4d49c0d7583cd4e7a61",
+    "sha256": "8ba1941a9986b2f48464cd02d51a1c168a2c37615dc05418dddfa88f96d9b4e8",
     "master": "art/world/original-world/masters/enemy-atlas-01.png",
     "masterSha256": "0099dcc17f8c2c13c9278317d53a87a9e47dbf9c019f99a98eada9acaa3463cb",
     "type": "sprite",
@@ -563,10 +563,10 @@
       "grid": 3,
       "cell": 8,
       "crop": [
-        836,
-        836,
-        418,
-        418
+        842,
+        845,
+        395,
+        327
       ]
     },
     "version": "1",
@@ -579,7 +579,7 @@
     "id": "original:asset.enemy-165",
     "path": "art/world/original-world/web/enemy-165.webp",
     "runtime": "assets/extensions/original-world/enemy-165.webp",
-    "sha256": "9d92c21ab0a9a26417b267740caa4beff0b9d556f1adf35ceb0c511966521f63",
+    "sha256": "fafd32501012e811abf78d999f6b9114e3019dcaa69eb6230ae644c87d355f46",
     "master": "art/world/original-world/masters/enemy-atlas-02.png",
     "masterSha256": "40edbd77bd480133deba626bbd4b1de3257d7da1f52863df45d72f0d9031d4a4",
     "type": "sprite",
@@ -595,10 +595,10 @@
       "grid": 3,
       "cell": 0,
       "crop": [
-        0,
-        0,
-        418,
-        418
+        19,
+        53,
+        404,
+        350
       ]
     },
     "version": "1",
@@ -611,7 +611,7 @@
     "id": "original:asset.enemy-166",
     "path": "art/world/original-world/web/enemy-166.webp",
     "runtime": "assets/extensions/original-world/enemy-166.webp",
-    "sha256": "a779bf16f375786f1a0e6d13ad02ef702ef41dad30e454f39c8bde9fe4a45d8f",
+    "sha256": "b9cee988f9a0ea3d2ea88ea867d3ae99a50a2c05f93feaf54547152489e7b9e4",
     "master": "art/world/original-world/masters/enemy-atlas-02.png",
     "masterSha256": "40edbd77bd480133deba626bbd4b1de3257d7da1f52863df45d72f0d9031d4a4",
     "type": "sprite",
@@ -627,10 +627,10 @@
       "grid": 3,
       "cell": 1,
       "crop": [
-        418,
-        0,
-        418,
-        418
+        435,
+        75,
+        397,
+        305
       ]
     },
     "version": "1",
@@ -643,7 +643,7 @@
     "id": "original:asset.enemy-167",
     "path": "art/world/original-world/web/enemy-167.webp",
     "runtime": "assets/extensions/original-world/enemy-167.webp",
-    "sha256": "c36181998655946e98d90e18d31a7d9146bf18e47d4766f93d9ba0228db82852",
+    "sha256": "d3c26666b7e56ed9a825553aba3f6e7c2f3feafa9ac3cf446a7ac21413a4ff38",
     "master": "art/world/original-world/masters/enemy-atlas-02.png",
     "masterSha256": "40edbd77bd480133deba626bbd4b1de3257d7da1f52863df45d72f0d9031d4a4",
     "type": "sprite",
@@ -659,10 +659,10 @@
       "grid": 3,
       "cell": 2,
       "crop": [
-        836,
-        0,
-        418,
-        418
+        841,
+        104,
+        399,
+        248
       ]
     },
     "version": "1",
@@ -675,7 +675,7 @@
     "id": "original:asset.enemy-168",
     "path": "art/world/original-world/web/enemy-168.webp",
     "runtime": "assets/extensions/original-world/enemy-168.webp",
-    "sha256": "8e97c6ef6dcb0a6b3284775aa413c885c8d999d447d06e5f02db4eb3091281c4",
+    "sha256": "738c46ca4fe8dde9438f4f982503c7836989b74f03bee4a53e36d0e6a558106c",
     "master": "art/world/original-world/masters/enemy-atlas-02.png",
     "masterSha256": "40edbd77bd480133deba626bbd4b1de3257d7da1f52863df45d72f0d9031d4a4",
     "type": "sprite",
@@ -691,10 +691,10 @@
       "grid": 3,
       "cell": 3,
       "crop": [
-        0,
-        418,
-        418,
-        418
+        19,
+        458,
+        425,
+        338
       ]
     },
     "version": "1",
@@ -707,7 +707,7 @@
     "id": "original:asset.enemy-169",
     "path": "art/world/original-world/web/enemy-169.webp",
     "runtime": "assets/extensions/original-world/enemy-169.webp",
-    "sha256": "45d85fe259d75c66eed41f2b96932d589ccb886432827cd90710988865018105",
+    "sha256": "55ee26f3755935c94b5617e4d0a023ce1d400135590368f36a07651075f40968",
     "master": "art/world/original-world/masters/enemy-atlas-02.png",
     "masterSha256": "40edbd77bd480133deba626bbd4b1de3257d7da1f52863df45d72f0d9031d4a4",
     "type": "sprite",
@@ -723,10 +723,10 @@
       "grid": 3,
       "cell": 4,
       "crop": [
-        418,
-        418,
-        418,
-        418
+        436,
+        472,
+        394,
+        305
       ]
     },
     "version": "1",
@@ -739,7 +739,7 @@
     "id": "original:asset.enemy-170",
     "path": "art/world/original-world/web/enemy-170.webp",
     "runtime": "assets/extensions/original-world/enemy-170.webp",
-    "sha256": "60a7c8c897ea42baf030d3b408a22073fa1fbf18d21f17af780b6ee9c37fa05f",
+    "sha256": "771c66574b7ddeb6a038cd9b87c913516a306ddbe78f1ca973281881d586732f",
     "master": "art/world/original-world/masters/enemy-atlas-02.png",
     "masterSha256": "40edbd77bd480133deba626bbd4b1de3257d7da1f52863df45d72f0d9031d4a4",
     "type": "sprite",
@@ -755,10 +755,10 @@
       "grid": 3,
       "cell": 5,
       "crop": [
-        836,
-        418,
-        418,
-        418
+        841,
+        467,
+        397,
+        314
       ]
     },
     "version": "1",
@@ -771,7 +771,7 @@
     "id": "original:asset.enemy-171",
     "path": "art/world/original-world/web/enemy-171.webp",
     "runtime": "assets/extensions/original-world/enemy-171.webp",
-    "sha256": "de8a9d07da12ffd69703781bb27106c7a32d0dab0af899f2eabd385e53d41548",
+    "sha256": "b787d134fd83507edde76d81517d795f38308947bb884f685ae9d08b73044723",
     "master": "art/world/original-world/masters/enemy-atlas-02.png",
     "masterSha256": "40edbd77bd480133deba626bbd4b1de3257d7da1f52863df45d72f0d9031d4a4",
     "type": "sprite",
@@ -787,10 +787,10 @@
       "grid": 3,
       "cell": 6,
       "crop": [
-        0,
-        836,
+        10,
+        874,
         418,
-        418
+        271
       ]
     },
     "version": "1",
@@ -803,7 +803,7 @@
     "id": "original:asset.enemy-172",
     "path": "art/world/original-world/web/enemy-172.webp",
     "runtime": "assets/extensions/original-world/enemy-172.webp",
-    "sha256": "689474eda8e23596f8f924fe337f16738091d7614541c4fcb6d8dc02a63b1d31",
+    "sha256": "0dd4bff4873928a70fd0d50af02205860f5702817738613799a2f1c2e8239b2e",
     "master": "art/world/original-world/masters/enemy-atlas-02.png",
     "masterSha256": "40edbd77bd480133deba626bbd4b1de3257d7da1f52863df45d72f0d9031d4a4",
     "type": "sprite",
@@ -819,10 +819,10 @@
       "grid": 3,
       "cell": 7,
       "crop": [
-        418,
-        836,
-        418,
-        418
+        434,
+        846,
+        397,
+        329
       ]
     },
     "version": "1",
@@ -835,7 +835,7 @@
     "id": "original:asset.enemy-173",
     "path": "art/world/original-world/web/enemy-173.webp",
     "runtime": "assets/extensions/original-world/enemy-173.webp",
-    "sha256": "a5f25e051f81d77d85f05a10dae6c1998e51f57b29c583ca3994cf33f39a7a7c",
+    "sha256": "fea9355a7ea457eeff251ccf555433dfff678a4711ffd134802510f48ec55cea",
     "master": "art/world/original-world/masters/enemy-atlas-02.png",
     "masterSha256": "40edbd77bd480133deba626bbd4b1de3257d7da1f52863df45d72f0d9031d4a4",
     "type": "sprite",
@@ -851,10 +851,10 @@
       "grid": 3,
       "cell": 8,
       "crop": [
-        836,
-        836,
-        418,
-        418
+        841,
+        849,
+        404,
+        332
       ]
     },
     "version": "1",
@@ -867,7 +867,7 @@
     "id": "original:asset.enemy-174",
     "path": "art/world/original-world/web/enemy-174.webp",
     "runtime": "assets/extensions/original-world/enemy-174.webp",
-    "sha256": "f824f0adfdd6df1012b274dcf48ed2445f6389a9893fff3ef4d1a206131e461e",
+    "sha256": "8dbd090a551a9ae51a215af33f474d8c7f041508958748e07a0dcb1f596076c0",
     "master": "art/world/original-world/masters/enemy-atlas-03.png",
     "masterSha256": "5e980e71ef2737210086b0fa0815a834c0e40efbb5d003fe541ae23ceaeb8353",
     "type": "sprite",
@@ -883,10 +883,10 @@
       "grid": 3,
       "cell": 0,
       "crop": [
-        0,
-        0,
-        418,
-        418
+        2,
+        40,
+        433,
+        329
       ]
     },
     "version": "1",
@@ -899,7 +899,7 @@
     "id": "original:asset.enemy-175",
     "path": "art/world/original-world/web/enemy-175.webp",
     "runtime": "assets/extensions/original-world/enemy-175.webp",
-    "sha256": "c3e775ae9b43bc57edacd08d291f79a269851f3111014895cd7d8702b3537d8e",
+    "sha256": "28cddf6ced38cb2cc57b457608d597bff5cc2e518569262ddbbd5cf14202296b",
     "master": "art/world/original-world/masters/enemy-atlas-03.png",
     "masterSha256": "5e980e71ef2737210086b0fa0815a834c0e40efbb5d003fe541ae23ceaeb8353",
     "type": "sprite",
@@ -915,10 +915,10 @@
       "grid": 3,
       "cell": 1,
       "crop": [
-        418,
-        0,
-        418,
-        418
+        426,
+        10,
+        405,
+        376
       ]
     },
     "version": "1",
@@ -931,7 +931,7 @@
     "id": "original:asset.enemy-176",
     "path": "art/world/original-world/web/enemy-176.webp",
     "runtime": "assets/extensions/original-world/enemy-176.webp",
-    "sha256": "eda0829d9d5a994629bbe3b07853c65470479b6b69b379abf8a8d54d042a4694",
+    "sha256": "7d8c91f4005fa92d1dcabaae8ad228d7e188c37a55227523d064f0b6ee5d5f6e",
     "master": "art/world/original-world/masters/enemy-atlas-03.png",
     "masterSha256": "5e980e71ef2737210086b0fa0815a834c0e40efbb5d003fe541ae23ceaeb8353",
     "type": "sprite",
@@ -947,10 +947,10 @@
       "grid": 3,
       "cell": 2,
       "crop": [
-        836,
-        0,
-        418,
-        418
+        839,
+        26,
+        414,
+        329
       ]
     },
     "version": "1",
@@ -963,7 +963,7 @@
     "id": "original:asset.enemy-177",
     "path": "art/world/original-world/web/enemy-177.webp",
     "runtime": "assets/extensions/original-world/enemy-177.webp",
-    "sha256": "8a121c60c9fa4ed3ce8cd42e200bd6d041b707e740899223af4cf2dd9354d951",
+    "sha256": "2990d031a2a592a02f3af4385e23c519a6302300cbf23978a19198ec2096c0bc",
     "master": "art/world/original-world/masters/enemy-atlas-03.png",
     "masterSha256": "5e980e71ef2737210086b0fa0815a834c0e40efbb5d003fe541ae23ceaeb8353",
     "type": "sprite",
@@ -979,10 +979,10 @@
       "grid": 3,
       "cell": 3,
       "crop": [
-        0,
-        418,
-        418,
-        418
+        4,
+        431,
+        434,
+        359
       ]
     },
     "version": "1",
@@ -995,7 +995,7 @@
     "id": "original:asset.enemy-178",
     "path": "art/world/original-world/web/enemy-178.webp",
     "runtime": "assets/extensions/original-world/enemy-178.webp",
-    "sha256": "7ae68adb2feb2cf47cd773205cb86ec2593cf9552a738a4218a33858daa1dc0e",
+    "sha256": "9050c9d8ca4e18072802d4c495b7b80007560a56bc98d2b2f1ac2bfe890e926e",
     "master": "art/world/original-world/masters/enemy-atlas-03.png",
     "masterSha256": "5e980e71ef2737210086b0fa0815a834c0e40efbb5d003fe541ae23ceaeb8353",
     "type": "sprite",
@@ -1011,10 +1011,10 @@
       "grid": 3,
       "cell": 4,
       "crop": [
-        418,
-        418,
-        418,
-        418
+        428,
+        388,
+        439,
+        408
       ]
     },
     "version": "1",
@@ -1027,7 +1027,7 @@
     "id": "original:asset.enemy-189",
     "path": "art/world/original-world/web/enemy-189.webp",
     "runtime": "assets/extensions/original-world/enemy-189.webp",
-    "sha256": "72609bf4ed1d72c7c1f182ffd129ab8756dfb84c7fb08095d56aceeb68e34d96",
+    "sha256": "c3119278cb6c73315ae2789172ef2c97fd58d2e73432189070c060a0c2bbb9b6",
     "master": "art/world/original-world/masters/enemy-atlas-03.png",
     "masterSha256": "5e980e71ef2737210086b0fa0815a834c0e40efbb5d003fe541ae23ceaeb8353",
     "type": "sprite",
@@ -1043,10 +1043,10 @@
       "grid": 3,
       "cell": 5,
       "crop": [
-        836,
-        418,
-        418,
-        418
+        835,
+        361,
+        414,
+        452
       ]
     },
     "version": "1",
@@ -1059,7 +1059,7 @@
     "id": "original:asset.enemy-190",
     "path": "art/world/original-world/web/enemy-190.webp",
     "runtime": "assets/extensions/original-world/enemy-190.webp",
-    "sha256": "08daf8c200b9b88d6b16277407bfff0708546ae70fcfc1829a08e3bd431558f1",
+    "sha256": "f58e23c5bfd29b184f8f58e7b311a73e591d39459be510eac04ba7d80b962aac",
     "master": "art/world/original-world/masters/enemy-atlas-03.png",
     "masterSha256": "5e980e71ef2737210086b0fa0815a834c0e40efbb5d003fe541ae23ceaeb8353",
     "type": "sprite",
@@ -1075,10 +1075,10 @@
       "grid": 3,
       "cell": 6,
       "crop": [
-        0,
-        836,
-        418,
-        418
+        8,
+        805,
+        400,
+        415
       ]
     },
     "version": "1",
@@ -1091,7 +1091,7 @@
     "id": "original:asset.enemy-191",
     "path": "art/world/original-world/web/enemy-191.webp",
     "runtime": "assets/extensions/original-world/enemy-191.webp",
-    "sha256": "04b317ef07490f731d7e0087b7a0b4d114a96dc7775d3625da1c6d245975de77",
+    "sha256": "4daeacea90d9e2b4954c2c94bc9ce8aaf997d117da69ea5ddd1fca80a854fe25",
     "master": "art/world/original-world/masters/enemy-atlas-03.png",
     "masterSha256": "5e980e71ef2737210086b0fa0815a834c0e40efbb5d003fe541ae23ceaeb8353",
     "type": "sprite",
@@ -1107,10 +1107,10 @@
       "grid": 3,
       "cell": 7,
       "crop": [
-        418,
-        836,
-        418,
-        418
+        424,
+        808,
+        420,
+        406
       ]
     },
     "version": "1",
@@ -1123,7 +1123,7 @@
     "id": "original:asset.enemy-192",
     "path": "art/world/original-world/web/enemy-192.webp",
     "runtime": "assets/extensions/original-world/enemy-192.webp",
-    "sha256": "6e289d9bbc554e585446e1c6dee6a9b4fde3ab12ac6ef193d6961a0e7b2d9cef",
+    "sha256": "14144c327b275e6e1ee7de6ac6592cd65e9b8a33bd42c396d1a2c99fbe800d83",
     "master": "art/world/original-world/masters/enemy-atlas-03.png",
     "masterSha256": "5e980e71ef2737210086b0fa0815a834c0e40efbb5d003fe541ae23ceaeb8353",
     "type": "sprite",
@@ -1139,10 +1139,10 @@
       "grid": 3,
       "cell": 8,
       "crop": [
-        836,
-        836,
-        418,
-        418
+        860,
+        791,
+        371,
+        433
       ]
     },
     "version": "1",
@@ -1155,7 +1155,7 @@
     "id": "original:asset.enemy-193",
     "path": "art/world/original-world/web/enemy-193.webp",
     "runtime": "assets/extensions/original-world/enemy-193.webp",
-    "sha256": "6c23c3ddfb15a28844b7bc033f52ba8ff755d177faa71aa8c14b84f03a3e1f24",
+    "sha256": "e075945b33ec52bec3a1e2c865b0d93e145c4a64b68e8b62a3f934cb3e8442a3",
     "master": "art/world/original-world/masters/enemy-atlas-04.png",
     "masterSha256": "8469a2e4ab175144f007af9ec9e2ad80f493018af04c8e6b37dacab5fe6fc385",
     "type": "sprite",
@@ -1171,10 +1171,10 @@
       "grid": 3,
       "cell": 0,
       "crop": [
-        0,
-        0,
-        418,
-        418
+        6,
+        10,
+        427,
+        402
       ]
     },
     "version": "1",
@@ -1187,7 +1187,7 @@
     "id": "original:asset.enemy-194",
     "path": "art/world/original-world/web/enemy-194.webp",
     "runtime": "assets/extensions/original-world/enemy-194.webp",
-    "sha256": "ec15d4de4fd25ea0b44dbfec02f506e30a2a3e5c38dad4d468923d5d85a74654",
+    "sha256": "bef61f2bcd5cb2f2c250d037e91be75c00aec35c234ddaebb3f67e868989871a",
     "master": "art/world/original-world/masters/enemy-atlas-04.png",
     "masterSha256": "8469a2e4ab175144f007af9ec9e2ad80f493018af04c8e6b37dacab5fe6fc385",
     "type": "sprite",
@@ -1203,10 +1203,10 @@
       "grid": 3,
       "cell": 1,
       "crop": [
-        418,
-        0,
-        418,
-        418
+        420,
+        34,
+        457,
+        380
       ]
     },
     "version": "1",
@@ -1219,7 +1219,7 @@
     "id": "original:asset.enemy-195",
     "path": "art/world/original-world/web/enemy-195.webp",
     "runtime": "assets/extensions/original-world/enemy-195.webp",
-    "sha256": "fcca947bc964c90148edc2adb031b8732692616bb3a876bd5d3ec720b1ef4ba1",
+    "sha256": "530112735aaca3030e403925ba41f1783292e25d21027fe1a3ad4901dca1fcd0",
     "master": "art/world/original-world/masters/enemy-atlas-04.png",
     "masterSha256": "8469a2e4ab175144f007af9ec9e2ad80f493018af04c8e6b37dacab5fe6fc385",
     "type": "sprite",
@@ -1235,10 +1235,10 @@
       "grid": 3,
       "cell": 2,
       "crop": [
-        836,
-        0,
-        418,
-        418
+        856,
+        18,
+        388,
+        399
       ]
     },
     "version": "1",
@@ -1251,7 +1251,7 @@
     "id": "original:asset.enemy-196",
     "path": "art/world/original-world/web/enemy-196.webp",
     "runtime": "assets/extensions/original-world/enemy-196.webp",
-    "sha256": "5314a53c94e6d37ae090968db1c277fb3f10c42042dbf955b1b9e44e111ef0f2",
+    "sha256": "c2d0973b40e4a45bb750472f0249b341cf97318d12724f448000968036fc2b06",
     "master": "art/world/original-world/masters/enemy-atlas-04.png",
     "masterSha256": "8469a2e4ab175144f007af9ec9e2ad80f493018af04c8e6b37dacab5fe6fc385",
     "type": "sprite",
@@ -1267,10 +1267,10 @@
       "grid": 3,
       "cell": 3,
       "crop": [
-        0,
-        418,
-        418,
-        418
+        8,
+        427,
+        412,
+        392
       ]
     },
     "version": "1",
@@ -1283,7 +1283,7 @@
     "id": "original:asset.enemy-197",
     "path": "art/world/original-world/web/enemy-197.webp",
     "runtime": "assets/extensions/original-world/enemy-197.webp",
-    "sha256": "536a95cd1b4e75fad04872069f6af80b6396525559386b396d6437a6667d6b33",
+    "sha256": "6379d3cfc04069ce07efb4eca86ddbe4850338b44a0c7452ab9150b6e2d9416e",
     "master": "art/world/original-world/masters/enemy-atlas-04.png",
     "masterSha256": "8469a2e4ab175144f007af9ec9e2ad80f493018af04c8e6b37dacab5fe6fc385",
     "type": "sprite",
@@ -1300,9 +1300,9 @@
       "cell": 4,
       "crop": [
         418,
-        418,
-        418,
-        418
+        424,
+        444,
+        397
       ]
     },
     "version": "1",
@@ -1315,7 +1315,7 @@
     "id": "original:asset.enemy-280",
     "path": "art/world/original-world/web/enemy-280.webp",
     "runtime": "assets/extensions/original-world/enemy-280.webp",
-    "sha256": "0984a7c836853e32345490fe2026201d0c9ba0ebd2f0ca90bc261c512fcdf61d",
+    "sha256": "05e1f8e7052b6732e6c63cfc9a60ab1a990503f61e3c610bd9663e07b7b98135",
     "master": "art/world/original-world/masters/enemy-atlas-04.png",
     "masterSha256": "8469a2e4ab175144f007af9ec9e2ad80f493018af04c8e6b37dacab5fe6fc385",
     "type": "sprite",
@@ -1331,10 +1331,10 @@
       "grid": 3,
       "cell": 5,
       "crop": [
-        836,
-        418,
-        418,
-        418
+        845,
+        423,
+        397,
+        396
       ]
     },
     "version": "1",
@@ -1347,7 +1347,7 @@
     "id": "original:asset.enemy-281",
     "path": "art/world/original-world/web/enemy-281.webp",
     "runtime": "assets/extensions/original-world/enemy-281.webp",
-    "sha256": "d0499ab7cf3bcc5a65b1e522c286fb70cc905054e61ef92f0a4788595b24628d",
+    "sha256": "eaa4cfb56759daf7d6e9778e46ffda868193d69c243bbd6b38c6d95954d06b53",
     "master": "art/world/original-world/masters/enemy-atlas-04.png",
     "masterSha256": "8469a2e4ab175144f007af9ec9e2ad80f493018af04c8e6b37dacab5fe6fc385",
     "type": "sprite",
@@ -1363,10 +1363,10 @@
       "grid": 3,
       "cell": 6,
       "crop": [
-        0,
-        836,
-        418,
-        418
+        8,
+        846,
+        390,
+        372
       ]
     },
     "version": "1",
@@ -1379,7 +1379,7 @@
     "id": "original:asset.enemy-282",
     "path": "art/world/original-world/web/enemy-282.webp",
     "runtime": "assets/extensions/original-world/enemy-282.webp",
-    "sha256": "2fd1701e5b09ff459dc7d17c4b5bfd42df859a8c17baed20cf7217d61fda0f90",
+    "sha256": "ac59afa68044ce23954263e9f86ee3cb1355a3fbd9707911b5760e873ff1ce8d",
     "master": "art/world/original-world/masters/enemy-atlas-04.png",
     "masterSha256": "8469a2e4ab175144f007af9ec9e2ad80f493018af04c8e6b37dacab5fe6fc385",
     "type": "sprite",
@@ -1395,10 +1395,10 @@
       "grid": 3,
       "cell": 7,
       "crop": [
-        418,
-        836,
-        418,
-        418
+        400,
+        833,
+        452,
+        386
       ]
     },
     "version": "1",
@@ -1411,7 +1411,7 @@
     "id": "original:asset.enemy-288",
     "path": "art/world/original-world/web/enemy-288.webp",
     "runtime": "assets/extensions/original-world/enemy-288.webp",
-    "sha256": "842ae8a37706a56bbe9b765909a895142dea6837802b332b2807d011d4eb2f60",
+    "sha256": "528a90592cc657fafaa262330127336cb89147863db7542925a4a1f572fa2262",
     "master": "art/world/original-world/masters/enemy-atlas-04.png",
     "masterSha256": "8469a2e4ab175144f007af9ec9e2ad80f493018af04c8e6b37dacab5fe6fc385",
     "type": "sprite",
@@ -1427,10 +1427,10 @@
       "grid": 3,
       "cell": 8,
       "crop": [
-        836,
-        836,
-        418,
-        418
+        816,
+        840,
+        433,
+        366
       ]
     },
     "version": "1",
@@ -1443,7 +1443,7 @@
     "id": "original:asset.enemy-290",
     "path": "art/world/original-world/web/enemy-290.webp",
     "runtime": "assets/extensions/original-world/enemy-290.webp",
-    "sha256": "4a09b61eb947284b4390441e99d3da79d0ad938d669452311e7263972a91017c",
+    "sha256": "5e9884e241b4e9513670887549a9c6d2d8dcddc951106dedb1aed41117faf636",
     "master": "art/world/original-world/masters/enemy-atlas-05.png",
     "masterSha256": "6b22692c5e91b988e15defc429526cd10aca6744adea92edba787ff781ebd17f",
     "type": "sprite",
@@ -1459,10 +1459,10 @@
       "grid": 3,
       "cell": 0,
       "crop": [
-        0,
-        0,
-        418,
-        418
+        30,
+        22,
+        382,
+        394
       ]
     },
     "version": "1",
@@ -1475,7 +1475,7 @@
     "id": "original:asset.enemy-291",
     "path": "art/world/original-world/web/enemy-291.webp",
     "runtime": "assets/extensions/original-world/enemy-291.webp",
-    "sha256": "8d145c11b628113d339f878753be0f36ae9eb374316da7ff1594a5c4f0903020",
+    "sha256": "106b1e1e157d8e51c68bb56bd46b8b68526d9c3ed022163f50e8b86d22fb82e8",
     "master": "art/world/original-world/masters/enemy-atlas-05.png",
     "masterSha256": "6b22692c5e91b988e15defc429526cd10aca6744adea92edba787ff781ebd17f",
     "type": "sprite",
@@ -1491,10 +1491,10 @@
       "grid": 3,
       "cell": 1,
       "crop": [
-        418,
-        0,
-        418,
-        418
+        422,
+        106,
+        427,
+        245
       ]
     },
     "version": "1",
@@ -1507,7 +1507,7 @@
     "id": "original:asset.enemy-292",
     "path": "art/world/original-world/web/enemy-292.webp",
     "runtime": "assets/extensions/original-world/enemy-292.webp",
-    "sha256": "eeb31ca3dca46e4334be2db76d89b8ef6f36ff9f7653232af5bef4e63e2be7d0",
+    "sha256": "a7b68d9b1b76be43b7bfec4c3e8b0b2b25001553ec015cf05013f2a47b785901",
     "master": "art/world/original-world/masters/enemy-atlas-05.png",
     "masterSha256": "6b22692c5e91b988e15defc429526cd10aca6744adea92edba787ff781ebd17f",
     "type": "sprite",
@@ -1523,10 +1523,10 @@
       "grid": 3,
       "cell": 2,
       "crop": [
-        836,
-        0,
-        418,
-        418
+        849,
+        11,
+        397,
+        431
       ]
     },
     "version": "1",
@@ -1539,7 +1539,7 @@
     "id": "original:asset.enemy-293",
     "path": "art/world/original-world/web/enemy-293.webp",
     "runtime": "assets/extensions/original-world/enemy-293.webp",
-    "sha256": "a9ee9ee5610a3e9e1a37f353a46c205c48196e5ccfc9fee025910f5c33db8e3a",
+    "sha256": "1d0dabafcc074a666e2465daee7dbd61025d6ae363a3daffe8c6bd5e9565ca08",
     "master": "art/world/original-world/masters/enemy-atlas-05.png",
     "masterSha256": "6b22692c5e91b988e15defc429526cd10aca6744adea92edba787ff781ebd17f",
     "type": "sprite",
@@ -1555,10 +1555,10 @@
       "grid": 3,
       "cell": 3,
       "crop": [
-        0,
-        418,
-        418,
-        418
+        17,
+        439,
+        399,
+        371
       ]
     },
     "version": "1",
@@ -1571,7 +1571,7 @@
     "id": "original:asset.enemy-294",
     "path": "art/world/original-world/web/enemy-294.webp",
     "runtime": "assets/extensions/original-world/enemy-294.webp",
-    "sha256": "f62d927a0b45e0a699194ae3163192c641bb470b27161024df22be5a749313e6",
+    "sha256": "2b80a7576dd73b9fe2aa69c28faebb705912ccc57a58927eb56ee157094d23a3",
     "master": "art/world/original-world/masters/enemy-atlas-05.png",
     "masterSha256": "6b22692c5e91b988e15defc429526cd10aca6744adea92edba787ff781ebd17f",
     "type": "sprite",
@@ -1587,10 +1587,10 @@
       "grid": 3,
       "cell": 4,
       "crop": [
-        418,
-        418,
-        418,
-        418
+        430,
+        437,
+        419,
+        381
       ]
     },
     "version": "1",
@@ -1603,7 +1603,7 @@
     "id": "original:asset.enemy-295",
     "path": "art/world/original-world/web/enemy-295.webp",
     "runtime": "assets/extensions/original-world/enemy-295.webp",
-    "sha256": "0107057eaa5fc6f481fc70dca51e30fbbe281e1a54bb6e25bf2004d898dbc0c9",
+    "sha256": "65bd85a5408b0221221eaa2dbc3baefe651aad545163b7cdff7dabca2f60e6cb",
     "master": "art/world/original-world/masters/enemy-atlas-05.png",
     "masterSha256": "6b22692c5e91b988e15defc429526cd10aca6744adea92edba787ff781ebd17f",
     "type": "sprite",
@@ -1619,10 +1619,10 @@
       "grid": 3,
       "cell": 5,
       "crop": [
-        836,
-        418,
-        418,
-        418
+        864,
+        491,
+        380,
+        303
       ]
     },
     "version": "1",
@@ -1635,7 +1635,7 @@
     "id": "original:asset.enemy-296",
     "path": "art/world/original-world/web/enemy-296.webp",
     "runtime": "assets/extensions/original-world/enemy-296.webp",
-    "sha256": "b9e83fdd84e44891915472a20f0e26dd390830828d254f620a096ac6f8a37432",
+    "sha256": "a668fe163307bad08a3c1476e6bc3fca2f11418bd3a236afca0160a35f9249fc",
     "master": "art/world/original-world/masters/enemy-atlas-05.png",
     "masterSha256": "6b22692c5e91b988e15defc429526cd10aca6744adea92edba787ff781ebd17f",
     "type": "sprite",
@@ -1651,10 +1651,10 @@
       "grid": 3,
       "cell": 6,
       "crop": [
-        0,
-        836,
-        418,
-        418
+        16,
+        822,
+        395,
+        407
       ]
     },
     "version": "1",
@@ -1667,7 +1667,7 @@
     "id": "original:asset.enemy-297",
     "path": "art/world/original-world/web/enemy-297.webp",
     "runtime": "assets/extensions/original-world/enemy-297.webp",
-    "sha256": "c1c646aeafc4220eecea956c7c4e38c333e49ca786e2501fbdd737dea6574e9b",
+    "sha256": "8e54725a906f27780ba6c833b795a434485c80678b3259100169dd43e56a8d81",
     "master": "art/world/original-world/masters/enemy-atlas-05.png",
     "masterSha256": "6b22692c5e91b988e15defc429526cd10aca6744adea92edba787ff781ebd17f",
     "type": "sprite",
@@ -1683,10 +1683,10 @@
       "grid": 3,
       "cell": 7,
       "crop": [
-        418,
-        836,
-        418,
-        418
+        425,
+        838,
+        421,
+        361
       ]
     },
     "version": "1",
@@ -1699,7 +1699,7 @@
     "id": "original:asset.enemy-309",
     "path": "art/world/original-world/web/enemy-309.webp",
     "runtime": "assets/extensions/original-world/enemy-309.webp",
-    "sha256": "afa14d8eedeacad9917188c49d929a922060016540fefb4863de3d2c7a0e3c4e",
+    "sha256": "355d2cf6b1aac41878d2986b35bff34de10f1d81b96f92a5f4d45ca0eb6c3dee",
     "master": "art/world/original-world/masters/enemy-atlas-05.png",
     "masterSha256": "6b22692c5e91b988e15defc429526cd10aca6744adea92edba787ff781ebd17f",
     "type": "sprite",
@@ -1715,10 +1715,10 @@
       "grid": 3,
       "cell": 8,
       "crop": [
-        836,
-        836,
-        418,
-        418
+        865,
+        835,
+        372,
+        371
       ]
     },
     "version": "1",
@@ -1731,7 +1731,7 @@
     "id": "original:asset.enemy-310",
     "path": "art/world/original-world/web/enemy-310.webp",
     "runtime": "assets/extensions/original-world/enemy-310.webp",
-    "sha256": "5ab2a93173bb1ec6c403cab505aeae1136d66ce32ef2c40edd599baded8028d7",
+    "sha256": "8a9963b1106d07d43b2caf528ca37fdeb9799918a9849426d93739c292b2f946",
     "master": "art/world/original-world/masters/enemy-atlas-06.png",
     "masterSha256": "2eb153851470f49d686a31f4cef4d953451612193dcd85f329f41f3b71927a0c",
     "type": "sprite",
@@ -1747,10 +1747,10 @@
       "grid": 3,
       "cell": 0,
       "crop": [
-        0,
-        0,
-        418,
-        418
+        11,
+        56,
+        400,
+        337
       ]
     },
     "version": "1",
@@ -1763,7 +1763,7 @@
     "id": "original:asset.enemy-311",
     "path": "art/world/original-world/web/enemy-311.webp",
     "runtime": "assets/extensions/original-world/enemy-311.webp",
-    "sha256": "11a8e84546d032f9e13ae7dc47b843d697a30163ff60ae055233c3b41da39908",
+    "sha256": "6503d015758bac74826ae24740c9db135d50c4b10cf97f824bc266f33ad0961f",
     "master": "art/world/original-world/masters/enemy-atlas-06.png",
     "masterSha256": "2eb153851470f49d686a31f4cef4d953451612193dcd85f329f41f3b71927a0c",
     "type": "sprite",
@@ -1779,10 +1779,10 @@
       "grid": 3,
       "cell": 1,
       "crop": [
-        418,
-        0,
-        418,
-        418
+        431,
+        81,
+        393,
+        298
       ]
     },
     "version": "1",
@@ -1795,7 +1795,7 @@
     "id": "original:asset.enemy-328",
     "path": "art/world/original-world/web/enemy-328.webp",
     "runtime": "assets/extensions/original-world/enemy-328.webp",
-    "sha256": "23601b54cc0f84f0325aef9d1a6c0da794b60b39bb81ea696fcbdf48eb5eefa3",
+    "sha256": "beb0532f3e01c22932d6f3a2aa149aa5536155ae2ebc6938a727374e30d0d12c",
     "master": "art/world/original-world/masters/enemy-atlas-06.png",
     "masterSha256": "2eb153851470f49d686a31f4cef4d953451612193dcd85f329f41f3b71927a0c",
     "type": "sprite",
@@ -1811,10 +1811,10 @@
       "grid": 3,
       "cell": 2,
       "crop": [
-        836,
-        0,
-        418,
-        418
+        837,
+        23,
+        406,
+        394
       ]
     },
     "version": "1",
@@ -1827,7 +1827,7 @@
     "id": "original:asset.enemy-329",
     "path": "art/world/original-world/web/enemy-329.webp",
     "runtime": "assets/extensions/original-world/enemy-329.webp",
-    "sha256": "dde160469521bc8f10a5bea82fd7e3f0fa8c858ef634f449318275ba01a85473",
+    "sha256": "f6434cdf4539365811c3dbde2c52863a21759a3743948dbaf45a35aec3618ffe",
     "master": "art/world/original-world/masters/enemy-atlas-06.png",
     "masterSha256": "2eb153851470f49d686a31f4cef4d953451612193dcd85f329f41f3b71927a0c",
     "type": "sprite",
@@ -1843,10 +1843,10 @@
       "grid": 3,
       "cell": 3,
       "crop": [
-        0,
-        418,
-        418,
-        418
+        10,
+        436,
+        406,
+        362
       ]
     },
     "version": "1",
@@ -1859,7 +1859,7 @@
     "id": "original:asset.enemy-330",
     "path": "art/world/original-world/web/enemy-330.webp",
     "runtime": "assets/extensions/original-world/enemy-330.webp",
-    "sha256": "4b9836621968fb2904bc4d8ff815be7d7aff88738bc8c4c8f215b9d1b5614126",
+    "sha256": "01d4fb52f68826c0575b70c1862a7ea620ad65f220d4a02d4e764c1b8fba40a4",
     "master": "art/world/original-world/masters/enemy-atlas-06.png",
     "masterSha256": "2eb153851470f49d686a31f4cef4d953451612193dcd85f329f41f3b71927a0c",
     "type": "sprite",
@@ -1875,10 +1875,10 @@
       "grid": 3,
       "cell": 4,
       "crop": [
-        418,
-        418,
-        418,
-        418
+        425,
+        434,
+        403,
+        369
       ]
     },
     "version": "1",
@@ -1891,7 +1891,7 @@
     "id": "original:asset.enemy-331",
     "path": "art/world/original-world/web/enemy-331.webp",
     "runtime": "assets/extensions/original-world/enemy-331.webp",
-    "sha256": "196007af121806941e9c854032eab3268aef8e2373caa4a38d3ee526d941353d",
+    "sha256": "f885255448d2304faeb975f6fa062d15a0db1de79c4d69a6826166999e28b2b1",
     "master": "art/world/original-world/masters/enemy-atlas-06.png",
     "masterSha256": "2eb153851470f49d686a31f4cef4d953451612193dcd85f329f41f3b71927a0c",
     "type": "sprite",
@@ -1907,10 +1907,10 @@
       "grid": 3,
       "cell": 5,
       "crop": [
-        836,
-        418,
-        418,
-        418
+        839,
+        425,
+        406,
+        386
       ]
     },
     "version": "1",
@@ -1923,7 +1923,7 @@
     "id": "original:asset.enemy-339",
     "path": "art/world/original-world/web/enemy-339.webp",
     "runtime": "assets/extensions/original-world/enemy-339.webp",
-    "sha256": "9e218bc90ac66790f8d53a3c1e5921ae45facb91d07addc2e58cb2568da0f9f4",
+    "sha256": "58c082f3cae3f11fe566176e22256c8c8688501b9ab141bd147b011dcfa595c6",
     "master": "art/world/original-world/masters/enemy-atlas-06.png",
     "masterSha256": "2eb153851470f49d686a31f4cef4d953451612193dcd85f329f41f3b71927a0c",
     "type": "sprite",
@@ -1939,10 +1939,10 @@
       "grid": 3,
       "cell": 6,
       "crop": [
-        0,
-        836,
-        418,
-        418
+        14,
+        819,
+        413,
+        424
       ]
     },
     "version": "1",
@@ -1955,7 +1955,7 @@
     "id": "original:asset.enemy-340",
     "path": "art/world/original-world/web/enemy-340.webp",
     "runtime": "assets/extensions/original-world/enemy-340.webp",
-    "sha256": "1febb39a5a0b276e8850a896198039539f34c9b3c16b8b409a3cdd0066ffabbe",
+    "sha256": "30d71b87c047c5554b61a1fe838d76cfce1d7753eec8284bd915a73fa259dba9",
     "master": "art/world/original-world/masters/enemy-atlas-06.png",
     "masterSha256": "2eb153851470f49d686a31f4cef4d953451612193dcd85f329f41f3b71927a0c",
     "type": "sprite",
@@ -1971,10 +1971,10 @@
       "grid": 3,
       "cell": 7,
       "crop": [
-        418,
-        836,
-        418,
-        418
+        426,
+        870,
+        424,
+        295
       ]
     },
     "version": "1",
@@ -1987,7 +1987,7 @@
     "id": "original:asset.planet-1",
     "path": "art/world/original-world/web/planet-1.webp",
     "runtime": "assets/extensions/original-world/planet-1.webp",
-    "sha256": "ad33290dc6b8fb619612f6cb46289991e59cc573277f42f22943b103e8b13f0e",
+    "sha256": "47504267fee73d23e44815ecf8a1be0c39c5581fc9ad89731235fac9e01d1c29",
     "master": "art/world/original-world/masters/planet-atlas-00.png",
     "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
     "type": "sprite",
@@ -2003,10 +2003,10 @@
       "grid": 4,
       "cell": 0,
       "crop": [
-        0,
-        0,
-        314,
-        314
+        21,
+        30,
+        298,
+        295
       ]
     },
     "version": "1",
@@ -2019,7 +2019,7 @@
     "id": "original:asset.planet-2",
     "path": "art/world/original-world/web/planet-2.webp",
     "runtime": "assets/extensions/original-world/planet-2.webp",
-    "sha256": "003ff9c360c44bdbbb57a1816ae6a61a94f720370412a9da17f2bfdc75742972",
+    "sha256": "092abf53f992b0ed03c757fd6a3f66d863250a751f4d76b4fc951f811827e353",
     "master": "art/world/original-world/masters/planet-atlas-00.png",
     "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
     "type": "sprite",
@@ -2035,10 +2035,10 @@
       "grid": 4,
       "cell": 1,
       "crop": [
-        314,
-        0,
-        313,
-        314
+        344,
+        44,
+        276,
+        272
       ]
     },
     "version": "1",
@@ -2051,7 +2051,7 @@
     "id": "original:asset.planet-3",
     "path": "art/world/original-world/web/planet-3.webp",
     "runtime": "assets/extensions/original-world/planet-3.webp",
-    "sha256": "33f4462e9dff7a6f2fd6042a0cf26643a29271e2af14be13d12234c121a2b069",
+    "sha256": "312a7f572b4623e0effb498c43b8a1a8e1f4f9cd0e9f758889fb5141e4e35d87",
     "master": "art/world/original-world/masters/planet-atlas-00.png",
     "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
     "type": "sprite",
@@ -2067,10 +2067,10 @@
       "grid": 4,
       "cell": 2,
       "crop": [
-        627,
-        0,
-        314,
-        314
+        662,
+        49,
+        262,
+        262
       ]
     },
     "version": "1",
@@ -2083,7 +2083,7 @@
     "id": "original:asset.planet-4",
     "path": "art/world/original-world/web/planet-4.webp",
     "runtime": "assets/extensions/original-world/planet-4.webp",
-    "sha256": "821e881603f7a990bddd4cd24f011852930b6ea730bd51d061dd8cb22161f2fe",
+    "sha256": "1efa210693a0d3f4b3979c7f7045b7571fd679115f15c9a3f9dc968316f718c5",
     "master": "art/world/original-world/masters/planet-atlas-00.png",
     "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
     "type": "sprite",
@@ -2099,10 +2099,10 @@
       "grid": 4,
       "cell": 3,
       "crop": [
-        941,
-        0,
-        313,
-        314
+        975,
+        51,
+        254,
+        257
       ]
     },
     "version": "1",
@@ -2115,7 +2115,7 @@
     "id": "original:asset.planet-5",
     "path": "art/world/original-world/web/planet-5.webp",
     "runtime": "assets/extensions/original-world/planet-5.webp",
-    "sha256": "31a77b4aac749c4bacb014b1fa45684ddcc5b3884b6b15ade9ced079e9258aea",
+    "sha256": "be280740b6d6412f02294915dbb36c3487448ec663e998fd70524a5d307766bb",
     "master": "art/world/original-world/masters/planet-atlas-00.png",
     "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
     "type": "sprite",
@@ -2131,10 +2131,10 @@
       "grid": 4,
       "cell": 4,
       "crop": [
-        0,
-        314,
-        314,
-        313
+        33,
+        339,
+        272,
+        271
       ]
     },
     "version": "1",
@@ -2147,7 +2147,7 @@
     "id": "original:asset.planet-6",
     "path": "art/world/original-world/web/planet-6.webp",
     "runtime": "assets/extensions/original-world/planet-6.webp",
-    "sha256": "d9d45878b7f0a8e00886130de267c316cfa2b41b0b03622ac776c9c23653123d",
+    "sha256": "b9d5fac78f5902231b182535f024af6caca418f3b89d93f154ca17986bd40222",
     "master": "art/world/original-world/masters/planet-atlas-00.png",
     "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
     "type": "sprite",
@@ -2163,10 +2163,10 @@
       "grid": 4,
       "cell": 5,
       "crop": [
-        314,
-        314,
-        313,
-        313
+        341,
+        340,
+        274,
+        274
       ]
     },
     "version": "1",
@@ -2179,7 +2179,7 @@
     "id": "original:asset.planet-7",
     "path": "art/world/original-world/web/planet-7.webp",
     "runtime": "assets/extensions/original-world/planet-7.webp",
-    "sha256": "122443c466254fe3ce9237e3f47ae2346432860fb52dc6b33411623a52a91dbe",
+    "sha256": "fbeab53bdcc76d849a0355449a30e5e5a29d6593eb812694fc98ccb4de096e23",
     "master": "art/world/original-world/masters/planet-atlas-00.png",
     "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
     "type": "sprite",
@@ -2195,10 +2195,10 @@
       "grid": 4,
       "cell": 6,
       "crop": [
-        627,
-        314,
-        314,
-        313
+        645,
+        336,
+        283,
+        282
       ]
     },
     "version": "1",
@@ -2211,7 +2211,7 @@
     "id": "original:asset.planet-8",
     "path": "art/world/original-world/web/planet-8.webp",
     "runtime": "assets/extensions/original-world/planet-8.webp",
-    "sha256": "b0ff80009d63aedd005c2ce6e3d8e1ce4942cc80ec10c0e01b369a27c8337bf7",
+    "sha256": "accb477a20f6652062ce966d3b2f3812a816331573d378167dc96b1648f99bbf",
     "master": "art/world/original-world/masters/planet-atlas-00.png",
     "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
     "type": "sprite",
@@ -2227,10 +2227,10 @@
       "grid": 4,
       "cell": 7,
       "crop": [
-        941,
-        314,
-        313,
-        313
+        911,
+        366,
+        340,
+        238
       ]
     },
     "version": "1",
@@ -2243,7 +2243,7 @@
     "id": "original:asset.planet-9",
     "path": "art/world/original-world/web/planet-9.webp",
     "runtime": "assets/extensions/original-world/planet-9.webp",
-    "sha256": "b9bb853012c313e6e24d67c2c9baeea45345cebc0264ea309cb4b55f34bc1805",
+    "sha256": "00cdff7e4ad7a0746e679c570a3e1ce79e7b8830fef313f5356f7781056b2481",
     "master": "art/world/original-world/masters/planet-atlas-00.png",
     "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
     "type": "sprite",
@@ -2259,10 +2259,10 @@
       "grid": 4,
       "cell": 8,
       "crop": [
-        0,
-        627,
-        314,
-        314
+        34,
+        619,
+        271,
+        322
       ]
     },
     "version": "1",
@@ -2275,7 +2275,7 @@
     "id": "original:asset.planet-10",
     "path": "art/world/original-world/web/planet-10.webp",
     "runtime": "assets/extensions/original-world/planet-10.webp",
-    "sha256": "69cc4c84927908048007b460cdbe5398d783493b690be2e224d0782afcd8a094",
+    "sha256": "fc5893f65acefcfdfeda0d0693bdad3c0f8993b68a8c15d922dad111177d44fe",
     "master": "art/world/original-world/masters/planet-atlas-00.png",
     "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
     "type": "sprite",
@@ -2291,10 +2291,10 @@
       "grid": 4,
       "cell": 9,
       "crop": [
-        314,
-        627,
-        313,
-        314
+        338,
+        647,
+        282,
+        281
       ]
     },
     "version": "1",
@@ -2307,7 +2307,7 @@
     "id": "original:asset.planet-11",
     "path": "art/world/original-world/web/planet-11.webp",
     "runtime": "assets/extensions/original-world/planet-11.webp",
-    "sha256": "395b27bf1dc9f5beaac6e7aff5e2d4f325cd4f6324a0db03d3bff87a38486dd3",
+    "sha256": "8d6aa605f5ef7568e1f795427d835b79bde41da2891b0ee783e32ac36ade0290",
     "master": "art/world/original-world/masters/planet-atlas-00.png",
     "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
     "type": "sprite",
@@ -2323,10 +2323,10 @@
       "grid": 4,
       "cell": 10,
       "crop": [
-        627,
-        627,
-        314,
-        314
+        654,
+        653,
+        272,
+        268
       ]
     },
     "version": "1",
@@ -2339,7 +2339,7 @@
     "id": "original:asset.planet-12",
     "path": "art/world/original-world/web/planet-12.webp",
     "runtime": "assets/extensions/original-world/planet-12.webp",
-    "sha256": "d79b3458aed748edf14b61432206827d9c02f9949b0e360f4612e9651425e6f5",
+    "sha256": "a6aadee782cfa7ca21bff449b015ca00cacecf30558bf39773357abac469455e",
     "master": "art/world/original-world/masters/planet-atlas-00.png",
     "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
     "type": "sprite",
@@ -2355,10 +2355,10 @@
       "grid": 4,
       "cell": 11,
       "crop": [
-        941,
-        627,
-        313,
-        314
+        960,
+        649,
+        274,
+        274
       ]
     },
     "version": "1",
@@ -2371,7 +2371,7 @@
     "id": "original:asset.planet-13",
     "path": "art/world/original-world/web/planet-13.webp",
     "runtime": "assets/extensions/original-world/planet-13.webp",
-    "sha256": "ba850c8c704e87717fdb717022da5048811a995b9bb3eac57b0abe08625775ff",
+    "sha256": "21c7a0ea0529300e7d6420cfa975ee2f12df313ba230101bf6b38f3c0d449a65",
     "master": "art/world/original-world/masters/planet-atlas-00.png",
     "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
     "type": "sprite",
@@ -2387,10 +2387,10 @@
       "grid": 4,
       "cell": 12,
       "crop": [
-        0,
-        941,
-        314,
-        313
+        25,
+        945,
+        277,
+        270
       ]
     },
     "version": "1",
@@ -2403,7 +2403,7 @@
     "id": "original:asset.planet-14",
     "path": "art/world/original-world/web/planet-14.webp",
     "runtime": "assets/extensions/original-world/planet-14.webp",
-    "sha256": "1f3fe12c886d69563ab12beaf3d6f7fb0f5fae06e6a75bb189076f9ae40dca1e",
+    "sha256": "4e4a8a4360e0fdeee53add8d005e6c3b384019e098b8588caf683031b3b14444",
     "master": "art/world/original-world/masters/planet-atlas-00.png",
     "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
     "type": "sprite",
@@ -2419,10 +2419,10 @@
       "grid": 4,
       "cell": 13,
       "crop": [
-        314,
-        941,
-        313,
-        313
+        340,
+        947,
+        272,
+        267
       ]
     },
     "version": "1",
@@ -2435,7 +2435,7 @@
     "id": "original:asset.planet-15",
     "path": "art/world/original-world/web/planet-15.webp",
     "runtime": "assets/extensions/original-world/planet-15.webp",
-    "sha256": "ba646dd87c2ecdc27d42cdcbd7dc14ae628dcacff2a370f623c38e9322e79bb2",
+    "sha256": "367925d2314c0e9a49e590102d8dec1f35fd910d4d7c5003e4ec4943c42f922b",
     "master": "art/world/original-world/masters/planet-atlas-00.png",
     "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
     "type": "sprite",
@@ -2451,10 +2451,10 @@
       "grid": 4,
       "cell": 14,
       "crop": [
-        627,
-        941,
-        314,
-        313
+        611,
+        950,
+        369,
+        260
       ]
     },
     "version": "1",
@@ -2467,7 +2467,7 @@
     "id": "original:asset.planet-16",
     "path": "art/world/original-world/web/planet-16.webp",
     "runtime": "assets/extensions/original-world/planet-16.webp",
-    "sha256": "e5f1fed937ce22201d45a4dd20500383689d60c556e9c76e4b4ade9f705af7b4",
+    "sha256": "4af613569107264b4d88b7249884c00d640aa61a01c93de80480b7b8bc2c2281",
     "master": "art/world/original-world/masters/planet-atlas-00.png",
     "masterSha256": "c90ac0733ab16fd184b40185cc3e996bb04805b9ab937da1659918de8d3e6af6",
     "type": "sprite",
@@ -2483,10 +2483,10 @@
       "grid": 4,
       "cell": 15,
       "crop": [
-        941,
-        941,
-        313,
-        313
+        962,
+        948,
+        271,
+        267
       ]
     },
     "version": "1",
@@ -2499,7 +2499,7 @@
     "id": "original:asset.planet-17",
     "path": "art/world/original-world/web/planet-17.webp",
     "runtime": "assets/extensions/original-world/planet-17.webp",
-    "sha256": "cd7847f710ef8d228ec9c3c01633d09195a9defbea7b91f584f3956be9553ef1",
+    "sha256": "b589fec70269d1330b38fc81cbafa26d0aab40759da366e4e5d0ad8309964339",
     "master": "art/world/original-world/masters/planet-atlas-01.png",
     "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
     "type": "sprite",
@@ -2515,10 +2515,10 @@
       "grid": 4,
       "cell": 0,
       "crop": [
-        0,
-        0,
-        314,
-        314
+        23,
+        25,
+        275,
+        268
       ]
     },
     "version": "1",
@@ -2531,7 +2531,7 @@
     "id": "original:asset.planet-18",
     "path": "art/world/original-world/web/planet-18.webp",
     "runtime": "assets/extensions/original-world/planet-18.webp",
-    "sha256": "865d8562dbc44febfe4d4e8c6b05d9a4e091b6fa3117998538e5466052e34167",
+    "sha256": "4985d324d753527bd55bd543cca4c3fc5b5fbc13fb63fa0a5af764049cd21b2f",
     "master": "art/world/original-world/masters/planet-atlas-01.png",
     "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
     "type": "sprite",
@@ -2547,10 +2547,10 @@
       "grid": 4,
       "cell": 1,
       "crop": [
-        314,
-        0,
-        313,
-        314
+        331,
+        22,
+        279,
+        274
       ]
     },
     "version": "1",
@@ -2563,7 +2563,7 @@
     "id": "original:asset.planet-19",
     "path": "art/world/original-world/web/planet-19.webp",
     "runtime": "assets/extensions/original-world/planet-19.webp",
-    "sha256": "ea6eaa8fc1a676193e53b672770a6c9d0a83b73159f17bcdf2a6f5c9450e8429",
+    "sha256": "706bb7ca5a131a4753c69ebd2f5a54fbcec83287c9fa4b0f81f98c599c502215",
     "master": "art/world/original-world/masters/planet-atlas-01.png",
     "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
     "type": "sprite",
@@ -2579,10 +2579,10 @@
       "grid": 4,
       "cell": 2,
       "crop": [
-        627,
-        0,
-        314,
-        314
+        644,
+        22,
+        281,
+        275
       ]
     },
     "version": "1",
@@ -2595,7 +2595,7 @@
     "id": "original:asset.planet-20",
     "path": "art/world/original-world/web/planet-20.webp",
     "runtime": "assets/extensions/original-world/planet-20.webp",
-    "sha256": "8c42d56becf75d9251b9ea2fe5b4a9f1dd44fa3ebcbabeda08c742ae75f6de6e",
+    "sha256": "0f829666a81bddf742ab771efd17ed940107c499df260e697a7d8ecd4c37c95b",
     "master": "art/world/original-world/masters/planet-atlas-01.png",
     "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
     "type": "sprite",
@@ -2611,10 +2611,10 @@
       "grid": 4,
       "cell": 3,
       "crop": [
-        941,
-        0,
-        313,
-        314
+        956,
+        23,
+        277,
+        271
       ]
     },
     "version": "1",
@@ -2627,7 +2627,7 @@
     "id": "original:asset.planet-21",
     "path": "art/world/original-world/web/planet-21.webp",
     "runtime": "assets/extensions/original-world/planet-21.webp",
-    "sha256": "ee9002a2f45eb739621942e080a579e764373de958a683dfe751a53a77e2af27",
+    "sha256": "54af5d2889f2d7298b8118a8c548cf42b567c828397d2348a0c62eee62acdae5",
     "master": "art/world/original-world/masters/planet-atlas-01.png",
     "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
     "type": "sprite",
@@ -2643,10 +2643,10 @@
       "grid": 4,
       "cell": 4,
       "crop": [
-        0,
-        314,
-        314,
-        313
+        21,
+        328,
+        278,
+        275
       ]
     },
     "version": "1",
@@ -2659,7 +2659,7 @@
     "id": "original:asset.planet-22",
     "path": "art/world/original-world/web/planet-22.webp",
     "runtime": "assets/extensions/original-world/planet-22.webp",
-    "sha256": "249c26a9cddafcf1d3205d275d5c0b44b079d002b471d836c2bfe88fb4084c48",
+    "sha256": "c7af01166cf5a019a67e8f5cd01f3d692485cc16e1c54c29e5bfa6a2b52533f1",
     "master": "art/world/original-world/masters/planet-atlas-01.png",
     "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
     "type": "sprite",
@@ -2675,10 +2675,10 @@
       "grid": 4,
       "cell": 5,
       "crop": [
-        314,
-        314,
-        313,
-        313
+        291,
+        333,
+        374,
+        263
       ]
     },
     "version": "1",
@@ -2691,7 +2691,7 @@
     "id": "original:asset.planet-23",
     "path": "art/world/original-world/web/planet-23.webp",
     "runtime": "assets/extensions/original-world/planet-23.webp",
-    "sha256": "e68e3d005b90206253d6adb3772b4adaf19c1fb9599bf76204aeb3cc416a5e57",
+    "sha256": "3c844e2d76fc41527eb826185713b407d0f9bc4dc2679edb5d67d8b16a1cb53d",
     "master": "art/world/original-world/masters/planet-atlas-01.png",
     "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
     "type": "sprite",
@@ -2707,10 +2707,10 @@
       "grid": 4,
       "cell": 6,
       "crop": [
-        627,
-        314,
-        314,
-        313
+        645,
+        329,
+        275,
+        272
       ]
     },
     "version": "1",
@@ -2723,7 +2723,7 @@
     "id": "original:asset.planet-24",
     "path": "art/world/original-world/web/planet-24.webp",
     "runtime": "assets/extensions/original-world/planet-24.webp",
-    "sha256": "7ae24e7e0ba6f7f696e0718a05fc43745684f529ecc32992b56724bf67ecfe6c",
+    "sha256": "fc9ff00f06357500d7b4208d4afd8e88d50f196641cd0f2c97a670cf5fc9c1ae",
     "master": "art/world/original-world/masters/planet-atlas-01.png",
     "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
     "type": "sprite",
@@ -2739,10 +2739,10 @@
       "grid": 4,
       "cell": 7,
       "crop": [
-        941,
-        314,
-        313,
-        313
+        954,
+        328,
+        278,
+        274
       ]
     },
     "version": "1",
@@ -2755,7 +2755,7 @@
     "id": "original:asset.planet-25",
     "path": "art/world/original-world/web/planet-25.webp",
     "runtime": "assets/extensions/original-world/planet-25.webp",
-    "sha256": "237ebc7a03fab63faa9b901ab667c60116075813556402cd71a2191c7a52a255",
+    "sha256": "43caf62f6479378ec7a98d4a388016e1c643cd65e8cef99aab1b5b677c288a29",
     "master": "art/world/original-world/masters/planet-atlas-01.png",
     "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
     "type": "sprite",
@@ -2771,10 +2771,10 @@
       "grid": 4,
       "cell": 8,
       "crop": [
-        0,
-        627,
-        314,
-        314
+        22,
+        635,
+        275,
+        273
       ]
     },
     "version": "1",
@@ -2787,7 +2787,7 @@
     "id": "original:asset.planet-26",
     "path": "art/world/original-world/web/planet-26.webp",
     "runtime": "assets/extensions/original-world/planet-26.webp",
-    "sha256": "c24c1c3c01c14719857fd92cb6137429098b81af15aa0b1841e54baab790179e",
+    "sha256": "f2538098d6bd07e720f7a01c3b3ebf237733074dc1ffd0d20ef280c6c61a4ac3",
     "master": "art/world/original-world/masters/planet-atlas-01.png",
     "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
     "type": "sprite",
@@ -2803,10 +2803,10 @@
       "grid": 4,
       "cell": 9,
       "crop": [
-        314,
-        627,
-        313,
-        314
+        332,
+        637,
+        277,
+        272
       ]
     },
     "version": "1",
@@ -2819,7 +2819,7 @@
     "id": "original:asset.planet-27",
     "path": "art/world/original-world/web/planet-27.webp",
     "runtime": "assets/extensions/original-world/planet-27.webp",
-    "sha256": "4b9475babe09ef6ac8c11097ba9f676635c3c4b8ffec8af4fd4570c4d6c07c17",
+    "sha256": "3ec20b2ca43befb200b86ac20ece721af55b10d8af8a6d270b119d5f92ab5755",
     "master": "art/world/original-world/masters/planet-atlas-01.png",
     "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
     "type": "sprite",
@@ -2835,10 +2835,10 @@
       "grid": 4,
       "cell": 10,
       "crop": [
-        627,
-        627,
-        314,
-        314
+        646,
+        637,
+        276,
+        272
       ]
     },
     "version": "1",
@@ -2851,7 +2851,7 @@
     "id": "original:asset.planet-28",
     "path": "art/world/original-world/web/planet-28.webp",
     "runtime": "assets/extensions/original-world/planet-28.webp",
-    "sha256": "2178167745242c4afccd046a4eb41938be20b33b034fc69f4dd366de2795d6e9",
+    "sha256": "0135dfc8e74b1da387c12e2dd634cb8ffcd42e0cb732425f393ed39545b6d1b8",
     "master": "art/world/original-world/masters/planet-atlas-01.png",
     "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
     "type": "sprite",
@@ -2867,10 +2867,10 @@
       "grid": 4,
       "cell": 11,
       "crop": [
-        941,
-        627,
-        313,
-        314
+        955,
+        636,
+        279,
+        274
       ]
     },
     "version": "1",
@@ -2883,7 +2883,7 @@
     "id": "original:asset.planet-29",
     "path": "art/world/original-world/web/planet-29.webp",
     "runtime": "assets/extensions/original-world/planet-29.webp",
-    "sha256": "f7654aa3ff9c34c60ae0f7729b7b1cdae72c0a16ba918acc1d7068efaddc3148",
+    "sha256": "fbdb256fdd6d54206f1868b1ef012af020bd75bed32ff1abe326a29515763c6d",
     "master": "art/world/original-world/masters/planet-atlas-01.png",
     "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
     "type": "sprite",
@@ -2899,10 +2899,10 @@
       "grid": 4,
       "cell": 12,
       "crop": [
-        0,
-        941,
-        314,
-        313
+        6,
+        936,
+        339,
+        268
       ]
     },
     "version": "1",
@@ -2915,7 +2915,7 @@
     "id": "original:asset.planet-30",
     "path": "art/world/original-world/web/planet-30.webp",
     "runtime": "assets/extensions/original-world/planet-30.webp",
-    "sha256": "b3d5c065d5f5440347b5b696e28d46af3d2aadf97636144754232f5dc8ab927f",
+    "sha256": "0b38682f74bbeb9e5de0e9f821a7036afd1b8295cb0b361ed1c7b931f5c55c8d",
     "master": "art/world/original-world/masters/planet-atlas-01.png",
     "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
     "type": "sprite",
@@ -2931,10 +2931,10 @@
       "grid": 4,
       "cell": 13,
       "crop": [
-        314,
-        941,
-        313,
-        313
+        333,
+        938,
+        276,
+        270
       ]
     },
     "version": "1",
@@ -2947,7 +2947,7 @@
     "id": "original:asset.planet-31",
     "path": "art/world/original-world/web/planet-31.webp",
     "runtime": "assets/extensions/original-world/planet-31.webp",
-    "sha256": "5185dd0962b96295b116bdc20eaa74c0d674771e5ae7f28f8bb08f768fd0db93",
+    "sha256": "4580f830e6e065f6e298316c006c2505687cca4cf3ec2d90113d998d0a5ff7a0",
     "master": "art/world/original-world/masters/planet-atlas-01.png",
     "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
     "type": "sprite",
@@ -2963,10 +2963,10 @@
       "grid": 4,
       "cell": 14,
       "crop": [
-        627,
-        941,
-        314,
-        313
+        641,
+        934,
+        282,
+        276
       ]
     },
     "version": "1",
@@ -2979,7 +2979,7 @@
     "id": "original:asset.planet-32",
     "path": "art/world/original-world/web/planet-32.webp",
     "runtime": "assets/extensions/original-world/planet-32.webp",
-    "sha256": "b525beccc4e934d2da871957e86720e6f2cb02170635a140c94865ae89a21a40",
+    "sha256": "9f38fce46f0e00fc50cbefcfd942688b4845226c56ded981a0b1d51659a2635b",
     "master": "art/world/original-world/masters/planet-atlas-01.png",
     "masterSha256": "626c6f1761577b4819e57aa191adaeea56841778e938837c3c02605c93287220",
     "type": "sprite",
@@ -2995,10 +2995,10 @@
       "grid": 4,
       "cell": 15,
       "crop": [
-        941,
-        941,
-        313,
-        313
+        957,
+        938,
+        275,
+        269
       ]
     },
     "version": "1",
@@ -3011,7 +3011,7 @@
     "id": "original:asset.planet-33",
     "path": "art/world/original-world/web/planet-33.webp",
     "runtime": "assets/extensions/original-world/planet-33.webp",
-    "sha256": "35c57369c954d28c9df9dd44f2c351797a859a48d48957bcb7798b765b8af756",
+    "sha256": "3423ad57e32433b9188fab401a987695e480849346f58bfcf0ab6cd85e0bcec4",
     "master": "art/world/original-world/masters/planet-atlas-02.png",
     "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
     "type": "sprite",
@@ -3027,10 +3027,10 @@
       "grid": 4,
       "cell": 0,
       "crop": [
-        0,
-        0,
-        314,
-        314
+        41,
+        40,
+        265,
+        263
       ]
     },
     "version": "1",
@@ -3043,7 +3043,7 @@
     "id": "original:asset.planet-34",
     "path": "art/world/original-world/web/planet-34.webp",
     "runtime": "assets/extensions/original-world/planet-34.webp",
-    "sha256": "0b059fcfdbde4fffb1aa90fd7bdac66cb317a402dab15aa31c6bd5bea3a85b6a",
+    "sha256": "e7607d10fdac5fd4f4e8b9cb733d3e3c26cb9cc53cd100ec38699a37472799e3",
     "master": "art/world/original-world/masters/planet-atlas-02.png",
     "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
     "type": "sprite",
@@ -3059,10 +3059,10 @@
       "grid": 4,
       "cell": 1,
       "crop": [
-        314,
-        0,
-        313,
-        314
+        341,
+        36,
+        271,
+        269
       ]
     },
     "version": "1",
@@ -3075,7 +3075,7 @@
     "id": "original:asset.planet-35",
     "path": "art/world/original-world/web/planet-35.webp",
     "runtime": "assets/extensions/original-world/planet-35.webp",
-    "sha256": "f429f4989f8b5357b1cd49063a93e2ccd7902bd1ec4a72dd1429b3be877b3932",
+    "sha256": "e62a16e38a46329a9a8640dec457e409e55e10404671a5fe0555f6628f55058e",
     "master": "art/world/original-world/masters/planet-atlas-02.png",
     "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
     "type": "sprite",
@@ -3091,10 +3091,10 @@
       "grid": 4,
       "cell": 2,
       "crop": [
-        627,
-        0,
-        314,
-        314
+        645,
+        37,
+        270,
+        267
       ]
     },
     "version": "1",
@@ -3107,7 +3107,7 @@
     "id": "original:asset.planet-36",
     "path": "art/world/original-world/web/planet-36.webp",
     "runtime": "assets/extensions/original-world/planet-36.webp",
-    "sha256": "67fff30c5025938749ceffb6819d1a82ce5794ca8290c5133648629ab2a0335c",
+    "sha256": "aa1cb5ce3b9d9ddb6da8c12e81f4f8115579a9a6c86362e65991633aa62aab45",
     "master": "art/world/original-world/masters/planet-atlas-02.png",
     "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
     "type": "sprite",
@@ -3123,10 +3123,10 @@
       "grid": 4,
       "cell": 3,
       "crop": [
-        941,
-        0,
-        313,
-        314
+        914,
+        42,
+        326,
+        258
       ]
     },
     "version": "1",
@@ -3139,7 +3139,7 @@
     "id": "original:asset.planet-37",
     "path": "art/world/original-world/web/planet-37.webp",
     "runtime": "assets/extensions/original-world/planet-37.webp",
-    "sha256": "38db76e79289b839f1f33dcaa1a59f4f30a7e04ef784323e209df063ff23f93c",
+    "sha256": "bd2654eeee51311c030fc75af1dd25f726da978af28f54621452e16798bbaa46",
     "master": "art/world/original-world/masters/planet-atlas-02.png",
     "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
     "type": "sprite",
@@ -3155,10 +3155,10 @@
       "grid": 4,
       "cell": 4,
       "crop": [
-        0,
-        314,
-        314,
-        313
+        39,
+        337,
+        270,
+        265
       ]
     },
     "version": "1",
@@ -3171,7 +3171,7 @@
     "id": "original:asset.planet-38",
     "path": "art/world/original-world/web/planet-38.webp",
     "runtime": "assets/extensions/original-world/planet-38.webp",
-    "sha256": "16db206bb94b8729eb4e8e213059a23bcf1465b1096dac5d019d106945b204d1",
+    "sha256": "903e7e7263f484ed0ea144f6e756734458f7bc43b9defe3d2f669507b640869f",
     "master": "art/world/original-world/masters/planet-atlas-02.png",
     "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
     "type": "sprite",
@@ -3187,10 +3187,10 @@
       "grid": 4,
       "cell": 5,
       "crop": [
-        314,
-        314,
-        313,
-        313
+        341,
+        337,
+        270,
+        265
       ]
     },
     "version": "1",
@@ -3203,7 +3203,7 @@
     "id": "original:asset.planet-39",
     "path": "art/world/original-world/web/planet-39.webp",
     "runtime": "assets/extensions/original-world/planet-39.webp",
-    "sha256": "c60bbca389bb70f30115b4e395d14bca78d32b33a7bb08725fd37a1ebd78f1ad",
+    "sha256": "82756a4af6a1573c825833ab0e4d8116dd116703ae80ad6eb88fc6832636acb4",
     "master": "art/world/original-world/masters/planet-atlas-02.png",
     "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
     "type": "sprite",
@@ -3219,10 +3219,10 @@
       "grid": 4,
       "cell": 6,
       "crop": [
-        627,
-        314,
-        314,
-        313
+        644,
+        337,
+        271,
+        265
       ]
     },
     "version": "1",
@@ -3235,7 +3235,7 @@
     "id": "original:asset.planet-40",
     "path": "art/world/original-world/web/planet-40.webp",
     "runtime": "assets/extensions/original-world/planet-40.webp",
-    "sha256": "8504b45df07db156443539cf23ee2fda5602b3e06c13d125b4809c8405a32b85",
+    "sha256": "1dfd6cef08a0e2b0cae62075457cab7cc770f605b49f748a3e3bacc1f005bae7",
     "master": "art/world/original-world/masters/planet-atlas-02.png",
     "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
     "type": "sprite",
@@ -3251,10 +3251,10 @@
       "grid": 4,
       "cell": 7,
       "crop": [
-        941,
-        314,
-        313,
-        313
+        950,
+        338,
+        269,
+        264
       ]
     },
     "version": "1",
@@ -3267,7 +3267,7 @@
     "id": "original:asset.planet-41",
     "path": "art/world/original-world/web/planet-41.webp",
     "runtime": "assets/extensions/original-world/planet-41.webp",
-    "sha256": "f2c431b292a2c2b462f8226ffca3b712afd7f4c26edcd1d29855f515c8d090ea",
+    "sha256": "cc67781f30f99c7177977c87cde504e01b33acfc91be925bb33a2a525a6dbb8a",
     "master": "art/world/original-world/masters/planet-atlas-02.png",
     "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
     "type": "sprite",
@@ -3283,10 +3283,10 @@
       "grid": 4,
       "cell": 8,
       "crop": [
-        0,
-        627,
-        314,
-        314
+        38,
+        638,
+        273,
+        267
       ]
     },
     "version": "1",
@@ -3299,7 +3299,7 @@
     "id": "original:asset.planet-42",
     "path": "art/world/original-world/web/planet-42.webp",
     "runtime": "assets/extensions/original-world/planet-42.webp",
-    "sha256": "0c15fe0a215b6ac5d7c3c71c320ae0d7bc25be77c4f5f7240bf1311d8b59ff27",
+    "sha256": "1b57849a3f179a240e4fc0924b81b4e1e2c3d359915900635ffad4a08dd9f7b6",
     "master": "art/world/original-world/masters/planet-atlas-02.png",
     "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
     "type": "sprite",
@@ -3315,10 +3315,10 @@
       "grid": 4,
       "cell": 9,
       "crop": [
-        314,
-        627,
-        313,
-        314
+        342,
+        636,
+        271,
+        268
       ]
     },
     "version": "1",
@@ -3331,7 +3331,7 @@
     "id": "original:asset.planet-43",
     "path": "art/world/original-world/web/planet-43.webp",
     "runtime": "assets/extensions/original-world/planet-43.webp",
-    "sha256": "83d28630cb5786e186c65fbe1786314848b6d3fc604ad2f4f570060371fbd06c",
+    "sha256": "f6f4d6e84f03eb900285db31a3e482780cba4d384da2105b2c59786a08835086",
     "master": "art/world/original-world/masters/planet-atlas-02.png",
     "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
     "type": "sprite",
@@ -3347,10 +3347,10 @@
       "grid": 4,
       "cell": 10,
       "crop": [
-        627,
-        627,
-        314,
-        314
+        619,
+        640,
+        335,
+        264
       ]
     },
     "version": "1",
@@ -3363,7 +3363,7 @@
     "id": "original:asset.planet-44",
     "path": "art/world/original-world/web/planet-44.webp",
     "runtime": "assets/extensions/original-world/planet-44.webp",
-    "sha256": "9b0e30f2c30fba1659d6c8ef2fe68c3132aae6007228abd33e26ea1bd4427398",
+    "sha256": "8c63eae62bc0c82b8fc8c274054ad19fc8ed982b1eee0ccd06b8510d9c2e8745",
     "master": "art/world/original-world/masters/planet-atlas-02.png",
     "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
     "type": "sprite",
@@ -3379,10 +3379,10 @@
       "grid": 4,
       "cell": 11,
       "crop": [
-        941,
-        627,
-        313,
-        314
+        949,
+        638,
+        267,
+        266
       ]
     },
     "version": "1",
@@ -3395,7 +3395,7 @@
     "id": "original:asset.planet-45",
     "path": "art/world/original-world/web/planet-45.webp",
     "runtime": "assets/extensions/original-world/planet-45.webp",
-    "sha256": "b2a22f8a9f795b11162825f0ef602aac8a1167522b277036810ccd7664c29793",
+    "sha256": "9510650d3fc0ed90ed50211aa6aa4e8db8d89317abbfefa4c7974ad98587012f",
     "master": "art/world/original-world/masters/planet-atlas-02.png",
     "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
     "type": "sprite",
@@ -3411,10 +3411,10 @@
       "grid": 4,
       "cell": 12,
       "crop": [
-        0,
-        941,
-        314,
-        313
+        38,
+        936,
+        269,
+        266
       ]
     },
     "version": "1",
@@ -3427,7 +3427,7 @@
     "id": "original:asset.planet-46",
     "path": "art/world/original-world/web/planet-46.webp",
     "runtime": "assets/extensions/original-world/planet-46.webp",
-    "sha256": "0f0e6839df4a2cb618b9d4bcb4957698d64a201fb1cb8673208f7d3b48d78347",
+    "sha256": "54bfb70dee1af1bea2b2ee2506f04d3f5b776c37d60328ff5ac5ceb10b824a39",
     "master": "art/world/original-world/masters/planet-atlas-02.png",
     "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
     "type": "sprite",
@@ -3443,10 +3443,10 @@
       "grid": 4,
       "cell": 13,
       "crop": [
-        314,
-        941,
-        313,
-        313
+        339,
+        934,
+        271,
+        267
       ]
     },
     "version": "1",
@@ -3459,7 +3459,7 @@
     "id": "original:asset.planet-47",
     "path": "art/world/original-world/web/planet-47.webp",
     "runtime": "assets/extensions/original-world/planet-47.webp",
-    "sha256": "0d8edd257831c8a11b71ffa295cffb41084e65651c225ae6502e4aed46881773",
+    "sha256": "8b8566c44dff8abfa2bebd2a9e92f31fb0ec79c52d0212e1b720117f80c8cd1f",
     "master": "art/world/original-world/masters/planet-atlas-02.png",
     "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
     "type": "sprite",
@@ -3475,10 +3475,10 @@
       "grid": 4,
       "cell": 14,
       "crop": [
-        627,
-        941,
-        314,
-        313
+        643,
+        936,
+        272,
+        267
       ]
     },
     "version": "1",
@@ -3491,7 +3491,7 @@
     "id": "original:asset.planet-48",
     "path": "art/world/original-world/web/planet-48.webp",
     "runtime": "assets/extensions/original-world/planet-48.webp",
-    "sha256": "c50dfed62a1e689a4f53840101f91a70d5b20dea3b94f017701c5f1d044877c1",
+    "sha256": "8ea890857c7690fe929f818c40b26e9dff4cff7f530e7e48fe75c9166ea803ec",
     "master": "art/world/original-world/masters/planet-atlas-02.png",
     "masterSha256": "0c4642d8c838500af4dc9d7ecce3495b34aabb9e2f050f55aa4e26250927de13",
     "type": "sprite",
@@ -3507,10 +3507,10 @@
       "grid": 4,
       "cell": 15,
       "crop": [
-        941,
-        941,
-        313,
-        313
+        946,
+        931,
+        275,
+        271
       ]
     },
     "version": "1",
@@ -3523,7 +3523,7 @@
     "id": "original:asset.planet-49",
     "path": "art/world/original-world/web/planet-49.webp",
     "runtime": "assets/extensions/original-world/planet-49.webp",
-    "sha256": "757252c545045b8aaf72dd8e52af24f568db09d4a05151911a33f9eabfe167df",
+    "sha256": "5202cfec3484e549aa78b0746d72a4642c739cfd009a628f5474a5f5cadd2f06",
     "master": "art/world/original-world/masters/planet-atlas-03.png",
     "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
     "type": "sprite",
@@ -3539,10 +3539,10 @@
       "grid": 4,
       "cell": 0,
       "crop": [
-        0,
-        0,
-        314,
-        314
+        34,
+        33,
+        261,
+        259
       ]
     },
     "version": "1",
@@ -3555,7 +3555,7 @@
     "id": "original:asset.planet-50",
     "path": "art/world/original-world/web/planet-50.webp",
     "runtime": "assets/extensions/original-world/planet-50.webp",
-    "sha256": "e73c925588221ddeed7771096c383f34cf4c68e186ecc57c8bf26a43a8c95b49",
+    "sha256": "df853d05d991aed6319d31dfc4e33890bf2a938da35d652ca366ef93a70d9513",
     "master": "art/world/original-world/masters/planet-atlas-03.png",
     "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
     "type": "sprite",
@@ -3571,10 +3571,10 @@
       "grid": 4,
       "cell": 1,
       "crop": [
-        314,
-        0,
-        313,
-        314
+        307,
+        35,
+        324,
+        254
       ]
     },
     "version": "1",
@@ -3587,7 +3587,7 @@
     "id": "original:asset.planet-51",
     "path": "art/world/original-world/web/planet-51.webp",
     "runtime": "assets/extensions/original-world/planet-51.webp",
-    "sha256": "ea930717f4662b9e58b9b20d7ba023af396ecba9e36d700fe8d947f365353e66",
+    "sha256": "a77b20a1da57b044b982a77e4ed8b048995364f03b2ff7f11a8d7fc3742f8500",
     "master": "art/world/original-world/masters/planet-atlas-03.png",
     "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
     "type": "sprite",
@@ -3603,10 +3603,10 @@
       "grid": 4,
       "cell": 2,
       "crop": [
-        627,
-        0,
-        314,
-        314
+        655,
+        32,
+        261,
+        260
       ]
     },
     "version": "1",
@@ -3619,7 +3619,7 @@
     "id": "original:asset.planet-52",
     "path": "art/world/original-world/web/planet-52.webp",
     "runtime": "assets/extensions/original-world/planet-52.webp",
-    "sha256": "b1006644ec2ac673cdeac54d0fcfb6399b6c161de17f25bafffb2f2a05752998",
+    "sha256": "97bbe456a84f2ff972ecb42ee7f462c72054a890063a473014633d299983fa91",
     "master": "art/world/original-world/masters/planet-atlas-03.png",
     "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
     "type": "sprite",
@@ -3635,10 +3635,10 @@
       "grid": 4,
       "cell": 3,
       "crop": [
-        941,
-        0,
-        313,
-        314
+        959,
+        31,
+        263,
+        260
       ]
     },
     "version": "1",
@@ -3651,7 +3651,7 @@
     "id": "original:asset.planet-53",
     "path": "art/world/original-world/web/planet-53.webp",
     "runtime": "assets/extensions/original-world/planet-53.webp",
-    "sha256": "0729a421e2bb842d4fe62e793d4b03fb83bedcca0a8428a18825338191ba2965",
+    "sha256": "87cf2e4dae856fcf8dc9af6911e80074de4d2d0f9174a2036b822e49f088aa85",
     "master": "art/world/original-world/masters/planet-atlas-03.png",
     "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
     "type": "sprite",
@@ -3667,10 +3667,10 @@
       "grid": 4,
       "cell": 4,
       "crop": [
-        0,
-        314,
-        314,
-        313
+        31,
+        333,
+        264,
+        264
       ]
     },
     "version": "1",
@@ -3683,7 +3683,7 @@
     "id": "original:asset.planet-54",
     "path": "art/world/original-world/web/planet-54.webp",
     "runtime": "assets/extensions/original-world/planet-54.webp",
-    "sha256": "1b2d55af1197d26cd4efbcda2bdfed848b83880f9caf0d38801ff5587370ec3a",
+    "sha256": "8ad1139c59da0fc102d640ecd36618ee8161eb43c152edba5c20304f053cc984",
     "master": "art/world/original-world/masters/planet-atlas-03.png",
     "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
     "type": "sprite",
@@ -3699,10 +3699,10 @@
       "grid": 4,
       "cell": 5,
       "crop": [
-        314,
-        314,
-        313,
-        313
+        336,
+        332,
+        263,
+        265
       ]
     },
     "version": "1",
@@ -3715,7 +3715,7 @@
     "id": "original:asset.planet-55",
     "path": "art/world/original-world/web/planet-55.webp",
     "runtime": "assets/extensions/original-world/planet-55.webp",
-    "sha256": "fbf65aff535e1130cef217cc3145d02ca544f97444a6b17735d07eb2a847b115",
+    "sha256": "556801104c6230a2abb2ea3bd290f1659e60a6760ab16bd08c597ea288e0e642",
     "master": "art/world/original-world/masters/planet-atlas-03.png",
     "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
     "type": "sprite",
@@ -3731,10 +3731,10 @@
       "grid": 4,
       "cell": 6,
       "crop": [
-        627,
-        314,
-        314,
-        313
+        651,
+        331,
+        266,
+        266
       ]
     },
     "version": "1",
@@ -3747,7 +3747,7 @@
     "id": "original:asset.planet-56",
     "path": "art/world/original-world/web/planet-56.webp",
     "runtime": "assets/extensions/original-world/planet-56.webp",
-    "sha256": "97d22a47a22fed9a13735bb9f086403c2a169a1b9a9acbf2ac2f63c51f8a3ad2",
+    "sha256": "cef9e636387dbfbac3f953f2e59761763d6734524136a048fdb810131720ed46",
     "master": "art/world/original-world/masters/planet-atlas-03.png",
     "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
     "type": "sprite",
@@ -3763,10 +3763,10 @@
       "grid": 4,
       "cell": 7,
       "crop": [
-        941,
-        314,
-        313,
-        313
+        958,
+        331,
+        269,
+        266
       ]
     },
     "version": "1",
@@ -3779,7 +3779,7 @@
     "id": "original:asset.planet-57",
     "path": "art/world/original-world/web/planet-57.webp",
     "runtime": "assets/extensions/original-world/planet-57.webp",
-    "sha256": "37aef99e3b0d738e4d7a619156508ac5f19ff158b3b1bffc2f68496445a1956d",
+    "sha256": "c63bdd03d2d23aeea43ac333f5bfb49036718062bd3ae05680bc582f0bf1b294",
     "master": "art/world/original-world/masters/planet-atlas-03.png",
     "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
     "type": "sprite",
@@ -3795,10 +3795,10 @@
       "grid": 4,
       "cell": 8,
       "crop": [
-        0,
-        627,
-        314,
-        314
+        17,
+        643,
+        317,
+        253
       ]
     },
     "version": "1",
@@ -3811,7 +3811,7 @@
     "id": "original:asset.planet-58",
     "path": "art/world/original-world/web/planet-58.webp",
     "runtime": "assets/extensions/original-world/planet-58.webp",
-    "sha256": "228ab282c91bc216553d46845c2389e69b838cda87c51b7d38e9aaa5da517c01",
+    "sha256": "12fc12d80ac8a64c95a137323ea45450107a7dbea705d1c065c98bd7d6f5dc4d",
     "master": "art/world/original-world/masters/planet-atlas-03.png",
     "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
     "type": "sprite",
@@ -3827,10 +3827,10 @@
       "grid": 4,
       "cell": 9,
       "crop": [
-        314,
-        627,
-        313,
-        314
+        340,
+        637,
+        263,
+        261
       ]
     },
     "version": "1",
@@ -3843,7 +3843,7 @@
     "id": "original:asset.planet-59",
     "path": "art/world/original-world/web/planet-59.webp",
     "runtime": "assets/extensions/original-world/planet-59.webp",
-    "sha256": "28387d5686f9dd2727a3840b269150cb59f15bb78a5f8ede0328f32b2f072452",
+    "sha256": "7dba7cfc07bcd04838eaeee3b5ab1c89de159ca6e5e982e60b5e7ca9dd148190",
     "master": "art/world/original-world/masters/planet-atlas-03.png",
     "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
     "type": "sprite",
@@ -3859,10 +3859,10 @@
       "grid": 4,
       "cell": 10,
       "crop": [
-        627,
-        627,
-        314,
-        314
+        648,
+        633,
+        270,
+        267
       ]
     },
     "version": "1",
@@ -3875,7 +3875,7 @@
     "id": "original:asset.planet-60",
     "path": "art/world/original-world/web/planet-60.webp",
     "runtime": "assets/extensions/original-world/planet-60.webp",
-    "sha256": "5f89533a6cca3844385b912b1c29644412bc079b9296fc30696e0e93a8ab18c7",
+    "sha256": "c84d26091cb1380dcbe947cae67ca7b808bfb5c14edc4b943f41d42a85a122b7",
     "master": "art/world/original-world/masters/planet-atlas-03.png",
     "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
     "type": "sprite",
@@ -3891,10 +3891,10 @@
       "grid": 4,
       "cell": 11,
       "crop": [
-        941,
-        627,
-        313,
-        314
+        956,
+        634,
+        270,
+        267
       ]
     },
     "version": "1",
@@ -3907,7 +3907,7 @@
     "id": "original:asset.planet-61",
     "path": "art/world/original-world/web/planet-61.webp",
     "runtime": "assets/extensions/original-world/planet-61.webp",
-    "sha256": "0eca79cba5fc81cb4fe38f60e1cf23ea48968babe2fb7a3af211691f5cb0854c",
+    "sha256": "86a9de4b3504e8b768c0e5eaff52fa51c238213ff001384a26aec84cab256361",
     "master": "art/world/original-world/masters/planet-atlas-03.png",
     "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
     "type": "sprite",
@@ -3923,10 +3923,10 @@
       "grid": 4,
       "cell": 12,
       "crop": [
-        0,
-        941,
-        314,
-        313
+        32,
+        932,
+        265,
+        261
       ]
     },
     "version": "1",
@@ -3939,7 +3939,7 @@
     "id": "original:asset.planet-62",
     "path": "art/world/original-world/web/planet-62.webp",
     "runtime": "assets/extensions/original-world/planet-62.webp",
-    "sha256": "1d4c23aa40fa4931be5a3103800da7b616a316397a23064456fb45f90a7627ee",
+    "sha256": "f833bbe81fec559f3b1629f85e122a010f4f511d7b58331400d239e26ca84e17",
     "master": "art/world/original-world/masters/planet-atlas-03.png",
     "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
     "type": "sprite",
@@ -3955,10 +3955,10 @@
       "grid": 4,
       "cell": 13,
       "crop": [
-        314,
-        941,
-        313,
-        313
+        338,
+        932,
+        263,
+        260
       ]
     },
     "version": "1",
@@ -3971,7 +3971,7 @@
     "id": "original:asset.planet-63",
     "path": "art/world/original-world/web/planet-63.webp",
     "runtime": "assets/extensions/original-world/planet-63.webp",
-    "sha256": "03dc0b03ba8f29b46ab30acb1aeaa1ceab804440146291d0ff7661811ce28e10",
+    "sha256": "d6591c380009e771a8fe4c61c6b07d9054d57426687fbe61018825da10cb1cc2",
     "master": "art/world/original-world/masters/planet-atlas-03.png",
     "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
     "type": "sprite",
@@ -3987,10 +3987,10 @@
       "grid": 4,
       "cell": 14,
       "crop": [
-        627,
-        941,
-        314,
-        313
+        646,
+        931,
+        265,
+        261
       ]
     },
     "version": "1",
@@ -4003,7 +4003,7 @@
     "id": "original:asset.planet-64",
     "path": "art/world/original-world/web/planet-64.webp",
     "runtime": "assets/extensions/original-world/planet-64.webp",
-    "sha256": "d459d0f87b68844e883f2e172cf08e71f4489c139813b4044593fdb8ddabcd9c",
+    "sha256": "30948851c8e44eeec30b0945884b11b9fbf12e277415e910a10475a95bb536e3",
     "master": "art/world/original-world/masters/planet-atlas-03.png",
     "masterSha256": "c073f0945d0e8633135ddf7e44bc86a732cffff5aa1979aa480d6fba491622e7",
     "type": "sprite",
@@ -4019,10 +4019,10 @@
       "grid": 4,
       "cell": 15,
       "crop": [
-        941,
-        941,
-        313,
-        313
+        920,
+        930,
+        329,
+        259
       ]
     },
     "version": "1",
@@ -4035,7 +4035,7 @@
     "id": "original:asset.planet-65",
     "path": "art/world/original-world/web/planet-65.webp",
     "runtime": "assets/extensions/original-world/planet-65.webp",
-    "sha256": "ecc2d6f4d6843ccc391361b7dd487bdee67f0f31cefe748444f2cf330f154c42",
+    "sha256": "619de2aeebccf42ca5bae881982e2df9c8725f0b44f0becf23f3aaecc4608bce",
     "master": "art/world/original-world/masters/planet-atlas-04.png",
     "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
     "type": "sprite",
@@ -4051,10 +4051,10 @@
       "grid": 4,
       "cell": 0,
       "crop": [
-        0,
-        0,
-        314,
-        314
+        42,
+        45,
+        271,
+        267
       ]
     },
     "version": "1",
@@ -4067,7 +4067,7 @@
     "id": "original:asset.planet-66",
     "path": "art/world/original-world/web/planet-66.webp",
     "runtime": "assets/extensions/original-world/planet-66.webp",
-    "sha256": "812fb7e211372d0f29725f825e03dd795182d67e172faa35bdbf8d321e993753",
+    "sha256": "f32ced7cd38534390db66a16b2a3ed6a35442247bec33852919f8243f905d7ef",
     "master": "art/world/original-world/masters/planet-atlas-04.png",
     "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
     "type": "sprite",
@@ -4083,10 +4083,10 @@
       "grid": 4,
       "cell": 1,
       "crop": [
-        314,
-        0,
-        313,
-        314
+        345,
+        45,
+        270,
+        268
       ]
     },
     "version": "1",
@@ -4099,7 +4099,7 @@
     "id": "original:asset.planet-67",
     "path": "art/world/original-world/web/planet-67.webp",
     "runtime": "assets/extensions/original-world/planet-67.webp",
-    "sha256": "f04ff7dc9851322035e0ead8fbfd12e5f5ef2db4749b0b403e05bf49ae324d9c",
+    "sha256": "1dff30ee47234547a1d90b60d8931f15b8fcbf8aff07ac1076105afc74b5f5db",
     "master": "art/world/original-world/masters/planet-atlas-04.png",
     "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
     "type": "sprite",
@@ -4115,10 +4115,10 @@
       "grid": 4,
       "cell": 2,
       "crop": [
-        627,
-        0,
-        314,
-        314
+        648,
+        45,
+        269,
+        266
       ]
     },
     "version": "1",
@@ -4131,7 +4131,7 @@
     "id": "original:asset.planet-68",
     "path": "art/world/original-world/web/planet-68.webp",
     "runtime": "assets/extensions/original-world/planet-68.webp",
-    "sha256": "c5d40f423972a193391d45793b7f1dfbc75daa9bd13fbee64fc3ad5d67284b7d",
+    "sha256": "1d26fe5a600940ab63f795e7df01c196b8b16bf431168478aa5a75e4d38afc1a",
     "master": "art/world/original-world/masters/planet-atlas-04.png",
     "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
     "type": "sprite",
@@ -4147,10 +4147,10 @@
       "grid": 4,
       "cell": 3,
       "crop": [
-        941,
-        0,
-        313,
-        314
+        950,
+        44,
+        269,
+        264
       ]
     },
     "version": "1",
@@ -4163,7 +4163,7 @@
     "id": "original:asset.planet-69",
     "path": "art/world/original-world/web/planet-69.webp",
     "runtime": "assets/extensions/original-world/planet-69.webp",
-    "sha256": "f06fa48c2e0d8b503c7dd518d4b04daf320b266991ac972dfd1d88c3915d1f5b",
+    "sha256": "5005a4c72ddd72ea464f92cc40bb2edd2ccc38538dd8db346672b5b0e218f051",
     "master": "art/world/original-world/masters/planet-atlas-04.png",
     "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
     "type": "sprite",
@@ -4179,10 +4179,10 @@
       "grid": 4,
       "cell": 4,
       "crop": [
-        0,
-        314,
-        314,
-        313
+        40,
+        338,
+        274,
+        269
       ]
     },
     "version": "1",
@@ -4195,7 +4195,7 @@
     "id": "original:asset.planet-70",
     "path": "art/world/original-world/web/planet-70.webp",
     "runtime": "assets/extensions/original-world/planet-70.webp",
-    "sha256": "294cdf43530544a65d598d2b2e995a70b7f5f777c8e49bb7a9e616f0be6a760c",
+    "sha256": "96306616cc538f2d10e96392e5254509aed56cd89ee1805a2da546f36d0ba2c6",
     "master": "art/world/original-world/masters/planet-atlas-04.png",
     "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
     "type": "sprite",
@@ -4211,10 +4211,10 @@
       "grid": 4,
       "cell": 5,
       "crop": [
-        314,
-        314,
-        313,
-        313
+        343,
+        337,
+        272,
+        270
       ]
     },
     "version": "1",
@@ -4227,7 +4227,7 @@
     "id": "original:asset.planet-71",
     "path": "art/world/original-world/web/planet-71.webp",
     "runtime": "assets/extensions/original-world/planet-71.webp",
-    "sha256": "a34487911d7391c7c86806d51f8189b49a42575d3b0339e23cc61f3fb13d651b",
+    "sha256": "9a5a683e32beb93265635d9ad05c304547ff806cc3b77cc09a32d6d63b9574e9",
     "master": "art/world/original-world/masters/planet-atlas-04.png",
     "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
     "type": "sprite",
@@ -4243,10 +4243,10 @@
       "grid": 4,
       "cell": 6,
       "crop": [
-        627,
-        314,
-        314,
-        313
+        611,
+        339,
+        340,
+        267
       ]
     },
     "version": "1",
@@ -4259,7 +4259,7 @@
     "id": "original:asset.planet-72",
     "path": "art/world/original-world/web/planet-72.webp",
     "runtime": "assets/extensions/original-world/planet-72.webp",
-    "sha256": "50443b45983ef3cede4c661a090546ba6c28441fd6b996bc2ad6e0c67deb4f09",
+    "sha256": "c8d555e5302b9f1d12e3eb689ab75f807f861b6fd66b48fec74cd74238bc9888",
     "master": "art/world/original-world/masters/planet-atlas-04.png",
     "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
     "type": "sprite",
@@ -4275,10 +4275,10 @@
       "grid": 4,
       "cell": 7,
       "crop": [
-        941,
-        314,
-        313,
-        313
+        949,
+        338,
+        270,
+        267
       ]
     },
     "version": "1",
@@ -4291,7 +4291,7 @@
     "id": "original:asset.planet-73",
     "path": "art/world/original-world/web/planet-73.webp",
     "runtime": "assets/extensions/original-world/planet-73.webp",
-    "sha256": "e7570ea4fd2c05f62f98306b411a44006729c3e48164cd2b7c1fb6cd180ea150",
+    "sha256": "96f741251fc64aa604ef08e0f45be20f83e2c28e3c721f41f35f8d57c455b98f",
     "master": "art/world/original-world/masters/planet-atlas-04.png",
     "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
     "type": "sprite",
@@ -4307,10 +4307,10 @@
       "grid": 4,
       "cell": 8,
       "crop": [
-        0,
-        627,
-        314,
-        314
+        40,
+        632,
+        273,
+        270
       ]
     },
     "version": "1",
@@ -4323,7 +4323,7 @@
     "id": "original:asset.planet-74",
     "path": "art/world/original-world/web/planet-74.webp",
     "runtime": "assets/extensions/original-world/planet-74.webp",
-    "sha256": "103736c02c50bb87ae4d9b2891e8e158f1fa299cfa78afc2c1761e0de7c30d11",
+    "sha256": "a91d3e50fe77c1ca780685119bf70cb0220f01e73a73645c513334f4d0827743",
     "master": "art/world/original-world/masters/planet-atlas-04.png",
     "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
     "type": "sprite",
@@ -4339,10 +4339,10 @@
       "grid": 4,
       "cell": 9,
       "crop": [
-        314,
-        627,
-        313,
-        314
+        343,
+        634,
+        272,
+        269
       ]
     },
     "version": "1",
@@ -4355,7 +4355,7 @@
     "id": "original:asset.planet-75",
     "path": "art/world/original-world/web/planet-75.webp",
     "runtime": "assets/extensions/original-world/planet-75.webp",
-    "sha256": "fd09949ca3f4297cb8ad76a7af764bb763bce3f81570a7483e104d33674f8d60",
+    "sha256": "e7912bb6edb3e9414aa4c23013d84d871f9dc00bd5fc84f6004b0162f143ff50",
     "master": "art/world/original-world/masters/planet-atlas-04.png",
     "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
     "type": "sprite",
@@ -4371,10 +4371,10 @@
       "grid": 4,
       "cell": 10,
       "crop": [
-        627,
-        627,
-        314,
-        314
+        646,
+        632,
+        273,
+        271
       ]
     },
     "version": "1",
@@ -4387,7 +4387,7 @@
     "id": "original:asset.planet-76",
     "path": "art/world/original-world/web/planet-76.webp",
     "runtime": "assets/extensions/original-world/planet-76.webp",
-    "sha256": "d91e06535a6545eda936106fbf2e66ea8d60e403093caafcf333ba2f266db290",
+    "sha256": "db828e6631697845e3a235748825948ed875732912092085f2731e6a68baa09c",
     "master": "art/world/original-world/masters/planet-atlas-04.png",
     "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
     "type": "sprite",
@@ -4403,10 +4403,10 @@
       "grid": 4,
       "cell": 11,
       "crop": [
-        941,
-        627,
-        313,
-        314
+        948,
+        632,
+        274,
+        272
       ]
     },
     "version": "1",
@@ -4419,7 +4419,7 @@
     "id": "original:asset.planet-77",
     "path": "art/world/original-world/web/planet-77.webp",
     "runtime": "assets/extensions/original-world/planet-77.webp",
-    "sha256": "6ad6ea4f972e2ca4aad189557a4de6d514ba9964cfd328165b140f41227a4862",
+    "sha256": "c45ec4c6d881471bf83c46865fbf55ef9c701e1da2c893644679e3201bea74aa",
     "master": "art/world/original-world/masters/planet-atlas-04.png",
     "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
     "type": "sprite",
@@ -4435,10 +4435,10 @@
       "grid": 4,
       "cell": 12,
       "crop": [
-        0,
-        941,
-        314,
-        313
+        36,
+        920,
+        279,
+        274
       ]
     },
     "version": "1",
@@ -4451,7 +4451,7 @@
     "id": "original:asset.planet-78",
     "path": "art/world/original-world/web/planet-78.webp",
     "runtime": "assets/extensions/original-world/planet-78.webp",
-    "sha256": "da5e3c227b78ac5cbc19ed95b5d40b35a3c947b1e80366211a37d346df8a988f",
+    "sha256": "ca61b1cf5f2f702ec2b94e149b601cfc8e7ff394263c08f4189004193f31f4b3",
     "master": "art/world/original-world/masters/planet-atlas-04.png",
     "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
     "type": "sprite",
@@ -4467,10 +4467,10 @@
       "grid": 4,
       "cell": 13,
       "crop": [
-        314,
-        941,
-        313,
-        313
+        316,
+        922,
+        340,
+        268
       ]
     },
     "version": "1",
@@ -4483,7 +4483,7 @@
     "id": "original:asset.planet-79",
     "path": "art/world/original-world/web/planet-79.webp",
     "runtime": "assets/extensions/original-world/planet-79.webp",
-    "sha256": "3dc11449b6ec6c5c4c4533d82d2253b7c9121421dae35716d4f23a10970d8193",
+    "sha256": "e54e939000383b115ec12d243c3271489f65dcd03f41438f9308f2b2e5abd2fb",
     "master": "art/world/original-world/masters/planet-atlas-04.png",
     "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
     "type": "sprite",
@@ -4499,10 +4499,10 @@
       "grid": 4,
       "cell": 14,
       "crop": [
-        627,
-        941,
-        314,
-        313
+        646,
+        921,
+        272,
+        269
       ]
     },
     "version": "1",
@@ -4515,7 +4515,7 @@
     "id": "original:asset.planet-80",
     "path": "art/world/original-world/web/planet-80.webp",
     "runtime": "assets/extensions/original-world/planet-80.webp",
-    "sha256": "bf74b5517c136fb11f201c24edec97ee559db9006640227c032b33f4bc9851d0",
+    "sha256": "27517b5013554c91ca45f45ed9e017caa89daf6afa76dec970fc6158b790ffaf",
     "master": "art/world/original-world/masters/planet-atlas-04.png",
     "masterSha256": "8f57503942eb8d423461b6ffd2d8ef5493ef215f37a50e2c4e2cb92961f607d8",
     "type": "sprite",
@@ -4531,10 +4531,10 @@
       "grid": 4,
       "cell": 15,
       "crop": [
-        941,
-        941,
-        313,
-        313
+        946,
+        919,
+        277,
+        275
       ]
     },
     "version": "1",
@@ -4547,7 +4547,7 @@
     "id": "original:asset.planet-81",
     "path": "art/world/original-world/web/planet-81.webp",
     "runtime": "assets/extensions/original-world/planet-81.webp",
-    "sha256": "40cbb9c0c2b9aedf31509ccae22e84cb742fc5ac71b0b25067b18e1faf54645c",
+    "sha256": "d763cfe5bf0a0d20e4508b7f8de7d59a062db3c80a61e70d78366c7fec0571b6",
     "master": "art/world/original-world/masters/planet-atlas-05.png",
     "masterSha256": "a3c2408ce97675263c8acf12752d21bf0de36e24910df730774171013c46b2af",
     "type": "sprite",
@@ -4563,10 +4563,10 @@
       "grid": 4,
       "cell": 0,
       "crop": [
-        0,
-        0,
-        314,
-        314
+        34,
+        54,
+        271,
+        268
       ]
     },
     "version": "1",
@@ -4579,7 +4579,7 @@
     "id": "original:asset.planet-82",
     "path": "art/world/original-world/web/planet-82.webp",
     "runtime": "assets/extensions/original-world/planet-82.webp",
-    "sha256": "2b27066a8e724967dcb9ee1f70bc520b36984ffadffdc329e63c7138134352ca",
+    "sha256": "4bde23a40a8b7c195b5783d3abeaa7d8f6faf0531bbb66605cfe2c194c162a08",
     "master": "art/world/original-world/masters/planet-atlas-05.png",
     "masterSha256": "a3c2408ce97675263c8acf12752d21bf0de36e24910df730774171013c46b2af",
     "type": "sprite",
@@ -4595,10 +4595,10 @@
       "grid": 4,
       "cell": 1,
       "crop": [
-        314,
-        0,
-        313,
-        314
+        342,
+        54,
+        271,
+        268
       ]
     },
     "version": "1",
@@ -4611,7 +4611,7 @@
     "id": "original:asset.planet-83",
     "path": "art/world/original-world/web/planet-83.webp",
     "runtime": "assets/extensions/original-world/planet-83.webp",
-    "sha256": "49151f86dfa8cf5ecf81186d2840aa91cff1605ccbec751a1a75c7b4823441db",
+    "sha256": "435e626277e74e64a0b506e89f5e208bf127f9df3980f1a48cbb6739c7a33135",
     "master": "art/world/original-world/masters/planet-atlas-05.png",
     "masterSha256": "a3c2408ce97675263c8acf12752d21bf0de36e24910df730774171013c46b2af",
     "type": "sprite",
@@ -4627,10 +4627,10 @@
       "grid": 4,
       "cell": 2,
       "crop": [
-        627,
-        0,
-        314,
-        314
+        642,
+        53,
+        272,
+        269
       ]
     },
     "version": "1",
@@ -4643,7 +4643,7 @@
     "id": "original:asset.planet-84",
     "path": "art/world/original-world/web/planet-84.webp",
     "runtime": "assets/extensions/original-world/planet-84.webp",
-    "sha256": "3ecd59201ea2f58f015472ba6a52b1d64e98cdd61c56d88a53fad22a55564226",
+    "sha256": "0ff5833b9c7b7f7b8cd3ca67bc59222fa9abf3fe01fb0ddcd4e3acd16430ac56",
     "master": "art/world/original-world/masters/planet-atlas-05.png",
     "masterSha256": "a3c2408ce97675263c8acf12752d21bf0de36e24910df730774171013c46b2af",
     "type": "sprite",
@@ -4659,10 +4659,10 @@
       "grid": 4,
       "cell": 3,
       "crop": [
-        941,
-        0,
-        313,
-        314
+        950,
+        53,
+        272,
+        269
       ]
     },
     "version": "1",
@@ -4675,7 +4675,7 @@
     "id": "original:asset.planet-85",
     "path": "art/world/original-world/web/planet-85.webp",
     "runtime": "assets/extensions/original-world/planet-85.webp",
-    "sha256": "d4d22b23511687ea9024cf4056b1e800ee6f1897129d83ba8f53174e01298422",
+    "sha256": "5fdad9fdda89167881b1b897ffdba5083c91b3780e83510d4518c00c4259e400",
     "master": "art/world/original-world/masters/planet-atlas-05.png",
     "masterSha256": "a3c2408ce97675263c8acf12752d21bf0de36e24910df730774171013c46b2af",
     "type": "sprite",
@@ -4691,10 +4691,10 @@
       "grid": 4,
       "cell": 4,
       "crop": [
-        0,
-        314,
-        314,
-        313
+        6,
+        369,
+        367,
+        273
       ]
     },
     "version": "1",

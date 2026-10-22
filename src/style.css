@@ -706,6 +706,10 @@ input[type="file"] {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
+.bridge.in-battle > .toast {
+  top: 100px;
+  bottom: auto;
+}
 .modal-backdrop {
   position: fixed;
   inset: 0;

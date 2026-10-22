@@ -186,10 +186,18 @@ try {
     e.hp = 100000;
     e.attack = 1;
   });
-  arena.skills.forEach((s) => {
-    s.cooldown = 1;
-    s.duration = 0.5;
-  });
+  // Only the three starter skills are accelerated for this feedback fixture.
+  // Source enemies keep their cooldowns and the complete world stays within
+  // its declared simultaneous-unit budget.
+  const rapidSkills = new Set(
+    arena.characters.filter((c) => c.starter).map((c) => c.skill),
+  );
+  arena.skills
+    .filter((s) => rapidSkills.has(s.id))
+    .forEach((s) => {
+      s.cooldown = 1;
+      s.duration = 0.5;
+    });
   const battle = fixture(arena),
     planet = arena.planets[0];
   battle.x = planet.x - 300;

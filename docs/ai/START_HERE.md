@@ -41,7 +41,7 @@ M1 已可試玩並有可編輯工坊，商業品質尚未核准。後續可以�
 
 - `src/content/schema.ts` 是執行契約；`content/core/pack.json`／`content/manifest.json` 僅核心整合者改。自己的 extension 使用自己命名空間的定義；requires 是**精確版本**，不是 semver 範圍。`comet.example.json` 是未啟用的可校驗範例。
 - 擴充包只能新增定義，不能以載入順序覆寫基底。修改既有角色／星球的掉落、造型等需交整合變更單，或用工坊完整快照匯出，不能假稱 extension 自動覆寫。
-- 目前支援技能 shield／barrage／fortify／turret／accelerate／weaken／heal；敵彈 aim／fan／ring。新機制先交最小資料例、預期行為與相容需求，不寫角色ID分支／eval。
+- 現行0.6／0.7採封閉技能動作與18種普通彈型，226個來源技能／74效果家族／82個彈幕模板；精確欄位以schema與[skill-engine-v6](../design/skill-engine-v6.md)為準，不再只限aim／fan／ring。0.7世界支援CID成長、啟動前置、基地、每日排程／傷害目標，初始三人、最多六人；先讀[世界契約](../design/original-world.md)。需要新階段／部件／移動或勝負條件時交核心能力需求，不寫角色ID分支／eval、不假稱一個phaseAt可重建任意Boss。
 - `domain/navigation.ts` 共用巡邏／守軍座標，`domain/formation.ts` 共用航跡跟隨；敵艦位置用模擬時間，不用 Date.now。前鋒／後衛由 team 順序決定，不依角色名字決定。
 - 角色 portrait／avatar／sprite 分開；世界物件 sprite、劇情／星域 background 指向 assets。每項可見實體都交圖片及hash，工坊可預覽／替換；圖片不決定碰撞。新素材放自己命名空間，附媒體檔；**僅加入 assets 欄位不會自動複製新檔，需核心整合建置複製步驟**。工坊 ZIP 匯出則已含實檔。
 - 六張 standard 原始PNG不可覆寫，映射05地球／04水星／01金星／03火星／02天王星／06月球。另有已授權的六張候選Q圖，不再沿用舊的全面禁止SD敘述。新增角色／造型依任務授權，以同角色單張標準圖為參考並先實際開圖；candidate 不自行改 approved。

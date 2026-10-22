@@ -54,7 +54,19 @@ const getRecord = async (page, key) =>
         r.onsuccess = () => {
           const tx = r.result.transaction("records", "readonly"),
             q = tx.objectStore("records").get(key);
-          q.onsuccess = () => resolve(q.result);
+          // Assertions need character/planet values, not every artwork byte
+          // and the complete undo history over the browser protocol.
+          q.onsuccess = () =>
+            resolve(
+              key === "editor:project"
+                ? {
+                    pack: {
+                      characters: q.result.pack.characters,
+                      planets: q.result.pack.planets,
+                    },
+                  }
+                : q.result,
+            );
           q.onerror = () => reject(q.error);
         };
       }),

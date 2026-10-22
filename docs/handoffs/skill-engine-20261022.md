@@ -53,3 +53,11 @@
 已建立 https://github.com/sces5504/20261020/pull/12 ，ccdd9c7已完整通過check release：84核心與全部七組瀏覽器、playtest readiness。其後補齊連續衝撞／瞬移區別、光束扇面與旋轉／目標距離截斷、連鎖完整次數、分裂避免重傷同目標、擴散單次震波／蓄傷反擊波、來源DoT週期，工坊依動作隱藏無效欄位；最新92核心全過，typecheck/build過，需以後述最終發布結果為準。這些改動均有實際命中測試，並非僅增加schema。原始人物素材bytes未改。
 
 四資源圖集已在錢包／成本／配方顯示；五個啟用包依上表，總16角色／2區／4星球。使用者要求本次完成、不安排「後續校正」。本版已採用的推定數值與幾何是明確設計，來源界線寫在證據文件，不是未實作清單。候選素材review與Android／iOS真機旗標不造假；完整release採既有playtest profile，commercial檢查不等同功能完成。
+
+## 完整驗證通過／整合交付
+
+實作 `33b77f6b84895d471c463035547bec6a6ec90e30`：92核心、typecheck、內容校驗、build，以及完整check release全部七組瀏覽器與playtest readiness通過。GitHub Checks run39723037449亦success。正式驗證副本：[skill-engine-0.6.json](../verification/skill-engine-0.6.json)。Chrome156.0.8078.4；桌機1440×1000@1與觸控390×844@2；技能seed77；60敵環形彈壓力流程90個rAF樣本約60FPS、模擬5秒，僅代表目前虛擬環境。桌機／手機實際畫面已檢視：光束／黑洞／分身、追蹤、資源圖。
+
+之後僅補3個素材選單舊名稱為復仇女神星，內容校驗通過，沒有改圖bytes或runtime；Pages會對最終main樹再次執行完整release。PR #12為本輪唯一整合PR；精確main／公開SHA以合併結果及公開version.json為準。程式工作已完成，不列待補機制或後續校正；真人品質批准、獨立作者接力、真機與硬體效能是未取得的外部證據，commercial實跑仍阻擋，不能混稱已通過。
+
+後續操作：核對PR #12最終合併SHA及Pages成功、公開站0.6.0與5包hash、工坊測試場及31項素材SHA／解碼。部署證據更新於PR描述；接手不要回舊foundation或覆寫玩家舊草稿。

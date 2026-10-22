@@ -1,0 +1,137 @@
+{
+  "dateUTC": "2026-10-22",
+  "implementationCommit": "33b77f6b84895d471c463035547bec6a6ec90e30",
+  "pullRequest": "https://github.com/sces5504/20261020/pull/12",
+  "coreTests": {
+    "passed": 92,
+    "failed": 0,
+    "seed": 77
+  },
+  "release": {
+    "command": "python3 scripts/project.py check release",
+    "exitCode": 0,
+    "browserGroups": [
+      "test:e2e",
+      "test:playtest",
+      "test:exploration",
+      "test:refinement",
+      "test:polish",
+      "test:content-integration",
+      "test:skills"
+    ],
+    "readinessProfile": "playtest"
+  },
+  "skillBrowser": {
+    "browser": "156.0.8078.4",
+    "build": {
+      "commit": "33b77f6b84895d471c463035547bec6a6ec90e30",
+      "target": "exploration-playtest",
+      "contentVersion": "0.6.0",
+      "contentHash": "ddefa66ffe5a6627d4863ccec509174dfb36ba053d49fc518e96791f495d929c",
+      "packs": [
+        {
+          "id": "m1:core",
+          "version": "0.6.0"
+        },
+        {
+          "id": "beacon:package.frontier",
+          "version": "0.3.0"
+        },
+        {
+          "id": "solar10:package.first-ten",
+          "version": "0.2.0"
+        },
+        {
+          "id": "stellaart:package.stellar10",
+          "version": "0.1.1"
+        },
+        {
+          "id": "stella:package.skills",
+          "version": "0.1.0"
+        }
+      ]
+    },
+    "results": [
+      {
+        "mobile": false,
+        "viewport": "1440x1000@1",
+        "seed": 77,
+        "characters": 16,
+        "library": 226,
+        "core": "0.6.0",
+        "stress": {
+          "enemies": 60,
+          "pattern": "ring",
+          "fps": 60.00400026668446,
+          "frames": 90,
+          "simulatedSeconds": 5.049999999999987,
+          "physicalDevice": false
+        },
+        "passed": [
+          "gate",
+          "levels",
+          "enemy-pattern",
+          "manual-cast",
+          "fixed-step",
+          "pause",
+          "beam",
+          "black-hole",
+          "clone",
+          "reset",
+          "bounds",
+          "draft-editor",
+          "skill-override",
+          "save-isolation",
+          "four-resource-art",
+          "sustained-60-enemy-barrage"
+        ]
+      },
+      {
+        "mobile": true,
+        "viewport": "390x844@2",
+        "seed": 77,
+        "characters": 16,
+        "library": 226,
+        "core": "0.6.0",
+        "stress": {
+          "enemies": 60,
+          "pattern": "ring",
+          "fps": 58.70075658752932,
+          "frames": 90,
+          "simulatedSeconds": 5.083333333333321,
+          "physicalDevice": false
+        },
+        "passed": [
+          "gate",
+          "levels",
+          "enemy-pattern",
+          "manual-cast",
+          "fixed-step",
+          "pause",
+          "beam",
+          "black-hole",
+          "clone",
+          "reset",
+          "bounds",
+          "draft-editor",
+          "skill-override",
+          "save-isolation",
+          "four-resource-art",
+          "sustained-60-enemy-barrage"
+        ]
+      }
+    ],
+    "errors": []
+  },
+  "subsequentChange": "Three art asset display labels renamed to 復仇女神星; content:check passed. No image bytes or runtime code changes. Final merged-tree release is also enforced by Pages workflow.",
+  "commercial": {
+    "passed": false,
+    "evidenceMissing": [
+      "human asset quality acceptance",
+      "independent author expansion rehearsal",
+      "physical Android Chrome",
+      "physical iOS Safari",
+      "physical-device performance baseline"
+    ]
+  }
+}

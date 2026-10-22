@@ -142,6 +142,7 @@ export async function mountStudio(root: HTMLElement) {
     id: "穩定 ID",
     kind: "世界節點類型",
     initiallyCleared: "初始已解放（無首勝獎勵）",
+    resupplyCost: "基地每人整補費用（{}為免費，未設沿用全域）",
     requiresActive: "需要先啟動的星球",
     hiddenUntilUnlocked: "前置未完成時隱藏",
     encounterPolicy: "接敵方式（auto／manual）",

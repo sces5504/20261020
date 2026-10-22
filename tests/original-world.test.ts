@@ -14,6 +14,7 @@ import {
   nodeVisible,
 } from "../src/domain/world";
 import { Combat } from "../src/domain/combat";
+import { patrolPosition } from "../src/domain/navigation";
 import { checkSave } from "../src/platform/storage";
 import { assemble } from "../src/content/loader";
 const source = (name: string) =>
@@ -236,16 +237,20 @@ test("empty Earth starts free, Moon requires activation, resource shortage is at
 });
 test("camps batch existing healing jobs atomically, charging only injured free team members", () => {
   const camp = nodes.find((v) => v.kind === "camp")!;
+  const paid = structuredClone(p);
+  paid.planets.find((v) => v.id === camp.id)!.resupplyCost = {
+    ...p.rules.healCost,
+  };
   let s = at(camp.id);
   s.roster.filter((o) => s.team.includes(o.id)).forEach((o) => (o.hp = 1));
   const old = structuredClone(s);
   s.wallet = {};
   assert.throws(() =>
-    apply(p, s, { type: "resupply", planet: camp.id }, now, "poor"),
+    apply(paid, s, { type: "resupply", planet: camp.id }, now, "poor"),
   );
   assert.equal(s.jobs.length, 0);
   s = old;
-  s = apply(p, s, { type: "resupply", planet: camp.id }, now, "heal");
+  s = apply(paid, s, { type: "resupply", planet: camp.id }, now, "heal");
   assert.equal(s.jobs.length, s.team.length);
   settle(p, s, now + p.rules.healSeconds * 1000 + 1);
   assert(
@@ -253,6 +258,50 @@ test("camps batch existing healing jobs atomically, charging only injured free t
       .filter((o) => s.team.includes(o.id))
       .every((o) => o.hp === stats(p, o).hp),
   );
+});
+test("an empty-wallet defeated expedition can recover at a base and earn all four resources from a foreground patrol", () => {
+  const camp = nodes.find(
+    (v) => v.kind === "camp" && v.region === "original:region.solar",
+  )!;
+  let s = at(camp.id);
+  s.wallet = {};
+  s.roster.forEach((o) => (o.hp = 0));
+  s = apply(p, s, { type: "resupply", planet: camp.id }, now, "free-emergency");
+  settle(p, s, now + p.rules.healSeconds * 1000 + 1);
+  assert(
+    s.roster
+      .filter((o) => s.team.includes(o.id))
+      .every((o) => o.hp === stats(p, o).hp),
+  );
+  assert.equal(s.wallet["m1:gas"] ?? 0, 0);
+  assert.equal(s.wallet["m1:ether"] ?? 0, 0);
+  const patrol = p.regions.find((r) => r.id === s.region)!.patrols[0];
+  assert(patrol);
+  Object.assign(s, patrolPosition(patrol, s.voyageSeconds));
+  s = apply(p, s, { type: "patrol", id: patrol.id }, s.settledAt, "supplies");
+  const combat = new Combat(p, s, patrol.id);
+  combat.autoSkills = true;
+  for (let tick = 0; tick < 1800 && !combat.ended; tick++) combat.step(1 / 60);
+  assert(combat.victory);
+  s = apply(
+    p,
+    s,
+    {
+      type: "result",
+      planet: patrol.id,
+      victory: true,
+      hp: combat.result(),
+      receipt: "patrol-supplies",
+    },
+    s.settledAt,
+    "claim-supplies",
+  );
+  for (const r of p.resources)
+    assert.equal(s.wallet[r.id], patrol.reward[r.id]);
+  const before = structuredClone(s);
+  settle(p, s, s.settledAt + 3600000);
+  assert.deepEqual(s.wallet, before.wallet);
+  assert.deepEqual(s.patrolCooldowns, before.patrolCooldowns);
 });
 test("daily schedule uses KST; cross-midnight results belong to entry date, cannot duplicate or roll back", () => {
   const v = nodes.find((v) => v.id === "original:daily.4-1")!;

@@ -6,7 +6,13 @@ import { AudioMixer } from "../platform/audio";
 import { acquisitionSources } from "../content/queries";
 import type { Game } from "../application/game";
 import type { Pack, Character } from "../content/schema";
-import { stats, costScale, newSave, type Save } from "../domain/model";
+import {
+  stats,
+  costScale,
+  newSave,
+  canAfford,
+  type Save,
+} from "../domain/model";
 import { production, questReady, summonCandidates } from "../domain/economy";
 import {
   nodeUnlocked,
@@ -106,6 +112,17 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       !!g.combat,
       v.schedule ? nodeAvailability(s, v, Date.now()) : null,
       Math.hypot(g.x - v.x, g.y - v.y) <= v.engageRadius,
+      v.kind === "camp"
+        ? s.roster
+            .filter((o) => s.team.includes(o.id))
+            .map((o) => [
+              o.id,
+              o.hp,
+              o.level,
+              o.resonance,
+              s.jobs.some((j) => j.owner === o.id),
+            ])
+        : null,
     ]);
     if (key === planetKey) return;
     planetKey = key;
@@ -116,16 +133,31 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     if (v.kind !== "planet") {
       const availability = nodeAvailability(s, v, Date.now());
       const nearby = Math.hypot(g.x - v.x, g.y - v.y) <= v.engageRadius;
+      const injured = s.roster.filter(
+        (o) =>
+          s.team.includes(o.id) &&
+          o.hp < stats(p, o).hp &&
+          !s.jobs.some((j) => j.owner === o.id),
+      ).length;
+      const serviceCost = Object.fromEntries(
+        Object.entries(v.resupplyCost ?? p.rules.healCost).map(([id, n]) => [
+          id,
+          n * injured,
+        ]),
+      );
+      const freeService = !Object.values(
+        v.resupplyCost ?? p.rules.healCost,
+      ).some((n) => n > 0);
       const text =
         (v.kind === "camp"
-          ? `在此可整補隊伍，需${p.rules.healSeconds}秒；不生產資源、不能建設。`
+          ? `${freeService ? "免費停靠整補" : "停靠整補"}，需${p.rules.healSeconds}秒；不生產資源、不能建設。`
           : v.objective === "damage"
             ? `${v.timeLimitSeconds}秒內累積傷害，依實際傷害比例結算；管理面板與離線不推進挑戰。`
             : "清除單波守軍即可完成據點；不提供星球產能。") +
         " " +
         threat;
       $("#planet-card").innerHTML =
-        `${button("✕", "intel-close", "", "intel-dismiss")}<div class="section-label">${esc(nodeKindNames[v.kind])}</div>${entityImage(p, v, "intel-planet-art")}<h2>${esc(v.name)}</h2><p class="intel-guidance">${locked ? "請先完成前置據點／星球啟動。" : esc(text)}</p><div class="tags"><span>${cleared && !v.schedule ? "已完成" : "可探索"}</span><span>${esc(availability.reason || nodeKindNames[v.kind])}</span></div><div class="costs">${amounts(p, v.reward)}</div>${v.enemies.length ? button("敵群情報", "panel", "enemy-intel", "text-button") : ""}${button("導航接近 →", "navigate", v.id, "primary", locked || !!g.combat)}${v.kind === "camp" ? button("隊伍整補", "resupply", v.id, "primary", locked || !nearby || !!g.combat) : button(cleared && !v.schedule ? "再次挑戰（無首勝獎勵）" : "開始挑戰", "battle", v.id, "primary", locked || !nearby || !availability.open || !!g.combat)}`;
+        `${button("✕", "intel-close", "", "intel-dismiss")}<div class="section-label">${esc(nodeKindNames[v.kind])}</div>${entityImage(p, v, "intel-planet-art")}<h2>${esc(v.name)}</h2><p class="intel-guidance">${locked ? "請先完成前置據點／星球啟動。" : esc(text)}</p><div class="tags"><span>${cleared && !v.schedule ? "已完成" : "可探索"}</span><span>${esc(availability.reason || nodeKindNames[v.kind])}</span></div><div class="costs">${amounts(p, v.kind === "camp" ? serviceCost : v.reward)}</div>${v.enemies.length ? button("敵群情報", "panel", "enemy-intel", "text-button") : ""}${button("導航接近 →", "navigate", v.id, "primary", locked || !!g.combat)}${v.kind === "camp" ? button("隊伍整補", "resupply", v.id, "primary", locked || !nearby || !!g.combat || !injured || !canAfford(s, serviceCost)) : button(cleared && !v.schedule ? "再次挑戰（無首勝獎勵）" : "開始挑戰", "battle", v.id, "primary", locked || !nearby || !availability.open || !!g.combat)}`;
       return;
     }
     const missing = Object.entries(v.activationCost)

@@ -3450,7 +3450,8 @@
     "regions": 48,
     "nodes": 754,
     "planetCount": 85,
-    "remainingReplayWaves": 153
+    "remainingReplayWaves": 153,
+    "supplyPatrols": 13
   },
   "adaptation": {
     "coordinateScale": 10,
@@ -3458,6 +3459,8 @@
     "firstWinPerResource": "18 + 2*level (minimum 12)",
     "dailyRewardPerResource": 1200,
     "sourceGateReturnPolicy": "explicit safe return to lower tier",
-    "sourceEventVM": "not recovered; combat replay entry/layout reconstructed"
+    "sourceEventVM": "not recovered; combat replay entry/layout reconstructed",
+    "campResupply": "free existing 20-second jobs; recovery adaptation, not recovered native price",
+    "supplyPatrols": "13 normal regions; 90 active-second respawn; each resource 12 + floor(level/2); no offline combat"
   }
 }

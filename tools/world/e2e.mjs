@@ -135,8 +135,12 @@ try {
       (v) => v.kind === "camp" && v.region === "original:region.virgo",
     );
     f = fixture(camp.id);
-    f.s.roster.forEach((o) => (o.hp = 1));
+    f.s.roster.forEach((o) => (o.hp = 0));
+    f.s.wallet = {};
     await install(page, f.p, f.s);
+    assert(
+      (await page.locator("#planet-card").innerText()).includes("免費停靠整補"),
+    );
     await page.locator('[data-action="resupply"]').click();
     await waitSave(page, (s) => s.jobs.some((j) => j.kind === "heal"));
     await page.screenshot({ path: `.artifacts/world/${name}-camp.png` });

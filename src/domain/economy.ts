@@ -287,7 +287,7 @@ export function apply(
         o.id,
         o.definition,
         p.rules.healSeconds,
-        p.rules.healCost,
+        v.resupplyCost ?? p.rules.healCost,
         "",
         `-${o.id}`,
       );

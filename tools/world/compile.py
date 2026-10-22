@@ -42,19 +42,21 @@ def node(id,name,r,x,y,w=None,kind='stronghold',requires=None,**extra):
  v=common(id,name,('單波自動接敵；首次清除發放四資源，重演不再領取。' if w else '可停靠整補；沿用既有四資源與整補工作。'),f"Wave[{w['_row']}] {w['f00']}" if w else 'source empty spawn; camp service adaptation')
  v.update(region=r,x=x,y=y,radius=58,color='#e9ae75',sprite='original:asset.node-'+('camp' if kind=='camp' else 'gate' if kind=='gate' else 'event' if kind=='event' else 'stronghold'),kind=kind,requires=requires or [],enemies=groups(w) if w else [],initiallyCleared=not bool(w),reward=money([max(12,round(18+max(1,w['f02'])*2))]*4) if w else {},activationCost={},production={},dropCharacters=[],engageRadius=300,guardRadius=160,leashRadius=1400,leashWarningRadius=1200)
  v.update(extra)
+ if kind=='camp':v.setdefault('resupplyCost',{})
  if kind!='planet':v['color']='#79d7d3' if kind=='camp' else '#ee8e7e'
  nodes.append(v)
  if w:coverage.setdefault(str(w['_row']),[]).append(id)
  return v
 def make_region(id,name,g,width=10000,height=10000):
- v=common(id,name,'原作座標按 10 世界單位／來源單位換算，Y 軸反向；星域航路選單躍遷。',f"Galaxy[{g}]")
+ v=common(id,name,'探索星球與敵方據點；臨時基地可停靠整補，巡邏遭遇可重複取得補給。',f"Galaxy[{g}]; coordinate scale10 / inverted Y adapted, not collision from art")
  v.update(width=width,height=height,startX=5600,startY=5600,background='original:asset.background-'+keys[g-1],sprite='original:asset.planet-'+str(next((p['_row'] for p in planets if p['f15']==g),1)),discoveryRadius=650,routes=[],patrols=[]);regions.append(v);return v
 forts={}
 for g in range(1,15):
  for hard in ([False,True] if g<=7 else [False]):
   r=make_region(region(g,hard),names[g-1]+(' · 高難' if hard else ''),g)
+  if hard:r['description']='敵群強化的高難航區，可沿回程航路返回一般星域整補。'
   if g==1 and not hard:r.update(startX=5970,startY=5530,campaignStart=True)
-  if g==14:r['description']='來源有 Galaxy 雙魚座定義，未收錄星球或遭遇；此處為可返回的空星域，不臆造關卡。'
+  if g==14:r['description']='尚未偵測到星球與敵群的靜默空域，可沿航路返回牡羊座。'
   forts[(g,hard)]=[]
   for s in spawns:
    if s['f04']!=g or bool(s['f02'])!=hard:continue
@@ -74,6 +76,25 @@ for p in planets:
  # Only existing registered playable characters are eligible; source PID.f14 is NOT guessed as CID.
  drop={'Sun':'solar10:character.sun','Jupiter':'solar10:character.jupiter','Saturn':'solar10:character.saturn','Neptune':'solar10:character.neptune','Pluto':'solar10:character.pluto','Nemesis':'solar10:character.nemesis','Ganymede':'solar10:character.ganymede','Io':'solar10:character.io','Titania':'solar10:character.titania'}
  if p['f00'] in drop:n['dropCharacters']=[drop[p['f00']]];n['description']+=' 首勝角色為本作收集流程適配。'
+# Repeatable supply encounters are an explicit exploration adaptation, not
+# fabricated source Wave rows. Keep bases safely outside their detection loop.
+for g in range(1,14):
+ r=next(r for r in regions if r['id']==region(g));near=[v for v in nodes if v['region']==r['id']]
+ options=[]
+ for radius in [1200,1800,2400,3000]:
+  for angle in [math.pi/4,3*math.pi/4,5*math.pi/4,7*math.pi/4,0,math.pi/2,math.pi,3*math.pi/2]:
+   x=round(max(500,min(r['width']-500,r['startX']+math.cos(angle)*radius)));y=round(max(500,min(r['height']-500,r['startY']+math.sin(angle)*radius)))
+   gap=min(math.hypot(x-v['x'],y-v['y'])-(900 if v['kind']=='camp' else 650) for v in near)
+   options.append((gap,x,y))
+   if gap>=0:break
+  if options[-1][0]>=0:break
+ _,x,y=next((v for v in options if v[0]>=0),max(options))
+ first=next(waves[s['f10']] for s in spawns if s['f04']==g and s['f02']==0 and s['f10'] in waves and waves[s['f10']]['groups'])
+ members=[v for v in groups(first) if not next(e for e in enemies if e['id']==v['enemy'])['boss']][:2]
+ if not members:members=groups(first)[:1]
+ for member in members:member.update(count=1,level=max(1,member['level']-2))
+ level=max(v['level'] for v in members)
+ r['patrols']=[dict(id='original:patrol.'+keys[g-1],x=x,y=y,enemies=members,reward=money([12+level//2]*4),detectionRadius=220,patrolRadius=240,patrolSpeed=38,phase=round(g*.35,2),respawnSeconds=90)]
 by_id={r['id']:r for r in regions}
 # Native directed gates; always supply explicit safe return, with no completion lock on travel to an earlier tier.
 for gate in read('gates'):
@@ -101,16 +122,16 @@ families={}
 for w in remaining:
  key=re.sub(r'(_\d.*)$','',w['f00'])
  families.setdefault(key,[]).append(w)
-hub=make_region('original:region.archive','事件航跡',1,width=3000,height=2200);hub.update(startX=1500,startY=1100,description='主線、活動、星門與戰艦遭遇入口。保留來源敵群與等級；事件觸發及地圖排列為重建，不代稱完整原作事件腳本。')
+hub=make_region('original:region.archive','事件航跡',1,width=3000,height=2200);hub.update(startX=1500,startY=1100,description='主線、活動、星門與戰艦遭遇入口；選擇航跡展開作戰，入口可返回太陽系。')
 by_id[region(1)]['routes'].append(dict(to=hub['id'],label='主線／活動／每日 Boss',requires=[]));hub['routes'].append(dict(to=region(1),label='返回太陽系',requires=[]))
 for index,(family,ws) in enumerate(families.items()):
  rid='original:region.replay-'+str(index+1);r=make_region(rid,family+' · 遭遇航跡',min(14,max(1,1+(max(w['f02'] for w in ws)-1)//10)),width=max(3000,1600*min(5,len(ws))+800),height=max(2200,1600*math.ceil(len(ws)/5)+800));r.update(startX=400,startY=400)
- r['description']='來源敵群與等級；串接次序與矩陣座標為本作重建，可回入口。';r['routes']=[dict(to=hub['id'],label='返回事件入口',requires=[])]
+ r['description']='完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。';r['routes']=[dict(to=hub['id'],label='返回事件入口',requires=[])]
  hub['routes'].append(dict(to=rid,label=family,requires=[]))
  prev=[]
  for j,w in enumerate(ws):
   kind='gate' if 'Gate' in w['f00'] else 'event';n=node('original:wave.'+str(w['_row']),w['f00'],rid,1000+(j%5)*1600,1000+(j//5)*1600,w,kind,requires=prev,encounterPolicy='manual');prev=[n['id']]
-daily=make_region('original:region.daily','每日母艦',1,width=6000,height=5000);daily.update(startX=3000,startY=4500,description='原作七日排程與四種母艦；每種母艦獨立限時傷害挑戰，180 秒與每日一次結算為本作流程適配。')
+daily=make_region('original:region.daily','每日母艦',1,width=6000,height=5000);daily.update(startX=3000,startY=4500,description='選擇當日母艦，180秒內累積傷害爭取補給；四個目標共用每日三次進場額度。')
 daily['routes']=[dict(to=hub['id'],label='返回事件入口',requires=[])];hub['routes'].append(dict(to=daily['id'],label='每日 Boss',requires=[]))
 for day in read('daily-boss'):
  for j in range(1,5):
@@ -119,5 +140,5 @@ for day in read('daily-boss'):
 assets=json.loads((ROOT/'art/world/original-world/assets.json').read_text()) if (ROOT/'art/world/original-world/assets.json').exists() else []
 pack=dict(schemaVersion=1,id='original:package.world',version='0.1.0',requires=[dict(id='m1:core',version='0.7.0'),dict(id='stella:package.skills',version='0.1.0'),dict(id='solar10:package.first-ten',version='0.2.0')],definitions=dict(enemies=enemies,skills=skills,regions=regions,planets=nodes,assets=assets))
 write(ROOT/'content/extensions/original-world.json',pack)
-write(SRC/'coverage.json',dict(runtimeWaves=coverage,excludedWaves=excluded,counts=dict(enemies=len(enemies),regions=len(regions),nodes=len(nodes),planetCount=len(planets),remainingReplayWaves=len(remaining)),adaptation=dict(coordinateScale=10,planetProductionDivisor=600,firstWinPerResource='18 + 2*level (minimum 12)',dailyRewardPerResource=1200,sourceGateReturnPolicy='explicit safe return to lower tier',sourceEventVM='not recovered; combat replay entry/layout reconstructed')))
+write(SRC/'coverage.json',dict(runtimeWaves=coverage,excludedWaves=excluded,counts=dict(enemies=len(enemies),regions=len(regions),nodes=len(nodes),planetCount=len(planets),remainingReplayWaves=len(remaining),supplyPatrols=sum(len(r.get('patrols',[])) for r in regions)),adaptation=dict(coordinateScale=10,planetProductionDivisor=600,firstWinPerResource='18 + 2*level (minimum 12)',dailyRewardPerResource=1200,sourceGateReturnPolicy='explicit safe return to lower tier',sourceEventVM='not recovered; combat replay entry/layout reconstructed',campResupply='free existing 20-second jobs; recovery adaptation, not recovered native price',supplyPatrols='13 normal regions; 90 active-second respawn; each resource 12 + floor(level/2); no offline combat')))
 print(pack['id'],len(enemies),'enemies',len(regions),'regions',len(nodes),'nodes',len(coverage),'wave mappings',len(excluded),'excluded')

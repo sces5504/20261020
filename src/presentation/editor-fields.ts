@@ -7,6 +7,7 @@ const moneyFields = new Set([
   "activationCost",
   "production",
   "healCost",
+  "resupplyCost",
   "levelCost",
 ]);
 export function complexField(

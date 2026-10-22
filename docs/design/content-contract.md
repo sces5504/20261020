@@ -371,3 +371,5 @@ CharacterDef基礎rarity與角色實例level／tier分開；數值表單改基�
 - 本輪不改0.6既有可攜ZIP預算（64MiB壓縮／128MiB解壓／30MiB單檔），候選美術可試玩，commercial原門檻保留。
 
 完整世界將rules.teamSize由M1三人上限升至6，沿用原有編隊／技能鍵1～6／航跡功能，不新增另一套隊伍模型。新存檔仍只取得三位起始少女；後期收集後可編成六人，來源Global CubePartySlot4/5/6與適配界線見world-constants.json。
+
+基地可選 `resupplyCost`（每名受傷隊員四資源費用）；省略沿用rules.healCost，空物件為免費，非camp節點不得設定。命令仍原子驗全部費用與工作可用性；完成沿用既有20秒heal工作。本原作包基地免費與13區補給巡邏是明示恢復適配，見完整世界契約。

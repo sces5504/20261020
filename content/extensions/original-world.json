@@ -2607,10 +2607,10 @@
       {
         "id": "original:region.solar",
         "name": "太陽系",
-        "description": "原作座標按 10 世界單位／來源單位換算，Y 軸反向；星域航路選單躍遷。",
+        "description": "探索星球與敵方據點；臨時基地可停靠整補，巡邏遭遇可重複取得補給。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[1]",
+        "sourceRef": "Galaxy[1]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 10000,
         "height": 10000,
         "startX": 5970,
@@ -2777,16 +2777,40 @@
             "requires": []
           }
         ],
-        "patrols": [],
+        "patrols": [
+          {
+            "id": "original:patrol.solar",
+            "x": 7770,
+            "y": 5530,
+            "enemies": [
+              {
+                "enemy": "original:enemy.148",
+                "count": 1,
+                "level": 1
+              }
+            ],
+            "reward": {
+              "m1:crystal": 12,
+              "m1:gas": 12,
+              "m1:metal": 12,
+              "m1:ether": 12
+            },
+            "detectionRadius": 220,
+            "patrolRadius": 240,
+            "patrolSpeed": 38,
+            "phase": 0.35,
+            "respawnSeconds": 90
+          }
+        ],
         "campaignStart": true
       },
       {
         "id": "original:region.solar-hard",
         "name": "太陽系 · 高難",
-        "description": "原作座標按 10 世界單位／來源單位換算，Y 軸反向；星域航路選單躍遷。",
+        "description": "敵群強化的高難航區，可沿回程航路返回一般星域整補。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[1]",
+        "sourceRef": "Galaxy[1]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 10000,
         "height": 10000,
         "startX": 5600,
@@ -2806,10 +2830,10 @@
       {
         "id": "original:region.virgo",
         "name": "處女座",
-        "description": "原作座標按 10 世界單位／來源單位換算，Y 軸反向；星域航路選單躍遷。",
+        "description": "探索星球與敵方據點；臨時基地可停靠整補，巡邏遭遇可重複取得補給。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[2]",
+        "sourceRef": "Galaxy[2]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 10000,
         "height": 10000,
         "startX": 5600,
@@ -2908,15 +2932,44 @@
             ]
           }
         ],
-        "patrols": []
+        "patrols": [
+          {
+            "id": "original:patrol.virgo",
+            "x": 5600,
+            "y": 7400,
+            "enemies": [
+              {
+                "enemy": "original:enemy.148",
+                "count": 1,
+                "level": 9
+              },
+              {
+                "enemy": "original:enemy.149",
+                "count": 1,
+                "level": 9
+              }
+            ],
+            "reward": {
+              "m1:crystal": 16,
+              "m1:gas": 16,
+              "m1:metal": 16,
+              "m1:ether": 16
+            },
+            "detectionRadius": 220,
+            "patrolRadius": 240,
+            "patrolSpeed": 38,
+            "phase": 0.7,
+            "respawnSeconds": 90
+          }
+        ]
       },
       {
         "id": "original:region.virgo-hard",
         "name": "處女座 · 高難",
-        "description": "原作座標按 10 世界單位／來源單位換算，Y 軸反向；星域航路選單躍遷。",
+        "description": "敵群強化的高難航區，可沿回程航路返回一般星域整補。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[2]",
+        "sourceRef": "Galaxy[2]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 10000,
         "height": 10000,
         "startX": 5600,
@@ -2936,10 +2989,10 @@
       {
         "id": "original:region.leo",
         "name": "獅子座",
-        "description": "原作座標按 10 世界單位／來源單位換算，Y 軸反向；星域航路選單躍遷。",
+        "description": "探索星球與敵方據點；臨時基地可停靠整補，巡邏遭遇可重複取得補給。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[3]",
+        "sourceRef": "Galaxy[3]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 10000,
         "height": 10000,
         "startX": 5600,
@@ -3101,15 +3154,44 @@
             ]
           }
         ],
-        "patrols": []
+        "patrols": [
+          {
+            "id": "original:patrol.leo",
+            "x": 7297,
+            "y": 3903,
+            "enemies": [
+              {
+                "enemy": "original:enemy.150",
+                "count": 1,
+                "level": 19
+              },
+              {
+                "enemy": "original:enemy.159",
+                "count": 1,
+                "level": 19
+              }
+            ],
+            "reward": {
+              "m1:crystal": 21,
+              "m1:gas": 21,
+              "m1:metal": 21,
+              "m1:ether": 21
+            },
+            "detectionRadius": 220,
+            "patrolRadius": 240,
+            "patrolSpeed": 38,
+            "phase": 1.05,
+            "respawnSeconds": 90
+          }
+        ]
       },
       {
         "id": "original:region.leo-hard",
         "name": "獅子座 · 高難",
-        "description": "原作座標按 10 世界單位／來源單位換算，Y 軸反向；星域航路選單躍遷。",
+        "description": "敵群強化的高難航區，可沿回程航路返回一般星域整補。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[3]",
+        "sourceRef": "Galaxy[3]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 10000,
         "height": 10000,
         "startX": 5600,
@@ -3129,10 +3211,10 @@
       {
         "id": "original:region.southern",
         "name": "南天",
-        "description": "原作座標按 10 世界單位／來源單位換算，Y 軸反向；星域航路選單躍遷。",
+        "description": "探索星球與敵方據點；臨時基地可停靠整補，巡邏遭遇可重複取得補給。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[4]",
+        "sourceRef": "Galaxy[4]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 10000,
         "height": 10000,
         "startX": 5600,
@@ -3236,15 +3318,44 @@
             ]
           }
         ],
-        "patrols": []
+        "patrols": [
+          {
+            "id": "original:patrol.southern",
+            "x": 8000,
+            "y": 5600,
+            "enemies": [
+              {
+                "enemy": "original:enemy.150",
+                "count": 1,
+                "level": 29
+              },
+              {
+                "enemy": "original:enemy.149",
+                "count": 1,
+                "level": 29
+              }
+            ],
+            "reward": {
+              "m1:crystal": 26,
+              "m1:gas": 26,
+              "m1:metal": 26,
+              "m1:ether": 26
+            },
+            "detectionRadius": 220,
+            "patrolRadius": 240,
+            "patrolSpeed": 38,
+            "phase": 1.4,
+            "respawnSeconds": 90
+          }
+        ]
       },
       {
         "id": "original:region.southern-hard",
         "name": "南天 · 高難",
-        "description": "原作座標按 10 世界單位／來源單位換算，Y 軸反向；星域航路選單躍遷。",
+        "description": "敵群強化的高難航區，可沿回程航路返回一般星域整補。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[4]",
+        "sourceRef": "Galaxy[4]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 10000,
         "height": 10000,
         "startX": 5600,
@@ -3264,10 +3375,10 @@
       {
         "id": "original:region.canis",
         "name": "大犬座",
-        "description": "原作座標按 10 世界單位／來源單位換算，Y 軸反向；星域航路選單躍遷。",
+        "description": "探索星球與敵方據點；臨時基地可停靠整補，巡邏遭遇可重複取得補給。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[5]",
+        "sourceRef": "Galaxy[5]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 10000,
         "height": 10000,
         "startX": 5600,
@@ -3376,15 +3487,44 @@
             ]
           }
         ],
-        "patrols": []
+        "patrols": [
+          {
+            "id": "original:patrol.canis",
+            "x": 5600,
+            "y": 7400,
+            "enemies": [
+              {
+                "enemy": "original:enemy.150",
+                "count": 1,
+                "level": 39
+              },
+              {
+                "enemy": "original:enemy.152",
+                "count": 1,
+                "level": 39
+              }
+            ],
+            "reward": {
+              "m1:crystal": 31,
+              "m1:gas": 31,
+              "m1:metal": 31,
+              "m1:ether": 31
+            },
+            "detectionRadius": 220,
+            "patrolRadius": 240,
+            "patrolSpeed": 38,
+            "phase": 1.75,
+            "respawnSeconds": 90
+          }
+        ]
       },
       {
         "id": "original:region.canis-hard",
         "name": "大犬座 · 高難",
-        "description": "原作座標按 10 世界單位／來源單位換算，Y 軸反向；星域航路選單躍遷。",
+        "description": "敵群強化的高難航區，可沿回程航路返回一般星域整補。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[5]",
+        "sourceRef": "Galaxy[5]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 10000,
         "height": 10000,
         "startX": 5600,
@@ -3404,10 +3544,10 @@
       {
         "id": "original:region.northern",
         "name": "北天",
-        "description": "原作座標按 10 世界單位／來源單位換算，Y 軸反向；星域航路選單躍遷。",
+        "description": "探索星球與敵方據點；臨時基地可停靠整補，巡邏遭遇可重複取得補給。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[6]",
+        "sourceRef": "Galaxy[6]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 10000,
         "height": 10000,
         "startX": 5600,
@@ -3490,15 +3630,44 @@
             ]
           }
         ],
-        "patrols": []
+        "patrols": [
+          {
+            "id": "original:patrol.northern",
+            "x": 7297,
+            "y": 7297,
+            "enemies": [
+              {
+                "enemy": "original:enemy.150",
+                "count": 1,
+                "level": 49
+              },
+              {
+                "enemy": "original:enemy.149",
+                "count": 1,
+                "level": 49
+              }
+            ],
+            "reward": {
+              "m1:crystal": 36,
+              "m1:gas": 36,
+              "m1:metal": 36,
+              "m1:ether": 36
+            },
+            "detectionRadius": 220,
+            "patrolRadius": 240,
+            "patrolSpeed": 38,
+            "phase": 2.1,
+            "respawnSeconds": 90
+          }
+        ]
       },
       {
         "id": "original:region.northern-hard",
         "name": "北天 · 高難",
-        "description": "原作座標按 10 世界單位／來源單位換算，Y 軸反向；星域航路選單躍遷。",
+        "description": "敵群強化的高難航區，可沿回程航路返回一般星域整補。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[6]",
+        "sourceRef": "Galaxy[6]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 10000,
         "height": 10000,
         "startX": 5600,
@@ -3518,10 +3687,10 @@
       {
         "id": "original:region.cygnus",
         "name": "天鵝座",
-        "description": "原作座標按 10 世界單位／來源單位換算，Y 軸反向；星域航路選單躍遷。",
+        "description": "探索星球與敵方據點；臨時基地可停靠整補，巡邏遭遇可重複取得補給。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[7]",
+        "sourceRef": "Galaxy[7]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 10000,
         "height": 10000,
         "startX": 5600,
@@ -3567,15 +3736,44 @@
             ]
           }
         ],
-        "patrols": []
+        "patrols": [
+          {
+            "id": "original:patrol.cygnus",
+            "x": 6873,
+            "y": 6873,
+            "enemies": [
+              {
+                "enemy": "original:enemy.150",
+                "count": 1,
+                "level": 59
+              },
+              {
+                "enemy": "original:enemy.149",
+                "count": 1,
+                "level": 59
+              }
+            ],
+            "reward": {
+              "m1:crystal": 41,
+              "m1:gas": 41,
+              "m1:metal": 41,
+              "m1:ether": 41
+            },
+            "detectionRadius": 220,
+            "patrolRadius": 240,
+            "patrolSpeed": 38,
+            "phase": 2.45,
+            "respawnSeconds": 90
+          }
+        ]
       },
       {
         "id": "original:region.cygnus-hard",
         "name": "天鵝座 · 高難",
-        "description": "原作座標按 10 世界單位／來源單位換算，Y 軸反向；星域航路選單躍遷。",
+        "description": "敵群強化的高難航區，可沿回程航路返回一般星域整補。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[7]",
+        "sourceRef": "Galaxy[7]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 10000,
         "height": 10000,
         "startX": 5600,
@@ -3595,10 +3793,10 @@
       {
         "id": "original:region.gemini",
         "name": "雙子座",
-        "description": "原作座標按 10 世界單位／來源單位換算，Y 軸反向；星域航路選單躍遷。",
+        "description": "探索星球與敵方據點；臨時基地可停靠整補，巡邏遭遇可重複取得補給。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[8]",
+        "sourceRef": "Galaxy[8]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 10000,
         "height": 10000,
         "startX": 5600,
@@ -3639,15 +3837,44 @@
             ]
           }
         ],
-        "patrols": []
+        "patrols": [
+          {
+            "id": "original:patrol.gemini",
+            "x": 5600,
+            "y": 7400,
+            "enemies": [
+              {
+                "enemy": "original:enemy.163",
+                "count": 1,
+                "level": 69
+              },
+              {
+                "enemy": "original:enemy.150",
+                "count": 1,
+                "level": 69
+              }
+            ],
+            "reward": {
+              "m1:crystal": 46,
+              "m1:gas": 46,
+              "m1:metal": 46,
+              "m1:ether": 46
+            },
+            "detectionRadius": 220,
+            "patrolRadius": 240,
+            "patrolSpeed": 38,
+            "phase": 2.8,
+            "respawnSeconds": 90
+          }
+        ]
       },
       {
         "id": "original:region.taurus",
         "name": "金牛座",
-        "description": "原作座標按 10 世界單位／來源單位換算，Y 軸反向；星域航路選單躍遷。",
+        "description": "探索星球與敵方據點；臨時基地可停靠整補，巡邏遭遇可重複取得補給。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[9]",
+        "sourceRef": "Galaxy[9]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 10000,
         "height": 10000,
         "startX": 5600,
@@ -3698,15 +3925,44 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [
+          {
+            "id": "original:patrol.taurus",
+            "x": 8600,
+            "y": 5600,
+            "enemies": [
+              {
+                "enemy": "original:enemy.150",
+                "count": 1,
+                "level": 79
+              },
+              {
+                "enemy": "original:enemy.153",
+                "count": 1,
+                "level": 79
+              }
+            ],
+            "reward": {
+              "m1:crystal": 51,
+              "m1:gas": 51,
+              "m1:metal": 51,
+              "m1:ether": 51
+            },
+            "detectionRadius": 220,
+            "patrolRadius": 240,
+            "patrolSpeed": 38,
+            "phase": 3.15,
+            "respawnSeconds": 90
+          }
+        ]
       },
       {
         "id": "original:region.scorpio",
         "name": "天蠍座",
-        "description": "原作座標按 10 世界單位／來源單位換算，Y 軸反向；星域航路選單躍遷。",
+        "description": "探索星球與敵方據點；臨時基地可停靠整補，巡邏遭遇可重複取得補給。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[10]",
+        "sourceRef": "Galaxy[10]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 10000,
         "height": 10000,
         "startX": 5600,
@@ -3726,15 +3982,44 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [
+          {
+            "id": "original:patrol.scorpio",
+            "x": 6449,
+            "y": 6449,
+            "enemies": [
+              {
+                "enemy": "original:enemy.172",
+                "count": 1,
+                "level": 88
+              },
+              {
+                "enemy": "original:enemy.163",
+                "count": 1,
+                "level": 88
+              }
+            ],
+            "reward": {
+              "m1:crystal": 56,
+              "m1:gas": 56,
+              "m1:metal": 56,
+              "m1:ether": 56
+            },
+            "detectionRadius": 220,
+            "patrolRadius": 240,
+            "patrolSpeed": 38,
+            "phase": 3.5,
+            "respawnSeconds": 90
+          }
+        ]
       },
       {
         "id": "original:region.sagittarius",
         "name": "人馬座",
-        "description": "原作座標按 10 世界單位／來源單位換算，Y 軸反向；星域航路選單躍遷。",
+        "description": "探索星球與敵方據點；臨時基地可停靠整補，巡邏遭遇可重複取得補給。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[11]",
+        "sourceRef": "Galaxy[11]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 10000,
         "height": 10000,
         "startX": 5600,
@@ -3759,15 +4044,44 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [
+          {
+            "id": "original:patrol.sagittarius",
+            "x": 8000,
+            "y": 5600,
+            "enemies": [
+              {
+                "enemy": "original:enemy.153",
+                "count": 1,
+                "level": 95
+              },
+              {
+                "enemy": "original:enemy.160",
+                "count": 1,
+                "level": 95
+              }
+            ],
+            "reward": {
+              "m1:crystal": 59,
+              "m1:gas": 59,
+              "m1:metal": 59,
+              "m1:ether": 59
+            },
+            "detectionRadius": 220,
+            "patrolRadius": 240,
+            "patrolSpeed": 38,
+            "phase": 3.85,
+            "respawnSeconds": 90
+          }
+        ]
       },
       {
         "id": "original:region.cancer",
         "name": "巨蟹座",
-        "description": "原作座標按 10 世界單位／來源單位換算，Y 軸反向；星域航路選單躍遷。",
+        "description": "探索星球與敵方據點；臨時基地可停靠整補，巡邏遭遇可重複取得補給。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[12]",
+        "sourceRef": "Galaxy[12]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 10000,
         "height": 10000,
         "startX": 5600,
@@ -3823,15 +4137,44 @@
             ]
           }
         ],
-        "patrols": []
+        "patrols": [
+          {
+            "id": "original:patrol.cancer",
+            "x": 4751,
+            "y": 6449,
+            "enemies": [
+              {
+                "enemy": "original:enemy.164",
+                "count": 1,
+                "level": 102
+              },
+              {
+                "enemy": "original:enemy.168",
+                "count": 1,
+                "level": 102
+              }
+            ],
+            "reward": {
+              "m1:crystal": 63,
+              "m1:gas": 63,
+              "m1:metal": 63,
+              "m1:ether": 63
+            },
+            "detectionRadius": 220,
+            "patrolRadius": 240,
+            "patrolSpeed": 38,
+            "phase": 4.2,
+            "respawnSeconds": 90
+          }
+        ]
       },
       {
         "id": "original:region.aries",
         "name": "牡羊座",
-        "description": "原作座標按 10 世界單位／來源單位換算，Y 軸反向；星域航路選單躍遷。",
+        "description": "探索星球與敵方據點；臨時基地可停靠整補，巡邏遭遇可重複取得補給。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[13]",
+        "sourceRef": "Galaxy[13]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 10000,
         "height": 10000,
         "startX": 5600,
@@ -3887,15 +4230,44 @@
             ]
           }
         ],
-        "patrols": []
+        "patrols": [
+          {
+            "id": "original:patrol.aries",
+            "x": 6800,
+            "y": 5600,
+            "enemies": [
+              {
+                "enemy": "original:enemy.294",
+                "count": 1,
+                "level": 113
+              },
+              {
+                "enemy": "original:enemy.168",
+                "count": 1,
+                "level": 113
+              }
+            ],
+            "reward": {
+              "m1:crystal": 68,
+              "m1:gas": 68,
+              "m1:metal": 68,
+              "m1:ether": 68
+            },
+            "detectionRadius": 220,
+            "patrolRadius": 240,
+            "patrolSpeed": 38,
+            "phase": 4.55,
+            "respawnSeconds": 90
+          }
+        ]
       },
       {
         "id": "original:region.pisces",
         "name": "雙魚座",
-        "description": "來源有 Galaxy 雙魚座定義，未收錄星球或遭遇；此處為可返回的空星域，不臆造關卡。",
+        "description": "尚未偵測到星球與敵群的靜默空域，可沿航路返回牡羊座。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[14]",
+        "sourceRef": "Galaxy[14]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 10000,
         "height": 10000,
         "startX": 5600,
@@ -3915,10 +4287,10 @@
       {
         "id": "original:region.archive",
         "name": "事件航跡",
-        "description": "主線、活動、星門與戰艦遭遇入口。保留來源敵群與等級；事件觸發及地圖排列為重建，不代稱完整原作事件腳本。",
+        "description": "主線、活動、星門與戰艦遭遇入口；選擇航跡展開作戰，入口可返回太陽系。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[1]",
+        "sourceRef": "Galaxy[1]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 3000,
         "height": 2200,
         "startX": 1500,
@@ -4068,10 +4440,10 @@
       {
         "id": "original:region.replay-1",
         "name": "Event1 · 遭遇航跡",
-        "description": "來源敵群與等級；串接次序與矩陣座標為本作重建，可回入口。",
+        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[1]",
+        "sourceRef": "Galaxy[1]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 5600,
         "height": 2400,
         "startX": 400,
@@ -4091,10 +4463,10 @@
       {
         "id": "original:region.replay-2",
         "name": "Event2 · 遭遇航跡",
-        "description": "來源敵群與等級；串接次序與矩陣座標為本作重建，可回入口。",
+        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[2]",
+        "sourceRef": "Galaxy[2]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 5600,
         "height": 2400,
         "startX": 400,
@@ -4114,10 +4486,10 @@
       {
         "id": "original:region.replay-3",
         "name": "Event3 · 遭遇航跡",
-        "description": "來源敵群與等級；串接次序與矩陣座標為本作重建，可回入口。",
+        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[3]",
+        "sourceRef": "Galaxy[3]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 5600,
         "height": 2400,
         "startX": 400,
@@ -4137,10 +4509,10 @@
       {
         "id": "original:region.replay-4",
         "name": "Event4 · 遭遇航跡",
-        "description": "來源敵群與等級；串接次序與矩陣座標為本作重建，可回入口。",
+        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[4]",
+        "sourceRef": "Galaxy[4]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 5600,
         "height": 2400,
         "startX": 400,
@@ -4160,10 +4532,10 @@
       {
         "id": "original:region.replay-5",
         "name": "Event5 · 遭遇航跡",
-        "description": "來源敵群與等級；串接次序與矩陣座標為本作重建，可回入口。",
+        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[5]",
+        "sourceRef": "Galaxy[5]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 5600,
         "height": 2400,
         "startX": 400,
@@ -4183,10 +4555,10 @@
       {
         "id": "original:region.replay-6",
         "name": "Event6 · 遭遇航跡",
-        "description": "來源敵群與等級；串接次序與矩陣座標為本作重建，可回入口。",
+        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[6]",
+        "sourceRef": "Galaxy[6]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 5600,
         "height": 2400,
         "startX": 400,
@@ -4206,10 +4578,10 @@
       {
         "id": "original:region.replay-7",
         "name": "Event7 · 遭遇航跡",
-        "description": "來源敵群與等級；串接次序與矩陣座標為本作重建，可回入口。",
+        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[7]",
+        "sourceRef": "Galaxy[7]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 5600,
         "height": 2400,
         "startX": 400,
@@ -4229,10 +4601,10 @@
       {
         "id": "original:region.replay-8",
         "name": "Event8 · 遭遇航跡",
-        "description": "來源敵群與等級；串接次序與矩陣座標為本作重建，可回入口。",
+        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[8]",
+        "sourceRef": "Galaxy[8]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 5600,
         "height": 2400,
         "startX": 400,
@@ -4252,10 +4624,10 @@
       {
         "id": "original:region.replay-9",
         "name": "Event9 · 遭遇航跡",
-        "description": "來源敵群與等級；串接次序與矩陣座標為本作重建，可回入口。",
+        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[9]",
+        "sourceRef": "Galaxy[9]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 5600,
         "height": 2400,
         "startX": 400,
@@ -4275,10 +4647,10 @@
       {
         "id": "original:region.replay-10",
         "name": "S1 · 遭遇航跡",
-        "description": "來源敵群與等級；串接次序與矩陣座標為本作重建，可回入口。",
+        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[1]",
+        "sourceRef": "Galaxy[1]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 4000,
         "height": 2400,
         "startX": 400,
@@ -4298,10 +4670,10 @@
       {
         "id": "original:region.replay-11",
         "name": "Battleship01 · 遭遇航跡",
-        "description": "來源敵群與等級；串接次序與矩陣座標為本作重建，可回入口。",
+        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[3]",
+        "sourceRef": "Galaxy[3]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 7200,
         "height": 2400,
         "startX": 400,
@@ -4321,10 +4693,10 @@
       {
         "id": "original:region.replay-12",
         "name": "Battleship02 · 遭遇航跡",
-        "description": "來源敵群與等級；串接次序與矩陣座標為本作重建，可回入口。",
+        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[4]",
+        "sourceRef": "Galaxy[4]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 7200,
         "height": 2400,
         "startX": 400,
@@ -4344,10 +4716,10 @@
       {
         "id": "original:region.replay-13",
         "name": "Battleship03 · 遭遇航跡",
-        "description": "來源敵群與等級；串接次序與矩陣座標為本作重建，可回入口。",
+        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[6]",
+        "sourceRef": "Galaxy[6]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 7200,
         "height": 2400,
         "startX": 400,
@@ -4367,10 +4739,10 @@
       {
         "id": "original:region.replay-14",
         "name": "Battleship04 · 遭遇航跡",
-        "description": "來源敵群與等級；串接次序與矩陣座標為本作重建，可回入口。",
+        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[9]",
+        "sourceRef": "Galaxy[9]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 7200,
         "height": 2400,
         "startX": 400,
@@ -4390,10 +4762,10 @@
       {
         "id": "original:region.replay-15",
         "name": "Battleship05 · 遭遇航跡",
-        "description": "來源敵群與等級；串接次序與矩陣座標為本作重建，可回入口。",
+        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[10]",
+        "sourceRef": "Galaxy[10]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 8800,
         "height": 4000,
         "startX": 400,
@@ -4413,10 +4785,10 @@
       {
         "id": "original:region.replay-16",
         "name": "S3 · 遭遇航跡",
-        "description": "來源敵群與等級；串接次序與矩陣座標為本作重建，可回入口。",
+        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[3]",
+        "sourceRef": "Galaxy[3]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 3000,
         "height": 2400,
         "startX": 400,
@@ -4436,10 +4808,10 @@
       {
         "id": "original:region.replay-17",
         "name": "S4 · 遭遇航跡",
-        "description": "來源敵群與等級；串接次序與矩陣座標為本作重建，可回入口。",
+        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[4]",
+        "sourceRef": "Galaxy[4]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 5600,
         "height": 2400,
         "startX": 400,
@@ -4459,10 +4831,10 @@
       {
         "id": "original:region.replay-18",
         "name": "Event10 · 遭遇航跡",
-        "description": "來源敵群與等級；串接次序與矩陣座標為本作重建，可回入口。",
+        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[10]",
+        "sourceRef": "Galaxy[10]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 8800,
         "height": 2400,
         "startX": 400,
@@ -4482,10 +4854,10 @@
       {
         "id": "original:region.replay-19",
         "name": "4 · 遭遇航跡",
-        "description": "來源敵群與等級；串接次序與矩陣座標為本作重建，可回入口。",
+        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[10]",
+        "sourceRef": "Galaxy[10]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 4000,
         "height": 2400,
         "startX": 400,
@@ -4505,10 +4877,10 @@
       {
         "id": "original:region.replay-20",
         "name": "Event11 · 遭遇航跡",
-        "description": "來源敵群與等級；串接次序與矩陣座標為本作重建，可回入口。",
+        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[10]",
+        "sourceRef": "Galaxy[10]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 8800,
         "height": 2400,
         "startX": 400,
@@ -4528,10 +4900,10 @@
       {
         "id": "original:region.replay-21",
         "name": "Battleship06 · 遭遇航跡",
-        "description": "來源敵群與等級；串接次序與矩陣座標為本作重建，可回入口。",
+        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[12]",
+        "sourceRef": "Galaxy[12]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 8800,
         "height": 4000,
         "startX": 400,
@@ -4551,10 +4923,10 @@
       {
         "id": "original:region.replay-22",
         "name": "Chapter5 · 遭遇航跡",
-        "description": "來源敵群與等級；串接次序與矩陣座標為本作重建，可回入口。",
+        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[6]",
+        "sourceRef": "Galaxy[6]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 8800,
         "height": 5600,
         "startX": 400,
@@ -4574,10 +4946,10 @@
       {
         "id": "original:region.replay-23",
         "name": "Event12 · 遭遇航跡",
-        "description": "來源敵群與等級；串接次序與矩陣座標為本作重建，可回入口。",
+        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[12]",
+        "sourceRef": "Galaxy[12]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 8800,
         "height": 2400,
         "startX": 400,
@@ -4597,10 +4969,10 @@
       {
         "id": "original:region.replay-24",
         "name": "Chapter6 · 遭遇航跡",
-        "description": "來源敵群與等級；串接次序與矩陣座標為本作重建，可回入口。",
+        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[8]",
+        "sourceRef": "Galaxy[8]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 8800,
         "height": 8800,
         "startX": 400,
@@ -4620,10 +4992,10 @@
       {
         "id": "original:region.replay-25",
         "name": "S7 · 遭遇航跡",
-        "description": "來源敵群與等級；串接次序與矩陣座標為本作重建，可回入口。",
+        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[8]",
+        "sourceRef": "Galaxy[8]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 8800,
         "height": 13600,
         "startX": 400,
@@ -4643,10 +5015,10 @@
       {
         "id": "original:region.daily",
         "name": "每日母艦",
-        "description": "原作七日排程與四種母艦；每種母艦獨立限時傷害挑戰，180 秒與每日一次結算為本作流程適配。",
+        "description": "選擇當日母艦，180秒內累積傷害爭取補給；四個目標共用每日三次進場額度。",
         "status": "active",
         "provenance": "research",
-        "sourceRef": "Galaxy[1]",
+        "sourceRef": "Galaxy[1]; coordinate scale10 / inverted Y adapted, not collision from art",
         "width": 6000,
         "height": 5000,
         "startX": 3000,
@@ -5339,7 +5711,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.17",
@@ -5365,7 +5738,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.18",
@@ -5391,7 +5765,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.19",
@@ -5417,7 +5792,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.312",
@@ -7383,7 +7759,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.36",
@@ -7409,7 +7786,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.37",
@@ -7435,7 +7813,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.38",
@@ -7461,7 +7840,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.337",
@@ -9447,7 +9827,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.55",
@@ -9473,7 +9854,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.56",
@@ -9499,7 +9881,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.57",
@@ -9525,7 +9908,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.362",
@@ -11521,7 +11905,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.74",
@@ -11547,7 +11932,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.75",
@@ -11573,7 +11959,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.76",
@@ -11599,7 +11986,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.387",
@@ -13625,7 +14013,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.93",
@@ -13651,7 +14040,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.94",
@@ -13677,7 +14067,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.95",
@@ -13703,7 +14094,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.421",
@@ -15704,7 +16096,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.112",
@@ -15730,7 +16123,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.113",
@@ -15756,7 +16150,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.114",
@@ -15782,7 +16177,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.446",
@@ -17813,7 +18209,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.131",
@@ -17839,7 +18236,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.132",
@@ -17865,7 +18263,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.133",
@@ -17891,7 +18290,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.505",
@@ -19952,7 +20352,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.150",
@@ -19978,7 +20379,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.151",
@@ -20004,7 +20406,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.152",
@@ -20030,7 +20433,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.153",
@@ -20796,7 +21200,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.169",
@@ -20822,7 +21227,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.170",
@@ -20848,7 +21254,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.171",
@@ -20874,7 +21281,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.190",
@@ -22710,7 +23118,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.226",
@@ -22736,7 +23145,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.227",
@@ -22762,7 +23172,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.228",
@@ -22788,7 +23199,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.229",
@@ -22814,7 +23226,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.230",
@@ -24405,7 +24818,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.261",
@@ -24431,7 +24845,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.262",
@@ -24457,7 +24872,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.263",
@@ -24483,7 +24899,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.274",
@@ -26174,7 +26591,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.305",
@@ -26200,7 +26618,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.306",
@@ -26226,7 +26645,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.307",
@@ -26252,7 +26672,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.471",
@@ -27928,7 +28349,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.502",
@@ -27954,7 +28376,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.503",
@@ -27980,7 +28403,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:spawn.504",
@@ -28006,7 +28430,8 @@
         "engageRadius": 300,
         "guardRadius": 160,
         "leashRadius": 1400,
-        "leashWarningRadius": 1200
+        "leashWarningRadius": 1200,
+        "resupplyCost": {}
       },
       {
         "id": "original:planet.1",

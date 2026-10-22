@@ -151,6 +151,7 @@ const planet = z
     resetSeconds: z.number().min(1).max(10).default(3),
     waveDelay: z.number().min(1).max(20).default(4),
     reward: amount,
+    resupplyCost: amount.optional(),
     activationCost: amount,
     production: amount,
     dropCharacters: z.array(id),
@@ -435,6 +436,10 @@ export function validatePack(input: unknown): {
     money(v.reward, v.id);
     money(v.activationCost, v.id);
     money(v.production, v.id);
+    if (v.resupplyCost) {
+      money(v.resupplyCost, v.id);
+      if (v.kind !== "camp") errors.push(`${v.id}: 整補費用只能設定於臨時基地`);
+    }
     if (v.sprite) has("assets", v.sprite, v.id);
     const r = p.regions.find((r) => r.id === v.region);
     if (r && (v.x < 0 || v.y < 0 || v.x > r.width || v.y > r.height))

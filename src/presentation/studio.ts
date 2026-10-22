@@ -209,6 +209,9 @@ export async function mountStudio(root: HTMLElement) {
     maxLevel: "等級上限",
     attackBonus: "全隊攻擊加成",
     condition: "達成條件",
+    repeat: "重複週期",
+    utcOffsetMinutes: "換日時區（UTC分鐘）",
+    resetHour: "換日小時（0–23）",
     target: "目標 ID",
     count: "需求次數",
     character: "獎勵角色 ID",
@@ -277,6 +280,7 @@ export async function mountStudio(root: HTMLElement) {
       k === "effect" ||
       k === "pattern" ||
       k === "phasePattern" ||
+      k === "repeat" ||
       k === "condition"
     ) {
       const vals =
@@ -290,7 +294,21 @@ export async function mountStudio(root: HTMLElement) {
                 ? effectTypes
                 : k === "pattern" || k === "phasePattern"
                   ? patternTypes
-                  : ["intro", "cleared", "activated", "summoned", "built"];
+                  : k === "repeat"
+                    ? ["once", "daily"]
+                    : [
+                        "intro",
+                        "cleared",
+                        "activated",
+                        "summoned",
+                        "built",
+                        "battleWon",
+                        "leveled",
+                        "healed",
+                        "constructed",
+                        "upgraded",
+                        "eventWon",
+                      ];
       control = `<select ${attr}>${vals.map((x) => `<option ${x === v ? "selected" : ""}>${x}</option>`).join("")}</select>`;
     } else if (typeof v === "object" || k === "description")
       control = `<textarea ${attr} rows="${typeof v === "object" ? Math.min(10, JSON.stringify(v, null, 2).split("\n").length) : 3}">${esc(typeof v === "object" ? JSON.stringify(v, null, 2) : v)}</textarea>`;

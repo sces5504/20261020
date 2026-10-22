@@ -264,9 +264,9 @@ try {
   assert.equal((await record(page)).cleared.length, 0);
   await page.goto(server.url + "#/catalog");
   await page.waitForSelector("#roster-rows tr");
-  assert.equal(await page.locator("#roster-rows tr").count(), 110);
+  assert.equal(await page.locator("#roster-rows tr").count(), 126 - pack.characters.length);
   await page.locator("#roster-filter").selectOption("priority");
-  assert.equal(await page.locator("#roster-rows tr").count(), 2);
+  assert.equal(await page.locator("#roster-rows tr").count(), 0);
   await page.screenshot({ path: ".artifacts/v2/roster.png" });
   await page.goto(server.url + "#/studio");
   await unlockStudio(page);

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "m1:core",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "name": "星河戰姬 · 太陽系探索",
   "resources": [
     {
@@ -2157,6 +2157,202 @@
         }
       ],
       "background": "m1art:surface-v1"
+    },
+    {
+      "id": "m1:daily.enemybase",
+      "name": "每日出擊",
+      "description": "贏得一次遭遇（星球、據點、巡邏、活動或母艦挑戰）。",
+      "status": "active",
+      "provenance": "inferred",
+      "background": "",
+      "condition": "battleWon",
+      "repeat": "daily",
+      "utcOffsetMinutes": 540,
+      "resetHour": 0,
+      "target": "",
+      "count": 1,
+      "reward": {
+        "m1:crystal": 50,
+        "m1:gas": 50,
+        "m1:metal": 50,
+        "m1:ether": 50
+      },
+      "character": "",
+      "dialogue": [
+        {
+          "speaker": "艦橋",
+          "text": "贏得一次遭遇（星球、據點、巡邏、活動或母艦挑戰）。"
+        }
+      ],
+      "sourceRef": "Stella Maiden 4.3.2 Quest[0]: count f02=1; basic four-slot reward f10..13; event mapping adapted in galaxy-angel-v8.md"
+    },
+    {
+      "id": "m1:daily.summongirl",
+      "name": "每日共鳴",
+      "description": "完成一次星體共鳴。",
+      "status": "active",
+      "provenance": "inferred",
+      "background": "",
+      "condition": "summoned",
+      "repeat": "daily",
+      "utcOffsetMinutes": 540,
+      "resetHour": 0,
+      "target": "",
+      "count": 1,
+      "reward": {
+        "m1:crystal": 50,
+        "m1:gas": 50,
+        "m1:metal": 50,
+        "m1:ether": 50
+      },
+      "character": "",
+      "dialogue": [
+        {
+          "speaker": "艦橋",
+          "text": "完成一次星體共鳴。"
+        }
+      ],
+      "sourceRef": "Stella Maiden 4.3.2 Quest[1]: count f02=1; basic four-slot reward f10..13; event mapping adapted in galaxy-angel-v8.md"
+    },
+    {
+      "id": "m1:daily.forcegirl",
+      "name": "每日強化",
+      "description": "強化任一少女一次。",
+      "status": "active",
+      "provenance": "inferred",
+      "background": "",
+      "condition": "leveled",
+      "repeat": "daily",
+      "utcOffsetMinutes": 540,
+      "resetHour": 0,
+      "target": "",
+      "count": 1,
+      "reward": {
+        "m1:crystal": 50,
+        "m1:gas": 50,
+        "m1:metal": 50,
+        "m1:ether": 50
+      },
+      "character": "",
+      "dialogue": [
+        {
+          "speaker": "艦橋",
+          "text": "強化任一少女一次。"
+        }
+      ],
+      "sourceRef": "Stella Maiden 4.3.2 Quest[2]: count f02=1; basic four-slot reward f10..13; event mapping adapted in galaxy-angel-v8.md"
+    },
+    {
+      "id": "m1:daily.healgirl",
+      "name": "每日整補",
+      "description": "完成一次受傷少女的整補。",
+      "status": "active",
+      "provenance": "inferred",
+      "background": "",
+      "condition": "healed",
+      "repeat": "daily",
+      "utcOffsetMinutes": 540,
+      "resetHour": 0,
+      "target": "",
+      "count": 1,
+      "reward": {
+        "m1:crystal": 50,
+        "m1:gas": 50,
+        "m1:metal": 50,
+        "m1:ether": 50
+      },
+      "character": "",
+      "dialogue": [
+        {
+          "speaker": "艦橋",
+          "text": "完成一次受傷少女的整補。"
+        }
+      ],
+      "sourceRef": "Stella Maiden 4.3.2 Quest[3]: count f02=1; basic four-slot reward f10..13; event mapping adapted in galaxy-angel-v8.md"
+    },
+    {
+      "id": "m1:daily.construct",
+      "name": "開拓設施",
+      "description": "在領地完成一座新設施。",
+      "status": "active",
+      "provenance": "inferred",
+      "background": "",
+      "condition": "constructed",
+      "repeat": "daily",
+      "utcOffsetMinutes": 540,
+      "resetHour": 0,
+      "target": "",
+      "count": 1,
+      "reward": {
+        "m1:crystal": 50,
+        "m1:gas": 50,
+        "m1:metal": 50,
+        "m1:ether": 50
+      },
+      "character": "",
+      "dialogue": [
+        {
+          "speaker": "艦橋",
+          "text": "在領地完成一座新設施。"
+        }
+      ],
+      "sourceRef": "Stella Maiden 4.3.2 Quest[4]: count f02=1; basic four-slot reward f10..13; event mapping adapted in galaxy-angel-v8.md"
+    },
+    {
+      "id": "m1:daily.buildupgrade",
+      "name": "升級設施",
+      "description": "將領地既有設施升級一次。",
+      "status": "active",
+      "provenance": "inferred",
+      "background": "",
+      "condition": "upgraded",
+      "repeat": "daily",
+      "utcOffsetMinutes": 540,
+      "resetHour": 0,
+      "target": "",
+      "count": 1,
+      "reward": {
+        "m1:crystal": 100,
+        "m1:gas": 100,
+        "m1:metal": 100,
+        "m1:ether": 100
+      },
+      "character": "",
+      "dialogue": [
+        {
+          "speaker": "艦橋",
+          "text": "將領地既有設施升級一次。"
+        }
+      ],
+      "sourceRef": "Stella Maiden 4.3.2 Quest[5]: count f02=1; basic four-slot reward f10..13; event mapping adapted in galaxy-angel-v8.md"
+    },
+    {
+      "id": "m1:daily.eventq",
+      "name": "事件委託",
+      "description": "完成一次主線／活動遭遇航跡的戰鬥。",
+      "status": "active",
+      "provenance": "inferred",
+      "background": "",
+      "condition": "eventWon",
+      "repeat": "daily",
+      "utcOffsetMinutes": 540,
+      "resetHour": 0,
+      "target": "",
+      "count": 1,
+      "reward": {
+        "m1:crystal": 50,
+        "m1:gas": 0,
+        "m1:metal": 50,
+        "m1:ether": 0
+      },
+      "character": "",
+      "dialogue": [
+        {
+          "speaker": "艦橋",
+          "text": "完成一次主線／活動遭遇航跡的戰鬥。"
+        }
+      ],
+      "sourceRef": "Stella Maiden 4.3.2 Quest[6]: count f02=1; basic four-slot reward f10..13; event mapping adapted in galaxy-angel-v8.md"
     }
   ],
   "assets": [

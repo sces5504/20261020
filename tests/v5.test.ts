@@ -39,7 +39,7 @@ test("quest supplies enable early upgrades/research and outweigh passive product
     raidRemaining: 0,
   };
   const rates = production(p, s);
-  for (const q of p.quests)
+  for (const q of p.quests.filter((q) => q.repeat !== "daily"))
     for (const r of p.resources)
       assert.ok(
         (q.reward[r.id] ?? 0) >= (rates[r.id] ?? 0) * 60 * 10,

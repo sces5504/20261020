@@ -1,3 +1,9 @@
+import {
+  advanceDaily,
+  questClaimed,
+  questPeriod,
+  questProgress,
+} from "./daily-quests";
 import type { Pack } from "../content/schema";
 import { nodeAvailability, nodeCleared, nodeUnlocked } from "./world";
 import {
@@ -39,8 +45,15 @@ function complete(p: Pack, s: Save, j: Save["jobs"][number]) {
   if (j.kind === "build") {
     const c = s.colonies[j.owner];
     if (c) {
+      advanceDaily(
+        p,
+        s,
+        (c.buildings[j.definition] ?? 0) === 0 ? "constructed" : "upgraded",
+        j.ends,
+      );
       c.buildings[j.definition] = (c.buildings[j.definition] ?? 0) + 1;
       s.built++;
+      advanceDaily(p, s, "built", j.ends);
     }
   }
   if (j.kind === "research" && !s.research.includes(j.definition))
@@ -49,10 +62,14 @@ function complete(p: Pack, s: Save, j: Save["jobs"][number]) {
     const acquired = addCharacter(p, s, j.payload, j.cost);
     if (acquired) s.acquisitionQueue.push(acquired.id);
     s.summoned++;
+    advanceDaily(p, s, "summoned", j.ends);
   }
   if (j.kind === "heal") {
     const o = s.roster.find((v) => v.id === j.owner);
-    if (o) o.hp = stats(p, o).hp;
+    if (o) {
+      o.hp = stats(p, o).hp;
+      advanceDaily(p, s, "healed", j.ends);
+    }
   }
   s.receipts.push(j.id);
 }
@@ -118,7 +135,13 @@ export type Command =
       voyageSeconds?: number;
       heading?: number;
     };
-export function questReady(s: Save, q: Pack["quests"][number]) {
+export function questReady(
+  s: Save,
+  q: Pack["quests"][number],
+  now = Date.now(),
+) {
+  if (q.repeat === "daily")
+    return !questClaimed(s, q, now) && questProgress(s, q, now) >= q.count;
   return q.condition === "intro"
     ? true
     : q.condition === "cleared"
@@ -375,6 +398,7 @@ export function apply(
     pay(costScale(p.rules.levelCost, o.level));
     const old = stats(p, o).hp;
     o.level++;
+    advanceDaily(p, s, "leveled", now);
     o.hp += stats(p, o).hp - old;
   }
   if (c.type === "reorder-team") {
@@ -411,11 +435,17 @@ export function apply(
   }
   if (c.type === "quest") {
     const q = p.quests.find((v) => v.id === c.id);
-    if (!q || s.quests.includes(q.id) || !questReady(s, q))
+    if (!q || questClaimed(s, q, now) || !questReady(s, q, now))
       throw Error("尚未達成或已領取。");
     money(s, q.reward);
     if (q.character) addCharacter(p, s, q.character);
-    s.quests.push(q.id);
+    if (q.repeat === "daily") {
+      s.dailyTasks[q.id] = {
+        period: questPeriod(q, now),
+        progress: questProgress(s, q, now),
+        claimed: true,
+      };
+    } else s.quests.push(q.id);
   }
   if (c.type === "begin") {
     const v = p.planets.find((v) => v.id === c.planet && v.status === "active");
@@ -499,6 +529,11 @@ export function apply(
       !s.disengagedPlanets.includes(c.planet)
     )
       s.disengagedPlanets.push(c.planet);
+    if (c.victory && !c.reset) {
+      advanceDaily(p, s, "battleWon", now);
+      if (p.planets.find((v) => v.id === c.planet)?.kind === "event")
+        advanceDaily(p, s, "eventWon", now);
+    }
     s.encounter = null;
     s.receipts.push(c.receipt);
   }

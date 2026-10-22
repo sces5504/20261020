@@ -3306,3 +3306,19 @@ button:not(:disabled):hover {
   max-width: none;
   width: 100%;
 }
+
+/* Compact instances preserve ownership without repeating full character cards. */
+.section-gap { height: 16px; }
+.copy-picker, .feed-copies { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0; }
+.copy-picker button, .feed-copy { display: flex; align-items: center; gap: 10px; padding: 10px; text-align: left; }
+.copy-picker .portrait, .feed-copy .portrait { width: 48px; height: 58px; flex: 0 0 48px; }
+.feed-copy small { display: block; color: var(--muted); }
+.copy-picker .selected { border-color: var(--gold); }
+.formation-slots .remove-member { align-self: stretch; margin-bottom: 8px; }
+.stationed-maiden { display: flex; align-items: center; gap: 16px; margin: 12px 0; padding: 12px; border: 1px solid #33465b; background: #091421; }
+.stationed-maiden .portrait.large { width: 95px; height: 150px; object-fit: contain; margin: 0; flex: 0 0 95px; }
+.stationed-maiden strong, .stationed-maiden small { display: block; }
+.daily-quests article > small { display: block; margin: 8px 0; }
+.territory-card .stationed-maiden { clear: both; }
+.stationed-maiden > div { min-width: 0; }
+.stationed-maiden .eyebrow { overflow-wrap: anywhere; }

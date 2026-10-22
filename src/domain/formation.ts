@@ -71,6 +71,63 @@ export class FleetMotion {
       this.trail.splice(0, this.trail.length - 1200);
     if (this.members[0]) this.positions.set(this.members[0], { ...point });
   }
+  private guardHeading?: number;
+  /** Combat: the captain faces the threat while every member receives the same dodge input.
+   * Offsets converge with bounded movement; neither entering combat nor turning teleports units.
+   */
+  advanceGuarded(destination: Point, speed: number, dt: number, threat: Point) {
+    const desired = Math.atan2(
+      threat.y - this.anchor.y,
+      threat.x - this.anchor.x,
+    );
+    this.guardHeading ??= this.heading;
+    const turn = Math.atan2(
+      Math.sin(desired - this.guardHeading),
+      Math.cos(desired - this.guardHeading),
+    );
+    this.guardHeading += Math.max(-2.4 * dt, Math.min(2.4 * dt, turn));
+    const old = { ...this.anchor };
+    // Record the same travel history for a continuous return to exploration after combat.
+    const held = new Map([...this.positions].map(([id, p]) => [id, { ...p }]));
+    this.advance(destination, speed, dt);
+    this.waiting.clear();
+    const dx = this.anchor.x - old.x,
+      dy = this.anchor.y - old.y;
+    this.members.forEach((id, i) => {
+      const before = held.get(id)!;
+      const target = {
+        x:
+          this.anchor.x -
+          Math.cos(this.guardHeading!) * i * this.spacing * 0.72,
+        y:
+          this.anchor.y -
+          Math.sin(this.guardHeading!) * i * this.spacing * 0.72,
+      };
+      const translated = { x: before.x + dx, y: before.y + dy };
+      const gap = Math.hypot(target.x - translated.x, target.y - translated.y);
+      const correction = Math.min(gap, speed * 1.1 * dt);
+      const next =
+        gap > 0.001
+          ? {
+              x: translated.x + ((target.x - translated.x) / gap) * correction,
+              y: translated.y + ((target.y - translated.y) / gap) * correction,
+            }
+          : translated;
+      // Regrouping must never cancel the player's dodge, even on rapid reversals.
+      const travel2 = dx * dx + dy * dy;
+      if (travel2 > 0.000001) {
+        const opposing =
+          ((next.x - translated.x) * dx + (next.y - translated.y) * dy) /
+          travel2;
+        if (opposing < 0) {
+          next.x -= opposing * dx;
+          next.y -= opposing * dy;
+        }
+      }
+      // Preserve object identity: renderers and domain fixtures may hold member positions.
+      Object.assign(this.positions.get(id)!, next);
+    });
+  }
   advance(destination: Point, speed: number, dt: number) {
     const dx = destination.x - this.anchor.x,
       dy = destination.y - this.anchor.y,

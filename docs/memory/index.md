@@ -1,3 +1,5 @@
+> 目前整合AI2（2026-10-23）：從遠端0.7 main a7dcdb6接手；新十人／美術與五項操作修正、每日任務，進度見 [交接](../handoffs/integration-v8-20261023.md)，契約 [0.8](../design/galaxy-angel-v8.md)。最終結果以交接末段與PR／公開version.json核對。
+
 最新世界交付（2026-10-22）：核心0.7.0，[PR #15](https://github.com/sces5504/20261020/pull/15)。106核心＋八組瀏覽器完整release（979.49秒）通過，165新圖、671來源遭遇均有勝利證據；[收據](../verification/original-world-0.7.json)、[交接與特殊核心授權](../handoffs/original-world-20261022.md)。公開SHA仍依version.json／PR合併結果核對；下段為歷史。
 
 > 本輪世界作者的特殊核心授權（2026-10-22）：使用者要求完整原作地圖／敵人／每日Boss／活動與美術，明確准本chat補必要欄位與流程、沿用架構。[目前交接](../handoffs/original-world-20261022.md)；[直接授權記錄](owner-preferences.md#2026-10-22-世界敵人完整內容的單次核心授權)。其他核心／內容AI先核對這次共用檔範圍，避免競改。

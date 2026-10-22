@@ -261,7 +261,7 @@ try {
       mobile,
       viewport: mobile ? "390x844@2" : "1440x1000@1",
       seed: 77,
-      characters: 16,
+      characters: pack.characters.length,
       library: 226,
       core: pack.version,
       stress: {

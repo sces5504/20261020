@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "id": "story10:package.virgo-vanguard",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "requires": [
     {
       "id": "m1:core",
-      "version": "0.6.0"
+      "version": "0.8.0"
     },
     {
       "id": "stella:package.skills",
@@ -17,7 +17,7 @@
       {
         "id": "story10:character.arcturus",
         "name": "大角星",
-        "description": "召喚四架跟隨無人機，提供額外火力。建議後衛；依玩家編隊順序站位。技能使用原作來源庫對應列，數值依原作差異換算，美術待補。",
+        "description": "召喚四架跟隨無人機，提供額外火力。建議後衛；依玩家編隊順序站位。技能使用原作來源庫對應列，數值依原作差異換算。",
         "status": "active",
         "provenance": "inferred",
         "rarity": 4,
@@ -49,7 +49,7 @@
       {
         "id": "story10:character.gliese",
         "name": "格利澤",
-        "description": "展開前方能量屏障，降低穿越屏障的來襲彈體傷害。建議前鋒；依玩家編隊順序站位。技能使用原作來源庫對應列，數值依原作差異換算，美術待補。",
+        "description": "展開前方能量屏障，降低穿越屏障的來襲彈體傷害。建議前鋒；依玩家編隊順序站位。技能使用原作來源庫對應列，數值依原作差異換算。",
         "status": "active",
         "provenance": "inferred",
         "rarity": 2,
@@ -81,7 +81,7 @@
       {
         "id": "story10:character.vello",
         "name": "維洛（暫譯）",
-        "description": "短時間提高自身攻擊與暴擊率。建議前鋒；依玩家編隊順序站位。技能使用原作來源庫對應列，數值依原作差異換算，美術待補。",
+        "description": "短時間提高自身攻擊與暴擊率。建議前鋒；依玩家編隊順序站位。技能使用原作來源庫對應列，數值依原作差異換算。",
         "status": "active",
         "provenance": "inferred",
         "rarity": 2,
@@ -113,7 +113,7 @@
       {
         "id": "story10:character.gliese-581e",
         "name": "格利澤581e",
-        "description": "短時間提高自身攻擊。建議後衛；依玩家編隊順序站位。技能使用原作來源庫對應列，數值依原作差異換算，美術待補。",
+        "description": "短時間提高自身攻擊。建議後衛；依玩家編隊順序站位。技能使用原作來源庫對應列，數值依原作差異換算。",
         "status": "active",
         "provenance": "inferred",
         "rarity": 2,
@@ -145,7 +145,7 @@
       {
         "id": "story10:character.valencia",
         "name": "瓦倫西亞（暫譯）",
-        "description": "短時間同時提高自身攻擊與攻速。建議後衛；依玩家編隊順序站位。技能使用原作來源庫對應列，數值依原作差異換算，美術待補。",
+        "description": "短時間同時提高自身攻擊與攻速。建議後衛；依玩家編隊順序站位。技能使用原作來源庫對應列，數值依原作差異換算。",
         "status": "active",
         "provenance": "inferred",
         "rarity": 2,
@@ -177,7 +177,7 @@
       {
         "id": "story10:character.linda",
         "name": "琳達（暫譯）",
-        "description": "發射兩枚爆破彈，命中造成範圍傷害並擊退敵人。建議前鋒；依玩家編隊順序站位。技能使用原作來源庫對應列，數值依原作差異換算，美術待補。",
+        "description": "發射兩枚爆破彈，命中造成範圍傷害並擊退敵人。建議前鋒；依玩家編隊順序站位。技能使用原作來源庫對應列，數值依原作差異換算。",
         "status": "active",
         "provenance": "inferred",
         "rarity": 2,
@@ -209,7 +209,7 @@
       {
         "id": "story10:character.izar",
         "name": "伊扎爾（暫譯）",
-        "description": "建立跟隨自己的火焰場，週期傷害附近敵人。建議前鋒；依玩家編隊順序站位。技能使用原作來源庫對應列，數值依原作差異換算，美術待補。",
+        "description": "建立跟隨自己的火焰場，週期傷害附近敵人。建議前鋒；依玩家編隊順序站位。技能使用原作來源庫對應列，數值依原作差異換算。",
         "status": "active",
         "provenance": "inferred",
         "rarity": 3,
@@ -241,7 +241,7 @@
       {
         "id": "story10:character.seginus",
         "name": "招搖",
-        "description": "短時間提高自身攻擊與暴擊率。建議前鋒；依玩家編隊順序站位。技能使用原作來源庫對應列，數值依原作差異換算，美術待補。",
+        "description": "短時間提高自身攻擊與暴擊率。建議前鋒；依玩家編隊順序站位。技能使用原作來源庫對應列，數值依原作差異換算。",
         "status": "active",
         "provenance": "inferred",
         "rarity": 3,
@@ -273,7 +273,7 @@
       {
         "id": "story10:character.spica",
         "name": "角宿一",
-        "description": "提高範圍內友軍攻速。建議後衛；依玩家編隊順序站位。技能使用原作來源庫對應列，數值依原作差異換算，美術待補。",
+        "description": "提高範圍內友軍攻速。建議後衛；依玩家編隊順序站位。技能使用原作來源庫對應列，數值依原作差異換算。",
         "status": "active",
         "provenance": "inferred",
         "rarity": 5,
@@ -305,7 +305,7 @@
       {
         "id": "story10:character.wolf359",
         "name": "沃爾夫359",
-        "description": "短時間將自身暴擊率設為100%，實際命中仍遵守共用暴擊上限。建議後衛；依玩家編隊順序站位。技能使用原作來源庫對應列，數值依原作差異換算，美術待補。",
+        "description": "短時間將自身暴擊率設為100%，實際命中仍遵守共用暴擊上限。建議後衛；依玩家編隊順序站位。技能使用原作來源庫對應列，數值依原作差異換算。",
         "status": "active",
         "provenance": "inferred",
         "rarity": 3,

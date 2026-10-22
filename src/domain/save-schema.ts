@@ -21,6 +21,17 @@ export const saveSchema = z
     voyageSeconds: nonneg.default(0),
     disengagedPlanets: z.array(z.string()).default([]),
     patrolCooldowns: z.record(nonneg).default({}),
+    dailyTasks: z
+      .record(
+        z
+          .object({
+            period: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+            progress: z.number().int().nonnegative(),
+            claimed: z.boolean(),
+          })
+          .strict(),
+      )
+      .default({}),
     dailyClaims: z.record(z.string().regex(/^\d{4}-\d{2}-\d{2}$/)).default({}),
     dailyAttempts: z
       .record(

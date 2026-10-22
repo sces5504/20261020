@@ -34,6 +34,10 @@ export type Save = {
   acquisitionQueue: string[];
   voyageSeconds: number;
   patrolCooldowns: Record<string, number>;
+  dailyTasks: Record<
+    string,
+    { period: string; progress: number; claimed: boolean }
+  >;
   dailyClaims: Record<string, string>;
   dailyAttempts: Record<string, { period: string; count: number }>;
   disengagedPlanets: string[];
@@ -103,6 +107,7 @@ export function newSave(p: Pack, now: number, id = "voyager"): Save {
     acquisitionQueue: [],
     voyageSeconds: 0,
     patrolCooldowns: {},
+    dailyTasks: {},
     dailyClaims: {},
     dailyAttempts: {},
     disengagedPlanets: [],

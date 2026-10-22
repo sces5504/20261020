@@ -1,3 +1,9 @@
+import { rosterGroups } from "./roster-groups";
+import {
+  questClaimed,
+  questProgress,
+  questResetAt,
+} from "../domain/daily-quests";
 import { resourceIcon } from "./common";
 import { icon } from "./icons";
 import { skillMechanic, patternNames } from "../content/descriptions";
@@ -220,7 +226,9 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       })
       .join("");
     const ready = p.quests.find(
-      (q) => !g.save.quests.includes(q.id) && questReady(g.save, q),
+      (q) =>
+        !questClaimed(g.save, q, Date.now()) &&
+        questReady(g.save, q, Date.now()),
     );
     const next = p.planets.find(
       (v) =>
@@ -344,15 +352,15 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     return `<div class="modal-heading"><div><span class="eyebrow">${kicker}</span><h2>${esc(title)}</h2></div>${button("✕", "close", "", "icon-button")}</div>`;
   }
   function rosterHtml() {
-    return `<div class="character-grid">${g.save.roster
-      .map((o) => {
+    return `<div class="character-grid">${rosterGroups(g.save)
+      .map(({ primary: o, copies }) => {
         const c = p.characters.find((c) => c.id === o.definition)!,
           st = stats(p, o),
           skill = p.skills.find((s) => s.id === c.skill)!,
           assigned = Object.entries(g.save.colonies).find(
             ([, v]) => v.assigned === o.id,
           );
-        return `<article class="character-card">${button(portrait(p, c, true), "character", o.id, "portrait-button")}<div class="character-info"><span class="rarity">${stars(c, o)}</span><h3>${esc(c.name)} <small>Lv.${o.level}</small></h3><p>${esc(c.role)}</p><div class="stat-grid"><span>生命<strong>${Math.ceil(o.hp)} / ${st.hp}</strong></span><span>攻擊<strong>${Math.round(st.attack)}</strong></span><span>防禦<strong>${Math.round(st.defense)}</strong></span></div><p><strong>${esc(skill.name)}</strong> · 冷卻 ${skill.cooldown}s</p><p class="skill-copy">${esc(skillMechanic(skill))}</p><div class="character-actions">${button(g.save.team.includes(o.id) ? "移出編隊" : "加入編隊", "team", o.id, "", !!assigned)}${button("強化 ↑", "level", o.id)}${button("整補", "heal", o.id, "", o.hp >= st.hp || g.save.jobs.some((j) => j.owner === o.id))}</div><small>${
+        return `<article class="character-card">${button(portrait(p, c, true), "character", o.id, "portrait-button")}<div class="character-info"><span class="rarity">${stars(c, o)}</span><h3>${esc(c.name)} <small>Lv.${o.level}</small></h3><small>持有 ${copies.length} 位${copies.length > 1 ? " · 重複角色可於詳情同調" : ""}</small><p>${esc(c.role)}</p><div class="stat-grid"><span>生命<strong>${Math.ceil(o.hp)} / ${st.hp}</strong></span><span>攻擊<strong>${Math.round(st.attack)}</strong></span><span>防禦<strong>${Math.round(st.defense)}</strong></span></div><p><strong>${esc(skill.name)}</strong> · 冷卻 ${skill.cooldown}s</p><p class="skill-copy">${esc(skillMechanic(skill))}</p><div class="character-actions">${button(g.save.team.includes(o.id) ? "移出編隊" : "加入編隊", "team", o.id, "", !!assigned)}${button("強化 ↑", "level", o.id)}${button("整補", "heal", o.id, "", o.hp >= st.hp || g.save.jobs.some((j) => j.owner === o.id))}</div><small>${
           assigned
             ? "派駐於 " + esc(p.planets.find((v) => v.id === assigned[0])?.name)
             : `強化費用：${Object.entries(costScale(p.rules.levelCost, o.level))
@@ -367,7 +375,20 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       })
       .join(
         "",
-      )}</div><h3 class="collection-heading">星體圖鑑 · ${new Set(g.save.roster.map((o) => o.definition)).size} / ${p.characters.length}</h3><div class="collection-grid">${p.characters.map((c) => `<article class="collection-card ${g.save.roster.some((o) => o.definition === c.id) ? "owned" : "locked"}">${portrait(p, c, true)}<div><span class="rarity">${"★".repeat(c.rarity)}</span><h3>${esc(c.name)}</h3><p>${acquisitionSources(p, c.id).map(esc).join(" · ") || "目前無取得來源"}</p></div></article>`).join("")}</div>`;
+      )}</div><h3 class="collection-heading">待收集星體 · 已收集 ${new Set(g.save.roster.map((o) => o.definition)).size} / ${p.characters.length}</h3><div class="collection-grid">${p.characters
+      .filter((c) => !g.save.roster.some((o) => o.definition === c.id))
+      .map(
+        (c) =>
+          `<article class="collection-card ${g.save.roster.some((o) => o.definition === c.id) ? "owned" : "locked"}">${portrait(p, c, true)}<div><span class="rarity">${"★".repeat(c.rarity)}</span><h3>${esc(c.name)}</h3><p>${acquisitionSources(p, c.id).map(esc).join(" · ") || "目前無取得來源"}</p></div></article>`,
+      )
+      .join("")}</div>`;
+  }
+  function stationedArt(id?: string) {
+    const o = g.save.roster.find((v) => v.id === id);
+    const c = o && p.characters.find((v) => v.id === o.definition);
+    return c
+      ? `<div class="stationed-maiden">${portrait(p, c, true)}<div><span class="eyebrow">STATIONED MAIDEN</span><strong>${esc(c.name)}</strong><small>派駐中 · 採集站產出 +20%</small>${button("查看少女", "character", o!.id, "text-button")}</div></div>`
+      : '<p class="muted">尚未派駐少女</p>';
   }
   function enemyIntel(id: string) {
     const v = p.planets.find((v) => v.id === id);
@@ -406,7 +427,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     if (panel === "roster") {
       title = "星體少女";
       kick = "CONSTELLATION ARCHIVE";
-      body = rosterHtml();
+      body = `${button("調整編隊 →", "panel", "formation", "primary")}<div class="section-gap"></div>${rosterHtml()}`;
     }
     if (panel === "character") {
       const o = s.roster.find((o) => o.id === sub)!;
@@ -415,7 +436,8 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
         skill = p.skills.find((sk) => sk.id === c.skill)!;
       title = c.name;
       kick = "STELLAR PROFILE";
-      body = `<div class="character-detail">${portrait(p, c, true)}<div class="profile-copy"><span class="rarity">${stars(c, o)}</span><h2>${esc(c.name)} <small>Lv.${o.level}</small></h2><p class="role-tag">${esc(c.role)}</p><p>${esc(c.description)}</p><div class="stat-grid"><span>生命<strong>${Math.ceil(o.hp)} / ${st.hp}</strong></span><span>攻擊<strong>${Math.round(st.attack)}</strong></span><span>防禦<strong>${Math.round(st.defense)}</strong></span></div><section class="skill-detail"><span class="eyebrow">ACTIVE SKILL · ${skill.cooldown}s</span><h3>${esc(skill.name)}</h3><p>${esc(skill.description)}</p><strong>${esc(skillMechanic(skill))}</strong></section><div class="costs">${amounts(p, costScale(p.rules.levelCost, o.level))}</div><div class="inline-actions">${button("強化 +1", "level", o.id)}${button("整補", "heal", o.id, "", o.hp >= st.hp || g.save.jobs.some((j) => j.owner === o.id))}${button(`同調 ${o.resonance ?? 0}/5`, "open-feed", o.id, "", !!g.combat || (o.resonance ?? 0) >= 5 || s.jobs.some((j) => j.owner === o.id) || Object.values(s.colonies).some((col) => col.assigned === o.id))}${button("調整編隊 →", "panel", "formation", "primary")}</div><p class="resonance-info">同調 ${o.resonance ?? 0}/5 · 每次生命／攻擊／防禦 +${p.rules.duplicateStatBonus * 100}% · 5次追加紫星；滿階後新共鳴返還投入的${p.rules.duplicateRefundRate * 100}%四資源。</p><p class="muted">取得方式：${acquisitionSources(p, c.id).map(esc).join("／")}</p></div></div>`;
+      const copies = s.roster.filter((v) => v.definition === o.definition);
+      body = `${button("← 返回角色選單", "panel", "roster", "text-button")}${copies.length > 1 ? `<div class="copy-picker" aria-label="同角色持有實例">${copies.map((v) => button(`${portrait(p, c)}<span>Lv.${v.level} · 同調 ${v.resonance ?? 0}/5${s.team.includes(v.id) ? " · 編隊中" : Object.values(s.colonies).some((col) => col.assigned === v.id) ? " · 派駐中" : ""}</span>`, "character", v.id, v.id === o.id ? "selected" : "")).join("")}</div>` : ""}<div class="character-detail">${portrait(p, c, true)}<div class="profile-copy"><span class="rarity">${stars(c, o)}</span><h2>${esc(c.name)} <small>Lv.${o.level}</small></h2><p class="role-tag">${esc(c.role)}</p><p>${esc(c.description)}</p><div class="stat-grid"><span>生命<strong>${Math.ceil(o.hp)} / ${st.hp}</strong></span><span>攻擊<strong>${Math.round(st.attack)}</strong></span><span>防禦<strong>${Math.round(st.defense)}</strong></span></div><section class="skill-detail"><span class="eyebrow">ACTIVE SKILL · ${skill.cooldown}s</span><h3>${esc(skill.name)}</h3><p>${esc(skill.description)}</p><strong>${esc(skillMechanic(skill))}</strong></section><div class="costs">${amounts(p, costScale(p.rules.levelCost, o.level))}</div><div class="inline-actions">${button("強化 +1", "level", o.id)}${button("整補", "heal", o.id, "", o.hp >= st.hp || g.save.jobs.some((j) => j.owner === o.id))}${button(`同調 ${o.resonance ?? 0}/5`, "open-feed", o.id, "", !!g.combat || (o.resonance ?? 0) >= 5 || s.jobs.some((j) => j.owner === o.id) || Object.values(s.colonies).some((col) => col.assigned === o.id))}${button("調整編隊 →", "panel", "formation", "primary")}</div><p class="resonance-info">同調 ${o.resonance ?? 0}/5 · 每次生命／攻擊／防禦 +${p.rules.duplicateStatBonus * 100}% · 5次追加紫星；滿階後新共鳴返還投入的${p.rules.duplicateRefundRate * 100}%四資源。</p><p class="muted">取得方式：${acquisitionSources(p, c.id).map(esc).join("／")}</p></div></div>`;
     }
     if (panel === "feed") {
       const target = s.roster.find((o) => o.id === sub)!;
@@ -432,7 +454,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
           !s.jobs.some((j) => j.owner === o.id) &&
           !Object.values(s.colonies).some((col) => col.assigned === o.id),
       );
-      body = `<p>目前 ${target.resonance ?? 0}/5。選擇一位未培養的重複角色，消耗後每項基礎數值 +${p.rules.duplicateStatBonus * 100}%。第五次追加一顆紫星。</p><div class="list-cards">${copies.map((o) => `<article>${portrait(p, c)}<h3>${esc(c.name)} · Lv.${o.level}</h3><small>${esc(o.id)}</small>${button("選擇此重複角色", "feed", o.id, "primary", !!g.combat || (target.resonance ?? 0) >= 5)}</article>`).join("") || '<p class="empty-state">沒有可消耗的同角色。編隊、派駐、治療中或已培養的角色不會列入。</p>'}</div>`;
+      body = `<p>目前 ${target.resonance ?? 0}/5。選擇一位未培養的重複角色，消耗後每項基礎數值 +${p.rules.duplicateStatBonus * 100}%。第五次追加一顆紫星。</p><div class="feed-copies">${copies.map((o) => button(`${portrait(p, c)}<span>${esc(c.name)} · Lv.${o.level}<small>選擇同調素材</small></span>`, "feed", o.id, "feed-copy", !!g.combat || (target.resonance ?? 0) >= 5)).join("") || '<p class="empty-state">沒有可消耗的同角色。編隊、派駐、治療中或已培養的角色不會列入。</p>'}</div>`;
     }
     if (panel === "regions") {
       title = "星域航路";
@@ -453,11 +475,11 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     if (panel === "formation") {
       title = "航行編隊";
       kick = "FLEET FORMATION";
-      body = `<p class="muted">最多 ${p.rules.teamSize} 人。01 沿移動方向領航，建議配置坦克；後衛沿航跡錯開跟隨，轉向時逐步追上。使用前移／後移調整順序，戰鬥中鎖定編隊。</p><div class="formation-slots">${s.team
+      body = `<p class="muted">最多 ${p.rules.teamSize} 人。01 為隊長，建議配置坦克；戰鬥中面向敵人掩護後排，全隊同步閃避，航行時沿航跡跟隨。使用前移／後移調整順序，戰鬥中鎖定編隊。</p><div class="formation-slots">${s.team
         .map((id, i) => {
           const o = s.roster.find((o) => o.id === id)!;
           const c = p.characters.find((c) => c.id === o.definition)!;
-          return `<div><span>0${i + 1}</span>${portrait(p, c)}<strong>${esc(c.name)}</strong>${button("詳細", "character", id, "text-button")}<small>${i === 0 ? "前鋒 · 優先接敵" : "後衛 · 支援火力"}</small><div class="inline-actions">${button("前移", "team-forward", id, "text-button", !!g.combat || i === 0)}${button("後移", "team-back", id, "text-button", !!g.combat || i === s.team.length - 1)}</div></div>`;
+          return `<div>${button("移出編隊", "team", id, "text-button remove-member", !!g.combat || s.team.length <= 1)}<span>0${i + 1}</span>${portrait(p, c)}<strong>${esc(c.name)}</strong>${button("詳細", "character", id, "text-button")}<small>${i === 0 ? "前鋒 · 優先接敵" : "後衛 · 支援火力"}</small><div class="inline-actions">${button("前移", "team-forward", id, "text-button", !!g.combat || i === 0)}${button("後移", "team-back", id, "text-button", !!g.combat || i === s.team.length - 1)}</div></div>`;
         })
         .join("")}</div>${rosterHtml()}`;
     }
@@ -495,7 +517,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
           )
           .map((v) => {
             const col = s.colonies[v.id];
-            return `<article class="territory-card">${entityImage(p, v)}<span class="eyebrow">${col?.active ? "PRODUCTION ONLINE" : "AWAITING ACTIVATION"}</span><h3>${esc(v.name)}</h3><p>${esc(v.description)}</p><div class="costs">${amounts(p, Object.fromEntries(Object.entries(v.production).map(([id, n]) => [id, n * 60])))}</div>${button(col?.active ? "管理建設 →" : "啟動星球 →", col?.active ? "manage-planet" : "activate", v.id, "primary")}${button("導航至星球", "navigate", v.id, "text-button")}</article>`;
+            return `<article class="territory-card">${entityImage(p, v)}<span class="eyebrow">${col?.active ? "PRODUCTION ONLINE" : "AWAITING ACTIVATION"}</span><h3>${esc(v.name)}</h3><p>${esc(v.description)}</p><div class="costs">${amounts(p, Object.fromEntries(Object.entries(v.production).map(([id, n]) => [id, n * 60])))}</div>${stationedArt(col?.assigned)}${button(col?.active ? "管理建設 →" : "啟動星球 →", col?.active ? "manage-planet" : "activate", v.id, "primary")}${button("導航至星球", "navigate", v.id, "text-button")}</article>`;
           })
           .join("") ||
         '<p class="empty-state">尚無領地。探索並解放第一顆星球後，便能在這裡管理。</p>'
@@ -527,7 +549,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       kick = "PLANETARY OPERATIONS";
       body = !col
         ? "<p>請先啟動星球。</p>"
-        : `<div class="colony-summary">${entityImage(p, v)}<div><span class="eyebrow">${col.lost ? "PRODUCTION SUSPENDED" : "PRODUCTION ONLINE"}</span><h3>${col.lost ? "生產待恢復 · 停產中" : "生產運作中"}</h3><p>星球持續提供資源；可建造、升級與派駐，增加產能。</p></div></div><div class="costs">${amounts(p, Object.fromEntries(Object.entries(production(p, { ...s, colonies: { [selected]: col } })).map(([id, n]) => [id, n * 60])))}<small>／分鐘，此星球目前產量</small></div><div class="list-cards">${p.buildings.map((b) => `<article class="building-card">${entityImage(p, b)}<span class="eyebrow">LEVEL ${col.buildings[b.id] ?? 0} / ${b.maxLevel}</span><h3>${esc(b.name)}</h3><p>${esc(b.description)} · ${b.seconds}s</p><div class="costs">${amounts(p, costScale(b.cost, (col.buildings[b.id] ?? 0) + 1))}</div>${button("建造／升級", "build", b.id, "primary", col.lost || (col.buildings[b.id] ?? 0) >= b.maxLevel || s.jobs.some((j) => j.kind === "build" && j.owner === selected))}</article>`).join("")}</div><h3>派駐少女 <small>採集站產出 +20%</small></h3><div class="inline-actions">${
+        : `${button("← 返回領地總覽", "panel", "planets", "text-button")}${stationedArt(col.assigned)}<div class="colony-summary">${entityImage(p, v)}<div><span class="eyebrow">${col.lost ? "PRODUCTION SUSPENDED" : "PRODUCTION ONLINE"}</span><h3>${col.lost ? "生產待恢復 · 停產中" : "生產運作中"}</h3><p>星球持續提供資源；可建造、升級與派駐，增加產能。</p></div></div><div class="costs">${amounts(p, Object.fromEntries(Object.entries(production(p, { ...s, colonies: { [selected]: col } })).map(([id, n]) => [id, n * 60])))}<small>／分鐘，此星球目前產量</small></div><div class="list-cards">${p.buildings.map((b) => `<article class="building-card">${entityImage(p, b)}<span class="eyebrow">LEVEL ${col.buildings[b.id] ?? 0} / ${b.maxLevel}</span><h3>${esc(b.name)}</h3><p>${esc(b.description)} · ${b.seconds}s</p><div class="costs">${amounts(p, costScale(b.cost, (col.buildings[b.id] ?? 0) + 1))}</div>${button("建造／升級", "build", b.id, "primary", col.lost || (col.buildings[b.id] ?? 0) >= b.maxLevel || s.jobs.some((j) => j.kind === "build" && j.owner === selected))}</article>`).join("")}</div><h3>派駐少女 <small>採集站產出 +20%</small></h3><div class="inline-actions">${
             s.roster
               .filter((o) => !s.team.includes(o.id))
               .map((o) =>
@@ -544,7 +566,19 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     if (panel === "quests") {
       title = "航行紀錄";
       kick = "VOYAGE JOURNAL";
-      body = `${jobList()}<div class="list-cards">${p.quests.map((q) => `<article><span class="eyebrow">${s.quests.includes(q.id) ? "ARCHIVED" : questReady(s, q) ? "SIGNAL RECEIVED" : "AWAITING SIGNAL"}</span><h3>${esc(q.name)}</h3><p>${esc(q.description || q.dialogue[0].text)}</p>${button("閱讀對話 →", "story", q.id, "text-button")}<div class="costs">${amounts(p, q.reward)}</div>${button(s.quests.includes(q.id) ? "已收錄" : "收錄並領取獎勵", "quest", q.id, "primary", s.quests.includes(q.id) || !questReady(s, q))}</article>`).join("")}</div>`;
+      body = `${jobList()}<h3>每日任務</h3><p class="muted">每日台灣時間 23:00 更新（與原作 KST 午夜一致）；進度與獎勵每日各自結算，未領獎勵不跨日累積。</p><div class="list-cards daily-quests">${p.quests
+        .filter((q) => q.repeat === "daily")
+        .map(
+          (q) =>
+            `<article data-daily-quest="${esc(q.id)}"><span class="eyebrow">${questClaimed(s, q, Date.now()) ? "CLAIMED" : "DAILY MISSION"}</span><h3>${esc(q.name)}</h3><p>${esc(q.description)}</p><strong>${Math.min(q.count, questProgress(s, q, Date.now()))} / ${q.count}</strong><small>更新倒數 <span data-ends="${questResetAt(q, Date.now())}"></span></small><div class="costs">${amounts(p, q.reward)}</div>${button(questClaimed(s, q, Date.now()) ? "今日已領取" : "領取每日獎勵", "quest", q.id, "primary", questClaimed(s, q, Date.now()) || !questReady(s, q, Date.now()))}</article>`,
+        )
+        .join("")}</div><h3>航行紀錄</h3><div class="list-cards">${p.quests
+        .filter((q) => q.repeat !== "daily")
+        .map(
+          (q) =>
+            `<article><span class="eyebrow">${s.quests.includes(q.id) ? "ARCHIVED" : questReady(s, q) ? "SIGNAL RECEIVED" : "AWAITING SIGNAL"}</span><h3>${esc(q.name)}</h3><p>${esc(q.description || q.dialogue[0].text)}</p>${button("閱讀對話 →", "story", q.id, "text-button")}<div class="costs">${amounts(p, q.reward)}</div>${button(s.quests.includes(q.id) ? "已收錄" : "收錄並領取獎勵", "quest", q.id, "primary", s.quests.includes(q.id) || !questReady(s, q))}</article>`,
+        )
+        .join("")}</div>`;
     }
     if (panel === "guide") {
       title = "航行指南";
@@ -957,6 +991,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
   let ticks = 0,
     lastJobs = "",
     lastNotice = "",
+    lastDailyState = "",
     noticeUntil = 0;
   timer = window.setInterval(() => {
     if (disposed) return;
@@ -993,7 +1028,10 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     }
     if (!panel && !g.combat && !g.report) {
       const q = p.quests.find(
-        (q) => questReady(g.save, q) && !g.save.storySeen.includes(q.id),
+        (q) =>
+          questReady(g.save, q) &&
+          q.repeat !== "daily" &&
+          !g.save.storySeen.includes(q.id),
       );
       if (q) {
         storyId = q.id;
@@ -1074,6 +1112,18 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     if (g.dirty) {
       g.dirty = false;
       renderPlanet();
+      renderMission();
+    }
+    const dailyState = JSON.stringify([
+      g.save.dailyTasks,
+      p.quests
+        .filter((q) => q.repeat === "daily")
+        .map((q) => questResetAt(q, Date.now())),
+    ]);
+    if (dailyState !== lastDailyState) {
+      lastDailyState = dailyState;
+      if (panel === "quests") drawPanel();
+      missionKey = "";
       renderMission();
     }
     const jobState = g.save.jobs.map((j) => j.id).join(",");

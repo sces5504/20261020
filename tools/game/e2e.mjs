@@ -167,14 +167,35 @@ try {
   await page.locator('[data-field="skill"]').selectOption(skillBefore);
   await page.locator('[data-action="save-entity"]').click();
   await page.screenshot({ path: ".artifacts/m1/studio.png" });
-  const downloadPromise = page.waitForEvent("download");
+  // Finish the previous asynchronous project save before starting a download clock.
+  await page.waitForFunction(
+    () => document.querySelector("#app")?.getAttribute("aria-busy") !== "true",
+    undefined,
+    { timeout: 30000 },
+  );
+  assert.equal(
+    (await getRecord(page, "editor:project")).pack.characters[0].skill,
+    skillBefore,
+  );
+  // Full 0.8 snapshot verifies and compresses 256 images; keep the bulk export
+  // bounded separately from the 8-second ordinary-interaction timeout.
+  const exportStart = Date.now();
+  const downloadPromise = page.waitForEvent("download", { timeout: 30000 });
   await page.locator('[data-action="export-pack"]').click();
-  const dl = await downloadPromise;
+  let dl;
+  try {
+    dl = await downloadPromise;
+  } catch (error) {
+    throw Error(
+      `Archive export failed: ${await page.locator("#report").innerText()} / ${error}`,
+    );
+  }
+  console.log(`E2E: full archive export ${Date.now() - exportStart}ms`);
   await dl.saveAs(".artifacts/m1/content.zip");
   await page
     .locator("#import-project")
     .setInputFiles(".artifacts/m1/content.zip");
-  // A complete world archive now carries 223 decoded/hash-verified images.
+  // A complete 0.8 archive now carries 256 decoded/hash-verified images.
   // Keep this bulk operation bounded without weakening ordinary UI timeouts.
   const importStart = Date.now();
   try {

@@ -19,3 +19,9 @@
 世界全671場與後期六人對策重跑中，之後才開始完整release以避免CPU干擾瀏覽器。下段將記實際收據。
 
 收尾檢查補上角色詳情對任意持有實例的加入／移出，避免去重後次要實例只能查看卻無法編隊。新瀏覽器補實際切次要實例→加入第四人→移出→回主要實例同調的驗證。第一次最終release仍在核心階段時已主動停止，不能計完整通過；以收尾提交再跑完整release。671世界勝利證據不受此UI修改影響。
+
+## 發布檢查收尾
+
+`4cd827e` 的內容／型別／115核心／build已通過；完整release在第一組工坊匯出遇舊8秒download時限，未算完整通過。單獨新草稿匯出41MiB約9935ms；完整連續編輯的診斷重播匯出11959ms、匯入16436ms均成功，未變更ZIP預算／素材／runtime。正式e2e新增前筆保存完成及技能落盤斷言，僅大量ZIP匯出使用獨立30秒上限／量測，普通UI仍8秒，完整256圖校驗保留。隨後以新固定提交再跑完整release。
+
+公開驗證工具 `node --import tsx tools/game/verify-public-v8.mjs <main-sha>`：驗公開version SHA／內容fingerprint、26角色、七每日任務的實際強化與領獎、33新圖HTTP／SHA／尺寸／解碼、大角星Lv10原技能實際施放／單步與零pageerror。環境Chromium缺代理CA，使用有系統CA信任的Playwright Node route.fetch取得同一公開origin內容，再供Chromium執行；全程不忽略TLS錯誤，仍不是實體手機證據。

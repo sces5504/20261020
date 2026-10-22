@@ -1,3 +1,4 @@
+import { nodeUnlocked, nodeCleared, nodeAvailability, nodeKindNames, nodeVisible } from "../domain/world";
 import { barrierEnds } from "../domain/mechanics";
 import Phaser from "phaser";
 import { SimulationClock } from "../application/simulation-clock";
@@ -175,6 +176,7 @@ export function mountSpace(
         const planet = model.pack.planets.find(
           (v) =>
             v.region === model.save.region &&
+            nodeVisible(model.save, v, model.pack, Date.now()) &&
             Math.hypot(v.x - p.x, v.y - p.y) <
               Math.max(v.radius + 35, 24 / this.cameras.main.zoom),
         );
@@ -371,9 +373,10 @@ export function mountSpace(
       for (const p of model.pack.planets.filter(
         (p) =>
           p.region === model.save.region &&
+            nodeVisible(model.save, p, model.pack, Date.now()) &&
           (model.viewMode === "map" || model.discovered.has(p.id)),
       )) {
-        for (const dep of p.requires) {
+        for (const dep of [...p.requires, ...p.requiresActive]) {
           const a = model.pack.planets.find((v) => v.id === dep)!;
           if (a.region !== p.region) continue;
           g.lineStyle(
@@ -394,9 +397,7 @@ export function mountSpace(
           drawR * 2.2,
         );
         const col = model.save.colonies[p.id];
-        const locked = !p.requires.every((id) =>
-          model.save.cleared.includes(id),
-        );
+        const locked = !nodeUnlocked(model.save, p, model.pack);
         if (p.id === this.selected) {
           g.lineStyle(1.6, 0xf4d9a2, 0.8);
           g.strokeCircle(p.x, p.y, drawR + 20 + Math.sin(this.elapsed) * 2);
@@ -422,9 +423,9 @@ export function mountSpace(
               ? "◈ 生產中"
               : col?.active
                 ? "◈ 生產中"
-                : model.save.cleared.includes(p.id)
-                  ? "◇ 已解放"
-                  : "◆ 敵方",
+                : nodeCleared(model.save, p)
+                  ? (p.kind === "planet" ? "◇ 已解放" : "◇ " + nodeKindNames[p.kind])
+                  : "◆ " + nodeKindNames[p.kind],
           10 / zoom,
           col?.lost ? "#ffab91" : "#81a8ae",
         );
@@ -433,12 +434,10 @@ export function mountSpace(
         for (const p of model.pack.planets.filter(
           (p) =>
             p.region === r.id &&
-            !model.save.cleared.includes(p.id) &&
+            nodeVisible(model.save, p, model.pack, Date.now()) && !nodeCleared(model.save, p) && nodeAvailability(model.save, p, Date.now()).open &&
             (model.viewMode === "map" || model.discovered.has(p.id)),
         )) {
-          const active = p.requires.every((id) =>
-            model.save.cleared.includes(id),
-          );
+          const active = nodeUnlocked(model.save, p, model.pack);
           for (const guard of guardianPositions(p)) {
             const e = model.pack.enemies.find((e) => e.id === guard.enemy)!;
             if (e.sprite) this.ensureAsset(e.sprite);
@@ -518,8 +517,8 @@ export function mountSpace(
           const next = model.pack.planets.find(
             (v) =>
               v.region === r.id &&
-              !model.save.cleared.includes(v.id) &&
-              v.requires.every((id) => model.save.cleared.includes(id)),
+              !nodeCleared(model.save, v) && v.kind !== "camp" && v.kind !== "dailyBoss" &&
+              nodeUnlocked(model.save, v, model.pack),
           );
           if (next && !camera.worldView.contains(next.x, next.y)) {
             const b = camera.worldView,

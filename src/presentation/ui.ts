@@ -8,6 +8,7 @@ import type { Game } from "../application/game";
 import type { Pack, Character } from "../content/schema";
 import { stats, costScale, newSave, type Save } from "../domain/model";
 import { production, questReady, summonCandidates } from "../domain/economy";
+import { nodeUnlocked, nodeCleared, nodeAvailability, nodeKindNames, nodeVisible } from "../domain/world";
 import { download, read } from "../platform/storage";
 import { mountSpace } from "./space";
 import { esc, button, amounts, portrait, entityImage, stars } from "./common";
@@ -16,7 +17,8 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
   const p = g.pack;
   const audio = new AudioMixer(p);
   let intelOpen = g.viewMode === "map";
-  let selected = p.planets.find((v) => v.region === g.save.region)?.id ?? "",
+  const firstTarget = () => p.planets.find(v => v.region === g.save.region && v.kind === "planet" && v.initiallyCleared && !g.save.colonies[v.id]?.active) ?? p.planets.find(v => v.region === g.save.region && nodeVisible(g.save,v,p,Date.now()));
+  let selected = firstTarget()?.id ?? "",
     panel = "",
     sub = "",
     storyId = "",
@@ -55,7 +57,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       (v) => v.id === selected && v.region === g.save.region,
     );
     if (!v) {
-      v = p.planets.find((v) => v.region === g.save.region);
+      v = firstTarget();
       selected = v?.id ?? "";
     }
     if (!v) {
@@ -64,12 +66,13 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     }
     const s = g.save,
       col = s.colonies[v.id],
-      locked = !v.requires.every((id) => s.cleared.includes(id)),
-      cleared = s.cleared.includes(v.id);
+      locked = !nodeUnlocked(s, v, p),
+      cleared = nodeCleared(s, v);
     $("#planet-card").hidden =
       !intelOpen ||
       !!g.combat ||
       (g.viewMode === "explore" && !g.discovered.has(v.id));
+    if (!nodeVisible(s, v, p, Date.now())) $("#planet-card").hidden = true;
     const key = JSON.stringify([
       intelOpen,
       g.viewMode,
@@ -78,25 +81,37 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       col?.active,
       col?.lost,
       col?.buildings,
+      p.resources.map(r => Math.floor(s.wallet[r.id]??0)),
       locked,
       cleared,
       !!g.combat,
+      v.schedule ? nodeAvailability(s, v, Date.now()) : null,
+      Math.hypot(g.x-v.x,g.y-v.y) <= v.engageRadius,
     ]);
     if (key === planetKey) return;
     planetKey = key;
+    const levels = v.enemies.map(e => e.level ?? 1);
+    const threat = levels.length ? `敵群 Lv.${Math.min(...levels)}${Math.min(...levels) !== Math.max(...levels) ? "～"+Math.max(...levels) : ""} · ${v.enemies.reduce((n,e)=>n+e.count,0)} 艘` : "無守軍";
+    if (v.kind !== "planet") {
+      const availability = nodeAvailability(s, v, Date.now());
+      const nearby = Math.hypot(g.x-v.x, g.y-v.y) <= v.engageRadius;
+      const text = (v.kind === "camp" ? `在此可整補隊伍，需${p.rules.healSeconds}秒；不生產資源、不能建設。` : v.objective === "damage" ? `${v.timeLimitSeconds}秒內累積傷害，依實際傷害比例結算；管理面板與離線不推進挑戰。` : "清除單波守軍即可完成據點；不提供星球產能。") + " " + threat;
+      $("#planet-card").innerHTML = `${button("✕", "intel-close", "", "intel-dismiss")}<div class="section-label">${esc(nodeKindNames[v.kind])}</div>${entityImage(p,v,"intel-planet-art")}<h2>${esc(v.name)}</h2><p class="intel-guidance">${locked ? "請先完成前置據點／星球啟動。" : esc(text)}</p><div class="tags"><span>${cleared && !v.schedule ? "已完成" : "可探索"}</span><span>${esc(availability.reason || nodeKindNames[v.kind])}</span></div><div class="costs">${amounts(p,v.reward)}</div>${button("導航接近 →","navigate",v.id,"primary",locked || !!g.combat)}${v.kind === "camp" ? button("隊伍整補","resupply",v.id,"primary",locked || !nearby || !!g.combat) : button(cleared && !v.schedule ? "再次挑戰（無首勝獎勵）" : "開始挑戰","battle",v.id,"primary",locked || !nearby || !availability.open || !!g.combat)}`;
+      return;
+    }
+    const missing = Object.entries(v.activationCost).filter(([id,n]) => (s.wallet[id]??0)<n).map(([id,n]) => `${p.resources.find(r => r.id===id)?.name} ${(n-(s.wallet[id]??0)).toFixed(0)}`);
     $("#planet-card").innerHTML =
       `${button("✕", "intel-close", "", "intel-dismiss")}<div class="section-label">星球情報 <span>INTEL</span></div>${entityImage(p, v, "intel-planet-art")}<span class="eyebrow">${col?.active ? "COLONY" : "UNEXPLORED SIGNAL"}</span><h2>${esc(v.name)}</h2><div class="tags"><span>${locked ? "航線未開放" : col?.lost ? "生產待恢復" : cleared ? "已解放" : "敵方佔領"}</span><span>${v.enemies.some((e) => p.enemies.find((v) => v.id === e.enemy)?.boss) ? "首領訊號" : "一般據點"}</span></div><p class="${locked || !col?.active ? "intel-guidance" : ""}">${
         locked
-          ? `解放 ${v.requires
-              .filter((id) => !s.cleared.includes(id))
+          ? `完成 ${[...v.requires.filter(id => !nodeCleared(s,p.planets.find(v => v.id===id)!)), ...v.requiresActive.filter(id => !s.colonies[id]?.active)]
               .map((id) => esc(p.planets.find((p) => p.id === id)?.name ?? id))
-              .join("、")} 以開啟航路。`
+              .join("、")} 的解放／啟動前置以開啟航路。`
           : col?.lost
             ? "設施已停產。修復後即可恢復生產。"
             : col?.active
               ? "生產設施運作中。可於領地總覽統一管理全部星球。"
-              : `靠近守軍自動交戰；清除所有守軍即可解放。離開交戰邊界${v.resetSeconds}秒會重置，畫面會事先警告。`
-      }</p><div class="intel-row"><span>偵測敵群</span><strong>${v.enemies.reduce((a, b) => a + b.count, 0)} 組訊號</strong></div><div class="intel-row"><span>${col?.active ? "每分鐘產量" : "首次解放獎勵"}</span></div><div class="costs">${amounts(p, col?.active ? Object.fromEntries(Object.entries(v.production).map(([id, n]) => [id, n * 60])) : v.reward)}</div>${col?.active ? button("管理星球 →", "panel", "colony", "primary") : cleared ? button("啟動星球 →", "activate", v.id, "primary") : button("導航接近 · 自動交戰 →", "navigate", v.id, "primary", locked || !!g.combat)}${cleared && !col?.active ? `<div class="costs">${amounts(p, v.activationCost)}</div>` : ""}`;
+              : cleared ? "守軍已清除，可啟動星球生產。" : `靠近守軍自動交戰；清除所有守軍即可解放。離開交戰邊界${v.resetSeconds}秒會重置，畫面會事先警告。`
+      }</p><div class="intel-row"><span>偵測敵群</span><strong>${v.enemies.reduce((a, b) => a + b.count, 0)} 組訊號</strong></div><div class="intel-row"><span>${col?.active ? "每分鐘產量" : "首次解放獎勵"}</span></div><div class="costs">${amounts(p, col?.active ? Object.fromEntries(Object.entries(v.production).map(([id, n]) => [id, n * 60])) : v.reward)}</div>${col?.active ? button("管理星球 →", "panel", "colony", "primary") : cleared ? button("啟動星球 →", "activate", v.id, "primary", locked || missing.length > 0) : button("導航接近 · 自動交戰 →", "navigate", v.id, "primary", locked || !!g.combat)}${cleared && !col?.active ? `<div class="costs">${amounts(p, v.activationCost)}</div>${missing.length ? `<p class="intel-guidance" role="status">尚缺：${esc(missing.join("、"))}</p>` : ""}` : ""}`;
   }
   let missionKey = "";
   function renderMission() {
@@ -105,6 +120,8 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       g.save.jobs.map((j) => [j.id, j.ends]),
       g.save.quests,
       g.save.cleared,
+      g.save.dailyAttempts,
+      Math.floor((Date.now()+540*60000)/86400000),
       Object.entries(g.save.colonies).map(([id, c]) => [id, c.active, c.lost]),
     ]);
     if (key === missionKey) return;
@@ -132,14 +149,22 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     const next = p.planets.find(
       (v) =>
         v.region === g.save.region &&
-        !g.save.cleared.includes(v.id) &&
-        v.requires.every((id) => g.save.cleared.includes(id)),
+        (!nodeCleared(g.save, v) || (v.kind === "planet" && !g.save.colonies[v.id]?.active)) && v.kind !== "camp" && v.kind !== "dailyBoss" &&
+        nodeUnlocked(g.save, v, p),
     );
-    const regionPlanets = p.planets.filter((v) => v.region === g.save.region);
+    const regionPlanets = p.planets.filter((v) => v.region === g.save.region && v.kind !== "camp" && v.kind !== "dailyBoss");
     const localCleared = regionPlanets.filter((v) =>
-      g.save.cleared.includes(v.id),
+      nodeCleared(g.save, v),
     ).length;
     if (!regionPlanets.length) {
+      const daily = p.planets.find(v => v.region === g.save.region && v.kind === "dailyBoss" && nodeVisible(g.save,v,p,Date.now()));
+      if (daily?.schedule) {
+        const attempt = g.save.dailyAttempts[g.save.region];
+        const availability = nodeAvailability(g.save,daily,Date.now());
+        const used = attempt?.period === availability.period ? attempt.count : 0;
+        $("#mission").innerHTML = `<span class="eyebrow">DAILY BOSS</span><h3>每日母艦挑戰</h3><p>本日剩餘 ${Math.max(0,daily.schedule.attemptLimit-used)} / ${daily.schedule.attemptLimit} 次。抵達母艦後手動開始；限時累積傷害，依比例結算四資源。</p>${button("星域航路 →", "panel", "regions", "primary")}`;
+        return;
+      }
       $("#mission").innerHTML =
         `<span class="eyebrow">TEST SECTOR</span><h3>${esc(p.regions.find((r) => r.id === g.save.region)!.name)}</h3><p>此處目前沒有星球與敵人，可自由航行。開啟星域航路即可返回；後續由內容包擴充。</p>${button("星域航路 →", "panel", "regions", "primary")}<div class="mission-jobs">${pending}</div>`;
       return;
@@ -349,7 +374,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       kick = "PLANETARY NETWORK";
       body = `<p class="muted">${Object.values(s.colonies).filter((c) => c.active).length} 顆已啟動星球。所有領地持續生產，不會遭受防衛襲擊。</p><div class="costs">${amounts(p, Object.fromEntries(Object.entries(production(p, s)).map(([id, n]) => [id, n * 60])))}<small>／分鐘，全部領地</small></div><div class="list-cards">${
         p.planets
-          .filter((v) => s.cleared.includes(v.id) || s.colonies[v.id])
+          .filter((v) => v.kind === "planet" && (nodeCleared(s,v) || s.colonies[v.id]))
           .map((v) => {
             const col = s.colonies[v.id];
             return `<article class="territory-card">${entityImage(p, v)}<span class="eyebrow">${col?.active ? "PRODUCTION ONLINE" : "AWAITING ACTIVATION"}</span><h3>${esc(v.name)}</h3><p>${esc(v.description)}</p><div class="costs">${amounts(p, Object.fromEntries(Object.entries(v.production).map(([id, n]) => [id, n * 60])))}</div>${button(col?.active ? "管理建設 →" : "啟動星球 →", col?.active ? "manage-planet" : "activate", v.id, "primary")}${button("導航至星球", "navigate", v.id, "text-button")}</article>`;
@@ -411,12 +436,12 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     if (panel === "result" && g.report) {
       title = g.report.title;
       kick = g.report.victory ? "MISSION COMPLETE" : "FLIGHT REPORT";
-      body = `<div class="result-screen"><span>${g.report.victory ? "✧" : "◇"}</span><p>${esc(g.report.message)}</p>${g.report.planet && g.report.victory && !s.colonies[g.report.planet]?.active ? button("啟動剛解放的星球", "result-activate", g.report.planet, "primary") : ""}${button("返回航線 →", "close", "", "primary")}</div>`;
+      body = `<div class="result-screen"><span>${g.report.victory ? "✧" : "◇"}</span><p>${esc(g.report.message)}</p>${g.report.planet && g.report.victory && p.planets.find(v => v.id === g.report!.planet)?.kind === "planet" && !s.colonies[g.report.planet]?.active ? button("啟動剛解放的星球", "result-activate", g.report.planet, "primary") : ""}${button("返回航線 →", "close", "", "primary")}</div>`;
     }
     if (panel === "archive") {
       title = "航行設定";
       kick = "SAVE & PREFERENCES";
-      body = `<div class="settings-list"><h3>本機進度</h3><p>進度自動保存在此瀏覽器。跨裝置時，請匯出後在另一裝置匯入。</p><div class="inline-actions">${button("匯出存檔", "export-save", "", "primary")}<label class="file-button">匯入存檔<input id="import-save" type="file" accept="application/json,.json"></label>${button("匯出還原備份", "export-backup")}</div>${button("開始新航跡（先備份）", "new-voyage")}<h3>聲音與畫面</h3><div class="inline-actions">${button(audio.enabled ? "聲音：開啟" : "聲音：關閉", "sound")}${button(g.lowEffects ? "特效：精簡" : "特效：完整", "effects")}</div><label>音效音量<input id="audio-volume" type="range" min="0" max="1" step="0.05" value="${audio.volume}"></label><h3>戰鬥操作</h3><p>點空白處移動與閃躲；普通攻擊自動進行。點敵人優先鎖定，點下方角色施放技能。</p>${button(g.autoSkills ? "自動技能：開啟" : "自動技能：關閉", "auto")}<h3>角色製作表</h3><a href="#/catalog">查看未來角色清單／下載 CSV ↗</a><h3>內容工坊</h3><p>瀏覽與調整內容，套用至隔離測試遊戲；完成後匯出內容包再發布。</p><a class="primary link-button" href="#/studio">進入內容工坊 ↗</a>${test ? '<p><a href="#/play">退出隔離測試，返回正式進度</a></p>' : ""}<details><summary>開發版狀態</summary><p>六張原始立繪已匯入，已套用原先六角色；原圖展示入口在內容工坊。音效採可編輯的程序合成，星球與敵艦為原創程序材質。M1的平衡／劇情與部分技能為明示的新設計；原作未知機制仍保留來源缺口。</p></details></div>`;
+      body = `<div class="settings-list"><h3>本機進度</h3><p>進度自動保存在此瀏覽器。跨裝置時，請匯出後在另一裝置匯入。</p><div class="inline-actions">${button("匯出存檔", "export-save", "", "primary")}<label class="file-button">匯入存檔<input id="import-save" type="file" accept="application/json,.json"></label>${button("匯出還原備份", "export-backup")}</div>${button("開始新航跡（先備份）", "new-voyage")}${p.regions.filter(r => r.campaignStart).map(r => button("開始「"+esc(r.name)+"」航跡（先備份）", "new-voyage", r.id)).join("")}<h3>聲音與畫面</h3><div class="inline-actions">${button(audio.enabled ? "聲音：開啟" : "聲音：關閉", "sound")}${button(g.lowEffects ? "特效：精簡" : "特效：完整", "effects")}</div><label>音效音量<input id="audio-volume" type="range" min="0" max="1" step="0.05" value="${audio.volume}"></label><h3>戰鬥操作</h3><p>點空白處移動與閃躲；普通攻擊自動進行。點敵人優先鎖定，點下方角色施放技能。</p>${button(g.autoSkills ? "自動技能：開啟" : "自動技能：關閉", "auto")}<h3>角色製作表</h3><a href="#/catalog">查看未來角色清單／下載 CSV ↗</a><h3>內容工坊</h3><p>瀏覽與調整內容，套用至隔離測試遊戲；完成後匯出內容包再發布。</p><a class="primary link-button" href="#/studio">進入內容工坊 ↗</a>${test ? '<p><a href="#/play">退出隔離測試，返回正式進度</a></p>' : ""}<details><summary>開發版狀態</summary><p>六張原始立繪已匯入，已套用原先六角色；原圖展示入口在內容工坊。音效採可編輯的程序合成，星球與敵艦為原創程序材質。M1的平衡／劇情與部分技能為明示的新設計；原作未知機制仍保留來源缺口。</p></details></div>`;
     }
     $("#overlay").innerHTML =
       `<div class="modal-backdrop"><section class="modal ${["roster", "formation", "character", "acquisition"].includes(panel) ? "wide" : ""}" role="dialog" aria-modal="true" aria-label="${esc(title)}">${heading(title, kick)}<div class="modal-body">${body}</div><div class="modal-footer"><i></i> 戰鬥已暫停 · 經營計時持續</div></section></div>`;
@@ -600,7 +625,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
           "開始新航跡",
         )
       ) {
-        await g.replaceSave(newSave(p, Date.now(), test ? "test" : "voyager"));
+        await g.replaceSave(newSave(id && p.regions.some(r => r.id === id && r.campaignStart) ? {...p, rules: {...p.rules, startRegion: id}} : p, Date.now(), test ? "test" : "voyager"));
         if (!g.error) location.reload();
       }
       return;
@@ -631,6 +656,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     }
     if (action === "activate")
       await g.command({ type: "activate", planet: id });
+    if (action === "resupply") await g.command({ type: "resupply", planet: id });
     if (action === "repair") await g.command({ type: "repair", planet: id });
     if (action === "build")
       await g.command({ type: "build", planet: selected, building: id });
@@ -855,7 +881,9 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     const wave = root.querySelector("#wave-clock");
     if (wave)
       wave.textContent = g.combat
-        ? `守軍剩餘 ${g.combat.units.filter((u) => u.side === "enemy" && u.hp > 0).length} · ${Math.floor(g.combat.time)}s`
+        ? (p.planets.find(v => v.id === g.combat!.planetId)?.timeLimitSeconds ?? 0)
+          ? `剩餘 ${Math.ceil(Math.max(0,(p.planets.find(v => v.id === g.combat!.planetId)?.timeLimitSeconds ?? 0)-g.combat.time))}s · 傷害 ${(g.combat.damageRatio*100).toFixed(2)}%`
+          : `守軍剩餘 ${g.combat.units.filter((u) => u.side === "enemy" && u.hp > 0).length} · ${Math.floor(g.combat.time)}s`
         : g.movementSpeed > p.rules.travelSpeed
           ? "安全航行 · 巡航加速"
           : "偵測到敵方訊號";

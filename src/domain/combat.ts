@@ -3,6 +3,7 @@ import { Mechanics } from "./mechanics";
 import type { Action, Modifier, Pattern } from "../content/mechanics";
 import { FleetMotion } from "./formation";
 import { guardianPositions, patrolPosition } from "./navigation";
+import { enemyStats } from "./world";
 import type { Pack, Character, Enemy, Skill } from "../content/schema";
 import { type Save, stats, damage, random } from "./model";
 export type Unit = {
@@ -95,10 +96,16 @@ export class Combat {
   autoSkills = false;
   ended = false;
   victory = false;
+  timedOut = false;
+  get damageRatio() {
+    const enemies = this.units.filter(u => u.side === "enemy" && !u.turretUntil);
+    const total = enemies.reduce((n, u) => n + u.maxHp, 0);
+    return total ? Math.min(1, Math.max(0, enemies.reduce((n, u) => n + u.maxHp - Math.max(0, u.hp), 0) / total)) : 0;
+  }
   hitsReceived = 0;
   waveIndex = 0;
   nextWaveAt = 0;
-  waveGroups: { enemy: string; count: number }[][] = [];
+  waveGroups: { enemy: string; count: number; level?: number }[][] = [];
   waveDelay = 4;
   reset = false;
   outsideSeconds = 0;
@@ -158,6 +165,7 @@ export class Combat {
         planet as Pack["planets"][number],
       )) {
         const e = pack.enemies.find((e) => e.id === guard.enemy)!;
+        const st = enemyStats(e, guard.level);
         this.units.push(
           this.unit(
             e,
@@ -165,10 +173,10 @@ export class Combat {
             "enemy",
             guard.x,
             guard.y,
-            e.hp,
-            e.hp,
-            e.attack,
-            e.defense,
+            st.hp,
+            st.hp,
+            st.attack,
+            st.defense,
           ),
         );
       }
@@ -176,6 +184,7 @@ export class Combat {
   private spawnWave(x: number, y: number) {
     for (const g of this.waveGroups[this.waveIndex]) {
       const e = this.pack.enemies.find((e) => e.id === g.enemy)!;
+      const st = enemyStats(e, g.level);
       for (let i = 0; i < g.count; i++)
         this.units.push(
           this.unit(
@@ -184,10 +193,10 @@ export class Combat {
             "enemy",
             x + (i === 0 ? 0 : (random(this) - 0.5) * 150),
             y + (i === 0 ? 0 : (random(this) - 0.5) * 150),
-            e.hp,
-            e.hp,
-            e.attack,
-            e.defense,
+            st.hp,
+            st.hp,
+            st.attack,
+            st.defense,
           ),
         );
     }
@@ -541,6 +550,13 @@ export class Combat {
     this.mechanics.bullets(dt);
     this.flashes.forEach((f) => (f.life -= dt));
     this.flashes = this.flashes.filter((f) => f.life > 0);
+    const arena = this.save.encounter?.kind !== "patrol" ? this.pack.planets.find(p => p.id === this.planetId) : undefined;
+    if (arena?.timeLimitSeconds && this.time >= arena.timeLimitSeconds) {
+      this.timedOut = true;
+      this.ended = true;
+      this.victory = arena.objective === "damage" && this.damageRatio > 0 && this.allies.some(u => u.hp > 0);
+      return;
+    }
     if (!this.allies.some((u) => u.hp > 0)) {
       this.ended = true;
       this.victory = false;

@@ -38,6 +38,7 @@ export function guardianPositions(planet: Pack["planets"][number]) {
       const radius = planet.guardRadius * (0.8 + (i % 2) * 0.25);
       return {
         enemy: group.enemy,
+        level: group.level ?? 1,
         id: `guard-${planet.id}-${i}`,
         x: planet.x + Math.cos(angle) * radius,
         y: planet.y + Math.sin(angle) * radius,

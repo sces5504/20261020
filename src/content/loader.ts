@@ -53,6 +53,7 @@ export function assemble(
   extensions: unknown[],
   regionPresentation: unknown = [],
   characterPresentation: unknown = [],
+  regionRoutes: unknown = [],
 ): Pack {
   const parsed = validatePack(base);
   if (!parsed.pack) throw Error(parsed.errors.join("\n"));
@@ -88,6 +89,14 @@ export function assemble(
     done.add(e.id);
   };
   list.forEach(visit);
+  // Integration-owned links only: author extensions cannot overwrite base routes.
+  const linked = new Set<string>();
+  for (const binding of z.array(z.object({ region: z.string(), routes: entitySchemas.regions.shape.routes }).strict()).parse(regionRoutes)) {
+    const target = core.regions.find(r => r.id === binding.region);
+    if (!target || linked.has(binding.region)) throw Error(`星域航路綁定缺失或重複：${binding.region}`);
+    linked.add(binding.region);
+    target.routes.push(...binding.routes);
+  }
   const bound = new Set<string>();
   for (const { region, ...presentation } of regionPresentationSchema.parse(
     regionPresentation,

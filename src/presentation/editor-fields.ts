@@ -30,7 +30,7 @@ export function complexField(
     return wrap(
       `<div class="resource-fields">${p.resources.map((r, i) => `<label>${esc(r.name)}<input type="number" min="1" max="999" data-index="${i}" value="${v[i]}"></label>`).join("")}</div>`,
     );
-  if ((k === "requires" || k === "dropCharacters") && Array.isArray(v)) {
+  if ((k === "requires" || k === "requiresActive" || k === "dropCharacters") && Array.isArray(v)) {
     const list =
       k === "dropCharacters"
         ? p.characters
@@ -43,7 +43,7 @@ export function complexField(
   }
   if (k === "enemies" && Array.isArray(v))
     return wrap(
-      `<div class="spawn-rows">${v.map((row) => spawnRow(p, row.enemy, row.count)).join("")}</div><button data-action="add-spawn" type="button">＋ 新增敵群</button>`,
+      `<div class="spawn-rows">${v.map((row) => spawnRow(p, row.enemy, row.count, row.level ?? 1)).join("")}</div><button data-action="add-spawn" type="button">＋ 新增敵群</button>`,
     );
   if (k === "dialogue" && Array.isArray(v))
     return wrap(
@@ -51,8 +51,8 @@ export function complexField(
     );
   return null;
 }
-export function spawnRow(p: Pack, id: string, count: number) {
-  return `<div class="spawn-row"><select data-spawn-enemy>${p.enemies.map((e) => `<option value="${esc(e.id)}" ${e.id === id ? "selected" : ""}>${esc(e.name)}</option>`).join("")}</select><input type="number" min="1" max="30" data-spawn-count value="${count}" aria-label="敵人數量"><button data-action="remove-row" type="button">移除</button></div>`;
+export function spawnRow(p: Pack, id: string, count: number, level = 1) {
+  return `<div class="spawn-row"><select data-spawn-enemy>${p.enemies.map((e) => `<option value="${esc(e.id)}" ${e.id === id ? "selected" : ""}>${esc(e.name)}</option>`).join("")}</select><input type="number" min="1" max="30" data-spawn-count value="${count}" aria-label="敵人數量"><input type="number" min="1" max="150" data-spawn-level value="${level}" aria-label="敵人等級"><button data-action="remove-row" type="button">移除</button></div>`;
 }
 export function dialogueRow(speaker: string, text: string) {
   return `<div class="dialogue-row"><label>發言者<input data-speaker value="${esc(speaker)}"></label><label>對白<textarea data-line-text rows="3">${esc(text)}</textarea></label><button data-action="remove-row" type="button">移除</button></div>`;
@@ -77,7 +77,7 @@ export function collectComplex(
       raw[k] = [
         ...group.querySelectorAll<HTMLInputElement>("[data-index]"),
       ].map((i) => Number(i.value));
-    else if (k === "requires" || k === "dropCharacters")
+    else if (k === "requires" || k === "requiresActive" || k === "dropCharacters")
       raw[k] = [
         ...group.querySelectorAll<HTMLInputElement>("[data-reference]:checked"),
       ].map((i) => i.dataset.reference);
@@ -89,6 +89,7 @@ export function collectComplex(
           count: Number(
             row.querySelector<HTMLInputElement>("[data-spawn-count]")!.value,
           ),
+          level: Number(row.querySelector<HTMLInputElement>("[data-spawn-level]")?.value ?? 1),
         }),
       );
     else if (k === "dialogue")

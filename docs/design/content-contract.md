@@ -356,3 +356,20 @@ CharacterDef基礎rarity與角色實例level／tier分開；數值表單改基�
 `art/catalog/extension-assets.json` 明列來源、runtime路徑、主檔／輸出SHA；建置只容許 art 來源和 public/assets/extensions 輸出，校驗快照中的src／hash，再複製原位元組。該目錄為忽略產物，非手改內容。角色 avatar 與 portrait 引用不同時，視為獨立頭像構圖；同圖重用才沿用舊版面部放大框。
 
 工坊 ZIP 以實際 bytes 的SHA去重（不信任宣告hash來決定合併），使用短的封裝相對路徑；包格式與舊 ZIP 匯入仍相容，所有媒體原位元組不變。維持25MiB壓縮／60MiB解壓限制，不以放寬上限通過新增素材。試玩允許候選三種角色圖，commercial仍需approved與既有品質／真機門檻，候選metadata不自動升格。version.json記錄精確包清單與有效內容fingerprint。
+
+## 2026-10-22 世界內容 0.7 增量
+
+本輪世界作者獲使用者單次特殊授權補必要共用欄位／流程，見 [交接](../handoffs/original-world-20261022.md)；不是其他擴充作者可任意覆寫共享核心的長期授權。核心0.7.0，schemaVersion仍1，舊ID／資料有預設。詳細來源、適配及數值見 [完整世界契約](original-world.md)。
+
+- enemies.growthReference={attack,defense,hp}、group.level（1～150）支援來源CID成長；未填沿用既有直接數值。原生HP須保留兩次截斷，不能先浮點算完。sourceRef明示引用／推定，不能用provenance掩蓋缺口。
+- planets.kind=planet/stronghold/camp/event/dailyBoss/gate；非planet不得有啟動費／產量或建造領地。enemies可空，須initiallyCleared或camp；initiallyCleared不發首勝、不灌入歷史領獎憑據。
+- requires沿用清除前置；requiresActive必須指生產星球。兩種依賴一起驗循環。hiddenUntilUnlocked控制呈現／選取／發現；UI線條不代替資料。
+- encounterPolicy=auto/manual；手動挑戰須到入口，日程未開或額度用完不能進場。timeLimitSeconds（最多3600）、objective=eliminate/damage，damage僅允許限時dailyBoss。普通星球仍單波自動接敵／越界重置。
+- schedule={weekdays[0..6],utcOffsetMinutes,resetHour,attemptLimit}；星期0週日，預設KST／0點／3次。額度以region共用；存檔dailyAttempts[region]={period,count}、dailyClaims[node]=ISO日期，舊檔預設空。進場記日期與次數、跨換日結果歸進場日、同日不重領／回退時鐘不增領。
+- regions.campaignStart供設定選擇新航跡起點；rules.startRegion可供新存檔入口，未設沿用原起始區。不刪m1:frontier-test或偷偷搬動既有進度。
+- 根manifest.regionRoutes只能在擴充組裝後新增明示region/routes連結，嚴格引用與重複目標校驗；extension仍不可覆寫基底。安全回程須實際配置，獨立core仍能單獨校驗。
+- 本輪不改0.6既有可攜ZIP預算（64MiB壓縮／128MiB解壓／30MiB單檔），候選美術可試玩，commercial原門檻保留。
+
+完整世界將rules.teamSize由M1三人上限升至6，沿用原有編隊／技能鍵1～6／航跡功能，不新增另一套隊伍模型。新存檔仍只取得三位起始少女；後期收集後可編成六人，來源Global CubePartySlot4/5/6與適配界線見world-constants.json。
+
+基地可選 `resupplyCost`（每名受傷隊員四資源費用）；省略沿用rules.healCost，空物件為免費，非camp節點不得設定。命令仍原子驗全部費用與工作可用性；完成沿用既有20秒heal工作。本原作包基地免費與13區補給巡邏是明示恢復適配，見完整世界契約。

@@ -1,0 +1,749 @@
+[
+  {
+    "model": "Enemy_Probe01",
+    "cidRows": [
+      147,
+      206
+    ],
+    "assetId": "original:asset.enemy-147",
+    "review": "candidate",
+    "index": 0,
+    "brief": "Probe01 armored alien spacecraft, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 0,
+    "cell": 0
+  },
+  {
+    "model": "Enemy_Scout01",
+    "cidRows": [
+      148,
+      207
+    ],
+    "assetId": "original:asset.enemy-148",
+    "review": "candidate",
+    "index": 1,
+    "brief": "Scout01 armored alien spacecraft, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 0,
+    "cell": 1
+  },
+  {
+    "model": "Enemy_Fighter01",
+    "cidRows": [
+      149,
+      208
+    ],
+    "assetId": "original:asset.enemy-149",
+    "review": "candidate",
+    "index": 2,
+    "brief": "compact triangular jet with orange spinal light and two short rear engines, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 0,
+    "cell": 2
+  },
+  {
+    "model": "Enemy_Fighter02",
+    "cidRows": [
+      150
+    ],
+    "assetId": "original:asset.enemy-150",
+    "review": "candidate",
+    "index": 3,
+    "brief": "four-wing interceptor with broad diamond center and red dorsal sensor, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 0,
+    "cell": 3
+  },
+  {
+    "model": "Enemy_Bomber01",
+    "cidRows": [
+      151
+    ],
+    "assetId": "original:asset.enemy-151",
+    "review": "candidate",
+    "index": 4,
+    "brief": "broad blunt hammerhead bomber with two visible round bomb pods, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 0,
+    "cell": 4
+  },
+  {
+    "model": "Enemy_Bomber02",
+    "cidRows": [
+      152
+    ],
+    "assetId": "original:asset.enemy-152",
+    "review": "candidate",
+    "index": 5,
+    "brief": "twin-hull bomber linked by a thick transverse armored bridge and square payload bay, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 0,
+    "cell": 5
+  },
+  {
+    "model": "Enemy_PTBoat01",
+    "cidRows": [
+      153
+    ],
+    "assetId": "original:asset.enemy-153",
+    "review": "candidate",
+    "index": 6,
+    "brief": "small narrow torpedo skiff with two orange side tubes, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 0,
+    "cell": 6
+  },
+  {
+    "model": "Enemy_PTBoat02",
+    "cidRows": [
+      154
+    ],
+    "assetId": "original:asset.enemy-154",
+    "review": "candidate",
+    "index": 7,
+    "brief": "three-pronged attack boat with two short rear thrusters and large forward torpedo tube, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 0,
+    "cell": 7
+  },
+  {
+    "model": "Enemy_PatrolKiller01",
+    "cidRows": [
+      155
+    ],
+    "assetId": "original:asset.enemy-155",
+    "review": "candidate",
+    "index": 8,
+    "brief": "asymmetric hook-nosed hunter with one enlarged dorsal cannon, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 0,
+    "cell": 8
+  },
+  {
+    "model": "Enemy_PatrolKiller02",
+    "cidRows": [
+      156
+    ],
+    "assetId": "original:asset.enemy-156",
+    "review": "candidate",
+    "index": 9,
+    "brief": "wide stingray shaped hunter with two separated claw-like gun arms, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 1,
+    "cell": 0
+  },
+  {
+    "model": "Enemy_Corvette01",
+    "cidRows": [
+      157
+    ],
+    "assetId": "original:asset.enemy-157",
+    "review": "candidate",
+    "index": 10,
+    "brief": "compact armored leaf-shaped corvette with tall vertical rear fin, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 1,
+    "cell": 1
+  },
+  {
+    "model": "Enemy_Corvette02",
+    "cidRows": [
+      158
+    ],
+    "assetId": "original:asset.enemy-158",
+    "review": "candidate",
+    "index": 11,
+    "brief": "crescent arc corvette with armored circular center and offset triple cannons, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 1,
+    "cell": 2
+  },
+  {
+    "model": "Enemy_Breacher01",
+    "cidRows": [
+      159
+    ],
+    "assetId": "original:asset.enemy-159",
+    "review": "candidate",
+    "index": 12,
+    "brief": "short wedge ramship with huge solid reinforced triangular front shield, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 1,
+    "cell": 3
+  },
+  {
+    "model": "Enemy_Breacher02",
+    "cidRows": [
+      160
+    ],
+    "assetId": "original:asset.enemy-160",
+    "review": "candidate",
+    "index": 13,
+    "brief": "battering-ram ship with a split chisel prow and heavy rear crossbar, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 1,
+    "cell": 4
+  },
+  {
+    "model": "Enemy_Frigate01",
+    "cidRows": [
+      161
+    ],
+    "assetId": "original:asset.enemy-161",
+    "review": "candidate",
+    "index": 14,
+    "brief": "elongated hexagonal frigate with two small lateral laser turrets, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 1,
+    "cell": 5
+  },
+  {
+    "model": "Enemy_Frigate02",
+    "cidRows": [
+      162
+    ],
+    "assetId": "original:asset.enemy-162",
+    "review": "candidate",
+    "index": 15,
+    "brief": "heavy rectangular frigate with four angular shoulder shields and violet rails, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 1,
+    "cell": 6
+  },
+  {
+    "model": "Enemy_Destroyer01",
+    "cidRows": [
+      163
+    ],
+    "assetId": "original:asset.enemy-163",
+    "review": "candidate",
+    "index": 16,
+    "brief": "long sharp three-keel destroyer with a central magenta reactor, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 1,
+    "cell": 7
+  },
+  {
+    "model": "Enemy_Destroyer02",
+    "cidRows": [
+      164
+    ],
+    "assetId": "original:asset.enemy-164",
+    "review": "candidate",
+    "index": 17,
+    "brief": "wide fork-prow destroyer with six short lateral cannon barrels, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 1,
+    "cell": 8
+  },
+  {
+    "model": "Enemy_Cruiser01",
+    "cidRows": [
+      165
+    ],
+    "assetId": "original:asset.enemy-165",
+    "review": "candidate",
+    "index": 18,
+    "brief": "broad diamond cruiser with stepped dark armor and dual purple cores, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 2,
+    "cell": 0
+  },
+  {
+    "model": "Enemy_Cruiser02",
+    "cidRows": [
+      166
+    ],
+    "assetId": "original:asset.enemy-166",
+    "review": "candidate",
+    "index": 19,
+    "brief": "oval ring-hull cruiser with a long pointed axial spine and cyan thrusters, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 2,
+    "cell": 1
+  },
+  {
+    "model": "Enemy_Ramer01",
+    "cidRows": [
+      167
+    ],
+    "assetId": "original:asset.enemy-167",
+    "review": "candidate",
+    "index": 20,
+    "brief": "heavily armored spear-tip ramming vessel, no visible open gun ports, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 2,
+    "cell": 2
+  },
+  {
+    "model": "Enemy_Ramer02",
+    "cidRows": [
+      168
+    ],
+    "assetId": "original:asset.enemy-168",
+    "review": "candidate",
+    "index": 21,
+    "brief": "massive drill-prow craft with angular corkscrew armor, distinct from a simple spear, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 2,
+    "cell": 3
+  },
+  {
+    "model": "Enemy_TorpedoCruiser01",
+    "cidRows": [
+      169
+    ],
+    "assetId": "original:asset.enemy-169",
+    "review": "candidate",
+    "index": 22,
+    "brief": "catamaran cruiser with six long external orange torpedo launch tubes, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 2,
+    "cell": 4
+  },
+  {
+    "model": "Enemy_TorpedoCruiser02",
+    "cidRows": [
+      170
+    ],
+    "assetId": "original:asset.enemy-170",
+    "review": "candidate",
+    "index": 23,
+    "brief": "heavy tri-hull torpedo cruiser with hexagonal missile racks, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 2,
+    "cell": 5
+  },
+  {
+    "model": "Enemy_BattleCruiser01",
+    "cidRows": [
+      171
+    ],
+    "assetId": "original:asset.enemy-171",
+    "review": "candidate",
+    "index": 24,
+    "brief": "long armored battleship with massive left and right railguns and violet reactor, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 2,
+    "cell": 6
+  },
+  {
+    "model": "Enemy_BattleCruiser02",
+    "cidRows": [
+      172
+    ],
+    "assetId": "original:asset.enemy-172",
+    "review": "candidate",
+    "index": 25,
+    "brief": "broad winged battle cruiser with forward split beam cannons and red reactor, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 2,
+    "cell": 7
+  },
+  {
+    "model": "Enemy_Battleship01",
+    "cidRows": [
+      173
+    ],
+    "assetId": "original:asset.enemy-173",
+    "review": "candidate",
+    "index": 26,
+    "brief": "huge five-gun arrowhead battleship with radial purple reactor plating, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 2,
+    "cell": 8
+  },
+  {
+    "model": "Enemy_Battleship02",
+    "cidRows": [
+      174
+    ],
+    "assetId": "original:asset.enemy-174",
+    "review": "candidate",
+    "index": 27,
+    "brief": "heavy fortress ship with a circular armored center and two crescent side shields, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 3,
+    "cell": 0
+  },
+  {
+    "model": "Enemy_Battleship03",
+    "cidRows": [
+      175
+    ],
+    "assetId": "original:asset.enemy-175",
+    "review": "candidate",
+    "index": 28,
+    "brief": "large six-point star fortress battleship with emerald beam lenses, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 3,
+    "cell": 1
+  },
+  {
+    "model": "Enemy_Battleship04",
+    "cidRows": [
+      176
+    ],
+    "assetId": "original:asset.enemy-176",
+    "review": "candidate",
+    "index": 29,
+    "brief": "broad segmented heavy dreadnought with three massive orange furnace cores, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 3,
+    "cell": 2
+  },
+  {
+    "model": "Enemy_Battleship05",
+    "cidRows": [
+      177
+    ],
+    "assetId": "original:asset.enemy-177",
+    "review": "candidate",
+    "index": 30,
+    "brief": "long angular black-purple carrier battleship with three dorsal gun spines, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 3,
+    "cell": 3
+  },
+  {
+    "model": "Enemy_Mothership01",
+    "cidRows": [
+      178
+    ],
+    "assetId": "original:asset.enemy-178",
+    "review": "candidate",
+    "index": 31,
+    "brief": "enormous black-violet hollow ring mothership, three docking spires and red interior core, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 3,
+    "cell": 4
+  },
+  {
+    "model": "Kiraba",
+    "cidRows": [
+      189
+    ],
+    "assetId": "original:asset.enemy-189",
+    "review": "candidate",
+    "index": 32,
+    "brief": "ADULT female enemy commander in fully covering dark navy-violet armored bodysuit, chibi 3-head proportions, silver bob hair, red light accents, huge floating five-pronged gun rig, floating full body, dignified hostile stance; no exposed cleavage or sexualized pose; do not draw an ordinary spacecraft",
+    "atlas": 3,
+    "cell": 5
+  },
+  {
+    "model": "Mitsuba",
+    "cidRows": [
+      190
+    ],
+    "assetId": "original:asset.enemy-190",
+    "review": "candidate",
+    "index": 33,
+    "brief": "ADULT female enemy commander in fully covering dark navy-violet armored bodysuit, chibi 3-head proportions, black long ponytail, violet light accents, two crescent cannon wings, floating full body, dignified hostile stance; no exposed cleavage or sexualized pose; do not draw an ordinary spacecraft",
+    "atlas": 3,
+    "cell": 6
+  },
+  {
+    "model": "Aitsu",
+    "cidRows": [
+      191
+    ],
+    "assetId": "original:asset.enemy-191",
+    "review": "candidate",
+    "index": 34,
+    "brief": "ADULT female enemy commander in fully covering dark navy-violet armored bodysuit, chibi 3-head proportions, white braided hair, cyan light accents, two angular scythe gun arms, floating full body, dignified hostile stance; no exposed cleavage or sexualized pose; do not draw an ordinary spacecraft",
+    "atlas": 3,
+    "cell": 7
+  },
+  {
+    "model": "Haitsu",
+    "cidRows": [
+      192
+    ],
+    "assetId": "original:asset.enemy-192",
+    "review": "candidate",
+    "index": 35,
+    "brief": "ADULT female enemy commander in fully covering dark navy-violet armored bodysuit, chibi 3-head proportions, dark blue short hair, orange light accents, six small armored drone shields, floating full body, dignified hostile stance; no exposed cleavage or sexualized pose; do not draw an ordinary spacecraft",
+    "atlas": 3,
+    "cell": 8
+  },
+  {
+    "model": "Morugo",
+    "cidRows": [
+      193
+    ],
+    "assetId": "original:asset.enemy-193",
+    "review": "candidate",
+    "index": 36,
+    "brief": "ADULT female enemy commander in fully covering dark navy-violet armored bodysuit, chibi 3-head proportions, violet twin buns, gold light accents, heavy six-sided floating fortress shell, floating full body, dignified hostile stance; no exposed cleavage or sexualized pose; do not draw an ordinary spacecraft",
+    "atlas": 4,
+    "cell": 0
+  },
+  {
+    "model": "Moruba",
+    "cidRows": [
+      194
+    ],
+    "assetId": "original:asset.enemy-194",
+    "review": "candidate",
+    "index": 37,
+    "brief": "ADULT female enemy commander in fully covering dark navy-violet armored bodysuit, chibi 3-head proportions, ash blonde side braid, red light accents, twin enormous drill-like ship claws, floating full body, dignified hostile stance; no exposed cleavage or sexualized pose; do not draw an ordinary spacecraft",
+    "atlas": 4,
+    "cell": 1
+  },
+  {
+    "model": "Zeruga",
+    "cidRows": [
+      195
+    ],
+    "assetId": "original:asset.enemy-195",
+    "review": "candidate",
+    "index": 38,
+    "brief": "ADULT female enemy commander in fully covering dark navy-violet armored bodysuit, chibi 3-head proportions, black straight waist-length hair, emerald light accents, three floating hexagonal laser shields, floating full body, dignified hostile stance; no exposed cleavage or sexualized pose; do not draw an ordinary spacecraft",
+    "atlas": 4,
+    "cell": 2
+  },
+  {
+    "model": "Shiruga",
+    "cidRows": [
+      196
+    ],
+    "assetId": "original:asset.enemy-196",
+    "review": "candidate",
+    "index": 39,
+    "brief": "ADULT female enemy commander in fully covering dark navy-violet armored bodysuit, chibi 3-head proportions, white long hair, magenta light accents, broken circular ring of angular gun petals, floating full body, dignified hostile stance; no exposed cleavage or sexualized pose; do not draw an ordinary spacecraft",
+    "atlas": 4,
+    "cell": 3
+  },
+  {
+    "model": "Leiga",
+    "cidRows": [
+      197
+    ],
+    "assetId": "original:asset.enemy-197",
+    "review": "candidate",
+    "index": 40,
+    "brief": "ADULT female enemy commander in fully covering dark navy-violet armored bodysuit, chibi 3-head proportions, navy swept-back hair, cyan light accents, four spear-like torpedo wing pods, floating full body, dignified hostile stance; no exposed cleavage or sexualized pose; do not draw an ordinary spacecraft",
+    "atlas": 4,
+    "cell": 4
+  },
+  {
+    "model": "DoradusBoss",
+    "cidRows": [
+      280
+    ],
+    "assetId": "original:asset.enemy-280",
+    "review": "candidate",
+    "index": 41,
+    "brief": "ADULT female enemy commander in fully covering dark navy-violet armored bodysuit, chibi 3-head proportions, copper long hair, orange light accents, wide circular sun-like cannon halo, floating full body, dignified hostile stance; no exposed cleavage or sexualized pose; do not draw an ordinary spacecraft",
+    "atlas": 4,
+    "cell": 5
+  },
+  {
+    "model": "OTS44Boss",
+    "cidRows": [
+      281
+    ],
+    "assetId": "original:asset.enemy-281",
+    "review": "candidate",
+    "index": 42,
+    "brief": "ADULT female enemy commander in fully covering dark navy-violet armored bodysuit, chibi 3-head proportions, purple short hair, blue light accents, compact paired shielded railguns, floating full body, dignified hostile stance; no exposed cleavage or sexualized pose; do not draw an ordinary spacecraft",
+    "atlas": 4,
+    "cell": 6
+  },
+  {
+    "model": "DENBoss",
+    "cidRows": [
+      282
+    ],
+    "assetId": "original:asset.enemy-282",
+    "review": "candidate",
+    "index": 43,
+    "brief": "ADULT female enemy commander in fully covering dark navy-violet armored bodysuit, chibi 3-head proportions, dark green short bob hair, gold light accents, two huge angular hammer-shaped weapon pods, floating full body, dignified hostile stance; no exposed cleavage or sexualized pose; do not draw an ordinary spacecraft",
+    "atlas": 4,
+    "cell": 7
+  },
+  {
+    "model": "Enemy_Fighter03",
+    "cidRows": [
+      288
+    ],
+    "assetId": "original:asset.enemy-288",
+    "review": "candidate",
+    "index": 44,
+    "brief": "forked racing fighter with azure rear vanes and long orange blade nose, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 4,
+    "cell": 8
+  },
+  {
+    "model": "Enemy_SignalDisturbance",
+    "cidRows": [
+      290
+    ],
+    "assetId": "original:asset.enemy-290",
+    "review": "candidate",
+    "index": 45,
+    "brief": "small faceted orb with three concentric communication antenna rings and purple signal tips, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 5,
+    "cell": 0
+  },
+  {
+    "model": "Enemy_ShockCruiser01",
+    "cidRows": [
+      291
+    ],
+    "assetId": "original:asset.enemy-291",
+    "review": "candidate",
+    "index": 46,
+    "brief": "forked electric cruiser with two exposed cyan Tesla-like prongs, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 5,
+    "cell": 1
+  },
+  {
+    "model": "Saiga",
+    "cidRows": [
+      292
+    ],
+    "assetId": "original:asset.enemy-292",
+    "review": "candidate",
+    "index": 47,
+    "brief": "ADULT female enemy commander in fully covering dark navy-violet armored bodysuit, chibi 3-head proportions, silver high ponytail, scarlet light accents, six pointed floating blade satellites, floating full body, dignified hostile stance; no exposed cleavage or sexualized pose; do not draw an ordinary spacecraft",
+    "atlas": 5,
+    "cell": 2
+  },
+  {
+    "model": "Enemy_Grinder01",
+    "cidRows": [
+      293
+    ],
+    "assetId": "original:asset.enemy-293",
+    "review": "candidate",
+    "index": 48,
+    "brief": "compact spinning saw-ring enemy drone with a solid red center eye and heavy metal teeth, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 5,
+    "cell": 3
+  },
+  {
+    "model": "Enemy_BarrageDefender01",
+    "cidRows": [
+      294
+    ],
+    "assetId": "original:asset.enemy-294",
+    "review": "candidate",
+    "index": 49,
+    "brief": "broad shield drone with seven small visible orange gun ports arranged on a curved armored plate, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 5,
+    "cell": 4
+  },
+  {
+    "model": "Enemy_LaserDefender01",
+    "cidRows": [
+      295
+    ],
+    "assetId": "original:asset.enemy-295",
+    "review": "candidate",
+    "index": 50,
+    "brief": "compact shield drone with one large clear violet laser lens in a split dark shell, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 5,
+    "cell": 5
+  },
+  {
+    "model": "Giria",
+    "cidRows": [
+      296
+    ],
+    "assetId": "original:asset.enemy-296",
+    "review": "candidate",
+    "index": 51,
+    "brief": "ADULT female enemy commander in fully covering dark navy-violet armored bodysuit, chibi 3-head proportions, white crown braid, violet light accents, massive open hexagonal throne-like ship frame, floating full body, dignified hostile stance; no exposed cleavage or sexualized pose; do not draw an ordinary spacecraft",
+    "atlas": 5,
+    "cell": 6
+  },
+  {
+    "model": "Enemy_Battleship06",
+    "cidRows": [
+      297
+    ],
+    "assetId": "original:asset.enemy-297",
+    "review": "candidate",
+    "index": 52,
+    "brief": "hexagonal halo-frame dreadnought with a narrow crimson core ship inside, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 5,
+    "cell": 7
+  },
+  {
+    "model": "Enemy_Capture01",
+    "cidRows": [
+      309
+    ],
+    "assetId": "original:asset.enemy-309",
+    "review": "candidate",
+    "index": 53,
+    "brief": "four-claw grappling drone with an empty central cage and red restraint cables, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 5,
+    "cell": 8
+  },
+  {
+    "model": "Enemy_MeleeDefender01",
+    "cidRows": [
+      310
+    ],
+    "assetId": "original:asset.enemy-310",
+    "review": "candidate",
+    "index": 54,
+    "brief": "armored shield-shaped drone with two wide hard-edged blades and violet center slit, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 6,
+    "cell": 0
+  },
+  {
+    "model": "Enemy_Incinerator01",
+    "cidRows": [
+      311
+    ],
+    "assetId": "original:asset.enemy-311",
+    "review": "candidate",
+    "index": 55,
+    "brief": "heavy furnace cruiser with paired large orange combustion nozzles and blunt reinforced nose, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 6,
+    "cell": 1
+  },
+  {
+    "model": "Enemy_MothershipQ01",
+    "cidRows": [
+      328
+    ],
+    "assetId": "original:asset.enemy-328",
+    "review": "candidate",
+    "index": 56,
+    "brief": "daily siege mothership with a thick spiked dark metal wheel and four crimson gun pylons, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 6,
+    "cell": 2
+  },
+  {
+    "model": "Enemy_MothershipQ02",
+    "cidRows": [
+      329
+    ],
+    "assetId": "original:asset.enemy-329",
+    "review": "candidate",
+    "index": 57,
+    "brief": "daily twin-crescent mothership with a sapphire central diamond generator, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 6,
+    "cell": 3
+  },
+  {
+    "model": "Enemy_MothershipQ03",
+    "cidRows": [
+      330
+    ],
+    "assetId": "original:asset.enemy-330",
+    "review": "candidate",
+    "index": 58,
+    "brief": "daily capital mothership with three interlocking armored rings and glowing orange axial furnace, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 6,
+    "cell": 4
+  },
+  {
+    "model": "Enemy_MothershipQ04",
+    "cidRows": [
+      331
+    ],
+    "assetId": "original:asset.enemy-331",
+    "review": "candidate",
+    "index": 59,
+    "brief": "daily obsidian cathedral mothership with four broad shield plates around a green hexagonal core, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 6,
+    "cell": 5
+  },
+  {
+    "model": "Girija",
+    "cidRows": [
+      339
+    ],
+    "assetId": "original:asset.enemy-339",
+    "review": "candidate",
+    "index": 60,
+    "brief": "ADULT female enemy commander in fully covering dark navy-violet armored bodysuit, chibi 3-head proportions, black long hair with silver fringe, green light accents, two concentric broken gun rings and four long side cannons, floating full body, dignified hostile stance; no exposed cleavage or sexualized pose; do not draw an ordinary spacecraft",
+    "atlas": 6,
+    "cell": 6
+  },
+  {
+    "model": "Enemy_LightCarrier01",
+    "cidRows": [
+      340
+    ],
+    "assetId": "original:asset.enemy-340",
+    "review": "candidate",
+    "index": 61,
+    "brief": "small flat aircraft-carrier silhouette with a blue recessed hangar deck and two separate launch rails, top-down slight three-quarter view, bow points RIGHT, dark navy-violet faceted armor with sharp silver edges and restrained orange/red/purple energy accents",
+    "atlas": 6,
+    "cell": 7
+  }
+]

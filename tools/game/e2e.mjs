@@ -54,7 +54,19 @@ const getRecord = async (page, key) =>
         r.onsuccess = () => {
           const tx = r.result.transaction("records", "readonly"),
             q = tx.objectStore("records").get(key);
-          q.onsuccess = () => resolve(q.result);
+          // Assertions need character/planet values, not every artwork byte
+          // and the complete undo history over the browser protocol.
+          q.onsuccess = () =>
+            resolve(
+              key === "editor:project"
+                ? {
+                    pack: {
+                      characters: q.result.pack.characters,
+                      planets: q.result.pack.planets,
+                    },
+                  }
+                : q.result,
+            );
           q.onerror = () => reject(q.error);
         };
       }),
@@ -162,7 +174,19 @@ try {
   await page
     .locator("#import-project")
     .setInputFiles(".artifacts/m1/content.zip");
-  await page.locator('[data-answer="yes"]').click();
+  // A complete world archive now carries 223 decoded/hash-verified images.
+  // Keep this bulk operation bounded without weakening ordinary UI timeouts.
+  const importStart = Date.now();
+  try {
+    await page.locator('[data-answer="yes"]').click({ timeout: 30000 });
+  } catch (e) {
+    throw Error(
+      `Import confirmation failed: ${await page.locator("#report").innerText()} / ${e}`,
+    );
+  }
+  console.log(
+    `E2E: full archive import validation ${Date.now() - importStart}ms`,
+  );
   await page.waitForFunction(
     () => document.querySelector('[aria-busy="true"]') === null,
   );

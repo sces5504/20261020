@@ -21,6 +21,17 @@ export const saveSchema = z
     voyageSeconds: nonneg.default(0),
     disengagedPlanets: z.array(z.string()).default([]),
     patrolCooldowns: z.record(nonneg).default({}),
+    dailyClaims: z.record(z.string().regex(/^\d{4}-\d{2}-\d{2}$/)).default({}),
+    dailyAttempts: z
+      .record(
+        z
+          .object({
+            period: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+            count: z.number().int().nonnegative(),
+          })
+          .strict(),
+      )
+      .default({}),
     heading: num.default(0),
     ownedSequence: z.number().int().nonnegative().default(0),
     duplicateConversions: z.number().int().nonnegative().default(0),
@@ -77,6 +88,10 @@ export const saveSchema = z
         planet: z.string(),
         seed: z.number().int().nonnegative(),
         kind: z.enum(["planet", "patrol"]).optional(),
+        period: z
+          .string()
+          .regex(/^\d{4}-\d{2}-\d{2}$/)
+          .optional(),
       })
       .strict()
       .nullable(),

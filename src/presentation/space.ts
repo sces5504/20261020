@@ -1,3 +1,10 @@
+import {
+  nodeUnlocked,
+  nodeCleared,
+  nodeAvailability,
+  nodeKindNames,
+  nodeVisible,
+} from "../domain/world";
 import { barrierEnds } from "../domain/mechanics";
 import Phaser from "phaser";
 import { SimulationClock } from "../application/simulation-clock";
@@ -172,12 +179,22 @@ export function mountSpace(
           model.combat.target = enemy.id;
           return;
         }
-        const planet = model.pack.planets.find(
-          (v) =>
-            v.region === model.save.region &&
-            Math.hypot(v.x - p.x, v.y - p.y) <
-              Math.max(v.radius + 35, 24 / this.cameras.main.zoom),
-        );
+        const planet = model.pack.planets
+          .filter(
+            (v) =>
+              v.region === model.save.region &&
+              nodeVisible(model.save, v, model.pack, Date.now()) &&
+              Math.hypot(v.x - p.x, v.y - p.y) <
+                Math.max(
+                  v.radius + 35,
+                  (v.kind === "planet" ? 20 : 14) / this.cameras.main.zoom,
+                ),
+          )
+          .sort(
+            (a, b) =>
+              Math.hypot(a.x - p.x, a.y - p.y) -
+              Math.hypot(b.x - p.x, b.y - p.y),
+          )[0];
         if (planet && !model.combat) {
           this.selected = planet.id;
           onPlanet(planet.id);
@@ -191,7 +208,8 @@ export function mountSpace(
         this.cancelTap = true;
       });
       for (const [i, p] of model.pack.planets.entries())
-        planetMaterial(this, `planet:${p.id}`, p.color, i * 1751);
+        if (!p.sprite)
+          planetMaterial(this, `planet:${p.id}`, p.color, i * 1751);
       for (const e of model.pack.enemies)
         enemyMaterial(this, `enemy:${e.id}`, e.color, e.boss, e.pattern);
       const used = new Set(
@@ -371,32 +389,47 @@ export function mountSpace(
       for (const p of model.pack.planets.filter(
         (p) =>
           p.region === model.save.region &&
+          nodeVisible(model.save, p, model.pack, Date.now()) &&
           (model.viewMode === "map" || model.discovered.has(p.id)),
       )) {
-        for (const dep of p.requires) {
+        for (const dep of [...p.requires, ...p.requiresActive]) {
           const a = model.pack.planets.find((v) => v.id === dep)!;
           if (a.region !== p.region) continue;
           g.lineStyle(
             1.2,
             0x83c9cb,
-            model.save.cleared.includes(dep) ? 0.4 : 0.12,
+            (
+              p.requiresActive.includes(dep)
+                ? model.save.colonies[dep]?.active
+                : nodeCleared(model.save, a)
+            )
+              ? 0.4
+              : 0.12,
           );
           g.lineBetween(a.x, a.y, p.x, p.y);
         }
         const color = Phaser.Display.Color.HexStringToColor(p.color).color;
-        const drawR = Math.max(p.radius, 24 / zoom);
+        const overview = model.viewMode === "map";
+        const compact =
+          overview &&
+          zoom < 0.25 &&
+          p.kind !== "planet" &&
+          p.id !== this.selected;
+        const drawR = Math.max(
+          p.radius,
+          (overview ? (p.kind === "planet" ? 16 : 8) : 24) / zoom,
+        );
         this.disc(p.x, p.y, drawR, color);
-        this.drawAsset(
-          p.id + ":material",
-          `planet:${p.id}`,
-          p.x,
-          p.y,
-          drawR * 2.2,
-        );
+        if (p.kind === "planet" && this.textures.exists(`planet:${p.id}`))
+          this.drawAsset(
+            p.id + ":material",
+            `planet:${p.id}`,
+            p.x,
+            p.y,
+            drawR * 2.2,
+          );
         const col = model.save.colonies[p.id];
-        const locked = !p.requires.every((id) =>
-          model.save.cleared.includes(id),
-        );
+        const locked = !nodeUnlocked(model.save, p, model.pack);
         if (p.id === this.selected) {
           g.lineStyle(1.6, 0xf4d9a2, 0.8);
           g.strokeCircle(p.x, p.y, drawR + 20 + Math.sin(this.elapsed) * 2);
@@ -404,41 +437,49 @@ export function mountSpace(
           g.strokeCircle(p.x, p.y, drawR + 28);
         }
         if (p.sprite) this.ensureAsset(p.sprite);
-        if (p.sprite && this.textures.exists(p.sprite))
+        if (
+          p.sprite &&
+          this.textures.exists(p.sprite) &&
+          !(battle && p.kind === "dailyBoss" && model.combat?.planetId === p.id)
+        )
           this.drawAsset(p.id, p.sprite, p.x, p.y, drawR * 2);
-        this.text(
-          p.x,
-          p.y + drawR + 12 / zoom,
-          p.name,
-          (w < 650 ? 11 : 13) / zoom,
-          locked ? "#637983" : "#dce8e8",
-        );
-        this.text(
-          p.x,
-          p.y + drawR + 29 / zoom,
-          locked
-            ? "◇ 未解鎖"
-            : col?.lost
-              ? "◈ 生產中"
-              : col?.active
+        if (!compact || zoom >= 0.14)
+          this.text(
+            p.x,
+            p.y + drawR + 12 / zoom,
+            p.name,
+            (w < 650 ? 11 : 13) / zoom,
+            locked ? "#637983" : "#dce8e8",
+          );
+        if (!compact)
+          this.text(
+            p.x,
+            p.y + drawR + 29 / zoom,
+            locked
+              ? "◇ 未解鎖"
+              : col?.lost
                 ? "◈ 生產中"
-                : model.save.cleared.includes(p.id)
-                  ? "◇ 已解放"
-                  : "◆ 敵方",
-          10 / zoom,
-          col?.lost ? "#ffab91" : "#81a8ae",
-        );
+                : col?.active
+                  ? "◈ 生產中"
+                  : nodeCleared(model.save, p)
+                    ? p.kind === "planet"
+                      ? "◇ 已解放"
+                      : "◇ " + nodeKindNames[p.kind]
+                    : "◆ " + nodeKindNames[p.kind],
+            10 / zoom,
+            col?.lost ? "#ffab91" : "#81a8ae",
+          );
       }
       if (!battle)
         for (const p of model.pack.planets.filter(
           (p) =>
             p.region === r.id &&
-            !model.save.cleared.includes(p.id) &&
+            nodeVisible(model.save, p, model.pack, Date.now()) &&
+            !nodeCleared(model.save, p) &&
+            nodeAvailability(model.save, p, Date.now()).open &&
             (model.viewMode === "map" || model.discovered.has(p.id)),
         )) {
-          const active = p.requires.every((id) =>
-            model.save.cleared.includes(id),
-          );
+          const active = nodeUnlocked(model.save, p, model.pack);
           for (const guard of guardianPositions(p)) {
             const e = model.pack.enemies.find((e) => e.id === guard.enemy)!;
             if (e.sprite) this.ensureAsset(e.sprite);
@@ -518,8 +559,10 @@ export function mountSpace(
           const next = model.pack.planets.find(
             (v) =>
               v.region === r.id &&
-              !model.save.cleared.includes(v.id) &&
-              v.requires.every((id) => model.save.cleared.includes(id)),
+              !nodeCleared(model.save, v) &&
+              v.kind !== "camp" &&
+              v.kind !== "dailyBoss" &&
+              nodeUnlocked(model.save, v, model.pack),
           );
           if (next && !camera.worldView.contains(next.x, next.y)) {
             const b = camera.worldView,

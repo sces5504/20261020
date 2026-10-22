@@ -1,0 +1,2246 @@
+{
+  "seed": 42,
+  "profile": "three starter maidens, auto skills, bounded manual pursuit; normal level ceil(enemy*1.15)+5 cap120, Lv90+ resonance5/all research; weaker ceil(enemy*.6), no resonance/research",
+  "runs": [
+    {
+      "region": "太陽系",
+      "node": "SE1",
+      "seed": 42,
+      "enemyLevel": 1,
+      "teamLevel": 7,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 2.5,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 20,
+        "m1:gas": 20,
+        "m1:metal": 20,
+        "m1:ether": 20
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 2131,
+      "teamAttack": 142.08
+    },
+    {
+      "region": "太陽系",
+      "node": "SE1",
+      "seed": 42,
+      "enemyLevel": 1,
+      "teamLevel": 1,
+      "strength": "weaker",
+      "victory": true,
+      "reset": false,
+      "seconds": 3.3,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 20,
+        "m1:gas": 20,
+        "m1:metal": 20,
+        "m1:ether": 20
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 1440,
+      "teamAttack": 96.0
+    },
+    {
+      "region": "太陽系",
+      "node": "SE15",
+      "seed": 42,
+      "enemyLevel": 8,
+      "teamLevel": 15,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 18.1,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 34,
+        "m1:gas": 34,
+        "m1:metal": 34,
+        "m1:ether": 34
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 3053,
+      "teamAttack": 203.52
+    },
+    {
+      "region": "太陽系",
+      "node": "SE15",
+      "seed": 42,
+      "enemyLevel": 8,
+      "teamLevel": 5,
+      "strength": "weaker",
+      "victory": true,
+      "reset": false,
+      "seconds": 31.4,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 34,
+        "m1:gas": 34,
+        "m1:metal": 34,
+        "m1:ether": 34
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 1900,
+      "teamAttack": 126.72
+    },
+    {
+      "region": "太陽系 · 高難",
+      "node": "QSE1",
+      "seed": 42,
+      "enemyLevel": 30,
+      "teamLevel": 40,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 20.8,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 78,
+        "m1:gas": 78,
+        "m1:metal": 78,
+        "m1:ether": 78
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 5933,
+      "teamAttack": 395.52
+    },
+    {
+      "region": "太陽系 · 高難",
+      "node": "QSE1",
+      "seed": 42,
+      "enemyLevel": 30,
+      "teamLevel": 18,
+      "strength": "weaker",
+      "victory": true,
+      "reset": false,
+      "seconds": 35,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 78,
+        "m1:gas": 78,
+        "m1:metal": 78,
+        "m1:ether": 78
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 3398,
+      "teamAttack": 226.56
+    },
+    {
+      "region": "太陽系 · 高難",
+      "node": "QSE25",
+      "seed": 42,
+      "enemyLevel": 40,
+      "teamLevel": 51,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 64,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 98,
+        "m1:gas": 98,
+        "m1:metal": 98,
+        "m1:ether": 98
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 7200,
+      "teamAttack": 480.0
+    },
+    {
+      "region": "太陽系 · 高難",
+      "node": "QSE25",
+      "seed": 42,
+      "enemyLevel": 40,
+      "teamLevel": 24,
+      "strength": "weaker",
+      "victory": false,
+      "reset": false,
+      "seconds": 66.1,
+      "survivors": 0,
+      "damageRatio": 0.4315,
+      "firstWin": {
+        "m1:crystal": 98,
+        "m1:gas": 98,
+        "m1:metal": 98,
+        "m1:ether": 98
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 4089,
+      "teamAttack": 272.64
+    },
+    {
+      "region": "處女座",
+      "node": "VE1",
+      "seed": 42,
+      "enemyLevel": 11,
+      "teamLevel": 18,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 15.6,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 40,
+        "m1:gas": 40,
+        "m1:metal": 40,
+        "m1:ether": 40
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 3398,
+      "teamAttack": 226.56
+    },
+    {
+      "region": "處女座",
+      "node": "VE1",
+      "seed": 42,
+      "enemyLevel": 11,
+      "teamLevel": 7,
+      "strength": "weaker",
+      "victory": true,
+      "reset": false,
+      "seconds": 22.4,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 40,
+        "m1:gas": 40,
+        "m1:metal": 40,
+        "m1:ether": 40
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 2131,
+      "teamAttack": 142.08
+    },
+    {
+      "region": "處女座",
+      "node": "VE15",
+      "seed": 42,
+      "enemyLevel": 20,
+      "teamLevel": 28,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 30.2,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 58,
+        "m1:gas": 58,
+        "m1:metal": 58,
+        "m1:ether": 58
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 4551,
+      "teamAttack": 303.36
+    },
+    {
+      "region": "處女座",
+      "node": "VE15",
+      "seed": 42,
+      "enemyLevel": 20,
+      "teamLevel": 12,
+      "strength": "weaker",
+      "victory": true,
+      "reset": false,
+      "seconds": 51.8,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 58,
+        "m1:gas": 58,
+        "m1:metal": 58,
+        "m1:ether": 58
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 2707,
+      "teamAttack": 180.48
+    },
+    {
+      "region": "處女座 · 高難",
+      "node": "QVE25",
+      "seed": 42,
+      "enemyLevel": 30,
+      "teamLevel": 40,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 83.3,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 78,
+        "m1:gas": 78,
+        "m1:metal": 78,
+        "m1:ether": 78
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 5933,
+      "teamAttack": 395.52
+    },
+    {
+      "region": "處女座 · 高難",
+      "node": "QVE25",
+      "seed": 42,
+      "enemyLevel": 30,
+      "teamLevel": 18,
+      "strength": "weaker",
+      "victory": false,
+      "reset": false,
+      "seconds": 208.3,
+      "survivors": 0,
+      "damageRatio": 0.6966,
+      "firstWin": {
+        "m1:crystal": 78,
+        "m1:gas": 78,
+        "m1:metal": 78,
+        "m1:ether": 78
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 3398,
+      "teamAttack": 226.56
+    },
+    {
+      "region": "處女座 · 高難",
+      "node": "QVE24",
+      "seed": 42,
+      "enemyLevel": 49,
+      "teamLevel": 62,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 30.1,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 116,
+        "m1:gas": 116,
+        "m1:metal": 116,
+        "m1:ether": 116
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 8467,
+      "teamAttack": 564.48
+    },
+    {
+      "region": "處女座 · 高難",
+      "node": "QVE24",
+      "seed": 42,
+      "enemyLevel": 49,
+      "teamLevel": 30,
+      "strength": "weaker",
+      "victory": false,
+      "reset": false,
+      "seconds": 49.2,
+      "survivors": 0,
+      "damageRatio": 0.618,
+      "firstWin": {
+        "m1:crystal": 116,
+        "m1:gas": 116,
+        "m1:metal": 116,
+        "m1:ether": 116
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 4780,
+      "teamAttack": 318.72
+    },
+    {
+      "region": "獅子座",
+      "node": "LE1",
+      "seed": 42,
+      "enemyLevel": 21,
+      "teamLevel": 30,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 18.2,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 60,
+        "m1:gas": 60,
+        "m1:metal": 60,
+        "m1:ether": 60
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 4780,
+      "teamAttack": 318.72
+    },
+    {
+      "region": "獅子座",
+      "node": "LE1",
+      "seed": 42,
+      "enemyLevel": 21,
+      "teamLevel": 13,
+      "strength": "weaker",
+      "victory": true,
+      "reset": false,
+      "seconds": 28.8,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 60,
+        "m1:gas": 60,
+        "m1:metal": 60,
+        "m1:ether": 60
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 2822,
+      "teamAttack": 188.16
+    },
+    {
+      "region": "獅子座",
+      "node": "LE15",
+      "seed": 42,
+      "enemyLevel": 29,
+      "teamLevel": 39,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 38.1,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 76,
+        "m1:gas": 76,
+        "m1:metal": 76,
+        "m1:ether": 76
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 5818,
+      "teamAttack": 387.84
+    },
+    {
+      "region": "獅子座",
+      "node": "LE15",
+      "seed": 42,
+      "enemyLevel": 29,
+      "teamLevel": 18,
+      "strength": "weaker",
+      "victory": true,
+      "reset": false,
+      "seconds": 62.5,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 76,
+        "m1:gas": 76,
+        "m1:metal": 76,
+        "m1:ether": 76
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 3398,
+      "teamAttack": 226.56
+    },
+    {
+      "region": "獅子座 · 高難",
+      "node": "QLE1",
+      "seed": 42,
+      "enemyLevel": 50,
+      "teamLevel": 63,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 42.4,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 118,
+        "m1:gas": 118,
+        "m1:metal": 118,
+        "m1:ether": 118
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 8582,
+      "teamAttack": 572.16
+    },
+    {
+      "region": "獅子座 · 高難",
+      "node": "QLE1",
+      "seed": 42,
+      "enemyLevel": 50,
+      "teamLevel": 30,
+      "strength": "weaker",
+      "victory": true,
+      "reset": false,
+      "seconds": 157.5,
+      "survivors": 1,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 118,
+        "m1:gas": 118,
+        "m1:metal": 118,
+        "m1:ether": 118
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 4780,
+      "teamAttack": 318.72
+    },
+    {
+      "region": "獅子座 · 高難",
+      "node": "QLE25",
+      "seed": 42,
+      "enemyLevel": 60,
+      "teamLevel": 74,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 93.3,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 138,
+        "m1:gas": 138,
+        "m1:metal": 138,
+        "m1:ether": 138
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 9849,
+      "teamAttack": 656.64
+    },
+    {
+      "region": "獅子座 · 高難",
+      "node": "QLE25",
+      "seed": 42,
+      "enemyLevel": 60,
+      "teamLevel": 36,
+      "strength": "weaker",
+      "victory": true,
+      "reset": false,
+      "seconds": 155.1,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 138,
+        "m1:gas": 138,
+        "m1:metal": 138,
+        "m1:ether": 138
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 5472,
+      "teamAttack": 364.8
+    },
+    {
+      "region": "南天",
+      "node": "StE1",
+      "seed": 42,
+      "enemyLevel": 31,
+      "teamLevel": 41,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 20,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 80,
+        "m1:gas": 80,
+        "m1:metal": 80,
+        "m1:ether": 80
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 6048,
+      "teamAttack": 403.2
+    },
+    {
+      "region": "南天",
+      "node": "StE1",
+      "seed": 42,
+      "enemyLevel": 31,
+      "teamLevel": 19,
+      "strength": "weaker",
+      "victory": true,
+      "reset": false,
+      "seconds": 31.2,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 80,
+        "m1:gas": 80,
+        "m1:metal": 80,
+        "m1:ether": 80
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 3513,
+      "teamAttack": 234.24
+    },
+    {
+      "region": "南天",
+      "node": "StE15",
+      "seed": 42,
+      "enemyLevel": 38,
+      "teamLevel": 49,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 46.3,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 94,
+        "m1:gas": 94,
+        "m1:metal": 94,
+        "m1:ether": 94
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 6969,
+      "teamAttack": 464.64
+    },
+    {
+      "region": "南天",
+      "node": "StE15",
+      "seed": 42,
+      "enemyLevel": 38,
+      "teamLevel": 23,
+      "strength": "weaker",
+      "victory": true,
+      "reset": false,
+      "seconds": 77.3,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 94,
+        "m1:gas": 94,
+        "m1:metal": 94,
+        "m1:ether": 94
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 3974,
+      "teamAttack": 264.96
+    },
+    {
+      "region": "南天 · 高難",
+      "node": "QStE25",
+      "seed": 42,
+      "enemyLevel": 50,
+      "teamLevel": 63,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 139.7,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 118,
+        "m1:gas": 118,
+        "m1:metal": 118,
+        "m1:ether": 118
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 8582,
+      "teamAttack": 572.16
+    },
+    {
+      "region": "南天 · 高難",
+      "node": "QStE25",
+      "seed": 42,
+      "enemyLevel": 50,
+      "teamLevel": 30,
+      "strength": "weaker",
+      "victory": false,
+      "reset": false,
+      "seconds": 211.4,
+      "survivors": 0,
+      "damageRatio": 0.4999,
+      "firstWin": {
+        "m1:crystal": 118,
+        "m1:gas": 118,
+        "m1:metal": 118,
+        "m1:ether": 118
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 4780,
+      "teamAttack": 318.72
+    },
+    {
+      "region": "南天 · 高難",
+      "node": "QStE24",
+      "seed": 42,
+      "enemyLevel": 69,
+      "teamLevel": 85,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 61.4,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 156,
+        "m1:gas": 156,
+        "m1:metal": 156,
+        "m1:ether": 156
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 11118,
+      "teamAttack": 741.12
+    },
+    {
+      "region": "南天 · 高難",
+      "node": "QStE24",
+      "seed": 42,
+      "enemyLevel": 69,
+      "teamLevel": 42,
+      "strength": "weaker",
+      "victory": false,
+      "reset": false,
+      "seconds": 80.8,
+      "survivors": 0,
+      "damageRatio": 0.4169,
+      "firstWin": {
+        "m1:crystal": 156,
+        "m1:gas": 156,
+        "m1:metal": 156,
+        "m1:ether": 156
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 6162,
+      "teamAttack": 410.88
+    },
+    {
+      "region": "大犬座",
+      "node": "CME1",
+      "seed": 42,
+      "enemyLevel": 41,
+      "teamLevel": 53,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 19,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 100,
+        "m1:gas": 100,
+        "m1:metal": 100,
+        "m1:ether": 100
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 7431,
+      "teamAttack": 495.36
+    },
+    {
+      "region": "大犬座",
+      "node": "CME1",
+      "seed": 42,
+      "enemyLevel": 41,
+      "teamLevel": 25,
+      "strength": "weaker",
+      "victory": true,
+      "reset": false,
+      "seconds": 28.6,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 100,
+        "m1:gas": 100,
+        "m1:metal": 100,
+        "m1:ether": 100
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 4205,
+      "teamAttack": 280.32
+    },
+    {
+      "region": "大犬座",
+      "node": "CME14",
+      "seed": 42,
+      "enemyLevel": 48,
+      "teamLevel": 61,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 26.1,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 114,
+        "m1:gas": 114,
+        "m1:metal": 114,
+        "m1:ether": 114
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 8352,
+      "teamAttack": 556.8
+    },
+    {
+      "region": "大犬座",
+      "node": "CME14",
+      "seed": 42,
+      "enemyLevel": 48,
+      "teamLevel": 29,
+      "strength": "weaker",
+      "victory": true,
+      "reset": false,
+      "seconds": 54.2,
+      "survivors": 2,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 114,
+        "m1:gas": 114,
+        "m1:metal": 114,
+        "m1:ether": 114
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 4666,
+      "teamAttack": 311.04
+    },
+    {
+      "region": "大犬座 · 高難",
+      "node": "QCME25",
+      "seed": 42,
+      "enemyLevel": 54,
+      "teamLevel": 68,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 184.1,
+      "survivors": 1,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 126,
+        "m1:gas": 126,
+        "m1:metal": 126,
+        "m1:ether": 126
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 9158,
+      "teamAttack": 610.56
+    },
+    {
+      "region": "大犬座 · 高難",
+      "node": "QCME25",
+      "seed": 42,
+      "enemyLevel": 54,
+      "teamLevel": 33,
+      "strength": "weaker",
+      "victory": false,
+      "reset": false,
+      "seconds": 133.1,
+      "survivors": 0,
+      "damageRatio": 0.2223,
+      "firstWin": {
+        "m1:crystal": 126,
+        "m1:gas": 126,
+        "m1:metal": 126,
+        "m1:ether": 126
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 5127,
+      "teamAttack": 341.76
+    },
+    {
+      "region": "大犬座 · 高難",
+      "node": "QCME24",
+      "seed": 42,
+      "enemyLevel": 79,
+      "teamLevel": 96,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 39.8,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 176,
+        "m1:gas": 176,
+        "m1:metal": 176,
+        "m1:ether": 176
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 5,
+      "research": true,
+      "teamHp": 13622,
+      "teamAttack": 1153.36
+    },
+    {
+      "region": "大犬座 · 高難",
+      "node": "QCME24",
+      "seed": 42,
+      "enemyLevel": 79,
+      "teamLevel": 48,
+      "strength": "weaker",
+      "victory": false,
+      "reset": false,
+      "seconds": 41.1,
+      "survivors": 0,
+      "damageRatio": 0.3293,
+      "firstWin": {
+        "m1:crystal": 176,
+        "m1:gas": 176,
+        "m1:metal": 176,
+        "m1:ether": 176
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 6854,
+      "teamAttack": 456.96
+    },
+    {
+      "region": "北天",
+      "node": "NtE1",
+      "seed": 42,
+      "enemyLevel": 51,
+      "teamLevel": 64,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 20,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 120,
+        "m1:gas": 120,
+        "m1:metal": 120,
+        "m1:ether": 120
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 8698,
+      "teamAttack": 579.84
+    },
+    {
+      "region": "北天",
+      "node": "NtE1",
+      "seed": 42,
+      "enemyLevel": 51,
+      "teamLevel": 31,
+      "strength": "weaker",
+      "victory": true,
+      "reset": false,
+      "seconds": 32.3,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 120,
+        "m1:gas": 120,
+        "m1:metal": 120,
+        "m1:ether": 120
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 4895,
+      "teamAttack": 326.4
+    },
+    {
+      "region": "北天",
+      "node": "NtE15",
+      "seed": 42,
+      "enemyLevel": 60,
+      "teamLevel": 74,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 86.4,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 138,
+        "m1:gas": 138,
+        "m1:metal": 138,
+        "m1:ether": 138
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 9849,
+      "teamAttack": 656.64
+    },
+    {
+      "region": "北天",
+      "node": "NtE15",
+      "seed": 42,
+      "enemyLevel": 60,
+      "teamLevel": 36,
+      "strength": "weaker",
+      "victory": true,
+      "reset": false,
+      "seconds": 175.9,
+      "survivors": 2,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 138,
+        "m1:gas": 138,
+        "m1:metal": 138,
+        "m1:ether": 138
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 5472,
+      "teamAttack": 364.8
+    },
+    {
+      "region": "北天 · 高難",
+      "node": "QNtE1",
+      "seed": 42,
+      "enemyLevel": 80,
+      "teamLevel": 97,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 37.4,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 178,
+        "m1:gas": 178,
+        "m1:metal": 178,
+        "m1:ether": 178
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 5,
+      "research": true,
+      "teamHp": 13750,
+      "teamAttack": 1164.09
+    },
+    {
+      "region": "北天 · 高難",
+      "node": "QNtE1",
+      "seed": 42,
+      "enemyLevel": 80,
+      "teamLevel": 48,
+      "strength": "weaker",
+      "victory": false,
+      "reset": false,
+      "seconds": 40.2,
+      "survivors": 0,
+      "damageRatio": 0.3284,
+      "firstWin": {
+        "m1:crystal": 178,
+        "m1:gas": 178,
+        "m1:metal": 178,
+        "m1:ether": 178
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 6854,
+      "teamAttack": 456.96
+    },
+    {
+      "region": "北天 · 高難",
+      "node": "QNtE25",
+      "seed": 42,
+      "enemyLevel": 90,
+      "teamLevel": 109,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 57.7,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 198,
+        "m1:gas": 198,
+        "m1:metal": 198,
+        "m1:ether": 198
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 5,
+      "research": true,
+      "teamHp": 15270,
+      "teamAttack": 1292.84
+    },
+    {
+      "region": "北天 · 高難",
+      "node": "QNtE25",
+      "seed": 42,
+      "enemyLevel": 90,
+      "teamLevel": 54,
+      "strength": "weaker",
+      "victory": false,
+      "reset": false,
+      "seconds": 242.2,
+      "survivors": 0,
+      "damageRatio": 0.9635,
+      "firstWin": {
+        "m1:crystal": 198,
+        "m1:gas": 198,
+        "m1:metal": 198,
+        "m1:ether": 198
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 7546,
+      "teamAttack": 503.04
+    },
+    {
+      "region": "天鵝座",
+      "node": "CyE1",
+      "seed": 42,
+      "enemyLevel": 61,
+      "teamLevel": 76,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 27.4,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 140,
+        "m1:gas": 140,
+        "m1:metal": 140,
+        "m1:ether": 140
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 10080,
+      "teamAttack": 672.0
+    },
+    {
+      "region": "天鵝座",
+      "node": "CyE1",
+      "seed": 42,
+      "enemyLevel": 61,
+      "teamLevel": 37,
+      "strength": "weaker",
+      "victory": true,
+      "reset": false,
+      "seconds": 49.5,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 140,
+        "m1:gas": 140,
+        "m1:metal": 140,
+        "m1:ether": 140
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 5587,
+      "teamAttack": 372.48
+    },
+    {
+      "region": "天鵝座",
+      "node": "CyE15",
+      "seed": 42,
+      "enemyLevel": 70,
+      "teamLevel": 86,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 82.2,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 158,
+        "m1:gas": 158,
+        "m1:metal": 158,
+        "m1:ether": 158
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 11232,
+      "teamAttack": 748.8
+    },
+    {
+      "region": "天鵝座",
+      "node": "CyE15",
+      "seed": 42,
+      "enemyLevel": 70,
+      "teamLevel": 42,
+      "strength": "weaker",
+      "victory": true,
+      "reset": false,
+      "seconds": 194.2,
+      "survivors": 2,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 158,
+        "m1:gas": 158,
+        "m1:metal": 158,
+        "m1:ether": 158
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 6162,
+      "teamAttack": 410.88
+    },
+    {
+      "region": "天鵝座 · 高難",
+      "node": "QCyE1",
+      "seed": 42,
+      "enemyLevel": 90,
+      "teamLevel": 109,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 42.2,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 198,
+        "m1:gas": 198,
+        "m1:metal": 198,
+        "m1:ether": 198
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 5,
+      "research": true,
+      "teamHp": 15270,
+      "teamAttack": 1292.84
+    },
+    {
+      "region": "天鵝座 · 高難",
+      "node": "QCyE1",
+      "seed": 42,
+      "enemyLevel": 90,
+      "teamLevel": 54,
+      "strength": "weaker",
+      "victory": true,
+      "reset": false,
+      "seconds": 97.5,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 198,
+        "m1:gas": 198,
+        "m1:metal": 198,
+        "m1:ether": 198
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 7546,
+      "teamAttack": 503.04
+    },
+    {
+      "region": "天鵝座 · 高難",
+      "node": "QCyE24",
+      "seed": 42,
+      "enemyLevel": 99,
+      "teamLevel": 119,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 52.5,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 216,
+        "m1:gas": 216,
+        "m1:metal": 216,
+        "m1:ether": 216
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 5,
+      "research": true,
+      "teamHp": 16537,
+      "teamAttack": 1400.13
+    },
+    {
+      "region": "天鵝座 · 高難",
+      "node": "QCyE24",
+      "seed": 42,
+      "enemyLevel": 99,
+      "teamLevel": 60,
+      "strength": "weaker",
+      "victory": false,
+      "reset": false,
+      "seconds": 26.7,
+      "survivors": 0,
+      "damageRatio": 0.1507,
+      "firstWin": {
+        "m1:crystal": 216,
+        "m1:gas": 216,
+        "m1:metal": 216,
+        "m1:ether": 216
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 8238,
+      "teamAttack": 549.12
+    },
+    {
+      "region": "雙子座",
+      "node": "GeE2",
+      "seed": 42,
+      "enemyLevel": 70,
+      "teamLevel": 86,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 38,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 158,
+        "m1:gas": 158,
+        "m1:metal": 158,
+        "m1:ether": 158
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 11232,
+      "teamAttack": 748.8
+    },
+    {
+      "region": "雙子座",
+      "node": "GeE2",
+      "seed": 42,
+      "enemyLevel": 70,
+      "teamLevel": 42,
+      "strength": "weaker",
+      "victory": true,
+      "reset": false,
+      "seconds": 69.6,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 158,
+        "m1:gas": 158,
+        "m1:metal": 158,
+        "m1:ether": 158
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 6162,
+      "teamAttack": 410.88
+    },
+    {
+      "region": "雙子座",
+      "node": "GeE15",
+      "seed": 42,
+      "enemyLevel": 80,
+      "teamLevel": 97,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 53.4,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 178,
+        "m1:gas": 178,
+        "m1:metal": 178,
+        "m1:ether": 178
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 5,
+      "research": true,
+      "teamHp": 13750,
+      "teamAttack": 1164.09
+    },
+    {
+      "region": "雙子座",
+      "node": "GeE15",
+      "seed": 42,
+      "enemyLevel": 80,
+      "teamLevel": 48,
+      "strength": "weaker",
+      "victory": true,
+      "reset": false,
+      "seconds": 156,
+      "survivors": 2,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 178,
+        "m1:gas": 178,
+        "m1:metal": 178,
+        "m1:ether": 178
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 6854,
+      "teamAttack": 456.96
+    },
+    {
+      "region": "金牛座",
+      "node": "TaE1",
+      "seed": 42,
+      "enemyLevel": 81,
+      "teamLevel": 99,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 27,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 180,
+        "m1:gas": 180,
+        "m1:metal": 180,
+        "m1:ether": 180
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 5,
+      "research": true,
+      "teamHp": 14002,
+      "teamAttack": 1185.55
+    },
+    {
+      "region": "金牛座",
+      "node": "TaE1",
+      "seed": 42,
+      "enemyLevel": 81,
+      "teamLevel": 49,
+      "strength": "weaker",
+      "victory": true,
+      "reset": false,
+      "seconds": 75.6,
+      "survivors": 2,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 180,
+        "m1:gas": 180,
+        "m1:metal": 180,
+        "m1:ether": 180
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 6969,
+      "teamAttack": 464.64
+    },
+    {
+      "region": "金牛座",
+      "node": "TaE20",
+      "seed": 42,
+      "enemyLevel": 91,
+      "teamLevel": 110,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 59.6,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 200,
+        "m1:gas": 200,
+        "m1:metal": 200,
+        "m1:ether": 200
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 5,
+      "research": true,
+      "teamHp": 15397,
+      "teamAttack": 1303.57
+    },
+    {
+      "region": "金牛座",
+      "node": "TaE20",
+      "seed": 42,
+      "enemyLevel": 91,
+      "teamLevel": 55,
+      "strength": "weaker",
+      "victory": false,
+      "reset": false,
+      "seconds": 244.8,
+      "survivors": 0,
+      "damageRatio": 0.9808,
+      "firstWin": {
+        "m1:crystal": 200,
+        "m1:gas": 200,
+        "m1:metal": 200,
+        "m1:ether": 200
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 7660,
+      "teamAttack": 510.72
+    },
+    {
+      "region": "天蠍座",
+      "node": "ScE1",
+      "seed": 42,
+      "enemyLevel": 90,
+      "teamLevel": 109,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 32,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 198,
+        "m1:gas": 198,
+        "m1:metal": 198,
+        "m1:ether": 198
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 5,
+      "research": true,
+      "teamHp": 15270,
+      "teamAttack": 1292.84
+    },
+    {
+      "region": "天蠍座",
+      "node": "ScE1",
+      "seed": 42,
+      "enemyLevel": 90,
+      "teamLevel": 54,
+      "strength": "weaker",
+      "victory": false,
+      "reset": false,
+      "seconds": 61.9,
+      "survivors": 0,
+      "damageRatio": 0.4783,
+      "firstWin": {
+        "m1:crystal": 198,
+        "m1:gas": 198,
+        "m1:metal": 198,
+        "m1:ether": 198
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 7546,
+      "teamAttack": 503.04
+    },
+    {
+      "region": "天蠍座",
+      "node": "ScE30",
+      "seed": 42,
+      "enemyLevel": 100,
+      "teamLevel": 120,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 77.9,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 218,
+        "m1:gas": 218,
+        "m1:metal": 218,
+        "m1:ether": 218
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 5,
+      "research": true,
+      "teamHp": 16663,
+      "teamAttack": 1410.86
+    },
+    {
+      "region": "天蠍座",
+      "node": "ScE30",
+      "seed": 42,
+      "enemyLevel": 100,
+      "teamLevel": 60,
+      "strength": "weaker",
+      "victory": false,
+      "reset": false,
+      "seconds": 120.7,
+      "survivors": 0,
+      "damageRatio": 0.3239,
+      "firstWin": {
+        "m1:crystal": 218,
+        "m1:gas": 218,
+        "m1:metal": 218,
+        "m1:ether": 218
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 8238,
+      "teamAttack": 549.12
+    },
+    {
+      "region": "人馬座",
+      "node": "SagE1",
+      "seed": 42,
+      "enemyLevel": 97,
+      "teamLevel": 117,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 47.1,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 212,
+        "m1:gas": 212,
+        "m1:metal": 212,
+        "m1:ether": 212
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 5,
+      "research": true,
+      "teamHp": 16283,
+      "teamAttack": 1378.67
+    },
+    {
+      "region": "人馬座",
+      "node": "SagE1",
+      "seed": 42,
+      "enemyLevel": 97,
+      "teamLevel": 59,
+      "strength": "weaker",
+      "victory": false,
+      "reset": false,
+      "seconds": 207,
+      "survivors": 0,
+      "damageRatio": 0.6945,
+      "firstWin": {
+        "m1:crystal": 212,
+        "m1:gas": 212,
+        "m1:metal": 212,
+        "m1:ether": 212
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 8122,
+      "teamAttack": 541.44
+    },
+    {
+      "region": "人馬座",
+      "node": "SagE29",
+      "seed": 42,
+      "enemyLevel": 110,
+      "teamLevel": 120,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 40.6,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 238,
+        "m1:gas": 238,
+        "m1:metal": 238,
+        "m1:ether": 238
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 5,
+      "research": true,
+      "teamHp": 16663,
+      "teamAttack": 1410.86
+    },
+    {
+      "region": "人馬座",
+      "node": "SagE29",
+      "seed": 42,
+      "enemyLevel": 110,
+      "teamLevel": 66,
+      "strength": "weaker",
+      "victory": false,
+      "reset": false,
+      "seconds": 28.7,
+      "survivors": 0,
+      "damageRatio": 0.1314,
+      "firstWin": {
+        "m1:crystal": 238,
+        "m1:gas": 238,
+        "m1:metal": 238,
+        "m1:ether": 238
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 8928,
+      "teamAttack": 595.2
+    },
+    {
+      "region": "巨蟹座",
+      "node": "CaE1",
+      "seed": 42,
+      "enemyLevel": 104,
+      "teamLevel": 120,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 73.4,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 226,
+        "m1:gas": 226,
+        "m1:metal": 226,
+        "m1:ether": 226
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 5,
+      "research": true,
+      "teamHp": 16663,
+      "teamAttack": 1410.86
+    },
+    {
+      "region": "巨蟹座",
+      "node": "CaE1",
+      "seed": 42,
+      "enemyLevel": 104,
+      "teamLevel": 63,
+      "strength": "weaker",
+      "victory": false,
+      "reset": false,
+      "seconds": 137.1,
+      "survivors": 0,
+      "damageRatio": 0.2258,
+      "firstWin": {
+        "m1:crystal": 226,
+        "m1:gas": 226,
+        "m1:metal": 226,
+        "m1:ether": 226
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 8582,
+      "teamAttack": 572.16
+    },
+    {
+      "region": "巨蟹座",
+      "node": "CaE29",
+      "seed": 42,
+      "enemyLevel": 118,
+      "teamLevel": 120,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 109.4,
+      "survivors": 2,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 254,
+        "m1:gas": 254,
+        "m1:metal": 254,
+        "m1:ether": 254
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 5,
+      "research": true,
+      "teamHp": 16663,
+      "teamAttack": 1410.86
+    },
+    {
+      "region": "巨蟹座",
+      "node": "CaE29",
+      "seed": 42,
+      "enemyLevel": 118,
+      "teamLevel": 71,
+      "strength": "weaker",
+      "victory": false,
+      "reset": false,
+      "seconds": 44.7,
+      "survivors": 0,
+      "damageRatio": 0.1033,
+      "firstWin": {
+        "m1:crystal": 254,
+        "m1:gas": 254,
+        "m1:metal": 254,
+        "m1:ether": 254
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 9505,
+      "teamAttack": 633.6
+    },
+    {
+      "region": "牡羊座",
+      "node": "AE1",
+      "seed": 42,
+      "enemyLevel": 115,
+      "teamLevel": 120,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 58.4,
+      "survivors": 3,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 248,
+        "m1:gas": 248,
+        "m1:metal": 248,
+        "m1:ether": 248
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 5,
+      "research": true,
+      "teamHp": 16663,
+      "teamAttack": 1410.86
+    },
+    {
+      "region": "牡羊座",
+      "node": "AE1",
+      "seed": 42,
+      "enemyLevel": 115,
+      "teamLevel": 69,
+      "strength": "weaker",
+      "victory": false,
+      "reset": false,
+      "seconds": 50.8,
+      "survivors": 0,
+      "damageRatio": 0.1594,
+      "firstWin": {
+        "m1:crystal": 248,
+        "m1:gas": 248,
+        "m1:metal": 248,
+        "m1:ether": 248
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 9273,
+      "teamAttack": 618.24
+    },
+    {
+      "region": "牡羊座",
+      "node": "AE29",
+      "seed": 42,
+      "enemyLevel": 128,
+      "teamLevel": 120,
+      "strength": "normal",
+      "victory": true,
+      "reset": false,
+      "seconds": 121.2,
+      "survivors": 2,
+      "damageRatio": 1,
+      "firstWin": {
+        "m1:crystal": 274,
+        "m1:gas": 274,
+        "m1:metal": 274,
+        "m1:ether": 274
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 5,
+      "research": true,
+      "teamHp": 16663,
+      "teamAttack": 1410.86
+    },
+    {
+      "region": "牡羊座",
+      "node": "AE29",
+      "seed": 42,
+      "enemyLevel": 128,
+      "teamLevel": 77,
+      "strength": "weaker",
+      "victory": false,
+      "reset": false,
+      "seconds": 81,
+      "survivors": 0,
+      "damageRatio": 0.3519,
+      "firstWin": {
+        "m1:crystal": 274,
+        "m1:gas": 274,
+        "m1:metal": 274,
+        "m1:ether": 274
+      },
+      "team": [
+        "m1:earth",
+        "m1:mercury",
+        "m1:venus"
+      ],
+      "resonance": 0,
+      "research": false,
+      "teamHp": 10195,
+      "teamAttack": 679.68
+    }
+  ]
+}

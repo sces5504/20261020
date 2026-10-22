@@ -169,7 +169,9 @@ try {
   assert.ok(
     (await page.locator('[data-action="travel"]').innerText()).includes("<em>"),
   );
-  await page.locator('[data-action="travel"]').click();
+  await page
+    .locator(`[data-action="travel"][data-id="${pack.regions[1].id}"]`)
+    .click();
   await page.locator('[data-answer="no"]').click();
   assert.equal((await record(page)).region, pack.regions[0].id);
   await page.locator('[data-action="travel"]').click();
@@ -214,7 +216,9 @@ try {
     .locator('[data-action="panel"][data-id="regions"]')
     .first()
     .click();
-  await page.locator('[data-action="travel"]').click();
+  await page
+    .locator(`[data-action="travel"][data-id="${pack.regions[0].id}"]`)
+    .click();
   await page.locator('[data-answer="yes"]').click();
   const home = await waitSave(page, (s) => s.region === pack.regions[0].id);
   assert.ok(home.colonies[pack.planets[0].id].active);
@@ -300,7 +304,9 @@ try {
   empty.storySeen = pack.quests.map((q) => q.id);
   await install(mp, pack, empty);
   await mp.locator('[data-action="panel"][data-id="regions"]').first().click();
-  await mp.locator('[data-action="travel"]').waitFor();
+  await mp
+    .locator(`[data-action="travel"][data-id="${pack.regions[0].id}"]`)
+    .waitFor();
   assert.ok(
     await mp.evaluate(
       () => document.documentElement.scrollWidth <= innerWidth + 1,

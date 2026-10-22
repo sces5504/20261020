@@ -4,7 +4,8 @@
     "extensions/frontier-beacon.json",
     "extensions/solar10.json",
     "extensions/stellar10-art.json",
-    "extensions/stella-skills.json"
+    "extensions/stella-skills.json",
+    "extensions/original-world.json"
   ],
   "regionPresentation": [
     {
@@ -75,6 +76,18 @@
       "portrait": "stellaart:asset.ariel-portrait-web",
       "avatar": "stellaart:asset.ariel-avatar-web",
       "sprite": "stellaart:asset.ariel-battle-v2-web"
+    }
+  ],
+  "regionRoutes": [
+    {
+      "region": "m1:frontier-test",
+      "routes": [
+        {
+          "to": "original:region.solar",
+          "label": "原作航跡 · 太陽系",
+          "requires": []
+        }
+      ]
     }
   ]
 }

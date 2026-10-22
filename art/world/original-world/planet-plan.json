@@ -1,0 +1,852 @@
+[
+  {
+    "pidRow": 1,
+    "key": "Sun",
+    "model": "Planet_Sun",
+    "assetId": "original:asset.planet-1",
+    "atlas": 0,
+    "cell": 0,
+    "brief": "luminous warm golden-orange star with a small contained corona and clearly visible rolling plasma, no planet rings",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 2,
+    "key": "Earth",
+    "model": "Planet_Earth",
+    "assetId": "original:asset.planet-2",
+    "atlas": 0,
+    "cell": 1,
+    "brief": "deep blue oceans and recognizable stylized green-brown continents with white cloud swirls",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 3,
+    "key": "Moon",
+    "model": "Planet_Moon",
+    "assetId": "original:asset.planet-3",
+    "atlas": 0,
+    "cell": 2,
+    "brief": "cool grey cratered rocky moon, two large maria and small crater chain",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 4,
+    "key": "Mercury",
+    "model": "Planet_Mercury",
+    "assetId": "original:asset.planet-4",
+    "atlas": 0,
+    "cell": 3,
+    "brief": "warm dark grey densely cratered rocky planet, one subtle bronze scar",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 5,
+    "key": "Venus",
+    "model": "Planet_Venus",
+    "assetId": "original:asset.planet-5",
+    "atlas": 0,
+    "cell": 4,
+    "brief": "opaque pale amber-white cloud planet with sweeping cream storm bands",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 6,
+    "key": "Mars",
+    "model": "Planet_Mars",
+    "assetId": "original:asset.planet-6",
+    "atlas": 0,
+    "cell": 5,
+    "brief": "rust red rocky planet with dark basalt channels and a small white polar cap",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 7,
+    "key": "Jupiter",
+    "model": "Planet_Jupiter",
+    "assetId": "original:asset.planet-7",
+    "atlas": 0,
+    "cell": 6,
+    "brief": "large orange-cream banded gas giant with a distinct oval red storm",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 8,
+    "key": "Saturn",
+    "model": "Planet_Saturn",
+    "assetId": "original:asset.planet-8",
+    "atlas": 0,
+    "cell": 7,
+    "brief": "pale yellow-beige striped gas giant with one wide flat tilted icy ring",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 9,
+    "key": "Uranus",
+    "model": "Planet_Uranus",
+    "assetId": "original:asset.planet-9",
+    "atlas": 0,
+    "cell": 8,
+    "brief": "muted cyan smooth ice giant with very fine near-vertical dark ring",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 10,
+    "key": "Neptune",
+    "model": "Planet_Neptune",
+    "assetId": "original:asset.planet-10",
+    "atlas": 0,
+    "cell": 9,
+    "brief": "deep cobalt blue gas giant with small white storm streaks",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 11,
+    "key": "Pluto",
+    "model": "Planet_Pluto",
+    "assetId": "original:asset.planet-11",
+    "atlas": 0,
+    "cell": 10,
+    "brief": "brown-tan dwarf planet with a large pale heart-shaped ice field",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 12,
+    "key": "Nemesis",
+    "model": "Planet_Nemesis",
+    "assetId": "original:asset.planet-12",
+    "atlas": 0,
+    "cell": 11,
+    "brief": "very dark burgundy brown dwarf with small dull red plasma fissures and restrained red rim light",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 13,
+    "key": "581E",
+    "model": "Planet_581E",
+    "assetId": "original:asset.planet-13",
+    "atlas": 0,
+    "cell": 12,
+    "brief": "pale blue and pearl celestial sphere with stellar plasma swirls with a softly luminous rim",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 14,
+    "key": "Seginus",
+    "model": "Planet_Seginus",
+    "assetId": "original:asset.planet-14",
+    "atlas": 0,
+    "cell": 13,
+    "brief": "rust and pale sand celestial sphere with craggy cratered mineral terrain with a distinct diagonal canyon",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 15,
+    "key": "Spica",
+    "model": "Planet_Spica",
+    "assetId": "original:asset.planet-15",
+    "atlas": 0,
+    "cell": 14,
+    "brief": "cream and golden brown celestial sphere with stellar plasma swirls with a softly luminous rim and a thin distinct tilted ring",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 16,
+    "key": "Gliese",
+    "model": "Planet_Gliese",
+    "assetId": "original:asset.planet-16",
+    "atlas": 0,
+    "cell": 15,
+    "brief": "lavender and dark cobalt celestial sphere with craggy cratered mineral terrain with a distinct diagonal canyon",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 17,
+    "key": "Izar",
+    "model": "Planet_Izar",
+    "assetId": "original:asset.planet-17",
+    "atlas": 1,
+    "cell": 0,
+    "brief": "cream and golden brown celestial sphere with painted mottled cloud systems with a narrow dark equator",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 18,
+    "key": "Arcturus",
+    "model": "Planet_Arcturus",
+    "assetId": "original:asset.planet-18",
+    "atlas": 1,
+    "cell": 1,
+    "brief": "lavender and dark cobalt celestial sphere with craggy cratered mineral terrain with a distinct diagonal canyon",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 19,
+    "key": "Valencia",
+    "model": "Planet_Valencia",
+    "assetId": "original:asset.planet-19",
+    "atlas": 1,
+    "cell": 2,
+    "brief": "navy and sapphire celestial sphere with broad curving atmospheric bands with one off-center oval storm",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 20,
+    "key": "Vello",
+    "model": "Planet_Vello",
+    "assetId": "original:asset.planet-20",
+    "atlas": 1,
+    "cell": 3,
+    "brief": "warm amber and deep ochre celestial sphere with smooth hazy gas bands and two tiny white cyclones",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 21,
+    "key": "Linda",
+    "model": "Planet_Linda",
+    "assetId": "original:asset.planet-21",
+    "atlas": 1,
+    "cell": 4,
+    "brief": "pale blue and pearl celestial sphere with stellar plasma swirls with a softly luminous rim",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 22,
+    "key": "Regulus",
+    "model": "Planet_Regulus",
+    "assetId": "original:asset.planet-22",
+    "atlas": 1,
+    "cell": 5,
+    "brief": "violet and muted rose celestial sphere with craggy cratered mineral terrain with a distinct diagonal canyon and a thin distinct tilted ring",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 23,
+    "key": "Arkas",
+    "model": "Planet_Arkas",
+    "assetId": "original:asset.planet-23",
+    "atlas": 1,
+    "cell": 6,
+    "brief": "rust and pale sand celestial sphere with stellar plasma swirls with a softly luminous rim",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 24,
+    "key": "Procyon",
+    "model": "Planet_Procyon",
+    "assetId": "original:asset.planet-24",
+    "atlas": 1,
+    "cell": 7,
+    "brief": "warm amber and deep ochre celestial sphere with smooth hazy gas bands and two tiny white cyclones",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 25,
+    "key": "Wolf359",
+    "model": "Planet_Wolf359",
+    "assetId": "original:asset.planet-25",
+    "atlas": 1,
+    "cell": 8,
+    "brief": "pale blue and pearl celestial sphere with stellar plasma swirls with a softly luminous rim",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 26,
+    "key": "Luyten",
+    "model": "Planet_Luyten",
+    "assetId": "original:asset.planet-26",
+    "atlas": 1,
+    "cell": 9,
+    "brief": "scarlet and charcoal celestial sphere with rocky dark islands surrounded by bright ice oceans",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 27,
+    "key": "Regor",
+    "model": "Planet_Regor",
+    "assetId": "original:asset.planet-27",
+    "atlas": 1,
+    "cell": 10,
+    "brief": "teal and indigo celestial sphere with rocky dark islands surrounded by bright ice oceans",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 28,
+    "key": "TseenKe",
+    "model": "Planet_TseenKe",
+    "assetId": "original:asset.planet-28",
+    "atlas": 1,
+    "cell": 11,
+    "brief": "rust and pale sand celestial sphere with broad curving atmospheric bands with one off-center oval storm",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 29,
+    "key": "Suhail",
+    "model": "Planet_Suhail",
+    "assetId": "original:asset.planet-29",
+    "atlas": 1,
+    "cell": 12,
+    "brief": "warm amber and deep ochre celestial sphere with layered desert ridges and a single large contrasting basin and a thin distinct tilted ring",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 30,
+    "key": "Alherem",
+    "model": "Planet_Alherem",
+    "assetId": "original:asset.planet-30",
+    "atlas": 1,
+    "cell": 13,
+    "brief": "scarlet and charcoal celestial sphere with layered desert ridges and a single large contrasting basin",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 31,
+    "key": "Musca",
+    "model": "Planet_Musca",
+    "assetId": "original:asset.planet-31",
+    "atlas": 1,
+    "cell": 14,
+    "brief": "scarlet and charcoal celestial sphere with smooth hazy gas bands and two tiny white cyclones",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 32,
+    "key": "Acrux",
+    "model": "Planet_Acrux",
+    "assetId": "original:asset.planet-32",
+    "atlas": 1,
+    "cell": 15,
+    "brief": "cream and golden brown celestial sphere with fragmented icy plates with three fine glowing fissures",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 33,
+    "key": "Achernar",
+    "model": "Planet_Achernar",
+    "assetId": "original:asset.planet-33",
+    "atlas": 2,
+    "cell": 0,
+    "brief": "dark green and mint celestial sphere with smooth hazy gas bands and two tiny white cyclones",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 34,
+    "key": "Ran",
+    "model": "Planet_Ran",
+    "assetId": "original:asset.planet-34",
+    "atlas": 2,
+    "cell": 1,
+    "brief": "teal and indigo celestial sphere with layered desert ridges and a single large contrasting basin",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 35,
+    "key": "Aegir",
+    "model": "Planet_Aegir",
+    "assetId": "original:asset.planet-35",
+    "atlas": 2,
+    "cell": 2,
+    "brief": "violet and muted rose celestial sphere with layered desert ridges and a single large contrasting basin",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 36,
+    "key": "Doradus",
+    "model": "Planet_Doradus",
+    "assetId": "original:asset.planet-36",
+    "atlas": 2,
+    "cell": 3,
+    "brief": "warm amber and deep ochre celestial sphere with fragmented icy plates with three fine glowing fissures and a thin distinct tilted ring",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 37,
+    "key": "Acamar",
+    "model": "Planet_Acamar",
+    "assetId": "original:asset.planet-37",
+    "atlas": 2,
+    "cell": 4,
+    "brief": "pale blue and pearl celestial sphere with layered desert ridges and a single large contrasting basin",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 38,
+    "key": "OTS44",
+    "model": "Planet_OTS44",
+    "assetId": "original:asset.planet-38",
+    "atlas": 2,
+    "cell": 5,
+    "brief": "dark green and mint celestial sphere with craggy cratered mineral terrain with a distinct diagonal canyon",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 39,
+    "key": "DEN",
+    "model": "Planet_DEN",
+    "assetId": "original:asset.planet-39",
+    "atlas": 2,
+    "cell": 6,
+    "brief": "violet and muted rose celestial sphere with craggy cratered mineral terrain with a distinct diagonal canyon",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 40,
+    "key": "Sirius",
+    "model": "Planet_Sirius",
+    "assetId": "original:asset.planet-40",
+    "atlas": 2,
+    "cell": 7,
+    "brief": "rust and pale sand celestial sphere with fragmented icy plates with three fine glowing fissures",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 41,
+    "key": "Bayes",
+    "model": "Planet_Bayes",
+    "assetId": "original:asset.planet-41",
+    "atlas": 2,
+    "cell": 8,
+    "brief": "copper and graphite celestial sphere with craggy cratered mineral terrain with a distinct diagonal canyon",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 42,
+    "key": "Rufus",
+    "model": "Planet_Rufus",
+    "assetId": "original:asset.planet-42",
+    "atlas": 2,
+    "cell": 9,
+    "brief": "lavender and dark cobalt celestial sphere with smooth hazy gas bands and two tiny white cyclones",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 43,
+    "key": "Asmidiske",
+    "model": "Planet_Asmidiske",
+    "assetId": "original:asset.planet-43",
+    "atlas": 2,
+    "cell": 10,
+    "brief": "teal and indigo celestial sphere with painted mottled cloud systems with a narrow dark equator and a thin distinct tilted ring",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 44,
+    "key": "Canis",
+    "model": "Planet_Canis",
+    "assetId": "original:asset.planet-44",
+    "atlas": 2,
+    "cell": 11,
+    "brief": "warm amber and deep ochre celestial sphere with fragmented icy plates with three fine glowing fissures",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 45,
+    "key": "Wezen",
+    "model": "Planet_Wezen",
+    "assetId": "original:asset.planet-45",
+    "atlas": 2,
+    "cell": 12,
+    "brief": "icy turquoise and silver celestial sphere with rocky dark islands surrounded by bright ice oceans",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 46,
+    "key": "Aludra",
+    "model": "Planet_Aludra",
+    "assetId": "original:asset.planet-46",
+    "atlas": 2,
+    "cell": 13,
+    "brief": "icy turquoise and silver celestial sphere with painted mottled cloud systems with a narrow dark equator",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 47,
+    "key": "Furud",
+    "model": "Planet_Furud",
+    "assetId": "original:asset.planet-47",
+    "atlas": 2,
+    "cell": 14,
+    "brief": "scarlet and charcoal celestial sphere with craggy cratered mineral terrain with a distinct diagonal canyon",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 48,
+    "key": "Naos",
+    "model": "Planet_Naos",
+    "assetId": "original:asset.planet-48",
+    "atlas": 2,
+    "cell": 15,
+    "brief": "teal and indigo celestial sphere with layered desert ridges and a single large contrasting basin",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 49,
+    "key": "Polaris",
+    "model": "Planet_Polaris",
+    "assetId": "original:asset.planet-49",
+    "atlas": 3,
+    "cell": 0,
+    "brief": "navy and sapphire celestial sphere with broad curving atmospheric bands with one off-center oval storm",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 50,
+    "key": "Mucephei",
+    "model": "Planet_MuCephei",
+    "assetId": "original:asset.planet-50",
+    "atlas": 3,
+    "cell": 1,
+    "brief": "cream and golden brown celestial sphere with smooth hazy gas bands and two tiny white cyclones and a thin distinct tilted ring",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 51,
+    "key": "Alrai",
+    "model": "Planet_Alrai",
+    "assetId": "original:asset.planet-51",
+    "atlas": 3,
+    "cell": 2,
+    "brief": "lavender and dark cobalt celestial sphere with fragmented icy plates with three fine glowing fissures",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 52,
+    "key": "Shedar",
+    "model": "Planet_Shedar",
+    "assetId": "original:asset.planet-52",
+    "atlas": 3,
+    "cell": 3,
+    "brief": "rust and pale sand celestial sphere with broad curving atmospheric bands with one off-center oval storm",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 53,
+    "key": "Hypatia",
+    "model": "Planet_Hypatia",
+    "assetId": "original:asset.planet-53",
+    "atlas": 3,
+    "cell": 4,
+    "brief": "dark green and mint celestial sphere with broad curving atmospheric bands with one off-center oval storm",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 54,
+    "key": "Vega",
+    "model": "Planet_Vega",
+    "assetId": "original:asset.planet-54",
+    "atlas": 3,
+    "cell": 5,
+    "brief": "copper and graphite celestial sphere with fragmented icy plates with three fine glowing fissures",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 55,
+    "key": "Kruger60",
+    "model": "Planet_Kruger60",
+    "assetId": "original:asset.planet-55",
+    "atlas": 3,
+    "cell": 6,
+    "brief": "pale blue and pearl celestial sphere with rocky dark islands surrounded by bright ice oceans",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 56,
+    "key": "Kochab",
+    "model": "Planet_Kochab",
+    "assetId": "original:asset.planet-56",
+    "atlas": 3,
+    "cell": 7,
+    "brief": "dark green and mint celestial sphere with layered desert ridges and a single large contrasting basin",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 57,
+    "key": "Navi",
+    "model": "Planet_Navi",
+    "assetId": "original:asset.planet-57",
+    "atlas": 3,
+    "cell": 8,
+    "brief": "teal and indigo celestial sphere with rocky dark islands surrounded by bright ice oceans and a thin distinct tilted ring",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 58,
+    "key": "Bellerophon",
+    "model": "Planet_Bellerophon",
+    "assetId": "original:asset.planet-58",
+    "atlas": 3,
+    "cell": 9,
+    "brief": "teal and indigo celestial sphere with smooth hazy gas bands and two tiny white cyclones",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 59,
+    "key": "Cygni",
+    "model": "Planet_Cygni",
+    "assetId": "original:asset.planet-59",
+    "atlas": 3,
+    "cell": 10,
+    "brief": "rust and pale sand celestial sphere with craggy cratered mineral terrain with a distinct diagonal canyon",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 60,
+    "key": "Sadr",
+    "model": "Planet_Sadr",
+    "assetId": "original:asset.planet-60",
+    "atlas": 3,
+    "cell": 11,
+    "brief": "lavender and dark cobalt celestial sphere with stellar plasma swirls with a softly luminous rim",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 61,
+    "key": "Deneb",
+    "model": "Planet_Deneb",
+    "assetId": "original:asset.planet-61",
+    "atlas": 3,
+    "cell": 12,
+    "brief": "teal and indigo celestial sphere with stellar plasma swirls with a softly luminous rim",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 62,
+    "key": "Enif",
+    "model": "Planet_Enif",
+    "assetId": "original:asset.planet-62",
+    "atlas": 3,
+    "cell": 13,
+    "brief": "cream and golden brown celestial sphere with fragmented icy plates with three fine glowing fissures",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 63,
+    "key": "Albireo",
+    "model": "Planet_Albireo",
+    "assetId": "original:asset.planet-63",
+    "atlas": 3,
+    "cell": 14,
+    "brief": "teal and indigo celestial sphere with smooth hazy gas bands and two tiny white cyclones",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 64,
+    "key": "Kepler",
+    "model": "Planet_Kepler",
+    "assetId": "original:asset.planet-64",
+    "atlas": 3,
+    "cell": 15,
+    "brief": "copper and graphite celestial sphere with craggy cratered mineral terrain with a distinct diagonal canyon and a thin distinct tilted ring",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 65,
+    "key": "Piazzi",
+    "model": "Planet_Piazzi",
+    "assetId": "original:asset.planet-65",
+    "atlas": 4,
+    "cell": 0,
+    "brief": "teal and indigo celestial sphere with stellar plasma swirls with a softly luminous rim",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 66,
+    "key": "Osiris",
+    "model": "Planet_Osiris",
+    "assetId": "original:asset.planet-66",
+    "atlas": 4,
+    "cell": 1,
+    "brief": "copper and graphite celestial sphere with smooth hazy gas bands and two tiny white cyclones",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 67,
+    "key": "Pollux",
+    "model": "Planet_Pollux",
+    "assetId": "original:asset.planet-67",
+    "atlas": 4,
+    "cell": 2,
+    "brief": "scarlet and charcoal celestial sphere with layered desert ridges and a single large contrasting basin",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 68,
+    "key": "Thestias",
+    "model": "Planet_Thestias",
+    "assetId": "original:asset.planet-68",
+    "atlas": 4,
+    "cell": 3,
+    "brief": "scarlet and charcoal celestial sphere with fragmented icy plates with three fine glowing fissures",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 69,
+    "key": "Betelgeuse",
+    "model": "Planet_Betelgeuse",
+    "assetId": "original:asset.planet-69",
+    "atlas": 4,
+    "cell": 4,
+    "brief": "icy turquoise and silver celestial sphere with layered desert ridges and a single large contrasting basin",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 70,
+    "key": "Bellatrix",
+    "model": "Planet_Bellatrix",
+    "assetId": "original:asset.planet-70",
+    "atlas": 4,
+    "cell": 5,
+    "brief": "pale blue and pearl celestial sphere with painted mottled cloud systems with a narrow dark equator",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 71,
+    "key": "Tabit",
+    "model": "Planet_Tabit",
+    "assetId": "original:asset.planet-71",
+    "atlas": 4,
+    "cell": 6,
+    "brief": "warm amber and deep ochre celestial sphere with smooth hazy gas bands and two tiny white cyclones and a thin distinct tilted ring",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 72,
+    "key": "Rigel",
+    "model": "Planet_Rigel",
+    "assetId": "original:asset.planet-72",
+    "atlas": 4,
+    "cell": 7,
+    "brief": "rust and pale sand celestial sphere with layered desert ridges and a single large contrasting basin",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 73,
+    "key": "Saiph",
+    "model": "Planet_Saiph",
+    "assetId": "original:asset.planet-73",
+    "atlas": 4,
+    "cell": 8,
+    "brief": "copper and graphite celestial sphere with smooth hazy gas bands and two tiny white cyclones",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 74,
+    "key": "Alhena",
+    "model": "Planet_Alhena",
+    "assetId": "original:asset.planet-74",
+    "atlas": 4,
+    "cell": 9,
+    "brief": "scarlet and charcoal celestial sphere with craggy cratered mineral terrain with a distinct diagonal canyon",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 75,
+    "key": "Castor",
+    "model": "Planet_Castor",
+    "assetId": "original:asset.planet-75",
+    "atlas": 4,
+    "cell": 10,
+    "brief": "navy and sapphire celestial sphere with rocky dark islands surrounded by bright ice oceans",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 76,
+    "key": "Aldebaran",
+    "model": "Planet_Aldebaran",
+    "assetId": "original:asset.planet-76",
+    "atlas": 4,
+    "cell": 11,
+    "brief": "navy and sapphire celestial sphere with smooth hazy gas bands and two tiny white cyclones",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 77,
+    "key": "Teide",
+    "model": "Planet_Teide",
+    "assetId": "original:asset.planet-77",
+    "atlas": 4,
+    "cell": 12,
+    "brief": "copper and graphite celestial sphere with stellar plasma swirls with a softly luminous rim",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 78,
+    "key": "Amateru",
+    "model": "Planet_Amateru",
+    "assetId": "original:asset.planet-78",
+    "atlas": 4,
+    "cell": 13,
+    "brief": "cream and golden brown celestial sphere with stellar plasma swirls with a softly luminous rim and a thin distinct tilted ring",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 79,
+    "key": "Alcyone",
+    "model": "Planet_Alcyone",
+    "assetId": "original:asset.planet-79",
+    "atlas": 4,
+    "cell": 14,
+    "brief": "lavender and dark cobalt celestial sphere with painted mottled cloud systems with a narrow dark equator",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 80,
+    "key": "Electra",
+    "model": "Planet_Electra",
+    "assetId": "original:asset.planet-80",
+    "atlas": 4,
+    "cell": 15,
+    "brief": "navy and sapphire celestial sphere with stellar plasma swirls with a softly luminous rim",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 81,
+    "key": "Maia",
+    "model": "Planet_Maia",
+    "assetId": "original:asset.planet-81",
+    "atlas": 5,
+    "cell": 0,
+    "brief": "violet and muted rose celestial sphere with smooth hazy gas bands and two tiny white cyclones",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 82,
+    "key": "Celaeno",
+    "model": "Planet_Celaeno",
+    "assetId": "original:asset.planet-82",
+    "atlas": 5,
+    "cell": 1,
+    "brief": "violet and muted rose celestial sphere with smooth hazy gas bands and two tiny white cyclones",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 83,
+    "key": "Asterope",
+    "model": "Planet_Asterope",
+    "assetId": "original:asset.planet-83",
+    "atlas": 5,
+    "cell": 2,
+    "brief": "pale blue and pearl celestial sphere with smooth hazy gas bands and two tiny white cyclones",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 84,
+    "key": "Merope",
+    "model": "Planet_Merope",
+    "assetId": "original:asset.planet-84",
+    "atlas": 5,
+    "cell": 3,
+    "brief": "violet and muted rose celestial sphere with craggy cratered mineral terrain with a distinct diagonal canyon",
+    "review": "candidate"
+  },
+  {
+    "pidRow": 85,
+    "key": "Taygeta",
+    "model": "Planet_Taygeta",
+    "assetId": "original:asset.planet-85",
+    "atlas": 5,
+    "cell": 4,
+    "brief": "cream and golden brown celestial sphere with smooth hazy gas bands and two tiny white cyclones and a thin distinct tilted ring",
+    "review": "candidate"
+  }
+]

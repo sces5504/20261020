@@ -140,6 +140,18 @@ export async function mountStudio(root: HTMLElement) {
   }
   const labels: Record<string, string> = {
     id: "穩定 ID",
+    kind: "世界節點類型",
+    initiallyCleared: "初始已解放（無首勝獎勵）",
+    resupplyCost: "基地每人整補費用（{}為免費，未設沿用全域）",
+    requiresActive: "需要先啟動的星球",
+    hiddenUntilUnlocked: "前置未完成時隱藏",
+    encounterPolicy: "接敵方式（auto／manual）",
+    timeLimitSeconds: "挑戰時限（有效戰鬥秒）",
+    objective: "勝利目標（eliminate／damage）",
+    schedule: "每日開放排程（星期0為週日）",
+    growthReference: "原生CID成長基準（ATK／DEF／HP）",
+    sourceRef: "原作來源與推定依據",
+    campaignStart: "可選新航跡起點",
     summonable: "可透過共鳴取得",
     category: "音效類別",
     waveform: "波形",
@@ -680,6 +692,8 @@ export async function mountStudio(root: HTMLElement) {
       if (t.id === "import-project" && t.files?.[0]) {
         const f = t.files[0];
         if (f.size > ARCHIVE_BYTES) throw Error("匯入檔案超過 64 MiB。");
+        message = "正在讀取並驗證完整內容與圖片，完成後會顯示匯入確認。";
+        status();
         const next = f.name.endsWith(".zip")
           ? {
               ...project,

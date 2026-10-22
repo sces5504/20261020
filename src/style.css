@@ -706,6 +706,10 @@ input[type="file"] {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
+.bridge.in-battle > .toast {
+  top: 100px;
+  bottom: auto;
+}
 .modal-backdrop {
   position: fixed;
   inset: 0;
@@ -3290,4 +3294,15 @@ button:not(:disabled):hover {
 .mechanic-row [data-action-control][hidden],
 .modifier-row [data-modifier-control][hidden] {
   display: none !important;
+}
+
+/* Keep every collected maiden readable without covering the management controls. */
+.squad:has(> .squad-card:nth-child(4)) {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.squad:has(> .squad-card:nth-child(4)) > .squad-card {
+  min-width: 0;
+  max-width: none;
+  width: 100%;
 }

@@ -3,6 +3,7 @@ import { snapshot } from "../content/schema";
 import { newSave, stats, type Save } from "../domain/model";
 import { apply, settle, type Command } from "../domain/economy";
 import { patrolPosition } from "../domain/navigation";
+import { nodeCleared, nodeUnlocked, nodeAvailability, nodeVisible } from "../domain/world";
 import { FleetMotion } from "../domain/formation";
 import { Combat } from "../domain/combat";
 import { fingerprint } from "../content/fingerprint";
@@ -161,7 +162,7 @@ export class Game {
             : {
                 title: c.victory ? "航跡已開拓" : "已撤離交戰區",
                 message: c.victory
-                  ? "星球守軍已全部清除。啟動星球，建立新的生產據點。"
+                  ? (this.pack.planets.find(v => v.id === c.planet)?.kind === "planet" ? "星球守軍已全部清除。啟動星球，建立新的生產據點。" : "遭遇已完成，獎勵與通關進度已保存；此據點不提供生產。")
                   : "角色生命已保存，可整補後再挑戰。",
                 victory: c.victory,
                 planet: patrol ? "" : c.planet,
@@ -253,6 +254,7 @@ export class Game {
           victory: c.victory,
           reset: c.reset,
           hp: c.result(),
+          scoreRatio: c.damageRatio,
           receipt: `encounter-${this.save.encounter?.seed}`,
         }).finally(() => (this.encounterPending = false));
       }
@@ -266,6 +268,7 @@ export class Game {
     for (const p of this.pack.planets.filter((p) => p.region === r.id)) {
       if (
         !this.discovered.has(p.id) &&
+        nodeVisible(this.save, p, this.pack, Date.now()) &&
         Math.hypot(p.x - this.x, p.y - this.y) < r.discoveryRadius
       ) {
         this.discovered.add(p.id);
@@ -304,9 +307,9 @@ export class Game {
             (p) =>
               p.region === r.id &&
               p.status === "active" &&
-              !this.save.cleared.includes(p.id) &&
+              !nodeCleared(this.save, p) && p.enemies.length > 0 && p.encounterPolicy === "auto" && nodeAvailability(this.save, p, Date.now()).open &&
               !this.disengagedPlanets.has(p.id) &&
-              p.requires.every((id) => this.save.cleared.includes(id)),
+              nodeUnlocked(this.save, p, this.pack),
           )
           .map((p) => ({
             kind: "begin" as const,
@@ -346,7 +349,7 @@ export class Game {
       this.pack.planets.some(
         (p) =>
           p.region === r.id &&
-          !this.save.cleared.includes(p.id) &&
+          !nodeCleared(this.save, p) && p.enemies.length > 0 && nodeUnlocked(this.save, p, this.pack) && p.encounterPolicy === "auto" &&
           Math.hypot(p.x - this.x, p.y - this.y) < p.engageRadius + 250,
       );
     return threat ? this.pack.rules.travelSpeed : this.pack.rules.cruiseSpeed;

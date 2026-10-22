@@ -34,6 +34,8 @@ export type Save = {
   acquisitionQueue: string[];
   voyageSeconds: number;
   patrolCooldowns: Record<string, number>;
+  dailyClaims: Record<string, string>;
+  dailyAttempts: Record<string, { period: string; count: number }>;
   disengagedPlanets: string[];
   heading: number;
   duplicateConversions: number;
@@ -66,6 +68,7 @@ export type Save = {
     planet: string;
     seed: number;
     kind?: "planet" | "patrol";
+    period?: string;
   } | null;
   orphans: Owned[];
 };
@@ -100,6 +103,8 @@ export function newSave(p: Pack, now: number, id = "voyager"): Save {
     acquisitionQueue: [],
     voyageSeconds: 0,
     patrolCooldowns: {},
+    dailyClaims: {},
+    dailyAttempts: {},
     disengagedPlanets: [],
     heading: 0,
     duplicateConversions: 0,
@@ -117,9 +122,13 @@ export function newSave(p: Pack, now: number, id = "voyager"): Save {
     wallet: Object.fromEntries(p.resources.map((r) => [r.id, r.initial])),
     roster,
     team: roster.slice(0, p.rules.teamSize).map((c) => c.id),
-    region: p.regions[0].id,
-    x: p.regions[0].startX,
-    y: p.regions[0].startY,
+    region: (
+      p.regions.find((r) => r.id === p.rules.startRegion) ?? p.regions[0]
+    ).id,
+    x: (p.regions.find((r) => r.id === p.rules.startRegion) ?? p.regions[0])
+      .startX,
+    y: (p.regions.find((r) => r.id === p.rules.startRegion) ?? p.regions[0])
+      .startY,
     cleared: [],
     colonies: {},
     research: [],

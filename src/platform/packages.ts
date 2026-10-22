@@ -1,5 +1,5 @@
 import { ARCHIVE_BYTES, EXPANDED_BYTES, ENTRY_BYTES } from "./budgets";
-import { zipSync, unzipSync, strToU8, strFromU8 } from "fflate";
+import { zipSync, unzipSync, strToU8, strFromU8, type Zippable } from "fflate";
 import { validatePack, type Pack } from "../content/schema";
 export async function exportPack(
   pack: Pack,
@@ -10,7 +10,7 @@ export async function exportPack(
   },
 ): Promise<Uint8Array> {
   const p = structuredClone(pack),
-    files: Record<string, Uint8Array> = {};
+    files: Zippable = {};
   const media = new Map<string, string>();
   for (const a of p.assets) {
     let bytes: Uint8Array;
@@ -44,7 +44,9 @@ export async function exportPack(
     if (!path) {
       path = `assets/${media.size}.${ext}`;
       media.set(key, path);
-      files[path] = bytes;
+      // PNG/JPEG/WebP are already compressed. Re-deflating the full world art
+      // blocks the workshop without meaningfully shrinking the portable ZIP.
+      files[path] = [bytes, { level: 0 }];
     }
     a.src = path;
   }

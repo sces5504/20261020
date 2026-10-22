@@ -1,5 +1,5 @@
 {
-  "milestone": "galaxy-angel-0.6-stella-skill-engine",
+  "milestone": "galaxy-angel-0.7-original-world",
   "status": "m1-playtest-complete",
   "checks": {
     "characterMappingConfirmed": true,
@@ -13,7 +13,7 @@
     "iosSafariVerified": false,
     "performanceBaselineVerified": false
   },
-  "notes": "核心0.6.0；frontier0.3.0、solar10角色0.2.0、stellar10美術0.1.1、stella技能庫0.1.0。16角色原作技能、226來源技能／74效果家族、82彈幕模板、隔離工坊實驗場及四資源圖。原圖bytes保留。發布測試與公開SHA見PR #12及skill-engine-20261022交接；桌機與觸控viewport不等於Android／iOS真機，候選美術不冒充人工批准。",
+  "notes": "核心0.7.0；原作世界包0.1.0。14來源星域、85星球、65敵人CID／62固定外觀、671可玩來源遭遇、主線／高難／活動重演與每日母艦，新增165圖。106核心＋八組瀏覽器完整release通過，seed42全671場有勝利證據；來源／適配界線、耗時及缺口見original-world交接與驗證。使用者單次特殊核心授權已記錄。候選圖片與觸控viewport不冒充人工批准／真機。",
   "playtestStatus": "ready",
   "playtestChecks": {
     "campaignLoop": true,
@@ -49,6 +49,12 @@
     "declarativeOriginalSkillFamilies": true,
     "projectileCatalogAndEditor": true,
     "isolatedConfigurableCombatLaboratory": true,
-    "fourResourceAtlas": true
+    "fourResourceAtlas": true,
+    "completeRecoveredWorldCoverage": true,
+    "fixedWorldArtwork": true,
+    "nativeEnemyGrowthAndHitability": true,
+    "campSupplyRecovery": true,
+    "dailyScheduleAndDamageClaim": true,
+    "sixMemberReadableHud": true
   }
 }

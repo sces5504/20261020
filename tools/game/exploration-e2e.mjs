@@ -317,7 +317,7 @@ try {
     "imported legacy colonies must recover without defense or repair fees",
   );
   const beforeReset = await record(page);
-  await page.locator('[data-action="new-voyage"]').click();
+  await page.locator('[data-action="new-voyage"][data-id=""]').click();
   await page.locator('[data-answer="yes"]').click();
   await page.waitForSelector(".story-scene");
   const reset = await record(page);

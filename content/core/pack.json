@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "m1:core",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "name": "星河戰姬 · 太陽系探索",
   "resources": [
     {
@@ -12,7 +12,7 @@
       "provenance": "m1-design",
       "color": "#8ae6ef",
       "initial": 180,
-      "capacity": 2400,
+      "capacity": 5000,
       "sprite": "m1:resource-icons-v1",
       "iconFrame": 0
     },
@@ -24,7 +24,7 @@
       "provenance": "m1-design",
       "color": "#b8a0ee",
       "initial": 170,
-      "capacity": 2400,
+      "capacity": 5000,
       "sprite": "m1:resource-icons-v1",
       "iconFrame": 1
     },
@@ -36,7 +36,7 @@
       "provenance": "m1-design",
       "color": "#f2bd7c",
       "initial": 240,
-      "capacity": 2400,
+      "capacity": 5000,
       "sprite": "m1:resource-icons-v1",
       "iconFrame": 2
     },
@@ -48,7 +48,7 @@
       "provenance": "m1-design",
       "color": "#9ad4a1",
       "initial": 150,
-      "capacity": 2400,
+      "capacity": 5000,
       "sprite": "m1:resource-icons-v1",
       "iconFrame": 3
     }
@@ -2369,8 +2369,8 @@
     }
   ],
   "rules": {
-    "teamSize": 3,
-    "maxLevel": 20,
+    "teamSize": 6,
+    "maxLevel": 120,
     "offlineCapSeconds": 3600,
     "summonSeconds": 35,
     "summonSlots": 4,

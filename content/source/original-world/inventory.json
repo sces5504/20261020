@@ -1,0 +1,28 @@
+{
+  "sourceApkSha256": "213a1630a5e893f4e5c1e17fc292a04aabfe5c865534c997cb90131624837905",
+  "coreBaseCommit": "5e6d471",
+  "sourceVersion": "4.3.2",
+  "rawCounts": {
+    "galaxies": 14,
+    "planets": 85,
+    "spawnPoints": 529,
+    "nonemptyWaves": 940,
+    "enemyDefinitions": 65,
+    "visualIdentities": 62,
+    "galaxyGates": 51
+  },
+  "excludedRuntimeSystems": [
+    "cancelled defense/raid restoration",
+    "cancelled rewarded dodge training",
+    "debug/Test/Dummy only fixtures"
+  ],
+  "confidence": {
+    "waveGroups": "native-confirmed Wave row references and seven CID/count pairs",
+    "growth": "native-confirmed ATK/HP/DEF truncation, CID.f15/f16/f17",
+    "mapCoordinates": "native-confirmed SpawnPoint.f11/f12; PID.f12/f13 relationally inferred",
+    "galaxyRows": "source Galaxy.f01; zero-region spawn placeholders are not reassigned by guessed names",
+    "planetGuardWave": "PID.f05 matched to GalaxyN_M Wave keys; relational inference",
+    "planetResources": "PID.f28/f29/f30/f31 inferred four-wallet order, checked against public Solar/Virgo lists",
+    "movementAndShot": "CID movement/interval columns and Shot/Attack chain require declared inference; never labelled native-confirmed"
+  }
+}

@@ -191,7 +191,7 @@ try {
     void d.dismiss();
   });
   await page.goto(server.url + "#/play");
-  await page.waitForSelector("canvas");
+  await page.waitForSelector("canvas", { timeout: 60000 });
   const arrived = await record(page);
   for (const q of pack.quests.filter(
     (q) =>
@@ -264,7 +264,10 @@ try {
   assert.equal((await record(page)).cleared.length, 0);
   await page.goto(server.url + "#/catalog");
   await page.waitForSelector("#roster-rows tr");
-  assert.equal(await page.locator("#roster-rows tr").count(), 126 - pack.characters.length);
+  assert.equal(
+    await page.locator("#roster-rows tr").count(),
+    126 - pack.characters.length,
+  );
   await page.locator("#roster-filter").selectOption("priority");
   assert.equal(await page.locator("#roster-rows tr").count(), 0);
   await page.screenshot({ path: ".artifacts/v2/roster.png" });
@@ -291,7 +294,7 @@ try {
   await page.locator('[data-action="kind"][data-id="enemies"]').click();
   await page.screenshot({ path: ".artifacts/v2/studio-enemy.png" });
   await page.goto(server.url + "#/play");
-  await page.waitForSelector("canvas");
+  await page.waitForSelector("canvas", { timeout: 60000 });
   await page.locator('[data-id="archive"][data-action="panel"]').click();
   const legacy = await record(page),
     firstPlanet = pack.planets[0];

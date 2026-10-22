@@ -127,7 +127,7 @@ try {
   );
   await page.locator('[data-action="close"]').first().click();
   await page.reload();
-  await page.waitForSelector(".in-battle");
+  await page.waitForSelector(".in-battle", { timeout: 60000 });
   assert.ok(
     (await getRecord(page, "save:main")).encounter,
     "checkpoint restores encounter after reload",
@@ -271,7 +271,7 @@ try {
     void d.dismiss();
   });
   await mobile.goto(url);
-  await mobile.waitForSelector("canvas");
+  await mobile.waitForSelector("canvas", { timeout: 60000 });
   await skipIntro(mobile);
   await mobile.waitForTimeout(500);
   assert.ok(

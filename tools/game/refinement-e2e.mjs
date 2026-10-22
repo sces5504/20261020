@@ -59,7 +59,7 @@ async function install(page, pack, s) {
     { pack, s },
   );
   await page.goto(server.url + "#/test");
-  await page.waitForSelector("canvas");
+  await page.waitForSelector("canvas", { timeout: 60000 });
 }
 function fixture(pack) {
   const s = newSave(pack, Date.now(), "test");

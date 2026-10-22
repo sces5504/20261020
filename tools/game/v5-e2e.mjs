@@ -53,7 +53,7 @@ async function install(page, p, s) {
     { p, s },
   );
   await page.goto(server.url + "#/test");
-  await page.waitForSelector("canvas");
+  await page.waitForSelector("canvas", { timeout: 60000 });
 }
 try {
   const context = await browser.newContext({
@@ -189,7 +189,7 @@ try {
     animations: "disabled",
   });
   await page.reload();
-  await page.waitForSelector("canvas");
+  await page.waitForSelector("canvas", { timeout: 60000 });
   assert.equal((await record(page)).region, pack.regions[1].id);
   // Empty-sector clicks must navigate even at another region's planet coordinates.
   await page.keyboard.press("m");

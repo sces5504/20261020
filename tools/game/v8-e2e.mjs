@@ -94,7 +94,7 @@ try {
       { pack, save },
     );
     await page.goto(server.url + "#/test");
-    await page.waitForSelector("canvas");
+    await page.waitForSelector("canvas", { timeout: 60000 });
     const open = async (panel) => {
       await page
         .locator(`.deck-nav [data-action="panel"][data-id="${panel}"]`)

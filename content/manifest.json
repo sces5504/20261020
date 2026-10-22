@@ -3,7 +3,8 @@
   "extensions": [
     "extensions/frontier-beacon.json",
     "extensions/solar10.json",
-    "extensions/stellar10-art.json"
+    "extensions/stellar10-art.json",
+    "extensions/stella-skills.json"
   ],
   "regionPresentation": [
     {

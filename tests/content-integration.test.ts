@@ -113,7 +113,7 @@ test("old second-sector save preserves position, colonies and committed summon r
   assert.deepEqual(s, before, "migration leaves input untouched");
 });
 
-test("shared skills expose the actual caster and stable skill ID without altering cooldown or effects", () => {
+test("original skill programs expose the actual caster, stable ID and cooldown", () => {
   const s = newSave(p, 1);
   const sun = addCharacter(p, s, "solar10:character.sun")!;
   const mars = addCharacter(p, s, "m1:mars")!;
@@ -121,12 +121,17 @@ test("shared skills expose the actual caster and stable skill ID without alterin
   const battle = new Combat(p, s, p.planets[0].id);
   for (const u of battle.allies) {
     const skill = battle.skillFor(u)!;
-    assert.equal(skill.id, "m1:armor");
+    assert.equal(
+      skill.id,
+      u.def === "solar10:character.sun" ? "solar10:skill.sun" : "m1:armor",
+    );
     assert(battle.cast(u.id));
     const flash = battle.flashes.at(-1)!;
     assert.equal(flash.sourceDefinition, u.def);
     assert.equal(flash.skillId, skill.id);
-    assert.equal(u.buff, "fortify");
+    if (u.def === "solar10:character.sun")
+      assert.equal(battle.mechanics.stat(u, "defense"), 1.6);
+    else assert.equal(battle.mechanics.stat(u, "defense"), 1.6 * 2.2);
     assert.equal(u.skillCooldown, skill.cooldown);
     assert(!battle.cast(u.id));
   }

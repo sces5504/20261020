@@ -204,7 +204,8 @@ try {
   console.log("Playtest: character profile, dialogue and content acquisition");
   await page.locator(".squad-card").first().click();
   await page.waitForSelector(".character-detail");
-  assert.ok((await page.locator(".skill-detail").innerText()).includes("護盾"));
+  assert.match(await page.locator(".skill-detail").innerText(), /40%機率偏折/);
+  assert.match(await page.locator(".skill-detail").innerText(), /3秒/);
   await page.screenshot({ path: ".artifacts/m1/profile.png" });
   await page.locator('[data-action="close"]').first().click();
   await page.locator('[data-id="planets"][data-action="panel"]').click();

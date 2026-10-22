@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "id": "beacon:package.frontier",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "requires": [
     {
       "id": "m1:core",
-      "version": "0.5.0"
+      "version": "0.6.0"
     }
   ],
   "definitions": {
@@ -15,7 +15,7 @@
         "provenance": "m1-design",
         "id": "beacon:enemy.scout",
         "name": "邊境游弋機",
-        "description": "邊境信標單波守軍；本案新設計。近距側移沿用核心行為，保留普攻命中窗口。",
+        "description": "邊境信標單波守軍；本案新設計。近距側移沿用核心行為，保留普攻命中窗口。 彈幕為本作設計：分段連射。",
         "hp": 480,
         "attack": 8,
         "defense": 18,
@@ -25,18 +25,22 @@
         "projectileSpeed": 160,
         "orbitSpeed": 0.45,
         "strafeSpeed": 14,
-        "pattern": "aim",
+        "pattern": "burst",
         "boss": false,
         "phaseAt": 0.5,
         "color": "#ff9a8a",
-        "sprite": "beacon:asset.scout-v1"
+        "sprite": "beacon:asset.scout-v1",
+        "phasePattern": "ring",
+        "volleyCount": 3,
+        "critical": 0.02,
+        "evasion": 0
       },
       {
         "status": "active",
         "provenance": "m1-design",
         "id": "beacon:enemy.warden",
         "name": "信標護衛艦",
-        "description": "邊境信標單波守軍；本案新設計。近距側移沿用核心行為，保留普攻命中窗口。",
+        "description": "邊境信標單波守軍；本案新設計。近距側移沿用核心行為，保留普攻命中窗口。 彈幕為本作設計：追蹤雙彈。",
         "hp": 820,
         "attack": 11,
         "defense": 20,
@@ -46,18 +50,22 @@
         "projectileSpeed": 160,
         "orbitSpeed": 0.45,
         "strafeSpeed": 14,
-        "pattern": "fan",
+        "pattern": "homing",
         "boss": false,
         "phaseAt": 0.5,
         "color": "#ff9a8a",
-        "sprite": "beacon:asset.warden-v1"
+        "sprite": "beacon:asset.warden-v1",
+        "phasePattern": "ring",
+        "volleyCount": 2,
+        "critical": 0.02,
+        "evasion": 0
       },
       {
         "status": "active",
         "provenance": "m1-design",
         "id": "beacon:enemy.anchor",
         "name": "錨定指揮艦",
-        "description": "邊境信標單波守軍；本案新設計。生命低於45%時沿用核心切換環形彈幕，沒有額外階段技能。",
+        "description": "邊境信標單波守軍；本案新設計。生命低於45%時沿用核心切換環形彈幕，沒有額外階段技能。 彈幕為本作設計：螺旋散射，受損後轉為預警雷射。",
         "hp": 1800,
         "attack": 12,
         "defense": 28,
@@ -67,11 +75,15 @@
         "projectileSpeed": 145,
         "orbitSpeed": 0.25,
         "strafeSpeed": 6,
-        "pattern": "fan",
+        "pattern": "spiral",
         "boss": true,
         "phaseAt": 0.45,
         "color": "#e1a4fa",
-        "sprite": "beacon:asset.anchor-v1"
+        "sprite": "beacon:asset.anchor-v1",
+        "phasePattern": "laser",
+        "volleyCount": 5,
+        "critical": 0.05,
+        "evasion": 0
       }
     ],
     "planets": [

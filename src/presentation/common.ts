@@ -16,11 +16,17 @@ export const button = (
   disabled = false,
 ) =>
   `<button class="${cls}" data-action="${action}" data-id="${esc(id)}" ${disabled ? "disabled" : ""}>${label}</button>`;
+export function resourceIcon(p: Pack, r: Pack["resources"][number]) {
+  const asset = p.assets.find((a) => a.id === r.sprite);
+  if (!asset) return '<span aria-hidden="true">◆</span>';
+  const frame = r.iconFrame ?? 0;
+  return `<span class="resource-icon" aria-hidden="true" style="background-image:url('${esc(asset.src)}');background-size:${r.iconFrame === undefined ? "contain" : "200% 200%"};background-position:${frame % 2 ? "100%" : "0"} ${frame >= 2 ? "100%" : "0"}"></span>`;
+}
 export function amounts(p: Pack, c: Record<string, number>) {
   return Object.entries(c)
     .map(
       ([id, n]) =>
-        `<span class="cost" style="--c:${p.resources.find((r) => r.id === id)?.color ?? "#fff"}">◆ ${esc(p.resources.find((r) => r.id === id)?.name ?? id)} ${Number(n.toFixed(3)).toLocaleString("zh-TW", { maximumFractionDigits: 3 })}</span>`,
+        `<span class="cost" style="--c:${p.resources.find((r) => r.id === id)?.color ?? "#fff"}">${p.resources.find((r) => r.id === id) ? resourceIcon(p, p.resources.find((r) => r.id === id)!) : "◆"} ${esc(p.resources.find((r) => r.id === id)?.name ?? id)} ${Number(n.toFixed(3)).toLocaleString("zh-TW", { maximumFractionDigits: 3 })}</span>`,
     )
     .join("");
 }

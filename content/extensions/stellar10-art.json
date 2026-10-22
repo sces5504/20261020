@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
   "id": "stellaart:package.stellar10",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "requires": [
     {
       "id": "m1:core",
-      "version": "0.5.0"
+      "version": "0.6.0"
     },
     {
       "id": "solar10:package.first-ten",
-      "version": "0.1.1"
+      "version": "0.2.0"
     }
   ],
   "definitions": {
@@ -151,7 +151,7 @@
       },
       {
         "id": "stellaart:asset.nemesis-portrait-web",
-        "name": "涅墨西斯 · portrait",
+        "name": "復仇女神星 · portrait",
         "src": "assets/extensions/stellar10/web/nemesis.webp",
         "width": 768,
         "height": 1152,
@@ -160,7 +160,7 @@
       },
       {
         "id": "stellaart:asset.nemesis-avatar-web",
-        "name": "涅墨西斯 · avatar",
+        "name": "復仇女神星 · avatar",
         "src": "assets/extensions/stellar10/avatars/nemesis.webp",
         "width": 256,
         "height": 256,
@@ -169,7 +169,7 @@
       },
       {
         "id": "stellaart:asset.nemesis-battle-v3-web",
-        "name": "涅墨西斯 · sprite",
+        "name": "復仇女神星 · sprite",
         "src": "assets/extensions/stellar10/web/nemesis-battle.webp",
         "width": 1024,
         "height": 1024,

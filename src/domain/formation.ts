@@ -54,6 +54,23 @@ export class FleetMotion {
     }
     return { ...this.anchor };
   }
+  /** Explicit skill displacement records a new trail point; followers still walk it. */
+  relocate(point: Point) {
+    const dx = point.x - this.anchor.x,
+      dy = point.y - this.anchor.y;
+    if (Math.hypot(dx, dy) > 0.001) {
+      const heading = Math.atan2(dy, dx);
+      if (Math.cos(heading - this.heading) < -0.35)
+        this.members.slice(1).forEach((id) => this.waiting.add(id));
+      this.heading = heading;
+    }
+    this.anchor.x = point.x;
+    this.anchor.y = point.y;
+    this.trail.push({ ...point });
+    if (this.trail.length > 1200)
+      this.trail.splice(0, this.trail.length - 1200);
+    if (this.members[0]) this.positions.set(this.members[0], { ...point });
+  }
   advance(destination: Point, speed: number, dt: number) {
     const dx = destination.x - this.anchor.x,
       dy = destination.y - this.anchor.y,

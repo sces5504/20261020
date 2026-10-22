@@ -1,3 +1,4 @@
+import { ARCHIVE_BYTES } from "../src/platform/budgets";
 import { readFile } from "node:fs/promises";
 import { test } from "node:test";
 import assert from "node:assert/strict";
@@ -51,8 +52,8 @@ test("workshop ZIP deduplicates real bytes across local and uploaded paths, neve
     async (path) => new Uint8Array(await readFile(`public/${path}`)),
   );
   assert.ok(
-    zip.length <= 25 * 1024 * 1024,
-    `fixed 25 MiB budget: ${zip.length}`,
+    zip.length <= ARCHIVE_BYTES,
+    `bounded 64 MiB full-game budget: ${zip.length}`,
   );
   const files = unzipSync(zip);
   const archived = JSON.parse(strFromU8(files["pack.json"]));
@@ -65,4 +66,24 @@ test("workshop ZIP deduplicates real bytes across local and uploaded paths, neve
     imported.assets.find((a) => a.id === source.id)!.src,
     imported.assets.find((a) => a.id === "addon:uploaded")!.src,
   );
+});
+
+test("portable imports reject oversized expansion and unsafe paths before decoding media", async () => {
+  const { zipSync, strToU8 } = await import("fflate");
+  assert.throws(
+    () =>
+      importPack(
+        zipSync({
+          "pack.json": strToU8("{}"),
+          "../escape.png": new Uint8Array([1]),
+        }),
+      ),
+    /非法檔案路徑/,
+  );
+  const large = zipSync({
+    "pack.json": strToU8("{}"),
+    "assets/huge.png": new Uint8Array(31 * 1024 * 1024),
+  });
+  assert.throws(() => importPack(large), /解壓大小/);
+  assert.throws(() => importPack(new Uint8Array(ARCHIVE_BYTES + 1)), /64 MiB/);
 });

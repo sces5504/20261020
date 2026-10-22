@@ -106,9 +106,8 @@ try {
   await page.locator('[data-action="view"]').click();
   await page.locator(".squad-card").first().click();
   await page.waitForSelector(".character-detail");
-  assert.ok(
-    (await page.locator(".skill-detail").innerText()).includes("80 點護盾"),
-  );
+  assert.match(await page.locator(".skill-detail").innerText(), /40%機率偏折/);
+  assert.match(await page.locator(".skill-detail").innerText(), /3秒/);
   await page.screenshot({ path: ".artifacts/v2/character.png" });
   await page
     .locator('.modal [data-id="formation"][data-action="panel"]')

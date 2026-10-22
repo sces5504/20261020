@@ -1,0 +1,1299 @@
+[
+  {
+    "id": "attack-1",
+    "table": "Attack",
+    "row": 1,
+    "key": "Splash01",
+    "action": {
+      "kind": "projectile",
+      "pattern": "aim",
+      "count": 1,
+      "power": 1,
+      "duration": 5,
+      "splash": 100
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-2",
+    "table": "Attack",
+    "row": 2,
+    "key": "Splash02",
+    "action": {
+      "kind": "projectile",
+      "pattern": "aim",
+      "count": 1,
+      "power": 1,
+      "duration": 5,
+      "splash": 100
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-3",
+    "table": "Attack",
+    "row": 3,
+    "key": "Fan01",
+    "action": {
+      "kind": "projectile",
+      "pattern": "fan",
+      "count": 5,
+      "power": 1,
+      "duration": 5,
+      "salvos": 1,
+      "rotation": 0
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-4",
+    "table": "Attack",
+    "row": 4,
+    "key": "Fan02",
+    "action": {
+      "kind": "projectile",
+      "pattern": "fan",
+      "count": 5,
+      "power": 1,
+      "duration": 5,
+      "salvos": 1,
+      "rotation": 0
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-5",
+    "table": "Attack",
+    "row": 5,
+    "key": "Triple01",
+    "action": {
+      "kind": "projectile",
+      "pattern": "fan",
+      "count": 3,
+      "power": 1,
+      "duration": 5
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-6",
+    "table": "Attack",
+    "row": 6,
+    "key": "Triple02",
+    "action": {
+      "kind": "projectile",
+      "pattern": "fan",
+      "count": 3,
+      "power": 1,
+      "duration": 5
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-7",
+    "table": "Attack",
+    "row": 7,
+    "key": "Circle01",
+    "action": {
+      "kind": "projectile",
+      "pattern": "ring",
+      "count": 14,
+      "power": 1,
+      "duration": 5,
+      "salvos": 1,
+      "spawnRadius": 0,
+      "inward": false
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-8",
+    "table": "Attack",
+    "row": 8,
+    "key": "Circle02",
+    "action": {
+      "kind": "projectile",
+      "pattern": "ring",
+      "count": 14,
+      "power": 1,
+      "duration": 5,
+      "salvos": 1,
+      "spawnRadius": 0,
+      "inward": false
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-9",
+    "table": "Attack",
+    "row": 9,
+    "key": "Pierce01",
+    "action": {
+      "kind": "projectile",
+      "pattern": "aim",
+      "count": 1,
+      "power": 1,
+      "duration": 5,
+      "pierce": 8
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-10",
+    "table": "Attack",
+    "row": 10,
+    "key": "Pierce02",
+    "action": {
+      "kind": "projectile",
+      "pattern": "aim",
+      "count": 1,
+      "power": 1,
+      "duration": 5,
+      "pierce": 8
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-11",
+    "table": "Attack",
+    "row": 11,
+    "key": "Normal01",
+    "action": {
+      "kind": "projectile",
+      "pattern": "aim",
+      "count": 1,
+      "power": 1,
+      "duration": 5
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-12",
+    "table": "Attack",
+    "row": 12,
+    "key": "Burst01",
+    "action": {
+      "kind": "projectile",
+      "pattern": "burst",
+      "count": 3,
+      "power": 1,
+      "duration": 5
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-13",
+    "table": "Attack",
+    "row": 13,
+    "key": "Burst02",
+    "action": {
+      "kind": "projectile",
+      "pattern": "burst",
+      "count": 3,
+      "power": 1,
+      "duration": 5
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-14",
+    "table": "Attack",
+    "row": 14,
+    "key": "MeleeSplash01",
+    "action": {
+      "kind": "projectile",
+      "pattern": "meleeSplash",
+      "count": 1,
+      "power": 1,
+      "duration": 5,
+      "splash": 100
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-15",
+    "table": "Attack",
+    "row": 15,
+    "key": "MeleeSplash02",
+    "action": {
+      "kind": "projectile",
+      "pattern": "meleeSplash",
+      "count": 1,
+      "power": 1,
+      "duration": 5,
+      "splash": 100
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-16",
+    "table": "Attack",
+    "row": 16,
+    "key": "Melee01",
+    "action": {
+      "kind": "projectile",
+      "pattern": "melee",
+      "count": 1,
+      "power": 1,
+      "duration": 5
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-17",
+    "table": "Attack",
+    "row": 17,
+    "key": "Melee02",
+    "action": {
+      "kind": "projectile",
+      "pattern": "melee",
+      "count": 1,
+      "power": 1,
+      "duration": 5
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-18",
+    "table": "Attack",
+    "row": 18,
+    "key": "MeleeFront01",
+    "action": {
+      "kind": "projectile",
+      "pattern": "meleeFan",
+      "count": 1,
+      "power": 1,
+      "duration": 5,
+      "spread": 1.05
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-19",
+    "table": "Attack",
+    "row": 19,
+    "key": "MeleeFront02",
+    "action": {
+      "kind": "projectile",
+      "pattern": "meleeFan",
+      "count": 1,
+      "power": 1,
+      "duration": 5,
+      "spread": 1.05
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-20",
+    "table": "Attack",
+    "row": 20,
+    "key": "MeleeSpear01",
+    "action": {
+      "kind": "projectile",
+      "pattern": "meleeSpear",
+      "count": 1,
+      "power": 1,
+      "duration": 5,
+      "width": 40
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-21",
+    "table": "Attack",
+    "row": 21,
+    "key": "MeleeSpear02",
+    "action": {
+      "kind": "projectile",
+      "pattern": "meleeSpear",
+      "count": 1,
+      "power": 1,
+      "duration": 5,
+      "width": 40
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-22",
+    "table": "Attack",
+    "row": 22,
+    "key": "Guide01",
+    "action": {
+      "kind": "projectile",
+      "pattern": "homing",
+      "count": 1,
+      "power": 1,
+      "duration": 5
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-23",
+    "table": "Attack",
+    "row": 23,
+    "key": "Guide02",
+    "action": {
+      "kind": "projectile",
+      "pattern": "homing",
+      "count": 1,
+      "power": 1,
+      "duration": 5
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-24",
+    "table": "Attack",
+    "row": 24,
+    "key": "Meteor",
+    "action": {
+      "kind": "bomb",
+      "pattern": "aim",
+      "count": 1,
+      "power": 1,
+      "duration": 1,
+      "target": "enemies",
+      "radius": 180,
+      "cadence": 0.25
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-25",
+    "table": "Attack",
+    "row": 25,
+    "key": "SplashE01",
+    "action": {
+      "kind": "projectile",
+      "pattern": "aim",
+      "count": 1,
+      "power": 1,
+      "duration": 5,
+      "splash": 100
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-26",
+    "table": "Attack",
+    "row": 26,
+    "key": "FanE01",
+    "action": {
+      "kind": "projectile",
+      "pattern": "fan",
+      "count": 5,
+      "power": 1,
+      "duration": 5,
+      "salvos": 1,
+      "rotation": 0
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-27",
+    "table": "Attack",
+    "row": 27,
+    "key": "TripleE01",
+    "action": {
+      "kind": "projectile",
+      "pattern": "fan",
+      "count": 3,
+      "power": 1,
+      "duration": 5
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-28",
+    "table": "Attack",
+    "row": 28,
+    "key": "CircleE01",
+    "action": {
+      "kind": "projectile",
+      "pattern": "ring",
+      "count": 14,
+      "power": 1,
+      "duration": 5,
+      "salvos": 1,
+      "spawnRadius": 0,
+      "inward": false
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-29",
+    "table": "Attack",
+    "row": 29,
+    "key": "PierceE01",
+    "action": {
+      "kind": "projectile",
+      "pattern": "aim",
+      "count": 1,
+      "power": 1,
+      "duration": 5,
+      "pierce": 8
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-30",
+    "table": "Attack",
+    "row": 30,
+    "key": "NormalE01",
+    "action": {
+      "kind": "projectile",
+      "pattern": "aim",
+      "count": 1,
+      "power": 1,
+      "duration": 5
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-31",
+    "table": "Attack",
+    "row": 31,
+    "key": "BurstE01",
+    "action": {
+      "kind": "projectile",
+      "pattern": "burst",
+      "count": 3,
+      "power": 1,
+      "duration": 5
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-32",
+    "table": "Attack",
+    "row": 32,
+    "key": "GuideE01",
+    "action": {
+      "kind": "projectile",
+      "pattern": "homing",
+      "count": 1,
+      "power": 1,
+      "duration": 5
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-33",
+    "table": "Attack",
+    "row": 33,
+    "key": "MeleeE01",
+    "action": {
+      "kind": "projectile",
+      "pattern": "melee",
+      "count": 1,
+      "power": 1,
+      "duration": 5
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-34",
+    "table": "Attack",
+    "row": 34,
+    "key": "MeleeFrontE01",
+    "action": {
+      "kind": "projectile",
+      "pattern": "meleeFan",
+      "count": 1,
+      "power": 1,
+      "duration": 5,
+      "spread": 1.05
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-35",
+    "table": "Attack",
+    "row": 35,
+    "key": "MeleeFront99",
+    "action": {
+      "kind": "projectile",
+      "pattern": "meleeFan",
+      "count": 1,
+      "power": 1,
+      "duration": 5,
+      "spread": 1.05
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-36",
+    "table": "Attack",
+    "row": 36,
+    "key": "GuideE02",
+    "action": {
+      "kind": "projectile",
+      "pattern": "homing",
+      "count": 1,
+      "power": 1,
+      "duration": 5
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-37",
+    "table": "Attack",
+    "row": 37,
+    "key": "GuideE03",
+    "action": {
+      "kind": "projectile",
+      "pattern": "homing",
+      "count": 1,
+      "power": 1,
+      "duration": 5
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-38",
+    "table": "Attack",
+    "row": 38,
+    "key": "Burst03",
+    "action": {
+      "kind": "projectile",
+      "pattern": "burst",
+      "count": 3,
+      "power": 1,
+      "duration": 5
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-39",
+    "table": "Attack",
+    "row": 39,
+    "key": "Laser01",
+    "action": {
+      "kind": "beam",
+      "pattern": "aim",
+      "count": 1,
+      "power": 1,
+      "duration": 1,
+      "target": "enemies",
+      "radius": 900,
+      "width": 35,
+      "interval": 0.2,
+      "track": false
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-40",
+    "table": "Attack",
+    "row": 40,
+    "key": "LaserDrone",
+    "action": {
+      "kind": "beam",
+      "pattern": "aim",
+      "count": 1,
+      "power": 1,
+      "duration": 1,
+      "target": "enemies",
+      "radius": 900,
+      "width": 35,
+      "interval": 0.2,
+      "track": false
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-41",
+    "table": "Attack",
+    "row": 41,
+    "key": "LaserTargetE",
+    "action": {
+      "kind": "beam",
+      "pattern": "aim",
+      "count": 1,
+      "power": 1,
+      "duration": 1,
+      "target": "enemies",
+      "radius": 900,
+      "width": 35,
+      "interval": 0.2,
+      "track": true
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-42",
+    "table": "Attack",
+    "row": 42,
+    "key": "StraightE01",
+    "action": {
+      "kind": "projectile",
+      "pattern": "aim",
+      "count": 1,
+      "power": 1,
+      "duration": 5
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-43",
+    "table": "Attack",
+    "row": 43,
+    "key": "Circle03",
+    "action": {
+      "kind": "projectile",
+      "pattern": "ring",
+      "count": 14,
+      "power": 1,
+      "duration": 5,
+      "salvos": 1,
+      "spawnRadius": 0,
+      "inward": false
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "attack-44",
+    "table": "Attack",
+    "row": 44,
+    "key": "CircleE02",
+    "action": {
+      "kind": "projectile",
+      "pattern": "ring",
+      "count": 14,
+      "power": 1,
+      "duration": 5,
+      "salvos": 1,
+      "spawnRadius": 0,
+      "inward": false
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-1",
+    "table": "Bullet",
+    "row": 1,
+    "key": "FanRight",
+    "action": {
+      "kind": "projectile",
+      "pattern": "fan",
+      "count": 5,
+      "power": 1,
+      "duration": 5,
+      "salvos": 1,
+      "rotation": 0.8
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-2",
+    "table": "Bullet",
+    "row": 2,
+    "key": "FanLeft",
+    "action": {
+      "kind": "projectile",
+      "pattern": "fan",
+      "count": 5,
+      "power": 1,
+      "duration": 5,
+      "salvos": 1,
+      "rotation": -0.8
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-3",
+    "table": "Bullet",
+    "row": 3,
+    "key": "FanBurst",
+    "action": {
+      "kind": "projectile",
+      "pattern": "fan",
+      "count": 5,
+      "power": 1,
+      "duration": 5,
+      "salvos": 3,
+      "rotation": 0
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-4",
+    "table": "Bullet",
+    "row": 4,
+    "key": "Straight",
+    "action": {
+      "kind": "projectile",
+      "pattern": "aim",
+      "count": 1,
+      "power": 1,
+      "duration": 5
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-5",
+    "table": "Bullet",
+    "row": 5,
+    "key": "Guide",
+    "action": {
+      "kind": "projectile",
+      "pattern": "homing",
+      "count": 1,
+      "power": 1,
+      "duration": 5
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-6",
+    "table": "Bullet",
+    "row": 6,
+    "key": "Rand",
+    "action": {
+      "kind": "projectile",
+      "pattern": "shotgun",
+      "count": 8,
+      "power": 1,
+      "duration": 5,
+      "randomSpread": true,
+      "spread": 1.2
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-7",
+    "table": "Bullet",
+    "row": 7,
+    "key": "Circle",
+    "action": {
+      "kind": "projectile",
+      "pattern": "ring",
+      "count": 14,
+      "power": 1,
+      "duration": 5,
+      "salvos": 1,
+      "spawnRadius": 0,
+      "inward": false
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-8",
+    "table": "Bullet",
+    "row": 8,
+    "key": "CircleInv",
+    "action": {
+      "kind": "projectile",
+      "pattern": "ring",
+      "count": 14,
+      "power": 1,
+      "duration": 5,
+      "salvos": 1,
+      "spawnRadius": 350,
+      "inward": true
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-9",
+    "table": "Bullet",
+    "row": 9,
+    "key": "CircleBurst",
+    "action": {
+      "kind": "projectile",
+      "pattern": "ring",
+      "count": 14,
+      "power": 1,
+      "duration": 5,
+      "salvos": 3,
+      "spawnRadius": 0,
+      "inward": false
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-10",
+    "table": "Bullet",
+    "row": 10,
+    "key": "Laser",
+    "action": {
+      "kind": "beam",
+      "pattern": "aim",
+      "count": 1,
+      "power": 1,
+      "duration": 1,
+      "target": "enemies",
+      "radius": 900,
+      "width": 35,
+      "interval": 0.2,
+      "track": false
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-11",
+    "table": "Bullet",
+    "row": 11,
+    "key": "FanRightPierce",
+    "action": {
+      "kind": "projectile",
+      "pattern": "fan",
+      "count": 5,
+      "power": 1,
+      "duration": 5,
+      "salvos": 1,
+      "rotation": 0.8,
+      "pierce": 8
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-12",
+    "table": "Bullet",
+    "row": 12,
+    "key": "FanLeftPierce",
+    "action": {
+      "kind": "projectile",
+      "pattern": "fan",
+      "count": 5,
+      "power": 1,
+      "duration": 5,
+      "salvos": 1,
+      "rotation": -0.8,
+      "pierce": 8
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-13",
+    "table": "Bullet",
+    "row": 13,
+    "key": "FanBurstPierce",
+    "action": {
+      "kind": "projectile",
+      "pattern": "fan",
+      "count": 5,
+      "power": 1,
+      "duration": 5,
+      "salvos": 3,
+      "rotation": 0,
+      "pierce": 8
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-14",
+    "table": "Bullet",
+    "row": 14,
+    "key": "CircleRot",
+    "action": {
+      "kind": "projectile",
+      "pattern": "spiral",
+      "count": 14,
+      "power": 1,
+      "duration": 5,
+      "rotation": 1
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-15",
+    "table": "Bullet",
+    "row": 15,
+    "key": "CircleRotInv",
+    "action": {
+      "kind": "projectile",
+      "pattern": "spiral",
+      "count": 14,
+      "power": 1,
+      "duration": 5,
+      "rotation": -1
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-16",
+    "table": "Bullet",
+    "row": 16,
+    "key": "Laser2",
+    "action": {
+      "kind": "beam",
+      "pattern": "aim",
+      "count": 1,
+      "power": 1,
+      "duration": 1,
+      "target": "enemies",
+      "radius": 900,
+      "width": 35,
+      "interval": 0.2,
+      "track": false
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-17",
+    "table": "Bullet",
+    "row": 17,
+    "key": "Straight2",
+    "action": {
+      "kind": "projectile",
+      "pattern": "aim",
+      "count": 1,
+      "power": 1,
+      "duration": 5
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-18",
+    "table": "Bullet",
+    "row": 18,
+    "key": "Rand2",
+    "action": {
+      "kind": "projectile",
+      "pattern": "shotgun",
+      "count": 8,
+      "power": 1,
+      "duration": 5,
+      "randomSpread": true,
+      "spread": 1.2
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-19",
+    "table": "Bullet",
+    "row": 19,
+    "key": "Laser3",
+    "action": {
+      "kind": "beam",
+      "pattern": "aim",
+      "count": 1,
+      "power": 1,
+      "duration": 1,
+      "target": "enemies",
+      "radius": 900,
+      "width": 35,
+      "interval": 0.2,
+      "track": false
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-20",
+    "table": "Bullet",
+    "row": 20,
+    "key": "FanBurst2",
+    "action": {
+      "kind": "projectile",
+      "pattern": "fan",
+      "count": 5,
+      "power": 1,
+      "duration": 5,
+      "salvos": 3,
+      "rotation": 0
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-21",
+    "table": "Bullet",
+    "row": 21,
+    "key": "Rand3",
+    "action": {
+      "kind": "projectile",
+      "pattern": "shotgun",
+      "count": 8,
+      "power": 1,
+      "duration": 5,
+      "randomSpread": true,
+      "spread": 1.2
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-22",
+    "table": "Bullet",
+    "row": 22,
+    "key": "Guide2",
+    "action": {
+      "kind": "projectile",
+      "pattern": "homing",
+      "count": 1,
+      "power": 1,
+      "duration": 5
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-23",
+    "table": "Bullet",
+    "row": 23,
+    "key": "CircleBurst2",
+    "action": {
+      "kind": "projectile",
+      "pattern": "ring",
+      "count": 14,
+      "power": 1,
+      "duration": 5,
+      "salvos": 3,
+      "spawnRadius": 0,
+      "inward": false
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-24",
+    "table": "Bullet",
+    "row": 24,
+    "key": "LaserZeruga",
+    "action": {
+      "kind": "beam",
+      "pattern": "aim",
+      "count": 1,
+      "power": 1,
+      "duration": 1,
+      "target": "enemies",
+      "radius": 900,
+      "width": 35,
+      "interval": 0.2,
+      "track": false
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-25",
+    "table": "Bullet",
+    "row": 25,
+    "key": "LaserShiruga",
+    "action": {
+      "kind": "beam",
+      "pattern": "aim",
+      "count": 1,
+      "power": 1,
+      "duration": 1,
+      "target": "enemies",
+      "radius": 900,
+      "width": 35,
+      "interval": 0.2,
+      "track": false
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-26",
+    "table": "Bullet",
+    "row": 26,
+    "key": "RandLeiga",
+    "action": {
+      "kind": "projectile",
+      "pattern": "shotgun",
+      "count": 8,
+      "power": 1,
+      "duration": 5,
+      "randomSpread": true,
+      "spread": 1.2
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-27",
+    "table": "Bullet",
+    "row": 27,
+    "key": "BombRange",
+    "action": {
+      "kind": "bomb",
+      "pattern": "aim",
+      "count": 1,
+      "power": 1,
+      "duration": 1,
+      "target": "enemies",
+      "radius": 180,
+      "cadence": 0.25
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-28",
+    "table": "Bullet",
+    "row": 28,
+    "key": "BombRangeSeq",
+    "action": {
+      "kind": "bomb",
+      "pattern": "aim",
+      "count": 5,
+      "power": 1,
+      "duration": 1,
+      "target": "enemies",
+      "radius": 180,
+      "cadence": 0.25
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-29",
+    "table": "Bullet",
+    "row": 29,
+    "key": "BombRangeTarget",
+    "action": {
+      "kind": "bomb",
+      "pattern": "aim",
+      "count": 1,
+      "power": 1,
+      "duration": 1,
+      "target": "enemies",
+      "radius": 180,
+      "cadence": 0.25
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-30",
+    "table": "Bullet",
+    "row": 30,
+    "key": "BombRangeTarget99",
+    "action": {
+      "kind": "bomb",
+      "pattern": "aim",
+      "count": 1,
+      "power": 1,
+      "duration": 1,
+      "target": "enemies",
+      "radius": 180,
+      "cadence": 0.25
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-31",
+    "table": "Bullet",
+    "row": 31,
+    "key": "FanRightSmall",
+    "action": {
+      "kind": "projectile",
+      "pattern": "fan",
+      "count": 5,
+      "power": 1,
+      "duration": 5,
+      "salvos": 1,
+      "rotation": 0.8
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-32",
+    "table": "Bullet",
+    "row": 32,
+    "key": "FanLeftSmall",
+    "action": {
+      "kind": "projectile",
+      "pattern": "fan",
+      "count": 5,
+      "power": 1,
+      "duration": 5,
+      "salvos": 1,
+      "rotation": -0.8
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-33",
+    "table": "Bullet",
+    "row": 33,
+    "key": "BombRangeTargetQ",
+    "action": {
+      "kind": "bomb",
+      "pattern": "aim",
+      "count": 1,
+      "power": 1,
+      "duration": 1,
+      "target": "enemies",
+      "radius": 180,
+      "cadence": 0.25
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-34",
+    "table": "Bullet",
+    "row": 34,
+    "key": "LaserGiria",
+    "action": {
+      "kind": "beam",
+      "pattern": "aim",
+      "count": 1,
+      "power": 1,
+      "duration": 1,
+      "target": "enemies",
+      "radius": 900,
+      "width": 35,
+      "interval": 0.2,
+      "track": false
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-35",
+    "table": "Bullet",
+    "row": 35,
+    "key": "CircleM",
+    "action": {
+      "kind": "projectile",
+      "pattern": "ring",
+      "count": 14,
+      "power": 1,
+      "duration": 5,
+      "salvos": 1,
+      "spawnRadius": 0,
+      "inward": false
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-36",
+    "table": "Bullet",
+    "row": 36,
+    "key": "CircleBurstM",
+    "action": {
+      "kind": "projectile",
+      "pattern": "ring",
+      "count": 14,
+      "power": 1,
+      "duration": 5,
+      "salvos": 3,
+      "spawnRadius": 0,
+      "inward": false
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-37",
+    "table": "Bullet",
+    "row": 37,
+    "key": "CircleRotQ",
+    "action": {
+      "kind": "projectile",
+      "pattern": "spiral",
+      "count": 14,
+      "power": 1,
+      "duration": 5,
+      "rotation": 1
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  },
+  {
+    "id": "bullet-38",
+    "table": "Bullet",
+    "row": 38,
+    "key": "CircleRotInvQ",
+    "action": {
+      "kind": "projectile",
+      "pattern": "spiral",
+      "count": 14,
+      "power": 1,
+      "duration": 5,
+      "rotation": -1
+    },
+    "evidence": "Source archetype name; parameters reconstructed, not native runtime measurements."
+  }
+]

@@ -1,3 +1,4 @@
+import { resourceIcon } from "./common";
 import { icon } from "./icons";
 import { skillMechanic } from "../content/descriptions";
 import { ask } from "./dialog";
@@ -32,7 +33,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
  <section class="viewport"><aside class="mission-rail"><div class="section-label">航行目標 <span>MISSION</span></div><div id="mission"></div><div class="rail-bottom"><span class="eyebrow">NAVIGATION</span><p>WASD／點擊星海航行<br>M 切換大星圖</p><div class="signal"><i></i><i></i><i></i><i></i><i></i></div><small>艦隊通訊連線中</small></div></aside>
  <div id="space" class="space" aria-label="星域戰場，點擊空白處移動，點擊星球查看情報" role="application"></div><div class="map-caption"><span>✧ 星域掃描</span><span id="coordinates"></span></div><div id="battle-state" class="battle-state"></div><div id="battle-tools" class="battle-tools"></div><aside id="planet-card" class="planet-card"></aside></section>
  <footer class="flight-deck"><div class="squad-heading"><span class="eyebrow">YOUR CONSTELLATION</span><strong>航行編隊</strong>${button("編隊 ↗", "panel", "formation", "text-button")}</div><div class="squad" id="squad"></div><nav class="deck-nav">${button(icon("resonance") + "星體共鳴", "panel", "summon")}${button(icon("research") + "共振研究", "panel", "research")}${button(icon("journal") + "航行紀錄", "panel", "quests")}${button(icon("planet") + "領地", "panel", "planets")}${button(icon("crew") + "角色", "panel", "roster")}${button(icon("pause") + "暫停", "pause", "", "pause-button")}</nav></footer>
- <div class="build-note">M1 試玩版 · ${p.characters.filter((c) => c.status === "active").length} 位少女／${p.regions.filter((r) => r.status === "active").length} 個星域</div><div class="toast" id="toast" role="status" aria-live="polite"></div><div id="skill-splash" class="skill-splash" aria-live="polite"></div><div id="overlay"></div></main>`;
+ <div class="build-note">v${p.version} · ${p.characters.filter((c) => c.status === "active").length} 位少女／${p.regions.filter((r) => r.status === "active").length} 個星域</div><div class="toast" id="toast" role="status" aria-live="polite"></div><div id="skill-splash" class="skill-splash" aria-live="polite"></div><div id="overlay"></div></main>`;
   const $ = (s: string) => root.querySelector<HTMLElement>(s)!;
   const space = mountSpace(
     $("#space"),
@@ -374,7 +375,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     if (panel === "summon") {
       title = "星體共鳴";
       kick = "STELLAR RESONANCE";
-      body = `<div class="summon-layout"><div class="resonance-orb">✧<span>CONNECTING THE STARS</span></div><div><p>調整四資源投入，尋找與少女相近的共鳴訊號。</p><label>配方預設<select id="preset">${p.characters.map((c) => `<option value="${esc(c.id)}">${esc(c.name)}的共鳴配方</option>`).join("")}</select></label><div class="recipe-inputs">${p.resources.map((r, i) => `<label style="--c:${r.color}">${esc(r.name)}<input class="recipe" data-slot="${i}" type="number" min="1" max="999" value="${recipe[i]}"></label>`).join("")}</div><div id="recipe-info"></div><label>批次數量<input id="batch-count" type="number" min="1" max="${p.rules.summonSlots}" value="${count}"></label>${button("確認投入並共鳴 →", "summon", "", "primary")}<p class="muted">${p.rules.summonSeconds} 秒完成 · 可同時 ${p.rules.summonSlots} 組 · 結果在開工時確定</p></div></div><h3>共鳴工作</h3><div id="jobs">${jobList()}</div>`;
+      body = `<div class="summon-layout"><div class="resonance-orb">✧<span>CONNECTING THE STARS</span></div><div><p>調整四資源投入，尋找與少女相近的共鳴訊號。</p><label>配方預設<select id="preset">${p.characters.map((c) => `<option value="${esc(c.id)}">${esc(c.name)}的共鳴配方</option>`).join("")}</select></label><div class="recipe-inputs">${p.resources.map((r, i) => `<label style="--c:${r.color}">${resourceIcon(p, r)}${esc(r.name)}<input class="recipe" data-slot="${i}" type="number" min="1" max="999" value="${recipe[i]}"></label>`).join("")}</div><div id="recipe-info"></div><label>批次數量<input id="batch-count" type="number" min="1" max="${p.rules.summonSlots}" value="${count}"></label>${button("確認投入並共鳴 →", "summon", "", "primary")}<p class="muted">${p.rules.summonSeconds} 秒完成 · 可同時 ${p.rules.summonSlots} 組 · 結果在開工時確定</p></div></div><h3>共鳴工作</h3><div id="jobs">${jobList()}</div>`;
     }
     if (panel === "colony") {
       const v = p.planets.find((v) => v.id === selected)!,
@@ -863,7 +864,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     $("#wallet").innerHTML = p.resources
       .map(
         (r) =>
-          `<div class="resource" style="--c:${r.color}"><span>◆</span><div><small>${esc(r.name)}</small><strong>${(g.save.wallet[r.id] ?? 0).toLocaleString("zh-TW", { maximumFractionDigits: 2 })}</strong></div><em>+${((rates[r.id] ?? 0) * 60).toFixed(0)}/m</em></div>`,
+          `<div class="resource" style="--c:${r.color}">${resourceIcon(p, r)}<div><small>${esc(r.name)}</small><strong>${(g.save.wallet[r.id] ?? 0).toLocaleString("zh-TW", { maximumFractionDigits: 2 })}</strong></div><em>+${((rates[r.id] ?? 0) * 60).toFixed(0)}/m</em></div>`,
       )
       .join("");
     $("#region-title").textContent = p.regions.find(

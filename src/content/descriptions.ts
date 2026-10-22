@@ -1,5 +1,134 @@
 import type { Skill } from "./schema";
+import type { Action, Modifier, Pattern } from "./mechanics";
+export const patternNames: Record<Pattern, string> = {
+  aim: "瞄準",
+  fan: "扇形",
+  ring: "環形",
+  spiral: "螺旋",
+  cross: "十字",
+  burst: "連射",
+  homing: "追蹤",
+  sine: "波形",
+  accelerating: "加速",
+  piercing: "穿透",
+  splash: "爆破",
+  laser: "雷射",
+  mine: "延時",
+  shotgun: "散射",
+  melee: "近戰",
+  meleeFan: "近戰扇掃",
+  meleeSplash: "近戰爆破",
+  meleeSpear: "近戰突刺",
+};
+const statusNames: Record<Modifier["stat"], string> = {
+  attack: "攻擊",
+  defense: "防禦",
+  attackSpeed: "攻速",
+  moveSpeed: "移速",
+  projectileSpeed: "彈速",
+  critical: "暴擊率",
+  evasion: "迴避率",
+  damageTaken: "承受傷害",
+  penetration: "敵方防禦",
+  stun: "暈眩",
+  corrosion: "侵蝕",
+  blaze: "灼燒",
+  invisible: "隱形",
+  invincible: "無敵",
+  taunt: "嘲諷",
+  reflect: "反射",
+  deflect: "偏折",
+  directional: "前方減傷",
+  redirect: "代受傷害",
+  charge: "蓄積傷害",
+  scale: "體型",
+  absorb: "吸收",
+  attackPattern: "普攻變更",
+  decoy: "誘敵",
+  offset: "抵消",
+};
+const n = (v: number) => Number(v.toFixed(2));
+export function modifierDescription(m: Modifier) {
+  let effect = ["stun", "invisible", "invincible", "taunt", "decoy"].includes(
+    m.stat,
+  )
+    ? statusNames[m.stat]
+    : ["reflect", "deflect", "offset"].includes(m.stat)
+      ? `${n(m.value * 100)}%機率${statusNames[m.stat]}彈體`
+      : m.stat === "attackPattern"
+        ? `普攻改為${patternNames[m.pattern ?? "aim"]}`
+        : m.stat === "directional"
+          ? `前方傷害降低${n((1 - m.value) * 100)}%`
+          : `${statusNames[m.stat]}${m.mode === "set" ? "設為" : m.mode === "add" ? "增加" : m.value < 1 ? "降至" : "提高至"}${n(m.value * 100)}%`;
+  if (m.nullify.length)
+    effect += `，使${m.nullify.map((v) => (v === "piercing" ? "穿透" : "濺射")).join("／")}附加效果無效`;
+  if (m.stat === "charge") effect = `蓄積實際生命損失的${n(m.value * 100)}%`;
+  if (m.stat === "redirect") effect = `代受${n(m.value * 100)}%傷害`;
+  if (m.stat === "absorb")
+    effect = `抵消當次傷害，將其${n(m.value * 100)}%轉為護盾`;
+  if (m.stat === "decoy")
+    effect += `，吸引${m.categories.map((v) => ({ melee: "近戰", normal: "普通", piercing: "穿透", splash: "爆破", homing: "追蹤", laser: "雷射" })[v]).join("／")}攻擊`;
+  if (m.immune.length)
+    effect += `，抵抗${m.immune.map((k) => ({ stun: "暈眩", corrosion: "侵蝕", blaze: "灼燒", laser: "雷射", melee: "近戰", taunt: "嘲諷", piercing: "穿透", splash: "濺射" })[k]).join("／")}`;
+  return `${effect}（${n(m.duration)}秒）`;
+}
+export function actionDescription(a: Action) {
+  const target = {
+    self: "自身",
+    allies: `範圍${n(a.radius)}內友軍`,
+    enemies: `範圍${n(a.radius)}內敵人`,
+    target: "鎖定目標",
+  }[a.target];
+  const atk = `自身攻擊${n(a.power * 100)}%`;
+  let text = "";
+  switch (a.kind) {
+    case "status":
+      text = `${target}：${a.modifiers.map(modifierDescription).join("；")}`;
+      break;
+    case "projectile":
+      text = `發射${a.count}枚${patternNames[a.pattern]}彈，每枚造成${atk}傷害${a.pierce ? "，可穿透敵人" : ""}${a.splash ? `，爆破半徑${n(a.splash)}` : ""}${a.chain ? `，最多追擊${a.chain + 1}次` : ""}${a.splitCount ? `，分裂為${a.splitCount}枚子彈` : ""}${a.cancelOnTargetDeath ? "；鎖定目標死亡時取消" : ""}${a.modifiers.length ? `，命中附加${a.modifiers.map(modifierDescription).join("、")}` : ""}`;
+      break;
+    case "zone":
+      text = `建立${a.expanding ? "擴散震波" : a.follow ? "隨身範圍場" : "定點範圍場"}，半徑${n(a.radius)}、持續${n(a.duration)}秒${a.pull ? "，牽引範圍內敵人" : ""}${a.power ? `，${a.once ? "每個目標僅受到一次" : `每${n(a.interval)}秒造成`}${atk}傷害` : ""}${a.modifiers.length ? `，附加${a.modifiers.map(modifierDescription).join("、")}` : ""}`;
+      break;
+    case "beam":
+      text = `施放${a.count}道${a.track ? "追蹤" : "直線"}${a.rotation ? "旋轉" : ""}雷射，寬${n(a.width)}、射程${n(a.radius)}、持續${n(a.duration)}秒，每${n(a.interval)}秒造成${atk}傷害`;
+      break;
+    case "summon":
+      text = `召喚${a.count}個${{ clone: "分身", turret: "砲台", drone: "無人機", decoy: "誘敵裝置" }[a.summon]}，${a.summon === "decoy" ? `生命為本體${n(a.power * 100)}%，不攻擊` : `生命／攻擊／防禦為本體${n(a.power * 100)}%`}，持續${n(a.duration)}秒${a.modifiers.length ? `；${a.modifiers.map(modifierDescription).join("、")}` : ""}`;
+      break;
+    case "heal":
+      text = `${target}恢復${atk}的生命`;
+      break;
+    case "shield":
+      text = `${target}獲得${atk}的護盾，持續${n(a.duration)}秒`;
+      break;
+    case "dash":
+      text = `${a.travelTime ? `在${n(a.travelTime)}秒內` : ""}向目標${a.travelTime ? "衝撞" : "瞬移"}${n(a.radius)}，路徑內敵人受到${atk}傷害`;
+      break;
+    case "cooldown":
+      text = `${target}技能剩餘冷卻縮短${n(a.power * 100)}%`;
+      break;
+    case "timeStop":
+      text = `停止敵方時間${n(a.duration)}秒；我方狀態時間與技能冷卻暫停`;
+      break;
+    case "bomb":
+      text = `隨機指定敵人${a.count}次並轟炸半徑${n(a.radius)}內目標，造成${atk}傷害`;
+      break;
+    case "dispel":
+      text = `清除${target}的所有狀態`;
+      break;
+    case "detonate":
+      text = `向${target}釋放蓄積的傷害`;
+      break;
+  }
+  if (a.bypassEvasion) text += "；無視迴避";
+  if (a.suppressCritical) text += "；不會暴擊";
+  return `${a.delay ? `蓄力${n(a.delay)}秒後，` : ""}${text}。`;
+}
 export function skillMechanic(s: Skill) {
+  if (s.effect === "program")
+    return s.actions!.map(actionDescription).join(" ");
   const n = s.power;
   return {
     shield: `全隊各獲得 ${n} 點護盾，持續 ${s.duration} 秒。護盾先於生命承受傷害。`,

@@ -1,3 +1,13 @@
+import projectilePresets from "../../content/source/stella-projectiles.json";
+import {
+  mechanicRow,
+  modifierRow,
+  refreshMechanicFields,
+} from "./skill-editor";
+import { ARCHIVE_BYTES } from "../platform/budgets";
+import { mountLaboratory } from "./laboratory";
+import { patternTypes } from "../content/mechanics";
+import { effectTypes } from "../content/schema";
 import { lockStudio } from "./studio-access";
 import { ask } from "./dialog";
 import {
@@ -40,6 +50,7 @@ export async function mountStudio(root: HTMLElement) {
   };
   project = parseProject(project);
   const previewMixers: AudioMixer[] = [];
+  let closeLab: (() => void) | undefined;
   let storageError = false;
   let kind: Kind = "characters",
     selected = project.pack.characters[0].id,
@@ -63,7 +74,7 @@ export async function mountStudio(root: HTMLElement) {
     });
   }
 
-  root.innerHTML = `<main class="studio"><header class="studio-header"><a class="brand" href="#/play"><span class="brand-icon">✧</span><span>GALAXY ANGEL STUDIO<small>星 河 戰 姬 · 內 容 工 坊</small></span></a><div class="inline-actions"><a href="#/art">六位標準原圖 ↗</a><a href="#/play">返回遊戲 ↗</a></div></header><div class="studio-title"><div><span class="eyebrow">CONTENT WORKSPACE / LOCAL DRAFT</span><h1>每一道星光，由你定義。</h1><p>瀏覽、調整、試玩，再將你的星海匯出。</p></div><div class="studio-actions">${button("復原", "undo")}${button("重做", "redo")}${button("套用至測試遊戲 ↗", "test", "", "primary")}</div></div><div class="studio-toolbar"><span id="project-status"></span><div>${button("從新版正式內容建立草稿", "use-published")}${button("新增項目", "new")}${button("校驗內容", "validate")}${button("鎖定工坊", "lock-studio")}${button("專案備份", "backup-project")}<label class="file-button">匯入專案／內容包<input id="import-project" type="file" accept=".json,.zip"></label>${button("匯出內容 ZIP", "export-pack")}</div></div><div class="studio-grid"><aside class="catalog-nav" id="catalog-nav"></aside><section class="catalog"><label class="search">搜尋內容<input id="catalog-search" type="search" placeholder="名稱或穩定 ID"></label><div id="catalog-list"></div></section><section class="inspector" id="inspector"></section></div><div class="studio-report" id="report" role="status"></div></main>`;
+  root.innerHTML = `<main class="studio"><header class="studio-header"><a class="brand" href="#/play"><span class="brand-icon">✧</span><span>GALAXY ANGEL STUDIO<small>星 河 戰 姬 · 內 容 工 坊</small></span></a><div class="inline-actions"><a href="#/art">六位標準原圖 ↗</a><a href="#/play">返回遊戲 ↗</a></div></header><div class="studio-title"><div><span class="eyebrow">CONTENT WORKSPACE / LOCAL DRAFT</span><h1>每一道星光，由你定義。</h1><p>瀏覽、調整、試玩，再將你的星海匯出。</p></div><div class="studio-actions">${button("技能測試訓練場", "laboratory")}${button("復原", "undo")}${button("重做", "redo")}${button("套用至測試遊戲 ↗", "test", "", "primary")}</div></div><div class="studio-toolbar"><span id="project-status"></span><div>${button("從新版正式內容建立草稿", "use-published")}${button("新增項目", "new")}${button("校驗內容", "validate")}${button("鎖定工坊", "lock-studio")}${button("專案備份", "backup-project")}<label class="file-button">匯入專案／內容包<input id="import-project" type="file" accept=".json,.zip"></label>${button("匯出內容 ZIP", "export-pack")}</div></div><div class="studio-grid"><aside class="catalog-nav" id="catalog-nav"></aside><section class="catalog"><label class="search">搜尋內容<input id="catalog-search" type="search" placeholder="名稱或穩定 ID"></label><div id="catalog-list"></div></section><section class="inspector" id="inspector"></section></div><div class="studio-report" id="report" role="status"></div></main>`;
   const $ = (s: string) => root.querySelector<HTMLElement>(s)!;
   function status() {
     if (disposed) return;
@@ -72,7 +83,7 @@ export async function mountStudio(root: HTMLElement) {
     $("#report").textContent =
       message ||
       (project.pack.version !== published.version
-        ? `目前是 v${project.pack.version} 舊草稿；正式版 v${published.version} 已有新圖片與巡邏設定。請先備份，再選「從新版正式內容建立草稿」，不會自動覆蓋你的修改。`
+        ? `目前是 v${project.pack.version} 舊草稿；正式版 v${published.version} 已有原作技能、圖片與彈幕設定。請先備份，再選「從新版正式內容建立草稿」，不會自動覆蓋你的修改。`
         : "選擇內容可檢視外觀，修改後先套用至隔離測試遊戲。");
   }
   async function save() {
@@ -200,6 +211,13 @@ export async function mountStudio(root: HTMLElement) {
     leashRadius: "守軍重置半徑",
     resetSeconds: "越界重置倒數（秒）",
     pattern: "彈幕模式",
+    phasePattern: "第二階段彈幕",
+    critical: "基礎暴擊率（0–0.95）",
+    evasion: "基礎迴避率（0–0.95）",
+    actions: "技能動作（第1級）",
+    levels: "技能等級2–10覆寫",
+    volleyCount: "每次齊射數量",
+    volleySpread: "彈體夾角（弧度）",
     boss: "首領",
     phaseAt: "第二階段生命比例",
     width: "寬度",
@@ -246,6 +264,7 @@ export async function mountStudio(root: HTMLElement) {
       k === "review" ||
       k === "effect" ||
       k === "pattern" ||
+      k === "phasePattern" ||
       k === "condition"
     ) {
       const vals =
@@ -256,17 +275,9 @@ export async function mountStudio(root: HTMLElement) {
             : k === "review"
               ? ["candidate", "approved"]
               : k === "effect"
-                ? [
-                    "shield",
-                    "barrage",
-                    "fortify",
-                    "turret",
-                    "accelerate",
-                    "weaken",
-                    "heal",
-                  ]
-                : k === "pattern"
-                  ? ["aim", "fan", "ring"]
+                ? effectTypes
+                : k === "pattern" || k === "phasePattern"
+                  ? patternTypes
                   : ["intro", "cleared", "activated", "summoned", "built"];
       control = `<select ${attr}>${vals.map((x) => `<option ${x === v ? "selected" : ""}>${x}</option>`).join("")}</select>`;
     } else if (typeof v === "object" || k === "description")
@@ -304,11 +315,20 @@ export async function mountStudio(root: HTMLElement) {
       `<div class="inspector-heading"><div><span class="eyebrow">${kindNames[kind]} / INSPECTOR</span><h2>${esc(e.name)}</h2><small>${esc(e.id)}</small></div><div>${button("複製為新項目", "clone", e.id)}${button("移除", "delete", e.id, "danger-button")}</div></div>${asset ? `<div class="asset-preview"><img src="${esc(asset.src)}" alt="${esc(asset.name)}"></div>` : ""}${c ? `<div class="level-preview"><label>能力預覽等級<input id="preview-level" type="number" min="1" max="${p.rules.maxLevel}" value="1"></label><span id="effective-stats">生命 ${c.hp} · 攻擊 ${c.attack} · 防禦 ${c.defense}</span></div>` : ""}${kind === "audio" ? button("▶ 試聽此音效", "preview-audio") : ""}<form id="entity-form" class="entity-form">${Object.entries(
         e,
       )
-        .filter(([k]) => !["waves", "waveDelay"].includes(k))
+        .filter(
+          ([k]) =>
+            ![
+              "waves",
+              "waveDelay",
+              ...(kind === "skills" && "effect" in e && e.effect === "program"
+                ? ["power", "duration"]
+                : []),
+            ].includes(k),
+        )
         .map(([k, v]) => field(k, v))
         .join(
           "",
-        )}${c ? acquisitionFields(p, c.id) : ""}<div class="form-actions full">${button("保存此項調整", "save-entity", "", "primary")}<span>保存草稿後，套用測試才影響試玩。</span></div></form><details><summary>引用影響 · ${refs.length} 項</summary><ul>${refs.map((v) => `<li>${esc(v)}</li>`).join("") || "<li>無其他定義引用</li>"}</ul><p>持有角色、所在星域或進行中工作缺失時，舊存檔會拒絕載入並保留原檔；退休比移除更適合既有內容。</p></details><div class="asset-import"><h3>匯入外觀素材</h3><p>PNG／JPEG／WebP，單張最多 8 MiB；媒體會隨 ZIP 匯出。立繪、頭像及 SD 分別引用，不改變碰撞與戰力。</p><label class="file-button">新增圖片到素材庫<input id="upload-asset" type="file" accept="image/png,image/jpeg,image/webp"></label></div><details><summary>進階：此項 JSON</summary><textarea id="raw-entity" rows="15">${esc(JSON.stringify(e, null, 2))}</textarea>${button("套用 JSON", "apply-json")}</details>`;
+        )}${kind === "skills" && !("actions" in e) ? field("actions", []) : ""}${c ? acquisitionFields(p, c.id) : ""}<div class="form-actions full">${button("保存此項調整", "save-entity", "", "primary")}<span>保存草稿後，套用測試才影響試玩。</span></div></form><details><summary>引用影響 · ${refs.length} 項</summary><ul>${refs.map((v) => `<li>${esc(v)}</li>`).join("") || "<li>無其他定義引用</li>"}</ul><p>持有角色、所在星域或進行中工作缺失時，舊存檔會拒絕載入並保留原檔；退休比移除更適合既有內容。</p></details><div class="asset-import"><h3>匯入外觀素材</h3><p>PNG／JPEG／WebP，單張最多 8 MiB；媒體會隨 ZIP 匯出。立繪、頭像及 SD 分別引用，不改變碰撞與戰力。</p><label class="file-button">新增圖片到素材庫<input id="upload-asset" type="file" accept="image/png,image/jpeg,image/webp"></label></div><details><summary>進階：此項 JSON</summary><textarea id="raw-entity" rows="15">${esc(JSON.stringify(e, null, 2))}</textarea>${button("套用 JSON", "apply-json")}</details>`;
   }
   function draw() {
     drawList();
@@ -365,6 +385,13 @@ export async function mountStudio(root: HTMLElement) {
     return r.pack;
   }
   async function act(action: string, id: string) {
+    if (action === "laboratory") {
+      const valid = validatePack(project.pack);
+      if (!valid.pack) throw Error(valid.errors.join("\n"));
+      closeLab?.();
+      closeLab = mountLaboratory(root, valid.pack);
+      return;
+    }
     if (action === "lock-studio") {
       if (
         await ask("鎖定工坊？已保存的草稿會保留，尚未保存的表單調整會放棄。")
@@ -372,6 +399,12 @@ export async function mountStudio(root: HTMLElement) {
         lockStudio();
         location.reload();
       }
+      return;
+    }
+    if (action === "add-mechanic") {
+      root
+        .querySelector(".mechanic-rows")
+        ?.insertAdjacentHTML("beforeend", mechanicRow());
       return;
     }
     if (action === "add-spawn") {
@@ -604,7 +637,16 @@ export async function mountStudio(root: HTMLElement) {
     if (!b || operationPending) return;
     e.preventDefault();
     if (b.dataset.action === "remove-row") {
-      b.closest(".spawn-row,.dialogue-row")?.remove();
+      b
+        .closest(".spawn-row,.dialogue-row,.mechanic-row,.modifier-row")
+        ?.remove();
+      return;
+    }
+    if (b.dataset.action === "add-modifier") {
+      b
+        .closest(".mechanic-row")
+        ?.querySelector(".modifier-rows")
+        ?.insertAdjacentHTML("beforeend", modifierRow());
       return;
     }
     busy(true);
@@ -618,12 +660,26 @@ export async function mountStudio(root: HTMLElement) {
   const change = async (e: Event) => {
     const t = e.target as HTMLInputElement;
     if (operationPending) return;
+    if (
+      t.dataset.actionProp === "kind" ||
+      t.dataset.actionProp === "pattern" ||
+      t.dataset.modifier === "stat"
+    ) {
+      refreshMechanicFields(root);
+      return;
+    }
+    if (t.dataset.projectilePreset !== undefined && t.value) {
+      const preset = projectilePresets.find((p) => p.id === t.value);
+      if (preset)
+        t.closest(".mechanic-row")!.outerHTML = mechanicRow(preset.action);
+      return;
+    }
     busy(true);
     try {
       if (t.id === "upload-asset" && t.files?.[0]) await upload(t.files[0]);
       if (t.id === "import-project" && t.files?.[0]) {
         const f = t.files[0];
-        if (f.size > 60 * 1024 * 1024) throw Error("匯入檔案超過 60 MiB。");
+        if (f.size > ARCHIVE_BYTES) throw Error("匯入檔案超過 64 MiB。");
         const next = f.name.endsWith(".zip")
           ? {
               ...project,
@@ -680,6 +736,7 @@ export async function mountStudio(root: HTMLElement) {
   draw();
   return () => {
     disposed = true;
+    closeLab?.();
     previewMixers.forEach((m) => m.destroy());
     root.removeEventListener("click", click);
     root.removeEventListener("change", change);

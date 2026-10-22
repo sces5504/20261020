@@ -145,7 +145,7 @@ try {
     console.log(
       `PASS ${width}: ten profiles and 30 decoded assets, four actual Q sprite fleets`,
     );
-    // Sun and Mars share one skill; each cast must display the actual source.
+    // Sun and Mars use original skill programs; each cast must display the actual source.
     const arena = save();
     const sun = addCharacter(pack, arena, "solar10:character.sun");
     const mars = addCharacter(pack, arena, "m1:mars");

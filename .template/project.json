@@ -3,25 +3,98 @@
   "initialized": true,
   "name": "星河戰姬 Galaxy Angel M1",
   "site_dir": "dist",
-  "install": [["npm", "ci", "--ignore-scripts"]],
-  "start": [["npm", "run", "dev", "--", "--port", "5173", "--strictPort"]],
+  "install": [
+    [
+      "npm",
+      "ci",
+      "--ignore-scripts"
+    ]
+  ],
+  "start": [
+    [
+      "npm",
+      "run",
+      "dev",
+      "--",
+      "--port",
+      "5173",
+      "--strictPort"
+    ]
+  ],
   "ready_url": "http://127.0.0.1:5173",
   "checks": {
     "daily": [
-      ["npm", "run", "content:check"],
-      ["npm", "run", "typecheck"],
-      ["npm", "test"]
+      [
+        "npm",
+        "run",
+        "content:check"
+      ],
+      [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      [
+        "npm",
+        "test"
+      ]
     ],
     "release": [
-      ["npm", "run", "build"],
-      ["npm", "run", "test:e2e"],
-      ["npm", "run", "test:playtest"],
-      ["npm", "run", "test:exploration"],
-      ["npm", "run", "test:refinement"],
-      ["npm", "run", "test:polish"],
-      ["npm", "run", "test:content-integration"],
-      ["npm", "run", "release:ready", "--", "--target", "playtest"]
+      [
+        "npm",
+        "run",
+        "build"
+      ],
+      [
+        "npm",
+        "run",
+        "test:e2e"
+      ],
+      [
+        "npm",
+        "run",
+        "test:playtest"
+      ],
+      [
+        "npm",
+        "run",
+        "test:exploration"
+      ],
+      [
+        "npm",
+        "run",
+        "test:refinement"
+      ],
+      [
+        "npm",
+        "run",
+        "test:polish"
+      ],
+      [
+        "npm",
+        "run",
+        "test:content-integration"
+      ],
+      [
+        "npm",
+        "run",
+        "test:skills"
+      ],
+      [
+        "npm",
+        "run",
+        "release:ready",
+        "--",
+        "--target",
+        "playtest"
+      ]
     ]
   },
-  "build": [["npm", "run", "build"]]
+  "build": [
+    [
+      "npm",
+      "run",
+      "build"
+    ]
+  ]
 }

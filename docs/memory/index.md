@@ -1,4 +1,4 @@
-最新收尾：PR #12已合main `7fe51c1`；本次交付同時修正普攻倍率僅作用普攻的共用邊界，93核心通過。最終PR／Pages證據仍以目前handoff及公開version.json核對。
+最新收尾：PR #12已合main `7fe51c1`；[PR #13](https://github.com/sces5504/20261020/pull/13)修正普攻倍率僅作用普攻的共用邊界，93核心與桌機／觸控test:skills通過。最終PR／Pages證據仍以目前handoff及公開version.json核對。
 
 目前整合交付（2026-10-22）：[PR #12](https://github.com/sces5504/20261020/pull/12)，核心0.6.0；實作 `33b77f6` 的92核心＋完整七組瀏覽器／check release（playtest）通過。[驗證紀錄](../verification/skill-engine-0.6.json)。最終名稱metadata另經內容校驗；main／Pages精確SHA依PR合併結果與公開version.json核對。Android／iOS真機與commercial接受未偽造。
 

@@ -2369,7 +2369,7 @@
     }
   ],
   "rules": {
-    "teamSize": 3,
+    "teamSize": 6,
     "maxLevel": 120,
     "offlineCapSeconds": 3600,
     "summonSeconds": 35,

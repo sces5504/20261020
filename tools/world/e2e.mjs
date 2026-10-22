@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { readFile, mkdir, writeFile } from "node:fs/promises";
 import { chromium } from "../node_modules/playwright/index.mjs";
 import { serveBuilt } from "../game/serve-built.mjs";
-import { newSave, stats } from "../../src/domain/model.ts";
+import { newSave, stats, addCharacter } from "../../src/domain/model.ts";
 const pack = JSON.parse(
   await readFile("content/generated/runtime.json", "utf8"),
 );
@@ -143,11 +143,37 @@ try {
     const day = new Date(Date.now() + 540 * 60000).getUTCDay();
     f = fixture(`original:daily.${day}-1`);
     f.v.timeLimitSeconds = 5;
+    for (const id of [
+      "m1:mars",
+      "solar10:character.pluto",
+      "solar10:character.nemesis",
+    ])
+      addCharacter(f.p, f.s, id);
+    f.s.team = f.s.roster.map((o) => o.id);
+    f.s.acquisitionQueue = [];
     f.s.roster.forEach((o) => {
       o.level = 100;
       o.hp = stats(f.p, o).hp;
     });
     await install(page, f.p, f.s);
+    assert.equal(await page.locator("#squad .squad-card").count(), 6);
+    const lastCard = await page
+      .locator("#squad .squad-card")
+      .last()
+      .boundingBox();
+    assert(
+      lastCard && lastCard.y + lastCard.height <= viewport.height,
+      "all six skill cards remain inside the viewport",
+    );
+    const arenaBox = await page.locator("#space").boundingBox();
+    assert(
+      arenaBox && arenaBox.height >= 200,
+      "six-person HUD preserves a playable battlefield",
+    );
+    await page.locator('[data-action="panel"][data-id="enemy-intel"]').click();
+    assert((await page.locator(".modal").innerText()).includes("扇形"));
+    assert((await page.locator(".modal").innerText()).includes("生命"));
+    await page.locator('.modal [data-action="close"]').first().click();
     await page.locator('[data-action="battle"]').click();
     await waitSave(page, (s) => s.encounter?.planet === f.v.id);
     await page.waitForFunction(() =>

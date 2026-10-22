@@ -1,6 +1,6 @@
 import { resourceIcon } from "./common";
 import { icon } from "./icons";
-import { skillMechanic } from "../content/descriptions";
+import { skillMechanic, patternNames } from "../content/descriptions";
 import { ask } from "./dialog";
 import { AudioMixer } from "../platform/audio";
 import { acquisitionSources } from "../content/queries";
@@ -15,6 +15,7 @@ import {
   nodeKindNames,
   nodeVisible,
   nodePeriod,
+  enemyStats,
 } from "../domain/world";
 import { download, read } from "../platform/storage";
 import { mountSpace } from "./space";
@@ -124,7 +125,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
         " " +
         threat;
       $("#planet-card").innerHTML =
-        `${button("✕", "intel-close", "", "intel-dismiss")}<div class="section-label">${esc(nodeKindNames[v.kind])}</div>${entityImage(p, v, "intel-planet-art")}<h2>${esc(v.name)}</h2><p class="intel-guidance">${locked ? "請先完成前置據點／星球啟動。" : esc(text)}</p><div class="tags"><span>${cleared && !v.schedule ? "已完成" : "可探索"}</span><span>${esc(availability.reason || nodeKindNames[v.kind])}</span></div><div class="costs">${amounts(p, v.reward)}</div>${button("導航接近 →", "navigate", v.id, "primary", locked || !!g.combat)}${v.kind === "camp" ? button("隊伍整補", "resupply", v.id, "primary", locked || !nearby || !!g.combat) : button(cleared && !v.schedule ? "再次挑戰（無首勝獎勵）" : "開始挑戰", "battle", v.id, "primary", locked || !nearby || !availability.open || !!g.combat)}`;
+        `${button("✕", "intel-close", "", "intel-dismiss")}<div class="section-label">${esc(nodeKindNames[v.kind])}</div>${entityImage(p, v, "intel-planet-art")}<h2>${esc(v.name)}</h2><p class="intel-guidance">${locked ? "請先完成前置據點／星球啟動。" : esc(text)}</p><div class="tags"><span>${cleared && !v.schedule ? "已完成" : "可探索"}</span><span>${esc(availability.reason || nodeKindNames[v.kind])}</span></div><div class="costs">${amounts(p, v.reward)}</div>${v.enemies.length ? button("敵群情報", "panel", "enemy-intel", "text-button") : ""}${button("導航接近 →", "navigate", v.id, "primary", locked || !!g.combat)}${v.kind === "camp" ? button("隊伍整補", "resupply", v.id, "primary", locked || !nearby || !!g.combat) : button(cleared && !v.schedule ? "再次挑戰（無首勝獎勵）" : "開始挑戰", "battle", v.id, "primary", locked || !nearby || !availability.open || !!g.combat)}`;
       return;
     }
     const missing = Object.entries(v.activationCost)
@@ -151,7 +152,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
               : cleared
                 ? "守軍已清除，可啟動星球生產。"
                 : `靠近守軍自動交戰；清除所有守軍即可解放。離開交戰邊界${v.resetSeconds}秒會重置，畫面會事先警告。`
-      }</p><div class="intel-row"><span>偵測敵群</span><strong>${v.enemies.reduce((a, b) => a + b.count, 0)} 組訊號</strong></div><div class="intel-row"><span>${col?.active ? "每分鐘產量" : "首次解放獎勵"}</span></div><div class="costs">${amounts(p, col?.active ? Object.fromEntries(Object.entries(v.production).map(([id, n]) => [id, n * 60])) : v.reward)}</div>${col?.active ? button("管理星球 →", "panel", "colony", "primary") : cleared ? button("啟動星球 →", "activate", v.id, "primary", locked || missing.length > 0) : button("導航接近 · 自動交戰 →", "navigate", v.id, "primary", locked || !!g.combat)}${cleared && !col?.active ? `<div class="costs">${amounts(p, v.activationCost)}</div>${missing.length ? `<p class="intel-guidance" role="status">尚缺：${esc(missing.join("、"))}</p>` : ""}` : ""}`;
+      }</p><div class="intel-row"><span>偵測敵群</span><strong>${v.enemies.reduce((a, b) => a + b.count, 0)} 組訊號</strong></div><div class="intel-row"><span>${col?.active ? "每分鐘產量" : "首次解放獎勵"}</span></div><div class="costs">${amounts(p, col?.active ? Object.fromEntries(Object.entries(v.production).map(([id, n]) => [id, n * 60])) : v.reward)}</div>${v.enemies.length ? button("敵群情報", "panel", "enemy-intel", "text-button") : ""}${col?.active ? button("管理星球 →", "panel", "colony", "primary") : cleared ? button("啟動星球 →", "activate", v.id, "primary", locked || missing.length > 0) : button("導航接近 · 自動交戰 →", "navigate", v.id, "primary", locked || !!g.combat)}${cleared && !col?.active ? `<div class="costs">${amounts(p, v.activationCost)}</div>${missing.length ? `<p class="intel-guidance" role="status">尚缺：${esc(missing.join("、"))}</p>` : ""}` : ""}`;
   }
   let missionKey = "";
   function renderMission() {
@@ -336,6 +337,19 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
         "",
       )}</div><h3 class="collection-heading">星體圖鑑 · ${new Set(g.save.roster.map((o) => o.definition)).size} / ${p.characters.length}</h3><div class="collection-grid">${p.characters.map((c) => `<article class="collection-card ${g.save.roster.some((o) => o.definition === c.id) ? "owned" : "locked"}">${portrait(p, c, true)}<div><span class="rarity">${"★".repeat(c.rarity)}</span><h3>${esc(c.name)}</h3><p>${acquisitionSources(p, c.id).map(esc).join(" · ") || "目前無取得來源"}</p></div></article>`).join("")}</div>`;
   }
+  function enemyIntel(id: string) {
+    const v = p.planets.find((v) => v.id === id);
+    if (!v) return "";
+    return `<h3>${esc(v.name)} · 敵群情報</h3><div class="list-cards">${v.enemies
+      .map((group) => {
+        const e = p.enemies.find((e) => e.id === group.enemy)!,
+          level = group.level ?? 1,
+          st = enemyStats(e, level),
+          skill = p.skills.find((s) => s.id === e.skill);
+        return `<article>${entityImage(p, e)}<h3>${esc(e.name)} ×${group.count} · Lv.${level}</h3><p>生命 ${st.hp.toLocaleString()} · 攻擊 ${st.attack} · 防禦 ${st.defense}</p><p>普通攻擊：${patternNames[e.pattern]}</p>${skill ? `<strong>${esc(skill.name)} · ${skill.cooldown}s</strong><p>${esc(skillMechanic(skill))}</p>` : ""}</article>`;
+      })
+      .join("")}</div>`;
+  }
   function drawPanel() {
     if (!panel) {
       $("#overlay").innerHTML = "";
@@ -426,6 +440,12 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
           return `<article><span class="eyebrow">${esc(c.name)} · CD ${sk.cooldown}s</span><h3>${esc(sk.name)}</h3><p>${esc(sk.description)}</p><p class="skill-copy">${esc(skillMechanic(sk))}</p></article>`;
         })
         .join("")}</div>`;
+      if (g.combat) body += enemyIntel(g.combat.planetId);
+    }
+    if (panel === "enemy-intel") {
+      title = "敵群情報";
+      kick = "THREAT DATABASE";
+      body = enemyIntel(g.combat?.planetId ?? selected);
     }
     if (panel === "planets") {
       title = "領地總覽";

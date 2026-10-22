@@ -114,5 +114,11 @@ export function collectComplex(
   }
 }
 export function acquisitionFields(p: Pack, id: string) {
-  return `<fieldset class="field full"><legend>取得方式 · 修改後實際生效</legend><p class="muted">共鳴、初始隊伍與配方由上方欄位控制。以下設定首次解放掉落與任務獎勵。</p><div class="checkbox-grid">${p.planets.map((v) => `<label><input type="checkbox" data-get-planet="${esc(v.id)}" ${v.dropCharacters.includes(id) ? "checked" : ""}>${esc(v.name)} 首次解放</label>`).join("")}${p.quests.map((q) => `<label><input type="checkbox" data-get-quest="${esc(q.id)}" ${q.character === id ? "checked" : ""}>${esc(q.name)} 獎勵${q.character && q.character !== id ? "（替換原獎勵角色）" : ""}</label>`).join("")}</div></fieldset>`;
+  return `<fieldset class="field full"><legend>取得方式 · 修改後實際生效</legend><p class="muted">共鳴、初始隊伍與配方由上方欄位控制。以下設定首次解放掉落與任務獎勵。</p><div class="checkbox-grid">${p.planets.map((v) => `<label><input type="checkbox" data-get-planet="${esc(v.id)}" ${v.dropCharacters.includes(id) ? "checked" : ""}>${esc(v.name)} 首次解放</label>`).join("")}${p.quests
+    .filter((q) => q.repeat !== "daily")
+    .map(
+      (q) =>
+        `<label><input type="checkbox" data-get-quest="${esc(q.id)}" ${q.character === id ? "checked" : ""}>${esc(q.name)} 獎勵${q.character && q.character !== id ? "（替換原獎勵角色）" : ""}</label>`,
+    )
+    .join("")}</div></fieldset>`;
 }

@@ -1,6 +1,17 @@
 import { ARCHIVE_BYTES, EXPANDED_BYTES, ENTRY_BYTES } from "./budgets";
 import { zipSync, unzipSync, strToU8, strFromU8, type Zippable } from "fflate";
 import { validatePack, type Pack } from "../content/schema";
+/** Native encoding avoids large intermediate binary strings in modern browsers.
+ * Keep the same bounded, byte-exact fallback for runtimes without this API.
+ */
+function encodeMedia(bytes: Uint8Array) {
+  const encode = (bytes as Uint8Array & { toBase64?: () => string }).toBase64;
+  if (typeof encode === "function") return encode.call(bytes);
+  let binary = "";
+  for (let i = 0; i < bytes.length; i += 8192)
+    binary += String.fromCharCode(...bytes.subarray(i, i + 8192));
+  return btoa(binary);
+}
 export async function exportPack(
   pack: Pack,
   loadAsset: (path: string) => Promise<Uint8Array> = async (path) => {
@@ -75,14 +86,19 @@ export function importPack(bytes: Uint8Array): Pack {
   const raw = JSON.parse(strFromU8(files["pack.json"]));
   const first = validatePack(raw);
   if (!first.pack) throw Error(first.errors.join("\n"));
+  const embedded = new Map<string, string>();
   for (const a of first.pack.assets) {
     if (a.src.startsWith("data:")) continue;
-    const file = files[a.src.replace(/^\.\//, "")];
+    const path = a.src.replace(/^\.\//, "");
+    const cached = embedded.get(path);
+    if (cached) {
+      a.src = cached;
+      continue;
+    }
+    const file = files[path];
     if (!file) throw Error(`缺少媒體 ${a.src}`);
-    let data = "";
-    for (let i = 0; i < file.length; i += 8192)
-      data += String.fromCharCode(...file.subarray(i, i + 8192));
-    a.src = `data:image/${a.src.endsWith(".jpg") ? "jpeg" : a.src.endsWith(".webp") ? "webp" : "png"};base64,${btoa(data)}`;
+    a.src = `data:image/${path.endsWith(".jpg") ? "jpeg" : path.endsWith(".webp") ? "webp" : "png"};base64,${encodeMedia(file)}`;
+    embedded.set(path, a.src);
   }
   return first.pack;
 }

@@ -231,6 +231,10 @@ try {
     }, media);
     await page.goto(server.url + "#/studio");
     await unlockStudio(page);
+    assert.equal(
+      await page.locator('[data-get-quest^="m1:daily."]').count(),
+      0,
+    );
     await page.locator('[data-action="laboratory"]').click();
     await page.waitForSelector(".laboratory");
     const allies = page.locator(".lab-ally");

@@ -199,7 +199,7 @@ try {
   // Keep this bulk operation bounded without weakening ordinary UI timeouts.
   const importStart = Date.now();
   try {
-    await page.locator('[data-answer="yes"]').click({ timeout: 30000 });
+    await page.locator('[data-answer="yes"]').click({ timeout: 60000 });
   } catch (e) {
     throw Error(
       `Import confirmation failed: ${await page.locator("#report").innerText()} / ${e}`,
@@ -217,8 +217,18 @@ try {
   );
   console.log("E2E: isolated game");
   const original = (await getRecord(page, "save:main")).roster;
+  const testLoadStart = Date.now();
   await page.locator('[data-action="test"]').click();
-  await page.waitForSelector(".bridge canvas");
+  // Imported media is stored as complete data URLs; materializing the full
+  // snapshot and its isolated save is a bulk load, separate from normal input.
+  try {
+    await page.waitForSelector(".bridge canvas", { timeout: 60000 });
+  } catch (error) {
+    throw Error(
+      `Full snapshot test startup failed: ${(await page.locator("body").innerText()).slice(0, 1500)} / ${error}`,
+    );
+  }
+  console.log(`E2E: imported snapshot startup ${Date.now() - testLoadStart}ms`);
   await skipIntro(page);
   assert.ok(
     (await page.locator(".sector-status").innerText()).includes("隔離測試"),

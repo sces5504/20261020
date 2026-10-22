@@ -25,3 +25,9 @@
 `4cd827e` 的內容／型別／115核心／build已通過；完整release在第一組工坊匯出遇舊8秒download時限，未算完整通過。單獨新草稿匯出41MiB約9935ms；完整連續編輯的診斷重播匯出11959ms、匯入16436ms均成功，未變更ZIP預算／素材／runtime。正式e2e新增前筆保存完成及技能落盤斷言，僅大量ZIP匯出使用獨立30秒上限／量測，普通UI仍8秒，完整256圖校驗保留。隨後以新固定提交再跑完整release。
 
 公開驗證工具 `node --import tsx tools/game/verify-public-v8.mjs <main-sha>`：驗公開version SHA／內容fingerprint、26角色、七每日任務的實際強化與領獎、33新圖HTTP／SHA／尺寸／解碼、大角星Lv10原技能實際施放／單步與零pageerror。環境Chromium缺代理CA，使用有系統CA信任的Playwright Node route.fetch取得同一公開origin內容，再供Chromium執行；全程不忽略TLS錯誤，仍不是實體手機證據。
+
+## 完整媒體負載收尾
+
+修正匯出等待後，實跑匯出11672ms／匯入19053ms通過，接著完整dataURL快照啟動超出舊8秒預設；另一次冷匯入驗證超過30秒，未標記完整成功。獨立批次啟動／匯入各設60秒有限上限，普通UI仍8秒。調查確認舊importPack逐檔建立大型二進位字串再btoa；10MiB同環境比較舊871ms、Chromium原生Uint8Array.toBase64 33ms、輸出完全相同。匯入改用可用時的原生編碼（舊環境保留原有fallback），同一ZIP媒體路徑只轉碼一次；四種資源／圖片bytes、hash／尺寸解碼與三項ZIP安全上限不變。Node24本環境無原生API，既有核心ZIP測試覆蓋fallback，瀏覽器完整ZIP往返覆蓋原生路徑。
+
+另補工坊取得關係表排除每日任務：每日獎勵契約只允許四資源，避免角色表提供無法通過校驗的每日角色獎勵選項；新整合瀏覽器有相應斷言。

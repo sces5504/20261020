@@ -1,5 +1,7 @@
 # 十位角色美術：固定整合入口
 
+後續批次：[十位新角色＋木星形象更新](../stellar11/START_HERE.md)；木星的新原圖與Q圖另存版本，本批舊素材保留。
+
 本批素材固定放在 repo 的 `art/characters/stellar10/`，不依賴聊天附件、下載目錄或 `/workspace/generated_images`。整合者取得此批 Git 提交後，即可從本檔開始。
 
 - [完整交接與驗證結果](../../../docs/handoffs/stellar10-character-art-20261022.md)

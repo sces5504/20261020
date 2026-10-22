@@ -1,3 +1,4 @@
+import { ARCHIVE_BYTES } from "../src/platform/budgets";
 import { readFile } from "node:fs/promises";
 import { test } from "node:test";
 import assert from "node:assert/strict";
@@ -51,8 +52,8 @@ test("workshop ZIP deduplicates real bytes across local and uploaded paths, neve
     async (path) => new Uint8Array(await readFile(`public/${path}`)),
   );
   assert.ok(
-    zip.length <= 25 * 1024 * 1024,
-    `fixed 25 MiB budget: ${zip.length}`,
+    zip.length <= ARCHIVE_BYTES,
+    `bounded 64 MiB full-game budget: ${zip.length}`,
   );
   const files = unzipSync(zip);
   const archived = JSON.parse(strFromU8(files["pack.json"]));

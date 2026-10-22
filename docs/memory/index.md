@@ -1,3 +1,5 @@
+目前進行中（2026-10-22）：[原作技能／彈幕／工坊測試場整合](../handoffs/skill-engine-20261022.md)，分支 `feat/stella-skill-engine`。使用者要求本次直接交付商業水準，缺乏原生證據可用 wiki／公開資料推定，不等 OBB。
+
 > 整合驗收：PR #11；實作7799c62，49核心＋六組瀏覽器＋完整release通過，四包有效內容hash07798ea2。真機／commercial仍待驗；main／Pages精確SHA以PR #11最新描述及公開version.json為準。
 
 > 本輪整合：第二區邊境信標＋十人內容／美術，交接 [frontier-solar10-integration-20261022](../handoffs/frontier-solar10-integration-20261022.md)。核心0.5.0；發布狀態以該交接與整合PR最後SHA／CI證據為準。

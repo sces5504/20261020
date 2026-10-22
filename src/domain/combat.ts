@@ -1,3 +1,5 @@
+import { Mechanics } from "./mechanics";
+import type { Action, Modifier, Pattern } from "../content/mechanics";
 import { FleetMotion } from "./formation";
 import { guardianPositions, patrolPosition } from "./navigation";
 import type { Pack, Character, Enemy, Skill } from "../content/schema";
@@ -30,6 +32,10 @@ export type Unit = {
   aim: number;
   hurtUntil: number;
   shotAt: number;
+  skillLevel?: number;
+  skillOverride?: string;
+  summonOwner?: string;
+  summonKind?: string;
 };
 export type Bullet = {
   id: number;
@@ -41,6 +47,23 @@ export type Bullet = {
   attack: number;
   life: number;
   color: string;
+  owner?: string;
+  pattern?: Pattern;
+  target?: string;
+  age?: number;
+  angle?: number;
+  speed?: number;
+  pierce?: number;
+  splash?: number;
+  pull?: number;
+  width?: number;
+  modifiers?: Modifier[];
+  hitIds?: string[];
+  action?: Action;
+  chain?: number;
+  nextHitAt?: number;
+  split?: boolean;
+  barrierIds?: string[];
 };
 export type Flash = {
   x: number;
@@ -54,6 +77,8 @@ export type Flash = {
   sourceDefinition?: string;
 };
 export class Combat {
+  mechanics = new Mechanics(this);
+  laboratory = false;
   units: Unit[] = [];
   bullets: Bullet[] = [];
   flashes: Flash[] = [];
@@ -212,14 +237,29 @@ export class Combat {
   }
 
   skillFor(u: Unit) {
-    return this.pack.skills.find(
-      (s) => s.id === this.pack.characters.find((c) => c.id === u.def)?.skill,
+    const definition =
+      this.pack.characters.find((c) => c.id === u.def) ??
+      this.pack.enemies.find((e) => e.id === u.def);
+    const skill = this.pack.skills.find(
+      (s) => s.id === (u.skillOverride ?? definition?.skill),
     );
+    const level = Math.max(1, Math.min(10, u.skillLevel ?? 1));
+    const override = level > 1 ? skill?.levels?.[level - 2] : undefined;
+    return skill && override ? { ...skill, ...override } : skill;
   }
+
   cast(id: string) {
     const u = this.units.find((v) => v.id === id),
       s = u && this.skillFor(u);
-    if (!u || !s || u.hp <= 0 || u.skillCooldown > 0 || this.ended)
+    if (
+      !u ||
+      !s ||
+      u.hp <= 0 ||
+      u.skillCooldown > 0 ||
+      this.ended ||
+      this.mechanics.frozen(u) ||
+      u.turretUntil
+    )
       return false;
     u.skillCooldown = s.cooldown;
     this.effect(u, s);
@@ -238,6 +278,7 @@ export class Combat {
       skillId: s.id,
       sourceDefinition: u.def,
     });
+    if (s.effect === "program") this.mechanics.cast(u, s.actions!, s.id);
     if (s.effect === "shield")
       friends.forEach((v) => {
         v.shield = s.power;
@@ -291,14 +332,22 @@ export class Combat {
     }
   }
   step(dt: number) {
+    if (!Number.isFinite(dt) || dt <= 0 || dt > 0.25)
+      throw Error("戰鬥步進必須為 0 < dt ≤ 0.25 秒");
     if (this.ended) return;
     this.time += dt;
-    const speed = Math.min(
-      ...this.allies.filter((u) => u.hp > 0).map((u) => u.speed),
-      this.pack.rules.travelSpeed,
-    );
+    const leaderFrozen =
+      this.allies[0] && this.mechanics.frozen(this.allies[0]);
+    const speed = leaderFrozen
+      ? 0
+      : Math.min(
+          ...this.allies
+            .filter((u) => u.hp > 0 && !this.mechanics.frozen(u))
+            .map((u) => u.speed * this.mechanics.stat(u, "moveSpeed")),
+          this.pack.rules.travelSpeed,
+        );
     this.fleet.advance(this.destination, speed, dt);
-    if (this.save.encounter?.kind !== "patrol") {
+    if (!this.laboratory && this.save.encounter?.kind !== "patrol") {
       const planet = this.pack.planets.find((p) => p.id === this.planetId)!;
       this.outsideSeconds =
         Math.hypot(this.anchor.x - planet.x, this.anchor.y - planet.y) >
@@ -312,6 +361,7 @@ export class Combat {
         return;
       }
     }
+    this.mechanics.step(dt);
     for (const u of this.units) {
       if (u.hp <= 0) continue;
       if (u.turretUntil && this.time >= u.turretUntil) {
@@ -323,20 +373,43 @@ export class Combat {
         u.shield = 0;
         u.power = 1;
       }
-      u.cooldown -= dt * (u.buff === "accelerate" ? u.power : 1);
-      u.skillCooldown = Math.max(0, u.skillCooldown - dt);
-      if (this.autoSkills && u.side === "ally" && !u.turretUntil)
+      if (this.mechanics.frozen(u)) {
+        if (u.side === "ally" && !u.turretUntil)
+          this.fleet.positions.set(u.id, { x: u.x, y: u.y });
+        continue;
+      }
+      u.cooldown -=
+        dt *
+        (u.buff === "accelerate" ? u.power : 1) *
+        this.mechanics.stat(u, "attackSpeed");
+      if (this.time >= this.mechanics.stoppedUntil)
+        u.skillCooldown = Math.max(0, u.skillCooldown - dt);
+      if ((this.autoSkills || u.side === "enemy") && !u.turretUntil)
         this.cast(u.id);
       const foes = this.units
-        .filter((v) => v.side !== u.side && v.hp > 0 && !v.turretUntil)
+        .filter(
+          (v) =>
+            v.side !== u.side &&
+            v.hp > 0 &&
+            !this.mechanics.has(v, "invisible"),
+        )
         .sort(
           (a, b) =>
             Math.hypot(a.x - u.x, a.y - u.y) - Math.hypot(b.x - u.x, b.y - u.y),
         );
       const priority = foes.find((v) => v.id === this.target);
-      const t = priority && u.side === "ally" ? priority : foes[0];
+      const taunt = this.mechanics.active(u).find((s) => s.stat === "taunt");
+      const t =
+        (taunt && foes.find((v) => v.id === taunt.source)) ||
+        (priority && u.side === "ally" ? priority : foes[0]);
+      const decoy = this.mechanics.decoy(
+        u,
+        this.pack.enemies.find((e) => e.id === u.def)?.pattern ?? "aim",
+      );
+      if (decoy && u.side === "enemy")
+        u.aim = Math.atan2(decoy.y - u.y, decoy.x - u.x);
       let dest = this.destination;
-      let enemySpeed = u.speed;
+      let enemySpeed = u.speed * this.mechanics.stat(u, "moveSpeed");
       if (u.side === "ally" && !u.turretUntil) {
         const pos = this.fleet.positions.get(u.id)!;
         u.x = pos.x;
@@ -347,7 +420,9 @@ export class Combat {
         const e = this.pack.enemies.find((e) => e.id === u.def)!;
         const distance = Math.hypot(u.x - t.x, u.y - t.y);
         if (e.orbitSpeed > 0 && distance <= u.range * 0.9) {
-          enemySpeed = Math.min(u.speed, e.strafeSpeed);
+          enemySpeed =
+            Math.min(u.speed, e.strafeSpeed) *
+            this.mechanics.stat(u, "moveSpeed");
           const direction = this.units.indexOf(u) % 2 ? 1 : -1;
           const a =
             Math.atan2(u.y - t.y, u.x - t.x) +
@@ -411,78 +486,38 @@ export class Combat {
         u.cooldown = u.interval;
         u.shotAt = this.time;
         const e = this.pack.enemies.find((e) => e.id === u.def);
-        let pattern = e?.pattern ?? "aim";
+        let pattern =
+          this.mechanics.active(u).find((s) => s.stat === "attackPattern")
+            ?.pattern ??
+          e?.pattern ??
+          "aim";
         if (e?.boss && u.hp / u.maxHp < e.phaseAt) pattern = "ring";
-        const count = pattern === "ring" ? 14 : pattern === "fan" ? 3 : 1;
-        const angle =
-            u.side === "enemy" ? u.aim : Math.atan2(t.y - u.y, t.x - u.x),
-          speed = e?.projectileSpeed ?? 520;
-        for (let i = 0; i < count; i++) {
-          const a =
-            pattern === "ring"
-              ? (i * Math.PI * 2) / count + this.time * 0.2
-              : angle + (i - (count - 1) / 2) * 0.22;
-          this.bullets.push({
-            id: this.sequence++,
-            side: u.side,
-            x: u.x,
-            y: u.y,
-            vx: Math.cos(a) * speed,
-            vy: Math.sin(a) * speed,
-            attack: u.attack * (u.buff === "weaken" ? u.power : 1),
-            life: 5,
-            color: u.side === "ally" ? u.color : "#ff8e7e",
-          });
-        }
+        const count =
+          e?.volleyCount ??
+          (pattern === "ring"
+            ? 14
+            : pattern === "fan"
+              ? 3
+              : pattern === "cross"
+                ? 4
+                : pattern === "shotgun"
+                  ? 7
+                  : pattern === "spiral"
+                    ? 5
+                    : pattern === "burst"
+                      ? 3
+                      : 1);
+        this.mechanics.fire(
+          u,
+          t,
+          pattern,
+          count,
+          undefined,
+          e?.projectileSpeed ?? 520,
+        );
       }
     }
-    for (const b of this.bullets) {
-      const oldX = b.x,
-        oldY = b.y;
-      b.x += b.vx * dt;
-      b.y += b.vy * dt;
-      b.life -= dt;
-      for (const u of this.units) {
-        if (u.hp <= 0 || u.side === b.side) continue;
-        const dx = b.x - oldX,
-          dy = b.y - oldY,
-          den = dx * dx + dy * dy;
-        const q = den
-          ? Math.max(
-              0,
-              Math.min(1, ((u.x - oldX) * dx + (u.y - oldY) * dy) / den),
-            )
-          : 0;
-        if (
-          Math.hypot(oldX + q * dx - u.x, oldY + q * dy - u.y) <
-          (u.boss ? 45 : 17)
-        ) {
-          let hit = damage(
-            b.attack,
-            u.defense * (u.buff === "fortify" ? u.power : 1),
-            this.pack.rules.defenseK,
-          );
-          const absorb = Math.min(u.shield, hit);
-          u.shield -= absorb;
-          hit -= absorb;
-          if (u.side === "ally" && hit > 0) this.hitsReceived++;
-          u.hp = Math.max(0, u.hp - hit);
-          u.hurtUntil = this.time + 0.2;
-          b.life = 0;
-          this.flashes.push({
-            x: u.x,
-            y: u.y,
-            radius: 20,
-            color: b.color,
-            life: 0.2,
-            label: hit ? String(hit) : "格擋",
-            side: u.side,
-          });
-          break;
-        }
-      }
-    }
-    this.bullets = this.bullets.filter((b) => b.life > 0);
+    this.mechanics.bullets(dt);
     this.flashes.forEach((f) => (f.life -= dt));
     this.flashes = this.flashes.filter((f) => f.life > 0);
     if (!this.allies.some((u) => u.hp > 0)) {

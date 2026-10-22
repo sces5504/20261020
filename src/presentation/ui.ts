@@ -1,3 +1,4 @@
+import { resourceIcon } from "./common";
 import { icon } from "./icons";
 import { skillMechanic } from "../content/descriptions";
 import { ask } from "./dialog";
@@ -374,7 +375,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     if (panel === "summon") {
       title = "星體共鳴";
       kick = "STELLAR RESONANCE";
-      body = `<div class="summon-layout"><div class="resonance-orb">✧<span>CONNECTING THE STARS</span></div><div><p>調整四資源投入，尋找與少女相近的共鳴訊號。</p><label>配方預設<select id="preset">${p.characters.map((c) => `<option value="${esc(c.id)}">${esc(c.name)}的共鳴配方</option>`).join("")}</select></label><div class="recipe-inputs">${p.resources.map((r, i) => `<label style="--c:${r.color}">${esc(r.name)}<input class="recipe" data-slot="${i}" type="number" min="1" max="999" value="${recipe[i]}"></label>`).join("")}</div><div id="recipe-info"></div><label>批次數量<input id="batch-count" type="number" min="1" max="${p.rules.summonSlots}" value="${count}"></label>${button("確認投入並共鳴 →", "summon", "", "primary")}<p class="muted">${p.rules.summonSeconds} 秒完成 · 可同時 ${p.rules.summonSlots} 組 · 結果在開工時確定</p></div></div><h3>共鳴工作</h3><div id="jobs">${jobList()}</div>`;
+      body = `<div class="summon-layout"><div class="resonance-orb">✧<span>CONNECTING THE STARS</span></div><div><p>調整四資源投入，尋找與少女相近的共鳴訊號。</p><label>配方預設<select id="preset">${p.characters.map((c) => `<option value="${esc(c.id)}">${esc(c.name)}的共鳴配方</option>`).join("")}</select></label><div class="recipe-inputs">${p.resources.map((r, i) => `<label style="--c:${r.color}">${resourceIcon(p, r)}${esc(r.name)}<input class="recipe" data-slot="${i}" type="number" min="1" max="999" value="${recipe[i]}"></label>`).join("")}</div><div id="recipe-info"></div><label>批次數量<input id="batch-count" type="number" min="1" max="${p.rules.summonSlots}" value="${count}"></label>${button("確認投入並共鳴 →", "summon", "", "primary")}<p class="muted">${p.rules.summonSeconds} 秒完成 · 可同時 ${p.rules.summonSlots} 組 · 結果在開工時確定</p></div></div><h3>共鳴工作</h3><div id="jobs">${jobList()}</div>`;
     }
     if (panel === "colony") {
       const v = p.planets.find((v) => v.id === selected)!,
@@ -863,7 +864,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     $("#wallet").innerHTML = p.resources
       .map(
         (r) =>
-          `<div class="resource" style="--c:${r.color}"><span>◆</span><div><small>${esc(r.name)}</small><strong>${(g.save.wallet[r.id] ?? 0).toLocaleString("zh-TW", { maximumFractionDigits: 2 })}</strong></div><em>+${((rates[r.id] ?? 0) * 60).toFixed(0)}/m</em></div>`,
+          `<div class="resource" style="--c:${r.color}">${resourceIcon(p, r)}<div><small>${esc(r.name)}</small><strong>${(g.save.wallet[r.id] ?? 0).toLocaleString("zh-TW", { maximumFractionDigits: 2 })}</strong></div><em>+${((rates[r.id] ?? 0) * 60).toFixed(0)}/m</em></div>`,
       )
       .join("");
     $("#region-title").textContent = p.regions.find(

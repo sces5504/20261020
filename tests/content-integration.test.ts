@@ -121,12 +121,17 @@ test("shared skills expose the actual caster and stable skill ID without alterin
   const battle = new Combat(p, s, p.planets[0].id);
   for (const u of battle.allies) {
     const skill = battle.skillFor(u)!;
-    assert.equal(skill.id, "m1:armor");
+    assert.equal(
+      skill.id,
+      u.def === "solar10:character.sun" ? "solar10:skill.sun" : "m1:armor",
+    );
     assert(battle.cast(u.id));
     const flash = battle.flashes.at(-1)!;
     assert.equal(flash.sourceDefinition, u.def);
     assert.equal(flash.skillId, skill.id);
-    assert.equal(u.buff, "fortify");
+    if (u.def === "solar10:character.sun")
+      assert.equal(battle.mechanics.stat(u, "defense"), 1.6);
+    else assert.equal(u.buff, "fortify");
     assert.equal(u.skillCooldown, skill.cooldown);
     assert(!battle.cast(u.id));
   }

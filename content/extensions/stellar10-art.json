@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "stellaart:package.stellar10",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "requires": [
     {
       "id": "m1:core",
@@ -9,7 +9,7 @@
     },
     {
       "id": "solar10:package.first-ten",
-      "version": "0.1.1"
+      "version": "0.2.0"
     }
   ],
   "definitions": {

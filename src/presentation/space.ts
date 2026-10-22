@@ -587,6 +587,36 @@ export function mountSpace(
           );
           g.strokeCircle(p.x, p.y, p.leashRadius);
         }
+        // Persistent visuals read the same field geometry used by core hit detection.
+        for (const f of combat.mechanics.fields) {
+          const a = f.action,
+            color = Phaser.Display.Color.HexStringToColor(f.color).color;
+          g.lineStyle(2, color, 0.7);
+          g.fillStyle(color, 0.12);
+          if (a.kind === "beam") {
+            const dx = Math.cos(f.angle) * a.radius,
+              dy = Math.sin(f.angle) * a.radius;
+            g.lineStyle(a.width, color, 0.2);
+            g.lineBetween(f.x, f.y, f.x + dx, f.y + dy);
+            g.lineStyle(Math.max(3, a.width * 0.12), 0xffffff, 0.9);
+            g.lineBetween(f.x, f.y, f.x + dx, f.y + dy);
+          } else {
+            g.fillCircle(f.x, f.y, a.radius);
+            g.strokeCircle(f.x, f.y, a.radius);
+            if (a.pull) {
+              g.fillStyle(0x030617, 0.95);
+              g.fillCircle(f.x, f.y, 25);
+              for (let i = 0; i < (model.lowEffects ? 2 : 5); i++) {
+                g.lineStyle(2, color, 0.6);
+                g.strokeCircle(
+                  f.x,
+                  f.y,
+                  20 + ((combat.time * 90 + i * 30) % 140),
+                );
+              }
+            }
+          }
+        }
         for (const b of combat.bullets) {
           const speed = Math.hypot(b.vx, b.vy) || 1;
           g.lineStyle(
@@ -668,6 +698,22 @@ export function mountSpace(
             else sprite.clearTint().setAlpha(1);
             if (combat.time - u.shotAt < 0.12) sprite.x -= Math.cos(u.aim) * 2;
           }
+          const statuses = combat.mechanics.active(u);
+          if (statuses.length) {
+            g.lineStyle(2, color, 0.55);
+            g.strokeCircle(u.x, u.y, size + 14 + Math.sin(combat.time * 3) * 2);
+            if (statuses.some((s) => s.stat === "directional")) {
+              g.lineStyle(5, color, 0.8);
+              g.beginPath();
+              g.arc(u.x, u.y, 52, u.aim - Math.PI / 2, u.aim + Math.PI / 2);
+              g.strokePath();
+            }
+            if (statuses.some((s) => s.stat === "stun"))
+              this.text(u.x, u.y - 45, "✦ 暈眩", 12, "#f8d888");
+            if (statuses.some((s) => s.stat === "moveSpeed" && s.value < 1))
+              this.text(u.x, u.y - 45, "▽ 減速", 12, "#b2b6ff");
+          }
+          if (sprite && u.summonKind === "clone") sprite.setAlpha(0.55);
           if (u.shield > 0) {
             this.hud.lineStyle(1.5, 0x87ede1, 0.8);
             this.hud.strokeCircle(u.x, u.y, size + 10);

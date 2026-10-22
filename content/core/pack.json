@@ -12,7 +12,9 @@
       "provenance": "m1-design",
       "color": "#8ae6ef",
       "initial": 180,
-      "capacity": 2400
+      "capacity": 2400,
+      "sprite": "m1:resource-icons-v1",
+      "iconFrame": 0
     },
     {
       "id": "m1:gas",
@@ -22,7 +24,9 @@
       "provenance": "m1-design",
       "color": "#b8a0ee",
       "initial": 170,
-      "capacity": 2400
+      "capacity": 2400,
+      "sprite": "m1:resource-icons-v1",
+      "iconFrame": 1
     },
     {
       "id": "m1:metal",
@@ -32,7 +36,9 @@
       "provenance": "m1-design",
       "color": "#f2bd7c",
       "initial": 240,
-      "capacity": 2400
+      "capacity": 2400,
+      "sprite": "m1:resource-icons-v1",
+      "iconFrame": 2
     },
     {
       "id": "m1:ether",
@@ -42,7 +48,9 @@
       "provenance": "m1-design",
       "color": "#9ad4a1",
       "initial": 150,
-      "capacity": 2400
+      "capacity": 2400,
+      "sprite": "m1:resource-icons-v1",
+      "iconFrame": 3
     }
   ],
   "characters": [
@@ -65,7 +73,12 @@
       "portrait": "m1art:asset.maiden-05-original-v1",
       "avatar": "m1art:asset.maiden-05-original-v1",
       "sprite": "m1art:maiden-05-battle-v1",
-      "recipe": [150, 100, 100, 50],
+      "recipe": [
+        150,
+        100,
+        100,
+        50
+      ],
       "starter": true,
       "role": "守護 · 領域護盾",
       "sourceRow": 2,
@@ -90,7 +103,12 @@
       "portrait": "m1art:asset.maiden-04-original-v1",
       "avatar": "m1art:asset.maiden-04-original-v1",
       "sprite": "m1art:maiden-04-battle-v1",
-      "recipe": [50, 150, 100, 100],
+      "recipe": [
+        50,
+        150,
+        100,
+        100
+      ],
       "starter": true,
       "role": "火力 · 擴散彈幕",
       "sourceRow": 3,
@@ -115,7 +133,12 @@
       "portrait": "m1art:asset.maiden-01-original-v1",
       "avatar": "m1art:asset.maiden-01-original-v1",
       "sprite": "m1art:maiden-01-battle-v1",
-      "recipe": [100, 50, 150, 100],
+      "recipe": [
+        100,
+        50,
+        150,
+        100
+      ],
       "starter": true,
       "role": "支援 · 定點砲台",
       "sourceRow": 4,
@@ -140,7 +163,12 @@
       "portrait": "m1art:asset.maiden-03-original-v1",
       "avatar": "m1art:asset.maiden-03-original-v1",
       "sprite": "m1art:maiden-03-battle-v1",
-      "recipe": [100, 100, 50, 150],
+      "recipe": [
+        100,
+        100,
+        50,
+        150
+      ],
       "starter": false,
       "role": "防衛 · 裝甲增幅",
       "sourceRow": 5,
@@ -165,7 +193,12 @@
       "portrait": "m1art:asset.maiden-02-original-v1",
       "avatar": "m1art:asset.maiden-02-original-v1",
       "sprite": "m1art:maiden-02-battle-v1",
-      "recipe": [100, 150, 50, 100],
+      "recipe": [
+        100,
+        150,
+        50,
+        100
+      ],
       "starter": false,
       "role": "速射 · 臨界加速",
       "sourceRow": 8,
@@ -190,7 +223,12 @@
       "portrait": "m1art:asset.maiden-06-original-v1",
       "avatar": "m1art:asset.maiden-06-original-v1",
       "sprite": "m1art:maiden-06-battle-v1",
-      "recipe": [50, 100, 100, 150],
+      "recipe": [
+        50,
+        100,
+        100,
+        150
+      ],
       "starter": false,
       "role": "干擾 · 攻擊封鎖",
       "sourceRow": 12,
@@ -512,7 +550,9 @@
       "radius": 49,
       "color": "#e9b87d",
       "sprite": "m1art:vein-v1",
-      "requires": ["m1:haven"],
+      "requires": [
+        "m1:haven"
+      ],
       "enemies": [
         {
           "enemy": "m1:scout",
@@ -541,7 +581,9 @@
         "m1:metal": 0.22,
         "m1:ether": 0.1
       },
-      "dropCharacters": ["m1:mars"],
+      "dropCharacters": [
+        "m1:mars"
+      ],
       "waveDelay": 4,
       "waves": [],
       "engageRadius": 360,
@@ -562,7 +604,9 @@
       "radius": 74,
       "color": "#b8a0e4",
       "sprite": "m1art:umbra-gate-v1",
-      "requires": ["m1:vein"],
+      "requires": [
+        "m1:vein"
+      ],
       "enemies": [
         {
           "enemy": "m1:scout",
@@ -595,7 +639,9 @@
         "m1:metal": 0.1,
         "m1:ether": 0.2
       },
-      "dropCharacters": ["m1:moon"],
+      "dropCharacters": [
+        "m1:moon"
+      ],
       "waveDelay": 4,
       "waves": [],
       "engageRadius": 360,
@@ -661,7 +707,9 @@
       },
       "seconds": 90,
       "attackBonus": 0.15,
-      "requires": ["m1:weapons"],
+      "requires": [
+        "m1:weapons"
+      ],
       "sprite": "m1art:refinery-v1"
     }
   ],
@@ -1000,6 +1048,15 @@
       "width": 1672,
       "height": 941,
       "hash": "dfc9583ea50a21849f04f564ce0ed4886ec41ff0bb0554d01c438aaf2398d767",
+      "review": "candidate"
+    },
+    {
+      "id": "m1:resource-icons-v1",
+      "name": "水晶／氣體／金屬／乙太圖示",
+      "src": "assets/extensions/four-resources-v1.webp",
+      "width": 512,
+      "height": 512,
+      "hash": "019682d6769704f324e1171c73933420f2aa994d311fd6dd687c0ec62ac45d39",
       "review": "candidate"
     }
   ],

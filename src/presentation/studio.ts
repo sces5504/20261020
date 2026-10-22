@@ -1,3 +1,7 @@
+import { ARCHIVE_BYTES } from "../platform/budgets";
+import { mountLaboratory } from "./laboratory";
+import { patternTypes } from "../content/mechanics";
+import { effectTypes } from "../content/schema";
 import { lockStudio } from "./studio-access";
 import { ask } from "./dialog";
 import {
@@ -40,6 +44,7 @@ export async function mountStudio(root: HTMLElement) {
   };
   project = parseProject(project);
   const previewMixers: AudioMixer[] = [];
+  let closeLab: (() => void) | undefined;
   let storageError = false;
   let kind: Kind = "characters",
     selected = project.pack.characters[0].id,
@@ -63,7 +68,7 @@ export async function mountStudio(root: HTMLElement) {
     });
   }
 
-  root.innerHTML = `<main class="studio"><header class="studio-header"><a class="brand" href="#/play"><span class="brand-icon">✧</span><span>GALAXY ANGEL STUDIO<small>星 河 戰 姬 · 內 容 工 坊</small></span></a><div class="inline-actions"><a href="#/art">六位標準原圖 ↗</a><a href="#/play">返回遊戲 ↗</a></div></header><div class="studio-title"><div><span class="eyebrow">CONTENT WORKSPACE / LOCAL DRAFT</span><h1>每一道星光，由你定義。</h1><p>瀏覽、調整、試玩，再將你的星海匯出。</p></div><div class="studio-actions">${button("復原", "undo")}${button("重做", "redo")}${button("套用至測試遊戲 ↗", "test", "", "primary")}</div></div><div class="studio-toolbar"><span id="project-status"></span><div>${button("從新版正式內容建立草稿", "use-published")}${button("新增項目", "new")}${button("校驗內容", "validate")}${button("鎖定工坊", "lock-studio")}${button("專案備份", "backup-project")}<label class="file-button">匯入專案／內容包<input id="import-project" type="file" accept=".json,.zip"></label>${button("匯出內容 ZIP", "export-pack")}</div></div><div class="studio-grid"><aside class="catalog-nav" id="catalog-nav"></aside><section class="catalog"><label class="search">搜尋內容<input id="catalog-search" type="search" placeholder="名稱或穩定 ID"></label><div id="catalog-list"></div></section><section class="inspector" id="inspector"></section></div><div class="studio-report" id="report" role="status"></div></main>`;
+  root.innerHTML = `<main class="studio"><header class="studio-header"><a class="brand" href="#/play"><span class="brand-icon">✧</span><span>GALAXY ANGEL STUDIO<small>星 河 戰 姬 · 內 容 工 坊</small></span></a><div class="inline-actions"><a href="#/art">六位標準原圖 ↗</a><a href="#/play">返回遊戲 ↗</a></div></header><div class="studio-title"><div><span class="eyebrow">CONTENT WORKSPACE / LOCAL DRAFT</span><h1>每一道星光，由你定義。</h1><p>瀏覽、調整、試玩，再將你的星海匯出。</p></div><div class="studio-actions">${button("技能測試訓練場", "laboratory")}${button("復原", "undo")}${button("重做", "redo")}${button("套用至測試遊戲 ↗", "test", "", "primary")}</div></div><div class="studio-toolbar"><span id="project-status"></span><div>${button("從新版正式內容建立草稿", "use-published")}${button("新增項目", "new")}${button("校驗內容", "validate")}${button("鎖定工坊", "lock-studio")}${button("專案備份", "backup-project")}<label class="file-button">匯入專案／內容包<input id="import-project" type="file" accept=".json,.zip"></label>${button("匯出內容 ZIP", "export-pack")}</div></div><div class="studio-grid"><aside class="catalog-nav" id="catalog-nav"></aside><section class="catalog"><label class="search">搜尋內容<input id="catalog-search" type="search" placeholder="名稱或穩定 ID"></label><div id="catalog-list"></div></section><section class="inspector" id="inspector"></section></div><div class="studio-report" id="report" role="status"></div></main>`;
   const $ = (s: string) => root.querySelector<HTMLElement>(s)!;
   function status() {
     if (disposed) return;
@@ -256,17 +261,9 @@ export async function mountStudio(root: HTMLElement) {
             : k === "review"
               ? ["candidate", "approved"]
               : k === "effect"
-                ? [
-                    "shield",
-                    "barrage",
-                    "fortify",
-                    "turret",
-                    "accelerate",
-                    "weaken",
-                    "heal",
-                  ]
+                ? effectTypes
                 : k === "pattern"
-                  ? ["aim", "fan", "ring"]
+                  ? patternTypes
                   : ["intro", "cleared", "activated", "summoned", "built"];
       control = `<select ${attr}>${vals.map((x) => `<option ${x === v ? "selected" : ""}>${x}</option>`).join("")}</select>`;
     } else if (typeof v === "object" || k === "description")
@@ -365,6 +362,13 @@ export async function mountStudio(root: HTMLElement) {
     return r.pack;
   }
   async function act(action: string, id: string) {
+    if (action === "laboratory") {
+      const valid = validatePack(project.pack);
+      if (!valid.pack) throw Error(valid.errors.join("\n"));
+      closeLab?.();
+      closeLab = mountLaboratory(root, valid.pack);
+      return;
+    }
     if (action === "lock-studio") {
       if (
         await ask("鎖定工坊？已保存的草稿會保留，尚未保存的表單調整會放棄。")
@@ -623,7 +627,7 @@ export async function mountStudio(root: HTMLElement) {
       if (t.id === "upload-asset" && t.files?.[0]) await upload(t.files[0]);
       if (t.id === "import-project" && t.files?.[0]) {
         const f = t.files[0];
-        if (f.size > 60 * 1024 * 1024) throw Error("匯入檔案超過 60 MiB。");
+        if (f.size > ARCHIVE_BYTES) throw Error("匯入檔案超過 64 MiB。");
         const next = f.name.endsWith(".zip")
           ? {
               ...project,
@@ -680,6 +684,7 @@ export async function mountStudio(root: HTMLElement) {
   draw();
   return () => {
     disposed = true;
+    closeLab?.();
     previewMixers.forEach((m) => m.destroy());
     root.removeEventListener("click", click);
     root.removeEventListener("change", change);

@@ -1,7 +1,9 @@
 import type { Skill } from "./schema";
 export function skillMechanic(s: Skill) {
+  if (s.effect === "program") return s.description;
   const n = s.power;
   return {
+    program: s.description,
     shield: `全隊各獲得 ${n} 點護盾，持續 ${s.duration} 秒。護盾先於生命承受傷害。`,
     barrage: `向四周發射 12 枚能源彈，每枚攻擊力為自身的 ${Math.round(n * 100)}%。`,
     turret: `召喚砲台 ${s.duration} 秒；每 0.5 秒射擊一次，攻擊力為自身的 ${Math.round(n * 100)}%。`,

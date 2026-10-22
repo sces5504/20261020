@@ -1,3 +1,4 @@
+import { ARCHIVE_BYTES, EXPANDED_BYTES, ENTRY_BYTES } from "./budgets";
 import { zipSync, unzipSync, strToU8, strFromU8 } from "fflate";
 import { validatePack, type Pack } from "../content/schema";
 export async function exportPack(
@@ -48,16 +49,19 @@ export async function exportPack(
     a.src = path;
   }
   files["pack.json"] = strToU8(JSON.stringify(p));
-  return zipSync(files, { level: 6 });
+  const result = zipSync(files, { level: 6 });
+  if (result.length > ARCHIVE_BYTES)
+    throw Error("內容包壓縮檔超過 64 MiB，請拆分內容包。");
+  return result;
 }
 export function importPack(bytes: Uint8Array): Pack {
-  if (bytes.length > 25 * 1024 * 1024) throw Error("內容包壓縮檔超過 25 MB。");
+  if (bytes.length > ARCHIVE_BYTES) throw Error("內容包壓縮檔超過 64 MiB。");
   let total = 0;
   const files = unzipSync(bytes, {
     filter: (f) => {
       if (
-        f.originalSize > 30 * 1024 * 1024 ||
-        (total += f.originalSize) > 60 * 1024 * 1024
+        f.originalSize > ENTRY_BYTES ||
+        (total += f.originalSize) > EXPANDED_BYTES
       )
         throw Error("內容包解壓大小超出限制。");
       if (f.name.includes("..") || f.name.startsWith("/"))

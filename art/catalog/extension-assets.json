@@ -238,5 +238,13 @@
     "sha256": "6fea27557144d34075207494f062aea6151cd55f0abfebd19afa74bc36de6a48",
     "master": "art/characters/stellar10/battle/ariel-v2-candidate.png",
     "masterSha256": "fe319d146c9926837efb0311ed5f056ed72ccbd9485636ac8eb1e7a16b02cd41"
+  },
+  {
+    "id": "m1:resource-icons-v1",
+    "path": "art/resources/four-resources-v1.webp",
+    "runtime": "assets/extensions/four-resources-v1.webp",
+    "sha256": "019682d6769704f324e1171c73933420f2aa994d311fd6dd687c0ec62ac45d39",
+    "master": "art/resources/four-resources-v1.png",
+    "masterSha256": "428db16eb83790f9e38d57ee5b9fb3fdc80e4236b4f7b709871806a76bdb8b6a"
   }
 ]

@@ -1,0 +1,2045 @@
+[
+  {
+    "row": 0,
+    "key": "None",
+    "type": 0,
+    "name": "None",
+    "description": "None",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 1,
+    "key": "AtkSpeed11",
+    "type": 1,
+    "name": "Accelerate\\nEnergy",
+    "description": "Increases attack speed [atkspdup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 2,
+    "key": "AtkSpeed12",
+    "type": 1,
+    "name": "Accelerate\\nEnergy",
+    "description": "Increases attack speed [atkspdup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 3,
+    "key": "AtkSpeed13",
+    "type": 1,
+    "name": "Accelerate\\nEnergy",
+    "description": "Increases attack speed [atkspdup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 4,
+    "key": "AtkSpeed21",
+    "type": 1,
+    "name": "Accelerate\\nEnergy",
+    "description": "Increases attack speed [atkspdup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 5,
+    "key": "AtkSpeed22",
+    "type": 1,
+    "name": "Accelerate\\nEnergy",
+    "description": "Increases attack speed [atkspdup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 6,
+    "key": "AtkSpeed61",
+    "type": 1,
+    "name": "Overload",
+    "description": "Increases attack speed [atkspdup] and projectile speed [projspdup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 7,
+    "key": "AtkSpeedRange31",
+    "type": 2,
+    "name": "Acceleration\\nArea",
+    "description": "Increases attack speed [atkspdup] of allies within [dist] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 8,
+    "key": "AtkSpeedRange32",
+    "type": 2,
+    "name": "Acceleration\\nArea",
+    "description": "Increases attack speed [atkspdup] of allies within [dist] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 9,
+    "key": "AtkSpeedRange33",
+    "type": 2,
+    "name": "Acceleration\\nArea",
+    "description": "Increases attack speed [atkspdup] of allies within [dist] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 10,
+    "key": "AtkSpeedCri11",
+    "type": 3,
+    "name": "Critical\\nAcceleration",
+    "description": "Increases attack speed [atkspdup] and critical rate [criup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 11,
+    "key": "AtkSpeedCri12",
+    "type": 3,
+    "name": "Critical\\nAcceleration",
+    "description": "Increases attack speed [atkspdup] and critical rate [criup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 12,
+    "key": "AtkSpeedCri21",
+    "type": 3,
+    "name": "Critical\\nAcceleration",
+    "description": "Increases attack speed [atkspdup] and critical rate [criup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 13,
+    "key": "AtkSpeedCri22",
+    "type": 3,
+    "name": "Critical\\nAcceleration",
+    "description": "Increases attack speed [atkspdup] and critical rate [criup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 14,
+    "key": "AtkSpeedCriRange31",
+    "type": 4,
+    "name": "Critical\\nAcceleration Zone",
+    "description": "Increases attack speed [atkspdup] and critical rate [criup] of allies within [dist] for [time]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 15,
+    "key": "AtkSpeedCriRange32",
+    "type": 4,
+    "name": "Critical\\nAcceleration Zone",
+    "description": "Increases attack speed [atkspdup] and critical rate [criup] of allies within [dist] for [time]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 16,
+    "key": "AtkPower11",
+    "type": 5,
+    "name": "Energy\\nAmplification",
+    "description": "Increases attack power [atkup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 17,
+    "key": "AtkPower12",
+    "type": 5,
+    "name": "Energy\\nAmplification",
+    "description": "Increases attack power [atkup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 18,
+    "key": "AtkPower13",
+    "type": 5,
+    "name": "Energy\\nAmplification",
+    "description": "Increases attack power [atkup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 19,
+    "key": "AtkPower41",
+    "type": 5,
+    "name": "Energy\\nAmplification",
+    "description": "Increases attack power [atkup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 20,
+    "key": "AtkPower43",
+    "type": 5,
+    "name": "Energy\\nAmplification",
+    "description": "Increases attack power [atkup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 21,
+    "key": "AtkPowerRange31",
+    "type": 6,
+    "name": "Amplication\\nArea",
+    "description": "Increases attack power [atkup] of allies within [dist] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 22,
+    "key": "AtkPowerRange32",
+    "type": 6,
+    "name": "Amplication\\nArea",
+    "description": "Increases attack power [atkup] of allies within [dist] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 23,
+    "key": "AtkPowerRange33",
+    "type": 6,
+    "name": "Amplication\\nArea",
+    "description": "Increases attack power [atkup] of allies within [dist] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 24,
+    "key": "AtkPowerSpeed11",
+    "type": 7,
+    "name": "Ready for\\nCombat",
+    "description": "Increases attack power [atkup] and attack speed [atkspdup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 25,
+    "key": "AtkPowerSpeed12",
+    "type": 7,
+    "name": "Ready for\\nCombat",
+    "description": "Increases attack power [atkup] and attack speed [atkspdup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 26,
+    "key": "AtkPowerSpeed13",
+    "type": 7,
+    "name": "Ready for\\nCombat",
+    "description": "Increases attack power [atkup] and attack speed [atkspdup] for [time].",
+    "enabled": true,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 27,
+    "key": "AtkPowerSpeed21",
+    "type": 7,
+    "name": "Ready for\\nCombat",
+    "description": "Increases attack power [atkup] and attack speed [atkspdup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 28,
+    "key": "AtkPowerSpeed22",
+    "type": 7,
+    "name": "Ready for\\nCombat",
+    "description": "Increases attack power [atkup] and attack speed [atkspdup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 29,
+    "key": "AtkPowerSpeed23",
+    "type": 7,
+    "name": "Ready for\\nCombat",
+    "description": "Increases attack power [atkup] and attack speed [atkspdup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 30,
+    "key": "AtkPowerCri11",
+    "type": 8,
+    "name": "Berserker",
+    "description": "Increases attack power [atkup] and critical rate [criup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 31,
+    "key": "AtkPowerCri12",
+    "type": 8,
+    "name": "Berserker",
+    "description": "Increases attack power [atkup] and critical rate [criup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 32,
+    "key": "AtkPowerCri21",
+    "type": 8,
+    "name": "Berserker",
+    "description": "Increases attack power [atkup] and critical rate [criup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 33,
+    "key": "AtkPowerCri22",
+    "type": 8,
+    "name": "Berserker",
+    "description": "Increases attack power [atkup] and critical rate [criup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 34,
+    "key": "AtkPowerCri23",
+    "type": 8,
+    "name": "Berserker",
+    "description": "Increases attack power [atkup] and critical rate [criup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 35,
+    "key": "AtkPowerCri41",
+    "type": 8,
+    "name": "Berserker",
+    "description": "Increases attack power [atkup] and critical rate [criup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 36,
+    "key": "AtkPowerCri42",
+    "type": 8,
+    "name": "Berserker",
+    "description": "Increases attack power [atkup] and critical rate [criup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 37,
+    "key": "AtkPowerCriRange31",
+    "type": 9,
+    "name": "Berserker\\nArea",
+    "description": "Increases attack power [atkup] and critical rate [criup] of allies within [dist] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 38,
+    "key": "AtkPowerCriRange32",
+    "type": 9,
+    "name": "Berserker\\nArea",
+    "description": "Increases attack power [atkup] and critical rate [criup] of allies within [dist] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 39,
+    "key": "AtkMaxCri21",
+    "type": 10,
+    "name": "Transcendent\\nSenses",
+    "description": "All attacks become critical for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 40,
+    "key": "AtkMaxCri22",
+    "type": 10,
+    "name": "Transcendent\\nSenses",
+    "description": "All attacks become critical for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 41,
+    "key": "DefPowerRange31",
+    "type": 11,
+    "name": "Defense\\nAmplification\\nArea",
+    "description": "Increases defense [defup] of allies within [dist] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 42,
+    "key": "DefPowerRange32",
+    "type": 11,
+    "name": "Defense\\nAmplification\\nArea",
+    "description": "Increases defense [defup] of allies within [dist] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 43,
+    "key": "DamDecRange61",
+    "type": 60,
+    "name": "Damage\\nDrop Zone",
+    "description": "Decreases received damage [dmgdec] of allies within [dist] for [time]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 44,
+    "key": "DefAtkPowerRange33",
+    "type": 12,
+    "name": "All-in-one\\nBattle Zone",
+    "description": "Increases attack power [atkup] and defense [defup] of allies within [dist] for [time]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 45,
+    "key": "DefAtkPowerRange32",
+    "type": 12,
+    "name": "All-in-one\\nBattle Zone",
+    "description": "Increases attack power [atkup] and defense [defup] of allies within [dist] for [time]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 46,
+    "key": "AvoidPowerRange31",
+    "type": 13,
+    "name": "Area of Expanded\\nVision",
+    "description": "Increases evasion [evaup] of allies within [dist] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 47,
+    "key": "AvoidPowerRange32",
+    "type": 13,
+    "name": "Area of Expanded\\nVision",
+    "description": "Increases evasion [evaup] of allies within [dist] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 48,
+    "key": "DefPower11",
+    "type": 14,
+    "name": "Defense\\nAmplification",
+    "description": "Increases defense [defup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 49,
+    "key": "DefPower12",
+    "type": 14,
+    "name": "Defense\\nAmplification",
+    "description": "Increases defense [defup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 50,
+    "key": "DefPower13",
+    "type": 14,
+    "name": "Defense\\nAmplification",
+    "description": "Increases defense [defup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 51,
+    "key": "DefPower51",
+    "type": 14,
+    "name": "Defense\\nAmplification",
+    "description": "Increases defense [defup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 52,
+    "key": "DefPower52",
+    "type": 14,
+    "name": "Defense\\nAmplification",
+    "description": "Increases defense [defup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 53,
+    "key": "DefPower53",
+    "type": 14,
+    "name": "Defense\\nAmplification",
+    "description": "Increases defense [defup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 54,
+    "key": "DefAtkPower53",
+    "type": 59,
+    "name": "Defense\\nAmplification",
+    "description": "Increases attack power [atkup] and defense [defup] within [dist] for [time]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 55,
+    "key": "AvoidPower11",
+    "type": 15,
+    "name": "Expanded\\nVision",
+    "description": "Increases evasion [evaup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 56,
+    "key": "AvoidPower12",
+    "type": 15,
+    "name": "Expanded\\nVision",
+    "description": "Increases evasion [evaup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 57,
+    "key": "AvoidPower13",
+    "type": 15,
+    "name": "Expanded\\nVision",
+    "description": "Increases evasion [evaup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 58,
+    "key": "FrontShield11",
+    "type": 16,
+    "name": "Energy\\nBarrier",
+    "description": "Decreases damage of front barrier [dmgdec] within [dist] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 59,
+    "key": "FrontShield12",
+    "type": 16,
+    "name": "Energy\\nBarrier",
+    "description": "Decreases damage of front barrier [dmgdec] within [dist] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 60,
+    "key": "FrontShield13",
+    "type": 16,
+    "name": "Energy\\nBarrier",
+    "description": "Decreases damage of front barrier [dmgdec] within [dist] for [time].",
+    "enabled": true,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 61,
+    "key": "ExpShield61",
+    "type": 17,
+    "name": "Offset Zone",
+    "description": "Creates a barrier within [dist]\\nwhich has a [percent] chance to offset projectiles for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 62,
+    "key": "InflectShield11",
+    "type": 18,
+    "name": "Deflection\\nZone",
+    "description": "Creates a barrier within [dist]\\nwhich has a [percent] chance to deflect projectiles for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 63,
+    "key": "InflectShield31",
+    "type": 18,
+    "name": "Deflection\\nZone",
+    "description": "Creates a barrier within [dist]\\nwhich has a [percent] chance to deflect projectiles for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 64,
+    "key": "InflectShield32",
+    "type": 18,
+    "name": "Deflection\\nZone",
+    "description": "Creates a barrier within [dist]\\nwhich has a [percent] chance to deflect projectiles for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 65,
+    "key": "RefShield51",
+    "type": 19,
+    "name": "Reflection\\nZone",
+    "description": "Creates a barrier within [dist]\\nwhich has a [percent] chance to reflect projectiles for [time].\\nReflected projectiles are 100% of opponent's damage",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 66,
+    "key": "RefShield52",
+    "type": 19,
+    "name": "Reflection\\nZone",
+    "description": "Creates a barrier within [dist]\\nwhich has a [percent] chance to reflect projectiles for [time].\\nReflected projectiles are 100% of opponent's damage",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 67,
+    "key": "RefShield53",
+    "type": 19,
+    "name": "Reflection\\nZone",
+    "description": "Creates a barrier within [dist]\\nwhich has a [percent] chance to reflect projectiles for [time].\\nReflected projectiles are 100% of opponent's damage",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 68,
+    "key": "DefPowerStun31",
+    "type": 20,
+    "name": "Mind Barrier",
+    "description": "Increases defense [defup] of allies within [dist] for [time] and resists stun.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 69,
+    "key": "DefPowerStun32",
+    "type": 20,
+    "name": "Mind Barrier",
+    "description": "Increases defense [defup] of allies within [dist] for [time] and resists stun.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 70,
+    "key": "DefPowerDot31",
+    "type": 21,
+    "name": "Corruption\\nBarrier",
+    "description": "Increases defense [defup] of allies within [dist] for [time] and resists corrosion and blaze.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 71,
+    "key": "DefPowerDot32",
+    "type": 21,
+    "name": "Corruption\\nBarrier",
+    "description": "Increases defense [defup] of allies within [dist] for [time] and resists corrosion and blaze.",
+    "enabled": true,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 72,
+    "key": "Invisibility01",
+    "type": 22,
+    "name": "Invisibility",
+    "description": "Become invisible for [time] to receive zero damage and stay out of the enemy's sight.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 73,
+    "key": "Invisibility02",
+    "type": 22,
+    "name": "Invisibility",
+    "description": "Become invisible for [time] to receive zero damage and stay out of the enemy's sight.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 74,
+    "key": "Invincibility51",
+    "type": 23,
+    "name": "Transcendence",
+    "description": "Receive zero damage from the enemy's attacks for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 75,
+    "key": "Invincibility52",
+    "type": 23,
+    "name": "Transcendence",
+    "description": "Receive zero damage from the enemy's attacks for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 76,
+    "key": "Miniature01",
+    "type": 24,
+    "name": "Minimize",
+    "description": "Increases evasion [evaup] and defense [defup] for [time] and shrinks Reflectstars.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 77,
+    "key": "Miniature02",
+    "type": 24,
+    "name": "Minimize",
+    "description": "Increases evasion [evaup] and defense [defup] for [time] and shrinks Reflectstars.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 78,
+    "key": "Taunt51",
+    "type": 25,
+    "name": "Provoke",
+    "description": "Provoke enemies within [dist] and Increase one's defenses [defup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 79,
+    "key": "Taunt52",
+    "type": 25,
+    "name": "Provoke",
+    "description": "Provoke enemies within [dist] and Increase one's defenses [defup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 80,
+    "key": "Blackhole51",
+    "type": 26,
+    "name": "Gravity\\nField",
+    "description": "Creates a black hole to pull enemies within [splashrange] for [skilltime] and causes [atksplashdmg] splash damage.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 81,
+    "key": "Blackhole11",
+    "type": 27,
+    "name": "Gravity\\nConcentration",
+    "description": "Creates a black hole to pull enemies within [splashrange] for [skilltime], decreases damage received, and causes [atksplashdmg] splash damage.",
+    "enabled": true,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 82,
+    "key": "Avatar01",
+    "type": 28,
+    "name": "Reflectstar\\nClone",
+    "description": "Creates a Reflectstar clone which performs at [percent] of your Reflectstar's full ability. Disappears after [skilltime]. Clone HP:[hp] Atk:[atk]",
+    "enabled": true,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 83,
+    "key": "MakeDrone41",
+    "type": 29,
+    "name": "Assemble\\nDrone",
+    "description": "Creates a drone [dronenum] which stays for [skilltime]. Drone HP[hp] Atk[atk]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 84,
+    "key": "MakeDrone42",
+    "type": 29,
+    "name": "Assemble\\nDrone",
+    "description": "Creates a drone [dronenum] which stays for [skilltime]. Drone HP[hp] Atk[atk]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 85,
+    "key": "MakeDrone43",
+    "type": 29,
+    "name": "Assemble\\nSoldiers",
+    "description": "Creates a Reflectstar [dronenum] which stays for [skilltime]. Reflectstar HP:[hp] Atk:[atk]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 86,
+    "key": "MakeTurret11",
+    "type": 30,
+    "name": "Set Cannon",
+    "description": "Creates a cannon [dronenum] which stays for [skilltime]. Cannon HP:[hp] Atk:[atk]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 87,
+    "key": "MakeTurret12",
+    "type": 30,
+    "name": "Set Cannon",
+    "description": "Creates a cannon [dronenum] which stays for [skilltime]. Cannon HP:[hp] Atk:[atk]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 88,
+    "key": "MakeTurret13",
+    "type": 30,
+    "name": "Set Cannon",
+    "description": "Creates a cannon [dronenum] which stays for [skilltime]. Cannon HP:[hp] Atk:[atk]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 89,
+    "key": "AtkPowerDec01",
+    "type": 31,
+    "name": "Block attack",
+    "description": "Decreases attack power [atkdn] and critical rate [cridn] of enemies within [dist] for [skilltime].",
+    "enabled": true,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 90,
+    "key": "AtkPowerDec02",
+    "type": 31,
+    "name": "Block attack",
+    "description": "Decreases attack power [atkdn] and critical rate [cridn] of enemies within [dist] for [skilltime].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 91,
+    "key": "AtkPowerDec03",
+    "type": 31,
+    "name": "Block attack",
+    "description": "Decreases attack power [atkdn] and critical rate [cridn] of enemies within [dist] for [skilltime].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 92,
+    "key": "DefPowerDec01",
+    "type": 32,
+    "name": "Defense block",
+    "description": "Decreases defense [defdn] and evasion [evadn] of enemies within [dist] for [skilltime].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 93,
+    "key": "DefPowerDec02",
+    "type": 32,
+    "name": "Defense block",
+    "description": "Decreases defense [defdn] and evasion [evadn] of enemies within [dist] for [skilltime].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 94,
+    "key": "StunShot01",
+    "type": 33,
+    "name": "Shock Shot",
+    "description": "Fires 3 shots to stun the enemy for [stun] and inflict [atk] damage.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 95,
+    "key": "StunShot02",
+    "type": 33,
+    "name": "Shock Shot",
+    "description": "Fires 3 shots to stun the enemy for [stun] and inflict [atk] damage.",
+    "enabled": true,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 96,
+    "key": "DecayShot01",
+    "type": 34,
+    "name": "Corrosive Shot",
+    "description": "Fires corrosive shots to inflict attack power [dotattack] dmg to the enemy every [dotms] for [decay].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 97,
+    "key": "DecayShot02",
+    "type": 34,
+    "name": "Corrosive Shot",
+    "description": "Fires corrosive shots to inflict attack power [dotattack] dmg to the enemy every [dotms] for [decay].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 98,
+    "key": "SlowField01",
+    "type": 35,
+    "name": "Mind\\nConfusion",
+    "description": "Decreases movement speed [movspddn] and attack speed [atkspddn] of enemies within [dist] for [skilltime].",
+    "enabled": true,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 99,
+    "key": "SlowField02",
+    "type": 35,
+    "name": "Mind\\nConfusion",
+    "description": "Decreases movement speed [movspddn] and attack speed [atkspddn] of enemies within [dist] for [skilltime].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 100,
+    "key": "DamageZone51",
+    "type": 36,
+    "name": "Flame Zone",
+    "description": "Creates an area of fire which inflicts attack power [dotattack] for [skilltime] to enemies within [dist] every [dotms] .",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 101,
+    "key": "DamageZone52",
+    "type": 36,
+    "name": "Flame Zone",
+    "description": "Creates an area of fire which inflicts attack power [dotattack] for [skilltime] to enemies within [dist] every [dotms] .",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 102,
+    "key": "DamageZone41",
+    "type": 37,
+    "name": "Flame\\nBarrier",
+    "description": "Put up a flame barrier which inflicts attack power [dotattack] damage to enemies within [dist] for [skilltime] every [dotms].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 103,
+    "key": "DecayField51",
+    "type": 38,
+    "name": "Corrosion\\nZone",
+    "description": "Creates an area which inflicts attack power [dotattack] corrosive damage to enemies within [dist] for [skilltime] every [dotms].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 104,
+    "key": "DecayField52",
+    "type": 38,
+    "name": "Corrosion\\nZone",
+    "description": "Creates an area which inflicts attack power [dotattack] corrosive damage to enemies within [dist] for [skilltime] every [dotms].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 105,
+    "key": "StellarWhirlwind41",
+    "type": 39,
+    "name": "Stellar\\nAccelerated Spin",
+    "description": "Inflicts stellar wind damage of attack power [dotattack] to enemies within [dist] during [decay] for [time] every [dotms].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 106,
+    "key": "StunWhirlwind41",
+    "type": 39,
+    "name": "Shock\\nAccelerated Spin",
+    "description": "Inflicts [stun] damage and [atk] damage to enemies within [dist] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 107,
+    "key": "Whirlwind41",
+    "type": 39,
+    "name": "Accelerated\\nSpin",
+    "description": "Spins during [time] and inflicts [atk] damage to enemies within [dist].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 108,
+    "key": "ShockWave61",
+    "type": 40,
+    "name": "Release of\\nKilling Intention",
+    "description": "Fires a shock wave up to [dist] to inflict [atk] damage and stuns enemies within range. Stun time [stun]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 109,
+    "key": "ShockWave42",
+    "type": 40,
+    "name": "Release of\\nFighting Spirit",
+    "description": "Fires a two shock wave up to [dist] to inflict [atk] damage and stuns enemies within range. Stun time [stun]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 110,
+    "key": "Crash41",
+    "type": 41,
+    "name": "Charge",
+    "description": "Charges at enemies to inflict [atk] damage and [stun] stun them.  Reduced damage [dmgdec] during activation.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 111,
+    "key": "Flash11",
+    "type": 42,
+    "name": "Lightspeed\\nSlash",
+    "description": "Inflicts [atk] damage to all enemies passed by during this instantaneous move. Reduced damage [dmgdec] during activation.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 112,
+    "key": "FlashDecay41",
+    "type": 43,
+    "name": "Assassin\\nBlow",
+    "description": "Inflicts [atk] damage and corrosive damage of attack power [dotattack] during [decay] every [dotms] to all penetrated enemies. Reduced damage [dmgdec] during activation.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 113,
+    "key": "Explode21",
+    "type": 44,
+    "name": "Shock\\nExplosion",
+    "description": "When hit, inflicts [atk] damage and [atksplashdmg] to all enemies within [splashrange] and knocks them back. 2 bullets",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 114,
+    "key": "Explode22",
+    "type": 44,
+    "name": "Shock\\nExplosion",
+    "description": "When hit, inflicts [atk] damage and [atksplashdmg] to all enemies within [splashrange] and knocks them back. 2 bullets",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 115,
+    "key": "Explode23",
+    "type": 44,
+    "name": "Shock\\nExplosion",
+    "description": "When hit, inflicts [atk] damage and [atksplashdmg] to all enemies within [splashrange] and knocks them back. 2 bullets",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 116,
+    "key": "Explode61",
+    "type": 44,
+    "name": "Tactical\\nDestroyer",
+    "description": "When hit, inflicts [atk] damage and [atksplashdmg] to all enemies within [splashrange] and knocks them back.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 117,
+    "key": "SniperGuideShot41",
+    "type": 58,
+    "name": "Autonomic\\nSnipe Shot",
+    "description": "Fires a guided projectile of [atk] damage which chases the enemy 8 times.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 118,
+    "key": "SniperGuideShot42",
+    "type": 58,
+    "name": "Autonomic\\nSnipe Shot",
+    "description": "Fires a guided projectile of [atk] damage which chases the enemy 8 times.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 119,
+    "key": "GuideShot21",
+    "type": 46,
+    "name": "Blindfire of\\nMassive Extinction",
+    "description": "Fires [shootcount] guided projectiles of [atk] damage which chase the enemy.",
+    "enabled": true,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 120,
+    "key": "MultiStraight61",
+    "type": 47,
+    "name": "Revolver\\nPanning",
+    "description": "Concentrated fire of [shootcount] with [atk] damage.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 121,
+    "key": "MachineShot21",
+    "type": 48,
+    "name": "Indiscriminate\\nBlindfire",
+    "description": "Randomly fires forward [shootcount] projectiles of [atk] damage.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 122,
+    "key": "MachineShot22",
+    "type": 48,
+    "name": "Indiscriminate\\nBlindfire",
+    "description": "Randomly fires forward [shootcount] projectiles of [atk] damage.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 123,
+    "key": "MachineShot23",
+    "type": 48,
+    "name": "Indiscriminate\\nBlindfire",
+    "description": "Randomly fires forward [shootcount] projectiles of [atk] damage.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 124,
+    "key": "Laser11",
+    "type": 49,
+    "name": "Light of\\nExtinction",
+    "description": "Fires a laser [dist] wide which inflicts [atk] damage for [time].",
+    "enabled": true,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 125,
+    "key": "Laser41",
+    "type": 49,
+    "name": "Annihilation\\nBeam",
+    "description": "Fires a laser [dist] wide which inflicts [atk] damage for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 126,
+    "key": "LaserTarget11",
+    "type": 50,
+    "name": "Guided Laser",
+    "description": "Fires a laser of [atk] damage to a targeted enemy for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 127,
+    "key": "LaserTarget61",
+    "type": 50,
+    "name": "Guided Laser",
+    "description": "Fires a laser of [atk] damage to a targeted enemy for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 128,
+    "key": "FireworkShot99",
+    "type": 51,
+    "name": "Spread Shot",
+    "description": "Fires a missle which spreads towards the enemy for [time].([atk] damage)",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 129,
+    "key": "FireworkShot100",
+    "type": 51,
+    "name": "Spread Shot",
+    "description": "Fires a missle which spreads when it hits for [time].([atk] damage)",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 130,
+    "key": "HookShot51",
+    "type": 52,
+    "name": "Target\\nDesignation",
+    "description": "Fires a projectile which inflicts [atk] damage and pulls the enemy in.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 131,
+    "key": "HookShot52",
+    "type": 52,
+    "name": "Target\\nDesignation",
+    "description": "Fires a projectile which inflicts [atk] damage and pulls the enemy in.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 132,
+    "key": "SniperShot41",
+    "type": 53,
+    "name": "Triple Snipe\\nShot",
+    "description": "Fires 3 snipe shots of [atk] damage.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 133,
+    "key": "SniperShot42",
+    "type": 53,
+    "name": "Triple Snipe\\nShot",
+    "description": "Fires 3 snipe shots of [atk] damage.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 134,
+    "key": "SniperShot43",
+    "type": 53,
+    "name": "Triple Snipe\\nShot",
+    "description": "Fires 3 snipe shots of [atk] damage.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 135,
+    "key": "PierceShot41",
+    "type": 53,
+    "name": "Penetration\\nShot",
+    "description": "Fires a snipe shot which penetrates the enemy and inflicts [atk] damage. Casting time [casttime]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 136,
+    "key": "PierceShot42",
+    "type": 53,
+    "name": "Penetration\\nShot",
+    "description": "Fires a snipe shot which penetrates the enemy and inflicts [atk] damage. Casting time [casttime]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 137,
+    "key": "StellarPierce41",
+    "type": 54,
+    "name": "Flame\\nSnipe Shot",
+    "description": "Fires a snipe shot which penetrates the enemy and inflicts [atk]dmg and stellar wind dmg of attack power [dotattack] every [dotms]. Casting time [casttime]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 138,
+    "key": "StellarPierce42",
+    "type": 54,
+    "name": "Flame\\nSnipe Shot",
+    "description": "Fires a snipe shot which penetrates the enemy and inflicts [atk]dmg and stellar wind dmg of attack power [dotattack] every [dotms]. Casting time [casttime]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 139,
+    "key": "StellarPierce61",
+    "type": 54,
+    "name": "Flame\\nSnipe Shot",
+    "description": "Fires a snipe shot which penetrates the enemy and inflicts [atk]dmg and stellar wind dmg of attack power [dotattack] every [dotms]. Casting time [casttime]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 140,
+    "key": "DecayPierce41",
+    "type": 55,
+    "name": "Corrosive\\nSnipe Shot",
+    "description": "Fires corrosive shots to inflict attack power [dotattack] dmg to the enemy every [dotms] for [decay].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 141,
+    "key": "AtkPowerE1",
+    "type": 5,
+    "name": "Energy\\nAmplification",
+    "description": "Increases attack power [atkup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 142,
+    "key": "FireworkShotE1",
+    "type": 51,
+    "name": "Spread Shot",
+    "description": "Fires a missle which spreads towards the enemy for [time].([atk] damage)",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 143,
+    "key": "AtkSpeedE1",
+    "type": 1,
+    "name": "Accelerate\\nEnergy",
+    "description": "Increases attack speed [atkspdup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 144,
+    "key": "AvoidPowerRangeE1",
+    "type": 13,
+    "name": "Area of Expanded\\nVision",
+    "description": "Increases evasion [evaup] of allies within [dist] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 145,
+    "key": "SlowFieldE1",
+    "type": 35,
+    "name": "Mind\\nConfusion",
+    "description": "Decreases movement speed [movspddn] and attack speed [atkspddn] of enemies within [dist] for [skilltime].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 146,
+    "key": "AtkPowerRangeE1",
+    "type": 6,
+    "name": "Amplication\\nArea",
+    "description": "Increases attack power [atkup] of allies within [dist] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 147,
+    "key": "TauntE1",
+    "type": 25,
+    "name": "Provoke",
+    "description": "Provoke enemies within [dist] and Increase one's defenses [defup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 148,
+    "key": "AtkMaxCriE1",
+    "type": 10,
+    "name": "Transcendent\\nSenses",
+    "description": "All attacks become critical for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 149,
+    "key": "GuideShotE1",
+    "type": 46,
+    "name": "Blindfire of\\nMassive Extinction",
+    "description": "Fires [shootcount] guided projectiles of [atk] damage which chase the enemy.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 150,
+    "key": "InvisibilityE1",
+    "type": 22,
+    "name": "Invisibility",
+    "description": "Become invisible for [time] to receive zero damage and stay out of the enemy's sight.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 151,
+    "key": "StunShotE1",
+    "type": 33,
+    "name": "Shock Shot",
+    "description": "Fires 3 shots to stun the enemy for [stun] and inflict [atk] damage.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 152,
+    "key": "PierceShotE1",
+    "type": 53,
+    "name": "Penetration\\nShot",
+    "description": "Fires a snipe shot which penetrates the enemy and inflicts [atk] damage. Casting time [casttime]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 153,
+    "key": "AtkPowerE",
+    "type": 5,
+    "name": "Energy\\nAmplification",
+    "description": "Increases attack power [atkup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 154,
+    "key": "AtkPowerCriE",
+    "type": 8,
+    "name": "Berserker",
+    "description": "Increases attack power [atkup] and critical rate [criup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 155,
+    "key": "AtkSpeedRangeE",
+    "type": 2,
+    "name": "Acceleration\\nArea",
+    "description": "Increases attack speed [atkspdup] of allies within [dist] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 156,
+    "key": "FlashE",
+    "type": 42,
+    "name": "Lightspeed\\nSlash",
+    "description": "Inflicts [atk] damage to all enemies passed by during this instantaneous move. Reduced damage [dmgdec] during activation.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 157,
+    "key": "CrashE",
+    "type": 41,
+    "name": "Charge",
+    "description": "Charges at enemies to inflict [atk] damage and [stun] stun them.  Reduced damage [dmgdec] during activation.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 158,
+    "key": "DefPowerStunE",
+    "type": 20,
+    "name": "Mind Barrier",
+    "description": "Increases defense [defup] of allies within [dist] for [time] and resists stun.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 159,
+    "key": "StunShotE",
+    "type": 33,
+    "name": "Shock Shot",
+    "description": "Fires 3 shots to stun the enemy for [stun] and inflict [atk] damage.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 160,
+    "key": "SplashShotE",
+    "type": 57,
+    "name": "Splash Shot",
+    "description": "Fires [shootcount] missiles which inflict [spashdmg] splash damage within [splashrange] for [time]. ([atk] damage)",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 161,
+    "key": "SplashShotE2",
+    "type": 57,
+    "name": "Splash Shot",
+    "description": "Fires [shootcount] missiles which inflict [spashdmg] splash damage within [splashrange] for [time]. ([atk] damage)",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 162,
+    "key": "DamageZoneE",
+    "type": 36,
+    "name": "Flame Zone",
+    "description": "Creates an area of fire which inflicts attack power [dotattack] for [skilltime] to enemies within [dist] every [dotms] .",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 163,
+    "key": "MakeDroneE",
+    "type": 29,
+    "name": "Assemble\\nDrone",
+    "description": "Creates a drone [dronenum] which stays for [skilltime]. Drone HP[hp] Atk[atk]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 164,
+    "key": "MakeDroneE2",
+    "type": 29,
+    "name": "Assemble\\nDrone",
+    "description": "Creates a drone [dronenum] which stays for [skilltime]. Drone HP[hp] Atk[atk]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 165,
+    "key": "MakeDroneE3",
+    "type": 29,
+    "name": "Assemble\\nDrone",
+    "description": "Creates a drone [dronenum] which stays for [skilltime]. Drone HP[hp] Atk[atk]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 166,
+    "key": "MakeDroneE4",
+    "type": 29,
+    "name": "Assemble\\nDrone",
+    "description": "Creates a drone [dronenum] which stays for [skilltime]. Drone HP[hp] Atk[atk]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 167,
+    "key": "MakeDroneE5",
+    "type": 29,
+    "name": "Assemble\\nDrone",
+    "description": "Creates a drone [dronenum] which stays for [skilltime]. Drone HP[hp] Atk[atk]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 168,
+    "key": "MakeDroneE6",
+    "type": 29,
+    "name": "Assemble\\nDrone",
+    "description": "Creates a drone [dronenum] which stays for [skilltime]. Drone HP[hp] Atk[atk]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 169,
+    "key": "MakeDroneE7",
+    "type": 29,
+    "name": "Assemble\\nDrone",
+    "description": "Creates a drone [dronenum] which stays for [skilltime]. Drone HP[hp] Atk[atk]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 170,
+    "key": "MakeDroneE8",
+    "type": 29,
+    "name": "Assemble\\nDrone",
+    "description": "Creates a drone [dronenum] which stays for [skilltime]. Drone HP[hp] Atk[atk]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 171,
+    "key": "MakeDroneLeiga",
+    "type": 29,
+    "name": "Assemble\\nDrone",
+    "description": "Creates a drone [dronenum] which stays for [skilltime]. Drone HP[hp] Atk[atk]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 172,
+    "key": "FlashDecayLeiga",
+    "type": 43,
+    "name": "Assassin\\nBlow",
+    "description": "Inflicts [atk] damage and corrosive damage of attack power [dotattack] during [decay] every [dotms] to all penetrated enemies. Reduced damage [dmgdec] during activation.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 173,
+    "key": "Blackhole99",
+    "type": 27,
+    "name": "Gravity\\nConcentration",
+    "description": "Creates a black hole to pull enemies within [splashrange] for [skilltime], decreases damage received, and causes [atksplashdmg] splash damage.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 174,
+    "key": "RefShield99",
+    "type": 19,
+    "name": "Reflection\\nZone",
+    "description": "Creates a barrier within [dist]\\nwhich has a [percent] chance to reflect projectiles for [time].\\nReflected projectiles are 100% of opponent's damage",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 175,
+    "key": "Blackhole98",
+    "type": 27,
+    "name": "Gravity\\nConcentration",
+    "description": "Creates a black hole to pull enemies within [splashrange] for [skilltime], decreases damage received, and causes [atksplashdmg] splash damage.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 176,
+    "key": "Laser99",
+    "type": 49,
+    "name": "Light of\\nExtinction",
+    "description": "Fires a laser [dist] wide which inflicts [atk] damage for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 177,
+    "key": "GuideShot99",
+    "type": 46,
+    "name": "Blindfire of\\nMassive Extinction",
+    "description": "Fires [shootcount] guided projectiles of [atk] damage which chase the enemy.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 178,
+    "key": "Explode99",
+    "type": 44,
+    "name": "Tactical\\nDestroyer",
+    "description": "When hit, inflicts [atk] damage and [atksplashdmg] to all enemies within [splashrange] and knocks them back.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 179,
+    "key": "DamageZone99",
+    "type": 37,
+    "name": "Flame\\nBarrier",
+    "description": "Put up a flame barrier which inflicts attack power [dotattack] damage to enemies within [dist] for [skilltime] every [dotms].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 180,
+    "key": "MakeDrone99",
+    "type": 29,
+    "name": "Assemble\\nSoldiers",
+    "description": "Creates a Reflectstar [dronenum] which stays for [skilltime]. Reflectstar HP:[hp] Atk:[atk]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 181,
+    "key": "AtkSpeedE",
+    "type": 1,
+    "name": "Accelerate\\nEnergy",
+    "description": "Increases attack speed [atkspdup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 182,
+    "key": "DefPowerDotE",
+    "type": 21,
+    "name": "Corruption\\nBarrier",
+    "description": "Increases defense [defup] of allies within [dist] for [time] and resists corrosion and blaze.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 183,
+    "key": "AtkSpeedCriRangeE",
+    "type": 4,
+    "name": "Critical\\nAcceleration Zone",
+    "description": "Increases attack speed [atkspdup] and critical rate [criup] of allies within [dist] for [time]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 184,
+    "key": "DamDecRange51",
+    "type": 60,
+    "name": "Absolute\\ndefensive space",
+    "description": "Decreases received damage [dmgdec] of allies within [dist] for [time]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 185,
+    "key": "TauntE2",
+    "type": 25,
+    "name": "Provoke",
+    "description": "Provoke enemies within [dist] and Increase one's defenses [defup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 186,
+    "key": "DamDecRange99",
+    "type": 60,
+    "name": "Absolute\\ndefensive space",
+    "description": "Decreases received damage [dmgdec] of allies within [dist] for [time]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 187,
+    "key": "AtkChanger12",
+    "type": 61,
+    "name": "Dispersion\\nEnergy",
+    "description": "The general attack is changed to a Blindfire for [time]. Blindfire [atk]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 188,
+    "key": "AtkPower42",
+    "type": 5,
+    "name": "Energy\\nAmplification",
+    "description": "Increases attack power [atkup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 189,
+    "key": "AtkUpSpeedDown22",
+    "type": 62,
+    "name": "Concentration\\nmode",
+    "description": "Increase attack power [atkup] and decrease your attack speed[atkspddn] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 190,
+    "key": "LaserE2",
+    "type": 49,
+    "name": "Light of\\nExtinction",
+    "description": "Fires a laser [dist] wide which inflicts [atk] damage for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 191,
+    "key": "DefPowerLaser33",
+    "type": 63,
+    "name": "Absorptive \\nBarrier",
+    "description": "Increases defense [defup] of allies within [dist] for [time] and resists laser.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 192,
+    "key": "MakeDrone61",
+    "type": 29,
+    "name": "A.M drones",
+    "description": "Creates a laser drone [dronenum] which stays for [skilltime]. Drone HP[hp] Atk[atk]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 193,
+    "key": "Reduction41",
+    "type": 64,
+    "name": "Time reduction",
+    "description": "Reduces the skill cooling time of the allies' reflectstars by [percent]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 194,
+    "key": "TauntE3",
+    "type": 25,
+    "name": "Provoke",
+    "description": "Provoke enemies within [dist] and Increase one's defenses [defup] for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 195,
+    "key": "GuideShotE2",
+    "type": 46,
+    "name": "Blindfire of\\nMassive Extinction",
+    "description": "Fires [shootcount] guided projectiles of [atk] damage which chase the enemy.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 196,
+    "key": "ShockWaveE1",
+    "type": 40,
+    "name": "Release of\\nKilling Intention",
+    "description": "Fires a shock wave up to [dist] to inflict [atk] damage and stuns enemies within range. Stun time [stun]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 197,
+    "key": "AtkUpDefThrough21",
+    "type": 65,
+    "name": "Superfragmentary\\narrow",
+    "description": "For [time], increases attack power [atkup] and ignore the enemy's defenses.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 198,
+    "key": "MakeDroneLeiga2",
+    "type": 29,
+    "name": "Assemble\\nDrone",
+    "description": "Creates a drone [dronenum] which stays for [skilltime]. Drone HP[hp] Atk[atk]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 199,
+    "key": "Sacrifice51",
+    "type": 66,
+    "name": "Sacrifice",
+    "description": "For [time], Algenib increases unit’s defense [defup] in the [dist] range and receive unit’s all damage instead.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 200,
+    "key": "AtkUpDefDecRange35",
+    "type": 12,
+    "name": "Assault order",
+    "description": "Increases attack power [atkup] of allies within [dist] for [time] and decrease the defense [defdn].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 201,
+    "key": "WhirlwindE",
+    "type": 39,
+    "name": "Accelerated\\nSpin",
+    "description": "Spins during [time] and inflicts [atk] damage to enemies within [dist].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 202,
+    "key": "DefPowerLaserE",
+    "type": 63,
+    "name": "Absorptive \\nBarrier",
+    "description": "Increases defense [defup] of allies within [dist] for [time] and resists laser.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 203,
+    "key": "ExpShieldE",
+    "type": 17,
+    "name": "Offset Zone",
+    "description": "Creates a barrier within [dist]\\nwhich has a [percent] chance to offset projectiles for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 204,
+    "key": "Giantization51",
+    "type": 68,
+    "name": "Giantization",
+    "description": "Polis gains [defup] Armor for [time] and get hugified.\\n When Polis is shot, she nullifies piecing and splash effects. and provoke enemies within [dist] ",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 205,
+    "key": "SniperGuideShot43",
+    "type": 67,
+    "name": "Absolute hit",
+    "description": "Fire eight guided missiles chasing enemies, dealing [atk] damage.Hugified",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 206,
+    "key": "DamageZoneB",
+    "type": 37,
+    "name": "Flame\\nBarrier",
+    "description": "Put up a flame barrier which inflicts attack power [dotattack] damage to enemies within [dist] for [skilltime] every [dotms].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 207,
+    "key": "ExpShieldE2",
+    "type": 17,
+    "name": "Offset Zone",
+    "description": "Creates a barrier within [dist]\\nwhich has a [percent] chance to offset projectiles for [time].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 208,
+    "key": "FlashE2",
+    "type": 42,
+    "name": "Lightspeed\\nSlash",
+    "description": "Inflicts [atk] damage to all enemies passed by during this instantaneous move. Reduced damage [dmgdec] during activation.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 209,
+    "key": "GuideShotE3",
+    "type": 46,
+    "name": "Blindfire of\\nMassive Extinction",
+    "description": "Fires [shootcount] guided projectiles of [atk] damage which chase the enemy.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 210,
+    "key": "SlowFieldE2",
+    "type": 35,
+    "name": "Mind\\nConfusion",
+    "description": "Decreases movement speed [movspddn] and attack speed [atkspddn] of enemies within [dist] for [skilltime].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 211,
+    "key": "EvasionDec01",
+    "type": 32,
+    "name": "Evasion block",
+    "description": "Decreases evasion [evadn] and defense [defdn] of enemies within [dist] for [skilltime].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 212,
+    "key": "EvasionDec02",
+    "type": 32,
+    "name": "Evasion block",
+    "description": "Decreases evasion [evadn] and defense [defdn] of enemies within [dist] for [skilltime].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 213,
+    "key": "DefPowerMeleeE",
+    "type": 69,
+    "name": "Absorptive \\nBarrier",
+    "description": "Increases defense [defup] of allies within [dist] for [time] and resists laser.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 214,
+    "key": "HookShotE",
+    "type": 52,
+    "name": "Target\\nDesignation",
+    "description": "Fires a projectile which inflicts [atk] damage and pulls the enemy in.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 215,
+    "key": "GuideShotE4",
+    "type": 46,
+    "name": "Blindfire of\\nMassive Extinction",
+    "description": "Fires [shootcount] guided projectiles of [atk] damage which chase the enemy.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 216,
+    "key": "MeleeInduce30",
+    "type": 70,
+    "name": "Melee\\ninduction device",
+    "description": "Create a device to induce melee Attack during [skilltime]. HP: [hp]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 217,
+    "key": "BasicInduce30",
+    "type": 71,
+    "name": "General\\ninduction device",
+    "description": "Create a device to induce normal, Pierce, and splash shots during [skilltime]. HP: [hp]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 218,
+    "key": "LaserGuideInduce30",
+    "type": 72,
+    "name": "Special\\ninduction device",
+    "description": "Create a device to induce guide and laser attacks during [skilltime]. HP : [hp]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 219,
+    "key": "DamDecRangeE",
+    "type": 60,
+    "name": "Damage\\nDrop Zone",
+    "description": "Decreases received damage [dmgdec] of allies within [dist] for [time]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 220,
+    "key": "ShockRef61",
+    "type": 73,
+    "name": "Shock reflection",
+    "description": "Releases shock wave dealing [atk] dmg taken by allies within [dist]  for [time].It is not applicable to things summoned.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 221,
+    "key": "SuperRapid21",
+    "type": 48,
+    "name": "Super Rapid",
+    "description": "After charging for [casttime], fire [shootcount] of [atk] damage.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 222,
+    "key": "TimeStop51",
+    "type": 74,
+    "name": "Time stop",
+    "description": "Stops enemy time for [time]\\nSelf buff time in use is not reduced, and allies' skill cooldowns stop.\\n Unaffected by cooldown reduction.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 223,
+    "key": "DefPowerTaunt32",
+    "type": 75,
+    "name": "Psychological\\nBarrier",
+    "description": "Increases defense [defup] of allies within [dist] for [time] and resists provoke.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 224,
+    "key": "Bombing51",
+    "type": 76,
+    "name": "Energy bombing",
+    "description": "After randomly designating an enemy 5 times, deal [atksplashdmg] damage to the [splashrange] range.",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 225,
+    "key": "WhirlwindE2",
+    "type": 39,
+    "name": "Accelerated\\nSpin",
+    "description": "Spins during [time] and inflicts [atk] damage to enemies within [dist].",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  },
+  {
+    "row": 226,
+    "key": "MakeDroneE10",
+    "type": 29,
+    "name": "Assemble\\nDrone",
+    "description": "Creates a drone [dronenum] which stays for [skilltime]. Drone HP[hp] Atk[atk]",
+    "enabled": false,
+    "validation": "description-based; native timing and targeting unverified"
+  }
+]

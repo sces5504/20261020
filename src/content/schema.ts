@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { actionSchema, patternTypes } from "./mechanics";
 const id = z.string().regex(/^[a-z][a-z0-9.-]*:[a-z][a-z0-9._-]*$/);
 const positive = z.number().finite().positive();
 const amount = z.record(id, z.number().finite().nonnegative());
@@ -17,11 +18,26 @@ export const effectTypes = [
   "accelerate",
   "weaken",
   "heal",
+  "program",
 ] as const;
 const skill = z
   .object({
     ...base,
     effect: z.enum(effectTypes),
+    actions: z.array(actionSchema).min(1).max(32).optional(),
+    levels: z
+      .array(
+        z
+          .object({
+            cooldown: positive,
+            actions: z.array(actionSchema).min(1).max(32),
+          })
+          .strict(),
+      )
+      .max(9)
+      .optional(),
+    sourceSkill: z.number().int().min(1).max(226).optional(),
+    fidelity: z.enum(["description", "native-verified"]).optional(),
     power: positive,
     duration: positive,
     cooldown: positive,
@@ -39,6 +55,8 @@ const character = z
     range: positive,
     interval: positive,
     growth: z.number().finite().min(0).max(1),
+    critical: z.number().min(0).max(0.95).optional(),
+    evasion: z.number().min(0).max(0.95).optional(),
     skill: id,
     color: z.string().regex(/^#[0-9a-f]{6}$/i),
     portrait: z.string(),
@@ -63,7 +81,10 @@ const enemy = z
     projectileSpeed: positive,
     orbitSpeed: z.number().min(0).max(2).default(0.45),
     strafeSpeed: z.number().min(0).max(300).default(14),
-    pattern: z.enum(["aim", "fan", "ring"]),
+    pattern: z.enum(patternTypes),
+    skill: id.optional(),
+    volleyCount: z.number().int().min(1).max(64).optional(),
+    volleySpread: z.number().min(0).max(6.284).optional(),
     boss: z.boolean(),
     phaseAt: z.number().min(0).max(1),
     color: z.string().regex(/^#[0-9a-f]{6}$/i),
@@ -147,6 +168,8 @@ const region = z
 const resource = z
   .object({
     ...base,
+    iconFrame: z.number().int().min(0).max(3).optional(),
+    sprite: z.string().default(""),
     color: z.string().regex(/^#[0-9a-f]{6}$/i),
     initial: z.number().finite().nonnegative(),
     capacity: positive,
@@ -361,7 +384,7 @@ export function validatePack(input: unknown): {
     if (r && (v.x < 0 || v.y < 0 || v.x > r.width || v.y > r.height))
       errors.push(`${v.id}: 座標超出星域`);
   });
-  for (const e of [...p.regions, ...p.research])
+  for (const e of [...p.regions, ...p.research, ...p.resources])
     if (e.sprite) has("assets", e.sprite, e.id);
   for (const r of p.regions)
     if (r.background) has("assets", r.background, r.id);
@@ -416,6 +439,13 @@ export function validatePack(input: unknown): {
   money(p.rules.healCost, "rules.healCost");
   money(p.rules.levelCost, "rules.levelCost");
 
+  for (const s of p.skills) {
+    if (s.effect === "program" && !s.actions?.length)
+      errors.push(`${s.id}: program 必須有技能動作`);
+    if (s.effect !== "program" && s.actions)
+      errors.push(`${s.id}: 舊效果不可夾帶未執行動作`);
+  }
+  for (const e of p.enemies) if (e.skill) has("skills", e.skill, e.id);
   const maxGrowth =
     (1 + 5 * p.rules.duplicateStatBonus) *
     Math.max(

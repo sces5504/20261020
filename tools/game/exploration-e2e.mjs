@@ -195,6 +195,7 @@ try {
   const arrived = await record(page);
   for (const q of pack.quests.filter(
     (q) =>
+      q.repeat !== "daily" &&
       q.condition === "summoned" &&
       q.count <= arrived.summoned &&
       !arrived.storySeen.includes(q.id),
@@ -207,6 +208,12 @@ try {
       "arrival dialogue must finish before resuming patrol travel",
     );
   }
+  await page.waitForTimeout(350);
+  assert.equal(
+    await page.locator(".story-scene").count(),
+    0,
+    "daily counters must not force an extra dialogue before patrol travel",
+  );
   await page.keyboard.down("d");
   await page.waitForSelector(".in-battle", { timeout: 60000 });
   await page.keyboard.up("d");

@@ -116,6 +116,22 @@ try {
       )
       .click();
     assert.equal(await page.locator(".copy-picker button").count(), 2);
+    // A secondary instance remains operable even though the roster has only one card.
+    await page.locator(".copy-picker button").last().click();
+    await page.locator('.character-detail [data-action="team"]').click();
+    await page.waitForFunction(
+      () =>
+        document.querySelector('.character-detail [data-action="team"]')
+          .textContent === "移出編隊",
+    );
+    assert.equal((await record(page, "save:test")).team.length, 4);
+    await page.locator('.character-detail [data-action="team"]').click();
+    await page.waitForFunction(
+      () =>
+        document.querySelector('.character-detail [data-action="team"]')
+          .textContent === "加入編隊",
+    );
+    await page.locator(".copy-picker button").first().click();
     await page.locator('[data-action="open-feed"]').click();
     assert.equal(await page.locator(".feed-copy").count(), 1);
     const feedBounds = await page.locator(".feed-copy .portrait").boundingBox();

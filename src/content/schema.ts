@@ -456,6 +456,12 @@ export function validatePack(input: unknown): {
   // Validate active encounters before runtime; unused source recipes remain editable.
   const peak = (s: Skill | undefined, interval: number) => {
     if (!s) return { bullets: 0, units: 0, fields: 0 };
+    if (s.effect === "barrage")
+      return { bullets: 12 * Math.ceil(2 / s.cooldown), units: 0, fields: 0 };
+    if (s.effect === "turret") {
+      const units = Math.ceil(s.duration / s.cooldown);
+      return { bullets: units * 10, units, fields: 0 };
+    }
     return [
       { actions: s.actions ?? [], cooldown: s.cooldown },
       ...(s.levels ?? []),

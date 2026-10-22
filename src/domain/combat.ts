@@ -293,6 +293,8 @@ export class Combat {
       u.turretUntil
     )
       return false;
+    if (s.effect !== "program")
+      this.mechanics.casts[u.id] = (this.mechanics.casts[u.id] ?? 0) + 1;
     u.skillCooldown = s.cooldown;
     this.effect(u, s);
     return true;
@@ -335,6 +337,7 @@ export class Combat {
         this.bullets.push({
           id: this.sequence++,
           side: u.side,
+          owner: u.id,
           x: u.x,
           y: u.y,
           vx: Math.cos(angle) * 480,
@@ -349,6 +352,8 @@ export class Combat {
         ...u,
         id: `turret-${this.sequence++}`,
         name: "共鳴砲台",
+        summonOwner: u.id,
+        summonKind: "turret",
         sprite: "",
         x: u.x + 45,
         y: u.y - 45,

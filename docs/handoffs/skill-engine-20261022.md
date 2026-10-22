@@ -45,3 +45,5 @@
 近期測試：32項專門機制情境已通過（含226技能Lv1/10雙次seed重播與82模板）；日常核心共82項曾有一項新屏障fixture因未同步fleet anchor失敗，已修正fixture且專門機制通過；另補顏色編輯真實作用測試，目前最後一輪完整測試進行中。桌機／觸控瀏覽器初版流程曾通過，壓力流程已完成但資源樣式斷言遇到Playwright取到被即時更新替換的DOM節點，已改同一次page.evaluate查live nodes；此為測試讀取競態，會完整重跑，不記為最新通過。當前仍未發布／未合main。
 
 完整驗證命令增加第七組 `test:skills`，既有第5組test:polish保留。下一步：核對最後日常測試、commit封存程式，再以實際HEAD執行完整check release；收集瀏覽器build／版本／viewport／seed／60敵壓力FPS、保存視覺證據；完成PR／main與公開版檢查。commercial旗標不能假冒實機／真人接受。
+
+首次完整release（21688e2）通過內容、typecheck、83核心與第一組瀏覽器，在test:playtest停止：舊流程仍要求地球顯示固定護盾，與本次原作40%偏折／3秒相反。已把playtest與exploration兩處舊斷言換成獨立的原作數值驗收，未降低條件。另補舊草稿barrage的施放次數／傷害歸屬及舊砲台召喚歸屬，預算估算涵蓋舊effect。最新typecheck與84項核心測試全通過（約10.8秒），新完整release尚待重跑。

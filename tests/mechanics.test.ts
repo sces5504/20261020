@@ -670,3 +670,19 @@ test("authored skill colors reach both the first and queued projectile of a salv
   advance(c, 0.1);
   assert(c.bullets.every((b) => b.color === "#12ab34"));
 });
+
+test("legacy draft barrage retains real hits, caster attribution and laboratory diagnostics", () => {
+  const { c, u, foes } = scene(undefined, 1);
+  const s = c.skillFor(u)!;
+  s.effect = "barrage";
+  delete s.actions;
+  delete s.levels;
+  s.power = 1;
+  s.duration = 2;
+  c.cast(u.id);
+  assert.equal(c.mechanics.casts[u.id], 1);
+  assert(c.bullets.every((b) => b.owner === u.id));
+  advance(c, 0.5);
+  assert(foes[0].hp < 10000);
+  assert(c.mechanics.damageDealt[u.id] > 0);
+});

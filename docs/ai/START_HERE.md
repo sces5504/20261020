@@ -1,3 +1,5 @@
+> 目前任務：[0.6技能／彈幕／工坊測試場整合](../handoffs/skill-engine-20261022.md)。使用者要求本次直接交付成品；缺原版實機部分已授權依wiki推定。契約[skill-engine-v6](../design/skill-engine-v6.md)，不要再為十人選近似M1技能。下段為上一輪整合歷史。
+
 > 最新內容整合：[第二區與十人交接](../handoffs/frontier-solar10-integration-20261022.md)／PR #11。啟用beacon0.2.0、solar10 0.1.1與stellaart0.1.0，16角色／2區／4星球，核心仍0.5.0；根manifest呈現綁定與安全媒體複製由核心整合者維護。下方六人等為首個切片歷史。
 
 # Galaxy Angel：後續 AI 擴充入口

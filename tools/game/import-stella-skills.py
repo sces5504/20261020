@@ -16,7 +16,7 @@ def actions(r,L):
  row=r['_row']
  if row==71:return [status('allies',[m('defense',v(33)/100,immune=['corrosion','blaze'])])]
  if row==81:return [status('self',[m('damageTaken',1-v(43)/100,life)]),dict(kind='zone',target='enemies',radius=v(49),duration=life,interval=.2,power=v(31)*r['f51']/10000,pull=r['f30'],follow=True)]
- if row==60:return [status('self',[m('directional',1-v(43)/100)])]
+ if row==60:return [status('self',[dict(m('directional',1-v(43)/100),interceptRadius=rad)])]
  if row==26:return [status('self',[m('attack',v(31)/100),m('attackSpeed',v(45)/100)])]
  if row==124:return [dict(kind='beam',target='enemies',radius=1200,width=rad,duration=time,power=v(31)/100,interval=.2,follow=True,delay=r['f75']/1000)]
  if row==119:return [dict(kind='projectile',pattern='homing',count=r['f17'],power=v(31)/100,duration=6,speed=520,cadence=.08,cancelOnTargetDeath=True)]
@@ -34,7 +34,7 @@ def actions(r,L):
   target='allies' if t in (2,4,6,9,11,12,13,60) else 'self'
   return buff(target,[mod(stat,f) for stat,f in attack[t]]+([m('damageTaken',max(0,1-v(43)/100),duration)] if t==60 else []))
  if t==10:return buff('self',[dict(m('critical',1,duration),mode='set')])
- if t==16:return buff('self',[m('directional',max(0,1-v(43)/100),duration)])
+ if t==16:return buff('self',[dict(m('directional',max(0,1-v(43)/100),duration),interceptRadius=rad)])
  if t in (17,18,19):return buff('self',[dict(m({17:'offset',18:'deflect',19:'reflect'}[t],ratio(54),duration),interceptRadius=rad)])
  if t in (20,21,63,69,75):return buff('allies',[mod('defense',33,immune={20:['stun'],21:['corrosion','blaze'],63:['laser'],69:['melee'],75:['taunt']}[t])])
  if t==22:return buff('self',[m('invisible',1,duration),mod('critical',35)])
@@ -52,7 +52,7 @@ def actions(r,L):
   modifiers=[]
   if r['f39']:modifiers.append(m('stun',1,v(39)/1000))
   if r['f41']:modifiers.append(dict(m('corrosion' if t==38 or 'Stellar' in r['f00'] else 'blaze',max(.01,ratio(28,10)),v(41)/1000),tick=.5))
-  return [dict(kind='zone',target='enemies',radius=rad,duration=duration,power=ratio(28) if r['f28'] else ratio(31),interval=.25,follow=t in (37,39),origin='owner' if t in (37,39) else 'target',modifiers=modifiers)]
+  return [dict(kind='zone',target='enemies',radius=rad,duration=duration,power=0 if t==38 else ratio(28) if r['f28'] else ratio(31),interval=.25,follow=t in (37,39),origin='owner' if t in (37,39) else 'target',modifiers=modifiers)]
  if t==40:return [dict(kind='zone',target='enemies',radius=rad,duration=.1,power=ratio(31),interval=.2,modifiers=[m('stun',1,max(.05,v(39)/1000))])]
  if t in (41,42,43):return [dict(kind='dash',target='target',radius=450,width=60,power=ratio(31),modifiers=([m('stun',1,max(.05,v(39)/1000))] if t==41 else [m('corrosion',ratio(28,10),max(.05,v(41)/1000))] if t==43 else []))]+buff('self',[m('damageTaken',max(0,1-v(43)/100),.3)])
  if t in (44,57):return [dict(shot(pattern='splash',splash=v(49) or 300,splashPower=ratio(51),knockback=60 if t==44 else 0),count=max(1,r['f17'],2 if '2 bullets' in r['description_en'] else 1))]
@@ -74,6 +74,8 @@ def actions(r,L):
  if t==74:return [dict(kind='timeStop',duration=duration)]
  if t==76:return [dict(kind='bomb',target='enemies',radius=v(49) or 600,duration=life,power=v(31)*r['f51']/10000,count=5,interval=.2)]
  raise ValueError(('untranslated effect family',t,row))
+translate_actions=actions
+def actions(r,L):return [dict(a,bypassEvasion=bool(r['f90']),suppressCritical=bool(r['f91']))for a in translate_actions(r,L)]
 packfile=root/'content/extensions/solar10.json';pack=json.loads(packfile.read_text());pack['version']='0.2.0';skills=[];evidence=[]
 for ch in pack['definitions']['characters']:
  key=ch['id'].split('.')[-1];cid,sid,title=selected[key];r=rows[sid];skillid='solar10:skill.'+key
@@ -82,7 +84,7 @@ for ch in pack['definitions']['characters']:
  descriptions={
  'sun':'範圍內友軍防禦提高至160%，持續4秒，並抵抗侵蝕與灼燒。',
  'jupiter':'建立持續2秒的黑洞，牽引範圍1000內敵人、每次造成自身攻擊10%的範圍傷害；自身所受傷害降低30%。',
- 'saturn':'建立持續4秒的前方能量屏障；前方來襲傷害降低40%。',
+ 'saturn':'展開持續4秒、寬800的前方能量屏障；穿越的來襲彈體減傷40%，保護後方友軍。',
  'neptune':'自身攻擊提高至130%、攻速提高至125%，持續3秒。',
  'pluto':'引導寬300的雷射，持續2秒，每次造成自身攻擊18%的傷害。',
  'nemesis':'發射20枚追蹤彈，每枚造成自身攻擊65%的傷害。',
@@ -90,7 +92,7 @@ for ch in pack['definitions']['characters']:
  'io':'範圍800內敵人移速降低至70%、攻速降低至80%，持續3秒。',
  'titania':'範圍800內敵人攻擊與暴擊率降低至80%，持續3秒。',
  'ariel':'連射3發，每發造成自身攻擊130%的傷害，並使命中敵人暈眩3秒。'}
- ch['description']=descriptions[key]+' 原作描述移植；原生時序與距離尺度仍待實機對照。';ch['role']=title
+ ch['description']=descriptions[key];ch['role']=title
  skill=dict(id=skillid,name=title,description=descriptions[key],status='active',provenance='research',effect='program',power=1,duration=max(.05,r['f12']/1000,r['f52']/1000),cooldown=r['f06']/1000,color=ch['color'],sourceSkill=sid,fidelity='description',actions=actions(r,1),levels=[dict(cooldown=(r['f06']-(L-1)*r['f07'])/1000,actions=actions(r,L)) for L in range(2,11)])
  skills.append(skill)
  evidence.append(dict(character=ch['id'],cid=cid,skill=sid,key=r['f00'],type=r['f02'],description=r['description_en'],raw={k:v for k,v in r.items() if k.startswith('f') and v not in (0,'',0.0)},confirmed=['CID.f106 → Skill._row','Skill.f02 effect selector','UI parameter formulas where mapped'],inferred=['World distance units used directly','Target selection, turn rate, tick interval and burst cadence are local reconstruction','Skill level 1 used by existing gameplay; studio can test levels 1–10; original skill cap not established']))
@@ -104,6 +106,16 @@ print('Translated ten skills, levels 1–10; indexed',len(rows),'source rows; no
 
 library=[]
 for r in rows[1:]:
- library.append(dict(id=f"stella:skill.{r['_row']}",name=r['name_en'].replace('\\n',' '),description=f"原作技能 {r['f00']}。依來源表與公開描述實作。",status='active',provenance='research',effect='program',power=1,duration=max(.05,r['f12']/1000,r['f52']/1000),cooldown=max(.1,r['f06']/1000),color='#a2dce8',sourceSkill=r['_row'],fidelity='description',actions=actions(r,1),levels=[dict(cooldown=max(.1,(r['f06']-(L-1)*r['f07'])/1000),actions=actions(r,L)) for L in range(2,11)]))
-(root/'content/extensions/stella-skills.json').write_text(json.dumps(dict(schemaVersion=1,id='stella:package.skills',version='0.1.0',requires=[dict(id='m1:core',version='0.5.0')],definitions=dict(skills=library)),ensure_ascii=False,indent=2)+'\n')
+ library.append(dict(id=f"stella:skill.{r['_row']}",name=r['name_en'].replace('\\n',' '),description="",status='active',provenance='research',effect='program',power=1,duration=max(.05,r['f12']/1000,r['f52']/1000),cooldown=max(.1,r['f06']/1000),color='#a2dce8',sourceSkill=r['_row'],fidelity='description',actions=actions(r,1),levels=[dict(cooldown=max(.1,(r['f06']-(L-1)*r['f07'])/1000),actions=actions(r,L)) for L in range(2,11)]))
+(root/'content/extensions/stella-skills.json').write_text(json.dumps(dict(schemaVersion=1,id='stella:package.skills',version='0.1.0',requires=[dict(id='m1:core',version='0.6.0')],definitions=dict(skills=library)),ensure_ascii=False,indent=2)+'\n')
 print('Full source skill library:',len(library),'definitions;',len(set(r['f02'] for r in rows[1:])),'effect families.')
+# Upgrade the original six in-place: stable IDs remain compatible with old saves and drafts.
+corefile=root/'content/core/pack.json';core=json.loads(corefile.read_text())
+titles={62:'偏折領域',187:'擴散能源',87:'設置砲台',48:'防禦增幅',11:'臨界加速',90:'月蝕封鎖'}
+for ch in core['characters']:
+ source=characters[ch['sourceRow']];r=rows[source['f106']]
+ skill=next(s for s in core['skills'] if s['id']==ch['skill'])
+ skill['description']={62:'建立能偏折來襲彈體的守護領域。',187:'將普通攻擊轉為多枚能源散射，集中火力壓制前方敵人。',87:'部署兩座砲台協同攻擊，持續期間可受擊與摧毀。',48:'提高自身防禦，承受敵方連續火力。',11:'同時提高自身攻速與暴擊率。',90:'削弱範圍內敵人的攻擊與暴擊率。'}[r['_row']]
+ skill.update(effect='program',sourceSkill=r['_row'],fidelity='description',actions=actions(r,1),duration=max(.05,r['f12']/1000,r['f52']/1000),cooldown=max(.1,r['f06']/1000),levels=[dict(cooldown=max(.1,(r['f06']-(L-1)*r['f07'])/1000),actions=actions(r,L))for L in range(2,11)])
+ ch['critical']=source['f18']/100;ch['evasion']=source['f19']/100
+corefile.write_text(json.dumps(core,ensure_ascii=False,indent=2)+'\n')

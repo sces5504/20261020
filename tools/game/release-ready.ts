@@ -35,6 +35,7 @@ if (result.pack) {
   // Visible world entities must carry the same portable artwork that the studio previews.
   for (const [kind, list, slots] of [
     ["enemies", p.enemies, ["sprite"]],
+    ["resources", p.resources, ["sprite"]],
     ["planets", p.planets, ["sprite"]],
     ["buildings", p.buildings, ["sprite"]],
     ["research", p.research, ["sprite"]],

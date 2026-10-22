@@ -3081,5 +3081,209 @@ button:not(:disabled):hover {
   }
 }
 
-.laboratory{position:fixed;inset:0;z-index:300;background:#081620;color:#dceae9;overflow:auto;padding:24px}.laboratory>header{display:flex;justify-content:space-between;gap:20px;align-items:start}.lab-layout{display:grid;grid-template-columns:330px minmax(0,1fr);gap:24px}.lab-config{display:grid;gap:12px;align-content:start}.lab-ally,.lab-enemy{display:grid;grid-template-columns:2fr 1fr 1fr;gap:6px;border-bottom:1px solid #28404b;padding-bottom:10px}.lab-enemy label:last-child{grid-column:1/-1}.laboratory label{display:grid;gap:5px;font-size:12px}.laboratory select,.laboratory input{max-width:100%;min-width:0;padding:8px;background:#122b38;color:#e0eae9;border:1px solid #45616a}.lab-controls,.lab-casts{display:flex;gap:8px;flex-wrap:wrap}.lab-controls label{display:flex;align-items:center}.lab-main canvas{width:100%;height:auto;border:1px solid #37555f;touch-action:none}.lab-main table{width:100%;font-size:13px;text-align:left}.lab-main pre{max-height:300px;overflow:auto;white-space:pre-wrap;font-size:12px}.lab-casts{margin:12px 0}.lab-config h3{margin:8px 0}.lab-config p{font-size:12px}#lab-error{color:#f0cb88}@media(max-width:800px){.laboratory{padding:12px}.lab-layout{grid-template-columns:1fr}.lab-config{max-height:40vh;overflow:auto}.lab-main{min-width:0}.lab-main canvas{min-height:240px;object-fit:contain}.laboratory>header{gap:8px}.laboratory h2{font-size:22px}.lab-casts button{flex:1;min-width:120px}}
-.resource-icon{display:inline-block!important;width:32px;height:32px;flex:none;background-size:200% 200%;background-repeat:no-repeat;vertical-align:middle}.cost .resource-icon{width:22px;height:22px}.wallet .resource-icon{width:38px;height:38px}.recipe-inputs .resource-icon{width:38px;height:38px}
+.laboratory {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: #081620;
+  color: #dceae9;
+  overflow: auto;
+  padding: 24px;
+}
+.laboratory > header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: start;
+}
+.lab-layout {
+  display: grid;
+  grid-template-columns: 330px minmax(0, 1fr);
+  gap: 24px;
+}
+.lab-config {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+.lab-ally,
+.lab-enemy {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 6px;
+  border-bottom: 1px solid #28404b;
+  padding-bottom: 10px;
+}
+.lab-enemy label:last-child {
+  grid-column: 1/-1;
+}
+.laboratory label {
+  display: grid;
+  gap: 5px;
+  font-size: 12px;
+}
+.laboratory select,
+.laboratory input {
+  max-width: 100%;
+  min-width: 0;
+  padding: 8px;
+  background: #122b38;
+  color: #e0eae9;
+  border: 1px solid #45616a;
+}
+.lab-controls,
+.lab-casts {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.lab-controls label {
+  display: flex;
+  align-items: center;
+}
+.lab-main canvas {
+  width: 100%;
+  height: auto;
+  border: 1px solid #37555f;
+  touch-action: none;
+}
+.lab-main table {
+  width: 100%;
+  font-size: 13px;
+  text-align: left;
+}
+.lab-main pre {
+  max-height: 300px;
+  overflow: auto;
+  white-space: pre-wrap;
+  font-size: 12px;
+}
+.lab-casts {
+  margin: 12px 0;
+}
+.lab-config h3 {
+  margin: 8px 0;
+}
+.lab-config p {
+  font-size: 12px;
+}
+#lab-error {
+  color: #f0cb88;
+}
+@media (max-width: 800px) {
+  .laboratory {
+    padding: 12px;
+  }
+  .lab-layout {
+    grid-template-columns: 1fr;
+  }
+  .lab-config {
+    max-height: 40vh;
+    overflow: auto;
+  }
+  .lab-main {
+    min-width: 0;
+  }
+  .lab-main canvas {
+    min-height: 240px;
+    object-fit: contain;
+  }
+  .laboratory > header {
+    gap: 8px;
+  }
+  .laboratory h2 {
+    font-size: 22px;
+  }
+  .lab-casts button {
+    flex: 1;
+    min-width: 120px;
+  }
+}
+.resource-icon {
+  display: inline-block !important;
+  width: 32px;
+  height: 32px;
+  flex: none;
+  background-size: 200% 200%;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+.cost .resource-icon {
+  width: 22px;
+  height: 22px;
+}
+.wallet .resource-icon {
+  width: 38px;
+  height: 38px;
+}
+.recipe-inputs .resource-icon {
+  width: 38px;
+  height: 38px;
+}
+.lab-skill-select {
+  grid-column: 1/-1;
+}
+.lab-main details {
+  padding: 8px 0;
+}
+.lab-main details p {
+  line-height: 1.7;
+  font-size: 13px;
+  color: #b9d0d4;
+}
+.lab-casts button:disabled {
+  opacity: 0.5;
+}
+.laboratory button {
+  min-height: 40px;
+}
+.mechanic-row,
+.modifier-row {
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #34535d;
+  background: #0c202a;
+  border-radius: 8px;
+}
+.mechanic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 8px;
+}
+.mechanic-grid label {
+  display: grid;
+  gap: 4px;
+  font-size: 12px;
+}
+.mechanic-grid input,
+.mechanic-grid select {
+  min-width: 0;
+  width: 100%;
+}
+.modifier-row {
+  background: #102a35;
+}
+.modifier-row fieldset {
+  margin: 8px 0;
+}
+.modifier-row legend {
+  font-size: 12px;
+}
+.laboratory > header {
+  position: sticky;
+  top: -24px;
+  z-index: 2;
+  background: #081620;
+  padding: 8px 0;
+}
+.lab-main canvas {
+  min-height: 0;
+}
+.laboratory:focus-within {
+  outline: none;
+}
+@media (max-width: 800px) {
+  .laboratory > header {
+    top: -12px;
+  }
+}

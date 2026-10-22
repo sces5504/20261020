@@ -20,7 +20,7 @@ export function resourceIcon(p: Pack, r: Pack["resources"][number]) {
   const asset = p.assets.find((a) => a.id === r.sprite);
   if (!asset) return '<span aria-hidden="true">◆</span>';
   const frame = r.iconFrame ?? 0;
-  return `<span class="resource-icon" aria-hidden="true" style="background-image:url('${esc(asset.src)}');background-position:${frame % 2 ? "100%" : "0"} ${frame >= 2 ? "100%" : "0"}"></span>`;
+  return `<span class="resource-icon" aria-hidden="true" style="background-image:url('${esc(asset.src)}');background-size:${r.iconFrame === undefined ? "contain" : "200% 200%"};background-position:${frame % 2 ? "100%" : "0"} ${frame >= 2 ? "100%" : "0"}"></span>`;
 }
 export function amounts(p: Pack, c: Record<string, number>) {
   return Object.entries(c)

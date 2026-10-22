@@ -1,3 +1,4 @@
+import { barrierEnds } from "../domain/mechanics";
 import Phaser from "phaser";
 import { SimulationClock } from "../application/simulation-clock";
 import { guardianPositions, patrolPosition } from "../domain/navigation";
@@ -592,20 +593,37 @@ export function mountSpace(
           const a = f.action,
             color = Phaser.Display.Color.HexStringToColor(f.color).color;
           g.lineStyle(2, color, 0.7);
-          g.fillStyle(color, 0.12);
+          g.fillStyle(color, 0.035);
           if (a.kind === "beam") {
             const dx = Math.cos(f.angle) * a.radius,
               dy = Math.sin(f.angle) * a.radius;
             g.lineStyle(a.width, color, 0.2);
             g.lineBetween(f.x, f.y, f.x + dx, f.y + dy);
-            g.lineStyle(Math.max(3, a.width * 0.12), 0xffffff, 0.9);
+            g.lineStyle(a.width * 0.45, color, 0.14);
+            g.lineBetween(f.x, f.y, f.x + dx, f.y + dy);
+            g.lineStyle(Math.max(3, a.width * 0.08), 0xffffff, 0.9);
             g.lineBetween(f.x, f.y, f.x + dx, f.y + dy);
           } else {
             g.fillCircle(f.x, f.y, a.radius);
             g.strokeCircle(f.x, f.y, a.radius);
             if (a.pull) {
               g.fillStyle(0x030617, 0.95);
-              g.fillCircle(f.x, f.y, 25);
+              g.fillCircle(f.x, f.y, 50);
+              g.lineStyle(3, 0xddd0ff, 0.8);
+              g.strokeEllipse(f.x, f.y, 115, 72);
+              for (let arm = 0; arm < (model.lowEffects ? 1 : 3); arm++)
+                for (let i = 1; i < 24; i++) {
+                  const r = 48 + i * 3,
+                    prior = 45 + i * 3,
+                    a = combat.time * 2 + (arm * Math.PI * 2) / 3 + i * 0.15;
+                  g.lineStyle(2, color, 0.7);
+                  g.lineBetween(
+                    f.x + Math.cos(a - 0.15) * prior,
+                    f.y + Math.sin(a - 0.15) * prior * 0.65,
+                    f.x + Math.cos(a) * r,
+                    f.y + Math.sin(a) * r * 0.65,
+                  );
+                }
               for (let i = 0; i < (model.lowEffects ? 2 : 5); i++) {
                 g.lineStyle(2, color, 0.6);
                 g.strokeCircle(
@@ -642,7 +660,8 @@ export function mountSpace(
           if (u.hp <= 0) continue;
           if (u.sprite) this.ensureAsset(u.sprite);
           const color = Phaser.Display.Color.HexStringToColor(u.color).color;
-          const size = u.boss ? 42 : u.turretUntil ? 14 : 18;
+          const scale = combat.mechanics.stat(u, "scale");
+          const size = (u.boss ? 42 : u.turretUntil ? 14 : 18) * scale;
           if (u.side === "ally") {
             if (!u.sprite || !this.textures.exists(u.sprite))
               this.ship(u.x, u.y, color, size);
@@ -660,12 +679,36 @@ export function mountSpace(
           if (u.side === "enemy" && u.windup > 0) {
             g.lineStyle(2, 0xffbc85, 0.65);
             g.strokeCircle(u.x, u.y, 60 + (1 - u.windup / 0.55) * 25);
-            g.lineBetween(
-              u.x,
-              u.y,
-              u.x + Math.cos(u.aim) * 250,
-              u.y + Math.sin(u.aim) * 250,
-            );
+            const { pattern, count, spread } = combat.volleyFor(u);
+            if (pattern === "laser") {
+              g.lineStyle(24, 0xff876b, 0.12);
+              g.lineBetween(
+                u.x,
+                u.y,
+                u.x + Math.cos(u.aim) * u.range,
+                u.y + Math.sin(u.aim) * u.range,
+              );
+              g.lineStyle(1, 0xffbc85, 0.7);
+            }
+            const rays =
+              pattern === "ring" ||
+              pattern === "spiral" ||
+              pattern === "fan" ||
+              pattern === "shotgun"
+                ? count
+                : 1;
+            for (let i = 0; i < rays; i++) {
+              const a =
+                pattern === "ring" || pattern === "spiral"
+                  ? (i * Math.PI * 2) / rays
+                  : u.aim + (i - (rays - 1) / 2) * spread;
+              g.lineBetween(
+                u.x,
+                u.y,
+                u.x + Math.cos(a) * u.range,
+                u.y + Math.sin(a) * u.range,
+              );
+            }
           }
           if (u.sprite && this.textures.exists(u.sprite))
             this.drawAsset(
@@ -676,10 +719,10 @@ export function mountSpace(
                 Math.sin(this.elapsed * 2.2 + combat.units.indexOf(u) * 1.7) *
                   3,
               u.side === "ally"
-                ? model.pack.rules.allySpriteSize
+                ? model.pack.rules.allySpriteSize * scale
                 : u.boss
-                  ? model.pack.rules.bossSpriteSize
-                  : model.pack.rules.enemySpriteSize,
+                  ? model.pack.rules.bossSpriteSize * scale
+                  : model.pack.rules.enemySpriteSize * scale,
             );
           this.sprites
             .get(u.id)
@@ -699,14 +742,24 @@ export function mountSpace(
             if (combat.time - u.shotAt < 0.12) sprite.x -= Math.cos(u.aim) * 2;
           }
           const statuses = combat.mechanics.active(u);
+          for (const s of statuses)
+            if (s.interceptRadius && s.stat !== "directional") {
+              g.lineStyle(2, color, 0.3);
+              g.strokeCircle(u.x, u.y, s.interceptRadius);
+            }
           if (statuses.length) {
             g.lineStyle(2, color, 0.55);
             g.strokeCircle(u.x, u.y, size + 14 + Math.sin(combat.time * 3) * 2);
-            if (statuses.some((s) => s.stat === "directional")) {
-              g.lineStyle(5, color, 0.8);
-              g.beginPath();
-              g.arc(u.x, u.y, 52, u.aim - Math.PI / 2, u.aim + Math.PI / 2);
-              g.strokePath();
+            for (const status of statuses.filter(
+              (s) => s.stat === "directional",
+            )) {
+              const p = barrierEnds(u, status.interceptRadius || 160);
+              g.lineStyle(14, color, 0.12);
+              g.lineBetween(p.x1, p.y1, p.x2, p.y2);
+              g.lineStyle(4, color, 0.8);
+              g.lineBetween(p.x1, p.y1, p.x2, p.y2);
+              g.lineStyle(1, 0xffffff, 0.7);
+              g.lineBetween(p.x1, p.y1, p.x2, p.y2);
             }
             if (statuses.some((s) => s.stat === "stun"))
               this.text(u.x, u.y - 45, "✦ 暈眩", 12, "#f8d888");

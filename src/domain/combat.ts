@@ -1,3 +1,4 @@
+import { defaultVolleyCount } from "../content/mechanics";
 import { Mechanics } from "./mechanics";
 import type { Action, Modifier, Pattern } from "../content/mechanics";
 import { FleetMotion } from "./formation";
@@ -32,6 +33,8 @@ export type Unit = {
   aim: number;
   hurtUntil: number;
   shotAt: number;
+  critical?: number;
+  evasion?: number;
   skillLevel?: number;
   skillOverride?: string;
   summonOwner?: string;
@@ -79,6 +82,7 @@ export type Flash = {
 export class Combat {
   mechanics = new Mechanics(this);
   laboratory = false;
+  lockHealth = false;
   units: Unit[] = [];
   bullets: Bullet[] = [];
   flashes: Flash[] = [];
@@ -210,6 +214,8 @@ export class Combat {
       maxHp,
       attack,
       defense,
+      critical: c.critical ?? 0,
+      evasion: c.evasion ?? 0,
       speed: c.speed,
       range: c.range,
       interval: c.interval,
@@ -240,6 +246,7 @@ export class Combat {
     const definition =
       this.pack.characters.find((c) => c.id === u.def) ??
       this.pack.enemies.find((e) => e.id === u.def);
+    if (!u.skillOverride && !definition?.skill) return undefined;
     const skill = this.pack.skills.find(
       (s) => s.id === (u.skillOverride ?? definition?.skill),
     );
@@ -248,6 +255,31 @@ export class Combat {
     return skill && override ? { ...skill, ...override } : skill;
   }
 
+  patternFor(u: Unit): Pattern {
+    const enemy = this.pack.enemies.find((e) => e.id === u.def);
+    if (enemy?.boss && u.hp / u.maxHp < enemy.phaseAt)
+      return enemy.phasePattern;
+    return (
+      this.mechanics.active(u).find((s) => s.stat === "attackPattern")
+        ?.pattern ??
+      enemy?.pattern ??
+      this.pack.characters.find((c) => c.id === u.def)?.pattern ??
+      "aim"
+    );
+  }
+  volleyFor(u: Unit) {
+    const definition =
+      this.pack.enemies.find((e) => e.id === u.def) ??
+      this.pack.characters.find((c) => c.id === u.def);
+    const pattern = this.patternFor(u);
+    const count = definition?.volleyCount ?? defaultVolleyCount(pattern);
+    return {
+      pattern,
+      count,
+      speed: definition?.projectileSpeed ?? 520,
+      spread: definition?.volleySpread ?? 0.22,
+    };
+  }
   cast(id: string) {
     const u = this.units.find((v) => v.id === id),
       s = u && this.skillFor(u);
@@ -399,15 +431,14 @@ export class Combat {
         );
       const priority = foes.find((v) => v.id === this.target);
       const taunt = this.mechanics.active(u).find((s) => s.stat === "taunt");
-      const t =
+      let t =
         (taunt && foes.find((v) => v.id === taunt.source)) ||
         (priority && u.side === "ally" ? priority : foes[0]);
       const decoy = this.mechanics.decoy(
         u,
         this.pack.enemies.find((e) => e.id === u.def)?.pattern ?? "aim",
       );
-      if (decoy && u.side === "enemy")
-        u.aim = Math.atan2(decoy.y - u.y, decoy.x - u.x);
+      if (decoy) t = decoy;
       let dest = this.destination;
       let enemySpeed = u.speed * this.mechanics.stat(u, "moveSpeed");
       if (u.side === "ally" && !u.turretUntil) {
@@ -485,35 +516,15 @@ export class Combat {
       if (t && Math.hypot(t.x - u.x, t.y - u.y) <= u.range && u.cooldown <= 0) {
         u.cooldown = u.interval;
         u.shotAt = this.time;
-        const e = this.pack.enemies.find((e) => e.id === u.def);
-        let pattern =
-          this.mechanics.active(u).find((s) => s.stat === "attackPattern")
-            ?.pattern ??
-          e?.pattern ??
-          "aim";
-        if (e?.boss && u.hp / u.maxHp < e.phaseAt) pattern = "ring";
-        const count =
-          e?.volleyCount ??
-          (pattern === "ring"
-            ? 14
-            : pattern === "fan"
-              ? 3
-              : pattern === "cross"
-                ? 4
-                : pattern === "shotgun"
-                  ? 7
-                  : pattern === "spiral"
-                    ? 5
-                    : pattern === "burst"
-                      ? 3
-                      : 1);
+        const volley = this.volleyFor(u);
         this.mechanics.fire(
           u,
           t,
-          pattern,
-          count,
+          volley.pattern,
+          volley.count,
           undefined,
-          e?.projectileSpeed ?? 520,
+          volley.speed,
+          volley.spread,
         );
       }
     }

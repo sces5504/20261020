@@ -25,3 +25,23 @@
 目前完整來源庫已產生226技能、74種有效效果家族（前述71為初步口頭盤點誤差，正式計數以SQL distinct f02排除None為準），共用同一宣告式核心，不以角色ID分支。庫包stella:package.skills@0.1.0已啟用，仍需逐家族情境驗證。十人solar10@0.2.0，art依賴更新0.1.1；核心版本尚未升號。下一步優先做完整機制測試、修引擎邊界，避免僅有schema卻無行為。基線49項於初版機制後通過，但最新連鎖／分裂／屏障改動尚未全測。
 
 檢查點：新增17個機制情境測試通過（.artifacts/mechanics-tests.log，約1.9秒，seed77）；含十人實際效果、屏障三種行為、穿透／濺射／分裂／連鎖、時間停止、DoT、工坊隔離，以及226技能×Lv1/10各重播兩次的有限／確定性驗證。這不是74家族全部人工品質驗收，仍須補其餘互動測試、完整瀏覽器與VFX視覺驗證。最新typecheck已通過。無PR／發布；仍在實作。
+
+## 0.6功能收尾檢查點
+
+原六人也已換成對應原作主動技能，ID保留；總226來源技能／74家族，82個Attack／Bullet作者模板，18種基本彈幕／近戰pattern。新增原生f90／f91命中旗標、真正前方有限屏障（可保護後方友軍）、分類誘敵、無視防禦、蓄傷不重複計／排除召喚物、傷害代受含護盾、引導打斷、定向／追蹤光束、週期與狀態刷新、彈體分裂／連鎖／向心生成、批次與掃射。未知類型拒絕，超預算不靜默丟敵彈；配置遭遇會在內容校驗估算預算。
+
+工坊：6名自選角色與等級／技能等級、三組敵人（總60）／等級／數量／彈幕、任意已註冊技能覆寫、seed77預設、暫停／固定單步／速度、自動與手動、雙方生命鎖定／傷害統計、狀態／幾何資料。使用已保存草稿且只用獨立副本，無正式進度讀寫。原語與狀態表單、82模板選擇已加入，舊草稿保留並提示新版原作技能。
+
+包／責任（本批仍只有核心整合者負責整合）：
+
+| 作者／包 | 版本與依賴 | 可改路徑／整合界線 |
+| --- | --- | --- |
+| 核心／m1:core | 0.6.0 | src/domain/application/content/platform、共用編輯與呈現、content/core、根manifest、建置發布 |
+| 地圖／beacon:package.frontier | 0.3.0；精確m1@0.6.0 | content/extensions/frontier-beacon.json、art/world/beacon、該作者handoff；本批新增連射／追蹤／螺旋與受損雷射配置 |
+| 角色／solar10:package.first-ten | 0.2.0；精確m1@0.6.0 | content/extensions/solar10.json、docs/characters/solar10.md；來源翻譯由整合工具重建，不再近似共用M1 |
+| 美術／stellaart:package.stellar10 | 0.1.1；精確solar10@0.2.0 | art/characters/stellar10、素材包；原圖bytes與Q圖不改，僅名稱metadata與依賴更新 |
+| 共用來源庫／stella:package.skills | 0.1.0；精確m1@0.6.0 | content/extensions/stella-skills.json、content/source、tools/game兩個來源翻譯工具 |
+
+近期測試：32項專門機制情境已通過（含226技能Lv1/10雙次seed重播與82模板）；日常核心共82項曾有一項新屏障fixture因未同步fleet anchor失敗，已修正fixture且專門機制通過；另補顏色編輯真實作用測試，目前最後一輪完整測試進行中。桌機／觸控瀏覽器初版流程曾通過，壓力流程已完成但資源樣式斷言遇到Playwright取到被即時更新替換的DOM節點，已改同一次page.evaluate查live nodes；此為測試讀取競態，會完整重跑，不記為最新通過。當前仍未發布／未合main。
+
+完整驗證命令增加第七組 `test:skills`，既有第5組test:polish保留。下一步：核對最後日常測試、commit封存程式，再以實際HEAD執行完整check release；收集瀏覽器build／版本／viewport／seed／60敵壓力FPS、保存視覺證據；完成PR／main與公開版檢查。commercial旗標不能假冒實機／真人接受。

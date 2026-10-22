@@ -1,3 +1,6 @@
+import { barrierEnds } from "../domain/mechanics";
+import { SimulationClock } from "../application/simulation-clock";
+import { patternNames, skillMechanic } from "../content/descriptions";
 import { laboratory, type LaboratoryConfig } from "../domain/laboratory";
 import type { Pack } from "../content/schema";
 import type { Combat } from "../domain/combat";
@@ -7,6 +10,10 @@ export function mountLaboratory(parent: HTMLElement, pack: Pack) {
   const root = document.createElement("section");
   root.className = "laboratory";
   root.setAttribute("role", "dialog");
+  root.setAttribute("aria-modal", "true");
+  const previousFocus = document.activeElement as HTMLElement | null;
+  const background = parent.querySelector<HTMLElement>("main");
+  if (background) background.inert = true;
   root.setAttribute("aria-label", "技能測試訓練場");
   root.innerHTML = `<header><div><span class="eyebrow">COMBAT LAB / ISOLATED SIMULATION</span><h2>技能測試訓練場</h2><p>使用已保存草稿。無獎勵、不消耗資源；正式玩家進度不會改變。</p></div><button data-lab="close">關閉測試場</button></header><div class="lab-layout"><form class="lab-config"><h3>我方編隊</h3>${Array.from(
     { length: 6 },
@@ -37,33 +44,40 @@ export function mountLaboratory(parent: HTMLElement, pack: Pack) {
         )
         .join(
           "",
-        )}</select></label><label>等級<input data-enemy-level type="number" min="1" max="120" value="1"></label><label>數量<input data-count type="number" min="1" max="30" value="1"></label><label>彈幕覆寫<select data-pattern><option value="">沿用內容</option>${patternTypes.map((p) => `<option>${p}</option>`).join("")}</select></label></div>`,
+        )}</select></label><label>等級<input data-enemy-level type="number" min="1" max="120" value="1"></label><label>數量<input data-count type="number" min="1" max="30" value="1"></label><label>彈幕覆寫<select data-pattern><option value="">沿用內容</option>${patternTypes.map((p) => `<option value="${p}">${patternNames[p]}</option>`).join("")}</select></label></div>`,
   ).join(
     "",
-  )}<label>隨機種子<input id="lab-seed" type="number" min="0" max="4294967295" value="77"></label><p class="muted">敵方測試等級採本作線性成長 8%／級。技能1–10級是測試範圍，原作技能上限未確認。</p><button data-lab="start" class="primary">建立／重置戰鬥</button><p id="lab-error" role="status"></p></form><div class="lab-main"><div class="lab-controls"><button data-lab="pause">開始／暫停</button><button data-lab="step">單步 1/60 秒</button><label><input id="lab-auto" type="checkbox">自動技能</label><label>速度<select id="lab-speed"><option value=".25">¼×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label></div><p>點擊空地移動編隊，點擊敵人鎖定。暫停時仍可施放技能後單步觀察。</p><canvas id="lab-canvas" width="1100" height="660" aria-label="技能實測戰場"></canvas><div id="lab-casts" class="lab-casts"></div><output id="lab-metrics" aria-live="off"></output><details><summary>狀態與判定資料</summary><pre id="lab-debug"></pre></details></div></div>`;
+  )}<label>隨機種子<input id="lab-seed" type="number" min="0" max="4294967295" value="77"></label><p class="muted">敵方測試等級採本作線性成長 8%／級。技能等級可獨立測試1–10級。</p><button data-lab="start" class="primary">建立／重置戰鬥</button><p id="lab-error" role="status"></p></form><div class="lab-main"><div class="lab-controls"><button data-lab="pause">開始／暫停</button><button data-lab="step">單步 1/60 秒</button><label><input id="lab-auto" type="checkbox">自動技能</label><label><input id="lab-lock-health" type="checkbox">鎖定雙方生命（保留傷害統計）</label><label>速度<select id="lab-speed"><option value=".25">¼×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label></div><p>點擊空地移動編隊，點擊敵人鎖定。暫停時仍可施放技能後單步觀察。</p><canvas id="lab-canvas" width="1100" height="660" tabindex="0" aria-label="技能實測戰場"></canvas><div id="lab-casts" class="lab-casts"></div><div id="lab-skill-info"></div><output id="lab-metrics" aria-live="off"></output><details><summary>狀態與判定資料</summary><pre id="lab-debug"></pre></details></div></div>`;
   parent.append(root);
   const $ = <T extends HTMLElement = HTMLElement>(s: string) =>
     root.querySelector<T>(s)!;
   const canvas = $<HTMLCanvasElement>("#lab-canvas"),
     ctx = canvas.getContext("2d")!;
   const images = new Map<string, HTMLImageElement>();
-  for (const a of pack.assets) {
-    const image = new Image();
-    image.src = a.src;
-    images.set(a.id, image);
-  }
+  const imageFor = (id: string) => {
+    let img = images.get(id);
+    if (!img) {
+      const asset = pack.assets.find((a) => a.id === id);
+      if (!asset) return undefined;
+      img = new Image();
+      img.src = asset.src;
+      images.set(id, img);
+    }
+    return img;
+  };
   let combat: Combat | undefined,
     paused = true,
     disposed = false,
     frame = 0,
     last = 0,
-    accumulator = 0,
     lastReport = 0,
     origin = { x: 0, y: 0 };
+  const clock = new SimulationClock();
+  let profile = "";
   let config: LaboratoryConfig | undefined;
   function start() {
     try {
-      config = {
+      const nextConfig: LaboratoryConfig = {
         allies: [...root.querySelectorAll<HTMLElement>(".lab-ally")].flatMap(
           (r) => {
             const character =
@@ -112,11 +126,15 @@ export function mountLaboratory(parent: HTMLElement, pack: Pack) {
           },
         ),
         seed: Number($<HTMLInputElement>("#lab-seed").value),
+        lockHealth: $<HTMLInputElement>("#lab-lock-health").checked,
       };
-      combat = laboratory(pack, config);
+      const nextCombat = laboratory(pack, nextConfig);
+      config = nextConfig;
+      combat = nextCombat;
       origin = { x: combat.anchor.x - 450, y: combat.anchor.y - 330 };
       paused = true;
-      accumulator = 0;
+      profile = "";
+      clock.reset();
       $("#lab-error").textContent = "已建立獨立戰鬥。";
       report();
       draw();
@@ -127,12 +145,38 @@ export function mountLaboratory(parent: HTMLElement, pack: Pack) {
   function report() {
     if (!combat) return;
     const c = combat;
-    $("#lab-casts").innerHTML = c.allies
-      .map(
-        (u) =>
-          `<button data-lab="cast" data-unit="${esc(u.id)}" ${u.hp <= 0 || u.skillCooldown > 0 || c.ended ? "disabled" : ""}>${esc(u.name)} · ${esc(c.skillFor(u)?.name ?? "無技能")} ${u.skillCooldown > 0 ? u.skillCooldown.toFixed(1) + "s" : "施放"}</button>`,
-      )
-      .join("");
+    $("[data-lab=pause]").textContent = paused
+      ? c.time
+        ? "繼續戰鬥"
+        : "開始戰鬥"
+      : "暫停戰鬥";
+    const nextProfile = c.allies
+      .map((u) => `${u.id}:${u.def}:${u.skillLevel}:${u.skillOverride}`)
+      .join("|");
+    if (profile !== nextProfile) {
+      profile = nextProfile;
+      $("#lab-casts").innerHTML = c.allies
+        .map(
+          (u) =>
+            `<button data-lab="cast" data-unit="${esc(u.id)}" ${u.hp <= 0 || u.skillCooldown > 0 || c.ended ? "disabled" : ""}>${esc(u.name)} · ${esc(c.skillFor(u)?.name ?? "無技能")} ${u.skillCooldown > 0 ? u.skillCooldown.toFixed(1) + "s" : "施放"}</button>`,
+        )
+        .join("");
+      $("#lab-skill-info").innerHTML = c.allies
+        .map((u) => {
+          const s = c.skillFor(u);
+          return `<details><summary>${esc(u.name)} · 技能Lv${u.skillLevel ?? 1}</summary><p>${esc(s ? skillMechanic(s) : "無技能")}</p></details>`;
+        })
+        .join("");
+    }
+    for (const u of c.allies) {
+      const b = root.querySelector<HTMLButtonElement>(
+        `[data-lab="cast"][data-unit="${u.id}"]`,
+      );
+      if (b) {
+        b.disabled = u.hp <= 0 || u.skillCooldown > 0 || c.ended;
+        b.textContent = `${u.name} · ${c.skillFor(u)?.name ?? "無技能"} ${u.skillCooldown > 0 ? u.skillCooldown.toFixed(1) + "s" : "施放"}`;
+      }
+    }
     $("#lab-metrics").innerHTML =
       `<p>${paused ? "暫停" : "運行"} · ${c.time.toFixed(2)}s · seed ${config?.seed} · 彈體 ${c.bullets.length} · 範圍場 ${c.mechanics.fields.length} ${c.ended ? (c.victory ? " · 我方勝利" : " · 我方敗北") : ""}</p><table><thead><tr><th>單位</th><th>生命</th><th>造成傷害</th><th>技能次數</th></tr></thead><tbody>${c.units.map((u) => `<tr><td>${esc(u.name)}</td><td>${Math.ceil(u.hp)} / ${Math.ceil(u.maxHp)}</td><td>${c.mechanics.damageDealt[u.id] ?? 0}</td><td>${c.mechanics.casts[u.id] ?? 0}</td></tr>`).join("")}</tbody></table>`;
     $("#lab-debug").textContent = JSON.stringify(
@@ -157,6 +201,7 @@ export function mountLaboratory(parent: HTMLElement, pack: Pack) {
     ctx.fillRect(0, 0, 1100, 660);
     if (!combat) return;
     const c = combat;
+    origin = { x: c.anchor.x - 450, y: c.anchor.y - 330 };
     ctx.save();
     ctx.translate(-origin.x, -origin.y);
     ctx.strokeStyle = "#173241";
@@ -176,14 +221,26 @@ export function mountLaboratory(parent: HTMLElement, pack: Pack) {
     for (const f of c.mechanics.fields) {
       ctx.save();
       ctx.strokeStyle = f.color;
-      ctx.fillStyle = f.color + "22";
+      ctx.fillStyle = f.color + "0b";
       ctx.lineWidth = 2;
       ctx.beginPath();
       if (f.action.kind === "beam") {
         ctx.translate(f.x, f.y);
         ctx.rotate(f.angle);
+        const beam = ctx.createLinearGradient(
+          0,
+          -f.action.width / 2,
+          0,
+          f.action.width / 2,
+        );
+        beam.addColorStop(0, f.color + "00");
+        beam.addColorStop(0.35, f.color + "55");
+        beam.addColorStop(0.5, "#ffffffaa");
+        beam.addColorStop(0.65, f.color + "55");
+        beam.addColorStop(1, f.color + "00");
+        ctx.fillStyle = beam;
         ctx.fillRect(0, -f.action.width / 2, f.action.radius, f.action.width);
-        ctx.strokeRect(0, -f.action.width / 2, f.action.radius, f.action.width);
+
         ctx.fillStyle = "#ffffff";
         ctx.fillRect(0, -2, f.action.radius, 4);
       } else {
@@ -202,9 +259,25 @@ export function mountLaboratory(parent: HTMLElement, pack: Pack) {
             );
             ctx.stroke();
           }
+          for (let arm = 0; arm < 3; arm++) {
+            ctx.beginPath();
+            for (let i = 0; i < 30; i++) {
+              const radius = 48 + i * 3,
+                angle = c.time * 2 + (arm * Math.PI * 2) / 3 + i * 0.15;
+              const x = f.x + Math.cos(angle) * radius,
+                y = f.y + Math.sin(angle) * radius * 0.65;
+              i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+            }
+            ctx.stroke();
+          }
+          ctx.strokeStyle = "#dfceff";
+          ctx.lineWidth = 3;
+          ctx.beginPath();
+          ctx.ellipse(f.x, f.y, 56, 35, -0.4, 0, Math.PI * 2);
+          ctx.stroke();
           ctx.fillStyle = "#02030a";
           ctx.beginPath();
-          ctx.arc(f.x, f.y, 22, 0, Math.PI * 2);
+          ctx.arc(f.x, f.y, 50, 0, Math.PI * 2);
           ctx.fill();
         }
       }
@@ -225,10 +298,24 @@ export function mountLaboratory(parent: HTMLElement, pack: Pack) {
     }
     for (const u of c.units) {
       if (u.hp <= 0) continue;
+      if (u.windup > 0) {
+        const v = c.volleyFor(u);
+        ctx.strokeStyle = "#ffb68a";
+        ctx.globalAlpha = 0.45;
+        ctx.lineWidth = v.pattern === "laser" ? 24 : 1;
+        ctx.beginPath();
+        ctx.moveTo(u.x, u.y);
+        ctx.lineTo(
+          u.x + Math.cos(u.aim) * u.range,
+          u.y + Math.sin(u.aim) * u.range,
+        );
+        ctx.stroke();
+        ctx.globalAlpha = 1;
+      }
       ctx.globalAlpha = u.summonKind === "clone" ? 0.6 : 1;
-      const img = images.get(u.sprite);
+      const img = imageFor(u.sprite);
       if (img?.complete && img.naturalWidth) {
-        const h = u.boss ? 110 : 70,
+        const h = (u.boss ? 110 : 70) * c.mechanics.stat(u, "scale"),
           w = (h * img.naturalWidth) / img.naturalHeight;
         ctx.drawImage(img, u.x - w / 2, u.y - h / 2, w, h);
       } else {
@@ -241,9 +328,19 @@ export function mountLaboratory(parent: HTMLElement, pack: Pack) {
       ctx.strokeStyle = u.color;
       ctx.lineWidth = 2;
       for (const s of c.mechanics.active(u)) {
+        if (s.interceptRadius && s.stat !== "directional") {
+          ctx.globalAlpha = 0.3;
+          ctx.beginPath();
+          ctx.arc(u.x, u.y, s.interceptRadius, 0, Math.PI * 2);
+          ctx.stroke();
+          ctx.globalAlpha = 1;
+        }
         ctx.beginPath();
         if (s.stat === "directional") {
-          ctx.arc(u.x, u.y, 45, u.aim - Math.PI / 2, u.aim + Math.PI / 2);
+          const ends = barrierEnds(u, s.interceptRadius || 160);
+          ctx.lineWidth = 4;
+          ctx.moveTo(ends.x1, ends.y1);
+          ctx.lineTo(ends.x2, ends.y2);
         } else if (s.stat === "stun") {
           for (let i = 0; i < 3; i++) {
             const a = c.time * 3 + (i * Math.PI * 2) / 3;
@@ -280,14 +377,20 @@ export function mountLaboratory(parent: HTMLElement, pack: Pack) {
   }
   function tick(now: number) {
     if (disposed) return;
-    const dt = last ? Math.min(0.1, (now - last) / 1000) : 0;
+    const raw = last ? Math.max(0, now - last) : 0;
     last = now;
-    if (combat && !paused && !combat.ended) {
+    if (combat) {
       combat.autoSkills = $<HTMLInputElement>("#lab-auto").checked;
-      accumulator += dt * Number($<HTMLSelectElement>("#lab-speed").value);
-      while (accumulator >= 1 / 60) {
-        combat.step(1 / 60);
-        accumulator -= 1 / 60;
+      try {
+        clock.advance(
+          raw * Number($<HTMLSelectElement>("#lab-speed").value),
+          paused || document.hidden || combat.ended,
+          (dt) => combat!.step(dt),
+        );
+      } catch (e) {
+        paused = true;
+        clock.reset();
+        $("#lab-error").textContent = String(e);
       }
     }
     draw();
@@ -306,11 +409,28 @@ export function mountLaboratory(parent: HTMLElement, pack: Pack) {
     if (b.dataset.lab === "pause") paused = !paused;
     if (b.dataset.lab === "step") {
       paused = true;
-      combat?.step(1 / 60);
+      try {
+        combat?.step(1 / 60);
+      } catch (e) {
+        $("#lab-error").textContent = String(e);
+      }
     }
-    if (b.dataset.lab === "cast") combat?.cast(b.dataset.unit!);
+    if (b.dataset.lab === "cast") {
+      try {
+        combat?.cast(b.dataset.unit!);
+      } catch (e) {
+        paused = true;
+        $("#lab-error").textContent = String(e);
+      }
+    }
     report();
     draw();
+  });
+  root.addEventListener("change", (e) => {
+    if ((e.target as HTMLElement).id === "lab-lock-health" && combat) {
+      combat.lockHealth = $<HTMLInputElement>("#lab-lock-health").checked;
+      if (config) config.lockHealth = combat.lockHealth;
+    }
   });
   canvas.addEventListener("pointerdown", (e) => {
     if (!combat) return;
@@ -324,9 +444,45 @@ export function mountLaboratory(parent: HTMLElement, pack: Pack) {
     if (t) combat.target = t.id;
     else combat.destination = { x, y };
   });
+  const keydown = (e: KeyboardEvent) => {
+    if (e.key === "Escape") {
+      e.preventDefault();
+      destroy();
+      return;
+    }
+    if (e.key === "Tab") {
+      const focusable = [
+        ...root.querySelectorAll<HTMLElement>(
+          "button,input,select,summary,canvas[tabindex]",
+        ),
+      ].filter(
+        (el) => el.offsetParent !== null && !(el as HTMLButtonElement).disabled,
+      );
+      const first = focusable[0],
+        last = focusable.at(-1);
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last?.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first?.focus();
+      }
+    }
+  };
+  const visibility = () => {
+    clock.reset();
+    last = 0;
+  };
+  document.addEventListener("visibilitychange", visibility);
+  root.addEventListener("keydown", keydown);
+  root.querySelector<HTMLButtonElement>("[data-lab=close]")?.focus();
   function destroy() {
     disposed = true;
     cancelAnimationFrame(frame);
+    root.removeEventListener("keydown", keydown);
+    document.removeEventListener("visibilitychange", visibility);
+    if (background) background.inert = false;
+    previousFocus?.focus();
     root.remove();
   }
   start();

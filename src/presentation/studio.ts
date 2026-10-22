@@ -1,3 +1,5 @@
+import projectilePresets from "../../content/source/stella-projectiles.json";
+import { mechanicRow, modifierRow } from "./skill-editor";
 import { ARCHIVE_BYTES } from "../platform/budgets";
 import { mountLaboratory } from "./laboratory";
 import { patternTypes } from "../content/mechanics";
@@ -77,7 +79,7 @@ export async function mountStudio(root: HTMLElement) {
     $("#report").textContent =
       message ||
       (project.pack.version !== published.version
-        ? `目前是 v${project.pack.version} 舊草稿；正式版 v${published.version} 已有新圖片與巡邏設定。請先備份，再選「從新版正式內容建立草稿」，不會自動覆蓋你的修改。`
+        ? `目前是 v${project.pack.version} 舊草稿；正式版 v${published.version} 已有原作技能、圖片與彈幕設定。請先備份，再選「從新版正式內容建立草稿」，不會自動覆蓋你的修改。`
         : "選擇內容可檢視外觀，修改後先套用至隔離測試遊戲。");
   }
   async function save() {
@@ -205,6 +207,13 @@ export async function mountStudio(root: HTMLElement) {
     leashRadius: "守軍重置半徑",
     resetSeconds: "越界重置倒數（秒）",
     pattern: "彈幕模式",
+    phasePattern: "第二階段彈幕",
+    critical: "基礎暴擊率（0–0.95）",
+    evasion: "基礎迴避率（0–0.95）",
+    actions: "技能動作",
+    levels: "技能等級2–10覆寫",
+    volleyCount: "每次齊射數量",
+    volleySpread: "彈體夾角（弧度）",
     boss: "首領",
     phaseAt: "第二階段生命比例",
     width: "寬度",
@@ -251,6 +260,7 @@ export async function mountStudio(root: HTMLElement) {
       k === "review" ||
       k === "effect" ||
       k === "pattern" ||
+      k === "phasePattern" ||
       k === "condition"
     ) {
       const vals =
@@ -262,7 +272,7 @@ export async function mountStudio(root: HTMLElement) {
               ? ["candidate", "approved"]
               : k === "effect"
                 ? effectTypes
-                : k === "pattern"
+                : k === "pattern" || k === "phasePattern"
                   ? patternTypes
                   : ["intro", "cleared", "activated", "summoned", "built"];
       control = `<select ${attr}>${vals.map((x) => `<option ${x === v ? "selected" : ""}>${x}</option>`).join("")}</select>`;
@@ -305,7 +315,7 @@ export async function mountStudio(root: HTMLElement) {
         .map(([k, v]) => field(k, v))
         .join(
           "",
-        )}${c ? acquisitionFields(p, c.id) : ""}<div class="form-actions full">${button("保存此項調整", "save-entity", "", "primary")}<span>保存草稿後，套用測試才影響試玩。</span></div></form><details><summary>引用影響 · ${refs.length} 項</summary><ul>${refs.map((v) => `<li>${esc(v)}</li>`).join("") || "<li>無其他定義引用</li>"}</ul><p>持有角色、所在星域或進行中工作缺失時，舊存檔會拒絕載入並保留原檔；退休比移除更適合既有內容。</p></details><div class="asset-import"><h3>匯入外觀素材</h3><p>PNG／JPEG／WebP，單張最多 8 MiB；媒體會隨 ZIP 匯出。立繪、頭像及 SD 分別引用，不改變碰撞與戰力。</p><label class="file-button">新增圖片到素材庫<input id="upload-asset" type="file" accept="image/png,image/jpeg,image/webp"></label></div><details><summary>進階：此項 JSON</summary><textarea id="raw-entity" rows="15">${esc(JSON.stringify(e, null, 2))}</textarea>${button("套用 JSON", "apply-json")}</details>`;
+        )}${kind === "skills" && !("actions" in e) ? field("actions", []) : ""}${c ? acquisitionFields(p, c.id) : ""}<div class="form-actions full">${button("保存此項調整", "save-entity", "", "primary")}<span>保存草稿後，套用測試才影響試玩。</span></div></form><details><summary>引用影響 · ${refs.length} 項</summary><ul>${refs.map((v) => `<li>${esc(v)}</li>`).join("") || "<li>無其他定義引用</li>"}</ul><p>持有角色、所在星域或進行中工作缺失時，舊存檔會拒絕載入並保留原檔；退休比移除更適合既有內容。</p></details><div class="asset-import"><h3>匯入外觀素材</h3><p>PNG／JPEG／WebP，單張最多 8 MiB；媒體會隨 ZIP 匯出。立繪、頭像及 SD 分別引用，不改變碰撞與戰力。</p><label class="file-button">新增圖片到素材庫<input id="upload-asset" type="file" accept="image/png,image/jpeg,image/webp"></label></div><details><summary>進階：此項 JSON</summary><textarea id="raw-entity" rows="15">${esc(JSON.stringify(e, null, 2))}</textarea>${button("套用 JSON", "apply-json")}</details>`;
   }
   function draw() {
     drawList();
@@ -376,6 +386,12 @@ export async function mountStudio(root: HTMLElement) {
         lockStudio();
         location.reload();
       }
+      return;
+    }
+    if (action === "add-mechanic") {
+      root
+        .querySelector(".mechanic-rows")
+        ?.insertAdjacentHTML("beforeend", mechanicRow());
       return;
     }
     if (action === "add-spawn") {
@@ -608,7 +624,16 @@ export async function mountStudio(root: HTMLElement) {
     if (!b || operationPending) return;
     e.preventDefault();
     if (b.dataset.action === "remove-row") {
-      b.closest(".spawn-row,.dialogue-row")?.remove();
+      b
+        .closest(".spawn-row,.dialogue-row,.mechanic-row,.modifier-row")
+        ?.remove();
+      return;
+    }
+    if (b.dataset.action === "add-modifier") {
+      b
+        .closest(".mechanic-row")
+        ?.querySelector(".modifier-rows")
+        ?.insertAdjacentHTML("beforeend", modifierRow());
       return;
     }
     busy(true);
@@ -622,6 +647,12 @@ export async function mountStudio(root: HTMLElement) {
   const change = async (e: Event) => {
     const t = e.target as HTMLInputElement;
     if (operationPending) return;
+    if (t.dataset.projectilePreset !== undefined && t.value) {
+      const preset = projectilePresets.find((p) => p.id === t.value);
+      if (preset)
+        t.closest(".mechanic-row")!.outerHTML = mechanicRow(preset.action);
+      return;
+    }
     busy(true);
     try {
       if (t.id === "upload-asset" && t.files?.[0]) await upload(t.files[0]);

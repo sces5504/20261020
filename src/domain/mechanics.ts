@@ -7,6 +7,8 @@ export type Status = Modifier & {
   source: string;
   until: number;
   nextTick: number;
+  bypassEvasion?: boolean;
+  suppressCritical?: boolean;
 };
 export type Field = {
   id: number;
@@ -86,7 +88,13 @@ export class Mechanics {
       (this.c.time < this.stoppedUntil && u.side === this.stoppedSide)
     );
   }
-  add(u: Unit, m: Modifier, source: Unit, key: string) {
+  add(
+    u: Unit,
+    m: Modifier,
+    source: Unit,
+    key: string,
+    flags?: Pick<Action, "bypassEvasion" | "suppressCritical">,
+  ) {
     if (
       (m.stat === "stun" ||
         m.stat === "corrosion" ||
@@ -95,6 +103,9 @@ export class Mechanics {
       this.immune(u, m.stat)
     )
       return;
+    const previous = this.active(u).find(
+      (s) => s.key === key && s.stat === m.stat && s.source === source.id,
+    );
     const list = this.active(u).filter(
       (s) => s.key !== key || s.stat !== m.stat || s.source !== source.id,
     );
@@ -103,9 +114,23 @@ export class Mechanics {
       key,
       source: source.id,
       until: this.c.time + m.duration,
-      nextTick: this.c.time + m.tick,
+      nextTick: previous?.nextTick ?? this.c.time + m.tick,
+      bypassEvasion: flags?.bypassEvasion,
+      suppressCritical: flags?.suppressCritical,
     });
     this.statuses.set(u.id, list);
+    if (m.stat === "stun") {
+      this.pending = this.pending.filter(
+        (p) => p.owner !== u.id || !p.action.interruptible,
+      );
+      for (const f of this.fields)
+        if (
+          f.owner === u.id &&
+          f.action.kind === "beam" &&
+          f.action.interruptible
+        )
+          f.until = 0;
+    }
   }
   targets(u: Unit, a: Action, at: { x: number; y: number } = u) {
     const pool = this.c.units.filter(
@@ -117,7 +142,9 @@ export class Mechanics {
       (v) => v.side !== u.side && !this.has(v, "invisible"),
     );
     foes.sort(
-      (x, y) => distance(u, x) - distance(u, y) || x.id.localeCompare(y.id),
+      (x, y) =>
+        distance(u, x) - distance(u, y) ||
+        (x.id < y.id ? -1 : x.id > y.id ? 1 : 0),
     );
     if (a.target === "target")
       return [foes.find((v) => v.id === this.c.target) ?? foes[0]].filter(
@@ -149,6 +176,8 @@ export class Mechanics {
       });
       return;
     }
+    const color =
+      this.c.pack.skills.find((s) => s.id === key)?.color ?? u.color;
     const targets = this.targets(u, a);
     const t = locked
       ? this.c.units.find((v) => v.id === locked && v.hp > 0)
@@ -176,11 +205,32 @@ export class Mechanics {
       this.stoppedSide = u.side === "ally" ? "enemy" : "ally";
     }
     if (a.kind === "projectile") {
+      if (a.salvos > 1) {
+        const shot = { ...a, salvos: 1 };
+        for (let i = 1; i < a.salvos; i++)
+          this.pending.push({
+            at: this.c.time + i * a.salvoInterval,
+            owner: u.id,
+            action: shot,
+            key,
+            target: t?.id,
+          });
+        a = shot;
+      }
       const cadence = a.cadence || (a.pattern === "burst" ? a.interval : 0);
       const shot =
         a.pattern === "burst" ? { ...a, pattern: "aim" as const } : a;
       if (cadence && a.count > 1) {
-        this.fire(u, t, shot.pattern, 1, { ...shot, count: 1, cadence: 0 });
+        this.fire(
+          u,
+          t,
+          shot.pattern,
+          1,
+          { ...shot, count: 1, cadence: 0 },
+          520,
+          undefined,
+          color,
+        );
         for (let i = 1; i < a.count; i++)
           this.pending.push({
             at: this.c.time + i * cadence,
@@ -189,7 +239,8 @@ export class Mechanics {
             key,
             target: t?.id,
           });
-      } else this.fire(u, t, shot.pattern, shot.count, shot);
+      } else
+        this.fire(u, t, shot.pattern, shot.count, shot, 520, undefined, color);
     }
     if (a.kind === "zone" || a.kind === "beam")
       this.fields.push({
@@ -200,7 +251,7 @@ export class Mechanics {
         y: a.origin === "target" && t ? t.y : u.y,
         target: t?.id,
         angle: t ? Math.atan2(t.y - u.y, t.x - u.x) : u.aim,
-        color: u.color,
+        color,
         until: this.c.time + a.duration,
         nextTick: this.c.time,
         action: a,
@@ -216,13 +267,18 @@ export class Mechanics {
           x: chosen.x,
           y: chosen.y,
           angle: 0,
-          color: u.color,
-          until: this.c.time + a.duration,
-          nextTick: this.c.time + a.duration - a.interval,
+          color,
+          until: this.c.time + a.duration + i * a.cadence,
+          nextTick: this.c.time + a.duration + i * a.cadence - a.interval,
           action: { ...a, kind: "zone", target: "enemies" },
         });
       }
     }
+    if (
+      a.kind === "summon" &&
+      this.c.units.filter((u) => u.hp > 0).length + a.count > 256
+    )
+      throw Error("戰鬥單位預算超過256。");
     if (a.kind === "summon")
       for (
         let i = 0;
@@ -286,7 +342,16 @@ export class Mechanics {
       const stored = this.storedDamage.get(u.id) ?? 0;
       this.storedDamage.delete(u.id);
       for (const v of targets)
-        this.hit(u, v, u.attack * a.power + stored, "splash", a.modifiers);
+        this.hit(
+          u,
+          v,
+          u.attack * a.power + stored,
+          "splash",
+          a.modifiers,
+          false,
+          undefined,
+          a,
+        );
       this.statuses.set(
         u.id,
         this.active(u).filter((s) => s.stat !== "charge"),
@@ -300,10 +365,87 @@ export class Mechanics {
     count: number,
     action?: Action,
     speed = 520,
+    spread?: number,
+    visualColor?: string,
   ) {
-    if (this.c.bullets.length >= 3000) return;
+    if (this.c.bullets.length + count > 3000)
+      throw Error("戰鬥彈體預算超過3000；請調整齊射數量或持續時間。");
     t = this.decoy(u, pattern) ?? t;
-    const base = t ? Math.atan2(t.y - u.y, t.x - u.x) : u.aim;
+    if (["melee", "meleeFan", "meleeSplash", "meleeSpear"].includes(pattern)) {
+      if (!t) return;
+      const angle = Math.atan2(t.y - u.y, t.x - u.x),
+        range = action?.radius ?? u.range;
+      const foes = this.c.units.filter((v) => v.hp > 0 && v.side !== u.side);
+      const targets =
+        pattern === "melee"
+          ? [t]
+          : pattern === "meleeSplash"
+            ? foes.filter((v) => distance(v, t) <= (action?.splash || 100))
+            : pattern === "meleeSpear"
+              ? foes.filter(
+                  (v) =>
+                    segmentDistance(
+                      u.x,
+                      u.y,
+                      u.x + Math.cos(angle) * range,
+                      u.y + Math.sin(angle) * range,
+                      v.x,
+                      v.y,
+                    ) <= (action?.width ?? 40),
+                )
+              : foes.filter(
+                  (v) =>
+                    distance(v, u) <= range &&
+                    Math.abs(
+                      angular(Math.atan2(v.y - u.y, v.x - u.x), angle),
+                    ) <= (action?.spread ?? Math.PI / 3),
+                );
+      for (const v of targets)
+        this.hit(
+          u,
+          v,
+          u.attack * this.stat(u, "attack") * (action?.power ?? 1),
+          "melee",
+          action?.modifiers,
+          false,
+          undefined,
+          action,
+        );
+      this.c.flashes.push({
+        x: u.x,
+        y: u.y,
+        radius: 80,
+        color: u.color,
+        life: 0.25,
+        label: "斬擊",
+        side: u.side,
+      });
+      return;
+    }
+    if (pattern === "burst" && !action) {
+      this.fire(u, t, "aim", 1, undefined, speed, spread);
+      for (let i = 1; i < count; i++)
+        this.pending.push({
+          at: this.c.time + i * 0.12,
+          owner: u.id,
+          key: "basic-burst",
+          target: t?.id,
+          action: actionSchema.parse({
+            kind: "projectile",
+            pattern: "aim",
+            count: 1,
+            speed,
+            duration: 5,
+          }),
+        });
+      return;
+    }
+    const base =
+      !action && u.side === "enemy"
+        ? u.aim
+        : t
+          ? Math.atan2(t.y - u.y, t.x - u.x)
+          : u.aim;
     u.aim = base;
     if (pattern === "laser") {
       const a =
@@ -333,16 +475,24 @@ export class Mechanics {
       return;
     }
     for (let i = 0; i < count; i++) {
-      const a =
+      let a =
         pattern === "ring"
-          ? (i * Math.PI * 2) / count + this.c.time * 0.2
+          ? (i * Math.PI * 2) / count + this.c.time * (action?.rotation ?? 0.2)
           : pattern === "spiral"
-            ? this.c.time * 2 + (i * Math.PI * 2) / count
+            ? this.c.time * (action?.rotation ?? 2) + (i * Math.PI * 2) / count
             : pattern === "cross"
               ? base + (i * Math.PI) / 2
               : base +
                 (i - (count - 1) / 2) *
-                  (action?.spread ?? (pattern === "shotgun" ? 0.12 : 0.22));
+                  (action?.spread ??
+                    spread ??
+                    (pattern === "shotgun" ? 0.12 : 0.22));
+      a +=
+        (action?.startAngle ?? 0) +
+        (action && pattern !== "ring" && pattern !== "spiral"
+          ? this.c.time * action.rotation
+          : 0);
+      if (action?.randomSpread) a += (random(this.c) - 0.5) * action.spread;
       const velocity =
         (action?.speed ?? speed) * this.stat(u, "projectileSpeed");
       const candidates = this.c.units.filter(
@@ -359,17 +509,18 @@ export class Mechanics {
         chain: action?.chain ?? 0,
         id: this.c.sequence++,
         side: u.side,
-        x: u.x,
-        y: u.y,
-        vx: Math.cos(a) * velocity,
-        vy: Math.sin(a) * velocity,
+        x: u.x + Math.cos(a) * (action?.spawnRadius ?? 0),
+        y: u.y + Math.sin(a) * (action?.spawnRadius ?? 0),
+        vx: Math.cos(a + (action?.inward ? Math.PI : 0)) * velocity,
+        vy: Math.sin(a + (action?.inward ? Math.PI : 0)) * velocity,
         attack:
           u.attack *
           this.stat(u, "attack") *
           (u.buff === "weaken" ? u.power : 1) *
-          (action?.power ?? 1),
+          (action?.power ?? 1) *
+          this.stat(u, "attackPattern"),
         life: action?.duration ?? 5,
-        color: u.side === "ally" ? u.color : "#ff8e7e",
+        color: visualColor ?? (u.side === "ally" ? u.color : "#ff8e7e"),
         owner: u.id,
         pattern,
         target: chosen?.id,
@@ -393,6 +544,11 @@ export class Mechanics {
     mods: Modifier[] = [],
     bypass = false,
     incoming?: { x: number; y: number },
+    flags?: {
+      bypassEvasion?: boolean;
+      suppressCritical?: boolean;
+      skipDirectional?: boolean;
+    },
   ) {
     if (
       u.hp <= 0 ||
@@ -409,47 +565,38 @@ export class Mechanics {
       defense = 0;
     else if (source) defense *= this.stat(source, "penetration");
     const critical = source
-      ? Math.min(
-          1,
-          this.stat(
-            source,
-            "critical",
-            this.c.pack.characters.find((c) => c.id === source.def)?.critical ??
-              0,
-          ),
-        )
+      ? Math.min(1, this.stat(source, "critical", source.critical ?? 0))
       : 0;
-    const evade = Math.min(
-      0.95,
-      this.stat(
-        u,
-        "evasion",
-        this.c.pack.characters.find((c) => c.id === u.def)?.evasion ?? 0,
-      ),
-    );
-    let hit = damage(
-      Math.min(30000, attack),
-      Math.min(30000, defense),
+    const evade = Math.min(0.95, this.stat(u, "evasion", u.evasion ?? 0));
+    let hit = effectDamage(
+      attack,
+      defense,
       this.c.pack.rules.defenseK,
-      random(this.c) < critical,
-      random(this.c) < evade,
+      !flags?.suppressCritical && random(this.c) < critical,
+      !flags?.bypassEvasion && random(this.c) < evade,
     );
     hit = Math.max(0, Math.round(hit * this.stat(u, "damageTaken")));
-    for (const s of this.active(u).filter((s) => s.stat === "directional"))
-      if (
-        (incoming || source) &&
-        Math.abs(
-          angular(
-            Math.atan2(
-              (incoming ?? source!).y - u.y,
-              (incoming ?? source!).x - u.x,
-            ),
-            u.aim,
-          ),
-        ) <=
-          Math.PI / 2
-      )
-        hit = Math.round(hit * s.value);
+    if (
+      !flags?.skipDirectional &&
+      !["corrosion", "blaze", "splash"].includes(kind) &&
+      (incoming || source)
+    )
+      for (const shield of this.c.units.filter(
+        (v) => v.hp > 0 && v.side === u.side,
+      ))
+        for (const status of this.active(shield).filter(
+          (s) => s.stat === "directional",
+        )) {
+          if (
+            crossesBarrier(
+              incoming ?? source!,
+              u,
+              shield,
+              status.interceptRadius || 160,
+            )
+          )
+            hit = Math.round(hit * status.value);
+        }
     const redirect = this.active(u).find((s) => s.stat === "redirect"),
       protector =
         redirect &&
@@ -458,40 +605,24 @@ export class Mechanics {
         );
     if (protector && redirect) {
       const part = Math.min(hit, Math.round(hit * redirect.value));
-      protector.hp = Math.max(0, protector.hp - part);
+      this.receive(source, protector, part);
       hit -= part;
     }
-    const absorption = this.active(u).find((s) => s.stat === "absorb");
-    if (absorption) {
-      u.shield = Math.min(u.maxHp, u.shield + hit * absorption.value);
-      hit = 0;
-    }
-    const absorb = Math.min(u.shield, hit);
-    u.shield -= absorb;
-    hit -= absorb;
-    const dealt = Math.min(u.hp, hit);
-    u.hp = Math.max(0, u.hp - hit);
-    u.hurtUntil = this.c.time + 0.2;
-    if (u.side === "ally" && dealt > 0) this.c.hitsReceived++;
-    if (source)
-      this.damageDealt[source.id] = (this.damageDealt[source.id] ?? 0) + dealt;
-    if (!u.summonOwner)
-      for (const ally of this.c.units.filter(
-        (v) => v.side === u.side && v.hp > 0,
-      )) {
-        for (const status of this.active(ally).filter(
-          (s) => s.stat === "charge",
-        )) {
-          const caster = this.c.units.find((v) => v.id === status.source);
-          if (caster)
-            this.storedDamage.set(
-              caster.id,
-              (this.storedDamage.get(caster.id) ?? 0) + dealt * status.value,
-            );
-        }
-      }
+    const dealt = this.receive(source, u, hit);
     for (const m of mods)
-      if (source) this.add(u, m, source, `hit:${source.def}:${m.stat}`);
+      if (source)
+        this.add(
+          u,
+          m,
+          source,
+          `hit:${source.def}:${m.stat}`,
+          flags
+            ? {
+                bypassEvasion: !!flags.bypassEvasion,
+                suppressCritical: !!flags.suppressCritical,
+              }
+            : undefined,
+        );
     this.c.flashes.push({
       x: u.x,
       y: u.y,
@@ -501,6 +632,32 @@ export class Mechanics {
       label: dealt ? String(dealt) : "格擋",
       side: u.side,
     });
+    return dealt;
+  }
+  private receive(source: Unit | undefined, u: Unit, hit: number) {
+    if (this.has(u, "invincible") || this.has(u, "invisible")) return 0;
+    const absorption = this.active(u).find((s) => s.stat === "absorb");
+    if (absorption) {
+      u.shield = Math.min(u.maxHp, u.shield + hit * absorption.value);
+      u.buffUntil = Math.max(u.buffUntil, absorption.until);
+      hit = 0;
+    }
+    const absorbed = Math.min(u.shield, hit);
+    u.shield -= absorbed;
+    hit -= absorbed;
+    const locked = this.c.laboratory && this.c.lockHealth;
+    const dealt = locked ? hit : Math.min(u.hp, hit);
+    if (!locked) u.hp = Math.max(0, u.hp - hit);
+    u.hurtUntil = this.c.time + 0.2;
+    if (u.side === "ally" && dealt > 0) this.c.hitsReceived++;
+    if (source)
+      this.damageDealt[source.id] = (this.damageDealt[source.id] ?? 0) + dealt;
+    if (!u.summonOwner)
+      for (const status of this.active(u).filter((s) => s.stat === "charge"))
+        this.storedDamage.set(
+          status.source,
+          (this.storedDamage.get(status.source) ?? 0) + dealt * status.value,
+        );
     return dealt;
   }
   step(dt: number) {
@@ -529,7 +686,16 @@ export class Mechanics {
         ) {
           s.nextTick += s.tick;
           const source = c.units.find((v) => v.id === s.source);
-          this.hit(source, u, (source?.attack ?? 1) * s.value, s.stat);
+          this.hit(
+            source,
+            u,
+            (source?.attack ?? 1) * s.value,
+            s.stat,
+            [],
+            false,
+            undefined,
+            s,
+          );
         }
       this.statuses.set(u.id, list);
       if (u.summonOwner && u.speed > 0 && u.hp > 0 && !this.frozen(u)) {
@@ -544,11 +710,11 @@ export class Mechanics {
     for (const f of this.fields) {
       const owner = c.units.find((u) => u.id === f.owner),
         a = f.action;
-      if (f.until < c.time || !owner || owner.hp <= 0) {
+      if (!owner || owner.hp <= 0 || f.until === 0) {
         f.until = 0;
         continue;
       }
-      if (this.frozen(owner)) {
+      if (c.time < this.stoppedUntil && owner.side === this.stoppedSide) {
         f.until += dt;
         f.nextTick += dt;
         continue;
@@ -575,33 +741,39 @@ export class Mechanics {
           }
         }
       if (c.time < f.nextTick) continue;
-      f.nextTick += a.interval;
-      const targets =
-        a.kind === "beam"
-          ? foes.filter(
-              (v) =>
-                segmentDistance(
-                  f.x,
-                  f.y,
-                  f.x + Math.cos(f.angle) * a.radius,
-                  f.y + Math.sin(f.angle) * a.radius,
-                  v.x,
-                  v.y,
-                ) <=
-                a.width / 2 + (v.boss ? 45 : 17),
-            )
-          : this.targets(owner, a, f);
-      for (const v of targets) {
-        if (a.power)
-          this.hit(
-            owner,
-            v,
-            owner.attack * this.stat(owner, "attack") * a.power,
-            a.kind === "beam" ? "laser" : "splash",
-            a.modifiers,
-          );
-        else
-          for (const m of a.modifiers) this.add(v, m, owner, `field:${f.id}`);
+      while (f.nextTick <= c.time && f.nextTick < f.until - 1e-8) {
+        f.nextTick += a.interval;
+        const targets =
+          a.kind === "beam"
+            ? foes.filter(
+                (v) =>
+                  segmentDistance(
+                    f.x,
+                    f.y,
+                    f.x + Math.cos(f.angle) * a.radius,
+                    f.y + Math.sin(f.angle) * a.radius,
+                    v.x,
+                    v.y,
+                  ) <=
+                  a.width / 2 + (v.boss ? 45 : 17) * this.stat(v, "scale"),
+              )
+            : this.targets(owner, a, f);
+        for (const v of targets) {
+          if (a.power)
+            this.hit(
+              owner,
+              v,
+              owner.attack * this.stat(owner, "attack") * a.power,
+              a.kind === "beam" ? "laser" : "splash",
+              a.modifiers,
+              false,
+              undefined,
+              a,
+            );
+          else
+            for (const m of a.modifiers)
+              this.add(v, m, owner, `field:${f.id}`, a);
+        }
       }
     }
     this.fields = this.fields.filter((f) => f.until > c.time);
@@ -609,21 +781,29 @@ export class Mechanics {
   intercept(b: Bullet, x: number, y: number) {
     for (const u of this.c.units.filter((u) => u.hp > 0 && u.side !== b.side))
       for (const s of this.active(u).filter((s) =>
-        ["offset", "reflect", "deflect"].includes(s.stat),
+        ["offset", "reflect", "deflect", "directional"].includes(s.stat),
       )) {
         const radius = s.interceptRadius || (u.boss ? 45 : 22);
-        if (segmentDistance(x, y, b.x, b.y, u.x, u.y) > radius) continue;
+        if (s.stat === "directional") {
+          if (!crossesBarrier({ x, y }, b, u, radius)) continue;
+        } else if (segmentDistance(x, y, b.x, b.y, u.x, u.y) > radius) continue;
         const id = `${u.id}:${s.key}:${s.until}`;
         if (b.barrierIds?.includes(id)) continue;
         (b.barrierIds ??= []).push(id);
+        if (s.stat === "directional") {
+          b.attack *= s.value;
+          continue;
+        }
         if (random(this.c) >= s.value) continue;
         const angle = Math.atan2(b.vy, b.vx),
           speed = Math.hypot(b.vx, b.vy);
         if (s.stat === "offset") b.life = 0;
         else if (s.stat === "reflect") {
+          const priorOwner = b.owner;
           b.side = u.side;
           b.owner = u.id;
-          b.target = this.c.units.find((v) => v.id === b.owner)?.id;
+          b.color = u.color;
+          b.target = priorOwner;
           b.vx = -b.vx;
           b.vy = -b.vy;
           b.hitIds = [];
@@ -653,13 +833,25 @@ export class Mechanics {
       }
     return false;
   }
+  displace(u: Unit, dx: number, dy: number) {
+    const r = this.c.pack.regions.find((r) => r.id === this.c.save.region)!;
+    u.x = Math.max(20, Math.min(r.width - 20, u.x + dx));
+    u.y = Math.max(20, Math.min(r.height - 20, u.y + dy));
+    if (u.side === "ally" && !u.turretUntil) {
+      this.c.fleet.positions.set(u.id, { x: u.x, y: u.y });
+      if (this.c.allies[0] === u) {
+        this.c.anchor.x = u.x;
+        this.c.anchor.y = u.y;
+      }
+    }
+  }
   splitBullet(b: Bullet) {
     if (!b.action?.splitCount || b.split) return;
     b.split = true;
     for (let i = 0; i < b.action.splitCount; i++) {
       const angle = (i * Math.PI * 2) / b.action.splitCount,
         speed = b.speed ?? 520;
-      if (this.c.bullets.length >= 3000) break;
+      if (this.c.bullets.length >= 3000) throw Error("分裂彈體超過3000預算。");
       this.c.bullets.push({
         ...b,
         id: this.c.sequence++,
@@ -734,16 +926,30 @@ export class Mechanics {
       for (const u of contacts) {
         if (b.life <= 0) break;
         if ((b.nextHitAt ?? 0) > c.time) continue;
-        this.hit(owner, u, b.attack, b.pattern ?? "aim", b.modifiers, false, {
-          x,
-          y,
-        });
+        this.hit(
+          owner,
+          u,
+          b.attack,
+          b.pattern ?? "aim",
+          b.modifiers,
+          false,
+          { x, y },
+          {
+            ...b.action,
+            bypassEvasion: b.action?.bypassEvasion,
+            suppressCritical: b.action?.suppressCritical,
+            skipDirectional: true,
+          },
+        );
         if (b.pull && owner) {
           const d = distance(u, owner);
           if (d > 1) {
             const m = Math.min(d, b.pull);
-            u.x += ((owner.x - u.x) / d) * m;
-            u.y += ((owner.y - u.y) / d) * m;
+            this.displace(
+              u,
+              ((owner.x - u.x) / d) * m,
+              ((owner.y - u.y) / d) * m,
+            );
           }
         }
         if (b.splash && !this.nullifies(u, "splash"))
@@ -760,12 +966,18 @@ export class Mechanics {
               b.attack * (b.action?.splashPower ?? 1),
               "splash",
               b.modifiers,
+              false,
+              undefined,
+              b.action,
             );
         (b.hitIds ??= []).push(u.id);
         if (b.action?.knockback && owner) {
           const a = Math.atan2(u.y - owner.y, u.x - owner.x);
-          u.x += Math.cos(a) * b.action.knockback;
-          u.y += Math.sin(a) * b.action.knockback;
+          this.displace(
+            u,
+            Math.cos(a) * b.action.knockback,
+            Math.sin(a) * b.action.knockback,
+          );
         }
         this.splitBullet(b);
         if (b.chain) {
@@ -800,4 +1012,68 @@ export function segmentDistance(
       ? Math.max(0, Math.min(1, ((px - x) * dx + (py - y) * dy) / den))
       : 0;
   return Math.hypot(x + q * dx - px, y + q * dy - py);
+}
+
+/** Same recovered Q16 order, with BigInt extension for content above the verified
+ * native word-size range. Deliberate reconstruction policy, never silently caps attack. */
+export function effectDamage(
+  attack: number,
+  defense: number,
+  k: number,
+  critical = false,
+  evaded = false,
+) {
+  if (
+    ![attack, defense, k].every(Number.isFinite) ||
+    attack < 0 ||
+    defense < 0 ||
+    k < 1 ||
+    Math.max(attack, defense, k) > 1e9
+  )
+    throw Error("戰鬥數值超出支援範圍");
+  if (attack < 32768 && defense + Math.floor(k) < 32768)
+    return damage(attack, defense, k, critical, evaded);
+  const q = 65536n,
+    def = BigInt(Math.floor(defense)),
+    armor = BigInt(Math.floor(k));
+  let result = BigInt(Math.floor(attack)) * q;
+  if (evaded) result = (result * (q - 65n * 750n)) / q;
+  if (critical) result = (result * (q + 65n * 1500n)) / q;
+  if (def >= 1) result = (result * (q - (def * q) / (def + armor))) / q;
+  return Math.max(1, Number(result / q));
+}
+
+/** Intersect a finite shield plane 60 world units in front of its caster. */
+export function barrierEnds(
+  u: { x: number; y: number; aim: number },
+  width: number,
+) {
+  const fx = Math.cos(u.aim),
+    fy = Math.sin(u.aim),
+    x = u.x + fx * 60,
+    y = u.y + fy * 60;
+  return {
+    x1: x - (fy * width) / 2,
+    y1: y + (fx * width) / 2,
+    x2: x + (fy * width) / 2,
+    y2: y - (fx * width) / 2,
+  };
+}
+export function crossesBarrier(
+  from: { x: number; y: number },
+  to: { x: number; y: number },
+  u: { x: number; y: number; aim: number },
+  width: number,
+) {
+  const fx = Math.cos(u.aim),
+    fy = Math.sin(u.aim),
+    x = u.x + fx * 60,
+    y = u.y + fy * 60;
+  const a = (from.x - x) * fx + (from.y - y) * fy,
+    b = (to.x - x) * fx + (to.y - y) * fy;
+  if (a < 0 || b > 0 || a === b) return false;
+  const q = a / (a - b),
+    ix = from.x + (to.x - from.x) * q - x,
+    iy = from.y + (to.y - from.y) * q - y;
+  return Math.abs(-ix * fy + iy * fx) <= width / 2;
 }

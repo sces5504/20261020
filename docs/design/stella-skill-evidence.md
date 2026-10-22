@@ -13,3 +13,5 @@
 - [MIST Game Wiki：Jupiter](https://mist-game.fandom.com/wiki/Jupiter)搜尋結果提供Gravity Concentration名稱與近戰前方武器線索，未證實本作完整傷害公式。
 
 本次不複製wiki圖片或文章進runtime。技能名稱／行為以資料與描述重建，自製VFX。技能等級1–10為目前可測試範圍，不宣稱原作上限。未提供技能強化玩法前，正式存檔角色預設技能Lv1；訓練場可獨立切換技能等級。
+
+本版定案：FrontShield以施法者前方60世界單位的有限攔截面、來源dist作寬度，降低穿越彈體攻擊並保護後方隊友；這是原生幾何未恢復時的明示重建。DefPowerMeleeE的英文描述錯列laser，依家族鍵／與DefPowerLaser分離的效果type69定案為近戰抗性。推定是本版已採用行為的來源紀錄，不代表待補實作。

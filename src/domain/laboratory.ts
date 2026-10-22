@@ -32,6 +32,7 @@ export const laboratorySchema = z
       .min(1)
       .max(3),
     seed: z.number().int().min(0).max(4294967295),
+    lockHealth: z.boolean().optional(),
   })
   .strict();
 export type LaboratoryConfig = z.infer<typeof laboratorySchema>;
@@ -86,6 +87,7 @@ export function laboratory(pack: Pack, config: LaboratoryConfig) {
   save.encounter = { planet: planet.id, seed: v.seed };
   const combat = new Combat(p, save, planet.id);
   combat.laboratory = true;
+  combat.lockHealth = v.lockHealth ?? false;
   combat.allies.forEach((u, i) => {
     u.skillLevel = v.allies[i].skillLevel;
     if (v.allies[i].skill) {

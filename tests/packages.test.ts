@@ -67,3 +67,23 @@ test("workshop ZIP deduplicates real bytes across local and uploaded paths, neve
     imported.assets.find((a) => a.id === "addon:uploaded")!.src,
   );
 });
+
+test("portable imports reject oversized expansion and unsafe paths before decoding media", async () => {
+  const { zipSync, strToU8 } = await import("fflate");
+  assert.throws(
+    () =>
+      importPack(
+        zipSync({
+          "pack.json": strToU8("{}"),
+          "../escape.png": new Uint8Array([1]),
+        }),
+      ),
+    /非法檔案路徑/,
+  );
+  const large = zipSync({
+    "pack.json": strToU8("{}"),
+    "assets/huge.png": new Uint8Array(31 * 1024 * 1024),
+  });
+  assert.throws(() => importPack(large), /解壓大小/);
+  assert.throws(() => importPack(new Uint8Array(ARCHIVE_BYTES + 1)), /64 MiB/);
+});

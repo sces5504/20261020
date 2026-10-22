@@ -14,7 +14,7 @@
     "type": 1,
     "name": "Accelerate\\nEnergy",
     "description": "Increases attack speed [atkspdup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -23,7 +23,7 @@
     "type": 1,
     "name": "Accelerate\\nEnergy",
     "description": "Increases attack speed [atkspdup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -32,7 +32,7 @@
     "type": 1,
     "name": "Accelerate\\nEnergy",
     "description": "Increases attack speed [atkspdup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -41,7 +41,7 @@
     "type": 1,
     "name": "Accelerate\\nEnergy",
     "description": "Increases attack speed [atkspdup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -50,7 +50,7 @@
     "type": 1,
     "name": "Accelerate\\nEnergy",
     "description": "Increases attack speed [atkspdup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -59,7 +59,7 @@
     "type": 1,
     "name": "Overload",
     "description": "Increases attack speed [atkspdup] and projectile speed [projspdup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -68,7 +68,7 @@
     "type": 2,
     "name": "Acceleration\\nArea",
     "description": "Increases attack speed [atkspdup] of allies within [dist] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -77,7 +77,7 @@
     "type": 2,
     "name": "Acceleration\\nArea",
     "description": "Increases attack speed [atkspdup] of allies within [dist] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -86,7 +86,7 @@
     "type": 2,
     "name": "Acceleration\\nArea",
     "description": "Increases attack speed [atkspdup] of allies within [dist] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -95,7 +95,7 @@
     "type": 3,
     "name": "Critical\\nAcceleration",
     "description": "Increases attack speed [atkspdup] and critical rate [criup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -104,7 +104,7 @@
     "type": 3,
     "name": "Critical\\nAcceleration",
     "description": "Increases attack speed [atkspdup] and critical rate [criup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -113,7 +113,7 @@
     "type": 3,
     "name": "Critical\\nAcceleration",
     "description": "Increases attack speed [atkspdup] and critical rate [criup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -122,7 +122,7 @@
     "type": 3,
     "name": "Critical\\nAcceleration",
     "description": "Increases attack speed [atkspdup] and critical rate [criup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -131,7 +131,7 @@
     "type": 4,
     "name": "Critical\\nAcceleration Zone",
     "description": "Increases attack speed [atkspdup] and critical rate [criup] of allies within [dist] for [time]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -140,7 +140,7 @@
     "type": 4,
     "name": "Critical\\nAcceleration Zone",
     "description": "Increases attack speed [atkspdup] and critical rate [criup] of allies within [dist] for [time]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -149,7 +149,7 @@
     "type": 5,
     "name": "Energy\\nAmplification",
     "description": "Increases attack power [atkup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -158,7 +158,7 @@
     "type": 5,
     "name": "Energy\\nAmplification",
     "description": "Increases attack power [atkup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -167,7 +167,7 @@
     "type": 5,
     "name": "Energy\\nAmplification",
     "description": "Increases attack power [atkup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -176,7 +176,7 @@
     "type": 5,
     "name": "Energy\\nAmplification",
     "description": "Increases attack power [atkup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -185,7 +185,7 @@
     "type": 5,
     "name": "Energy\\nAmplification",
     "description": "Increases attack power [atkup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -194,7 +194,7 @@
     "type": 6,
     "name": "Amplication\\nArea",
     "description": "Increases attack power [atkup] of allies within [dist] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -203,7 +203,7 @@
     "type": 6,
     "name": "Amplication\\nArea",
     "description": "Increases attack power [atkup] of allies within [dist] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -212,7 +212,7 @@
     "type": 6,
     "name": "Amplication\\nArea",
     "description": "Increases attack power [atkup] of allies within [dist] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -221,7 +221,7 @@
     "type": 7,
     "name": "Ready for\\nCombat",
     "description": "Increases attack power [atkup] and attack speed [atkspdup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -230,7 +230,7 @@
     "type": 7,
     "name": "Ready for\\nCombat",
     "description": "Increases attack power [atkup] and attack speed [atkspdup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -248,7 +248,7 @@
     "type": 7,
     "name": "Ready for\\nCombat",
     "description": "Increases attack power [atkup] and attack speed [atkspdup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -257,7 +257,7 @@
     "type": 7,
     "name": "Ready for\\nCombat",
     "description": "Increases attack power [atkup] and attack speed [atkspdup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -266,7 +266,7 @@
     "type": 7,
     "name": "Ready for\\nCombat",
     "description": "Increases attack power [atkup] and attack speed [atkspdup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -275,7 +275,7 @@
     "type": 8,
     "name": "Berserker",
     "description": "Increases attack power [atkup] and critical rate [criup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -284,7 +284,7 @@
     "type": 8,
     "name": "Berserker",
     "description": "Increases attack power [atkup] and critical rate [criup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -293,7 +293,7 @@
     "type": 8,
     "name": "Berserker",
     "description": "Increases attack power [atkup] and critical rate [criup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -302,7 +302,7 @@
     "type": 8,
     "name": "Berserker",
     "description": "Increases attack power [atkup] and critical rate [criup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -311,7 +311,7 @@
     "type": 8,
     "name": "Berserker",
     "description": "Increases attack power [atkup] and critical rate [criup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -320,7 +320,7 @@
     "type": 8,
     "name": "Berserker",
     "description": "Increases attack power [atkup] and critical rate [criup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -329,7 +329,7 @@
     "type": 8,
     "name": "Berserker",
     "description": "Increases attack power [atkup] and critical rate [criup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -338,7 +338,7 @@
     "type": 9,
     "name": "Berserker\\nArea",
     "description": "Increases attack power [atkup] and critical rate [criup] of allies within [dist] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -347,7 +347,7 @@
     "type": 9,
     "name": "Berserker\\nArea",
     "description": "Increases attack power [atkup] and critical rate [criup] of allies within [dist] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -356,7 +356,7 @@
     "type": 10,
     "name": "Transcendent\\nSenses",
     "description": "All attacks become critical for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -365,7 +365,7 @@
     "type": 10,
     "name": "Transcendent\\nSenses",
     "description": "All attacks become critical for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -374,7 +374,7 @@
     "type": 11,
     "name": "Defense\\nAmplification\\nArea",
     "description": "Increases defense [defup] of allies within [dist] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -383,7 +383,7 @@
     "type": 11,
     "name": "Defense\\nAmplification\\nArea",
     "description": "Increases defense [defup] of allies within [dist] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -392,7 +392,7 @@
     "type": 60,
     "name": "Damage\\nDrop Zone",
     "description": "Decreases received damage [dmgdec] of allies within [dist] for [time]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -401,7 +401,7 @@
     "type": 12,
     "name": "All-in-one\\nBattle Zone",
     "description": "Increases attack power [atkup] and defense [defup] of allies within [dist] for [time]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -410,7 +410,7 @@
     "type": 12,
     "name": "All-in-one\\nBattle Zone",
     "description": "Increases attack power [atkup] and defense [defup] of allies within [dist] for [time]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -419,7 +419,7 @@
     "type": 13,
     "name": "Area of Expanded\\nVision",
     "description": "Increases evasion [evaup] of allies within [dist] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -428,7 +428,7 @@
     "type": 13,
     "name": "Area of Expanded\\nVision",
     "description": "Increases evasion [evaup] of allies within [dist] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -437,7 +437,7 @@
     "type": 14,
     "name": "Defense\\nAmplification",
     "description": "Increases defense [defup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -446,7 +446,7 @@
     "type": 14,
     "name": "Defense\\nAmplification",
     "description": "Increases defense [defup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -455,7 +455,7 @@
     "type": 14,
     "name": "Defense\\nAmplification",
     "description": "Increases defense [defup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -464,7 +464,7 @@
     "type": 14,
     "name": "Defense\\nAmplification",
     "description": "Increases defense [defup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -473,7 +473,7 @@
     "type": 14,
     "name": "Defense\\nAmplification",
     "description": "Increases defense [defup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -482,7 +482,7 @@
     "type": 14,
     "name": "Defense\\nAmplification",
     "description": "Increases defense [defup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -491,7 +491,7 @@
     "type": 59,
     "name": "Defense\\nAmplification",
     "description": "Increases attack power [atkup] and defense [defup] within [dist] for [time]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -500,7 +500,7 @@
     "type": 15,
     "name": "Expanded\\nVision",
     "description": "Increases evasion [evaup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -509,7 +509,7 @@
     "type": 15,
     "name": "Expanded\\nVision",
     "description": "Increases evasion [evaup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -518,7 +518,7 @@
     "type": 15,
     "name": "Expanded\\nVision",
     "description": "Increases evasion [evaup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -527,7 +527,7 @@
     "type": 16,
     "name": "Energy\\nBarrier",
     "description": "Decreases damage of front barrier [dmgdec] within [dist] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -536,7 +536,7 @@
     "type": 16,
     "name": "Energy\\nBarrier",
     "description": "Decreases damage of front barrier [dmgdec] within [dist] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -554,7 +554,7 @@
     "type": 17,
     "name": "Offset Zone",
     "description": "Creates a barrier within [dist]\\nwhich has a [percent] chance to offset projectiles for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -563,7 +563,7 @@
     "type": 18,
     "name": "Deflection\\nZone",
     "description": "Creates a barrier within [dist]\\nwhich has a [percent] chance to deflect projectiles for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -572,7 +572,7 @@
     "type": 18,
     "name": "Deflection\\nZone",
     "description": "Creates a barrier within [dist]\\nwhich has a [percent] chance to deflect projectiles for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -581,7 +581,7 @@
     "type": 18,
     "name": "Deflection\\nZone",
     "description": "Creates a barrier within [dist]\\nwhich has a [percent] chance to deflect projectiles for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -590,7 +590,7 @@
     "type": 19,
     "name": "Reflection\\nZone",
     "description": "Creates a barrier within [dist]\\nwhich has a [percent] chance to reflect projectiles for [time].\\nReflected projectiles are 100% of opponent's damage",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -599,7 +599,7 @@
     "type": 19,
     "name": "Reflection\\nZone",
     "description": "Creates a barrier within [dist]\\nwhich has a [percent] chance to reflect projectiles for [time].\\nReflected projectiles are 100% of opponent's damage",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -608,7 +608,7 @@
     "type": 19,
     "name": "Reflection\\nZone",
     "description": "Creates a barrier within [dist]\\nwhich has a [percent] chance to reflect projectiles for [time].\\nReflected projectiles are 100% of opponent's damage",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -617,7 +617,7 @@
     "type": 20,
     "name": "Mind Barrier",
     "description": "Increases defense [defup] of allies within [dist] for [time] and resists stun.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -626,7 +626,7 @@
     "type": 20,
     "name": "Mind Barrier",
     "description": "Increases defense [defup] of allies within [dist] for [time] and resists stun.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -635,7 +635,7 @@
     "type": 21,
     "name": "Corruption\\nBarrier",
     "description": "Increases defense [defup] of allies within [dist] for [time] and resists corrosion and blaze.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -653,7 +653,7 @@
     "type": 22,
     "name": "Invisibility",
     "description": "Become invisible for [time] to receive zero damage and stay out of the enemy's sight.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -662,7 +662,7 @@
     "type": 22,
     "name": "Invisibility",
     "description": "Become invisible for [time] to receive zero damage and stay out of the enemy's sight.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -671,7 +671,7 @@
     "type": 23,
     "name": "Transcendence",
     "description": "Receive zero damage from the enemy's attacks for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -680,7 +680,7 @@
     "type": 23,
     "name": "Transcendence",
     "description": "Receive zero damage from the enemy's attacks for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -689,7 +689,7 @@
     "type": 24,
     "name": "Minimize",
     "description": "Increases evasion [evaup] and defense [defup] for [time] and shrinks Reflectstars.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -698,7 +698,7 @@
     "type": 24,
     "name": "Minimize",
     "description": "Increases evasion [evaup] and defense [defup] for [time] and shrinks Reflectstars.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -707,7 +707,7 @@
     "type": 25,
     "name": "Provoke",
     "description": "Provoke enemies within [dist] and Increase one's defenses [defup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -716,7 +716,7 @@
     "type": 25,
     "name": "Provoke",
     "description": "Provoke enemies within [dist] and Increase one's defenses [defup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -725,7 +725,7 @@
     "type": 26,
     "name": "Gravity\\nField",
     "description": "Creates a black hole to pull enemies within [splashrange] for [skilltime] and causes [atksplashdmg] splash damage.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -752,7 +752,7 @@
     "type": 29,
     "name": "Assemble\\nDrone",
     "description": "Creates a drone [dronenum] which stays for [skilltime]. Drone HP[hp] Atk[atk]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -761,7 +761,7 @@
     "type": 29,
     "name": "Assemble\\nDrone",
     "description": "Creates a drone [dronenum] which stays for [skilltime]. Drone HP[hp] Atk[atk]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -770,7 +770,7 @@
     "type": 29,
     "name": "Assemble\\nSoldiers",
     "description": "Creates a Reflectstar [dronenum] which stays for [skilltime]. Reflectstar HP:[hp] Atk:[atk]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -779,7 +779,7 @@
     "type": 30,
     "name": "Set Cannon",
     "description": "Creates a cannon [dronenum] which stays for [skilltime]. Cannon HP:[hp] Atk:[atk]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -788,7 +788,7 @@
     "type": 30,
     "name": "Set Cannon",
     "description": "Creates a cannon [dronenum] which stays for [skilltime]. Cannon HP:[hp] Atk:[atk]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -797,7 +797,7 @@
     "type": 30,
     "name": "Set Cannon",
     "description": "Creates a cannon [dronenum] which stays for [skilltime]. Cannon HP:[hp] Atk:[atk]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -815,7 +815,7 @@
     "type": 31,
     "name": "Block attack",
     "description": "Decreases attack power [atkdn] and critical rate [cridn] of enemies within [dist] for [skilltime].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -824,7 +824,7 @@
     "type": 31,
     "name": "Block attack",
     "description": "Decreases attack power [atkdn] and critical rate [cridn] of enemies within [dist] for [skilltime].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -833,7 +833,7 @@
     "type": 32,
     "name": "Defense block",
     "description": "Decreases defense [defdn] and evasion [evadn] of enemies within [dist] for [skilltime].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -842,7 +842,7 @@
     "type": 32,
     "name": "Defense block",
     "description": "Decreases defense [defdn] and evasion [evadn] of enemies within [dist] for [skilltime].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -851,7 +851,7 @@
     "type": 33,
     "name": "Shock Shot",
     "description": "Fires 3 shots to stun the enemy for [stun] and inflict [atk] damage.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -869,7 +869,7 @@
     "type": 34,
     "name": "Corrosive Shot",
     "description": "Fires corrosive shots to inflict attack power [dotattack] dmg to the enemy every [dotms] for [decay].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -878,7 +878,7 @@
     "type": 34,
     "name": "Corrosive Shot",
     "description": "Fires corrosive shots to inflict attack power [dotattack] dmg to the enemy every [dotms] for [decay].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -896,7 +896,7 @@
     "type": 35,
     "name": "Mind\\nConfusion",
     "description": "Decreases movement speed [movspddn] and attack speed [atkspddn] of enemies within [dist] for [skilltime].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -905,7 +905,7 @@
     "type": 36,
     "name": "Flame Zone",
     "description": "Creates an area of fire which inflicts attack power [dotattack] for [skilltime] to enemies within [dist] every [dotms] .",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -914,7 +914,7 @@
     "type": 36,
     "name": "Flame Zone",
     "description": "Creates an area of fire which inflicts attack power [dotattack] for [skilltime] to enemies within [dist] every [dotms] .",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -923,7 +923,7 @@
     "type": 37,
     "name": "Flame\\nBarrier",
     "description": "Put up a flame barrier which inflicts attack power [dotattack] damage to enemies within [dist] for [skilltime] every [dotms].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -932,7 +932,7 @@
     "type": 38,
     "name": "Corrosion\\nZone",
     "description": "Creates an area which inflicts attack power [dotattack] corrosive damage to enemies within [dist] for [skilltime] every [dotms].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -941,7 +941,7 @@
     "type": 38,
     "name": "Corrosion\\nZone",
     "description": "Creates an area which inflicts attack power [dotattack] corrosive damage to enemies within [dist] for [skilltime] every [dotms].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -950,7 +950,7 @@
     "type": 39,
     "name": "Stellar\\nAccelerated Spin",
     "description": "Inflicts stellar wind damage of attack power [dotattack] to enemies within [dist] during [decay] for [time] every [dotms].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -959,7 +959,7 @@
     "type": 39,
     "name": "Shock\\nAccelerated Spin",
     "description": "Inflicts [stun] damage and [atk] damage to enemies within [dist] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -968,7 +968,7 @@
     "type": 39,
     "name": "Accelerated\\nSpin",
     "description": "Spins during [time] and inflicts [atk] damage to enemies within [dist].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -977,7 +977,7 @@
     "type": 40,
     "name": "Release of\\nKilling Intention",
     "description": "Fires a shock wave up to [dist] to inflict [atk] damage and stuns enemies within range. Stun time [stun]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -986,7 +986,7 @@
     "type": 40,
     "name": "Release of\\nFighting Spirit",
     "description": "Fires a two shock wave up to [dist] to inflict [atk] damage and stuns enemies within range. Stun time [stun]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -995,7 +995,7 @@
     "type": 41,
     "name": "Charge",
     "description": "Charges at enemies to inflict [atk] damage and [stun] stun them.  Reduced damage [dmgdec] during activation.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1004,7 +1004,7 @@
     "type": 42,
     "name": "Lightspeed\\nSlash",
     "description": "Inflicts [atk] damage to all enemies passed by during this instantaneous move. Reduced damage [dmgdec] during activation.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1013,7 +1013,7 @@
     "type": 43,
     "name": "Assassin\\nBlow",
     "description": "Inflicts [atk] damage and corrosive damage of attack power [dotattack] during [decay] every [dotms] to all penetrated enemies. Reduced damage [dmgdec] during activation.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1022,7 +1022,7 @@
     "type": 44,
     "name": "Shock\\nExplosion",
     "description": "When hit, inflicts [atk] damage and [atksplashdmg] to all enemies within [splashrange] and knocks them back. 2 bullets",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1031,7 +1031,7 @@
     "type": 44,
     "name": "Shock\\nExplosion",
     "description": "When hit, inflicts [atk] damage and [atksplashdmg] to all enemies within [splashrange] and knocks them back. 2 bullets",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1040,7 +1040,7 @@
     "type": 44,
     "name": "Shock\\nExplosion",
     "description": "When hit, inflicts [atk] damage and [atksplashdmg] to all enemies within [splashrange] and knocks them back. 2 bullets",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1049,7 +1049,7 @@
     "type": 44,
     "name": "Tactical\\nDestroyer",
     "description": "When hit, inflicts [atk] damage and [atksplashdmg] to all enemies within [splashrange] and knocks them back.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1058,7 +1058,7 @@
     "type": 58,
     "name": "Autonomic\\nSnipe Shot",
     "description": "Fires a guided projectile of [atk] damage which chases the enemy 8 times.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1067,7 +1067,7 @@
     "type": 58,
     "name": "Autonomic\\nSnipe Shot",
     "description": "Fires a guided projectile of [atk] damage which chases the enemy 8 times.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1085,7 +1085,7 @@
     "type": 47,
     "name": "Revolver\\nPanning",
     "description": "Concentrated fire of [shootcount] with [atk] damage.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1094,7 +1094,7 @@
     "type": 48,
     "name": "Indiscriminate\\nBlindfire",
     "description": "Randomly fires forward [shootcount] projectiles of [atk] damage.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1103,7 +1103,7 @@
     "type": 48,
     "name": "Indiscriminate\\nBlindfire",
     "description": "Randomly fires forward [shootcount] projectiles of [atk] damage.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1112,7 +1112,7 @@
     "type": 48,
     "name": "Indiscriminate\\nBlindfire",
     "description": "Randomly fires forward [shootcount] projectiles of [atk] damage.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1130,7 +1130,7 @@
     "type": 49,
     "name": "Annihilation\\nBeam",
     "description": "Fires a laser [dist] wide which inflicts [atk] damage for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1139,7 +1139,7 @@
     "type": 50,
     "name": "Guided Laser",
     "description": "Fires a laser of [atk] damage to a targeted enemy for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1148,7 +1148,7 @@
     "type": 50,
     "name": "Guided Laser",
     "description": "Fires a laser of [atk] damage to a targeted enemy for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1157,7 +1157,7 @@
     "type": 51,
     "name": "Spread Shot",
     "description": "Fires a missle which spreads towards the enemy for [time].([atk] damage)",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1166,7 +1166,7 @@
     "type": 51,
     "name": "Spread Shot",
     "description": "Fires a missle which spreads when it hits for [time].([atk] damage)",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1175,7 +1175,7 @@
     "type": 52,
     "name": "Target\\nDesignation",
     "description": "Fires a projectile which inflicts [atk] damage and pulls the enemy in.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1184,7 +1184,7 @@
     "type": 52,
     "name": "Target\\nDesignation",
     "description": "Fires a projectile which inflicts [atk] damage and pulls the enemy in.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1193,7 +1193,7 @@
     "type": 53,
     "name": "Triple Snipe\\nShot",
     "description": "Fires 3 snipe shots of [atk] damage.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1202,7 +1202,7 @@
     "type": 53,
     "name": "Triple Snipe\\nShot",
     "description": "Fires 3 snipe shots of [atk] damage.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1211,7 +1211,7 @@
     "type": 53,
     "name": "Triple Snipe\\nShot",
     "description": "Fires 3 snipe shots of [atk] damage.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1220,7 +1220,7 @@
     "type": 53,
     "name": "Penetration\\nShot",
     "description": "Fires a snipe shot which penetrates the enemy and inflicts [atk] damage. Casting time [casttime]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1229,7 +1229,7 @@
     "type": 53,
     "name": "Penetration\\nShot",
     "description": "Fires a snipe shot which penetrates the enemy and inflicts [atk] damage. Casting time [casttime]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1238,7 +1238,7 @@
     "type": 54,
     "name": "Flame\\nSnipe Shot",
     "description": "Fires a snipe shot which penetrates the enemy and inflicts [atk]dmg and stellar wind dmg of attack power [dotattack] every [dotms]. Casting time [casttime]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1247,7 +1247,7 @@
     "type": 54,
     "name": "Flame\\nSnipe Shot",
     "description": "Fires a snipe shot which penetrates the enemy and inflicts [atk]dmg and stellar wind dmg of attack power [dotattack] every [dotms]. Casting time [casttime]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1256,7 +1256,7 @@
     "type": 54,
     "name": "Flame\\nSnipe Shot",
     "description": "Fires a snipe shot which penetrates the enemy and inflicts [atk]dmg and stellar wind dmg of attack power [dotattack] every [dotms]. Casting time [casttime]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1265,7 +1265,7 @@
     "type": 55,
     "name": "Corrosive\\nSnipe Shot",
     "description": "Fires corrosive shots to inflict attack power [dotattack] dmg to the enemy every [dotms] for [decay].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1274,7 +1274,7 @@
     "type": 5,
     "name": "Energy\\nAmplification",
     "description": "Increases attack power [atkup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1283,7 +1283,7 @@
     "type": 51,
     "name": "Spread Shot",
     "description": "Fires a missle which spreads towards the enemy for [time].([atk] damage)",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1292,7 +1292,7 @@
     "type": 1,
     "name": "Accelerate\\nEnergy",
     "description": "Increases attack speed [atkspdup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1301,7 +1301,7 @@
     "type": 13,
     "name": "Area of Expanded\\nVision",
     "description": "Increases evasion [evaup] of allies within [dist] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1310,7 +1310,7 @@
     "type": 35,
     "name": "Mind\\nConfusion",
     "description": "Decreases movement speed [movspddn] and attack speed [atkspddn] of enemies within [dist] for [skilltime].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1319,7 +1319,7 @@
     "type": 6,
     "name": "Amplication\\nArea",
     "description": "Increases attack power [atkup] of allies within [dist] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1328,7 +1328,7 @@
     "type": 25,
     "name": "Provoke",
     "description": "Provoke enemies within [dist] and Increase one's defenses [defup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1337,7 +1337,7 @@
     "type": 10,
     "name": "Transcendent\\nSenses",
     "description": "All attacks become critical for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1346,7 +1346,7 @@
     "type": 46,
     "name": "Blindfire of\\nMassive Extinction",
     "description": "Fires [shootcount] guided projectiles of [atk] damage which chase the enemy.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1355,7 +1355,7 @@
     "type": 22,
     "name": "Invisibility",
     "description": "Become invisible for [time] to receive zero damage and stay out of the enemy's sight.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1364,7 +1364,7 @@
     "type": 33,
     "name": "Shock Shot",
     "description": "Fires 3 shots to stun the enemy for [stun] and inflict [atk] damage.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1373,7 +1373,7 @@
     "type": 53,
     "name": "Penetration\\nShot",
     "description": "Fires a snipe shot which penetrates the enemy and inflicts [atk] damage. Casting time [casttime]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1382,7 +1382,7 @@
     "type": 5,
     "name": "Energy\\nAmplification",
     "description": "Increases attack power [atkup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1391,7 +1391,7 @@
     "type": 8,
     "name": "Berserker",
     "description": "Increases attack power [atkup] and critical rate [criup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1400,7 +1400,7 @@
     "type": 2,
     "name": "Acceleration\\nArea",
     "description": "Increases attack speed [atkspdup] of allies within [dist] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1409,7 +1409,7 @@
     "type": 42,
     "name": "Lightspeed\\nSlash",
     "description": "Inflicts [atk] damage to all enemies passed by during this instantaneous move. Reduced damage [dmgdec] during activation.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1418,7 +1418,7 @@
     "type": 41,
     "name": "Charge",
     "description": "Charges at enemies to inflict [atk] damage and [stun] stun them.  Reduced damage [dmgdec] during activation.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1427,7 +1427,7 @@
     "type": 20,
     "name": "Mind Barrier",
     "description": "Increases defense [defup] of allies within [dist] for [time] and resists stun.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1436,7 +1436,7 @@
     "type": 33,
     "name": "Shock Shot",
     "description": "Fires 3 shots to stun the enemy for [stun] and inflict [atk] damage.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1445,7 +1445,7 @@
     "type": 57,
     "name": "Splash Shot",
     "description": "Fires [shootcount] missiles which inflict [spashdmg] splash damage within [splashrange] for [time]. ([atk] damage)",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1454,7 +1454,7 @@
     "type": 57,
     "name": "Splash Shot",
     "description": "Fires [shootcount] missiles which inflict [spashdmg] splash damage within [splashrange] for [time]. ([atk] damage)",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1463,7 +1463,7 @@
     "type": 36,
     "name": "Flame Zone",
     "description": "Creates an area of fire which inflicts attack power [dotattack] for [skilltime] to enemies within [dist] every [dotms] .",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1472,7 +1472,7 @@
     "type": 29,
     "name": "Assemble\\nDrone",
     "description": "Creates a drone [dronenum] which stays for [skilltime]. Drone HP[hp] Atk[atk]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1481,7 +1481,7 @@
     "type": 29,
     "name": "Assemble\\nDrone",
     "description": "Creates a drone [dronenum] which stays for [skilltime]. Drone HP[hp] Atk[atk]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1490,7 +1490,7 @@
     "type": 29,
     "name": "Assemble\\nDrone",
     "description": "Creates a drone [dronenum] which stays for [skilltime]. Drone HP[hp] Atk[atk]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1499,7 +1499,7 @@
     "type": 29,
     "name": "Assemble\\nDrone",
     "description": "Creates a drone [dronenum] which stays for [skilltime]. Drone HP[hp] Atk[atk]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1508,7 +1508,7 @@
     "type": 29,
     "name": "Assemble\\nDrone",
     "description": "Creates a drone [dronenum] which stays for [skilltime]. Drone HP[hp] Atk[atk]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1517,7 +1517,7 @@
     "type": 29,
     "name": "Assemble\\nDrone",
     "description": "Creates a drone [dronenum] which stays for [skilltime]. Drone HP[hp] Atk[atk]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1526,7 +1526,7 @@
     "type": 29,
     "name": "Assemble\\nDrone",
     "description": "Creates a drone [dronenum] which stays for [skilltime]. Drone HP[hp] Atk[atk]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1535,7 +1535,7 @@
     "type": 29,
     "name": "Assemble\\nDrone",
     "description": "Creates a drone [dronenum] which stays for [skilltime]. Drone HP[hp] Atk[atk]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1544,7 +1544,7 @@
     "type": 29,
     "name": "Assemble\\nDrone",
     "description": "Creates a drone [dronenum] which stays for [skilltime]. Drone HP[hp] Atk[atk]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1553,7 +1553,7 @@
     "type": 43,
     "name": "Assassin\\nBlow",
     "description": "Inflicts [atk] damage and corrosive damage of attack power [dotattack] during [decay] every [dotms] to all penetrated enemies. Reduced damage [dmgdec] during activation.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1562,7 +1562,7 @@
     "type": 27,
     "name": "Gravity\\nConcentration",
     "description": "Creates a black hole to pull enemies within [splashrange] for [skilltime], decreases damage received, and causes [atksplashdmg] splash damage.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1571,7 +1571,7 @@
     "type": 19,
     "name": "Reflection\\nZone",
     "description": "Creates a barrier within [dist]\\nwhich has a [percent] chance to reflect projectiles for [time].\\nReflected projectiles are 100% of opponent's damage",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1580,7 +1580,7 @@
     "type": 27,
     "name": "Gravity\\nConcentration",
     "description": "Creates a black hole to pull enemies within [splashrange] for [skilltime], decreases damage received, and causes [atksplashdmg] splash damage.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1589,7 +1589,7 @@
     "type": 49,
     "name": "Light of\\nExtinction",
     "description": "Fires a laser [dist] wide which inflicts [atk] damage for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1598,7 +1598,7 @@
     "type": 46,
     "name": "Blindfire of\\nMassive Extinction",
     "description": "Fires [shootcount] guided projectiles of [atk] damage which chase the enemy.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1607,7 +1607,7 @@
     "type": 44,
     "name": "Tactical\\nDestroyer",
     "description": "When hit, inflicts [atk] damage and [atksplashdmg] to all enemies within [splashrange] and knocks them back.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1616,7 +1616,7 @@
     "type": 37,
     "name": "Flame\\nBarrier",
     "description": "Put up a flame barrier which inflicts attack power [dotattack] damage to enemies within [dist] for [skilltime] every [dotms].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1625,7 +1625,7 @@
     "type": 29,
     "name": "Assemble\\nSoldiers",
     "description": "Creates a Reflectstar [dronenum] which stays for [skilltime]. Reflectstar HP:[hp] Atk:[atk]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1634,7 +1634,7 @@
     "type": 1,
     "name": "Accelerate\\nEnergy",
     "description": "Increases attack speed [atkspdup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1643,7 +1643,7 @@
     "type": 21,
     "name": "Corruption\\nBarrier",
     "description": "Increases defense [defup] of allies within [dist] for [time] and resists corrosion and blaze.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1652,7 +1652,7 @@
     "type": 4,
     "name": "Critical\\nAcceleration Zone",
     "description": "Increases attack speed [atkspdup] and critical rate [criup] of allies within [dist] for [time]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1661,7 +1661,7 @@
     "type": 60,
     "name": "Absolute\\ndefensive space",
     "description": "Decreases received damage [dmgdec] of allies within [dist] for [time]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1670,7 +1670,7 @@
     "type": 25,
     "name": "Provoke",
     "description": "Provoke enemies within [dist] and Increase one's defenses [defup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1679,7 +1679,7 @@
     "type": 60,
     "name": "Absolute\\ndefensive space",
     "description": "Decreases received damage [dmgdec] of allies within [dist] for [time]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1688,7 +1688,7 @@
     "type": 61,
     "name": "Dispersion\\nEnergy",
     "description": "The general attack is changed to a Blindfire for [time]. Blindfire [atk]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1697,7 +1697,7 @@
     "type": 5,
     "name": "Energy\\nAmplification",
     "description": "Increases attack power [atkup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1706,7 +1706,7 @@
     "type": 62,
     "name": "Concentration\\nmode",
     "description": "Increase attack power [atkup] and decrease your attack speed[atkspddn] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1715,7 +1715,7 @@
     "type": 49,
     "name": "Light of\\nExtinction",
     "description": "Fires a laser [dist] wide which inflicts [atk] damage for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1724,7 +1724,7 @@
     "type": 63,
     "name": "Absorptive \\nBarrier",
     "description": "Increases defense [defup] of allies within [dist] for [time] and resists laser.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1733,7 +1733,7 @@
     "type": 29,
     "name": "A.M drones",
     "description": "Creates a laser drone [dronenum] which stays for [skilltime]. Drone HP[hp] Atk[atk]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1742,7 +1742,7 @@
     "type": 64,
     "name": "Time reduction",
     "description": "Reduces the skill cooling time of the allies' reflectstars by [percent]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1751,7 +1751,7 @@
     "type": 25,
     "name": "Provoke",
     "description": "Provoke enemies within [dist] and Increase one's defenses [defup] for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1760,7 +1760,7 @@
     "type": 46,
     "name": "Blindfire of\\nMassive Extinction",
     "description": "Fires [shootcount] guided projectiles of [atk] damage which chase the enemy.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1769,7 +1769,7 @@
     "type": 40,
     "name": "Release of\\nKilling Intention",
     "description": "Fires a shock wave up to [dist] to inflict [atk] damage and stuns enemies within range. Stun time [stun]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1778,7 +1778,7 @@
     "type": 65,
     "name": "Superfragmentary\\narrow",
     "description": "For [time], increases attack power [atkup] and ignore the enemy's defenses.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1787,7 +1787,7 @@
     "type": 29,
     "name": "Assemble\\nDrone",
     "description": "Creates a drone [dronenum] which stays for [skilltime]. Drone HP[hp] Atk[atk]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1796,7 +1796,7 @@
     "type": 66,
     "name": "Sacrifice",
     "description": "For [time], Algenib increases unit’s defense [defup] in the [dist] range and receive unit’s all damage instead.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1805,7 +1805,7 @@
     "type": 12,
     "name": "Assault order",
     "description": "Increases attack power [atkup] of allies within [dist] for [time] and decrease the defense [defdn].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1814,7 +1814,7 @@
     "type": 39,
     "name": "Accelerated\\nSpin",
     "description": "Spins during [time] and inflicts [atk] damage to enemies within [dist].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1823,7 +1823,7 @@
     "type": 63,
     "name": "Absorptive \\nBarrier",
     "description": "Increases defense [defup] of allies within [dist] for [time] and resists laser.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1832,7 +1832,7 @@
     "type": 17,
     "name": "Offset Zone",
     "description": "Creates a barrier within [dist]\\nwhich has a [percent] chance to offset projectiles for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1841,7 +1841,7 @@
     "type": 68,
     "name": "Giantization",
     "description": "Polis gains [defup] Armor for [time] and get hugified.\\n When Polis is shot, she nullifies piecing and splash effects. and provoke enemies within [dist] ",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1850,7 +1850,7 @@
     "type": 67,
     "name": "Absolute hit",
     "description": "Fire eight guided missiles chasing enemies, dealing [atk] damage.Hugified",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1859,7 +1859,7 @@
     "type": 37,
     "name": "Flame\\nBarrier",
     "description": "Put up a flame barrier which inflicts attack power [dotattack] damage to enemies within [dist] for [skilltime] every [dotms].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1868,7 +1868,7 @@
     "type": 17,
     "name": "Offset Zone",
     "description": "Creates a barrier within [dist]\\nwhich has a [percent] chance to offset projectiles for [time].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1877,7 +1877,7 @@
     "type": 42,
     "name": "Lightspeed\\nSlash",
     "description": "Inflicts [atk] damage to all enemies passed by during this instantaneous move. Reduced damage [dmgdec] during activation.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1886,7 +1886,7 @@
     "type": 46,
     "name": "Blindfire of\\nMassive Extinction",
     "description": "Fires [shootcount] guided projectiles of [atk] damage which chase the enemy.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1895,7 +1895,7 @@
     "type": 35,
     "name": "Mind\\nConfusion",
     "description": "Decreases movement speed [movspddn] and attack speed [atkspddn] of enemies within [dist] for [skilltime].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1904,7 +1904,7 @@
     "type": 32,
     "name": "Evasion block",
     "description": "Decreases evasion [evadn] and defense [defdn] of enemies within [dist] for [skilltime].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1913,7 +1913,7 @@
     "type": 32,
     "name": "Evasion block",
     "description": "Decreases evasion [evadn] and defense [defdn] of enemies within [dist] for [skilltime].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1922,7 +1922,7 @@
     "type": 69,
     "name": "Absorptive \\nBarrier",
     "description": "Increases defense [defup] of allies within [dist] for [time] and resists laser.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1931,7 +1931,7 @@
     "type": 52,
     "name": "Target\\nDesignation",
     "description": "Fires a projectile which inflicts [atk] damage and pulls the enemy in.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1940,7 +1940,7 @@
     "type": 46,
     "name": "Blindfire of\\nMassive Extinction",
     "description": "Fires [shootcount] guided projectiles of [atk] damage which chase the enemy.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1949,7 +1949,7 @@
     "type": 70,
     "name": "Melee\\ninduction device",
     "description": "Create a device to induce melee Attack during [skilltime]. HP: [hp]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1958,7 +1958,7 @@
     "type": 71,
     "name": "General\\ninduction device",
     "description": "Create a device to induce normal, Pierce, and splash shots during [skilltime]. HP: [hp]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1967,7 +1967,7 @@
     "type": 72,
     "name": "Special\\ninduction device",
     "description": "Create a device to induce guide and laser attacks during [skilltime]. HP : [hp]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1976,7 +1976,7 @@
     "type": 60,
     "name": "Damage\\nDrop Zone",
     "description": "Decreases received damage [dmgdec] of allies within [dist] for [time]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1985,7 +1985,7 @@
     "type": 73,
     "name": "Shock reflection",
     "description": "Releases shock wave dealing [atk] dmg taken by allies within [dist]  for [time].It is not applicable to things summoned.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -1994,7 +1994,7 @@
     "type": 48,
     "name": "Super Rapid",
     "description": "After charging for [casttime], fire [shootcount] of [atk] damage.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -2003,7 +2003,7 @@
     "type": 74,
     "name": "Time stop",
     "description": "Stops enemy time for [time]\\nSelf buff time in use is not reduced, and allies' skill cooldowns stop.\\n Unaffected by cooldown reduction.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -2012,7 +2012,7 @@
     "type": 75,
     "name": "Psychological\\nBarrier",
     "description": "Increases defense [defup] of allies within [dist] for [time] and resists provoke.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -2021,7 +2021,7 @@
     "type": 76,
     "name": "Energy bombing",
     "description": "After randomly designating an enemy 5 times, deal [atksplashdmg] damage to the [splashrange] range.",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -2030,7 +2030,7 @@
     "type": 39,
     "name": "Accelerated\\nSpin",
     "description": "Spins during [time] and inflicts [atk] damage to enemies within [dist].",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   },
   {
@@ -2039,7 +2039,7 @@
     "type": 29,
     "name": "Assemble\\nDrone",
     "description": "Creates a drone [dronenum] which stays for [skilltime]. Drone HP[hp] Atk[atk]",
-    "enabled": false,
+    "enabled": true,
     "validation": "description-based; native timing and targeting unverified"
   }
 ]

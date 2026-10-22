@@ -1,3 +1,4 @@
+import { mechanicRow, collectActions } from "./skill-editor";
 import type { Kind, Pack } from "../content/schema";
 import { esc } from "./common";
 const moneyFields = new Set([
@@ -17,6 +18,10 @@ export function complexField(
 ): string | null {
   const wrap = (body: string) =>
     `<fieldset class="field full complex-field" data-complex="${k}"><legend>${esc(label)}</legend>${body}</fieldset>`;
+  if (k === "actions" && Array.isArray(v))
+    return wrap(
+      `<p>依序執行各動作；蓄力與逐發間隔可獨立設定。數值保存時會校驗。</p><div class="mechanic-rows">${v.map(mechanicRow).join("")}</div><button type="button" data-action="add-mechanic">＋ 新增動作</button>`,
+    );
   if (moneyFields.has(k) && v && typeof v === "object" && !Array.isArray(v))
     return wrap(
       `<div class="resource-fields">${p.resources.map((r) => `<label>${esc(r.name)}<input type="number" min="0" step="any" data-resource="${esc(r.id)}" value="${(v as Record<string, number>)[r.id] ?? 0}"></label>`).join("")}</div>`,
@@ -58,7 +63,11 @@ export function collectComplex(
 ) {
   for (const group of root.querySelectorAll<HTMLElement>("[data-complex]")) {
     const k = group.dataset.complex!;
-    if (moneyFields.has(k))
+    if (k === "actions") {
+      const actions = collectActions(group);
+      if (actions.length) raw[k] = actions;
+      else delete raw[k];
+    } else if (moneyFields.has(k))
       raw[k] = Object.fromEntries(
         [...group.querySelectorAll<HTMLInputElement>("[data-resource]")].map(
           (i) => [i.dataset.resource!, Number(i.value)],

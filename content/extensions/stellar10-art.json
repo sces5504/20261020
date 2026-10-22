@@ -5,7 +5,7 @@
   "requires": [
     {
       "id": "m1:core",
-      "version": "0.5.0"
+      "version": "0.6.0"
     },
     {
       "id": "solar10:package.first-ten",

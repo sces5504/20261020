@@ -15,6 +15,10 @@ export const patternTypes = [
   "laser",
   "mine",
   "shotgun",
+  "melee",
+  "meleeFan",
+  "meleeSplash",
+  "meleeSpear",
 ] as const;
 export const statusTypes = [
   "attack",
@@ -107,6 +111,16 @@ export const actionSchema = z
     pattern: z.enum(patternTypes).default("aim"),
     speed: finite.min(1).max(4000).default(520),
     spread: finite.min(0).max(6.284).default(0.22),
+    rotation: finite.min(-10).max(10).default(0),
+    startAngle: finite.min(-6.284).max(6.284).default(0),
+    randomSpread: z.boolean().default(false),
+    spawnRadius: finite.min(0).max(2000).default(0),
+    inward: z.boolean().default(false),
+    salvos: z.number().int().min(1).max(16).default(1),
+    salvoInterval: finite.min(0.05).max(10).default(0.5),
+    interruptible: z.boolean().default(true),
+    bypassEvasion: z.boolean().default(false),
+    suppressCritical: z.boolean().default(false),
     width: finite.min(1).max(1000).default(24),
     pierce: z.number().int().min(0).max(60).default(0),
     splash: finite.min(0).max(2000).default(0),
@@ -130,3 +144,18 @@ export const actionSchema = z
 export type Action = z.infer<typeof actionSchema>;
 export type Modifier = z.infer<typeof modifierSchema>;
 export type Pattern = (typeof patternTypes)[number];
+
+export function defaultVolleyCount(pattern: Pattern) {
+  return (
+    (
+      {
+        ring: 14,
+        fan: 3,
+        cross: 4,
+        shotgun: 7,
+        spiral: 5,
+        burst: 3,
+      } as Partial<Record<Pattern, number>>
+    )[pattern] ?? 1
+  );
+}

@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { actionSchema, patternTypes } from "./mechanics";
+import { actionSchema, patternTypes, defaultVolleyCount } from "./mechanics";
 const id = z.string().regex(/^[a-z][a-z0-9.-]*:[a-z][a-z0-9._-]*$/);
 const positive = z.number().finite().positive();
 const amount = z.record(id, z.number().finite().nonnegative());
@@ -58,6 +58,10 @@ const character = z
     critical: z.number().min(0).max(0.95).optional(),
     evasion: z.number().min(0).max(0.95).optional(),
     skill: id,
+    pattern: z.enum(patternTypes).optional(),
+    projectileSpeed: positive.optional(),
+    volleyCount: z.number().int().min(1).max(64).optional(),
+    volleySpread: z.number().min(0).max(6.284).optional(),
     color: z.string().regex(/^#[0-9a-f]{6}$/i),
     portrait: z.string(),
     avatar: z.string(),
@@ -79,6 +83,8 @@ const enemy = z
     range: positive,
     interval: positive,
     projectileSpeed: positive,
+    critical: z.number().min(0).max(0.95).optional(),
+    evasion: z.number().min(0).max(0.95).optional(),
     orbitSpeed: z.number().min(0).max(2).default(0.45),
     strafeSpeed: z.number().min(0).max(300).default(14),
     pattern: z.enum(patternTypes),
@@ -87,6 +93,7 @@ const enemy = z
     volleySpread: z.number().min(0).max(6.284).optional(),
     boss: z.boolean(),
     phaseAt: z.number().min(0).max(1),
+    phasePattern: z.enum(patternTypes).default("ring"),
     color: z.string().regex(/^#[0-9a-f]{6}$/i),
     sprite: z.string(),
   })
@@ -446,6 +453,95 @@ export function validatePack(input: unknown): {
       errors.push(`${s.id}: 舊效果不可夾帶未執行動作`);
   }
   for (const e of p.enemies) if (e.skill) has("skills", e.skill, e.id);
+  // Validate active encounters before runtime; unused source recipes remain editable.
+  const peak = (s: Skill | undefined, interval: number) => {
+    if (!s) return { bullets: 0, units: 0, fields: 0 };
+    return [
+      { actions: s.actions ?? [], cooldown: s.cooldown },
+      ...(s.levels ?? []),
+    ].reduce(
+      (max, v) => {
+        let bullets = 0,
+          units = 0,
+          fields = 0;
+        for (const a of v.actions) {
+          const copies = Math.max(1, Math.ceil(a.duration / v.cooldown));
+          if (a.kind === "projectile")
+            bullets += a.count * a.salvos * (1 + a.splitCount) * copies;
+          if (a.kind === "summon") {
+            units += a.count * copies;
+            bullets += a.count * copies * Math.ceil(5 / interval);
+          }
+          if (a.kind === "beam" || a.kind === "zone" || a.kind === "bomb")
+            fields += (a.kind === "bomb" ? a.count : 1) * copies;
+        }
+        return {
+          bullets: Math.max(max.bullets, bullets),
+          units: Math.max(max.units, units),
+          fields: Math.max(max.fields, fields),
+        };
+      },
+      { bullets: 0, units: 0, fields: 0 },
+    );
+  };
+  const allyPeaks = p.characters
+    .filter((c) => c.status === "active")
+    .map((c) => {
+      const s = p.skills.find((s) => s.id === c.skill),
+        v = peak(s, c.interval);
+      const changed = (s?.actions ?? [])
+        .flatMap((a) => a.modifiers)
+        .find((m) => m.stat === "attackPattern")?.pattern;
+      return {
+        ...v,
+        bullets:
+          v.bullets +
+          (c.volleyCount ?? defaultVolleyCount(changed ?? c.pattern ?? "aim")) *
+            Math.ceil(5 / c.interval),
+      };
+    });
+  const allyBudget = {
+    bullets: Math.max(0, ...allyPeaks.map((v) => v.bullets)) * p.rules.teamSize,
+    units:
+      Math.max(0, ...allyPeaks.map((v) => v.units)) * p.rules.teamSize +
+      p.rules.teamSize,
+    fields: Math.max(0, ...allyPeaks.map((v) => v.fields)) * p.rules.teamSize,
+  };
+  const encounterBudget = (
+    groups: { enemy: string; count: number }[],
+    owner: string,
+  ) => {
+    const total = { ...allyBudget };
+    for (const group of groups) {
+      const e = p.enemies.find((e) => e.id === group.enemy);
+      if (!e) continue;
+      const value = peak(
+        p.skills.find((s) => s.id === e.skill),
+        e.interval,
+      );
+      const count =
+        e.volleyCount ??
+        Math.max(
+          defaultVolleyCount(e.pattern),
+          e.boss ? defaultVolleyCount(e.phasePattern) : 0,
+        );
+      total.bullets +=
+        group.count *
+        (value.bullets +
+          (e.pattern === "laser"
+            ? 0
+            : count * Math.ceil(5 / (e.interval + 0.55))));
+      total.units += group.count * (1 + value.units);
+      total.fields += group.count * value.fields;
+    }
+    if (total.bullets > 3000 || total.units > 256 || total.fields > 128)
+      errors.push(
+        `${owner}: 遭遇預算超限（彈體${total.bullets}/3000，單位${total.units}/256，持續場${total.fields}/128），請在測試場縮減並驗證`,
+      );
+  };
+  for (const v of p.planets) encounterBudget(v.enemies, v.id);
+  for (const r of p.regions)
+    for (const v of r.patrols) encounterBudget(v.enemies, v.id);
   const maxGrowth =
     (1 + 5 * p.rules.duplicateStatBonus) *
     Math.max(

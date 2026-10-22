@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "m1:core",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "name": "星河戰姬 · 太陽系探索",
   "resources": [
     {
@@ -82,7 +82,9 @@
       "starter": true,
       "role": "守護 · 領域護盾",
       "sourceRow": 2,
-      "summonable": true
+      "summonable": true,
+      "critical": 0.16,
+      "evasion": 0.25
     },
     {
       "id": "m1:mercury",
@@ -112,7 +114,9 @@
       "starter": true,
       "role": "火力 · 擴散彈幕",
       "sourceRow": 3,
-      "summonable": true
+      "summonable": true,
+      "critical": 0.22,
+      "evasion": 0.24
     },
     {
       "id": "m1:venus",
@@ -142,7 +146,9 @@
       "starter": true,
       "role": "支援 · 定點砲台",
       "sourceRow": 4,
-      "summonable": true
+      "summonable": true,
+      "critical": 0.22,
+      "evasion": 0.25
     },
     {
       "id": "m1:mars",
@@ -172,7 +178,9 @@
       "starter": false,
       "role": "防衛 · 裝甲增幅",
       "sourceRow": 5,
-      "summonable": true
+      "summonable": true,
+      "critical": 0.2,
+      "evasion": 0.28
     },
     {
       "id": "m1:uranus",
@@ -202,7 +210,9 @@
       "starter": false,
       "role": "速射 · 臨界加速",
       "sourceRow": 8,
-      "summonable": true
+      "summonable": true,
+      "critical": 0.2,
+      "evasion": 0.24
     },
     {
       "id": "m1:moon",
@@ -232,81 +242,1379 @@
       "starter": false,
       "role": "干擾 · 攻擊封鎖",
       "sourceRow": 12,
-      "summonable": true
+      "summonable": true,
+      "critical": 0.5,
+      "evasion": 0.57
     }
   ],
   "skills": [
     {
       "id": "m1:deflect",
       "name": "偏折領域",
-      "description": "為我方全隊附加護盾，在敵方彈幕到來前使用。",
+      "description": "建立能偏折來襲彈體的守護領域。",
       "status": "active",
       "provenance": "m1-design",
-      "effect": "shield",
+      "effect": "program",
       "power": 80,
-      "duration": 5,
-      "cooldown": 12,
-      "color": "#62dfce"
+      "duration": 3.0,
+      "cooldown": 14.0,
+      "color": "#62dfce",
+      "sourceSkill": 62,
+      "fidelity": "description",
+      "actions": [
+        {
+          "kind": "status",
+          "target": "self",
+          "radius": 750,
+          "modifiers": [
+            {
+              "stat": "deflect",
+              "value": 0.4,
+              "duration": 3.0,
+              "immune": [],
+              "interceptRadius": 750
+            }
+          ],
+          "bypassEvasion": false,
+          "suppressCritical": false
+        }
+      ],
+      "levels": [
+        {
+          "cooldown": 13.7,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 770,
+              "modifiers": [
+                {
+                  "stat": "deflect",
+                  "value": 0.42,
+                  "duration": 3.3,
+                  "immune": [],
+                  "interceptRadius": 770
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 13.4,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 790,
+              "modifiers": [
+                {
+                  "stat": "deflect",
+                  "value": 0.44,
+                  "duration": 3.6,
+                  "immune": [],
+                  "interceptRadius": 790
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 13.1,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 810,
+              "modifiers": [
+                {
+                  "stat": "deflect",
+                  "value": 0.46,
+                  "duration": 3.9,
+                  "immune": [],
+                  "interceptRadius": 810
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 12.8,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 830,
+              "modifiers": [
+                {
+                  "stat": "deflect",
+                  "value": 0.48,
+                  "duration": 4.2,
+                  "immune": [],
+                  "interceptRadius": 830
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 12.5,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 850,
+              "modifiers": [
+                {
+                  "stat": "deflect",
+                  "value": 0.5,
+                  "duration": 4.5,
+                  "immune": [],
+                  "interceptRadius": 850
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 12.2,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 870,
+              "modifiers": [
+                {
+                  "stat": "deflect",
+                  "value": 0.52,
+                  "duration": 4.8,
+                  "immune": [],
+                  "interceptRadius": 870
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 11.9,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 890,
+              "modifiers": [
+                {
+                  "stat": "deflect",
+                  "value": 0.54,
+                  "duration": 5.1,
+                  "immune": [],
+                  "interceptRadius": 890
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 11.6,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 910,
+              "modifiers": [
+                {
+                  "stat": "deflect",
+                  "value": 0.56,
+                  "duration": 5.4,
+                  "immune": [],
+                  "interceptRadius": 910
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 11.3,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 930,
+              "modifiers": [
+                {
+                  "stat": "deflect",
+                  "value": 0.58,
+                  "duration": 5.7,
+                  "immune": [],
+                  "interceptRadius": 930
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "m1:dispersion",
       "name": "擴散能源",
-      "description": "向四周發射十二枚能源彈，適合清除靠近或包圍隊伍的敵人。",
+      "description": "將普通攻擊轉為多枚能源散射，集中火力壓制前方敵人。",
       "status": "active",
       "provenance": "m1-design",
-      "effect": "barrage",
+      "effect": "program",
       "power": 1.5,
-      "duration": 4,
-      "cooldown": 10,
-      "color": "#8dcfff"
+      "duration": 3.0,
+      "cooldown": 13.0,
+      "color": "#8dcfff",
+      "sourceSkill": 187,
+      "fidelity": "description",
+      "actions": [
+        {
+          "kind": "status",
+          "target": "self",
+          "radius": 800,
+          "modifiers": [
+            {
+              "stat": "attackPattern",
+              "value": 0.25,
+              "duration": 3.0,
+              "immune": [],
+              "pattern": "shotgun"
+            }
+          ],
+          "bypassEvasion": false,
+          "suppressCritical": false
+        }
+      ],
+      "levels": [
+        {
+          "cooldown": 12.7,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 800,
+              "modifiers": [
+                {
+                  "stat": "attackPattern",
+                  "value": 0.26,
+                  "duration": 3.3,
+                  "immune": [],
+                  "pattern": "shotgun"
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 12.4,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 800,
+              "modifiers": [
+                {
+                  "stat": "attackPattern",
+                  "value": 0.27,
+                  "duration": 3.6,
+                  "immune": [],
+                  "pattern": "shotgun"
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 12.1,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 800,
+              "modifiers": [
+                {
+                  "stat": "attackPattern",
+                  "value": 0.28,
+                  "duration": 3.9,
+                  "immune": [],
+                  "pattern": "shotgun"
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 11.8,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 800,
+              "modifiers": [
+                {
+                  "stat": "attackPattern",
+                  "value": 0.29,
+                  "duration": 4.2,
+                  "immune": [],
+                  "pattern": "shotgun"
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 11.5,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 800,
+              "modifiers": [
+                {
+                  "stat": "attackPattern",
+                  "value": 0.3,
+                  "duration": 4.5,
+                  "immune": [],
+                  "pattern": "shotgun"
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 11.2,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 800,
+              "modifiers": [
+                {
+                  "stat": "attackPattern",
+                  "value": 0.31,
+                  "duration": 4.8,
+                  "immune": [],
+                  "pattern": "shotgun"
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 10.9,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 800,
+              "modifiers": [
+                {
+                  "stat": "attackPattern",
+                  "value": 0.32,
+                  "duration": 5.1,
+                  "immune": [],
+                  "pattern": "shotgun"
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 10.6,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 800,
+              "modifiers": [
+                {
+                  "stat": "attackPattern",
+                  "value": 0.33,
+                  "duration": 5.4,
+                  "immune": [],
+                  "pattern": "shotgun"
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 10.3,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 800,
+              "modifiers": [
+                {
+                  "stat": "attackPattern",
+                  "value": 0.34,
+                  "duration": 5.7,
+                  "immune": [],
+                  "pattern": "shotgun"
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "m1:cannon",
       "name": "設置砲台",
-      "description": "在身旁設置固定砲台，以額外火力協助攻擊射程內的敵人。",
+      "description": "部署兩座砲台協同攻擊，持續期間可受擊與摧毀。",
       "status": "active",
       "provenance": "m1-design",
-      "effect": "turret",
+      "effect": "program",
       "power": 0.8,
-      "duration": 8,
-      "cooldown": 16,
-      "color": "#f3d691"
+      "duration": 3.0,
+      "cooldown": 15.0,
+      "color": "#f3d691",
+      "sourceSkill": 87,
+      "fidelity": "description",
+      "actions": [
+        {
+          "kind": "summon",
+          "summon": "turret",
+          "power": 0.5,
+          "count": 2,
+          "duration": 3.0,
+          "delay": 0.0,
+          "bypassEvasion": false,
+          "suppressCritical": false
+        }
+      ],
+      "levels": [
+        {
+          "cooldown": 14.7,
+          "actions": [
+            {
+              "kind": "summon",
+              "summon": "turret",
+              "power": 0.5,
+              "count": 2,
+              "duration": 3.3,
+              "delay": 0.0,
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 14.4,
+          "actions": [
+            {
+              "kind": "summon",
+              "summon": "turret",
+              "power": 0.5,
+              "count": 2,
+              "duration": 3.6,
+              "delay": 0.0,
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 14.1,
+          "actions": [
+            {
+              "kind": "summon",
+              "summon": "turret",
+              "power": 0.5,
+              "count": 2,
+              "duration": 3.9,
+              "delay": 0.0,
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 13.8,
+          "actions": [
+            {
+              "kind": "summon",
+              "summon": "turret",
+              "power": 0.5,
+              "count": 2,
+              "duration": 4.2,
+              "delay": 0.0,
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 13.5,
+          "actions": [
+            {
+              "kind": "summon",
+              "summon": "turret",
+              "power": 0.5,
+              "count": 2,
+              "duration": 4.5,
+              "delay": 0.0,
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 13.2,
+          "actions": [
+            {
+              "kind": "summon",
+              "summon": "turret",
+              "power": 0.5,
+              "count": 2,
+              "duration": 4.8,
+              "delay": 0.0,
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 12.9,
+          "actions": [
+            {
+              "kind": "summon",
+              "summon": "turret",
+              "power": 0.5,
+              "count": 2,
+              "duration": 5.1,
+              "delay": 0.0,
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 12.6,
+          "actions": [
+            {
+              "kind": "summon",
+              "summon": "turret",
+              "power": 0.5,
+              "count": 2,
+              "duration": 5.4,
+              "delay": 0.0,
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 12.3,
+          "actions": [
+            {
+              "kind": "summon",
+              "summon": "turret",
+              "power": 0.5,
+              "count": 2,
+              "duration": 5.7,
+              "delay": 0.0,
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "m1:armor",
       "name": "防禦增幅",
-      "description": "暫時提高自己的防禦，適合承受連續火力時使用。",
+      "description": "提高自身防禦，承受敵方連續火力。",
       "status": "active",
       "provenance": "m1-design",
-      "effect": "fortify",
+      "effect": "program",
       "power": 1.8,
-      "duration": 6,
-      "cooldown": 12,
-      "color": "#f69781"
+      "duration": 3.0,
+      "cooldown": 11.0,
+      "color": "#f69781",
+      "sourceSkill": 48,
+      "fidelity": "description",
+      "actions": [
+        {
+          "kind": "status",
+          "target": "self",
+          "radius": 50,
+          "modifiers": [
+            {
+              "stat": "defense",
+              "value": 2.2,
+              "duration": 3.0,
+              "immune": []
+            }
+          ],
+          "bypassEvasion": false,
+          "suppressCritical": false
+        }
+      ],
+      "levels": [
+        {
+          "cooldown": 10.7,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 50,
+              "modifiers": [
+                {
+                  "stat": "defense",
+                  "value": 2.3,
+                  "duration": 3.3,
+                  "immune": []
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 10.4,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 50,
+              "modifiers": [
+                {
+                  "stat": "defense",
+                  "value": 2.4,
+                  "duration": 3.6,
+                  "immune": []
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 10.1,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 50,
+              "modifiers": [
+                {
+                  "stat": "defense",
+                  "value": 2.5,
+                  "duration": 3.9,
+                  "immune": []
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 9.8,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 50,
+              "modifiers": [
+                {
+                  "stat": "defense",
+                  "value": 2.6,
+                  "duration": 4.2,
+                  "immune": []
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 9.5,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 50,
+              "modifiers": [
+                {
+                  "stat": "defense",
+                  "value": 2.7,
+                  "duration": 4.5,
+                  "immune": []
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 9.2,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 50,
+              "modifiers": [
+                {
+                  "stat": "defense",
+                  "value": 2.8,
+                  "duration": 4.8,
+                  "immune": []
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 8.9,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 50,
+              "modifiers": [
+                {
+                  "stat": "defense",
+                  "value": 2.9,
+                  "duration": 5.1,
+                  "immune": []
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 8.6,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 50,
+              "modifiers": [
+                {
+                  "stat": "defense",
+                  "value": 3.0,
+                  "duration": 5.4,
+                  "immune": []
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 8.3,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 50,
+              "modifiers": [
+                {
+                  "stat": "defense",
+                  "value": 3.1,
+                  "duration": 5.7,
+                  "immune": []
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "m1:critical",
       "name": "臨界加速",
-      "description": "暫時加快自己的普通攻擊節奏，用於集中輸出。",
+      "description": "同時提高自身攻速與暴擊率。",
       "status": "active",
       "provenance": "m1-design",
-      "effect": "accelerate",
+      "effect": "program",
       "power": 1.8,
-      "duration": 5,
-      "cooldown": 14,
-      "color": "#d9b4ff"
+      "duration": 3.0,
+      "cooldown": 12.0,
+      "color": "#d9b4ff",
+      "sourceSkill": 11,
+      "fidelity": "description",
+      "actions": [
+        {
+          "kind": "status",
+          "target": "self",
+          "radius": 800,
+          "modifiers": [
+            {
+              "stat": "attackSpeed",
+              "value": 1.4,
+              "duration": 3.0,
+              "immune": []
+            },
+            {
+              "stat": "critical",
+              "value": 1.4,
+              "duration": 3.0,
+              "immune": []
+            }
+          ],
+          "bypassEvasion": false,
+          "suppressCritical": false
+        }
+      ],
+      "levels": [
+        {
+          "cooldown": 11.7,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 800,
+              "modifiers": [
+                {
+                  "stat": "attackSpeed",
+                  "value": 1.44,
+                  "duration": 3.3,
+                  "immune": []
+                },
+                {
+                  "stat": "critical",
+                  "value": 1.43,
+                  "duration": 3.3,
+                  "immune": []
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 11.4,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 800,
+              "modifiers": [
+                {
+                  "stat": "attackSpeed",
+                  "value": 1.48,
+                  "duration": 3.6,
+                  "immune": []
+                },
+                {
+                  "stat": "critical",
+                  "value": 1.46,
+                  "duration": 3.6,
+                  "immune": []
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 11.1,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 800,
+              "modifiers": [
+                {
+                  "stat": "attackSpeed",
+                  "value": 1.52,
+                  "duration": 3.9,
+                  "immune": []
+                },
+                {
+                  "stat": "critical",
+                  "value": 1.49,
+                  "duration": 3.9,
+                  "immune": []
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 10.8,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 800,
+              "modifiers": [
+                {
+                  "stat": "attackSpeed",
+                  "value": 1.56,
+                  "duration": 4.2,
+                  "immune": []
+                },
+                {
+                  "stat": "critical",
+                  "value": 1.52,
+                  "duration": 4.2,
+                  "immune": []
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 10.5,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 800,
+              "modifiers": [
+                {
+                  "stat": "attackSpeed",
+                  "value": 1.6,
+                  "duration": 4.5,
+                  "immune": []
+                },
+                {
+                  "stat": "critical",
+                  "value": 1.55,
+                  "duration": 4.5,
+                  "immune": []
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 10.2,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 800,
+              "modifiers": [
+                {
+                  "stat": "attackSpeed",
+                  "value": 1.64,
+                  "duration": 4.8,
+                  "immune": []
+                },
+                {
+                  "stat": "critical",
+                  "value": 1.58,
+                  "duration": 4.8,
+                  "immune": []
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 9.9,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 800,
+              "modifiers": [
+                {
+                  "stat": "attackSpeed",
+                  "value": 1.68,
+                  "duration": 5.1,
+                  "immune": []
+                },
+                {
+                  "stat": "critical",
+                  "value": 1.61,
+                  "duration": 5.1,
+                  "immune": []
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 9.6,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 800,
+              "modifiers": [
+                {
+                  "stat": "attackSpeed",
+                  "value": 1.72,
+                  "duration": 5.4,
+                  "immune": []
+                },
+                {
+                  "stat": "critical",
+                  "value": 1.64,
+                  "duration": 5.4,
+                  "immune": []
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 9.3,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "self",
+              "radius": 800,
+              "modifiers": [
+                {
+                  "stat": "attackSpeed",
+                  "value": 1.76,
+                  "duration": 5.7,
+                  "immune": []
+                },
+                {
+                  "stat": "critical",
+                  "value": 1.67,
+                  "duration": 5.7,
+                  "immune": []
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "m1:eclipse",
       "name": "月蝕封鎖",
-      "description": "削弱目前場上所有敵人的攻擊，適合應對密集彈幕。",
+      "description": "削弱範圍內敵人的攻擊與暴擊率。",
       "status": "active",
       "provenance": "m1-design",
-      "effect": "weaken",
+      "effect": "program",
       "power": 0.5,
-      "duration": 6,
-      "cooldown": 14,
-      "color": "#adb8ef"
+      "duration": 3.0,
+      "cooldown": 14.0,
+      "color": "#adb8ef",
+      "sourceSkill": 90,
+      "fidelity": "description",
+      "actions": [
+        {
+          "kind": "status",
+          "target": "enemies",
+          "radius": 850,
+          "modifiers": [
+            {
+              "stat": "attack",
+              "value": 0.77,
+              "duration": 3.0,
+              "immune": []
+            },
+            {
+              "stat": "critical",
+              "value": 0.77,
+              "duration": 3.0,
+              "immune": []
+            }
+          ],
+          "bypassEvasion": false,
+          "suppressCritical": false
+        }
+      ],
+      "levels": [
+        {
+          "cooldown": 13.7,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "enemies",
+              "radius": 880,
+              "modifiers": [
+                {
+                  "stat": "attack",
+                  "value": 0.75,
+                  "duration": 3.2,
+                  "immune": []
+                },
+                {
+                  "stat": "critical",
+                  "value": 0.75,
+                  "duration": 3.2,
+                  "immune": []
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 13.4,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "enemies",
+              "radius": 910,
+              "modifiers": [
+                {
+                  "stat": "attack",
+                  "value": 0.73,
+                  "duration": 3.4,
+                  "immune": []
+                },
+                {
+                  "stat": "critical",
+                  "value": 0.73,
+                  "duration": 3.4,
+                  "immune": []
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 13.1,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "enemies",
+              "radius": 940,
+              "modifiers": [
+                {
+                  "stat": "attack",
+                  "value": 0.71,
+                  "duration": 3.6,
+                  "immune": []
+                },
+                {
+                  "stat": "critical",
+                  "value": 0.71,
+                  "duration": 3.6,
+                  "immune": []
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 12.8,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "enemies",
+              "radius": 970,
+              "modifiers": [
+                {
+                  "stat": "attack",
+                  "value": 0.69,
+                  "duration": 3.8,
+                  "immune": []
+                },
+                {
+                  "stat": "critical",
+                  "value": 0.69,
+                  "duration": 3.8,
+                  "immune": []
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 12.5,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "enemies",
+              "radius": 1000,
+              "modifiers": [
+                {
+                  "stat": "attack",
+                  "value": 0.67,
+                  "duration": 4.0,
+                  "immune": []
+                },
+                {
+                  "stat": "critical",
+                  "value": 0.67,
+                  "duration": 4.0,
+                  "immune": []
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 12.2,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "enemies",
+              "radius": 1030,
+              "modifiers": [
+                {
+                  "stat": "attack",
+                  "value": 0.65,
+                  "duration": 4.2,
+                  "immune": []
+                },
+                {
+                  "stat": "critical",
+                  "value": 0.65,
+                  "duration": 4.2,
+                  "immune": []
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 11.9,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "enemies",
+              "radius": 1060,
+              "modifiers": [
+                {
+                  "stat": "attack",
+                  "value": 0.63,
+                  "duration": 4.4,
+                  "immune": []
+                },
+                {
+                  "stat": "critical",
+                  "value": 0.63,
+                  "duration": 4.4,
+                  "immune": []
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 11.6,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "enemies",
+              "radius": 1090,
+              "modifiers": [
+                {
+                  "stat": "attack",
+                  "value": 0.61,
+                  "duration": 4.6,
+                  "immune": []
+                },
+                {
+                  "stat": "critical",
+                  "value": 0.61,
+                  "duration": 4.6,
+                  "immune": []
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        },
+        {
+          "cooldown": 11.3,
+          "actions": [
+            {
+              "kind": "status",
+              "target": "enemies",
+              "radius": 1120,
+              "modifiers": [
+                {
+                  "stat": "attack",
+                  "value": 0.59,
+                  "duration": 4.8,
+                  "immune": []
+                },
+                {
+                  "stat": "critical",
+                  "value": 0.59,
+                  "duration": 4.8,
+                  "immune": []
+                }
+              ],
+              "bypassEvasion": false,
+              "suppressCritical": false
+            }
+          ]
+        }
+      ]
     }
   ],
   "enemies": [

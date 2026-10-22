@@ -1,0 +1,1827 @@
+{
+  "format": "art-only-integration-map-not-runtime-content-pack",
+  "coreVersionObserved": "0.7.0",
+  "reviewStatus": "awaiting-user-review",
+  "scope": "10-new-art-characters-and-1-existing-jupiter-media-update",
+  "characters": [
+    {
+      "artCharacterId": "stellaart:character.arcturus",
+      "name": "大角星",
+      "provisionalName": false,
+      "changeKind": "new-character",
+      "gameCharacterId": null,
+      "proposedContentId": "future:arcturus",
+      "originalKey": "Arcturus",
+      "originalCidRow": 29,
+      "sourceBaseStars": 4,
+      "sourceStarsNote": "附件來源metadata，不修改遊戲稀有度、技能或數值。",
+      "portrait": {
+        "assetId": "stellaart:asset.arcturus-portrait-20261023-web",
+        "characterId": "stellaart:character.arcturus",
+        "path": "web/arcturus.webp",
+        "preview": "web/arcturus.webp",
+        "sha256": "89abe1d569e90a3c3d30f1ea712db8e99dc2db1853ef95eda962a8388cb753ba",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "af62aa4b006c1e8d95b89b3e95849717904b2bbcb99d3196ba1d8e9c50e155cb",
+        "sourceOriginalVersion": "v1-initial-style-original-pose",
+        "sourceAssetSha256": "af62aa4b006c1e8d95b89b3e95849717904b2bbcb99d3196ba1d8e9c50e155cb",
+        "sourcePath": "standards/arcturus.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.50390625,
+          "y": 0.9930555555555556
+        },
+        "safeArea": {
+          "bodyBounds": [
+            11,
+            13,
+            763,
+            1144
+          ],
+          "marginPx": [
+            11,
+            13,
+            5,
+            8
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.arcturus-avatar-20261023-web",
+        "characterId": "stellaart:character.arcturus",
+        "path": "avatars/arcturus.webp",
+        "preview": "avatars/arcturus.webp",
+        "sha256": "1f9ae2a2a6a21ee76e7934603f879187957e947b3c507f43a395366cc4df3c72",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "af62aa4b006c1e8d95b89b3e95849717904b2bbcb99d3196ba1d8e9c50e155cb",
+        "sourceOriginalVersion": "v1-initial-style-original-pose",
+        "sourceAssetSha256": "af62aa4b006c1e8d95b89b3e95849717904b2bbcb99d3196ba1d8e9c50e155cb",
+        "sourcePath": "standards/arcturus.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              280,
+              0,
+              400,
+              400
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            11,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            11,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.arcturus-battle-20261023-v1-web",
+        "characterId": "stellaart:character.arcturus",
+        "path": "web/arcturus-battle.webp",
+        "preview": "web/arcturus-battle.webp",
+        "sha256": "0339f0188c4f8a841c58f57a94a44525c3d3f57320634b3bf4138cd6138a674c",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "af62aa4b006c1e8d95b89b3e95849717904b2bbcb99d3196ba1d8e9c50e155cb",
+        "sourceOriginalVersion": "v1-initial-style-original-pose",
+        "sourceAssetSha256": "ba98d4e1e41c639af961c76b4e3e6dcd18abdf69611861718bfb1814a5c724b7",
+        "sourcePath": "battle/arcturus-v1-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 119.03506097560972,
+            "y": 82,
+            "scale": 0.6554878048780488
+          }
+        },
+        "pivot": {
+          "x": 0.5009765625,
+          "y": 0.9111328125
+        },
+        "safeArea": {
+          "bodyBounds": [
+            130,
+            97,
+            896,
+            933
+          ],
+          "marginPx": [
+            130,
+            97,
+            128,
+            91
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "runtimeCharacterDefinition": null
+    },
+    {
+      "artCharacterId": "stellaart:character.gliese",
+      "name": "格利澤",
+      "provisionalName": false,
+      "changeKind": "new-character",
+      "gameCharacterId": null,
+      "proposedContentId": "future:gliese",
+      "originalKey": "Gliese",
+      "originalCidRow": 25,
+      "sourceBaseStars": 2,
+      "sourceStarsNote": "附件來源metadata，不修改遊戲稀有度、技能或數值。",
+      "portrait": {
+        "assetId": "stellaart:asset.gliese-portrait-20261023-web",
+        "characterId": "stellaart:character.gliese",
+        "path": "web/gliese.webp",
+        "preview": "web/gliese.webp",
+        "sha256": "8ae10f988d019f0027aeaf648664a99438c537947b750d48ebf0748c626101be",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "2091255bb24105b659f2a56bbd444ef729da573b8dc16a14cb57f9ec7e3448c9",
+        "sourceOriginalVersion": "v1-initial-style-original-pose",
+        "sourceAssetSha256": "2091255bb24105b659f2a56bbd444ef729da573b8dc16a14cb57f9ec7e3448c9",
+        "sourcePath": "standards/gliese.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.49609375,
+          "y": 0.9913194444444444
+        },
+        "safeArea": {
+          "bodyBounds": [
+            29,
+            8,
+            733,
+            1142
+          ],
+          "marginPx": [
+            29,
+            8,
+            35,
+            10
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.gliese-avatar-20261023-web",
+        "characterId": "stellaart:character.gliese",
+        "path": "avatars/gliese.webp",
+        "preview": "avatars/gliese.webp",
+        "sha256": "e2261394380f538b21f463e590369945362054f9e6983b3e4ad3a8d36d072651",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "2091255bb24105b659f2a56bbd444ef729da573b8dc16a14cb57f9ec7e3448c9",
+        "sourceOriginalVersion": "v1-initial-style-original-pose",
+        "sourceAssetSha256": "2091255bb24105b659f2a56bbd444ef729da573b8dc16a14cb57f9ec7e3448c9",
+        "sourcePath": "standards/gliese.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              320,
+              0,
+              400,
+              400
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            7,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            7,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.gliese-battle-20261023-v1-web",
+        "characterId": "stellaart:character.gliese",
+        "path": "web/gliese-battle.webp",
+        "preview": "web/gliese-battle.webp",
+        "sha256": "b80fd6ff600ee070fc16c240b7a074bb50979bca7eafa6578e2eed235f3db469",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "2091255bb24105b659f2a56bbd444ef729da573b8dc16a14cb57f9ec7e3448c9",
+        "sourceOriginalVersion": "v1-initial-style-original-pose",
+        "sourceAssetSha256": "9943373149c206e6fd8a11eb75d1c8d0b0aafb4a3b971ca12528770ebeb5db9c",
+        "sourcePath": "battle/gliese-v1-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 103.71717171717177,
+            "y": 82.00000000000006,
+            "scale": 0.6682206682206682
+          }
+        },
+        "pivot": {
+          "x": 0.5048828125,
+          "y": 0.9140625
+        },
+        "safeArea": {
+          "bodyBounds": [
+            117,
+            99,
+            917,
+            936
+          ],
+          "marginPx": [
+            117,
+            99,
+            107,
+            88
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "runtimeCharacterDefinition": null
+    },
+    {
+      "artCharacterId": "stellaart:character.vello",
+      "name": "維洛",
+      "provisionalName": true,
+      "changeKind": "new-character",
+      "gameCharacterId": null,
+      "proposedContentId": "future:vello",
+      "originalKey": "Vello",
+      "originalCidRow": 31,
+      "sourceBaseStars": 2,
+      "sourceStarsNote": "附件來源metadata，不修改遊戲稀有度、技能或數值。",
+      "portrait": {
+        "assetId": "stellaart:asset.vello-portrait-20261023-web",
+        "characterId": "stellaart:character.vello",
+        "path": "web/vello.webp",
+        "preview": "web/vello.webp",
+        "sha256": "653859afadac6d599326877897b8d171738b00ff856913bf37e0d194df0701f9",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "d7deb03c094250cae464b93a89c055a43cdcf97fd2efa75a2a77de41ee080780",
+        "sourceOriginalVersion": "v1-initial-style-original-pose",
+        "sourceAssetSha256": "d7deb03c094250cae464b93a89c055a43cdcf97fd2efa75a2a77de41ee080780",
+        "sourcePath": "standards/vello.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.5618489583333334,
+          "y": 0.9904513888888888
+        },
+        "safeArea": {
+          "bodyBounds": [
+            99,
+            2,
+            764,
+            1141
+          ],
+          "marginPx": [
+            99,
+            2,
+            4,
+            11
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.vello-avatar-20261023-web",
+        "characterId": "stellaart:character.vello",
+        "path": "avatars/vello.webp",
+        "preview": "avatars/vello.webp",
+        "sha256": "2698dd7b34d6c212f3c44598218a2024b61899aec6760b9a64187b83f522e26b",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "d7deb03c094250cae464b93a89c055a43cdcf97fd2efa75a2a77de41ee080780",
+        "sourceOriginalVersion": "v1-initial-style-original-pose",
+        "sourceAssetSha256": "d7deb03c094250cae464b93a89c055a43cdcf97fd2efa75a2a77de41ee080780",
+        "sourcePath": "standards/vello.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              240,
+              0,
+              400,
+              400
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            1,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.vello-battle-20261023-v1-web",
+        "characterId": "stellaart:character.vello",
+        "path": "web/vello-battle.webp",
+        "preview": "web/vello-battle.webp",
+        "sha256": "8e6b069925aeaee54198b33edee6c7c900d824d70d1ba700003415069631e850",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "d7deb03c094250cae464b93a89c055a43cdcf97fd2efa75a2a77de41ee080780",
+        "sourceOriginalVersion": "v1-initial-style-original-pose",
+        "sourceAssetSha256": "0cf661157f3e6bbabb3825e9b8b623c51e3db28fd11543ca9eddd0a6c2844952",
+        "sourcePath": "battle/vello-v1-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 101.75856697819319,
+            "y": 82,
+            "scale": 0.6697819314641744
+          }
+        },
+        "pivot": {
+          "x": 0.537109375,
+          "y": 0.9169921875
+        },
+        "safeArea": {
+          "bodyBounds": [
+            179,
+            86,
+            921,
+            939
+          ],
+          "marginPx": [
+            179,
+            86,
+            103,
+            85
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "runtimeCharacterDefinition": null
+    },
+    {
+      "artCharacterId": "stellaart:character.e581",
+      "name": "格利澤581e",
+      "provisionalName": false,
+      "changeKind": "new-character",
+      "gameCharacterId": null,
+      "proposedContentId": "future:star-581e",
+      "originalKey": "581E",
+      "originalCidRow": 26,
+      "sourceBaseStars": 2,
+      "sourceStarsNote": "附件來源metadata，不修改遊戲稀有度、技能或數值。",
+      "portrait": {
+        "assetId": "stellaart:asset.e581-portrait-20261023-web",
+        "characterId": "stellaart:character.e581",
+        "path": "web/e581.webp",
+        "preview": "web/e581.webp",
+        "sha256": "ede95d1192ef6159fe3576fff9f4aa0a01794e0c766aecf7aa63d0a48cdcabc5",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "1d4217e3efcf7ba4e3c6b1ef55f0a264335a0566383fe5503a11b657058dcc82",
+        "sourceOriginalVersion": "v2-complete-frame",
+        "sourceAssetSha256": "1d4217e3efcf7ba4e3c6b1ef55f0a264335a0566383fe5503a11b657058dcc82",
+        "sourcePath": "standards/e581.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.5091145833333334,
+          "y": 0.984375
+        },
+        "safeArea": {
+          "bodyBounds": [
+            24,
+            17,
+            758,
+            1134
+          ],
+          "marginPx": [
+            24,
+            17,
+            10,
+            18
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.e581-avatar-20261023-web",
+        "characterId": "stellaart:character.e581",
+        "path": "avatars/e581.webp",
+        "preview": "avatars/e581.webp",
+        "sha256": "997e979c3b3515d4110c93922f5b269c13ab8b302a91b27c16ff8697f0d129a2",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "1d4217e3efcf7ba4e3c6b1ef55f0a264335a0566383fe5503a11b657058dcc82",
+        "sourceOriginalVersion": "v2-complete-frame",
+        "sourceAssetSha256": "1d4217e3efcf7ba4e3c6b1ef55f0a264335a0566383fe5503a11b657058dcc82",
+        "sourcePath": "standards/e581.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              320,
+              0,
+              400,
+              400
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            14,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            14,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.e581-battle-20261023-v1-web",
+        "characterId": "stellaart:character.e581",
+        "path": "web/e581-battle.webp",
+        "preview": "web/e581-battle.webp",
+        "sha256": "7247589b91d167df00e2cd8201a3ceaf91cff406540b534611a31c1cf97085f2",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "1d4217e3efcf7ba4e3c6b1ef55f0a264335a0566383fe5503a11b657058dcc82",
+        "sourceOriginalVersion": "v2-complete-frame",
+        "sourceAssetSha256": "0cdecfc22d189a014c8856064d6aea3dbd78efcf8af35a19fe96126ef1c87e92",
+        "sourcePath": "battle/e581-v1-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 101.10366328916604,
+            "y": 82,
+            "scale": 0.6703039750584567
+          }
+        },
+        "pivot": {
+          "x": 0.50732421875,
+          "y": 0.9169921875
+        },
+        "safeArea": {
+          "bodyBounds": [
+            121,
+            91,
+            918,
+            939
+          ],
+          "marginPx": [
+            121,
+            91,
+            106,
+            85
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "runtimeCharacterDefinition": null
+    },
+    {
+      "artCharacterId": "stellaart:character.valencia",
+      "name": "瓦倫西亞",
+      "provisionalName": true,
+      "changeKind": "new-character",
+      "gameCharacterId": null,
+      "proposedContentId": "future:valencia",
+      "originalKey": "Valencia",
+      "originalCidRow": 30,
+      "sourceBaseStars": 2,
+      "sourceStarsNote": "附件來源metadata，不修改遊戲稀有度、技能或數值。",
+      "portrait": {
+        "assetId": "stellaart:asset.valencia-portrait-20261023-web",
+        "characterId": "stellaart:character.valencia",
+        "path": "web/valencia.webp",
+        "preview": "web/valencia.webp",
+        "sha256": "3c3142ffcebee398e1eebd018692c690024be7d533f5f36eae3bf9a31f460336",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "e3213570e5aea0cfd73d4f0b3469211efedcd35ca94dacfeab8633fdc53af93b",
+        "sourceOriginalVersion": "v1-initial-style-original-pose",
+        "sourceAssetSha256": "e3213570e5aea0cfd73d4f0b3469211efedcd35ca94dacfeab8633fdc53af93b",
+        "sourcePath": "standards/valencia.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.4986979166666667,
+          "y": 0.9904513888888888
+        },
+        "safeArea": {
+          "bodyBounds": [
+            10,
+            7,
+            756,
+            1141
+          ],
+          "marginPx": [
+            10,
+            7,
+            12,
+            11
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.valencia-avatar-20261023-web",
+        "characterId": "stellaart:character.valencia",
+        "path": "avatars/valencia.webp",
+        "preview": "avatars/valencia.webp",
+        "sha256": "1e2f578903cbef32631fa1546447b4040f98dcda29c55da16890731eb88d45d6",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "e3213570e5aea0cfd73d4f0b3469211efedcd35ca94dacfeab8633fdc53af93b",
+        "sourceOriginalVersion": "v1-initial-style-original-pose",
+        "sourceAssetSha256": "e3213570e5aea0cfd73d4f0b3469211efedcd35ca94dacfeab8633fdc53af93b",
+        "sourcePath": "standards/valencia.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              340,
+              0,
+              340,
+              340
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            7,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            7,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.valencia-battle-20261023-v1-web",
+        "characterId": "stellaart:character.valencia",
+        "path": "web/valencia-battle.webp",
+        "preview": "web/valencia-battle.webp",
+        "sha256": "7ee9fd914d16967e3e0975a0c8b2d14472a9616c8a0b3de1c05039502511651b",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "e3213570e5aea0cfd73d4f0b3469211efedcd35ca94dacfeab8633fdc53af93b",
+        "sourceOriginalVersion": "v1-initial-style-original-pose",
+        "sourceAssetSha256": "50a5744cbcf3d0e61c2e94f9addcfa718ce4d1a2b91e02e14aae275484bdbeb9",
+        "sourcePath": "battle/valencia-v1-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 103.06531881804045,
+            "y": 82,
+            "scale": 0.6687402799377916
+          }
+        },
+        "pivot": {
+          "x": 0.5009765625,
+          "y": 0.916015625
+        },
+        "safeArea": {
+          "bodyBounds": [
+            109,
+            88,
+            917,
+            938
+          ],
+          "marginPx": [
+            109,
+            88,
+            107,
+            86
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "runtimeCharacterDefinition": null
+    },
+    {
+      "artCharacterId": "stellaart:character.linda",
+      "name": "琳達",
+      "provisionalName": true,
+      "changeKind": "new-character",
+      "gameCharacterId": null,
+      "proposedContentId": "future:linda",
+      "originalKey": "Linda",
+      "originalCidRow": 32,
+      "sourceBaseStars": 2,
+      "sourceStarsNote": "附件來源metadata，不修改遊戲稀有度、技能或數值。",
+      "portrait": {
+        "assetId": "stellaart:asset.linda-portrait-20261023-web",
+        "characterId": "stellaart:character.linda",
+        "path": "web/linda.webp",
+        "preview": "web/linda.webp",
+        "sha256": "1dd59faba7f436e005fcc805e85ae737965bd6010fe0252c4239104764387338",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "d7971022a8d2c31d53fabb7486e323a8bed47f6639458d53e316469a7c7c7941",
+        "sourceOriginalVersion": "v1-initial-style-original-pose",
+        "sourceAssetSha256": "d7971022a8d2c31d53fabb7486e323a8bed47f6639458d53e316469a7c7c7941",
+        "sourcePath": "standards/linda.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.5188802083333334,
+          "y": 0.9939236111111112
+        },
+        "safeArea": {
+          "bodyBounds": [
+            70,
+            4,
+            727,
+            1145
+          ],
+          "marginPx": [
+            70,
+            4,
+            41,
+            7
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.linda-avatar-20261023-web",
+        "characterId": "stellaart:character.linda",
+        "path": "avatars/linda.webp",
+        "preview": "avatars/linda.webp",
+        "sha256": "79c5f7f8922776dbef50f3141ed3481001de620085d6bbcf451e2ad202b42703",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "d7971022a8d2c31d53fabb7486e323a8bed47f6639458d53e316469a7c7c7941",
+        "sourceOriginalVersion": "v1-initial-style-original-pose",
+        "sourceAssetSha256": "d7971022a8d2c31d53fabb7486e323a8bed47f6639458d53e316469a7c7c7941",
+        "sourcePath": "standards/linda.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              330,
+              0,
+              340,
+              340
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            4,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            4,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.linda-battle-20261023-v1-web",
+        "characterId": "stellaart:character.linda",
+        "path": "web/linda-battle.webp",
+        "preview": "web/linda-battle.webp",
+        "sha256": "d671f83589e3b82c6f42b1538b3e93a17ccd503a7c12b821da3006ac4ab5406b",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "d7971022a8d2c31d53fabb7486e323a8bed47f6639458d53e316469a7c7c7941",
+        "sourceOriginalVersion": "v1-initial-style-original-pose",
+        "sourceAssetSha256": "891d1d6934a46aad167657561c65f61d004d8e32831c41314b3644765968a23b",
+        "sourcePath": "battle/linda-v1-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 109.53858024691363,
+            "y": 82.00000000000006,
+            "scale": 0.6635802469135802
+          }
+        },
+        "pivot": {
+          "x": 0.52880859375,
+          "y": 0.9169921875
+        },
+        "safeArea": {
+          "bodyBounds": [
+            179,
+            95,
+            904,
+            939
+          ],
+          "marginPx": [
+            179,
+            95,
+            120,
+            85
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "runtimeCharacterDefinition": null
+    },
+    {
+      "artCharacterId": "stellaart:character.izar",
+      "name": "伊扎爾",
+      "provisionalName": true,
+      "changeKind": "new-character",
+      "gameCharacterId": null,
+      "proposedContentId": "future:izar",
+      "originalKey": "Izar",
+      "originalCidRow": 33,
+      "sourceBaseStars": 3,
+      "sourceStarsNote": "附件來源metadata，不修改遊戲稀有度、技能或數值。",
+      "portrait": {
+        "assetId": "stellaart:asset.izar-portrait-20261023-web",
+        "characterId": "stellaart:character.izar",
+        "path": "web/izar.webp",
+        "preview": "web/izar.webp",
+        "sha256": "a6599e3047f65aff7e600fefd58cf4fee193e79816c5a5dcdfee727b866421cb",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "13482e3914ef43f7193c711f8cd986937fa6d133abcc1500c32b58bdbc2c1922",
+        "sourceOriginalVersion": "v2-soft-layered-short-hair-no-mole",
+        "sourceAssetSha256": "13482e3914ef43f7193c711f8cd986937fa6d133abcc1500c32b58bdbc2c1922",
+        "sourcePath": "standards/izar.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.5221354166666666,
+          "y": 0.9921875
+        },
+        "safeArea": {
+          "bodyBounds": [
+            38,
+            13,
+            764,
+            1143
+          ],
+          "marginPx": [
+            38,
+            13,
+            4,
+            9
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.izar-avatar-20261023-web",
+        "characterId": "stellaart:character.izar",
+        "path": "avatars/izar.webp",
+        "preview": "avatars/izar.webp",
+        "sha256": "45401d1a4390ac0f5ef33d3eabb8a1d252a02af3a972ccfa3821ddee7c9422fa",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "13482e3914ef43f7193c711f8cd986937fa6d133abcc1500c32b58bdbc2c1922",
+        "sourceOriginalVersion": "v2-soft-layered-short-hair-no-mole",
+        "sourceAssetSha256": "13482e3914ef43f7193c711f8cd986937fa6d133abcc1500c32b58bdbc2c1922",
+        "sourcePath": "standards/izar.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              300,
+              0,
+              380,
+              380
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            11,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            11,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.izar-battle-20261023-v1-web",
+        "characterId": "stellaart:character.izar",
+        "path": "web/izar-battle.webp",
+        "preview": "web/izar-battle.webp",
+        "sha256": "c35005922894f4dec2dd8b37f0100b3270a4c65aaa740d7591cb2780608321a9",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "13482e3914ef43f7193c711f8cd986937fa6d133abcc1500c32b58bdbc2c1922",
+        "sourceOriginalVersion": "v2-soft-layered-short-hair-no-mole",
+        "sourceAssetSha256": "b8aed0e021b6efb11866c0c169de4b20ef3c6347e4a5c7b0e0cfd453aa409904",
+        "sourcePath": "battle/izar-v1-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 153.66666666666663,
+            "y": 81.99999999999994,
+            "scale": 0.6259097525473072
+          }
+        },
+        "pivot": {
+          "x": 0.51416015625,
+          "y": 0.91015625
+        },
+        "safeArea": {
+          "bodyBounds": [
+            190,
+            107,
+            863,
+            932
+          ],
+          "marginPx": [
+            190,
+            107,
+            161,
+            92
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "runtimeCharacterDefinition": null
+    },
+    {
+      "artCharacterId": "stellaart:character.seginus",
+      "name": "招搖",
+      "provisionalName": false,
+      "changeKind": "new-character",
+      "gameCharacterId": null,
+      "proposedContentId": "future:seginus",
+      "originalKey": "Seginus",
+      "originalCidRow": 27,
+      "sourceBaseStars": 3,
+      "sourceStarsNote": "附件來源metadata，不修改遊戲稀有度、技能或數值。",
+      "portrait": {
+        "assetId": "stellaart:asset.seginus-portrait-20261023-web",
+        "characterId": "stellaart:character.seginus",
+        "path": "web/seginus.webp",
+        "preview": "web/seginus.webp",
+        "sha256": "4f3a063044233fe127731de6ede1f60f4cd2314a622ec40ac2b897526b8f9928",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "6029ad7c644e882c1b29af38b32112df9b781a4c54143ff5a4317ac4087f3c9d",
+        "sourceOriginalVersion": "v1-initial-style-original-pose",
+        "sourceAssetSha256": "6029ad7c644e882c1b29af38b32112df9b781a4c54143ff5a4317ac4087f3c9d",
+        "sourcePath": "standards/seginus.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.5201822916666666,
+          "y": 0.9904513888888888
+        },
+        "safeArea": {
+          "bodyBounds": [
+            35,
+            12,
+            764,
+            1141
+          ],
+          "marginPx": [
+            35,
+            12,
+            4,
+            11
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.seginus-avatar-20261023-web",
+        "characterId": "stellaart:character.seginus",
+        "path": "avatars/seginus.webp",
+        "preview": "avatars/seginus.webp",
+        "sha256": "ac40f1021095e95eec171a0d8a6936aff1d3cfef5a652b917f7b4e1e4210bf30",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "6029ad7c644e882c1b29af38b32112df9b781a4c54143ff5a4317ac4087f3c9d",
+        "sourceOriginalVersion": "v1-initial-style-original-pose",
+        "sourceAssetSha256": "6029ad7c644e882c1b29af38b32112df9b781a4c54143ff5a4317ac4087f3c9d",
+        "sourcePath": "standards/seginus.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              370,
+              0,
+              300,
+              300
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            14,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            14,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.seginus-battle-20261023-v1-web",
+        "characterId": "stellaart:character.seginus",
+        "path": "web/seginus-battle.webp",
+        "preview": "web/seginus-battle.webp",
+        "sha256": "0408a577822752ce06c2a75027359806f0deb014d539004a8035763f2261e2e8",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "6029ad7c644e882c1b29af38b32112df9b781a4c54143ff5a4317ac4087f3c9d",
+        "sourceOriginalVersion": "v1-initial-style-original-pose",
+        "sourceAssetSha256": "bd701e6c1e3ab460a47c74402adc669c0bced17ccba997825fa5bc7ff92a9027",
+        "sourcePath": "battle/seginus-v1-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 108.89575289575288,
+            "y": 82,
+            "scale": 0.6640926640926641
+          }
+        },
+        "pivot": {
+          "x": 0.51904296875,
+          "y": 0.9052734375
+        },
+        "safeArea": {
+          "bodyBounds": [
+            161,
+            104,
+            902,
+            927
+          ],
+          "marginPx": [
+            161,
+            104,
+            122,
+            97
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "runtimeCharacterDefinition": null
+    },
+    {
+      "artCharacterId": "stellaart:character.spica",
+      "name": "角宿一",
+      "provisionalName": false,
+      "changeKind": "new-character",
+      "gameCharacterId": null,
+      "proposedContentId": "future:spica",
+      "originalKey": "Spica",
+      "originalCidRow": 28,
+      "sourceBaseStars": 5,
+      "sourceStarsNote": "附件來源metadata，不修改遊戲稀有度、技能或數值。",
+      "portrait": {
+        "assetId": "stellaart:asset.spica-portrait-20261023-web",
+        "characterId": "stellaart:character.spica",
+        "path": "web/spica.webp",
+        "preview": "web/spica.webp",
+        "sha256": "7e104c8f861fba7bcc556d4b7a280712324f24ff4d6ced92fb2a66211e4aee0f",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "d3995e3023a9bf09db2c503b50165bb03c320a13898c4a77150404932b621a72",
+        "sourceOriginalVersion": "v1-initial-style-original-pose",
+        "sourceAssetSha256": "d3995e3023a9bf09db2c503b50165bb03c320a13898c4a77150404932b621a72",
+        "sourcePath": "standards/spica.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.5104166666666666,
+          "y": 0.9895833333333334
+        },
+        "safeArea": {
+          "bodyBounds": [
+            31,
+            9,
+            753,
+            1140
+          ],
+          "marginPx": [
+            31,
+            9,
+            15,
+            12
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.spica-avatar-20261023-web",
+        "characterId": "stellaart:character.spica",
+        "path": "avatars/spica.webp",
+        "preview": "avatars/spica.webp",
+        "sha256": "95d57968fc99366265d225f7914f7a4eb4cd466945f18d34fc1ee6dd0e0ea8c3",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "d3995e3023a9bf09db2c503b50165bb03c320a13898c4a77150404932b621a72",
+        "sourceOriginalVersion": "v1-initial-style-original-pose",
+        "sourceAssetSha256": "d3995e3023a9bf09db2c503b50165bb03c320a13898c4a77150404932b621a72",
+        "sourcePath": "standards/spica.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              310,
+              0,
+              330,
+              330
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            10,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            10,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.spica-battle-20261023-v1-web",
+        "characterId": "stellaart:character.spica",
+        "path": "web/spica-battle.webp",
+        "preview": "web/spica-battle.webp",
+        "sha256": "15a1e647750f24f0b387506a85342034a231acd88e76921a6de345b8577be662",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "d3995e3023a9bf09db2c503b50165bb03c320a13898c4a77150404932b621a72",
+        "sourceOriginalVersion": "v1-initial-style-original-pose",
+        "sourceAssetSha256": "29711db34962c0eb2451348328cb8fa397dfa4a6c621a05b82d3fa0df13e918e",
+        "sourcePath": "battle/spica-v1-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 101.75856697819319,
+            "y": 82,
+            "scale": 0.6697819314641744
+          }
+        },
+        "pivot": {
+          "x": 0.5087890625,
+          "y": 0.8984375
+        },
+        "safeArea": {
+          "bodyBounds": [
+            133,
+            107,
+            909,
+            920
+          ],
+          "marginPx": [
+            133,
+            107,
+            115,
+            104
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "runtimeCharacterDefinition": null
+    },
+    {
+      "artCharacterId": "stellaart:character.wolf359",
+      "name": "沃爾夫359",
+      "provisionalName": false,
+      "changeKind": "new-character",
+      "gameCharacterId": null,
+      "proposedContentId": "future:wolf359",
+      "originalKey": "Wolf359",
+      "originalCidRow": 37,
+      "sourceBaseStars": 3,
+      "sourceStarsNote": "附件來源metadata，不修改遊戲稀有度、技能或數值。",
+      "portrait": {
+        "assetId": "stellaart:asset.wolf359-portrait-20261023-web",
+        "characterId": "stellaart:character.wolf359",
+        "path": "web/wolf359.webp",
+        "preview": "web/wolf359.webp",
+        "sha256": "9203e9f2ef8127970563598b749769af5ae264cb519e985b3428c5bccbe57cd7",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "fe6ca82a9076d626d2b147d9393dc744e869824442c109a2c7c8fe736ebf5141",
+        "sourceOriginalVersion": "v1-initial-style-original-pose",
+        "sourceAssetSha256": "fe6ca82a9076d626d2b147d9393dc744e869824442c109a2c7c8fe736ebf5141",
+        "sourcePath": "standards/wolf359.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.478515625,
+          "y": 0.9930555555555556
+        },
+        "safeArea": {
+          "bodyBounds": [
+            59,
+            3,
+            676,
+            1144
+          ],
+          "marginPx": [
+            59,
+            3,
+            92,
+            8
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.wolf359-avatar-20261023-web",
+        "characterId": "stellaart:character.wolf359",
+        "path": "avatars/wolf359.webp",
+        "preview": "avatars/wolf359.webp",
+        "sha256": "6852bd27498daf0cc7f6719c6fe3d1f04026f32445ca501d2ae3c63579fa71a8",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "fe6ca82a9076d626d2b147d9393dc744e869824442c109a2c7c8fe736ebf5141",
+        "sourceOriginalVersion": "v1-initial-style-original-pose",
+        "sourceAssetSha256": "fe6ca82a9076d626d2b147d9393dc744e869824442c109a2c7c8fe736ebf5141",
+        "sourcePath": "standards/wolf359.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              330,
+              0,
+              440,
+              440
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            5,
+            2,
+            256,
+            256
+          ],
+          "marginPx": [
+            5,
+            2,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.wolf359-battle-20261023-v1-web",
+        "characterId": "stellaart:character.wolf359",
+        "path": "web/wolf359-battle.webp",
+        "preview": "web/wolf359-battle.webp",
+        "sha256": "6cc059e8a248bd7207d6af19110ac0db15cfea6ad365272300826787ae6cd646",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "fe6ca82a9076d626d2b147d9393dc744e869824442c109a2c7c8fe736ebf5141",
+        "sourceOriginalVersion": "v1-initial-style-original-pose",
+        "sourceAssetSha256": "67fa3f31703c6fb2142807c59105e9570eb49d9535609092ffeb0a91325a0458",
+        "sourcePath": "battle/wolf359-v1-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 225.33333333333331,
+            "y": 82,
+            "scale": 0.5598958333333334
+          }
+        },
+        "pivot": {
+          "x": 0.501953125,
+          "y": 0.91796875
+        },
+        "safeArea": {
+          "bodyBounds": [
+            253,
+            86,
+            775,
+            940
+          ],
+          "marginPx": [
+            253,
+            86,
+            249,
+            84
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "runtimeCharacterDefinition": null
+    },
+    {
+      "artCharacterId": "stellaart:character.jupiter",
+      "name": "木星",
+      "provisionalName": false,
+      "changeKind": "portrait-update",
+      "gameCharacterId": "solar10:character.jupiter",
+      "proposedContentId": null,
+      "originalKey": "Jupiter",
+      "originalCidRow": 6,
+      "sourceBaseStars": 5,
+      "sourceStarsNote": "附件來源metadata，不修改遊戲稀有度、技能或數值。",
+      "portrait": {
+        "assetId": "stellaart:asset.jupiter-portrait-20261023-web",
+        "characterId": "stellaart:character.jupiter",
+        "path": "web/jupiter.webp",
+        "preview": "web/jupiter.webp",
+        "sha256": "01e9ec9f6769ca26f2f677901480ec095f963821de16f32b5071e94cd4542321",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "a2006144e98685da301c9c3f8903bde7a11c26a87622cab4651d6672fd2e3ffe",
+        "sourceOriginalVersion": "v11-safe-seated-user-pose-direction",
+        "sourceAssetSha256": "a2006144e98685da301c9c3f8903bde7a11c26a87622cab4651d6672fd2e3ffe",
+        "sourcePath": "standards/jupiter.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.5045572916666666,
+          "y": 0.9869791666666666
+        },
+        "safeArea": {
+          "bodyBounds": [
+            9,
+            9,
+            766,
+            1137
+          ],
+          "marginPx": [
+            9,
+            9,
+            2,
+            15
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.jupiter-avatar-20261023-web",
+        "characterId": "stellaart:character.jupiter",
+        "path": "avatars/jupiter.webp",
+        "preview": "avatars/jupiter.webp",
+        "sha256": "21957eb5eef85a19f274ad6af21f411225e0f918253253a832947175cb331768",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "a2006144e98685da301c9c3f8903bde7a11c26a87622cab4651d6672fd2e3ffe",
+        "sourceOriginalVersion": "v11-safe-seated-user-pose-direction",
+        "sourceAssetSha256": "a2006144e98685da301c9c3f8903bde7a11c26a87622cab4651d6672fd2e3ffe",
+        "sourcePath": "standards/jupiter.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              350,
+              0,
+              340,
+              340
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            9,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            9,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.jupiter-battle-20261023-v1-web",
+        "characterId": "stellaart:character.jupiter",
+        "path": "web/jupiter-battle.webp",
+        "preview": "web/jupiter-battle.webp",
+        "sha256": "d22d1ba9024338d79d784fc5db179851f2f37945e705b330948d11b5dd076a00",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "a2006144e98685da301c9c3f8903bde7a11c26a87622cab4651d6672fd2e3ffe",
+        "sourceOriginalVersion": "v11-safe-seated-user-pose-direction",
+        "sourceAssetSha256": "d3c2fcfdbbeee443e5faef6a1e41d0c5ffbb26f91d0ec324e0fcf901752f33e2",
+        "sourcePath": "battle/jupiter-v1-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 100.44773790951638,
+            "y": 82,
+            "scale": 0.6708268330733229
+          }
+        },
+        "pivot": {
+          "x": 0.50244140625,
+          "y": 0.91015625
+        },
+        "safeArea": {
+          "bodyBounds": [
+            110,
+            106,
+            919,
+            932
+          ],
+          "marginPx": [
+            110,
+            106,
+            105,
+            92
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "runtimeCharacterDefinition": null,
+      "replacesMedia": {
+        "portrait": {
+          "assetId": "stellaart:asset.jupiter-portrait-web",
+          "sha256": "8858ba0e3a8ef72e5e859432e9fd456bbc63adfdf3806926efbcdb3629173263",
+          "sourcePath": "art/characters/stellar10/web/jupiter.webp"
+        },
+        "avatar": {
+          "assetId": "stellaart:asset.jupiter-avatar-web",
+          "sha256": "b472eb897c407153141ddaf46b09ea33218891ed5593aa6d06e2d79da7c8141b",
+          "sourcePath": "art/characters/stellar10/avatars/jupiter.webp"
+        },
+        "sprite": {
+          "assetId": "stellaart:asset.jupiter-battle-v2-web",
+          "sha256": "7f7858cb95f32377c0c1d3245f55582a536c787a85c14aa37656bb703b8e40ba",
+          "sourcePath": "art/characters/stellar10/web/jupiter-battle.webp"
+        }
+      },
+      "preserveExistingGameplay": true,
+      "supportingProp": "bench",
+      "pivotCaution": "木星圖含長凳，pivot為整體輪廓底部；靜態展示可用，戰鬥動作仍需整合者決定，不宣稱站姿動畫已完成。"
+    }
+  ],
+  "integrationNotes": [
+    "新十位尚無runtime角色定義；future ID只供對應。",
+    "木星沿用solar10:character.jupiter，只換三個美術引用，保留數值、技能、配方與存檔ID。",
+    "整合者需新增安全媒體複製與載入設定；來源及網頁輸出hash須一致。",
+    "所有Q圖均為單張靜態候選；動畫／真機／戰鬥接入另驗。"
+  ]
+}

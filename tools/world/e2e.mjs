@@ -169,6 +169,20 @@ try {
       lastCard && lastCard.y + lastCard.height <= viewport.height,
       "all six skill cards remain inside the viewport",
     );
+    const controls = await page.locator(".deck-nav").boundingBox();
+    for (const card of await page.locator("#squad .squad-card").all()) {
+      const box = await card.boundingBox();
+      assert(box && box.width >= 100, "six-person skill cards remain readable");
+      assert(
+        controls &&
+          box &&
+          (box.x + box.width <= controls.x ||
+            controls.x + controls.width <= box.x ||
+            box.y + box.height <= controls.y ||
+            controls.y + controls.height <= box.y),
+        "skill cards never cover management controls",
+      );
+    }
     const arenaBox = await page.locator("#space").boundingBox();
     assert(
       arenaBox && arenaBox.height >= 200,
@@ -264,7 +278,11 @@ try {
           "activation-chain",
           "real-route-locks",
           "material-shortage",
-          "camp-heal",
+          "free-camp-recovery",
+          "six-readable-skill-cards",
+          "management-controls-not-covered",
+          "enemy-threat-intel",
+          "native-campaign-restart-with-backup",
           "daily-entry",
           "countdown",
           "management-pause",

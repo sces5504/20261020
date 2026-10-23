@@ -1,0 +1,42 @@
+[
+  {
+    "key": "Doradus",
+    "sourceUrl": "https://gamerch.com/mist-smjp/147857",
+    "imageUrl": "https://cdn.gamerch.com/contents/wiki/1424/entry/vf8BVvAg.jpg",
+    "path": "references/Doradus-original.jpg",
+    "coverage": "cropped portrait",
+    "use": "core appearance and visible head/shoulder angle"
+  },
+  {
+    "key": "Deneb",
+    "sourceUrl": "https://www.trueplookpanya.com/knowledge/content/75095",
+    "imageUrl": "https://static.trueplookpanya.com/tppy/member/m_665000_667500/665461/cms/images/Stella-01.jpg",
+    "path": "references/Deneb-original.jpg",
+    "coverage": "center panel in multi-panel in-game screenshot",
+    "use": "core appearance, hand in pocket, lowered chin and blue wing"
+  },
+  {
+    "key": "Scuti",
+    "source": "user attachment 1",
+    "path": null,
+    "use": "text-described appearance and armor structure; direct input rejected; original-game pose unavailable"
+  },
+  {
+    "key": "Antares",
+    "source": "user attachment 2",
+    "path": null,
+    "use": "text-described appearance and armor structure; direct input rejected; original-game pose unavailable"
+  },
+  {
+    "key": "Mucephei",
+    "source": "user-authorized original candidate",
+    "path": null,
+    "use": "not verified against original"
+  },
+  {
+    "key": "Sargas",
+    "source": "user-authorized original candidate",
+    "path": null,
+    "use": "not verified against original"
+  }
+]

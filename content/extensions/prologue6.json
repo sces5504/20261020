@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "id": "prologue6:package.prologue-six",
+  "version": "0.1.0",
+  "requires": [
+    {
+      "id": "m1:core",
+      "version": "0.8.0"
+    },
+    {
+      "id": "stella:package.skills",
+      "version": "0.1.0"
+    }
+  ],
+  "definitions": {
+    "characters": [
+      {
+        "id": "prologue6:character.scuti",
+        "name": "盾牌座UY",
+        "description": "展開抵消領域，以機率消除穿越的來襲彈體。建議前鋒，實際位置由玩家編隊順序決定。美術待補。",
+        "status": "active",
+        "provenance": "inferred",
+        "rarity": 5,
+        "hp": 914,
+        "attack": 73,
+        "defense": 19,
+        "speed": 180,
+        "range": 430,
+        "interval": 0.8,
+        "growth": 0.08,
+        "critical": 0.07,
+        "evasion": 0.15,
+        "skill": "stella:skill.61",
+        "color": "#d5b6e8",
+        "portrait": "",
+        "avatar": "",
+        "sprite": "",
+        "recipe": [
+          581,
+          629,
+          575,
+          641
+        ],
+        "starter": false,
+        "role": "前鋒 · 彈體抵消",
+        "sourceRow": 107,
+        "summonable": true
+      }
+    ],
+    "skills": []
+  }
+}

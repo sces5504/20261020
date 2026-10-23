@@ -21,7 +21,7 @@ for(const v of battles.filter(v=>!flowOnly&&(!wanted.length||wanted.includes(v.i
  const fresh=newSave(p,0);
  const level=Math.max(...v.enemies.map(e=>e.level??1));
  fresh.region=v.region;fresh.x=v.x;fresh.y=v.y;fresh.encounter={planet:v.id,seed:42};
- fresh.roster.forEach(o=>{o.level=level+2;o.hp=stats(p,o).hp});
+ fresh.roster.forEach(o=>{o.level=Number(process.argv.find(a=>a.startsWith('--level='))?.split('=')[1]??level+2);o.hp=stats(p,o).hp});
  const c=new Combat(p,fresh,v.id);c.autoSkills=true;
  for(let t=0;t<60*240&&!c.ended;t++){
   const enemies=c.units.filter(u=>u.side==='enemy'&&u.hp>0);
@@ -29,7 +29,7 @@ for(const v of battles.filter(v=>!flowOnly&&(!wanted.length||wanted.includes(v.i
   if(enemy){const x=enemy.x-230+Math.cos(t/80)*60-v.x,y=enemy.y+Math.sin(t/80)*100-v.y;const scale=Math.min(1,(v.leashWarningRadius-120)/Math.hypot(x,y));c.destination={x:v.x+x*scale,y:v.y+y*scale}}
   c.step(1/60);
  }
- const result={id:v.id,team:'initial three starters; no resonance/research; full health',teamLevel:level+2,seed:42,mode:v.storyEncounter!.mode,victory:c.victory,reset:c.reset,seconds:+c.time.toFixed(2),survivors:c.allies.filter(u=>u.hp>0).length,hp:c.result()};proof.push(result);console.log(JSON.stringify(result));
+ const result={id:v.id,team:'initial three starters; no resonance/research; full health',teamLevel:fresh.roster[0].level,seed:42,mode:v.storyEncounter!.mode,victory:c.victory,reset:c.reset,seconds:+c.time.toFixed(2),survivors:c.allies.filter(u=>u.hp>0).length,hp:c.result()};proof.push(result);console.log(JSON.stringify(result));
 }
 if(!flowOnly&&!wanted.length)writeFileSync('docs/verification/chronicle-battles.json',JSON.stringify({fingerprint:await fingerprint(p),battleInputFingerprint:await fingerprint({characters:p.characters,enemies:p.enemies,skills:p.skills,research:p.research,rules:p.rules,planets:battles} as any),battles:proof},null,2)+'\n');
 if(process.argv.includes('--battles')){assert.ok(proof.every(r=>r.victory));process.exit(0)}

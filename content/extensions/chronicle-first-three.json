@@ -1582,8 +1582,8 @@
           "mode": "protect",
           "actors": [
             {
-              "id": "chronicle:unit.gliee-6",
-              "character": "solar10:character.jupiter",
+              "id": "chronicle:unit.gliee-26",
+              "character": "story10:character.gliese-581e",
               "x": 5520,
               "y": 5510,
               "side": "ally",
@@ -1592,8 +1592,8 @@
               "spawnAt": 0
             },
             {
-              "id": "chronicle:unit.gliee-26",
-              "character": "story10:character.gliese-581e",
+              "id": "chronicle:unit.gliee-6",
+              "character": "solar10:character.jupiter",
               "x": 5575,
               "y": 5570,
               "side": "ally",

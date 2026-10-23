@@ -1,0 +1,18 @@
+[
+  {
+    "id": "chronicle:encounter.gliee",
+    "team": "initial three starters; no resonance/research; full health",
+    "teamLevel": 10,
+    "seed": 42,
+    "mode": "protect",
+    "victory": true,
+    "reset": false,
+    "seconds": 10.45,
+    "survivors": 3,
+    "hp": {
+      "owned-1": 991,
+      "owned-2": 716,
+      "owned-3": 771
+    }
+  }
+]

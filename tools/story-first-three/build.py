@@ -47,7 +47,7 @@ briefs={
  'kiraba':('太陽系決戰','original:spawn.15','eliminate',None,[6,7,8,9],(1956,2002),'擊敗Kiraba；支援星靈僅在本次戰場參戰'),
  'gliese':('格利澤護送','original:wave.55','escort',90,[25],(2092,2124),'護送格利澤脫離追擊'),
  'vello':('前進基地求援','original:spawn.21','eliminate',None,[31],(2159,2202),'支援維洛，打開聯絡總部的通道'),
- 'gliee':('姊妹重逢','original:planet.13','protect',None,[6,26],(2239,2264),'保護格利澤581e，擊退包圍的敵軍'),
+ 'gliee':('姊妹重逢','original:planet.13','protect',None,[26,6],(2239,2264),'保護格利澤581e，擊退包圍的敵軍'),
  'izar-standoff':('總部的闖入者','original:spawn.22','eliminate',None,[31],(2319,2345),'制伏闖入者伊扎爾，結束衝突'),
  'linda':('琳達與黑洞','original:planet.21','eliminate',None,[32],(2432,2448),'援救琳達，取得黑洞研究情報'),
  'tactical-a':('投射裝置外殼','original:spawn.24','eliminate',None,[30],(2547,2556),'取回投射裝置的外殼'),

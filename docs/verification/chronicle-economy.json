@@ -1,0 +1,842 @@
+{
+  "scope": "Initial wallet + chapter rewards only; no passive/daily/tutorial/world income. World clears/region arrivals explicitly fixture supplied. Actual paid leveling and timed healing; auto skills and scripted movement. This is not a measured new-account playthrough.",
+  "battles": [
+    {
+      "id": "chronicle:encounter.venus",
+      "levels": [
+        4,
+        4,
+        3
+      ],
+      "victory": true,
+      "seconds": 3.18,
+      "wallet": {
+        "m1:crystal": 150,
+        "m1:gas": 140,
+        "m1:metal": 210,
+        "m1:ether": 120
+      }
+    },
+    {
+      "id": "chronicle:encounter.receiver-a",
+      "levels": [
+        5,
+        4,
+        4
+      ],
+      "victory": true,
+      "seconds": 2.4,
+      "wallet": {
+        "m1:crystal": 166,
+        "m1:gas": 156,
+        "m1:metal": 226,
+        "m1:ether": 136
+      }
+    },
+    {
+      "id": "chronicle:encounter.receiver-b",
+      "levels": [
+        5,
+        4,
+        4
+      ],
+      "victory": true,
+      "seconds": 4.87,
+      "wallet": {
+        "m1:crystal": 166,
+        "m1:gas": 156,
+        "m1:metal": 226,
+        "m1:ether": 136
+      }
+    },
+    {
+      "id": "chronicle:encounter.mars",
+      "levels": [
+        5,
+        5,
+        5
+      ],
+      "victory": true,
+      "seconds": 5,
+      "wallet": {
+        "m1:crystal": 170,
+        "m1:gas": 160,
+        "m1:metal": 230,
+        "m1:ether": 140
+      }
+    },
+    {
+      "id": "chronicle:encounter.jupiter-seal",
+      "levels": [
+        6,
+        6,
+        5
+      ],
+      "victory": true,
+      "seconds": 24.02,
+      "wallet": {
+        "m1:crystal": 150,
+        "m1:gas": 140,
+        "m1:metal": 210,
+        "m1:ether": 120
+      }
+    },
+    {
+      "id": "chronicle:encounter.sun-traces",
+      "levels": [
+        6,
+        6,
+        6
+      ],
+      "victory": true,
+      "seconds": 4.98,
+      "wallet": {
+        "m1:crystal": 170,
+        "m1:gas": 160,
+        "m1:metal": 230,
+        "m1:ether": 140
+      }
+    },
+    {
+      "id": "chronicle:encounter.nemesis-first",
+      "levels": [
+        6,
+        6,
+        6
+      ],
+      "victory": true,
+      "seconds": 24.02,
+      "wallet": {
+        "m1:crystal": 170,
+        "m1:gas": 160,
+        "m1:metal": 230,
+        "m1:ether": 140
+      }
+    },
+    {
+      "id": "chronicle:encounter.saturn",
+      "levels": [
+        7,
+        7,
+        6
+      ],
+      "victory": true,
+      "seconds": 6.4,
+      "wallet": {
+        "m1:crystal": 116,
+        "m1:gas": 106,
+        "m1:metal": 176,
+        "m1:ether": 86
+      }
+    },
+    {
+      "id": "chronicle:encounter.uranus",
+      "levels": [
+        7,
+        7,
+        7
+      ],
+      "victory": true,
+      "seconds": 6.27,
+      "wallet": {
+        "m1:crystal": 144,
+        "m1:gas": 134,
+        "m1:metal": 204,
+        "m1:ether": 114
+      }
+    },
+    {
+      "id": "chronicle:encounter.warp-parts",
+      "levels": [
+        8,
+        7,
+        7
+      ],
+      "victory": true,
+      "seconds": 10.38,
+      "wallet": {
+        "m1:crystal": 160,
+        "m1:gas": 150,
+        "m1:metal": 220,
+        "m1:ether": 130
+      }
+    },
+    {
+      "id": "chronicle:encounter.neptune",
+      "levels": [
+        8,
+        7,
+        7
+      ],
+      "victory": true,
+      "seconds": 16.1,
+      "wallet": {
+        "m1:crystal": 140,
+        "m1:gas": 130,
+        "m1:metal": 200,
+        "m1:ether": 110
+      }
+    },
+    {
+      "id": "chronicle:encounter.pluto-parts",
+      "levels": [
+        8,
+        8,
+        7
+      ],
+      "victory": true,
+      "seconds": 10.45,
+      "wallet": {
+        "m1:crystal": 156,
+        "m1:gas": 146,
+        "m1:metal": 216,
+        "m1:ether": 126
+      }
+    },
+    {
+      "id": "chronicle:encounter.pluto",
+      "levels": [
+        8,
+        8,
+        7
+      ],
+      "victory": true,
+      "seconds": 24.02,
+      "wallet": {
+        "m1:crystal": 146,
+        "m1:gas": 136,
+        "m1:metal": 206,
+        "m1:ether": 116
+      }
+    },
+    {
+      "id": "chronicle:encounter.nemesis-parts",
+      "levels": [
+        8,
+        8,
+        8
+      ],
+      "victory": true,
+      "seconds": 10.18,
+      "wallet": {
+        "m1:crystal": 152,
+        "m1:gas": 142,
+        "m1:metal": 212,
+        "m1:ether": 122
+      }
+    },
+    {
+      "id": "chronicle:encounter.nemesis-duel",
+      "levels": [
+        8,
+        8,
+        8
+      ],
+      "victory": true,
+      "seconds": 9.82,
+      "wallet": {
+        "m1:crystal": 132,
+        "m1:gas": 122,
+        "m1:metal": 192,
+        "m1:ether": 102
+      }
+    },
+    {
+      "id": "chronicle:encounter.kiraba",
+      "levels": [
+        9,
+        8,
+        8
+      ],
+      "victory": true,
+      "seconds": 10.4,
+      "wallet": {
+        "m1:crystal": 126,
+        "m1:gas": 116,
+        "m1:metal": 186,
+        "m1:ether": 96
+      }
+    },
+    {
+      "id": "chronicle:encounter.gliese",
+      "levels": [
+        9,
+        9,
+        9
+      ],
+      "victory": true,
+      "seconds": 16.1,
+      "wallet": {
+        "m1:crystal": 184,
+        "m1:gas": 174,
+        "m1:metal": 244,
+        "m1:ether": 154
+      }
+    },
+    {
+      "id": "chronicle:encounter.vello",
+      "levels": [
+        10,
+        9,
+        9
+      ],
+      "victory": true,
+      "seconds": 14.45,
+      "wallet": {
+        "m1:crystal": 196,
+        "m1:gas": 186,
+        "m1:metal": 256,
+        "m1:ether": 166
+      }
+    },
+    {
+      "id": "chronicle:encounter.gliee",
+      "levels": [
+        10,
+        10,
+        10
+      ],
+      "victory": true,
+      "seconds": 10.77,
+      "wallet": {
+        "m1:crystal": 120,
+        "m1:gas": 110,
+        "m1:metal": 180,
+        "m1:ether": 90
+      }
+    },
+    {
+      "id": "chronicle:encounter.izar-standoff",
+      "levels": [
+        11,
+        10,
+        10
+      ],
+      "victory": true,
+      "seconds": 23.7,
+      "wallet": {
+        "m1:crystal": 150,
+        "m1:gas": 140,
+        "m1:metal": 210,
+        "m1:ether": 120
+      }
+    },
+    {
+      "id": "chronicle:encounter.linda",
+      "levels": [
+        11,
+        11,
+        10
+      ],
+      "victory": true,
+      "seconds": 12,
+      "wallet": {
+        "m1:crystal": 150,
+        "m1:gas": 140,
+        "m1:metal": 210,
+        "m1:ether": 120
+      }
+    },
+    {
+      "id": "chronicle:encounter.tactical-a",
+      "levels": [
+        12,
+        11,
+        11
+      ],
+      "victory": true,
+      "seconds": 12.82,
+      "wallet": {
+        "m1:crystal": 178,
+        "m1:gas": 168,
+        "m1:metal": 238,
+        "m1:ether": 148
+      }
+    },
+    {
+      "id": "chronicle:encounter.tactical-b",
+      "levels": [
+        12,
+        11,
+        11
+      ],
+      "victory": true,
+      "seconds": 16.62,
+      "wallet": {
+        "m1:crystal": 168,
+        "m1:gas": 158,
+        "m1:metal": 228,
+        "m1:ether": 138
+      }
+    },
+    {
+      "id": "chronicle:encounter.tactical-c",
+      "levels": [
+        12,
+        11,
+        11
+      ],
+      "victory": true,
+      "seconds": 14.43,
+      "wallet": {
+        "m1:crystal": 158,
+        "m1:gas": 148,
+        "m1:metal": 218,
+        "m1:ether": 128
+      }
+    },
+    {
+      "id": "chronicle:encounter.valencia",
+      "levels": [
+        12,
+        11,
+        11
+      ],
+      "victory": true,
+      "seconds": 14.48,
+      "wallet": {
+        "m1:crystal": 148,
+        "m1:gas": 138,
+        "m1:metal": 208,
+        "m1:ether": 118
+      }
+    },
+    {
+      "id": "chronicle:encounter.seginus",
+      "levels": [
+        12,
+        12,
+        11
+      ],
+      "victory": true,
+      "seconds": 8.87,
+      "wallet": {
+        "m1:crystal": 146,
+        "m1:gas": 136,
+        "m1:metal": 206,
+        "m1:ether": 116
+      }
+    },
+    {
+      "id": "chronicle:encounter.spica",
+      "levels": [
+        12,
+        12,
+        12
+      ],
+      "victory": true,
+      "seconds": 3.65,
+      "wallet": {
+        "m1:crystal": 164,
+        "m1:gas": 154,
+        "m1:metal": 224,
+        "m1:ether": 134
+      }
+    },
+    {
+      "id": "chronicle:encounter.spica-return",
+      "levels": [
+        12,
+        12,
+        12
+      ],
+      "victory": true,
+      "seconds": 16.1,
+      "wallet": {
+        "m1:crystal": 144,
+        "m1:gas": 134,
+        "m1:metal": 204,
+        "m1:ether": 114
+      }
+    },
+    {
+      "id": "chronicle:encounter.blackhole-delivery",
+      "levels": [
+        13,
+        12,
+        12
+      ],
+      "victory": true,
+      "seconds": 16.1,
+      "wallet": {
+        "m1:crystal": 140,
+        "m1:gas": 130,
+        "m1:metal": 200,
+        "m1:ether": 110
+      }
+    },
+    {
+      "id": "chronicle:encounter.mitsuba",
+      "levels": [
+        13,
+        12,
+        12
+      ],
+      "victory": true,
+      "seconds": 16.6,
+      "wallet": {
+        "m1:crystal": 140,
+        "m1:gas": 130,
+        "m1:metal": 200,
+        "m1:ether": 110
+      }
+    },
+    {
+      "id": "chronicle:encounter.collapse",
+      "levels": [
+        13,
+        12,
+        12
+      ],
+      "victory": true,
+      "seconds": 24.02,
+      "wallet": {
+        "m1:crystal": 130,
+        "m1:gas": 120,
+        "m1:metal": 190,
+        "m1:ether": 100
+      }
+    }
+  ],
+  "chapters": [
+    {
+      "id": "chronicle:quest.01",
+      "levels": [
+        1,
+        1,
+        1
+      ],
+      "wallet": {
+        "m1:crystal": 330,
+        "m1:gas": 320,
+        "m1:metal": 390,
+        "m1:ether": 300
+      }
+    },
+    {
+      "id": "chronicle:quest.02",
+      "levels": [
+        4,
+        4,
+        3
+      ],
+      "wallet": {
+        "m1:crystal": 250,
+        "m1:gas": 240,
+        "m1:metal": 310,
+        "m1:ether": 220
+      }
+    },
+    {
+      "id": "chronicle:quest.03",
+      "levels": [
+        5,
+        4,
+        4
+      ],
+      "wallet": {
+        "m1:crystal": 266,
+        "m1:gas": 256,
+        "m1:metal": 326,
+        "m1:ether": 236
+      }
+    },
+    {
+      "id": "chronicle:quest.04",
+      "levels": [
+        5,
+        5,
+        5
+      ],
+      "wallet": {
+        "m1:crystal": 270,
+        "m1:gas": 260,
+        "m1:metal": 330,
+        "m1:ether": 240
+      }
+    },
+    {
+      "id": "chronicle:quest.05",
+      "levels": [
+        6,
+        6,
+        5
+      ],
+      "wallet": {
+        "m1:crystal": 250,
+        "m1:gas": 240,
+        "m1:metal": 310,
+        "m1:ether": 220
+      }
+    },
+    {
+      "id": "chronicle:quest.06",
+      "levels": [
+        6,
+        6,
+        6
+      ],
+      "wallet": {
+        "m1:crystal": 270,
+        "m1:gas": 260,
+        "m1:metal": 330,
+        "m1:ether": 240
+      }
+    },
+    {
+      "id": "chronicle:quest.07",
+      "levels": [
+        7,
+        7,
+        6
+      ],
+      "wallet": {
+        "m1:crystal": 216,
+        "m1:gas": 206,
+        "m1:metal": 276,
+        "m1:ether": 186
+      }
+    },
+    {
+      "id": "chronicle:quest.08",
+      "levels": [
+        7,
+        7,
+        7
+      ],
+      "wallet": {
+        "m1:crystal": 244,
+        "m1:gas": 234,
+        "m1:metal": 304,
+        "m1:ether": 214
+      }
+    },
+    {
+      "id": "chronicle:quest.09",
+      "levels": [
+        8,
+        7,
+        7
+      ],
+      "wallet": {
+        "m1:crystal": 240,
+        "m1:gas": 230,
+        "m1:metal": 300,
+        "m1:ether": 210
+      }
+    },
+    {
+      "id": "chronicle:quest.10",
+      "levels": [
+        8,
+        8,
+        7
+      ],
+      "wallet": {
+        "m1:crystal": 246,
+        "m1:gas": 236,
+        "m1:metal": 306,
+        "m1:ether": 216
+      }
+    },
+    {
+      "id": "chronicle:quest.11",
+      "levels": [
+        8,
+        8,
+        8
+      ],
+      "wallet": {
+        "m1:crystal": 232,
+        "m1:gas": 222,
+        "m1:metal": 292,
+        "m1:ether": 202
+      }
+    },
+    {
+      "id": "chronicle:quest.12",
+      "levels": [
+        9,
+        8,
+        8
+      ],
+      "wallet": {
+        "m1:crystal": 226,
+        "m1:gas": 216,
+        "m1:metal": 286,
+        "m1:ether": 196
+      }
+    },
+    {
+      "id": "chronicle:quest.13",
+      "levels": [
+        9,
+        8,
+        8
+      ],
+      "wallet": {
+        "m1:crystal": 376,
+        "m1:gas": 366,
+        "m1:metal": 436,
+        "m1:ether": 346
+      }
+    },
+    {
+      "id": "chronicle:quest.14",
+      "levels": [
+        9,
+        9,
+        9
+      ],
+      "wallet": {
+        "m1:crystal": 334,
+        "m1:gas": 324,
+        "m1:metal": 394,
+        "m1:ether": 304
+      }
+    },
+    {
+      "id": "chronicle:quest.15",
+      "levels": [
+        10,
+        9,
+        9
+      ],
+      "wallet": {
+        "m1:crystal": 346,
+        "m1:gas": 336,
+        "m1:metal": 406,
+        "m1:ether": 316
+      }
+    },
+    {
+      "id": "chronicle:quest.16",
+      "levels": [
+        10,
+        10,
+        10
+      ],
+      "wallet": {
+        "m1:crystal": 270,
+        "m1:gas": 260,
+        "m1:metal": 330,
+        "m1:ether": 240
+      }
+    },
+    {
+      "id": "chronicle:quest.17",
+      "levels": [
+        11,
+        10,
+        10
+      ],
+      "wallet": {
+        "m1:crystal": 300,
+        "m1:gas": 290,
+        "m1:metal": 360,
+        "m1:ether": 270
+      }
+    },
+    {
+      "id": "chronicle:quest.18",
+      "levels": [
+        11,
+        11,
+        10
+      ],
+      "wallet": {
+        "m1:crystal": 300,
+        "m1:gas": 290,
+        "m1:metal": 360,
+        "m1:ether": 270
+      }
+    },
+    {
+      "id": "chronicle:quest.19",
+      "levels": [
+        11,
+        11,
+        10
+      ],
+      "wallet": {
+        "m1:crystal": 450,
+        "m1:gas": 440,
+        "m1:metal": 510,
+        "m1:ether": 420
+      }
+    },
+    {
+      "id": "chronicle:quest.20",
+      "levels": [
+        12,
+        11,
+        11
+      ],
+      "wallet": {
+        "m1:crystal": 298,
+        "m1:gas": 288,
+        "m1:metal": 358,
+        "m1:ether": 268
+      }
+    },
+    {
+      "id": "chronicle:quest.21",
+      "levels": [
+        12,
+        12,
+        11
+      ],
+      "wallet": {
+        "m1:crystal": 296,
+        "m1:gas": 286,
+        "m1:metal": 356,
+        "m1:ether": 266
+      }
+    },
+    {
+      "id": "chronicle:quest.22",
+      "levels": [
+        12,
+        12,
+        12
+      ],
+      "wallet": {
+        "m1:crystal": 294,
+        "m1:gas": 284,
+        "m1:metal": 354,
+        "m1:ether": 264
+      }
+    },
+    {
+      "id": "chronicle:quest.23",
+      "levels": [
+        13,
+        12,
+        12
+      ],
+      "wallet": {
+        "m1:crystal": 280,
+        "m1:gas": 270,
+        "m1:metal": 340,
+        "m1:ether": 250
+      }
+    },
+    {
+      "id": "chronicle:quest.24",
+      "levels": [
+        13,
+        12,
+        12
+      ],
+      "wallet": {
+        "m1:crystal": 480,
+        "m1:gas": 470,
+        "m1:metal": 540,
+        "m1:ether": 450
+      }
+    }
+  ],
+  "heals": 28,
+  "levels": 34,
+  "passed": true
+}

@@ -1,0 +1,4740 @@
+{
+  "baseline": "9da3fdd135be55134f4ee800a6541eb4b9c80293",
+  "scope": "First 24 QuestS nodes. Translated and abridged Chinese adaptation; original source facts separated from gameplay and timing adaptation. Not original runtime certification.",
+  "quests": [
+    {
+      "quest": "chronicle:quest.01",
+      "questSRow": 1,
+      "entryLabel": 6000,
+      "firstRow": 0,
+      "lines": [
+        {
+          "step": 0,
+          "eventScriptRow": 2,
+          "cid": 0,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 1,
+          "eventScriptRow": 64,
+          "cid": 107,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 2,
+          "eventScriptRow": 65,
+          "cid": 107,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 3,
+          "eventScriptRow": 66,
+          "cid": 48,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 4,
+          "eventScriptRow": 68,
+          "cid": 107,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 5,
+          "eventScriptRow": 69,
+          "cid": 62,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 6,
+          "eventScriptRow": 72,
+          "cid": 99,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 7,
+          "eventScriptRow": 74,
+          "cid": 99,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 8,
+          "eventScriptRow": 75,
+          "cid": 101,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 9,
+          "eventScriptRow": 78,
+          "cid": 29,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 10,
+          "eventScriptRow": 96,
+          "cid": 73,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 11,
+          "eventScriptRow": 103,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 12,
+          "eventScriptRow": 111,
+          "cid": 73,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 13,
+          "eventScriptRow": 116,
+          "cid": 73,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 14,
+          "eventScriptRow": 117,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 15,
+          "eventScriptRow": 123,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 16,
+          "eventScriptRow": 125,
+          "cid": 73,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 17,
+          "eventScriptRow": 128,
+          "cid": 73,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 18,
+          "eventScriptRow": 130,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 19,
+          "eventScriptRow": 131,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 20,
+          "eventScriptRow": 133,
+          "cid": 73,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 21,
+          "eventScriptRow": 134,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 22,
+          "eventScriptRow": 151,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 23,
+          "eventScriptRow": 163,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 24,
+          "eventScriptRow": 179,
+          "cid": 73,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 25,
+          "eventScriptRow": 201,
+          "cid": 73,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 26,
+          "eventScriptRow": 205,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 27,
+          "eventScriptRow": 207,
+          "cid": 107,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 28,
+          "eventScriptRow": 209,
+          "cid": 29,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 29,
+          "eventScriptRow": 210,
+          "cid": 99,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 30,
+          "eventScriptRow": 219,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 31,
+          "eventScriptRow": 220,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 32,
+          "eventScriptRow": 223,
+          "cid": 73,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 33,
+          "eventScriptRow": 225,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 34,
+          "eventScriptRow": 226,
+          "cid": 73,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 35,
+          "eventScriptRow": 233,
+          "cid": 73,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 36,
+          "eventScriptRow": 235,
+          "cid": 107,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 37,
+          "eventScriptRow": 239,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 40,
+          "eventScriptRow": 262,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 41,
+          "eventScriptRow": 264,
+          "cid": 73,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 42,
+          "eventScriptRow": 265,
+          "cid": 73,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 43,
+          "eventScriptRow": 267,
+          "cid": 107,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 44,
+          "eventScriptRow": 269,
+          "cid": 99,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 45,
+          "eventScriptRow": 270,
+          "cid": 29,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 46,
+          "eventScriptRow": 272,
+          "cid": 73,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 47,
+          "eventScriptRow": 274,
+          "cid": 73,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 48,
+          "eventScriptRow": 278,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 49,
+          "eventScriptRow": 282,
+          "cid": 73,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 50,
+          "eventScriptRow": 283,
+          "cid": 73,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 51,
+          "eventScriptRow": 285,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 52,
+          "eventScriptRow": 287,
+          "cid": 73,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 53,
+          "eventScriptRow": 289,
+          "cid": 73,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 54,
+          "eventScriptRow": 291,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 56,
+          "eventScriptRow": 294,
+          "cid": 73,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 57,
+          "eventScriptRow": 298,
+          "cid": 73,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 58,
+          "eventScriptRow": 299,
+          "cid": 73,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 59,
+          "eventScriptRow": 300,
+          "cid": 226,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 60,
+          "eventScriptRow": 303,
+          "cid": 73,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 61,
+          "eventScriptRow": 304,
+          "cid": 226,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 62,
+          "eventScriptRow": 307,
+          "cid": 73,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 63,
+          "eventScriptRow": 315,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 64,
+          "eventScriptRow": 317,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 65,
+          "eventScriptRow": 323,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 66,
+          "eventScriptRow": 332,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        }
+      ],
+      "rewardPerResource": 150
+    },
+    {
+      "quest": "chronicle:quest.02",
+      "questSRow": 2,
+      "entryLabel": 6001,
+      "firstRow": 868,
+      "lines": [
+        {
+          "step": 1,
+          "eventScriptRow": 880,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 2,
+          "eventScriptRow": 882,
+          "cid": 0,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 3,
+          "eventScriptRow": 884,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 4,
+          "eventScriptRow": 886,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 5,
+          "eventScriptRow": 893,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 6,
+          "eventScriptRow": 895,
+          "cid": 3,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 9,
+          "eventScriptRow": 903,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 10,
+          "eventScriptRow": 909,
+          "cid": 3,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 11,
+          "eventScriptRow": 910,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 12,
+          "eventScriptRow": 912,
+          "cid": 3,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 13,
+          "eventScriptRow": 915,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 14,
+          "eventScriptRow": 919,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 15,
+          "eventScriptRow": 920,
+          "cid": 226,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 16,
+          "eventScriptRow": 925,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 17,
+          "eventScriptRow": 931,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 18,
+          "eventScriptRow": 935,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 19,
+          "eventScriptRow": 938,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        }
+      ],
+      "rewardPerResource": 100
+    },
+    {
+      "quest": "chronicle:quest.03",
+      "questSRow": 3,
+      "entryLabel": 6002,
+      "firstRow": 943,
+      "lines": [
+        {
+          "step": 0,
+          "eventScriptRow": 955,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 1,
+          "eventScriptRow": 962,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 2,
+          "eventScriptRow": 964,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 3,
+          "eventScriptRow": 966,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 4,
+          "eventScriptRow": 969,
+          "cid": 226,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 5,
+          "eventScriptRow": 971,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 6,
+          "eventScriptRow": 972,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 9,
+          "eventScriptRow": 981,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 12,
+          "eventScriptRow": 988,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 13,
+          "eventScriptRow": 991,
+          "cid": 3,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 14,
+          "eventScriptRow": 992,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 15,
+          "eventScriptRow": 997,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 16,
+          "eventScriptRow": 1001,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 17,
+          "eventScriptRow": 1003,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 18,
+          "eventScriptRow": 1004,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 20,
+          "eventScriptRow": 1009,
+          "cid": 189,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 21,
+          "eventScriptRow": 1011,
+          "cid": 189,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 22,
+          "eventScriptRow": 1012,
+          "cid": 189,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 23,
+          "eventScriptRow": 1013,
+          "cid": 189,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        }
+      ],
+      "rewardPerResource": 100
+    },
+    {
+      "quest": "chronicle:quest.04",
+      "questSRow": 4,
+      "entryLabel": 6003,
+      "firstRow": 1018,
+      "lines": [
+        {
+          "step": 0,
+          "eventScriptRow": 1030,
+          "cid": 5,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 1,
+          "eventScriptRow": 1035,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 2,
+          "eventScriptRow": 1036,
+          "cid": 5,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 3,
+          "eventScriptRow": 1040,
+          "cid": 5,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 4,
+          "eventScriptRow": 1042,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 5,
+          "eventScriptRow": 1046,
+          "cid": 3,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 8,
+          "eventScriptRow": 1052,
+          "cid": 5,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 9,
+          "eventScriptRow": 1053,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 10,
+          "eventScriptRow": 1066,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 11,
+          "eventScriptRow": 1067,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 12,
+          "eventScriptRow": 1072,
+          "cid": 5,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 13,
+          "eventScriptRow": 1078,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 14,
+          "eventScriptRow": 1080,
+          "cid": 5,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 15,
+          "eventScriptRow": 1083,
+          "cid": 5,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 16,
+          "eventScriptRow": 1087,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 17,
+          "eventScriptRow": 1091,
+          "cid": 5,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 18,
+          "eventScriptRow": 1094,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 19,
+          "eventScriptRow": 1098,
+          "cid": 5,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        }
+      ],
+      "rewardPerResource": 100
+    },
+    {
+      "quest": "chronicle:quest.05",
+      "questSRow": 5,
+      "entryLabel": 6004,
+      "firstRow": 1104,
+      "lines": [
+        {
+          "step": 0,
+          "eventScriptRow": 1116,
+          "cid": 5,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 1,
+          "eventScriptRow": 1117,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 2,
+          "eventScriptRow": 1120,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 3,
+          "eventScriptRow": 1122,
+          "cid": 3,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 4,
+          "eventScriptRow": 1125,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 5,
+          "eventScriptRow": 1135,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 6,
+          "eventScriptRow": 1138,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 7,
+          "eventScriptRow": 1142,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 8,
+          "eventScriptRow": 1148,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 9,
+          "eventScriptRow": 1152,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 12,
+          "eventScriptRow": 1179,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 13,
+          "eventScriptRow": 1180,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 14,
+          "eventScriptRow": 1183,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 15,
+          "eventScriptRow": 1195,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 16,
+          "eventScriptRow": 1196,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 17,
+          "eventScriptRow": 1197,
+          "cid": 3,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 18,
+          "eventScriptRow": 1198,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        }
+      ],
+      "rewardPerResource": 100
+    },
+    {
+      "quest": "chronicle:quest.06",
+      "questSRow": 6,
+      "entryLabel": 6005,
+      "firstRow": 1204,
+      "lines": [
+        {
+          "step": 0,
+          "eventScriptRow": 1216,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 1,
+          "eventScriptRow": 1217,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 2,
+          "eventScriptRow": 1220,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 3,
+          "eventScriptRow": 1221,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 4,
+          "eventScriptRow": 1224,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 7,
+          "eventScriptRow": 1237,
+          "cid": 5,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 8,
+          "eventScriptRow": 1240,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 9,
+          "eventScriptRow": 1245,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 10,
+          "eventScriptRow": 1246,
+          "cid": 5,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 11,
+          "eventScriptRow": 1247,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 12,
+          "eventScriptRow": 1251,
+          "cid": 3,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 13,
+          "eventScriptRow": 1264,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 14,
+          "eventScriptRow": 1271,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 15,
+          "eventScriptRow": 1274,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 16,
+          "eventScriptRow": 1277,
+          "cid": 5,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 17,
+          "eventScriptRow": 1279,
+          "cid": 5,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 18,
+          "eventScriptRow": 1280,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 19,
+          "eventScriptRow": 1281,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 22,
+          "eventScriptRow": 1290,
+          "cid": 189,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 23,
+          "eventScriptRow": 1291,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 24,
+          "eventScriptRow": 1293,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 25,
+          "eventScriptRow": 1299,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 26,
+          "eventScriptRow": 1300,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        }
+      ],
+      "rewardPerResource": 100
+    },
+    {
+      "quest": "chronicle:quest.07",
+      "questSRow": 7,
+      "entryLabel": 6006,
+      "firstRow": 1305,
+      "lines": [
+        {
+          "step": 0,
+          "eventScriptRow": 1316,
+          "cid": 0,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 1,
+          "eventScriptRow": 1319,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 2,
+          "eventScriptRow": 1324,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 3,
+          "eventScriptRow": 1339,
+          "cid": 7,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 4,
+          "eventScriptRow": 1341,
+          "cid": 7,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 5,
+          "eventScriptRow": 1342,
+          "cid": 7,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 6,
+          "eventScriptRow": 1350,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 9,
+          "eventScriptRow": 1351,
+          "cid": 7,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 10,
+          "eventScriptRow": 1358,
+          "cid": 7,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 11,
+          "eventScriptRow": 1360,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 12,
+          "eventScriptRow": 1362,
+          "cid": 7,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 13,
+          "eventScriptRow": 1370,
+          "cid": 7,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 14,
+          "eventScriptRow": 1372,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 15,
+          "eventScriptRow": 1378,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 16,
+          "eventScriptRow": 1379,
+          "cid": 7,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 17,
+          "eventScriptRow": 1382,
+          "cid": 7,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        }
+      ],
+      "rewardPerResource": 100
+    },
+    {
+      "quest": "chronicle:quest.08",
+      "questSRow": 8,
+      "entryLabel": 6007,
+      "firstRow": 1387,
+      "lines": [
+        {
+          "step": 1,
+          "eventScriptRow": 1403,
+          "cid": 1,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 2,
+          "eventScriptRow": 1404,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 3,
+          "eventScriptRow": 1406,
+          "cid": 189,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 4,
+          "eventScriptRow": 1407,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 5,
+          "eventScriptRow": 1408,
+          "cid": 189,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 6,
+          "eventScriptRow": 1412,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 8,
+          "eventScriptRow": 1427,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 9,
+          "eventScriptRow": 1436,
+          "cid": 8,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 10,
+          "eventScriptRow": 1440,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 13,
+          "eventScriptRow": 1447,
+          "cid": 8,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 14,
+          "eventScriptRow": 1448,
+          "cid": 3,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 15,
+          "eventScriptRow": 1449,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 16,
+          "eventScriptRow": 1458,
+          "cid": 8,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 17,
+          "eventScriptRow": 1461,
+          "cid": 8,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 18,
+          "eventScriptRow": 1464,
+          "cid": 8,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 19,
+          "eventScriptRow": 1467,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 20,
+          "eventScriptRow": 1468,
+          "cid": 8,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        }
+      ],
+      "rewardPerResource": 100
+    },
+    {
+      "quest": "chronicle:quest.09",
+      "questSRow": 9,
+      "entryLabel": 6008,
+      "firstRow": 1473,
+      "lines": [
+        {
+          "step": 0,
+          "eventScriptRow": 1485,
+          "cid": 8,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 1,
+          "eventScriptRow": 1491,
+          "cid": 9,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 2,
+          "eventScriptRow": 1492,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 3,
+          "eventScriptRow": 1498,
+          "cid": 9,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 4,
+          "eventScriptRow": 1499,
+          "cid": 8,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 5,
+          "eventScriptRow": 1501,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 6,
+          "eventScriptRow": 1503,
+          "cid": 8,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 7,
+          "eventScriptRow": 1509,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 8,
+          "eventScriptRow": 1513,
+          "cid": 8,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 9,
+          "eventScriptRow": 1514,
+          "cid": 3,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 10,
+          "eventScriptRow": 1515,
+          "cid": 5,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 13,
+          "eventScriptRow": 1551,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 14,
+          "eventScriptRow": 1553,
+          "cid": 3,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 15,
+          "eventScriptRow": 1556,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 16,
+          "eventScriptRow": 1574,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 17,
+          "eventScriptRow": 1576,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 20,
+          "eventScriptRow": 1597,
+          "cid": 9,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 21,
+          "eventScriptRow": 1600,
+          "cid": 9,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 22,
+          "eventScriptRow": 1604,
+          "cid": 9,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 23,
+          "eventScriptRow": 1607,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 24,
+          "eventScriptRow": 1608,
+          "cid": 3,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 25,
+          "eventScriptRow": 1609,
+          "cid": 5,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        }
+      ],
+      "rewardPerResource": 100
+    },
+    {
+      "quest": "chronicle:quest.10",
+      "questSRow": 10,
+      "entryLabel": 6009,
+      "firstRow": 1619,
+      "lines": [
+        {
+          "step": 0,
+          "eventScriptRow": 1634,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 1,
+          "eventScriptRow": 1639,
+          "cid": 5,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 2,
+          "eventScriptRow": 1650,
+          "cid": 10,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 3,
+          "eventScriptRow": 1652,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 4,
+          "eventScriptRow": 1653,
+          "cid": 10,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 5,
+          "eventScriptRow": 1655,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 6,
+          "eventScriptRow": 1664,
+          "cid": 10,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 7,
+          "eventScriptRow": 1671,
+          "cid": 10,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 8,
+          "eventScriptRow": 1676,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 9,
+          "eventScriptRow": 1679,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 10,
+          "eventScriptRow": 1681,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 11,
+          "eventScriptRow": 1689,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 12,
+          "eventScriptRow": 1692,
+          "cid": 3,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 13,
+          "eventScriptRow": 1695,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 16,
+          "eventScriptRow": 1709,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 17,
+          "eventScriptRow": 1716,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 22,
+          "eventScriptRow": 1726,
+          "cid": 10,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 23,
+          "eventScriptRow": 1729,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 24,
+          "eventScriptRow": 1730,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 25,
+          "eventScriptRow": 1735,
+          "cid": 3,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 26,
+          "eventScriptRow": 1739,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 27,
+          "eventScriptRow": 1740,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        }
+      ],
+      "rewardPerResource": 100
+    },
+    {
+      "quest": "chronicle:quest.11",
+      "questSRow": 11,
+      "entryLabel": 6010,
+      "firstRow": 1746,
+      "lines": [
+        {
+          "step": 0,
+          "eventScriptRow": 1756,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 1,
+          "eventScriptRow": 1760,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 2,
+          "eventScriptRow": 1761,
+          "cid": 5,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 3,
+          "eventScriptRow": 1762,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 6,
+          "eventScriptRow": 1793,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 7,
+          "eventScriptRow": 1809,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 8,
+          "eventScriptRow": 1810,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 9,
+          "eventScriptRow": 1811,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 10,
+          "eventScriptRow": 1814,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 11,
+          "eventScriptRow": 1815,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 12,
+          "eventScriptRow": 1816,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 13,
+          "eventScriptRow": 1820,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 16,
+          "eventScriptRow": 1841,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 17,
+          "eventScriptRow": 1842,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 18,
+          "eventScriptRow": 1846,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 19,
+          "eventScriptRow": 1848,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 20,
+          "eventScriptRow": 1849,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 21,
+          "eventScriptRow": 1852,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 22,
+          "eventScriptRow": 1854,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 23,
+          "eventScriptRow": 1857,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 24,
+          "eventScriptRow": 1860,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 25,
+          "eventScriptRow": 1862,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 26,
+          "eventScriptRow": 1865,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 27,
+          "eventScriptRow": 1866,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 28,
+          "eventScriptRow": 1868,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        }
+      ],
+      "rewardPerResource": 100
+    },
+    {
+      "quest": "chronicle:quest.12",
+      "questSRow": 12,
+      "entryLabel": 6011,
+      "firstRow": 1874,
+      "lines": [
+        {
+          "step": 0,
+          "eventScriptRow": 1897,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 1,
+          "eventScriptRow": 1898,
+          "cid": 7,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 2,
+          "eventScriptRow": 1914,
+          "cid": 8,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 3,
+          "eventScriptRow": 1915,
+          "cid": 9,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 4,
+          "eventScriptRow": 1932,
+          "cid": 10,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 5,
+          "eventScriptRow": 1933,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 6,
+          "eventScriptRow": 1956,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 7,
+          "eventScriptRow": 1957,
+          "cid": 189,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 8,
+          "eventScriptRow": 1959,
+          "cid": 189,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 9,
+          "eventScriptRow": 1962,
+          "cid": 189,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 10,
+          "eventScriptRow": 1963,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 11,
+          "eventScriptRow": 1965,
+          "cid": 189,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 14,
+          "eventScriptRow": 1987,
+          "cid": 189,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 15,
+          "eventScriptRow": 1990,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 16,
+          "eventScriptRow": 1991,
+          "cid": 189,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 17,
+          "eventScriptRow": 1993,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 18,
+          "eventScriptRow": 2001,
+          "cid": 189,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 19,
+          "eventScriptRow": 2002,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 20,
+          "eventScriptRow": 2003,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 21,
+          "eventScriptRow": 2004,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 22,
+          "eventScriptRow": 2005,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 23,
+          "eventScriptRow": 2007,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        }
+      ],
+      "rewardPerResource": 100
+    },
+    {
+      "quest": "chronicle:quest.13",
+      "questSRow": 13,
+      "entryLabel": 6012,
+      "firstRow": 2013,
+      "lines": [
+        {
+          "step": 1,
+          "eventScriptRow": 2027,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 2,
+          "eventScriptRow": 2033,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 3,
+          "eventScriptRow": 2034,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 4,
+          "eventScriptRow": 2035,
+          "cid": 1,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 5,
+          "eventScriptRow": 2036,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 6,
+          "eventScriptRow": 2038,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 7,
+          "eventScriptRow": 2039,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 8,
+          "eventScriptRow": 2046,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 9,
+          "eventScriptRow": 2047,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 10,
+          "eventScriptRow": 2049,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 11,
+          "eventScriptRow": 2049,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 12,
+          "eventScriptRow": 2050,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 13,
+          "eventScriptRow": 2051,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 14,
+          "eventScriptRow": 2052,
+          "cid": 11,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        }
+      ],
+      "rewardPerResource": 150
+    },
+    {
+      "quest": "chronicle:quest.14",
+      "questSRow": 14,
+      "entryLabel": 6013,
+      "firstRow": 2056,
+      "lines": [
+        {
+          "step": 2,
+          "eventScriptRow": 2070,
+          "cid": 190,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 3,
+          "eventScriptRow": 2071,
+          "cid": 190,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 4,
+          "eventScriptRow": 2072,
+          "cid": 190,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 6,
+          "eventScriptRow": 2079,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 7,
+          "eventScriptRow": 2080,
+          "cid": 3,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 8,
+          "eventScriptRow": 2081,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 9,
+          "eventScriptRow": 2085,
+          "cid": 5,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 10,
+          "eventScriptRow": 2088,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 11,
+          "eventScriptRow": 2090,
+          "cid": 5,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 12,
+          "eventScriptRow": 2092,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 13,
+          "eventScriptRow": 2093,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 16,
+          "eventScriptRow": 2120,
+          "cid": 25,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 17,
+          "eventScriptRow": 2124,
+          "cid": 25,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 18,
+          "eventScriptRow": 2125,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 19,
+          "eventScriptRow": 2126,
+          "cid": 25,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 20,
+          "eventScriptRow": 2127,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 21,
+          "eventScriptRow": 2131,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 22,
+          "eventScriptRow": 2135,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 23,
+          "eventScriptRow": 2138,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 24,
+          "eventScriptRow": 2139,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        }
+      ],
+      "rewardPerResource": 150
+    },
+    {
+      "quest": "chronicle:quest.15",
+      "questSRow": 15,
+      "entryLabel": 6014,
+      "firstRow": 2145,
+      "lines": [
+        {
+          "step": 0,
+          "eventScriptRow": 2160,
+          "cid": 31,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 1,
+          "eventScriptRow": 2161,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 4,
+          "eventScriptRow": 2167,
+          "cid": 31,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 5,
+          "eventScriptRow": 2168,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 6,
+          "eventScriptRow": 2169,
+          "cid": 31,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 7,
+          "eventScriptRow": 2175,
+          "cid": 31,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 8,
+          "eventScriptRow": 2176,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 9,
+          "eventScriptRow": 2178,
+          "cid": 31,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 10,
+          "eventScriptRow": 2185,
+          "cid": 31,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 11,
+          "eventScriptRow": 2188,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 12,
+          "eventScriptRow": 2190,
+          "cid": 31,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 13,
+          "eventScriptRow": 2202,
+          "cid": 30,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 14,
+          "eventScriptRow": 2203,
+          "cid": 31,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 15,
+          "eventScriptRow": 2207,
+          "cid": 30,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 16,
+          "eventScriptRow": 2210,
+          "cid": 30,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        }
+      ],
+      "rewardPerResource": 150
+    },
+    {
+      "quest": "chronicle:quest.16",
+      "questSRow": 16,
+      "entryLabel": 6015,
+      "firstRow": 2217,
+      "lines": [
+        {
+          "step": 0,
+          "eventScriptRow": 2229,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 1,
+          "eventScriptRow": 2230,
+          "cid": 25,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 2,
+          "eventScriptRow": 2231,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 3,
+          "eventScriptRow": 2232,
+          "cid": 25,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 4,
+          "eventScriptRow": 2233,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 5,
+          "eventScriptRow": 2234,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 6,
+          "eventScriptRow": 2239,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 9,
+          "eventScriptRow": 2255,
+          "cid": 26,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 10,
+          "eventScriptRow": 2256,
+          "cid": 25,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 11,
+          "eventScriptRow": 2257,
+          "cid": 26,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 12,
+          "eventScriptRow": 2259,
+          "cid": 26,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 13,
+          "eventScriptRow": 2260,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 14,
+          "eventScriptRow": 2261,
+          "cid": 26,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 15,
+          "eventScriptRow": 2262,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 16,
+          "eventScriptRow": 2263,
+          "cid": 26,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 17,
+          "eventScriptRow": 2264,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 18,
+          "eventScriptRow": 2266,
+          "cid": 26,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 19,
+          "eventScriptRow": 2269,
+          "cid": 26,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 20,
+          "eventScriptRow": 2272,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        }
+      ],
+      "rewardPerResource": 150
+    },
+    {
+      "quest": "chronicle:quest.17",
+      "questSRow": 17,
+      "entryLabel": 6016,
+      "firstRow": 2281,
+      "lines": [
+        {
+          "step": 0,
+          "eventScriptRow": 2297,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 1,
+          "eventScriptRow": 2298,
+          "cid": 31,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 2,
+          "eventScriptRow": 2301,
+          "cid": 30,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 3,
+          "eventScriptRow": 2304,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 4,
+          "eventScriptRow": 2305,
+          "cid": 30,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 5,
+          "eventScriptRow": 2319,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 6,
+          "eventScriptRow": 2327,
+          "cid": 31,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 7,
+          "eventScriptRow": 2328,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 8,
+          "eventScriptRow": 2330,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 11,
+          "eventScriptRow": 2345,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 12,
+          "eventScriptRow": 2347,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 13,
+          "eventScriptRow": 2360,
+          "cid": 29,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 14,
+          "eventScriptRow": 2362,
+          "cid": 29,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 15,
+          "eventScriptRow": 2363,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 16,
+          "eventScriptRow": 2367,
+          "cid": 29,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 17,
+          "eventScriptRow": 2369,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 18,
+          "eventScriptRow": 2379,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 19,
+          "eventScriptRow": 2381,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 20,
+          "eventScriptRow": 2383,
+          "cid": 29,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 21,
+          "eventScriptRow": 2384,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 22,
+          "eventScriptRow": 2386,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 23,
+          "eventScriptRow": 2387,
+          "cid": 29,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        }
+      ],
+      "rewardPerResource": 150
+    },
+    {
+      "quest": "chronicle:quest.18",
+      "questSRow": 18,
+      "entryLabel": 6017,
+      "firstRow": 2395,
+      "lines": [
+        {
+          "step": 0,
+          "eventScriptRow": 2405,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 1,
+          "eventScriptRow": 2412,
+          "cid": 29,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 2,
+          "eventScriptRow": 2415,
+          "cid": 29,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 3,
+          "eventScriptRow": 2419,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 4,
+          "eventScriptRow": 2421,
+          "cid": 29,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 5,
+          "eventScriptRow": 2424,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 6,
+          "eventScriptRow": 2425,
+          "cid": 29,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 7,
+          "eventScriptRow": 2426,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 8,
+          "eventScriptRow": 2427,
+          "cid": 29,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 9,
+          "eventScriptRow": 2432,
+          "cid": 32,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 10,
+          "eventScriptRow": 2433,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 13,
+          "eventScriptRow": 2440,
+          "cid": 32,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 14,
+          "eventScriptRow": 2442,
+          "cid": 32,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 15,
+          "eventScriptRow": 2446,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 16,
+          "eventScriptRow": 2448,
+          "cid": 32,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 17,
+          "eventScriptRow": 2451,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 18,
+          "eventScriptRow": 2453,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 19,
+          "eventScriptRow": 2454,
+          "cid": 3,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 20,
+          "eventScriptRow": 2456,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        }
+      ],
+      "rewardPerResource": 150
+    },
+    {
+      "quest": "chronicle:quest.19",
+      "questSRow": 19,
+      "entryLabel": 6018,
+      "firstRow": 2466,
+      "lines": [
+        {
+          "step": 0,
+          "eventScriptRow": 2476,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 1,
+          "eventScriptRow": 2480,
+          "cid": 0,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 2,
+          "eventScriptRow": 2500,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 3,
+          "eventScriptRow": 2501,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 4,
+          "eventScriptRow": 2502,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 5,
+          "eventScriptRow": 2503,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 6,
+          "eventScriptRow": 2504,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 7,
+          "eventScriptRow": 2506,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 8,
+          "eventScriptRow": 2508,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 9,
+          "eventScriptRow": 2509,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 10,
+          "eventScriptRow": 2510,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        }
+      ],
+      "rewardPerResource": 150
+    },
+    {
+      "quest": "chronicle:quest.20",
+      "questSRow": 20,
+      "entryLabel": 6019,
+      "firstRow": 2516,
+      "lines": [
+        {
+          "step": 0,
+          "eventScriptRow": 2526,
+          "cid": 29,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 1,
+          "eventScriptRow": 2528,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 2,
+          "eventScriptRow": 2530,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 3,
+          "eventScriptRow": 2531,
+          "cid": 29,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 4,
+          "eventScriptRow": 2537,
+          "cid": 29,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 5,
+          "eventScriptRow": 2539,
+          "cid": 29,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 6,
+          "eventScriptRow": 2541,
+          "cid": 30,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 7,
+          "eventScriptRow": 2547,
+          "cid": 30,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 10,
+          "eventScriptRow": 2556,
+          "cid": 30,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 13,
+          "eventScriptRow": 2568,
+          "cid": 30,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 14,
+          "eventScriptRow": 2569,
+          "cid": 3,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 15,
+          "eventScriptRow": 2570,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 18,
+          "eventScriptRow": 2582,
+          "cid": 30,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 21,
+          "eventScriptRow": 2586,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 22,
+          "eventScriptRow": 2587,
+          "cid": 30,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 23,
+          "eventScriptRow": 2590,
+          "cid": 30,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        }
+      ],
+      "rewardPerResource": 150
+    },
+    {
+      "quest": "chronicle:quest.21",
+      "questSRow": 21,
+      "entryLabel": 6020,
+      "firstRow": 2596,
+      "lines": [
+        {
+          "step": 0,
+          "eventScriptRow": 2605,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 1,
+          "eventScriptRow": 2610,
+          "cid": 27,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 2,
+          "eventScriptRow": 2611,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 3,
+          "eventScriptRow": 2612,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 6,
+          "eventScriptRow": 2620,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 7,
+          "eventScriptRow": 2621,
+          "cid": 27,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 8,
+          "eventScriptRow": 2626,
+          "cid": 27,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 9,
+          "eventScriptRow": 2629,
+          "cid": 27,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 10,
+          "eventScriptRow": 2630,
+          "cid": 27,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 11,
+          "eventScriptRow": 2631,
+          "cid": 27,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 12,
+          "eventScriptRow": 2633,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 13,
+          "eventScriptRow": 2637,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 14,
+          "eventScriptRow": 2638,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 15,
+          "eventScriptRow": 2639,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 16,
+          "eventScriptRow": 2640,
+          "cid": 27,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 17,
+          "eventScriptRow": 2641,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        }
+      ],
+      "rewardPerResource": 150
+    },
+    {
+      "quest": "chronicle:quest.22",
+      "questSRow": 22,
+      "entryLabel": 6021,
+      "firstRow": 2649,
+      "lines": [
+        {
+          "step": 0,
+          "eventScriptRow": 2667,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 1,
+          "eventScriptRow": 2679,
+          "cid": 28,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 2,
+          "eventScriptRow": 2682,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 5,
+          "eventScriptRow": 2689,
+          "cid": 28,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 6,
+          "eventScriptRow": 2690,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 7,
+          "eventScriptRow": 2693,
+          "cid": 28,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 8,
+          "eventScriptRow": 2694,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 9,
+          "eventScriptRow": 2697,
+          "cid": 28,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 10,
+          "eventScriptRow": 2702,
+          "cid": 28,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 11,
+          "eventScriptRow": 2704,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 14,
+          "eventScriptRow": 2715,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 15,
+          "eventScriptRow": 2716,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 16,
+          "eventScriptRow": 2718,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 17,
+          "eventScriptRow": 2719,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 18,
+          "eventScriptRow": 2735,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 19,
+          "eventScriptRow": 2736,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 20,
+          "eventScriptRow": 2737,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 21,
+          "eventScriptRow": 2738,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 22,
+          "eventScriptRow": 2739,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 23,
+          "eventScriptRow": 2743,
+          "cid": 28,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 24,
+          "eventScriptRow": 2744,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        }
+      ],
+      "rewardPerResource": 150
+    },
+    {
+      "quest": "chronicle:quest.23",
+      "questSRow": 23,
+      "entryLabel": 6022,
+      "firstRow": 2750,
+      "lines": [
+        {
+          "step": 0,
+          "eventScriptRow": 2773,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 1,
+          "eventScriptRow": 2775,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 2,
+          "eventScriptRow": 2777,
+          "cid": 29,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 5,
+          "eventScriptRow": 2801,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 6,
+          "eventScriptRow": 2802,
+          "cid": 29,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 7,
+          "eventScriptRow": 2805,
+          "cid": 29,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 8,
+          "eventScriptRow": 2806,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 9,
+          "eventScriptRow": 2808,
+          "cid": 29,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 10,
+          "eventScriptRow": 2830,
+          "cid": 30,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 11,
+          "eventScriptRow": 2831,
+          "cid": 29,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 15,
+          "eventScriptRow": 2845,
+          "cid": 190,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 16,
+          "eventScriptRow": 2848,
+          "cid": 190,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 17,
+          "eventScriptRow": 2849,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 18,
+          "eventScriptRow": 2850,
+          "cid": 29,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 19,
+          "eventScriptRow": 2861,
+          "cid": 190,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 20,
+          "eventScriptRow": 2869,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 21,
+          "eventScriptRow": 2871,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 22,
+          "eventScriptRow": 2873,
+          "cid": 29,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 23,
+          "eventScriptRow": 2881,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 24,
+          "eventScriptRow": 2890,
+          "cid": 28,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 25,
+          "eventScriptRow": 2891,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 26,
+          "eventScriptRow": 2893,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 27,
+          "eventScriptRow": 2896,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 28,
+          "eventScriptRow": 2897,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 31,
+          "eventScriptRow": 2905,
+          "cid": 190,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 32,
+          "eventScriptRow": 2906,
+          "cid": 29,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 33,
+          "eventScriptRow": 2907,
+          "cid": 190,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 34,
+          "eventScriptRow": 2913,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 35,
+          "eventScriptRow": 2915,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 36,
+          "eventScriptRow": 2918,
+          "cid": 29,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 37,
+          "eventScriptRow": 2924,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 38,
+          "eventScriptRow": 2926,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 39,
+          "eventScriptRow": 2927,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 40,
+          "eventScriptRow": 2930,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 41,
+          "eventScriptRow": 2932,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 44,
+          "eventScriptRow": 2937,
+          "cid": 190,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 45,
+          "eventScriptRow": 2938,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 46,
+          "eventScriptRow": 2939,
+          "cid": 190,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 47,
+          "eventScriptRow": 2940,
+          "cid": 190,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 48,
+          "eventScriptRow": 2942,
+          "cid": 190,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 49,
+          "eventScriptRow": 2946,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 50,
+          "eventScriptRow": 2947,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 51,
+          "eventScriptRow": 2948,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 52,
+          "eventScriptRow": 2949,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        }
+      ],
+      "rewardPerResource": 150
+    },
+    {
+      "quest": "chronicle:quest.24",
+      "questSRow": 24,
+      "entryLabel": 6023,
+      "firstRow": 2957,
+      "lines": [
+        {
+          "step": 1,
+          "eventScriptRow": 2978,
+          "cid": 4,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 2,
+          "eventScriptRow": 2979,
+          "cid": 29,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 3,
+          "eventScriptRow": 2980,
+          "cid": 29,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 4,
+          "eventScriptRow": 2981,
+          "cid": 2,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 5,
+          "eventScriptRow": 2982,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 6,
+          "eventScriptRow": 2983,
+          "cid": 29,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 7,
+          "eventScriptRow": 2984,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 8,
+          "eventScriptRow": 2985,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 10,
+          "eventScriptRow": 2993,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 11,
+          "eventScriptRow": 2996,
+          "cid": 6,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 12,
+          "eventScriptRow": 2997,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 13,
+          "eventScriptRow": 3002,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 14,
+          "eventScriptRow": 3003,
+          "cid": 28,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 15,
+          "eventScriptRow": 3006,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 16,
+          "eventScriptRow": 3008,
+          "cid": 28,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 17,
+          "eventScriptRow": 3009,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 18,
+          "eventScriptRow": 3010,
+          "cid": 33,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 19,
+          "eventScriptRow": 3011,
+          "cid": 28,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        },
+        {
+          "step": 20,
+          "eventScriptRow": 3012,
+          "cid": 28,
+          "classification": "localized-adaptation",
+          "speakerBasis": "f34/f35 + f36 selection checked against dialogue response and surrounding context; explicit prose adaptation where narrator/commands condensed",
+          "sourceHasText": true
+        }
+      ],
+      "rewardPerResource": 200
+    }
+  ],
+  "encounters": {
+    "venus": {
+      "source": "original:planet.5",
+      "sourceRows": [
+        880,
+        909
+      ],
+      "level": 1,
+      "mode": "eliminate",
+      "seconds": null,
+      "reward": {},
+      "notes": "消滅追擊金星的敵群"
+    },
+    "receiver-a": {
+      "source": "original:spawn.1",
+      "sourceRows": [
+        970,
+        981
+      ],
+      "level": 1,
+      "mode": "eliminate",
+      "seconds": null,
+      "reward": {},
+      "notes": "清除據點並回收接收器外殼"
+    },
+    "receiver-b": {
+      "source": "original:spawn.2",
+      "sourceRows": [
+        981,
+        1004
+      ],
+      "level": 1,
+      "mode": "eliminate",
+      "seconds": null,
+      "reward": {},
+      "notes": "清除據點並回收能量接收模組"
+    },
+    "mars": {
+      "source": "original:planet.6",
+      "sourceRows": [
+        1030,
+        1061
+      ],
+      "level": 3,
+      "mode": "eliminate",
+      "seconds": null,
+      "reward": {},
+      "notes": "擊退火星本體附近的敵軍"
+    },
+    "jupiter-seal": {
+      "source": "original:wave.52",
+      "sourceRows": [
+        1133,
+        1198
+      ],
+      "level": 3,
+      "mode": "defend",
+      "seconds": 24,
+      "reward": {},
+      "notes": "在木星甦醒前保護封印結晶附近的防線"
+    },
+    "sun-traces": {
+      "source": "original:spawn.3",
+      "sourceRows": [
+        1228,
+        1245
+      ],
+      "level": 3,
+      "mode": "eliminate",
+      "seconds": null,
+      "reward": {},
+      "notes": "清除太陽附近巡邏隊，調查殘留能量"
+    },
+    "nemesis-first": {
+      "source": "original:spawn.4",
+      "sourceRows": [
+        1264,
+        1294
+      ],
+      "level": 3,
+      "mode": "survive",
+      "seconds": 24,
+      "reward": {},
+      "notes": "抵擋復仇女神星，等敵方撤退命令抵達"
+    },
+    "saturn": {
+      "source": "original:planet.8",
+      "sourceRows": [
+        1338,
+        1357
+      ],
+      "level": 3,
+      "mode": "protect",
+      "seconds": null,
+      "reward": {},
+      "notes": "保護土星並清除敵軍"
+    },
+    "uranus": {
+      "source": "original:planet.9",
+      "sourceRows": [
+        1436,
+        1451
+      ],
+      "level": 3,
+      "mode": "protect",
+      "seconds": null,
+      "reward": {},
+      "notes": "保護天王星並打開撤退通道"
+    },
+    "warp-parts": {
+      "source": "original:spawn.7",
+      "sourceRows": [
+        1518,
+        1551
+      ],
+      "level": 5,
+      "mode": "eliminate",
+      "seconds": null,
+      "reward": {},
+      "notes": "清除敵據點，回收躍遷門零件"
+    },
+    "neptune": {
+      "source": "original:wave.53",
+      "sourceRows": [
+        1573,
+        1597
+      ],
+      "level": 5,
+      "mode": "escort",
+      "seconds": 90,
+      "reward": {},
+      "notes": "保護海王星，抵達安全區"
+    },
+    "pluto-parts": {
+      "source": "original:spawn.9",
+      "sourceRows": [
+        1687,
+        1716
+      ],
+      "level": 5,
+      "mode": "eliminate",
+      "seconds": null,
+      "reward": {},
+      "notes": "取得能量裝置需要的零件"
+    },
+    "pluto": {
+      "source": "original:planet.11",
+      "sourceRows": [
+        1676,
+        1730
+      ],
+      "level": 5,
+      "mode": "defend",
+      "seconds": 24,
+      "reward": {},
+      "notes": "保護木星，撐到過載裝置啟動"
+    },
+    "nemesis-parts": {
+      "source": "original:spawn.10",
+      "sourceRows": [
+        1762,
+        1793
+      ],
+      "level": 5,
+      "mode": "eliminate",
+      "seconds": null,
+      "reward": {},
+      "notes": "取回殘片，完成一次性躍遷門"
+    },
+    "nemesis-duel": {
+      "source": "original:planet.12",
+      "sourceRows": [
+        1809,
+        1842
+      ],
+      "level": 5,
+      "mode": "eliminate",
+      "seconds": null,
+      "reward": {},
+      "notes": "支援木星，制伏復仇女神星"
+    },
+    "kiraba": {
+      "source": "original:spawn.15",
+      "sourceRows": [
+        1956,
+        2002
+      ],
+      "level": 5,
+      "mode": "eliminate",
+      "seconds": null,
+      "reward": {},
+      "notes": "擊敗Kiraba；支援星靈僅在本次戰場參戰"
+    },
+    "gliese": {
+      "source": "original:wave.55",
+      "sourceRows": [
+        2092,
+        2124
+      ],
+      "level": 10,
+      "mode": "escort",
+      "seconds": 90,
+      "reward": {},
+      "notes": "護送格利澤脫離追擊"
+    },
+    "vello": {
+      "source": "original:spawn.21",
+      "sourceRows": [
+        2159,
+        2202
+      ],
+      "level": 10,
+      "mode": "eliminate",
+      "seconds": null,
+      "reward": {},
+      "notes": "支援維洛，打開聯絡總部的通道"
+    },
+    "gliee": {
+      "source": "original:planet.13",
+      "sourceRows": [
+        2239,
+        2264
+      ],
+      "level": 10,
+      "mode": "protect",
+      "seconds": null,
+      "reward": {},
+      "notes": "保護格利澤581e，擊退包圍的敵軍"
+    },
+    "izar-standoff": {
+      "source": "original:spawn.22",
+      "sourceRows": [
+        2319,
+        2345
+      ],
+      "level": 10,
+      "mode": "eliminate",
+      "seconds": null,
+      "reward": {},
+      "notes": "制伏闖入者伊扎爾，結束衝突"
+    },
+    "linda": {
+      "source": "original:planet.21",
+      "sourceRows": [
+        2432,
+        2448
+      ],
+      "level": 10,
+      "mode": "eliminate",
+      "seconds": null,
+      "reward": {},
+      "notes": "援救琳達，取得黑洞研究情報"
+    },
+    "tactical-a": {
+      "source": "original:spawn.24",
+      "sourceRows": [
+        2547,
+        2556
+      ],
+      "level": 13,
+      "mode": "eliminate",
+      "seconds": null,
+      "reward": {},
+      "notes": "取回投射裝置的外殼"
+    },
+    "tactical-b": {
+      "source": "original:spawn.25",
+      "sourceRows": [
+        2556,
+        2562
+      ],
+      "level": 13,
+      "mode": "eliminate",
+      "seconds": null,
+      "reward": {},
+      "notes": "取回能量控制模組"
+    },
+    "tactical-c": {
+      "source": "original:spawn.26",
+      "sourceRows": [
+        2568,
+        2577
+      ],
+      "level": 13,
+      "mode": "eliminate",
+      "seconds": null,
+      "reward": {},
+      "notes": "取回穩定裝置"
+    },
+    "valencia": {
+      "source": "original:spawn.27",
+      "sourceRows": [
+        2582,
+        2590
+      ],
+      "level": 13,
+      "mode": "protect",
+      "seconds": null,
+      "reward": {},
+      "notes": "保護瓦倫西亞，清除伏兵"
+    },
+    "seginus": {
+      "source": "original:planet.14",
+      "sourceRows": [
+        2610,
+        2631
+      ],
+      "level": 13,
+      "mode": "protect",
+      "seconds": null,
+      "reward": {},
+      "notes": "保護招搖，守住平民避難所"
+    },
+    "spica": {
+      "source": "original:planet.15",
+      "sourceRows": [
+        2667,
+        2689
+      ],
+      "level": 13,
+      "mode": "eliminate",
+      "seconds": null,
+      "reward": {},
+      "notes": "擊退追兵，援救角宿一"
+    },
+    "spica-return": {
+      "source": "original:wave.56",
+      "sourceRows": [
+        2704,
+        2733
+      ],
+      "level": 13,
+      "mode": "escort",
+      "seconds": 90,
+      "reward": {},
+      "notes": "保護角宿一，送她抵達避難所"
+    },
+    "blackhole-delivery": {
+      "source": "original:wave.57",
+      "sourceRows": [
+        2773,
+        2801
+      ],
+      "level": 13,
+      "mode": "escort",
+      "seconds": 90,
+      "reward": {},
+      "notes": "護送攜帶裝置的瓦倫西亞抵達發射位置"
+    },
+    "mitsuba": {
+      "source": "original:spawn.34",
+      "sourceRows": [
+        2844,
+        2907
+      ],
+      "level": 18,
+      "mode": "eliminate",
+      "seconds": null,
+      "reward": {},
+      "notes": "在角宿一與木星支援下，擊敗Mitsuba"
+    },
+    "collapse": {
+      "source": "original:spawn.33",
+      "sourceRows": [
+        2913,
+        2949
+      ],
+      "level": 18,
+      "mode": "defend",
+      "seconds": 24,
+      "reward": {},
+      "notes": "掩護木星穩定人造黑洞，維持撤離通道"
+    }
+  }
+}

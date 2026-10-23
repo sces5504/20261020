@@ -391,7 +391,7 @@ try {
   );
   assert.deepEqual(errors, []);
   console.log(
-    "PASS exploration: dialogue, WASD/touch, DPR2 canvas, map toggle, character/formation/skill descriptions, custom confirmations, cancel atomicity, persistent summon reveal, natural patrol collision/retreat, 110 future art targets and 2 remaining priority entries, no native dialogs or mobile obstruction.",
+    "PASS exploration: dialogue, WASD/touch, DPR2 canvas, map toggle, character/formation/skill descriptions, custom confirmations, cancel atomicity, persistent summon reveal, natural patrol collision/retreat, production roster aligned with the live character catalog, no native dialogs or mobile obstruction.",
   );
 } finally {
   await browser.close();

@@ -44,3 +44,11 @@
 最後邊界修正：region/position等requires只在接受任務時判定；已接受流程移區後仍能接續，流程已讀後按objective獨立完成。針對跨區／完成條件2項測試PASS，typecheck PASS，未重跑已成功瀏覽器。
 
 補齊來源SpawnCID的不可收集單位契約：storyEncounter演員可二擇一引用character或enemy，沿同一Unit與來源成長，不要求先做成可抽少女才能在戰場出場／被保護／接收生命門檻。針對不可收集單位＋五目標＋進退場3項PASS，typecheck PASS；不重跑其他瀏覽器。戰場角色來源與正式speaker仍由劇情作者逐row指定。
+
+## 正式發布候選與最小修復（不可忽略）
+
+PR #20已合main `a154206beebb809bb254fea2775c794cb876a138`。main Checks成功，124核心。第一次完整Pages run39931071868：內容／型別／124核心／build／test:e2e／test:playtest通過，test:exploration在製作表數量失敗（100待製作，但32已整合應94）。原始收據完整保存`docs/verification/story-core-release-initial.json`，未標完整通過，未部署；其後項目尚未執行。
+
+原因是六人遊戲與美術已接入，而公開製作表JSON／CSV仍標待製作；只修該六筆為已整合，不改角色／核心／Combat／技能或內容包。為遵守使用者失敗只驗受影響項，不再從全套開頭重跑：`scripts/continue-release.py`核對GitHub失敗main run與其不可變artifact、來源SHA／乾淨工作樹／祖先關係／完整指令順序，且變更僅限製作表、文件與驗證工具。只有原已成功且不受影響的五項（內容、型別、核心、前兩瀏覽器）可帶來源run／SHA沿用；build重做，失敗探索及後續九項實跑。未知runtime／build input變更明確拒絕接續，不能略過。新receipt每項標重用來源，原失敗不改寫。
+
+Pages僅在合併提交明填`Release-Resume-Run: 39931071868`時走此接續，正常發布仍原完整門檻。資料修復PR的Checks只跑接續安全測試、build與受影響探索，不重跑124核心。三項接續安全測試通過（拒絕來源身分／指令順序／runtime變更，失敗與build不重用），workflow shell語法及build通過。最終接續結果／公開SHA以整合PR及修復PR最新描述為準。

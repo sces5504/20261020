@@ -1,0 +1,238 @@
+{
+  "baseline": "ff7d31a",
+  "scales": {
+    "hp": 3.0670575995460134,
+    "attack": 1.780185758513932,
+    "defense": 1.1428571428571428
+  },
+  "scalePolicy": "Reuse fixed story10 conversion coefficients; do not recompute against expanded roster",
+  "characters": [
+    {
+      "character": "prologue6:character.scuti",
+      "cid": 107,
+      "key": "Scuti",
+      "usage": "序章部隊指揮",
+      "sourceSkill": 61,
+      "gachaRow": 106,
+      "gachaMode": 0,
+      "gachaFlag": 1,
+      "nativeLv1": {
+        "hp": 298,
+        "attack": 41,
+        "defense": 17
+      },
+      "sourceRefs": {
+        "f15": 418,
+        "f16": 176,
+        "f17": 2987,
+        "f18": 7,
+        "f19": 15
+      },
+      "converted": {
+        "hp": 914,
+        "attack": 73,
+        "defense": 19
+      },
+      "event": {
+        "_row": 64,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 107,
+        "f43": "Shield unit! Prepare to focus fire on the right wing!"
+      },
+      "sourceDescription": "Creates a barrier within [dist]\\nwhich has a [percent] chance to offset projectiles for [time]."
+    },
+    {
+      "character": "prologue6:character.antares",
+      "cid": 99,
+      "key": "Antares",
+      "usage": "序章部隊指揮",
+      "sourceSkill": 75,
+      "gachaRow": 98,
+      "gachaMode": 0,
+      "gachaFlag": 0,
+      "nativeLv1": {
+        "hp": 661,
+        "attack": 14,
+        "defense": 23
+      },
+      "sourceRefs": {
+        "f15": 144,
+        "f16": 237,
+        "f17": 6612,
+        "f18": 6,
+        "f19": 9
+      },
+      "converted": {
+        "hp": 2027,
+        "attack": 25,
+        "defense": 26
+      },
+      "event": {
+        "_row": 72,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 99,
+        "f43": "We have to buy time until the Shield unit deploys the defense system!"
+      },
+      "sourceDescription": "Receive zero damage from the enemy's attacks for [time]."
+    },
+    {
+      "character": "prologue6:character.deneb",
+      "cid": 73,
+      "key": "Deneb",
+      "usage": "序章參戰與後續天鵝座主角",
+      "sourceSkill": 184,
+      "gachaRow": 72,
+      "gachaMode": 0,
+      "gachaFlag": 0,
+      "nativeLv1": {
+        "hp": 512,
+        "attack": 12,
+        "defense": 27
+      },
+      "sourceRefs": {
+        "f15": 123,
+        "f16": 271,
+        "f17": 5121,
+        "f18": 5,
+        "f19": 9
+      },
+      "converted": {
+        "hp": 1570,
+        "attack": 21,
+        "defense": 31
+      },
+      "event": {
+        "_row": 96,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 73,
+        "f43": "Those damn demakers, sending a whole mothership through…\\nAt this rate, Earth is a goner."
+      },
+      "sourceDescription": "Decreases received damage [dmgdec] of allies within [dist] for [time]"
+    },
+    {
+      "character": "prologue6:character.doradus",
+      "cid": 48,
+      "key": "Doradus",
+      "usage": "序章支援部隊",
+      "sourceSkill": 116,
+      "gachaRow": 47,
+      "gachaMode": 0,
+      "gachaFlag": 1,
+      "nativeLv1": {
+        "hp": 222,
+        "attack": 51,
+        "defense": 15
+      },
+      "sourceRefs": {
+        "f15": 510,
+        "f16": 150,
+        "f17": 2223,
+        "f18": 18,
+        "f19": 10
+      },
+      "converted": {
+        "hp": 681,
+        "attack": 91,
+        "defense": 17
+      },
+      "event": {
+        "_row": 25,
+        "f01": 0,
+        "f02": 47,
+        "f09": 48,
+        "f34": 0,
+        "f43": ""
+      },
+      "sourceDescription": "When hit, inflicts [atk] damage and [atksplashdmg] to all enemies within [splashrange] and knocks them back."
+    },
+    {
+      "character": "prologue6:character.mucephei",
+      "cid": 62,
+      "key": "Mucephei",
+      "usage": "序章能量屏障部隊；主動技依CID為過載",
+      "sourceSkill": 6,
+      "gachaRow": 61,
+      "gachaMode": 0,
+      "gachaFlag": 1,
+      "nativeLv1": {
+        "hp": 233,
+        "attack": 51,
+        "defense": 17
+      },
+      "sourceRefs": {
+        "f15": 519,
+        "f16": 172,
+        "f17": 2339,
+        "f18": 10,
+        "f19": 8
+      },
+      "converted": {
+        "hp": 715,
+        "attack": 91,
+        "defense": 19
+      },
+      "event": {
+        "_row": 27,
+        "f01": 0,
+        "f02": 47,
+        "f09": 62,
+        "f34": 0,
+        "f43": ""
+      },
+      "sourceDescription": "Increases attack speed [atkspdup] and projectile speed [projspdup] for [time]."
+    },
+    {
+      "character": "prologue6:character.sargas",
+      "cid": 101,
+      "key": "Sargas",
+      "usage": "序章支援部隊",
+      "sourceSkill": 106,
+      "gachaRow": 100,
+      "gachaMode": 0,
+      "gachaFlag": 0,
+      "nativeLv1": {
+        "hp": 209,
+        "attack": 42,
+        "defense": 13
+      },
+      "sourceRefs": {
+        "f15": 420,
+        "f16": 131,
+        "f17": 2090,
+        "f18": 16,
+        "f19": 0
+      },
+      "converted": {
+        "hp": 641,
+        "attack": 75,
+        "defense": 15
+      },
+      "event": {
+        "_row": 39,
+        "f01": 0,
+        "f02": 47,
+        "f09": 101,
+        "f34": 0,
+        "f43": ""
+      },
+      "sourceDescription": "Inflicts [stun] damage and [atk] damage to enemies within [dist] for [time]."
+    }
+  ],
+  "overloadSource": {
+    "_row": 6,
+    "f06": 14000,
+    "f07": 400,
+    "f12": 4000,
+    "f13": 300,
+    "f45": 155,
+    "f46": 5,
+    "f82": 300,
+    "f83": 20
+  }
+}

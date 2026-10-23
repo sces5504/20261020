@@ -45,8 +45,402 @@
         "role": "前鋒 · 彈體抵消",
         "sourceRow": 107,
         "summonable": true
+      },
+      {
+        "id": "prologue6:character.antares",
+        "name": "心宿二",
+        "description": "短時間不受敵方攻擊傷害，適合在前鋒承壓時使用。建議前鋒，實際位置由玩家編隊順序決定。美術待補。",
+        "status": "active",
+        "provenance": "inferred",
+        "rarity": 4,
+        "hp": 2027,
+        "attack": 25,
+        "defense": 26,
+        "speed": 180,
+        "range": 430,
+        "interval": 0.8,
+        "growth": 0.08,
+        "critical": 0.06,
+        "evasion": 0.09,
+        "skill": "stella:skill.75",
+        "color": "#df8d86",
+        "portrait": "",
+        "avatar": "",
+        "sprite": "",
+        "recipe": [
+          747,
+          304,
+          380,
+          871
+        ],
+        "starter": false,
+        "role": "前鋒 · 短時無敵",
+        "sourceRow": 99,
+        "summonable": true
+      },
+      {
+        "id": "prologue6:character.deneb",
+        "name": "天津四",
+        "description": "短時間降低範圍內友軍承受傷害。建議前鋒／後衛，實際位置由玩家編隊順序決定。美術待補。",
+        "status": "active",
+        "provenance": "inferred",
+        "rarity": 4,
+        "hp": 1570,
+        "attack": 21,
+        "defense": 31,
+        "speed": 180,
+        "range": 430,
+        "interval": 0.8,
+        "growth": 0.08,
+        "critical": 0.05,
+        "evasion": 0.09,
+        "skill": "stella:skill.184",
+        "color": "#93c8ea",
+        "portrait": "",
+        "avatar": "",
+        "sprite": "",
+        "recipe": [
+          724,
+          347,
+          314,
+          924
+        ],
+        "starter": false,
+        "role": "前鋒／後衛 · 全隊減傷",
+        "sourceRow": 73,
+        "summonable": true
+      },
+      {
+        "id": "prologue6:character.doradus",
+        "name": "Doradus",
+        "description": "發射爆破彈，命中造成範圍傷害並擊退敵人。建議後衛，實際位置由玩家編隊順序決定。美術待補。",
+        "status": "active",
+        "provenance": "inferred",
+        "rarity": 3,
+        "hp": 681,
+        "attack": 91,
+        "defense": 17,
+        "speed": 180,
+        "range": 430,
+        "interval": 0.8,
+        "growth": 0.08,
+        "critical": 0.18,
+        "evasion": 0.1,
+        "skill": "stella:skill.116",
+        "color": "#e6b481",
+        "portrait": "",
+        "avatar": "",
+        "sprite": "",
+        "recipe": [
+          578,
+          578,
+          578,
+          578
+        ],
+        "starter": false,
+        "role": "後衛 · 範圍爆破",
+        "sourceRow": 48,
+        "summonable": true
+      },
+      {
+        "id": "prologue6:character.mucephei",
+        "name": "Mucephei",
+        "description": "過載同時提高自身攻速與彈速；屏障部隊是序章用途，不是此角色的主動技能。建議後衛，實際位置由玩家編隊順序決定。美術待補。",
+        "status": "active",
+        "provenance": "inferred",
+        "rarity": 3,
+        "hp": 715,
+        "attack": 91,
+        "defense": 19,
+        "speed": 180,
+        "range": 430,
+        "interval": 0.8,
+        "growth": 0.08,
+        "critical": 0.1,
+        "evasion": 0.08,
+        "skill": "prologue6:skill.overload",
+        "color": "#b3c8ee",
+        "portrait": "",
+        "avatar": "",
+        "sprite": "",
+        "recipe": [
+          578,
+          578,
+          578,
+          578
+        ],
+        "starter": false,
+        "role": "後衛 · 攻速與彈速強化",
+        "sourceRow": 62,
+        "summonable": true
+      },
+      {
+        "id": "prologue6:character.sargas",
+        "name": "Sargas",
+        "description": "建立跟隨自身的範圍場，週期傷害並暈眩附近敵人。建議前鋒，實際位置由玩家編隊順序決定。美術待補。",
+        "status": "active",
+        "provenance": "inferred",
+        "rarity": 3,
+        "hp": 641,
+        "attack": 75,
+        "defense": 15,
+        "speed": 180,
+        "range": 430,
+        "interval": 0.8,
+        "growth": 0.08,
+        "critical": 0.16,
+        "evasion": 0.0,
+        "skill": "stella:skill.106",
+        "color": "#c8ad8e",
+        "portrait": "",
+        "avatar": "",
+        "sprite": "",
+        "recipe": [
+          315,
+          735,
+          630,
+          420
+        ],
+        "starter": false,
+        "role": "前鋒 · 範圍暈眩",
+        "sourceRow": 101,
+        "summonable": true
       }
     ],
-    "skills": []
+    "skills": [
+      {
+        "id": "prologue6:skill.overload",
+        "name": "過載",
+        "description": "同時提高自身普通攻擊節奏與彈體速度。",
+        "status": "active",
+        "provenance": "research",
+        "effect": "program",
+        "power": 1,
+        "duration": 4.0,
+        "cooldown": 14.0,
+        "color": "#b3c8ee",
+        "sourceSkill": 6,
+        "fidelity": "description",
+        "actions": [
+          {
+            "kind": "status",
+            "target": "self",
+            "radius": 800,
+            "modifiers": [
+              {
+                "stat": "attackSpeed",
+                "value": 1.55,
+                "duration": 4.0
+              },
+              {
+                "stat": "projectileSpeed",
+                "value": 3.0,
+                "duration": 4.0
+              }
+            ]
+          }
+        ],
+        "levels": [
+          {
+            "cooldown": 13.6,
+            "actions": [
+              {
+                "kind": "status",
+                "target": "self",
+                "radius": 800,
+                "modifiers": [
+                  {
+                    "stat": "attackSpeed",
+                    "value": 1.6,
+                    "duration": 4.3
+                  },
+                  {
+                    "stat": "projectileSpeed",
+                    "value": 3.2,
+                    "duration": 4.3
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "cooldown": 13.2,
+            "actions": [
+              {
+                "kind": "status",
+                "target": "self",
+                "radius": 800,
+                "modifiers": [
+                  {
+                    "stat": "attackSpeed",
+                    "value": 1.65,
+                    "duration": 4.6
+                  },
+                  {
+                    "stat": "projectileSpeed",
+                    "value": 3.4,
+                    "duration": 4.6
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "cooldown": 12.8,
+            "actions": [
+              {
+                "kind": "status",
+                "target": "self",
+                "radius": 800,
+                "modifiers": [
+                  {
+                    "stat": "attackSpeed",
+                    "value": 1.7,
+                    "duration": 4.9
+                  },
+                  {
+                    "stat": "projectileSpeed",
+                    "value": 3.6,
+                    "duration": 4.9
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "cooldown": 12.4,
+            "actions": [
+              {
+                "kind": "status",
+                "target": "self",
+                "radius": 800,
+                "modifiers": [
+                  {
+                    "stat": "attackSpeed",
+                    "value": 1.75,
+                    "duration": 5.2
+                  },
+                  {
+                    "stat": "projectileSpeed",
+                    "value": 3.8,
+                    "duration": 5.2
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "cooldown": 12.0,
+            "actions": [
+              {
+                "kind": "status",
+                "target": "self",
+                "radius": 800,
+                "modifiers": [
+                  {
+                    "stat": "attackSpeed",
+                    "value": 1.8,
+                    "duration": 5.5
+                  },
+                  {
+                    "stat": "projectileSpeed",
+                    "value": 4.0,
+                    "duration": 5.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "cooldown": 11.6,
+            "actions": [
+              {
+                "kind": "status",
+                "target": "self",
+                "radius": 800,
+                "modifiers": [
+                  {
+                    "stat": "attackSpeed",
+                    "value": 1.85,
+                    "duration": 5.8
+                  },
+                  {
+                    "stat": "projectileSpeed",
+                    "value": 4.2,
+                    "duration": 5.8
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "cooldown": 11.2,
+            "actions": [
+              {
+                "kind": "status",
+                "target": "self",
+                "radius": 800,
+                "modifiers": [
+                  {
+                    "stat": "attackSpeed",
+                    "value": 1.9,
+                    "duration": 6.1
+                  },
+                  {
+                    "stat": "projectileSpeed",
+                    "value": 4.4,
+                    "duration": 6.1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "cooldown": 10.8,
+            "actions": [
+              {
+                "kind": "status",
+                "target": "self",
+                "radius": 800,
+                "modifiers": [
+                  {
+                    "stat": "attackSpeed",
+                    "value": 1.95,
+                    "duration": 6.4
+                  },
+                  {
+                    "stat": "projectileSpeed",
+                    "value": 4.6,
+                    "duration": 6.4
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "cooldown": 10.4,
+            "actions": [
+              {
+                "kind": "status",
+                "target": "self",
+                "radius": 800,
+                "modifiers": [
+                  {
+                    "stat": "attackSpeed",
+                    "value": 2.0,
+                    "duration": 6.7
+                  },
+                  {
+                    "stat": "projectileSpeed",
+                    "value": 4.8,
+                    "duration": 6.7
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 }

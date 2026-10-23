@@ -1,3 +1,5 @@
+> 0.8 整合更新（2026-10-23）：本包已升為story10:package.virgo-vanguard@0.2.0，精確依賴m1:core@0.8.0；十人立繪／頭像／戰鬥圖由stellaart:package.stellar11@0.1.0接入。以來源CID對照，不靠名稱或清單順序猜測；根manifest的characterPresentation為本批實際引用。下方0.1無美術記錄保留為原作者歷史，已非目前狀態。
+
 # story10：主線後續十人
 
 來源：2026-10-22使用者要求確認原作技能完成後新增可能在接續劇情登場的10人；明確選擇「按原作角色差異換算到目前遊戲的數值尺度」。起點origin/main `5e6d471`，分支content/story10。包 `story10:package.virgo-vanguard@0.1.0`，精確依賴m1:core@0.6.0與stella:package.skills@0.1.0；只新增角色，沿用已實現的來源技能庫。

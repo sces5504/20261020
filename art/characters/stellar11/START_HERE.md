@@ -1,3 +1,5 @@
+> 0.8 接入更新（2026-10-23）：十人與既有木星三類素材已透過stellaart:package.stellar11@0.1.0綁定，根content/manifest.json的characterPresentation為本批正式遊戲引用。木星保留原角色ID與戰力，舊素材仍保留；素材人工品質狀態仍為候選。公開部署結果依整合PR #17與version.json核對。
+
 # 十位新角色與木星更新：固定整合入口
 
 本批素材固定放在 `art/characters/stellar11/`。這是美術交付，遊戲接入由整合者處理，不需另向聊天作者索取 ZIP。

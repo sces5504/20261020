@@ -49,3 +49,13 @@
 ## CI候選結果與最小修復
 
 8b4074b的CI run39884679393：115核心與九組瀏覽器全部通過，最後readiness指出七項每日任務缺背景引用，故整輪未通過。每日不播放劇情，但沿用Quest完整媒體契約補上現有艦橋／地表背景，不新造敘事、不改數值或戰鬥。只重跑內容校驗與playtest readiness；其餘已通過結果保留，正式main部署仍由既有release gate驗證。
+
+## 功能交付與正式發布入口
+
+最新實作4b397f2：背景引用修復後content:check及release:ready --target playtest均成功。未重跑已通過的115核心／九瀏覽器，候選整輪raw report仍保留passed=false，不拼造成完整成功。收據docs/verification/integration-v8-0.8.json明列候選最後門檻失敗與局部修復；docs/verification/integration-v8-world.json保存671唯一來源遭遇勝利證據，656三人＋15六人對策seed42，從e43420a後combat／世界／技能不變，唯一後改內容是七個每日背景引用。
+
+已檢視本輪CI桌機／手機領地與每日截圖，派駐立繪不再受星球float擠壓、按鍵可操作；副本小圖切換→加入／移出、同調小圖、編隊頂部移出、返回、每日實領、十人與木星詳情／訓練場、33圖HTTP／SHA／decode、存檔隔離全通過。四張截圖存於docs/verification/integration-v8-*.png。指南、新十人／美術入口與接力索引已更新。
+
+以本PR最後文件提交合併main，既有Pages workflow將對合併SHA做最後一次完整release及部署；不再另跑功能分支全套，也不重播671場。PR #17描述記錄main精確SHA／Pages run／公開瀏覽器驗證，避免僅為把部署自己的SHA寫進git而觸發另一整輪發布。接手查PR最新描述與公開version.json；若main workflow失敗，先針對失敗項修復，保留已成功收據。
+
+功能缺口已交付；使用者後補劇情／任務敘事不等同目前每日／活動機制未實作。來源重建界線與commercial缺人工批准／獨立接力／Android與iOS真機／硬體效能保持明示，未標為成功。

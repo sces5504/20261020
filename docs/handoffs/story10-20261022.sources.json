@@ -1,0 +1,360 @@
+{
+  "baseline": "5e6d471",
+  "scales": {
+    "hp": 3.0670575995460134,
+    "attack": 1.780185758513932,
+    "defense": 1.1428571428571428
+  },
+  "characters": [
+    {
+      "character": "story10:character.arcturus",
+      "cid": 29,
+      "key": "Arcturus",
+      "sourceSkill": 85,
+      "gachaRow": 28,
+      "sourceRefs": {
+        "f15": 545,
+        "f16": 93,
+        "f17": 1501,
+        "f18": 19,
+        "f19": 0
+      },
+      "nativeLv1": {
+        "hp": 150,
+        "attack": 54,
+        "defense": 9
+      },
+      "converted": {
+        "hp": 460,
+        "attack": 96,
+        "defense": 10
+      },
+      "event": {
+        "_row": 2082,
+        "f01": 0,
+        "f34": 4,
+        "f43": "Earth. At this point, we're entering the Virgo area\\nunder the command of Admiral Arcturus."
+      },
+      "nearestPriorLabel": {
+        "_row": 2056,
+        "f01": 6013
+      },
+      "sourceDescription": "Creates a Reflectstar [dronenum] which stays for [skilltime]. Reflectstar HP:[hp] Atk:[atk]"
+    },
+    {
+      "character": "story10:character.gliese",
+      "cid": 25,
+      "key": "Gliese",
+      "sourceSkill": 58,
+      "gachaRow": 24,
+      "sourceRefs": {
+        "f15": 224,
+        "f16": 214,
+        "f17": 1264,
+        "f18": 24,
+        "f19": 18
+      },
+      "nativeLv1": {
+        "hp": 126,
+        "attack": 22,
+        "defense": 21
+      },
+      "converted": {
+        "hp": 386,
+        "attack": 39,
+        "defense": 24
+      },
+      "event": {
+        "_row": 2098,
+        "f01": 0,
+        "f34": 25,
+        "f43": "Go awaynew!"
+      },
+      "nearestPriorLabel": {
+        "_row": 2056,
+        "f01": 6013
+      },
+      "sourceDescription": "Decreases damage of front barrier [dmgdec] within [dist] for [time]."
+    },
+    {
+      "character": "story10:character.vello",
+      "cid": 31,
+      "key": "Vello",
+      "sourceSkill": 32,
+      "gachaRow": 30,
+      "sourceRefs": {
+        "f15": 128,
+        "f16": 129,
+        "f17": 1975,
+        "f18": 11,
+        "f19": 11
+      },
+      "nativeLv1": {
+        "hp": 197,
+        "attack": 12,
+        "defense": 12
+      },
+      "converted": {
+        "hp": 604,
+        "attack": 21,
+        "defense": 14
+      },
+      "event": {
+        "_row": 2160,
+        "f01": 0,
+        "f34": 31,
+        "f43": "There's no end to this! Where are the reinforments from HQ?!"
+      },
+      "nearestPriorLabel": {
+        "_row": 2145,
+        "f01": 6014
+      },
+      "sourceDescription": "Increases attack power [atkup] and critical rate [criup] for [time]."
+    },
+    {
+      "character": "story10:character.gliese-581e",
+      "cid": 26,
+      "key": "581E",
+      "sourceSkill": 16,
+      "gachaRow": 25,
+      "sourceRefs": {
+        "f15": 220,
+        "f16": 219,
+        "f17": 1453,
+        "f18": 20,
+        "f19": 24
+      },
+      "nativeLv1": {
+        "hp": 145,
+        "attack": 22,
+        "defense": 21
+      },
+      "converted": {
+        "hp": 445,
+        "attack": 39,
+        "defense": 24
+      },
+      "event": {
+        "_row": 2255,
+        "f01": 0,
+        "f34": 26,
+        "f43": "Mmm…\\nGliese?"
+      },
+      "nearestPriorLabel": {
+        "_row": 2217,
+        "f01": 6015
+      },
+      "sourceDescription": "Increases attack power [atkup] for [time]."
+    },
+    {
+      "character": "story10:character.valencia",
+      "cid": 30,
+      "key": "Valencia",
+      "sourceSkill": 27,
+      "gachaRow": 29,
+      "sourceRefs": {
+        "f15": 193,
+        "f16": 96,
+        "f17": 1358,
+        "f18": 12,
+        "f19": 9
+      },
+      "nativeLv1": {
+        "hp": 135,
+        "attack": 19,
+        "defense": 9
+      },
+      "converted": {
+        "hp": 414,
+        "attack": 34,
+        "defense": 10
+      },
+      "event": {
+        "_row": 2301,
+        "f01": 0,
+        "f34": 30,
+        "f43": "Vello!!! Do you copy?!!"
+      },
+      "nearestPriorLabel": {
+        "_row": 2281,
+        "f01": 6016
+      },
+      "sourceDescription": "Increases attack power [atkup] and attack speed [atkspdup] for [time]."
+    },
+    {
+      "character": "story10:character.linda",
+      "cid": 32,
+      "key": "Linda",
+      "sourceSkill": 113,
+      "gachaRow": 31,
+      "sourceRefs": {
+        "f15": 143,
+        "f16": 157,
+        "f17": 1801,
+        "f18": 8,
+        "f19": 12
+      },
+      "nativeLv1": {
+        "hp": 180,
+        "attack": 14,
+        "defense": 15
+      },
+      "converted": {
+        "hp": 552,
+        "attack": 25,
+        "defense": 17
+      },
+      "event": {
+        "_row": 2432,
+        "f01": 0,
+        "f34": 32,
+        "f43": "Ahhh! There's too many of them!!!"
+      },
+      "nearestPriorLabel": {
+        "_row": 2395,
+        "f01": 6017
+      },
+      "sourceDescription": "When hit, inflicts [atk] damage and [atksplashdmg] to all enemies within [splashrange] and knocks them back. 2 bullets"
+    },
+    {
+      "character": "story10:character.izar",
+      "cid": 33,
+      "key": "Izar",
+      "sourceSkill": 102,
+      "gachaRow": 32,
+      "sourceRefs": {
+        "f15": 512,
+        "f16": 103,
+        "f17": 2128,
+        "f18": 12,
+        "f19": 0
+      },
+      "nativeLv1": {
+        "hp": 212,
+        "attack": 51,
+        "defense": 10
+      },
+      "converted": {
+        "hp": 650,
+        "attack": 91,
+        "defense": 11
+      },
+      "event": {
+        "_row": 2476,
+        "f01": 0,
+        "f34": 33,
+        "f43": "Jupiter was it?\\nWhy are you helping me…"
+      },
+      "nearestPriorLabel": {
+        "_row": 2466,
+        "f01": 6018
+      },
+      "sourceDescription": "Put up a flame barrier which inflicts attack power [dotattack] damage to enemies within [dist] for [skilltime] every [dotms]."
+    },
+    {
+      "character": "story10:character.seginus",
+      "cid": 27,
+      "key": "Seginus",
+      "sourceSkill": 35,
+      "gachaRow": 26,
+      "sourceRefs": {
+        "f15": 466,
+        "f16": 136,
+        "f17": 2299,
+        "f18": 9,
+        "f19": 0
+      },
+      "nativeLv1": {
+        "hp": 229,
+        "attack": 46,
+        "defense": 13
+      },
+      "converted": {
+        "hp": 702,
+        "attack": 82,
+        "defense": 15
+      },
+      "event": {
+        "_row": 2610,
+        "f01": 0,
+        "f34": 27,
+        "f43": "Do not lay a hand on this planet!!!"
+      },
+      "nearestPriorLabel": {
+        "_row": 2596,
+        "f01": 6020
+      },
+      "sourceDescription": "Increases attack power [atkup] and critical rate [criup] for [time]."
+    },
+    {
+      "character": "story10:character.spica",
+      "cid": 28,
+      "key": "Spica",
+      "sourceSkill": 9,
+      "gachaRow": 27,
+      "sourceRefs": {
+        "f15": 143,
+        "f16": 330,
+        "f17": 1672,
+        "f18": 11,
+        "f19": 17
+      },
+      "nativeLv1": {
+        "hp": 167,
+        "attack": 14,
+        "defense": 33
+      },
+      "converted": {
+        "hp": 512,
+        "attack": 25,
+        "defense": 38
+      },
+      "event": {
+        "_row": 2679,
+        "f01": 0,
+        "f34": 28,
+        "f43": "Guards!\\nOh no… This is my fault…"
+      },
+      "nearestPriorLabel": {
+        "_row": 2649,
+        "f01": 6021
+      },
+      "sourceDescription": "Increases attack speed [atkspdup] of allies within [dist] for [time]."
+    },
+    {
+      "character": "story10:character.wolf359",
+      "cid": 37,
+      "key": "Wolf359",
+      "sourceSkill": 39,
+      "gachaRow": 36,
+      "sourceRefs": {
+        "f15": 154,
+        "f16": 129,
+        "f17": 1532,
+        "f18": 11,
+        "f19": 10
+      },
+      "nativeLv1": {
+        "hp": 153,
+        "attack": 15,
+        "defense": 12
+      },
+      "converted": {
+        "hp": 469,
+        "attack": 27,
+        "defense": 14
+      },
+      "event": {
+        "_row": 3032,
+        "f01": 0,
+        "f34": 37,
+        "f43": "……………."
+      },
+      "nearestPriorLabel": {
+        "_row": 3019,
+        "f01": 6024
+      },
+      "sourceDescription": "All attacks become critical for [time]."
+    }
+  ]
+}

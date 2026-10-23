@@ -1,3 +1,5 @@
+> 0.8整合AI2：角色總26人、新十人＋木星媒體更新、單卡收藏／領地返回與派駐立繪、戰中面敵同步閃避、七項每日任務。現行核心與精確依賴0.8.0，schema1新dailyTasks預設空；先讀 [交接](../handoffs/integration-v8-20261023.md)／[契約](../design/galaxy-angel-v8.md)，不要沿用下方歷史版本。
+
 > 0.7 世界／敵群已完成完整試玩發布驗收：[PR #15](https://github.com/sces5504/20261020/pull/15)、[本輪交接](../handoffs/original-world-20261022.md)、[世界契約](../design/original-world.md)、[106核心＋八組收據](../verification/original-world-0.7.json)。使用者單次特殊授權本世界chat補必要核心欄位與流程，其他AI先查交接避免競改。新增original:命名空間、CID成長、空守軍／啟動前置／基地／每日限時與三次額度、六人上限與恢復路徑。下段0.6為歷史起點；公開SHA依PR合併與version.json。
 
 > 目前任務：[0.6技能／彈幕／工坊測試場整合](../handoffs/skill-engine-20261022.md)。使用者要求本次直接交付成品；缺原版實機部分已授權依wiki推定。契約[skill-engine-v6](../design/skill-engine-v6.md)，不要再為十人選近似M1技能。下段為上一輪整合歷史。

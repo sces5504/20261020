@@ -1,0 +1,316 @@
+{
+  "schemaVersion": 1,
+  "id": "stellaart:package.stellar11",
+  "version": "0.1.0",
+  "requires": [
+    {
+      "id": "m1:core",
+      "version": "0.8.0"
+    },
+    {
+      "id": "story10:package.virgo-vanguard",
+      "version": "0.2.0"
+    }
+  ],
+  "definitions": {
+    "assets": [
+      {
+        "id": "stellaart:asset.arcturus-portrait-20261023-web",
+        "name": "大角星 · portrait",
+        "src": "assets/extensions/stellar11/web/arcturus.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "89abe1d569e90a3c3d30f1ea712db8e99dc2db1853ef95eda962a8388cb753ba",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.arcturus-avatar-20261023-web",
+        "name": "大角星 · avatar",
+        "src": "assets/extensions/stellar11/avatars/arcturus.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "1f9ae2a2a6a21ee76e7934603f879187957e947b3c507f43a395366cc4df3c72",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.arcturus-battle-20261023-v1-web",
+        "name": "大角星 · sprite",
+        "src": "assets/extensions/stellar11/web/arcturus-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "0339f0188c4f8a841c58f57a94a44525c3d3f57320634b3bf4138cd6138a674c",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.gliese-portrait-20261023-web",
+        "name": "格利澤 · portrait",
+        "src": "assets/extensions/stellar11/web/gliese.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "8ae10f988d019f0027aeaf648664a99438c537947b750d48ebf0748c626101be",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.gliese-avatar-20261023-web",
+        "name": "格利澤 · avatar",
+        "src": "assets/extensions/stellar11/avatars/gliese.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "e2261394380f538b21f463e590369945362054f9e6983b3e4ad3a8d36d072651",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.gliese-battle-20261023-v1-web",
+        "name": "格利澤 · sprite",
+        "src": "assets/extensions/stellar11/web/gliese-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "b80fd6ff600ee070fc16c240b7a074bb50979bca7eafa6578e2eed235f3db469",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.vello-portrait-20261023-web",
+        "name": "維洛 · portrait",
+        "src": "assets/extensions/stellar11/web/vello.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "653859afadac6d599326877897b8d171738b00ff856913bf37e0d194df0701f9",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.vello-avatar-20261023-web",
+        "name": "維洛 · avatar",
+        "src": "assets/extensions/stellar11/avatars/vello.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "2698dd7b34d6c212f3c44598218a2024b61899aec6760b9a64187b83f522e26b",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.vello-battle-20261023-v1-web",
+        "name": "維洛 · sprite",
+        "src": "assets/extensions/stellar11/web/vello-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "8e6b069925aeaee54198b33edee6c7c900d824d70d1ba700003415069631e850",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.e581-portrait-20261023-web",
+        "name": "格利澤581e · portrait",
+        "src": "assets/extensions/stellar11/web/e581.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "ede95d1192ef6159fe3576fff9f4aa0a01794e0c766aecf7aa63d0a48cdcabc5",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.e581-avatar-20261023-web",
+        "name": "格利澤581e · avatar",
+        "src": "assets/extensions/stellar11/avatars/e581.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "997e979c3b3515d4110c93922f5b269c13ab8b302a91b27c16ff8697f0d129a2",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.e581-battle-20261023-v1-web",
+        "name": "格利澤581e · sprite",
+        "src": "assets/extensions/stellar11/web/e581-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "7247589b91d167df00e2cd8201a3ceaf91cff406540b534611a31c1cf97085f2",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.valencia-portrait-20261023-web",
+        "name": "瓦倫西亞 · portrait",
+        "src": "assets/extensions/stellar11/web/valencia.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "3c3142ffcebee398e1eebd018692c690024be7d533f5f36eae3bf9a31f460336",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.valencia-avatar-20261023-web",
+        "name": "瓦倫西亞 · avatar",
+        "src": "assets/extensions/stellar11/avatars/valencia.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "1e2f578903cbef32631fa1546447b4040f98dcda29c55da16890731eb88d45d6",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.valencia-battle-20261023-v1-web",
+        "name": "瓦倫西亞 · sprite",
+        "src": "assets/extensions/stellar11/web/valencia-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "7ee9fd914d16967e3e0975a0c8b2d14472a9616c8a0b3de1c05039502511651b",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.linda-portrait-20261023-web",
+        "name": "琳達 · portrait",
+        "src": "assets/extensions/stellar11/web/linda.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "1dd59faba7f436e005fcc805e85ae737965bd6010fe0252c4239104764387338",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.linda-avatar-20261023-web",
+        "name": "琳達 · avatar",
+        "src": "assets/extensions/stellar11/avatars/linda.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "79c5f7f8922776dbef50f3141ed3481001de620085d6bbcf451e2ad202b42703",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.linda-battle-20261023-v1-web",
+        "name": "琳達 · sprite",
+        "src": "assets/extensions/stellar11/web/linda-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "d671f83589e3b82c6f42b1538b3e93a17ccd503a7c12b821da3006ac4ab5406b",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.izar-portrait-20261023-web",
+        "name": "伊扎爾 · portrait",
+        "src": "assets/extensions/stellar11/web/izar.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "a6599e3047f65aff7e600fefd58cf4fee193e79816c5a5dcdfee727b866421cb",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.izar-avatar-20261023-web",
+        "name": "伊扎爾 · avatar",
+        "src": "assets/extensions/stellar11/avatars/izar.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "45401d1a4390ac0f5ef33d3eabb8a1d252a02af3a972ccfa3821ddee7c9422fa",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.izar-battle-20261023-v1-web",
+        "name": "伊扎爾 · sprite",
+        "src": "assets/extensions/stellar11/web/izar-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "c35005922894f4dec2dd8b37f0100b3270a4c65aaa740d7591cb2780608321a9",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.seginus-portrait-20261023-web",
+        "name": "招搖 · portrait",
+        "src": "assets/extensions/stellar11/web/seginus.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "4f3a063044233fe127731de6ede1f60f4cd2314a622ec40ac2b897526b8f9928",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.seginus-avatar-20261023-web",
+        "name": "招搖 · avatar",
+        "src": "assets/extensions/stellar11/avatars/seginus.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "ac40f1021095e95eec171a0d8a6936aff1d3cfef5a652b917f7b4e1e4210bf30",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.seginus-battle-20261023-v1-web",
+        "name": "招搖 · sprite",
+        "src": "assets/extensions/stellar11/web/seginus-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "0408a577822752ce06c2a75027359806f0deb014d539004a8035763f2261e2e8",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.spica-portrait-20261023-web",
+        "name": "角宿一 · portrait",
+        "src": "assets/extensions/stellar11/web/spica.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "7e104c8f861fba7bcc556d4b7a280712324f24ff4d6ced92fb2a66211e4aee0f",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.spica-avatar-20261023-web",
+        "name": "角宿一 · avatar",
+        "src": "assets/extensions/stellar11/avatars/spica.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "95d57968fc99366265d225f7914f7a4eb4cd466945f18d34fc1ee6dd0e0ea8c3",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.spica-battle-20261023-v1-web",
+        "name": "角宿一 · sprite",
+        "src": "assets/extensions/stellar11/web/spica-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "15a1e647750f24f0b387506a85342034a231acd88e76921a6de345b8577be662",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.wolf359-portrait-20261023-web",
+        "name": "沃爾夫359 · portrait",
+        "src": "assets/extensions/stellar11/web/wolf359.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "9203e9f2ef8127970563598b749769af5ae264cb519e985b3428c5bccbe57cd7",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.wolf359-avatar-20261023-web",
+        "name": "沃爾夫359 · avatar",
+        "src": "assets/extensions/stellar11/avatars/wolf359.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "6852bd27498daf0cc7f6719c6fe3d1f04026f32445ca501d2ae3c63579fa71a8",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.wolf359-battle-20261023-v1-web",
+        "name": "沃爾夫359 · sprite",
+        "src": "assets/extensions/stellar11/web/wolf359-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "6cc059e8a248bd7207d6af19110ac0db15cfea6ad365272300826787ae6cd646",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.jupiter-portrait-20261023-web",
+        "name": "木星 · portrait",
+        "src": "assets/extensions/stellar11/web/jupiter.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "01e9ec9f6769ca26f2f677901480ec095f963821de16f32b5071e94cd4542321",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.jupiter-avatar-20261023-web",
+        "name": "木星 · avatar",
+        "src": "assets/extensions/stellar11/avatars/jupiter.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "21957eb5eef85a19f274ad6af21f411225e0f918253253a832947175cb331768",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.jupiter-battle-20261023-v1-web",
+        "name": "木星 · sprite",
+        "src": "assets/extensions/stellar11/web/jupiter-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "d22d1ba9024338d79d784fc5db179851f2f37945e705b330948d11b5dd076a00",
+        "review": "candidate"
+      }
+    ]
+  }
+}

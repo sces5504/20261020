@@ -406,7 +406,18 @@ export class Combat {
             .map((u) => u.speed * this.mechanics.stat(u, "moveSpeed")),
           this.pack.rules.travelSpeed,
         );
-    this.fleet.advance(this.destination, speed, dt);
+    const threats = this.units.filter(
+      (u) => u.side === "enemy" && u.hp > 0 && !u.turretUntil,
+    );
+    const threat =
+      threats.find((u) => u.id === this.target) ??
+      threats.sort(
+        (a, b) =>
+          Math.hypot(a.x - this.anchor.x, a.y - this.anchor.y) -
+          Math.hypot(b.x - this.anchor.x, b.y - this.anchor.y),
+      )[0];
+    if (threat) this.fleet.advanceGuarded(this.destination, speed, dt, threat);
+    else this.fleet.advance(this.destination, speed, dt);
     if (!this.laboratory && this.save.encounter?.kind !== "patrol") {
       const planet = this.pack.planets.find((p) => p.id === this.planetId)!;
       this.outsideSeconds =

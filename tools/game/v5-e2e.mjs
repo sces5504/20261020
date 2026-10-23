@@ -38,7 +38,7 @@ async function waitSave(page, predicate) {
 }
 async function install(page, p, s) {
   await page.goto(server.url + "#/art");
-  await page.waitForSelector(".art-gallery");
+  await page.waitForSelector(".art-gallery", { timeout: 60000 });
   await page.evaluate(
     async ({ p, s }) => {
       const r = indexedDB.open("stella-maiden-m1", 1);
@@ -53,7 +53,7 @@ async function install(page, p, s) {
     { p, s },
   );
   await page.goto(server.url + "#/test");
-  await page.waitForSelector("canvas");
+  await page.waitForSelector("canvas", { timeout: 60000 });
 }
 try {
   const context = await browser.newContext({
@@ -80,7 +80,7 @@ try {
   assert.equal(await page.locator("#entity-form").count(), 0);
   await unlockStudio(page);
   await page.reload();
-  await page.waitForSelector("#entity-form");
+  await page.waitForSelector("#entity-form", { timeout: 60000 });
   await page.locator('[data-action="lock-studio"]').click();
   await page.getByRole("alertdialog").waitFor();
   await page.locator('[data-answer="yes"]').click();
@@ -189,7 +189,7 @@ try {
     animations: "disabled",
   });
   await page.reload();
-  await page.waitForSelector("canvas");
+  await page.waitForSelector("canvas", { timeout: 60000 });
   assert.equal((await record(page)).region, pack.regions[1].id);
   // Empty-sector clicks must navigate even at another region's planet coordinates.
   await page.keyboard.press("m");

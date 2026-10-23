@@ -5526,5 +5526,269 @@
     "source": "imagegen; prompt next to master; fixed source identity, original redraw, no OBB pixels",
     "review": "candidate",
     "preview": "art/world/original-world/web/node-gate.webp"
+  },
+  {
+    "id": "stellaart:asset.arcturus-portrait-20261023-web",
+    "path": "art/characters/stellar11/web/arcturus.webp",
+    "runtime": "assets/extensions/stellar11/web/arcturus.webp",
+    "sha256": "89abe1d569e90a3c3d30f1ea712db8e99dc2db1853ef95eda962a8388cb753ba",
+    "master": "art/characters/stellar11/standards/arcturus.png",
+    "masterSha256": "af62aa4b006c1e8d95b89b3e95849717904b2bbcb99d3196ba1d8e9c50e155cb"
+  },
+  {
+    "id": "stellaart:asset.arcturus-avatar-20261023-web",
+    "path": "art/characters/stellar11/avatars/arcturus.webp",
+    "runtime": "assets/extensions/stellar11/avatars/arcturus.webp",
+    "sha256": "1f9ae2a2a6a21ee76e7934603f879187957e947b3c507f43a395366cc4df3c72",
+    "master": "art/characters/stellar11/standards/arcturus.png",
+    "masterSha256": "af62aa4b006c1e8d95b89b3e95849717904b2bbcb99d3196ba1d8e9c50e155cb"
+  },
+  {
+    "id": "stellaart:asset.arcturus-battle-20261023-v1-web",
+    "path": "art/characters/stellar11/web/arcturus-battle.webp",
+    "runtime": "assets/extensions/stellar11/web/arcturus-battle.webp",
+    "sha256": "0339f0188c4f8a841c58f57a94a44525c3d3f57320634b3bf4138cd6138a674c",
+    "master": "art/characters/stellar11/battle/arcturus-v1-candidate.png",
+    "masterSha256": "ba98d4e1e41c639af961c76b4e3e6dcd18abdf69611861718bfb1814a5c724b7"
+  },
+  {
+    "id": "stellaart:asset.gliese-portrait-20261023-web",
+    "path": "art/characters/stellar11/web/gliese.webp",
+    "runtime": "assets/extensions/stellar11/web/gliese.webp",
+    "sha256": "8ae10f988d019f0027aeaf648664a99438c537947b750d48ebf0748c626101be",
+    "master": "art/characters/stellar11/standards/gliese.png",
+    "masterSha256": "2091255bb24105b659f2a56bbd444ef729da573b8dc16a14cb57f9ec7e3448c9"
+  },
+  {
+    "id": "stellaart:asset.gliese-avatar-20261023-web",
+    "path": "art/characters/stellar11/avatars/gliese.webp",
+    "runtime": "assets/extensions/stellar11/avatars/gliese.webp",
+    "sha256": "e2261394380f538b21f463e590369945362054f9e6983b3e4ad3a8d36d072651",
+    "master": "art/characters/stellar11/standards/gliese.png",
+    "masterSha256": "2091255bb24105b659f2a56bbd444ef729da573b8dc16a14cb57f9ec7e3448c9"
+  },
+  {
+    "id": "stellaart:asset.gliese-battle-20261023-v1-web",
+    "path": "art/characters/stellar11/web/gliese-battle.webp",
+    "runtime": "assets/extensions/stellar11/web/gliese-battle.webp",
+    "sha256": "b80fd6ff600ee070fc16c240b7a074bb50979bca7eafa6578e2eed235f3db469",
+    "master": "art/characters/stellar11/battle/gliese-v1-candidate.png",
+    "masterSha256": "9943373149c206e6fd8a11eb75d1c8d0b0aafb4a3b971ca12528770ebeb5db9c"
+  },
+  {
+    "id": "stellaart:asset.vello-portrait-20261023-web",
+    "path": "art/characters/stellar11/web/vello.webp",
+    "runtime": "assets/extensions/stellar11/web/vello.webp",
+    "sha256": "653859afadac6d599326877897b8d171738b00ff856913bf37e0d194df0701f9",
+    "master": "art/characters/stellar11/standards/vello.png",
+    "masterSha256": "d7deb03c094250cae464b93a89c055a43cdcf97fd2efa75a2a77de41ee080780"
+  },
+  {
+    "id": "stellaart:asset.vello-avatar-20261023-web",
+    "path": "art/characters/stellar11/avatars/vello.webp",
+    "runtime": "assets/extensions/stellar11/avatars/vello.webp",
+    "sha256": "2698dd7b34d6c212f3c44598218a2024b61899aec6760b9a64187b83f522e26b",
+    "master": "art/characters/stellar11/standards/vello.png",
+    "masterSha256": "d7deb03c094250cae464b93a89c055a43cdcf97fd2efa75a2a77de41ee080780"
+  },
+  {
+    "id": "stellaart:asset.vello-battle-20261023-v1-web",
+    "path": "art/characters/stellar11/web/vello-battle.webp",
+    "runtime": "assets/extensions/stellar11/web/vello-battle.webp",
+    "sha256": "8e6b069925aeaee54198b33edee6c7c900d824d70d1ba700003415069631e850",
+    "master": "art/characters/stellar11/battle/vello-v1-candidate.png",
+    "masterSha256": "0cf661157f3e6bbabb3825e9b8b623c51e3db28fd11543ca9eddd0a6c2844952"
+  },
+  {
+    "id": "stellaart:asset.e581-portrait-20261023-web",
+    "path": "art/characters/stellar11/web/e581.webp",
+    "runtime": "assets/extensions/stellar11/web/e581.webp",
+    "sha256": "ede95d1192ef6159fe3576fff9f4aa0a01794e0c766aecf7aa63d0a48cdcabc5",
+    "master": "art/characters/stellar11/standards/e581.png",
+    "masterSha256": "1d4217e3efcf7ba4e3c6b1ef55f0a264335a0566383fe5503a11b657058dcc82"
+  },
+  {
+    "id": "stellaart:asset.e581-avatar-20261023-web",
+    "path": "art/characters/stellar11/avatars/e581.webp",
+    "runtime": "assets/extensions/stellar11/avatars/e581.webp",
+    "sha256": "997e979c3b3515d4110c93922f5b269c13ab8b302a91b27c16ff8697f0d129a2",
+    "master": "art/characters/stellar11/standards/e581.png",
+    "masterSha256": "1d4217e3efcf7ba4e3c6b1ef55f0a264335a0566383fe5503a11b657058dcc82"
+  },
+  {
+    "id": "stellaart:asset.e581-battle-20261023-v1-web",
+    "path": "art/characters/stellar11/web/e581-battle.webp",
+    "runtime": "assets/extensions/stellar11/web/e581-battle.webp",
+    "sha256": "7247589b91d167df00e2cd8201a3ceaf91cff406540b534611a31c1cf97085f2",
+    "master": "art/characters/stellar11/battle/e581-v1-candidate.png",
+    "masterSha256": "0cdecfc22d189a014c8856064d6aea3dbd78efcf8af35a19fe96126ef1c87e92"
+  },
+  {
+    "id": "stellaart:asset.valencia-portrait-20261023-web",
+    "path": "art/characters/stellar11/web/valencia.webp",
+    "runtime": "assets/extensions/stellar11/web/valencia.webp",
+    "sha256": "3c3142ffcebee398e1eebd018692c690024be7d533f5f36eae3bf9a31f460336",
+    "master": "art/characters/stellar11/standards/valencia.png",
+    "masterSha256": "e3213570e5aea0cfd73d4f0b3469211efedcd35ca94dacfeab8633fdc53af93b"
+  },
+  {
+    "id": "stellaart:asset.valencia-avatar-20261023-web",
+    "path": "art/characters/stellar11/avatars/valencia.webp",
+    "runtime": "assets/extensions/stellar11/avatars/valencia.webp",
+    "sha256": "1e2f578903cbef32631fa1546447b4040f98dcda29c55da16890731eb88d45d6",
+    "master": "art/characters/stellar11/standards/valencia.png",
+    "masterSha256": "e3213570e5aea0cfd73d4f0b3469211efedcd35ca94dacfeab8633fdc53af93b"
+  },
+  {
+    "id": "stellaart:asset.valencia-battle-20261023-v1-web",
+    "path": "art/characters/stellar11/web/valencia-battle.webp",
+    "runtime": "assets/extensions/stellar11/web/valencia-battle.webp",
+    "sha256": "7ee9fd914d16967e3e0975a0c8b2d14472a9616c8a0b3de1c05039502511651b",
+    "master": "art/characters/stellar11/battle/valencia-v1-candidate.png",
+    "masterSha256": "50a5744cbcf3d0e61c2e94f9addcfa718ce4d1a2b91e02e14aae275484bdbeb9"
+  },
+  {
+    "id": "stellaart:asset.linda-portrait-20261023-web",
+    "path": "art/characters/stellar11/web/linda.webp",
+    "runtime": "assets/extensions/stellar11/web/linda.webp",
+    "sha256": "1dd59faba7f436e005fcc805e85ae737965bd6010fe0252c4239104764387338",
+    "master": "art/characters/stellar11/standards/linda.png",
+    "masterSha256": "d7971022a8d2c31d53fabb7486e323a8bed47f6639458d53e316469a7c7c7941"
+  },
+  {
+    "id": "stellaart:asset.linda-avatar-20261023-web",
+    "path": "art/characters/stellar11/avatars/linda.webp",
+    "runtime": "assets/extensions/stellar11/avatars/linda.webp",
+    "sha256": "79c5f7f8922776dbef50f3141ed3481001de620085d6bbcf451e2ad202b42703",
+    "master": "art/characters/stellar11/standards/linda.png",
+    "masterSha256": "d7971022a8d2c31d53fabb7486e323a8bed47f6639458d53e316469a7c7c7941"
+  },
+  {
+    "id": "stellaart:asset.linda-battle-20261023-v1-web",
+    "path": "art/characters/stellar11/web/linda-battle.webp",
+    "runtime": "assets/extensions/stellar11/web/linda-battle.webp",
+    "sha256": "d671f83589e3b82c6f42b1538b3e93a17ccd503a7c12b821da3006ac4ab5406b",
+    "master": "art/characters/stellar11/battle/linda-v1-candidate.png",
+    "masterSha256": "891d1d6934a46aad167657561c65f61d004d8e32831c41314b3644765968a23b"
+  },
+  {
+    "id": "stellaart:asset.izar-portrait-20261023-web",
+    "path": "art/characters/stellar11/web/izar.webp",
+    "runtime": "assets/extensions/stellar11/web/izar.webp",
+    "sha256": "a6599e3047f65aff7e600fefd58cf4fee193e79816c5a5dcdfee727b866421cb",
+    "master": "art/characters/stellar11/standards/izar.png",
+    "masterSha256": "13482e3914ef43f7193c711f8cd986937fa6d133abcc1500c32b58bdbc2c1922"
+  },
+  {
+    "id": "stellaart:asset.izar-avatar-20261023-web",
+    "path": "art/characters/stellar11/avatars/izar.webp",
+    "runtime": "assets/extensions/stellar11/avatars/izar.webp",
+    "sha256": "45401d1a4390ac0f5ef33d3eabb8a1d252a02af3a972ccfa3821ddee7c9422fa",
+    "master": "art/characters/stellar11/standards/izar.png",
+    "masterSha256": "13482e3914ef43f7193c711f8cd986937fa6d133abcc1500c32b58bdbc2c1922"
+  },
+  {
+    "id": "stellaart:asset.izar-battle-20261023-v1-web",
+    "path": "art/characters/stellar11/web/izar-battle.webp",
+    "runtime": "assets/extensions/stellar11/web/izar-battle.webp",
+    "sha256": "c35005922894f4dec2dd8b37f0100b3270a4c65aaa740d7591cb2780608321a9",
+    "master": "art/characters/stellar11/battle/izar-v1-candidate.png",
+    "masterSha256": "b8aed0e021b6efb11866c0c169de4b20ef3c6347e4a5c7b0e0cfd453aa409904"
+  },
+  {
+    "id": "stellaart:asset.seginus-portrait-20261023-web",
+    "path": "art/characters/stellar11/web/seginus.webp",
+    "runtime": "assets/extensions/stellar11/web/seginus.webp",
+    "sha256": "4f3a063044233fe127731de6ede1f60f4cd2314a622ec40ac2b897526b8f9928",
+    "master": "art/characters/stellar11/standards/seginus.png",
+    "masterSha256": "6029ad7c644e882c1b29af38b32112df9b781a4c54143ff5a4317ac4087f3c9d"
+  },
+  {
+    "id": "stellaart:asset.seginus-avatar-20261023-web",
+    "path": "art/characters/stellar11/avatars/seginus.webp",
+    "runtime": "assets/extensions/stellar11/avatars/seginus.webp",
+    "sha256": "ac40f1021095e95eec171a0d8a6936aff1d3cfef5a652b917f7b4e1e4210bf30",
+    "master": "art/characters/stellar11/standards/seginus.png",
+    "masterSha256": "6029ad7c644e882c1b29af38b32112df9b781a4c54143ff5a4317ac4087f3c9d"
+  },
+  {
+    "id": "stellaart:asset.seginus-battle-20261023-v1-web",
+    "path": "art/characters/stellar11/web/seginus-battle.webp",
+    "runtime": "assets/extensions/stellar11/web/seginus-battle.webp",
+    "sha256": "0408a577822752ce06c2a75027359806f0deb014d539004a8035763f2261e2e8",
+    "master": "art/characters/stellar11/battle/seginus-v1-candidate.png",
+    "masterSha256": "bd701e6c1e3ab460a47c74402adc669c0bced17ccba997825fa5bc7ff92a9027"
+  },
+  {
+    "id": "stellaart:asset.spica-portrait-20261023-web",
+    "path": "art/characters/stellar11/web/spica.webp",
+    "runtime": "assets/extensions/stellar11/web/spica.webp",
+    "sha256": "7e104c8f861fba7bcc556d4b7a280712324f24ff4d6ced92fb2a66211e4aee0f",
+    "master": "art/characters/stellar11/standards/spica.png",
+    "masterSha256": "d3995e3023a9bf09db2c503b50165bb03c320a13898c4a77150404932b621a72"
+  },
+  {
+    "id": "stellaart:asset.spica-avatar-20261023-web",
+    "path": "art/characters/stellar11/avatars/spica.webp",
+    "runtime": "assets/extensions/stellar11/avatars/spica.webp",
+    "sha256": "95d57968fc99366265d225f7914f7a4eb4cd466945f18d34fc1ee6dd0e0ea8c3",
+    "master": "art/characters/stellar11/standards/spica.png",
+    "masterSha256": "d3995e3023a9bf09db2c503b50165bb03c320a13898c4a77150404932b621a72"
+  },
+  {
+    "id": "stellaart:asset.spica-battle-20261023-v1-web",
+    "path": "art/characters/stellar11/web/spica-battle.webp",
+    "runtime": "assets/extensions/stellar11/web/spica-battle.webp",
+    "sha256": "15a1e647750f24f0b387506a85342034a231acd88e76921a6de345b8577be662",
+    "master": "art/characters/stellar11/battle/spica-v1-candidate.png",
+    "masterSha256": "29711db34962c0eb2451348328cb8fa397dfa4a6c621a05b82d3fa0df13e918e"
+  },
+  {
+    "id": "stellaart:asset.wolf359-portrait-20261023-web",
+    "path": "art/characters/stellar11/web/wolf359.webp",
+    "runtime": "assets/extensions/stellar11/web/wolf359.webp",
+    "sha256": "9203e9f2ef8127970563598b749769af5ae264cb519e985b3428c5bccbe57cd7",
+    "master": "art/characters/stellar11/standards/wolf359.png",
+    "masterSha256": "fe6ca82a9076d626d2b147d9393dc744e869824442c109a2c7c8fe736ebf5141"
+  },
+  {
+    "id": "stellaart:asset.wolf359-avatar-20261023-web",
+    "path": "art/characters/stellar11/avatars/wolf359.webp",
+    "runtime": "assets/extensions/stellar11/avatars/wolf359.webp",
+    "sha256": "6852bd27498daf0cc7f6719c6fe3d1f04026f32445ca501d2ae3c63579fa71a8",
+    "master": "art/characters/stellar11/standards/wolf359.png",
+    "masterSha256": "fe6ca82a9076d626d2b147d9393dc744e869824442c109a2c7c8fe736ebf5141"
+  },
+  {
+    "id": "stellaart:asset.wolf359-battle-20261023-v1-web",
+    "path": "art/characters/stellar11/web/wolf359-battle.webp",
+    "runtime": "assets/extensions/stellar11/web/wolf359-battle.webp",
+    "sha256": "6cc059e8a248bd7207d6af19110ac0db15cfea6ad365272300826787ae6cd646",
+    "master": "art/characters/stellar11/battle/wolf359-v1-candidate.png",
+    "masterSha256": "67fa3f31703c6fb2142807c59105e9570eb49d9535609092ffeb0a91325a0458"
+  },
+  {
+    "id": "stellaart:asset.jupiter-portrait-20261023-web",
+    "path": "art/characters/stellar11/web/jupiter.webp",
+    "runtime": "assets/extensions/stellar11/web/jupiter.webp",
+    "sha256": "01e9ec9f6769ca26f2f677901480ec095f963821de16f32b5071e94cd4542321",
+    "master": "art/characters/stellar11/standards/jupiter.png",
+    "masterSha256": "a2006144e98685da301c9c3f8903bde7a11c26a87622cab4651d6672fd2e3ffe"
+  },
+  {
+    "id": "stellaart:asset.jupiter-avatar-20261023-web",
+    "path": "art/characters/stellar11/avatars/jupiter.webp",
+    "runtime": "assets/extensions/stellar11/avatars/jupiter.webp",
+    "sha256": "21957eb5eef85a19f274ad6af21f411225e0f918253253a832947175cb331768",
+    "master": "art/characters/stellar11/standards/jupiter.png",
+    "masterSha256": "a2006144e98685da301c9c3f8903bde7a11c26a87622cab4651d6672fd2e3ffe"
+  },
+  {
+    "id": "stellaart:asset.jupiter-battle-20261023-v1-web",
+    "path": "art/characters/stellar11/web/jupiter-battle.webp",
+    "runtime": "assets/extensions/stellar11/web/jupiter-battle.webp",
+    "sha256": "d22d1ba9024338d79d784fc5db179851f2f37945e705b330948d11b5dd076a00",
+    "master": "art/characters/stellar11/battle/jupiter-v1-candidate.png",
+    "masterSha256": "d3c2fcfdbbeee443e5faef6a1e41d0c5ffbb26f91d0ec324e0fcf901752f33e2"
   }
 ]

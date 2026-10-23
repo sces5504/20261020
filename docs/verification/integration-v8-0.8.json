@@ -1,0 +1,392 @@
+{
+  "dateTaipei": "2026-10-23",
+  "candidateCommit": "8b4074bffc6419a72033a4f4ac88d78e05897d7f",
+  "mediaFixCommit": "4b397f20713bf47f8f6cb7b118917fe9a3592c0e",
+  "baseMain": "a7dcdb6c4777e7c1561327645ddc3769da6edce1",
+  "pullRequest": "https://github.com/sces5504/20261020/pull/17",
+  "ciRun": "https://github.com/sces5504/20261020/actions/runs/39884679393",
+  "coreTests": {
+    "passed": 115,
+    "failed": 0,
+    "evidence": "CI job120190096685 logs"
+  },
+  "candidateRelease": {
+    "mode": "release",
+    "time_utc": "2026-10-23T01:45:40.546557+00:00",
+    "head": "8b4074bffc6419a72033a4f4ac88d78e05897d7f",
+    "dirty": false,
+    "elapsed_seconds": 641.3,
+    "results": [
+      {
+        "argv": [
+          "npm",
+          "run",
+          "content:check"
+        ],
+        "exit_code": 0
+      },
+      {
+        "argv": [
+          "npm",
+          "run",
+          "typecheck"
+        ],
+        "exit_code": 0
+      },
+      {
+        "argv": [
+          "npm",
+          "test"
+        ],
+        "exit_code": 0
+      },
+      {
+        "argv": [
+          "npm",
+          "run",
+          "build"
+        ],
+        "exit_code": 0
+      },
+      {
+        "argv": [
+          "npm",
+          "run",
+          "test:e2e"
+        ],
+        "exit_code": 0
+      },
+      {
+        "argv": [
+          "npm",
+          "run",
+          "test:playtest"
+        ],
+        "exit_code": 0
+      },
+      {
+        "argv": [
+          "npm",
+          "run",
+          "test:exploration"
+        ],
+        "exit_code": 0
+      },
+      {
+        "argv": [
+          "npm",
+          "run",
+          "test:refinement"
+        ],
+        "exit_code": 0
+      },
+      {
+        "argv": [
+          "npm",
+          "run",
+          "test:polish"
+        ],
+        "exit_code": 0
+      },
+      {
+        "argv": [
+          "npm",
+          "run",
+          "test:content-integration"
+        ],
+        "exit_code": 0
+      },
+      {
+        "argv": [
+          "npm",
+          "run",
+          "test:skills"
+        ],
+        "exit_code": 0
+      },
+      {
+        "argv": [
+          "npm",
+          "run",
+          "test:world"
+        ],
+        "exit_code": 0
+      },
+      {
+        "argv": [
+          "npm",
+          "run",
+          "test:integration-v8"
+        ],
+        "exit_code": 0
+      },
+      {
+        "argv": [
+          "npm",
+          "run",
+          "release:ready",
+          "--",
+          "--target",
+          "playtest"
+        ],
+        "exit_code": 1
+      }
+    ],
+    "passed": false
+  },
+  "candidateFailure": "Only final playtest readiness failed for seven daily quest background references; all prior 13 commands passed. This candidate is not represented as a complete release success.",
+  "targetedFollowup": {
+    "commit": "4b397f20713bf47f8f6cb7b118917fe9a3592c0e",
+    "commands": [
+      [
+        "npm",
+        "run",
+        "content:check"
+      ],
+      [
+        "npm",
+        "run",
+        "release:ready",
+        "--",
+        "--target",
+        "playtest"
+      ]
+    ],
+    "exitCodes": [
+      0,
+      0
+    ],
+    "change": "Seven daily quest backgrounds use existing surface/bridge assets. No runtime, mechanics or reward change.",
+    "unchangedRuntimeAndOtherContentVerified": true
+  },
+  "browserGroups": [
+    "test:e2e",
+    "test:playtest",
+    "test:exploration",
+    "test:refinement",
+    "test:polish",
+    "test:content-integration",
+    "test:skills",
+    "test:world",
+    "test:integration-v8"
+  ],
+  "skillBrowser": {
+    "browser": "156.0.8078.4",
+    "build": {
+      "commit": "8b4074bffc6419a72033a4f4ac88d78e05897d7f",
+      "target": "exploration-playtest",
+      "contentVersion": "0.8.0",
+      "contentHash": "3c5758c70247b1a38149fdf11fc26d0acf9601e3a62d868df3012537ff21442a",
+      "packs": [
+        {
+          "id": "m1:core",
+          "version": "0.8.0"
+        },
+        {
+          "id": "beacon:package.frontier",
+          "version": "0.3.0"
+        },
+        {
+          "id": "solar10:package.first-ten",
+          "version": "0.2.0"
+        },
+        {
+          "id": "stellaart:package.stellar10",
+          "version": "0.1.1"
+        },
+        {
+          "id": "stella:package.skills",
+          "version": "0.1.0"
+        },
+        {
+          "id": "original:package.world",
+          "version": "0.1.0"
+        },
+        {
+          "id": "story10:package.virgo-vanguard",
+          "version": "0.2.0"
+        },
+        {
+          "id": "stellaart:package.stellar11",
+          "version": "0.1.0"
+        }
+      ]
+    },
+    "results": [
+      {
+        "mobile": false,
+        "viewport": "1440x1000@1",
+        "seed": 77,
+        "characters": 26,
+        "library": 226,
+        "core": "0.8.0",
+        "stress": {
+          "enemies": 60,
+          "pattern": "ring",
+          "fps": 60.00400026668446,
+          "frames": 90,
+          "simulatedSeconds": 5.049999999999987,
+          "physicalDevice": false
+        },
+        "passed": [
+          "gate",
+          "levels",
+          "enemy-pattern",
+          "manual-cast",
+          "fixed-step",
+          "pause",
+          "beam",
+          "black-hole",
+          "clone",
+          "reset",
+          "bounds",
+          "draft-editor",
+          "skill-override",
+          "save-isolation",
+          "four-resource-art",
+          "sustained-60-enemy-barrage"
+        ]
+      },
+      {
+        "mobile": true,
+        "viewport": "390x844@2",
+        "seed": 77,
+        "characters": 26,
+        "library": 226,
+        "core": "0.8.0",
+        "stress": {
+          "enemies": 60,
+          "pattern": "ring",
+          "fps": 59.99999999999999,
+          "frames": 90,
+          "simulatedSeconds": 5.049999999999987,
+          "physicalDevice": false
+        },
+        "passed": [
+          "gate",
+          "levels",
+          "enemy-pattern",
+          "manual-cast",
+          "fixed-step",
+          "pause",
+          "beam",
+          "black-hole",
+          "clone",
+          "reset",
+          "bounds",
+          "draft-editor",
+          "skill-override",
+          "save-isolation",
+          "four-resource-art",
+          "sustained-60-enemy-barrage"
+        ]
+      }
+    ],
+    "errors": []
+  },
+  "integrationBrowser": {
+    "results": [
+      {
+        "mobile": false,
+        "characters": 26,
+        "instances": 27,
+        "dailyQuests": 7,
+        "passed": [
+          "unique-cards",
+          "copy-picker",
+          "small-feed",
+          "formation-remove",
+          "stationed-portrait",
+          "colony-back",
+          "daily-claim",
+          "all-new-portraits",
+          "jupiter-update",
+          "no-overflow",
+          "main-save-isolation"
+        ]
+      },
+      {
+        "mobile": true,
+        "characters": 26,
+        "instances": 27,
+        "dailyQuests": 7,
+        "passed": [
+          "unique-cards",
+          "copy-picker",
+          "small-feed",
+          "formation-remove",
+          "stationed-portrait",
+          "colony-back",
+          "daily-claim",
+          "all-new-portraits",
+          "jupiter-update",
+          "no-overflow",
+          "main-save-isolation"
+        ]
+      }
+    ],
+    "errors": []
+  },
+  "worldBrowser": {
+    "viewports": [
+      "1440x1000",
+      "390x844"
+    ],
+    "errors": [],
+    "checks": [
+      "activation-chain",
+      "real-route-locks",
+      "material-shortage",
+      "free-camp-recovery",
+      "six-readable-skill-cards",
+      "management-controls-not-covered",
+      "enemy-threat-intel",
+      "native-campaign-restart-with-backup",
+      "daily-entry",
+      "countdown",
+      "management-pause",
+      "first-claim",
+      "portable-art-preview"
+    ]
+  },
+  "worldReplay": {
+    "sealedWorkingTreeCommit": "e43420a563a5e2a10ad295083a7afdbda2badc32",
+    "combatAndWorldUnchanged": true,
+    "onlyLaterContentChange": "Seven cosmetic daily quest background references",
+    "uniqueVictories": 671,
+    "threePersonWins": 656,
+    "sixPersonWins": 15,
+    "seed": 42,
+    "details": "integration-v8-world.json"
+  },
+  "newArt": {
+    "newCharacters": 10,
+    "existingJupiterMediaUpdate": true,
+    "runtimeMedia": 33,
+    "deliveredAssetsVerified": 55,
+    "previousStandardsUnchanged": 16,
+    "review": "candidate"
+  },
+  "dailyQuests": {
+    "count": 7,
+    "reset": "KST midnight / Taiwan 23:00",
+    "source": "Quest rows0-6, basic four-slot f10..13; explicit event adaptation"
+  },
+  "archiveBudgetsMiB": {
+    "compressed": 64,
+    "expanded": 128,
+    "entry": 30
+  },
+  "originalFrameByFrameCertification": false,
+  "commercial": {
+    "passed": false,
+    "missing": [
+      "human asset acceptance",
+      "independent handoff",
+      "physical Android",
+      "physical iOS",
+      "hardware performance"
+    ]
+  },
+  "finalDeploymentEvidence": "Main exact-SHA full release, Pages and public browser validation are recorded in PR #17 and public version.json. This avoids another deployment only to record its own SHA."
+}

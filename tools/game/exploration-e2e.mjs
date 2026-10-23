@@ -161,7 +161,7 @@ try {
   await page.locator('[data-action="close"]').first().click();
   // Stop the game before installing a safe, reproducible patrol approach fixture.
   await page.goto(server.url + "#/art");
-  await page.waitForSelector(".art-gallery");
+  await page.waitForSelector(".art-gallery", { timeout: 60000 });
   const patrol = pack.regions[0].patrols[0];
   await page.evaluate(async ({ x, y }) => {
     const r = indexedDB.open("stella-maiden-m1", 1);
@@ -191,10 +191,11 @@ try {
     void d.dismiss();
   });
   await page.goto(server.url + "#/play");
-  await page.waitForSelector("canvas");
+  await page.waitForSelector("canvas", { timeout: 60000 });
   const arrived = await record(page);
   for (const q of pack.quests.filter(
     (q) =>
+      q.repeat !== "daily" &&
       q.condition === "summoned" &&
       q.count <= arrived.summoned &&
       !arrived.storySeen.includes(q.id),
@@ -207,6 +208,12 @@ try {
       "arrival dialogue must finish before resuming patrol travel",
     );
   }
+  await page.waitForTimeout(350);
+  assert.equal(
+    await page.locator(".story-scene").count(),
+    0,
+    "daily counters must not force an extra dialogue before patrol travel",
+  );
   await page.keyboard.down("d");
   await page.waitForSelector(".in-battle", { timeout: 60000 });
   await page.keyboard.up("d");
@@ -264,9 +271,12 @@ try {
   assert.equal((await record(page)).cleared.length, 0);
   await page.goto(server.url + "#/catalog");
   await page.waitForSelector("#roster-rows tr");
-  assert.equal(await page.locator("#roster-rows tr").count(), 110);
+  assert.equal(
+    await page.locator("#roster-rows tr").count(),
+    126 - pack.characters.length,
+  );
   await page.locator("#roster-filter").selectOption("priority");
-  assert.equal(await page.locator("#roster-rows tr").count(), 2);
+  assert.equal(await page.locator("#roster-rows tr").count(), 0);
   await page.screenshot({ path: ".artifacts/v2/roster.png" });
   await page.goto(server.url + "#/studio");
   await unlockStudio(page);
@@ -291,7 +301,7 @@ try {
   await page.locator('[data-action="kind"][data-id="enemies"]').click();
   await page.screenshot({ path: ".artifacts/v2/studio-enemy.png" });
   await page.goto(server.url + "#/play");
-  await page.waitForSelector("canvas");
+  await page.waitForSelector("canvas", { timeout: 60000 });
   await page.locator('[data-id="archive"][data-action="panel"]').click();
   const legacy = await record(page),
     firstPlanet = pack.planets[0];

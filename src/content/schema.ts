@@ -233,7 +233,22 @@ const quest = z
   .object({
     ...base,
     background: z.string().default(""),
-    condition: z.enum(["cleared", "activated", "summoned", "built", "intro"]),
+    condition: z.enum([
+      "cleared",
+      "activated",
+      "summoned",
+      "built",
+      "intro",
+      "battleWon",
+      "leveled",
+      "healed",
+      "constructed",
+      "upgraded",
+      "eventWon",
+    ]),
+    repeat: z.enum(["once", "daily"]).default("once"),
+    utcOffsetMinutes: z.number().int().min(-720).max(840).default(540),
+    resetHour: z.number().int().min(0).max(23).default(0),
     target: z.string(),
     count: z.number().int().min(1),
     reward: amount,
@@ -491,6 +506,33 @@ export function validatePack(input: unknown): {
     r.requires.forEach((v) => has("research", v, r.id)),
   );
   p.quests.forEach((q) => {
+    if (
+      q.repeat === "daily" &&
+      (![
+        "battleWon",
+        "leveled",
+        "healed",
+        "constructed",
+        "upgraded",
+        "eventWon",
+        "summoned",
+        "built",
+      ].includes(q.condition) ||
+        q.character)
+    )
+      errors.push(`${q.id}: 每日任務必須使用事件計數且不可發放角色`);
+    if (
+      q.repeat !== "daily" &&
+      [
+        "battleWon",
+        "leveled",
+        "healed",
+        "constructed",
+        "upgraded",
+        "eventWon",
+      ].includes(q.condition)
+    )
+      errors.push(`${q.id}: 此條件僅供每日任務`);
     money(q.reward, q.id);
     if (q.background) has("assets", q.background, q.id);
     if (q.character) has("characters", q.character, q.id);

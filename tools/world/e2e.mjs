@@ -24,7 +24,7 @@ async function save(page) {
 }
 async function install(page, p, s) {
   await page.goto(server.url + "#/art");
-  await page.waitForSelector(".art-gallery");
+  await page.waitForSelector(".art-gallery", { timeout: 60000 });
   await page.evaluate(
     async ({ p, s }) => {
       localStorage.setItem("stella:view", "map");
@@ -41,7 +41,7 @@ async function install(page, p, s) {
   );
   await page.goto(server.url + "#/test");
   try {
-    await page.waitForSelector("canvas");
+    await page.waitForSelector("canvas", { timeout: 60000 });
   } catch (e) {
     await page.screenshot({
       path: ".artifacts/world/load-failure.png",

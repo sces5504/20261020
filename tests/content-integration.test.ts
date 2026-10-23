@@ -15,8 +15,11 @@ const extensions = manifest.extensions.map((file: string) =>
 
 test("root presentation bindings resolve after additive packs, reject conflicts and cannot alter gameplay", () => {
   const region = p.regions.find((r) => r.id === "m1:frontier-test")!;
-  assert.equal(p.characters.length, 16);
-  assert.equal(p.planets.filter(v => !v.id.startsWith("original:")).length, 4);
+  assert.equal(p.characters.length, 26);
+  assert.equal(
+    p.planets.filter((v) => !v.id.startsWith("original:")).length,
+    4,
+  );
   assert.equal(region.background, "beacon:asset.frontier-v1");
   assert.equal(region.routes[0].to, "m1:helios");
   assert.equal(

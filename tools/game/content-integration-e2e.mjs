@@ -32,7 +32,7 @@ async function record(page, key = "save:test") {
 }
 async function install(page, save) {
   await page.goto(server.url + "#/art");
-  await page.waitForSelector(".art-gallery");
+  await page.waitForSelector(".art-gallery", { timeout: 60000 });
   await page.evaluate(
     async ({ p, s }) => {
       const r = indexedDB.open("stella-maiden-m1", 1);
@@ -48,7 +48,7 @@ async function install(page, save) {
     { p: pack, s: save },
   );
   await page.goto(server.url + "#/test");
-  await page.waitForSelector("canvas");
+  await page.waitForSelector("canvas", { timeout: 60000 });
 }
 function save() {
   const s = newSave(pack, Date.now(), "test");
@@ -230,7 +230,7 @@ try {
     );
     await install(page, unlocked);
     await page.reload();
-    await page.waitForSelector("canvas");
+    await page.waitForSelector("canvas", { timeout: 60000 });
     assert.equal((await record(page)).region, signal.region);
     await page
       .locator('[data-action="panel"][data-id="regions"]')

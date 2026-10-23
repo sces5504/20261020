@@ -5,7 +5,9 @@
     "extensions/solar10.json",
     "extensions/stellar10-art.json",
     "extensions/stella-skills.json",
-    "extensions/original-world.json"
+    "extensions/original-world.json",
+    "extensions/story10.json",
+    "extensions/stellar11-art.json"
   ],
   "regionPresentation": [
     {
@@ -22,12 +24,6 @@
       "portrait": "stellaart:asset.sun-portrait-web",
       "avatar": "stellaart:asset.sun-avatar-web",
       "sprite": "stellaart:asset.sun-battle-v2-web"
-    },
-    {
-      "character": "solar10:character.jupiter",
-      "portrait": "stellaart:asset.jupiter-portrait-web",
-      "avatar": "stellaart:asset.jupiter-avatar-web",
-      "sprite": "stellaart:asset.jupiter-battle-v2-web"
     },
     {
       "character": "solar10:character.saturn",
@@ -76,6 +72,72 @@
       "portrait": "stellaart:asset.ariel-portrait-web",
       "avatar": "stellaart:asset.ariel-avatar-web",
       "sprite": "stellaart:asset.ariel-battle-v2-web"
+    },
+    {
+      "character": "story10:character.arcturus",
+      "portrait": "stellaart:asset.arcturus-portrait-20261023-web",
+      "avatar": "stellaart:asset.arcturus-avatar-20261023-web",
+      "sprite": "stellaart:asset.arcturus-battle-20261023-v1-web"
+    },
+    {
+      "character": "story10:character.gliese",
+      "portrait": "stellaart:asset.gliese-portrait-20261023-web",
+      "avatar": "stellaart:asset.gliese-avatar-20261023-web",
+      "sprite": "stellaart:asset.gliese-battle-20261023-v1-web"
+    },
+    {
+      "character": "story10:character.vello",
+      "portrait": "stellaart:asset.vello-portrait-20261023-web",
+      "avatar": "stellaart:asset.vello-avatar-20261023-web",
+      "sprite": "stellaart:asset.vello-battle-20261023-v1-web"
+    },
+    {
+      "character": "story10:character.gliese-581e",
+      "portrait": "stellaart:asset.e581-portrait-20261023-web",
+      "avatar": "stellaart:asset.e581-avatar-20261023-web",
+      "sprite": "stellaart:asset.e581-battle-20261023-v1-web"
+    },
+    {
+      "character": "story10:character.valencia",
+      "portrait": "stellaart:asset.valencia-portrait-20261023-web",
+      "avatar": "stellaart:asset.valencia-avatar-20261023-web",
+      "sprite": "stellaart:asset.valencia-battle-20261023-v1-web"
+    },
+    {
+      "character": "story10:character.linda",
+      "portrait": "stellaart:asset.linda-portrait-20261023-web",
+      "avatar": "stellaart:asset.linda-avatar-20261023-web",
+      "sprite": "stellaart:asset.linda-battle-20261023-v1-web"
+    },
+    {
+      "character": "story10:character.izar",
+      "portrait": "stellaart:asset.izar-portrait-20261023-web",
+      "avatar": "stellaart:asset.izar-avatar-20261023-web",
+      "sprite": "stellaart:asset.izar-battle-20261023-v1-web"
+    },
+    {
+      "character": "story10:character.seginus",
+      "portrait": "stellaart:asset.seginus-portrait-20261023-web",
+      "avatar": "stellaart:asset.seginus-avatar-20261023-web",
+      "sprite": "stellaart:asset.seginus-battle-20261023-v1-web"
+    },
+    {
+      "character": "story10:character.spica",
+      "portrait": "stellaart:asset.spica-portrait-20261023-web",
+      "avatar": "stellaart:asset.spica-avatar-20261023-web",
+      "sprite": "stellaart:asset.spica-battle-20261023-v1-web"
+    },
+    {
+      "character": "story10:character.wolf359",
+      "portrait": "stellaart:asset.wolf359-portrait-20261023-web",
+      "avatar": "stellaart:asset.wolf359-avatar-20261023-web",
+      "sprite": "stellaart:asset.wolf359-battle-20261023-v1-web"
+    },
+    {
+      "character": "solar10:character.jupiter",
+      "portrait": "stellaart:asset.jupiter-portrait-20261023-web",
+      "avatar": "stellaart:asset.jupiter-avatar-20261023-web",
+      "sprite": "stellaart:asset.jupiter-battle-20261023-v1-web"
     }
   ],
   "regionRoutes": [

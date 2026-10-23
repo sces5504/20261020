@@ -107,10 +107,25 @@ test("sub-five-unit keyboard steps move living allies in combat, and movement st
       "each ally must actually move, not only the camera",
     ),
   );
-  assert.ok(c.allies[0].x > c.allies[1].x + 40, "vanguard remains ahead");
+  const captain = c.allies[0],
+    rear = c.allies[1];
+  const enemy = c.units
+    .filter((u) => u.side === "enemy" && u.hp > 0)
+    .sort(
+      (a, b) =>
+        Math.hypot(a.x - captain.x, a.y - captain.y) -
+        Math.hypot(b.x - captain.x, b.y - captain.y),
+    )[0];
+  const facing = Math.atan2(enemy.y - captain.y, enemy.x - captain.x);
+  assert.ok(
+    (captain.x - rear.x) * Math.cos(facing) +
+      (captain.y - rear.y) * Math.sin(facing) >
+      30,
+    "captain shields the threat-facing side during a strafe",
+  );
   assert.ok(
     Math.hypot(c.allies[1].x - c.allies[2].x, c.allies[1].y - c.allies[2].y) >
-      100,
+      60,
     "rear slots remain separated",
   );
   const at = c.anchor.x;

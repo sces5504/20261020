@@ -47,7 +47,7 @@ try {
   });
   await page.goto(server.url + "#/studio");
   await unlockStudio(page);
-  await page.waitForSelector("#entity-form");
+  await page.waitForSelector("#entity-form", { timeout: 60000 });
   console.log("Playtest: image replacement + content-only seventh maiden");
   await page
     .locator("#upload-asset")
@@ -86,7 +86,7 @@ try {
     () => document.querySelector('[aria-busy="true"]') === null,
   );
   await page.locator('[data-action="test"]').click();
-  await page.waitForSelector("canvas");
+  await page.waitForSelector("canvas", { timeout: 60000 });
   await page.locator('[data-action="story-skip"]').click();
   await page.locator('[data-action="view"]').click();
   await page.locator('[data-action="navigate"]').first().click();

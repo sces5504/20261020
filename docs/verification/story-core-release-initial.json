@@ -1,0 +1,65 @@
+{
+  "mode": "release",
+  "time_utc": "2026-10-23T09:24:14.402815+00:00",
+  "head": "a154206beebb809bb254fea2775c794cb876a138",
+  "dirty": false,
+  "elapsed_seconds": 175.03,
+  "results": [
+    {
+      "argv": [
+        "npm",
+        "run",
+        "content:check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "npm",
+        "test"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:e2e"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:playtest"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:exploration"
+      ],
+      "exit_code": 1
+    }
+  ],
+  "passed": false
+}

@@ -10,7 +10,10 @@ test("fresh campaign reaches the boss, starts production, resolves research and 
     n = 0;
   const cmd = (c: Parameters<typeof apply>[2]) =>
     (s = apply(p, s, c, now, `campaign-${n++}`));
-  const legacy = p.planets.filter(v => !v.id.startsWith("original:"));
+  // This rehearsal covers the original four production planets, not later event packs.
+  const legacy = p.planets.filter(
+    (v) => v.id.startsWith("m1:") || v.id.startsWith("beacon:"),
+  );
   for (const v of legacy) {
     for (const o of [...s.roster]) {
       if (s.team.includes(o.id) && o.level === 1)

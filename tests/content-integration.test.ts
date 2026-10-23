@@ -17,7 +17,9 @@ test("root presentation bindings resolve after additive packs, reject conflicts 
   const region = p.regions.find((r) => r.id === "m1:frontier-test")!;
   assert.equal(p.characters.length, 32);
   assert.equal(
-    p.planets.filter((v) => !v.id.startsWith("original:")).length,
+    p.planets.filter(
+      (v) => v.id.startsWith("m1:") || v.id.startsWith("beacon:"),
+    ).length,
     4,
   );
   assert.equal(region.background, "beacon:asset.frontier-v1");

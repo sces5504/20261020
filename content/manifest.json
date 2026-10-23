@@ -189,6 +189,26 @@
           "requires": []
         }
       ]
+    },
+    {
+      "region": "original:region.solar",
+      "routes": [
+        {
+          "to": "chronicle:region.solar",
+          "label": "救援戰役航跡",
+          "requires": []
+        }
+      ]
+    },
+    {
+      "region": "original:region.virgo",
+      "routes": [
+        {
+          "to": "chronicle:region.virgo",
+          "label": "救援戰役航跡",
+          "requires": []
+        }
+      ]
     }
   ]
 }

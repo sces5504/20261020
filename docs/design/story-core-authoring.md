@@ -84,12 +84,12 @@ say/stage的actor可引用actors或characters；portrait是明確assets ID，差
 |---|---|
 | mode | eliminate清敵；protect目標存活且清敵；escort受保護角色抵達；survive限時小隊存活；defend限時小隊與指定目標存活 |
 | seconds? | 1–1800有效戰鬥秒，survive/defend必填；protect/eliminate/escort有填時為失敗deadline |
-| actors | 最多12：id（戰場實例ID）、character（角色定義ID）、x/y、side ally/enemy、level 1–120預設1、required預設false、spawnAt預設0、destination? {x,y,radius:10–300} |
+| actors | 最多12：id（戰場實例ID）、character（角色定義ID）或enemy（敵人定義ID）二擇一、x/y、side ally/enemy、level 1–120預設1、required預設false、spawnAt預設0、destination? {x,y,radius:10–300} |
 | waves | 最多24，按at遞增：{at,enemies:[{enemy,count:1–30,level:1–120}]}；預定波次未抵達不能提早清敵獲勝 |
 | timeline | 最多64：actor、at?、hpBelow?（0–1）、action。at與hpBelow至少一個，兩個都填則AND，每列只執行一次 |
 | cues | 最多24：at?、hpBelow?、actor?、steps（1–32個純PresentationStep）。生命門檻必須指向戰場actor；兩門檻同時配置為AND |
 
-required目標死亡立刻失敗；護送需要required友軍與destination，protect需要required友軍。非編隊演員使用同一戰鬥單位、傷害、技能和可見素材，不加入玩家持有／編隊、不持久修改HP。友方故事演員自動施技；移動按destination或timeline，靜止者保持位置，沒有隱形無敵或傷害轉移。增援按有效戰鬥秒執行；管理／劇情對話暫停與離線都不推進倒數。倒數勝利不會自動消滅所有敵人。演員與目標位置須在星域及遭遇警告圈內；總單位與既有技能彈體／場域預算一起校驗。
+required目標死亡立刻失敗；護送需要required友軍與destination，protect需要required友軍。非編隊演員可引用少女或不可收集的敵人定義（不需新增可抽少女），使用同一戰鬥單位、傷害、技能和可見素材，不加入玩家持有／編隊、不持久修改HP。友方故事演員自動施技；移動按destination或timeline，靜止者保持位置，沒有隱形無敵或傷害轉移。增援按有效戰鬥秒執行；管理／劇情對話暫停與離線都不推進倒數。倒數勝利不會自動消滅所有敵人。演員與目標位置須在星域及遭遇警告圈內；總單位與既有技能彈體／場域預算一起校驗。
 
 timeline action只接受：retreat（移除且不能用於required）、team（必填side，required不可變敵）、move（必填x/y）、setHp（必填ratio 0–1）。其他operand明確拒絕。這些是明示重建原語；setHp不可直接改存檔角色HP，亦非讓內容包任意寫玩家欄位。使用原作SpawnCID／ChangeTeam等線索時，作者需另記row、參數換算與未確認之處。
 

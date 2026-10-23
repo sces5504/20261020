@@ -211,13 +211,17 @@ export class Combat {
       if (this.storySpawned.has(a.id) || a.spawnAt > this.time) continue;
       this.storySpawned.add(a.id);
       if (a.destination) this.storyDestinations.set(a.id, { ...a.destination });
-      const c = this.pack.characters.find((c) => c.id === a.character)!;
-      const st = stats(this.pack, {
-        id: a.id,
-        definition: a.character,
-        level: a.level,
-        hp: c.hp,
-      });
+      const c = a.character
+        ? this.pack.characters.find((c) => c.id === a.character)!
+        : this.pack.enemies.find((e) => e.id === a.enemy)!;
+      const st = a.character
+        ? stats(this.pack, {
+            id: a.id,
+            definition: a.character,
+            level: a.level,
+            hp: c.hp,
+          })
+        : enemyStats(c as Enemy, a.level);
       this.units.push({
         ...this.unit(
           c,

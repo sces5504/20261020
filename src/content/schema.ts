@@ -695,7 +695,10 @@ export function validatePack(input: unknown): {
       errors.push(`${v.id}: 護送需要目的地`);
     const actorIds = new Set<string>();
     e.actors.forEach((a) => {
-      has("characters", a.character, v.id);
+      if (!!a.character === !!a.enemy)
+        errors.push(`${v.id}: 戰場演員必須指定且只能指定character或enemy`);
+      if (a.character) has("characters", a.character, v.id);
+      if (a.enemy) has("enemies", a.enemy, v.id);
       if (actorIds.has(a.id)) errors.push(`${v.id}: 重複戰場演員`);
       actorIds.add(a.id);
       if (a.required && a.side !== "ally")
@@ -932,9 +935,14 @@ export function validatePack(input: unknown): {
       [
         ...v.enemies,
         ...(v.storyEncounter?.waves.flatMap((w) => w.enemies) ?? []),
+        ...(v.storyEncounter?.actors
+          .filter((a) => a.enemy)
+          .map((a) => ({ enemy: a.enemy!, count: 1, level: a.level })) ?? []),
       ],
       v.id,
-      v.storyEncounter?.actors.map((a) => a.character),
+      v.storyEncounter?.actors.flatMap((a) =>
+        a.character ? [a.character] : [],
+      ),
     );
   for (const r of p.regions)
     for (const v of r.patrols) encounterBudget(v.enemies, v.id);

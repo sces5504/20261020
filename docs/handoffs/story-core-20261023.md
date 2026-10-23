@@ -42,3 +42,5 @@
 最終呈現收尾局部驗證：build（含tsc）PASS；同一新story browser雙viewport再驗鏡頭聚焦／縮放與兩段fade後接續戰鬥成功，零pageerror。舊圖鑑e2e的六張／固定1024px假設已改為正式清單及每張素材宣告尺寸，未降低解碼／尺寸門檻。PR #20第一輪daily Checks run39927679569：122/122核心、內容／型別成功。最終發布尚待main完整門檻；不另本機跑全套。
 
 最後邊界修正：region/position等requires只在接受任務時判定；已接受流程移區後仍能接續，流程已讀後按objective獨立完成。針對跨區／完成條件2項測試PASS，typecheck PASS，未重跑已成功瀏覽器。
+
+補齊來源SpawnCID的不可收集單位契約：storyEncounter演員可二擇一引用character或enemy，沿同一Unit與來源成長，不要求先做成可抽少女才能在戰場出場／被保護／接收生命門檻。針對不可收集單位＋五目標＋進退場3項PASS，typecheck PASS；不重跑其他瀏覽器。戰場角色來源與正式speaker仍由劇情作者逐row指定。

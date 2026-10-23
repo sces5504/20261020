@@ -282,3 +282,34 @@ test("a region prerequisite gates acceptance, while accepted flow can travel and
   unaccepted.region = route.to;
   assert.ok(!storyAvailable(p, unaccepted, q.id));
 });
+
+test("non-collectible enemy definitions can be named story actors without adding a playable girl", () => {
+  const p = fixture(),
+    v = p.planets.find((v) => v.id === "fixture:encounter")!;
+  v.storyEncounter!.actors = [
+    {
+      id: "fixture:noncollectible",
+      enemy: "fixture:enemy",
+      side: "ally",
+      x: v.x + 20,
+      y: v.y,
+      level: 1,
+      required: true,
+      spawnAt: 0,
+    },
+  ];
+  const valid = validatePack(p);
+  assert.ok(valid.pack, valid.errors.join(";"));
+  const s = newSave(p, now);
+  s.x = v.x;
+  s.y = v.y;
+  s.encounter = { planet: v.id, seed: 42 };
+  const c = new Combat(valid.pack!, s, v.id),
+    a = c.units.find((u) => u.id === "fixture:noncollectible")!;
+  assert.equal(a.def, "fixture:enemy");
+  assert.equal(a.hp, 100000);
+  assert.ok(!s.roster.some((o) => o.definition === "fixture:enemy"));
+  a.hp = 0;
+  c.step(0.1);
+  assert.ok(c.ended && !c.victory);
+});

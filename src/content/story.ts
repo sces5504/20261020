@@ -129,7 +129,8 @@ export const storyEncounterSchema = z
         z
           .object({
             id: ref,
-            character: ref,
+            character: ref.optional(),
+            enemy: ref.optional(),
             x: finite,
             y: finite,
             side: z.enum(["ally", "enemy"]),

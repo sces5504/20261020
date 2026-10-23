@@ -108,7 +108,10 @@ try {
       await page.locator(".character-grid > .character-card").count(),
       pack.characters.length,
     );
-    assert.equal((await record(page, "save:test")).roster.length, pack.characters.length + 1);
+    assert.equal(
+      (await record(page, "save:test")).roster.length,
+      pack.characters.length + 1,
+    );
     assert.equal(await page.locator(".collection-card.owned").count(), 0);
     await page
       .locator(
@@ -189,11 +192,12 @@ try {
         c.id.startsWith("story10:") || c.id === "solar10:character.jupiter",
     )) {
       const owned = save.roster.find((o) => o.definition === c.id);
-      await page
-        .locator(
-          `.character-grid [data-action="character"][data-id="${owned.id}"]`,
-        )
-        .click();
+      const card = page.locator(
+        `.character-grid [data-action="character"][data-id="${owned.id}"]`,
+      );
+      await card.scrollIntoViewIfNeeded();
+      await card.locator("img").evaluate((im) => im.decode());
+      await card.click();
       const asset = pack.assets.find((a) => a.id === c.portrait);
       assert.equal(
         await page.locator(".character-detail > img").getAttribute("src"),
@@ -271,7 +275,7 @@ try {
     results.push({
       mobile,
       characters: pack.characters.length,
-      instances: 27,
+      fixtureInstances: save.roster.length,
       dailyQuests: 7,
       passed: [
         "unique-cards",

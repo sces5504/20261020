@@ -9,14 +9,23 @@ import subprocess
 import time
 
 ROOT=Path(__file__).resolve().parents[1]
-ALLOWED={'tools/game/exploration-e2e.mjs','public/catalog/characters.json','public/catalog/future-characters.csv',
+ALLOWED={'tools/game/v8-e2e.mjs','tools/game/exploration-e2e.mjs','public/catalog/characters.json','public/catalog/future-characters.csv',
          'scripts/continue-release.py','tests/test_release_continuation.py',
          '.github/workflows/ci.yml','.github/workflows/pages.yml'}
 REUSABLE={('npm','run','content:check'),('npm','run','typecheck'),('npm','test'),
-          ('npm','run','test:e2e'),('npm','run','test:playtest')}
+          ('npm','run','test:e2e'),('npm','run','test:playtest'),
+          ('npm','run','test:exploration'),('npm','run','test:refinement'),
+          ('npm','run','test:polish'),('npm','run','test:content-integration'),
+          ('npm','run','test:skills'),('npm','run','test:world')}
 
 def catalog_only(paths):
     return bool(paths) and all(p in ALLOWED or p.startswith(('docs/handoffs/','docs/verification/')) for p in paths)
+
+def browser_commands(paths):
+    checks=[]
+    if any(p.startswith('public/catalog/') or p=='tools/game/exploration-e2e.mjs' for p in paths):checks.append(['npm','run','test:exploration'])
+    if 'tools/game/v8-e2e.mjs' in paths:checks.append(['npm','run','test:integration-v8'])
+    return checks
 
 def reusable_results(receipt,commands,paths):
     if not catalog_only(paths):raise ValueError('Continuation rejected: gameplay/build inputs changed; a new release gate is required')
@@ -28,7 +37,8 @@ def reusable_results(receipt,commands,paths):
         if row.get('argv')!=commands[i] or type(row.get('exit_code')) is not int:
             raise ValueError('Source command list does not match the current release gate')
         if row['exit_code'] and i!=len(results)-1:raise ValueError('Source receipt continued after a failure')
-    return {tuple(r['argv']):r for r in results if r['exit_code']==0 and tuple(r['argv']) in REUSABLE}
+    affected={tuple(argv) for argv in browser_commands(paths)}
+    return {tuple(r['argv']):r for r in results if r['exit_code']==0 and tuple(r['argv']) in REUSABLE and tuple(r['argv']) not in affected}
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--source-run',required=True,type=int);parser.add_argument('--repo',required=True)
@@ -49,7 +59,7 @@ def main():
         for argv in commands:
             if tuple(argv) in reused:
                 print('Reuse verified PASS from '+run['headSha']+': '+' '.join(argv),flush=True)
-                results.append({'argv':argv,'exit_code':0,'reused_from':{'run':args.source_run,'head':run['headSha']}})
+                results.append({'argv':argv,'exit_code':0,'reused_from':{'run':args.source_run,'head':run['headSha'],**({'prior':reused[tuple(argv)]['reused_from']} if reused[tuple(argv)].get('reused_from') else {})}})
             else:
                 print('Check: '+' '.join(argv),flush=True)
                 result=subprocess.run(argv,cwd=ROOT);results.append({'argv':argv,'exit_code':result.returncode})

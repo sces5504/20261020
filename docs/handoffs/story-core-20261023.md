@@ -52,3 +52,11 @@ PR #20已合main `a154206beebb809bb254fea2775c794cb876a138`。main Checks成功�
 原因是六人遊戲與美術已接入，而公開製作表JSON／CSV仍標待製作；只修該六筆為已整合，不改角色／核心／Combat／技能或內容包。為遵守使用者失敗只驗受影響項，不再從全套開頭重跑：`scripts/continue-release.py`核對GitHub失敗main run與其不可變artifact、來源SHA／乾淨工作樹／祖先關係／完整指令順序，且變更僅限製作表、文件與驗證工具。只有原已成功且不受影響的五項（內容、型別、核心、前兩瀏覽器）可帶來源run／SHA沿用；build重做，失敗探索及後續九項實跑。未知runtime／build input變更明確拒絕接續，不能略過。新receipt每項標重用來源，原失敗不改寫。
 
 Pages僅在合併提交明填`Release-Resume-Run: 39931071868`時走此接續，正常發布仍原完整門檻。資料修復PR的Checks只跑接續安全測試、build與受影響探索，不重跑124核心。三項接續安全測試通過（拒絕來源身分／指令順序／runtime變更，失敗與build不重用），workflow shell語法及build通過。最終接續結果／公開SHA以整合PR及修復PR最新描述為準。
+
+## 接續第一次結果與v8測試穩定化
+
+PR #21合main `fd12e650904fc8a4b441d98f0c96a70452fc8bba`，Pages run39933381213確實重用五項原成功並重建，探索、refinement、polish、content-integration、skills、world均通過。v8在點擊深處角色卡owned-extra-22時失去可見性而逾時；story與readiness尚未執行，沒有部署。此輪原始收據另保留`docs/verification/story-core-release-continuation1.json`，先前成功不重跑。
+
+原v8本機雙viewport均PASS，未重現CI點擊不穩定；測試改為顯式scrollIntoView＋圖片decode後正常click，沒有force或降低可見／素材斷言，不修改遊戲／UI。輸出移除過時instances27，改記實際fixtureInstances。接續工具擴充沿用本輪已成功的其他profile，但被修改的profile即使曾成功仍必須重跑；來源既有重用鏈保留prior，不冒充本輪新跑。接續安全測試5項與workflow shell語法PASS；新修復CI只跑v8、build及該安全測試。下一次合併須使用`Release-Resume-Run: 39933381213`，只實跑build、v8、story與readiness，其餘11項保留來源證據。
+
+穩定化後v8本機桌機／觸控兩組均PASS（32角色、33初始fixture實例、七daily、51媒體及正式存檔隔離）；未修改遊戲。接續規劃已核對：11項有成功來源可沿用，4項（build、v8、story、readiness）需要本次實跑，原本失敗維持失敗收據。

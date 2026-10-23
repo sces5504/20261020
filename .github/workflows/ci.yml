@@ -40,7 +40,13 @@ jobs:
             then
               python3 -m unittest discover -s tests -p test_release_continuation.py
               npm run build
-              npm run test:exploration
+              python3 - <<'PY_AFFECTED'
+          import os,runpy,subprocess
+          m=runpy.run_path('scripts/continue-release.py')
+          base='origin/main' if os.environ.get('GITHUB_EVENT_NAME')=='pull_request' else 'HEAD^'
+          paths=subprocess.check_output(['git','diff','--name-only',base,'HEAD'],text=True).splitlines()
+          for argv in m['browser_commands'](paths):subprocess.run(argv,check=True)
+          PY_AFFECTED
             else
               python3 scripts/project.py check daily
             fi

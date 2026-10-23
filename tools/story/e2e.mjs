@@ -101,6 +101,16 @@ try {
       throw e;
     }
     await page.locator('[data-action="flow-next"]').click();
+    await page.locator(".camera-view").waitFor();
+    await page.screenshot({
+      path: `.artifacts/story/${mobile ? "mobile" : "desktop"}-camera.png`,
+    });
+    await page.waitForTimeout(160);
+    await page.locator('[data-action="flow-next"]').click();
+    await page.waitForTimeout(160);
+    await page.locator('[data-action="flow-next"]').click();
+    await page.waitForTimeout(160);
+    await page.locator('[data-action="flow-next"]').click();
     await page
       .getByText("測試：戰後對話，領獎獨立。", { exact: true })
       .waitFor();

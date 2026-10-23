@@ -2,6 +2,8 @@
 
 # 十位新角色與木星更新：固定整合入口
 
+後續批次：[序章六位角色立繪與Q版](../prologue6/START_HERE.md)。本批素材保留原樣。
+
 本批素材固定放在 `art/characters/stellar11/`。這是美術交付，遊戲接入由整合者處理，不需另向聊天作者索取 ZIP。
 
 - [完整交接](../../../docs/handoffs/stellar11-character-art-20261023.md)

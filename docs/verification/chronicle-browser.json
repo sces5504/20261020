@@ -1,0 +1,54 @@
+{
+  "results": [
+    {
+      "mobile": false,
+      "viewport": "1440x1000",
+      "checks": [
+        "real-prologue",
+        "skip-initializes-once",
+        "reload-no-duplicate",
+        "real-venus-rescue-and-radio-cue",
+        "chapter-complete-before-claim",
+        "claim",
+        "read-only-replay",
+        "formal-save-isolated",
+        "dialogue-layout",
+        "two-NPC-portraits",
+        "blackhole-background",
+        "four-media-http-sha-decode"
+      ],
+      "media": [
+        "chronicle:asset.kiraba",
+        "chronicle:asset.mitsuba",
+        "chronicle:asset.prologue",
+        "chronicle:asset.blackhole"
+      ]
+    },
+    {
+      "mobile": true,
+      "viewport": "390x844 DPR2",
+      "checks": [
+        "real-prologue",
+        "skip-initializes-once",
+        "reload-no-duplicate",
+        "real-venus-rescue-and-radio-cue",
+        "chapter-complete-before-claim",
+        "claim",
+        "read-only-replay",
+        "formal-save-isolated",
+        "dialogue-layout",
+        "two-NPC-portraits",
+        "blackhole-background",
+        "four-media-http-sha-decode"
+      ],
+      "media": [
+        "chronicle:asset.kiraba",
+        "chronicle:asset.mitsuba",
+        "chronicle:asset.prologue",
+        "chronicle:asset.blackhole"
+      ]
+    }
+  ],
+  "errors": [],
+  "physicalDevice": false
+}

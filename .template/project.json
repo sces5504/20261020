@@ -98,6 +98,11 @@
       [
         "npm",
         "run",
+        "test:chronicle"
+      ],
+      [
+        "npm",
+        "run",
         "release:ready",
         "--",
         "--target",

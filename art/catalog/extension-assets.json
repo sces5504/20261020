@@ -5934,5 +5934,37 @@
     "sha256": "433a2d10303430bddb4e95f4b2c9b4be9b6be005781911ccaa0f11a606f95873",
     "master": "art/characters/prologue6/battle/sargas-v1-candidate.png",
     "masterSha256": "6612a40aec5e4babfdc7b68a8d73bb85fc503004dfe0670db0a29000212e1eec"
+  },
+  {
+    "id": "chronicle:asset.kiraba",
+    "path": "art/story-first-three/web/kiraba.webp",
+    "runtime": "assets/extensions/story-first-three/kiraba.webp",
+    "sha256": "2a880dcc7ff4ce3eb574335ffd42eb4673fcf6687405c5c1dc75bcd19825f793",
+    "master": "art/story-first-three/masters/kiraba.png",
+    "masterSha256": "0801563199f589dbd694ded426edcae6bea68da526955096ec4b9104e656a619"
+  },
+  {
+    "id": "chronicle:asset.mitsuba",
+    "path": "art/story-first-three/web/mitsuba.webp",
+    "runtime": "assets/extensions/story-first-three/mitsuba.webp",
+    "sha256": "9bca0aca54abc05f78689fc8be30f3d53d695063e34123835cb23eb6654bda26",
+    "master": "art/story-first-three/masters/mitsuba.png",
+    "masterSha256": "71cf343bd41da03cb4767902756dc6041df6222d4c80c2a8bffe529d891a73db"
+  },
+  {
+    "id": "chronicle:asset.prologue",
+    "path": "art/story-first-three/web/prologue.webp",
+    "runtime": "assets/extensions/story-first-three/prologue.webp",
+    "sha256": "d5ad1a9bcca3d3ccc4f99b84495124362f11e39e6e6a9d23dc50742810add814",
+    "master": "art/story-first-three/masters/prologue.png",
+    "masterSha256": "f25687a5d904c057c9a3cb1adcd001173f54d9c839b9a6ea5eec8f32544b857e"
+  },
+  {
+    "id": "chronicle:asset.blackhole",
+    "path": "art/story-first-three/web/blackhole.webp",
+    "runtime": "assets/extensions/story-first-three/blackhole.webp",
+    "sha256": "3ff4d8c3fa35c65581b8a322946fecf9f18b8ad6f9156408836e9fecb2435f80",
+    "master": "art/story-first-three/masters/blackhole.png",
+    "masterSha256": "da684dc328ac0894b0bcd172a09250e28af8cfcd6232457d035545e25b4a05a2"
   }
 ]

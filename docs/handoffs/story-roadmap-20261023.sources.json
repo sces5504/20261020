@@ -1,0 +1,4343 @@
+{
+  "baseline": "ff7d31a",
+  "status": "planning only; not approved story content",
+  "method": "QuestS f02 matched to first EventScript f01; segment ends at next positive label. First occurrence per CID/portrait field retained in each segment. f34/f35 are portrait operands, not proven speaker identities; referenced scripts and battle actors require follow-up.",
+  "entries": [
+    {
+      "questSRow": 1,
+      "key": "Chapter0",
+      "entryLabel": 6000,
+      "otherLabelOperand_f03": 0,
+      "entryRow": 0,
+      "segmentEndExclusive": 309,
+      "titleEn": "Chapter 0\\nMaster",
+      "workingTitleZh": "Master／序章",
+      "chapter": 0,
+      "portraitOperands": [
+        {
+          "cidRow": 107,
+          "key": "Scuti",
+          "eventScriptRow": 64,
+          "field": "f34"
+        },
+        {
+          "cidRow": 48,
+          "key": "Doradus",
+          "eventScriptRow": 65,
+          "field": "f35"
+        },
+        {
+          "cidRow": 62,
+          "key": "Mucephei",
+          "eventScriptRow": 69,
+          "field": "f35"
+        },
+        {
+          "cidRow": 99,
+          "key": "Antares",
+          "eventScriptRow": 72,
+          "field": "f34"
+        },
+        {
+          "cidRow": 101,
+          "key": "Sargas",
+          "eventScriptRow": 74,
+          "field": "f35"
+        },
+        {
+          "cidRow": 29,
+          "key": "Arcturus",
+          "eventScriptRow": 78,
+          "field": "f34"
+        },
+        {
+          "cidRow": 73,
+          "key": "Deneb",
+          "eventScriptRow": 96,
+          "field": "f34"
+        },
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 103,
+          "field": "f34"
+        },
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 117,
+          "field": "f35"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 123,
+          "field": "f35"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 163,
+          "field": "f34"
+        },
+        {
+          "cidRow": 107,
+          "key": "Scuti",
+          "eventScriptRow": 266,
+          "field": "f35"
+        },
+        {
+          "cidRow": 99,
+          "key": "Antares",
+          "eventScriptRow": 268,
+          "field": "f35"
+        },
+        {
+          "cidRow": 29,
+          "key": "Arcturus",
+          "eventScriptRow": 270,
+          "field": "f35"
+        },
+        {
+          "cidRow": 2,
+          "key": "Earth",
+          "eventScriptRow": 278,
+          "field": "f34"
+        },
+        {
+          "cidRow": 2,
+          "key": "Earth",
+          "eventScriptRow": 280,
+          "field": "f35"
+        },
+        {
+          "cidRow": 226,
+          "key": "Master98",
+          "eventScriptRow": 300,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 2,
+      "key": "Chapter1_1",
+      "entryLabel": 6001,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 868,
+      "segmentEndExclusive": 943,
+      "titleEn": "Chapter1-1\\nRescue Venus",
+      "workingTitleZh": "救援金星",
+      "chapter": 1,
+      "portraitOperands": [
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 880,
+          "field": "f34"
+        },
+        {
+          "cidRow": 2,
+          "key": "Earth",
+          "eventScriptRow": 891,
+          "field": "f34"
+        },
+        {
+          "cidRow": 227,
+          "key": "Master99",
+          "eventScriptRow": 891,
+          "field": "f35"
+        },
+        {
+          "cidRow": 3,
+          "key": "Mercury",
+          "eventScriptRow": 895,
+          "field": "f34"
+        },
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 903,
+          "field": "f35"
+        },
+        {
+          "cidRow": 227,
+          "key": "Master99",
+          "eventScriptRow": 918,
+          "field": "f34"
+        },
+        {
+          "cidRow": 2,
+          "key": "Earth",
+          "eventScriptRow": 921,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 3,
+      "key": "Chapter1_2",
+      "entryLabel": 6002,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 943,
+      "segmentEndExclusive": 976,
+      "titleEn": "Chapter1-2\\nReceiver improvement",
+      "workingTitleZh": "改良接收器",
+      "chapter": 1,
+      "portraitOperands": [
+        {
+          "cidRow": 2,
+          "key": "Earth",
+          "eventScriptRow": 955,
+          "field": "f34"
+        },
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 955,
+          "field": "f35"
+        },
+        {
+          "cidRow": 227,
+          "key": "Master99",
+          "eventScriptRow": 960,
+          "field": "f35"
+        },
+        {
+          "cidRow": 3,
+          "key": "Mercury",
+          "eventScriptRow": 967,
+          "field": "f34"
+        },
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 970,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 4,
+      "key": "Chapter1_3",
+      "entryLabel": 6003,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 1018,
+      "segmentEndExclusive": 1104,
+      "titleEn": "Chapter1-3\\nRescue Mars",
+      "workingTitleZh": "救援火星",
+      "chapter": 1,
+      "portraitOperands": [
+        {
+          "cidRow": 5,
+          "key": "Mars",
+          "eventScriptRow": 1030,
+          "field": "f34"
+        },
+        {
+          "cidRow": 2,
+          "key": "Earth",
+          "eventScriptRow": 1035,
+          "field": "f35"
+        },
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 1038,
+          "field": "f35"
+        },
+        {
+          "cidRow": 227,
+          "key": "Master99",
+          "eventScriptRow": 1044,
+          "field": "f34"
+        },
+        {
+          "cidRow": 3,
+          "key": "Mercury",
+          "eventScriptRow": 1046,
+          "field": "f35"
+        },
+        {
+          "cidRow": 227,
+          "key": "Master99",
+          "eventScriptRow": 1071,
+          "field": "f35"
+        },
+        {
+          "cidRow": 3,
+          "key": "Mercury",
+          "eventScriptRow": 1077,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 5,
+      "key": "Chapter1_4",
+      "entryLabel": 6004,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 1104,
+      "segmentEndExclusive": 1131,
+      "titleEn": "Chapter1-4\\nRescue Jupiter ",
+      "workingTitleZh": "救援木星",
+      "chapter": 1,
+      "portraitOperands": [
+        {
+          "cidRow": 5,
+          "key": "Mars",
+          "eventScriptRow": 1116,
+          "field": "f34"
+        },
+        {
+          "cidRow": 2,
+          "key": "Earth",
+          "eventScriptRow": 1116,
+          "field": "f35"
+        },
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 1120,
+          "field": "f34"
+        },
+        {
+          "cidRow": 3,
+          "key": "Mercury",
+          "eventScriptRow": 1122,
+          "field": "f35"
+        },
+        {
+          "cidRow": 2,
+          "key": "Earth",
+          "eventScriptRow": 1125,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 6,
+      "key": "Chapter1_5",
+      "entryLabel": 6005,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 1204,
+      "segmentEndExclusive": 1305,
+      "titleEn": "Chapter1-5\\nSun exploration",
+      "workingTitleZh": "太陽探索",
+      "chapter": 1,
+      "portraitOperands": [
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 1216,
+          "field": "f34"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 1216,
+          "field": "f35"
+        },
+        {
+          "cidRow": 2,
+          "key": "Earth",
+          "eventScriptRow": 1221,
+          "field": "f34"
+        },
+        {
+          "cidRow": 5,
+          "key": "Mars",
+          "eventScriptRow": 1223,
+          "field": "f34"
+        },
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 1237,
+          "field": "f35"
+        },
+        {
+          "cidRow": 3,
+          "key": "Mercury",
+          "eventScriptRow": 1241,
+          "field": "f34"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 1242,
+          "field": "f34"
+        },
+        {
+          "cidRow": 2,
+          "key": "Earth",
+          "eventScriptRow": 1244,
+          "field": "f35"
+        },
+        {
+          "cidRow": 5,
+          "key": "Mars",
+          "eventScriptRow": 1246,
+          "field": "f35"
+        },
+        {
+          "cidRow": 227,
+          "key": "Master99",
+          "eventScriptRow": 1251,
+          "field": "f35"
+        },
+        {
+          "cidRow": 11,
+          "key": "Nemesis",
+          "eventScriptRow": 1271,
+          "field": "f34"
+        },
+        {
+          "cidRow": 189,
+          "key": "Kiraba",
+          "eventScriptRow": 1290,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 7,
+      "key": "Chapter1_6",
+      "entryLabel": 6006,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 1305,
+      "segmentEndExclusive": 1387,
+      "titleEn": "Chapter1-6\\nRescue Saturn",
+      "workingTitleZh": "救援土星",
+      "chapter": 1,
+      "portraitOperands": [
+        {
+          "cidRow": 2,
+          "key": "Earth",
+          "eventScriptRow": 1317,
+          "field": "f34"
+        },
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 1317,
+          "field": "f35"
+        },
+        {
+          "cidRow": 5,
+          "key": "Mars",
+          "eventScriptRow": 1322,
+          "field": "f35"
+        },
+        {
+          "cidRow": 3,
+          "key": "Mercury",
+          "eventScriptRow": 1326,
+          "field": "f35"
+        },
+        {
+          "cidRow": 5,
+          "key": "Mars",
+          "eventScriptRow": 1327,
+          "field": "f34"
+        },
+        {
+          "cidRow": 7,
+          "key": "Saturn",
+          "eventScriptRow": 1338,
+          "field": "f35"
+        },
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 1358,
+          "field": "f34"
+        },
+        {
+          "cidRow": 227,
+          "key": "Master99",
+          "eventScriptRow": 1366,
+          "field": "f34"
+        },
+        {
+          "cidRow": 3,
+          "key": "Mercury",
+          "eventScriptRow": 1375,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 8,
+      "key": "Chapter1_7",
+      "entryLabel": 6007,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 1387,
+      "segmentEndExclusive": 1473,
+      "titleEn": "Chapter1-7\\nRescue Uranus",
+      "workingTitleZh": "救援天王星",
+      "chapter": 1,
+      "portraitOperands": [
+        {
+          "cidRow": 1,
+          "key": "Sun",
+          "eventScriptRow": 1403,
+          "field": "f34"
+        },
+        {
+          "cidRow": 11,
+          "key": "Nemesis",
+          "eventScriptRow": 1403,
+          "field": "f35"
+        },
+        {
+          "cidRow": 189,
+          "key": "Kiraba",
+          "eventScriptRow": 1406,
+          "field": "f34"
+        },
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 1427,
+          "field": "f34"
+        },
+        {
+          "cidRow": 2,
+          "key": "Earth",
+          "eventScriptRow": 1428,
+          "field": "f35"
+        },
+        {
+          "cidRow": 8,
+          "key": "Uranus",
+          "eventScriptRow": 1436,
+          "field": "f34"
+        },
+        {
+          "cidRow": 2,
+          "key": "Earth",
+          "eventScriptRow": 1437,
+          "field": "f34"
+        },
+        {
+          "cidRow": 8,
+          "key": "Uranus",
+          "eventScriptRow": 1441,
+          "field": "f35"
+        },
+        {
+          "cidRow": 3,
+          "key": "Mercury",
+          "eventScriptRow": 1448,
+          "field": "f35"
+        },
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 1453,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 9,
+      "key": "Chapter1_8",
+      "entryLabel": 6008,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 1473,
+      "segmentEndExclusive": 1518,
+      "titleEn": "Chapter1-8\\nRescue Neptune",
+      "workingTitleZh": "救援海王星",
+      "chapter": 1,
+      "portraitOperands": [
+        {
+          "cidRow": 8,
+          "key": "Uranus",
+          "eventScriptRow": 1485,
+          "field": "f34"
+        },
+        {
+          "cidRow": 2,
+          "key": "Earth",
+          "eventScriptRow": 1487,
+          "field": "f35"
+        },
+        {
+          "cidRow": 9,
+          "key": "Neptune",
+          "eventScriptRow": 1491,
+          "field": "f35"
+        },
+        {
+          "cidRow": 2,
+          "key": "Earth",
+          "eventScriptRow": 1492,
+          "field": "f34"
+        },
+        {
+          "cidRow": 3,
+          "key": "Mercury",
+          "eventScriptRow": 1494,
+          "field": "f34"
+        },
+        {
+          "cidRow": 5,
+          "key": "Mars",
+          "eventScriptRow": 1495,
+          "field": "f35"
+        },
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 1501,
+          "field": "f34"
+        },
+        {
+          "cidRow": 8,
+          "key": "Uranus",
+          "eventScriptRow": 1503,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 10,
+      "key": "Chapter1_9",
+      "entryLabel": 6009,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 1619,
+      "segmentEndExclusive": 1699,
+      "titleEn": "Chapter1-9\\nPluto Exploration",
+      "workingTitleZh": "冥王星探索",
+      "chapter": 1,
+      "portraitOperands": [
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 1630,
+          "field": "f34"
+        },
+        {
+          "cidRow": 2,
+          "key": "Earth",
+          "eventScriptRow": 1630,
+          "field": "f35"
+        },
+        {
+          "cidRow": 3,
+          "key": "Mercury",
+          "eventScriptRow": 1632,
+          "field": "f35"
+        },
+        {
+          "cidRow": 5,
+          "key": "Mars",
+          "eventScriptRow": 1639,
+          "field": "f35"
+        },
+        {
+          "cidRow": 2,
+          "key": "Earth",
+          "eventScriptRow": 1649,
+          "field": "f34"
+        },
+        {
+          "cidRow": 10,
+          "key": "Pluto",
+          "eventScriptRow": 1650,
+          "field": "f35"
+        },
+        {
+          "cidRow": 3,
+          "key": "Mercury",
+          "eventScriptRow": 1651,
+          "field": "f34"
+        },
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 1655,
+          "field": "f35"
+        },
+        {
+          "cidRow": 10,
+          "key": "Pluto",
+          "eventScriptRow": 1662,
+          "field": "f34"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 1676,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 11,
+      "key": "Chapter1_10",
+      "entryLabel": 6010,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 1746,
+      "segmentEndExclusive": 1768,
+      "titleEn": "Chapter1-10\\nNemesis",
+      "workingTitleZh": "復仇女神星",
+      "chapter": 1,
+      "portraitOperands": [
+        {
+          "cidRow": 2,
+          "key": "Earth",
+          "eventScriptRow": 1756,
+          "field": "f34"
+        },
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 1756,
+          "field": "f35"
+        },
+        {
+          "cidRow": 5,
+          "key": "Mars",
+          "eventScriptRow": 1761,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 12,
+      "key": "Chapter1_11",
+      "entryLabel": 6011,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 1874,
+      "segmentEndExclusive": 2013,
+      "titleEn": "Chapter1-11\\nKiraba",
+      "workingTitleZh": "Kiraba",
+      "chapter": 1,
+      "portraitOperands": [
+        {
+          "cidRow": 2,
+          "key": "Earth",
+          "eventScriptRow": 1883,
+          "field": "f34"
+        },
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 1884,
+          "field": "f35"
+        },
+        {
+          "cidRow": 7,
+          "key": "Saturn",
+          "eventScriptRow": 1898,
+          "field": "f35"
+        },
+        {
+          "cidRow": 8,
+          "key": "Uranus",
+          "eventScriptRow": 1914,
+          "field": "f35"
+        },
+        {
+          "cidRow": 9,
+          "key": "Neptune",
+          "eventScriptRow": 1915,
+          "field": "f34"
+        },
+        {
+          "cidRow": 3,
+          "key": "Mercury",
+          "eventScriptRow": 1931,
+          "field": "f35"
+        },
+        {
+          "cidRow": 10,
+          "key": "Pluto",
+          "eventScriptRow": 1932,
+          "field": "f35"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 1933,
+          "field": "f34"
+        },
+        {
+          "cidRow": 11,
+          "key": "Nemesis",
+          "eventScriptRow": 1956,
+          "field": "f34"
+        },
+        {
+          "cidRow": 189,
+          "key": "Kiraba",
+          "eventScriptRow": 1957,
+          "field": "f35"
+        },
+        {
+          "cidRow": 189,
+          "key": "Kiraba",
+          "eventScriptRow": 1968,
+          "field": "f34"
+        },
+        {
+          "cidRow": 11,
+          "key": "Nemesis",
+          "eventScriptRow": 1969,
+          "field": "f35"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 1974,
+          "field": "f35"
+        },
+        {
+          "cidRow": 2,
+          "key": "Earth",
+          "eventScriptRow": 1995,
+          "field": "f35"
+        },
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 2002,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 13,
+      "key": "Chapter1_12",
+      "entryLabel": 6012,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 2013,
+      "segmentEndExclusive": 2056,
+      "titleEn": "Chapter1\\nSolar system epilogue",
+      "workingTitleZh": "太陽系後日談",
+      "chapter": 1,
+      "portraitOperands": [
+        {
+          "cidRow": 11,
+          "key": "Nemesis",
+          "eventScriptRow": 2027,
+          "field": "f34"
+        },
+        {
+          "cidRow": 1,
+          "key": "Sun",
+          "eventScriptRow": 2035,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 14,
+      "key": "Chapter2_1",
+      "entryLabel": 6013,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 2056,
+      "segmentEndExclusive": 2104,
+      "titleEn": "Chapter2-1\\nGliese Escort",
+      "workingTitleZh": "護送格利澤",
+      "chapter": 2,
+      "portraitOperands": [
+        {
+          "cidRow": 190,
+          "key": "Mitsuba",
+          "eventScriptRow": 2070,
+          "field": "f34"
+        },
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 2079,
+          "field": "f34"
+        },
+        {
+          "cidRow": 3,
+          "key": "Mercury",
+          "eventScriptRow": 2080,
+          "field": "f35"
+        },
+        {
+          "cidRow": 2,
+          "key": "Earth",
+          "eventScriptRow": 2082,
+          "field": "f35"
+        },
+        {
+          "cidRow": 5,
+          "key": "Mars",
+          "eventScriptRow": 2085,
+          "field": "f34"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 2086,
+          "field": "f35"
+        },
+        {
+          "cidRow": 25,
+          "key": "Gliese",
+          "eventScriptRow": 2098,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 15,
+      "key": "Chapter2_2",
+      "entryLabel": 6014,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 2145,
+      "segmentEndExclusive": 2217,
+      "titleEn": "Chapter2-2\\nRescue Vello",
+      "workingTitleZh": "救援維洛",
+      "chapter": 2,
+      "portraitOperands": [
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 2159,
+          "field": "f34"
+        },
+        {
+          "cidRow": 31,
+          "key": "Vello",
+          "eventScriptRow": 2160,
+          "field": "f34"
+        },
+        {
+          "cidRow": 2,
+          "key": "Earth",
+          "eventScriptRow": 2161,
+          "field": "f35"
+        },
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 2173,
+          "field": "f35"
+        },
+        {
+          "cidRow": 30,
+          "key": "Valencia",
+          "eventScriptRow": 2202,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 16,
+      "key": "Chapter2_3",
+      "entryLabel": 6015,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 2217,
+      "segmentEndExclusive": 2281,
+      "titleEn": "Chapter2-3\\nRescue Gliee",
+      "workingTitleZh": "救援 Gliee（原文；對象待逐句核對）",
+      "chapter": 2,
+      "portraitOperands": [
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 2229,
+          "field": "f34"
+        },
+        {
+          "cidRow": 25,
+          "key": "Gliese",
+          "eventScriptRow": 2229,
+          "field": "f35"
+        },
+        {
+          "cidRow": 26,
+          "key": "581E",
+          "eventScriptRow": 2255,
+          "field": "f34"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 2259,
+          "field": "f35"
+        },
+        {
+          "cidRow": 25,
+          "key": "Gliese",
+          "eventScriptRow": 2274,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 17,
+      "key": "Chapter2_4",
+      "entryLabel": 6016,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 2281,
+      "segmentEndExclusive": 2395,
+      "titleEn": "Chapter2-4\\nArcturus Exploration",
+      "workingTitleZh": "大角星探索",
+      "chapter": 2,
+      "portraitOperands": [
+        {
+          "cidRow": 2,
+          "key": "Earth",
+          "eventScriptRow": 2297,
+          "field": "f34"
+        },
+        {
+          "cidRow": 31,
+          "key": "Vello",
+          "eventScriptRow": 2297,
+          "field": "f35"
+        },
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 2299,
+          "field": "f34"
+        },
+        {
+          "cidRow": 30,
+          "key": "Valencia",
+          "eventScriptRow": 2301,
+          "field": "f34"
+        },
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 2304,
+          "field": "f35"
+        },
+        {
+          "cidRow": 235,
+          "key": "Izar_Boss",
+          "eventScriptRow": 2319,
+          "field": "f34"
+        },
+        {
+          "cidRow": 31,
+          "key": "Vello",
+          "eventScriptRow": 2325,
+          "field": "f34"
+        },
+        {
+          "cidRow": 235,
+          "key": "Izar_Boss",
+          "eventScriptRow": 2325,
+          "field": "f35"
+        },
+        {
+          "cidRow": 2,
+          "key": "Earth",
+          "eventScriptRow": 2329,
+          "field": "f35"
+        },
+        {
+          "cidRow": 29,
+          "key": "Arcturus",
+          "eventScriptRow": 2360,
+          "field": "f34"
+        },
+        {
+          "cidRow": 232,
+          "key": "Jupiter_Hp",
+          "eventScriptRow": 2379,
+          "field": "f34"
+        },
+        {
+          "cidRow": 29,
+          "key": "Arcturus",
+          "eventScriptRow": 2379,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 18,
+      "key": "Chapter2_5",
+      "entryLabel": 6017,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 2395,
+      "segmentEndExclusive": 2466,
+      "titleEn": "Chapter2-5\\nRescue Linda",
+      "workingTitleZh": "救援琳達",
+      "chapter": 2,
+      "portraitOperands": [
+        {
+          "cidRow": 2,
+          "key": "Earth",
+          "eventScriptRow": 2405,
+          "field": "f34"
+        },
+        {
+          "cidRow": 29,
+          "key": "Arcturus",
+          "eventScriptRow": 2405,
+          "field": "f35"
+        },
+        {
+          "cidRow": 31,
+          "key": "Vello",
+          "eventScriptRow": 2407,
+          "field": "f34"
+        },
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 2414,
+          "field": "f34"
+        },
+        {
+          "cidRow": 32,
+          "key": "Linda",
+          "eventScriptRow": 2432,
+          "field": "f34"
+        },
+        {
+          "cidRow": 2,
+          "key": "Earth",
+          "eventScriptRow": 2441,
+          "field": "f35"
+        },
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 2444,
+          "field": "f35"
+        },
+        {
+          "cidRow": 3,
+          "key": "Mercury",
+          "eventScriptRow": 2454,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 19,
+      "key": "Chapter2_6",
+      "entryLabel": 6018,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 2466,
+      "segmentEndExclusive": 2516,
+      "titleEn": "Chapter2-6\\nIzar exploration",
+      "workingTitleZh": "伊扎爾探索",
+      "chapter": 2,
+      "portraitOperands": [
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 2476,
+          "field": "f34"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 2476,
+          "field": "f35"
+        },
+        {
+          "cidRow": 25,
+          "key": "Gliese",
+          "eventScriptRow": 2478,
+          "field": "f35"
+        },
+        {
+          "cidRow": 26,
+          "key": "581E",
+          "eventScriptRow": 2479,
+          "field": "f35"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 2487,
+          "field": "f34"
+        },
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 2488,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 20,
+      "key": "Chapter2_7",
+      "entryLabel": 6019,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 2516,
+      "segmentEndExclusive": 2552,
+      "titleEn": "Chapter2-7\\nTactical black hole design",
+      "workingTitleZh": "戰術黑洞設計",
+      "chapter": 2,
+      "portraitOperands": [
+        {
+          "cidRow": 29,
+          "key": "Arcturus",
+          "eventScriptRow": 2526,
+          "field": "f34"
+        },
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 2526,
+          "field": "f35"
+        },
+        {
+          "cidRow": 2,
+          "key": "Earth",
+          "eventScriptRow": 2533,
+          "field": "f35"
+        },
+        {
+          "cidRow": 30,
+          "key": "Valencia",
+          "eventScriptRow": 2540,
+          "field": "f35"
+        },
+        {
+          "cidRow": 30,
+          "key": "Valencia",
+          "eventScriptRow": 2547,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 21,
+      "key": "Chapter2_8",
+      "entryLabel": 6020,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 2596,
+      "segmentEndExclusive": 2649,
+      "titleEn": "Chapter2-8\\nSeginus Exploration",
+      "workingTitleZh": "招搖探索",
+      "chapter": 2,
+      "portraitOperands": [
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 2605,
+          "field": "f34"
+        },
+        {
+          "cidRow": 27,
+          "key": "Seginus",
+          "eventScriptRow": 2610,
+          "field": "f34"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 2611,
+          "field": "f35"
+        },
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 2620,
+          "field": "f35"
+        },
+        {
+          "cidRow": 26,
+          "key": "581E",
+          "eventScriptRow": 2628,
+          "field": "f35"
+        },
+        {
+          "cidRow": 27,
+          "key": "Seginus",
+          "eventScriptRow": 2640,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 22,
+      "key": "Chapter2_9",
+      "entryLabel": 6021,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 2649,
+      "segmentEndExclusive": 2708,
+      "titleEn": "Chapter2-9\\nRescue Spica",
+      "workingTitleZh": "救援角宿一",
+      "chapter": 2,
+      "portraitOperands": [
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 2665,
+          "field": "f34"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 2668,
+          "field": "f35"
+        },
+        {
+          "cidRow": 28,
+          "key": "Spica",
+          "eventScriptRow": 2679,
+          "field": "f34"
+        },
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 2682,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 23,
+      "key": "Chapter2_10",
+      "entryLabel": 6022,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 2750,
+      "segmentEndExclusive": 2769,
+      "titleEn": "Chapter2-10\\nMitsuba",
+      "workingTitleZh": "Mitsuba",
+      "chapter": 2,
+      "portraitOperands": []
+    },
+    {
+      "questSRow": 24,
+      "key": "Chapter2_11",
+      "entryLabel": 6023,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 2957,
+      "segmentEndExclusive": 3019,
+      "titleEn": "Chapter2\\nVirgo epilogue",
+      "workingTitleZh": "處女座後日談",
+      "chapter": 2,
+      "portraitOperands": [
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 2978,
+          "field": "f34"
+        },
+        {
+          "cidRow": 29,
+          "key": "Arcturus",
+          "eventScriptRow": 2979,
+          "field": "f35"
+        },
+        {
+          "cidRow": 2,
+          "key": "Earth",
+          "eventScriptRow": 2981,
+          "field": "f34"
+        },
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 2982,
+          "field": "f34"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 2996,
+          "field": "f35"
+        },
+        {
+          "cidRow": 28,
+          "key": "Spica",
+          "eventScriptRow": 3003,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 25,
+      "key": "Chapter3_1",
+      "entryLabel": 6024,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 3019,
+      "segmentEndExclusive": 3076,
+      "titleEn": "Chapter3-1\\nResearch 1",
+      "workingTitleZh": "研究1",
+      "chapter": 3,
+      "portraitOperands": [
+        {
+          "cidRow": 38,
+          "key": "Luyten",
+          "eventScriptRow": 3030,
+          "field": "f35"
+        },
+        {
+          "cidRow": 37,
+          "key": "Wolf359",
+          "eventScriptRow": 3032,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 26,
+      "key": "Chapter3_2",
+      "entryLabel": 6025,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 3076,
+      "segmentEndExclusive": 3148,
+      "titleEn": "Chapter3-2\\nTracking 1",
+      "workingTitleZh": "追蹤1",
+      "chapter": 3,
+      "portraitOperands": [
+        {
+          "cidRow": 38,
+          "key": "Luyten",
+          "eventScriptRow": 3091,
+          "field": "f34"
+        },
+        {
+          "cidRow": 37,
+          "key": "Wolf359",
+          "eventScriptRow": 3091,
+          "field": "f35"
+        },
+        {
+          "cidRow": 259,
+          "key": "Signaller01",
+          "eventScriptRow": 3093,
+          "field": "f35"
+        },
+        {
+          "cidRow": 38,
+          "key": "Luyten",
+          "eventScriptRow": 3100,
+          "field": "f35"
+        },
+        {
+          "cidRow": 39,
+          "key": "Regor",
+          "eventScriptRow": 3101,
+          "field": "f34"
+        },
+        {
+          "cidRow": 40,
+          "key": "TseenKe",
+          "eventScriptRow": 3116,
+          "field": "f34"
+        },
+        {
+          "cidRow": 39,
+          "key": "Regor",
+          "eventScriptRow": 3116,
+          "field": "f35"
+        },
+        {
+          "cidRow": 42,
+          "key": "Alherem",
+          "eventScriptRow": 3134,
+          "field": "f35"
+        },
+        {
+          "cidRow": 41,
+          "key": "Suhail",
+          "eventScriptRow": 3142,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 27,
+      "key": "Chapter3_3",
+      "entryLabel": 6026,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 3148,
+      "segmentEndExclusive": 3214,
+      "titleEn": "Chapter3-3\\nResearch 2",
+      "workingTitleZh": "研究2",
+      "chapter": 3,
+      "portraitOperands": [
+        {
+          "cidRow": 37,
+          "key": "Wolf359",
+          "eventScriptRow": 3160,
+          "field": "f34"
+        },
+        {
+          "cidRow": 36,
+          "key": "Procyon",
+          "eventScriptRow": 3190,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 28,
+      "key": "Chapter3_4",
+      "entryLabel": 6027,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 3214,
+      "segmentEndExclusive": 3295,
+      "titleEn": "Chapter3-4\\nTracking 2",
+      "workingTitleZh": "追蹤2",
+      "chapter": 3,
+      "portraitOperands": [
+        {
+          "cidRow": 40,
+          "key": "TseenKe",
+          "eventScriptRow": 3225,
+          "field": "f34"
+        },
+        {
+          "cidRow": 41,
+          "key": "Suhail",
+          "eventScriptRow": 3226,
+          "field": "f35"
+        },
+        {
+          "cidRow": 42,
+          "key": "Alherem",
+          "eventScriptRow": 3227,
+          "field": "f35"
+        },
+        {
+          "cidRow": 41,
+          "key": "Suhail",
+          "eventScriptRow": 3236,
+          "field": "f34"
+        },
+        {
+          "cidRow": 34,
+          "key": "Regulus",
+          "eventScriptRow": 3259,
+          "field": "f34"
+        },
+        {
+          "cidRow": 40,
+          "key": "TseenKe",
+          "eventScriptRow": 3268,
+          "field": "f35"
+        },
+        {
+          "cidRow": 42,
+          "key": "Alherem",
+          "eventScriptRow": 3272,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 29,
+      "key": "Chapter3_5",
+      "entryLabel": 6028,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 3295,
+      "segmentEndExclusive": 3383,
+      "titleEn": "Chapter3-5\\nResearch 3",
+      "workingTitleZh": "研究3",
+      "chapter": 3,
+      "portraitOperands": [
+        {
+          "cidRow": 37,
+          "key": "Wolf359",
+          "eventScriptRow": 3308,
+          "field": "f34"
+        },
+        {
+          "cidRow": 36,
+          "key": "Procyon",
+          "eventScriptRow": 3308,
+          "field": "f35"
+        },
+        {
+          "cidRow": 259,
+          "key": "Signaller01",
+          "eventScriptRow": 3344,
+          "field": "f35"
+        },
+        {
+          "cidRow": 191,
+          "key": "Aitsu",
+          "eventScriptRow": 3358,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 30,
+      "key": "Chapter3_6",
+      "entryLabel": 6029,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 3383,
+      "segmentEndExclusive": 3467,
+      "titleEn": "Chapter3-6\\nTracking 3",
+      "workingTitleZh": "追蹤3",
+      "chapter": 3,
+      "portraitOperands": [
+        {
+          "cidRow": 34,
+          "key": "Regulus",
+          "eventScriptRow": 3396,
+          "field": "f35"
+        },
+        {
+          "cidRow": 40,
+          "key": "TseenKe",
+          "eventScriptRow": 3397,
+          "field": "f34"
+        },
+        {
+          "cidRow": 42,
+          "key": "Alherem",
+          "eventScriptRow": 3404,
+          "field": "f35"
+        },
+        {
+          "cidRow": 35,
+          "key": "Arkas",
+          "eventScriptRow": 3433,
+          "field": "f34"
+        },
+        {
+          "cidRow": 40,
+          "key": "TseenKe",
+          "eventScriptRow": 3436,
+          "field": "f35"
+        },
+        {
+          "cidRow": 34,
+          "key": "Regulus",
+          "eventScriptRow": 3442,
+          "field": "f34"
+        },
+        {
+          "cidRow": 35,
+          "key": "Arkas",
+          "eventScriptRow": 3442,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 31,
+      "key": "Chapter3_7",
+      "entryLabel": 6030,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 3467,
+      "segmentEndExclusive": 3562,
+      "titleEn": "Chapter3-7\\nHoming",
+      "workingTitleZh": "歸航",
+      "chapter": 3,
+      "portraitOperands": [
+        {
+          "cidRow": 36,
+          "key": "Procyon",
+          "eventScriptRow": 3479,
+          "field": "f34"
+        },
+        {
+          "cidRow": 37,
+          "key": "Wolf359",
+          "eventScriptRow": 3479,
+          "field": "f35"
+        },
+        {
+          "cidRow": 191,
+          "key": "Aitsu",
+          "eventScriptRow": 3492,
+          "field": "f34"
+        },
+        {
+          "cidRow": 40,
+          "key": "TseenKe",
+          "eventScriptRow": 3512,
+          "field": "f34"
+        },
+        {
+          "cidRow": 37,
+          "key": "Wolf359",
+          "eventScriptRow": 3521,
+          "field": "f34"
+        },
+        {
+          "cidRow": 191,
+          "key": "Aitsu",
+          "eventScriptRow": 3521,
+          "field": "f35"
+        },
+        {
+          "cidRow": 36,
+          "key": "Procyon",
+          "eventScriptRow": 3525,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 32,
+      "key": "Chapter3_8",
+      "entryLabel": 6031,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 3562,
+      "segmentEndExclusive": 3598,
+      "titleEn": "Chapter3-8\\nDefense 1",
+      "workingTitleZh": "防衛1",
+      "chapter": 3,
+      "portraitOperands": [
+        {
+          "cidRow": 37,
+          "key": "Wolf359",
+          "eventScriptRow": 3578,
+          "field": "f34"
+        },
+        {
+          "cidRow": 38,
+          "key": "Luyten",
+          "eventScriptRow": 3579,
+          "field": "f35"
+        },
+        {
+          "cidRow": 36,
+          "key": "Procyon",
+          "eventScriptRow": 3585,
+          "field": "f34"
+        },
+        {
+          "cidRow": 259,
+          "key": "Signaller01",
+          "eventScriptRow": 3588,
+          "field": "f34"
+        },
+        {
+          "cidRow": 40,
+          "key": "TseenKe",
+          "eventScriptRow": 3591,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 33,
+      "key": "Chapter3_9",
+      "entryLabel": 6032,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 3627,
+      "segmentEndExclusive": 3719,
+      "titleEn": "Chapter3-9\\nDefense 2",
+      "workingTitleZh": "防衛2",
+      "chapter": 3,
+      "portraitOperands": [
+        {
+          "cidRow": 38,
+          "key": "Luyten",
+          "eventScriptRow": 3647,
+          "field": "f34"
+        },
+        {
+          "cidRow": 37,
+          "key": "Wolf359",
+          "eventScriptRow": 3647,
+          "field": "f35"
+        },
+        {
+          "cidRow": 40,
+          "key": "TseenKe",
+          "eventScriptRow": 3650,
+          "field": "f34"
+        },
+        {
+          "cidRow": 36,
+          "key": "Procyon",
+          "eventScriptRow": 3650,
+          "field": "f35"
+        },
+        {
+          "cidRow": 37,
+          "key": "Wolf359",
+          "eventScriptRow": 3660,
+          "field": "f34"
+        },
+        {
+          "cidRow": 38,
+          "key": "Luyten",
+          "eventScriptRow": 3661,
+          "field": "f35"
+        },
+        {
+          "cidRow": 42,
+          "key": "Alherem",
+          "eventScriptRow": 3663,
+          "field": "f34"
+        },
+        {
+          "cidRow": 40,
+          "key": "TseenKe",
+          "eventScriptRow": 3663,
+          "field": "f35"
+        },
+        {
+          "cidRow": 2,
+          "key": "Earth",
+          "eventScriptRow": 3674,
+          "field": "f34"
+        },
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 3692,
+          "field": "f34"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 3696,
+          "field": "f35"
+        },
+        {
+          "cidRow": 259,
+          "key": "Signaller01",
+          "eventScriptRow": 3712,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 34,
+      "key": "Chapter3_10",
+      "entryLabel": 6033,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 3719,
+      "segmentEndExclusive": 3834,
+      "titleEn": "Chapter3-10\\nHigh speed MotherShip",
+      "workingTitleZh": "高速母艦",
+      "chapter": 3,
+      "portraitOperands": [
+        {
+          "cidRow": 38,
+          "key": "Luyten",
+          "eventScriptRow": 3749,
+          "field": "f34"
+        },
+        {
+          "cidRow": 37,
+          "key": "Wolf359",
+          "eventScriptRow": 3749,
+          "field": "f35"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 3755,
+          "field": "f35"
+        },
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 3756,
+          "field": "f34"
+        },
+        {
+          "cidRow": 38,
+          "key": "Luyten",
+          "eventScriptRow": 3768,
+          "field": "f35"
+        },
+        {
+          "cidRow": 28,
+          "key": "Spica",
+          "eventScriptRow": 3785,
+          "field": "f35"
+        },
+        {
+          "cidRow": 37,
+          "key": "Wolf359",
+          "eventScriptRow": 3786,
+          "field": "f34"
+        },
+        {
+          "cidRow": 36,
+          "key": "Procyon",
+          "eventScriptRow": 3786,
+          "field": "f35"
+        },
+        {
+          "cidRow": 28,
+          "key": "Spica",
+          "eventScriptRow": 3801,
+          "field": "f34"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 3818,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 35,
+      "key": "Chapter3_11",
+      "entryLabel": 6034,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 3834,
+      "segmentEndExclusive": 3984,
+      "titleEn": "Chapter3-11\\nMothership [Samael]",
+      "workingTitleZh": "母艦 Samael",
+      "chapter": 3,
+      "portraitOperands": [
+        {
+          "cidRow": 259,
+          "key": "Signaller01",
+          "eventScriptRow": 3858,
+          "field": "f35"
+        },
+        {
+          "cidRow": 38,
+          "key": "Luyten",
+          "eventScriptRow": 3859,
+          "field": "f34"
+        },
+        {
+          "cidRow": 29,
+          "key": "Arcturus",
+          "eventScriptRow": 3903,
+          "field": "f34"
+        },
+        {
+          "cidRow": 38,
+          "key": "Luyten",
+          "eventScriptRow": 3904,
+          "field": "f35"
+        },
+        {
+          "cidRow": 37,
+          "key": "Wolf359",
+          "eventScriptRow": 3910,
+          "field": "f34"
+        },
+        {
+          "cidRow": 40,
+          "key": "TseenKe",
+          "eventScriptRow": 3912,
+          "field": "f34"
+        },
+        {
+          "cidRow": 42,
+          "key": "Alherem",
+          "eventScriptRow": 3912,
+          "field": "f35"
+        },
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 3935,
+          "field": "f34"
+        },
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 3936,
+          "field": "f35"
+        },
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 3978,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 36,
+      "key": "Chapter3_12",
+      "entryLabel": 6035,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 3984,
+      "segmentEndExclusive": 4064,
+      "titleEn": "Chapter3-12\\nLeo epilogue",
+      "workingTitleZh": "獅子座後日談",
+      "chapter": 3,
+      "portraitOperands": [
+        {
+          "cidRow": 7,
+          "key": "Saturn",
+          "eventScriptRow": 4016,
+          "field": "f34"
+        },
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 4017,
+          "field": "f35"
+        },
+        {
+          "cidRow": 4,
+          "key": "Venus",
+          "eventScriptRow": 4026,
+          "field": "f34"
+        },
+        {
+          "cidRow": 38,
+          "key": "Luyten",
+          "eventScriptRow": 4030,
+          "field": "f34"
+        },
+        {
+          "cidRow": 37,
+          "key": "Wolf359",
+          "eventScriptRow": 4031,
+          "field": "f35"
+        },
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 4035,
+          "field": "f34"
+        },
+        {
+          "cidRow": 36,
+          "key": "Procyon",
+          "eventScriptRow": 4037,
+          "field": "f35"
+        },
+        {
+          "cidRow": 2,
+          "key": "Earth",
+          "eventScriptRow": 4045,
+          "field": "f35"
+        },
+        {
+          "cidRow": 29,
+          "key": "Arcturus",
+          "eventScriptRow": 4046,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 37,
+      "key": "Chapter4_1",
+      "entryLabel": 6036,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 4064,
+      "segmentEndExclusive": 4104,
+      "titleEn": "Chapter4-1\\nAegir",
+      "workingTitleZh": "Aegir",
+      "chapter": 4,
+      "portraitOperands": [
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 4079,
+          "field": "f34"
+        },
+        {
+          "cidRow": 36,
+          "key": "Procyon",
+          "eventScriptRow": 4079,
+          "field": "f35"
+        },
+        {
+          "cidRow": 37,
+          "key": "Wolf359",
+          "eventScriptRow": 4083,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 38,
+      "key": "Chapter4_2",
+      "entryLabel": 6037,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 4156,
+      "segmentEndExclusive": 4213,
+      "titleEn": "Chapter4-2\\nWormhole",
+      "workingTitleZh": "蟲洞",
+      "chapter": 4,
+      "portraitOperands": [
+        {
+          "cidRow": 47,
+          "key": "Aegir",
+          "eventScriptRow": 4174,
+          "field": "f34"
+        },
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 4174,
+          "field": "f35"
+        },
+        {
+          "cidRow": 36,
+          "key": "Procyon",
+          "eventScriptRow": 4184,
+          "field": "f34"
+        },
+        {
+          "cidRow": 37,
+          "key": "Wolf359",
+          "eventScriptRow": 4194,
+          "field": "f34"
+        },
+        {
+          "cidRow": 36,
+          "key": "Procyon",
+          "eventScriptRow": 4194,
+          "field": "f35"
+        },
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 4199,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 39,
+      "key": "Chapter4_3",
+      "entryLabel": 6038,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 4213,
+      "segmentEndExclusive": 4298,
+      "titleEn": "Chapter4-3\\nDrifting",
+      "workingTitleZh": "漂流",
+      "chapter": 4,
+      "portraitOperands": [
+        {
+          "cidRow": 37,
+          "key": "Wolf359",
+          "eventScriptRow": 4226,
+          "field": "f34"
+        },
+        {
+          "cidRow": 47,
+          "key": "Aegir",
+          "eventScriptRow": 4227,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 40,
+      "key": "Chapter4_4",
+      "entryLabel": 6039,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 4298,
+      "segmentEndExclusive": 4383,
+      "titleEn": "Chapter4-4\\nSupport",
+      "workingTitleZh": "支援",
+      "chapter": 4,
+      "portraitOperands": [
+        {
+          "cidRow": 48,
+          "key": "Doradus",
+          "eventScriptRow": 4315,
+          "field": "f34"
+        },
+        {
+          "cidRow": 50,
+          "key": "OTS44",
+          "eventScriptRow": 4316,
+          "field": "f35"
+        },
+        {
+          "cidRow": 51,
+          "key": "DEN",
+          "eventScriptRow": 4319,
+          "field": "f35"
+        },
+        {
+          "cidRow": 50,
+          "key": "OTS44",
+          "eventScriptRow": 4337,
+          "field": "f34"
+        },
+        {
+          "cidRow": 37,
+          "key": "Wolf359",
+          "eventScriptRow": 4341,
+          "field": "f34"
+        },
+        {
+          "cidRow": 47,
+          "key": "Aegir",
+          "eventScriptRow": 4341,
+          "field": "f35"
+        },
+        {
+          "cidRow": 48,
+          "key": "Doradus",
+          "eventScriptRow": 4359,
+          "field": "f35"
+        },
+        {
+          "cidRow": 47,
+          "key": "Aegir",
+          "eventScriptRow": 4371,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 41,
+      "key": "Chapter4_5",
+      "entryLabel": 6040,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 4383,
+      "segmentEndExclusive": 4480,
+      "titleEn": "Chapter4-5\\nFate",
+      "workingTitleZh": "命運",
+      "chapter": 4,
+      "portraitOperands": [
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 4401,
+          "field": "f34"
+        },
+        {
+          "cidRow": 43,
+          "key": "Musca",
+          "eventScriptRow": 4402,
+          "field": "f35"
+        },
+        {
+          "cidRow": 36,
+          "key": "Procyon",
+          "eventScriptRow": 4406,
+          "field": "f35"
+        },
+        {
+          "cidRow": 43,
+          "key": "Musca",
+          "eventScriptRow": 4428,
+          "field": "f34"
+        },
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 4431,
+          "field": "f35"
+        },
+        {
+          "cidRow": 44,
+          "key": "Acrux",
+          "eventScriptRow": 4438,
+          "field": "f34"
+        },
+        {
+          "cidRow": 49,
+          "key": "Acamar",
+          "eventScriptRow": 4438,
+          "field": "f35"
+        },
+        {
+          "cidRow": 36,
+          "key": "Procyon",
+          "eventScriptRow": 4458,
+          "field": "f34"
+        },
+        {
+          "cidRow": 44,
+          "key": "Acrux",
+          "eventScriptRow": 4459,
+          "field": "f35"
+        },
+        {
+          "cidRow": 49,
+          "key": "Acamar",
+          "eventScriptRow": 4469,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 42,
+      "key": "Chapter4_6",
+      "entryLabel": 6041,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 4480,
+      "segmentEndExclusive": 4562,
+      "titleEn": "Chapter4-6\\nReturn",
+      "workingTitleZh": "歸還",
+      "chapter": 4,
+      "portraitOperands": [
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 4496,
+          "field": "f34"
+        },
+        {
+          "cidRow": 49,
+          "key": "Acamar",
+          "eventScriptRow": 4497,
+          "field": "f35"
+        },
+        {
+          "cidRow": 36,
+          "key": "Procyon",
+          "eventScriptRow": 4508,
+          "field": "f35"
+        },
+        {
+          "cidRow": 43,
+          "key": "Musca",
+          "eventScriptRow": 4509,
+          "field": "f34"
+        },
+        {
+          "cidRow": 37,
+          "key": "Wolf359",
+          "eventScriptRow": 4535,
+          "field": "f34"
+        },
+        {
+          "cidRow": 48,
+          "key": "Doradus",
+          "eventScriptRow": 4537,
+          "field": "f34"
+        },
+        {
+          "cidRow": 50,
+          "key": "OTS44",
+          "eventScriptRow": 4539,
+          "field": "f34"
+        },
+        {
+          "cidRow": 51,
+          "key": "DEN",
+          "eventScriptRow": 4539,
+          "field": "f35"
+        },
+        {
+          "cidRow": 48,
+          "key": "Doradus",
+          "eventScriptRow": 4543,
+          "field": "f35"
+        },
+        {
+          "cidRow": 36,
+          "key": "Procyon",
+          "eventScriptRow": 4549,
+          "field": "f34"
+        },
+        {
+          "cidRow": 51,
+          "key": "DEN",
+          "eventScriptRow": 4556,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 43,
+      "key": "Chapter4_7",
+      "entryLabel": 6042,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 4562,
+      "segmentEndExclusive": 4594,
+      "titleEn": "Chapter4-7\\nHaitsu",
+      "workingTitleZh": "Haitsu",
+      "chapter": 4,
+      "portraitOperands": [
+        {
+          "cidRow": 36,
+          "key": "Procyon",
+          "eventScriptRow": 4588,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 44,
+      "key": "Chapter4_8",
+      "entryLabel": 6043,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 4657,
+      "segmentEndExclusive": 4740,
+      "titleEn": "Chapter4-8\\nRan",
+      "workingTitleZh": "Ran",
+      "chapter": 4,
+      "portraitOperands": [
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 4675,
+          "field": "f34"
+        },
+        {
+          "cidRow": 46,
+          "key": "Ran",
+          "eventScriptRow": 4676,
+          "field": "f35"
+        },
+        {
+          "cidRow": 48,
+          "key": "Doradus",
+          "eventScriptRow": 4677,
+          "field": "f34"
+        },
+        {
+          "cidRow": 36,
+          "key": "Procyon",
+          "eventScriptRow": 4680,
+          "field": "f34"
+        },
+        {
+          "cidRow": 47,
+          "key": "Aegir",
+          "eventScriptRow": 4682,
+          "field": "f34"
+        },
+        {
+          "cidRow": 192,
+          "key": "Haitsu",
+          "eventScriptRow": 4690,
+          "field": "f35"
+        },
+        {
+          "cidRow": 50,
+          "key": "OTS44",
+          "eventScriptRow": 4698,
+          "field": "f34"
+        },
+        {
+          "cidRow": 51,
+          "key": "DEN",
+          "eventScriptRow": 4698,
+          "field": "f35"
+        },
+        {
+          "cidRow": 37,
+          "key": "Wolf359",
+          "eventScriptRow": 4725,
+          "field": "f34"
+        },
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 4725,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 45,
+      "key": "Chapter4_9",
+      "entryLabel": 6044,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 4740,
+      "segmentEndExclusive": 4787,
+      "titleEn": "Chapter4-9\\nSummoning Mothership",
+      "workingTitleZh": "召喚母艦",
+      "chapter": 4,
+      "portraitOperands": [
+        {
+          "cidRow": 46,
+          "key": "Ran",
+          "eventScriptRow": 4760,
+          "field": "f34"
+        },
+        {
+          "cidRow": 48,
+          "key": "Doradus",
+          "eventScriptRow": 4761,
+          "field": "f35"
+        },
+        {
+          "cidRow": 192,
+          "key": "Haitsu",
+          "eventScriptRow": 4771,
+          "field": "f34"
+        },
+        {
+          "cidRow": 46,
+          "key": "Ran",
+          "eventScriptRow": 4774,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 46,
+      "key": "Chapter4_10",
+      "entryLabel": 6045,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 4831,
+      "segmentEndExclusive": 4920,
+      "titleEn": "Chapter4-10\\nMothership hijacking",
+      "workingTitleZh": "劫持母艦",
+      "chapter": 4,
+      "portraitOperands": [
+        {
+          "cidRow": 48,
+          "key": "Doradus",
+          "eventScriptRow": 4856,
+          "field": "f35"
+        },
+        {
+          "cidRow": 192,
+          "key": "Haitsu",
+          "eventScriptRow": 4857,
+          "field": "f34"
+        },
+        {
+          "cidRow": 50,
+          "key": "OTS44",
+          "eventScriptRow": 4858,
+          "field": "f34"
+        },
+        {
+          "cidRow": 51,
+          "key": "DEN",
+          "eventScriptRow": 4861,
+          "field": "f35"
+        },
+        {
+          "cidRow": 36,
+          "key": "Procyon",
+          "eventScriptRow": 4878,
+          "field": "f34"
+        },
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 4878,
+          "field": "f35"
+        },
+        {
+          "cidRow": 48,
+          "key": "Doradus",
+          "eventScriptRow": 4881,
+          "field": "f34"
+        },
+        {
+          "cidRow": 50,
+          "key": "OTS44",
+          "eventScriptRow": 4882,
+          "field": "f35"
+        },
+        {
+          "cidRow": 46,
+          "key": "Ran",
+          "eventScriptRow": 4885,
+          "field": "f35"
+        },
+        {
+          "cidRow": 47,
+          "key": "Aegir",
+          "eventScriptRow": 4886,
+          "field": "f34"
+        },
+        {
+          "cidRow": 192,
+          "key": "Haitsu",
+          "eventScriptRow": 4898,
+          "field": "f35"
+        },
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 4906,
+          "field": "f34"
+        },
+        {
+          "cidRow": 189,
+          "key": "Kiraba",
+          "eventScriptRow": 4915,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 47,
+      "key": "Chapter4_11",
+      "entryLabel": 6046,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 4920,
+      "segmentEndExclusive": 5069,
+      "titleEn": "Chapter4-11\\nTraitor",
+      "workingTitleZh": "叛徒",
+      "chapter": 4,
+      "portraitOperands": [
+        {
+          "cidRow": 189,
+          "key": "Kiraba",
+          "eventScriptRow": 4957,
+          "field": "f34"
+        },
+        {
+          "cidRow": 192,
+          "key": "Haitsu",
+          "eventScriptRow": 4959,
+          "field": "f35"
+        },
+        {
+          "cidRow": 190,
+          "key": "Mitsuba",
+          "eventScriptRow": 4962,
+          "field": "f34"
+        },
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 4978,
+          "field": "f34"
+        },
+        {
+          "cidRow": 48,
+          "key": "Doradus",
+          "eventScriptRow": 4978,
+          "field": "f35"
+        },
+        {
+          "cidRow": 48,
+          "key": "Doradus",
+          "eventScriptRow": 4983,
+          "field": "f34"
+        },
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 4998,
+          "field": "f35"
+        },
+        {
+          "cidRow": 50,
+          "key": "OTS44",
+          "eventScriptRow": 5004,
+          "field": "f35"
+        },
+        {
+          "cidRow": 51,
+          "key": "DEN",
+          "eventScriptRow": 5005,
+          "field": "f34"
+        },
+        {
+          "cidRow": 192,
+          "key": "Haitsu",
+          "eventScriptRow": 5010,
+          "field": "f34"
+        },
+        {
+          "cidRow": 189,
+          "key": "Kiraba",
+          "eventScriptRow": 5011,
+          "field": "f35"
+        },
+        {
+          "cidRow": 46,
+          "key": "Ran",
+          "eventScriptRow": 5027,
+          "field": "f34"
+        },
+        {
+          "cidRow": 46,
+          "key": "Ran",
+          "eventScriptRow": 5064,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 48,
+      "key": "Chapter4_12",
+      "entryLabel": 6047,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 5069,
+      "segmentEndExclusive": 5160,
+      "titleEn": "Chapter4-12\\nSouthern epilogue",
+      "workingTitleZh": "南天後日談",
+      "chapter": 4,
+      "portraitOperands": [
+        {
+          "cidRow": 46,
+          "key": "Ran",
+          "eventScriptRow": 5095,
+          "field": "f35"
+        },
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 5096,
+          "field": "f34"
+        },
+        {
+          "cidRow": 36,
+          "key": "Procyon",
+          "eventScriptRow": 5103,
+          "field": "f34"
+        },
+        {
+          "cidRow": 192,
+          "key": "Haitsu",
+          "eventScriptRow": 5103,
+          "field": "f35"
+        },
+        {
+          "cidRow": 46,
+          "key": "Ran",
+          "eventScriptRow": 5108,
+          "field": "f34"
+        },
+        {
+          "cidRow": 48,
+          "key": "Doradus",
+          "eventScriptRow": 5108,
+          "field": "f35"
+        },
+        {
+          "cidRow": 50,
+          "key": "OTS44",
+          "eventScriptRow": 5114,
+          "field": "f34"
+        },
+        {
+          "cidRow": 51,
+          "key": "DEN",
+          "eventScriptRow": 5114,
+          "field": "f35"
+        },
+        {
+          "cidRow": 192,
+          "key": "Haitsu",
+          "eventScriptRow": 5120,
+          "field": "f34"
+        },
+        {
+          "cidRow": 43,
+          "key": "Musca",
+          "eventScriptRow": 5129,
+          "field": "f34"
+        },
+        {
+          "cidRow": 44,
+          "key": "Acrux",
+          "eventScriptRow": 5130,
+          "field": "f34"
+        },
+        {
+          "cidRow": 49,
+          "key": "Acamar",
+          "eventScriptRow": 5130,
+          "field": "f35"
+        },
+        {
+          "cidRow": 47,
+          "key": "Aegir",
+          "eventScriptRow": 5140,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 49,
+      "key": "Chapter5_1",
+      "entryLabel": 6048,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 5175,
+      "segmentEndExclusive": 5246,
+      "titleEn": "Chapter5-1\\nScouting Fleet",
+      "workingTitleZh": "偵察艦隊",
+      "chapter": 5,
+      "portraitOperands": [
+        {
+          "cidRow": 193,
+          "key": "Morugo",
+          "eventScriptRow": 5192,
+          "field": "f34"
+        },
+        {
+          "cidRow": 305,
+          "key": "CentralSystem",
+          "eventScriptRow": 5192,
+          "field": "f35"
+        },
+        {
+          "cidRow": 56,
+          "key": "Canis",
+          "eventScriptRow": 5203,
+          "field": "f34"
+        },
+        {
+          "cidRow": 57,
+          "key": "Wezen",
+          "eventScriptRow": 5204,
+          "field": "f35"
+        },
+        {
+          "cidRow": 59,
+          "key": "Furud",
+          "eventScriptRow": 5208,
+          "field": "f35"
+        },
+        {
+          "cidRow": 58,
+          "key": "Aludra",
+          "eventScriptRow": 5212,
+          "field": "f35"
+        },
+        {
+          "cidRow": 52,
+          "key": "Sirius",
+          "eventScriptRow": 5219,
+          "field": "f35"
+        },
+        {
+          "cidRow": 53,
+          "key": "Bayes",
+          "eventScriptRow": 5222,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 50,
+      "key": "Chapter5_2",
+      "entryLabel": 6049,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 5246,
+      "segmentEndExclusive": 5265,
+      "titleEn": "Chapter5-2\\nStage preparation",
+      "workingTitleZh": "舞台準備",
+      "chapter": 5,
+      "portraitOperands": [
+        {
+          "cidRow": 56,
+          "key": "Canis",
+          "eventScriptRow": 5260,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 51,
+      "key": "Chapter5_3",
+      "entryLabel": 6050,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 5291,
+      "segmentEndExclusive": 5369,
+      "titleEn": "Chapter5-3\\nStage defense",
+      "workingTitleZh": "舞台防衛",
+      "chapter": 5,
+      "portraitOperands": [
+        {
+          "cidRow": 56,
+          "key": "Canis",
+          "eventScriptRow": 5302,
+          "field": "f34"
+        },
+        {
+          "cidRow": 57,
+          "key": "Wezen",
+          "eventScriptRow": 5302,
+          "field": "f35"
+        },
+        {
+          "cidRow": 58,
+          "key": "Aludra",
+          "eventScriptRow": 5305,
+          "field": "f35"
+        },
+        {
+          "cidRow": 52,
+          "key": "Sirius",
+          "eventScriptRow": 5317,
+          "field": "f35"
+        },
+        {
+          "cidRow": 193,
+          "key": "Morugo",
+          "eventScriptRow": 5364,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 52,
+      "key": "Chapter5_4",
+      "entryLabel": 6051,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 5369,
+      "segmentEndExclusive": 5404,
+      "titleEn": "Chapter5-4\\nStage fortification",
+      "workingTitleZh": "舞台強化",
+      "chapter": 5,
+      "portraitOperands": [
+        {
+          "cidRow": 56,
+          "key": "Canis",
+          "eventScriptRow": 5380,
+          "field": "f34"
+        },
+        {
+          "cidRow": 52,
+          "key": "Sirius",
+          "eventScriptRow": 5381,
+          "field": "f35"
+        },
+        {
+          "cidRow": 53,
+          "key": "Bayes",
+          "eventScriptRow": 5392,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 53,
+      "key": "Chapter5_5",
+      "entryLabel": 6052,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 5435,
+      "segmentEndExclusive": 5494,
+      "titleEn": "Chapter5-5\\nStage defense2",
+      "workingTitleZh": "舞台防衛2",
+      "chapter": 5,
+      "portraitOperands": [
+        {
+          "cidRow": 56,
+          "key": "Canis",
+          "eventScriptRow": 5451,
+          "field": "f34"
+        },
+        {
+          "cidRow": 53,
+          "key": "Bayes",
+          "eventScriptRow": 5451,
+          "field": "f35"
+        },
+        {
+          "cidRow": 52,
+          "key": "Sirius",
+          "eventScriptRow": 5454,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 54,
+      "key": "Chapter5_6",
+      "entryLabel": 6053,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 5494,
+      "segmentEndExclusive": 5522,
+      "titleEn": "Chapter5-6\\nChase",
+      "workingTitleZh": "追擊",
+      "chapter": 5,
+      "portraitOperands": [
+        {
+          "cidRow": 56,
+          "key": "Canis",
+          "eventScriptRow": 5505,
+          "field": "f34"
+        },
+        {
+          "cidRow": 52,
+          "key": "Sirius",
+          "eventScriptRow": 5505,
+          "field": "f35"
+        },
+        {
+          "cidRow": 53,
+          "key": "Bayes",
+          "eventScriptRow": 5507,
+          "field": "f34"
+        },
+        {
+          "cidRow": 53,
+          "key": "Bayes",
+          "eventScriptRow": 5509,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 55,
+      "key": "Chapter5_7",
+      "entryLabel": 6054,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 5552,
+      "segmentEndExclusive": 5645,
+      "titleEn": "Chapter5-7\\nPatrol",
+      "workingTitleZh": "巡邏",
+      "chapter": 5,
+      "portraitOperands": [
+        {
+          "cidRow": 56,
+          "key": "Canis",
+          "eventScriptRow": 5561,
+          "field": "f34"
+        },
+        {
+          "cidRow": 53,
+          "key": "Bayes",
+          "eventScriptRow": 5561,
+          "field": "f35"
+        },
+        {
+          "cidRow": 193,
+          "key": "Morugo",
+          "eventScriptRow": 5621,
+          "field": "f34"
+        },
+        {
+          "cidRow": 56,
+          "key": "Canis",
+          "eventScriptRow": 5622,
+          "field": "f35"
+        },
+        {
+          "cidRow": 149,
+          "key": "Enemy_Fighter01",
+          "eventScriptRow": 5640,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 56,
+      "key": "Chapter5_8",
+      "entryLabel": 6055,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 5645,
+      "segmentEndExclusive": 5678,
+      "titleEn": "Chapter5-8\\nMultiple shields",
+      "workingTitleZh": "多重護盾",
+      "chapter": 5,
+      "portraitOperands": [
+        {
+          "cidRow": 56,
+          "key": "Canis",
+          "eventScriptRow": 5660,
+          "field": "f34"
+        },
+        {
+          "cidRow": 52,
+          "key": "Sirius",
+          "eventScriptRow": 5661,
+          "field": "f35"
+        },
+        {
+          "cidRow": 53,
+          "key": "Bayes",
+          "eventScriptRow": 5674,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 57,
+      "key": "Chapter5_9",
+      "entryLabel": 6056,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 5702,
+      "segmentEndExclusive": 5783,
+      "titleEn": "Chapter5-9\\nMultiple shields2",
+      "workingTitleZh": "多重護盾2",
+      "chapter": 5,
+      "portraitOperands": [
+        {
+          "cidRow": 193,
+          "key": "Morugo",
+          "eventScriptRow": 5725,
+          "field": "f34"
+        },
+        {
+          "cidRow": 56,
+          "key": "Canis",
+          "eventScriptRow": 5730,
+          "field": "f34"
+        },
+        {
+          "cidRow": 52,
+          "key": "Sirius",
+          "eventScriptRow": 5731,
+          "field": "f35"
+        },
+        {
+          "cidRow": 57,
+          "key": "Wezen",
+          "eventScriptRow": 5738,
+          "field": "f35"
+        },
+        {
+          "cidRow": 59,
+          "key": "Furud",
+          "eventScriptRow": 5743,
+          "field": "f35"
+        },
+        {
+          "cidRow": 58,
+          "key": "Aludra",
+          "eventScriptRow": 5746,
+          "field": "f35"
+        },
+        {
+          "cidRow": 60,
+          "key": "Naos",
+          "eventScriptRow": 5748,
+          "field": "f35"
+        },
+        {
+          "cidRow": 149,
+          "key": "Enemy_Fighter01",
+          "eventScriptRow": 5776,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 58,
+      "key": "Chapter5_10",
+      "entryLabel": 6057,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 5783,
+      "segmentEndExclusive": 5827,
+      "titleEn": "Chapter5-10\\nMorugo",
+      "workingTitleZh": "Morugo",
+      "chapter": 5,
+      "portraitOperands": [
+        {
+          "cidRow": 56,
+          "key": "Canis",
+          "eventScriptRow": 5806,
+          "field": "f34"
+        },
+        {
+          "cidRow": 52,
+          "key": "Sirius",
+          "eventScriptRow": 5806,
+          "field": "f35"
+        },
+        {
+          "cidRow": 53,
+          "key": "Bayes",
+          "eventScriptRow": 5812,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 59,
+      "key": "Chapter5_11",
+      "entryLabel": 6058,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 5899,
+      "segmentEndExclusive": 5946,
+      "titleEn": "Chapter5\\nCanisMajor epilogue",
+      "workingTitleZh": "大犬座後日談",
+      "chapter": 5,
+      "portraitOperands": [
+        {
+          "cidRow": 56,
+          "key": "Canis",
+          "eventScriptRow": 5922,
+          "field": "f34"
+        },
+        {
+          "cidRow": 52,
+          "key": "Sirius",
+          "eventScriptRow": 5922,
+          "field": "f35"
+        },
+        {
+          "cidRow": 57,
+          "key": "Wezen",
+          "eventScriptRow": 5928,
+          "field": "f35"
+        },
+        {
+          "cidRow": 59,
+          "key": "Furud",
+          "eventScriptRow": 5929,
+          "field": "f35"
+        },
+        {
+          "cidRow": 58,
+          "key": "Aludra",
+          "eventScriptRow": 5931,
+          "field": "f35"
+        },
+        {
+          "cidRow": 304,
+          "key": "Staff01",
+          "eventScriptRow": 5939,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 60,
+      "key": "Chapter6_0",
+      "entryLabel": 6059,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 5946,
+      "segmentEndExclusive": 5994,
+      "titleEn": "Chapter6\\nPrologue",
+      "workingTitleZh": "序幕",
+      "chapter": 6,
+      "portraitOperands": [
+        {
+          "cidRow": 194,
+          "key": "Moruba",
+          "eventScriptRow": 5956,
+          "field": "f34"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 5964,
+          "field": "f34"
+        },
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 5965,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 61,
+      "key": "Chapter6_1",
+      "entryLabel": 6060,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 5994,
+      "segmentEndExclusive": 6073,
+      "titleEn": "Chapter6-1\\nkingdom",
+      "workingTitleZh": "王國",
+      "chapter": 6,
+      "portraitOperands": [
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 6009,
+          "field": "f34"
+        },
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 6009,
+          "field": "f35"
+        },
+        {
+          "cidRow": 322,
+          "key": "RoyalGuards",
+          "eventScriptRow": 6031,
+          "field": "f34"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 6036,
+          "field": "f35"
+        },
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 6040,
+          "field": "f34"
+        },
+        {
+          "cidRow": 67,
+          "key": "Kruger60",
+          "eventScriptRow": 6047,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 62,
+      "key": "Chapter6_2",
+      "entryLabel": 6061,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 6073,
+      "segmentEndExclusive": 6170,
+      "titleEn": "Chapter6-2\\nQueen's Test",
+      "workingTitleZh": "女王的考驗",
+      "chapter": 6,
+      "portraitOperands": [
+        {
+          "cidRow": 68,
+          "key": "Kochab",
+          "eventScriptRow": 6085,
+          "field": "f35"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 6086,
+          "field": "f34"
+        },
+        {
+          "cidRow": 68,
+          "key": "Kochab",
+          "eventScriptRow": 6099,
+          "field": "f34"
+        },
+        {
+          "cidRow": 66,
+          "key": "Vega",
+          "eventScriptRow": 6099,
+          "field": "f35"
+        },
+        {
+          "cidRow": 61,
+          "key": "Polaris",
+          "eventScriptRow": 6116,
+          "field": "f35"
+        },
+        {
+          "cidRow": 66,
+          "key": "Vega",
+          "eventScriptRow": 6140,
+          "field": "f34"
+        },
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 6154,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 63,
+      "key": "Chapter6_3",
+      "entryLabel": 6062,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 6170,
+      "segmentEndExclusive": 6246,
+      "titleEn": "Chapter6-3\\nAlrai",
+      "workingTitleZh": "Alrai",
+      "chapter": 6,
+      "portraitOperands": [
+        {
+          "cidRow": 61,
+          "key": "Polaris",
+          "eventScriptRow": 6190,
+          "field": "f34"
+        },
+        {
+          "cidRow": 68,
+          "key": "Kochab",
+          "eventScriptRow": 6191,
+          "field": "f35"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 6192,
+          "field": "f34"
+        },
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 6195,
+          "field": "f34"
+        },
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 6199,
+          "field": "f35"
+        },
+        {
+          "cidRow": 63,
+          "key": "Alrai",
+          "eventScriptRow": 6221,
+          "field": "f34"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 6225,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 64,
+      "key": "Chapter6_4",
+      "entryLabel": 6063,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 6246,
+      "segmentEndExclusive": 6343,
+      "titleEn": "Chapter6-4\\nShedar",
+      "workingTitleZh": "Shedar",
+      "chapter": 6,
+      "portraitOperands": [
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 6258,
+          "field": "f34"
+        },
+        {
+          "cidRow": 108,
+          "key": "Ioannina",
+          "eventScriptRow": 6259,
+          "field": "f35"
+        },
+        {
+          "cidRow": 107,
+          "key": "Scuti",
+          "eventScriptRow": 6260,
+          "field": "f35"
+        },
+        {
+          "cidRow": 63,
+          "key": "Alrai",
+          "eventScriptRow": 6278,
+          "field": "f35"
+        },
+        {
+          "cidRow": 64,
+          "key": "Shedar",
+          "eventScriptRow": 6285,
+          "field": "f34"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 6285,
+          "field": "f35"
+        },
+        {
+          "cidRow": 63,
+          "key": "Alrai",
+          "eventScriptRow": 6295,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 65,
+      "key": "Chapter6_5",
+      "entryLabel": 6064,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 6343,
+      "segmentEndExclusive": 6386,
+      "titleEn": "Chapter6-5\\nMu cephei",
+      "workingTitleZh": "Mucephei",
+      "chapter": 6,
+      "portraitOperands": [
+        {
+          "cidRow": 64,
+          "key": "Shedar",
+          "eventScriptRow": 6356,
+          "field": "f34"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 6356,
+          "field": "f35"
+        },
+        {
+          "cidRow": 62,
+          "key": "Mucephei",
+          "eventScriptRow": 6366,
+          "field": "f35"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 6370,
+          "field": "f34"
+        },
+        {
+          "cidRow": 62,
+          "key": "Mucephei",
+          "eventScriptRow": 6384,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 66,
+      "key": "Chapter6_6",
+      "entryLabel": 6065,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 6441,
+      "segmentEndExclusive": 6501,
+      "titleEn": "Chapter6-6\\nHypatia",
+      "workingTitleZh": "Hypatia",
+      "chapter": 6,
+      "portraitOperands": [
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 6454,
+          "field": "f34"
+        },
+        {
+          "cidRow": 63,
+          "key": "Alrai",
+          "eventScriptRow": 6454,
+          "field": "f35"
+        },
+        {
+          "cidRow": 65,
+          "key": "Hypatia",
+          "eventScriptRow": 6468,
+          "field": "f34"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 6479,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 67,
+      "key": "Chapter6_7",
+      "entryLabel": 6066,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 6501,
+      "segmentEndExclusive": 6574,
+      "titleEn": "Chapter6-7\\nNavi",
+      "workingTitleZh": "Navi",
+      "chapter": 6,
+      "portraitOperands": [
+        {
+          "cidRow": 62,
+          "key": "Mucephei",
+          "eventScriptRow": 6512,
+          "field": "f34"
+        },
+        {
+          "cidRow": 64,
+          "key": "Shedar",
+          "eventScriptRow": 6512,
+          "field": "f35"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 6514,
+          "field": "f34"
+        },
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 6519,
+          "field": "f35"
+        },
+        {
+          "cidRow": 63,
+          "key": "Alrai",
+          "eventScriptRow": 6524,
+          "field": "f34"
+        },
+        {
+          "cidRow": 69,
+          "key": "Navi",
+          "eventScriptRow": 6538,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 68,
+      "key": "Chapter6_8",
+      "entryLabel": 6067,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 6574,
+      "segmentEndExclusive": 6595,
+      "titleEn": "Chapter6-8\\nEnergy supplement",
+      "workingTitleZh": "能量補給",
+      "chapter": 6,
+      "portraitOperands": [
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 6585,
+          "field": "f34"
+        },
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 6585,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 69,
+      "key": "Chapter6_9",
+      "entryLabel": 6068,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 6626,
+      "segmentEndExclusive": 6679,
+      "titleEn": "Chapter6-9\\nKingdom defense",
+      "workingTitleZh": "王國防衛",
+      "chapter": 6,
+      "portraitOperands": [
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 6642,
+          "field": "f34"
+        },
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 6642,
+          "field": "f35"
+        },
+        {
+          "cidRow": 62,
+          "key": "Mucephei",
+          "eventScriptRow": 6646,
+          "field": "f34"
+        },
+        {
+          "cidRow": 64,
+          "key": "Shedar",
+          "eventScriptRow": 6647,
+          "field": "f35"
+        },
+        {
+          "cidRow": 65,
+          "key": "Hypatia",
+          "eventScriptRow": 6651,
+          "field": "f34"
+        },
+        {
+          "cidRow": 194,
+          "key": "Moruba",
+          "eventScriptRow": 6654,
+          "field": "f35"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 6660,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 70,
+      "key": "Chapter6_10",
+      "entryLabel": 6069,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 6679,
+      "segmentEndExclusive": 6785,
+      "titleEn": "Chapter6-10\\nMoruba",
+      "workingTitleZh": "Moruba",
+      "chapter": 6,
+      "portraitOperands": [
+        {
+          "cidRow": 62,
+          "key": "Mucephei",
+          "eventScriptRow": 6690,
+          "field": "f34"
+        },
+        {
+          "cidRow": 64,
+          "key": "Shedar",
+          "eventScriptRow": 6690,
+          "field": "f35"
+        },
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 6692,
+          "field": "f34"
+        },
+        {
+          "cidRow": 66,
+          "key": "Vega",
+          "eventScriptRow": 6693,
+          "field": "f35"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 6694,
+          "field": "f34"
+        },
+        {
+          "cidRow": 48,
+          "key": "Doradus",
+          "eventScriptRow": 6700,
+          "field": "f34"
+        },
+        {
+          "cidRow": 36,
+          "key": "Procyon",
+          "eventScriptRow": 6723,
+          "field": "f34"
+        },
+        {
+          "cidRow": 33,
+          "key": "Izar",
+          "eventScriptRow": 6724,
+          "field": "f35"
+        },
+        {
+          "cidRow": 27,
+          "key": "Seginus",
+          "eventScriptRow": 6726,
+          "field": "f34"
+        },
+        {
+          "cidRow": 25,
+          "key": "Gliese",
+          "eventScriptRow": 6729,
+          "field": "f34"
+        },
+        {
+          "cidRow": 50,
+          "key": "OTS44",
+          "eventScriptRow": 6736,
+          "field": "f34"
+        },
+        {
+          "cidRow": 51,
+          "key": "DEN",
+          "eventScriptRow": 6736,
+          "field": "f35"
+        },
+        {
+          "cidRow": 63,
+          "key": "Alrai",
+          "eventScriptRow": 6739,
+          "field": "f34"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 6739,
+          "field": "f35"
+        },
+        {
+          "cidRow": 194,
+          "key": "Moruba",
+          "eventScriptRow": 6746,
+          "field": "f34"
+        },
+        {
+          "cidRow": 65,
+          "key": "Hypatia",
+          "eventScriptRow": 6747,
+          "field": "f35"
+        },
+        {
+          "cidRow": 27,
+          "key": "Seginus",
+          "eventScriptRow": 6765,
+          "field": "f35"
+        },
+        {
+          "cidRow": 64,
+          "key": "Shedar",
+          "eventScriptRow": 6768,
+          "field": "f34"
+        },
+        {
+          "cidRow": 62,
+          "key": "Mucephei",
+          "eventScriptRow": 6768,
+          "field": "f35"
+        },
+        {
+          "cidRow": 50,
+          "key": "OTS44",
+          "eventScriptRow": 6770,
+          "field": "f35"
+        },
+        {
+          "cidRow": 63,
+          "key": "Alrai",
+          "eventScriptRow": 6777,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 71,
+      "key": "Chapter6_11",
+      "entryLabel": 6070,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 6785,
+      "segmentEndExclusive": 6893,
+      "titleEn": "Chapter6\\nNorthern epilogue",
+      "workingTitleZh": "北天後日談",
+      "chapter": 6,
+      "portraitOperands": [
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 6814,
+          "field": "f34"
+        },
+        {
+          "cidRow": 63,
+          "key": "Alrai",
+          "eventScriptRow": 6814,
+          "field": "f35"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 6820,
+          "field": "f35"
+        },
+        {
+          "cidRow": 68,
+          "key": "Kochab",
+          "eventScriptRow": 6821,
+          "field": "f34"
+        },
+        {
+          "cidRow": 61,
+          "key": "Polaris",
+          "eventScriptRow": 6822,
+          "field": "f34"
+        },
+        {
+          "cidRow": 68,
+          "key": "Kochab",
+          "eventScriptRow": 6823,
+          "field": "f35"
+        },
+        {
+          "cidRow": 63,
+          "key": "Alrai",
+          "eventScriptRow": 6880,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 72,
+      "key": "Chapter7_0",
+      "entryLabel": 6071,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 7000,
+      "segmentEndExclusive": 7049,
+      "titleEn": "Chapter7\\nPrologue",
+      "workingTitleZh": "序幕",
+      "chapter": 7,
+      "portraitOperands": [
+        {
+          "cidRow": 73,
+          "key": "Deneb",
+          "eventScriptRow": 7014,
+          "field": "f34"
+        },
+        {
+          "cidRow": 118,
+          "key": "Gienah",
+          "eventScriptRow": 7022,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 73,
+      "key": "Chapter7_1",
+      "entryLabel": 6072,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 7049,
+      "segmentEndExclusive": 7119,
+      "titleEn": "Chapter7-1\\nSignal tracking",
+      "workingTitleZh": "追蹤訊號",
+      "chapter": 7,
+      "portraitOperands": [
+        {
+          "cidRow": 74,
+          "key": "Enif",
+          "eventScriptRow": 7061,
+          "field": "f34"
+        },
+        {
+          "cidRow": 77,
+          "key": "Piazzi",
+          "eventScriptRow": 7061,
+          "field": "f35"
+        },
+        {
+          "cidRow": 71,
+          "key": "Cygni",
+          "eventScriptRow": 7099,
+          "field": "f34"
+        },
+        {
+          "cidRow": 74,
+          "key": "Enif",
+          "eventScriptRow": 7108,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 74,
+      "key": "Chapter7_2",
+      "entryLabel": 6073,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 7119,
+      "segmentEndExclusive": 7190,
+      "titleEn": "Chapter7-2\\nDeneb's Memory1",
+      "workingTitleZh": "天津四的記憶1",
+      "chapter": 7,
+      "portraitOperands": [
+        {
+          "cidRow": 74,
+          "key": "Enif",
+          "eventScriptRow": 7133,
+          "field": "f34"
+        },
+        {
+          "cidRow": 77,
+          "key": "Piazzi",
+          "eventScriptRow": 7133,
+          "field": "f35"
+        },
+        {
+          "cidRow": 71,
+          "key": "Cygni",
+          "eventScriptRow": 7136,
+          "field": "f34"
+        },
+        {
+          "cidRow": 74,
+          "key": "Enif",
+          "eventScriptRow": 7139,
+          "field": "f35"
+        },
+        {
+          "cidRow": 72,
+          "key": "Sadr",
+          "eventScriptRow": 7141,
+          "field": "f34"
+        },
+        {
+          "cidRow": 71,
+          "key": "Cygni",
+          "eventScriptRow": 7155,
+          "field": "f35"
+        },
+        {
+          "cidRow": 73,
+          "key": "Deneb",
+          "eventScriptRow": 7170,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 75,
+      "key": "Chapter7_3",
+      "entryLabel": 6074,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 7190,
+      "segmentEndExclusive": 7255,
+      "titleEn": "Chapter7-3\\nDeneb's Memory2",
+      "workingTitleZh": "天津四的記憶2",
+      "chapter": 7,
+      "portraitOperands": [
+        {
+          "cidRow": 74,
+          "key": "Enif",
+          "eventScriptRow": 7203,
+          "field": "f34"
+        },
+        {
+          "cidRow": 77,
+          "key": "Piazzi",
+          "eventScriptRow": 7203,
+          "field": "f35"
+        },
+        {
+          "cidRow": 71,
+          "key": "Cygni",
+          "eventScriptRow": 7219,
+          "field": "f35"
+        },
+        {
+          "cidRow": 73,
+          "key": "Deneb",
+          "eventScriptRow": 7233,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 76,
+      "key": "Chapter7_4",
+      "entryLabel": 6075,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 7255,
+      "segmentEndExclusive": 7321,
+      "titleEn": "Chapter7-4\\nDeneb's Memory3",
+      "workingTitleZh": "天津四的記憶3",
+      "chapter": 7,
+      "portraitOperands": [
+        {
+          "cidRow": 74,
+          "key": "Enif",
+          "eventScriptRow": 7268,
+          "field": "f34"
+        },
+        {
+          "cidRow": 77,
+          "key": "Piazzi",
+          "eventScriptRow": 7268,
+          "field": "f35"
+        },
+        {
+          "cidRow": 71,
+          "key": "Cygni",
+          "eventScriptRow": 7287,
+          "field": "f35"
+        },
+        {
+          "cidRow": 77,
+          "key": "Piazzi",
+          "eventScriptRow": 7290,
+          "field": "f34"
+        },
+        {
+          "cidRow": 73,
+          "key": "Deneb",
+          "eventScriptRow": 7304,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 77,
+      "key": "Chapter7_5",
+      "entryLabel": 6076,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 7321,
+      "segmentEndExclusive": 7396,
+      "titleEn": "Chapter7-5\\nDeneb's Memory4",
+      "workingTitleZh": "天津四的記憶4",
+      "chapter": 7,
+      "portraitOperands": [
+        {
+          "cidRow": 74,
+          "key": "Enif",
+          "eventScriptRow": 7334,
+          "field": "f34"
+        },
+        {
+          "cidRow": 77,
+          "key": "Piazzi",
+          "eventScriptRow": 7334,
+          "field": "f35"
+        },
+        {
+          "cidRow": 71,
+          "key": "Cygni",
+          "eventScriptRow": 7352,
+          "field": "f35"
+        },
+        {
+          "cidRow": 73,
+          "key": "Deneb",
+          "eventScriptRow": 7365,
+          "field": "f34"
+        },
+        {
+          "cidRow": 337,
+          "key": "BlackHole",
+          "eventScriptRow": 7380,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 78,
+      "key": "Chapter7_6",
+      "entryLabel": 6077,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 7396,
+      "segmentEndExclusive": 7475,
+      "titleEn": "Chapter7-6\\nDeneb's Memory5",
+      "workingTitleZh": "天津四的記憶5",
+      "chapter": 7,
+      "portraitOperands": [
+        {
+          "cidRow": 74,
+          "key": "Enif",
+          "eventScriptRow": 7409,
+          "field": "f34"
+        },
+        {
+          "cidRow": 77,
+          "key": "Piazzi",
+          "eventScriptRow": 7409,
+          "field": "f35"
+        },
+        {
+          "cidRow": 71,
+          "key": "Cygni",
+          "eventScriptRow": 7414,
+          "field": "f35"
+        },
+        {
+          "cidRow": 73,
+          "key": "Deneb",
+          "eventScriptRow": 7454,
+          "field": "f34"
+        },
+        {
+          "cidRow": 337,
+          "key": "BlackHole",
+          "eventScriptRow": 7454,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 79,
+      "key": "Chapter7_7",
+      "entryLabel": 6078,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 7475,
+      "segmentEndExclusive": 7534,
+      "titleEn": "Chapter7-7\\nDeneb's Memory6",
+      "workingTitleZh": "天津四的記憶6",
+      "chapter": 7,
+      "portraitOperands": [
+        {
+          "cidRow": 74,
+          "key": "Enif",
+          "eventScriptRow": 7488,
+          "field": "f34"
+        },
+        {
+          "cidRow": 77,
+          "key": "Piazzi",
+          "eventScriptRow": 7488,
+          "field": "f35"
+        },
+        {
+          "cidRow": 71,
+          "key": "Cygni",
+          "eventScriptRow": 7490,
+          "field": "f35"
+        },
+        {
+          "cidRow": 71,
+          "key": "Cygni",
+          "eventScriptRow": 7506,
+          "field": "f34"
+        },
+        {
+          "cidRow": 73,
+          "key": "Deneb",
+          "eventScriptRow": 7520,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 80,
+      "key": "Chapter7_8",
+      "entryLabel": 6079,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 7534,
+      "segmentEndExclusive": 7597,
+      "titleEn": "Chapter7-8\\nDeneb's Memory7",
+      "workingTitleZh": "天津四的記憶7",
+      "chapter": 7,
+      "portraitOperands": [
+        {
+          "cidRow": 74,
+          "key": "Enif",
+          "eventScriptRow": 7547,
+          "field": "f34"
+        },
+        {
+          "cidRow": 77,
+          "key": "Piazzi",
+          "eventScriptRow": 7547,
+          "field": "f35"
+        },
+        {
+          "cidRow": 73,
+          "key": "Deneb",
+          "eventScriptRow": 7577,
+          "field": "f34"
+        },
+        {
+          "cidRow": 6,
+          "key": "Jupiter",
+          "eventScriptRow": 7589,
+          "field": "f34"
+        },
+        {
+          "cidRow": 337,
+          "key": "BlackHole",
+          "eventScriptRow": 7589,
+          "field": "f35"
+        }
+      ]
+    },
+    {
+      "questSRow": 81,
+      "key": "Chapter7_9",
+      "entryLabel": 6080,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 7597,
+      "segmentEndExclusive": 7658,
+      "titleEn": "Chapter7-9\\nDeneb's Memory8",
+      "workingTitleZh": "天津四的記憶8",
+      "chapter": 7,
+      "portraitOperands": [
+        {
+          "cidRow": 74,
+          "key": "Enif",
+          "eventScriptRow": 7610,
+          "field": "f34"
+        },
+        {
+          "cidRow": 77,
+          "key": "Piazzi",
+          "eventScriptRow": 7610,
+          "field": "f35"
+        },
+        {
+          "cidRow": 71,
+          "key": "Cygni",
+          "eventScriptRow": 7614,
+          "field": "f34"
+        },
+        {
+          "cidRow": 73,
+          "key": "Deneb",
+          "eventScriptRow": 7640,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 82,
+      "key": "Chapter7_10",
+      "entryLabel": 6081,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 7658,
+      "segmentEndExclusive": 7752,
+      "titleEn": "Chapter7-10\\nDeneb's Memory9",
+      "workingTitleZh": "天津四的記憶9",
+      "chapter": 7,
+      "portraitOperands": [
+        {
+          "cidRow": 74,
+          "key": "Enif",
+          "eventScriptRow": 7671,
+          "field": "f34"
+        },
+        {
+          "cidRow": 77,
+          "key": "Piazzi",
+          "eventScriptRow": 7671,
+          "field": "f35"
+        },
+        {
+          "cidRow": 71,
+          "key": "Cygni",
+          "eventScriptRow": 7689,
+          "field": "f35"
+        },
+        {
+          "cidRow": 72,
+          "key": "Sadr",
+          "eventScriptRow": 7692,
+          "field": "f34"
+        },
+        {
+          "cidRow": 195,
+          "key": "Zeruga",
+          "eventScriptRow": 7694,
+          "field": "f34"
+        },
+        {
+          "cidRow": 72,
+          "key": "Sadr",
+          "eventScriptRow": 7709,
+          "field": "f35"
+        },
+        {
+          "cidRow": 74,
+          "key": "Enif",
+          "eventScriptRow": 7716,
+          "field": "f35"
+        },
+        {
+          "cidRow": 73,
+          "key": "Deneb",
+          "eventScriptRow": 7722,
+          "field": "f34"
+        }
+      ]
+    },
+    {
+      "questSRow": 83,
+      "key": "Chapter7_11",
+      "entryLabel": 6082,
+      "otherLabelOperand_f03": 4600,
+      "entryRow": 7752,
+      "segmentEndExclusive": 7809,
+      "titleEn": "Chapter7\\nCygnus epilogue",
+      "workingTitleZh": "天鵝座後日談",
+      "chapter": 7,
+      "portraitOperands": [
+        {
+          "cidRow": 73,
+          "key": "Deneb",
+          "eventScriptRow": 7764,
+          "field": "f34"
+        },
+        {
+          "cidRow": 118,
+          "key": "Gienah",
+          "eventScriptRow": 7764,
+          "field": "f35"
+        },
+        {
+          "cidRow": 117,
+          "key": "Denebola",
+          "eventScriptRow": 7772,
+          "field": "f35"
+        },
+        {
+          "cidRow": 124,
+          "key": "Behemoth",
+          "eventScriptRow": 7777,
+          "field": "f34"
+        },
+        {
+          "cidRow": 73,
+          "key": "Deneb",
+          "eventScriptRow": 7777,
+          "field": "f35"
+        },
+        {
+          "cidRow": 124,
+          "key": "Behemoth",
+          "eventScriptRow": 7802,
+          "field": "f35"
+        }
+      ]
+    }
+  ]
+}

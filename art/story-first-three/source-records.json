@@ -1,0 +1,12 @@
+{
+  "authorization": "2026-10-23 使用者：敵人立繪可依各自Q版製作，畫風與現有遊戲少女一致。章節背景依原起始prompt情境需求製作。",
+  "tool": "image_gen.imagegen",
+  "status": "candidate; not user-approved or original-game artwork",
+  "entries": [
+    {"name":"kiraba","sourceCID":189,"identityReference":"art/world/original-world/web/enemy-189.webp","styleReference":"art/characters/prologue6/web/scuti.webp","brief":"忠於銀白短髮、紅眼、黑紫裝甲與紅色機械翼刃；成年比例全身、透明底，細緻日系少女遊戲立繪。原Q圖不改。"},
+    {"name":"mitsuba","sourceCID":190,"identityReference":"art/world/original-world/web/enemy-190.webp","styleReference":"art/characters/prologue6/web/scuti.webp","brief":"忠於黑紫高馬尾、紫眼、紫色能量環與弧形機械翼；成年比例全身、透明底，與現有立繪線條材質一致。原Q圖不改。"},
+    {"name":"prologue","brief":"地球防衛戰；母艦、蟲洞、地球與藍色多重屏障；現代二次元太空遊戲寬幅背景，無人物與文字。靜態敘事插畫，不是艦隊動畫。"},
+    {"name":"blackhole","brief":"處女座人造黑洞；不穩定吸積環、敵方艦影與機械殘片；寬幅背景，無人物與文字。靜態敘事插畫，不是物理模擬。"}
+  ],
+  "export": "Chromium Canvas only encodes PNG to WebP at0.92, preserves dimensions; no crop or original portrait edits. Exact paths, master/output SHA256 and runtime references: media.json."
+}

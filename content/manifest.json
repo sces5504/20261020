@@ -9,7 +9,8 @@
     "extensions/story10.json",
     "extensions/stellar11-art.json",
     "extensions/prologue6.json",
-    "extensions/prologue6-art.json"
+    "extensions/prologue6-art.json",
+    "extensions/chronicle-first-three.json"
   ],
   "regionPresentation": [
     {
@@ -185,6 +186,26 @@
         {
           "to": "original:region.solar",
           "label": "原作航跡 · 太陽系",
+          "requires": []
+        }
+      ]
+    },
+    {
+      "region": "original:region.solar",
+      "routes": [
+        {
+          "to": "chronicle:region.solar",
+          "label": "救援戰役航跡",
+          "requires": []
+        }
+      ]
+    },
+    {
+      "region": "original:region.virgo",
+      "routes": [
+        {
+          "to": "chronicle:region.virgo",
+          "label": "救援戰役航跡",
           "requires": []
         }
       ]

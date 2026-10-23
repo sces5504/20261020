@@ -155,3 +155,7 @@ AI 設計補充：戰鬥參戰能力快照固定，管理期間已完成研究�
 ## 2026-10-23：整合AI2／0.8
 
 依使用者五項修正與內容整合指示，從實際0.7 main接入PR14／16，角色與美術按CID核對。戰中同步平移＋面敵單列，探索保留航跡；隊長擋彈由實際幾何驗證，不增加隱性免傷。每日任務沿用Quest／economy、schema1增量帳本，來源Quest七種可用玩法及基礎四槽獎勵，取消防衛／訓練不恢復。詳見docs/design/galaxy-angel-v8.md。
+
+## 2026-10-23 · 通用劇情核心0.9（本輪明確授權）
+
+依使用者24節點需求，沿Quest新增可選story、獨立actor素材與Planet.storyEncounter，共用既有Combat／domain receipt／schema1遷移。完成、已讀、已領分開；略過呈現仍處理必要初始化、遭遇門檻不跳過；回看只在呈現層。既有世界與角色是舊檔條件證據，resumeIf明示已完成遭遇銜接；進行中流程signature改版拒絕猜測cursor。正式24節點台詞與任務由劇情作者製作。來源／推論與完整欄位見story-core-requirements.md、story-core-authoring.md；新功能不等於原版逐幀／commercial／真機認證。

@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "id": "stellaart:package.prologue6",
+  "version": "0.1.0",
+  "requires": [
+    {
+      "id": "prologue6:package.prologue-six",
+      "version": "0.1.0"
+    }
+  ],
+  "definitions": {
+    "assets": [
+      {
+        "id": "stellaart:asset.scuti-portrait-20261023-web",
+        "name": "盾牌座UY · portrait",
+        "src": "assets/extensions/prologue6/web/scuti.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "0ccff7020e4cbdf6b1a3d089502f14320775d45906f6d8a6d8fb77ee3e950df3",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.scuti-avatar-20261023-web",
+        "name": "盾牌座UY · avatar",
+        "src": "assets/extensions/prologue6/avatars/scuti.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "0d28479b22a05e9ce77c3a886ddce3123f622e522501d0507a98c3a07935a05b",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.scuti-battle-20261023-v1-web",
+        "name": "盾牌座UY · sprite",
+        "src": "assets/extensions/prologue6/web/scuti-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "a772038c6173739900a9157334b5cfff9c9efe990867d84e58508ebb9b582a52",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.antares-portrait-20261023-web",
+        "name": "心宿二 · portrait",
+        "src": "assets/extensions/prologue6/web/antares.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "fae8b82371cb9ff9078b80e55ac96e06abbdf2b407066069616832adffbb2022",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.antares-avatar-20261023-web",
+        "name": "心宿二 · avatar",
+        "src": "assets/extensions/prologue6/avatars/antares.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "73840682d0de7360b43cc4b0247d33a4735e300edb43c782a6cb4163e5dc4d90",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.antares-battle-20261023-v1-web",
+        "name": "心宿二 · sprite",
+        "src": "assets/extensions/prologue6/web/antares-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "c67187161509b18dec6a112e7b8678e25a06ffd0c810d966e65ae5bdcd95c930",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.deneb-portrait-20261023-web",
+        "name": "天津四 · portrait",
+        "src": "assets/extensions/prologue6/web/deneb.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "4021386779f3d5ca9c852232129ad8d1c18a7e8c09771ea38c51f7f65dd1bc74",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.deneb-avatar-20261023-web",
+        "name": "天津四 · avatar",
+        "src": "assets/extensions/prologue6/avatars/deneb.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "e3704d81cce7331d934c5741c51f51be045729bed7321452e83138c2a0659435",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.deneb-battle-20261023-v1-web",
+        "name": "天津四 · sprite",
+        "src": "assets/extensions/prologue6/web/deneb-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "3af79ef5e2f8fd697cbe18a2a8260dbe9e76a082bcf235aeba067e2c366c44cf",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.doradus-portrait-20261023-web",
+        "name": "Doradus · portrait",
+        "src": "assets/extensions/prologue6/web/doradus.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "d556757e27a4fdd4959b743e496795b1b611ed3027620d5c3bbe1208435185b0",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.doradus-avatar-20261023-web",
+        "name": "Doradus · avatar",
+        "src": "assets/extensions/prologue6/avatars/doradus.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "da797d006f8712be26c2a1cfc98a39da7fe75b40f0325ca9a36a39d9391c0726",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.doradus-battle-20261023-v1-web",
+        "name": "Doradus · sprite",
+        "src": "assets/extensions/prologue6/web/doradus-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "261f538554fdd11d80968690f25edee4f72238783a578acc08120611627b3b66",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.mucephei-portrait-20261023-web",
+        "name": "Mucephei · portrait",
+        "src": "assets/extensions/prologue6/web/mucephei.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "61d21137f5684f6b47b539a2fc59fe9691bcb0837b83040646d76bbb0092a9f7",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.mucephei-avatar-20261023-web",
+        "name": "Mucephei · avatar",
+        "src": "assets/extensions/prologue6/avatars/mucephei.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "6ea8330804d3913dc27a15d1635506f5d4c4fe9be5665a65e822e4c062384892",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.mucephei-battle-20261023-v1-web",
+        "name": "Mucephei · sprite",
+        "src": "assets/extensions/prologue6/web/mucephei-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "370cfc00d47b36278adea74bf5f2a174ab4888ff27a52acc481c0e7969e4b3b3",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.sargas-portrait-20261023-web",
+        "name": "Sargas · portrait",
+        "src": "assets/extensions/prologue6/web/sargas.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "3bff9178f07ecd74bc4fdf5066975e9789cb87a3bd7045af342cb1b7e044b318",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.sargas-avatar-20261023-web",
+        "name": "Sargas · avatar",
+        "src": "assets/extensions/prologue6/avatars/sargas.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "545af8d9403caa978e1cfb4391e7001ab313b02306b6dd0dc9d29d7f61d46d4d",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.sargas-battle-20261023-v1-web",
+        "name": "Sargas · sprite",
+        "src": "assets/extensions/prologue6/web/sargas-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "433a2d10303430bddb4e95f4b2c9b4be9b6be005781911ccaa0f11a606f95873",
+        "review": "candidate"
+      }
+    ]
+  }
+}

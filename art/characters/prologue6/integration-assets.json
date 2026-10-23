@@ -1,0 +1,1005 @@
+{
+  "format": "art-only-integration-map-not-runtime-content-pack",
+  "coreVersionObserved": "0.8.0",
+  "reviewStatus": "awaiting-user-review",
+  "characters": [
+    {
+      "artCharacterId": "stellaart:character.scuti",
+      "name": "盾牌座UY",
+      "chineseNamePending": false,
+      "originalCandidate": false,
+      "gameCharacterId": null,
+      "proposedContentId": "future:scuti",
+      "originalKey": "Scuti",
+      "originalCidRow": 107,
+      "sourceBaseStars": 5,
+      "sourcePrologueRole": "序章部隊指揮",
+      "sourceMetadataNote": "來源星數與序章用途僅參考，不修改玩法數值、技能、稀有度或劇情。",
+      "portrait": {
+        "assetId": "stellaart:asset.scuti-portrait-20261023-web",
+        "characterId": "stellaart:character.scuti",
+        "path": "web/scuti.webp",
+        "preview": "web/scuti.webp",
+        "sha256": "0ccff7020e4cbdf6b1a3d089502f14320775d45906f6d8a6d8fb77ee3e950df3",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "4124b88b8398a6312fd7f9b5c47ddba7db370dac29834ee0198aa7430f31f31c",
+        "sourceOriginalVersion": "v1",
+        "sourceAssetSha256": "4124b88b8398a6312fd7f9b5c47ddba7db370dac29834ee0198aa7430f31f31c",
+        "sourcePath": "standards/scuti.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.501953125,
+          "y": 0.9930555555555556
+        },
+        "safeArea": {
+          "bodyBounds": [
+            15,
+            9,
+            756,
+            1144
+          ],
+          "marginPx": [
+            15,
+            9,
+            12,
+            8
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.scuti-avatar-20261023-web",
+        "characterId": "stellaart:character.scuti",
+        "path": "avatars/scuti.webp",
+        "preview": "avatars/scuti.webp",
+        "sha256": "0d28479b22a05e9ce77c3a886ddce3123f622e522501d0507a98c3a07935a05b",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "4124b88b8398a6312fd7f9b5c47ddba7db370dac29834ee0198aa7430f31f31c",
+        "sourceOriginalVersion": "v1",
+        "sourceAssetSha256": "4124b88b8398a6312fd7f9b5c47ddba7db370dac29834ee0198aa7430f31f31c",
+        "sourcePath": "standards/scuti.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              400,
+              0,
+              300,
+              300
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            10,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            10,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.scuti-battle-20261023-v1-web",
+        "characterId": "stellaart:character.scuti",
+        "path": "web/scuti-battle.webp",
+        "preview": "web/scuti-battle.webp",
+        "sha256": "a772038c6173739900a9157334b5cfff9c9efe990867d84e58508ebb9b582a52",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "4124b88b8398a6312fd7f9b5c47ddba7db370dac29834ee0198aa7430f31f31c",
+        "sourceOriginalVersion": "v1",
+        "sourceAssetSha256": "5965309155b86e13800395ec608b4b6d8f7cc4411d41388f9ed335c2f1154a31",
+        "sourcePath": "battle/scuti-v1-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 86.77398889770024,
+            "y": 82,
+            "scale": 0.6819984139571769
+          }
+        },
+        "pivot": {
+          "x": 0.5048828125,
+          "y": 0.91015625
+        },
+        "safeArea": {
+          "bodyBounds": [
+            120,
+            106,
+            914,
+            932
+          ],
+          "marginPx": [
+            120,
+            106,
+            110,
+            92
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "runtimeCharacterDefinition": null,
+      "supportingProp": null
+    },
+    {
+      "artCharacterId": "stellaart:character.antares",
+      "name": "心宿二",
+      "chineseNamePending": false,
+      "originalCandidate": false,
+      "gameCharacterId": null,
+      "proposedContentId": "future:antares",
+      "originalKey": "Antares",
+      "originalCidRow": 99,
+      "sourceBaseStars": 4,
+      "sourcePrologueRole": "序章部隊指揮",
+      "sourceMetadataNote": "來源星數與序章用途僅參考，不修改玩法數值、技能、稀有度或劇情。",
+      "portrait": {
+        "assetId": "stellaart:asset.antares-portrait-20261023-web",
+        "characterId": "stellaart:character.antares",
+        "path": "web/antares.webp",
+        "preview": "web/antares.webp",
+        "sha256": "fae8b82371cb9ff9078b80e55ac96e06abbdf2b407066069616832adffbb2022",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "0fb63d28eda1b021d25774db38c0fd9c374e3e5cbaad3f0da0224a473f928f3c",
+        "sourceOriginalVersion": "v1",
+        "sourceAssetSha256": "0fb63d28eda1b021d25774db38c0fd9c374e3e5cbaad3f0da0224a473f928f3c",
+        "sourcePath": "standards/antares.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.5078125,
+          "y": 0.9930555555555556
+        },
+        "safeArea": {
+          "bodyBounds": [
+            27,
+            6,
+            753,
+            1144
+          ],
+          "marginPx": [
+            27,
+            6,
+            15,
+            8
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.antares-avatar-20261023-web",
+        "characterId": "stellaart:character.antares",
+        "path": "avatars/antares.webp",
+        "preview": "avatars/antares.webp",
+        "sha256": "73840682d0de7360b43cc4b0247d33a4735e300edb43c782a6cb4163e5dc4d90",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "0fb63d28eda1b021d25774db38c0fd9c374e3e5cbaad3f0da0224a473f928f3c",
+        "sourceOriginalVersion": "v1",
+        "sourceAssetSha256": "0fb63d28eda1b021d25774db38c0fd9c374e3e5cbaad3f0da0224a473f928f3c",
+        "sourcePath": "standards/antares.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              310,
+              0,
+              350,
+              350
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            35,
+            6,
+            256,
+            256
+          ],
+          "marginPx": [
+            35,
+            6,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.antares-battle-20261023-v1-web",
+        "characterId": "stellaart:character.antares",
+        "path": "web/antares-battle.webp",
+        "preview": "web/antares-battle.webp",
+        "sha256": "c67187161509b18dec6a112e7b8678e25a06ffd0c810d966e65ae5bdcd95c930",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "0fb63d28eda1b021d25774db38c0fd9c374e3e5cbaad3f0da0224a473f928f3c",
+        "sourceOriginalVersion": "v1",
+        "sourceAssetSha256": "a60fb33d1974e8e19da562ff64968959c7979227a0bf41b11a2fd633c54f57ef",
+        "sourcePath": "battle/antares-v1-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 123.69696969696969,
+            "y": 82,
+            "scale": 0.6515151515151515
+          }
+        },
+        "pivot": {
+          "x": 0.50732421875,
+          "y": 0.916015625
+        },
+        "safeArea": {
+          "bodyBounds": [
+            152,
+            84,
+            887,
+            938
+          ],
+          "marginPx": [
+            152,
+            84,
+            137,
+            86
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "runtimeCharacterDefinition": null,
+      "supportingProp": null
+    },
+    {
+      "artCharacterId": "stellaart:character.deneb",
+      "name": "天津四",
+      "chineseNamePending": false,
+      "originalCandidate": false,
+      "gameCharacterId": null,
+      "proposedContentId": "future:deneb",
+      "originalKey": "Deneb",
+      "originalCidRow": 73,
+      "sourceBaseStars": 4,
+      "sourcePrologueRole": "序章參戰，後續天鵝座主角",
+      "sourceMetadataNote": "來源星數與序章用途僅參考，不修改玩法數值、技能、稀有度或劇情。",
+      "portrait": {
+        "assetId": "stellaart:asset.deneb-portrait-20261023-web",
+        "characterId": "stellaart:character.deneb",
+        "path": "web/deneb.webp",
+        "preview": "web/deneb.webp",
+        "sha256": "4021386779f3d5ca9c852232129ad8d1c18a7e8c09771ea38c51f7f65dd1bc74",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "85ee010f2ba0f32ad4320c93260136f4f25e546734b93b6041422146bd66c8c1",
+        "sourceOriginalVersion": "v1",
+        "sourceAssetSha256": "85ee010f2ba0f32ad4320c93260136f4f25e546734b93b6041422146bd66c8c1",
+        "sourcePath": "standards/deneb.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.533203125,
+          "y": 0.9921875
+        },
+        "safeArea": {
+          "bodyBounds": [
+            134,
+            11,
+            685,
+            1143
+          ],
+          "marginPx": [
+            134,
+            11,
+            83,
+            9
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.deneb-avatar-20261023-web",
+        "characterId": "stellaart:character.deneb",
+        "path": "avatars/deneb.webp",
+        "preview": "avatars/deneb.webp",
+        "sha256": "e3704d81cce7331d934c5741c51f51be045729bed7321452e83138c2a0659435",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "85ee010f2ba0f32ad4320c93260136f4f25e546734b93b6041422146bd66c8c1",
+        "sourceOriginalVersion": "v1",
+        "sourceAssetSha256": "85ee010f2ba0f32ad4320c93260136f4f25e546734b93b6041422146bd66c8c1",
+        "sourcePath": "standards/deneb.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              340,
+              30,
+              340,
+              340
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            0,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.deneb-battle-20261023-v1-web",
+        "characterId": "stellaart:character.deneb",
+        "path": "web/deneb-battle.webp",
+        "preview": "web/deneb-battle.webp",
+        "sha256": "3af79ef5e2f8fd697cbe18a2a8260dbe9e76a082bcf235aeba067e2c366c44cf",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "85ee010f2ba0f32ad4320c93260136f4f25e546734b93b6041422146bd66c8c1",
+        "sourceOriginalVersion": "v1",
+        "sourceAssetSha256": "3c714543daa0fc64d120c62e16d35efa5e9617d638634906a3cd61836b7abe98",
+        "sourcePath": "battle/deneb-v1-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 103.71717171717177,
+            "y": 82.00000000000006,
+            "scale": 0.6682206682206682
+          }
+        },
+        "pivot": {
+          "x": 0.53271484375,
+          "y": 0.9091796875
+        },
+        "safeArea": {
+          "bodyBounds": [
+            231,
+            104,
+            860,
+            931
+          ],
+          "marginPx": [
+            231,
+            104,
+            164,
+            93
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "runtimeCharacterDefinition": null,
+      "supportingProp": null
+    },
+    {
+      "artCharacterId": "stellaart:character.doradus",
+      "name": "Doradus",
+      "chineseNamePending": true,
+      "originalCandidate": false,
+      "gameCharacterId": null,
+      "proposedContentId": "future:doradus",
+      "originalKey": "Doradus",
+      "originalCidRow": 48,
+      "sourceBaseStars": 3,
+      "sourcePrologueRole": "序章支援部隊",
+      "sourceMetadataNote": "來源星數與序章用途僅參考，不修改玩法數值、技能、稀有度或劇情。",
+      "portrait": {
+        "assetId": "stellaart:asset.doradus-portrait-20261023-web",
+        "characterId": "stellaart:character.doradus",
+        "path": "web/doradus.webp",
+        "preview": "web/doradus.webp",
+        "sha256": "d556757e27a4fdd4959b743e496795b1b611ed3027620d5c3bbe1208435185b0",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "91fab41a078452b7dc9adbe38e392903aa2029ed14c5b0f5a996cd5724a49f7b",
+        "sourceOriginalVersion": "v1",
+        "sourceAssetSha256": "91fab41a078452b7dc9adbe38e392903aa2029ed14c5b0f5a996cd5724a49f7b",
+        "sourcePath": "standards/doradus.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.5162760416666666,
+          "y": 0.9930555555555556
+        },
+        "safeArea": {
+          "bodyBounds": [
+            87,
+            6,
+            706,
+            1144
+          ],
+          "marginPx": [
+            87,
+            6,
+            62,
+            8
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.doradus-avatar-20261023-web",
+        "characterId": "stellaart:character.doradus",
+        "path": "avatars/doradus.webp",
+        "preview": "avatars/doradus.webp",
+        "sha256": "da797d006f8712be26c2a1cfc98a39da7fe75b40f0325ca9a36a39d9391c0726",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "91fab41a078452b7dc9adbe38e392903aa2029ed14c5b0f5a996cd5724a49f7b",
+        "sourceOriginalVersion": "v1",
+        "sourceAssetSha256": "91fab41a078452b7dc9adbe38e392903aa2029ed14c5b0f5a996cd5724a49f7b",
+        "sourcePath": "standards/doradus.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              330,
+              0,
+              340,
+              340
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            6,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            6,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.doradus-battle-20261023-v1-web",
+        "characterId": "stellaart:character.doradus",
+        "path": "web/doradus-battle.webp",
+        "preview": "web/doradus-battle.webp",
+        "sha256": "261f538554fdd11d80968690f25edee4f72238783a578acc08120611627b3b66",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "91fab41a078452b7dc9adbe38e392903aa2029ed14c5b0f5a996cd5724a49f7b",
+        "sourceOriginalVersion": "v1",
+        "sourceAssetSha256": "66651493d1adac9ef5adb72e20f3863e187479846db65a13f0d432e707250030",
+        "sourcePath": "battle/doradus-v1-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 101.10366328916604,
+            "y": 82,
+            "scale": 0.6703039750584567
+          }
+        },
+        "pivot": {
+          "x": 0.48974609375,
+          "y": 0.9091796875
+        },
+        "safeArea": {
+          "bodyBounds": [
+            136,
+            88,
+            867,
+            931
+          ],
+          "marginPx": [
+            136,
+            88,
+            157,
+            93
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "runtimeCharacterDefinition": null,
+      "supportingProp": null
+    },
+    {
+      "artCharacterId": "stellaart:character.mucephei",
+      "name": "Mucephei",
+      "chineseNamePending": true,
+      "originalCandidate": true,
+      "gameCharacterId": null,
+      "proposedContentId": "future:mucephei",
+      "originalKey": "Mucephei",
+      "originalCidRow": 62,
+      "sourceBaseStars": 3,
+      "sourcePrologueRole": "序章能量屏障部隊",
+      "sourceMetadataNote": "來源星數與序章用途僅參考，不修改玩法數值、技能、稀有度或劇情。",
+      "portrait": {
+        "assetId": "stellaart:asset.mucephei-portrait-20261023-web",
+        "characterId": "stellaart:character.mucephei",
+        "path": "web/mucephei.webp",
+        "preview": "web/mucephei.webp",
+        "sha256": "61d21137f5684f6b47b539a2fc59fe9691bcb0837b83040646d76bbb0092a9f7",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "9e1bdba450d15a82a197d7985cac0906f2c4aab6b6fa47f7a6ff494bee571ba3",
+        "sourceOriginalVersion": "v1",
+        "sourceAssetSha256": "9e1bdba450d15a82a197d7985cac0906f2c4aab6b6fa47f7a6ff494bee571ba3",
+        "sourcePath": "standards/mucephei.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.4915364583333333,
+          "y": 0.984375
+        },
+        "safeArea": {
+          "bodyBounds": [
+            16,
+            2,
+            739,
+            1134
+          ],
+          "marginPx": [
+            16,
+            2,
+            29,
+            18
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.mucephei-avatar-20261023-web",
+        "characterId": "stellaart:character.mucephei",
+        "path": "avatars/mucephei.webp",
+        "preview": "avatars/mucephei.webp",
+        "sha256": "6ea8330804d3913dc27a15d1635506f5d4c4fe9be5665a65e822e4c062384892",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "9e1bdba450d15a82a197d7985cac0906f2c4aab6b6fa47f7a6ff494bee571ba3",
+        "sourceOriginalVersion": "v1",
+        "sourceAssetSha256": "9e1bdba450d15a82a197d7985cac0906f2c4aab6b6fa47f7a6ff494bee571ba3",
+        "sourcePath": "standards/mucephei.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              365,
+              120,
+              340,
+              340
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            0,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          253
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.mucephei-battle-20261023-v1-web",
+        "characterId": "stellaart:character.mucephei",
+        "path": "web/mucephei-battle.webp",
+        "preview": "web/mucephei-battle.webp",
+        "sha256": "370cfc00d47b36278adea74bf5f2a174ab4888ff27a52acc481c0e7969e4b3b3",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "9e1bdba450d15a82a197d7985cac0906f2c4aab6b6fa47f7a6ff494bee571ba3",
+        "sourceOriginalVersion": "v1",
+        "sourceAssetSha256": "2e0ce7f7dfbba826222ddef28dc1d0b24b76051891e4f16ae4b39ad2fddaba10",
+        "sourcePath": "battle/mucephei-v1-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 98.150234741784,
+            "y": 81.99999999999994,
+            "scale": 0.672926447574335
+          }
+        },
+        "pivot": {
+          "x": 0.50634765625,
+          "y": 0.9111328125
+        },
+        "safeArea": {
+          "bodyBounds": [
+            123,
+            94,
+            914,
+            933
+          ],
+          "marginPx": [
+            123,
+            94,
+            110,
+            91
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "runtimeCharacterDefinition": null,
+      "supportingProp": null
+    },
+    {
+      "artCharacterId": "stellaart:character.sargas",
+      "name": "Sargas",
+      "chineseNamePending": true,
+      "originalCandidate": true,
+      "gameCharacterId": null,
+      "proposedContentId": "future:sargas",
+      "originalKey": "Sargas",
+      "originalCidRow": 101,
+      "sourceBaseStars": 3,
+      "sourcePrologueRole": "序章支援部隊",
+      "sourceMetadataNote": "來源星數與序章用途僅參考，不修改玩法數值、技能、稀有度或劇情。",
+      "portrait": {
+        "assetId": "stellaart:asset.sargas-portrait-20261023-web",
+        "characterId": "stellaart:character.sargas",
+        "path": "web/sargas.webp",
+        "preview": "web/sargas.webp",
+        "sha256": "3bff9178f07ecd74bc4fdf5066975e9789cb87a3bd7045af342cb1b7e044b318",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "6da6f45bf7044376999c57222ab68919dc10fc1c5dcee77f6acf26319b81c169",
+        "sourceOriginalVersion": "v1",
+        "sourceAssetSha256": "6da6f45bf7044376999c57222ab68919dc10fc1c5dcee77f6acf26319b81c169",
+        "sourcePath": "standards/sargas.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.5013020833333334,
+          "y": 0.9904513888888888
+        },
+        "safeArea": {
+          "bodyBounds": [
+            12,
+            6,
+            758,
+            1141
+          ],
+          "marginPx": [
+            12,
+            6,
+            10,
+            11
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.sargas-avatar-20261023-web",
+        "characterId": "stellaart:character.sargas",
+        "path": "avatars/sargas.webp",
+        "preview": "avatars/sargas.webp",
+        "sha256": "545af8d9403caa978e1cfb4391e7001ab313b02306b6dd0dc9d29d7f61d46d4d",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "6da6f45bf7044376999c57222ab68919dc10fc1c5dcee77f6acf26319b81c169",
+        "sourceOriginalVersion": "v1",
+        "sourceAssetSha256": "6da6f45bf7044376999c57222ab68919dc10fc1c5dcee77f6acf26319b81c169",
+        "sourcePath": "standards/sargas.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              340,
+              0,
+              360,
+              360
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            6,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            6,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.sargas-battle-20261023-v1-web",
+        "characterId": "stellaart:character.sargas",
+        "path": "web/sargas-battle.webp",
+        "preview": "web/sargas-battle.webp",
+        "sha256": "433a2d10303430bddb4e95f4b2c9b4be9b6be005781911ccaa0f11a606f95873",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "6da6f45bf7044376999c57222ab68919dc10fc1c5dcee77f6acf26319b81c169",
+        "sourceOriginalVersion": "v1",
+        "sourceAssetSha256": "6612a40aec5e4babfdc7b68a8d73bb85fc503004dfe0670db0a29000212e1eec",
+        "sourcePath": "battle/sargas-v1-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 129.5263157894737,
+            "y": 82,
+            "scale": 0.6466165413533834
+          }
+        },
+        "pivot": {
+          "x": 0.5107421875,
+          "y": 0.9150390625
+        },
+        "safeArea": {
+          "bodyBounds": [
+            161,
+            87,
+            885,
+            937
+          ],
+          "marginPx": [
+            161,
+            87,
+            139,
+            87
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "runtimeCharacterDefinition": null,
+      "supportingProp": "equipment case under one boot"
+    }
+  ],
+  "integrationNotes": [
+    "以原作Key／CID核對內容ID，future ID僅建議，不依中文名或順序猜。",
+    "Doradus／Mucephei／Sargas中文名待核，維持原文。Mucephei／Sargas為原創形象候選，未核對原作外觀。",
+    "六張原圖位元組保留；只用同角色單張圖生成Q版，衍生圖全為候選。",
+    "Sargas圖含腳下裝備箱，錨點包含整體輪廓，場景配置另驗。",
+    "新媒體需明確複製至runtime並納入正確內容包；本檔不會自動啟用角色。",
+    "Q版為單張靜態圖，未提供動畫／骨架／動作幀。"
+  ]
+}

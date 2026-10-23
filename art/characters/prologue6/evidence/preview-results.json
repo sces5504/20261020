@@ -1,0 +1,34 @@
+[
+  {
+    "name": "desktop",
+    "width": 1440,
+    "height": 1000,
+    "dpr": 1,
+    "status": "passed",
+    "checks": [
+      "6 characters",
+      "18 images decoded per mode",
+      "portrait/SD switching",
+      "details",
+      "light/dark backgrounds",
+      "no horizontal overflow"
+    ],
+    "scope": "Chromium viewport art fit only; no game combat, physical device, animation or commercial approval"
+  },
+  {
+    "name": "mobile",
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "status": "passed",
+    "checks": [
+      "6 characters",
+      "18 images decoded per mode",
+      "portrait/SD switching",
+      "details",
+      "light/dark backgrounds",
+      "no horizontal overflow"
+    ],
+    "scope": "Chromium viewport art fit only; no game combat, physical device, animation or commercial approval"
+  }
+]

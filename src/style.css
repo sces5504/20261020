@@ -3308,17 +3308,147 @@ button:not(:disabled):hover {
 }
 
 /* Compact instances preserve ownership without repeating full character cards. */
-.section-gap { height: 16px; }
-.copy-picker, .feed-copies { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0; }
-.copy-picker button, .feed-copy { display: flex; align-items: center; gap: 10px; padding: 10px; text-align: left; }
-.copy-picker .portrait, .feed-copy .portrait { width: 48px; height: 58px; flex: 0 0 48px; }
-.feed-copy small { display: block; color: var(--muted); }
-.copy-picker .selected { border-color: var(--gold); }
-.formation-slots .remove-member { align-self: stretch; margin-bottom: 8px; }
-.stationed-maiden { display: flex; align-items: center; gap: 16px; margin: 12px 0; padding: 12px; border: 1px solid #33465b; background: #091421; }
-.stationed-maiden .portrait.large { width: 95px; height: 150px; object-fit: contain; margin: 0; flex: 0 0 95px; }
-.stationed-maiden strong, .stationed-maiden small { display: block; }
-.daily-quests article > small { display: block; margin: 8px 0; }
-.territory-card .stationed-maiden { clear: both; }
-.stationed-maiden > div { min-width: 0; }
-.stationed-maiden .eyebrow { overflow-wrap: anywhere; }
+.section-gap {
+  height: 16px;
+}
+.copy-picker,
+.feed-copies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 12px 0;
+}
+.copy-picker button,
+.feed-copy {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  text-align: left;
+}
+.copy-picker .portrait,
+.feed-copy .portrait {
+  width: 48px;
+  height: 58px;
+  flex: 0 0 48px;
+}
+.feed-copy small {
+  display: block;
+  color: var(--muted);
+}
+.copy-picker .selected {
+  border-color: var(--gold);
+}
+.formation-slots .remove-member {
+  align-self: stretch;
+  margin-bottom: 8px;
+}
+.stationed-maiden {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 12px 0;
+  padding: 12px;
+  border: 1px solid #33465b;
+  background: #091421;
+}
+.stationed-maiden .portrait.large {
+  width: 95px;
+  height: 150px;
+  object-fit: contain;
+  margin: 0;
+  flex: 0 0 95px;
+}
+.stationed-maiden strong,
+.stationed-maiden small {
+  display: block;
+}
+.daily-quests article > small {
+  display: block;
+  margin: 8px 0;
+}
+.territory-card .stationed-maiden {
+  clear: both;
+}
+.stationed-maiden > div {
+  min-width: 0;
+}
+.stationed-maiden .eyebrow {
+  overflow-wrap: anywhere;
+}
+.gallery-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+.gallery-toolbar input {
+  max-width: 100%;
+}
+.art-gallery .art-originals {
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+}
+.art-gallery .art-originals img {
+  width: 100%;
+  height: 520px;
+  object-fit: contain;
+}
+.story-actors {
+  position: absolute;
+  inset: 12% 4% 24%;
+  display: flex;
+  justify-content: space-around;
+  pointer-events: none;
+}
+.story-actors img {
+  width: 32%;
+  height: 100%;
+  object-fit: contain;
+}
+.story-actors .left {
+  margin-right: auto;
+}
+.story-actors .right {
+  margin-left: auto;
+}
+.story-cinematic-fade {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  pointer-events: none;
+}
+.story-scene .story-box {
+  z-index: 3;
+}
+.story-scene .story-chapter {
+  z-index: 3;
+}
+@media (max-width: 600px) {
+  .art-gallery .art-originals img {
+    height: 440px;
+  }
+  .gallery-toolbar {
+    padding: 0 1rem;
+  }
+  .story-actors {
+    inset: 16% 0 30%;
+  }
+}
+
+.story-actors .story-actor {
+  width: 32%;
+  height: 100%;
+}
+.story-actors .story-actor img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.story-scene.camera-view {
+  background: transparent;
+}
+.story-scene.camera-view .story-sky {
+  visibility: hidden;
+}

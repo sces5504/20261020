@@ -1,3 +1,4 @@
+import { storySignature } from "../domain/story";
 import { z } from "zod";
 import type { Save } from "../domain/model";
 import { packSchema, type Pack } from "../content/schema";
@@ -60,6 +61,22 @@ export function checkSave(raw: unknown, p: Pack): Save {
       : p.planets.some((v) => v.id === s.encounter!.planet))
   )
     throw Error("戰鬥星球缺失。");
+  const session = s.story.session;
+  if (session) {
+    const q = p.quests.find((q) => q.id === session.quest);
+    if (
+      !q?.story ||
+      q.story.steps.length < session.cursor ||
+      session.signature !== storySignature(q.story)
+    )
+      throw Error("進行中的劇情流程缺失或已改版；請恢復原內容包，原存檔保留。");
+    if (
+      session.waiting &&
+      (s.encounter?.planet !== session.waiting ||
+        q.story.steps[session.cursor]?.kind !== "encounter")
+    )
+      throw Error("劇情遭遇存檔狀態不符。");
+  }
   return s;
 }
 let connection: Promise<IDBDatabase> | undefined;

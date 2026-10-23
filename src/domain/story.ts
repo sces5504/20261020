@@ -112,8 +112,9 @@ export function storyAvailable(p: Pack, s: Save, id: string): boolean {
     !!q &&
     q.status === "active" &&
     !!story &&
-    story.chapterRequires.every((ch) => chapterComplete(p, s, ch)) &&
-    (!story.requires || conditionMet(s, story.requires))
+    (s.story.session?.quest === id ||
+      (story.chapterRequires.every((ch) => chapterComplete(p, s, ch)) &&
+        (!story.requires || conditionMet(s, story.requires))))
   );
 }
 export function refreshStory(p: Pack, s: Save) {
@@ -126,7 +127,6 @@ export function refreshStory(p: Pack, s: Save) {
       if (
         q.story &&
         !s.story.completed.includes(q.id) &&
-        storyAvailable(p, s, q.id) &&
         (s.storySeen.includes(q.id) || s.quests.includes(q.id)) &&
         (!q.story.objective || conditionMet(s, q.story.objective))
       ) {

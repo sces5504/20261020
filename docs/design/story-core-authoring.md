@@ -15,7 +15,7 @@
 | chapter | namespaced ID，必填 | 將同章任務分組，不代表角色ID |
 | autoStart | 布林，預設false | 前置滿足且沒有戰鬥／其他面板時自動觸發一次；false由章節面板開始 |
 | chapterRequires | ID陣列，預設[] | 各前置章全部active節點完成才開放；不能自我前置或循環 |
-| requires | Condition，可省略 | 任務開放條件，省略為可開始；任務前置引用不能循環 |
+| requires | Condition，可省略 | 任務開始門檻，省略為可開始；已接受流程不因移區失去資格；任務前置引用不能循環 |
 | objective | Condition，可省略 | 流程已讀後，條件滿足才標完成；省略為流程已讀即可完成 |
 | steps | 1–512個StoryStep | 逐步持久cursor；每個初始化有穩定receipt |
 

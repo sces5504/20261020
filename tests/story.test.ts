@@ -230,13 +230,11 @@ test("invalid story contracts, cycles, missing assets/opcodes and modified in-fl
         target: "fixture:quest",
       }),
     (v: any) =>
-      v.planets
-        .at(-1)
-        .storyEncounter.timeline.push({
-          actor: "fixture:escort",
-          at: 1,
-          action: "move",
-        }),
+      v.planets.at(-1).storyEncounter.timeline.push({
+        actor: "fixture:escort",
+        at: 1,
+        action: "move",
+      }),
   ]) {
     const copy = structuredClone(p);
     mutate(copy);
@@ -260,4 +258,27 @@ test("challenge route discovery preserves declarations and reports real connecte
           .routes.some((r) => r.to === path[i]),
       );
   }
+});
+
+test("a region prerequisite gates acceptance, while accepted flow can travel and complete elsewhere", () => {
+  const p = fixture(),
+    q = p.quests.find((q) => q.id === "fixture:quest")!;
+  let s = newSave(p, now);
+  q.story!.requires = conditionSchema.parse({
+    fact: "region",
+    target: s.region,
+  });
+  q.story!.steps = [
+    { kind: "say", speaker: "測試", text: "測試：跨區後仍可接續。" },
+  ];
+  const route = p.regions.find((r) => r.id === s.region)!.routes[0];
+  s = cmd(p, s, { type: "story-start", id: q.id });
+  s = cmd(p, s, { type: "travel", region: route.to });
+  assert.ok(storyAvailable(p, s, q.id));
+  s = cmd(p, s, { type: "story-next" });
+  assert.ok(s.storySeen.includes(q.id));
+  assert.ok(s.story.completed.includes(q.id));
+  const unaccepted = newSave(p, now);
+  unaccepted.region = route.to;
+  assert.ok(!storyAvailable(p, unaccepted, q.id));
 });

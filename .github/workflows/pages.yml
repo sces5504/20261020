@@ -56,6 +56,9 @@ jobs:
           if-no-files-found: ignore
           include-hidden-files: true
           path: |
+            .artifacts/story/browser.json
+            .artifacts/story/*-gallery.png
+            .artifacts/story/*-challenges.png
             .artifacts/checks-release.json
             .artifacts/skills/browser.json
             .artifacts/world/browser.json

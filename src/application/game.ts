@@ -3,7 +3,12 @@ import { snapshot } from "../content/schema";
 import { newSave, stats, type Save } from "../domain/model";
 import { apply, settle, type Command } from "../domain/economy";
 import { patrolPosition } from "../domain/navigation";
-import { nodeCleared, nodeUnlocked, nodeAvailability, nodeVisible } from "../domain/world";
+import {
+  nodeCleared,
+  nodeUnlocked,
+  nodeAvailability,
+  nodeVisible,
+} from "../domain/world";
 import { FleetMotion } from "../domain/formation";
 import { Combat } from "../domain/combat";
 import { fingerprint } from "../content/fingerprint";
@@ -42,6 +47,16 @@ export class Game {
     planet: string;
   } | null = null;
 
+  storyCamera: {
+    x: number;
+    y: number;
+    zoom: number;
+    seconds: number;
+    startedAt: number;
+    fromX: number;
+    fromY: number;
+    fromZoom: number;
+  } | null = null;
   events: string[] = [];
   private serial = Promise.resolve();
   private storageRevision: number | null = null;
@@ -141,18 +156,27 @@ export class Game {
         this.report = null;
         this.notice = `已抵達 ${this.pack.regions.find((r) => r.id === s.region)!.name}`;
       }
-      if (c.type === "begin" || c.type === "patrol") {
+      if (
+        c.type === "begin" ||
+        c.type === "patrol" ||
+        (c.type === "story-battle" && s.encounter)
+      ) {
         this.viewMode = "explore";
-        this.combat = new Combat(
-          this.pack,
-          s,
-          c.type === "begin" ? c.planet : c.id,
-          this.fleet,
-        );
+        if (c.type === "story-battle") {
+          this.fleet = new FleetMotion(
+            s.x,
+            s.y,
+            s.heading,
+            s.team,
+            this.pack.rules.formationSpacing,
+          );
+        }
+        this.combat = new Combat(this.pack, s, s.encounter!.planet, this.fleet);
         this.combat.autoSkills = this.autoSkills;
         this.x = s.x;
         this.y = s.y;
       }
+      if (c.type === "story-cue") this.pause.delete("story-cue-ready");
       if (c.type === "result") {
         const patrol = base.encounter?.kind === "patrol";
         this.events.push(c.victory ? "victory" : "defeat");
@@ -162,7 +186,10 @@ export class Game {
             : {
                 title: c.victory ? "航跡已開拓" : "已撤離交戰區",
                 message: c.victory
-                  ? (this.pack.planets.find(v => v.id === c.planet)?.kind === "planet" ? "星球守軍已全部清除。啟動星球，建立新的生產據點。" : "遭遇已完成，獎勵與通關進度已保存；此據點不提供生產。")
+                  ? this.pack.planets.find((v) => v.id === c.planet)?.kind ===
+                    "planet"
+                    ? "星球守軍已全部清除。啟動星球，建立新的生產據點。"
+                    : "遭遇已完成，獎勵與通關進度已保存；此據點不提供生產。"
                   : "角色生命已保存，可整補後再挑戰。",
                 victory: c.victory,
                 planet: patrol ? "" : c.planet,
@@ -225,6 +252,20 @@ export class Game {
       heading: this.fleet.heading,
     });
   }
+  pendingStoryCue() {
+    const combat = this.combat;
+    if (!combat) return -1;
+    return (combat.storyEncounter?.cues ?? []).findIndex(
+      (c, i) =>
+        !this.save.encounter?.cues?.includes(i) &&
+        (c.at === undefined || combat.time >= c.at) &&
+        (c.hpBelow === undefined ||
+          (() => {
+            const a = combat.units.find((u) => u.id === c.actor);
+            return !!a && a.hp / a.maxHp <= c.hpBelow!;
+          })()),
+    );
+  }
   step(dt: number) {
     if (this.pause.size || this.simulationLocked || this.error) return;
     this.fleet.setMembers(this.save.team);
@@ -244,6 +285,10 @@ export class Game {
       if (center.x || center.y) {
         this.x = center.x;
         this.y = center.y;
+      }
+      if (this.pendingStoryCue() >= 0) {
+        this.pause.add("story-cue-ready");
+        return;
       }
       if (this.combat.ended && !this.encounterPending) {
         const c = this.combat;
@@ -307,7 +352,10 @@ export class Game {
             (p) =>
               p.region === r.id &&
               p.status === "active" &&
-              !nodeCleared(this.save, p) && p.enemies.length > 0 && p.encounterPolicy === "auto" && nodeAvailability(this.save, p, Date.now()).open &&
+              !nodeCleared(this.save, p) &&
+              p.enemies.length > 0 &&
+              p.encounterPolicy === "auto" &&
+              nodeAvailability(this.save, p, Date.now()).open &&
               !this.disengagedPlanets.has(p.id) &&
               nodeUnlocked(this.save, p, this.pack),
           )
@@ -349,7 +397,10 @@ export class Game {
       this.pack.planets.some(
         (p) =>
           p.region === r.id &&
-          !nodeCleared(this.save, p) && p.enemies.length > 0 && nodeUnlocked(this.save, p, this.pack) && p.encounterPolicy === "auto" &&
+          !nodeCleared(this.save, p) &&
+          p.enemies.length > 0 &&
+          nodeUnlocked(this.save, p, this.pack) &&
+          p.encounterPolicy === "auto" &&
           Math.hypot(p.x - this.x, p.y - this.y) < p.engageRadius + 250,
       );
     return threat ? this.pack.rules.travelSpeed : this.pack.rules.cruiseSpeed;

@@ -46,3 +46,24 @@ export function guardianPositions(planet: Pack["planets"][number]) {
     }),
   );
 }
+
+/** Shortest declared route, retaining locks so the UI can explain the next prerequisite. */
+export function regionPath(
+  p: import("../content/schema").Pack,
+  from: string,
+  to: string,
+): string[] {
+  const queue = [[from]],
+    seen = new Set([from]);
+  while (queue.length) {
+    const path = queue.shift()!;
+    const last = path[path.length - 1];
+    if (last === to) return path;
+    for (const r of p.regions.find((r) => r.id === last)?.routes ?? [])
+      if (!seen.has(r.to)) {
+        seen.add(r.to);
+        queue.push([...path, r.to]);
+      }
+  }
+  return [];
+}

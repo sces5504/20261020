@@ -5790,5 +5790,149 @@
     "sha256": "d22d1ba9024338d79d784fc5db179851f2f37945e705b330948d11b5dd076a00",
     "master": "art/characters/stellar11/battle/jupiter-v1-candidate.png",
     "masterSha256": "d3c2fcfdbbeee443e5faef6a1e41d0c5ffbb26f91d0ec324e0fcf901752f33e2"
+  },
+  {
+    "id": "stellaart:asset.scuti-portrait-20261023-web",
+    "path": "art/characters/prologue6/web/scuti.webp",
+    "runtime": "assets/extensions/prologue6/web/scuti.webp",
+    "sha256": "0ccff7020e4cbdf6b1a3d089502f14320775d45906f6d8a6d8fb77ee3e950df3",
+    "master": "art/characters/prologue6/standards/scuti.png",
+    "masterSha256": "4124b88b8398a6312fd7f9b5c47ddba7db370dac29834ee0198aa7430f31f31c"
+  },
+  {
+    "id": "stellaart:asset.scuti-avatar-20261023-web",
+    "path": "art/characters/prologue6/avatars/scuti.webp",
+    "runtime": "assets/extensions/prologue6/avatars/scuti.webp",
+    "sha256": "0d28479b22a05e9ce77c3a886ddce3123f622e522501d0507a98c3a07935a05b",
+    "master": "art/characters/prologue6/standards/scuti.png",
+    "masterSha256": "4124b88b8398a6312fd7f9b5c47ddba7db370dac29834ee0198aa7430f31f31c"
+  },
+  {
+    "id": "stellaart:asset.scuti-battle-20261023-v1-web",
+    "path": "art/characters/prologue6/web/scuti-battle.webp",
+    "runtime": "assets/extensions/prologue6/web/scuti-battle.webp",
+    "sha256": "a772038c6173739900a9157334b5cfff9c9efe990867d84e58508ebb9b582a52",
+    "master": "art/characters/prologue6/battle/scuti-v1-candidate.png",
+    "masterSha256": "5965309155b86e13800395ec608b4b6d8f7cc4411d41388f9ed335c2f1154a31"
+  },
+  {
+    "id": "stellaart:asset.antares-portrait-20261023-web",
+    "path": "art/characters/prologue6/web/antares.webp",
+    "runtime": "assets/extensions/prologue6/web/antares.webp",
+    "sha256": "fae8b82371cb9ff9078b80e55ac96e06abbdf2b407066069616832adffbb2022",
+    "master": "art/characters/prologue6/standards/antares.png",
+    "masterSha256": "0fb63d28eda1b021d25774db38c0fd9c374e3e5cbaad3f0da0224a473f928f3c"
+  },
+  {
+    "id": "stellaart:asset.antares-avatar-20261023-web",
+    "path": "art/characters/prologue6/avatars/antares.webp",
+    "runtime": "assets/extensions/prologue6/avatars/antares.webp",
+    "sha256": "73840682d0de7360b43cc4b0247d33a4735e300edb43c782a6cb4163e5dc4d90",
+    "master": "art/characters/prologue6/standards/antares.png",
+    "masterSha256": "0fb63d28eda1b021d25774db38c0fd9c374e3e5cbaad3f0da0224a473f928f3c"
+  },
+  {
+    "id": "stellaart:asset.antares-battle-20261023-v1-web",
+    "path": "art/characters/prologue6/web/antares-battle.webp",
+    "runtime": "assets/extensions/prologue6/web/antares-battle.webp",
+    "sha256": "c67187161509b18dec6a112e7b8678e25a06ffd0c810d966e65ae5bdcd95c930",
+    "master": "art/characters/prologue6/battle/antares-v1-candidate.png",
+    "masterSha256": "a60fb33d1974e8e19da562ff64968959c7979227a0bf41b11a2fd633c54f57ef"
+  },
+  {
+    "id": "stellaart:asset.deneb-portrait-20261023-web",
+    "path": "art/characters/prologue6/web/deneb.webp",
+    "runtime": "assets/extensions/prologue6/web/deneb.webp",
+    "sha256": "4021386779f3d5ca9c852232129ad8d1c18a7e8c09771ea38c51f7f65dd1bc74",
+    "master": "art/characters/prologue6/standards/deneb.png",
+    "masterSha256": "85ee010f2ba0f32ad4320c93260136f4f25e546734b93b6041422146bd66c8c1"
+  },
+  {
+    "id": "stellaart:asset.deneb-avatar-20261023-web",
+    "path": "art/characters/prologue6/avatars/deneb.webp",
+    "runtime": "assets/extensions/prologue6/avatars/deneb.webp",
+    "sha256": "e3704d81cce7331d934c5741c51f51be045729bed7321452e83138c2a0659435",
+    "master": "art/characters/prologue6/standards/deneb.png",
+    "masterSha256": "85ee010f2ba0f32ad4320c93260136f4f25e546734b93b6041422146bd66c8c1"
+  },
+  {
+    "id": "stellaart:asset.deneb-battle-20261023-v1-web",
+    "path": "art/characters/prologue6/web/deneb-battle.webp",
+    "runtime": "assets/extensions/prologue6/web/deneb-battle.webp",
+    "sha256": "3af79ef5e2f8fd697cbe18a2a8260dbe9e76a082bcf235aeba067e2c366c44cf",
+    "master": "art/characters/prologue6/battle/deneb-v1-candidate.png",
+    "masterSha256": "3c714543daa0fc64d120c62e16d35efa5e9617d638634906a3cd61836b7abe98"
+  },
+  {
+    "id": "stellaart:asset.doradus-portrait-20261023-web",
+    "path": "art/characters/prologue6/web/doradus.webp",
+    "runtime": "assets/extensions/prologue6/web/doradus.webp",
+    "sha256": "d556757e27a4fdd4959b743e496795b1b611ed3027620d5c3bbe1208435185b0",
+    "master": "art/characters/prologue6/standards/doradus.png",
+    "masterSha256": "91fab41a078452b7dc9adbe38e392903aa2029ed14c5b0f5a996cd5724a49f7b"
+  },
+  {
+    "id": "stellaart:asset.doradus-avatar-20261023-web",
+    "path": "art/characters/prologue6/avatars/doradus.webp",
+    "runtime": "assets/extensions/prologue6/avatars/doradus.webp",
+    "sha256": "da797d006f8712be26c2a1cfc98a39da7fe75b40f0325ca9a36a39d9391c0726",
+    "master": "art/characters/prologue6/standards/doradus.png",
+    "masterSha256": "91fab41a078452b7dc9adbe38e392903aa2029ed14c5b0f5a996cd5724a49f7b"
+  },
+  {
+    "id": "stellaart:asset.doradus-battle-20261023-v1-web",
+    "path": "art/characters/prologue6/web/doradus-battle.webp",
+    "runtime": "assets/extensions/prologue6/web/doradus-battle.webp",
+    "sha256": "261f538554fdd11d80968690f25edee4f72238783a578acc08120611627b3b66",
+    "master": "art/characters/prologue6/battle/doradus-v1-candidate.png",
+    "masterSha256": "66651493d1adac9ef5adb72e20f3863e187479846db65a13f0d432e707250030"
+  },
+  {
+    "id": "stellaart:asset.mucephei-portrait-20261023-web",
+    "path": "art/characters/prologue6/web/mucephei.webp",
+    "runtime": "assets/extensions/prologue6/web/mucephei.webp",
+    "sha256": "61d21137f5684f6b47b539a2fc59fe9691bcb0837b83040646d76bbb0092a9f7",
+    "master": "art/characters/prologue6/standards/mucephei.png",
+    "masterSha256": "9e1bdba450d15a82a197d7985cac0906f2c4aab6b6fa47f7a6ff494bee571ba3"
+  },
+  {
+    "id": "stellaart:asset.mucephei-avatar-20261023-web",
+    "path": "art/characters/prologue6/avatars/mucephei.webp",
+    "runtime": "assets/extensions/prologue6/avatars/mucephei.webp",
+    "sha256": "6ea8330804d3913dc27a15d1635506f5d4c4fe9be5665a65e822e4c062384892",
+    "master": "art/characters/prologue6/standards/mucephei.png",
+    "masterSha256": "9e1bdba450d15a82a197d7985cac0906f2c4aab6b6fa47f7a6ff494bee571ba3"
+  },
+  {
+    "id": "stellaart:asset.mucephei-battle-20261023-v1-web",
+    "path": "art/characters/prologue6/web/mucephei-battle.webp",
+    "runtime": "assets/extensions/prologue6/web/mucephei-battle.webp",
+    "sha256": "370cfc00d47b36278adea74bf5f2a174ab4888ff27a52acc481c0e7969e4b3b3",
+    "master": "art/characters/prologue6/battle/mucephei-v1-candidate.png",
+    "masterSha256": "2e0ce7f7dfbba826222ddef28dc1d0b24b76051891e4f16ae4b39ad2fddaba10"
+  },
+  {
+    "id": "stellaart:asset.sargas-portrait-20261023-web",
+    "path": "art/characters/prologue6/web/sargas.webp",
+    "runtime": "assets/extensions/prologue6/web/sargas.webp",
+    "sha256": "3bff9178f07ecd74bc4fdf5066975e9789cb87a3bd7045af342cb1b7e044b318",
+    "master": "art/characters/prologue6/standards/sargas.png",
+    "masterSha256": "6da6f45bf7044376999c57222ab68919dc10fc1c5dcee77f6acf26319b81c169"
+  },
+  {
+    "id": "stellaart:asset.sargas-avatar-20261023-web",
+    "path": "art/characters/prologue6/avatars/sargas.webp",
+    "runtime": "assets/extensions/prologue6/avatars/sargas.webp",
+    "sha256": "545af8d9403caa978e1cfb4391e7001ab313b02306b6dd0dc9d29d7f61d46d4d",
+    "master": "art/characters/prologue6/standards/sargas.png",
+    "masterSha256": "6da6f45bf7044376999c57222ab68919dc10fc1c5dcee77f6acf26319b81c169"
+  },
+  {
+    "id": "stellaart:asset.sargas-battle-20261023-v1-web",
+    "path": "art/characters/prologue6/web/sargas-battle.webp",
+    "runtime": "assets/extensions/prologue6/web/sargas-battle.webp",
+    "sha256": "433a2d10303430bddb4e95f4b2c9b4be9b6be005781911ccaa0f11a606f95873",
+    "master": "art/characters/prologue6/battle/sargas-v1-candidate.png",
+    "masterSha256": "6612a40aec5e4babfdc7b68a8d73bb85fc503004dfe0670db0a29000212e1eec"
   }
 ]

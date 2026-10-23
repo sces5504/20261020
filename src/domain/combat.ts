@@ -38,6 +38,7 @@ export type Unit = {
   evasion?: number;
   skillLevel?: number;
   skillOverride?: string;
+  storyActor?: boolean;
   summonOwner?: string;
   summonKind?: string;
 };
@@ -81,6 +82,14 @@ export type Flash = {
   sourceDefinition?: string;
 };
 export class Combat {
+  storyWave = 0;
+  storyTimeline = new Set<number>();
+  storySpawned = new Set<string>();
+  storyDestinations = new Map<
+    string,
+    { x: number; y: number; radius: number }
+  >();
+  storyRetreated = new Set<string>();
   mechanics = new Mechanics(this);
   laboratory = false;
   lockHealth = false;
@@ -191,6 +200,114 @@ export class Combat {
           ),
         );
       }
+    this.spawnStoryActors();
+  }
+  get storyEncounter() {
+    return this.pack.planets.find((v) => v.id === this.planetId)
+      ?.storyEncounter;
+  }
+  private spawnStoryActors() {
+    for (const a of this.storyEncounter?.actors ?? []) {
+      if (this.storySpawned.has(a.id) || a.spawnAt > this.time) continue;
+      this.storySpawned.add(a.id);
+      if (a.destination) this.storyDestinations.set(a.id, { ...a.destination });
+      const c = this.pack.characters.find((c) => c.id === a.character)!;
+      const st = stats(this.pack, {
+        id: a.id,
+        definition: a.character,
+        level: a.level,
+        hp: c.hp,
+      });
+      this.units.push({
+        ...this.unit(
+          c,
+          a.id,
+          a.side,
+          a.x,
+          a.y,
+          st.hp,
+          st.hp,
+          st.attack,
+          st.defense,
+        ),
+        storyActor: true,
+      });
+    }
+  }
+  private stepStory(dt: number): boolean {
+    const e = this.storyEncounter;
+    if (!e) return false;
+    this.spawnStoryActors();
+    e.timeline.forEach((ev, i) => {
+      const u = this.units.find((u) => u.id === ev.actor);
+      if (
+        this.storyTimeline.has(i) ||
+        !u ||
+        (ev.at !== undefined && this.time < ev.at) ||
+        (ev.hpBelow !== undefined && u.hp / u.maxHp > ev.hpBelow)
+      )
+        return;
+      this.storyTimeline.add(i);
+      if (ev.action === "retreat") {
+        this.storyRetreated.add(u.id);
+        u.hp = 0;
+      }
+      if (ev.action === "team") u.side = ev.side!;
+      if (ev.action === "move")
+        this.storyDestinations.set(u.id, { x: ev.x!, y: ev.y!, radius: 20 });
+      if (ev.action === "setHp") u.hp = u.maxHp * ev.ratio!;
+    });
+    while (
+      this.storyWave < e.waves.length &&
+      e.waves[this.storyWave].at <= this.time
+    ) {
+      const wave = e.waves[this.storyWave++];
+      for (const g of wave.enemies) {
+        const def = this.pack.enemies.find((v) => v.id === g.enemy)!;
+        const st = enemyStats(def, g.level);
+        for (let i = 0; i < g.count; i++)
+          this.units.push(
+            this.unit(
+              def,
+              `story-enemy-${this.sequence++}`,
+              "enemy",
+              this.anchor.x + 180 + (i % 4) * 30,
+              this.anchor.y - 80 + Math.floor(i / 4) * 35,
+              st.hp,
+              st.hp,
+              st.attack,
+              st.defense,
+            ),
+          );
+      }
+    }
+    for (const a of e.actors) {
+      const u = this.units.find((u) => u.id === a.id);
+      if (!u) continue;
+      if (a.required && u.hp <= 0) {
+        this.ended = true;
+        this.victory = false;
+        return true;
+      }
+      const dest = this.storyDestinations.get(a.id);
+      if (
+        u.hp > 0 &&
+        dest &&
+        !this.mechanics.frozen(u) &&
+        !this.mechanics.moving(u)
+      ) {
+        const d = Math.hypot(dest.x - u.x, dest.y - u.y),
+          step = Math.min(
+            d,
+            u.speed * this.mechanics.stat(u, "moveSpeed") * dt,
+          );
+        if (d) {
+          u.x += ((dest.x - u.x) / d) * step;
+          u.y += ((dest.y - u.y) / d) * step;
+        }
+      }
+    }
+    return false;
   }
   private spawnWave(x: number, y: number) {
     for (const g of this.waveGroups[this.waveIndex]) {
@@ -256,7 +373,9 @@ export class Combat {
     };
   }
   get allies() {
-    return this.units.filter((u) => u.side === "ally" && !u.turretUntil);
+    return this.units.filter(
+      (u) => u.side === "ally" && !u.turretUntil && !u.storyActor,
+    );
   }
   get center() {
     return { ...this.anchor };
@@ -433,6 +552,7 @@ export class Combat {
       }
     }
     this.mechanics.step(dt);
+    if (this.stepStory(dt)) return;
     for (const u of this.units) {
       if (u.hp <= 0) continue;
       if (u.turretUntil && this.time >= u.turretUntil) {
@@ -445,7 +565,7 @@ export class Combat {
         u.power = 1;
       }
       if (this.mechanics.frozen(u)) {
-        if (u.side === "ally" && !u.turretUntil)
+        if (u.side === "ally" && !u.turretUntil && !u.storyActor)
           this.fleet.positions.set(u.id, { x: u.x, y: u.y });
         continue;
       }
@@ -455,7 +575,10 @@ export class Combat {
         this.mechanics.stat(u, "attackSpeed");
       if (this.time >= this.mechanics.stoppedUntil)
         u.skillCooldown = Math.max(0, u.skillCooldown - dt);
-      if ((this.autoSkills || u.side === "enemy") && !u.turretUntil)
+      if (
+        (this.autoSkills || u.side === "enemy" || u.storyActor) &&
+        !u.turretUntil
+      )
         this.cast(u.id);
       if (this.mechanics.moving(u)) continue;
       const foes = this.units
@@ -481,13 +604,13 @@ export class Combat {
       if (decoy) t = decoy;
       let dest = this.destination;
       let enemySpeed = u.speed * this.mechanics.stat(u, "moveSpeed");
-      if (u.side === "ally" && !u.turretUntil) {
+      if (u.side === "ally" && !u.turretUntil && !u.storyActor) {
         const pos = this.fleet.positions.get(u.id)!;
         u.x = pos.x;
         u.y = pos.y;
         dest = { x: u.x, y: u.y };
       }
-      if (u.side === "enemy" && t) {
+      if (u.side === "enemy" && t && !u.storyActor) {
         const e = this.pack.enemies.find((e) => e.id === u.def)!;
         const distance = Math.hypot(u.x - t.x, u.y - t.y);
         if (e.orbitSpeed > 0 && distance <= u.range * 0.9) {
@@ -510,13 +633,14 @@ export class Combat {
       }
       const d = Math.hypot(dest.x - u.x, dest.y - u.y),
         move =
-          u.side === "ally"
+          !u.storyActor &&
+          (u.side === "ally"
             ? !u.turretUntil && d > 0.05
             : t &&
               d >
                 (this.pack.enemies.find((e) => e.id === u.def)!.orbitSpeed > 0
                   ? 0.05
-                  : u.range * 0.65);
+                  : u.range * 0.65));
       if (move && d > 0) {
         u.x +=
           ((dest.x - u.x) / d) *
@@ -576,6 +700,48 @@ export class Combat {
       this.save.encounter?.kind !== "patrol"
         ? this.pack.planets.find((p) => p.id === this.planetId)
         : undefined;
+    const story = this.storyEncounter;
+    if (story) {
+      const alive = this.allies.some((u) => u.hp > 0);
+      const required = story.actors.filter((a) => a.required);
+      const protectedAlive = required.every(
+        (a) =>
+          !this.storySpawned.has(a.id) ||
+          (this.units.find((u) => u.id === a.id)?.hp ?? 0) > 0,
+      );
+      if (!alive || !protectedAlive) {
+        this.ended = true;
+        this.victory = false;
+        return;
+      }
+      const arrived = required
+        .filter((a) => a.destination)
+        .every((a) => {
+          const u = this.units.find((u) => u.id === a.id);
+          return (
+            !!u &&
+            Math.hypot(u.x - a.destination!.x, u.y - a.destination!.y) <=
+              a.destination!.radius
+          );
+        });
+      if (story.mode === "escort" && arrived) {
+        this.ended = true;
+        this.victory = true;
+        return;
+      }
+      if (story.seconds && this.time >= story.seconds) {
+        this.ended = true;
+        this.timedOut = true;
+        this.victory = ["survive", "defend"].includes(story.mode);
+        return;
+      }
+      if (
+        ["survive", "defend", "escort"].includes(story.mode) ||
+        this.storyWave < story.waves.length ||
+        story.actors.some((a) => !this.storySpawned.has(a.id))
+      )
+        return;
+    }
     if (arena?.timeLimitSeconds && this.time >= arena.timeLimitSeconds) {
       this.timedOut = true;
       this.ended = true;

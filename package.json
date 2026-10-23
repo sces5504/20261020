@@ -1,6 +1,6 @@
 {
   "name": "galaxy-angel",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -24,7 +24,8 @@
     "test:content-integration": "node --import tsx tools/game/content-integration-e2e.mjs",
     "test:skills": "node --import tsx tools/game/skills-e2e.mjs",
     "test:world": "node --import tsx tools/world/e2e.mjs",
-    "test:integration-v8": "node --import tsx tools/game/v8-e2e.mjs"
+    "test:integration-v8": "node --import tsx tools/game/v8-e2e.mjs",
+    "test:story": "node --import tsx tools/story/e2e.mjs"
   },
   "dependencies": {
     "fflate": "0.8.3",

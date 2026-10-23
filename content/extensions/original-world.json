@@ -5,7 +5,7 @@
   "requires": [
     {
       "id": "m1:core",
-      "version": "0.8.0"
+      "version": "0.9.0"
     },
     {
       "id": "stella:package.skills",
@@ -2802,7 +2802,8 @@
             "respawnSeconds": 90
           }
         ],
-        "campaignStart": true
+        "campaignStart": true,
+        "category": "campaign"
       },
       {
         "id": "original:region.solar-hard",
@@ -2825,7 +2826,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "hard"
       },
       {
         "id": "original:region.virgo",
@@ -2961,7 +2963,8 @@
             "phase": 0.7,
             "respawnSeconds": 90
           }
-        ]
+        ],
+        "category": "campaign"
       },
       {
         "id": "original:region.virgo-hard",
@@ -2984,7 +2987,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "hard"
       },
       {
         "id": "original:region.leo",
@@ -3183,7 +3187,8 @@
             "phase": 1.05,
             "respawnSeconds": 90
           }
-        ]
+        ],
+        "category": "campaign"
       },
       {
         "id": "original:region.leo-hard",
@@ -3206,7 +3211,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "hard"
       },
       {
         "id": "original:region.southern",
@@ -3347,7 +3353,8 @@
             "phase": 1.4,
             "respawnSeconds": 90
           }
-        ]
+        ],
+        "category": "campaign"
       },
       {
         "id": "original:region.southern-hard",
@@ -3370,7 +3377,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "hard"
       },
       {
         "id": "original:region.canis",
@@ -3516,7 +3524,8 @@
             "phase": 1.75,
             "respawnSeconds": 90
           }
-        ]
+        ],
+        "category": "campaign"
       },
       {
         "id": "original:region.canis-hard",
@@ -3539,7 +3548,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "hard"
       },
       {
         "id": "original:region.northern",
@@ -3659,7 +3669,8 @@
             "phase": 2.1,
             "respawnSeconds": 90
           }
-        ]
+        ],
+        "category": "campaign"
       },
       {
         "id": "original:region.northern-hard",
@@ -3682,7 +3693,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "hard"
       },
       {
         "id": "original:region.cygnus",
@@ -3765,7 +3777,8 @@
             "phase": 2.45,
             "respawnSeconds": 90
           }
-        ]
+        ],
+        "category": "campaign"
       },
       {
         "id": "original:region.cygnus-hard",
@@ -3788,7 +3801,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "hard"
       },
       {
         "id": "original:region.gemini",
@@ -3866,7 +3880,8 @@
             "phase": 2.8,
             "respawnSeconds": 90
           }
-        ]
+        ],
+        "category": "campaign"
       },
       {
         "id": "original:region.taurus",
@@ -3954,7 +3969,8 @@
             "phase": 3.15,
             "respawnSeconds": 90
           }
-        ]
+        ],
+        "category": "campaign"
       },
       {
         "id": "original:region.scorpio",
@@ -4011,7 +4027,8 @@
             "phase": 3.5,
             "respawnSeconds": 90
           }
-        ]
+        ],
+        "category": "campaign"
       },
       {
         "id": "original:region.sagittarius",
@@ -4073,7 +4090,8 @@
             "phase": 3.85,
             "respawnSeconds": 90
           }
-        ]
+        ],
+        "category": "campaign"
       },
       {
         "id": "original:region.cancer",
@@ -4166,7 +4184,8 @@
             "phase": 4.2,
             "respawnSeconds": 90
           }
-        ]
+        ],
+        "category": "campaign"
       },
       {
         "id": "original:region.aries",
@@ -4259,7 +4278,8 @@
             "phase": 4.55,
             "respawnSeconds": 90
           }
-        ]
+        ],
+        "category": "campaign"
       },
       {
         "id": "original:region.pisces",
@@ -4282,7 +4302,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "campaign"
       },
       {
         "id": "original:region.archive",
@@ -4435,7 +4456,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "event"
       },
       {
         "id": "original:region.replay-1",
@@ -4458,7 +4480,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "event"
       },
       {
         "id": "original:region.replay-2",
@@ -4481,7 +4504,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "event"
       },
       {
         "id": "original:region.replay-3",
@@ -4504,7 +4528,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "event"
       },
       {
         "id": "original:region.replay-4",
@@ -4527,7 +4552,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "event"
       },
       {
         "id": "original:region.replay-5",
@@ -4550,7 +4576,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "event"
       },
       {
         "id": "original:region.replay-6",
@@ -4573,7 +4600,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "event"
       },
       {
         "id": "original:region.replay-7",
@@ -4596,7 +4624,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "event"
       },
       {
         "id": "original:region.replay-8",
@@ -4619,7 +4648,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "event"
       },
       {
         "id": "original:region.replay-9",
@@ -4642,7 +4672,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "event"
       },
       {
         "id": "original:region.replay-10",
@@ -4665,7 +4696,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "event"
       },
       {
         "id": "original:region.replay-11",
@@ -4688,7 +4720,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "event"
       },
       {
         "id": "original:region.replay-12",
@@ -4711,7 +4744,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "event"
       },
       {
         "id": "original:region.replay-13",
@@ -4734,7 +4768,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "event"
       },
       {
         "id": "original:region.replay-14",
@@ -4757,7 +4792,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "event"
       },
       {
         "id": "original:region.replay-15",
@@ -4780,7 +4816,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "event"
       },
       {
         "id": "original:region.replay-16",
@@ -4803,7 +4840,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "event"
       },
       {
         "id": "original:region.replay-17",
@@ -4826,7 +4864,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "event"
       },
       {
         "id": "original:region.replay-18",
@@ -4849,7 +4888,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "event"
       },
       {
         "id": "original:region.replay-19",
@@ -4872,7 +4912,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "event"
       },
       {
         "id": "original:region.replay-20",
@@ -4895,7 +4936,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "event"
       },
       {
         "id": "original:region.replay-21",
@@ -4918,7 +4960,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "event"
       },
       {
         "id": "original:region.replay-22",
@@ -4941,7 +4984,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "event"
       },
       {
         "id": "original:region.replay-23",
@@ -4964,7 +5008,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "event"
       },
       {
         "id": "original:region.replay-24",
@@ -4987,7 +5032,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "event"
       },
       {
         "id": "original:region.replay-25",
@@ -5010,7 +5056,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "event"
       },
       {
         "id": "original:region.daily",
@@ -5033,7 +5080,8 @@
             "requires": []
           }
         ],
-        "patrols": []
+        "patrols": [],
+        "category": "daily"
       }
     ],
     "planets": [

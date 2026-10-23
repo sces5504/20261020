@@ -12,6 +12,25 @@ const owned = z
   .strict();
 export const saveSchema = z
   .object({
+    story: z
+      .object({
+        completed: z.array(z.string()).default([]),
+        counters: z.record(z.number().int().nonnegative()).default({}),
+        session: z
+          .object({
+            quest: z.string(),
+            signature: z.string(),
+            cursor: z.number().int().nonnegative(),
+            waiting: z.string(),
+            battleWon: z.boolean(),
+            cues: z.array(z.number().int().nonnegative()).default([]),
+          })
+          .strict()
+          .nullable()
+          .default(null),
+      })
+      .strict()
+      .default({}),
     schemaVersion: z.literal(1),
     contentHash: z.string().default(""),
     migrationHistory: z.array(z.string()).default([]),
@@ -96,6 +115,7 @@ export const saveSchema = z
     built: z.number().int().nonnegative(),
     encounter: z
       .object({
+        cues: z.array(z.number().int().nonnegative()).default([]),
         planet: z.string(),
         seed: z.number().int().nonnegative(),
         kind: z.enum(["planet", "patrol"]).optional(),

@@ -1,0 +1,146 @@
+{
+  "mode": "release",
+  "head": "fd12e650904fc8a4b441d98f0c96a70452fc8bba",
+  "dirty": false,
+  "time_utc": "2026-10-23T09:45:34.215782+00:00",
+  "elapsed_seconds": 349.72,
+  "source_run": 39931071868,
+  "source_head": "a154206beebb809bb254fea2775c794cb876a138",
+  "changed_paths": [
+    ".github/workflows/ci.yml",
+    ".github/workflows/pages.yml",
+    "docs/handoffs/story-core-20261023.md",
+    "docs/verification/story-core-release-initial.json",
+    "public/catalog/characters.json",
+    "public/catalog/future-characters.csv",
+    "scripts/continue-release.py",
+    "tests/test_release_continuation.py",
+    "tools/game/exploration-e2e.mjs"
+  ],
+  "results": [
+    {
+      "argv": [
+        "npm",
+        "run",
+        "content:check"
+      ],
+      "exit_code": 0,
+      "reused_from": {
+        "run": 39931071868,
+        "head": "a154206beebb809bb254fea2775c794cb876a138"
+      }
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "exit_code": 0,
+      "reused_from": {
+        "run": 39931071868,
+        "head": "a154206beebb809bb254fea2775c794cb876a138"
+      }
+    },
+    {
+      "argv": [
+        "npm",
+        "test"
+      ],
+      "exit_code": 0,
+      "reused_from": {
+        "run": 39931071868,
+        "head": "a154206beebb809bb254fea2775c794cb876a138"
+      }
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:e2e"
+      ],
+      "exit_code": 0,
+      "reused_from": {
+        "run": 39931071868,
+        "head": "a154206beebb809bb254fea2775c794cb876a138"
+      }
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:playtest"
+      ],
+      "exit_code": 0,
+      "reused_from": {
+        "run": 39931071868,
+        "head": "a154206beebb809bb254fea2775c794cb876a138"
+      }
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:exploration"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:refinement"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:polish"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:content-integration"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:skills"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:world"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test:integration-v8"
+      ],
+      "exit_code": 1
+    }
+  ],
+  "passed": false
+}

@@ -1,0 +1,1808 @@
+{
+  "schemaVersion": 1,
+  "packId": "stellaart.prologue6-art-20261023",
+  "coreVersionObserved": "0.8.0",
+  "scope": "six-character-art-only",
+  "sourceZipSha256": "3e2111ea56e06b55cc153b13543a60a7c209c73ee30eb98d427532e52e86f2c4",
+  "characters": [
+    {
+      "id": "stellaart:character.scuti",
+      "assetId": "stellaart:asset.scuti-standard-20261023",
+      "nameZhHant": "盾牌座UY",
+      "chineseNamePending": false,
+      "originalGameKey": "Scuti",
+      "originalCidRow": 107,
+      "baseStars": 5,
+      "baseStarsSource": "research/stella-maiden/generated/stella_research.sqlite: characters_with_skill; original base rarity only",
+      "prologueRole": "序章部隊指揮",
+      "roleSource": "user request 2026-10-23, not an original-game skill claim",
+      "bodyType": "熟女",
+      "gameCharacterId": null,
+      "originalCandidate": false,
+      "path": "standards/scuti.png",
+      "promptPath": "prompts/scuti-standard-source.txt",
+      "version": "v1",
+      "sha256": "4124b88b8398a6312fd7f9b5c47ddba7db370dac29834ee0198aa7430f31f31c",
+      "width": 1024,
+      "height": 1536,
+      "type": "character-standard",
+      "mimeType": "image/png",
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "blendMode": "normal",
+      "opaqueBounds": [
+        20,
+        12,
+        1008,
+        1525
+      ],
+      "pivotNormalized": [
+        0.501953125,
+        0.9928385416666666
+      ],
+      "pivotNote": "Visual bottom of figure/props, not collision data; Sargas includes support equipment case.",
+      "atlas": null,
+      "animation": null,
+      "bundle": "prologue6-20261023",
+      "preview": "web/scuti.webp",
+      "reviewStatus": "awaiting-user-review",
+      "poseReference": {
+        "sourcePath": null,
+        "evidence": "未取得可核對原作姿勢圖；姿態為原創指揮動作，不宣稱重現原作。",
+        "coverage": "original-pose-not-found"
+      },
+      "appearanceBrief": "Clearly adult female commander age29, long pale golden-blonde straight hair, two fine rose-violet inner streaks, swept fringe, violet eyes, delicate mature feminine face, fair skin, dignified calm expression. Slim braided headband with one off-center orbital clip, no elf ears. ORIGINAL pearl WHITE, midnight INDIGO and warm GOLD sci-fi shield-command outfit. Preserve the user's fantasy armor direction: pearl-white sculpted chest armor over an opaque indigo fitted bust layer, high gold-edged collar, small upper-chest keyhole, exposed abdomen and waist, and articulated arm armor. All breasts remain fully covered. Tailored indigo short armored bottoms fully cover hips and seat, with short white pleated side panels; bare upper thighs, pearl/gold knee-high articulated boots. White/gold armor edges and purple-blue inner cloth echo the reference's open midriff battle armor; not a covered uniform tunic. One angular white shoulder mantle and slim asymmetric mechanical pauldron, no pink neck bow. One large six-sided deployable SHIELD close to left forearm with indigo enamel and segmented gold orbit motif; left hand forward bracing shield. Right arm extended horizontally with precise two-finger directional COMMAND gesture. Three-quarter torso facing left, front leg gently stepping forward, feet spaced for balance. Entire shield inside frame. This pose is an original extension, not verified original-game pose. Do not reproduce the style reference's chest-touch hand or copper hair or same face.",
+      "source": {
+        "tool": "image_gen",
+        "modelVersion": "not-exposed",
+        "generatedFile": "exec-b43e5108-502f-49fc-bc8f-64071c778566.png",
+        "actualReferencePaths": [
+          "/workspace/20261020/art/characters/standard/maiden-01/v1.png"
+        ],
+        "userArmorAttachmentDirectInput": false,
+        "note": "Scuti/Antares armor attachments described in text after direct input rejection; exact prompt archived."
+      },
+      "supportingProp": null,
+      "assetVersion": "v1",
+      "sourceOriginalVersion": "v1",
+      "sourceOriginalSha256": "4124b88b8398a6312fd7f9b5c47ddba7db370dac29834ee0198aa7430f31f31c",
+      "sourceReportedReviewStatus": "user-liked-retain",
+      "visualInspection": "柔和橢圓臉紫眼、淡金長披髮與紫色細內層髮束、頭側細編髮及左鬢紫藍星環；白金靛藍輕甲、白短裙片配深短褲、白長靴；右手向外雙指指揮、左臂大型六邊白靛藍盾，前踏姿勢。",
+      "proposedContentId": "future:scuti",
+      "runtimeStatus": "not-integrated",
+      "changeKind": "new-character",
+      "pivot": {
+        "x": 0.501953125,
+        "y": 0.9928385416666666
+      },
+      "safeArea": {
+        "bodyBounds": [
+          20,
+          12,
+          1008,
+          1525
+        ],
+        "note": "原圖不修整；網頁衍生版另作尺寸輸出"
+      },
+      "webAsset": {
+        "assetId": "stellaart:asset.scuti-portrait-20261023-web",
+        "characterId": "stellaart:character.scuti",
+        "path": "web/scuti.webp",
+        "preview": "web/scuti.webp",
+        "sha256": "0ccff7020e4cbdf6b1a3d089502f14320775d45906f6d8a6d8fb77ee3e950df3",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "4124b88b8398a6312fd7f9b5c47ddba7db370dac29834ee0198aa7430f31f31c",
+        "sourceOriginalVersion": "v1",
+        "sourceAssetSha256": "4124b88b8398a6312fd7f9b5c47ddba7db370dac29834ee0198aa7430f31f31c",
+        "sourcePath": "standards/scuti.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.501953125,
+          "y": 0.9930555555555556
+        },
+        "safeArea": {
+          "bodyBounds": [
+            15,
+            9,
+            756,
+            1144
+          ],
+          "marginPx": [
+            15,
+            9,
+            12,
+            8
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatarAsset": {
+        "assetId": "stellaart:asset.scuti-avatar-20261023-web",
+        "characterId": "stellaart:character.scuti",
+        "path": "avatars/scuti.webp",
+        "preview": "avatars/scuti.webp",
+        "sha256": "0d28479b22a05e9ce77c3a886ddce3123f622e522501d0507a98c3a07935a05b",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "4124b88b8398a6312fd7f9b5c47ddba7db370dac29834ee0198aa7430f31f31c",
+        "sourceOriginalVersion": "v1",
+        "sourceAssetSha256": "4124b88b8398a6312fd7f9b5c47ddba7db370dac29834ee0198aa7430f31f31c",
+        "sourcePath": "standards/scuti.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              400,
+              0,
+              300,
+              300
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            10,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            10,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "battleAsset": {
+        "assetId": "stellaart:asset.scuti-battle-20261023-v1",
+        "characterId": "stellaart:character.scuti",
+        "path": "battle/scuti-v1-candidate.png",
+        "preview": "web/scuti-battle.webp",
+        "version": "1.0.0-candidate",
+        "sha256": "5965309155b86e13800395ec608b4b6d8f7cc4411d41388f9ed335c2f1154a31",
+        "sourceOriginalSha256": "4124b88b8398a6312fd7f9b5c47ddba7db370dac29834ee0198aa7430f31f31c",
+        "sourceOriginalVersion": "v1",
+        "width": 1247,
+        "height": 1261,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.5056134723336007,
+          "y": 0.9888977002379065,
+          "note": "視覺輪廓底部，Sargas含裝備箱，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            48,
+            35,
+            1213,
+            1247
+          ],
+          "marginPx": [
+            48,
+            35,
+            34,
+            14
+          ],
+          "note": "主檔保留；網頁衍生版等比縮放加透明安全區"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/scuti.png",
+          "prompt": "prompts/scuti-battle-v1.txt",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "prologue6-20261023",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": {
+          "assetId": "stellaart:asset.scuti-battle-20261023-v1-web",
+          "characterId": "stellaart:character.scuti",
+          "path": "web/scuti-battle.webp",
+          "preview": "web/scuti-battle.webp",
+          "sha256": "a772038c6173739900a9157334b5cfff9c9efe990867d84e58508ebb9b582a52",
+          "width": 1024,
+          "height": 1024,
+          "colorSpace": "sRGB",
+          "alpha": "straight",
+          "use": "static-SD-battle-web",
+          "sourceOriginalSha256": "4124b88b8398a6312fd7f9b5c47ddba7db370dac29834ee0198aa7430f31f31c",
+          "sourceOriginalVersion": "v1",
+          "sourceAssetSha256": "5965309155b86e13800395ec608b4b6d8f7cc4411d41388f9ed335c2f1154a31",
+          "sourcePath": "battle/scuti-v1-candidate.png",
+          "source": {
+            "tool": "Chromium Canvas WebP 0.92",
+            "operations": "uniform scale, transparent framing, encode",
+            "frame": {
+              "x": 86.77398889770024,
+              "y": 82,
+              "scale": 0.6819984139571769
+            }
+          },
+          "pivot": {
+            "x": 0.5048828125,
+            "y": 0.91015625
+          },
+          "safeArea": {
+            "bodyBounds": [
+              120,
+              106,
+              914,
+              932
+            ],
+            "marginPx": [
+              120,
+              106,
+              110,
+              92
+            ]
+          },
+          "alphaRange": [
+            0,
+            255
+          ],
+          "reviewStatus": "awaiting-user-review",
+          "animation": null
+        },
+        "proportionTarget": "M1約2.4頭身，大頭短身；實際逐圖待審"
+      }
+    },
+    {
+      "id": "stellaart:character.antares",
+      "assetId": "stellaart:asset.antares-standard-20261023",
+      "nameZhHant": "心宿二",
+      "chineseNamePending": false,
+      "originalGameKey": "Antares",
+      "originalCidRow": 99,
+      "baseStars": 4,
+      "baseStarsSource": "research/stella-maiden/generated/stella_research.sqlite: characters_with_skill; original base rarity only",
+      "prologueRole": "序章部隊指揮",
+      "roleSource": "user request 2026-10-23, not an original-game skill claim",
+      "bodyType": "熟女",
+      "gameCharacterId": null,
+      "originalCandidate": false,
+      "path": "standards/antares.png",
+      "promptPath": "prompts/antares-standard-source.txt",
+      "version": "v1",
+      "sha256": "0fb63d28eda1b021d25774db38c0fd9c374e3e5cbaad3f0da0224a473f928f3c",
+      "width": 1024,
+      "height": 1536,
+      "type": "character-standard",
+      "mimeType": "image/png",
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "blendMode": "normal",
+      "opaqueBounds": [
+        36,
+        7,
+        1004,
+        1525
+      ],
+      "pivotNormalized": [
+        0.5078125,
+        0.9928385416666666
+      ],
+      "pivotNote": "Visual bottom of figure/props, not collision data; Sargas includes support equipment case.",
+      "atlas": null,
+      "animation": null,
+      "bundle": "prologue6-20261023",
+      "preview": "web/antares.webp",
+      "reviewStatus": "awaiting-user-review",
+      "poseReference": {
+        "sourcePath": null,
+        "evidence": "未取得可核對原作姿勢圖；以使用者第二張核心形象重設動態持槍姿勢，非原作姿態證據。",
+        "coverage": "original-pose-not-found"
+      },
+      "appearanceBrief": "Clearly adult mature female commander age32, short warm CHESTNUT AUBURN side-swept bob, violet-lilac eyes, fair skin, soft mature feminine facial proportions and authoritative calm half-smile. Two compact swept-back SILVER TEMPLE FINS with ruby sensor leave face and short bob clear, not a closed helmet. Redesign as pearl SILVER, GUNMETAL and WINE-RED mechanized spear commander. One sculpted graphite shoulder guard, articulated silver arm bracers, sculpted silver chest armor with opaque gunmetal panels completely covering the bust, high silver collar, OPEN ABDOMEN and bare side-waist, segmented silver/gold hip armor over opaque wine-red fitted combat shorts that fully cover hips and seat. Maintain the reference's metal armor and exposed-midriff design direction, not a covered uniform vest. Short asymmetric side-tabard over tailored graphite shorts, bare upper thighs, silver armored shin boots. No long cape, no giant matched shoulder pads. Long slender crimson-core MECHANICAL LANCE held DIAGONALLY across body using BOTH HANDS, head above left shoulder, butt beside opposite boot, entire lance in frame. Active grounded three-quarter stance, torso twisting toward viewer, one foot forward and other heel raised; head turned as if assessing flank. Feminine slender arms, no bulky muscles or masculine jaw. No shield, no pointing or salute. Appearance based on user's short auburn-haired silver-armored woman, costume redesigned with full bust/torso coverage.",
+      "source": {
+        "tool": "image_gen",
+        "modelVersion": "not-exposed",
+        "generatedFile": "exec-4fa4ff1d-fd7d-442a-9c4f-828d36b640cf.png",
+        "actualReferencePaths": [
+          "/workspace/20261020/art/characters/standard/maiden-01/v1.png"
+        ],
+        "userArmorAttachmentDirectInput": false,
+        "note": "Scuti/Antares armor attachments described in text after direct input rejection; exact prompt archived."
+      },
+      "supportingProp": null,
+      "assetVersion": "v1",
+      "sourceOriginalVersion": "v1",
+      "sourceOriginalSha256": "0fb63d28eda1b021d25774db38c0fd9c374e3e5cbaad3f0da0224a473f928f3c",
+      "sourceReportedReviewStatus": "awaiting-user-review",
+      "visualInspection": "柔和成熟臉紫眼、栗棕側分短鮑伯、兩側銀紅頭飾；銀甲黑內襯與酒紅腰裙片、黑紅短褲、銀靴；右肩黑甲、雙手斜持紅核雙頭機械長槍，扭身前踏。",
+      "proposedContentId": "future:antares",
+      "runtimeStatus": "not-integrated",
+      "changeKind": "new-character",
+      "pivot": {
+        "x": 0.5078125,
+        "y": 0.9928385416666666
+      },
+      "safeArea": {
+        "bodyBounds": [
+          36,
+          7,
+          1004,
+          1525
+        ],
+        "note": "原圖不修整；網頁衍生版另作尺寸輸出"
+      },
+      "webAsset": {
+        "assetId": "stellaart:asset.antares-portrait-20261023-web",
+        "characterId": "stellaart:character.antares",
+        "path": "web/antares.webp",
+        "preview": "web/antares.webp",
+        "sha256": "fae8b82371cb9ff9078b80e55ac96e06abbdf2b407066069616832adffbb2022",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "0fb63d28eda1b021d25774db38c0fd9c374e3e5cbaad3f0da0224a473f928f3c",
+        "sourceOriginalVersion": "v1",
+        "sourceAssetSha256": "0fb63d28eda1b021d25774db38c0fd9c374e3e5cbaad3f0da0224a473f928f3c",
+        "sourcePath": "standards/antares.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.5078125,
+          "y": 0.9930555555555556
+        },
+        "safeArea": {
+          "bodyBounds": [
+            27,
+            6,
+            753,
+            1144
+          ],
+          "marginPx": [
+            27,
+            6,
+            15,
+            8
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatarAsset": {
+        "assetId": "stellaart:asset.antares-avatar-20261023-web",
+        "characterId": "stellaart:character.antares",
+        "path": "avatars/antares.webp",
+        "preview": "avatars/antares.webp",
+        "sha256": "73840682d0de7360b43cc4b0247d33a4735e300edb43c782a6cb4163e5dc4d90",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "0fb63d28eda1b021d25774db38c0fd9c374e3e5cbaad3f0da0224a473f928f3c",
+        "sourceOriginalVersion": "v1",
+        "sourceAssetSha256": "0fb63d28eda1b021d25774db38c0fd9c374e3e5cbaad3f0da0224a473f928f3c",
+        "sourcePath": "standards/antares.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              310,
+              0,
+              350,
+              350
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            35,
+            6,
+            256,
+            256
+          ],
+          "marginPx": [
+            35,
+            6,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "battleAsset": {
+        "assetId": "stellaart:asset.antares-battle-20261023-v1",
+        "characterId": "stellaart:character.antares",
+        "path": "battle/antares-v1-candidate.png",
+        "preview": "web/antares-battle.webp",
+        "version": "1.0.0-candidate",
+        "sha256": "a60fb33d1974e8e19da562ff64968959c7979227a0bf41b11a2fd633c54f57ef",
+        "sourceOriginalSha256": "0fb63d28eda1b021d25774db38c0fd9c374e3e5cbaad3f0da0224a473f928f3c",
+        "sourceOriginalVersion": "v1",
+        "width": 1192,
+        "height": 1320,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.5096476510067114,
+          "y": 0.9954545454545455,
+          "note": "視覺輪廓底部，Sargas含裝備箱，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            43,
+            3,
+            1172,
+            1314
+          ],
+          "marginPx": [
+            43,
+            3,
+            20,
+            6
+          ],
+          "note": "主檔保留；網頁衍生版等比縮放加透明安全區"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/antares.png",
+          "prompt": "prompts/antares-battle-v1.txt",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "prologue6-20261023",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": {
+          "assetId": "stellaart:asset.antares-battle-20261023-v1-web",
+          "characterId": "stellaart:character.antares",
+          "path": "web/antares-battle.webp",
+          "preview": "web/antares-battle.webp",
+          "sha256": "c67187161509b18dec6a112e7b8678e25a06ffd0c810d966e65ae5bdcd95c930",
+          "width": 1024,
+          "height": 1024,
+          "colorSpace": "sRGB",
+          "alpha": "straight",
+          "use": "static-SD-battle-web",
+          "sourceOriginalSha256": "0fb63d28eda1b021d25774db38c0fd9c374e3e5cbaad3f0da0224a473f928f3c",
+          "sourceOriginalVersion": "v1",
+          "sourceAssetSha256": "a60fb33d1974e8e19da562ff64968959c7979227a0bf41b11a2fd633c54f57ef",
+          "sourcePath": "battle/antares-v1-candidate.png",
+          "source": {
+            "tool": "Chromium Canvas WebP 0.92",
+            "operations": "uniform scale, transparent framing, encode",
+            "frame": {
+              "x": 123.69696969696969,
+              "y": 82,
+              "scale": 0.6515151515151515
+            }
+          },
+          "pivot": {
+            "x": 0.50732421875,
+            "y": 0.916015625
+          },
+          "safeArea": {
+            "bodyBounds": [
+              152,
+              84,
+              887,
+              938
+            ],
+            "marginPx": [
+              152,
+              84,
+              137,
+              86
+            ]
+          },
+          "alphaRange": [
+            0,
+            255
+          ],
+          "reviewStatus": "awaiting-user-review",
+          "animation": null
+        },
+        "proportionTarget": "M1約2.4頭身，大頭短身；實際逐圖待審"
+      }
+    },
+    {
+      "id": "stellaart:character.deneb",
+      "assetId": "stellaart:asset.deneb-standard-20261023",
+      "nameZhHant": "天津四",
+      "chineseNamePending": false,
+      "originalGameKey": "Deneb",
+      "originalCidRow": 73,
+      "baseStars": 4,
+      "baseStarsSource": "research/stella-maiden/generated/stella_research.sqlite: characters_with_skill; original base rarity only",
+      "prologueRole": "序章參戰，後續天鵝座主角",
+      "roleSource": "user request 2026-10-23, not an original-game skill claim",
+      "bodyType": "嬌小",
+      "gameCharacterId": null,
+      "originalCandidate": false,
+      "path": "standards/deneb.png",
+      "promptPath": "prompts/deneb-standard-source.txt",
+      "version": "v1",
+      "sha256": "85ee010f2ba0f32ad4320c93260136f4f25e546734b93b6041422146bd66c8c1",
+      "width": 1024,
+      "height": 1536,
+      "type": "character-standard",
+      "mimeType": "image/png",
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "blendMode": "normal",
+      "opaqueBounds": [
+        179,
+        14,
+        914,
+        1524
+      ],
+      "pivotNormalized": [
+        0.53369140625,
+        0.9921875
+      ],
+      "pivotNote": "Visual bottom of figure/props, not collision data; Sargas includes support equipment case.",
+      "atlas": null,
+      "animation": null,
+      "bundle": "prologue6-20261023",
+      "preview": "web/deneb.webp",
+      "reviewStatus": "awaiting-user-review",
+      "poseReference": {
+        "sourcePath": "references/Deneb-original.jpg",
+        "evidence": "新聞遊戲截圖中央Deneb可見頭略低、正面沉靜視線、一手插白外套口袋及一側藍色翼；下肢未見，為補全。",
+        "coverage": "partial-visible-pose"
+      },
+      "appearanceBrief": "Use the ORIGINAL GAME screenshot reference ONLY for Deneb in the CENTER panel (the small brown-haired blue-eyed girl with white coat and blue wing); IGNORE all other characters and all UI. Small-stature female, natural slender SIX-head proportions, not chibi. Jaw-length ash BROWN bob with curved side locks, turquoise/cyan narrow highlight band through fringe, intense BLUE eyes, small ahoge, pale skin, quiet serious thoughtful soft round anime face. Keep original slightly lowered chin, straight-on calm gaze, one hand tucked into long WHITE COAT pocket and opposite arm relaxed by side. New modest fully covering science-fantasy outfit: oversized pearl-white high-collar research/command coat reaching mid-calf, sky-blue lining, restrained cyan zipper tracks, navy star clasp at neck, fully opaque pale-blue tunic beneath, opaque navy straight trousers, white/cyan flat boots. No skin exposure except face/hands, no adult curves. A pair of asymmetric folded BLUE CRYSTAL SWAN WING PANELS mounted behind shoulders, shaped like elegant layered mechanical feathers, restrained and integrated, not angel costume or magic glow. One hand in pocket, opposite hand holds short closed cyan navigation stylus lowered near thigh. Quiet offset stance, one foot ahead and head slightly down, clear personality. Whole coat, wings and shoes visible, no oversized floating weapon.",
+      "source": {
+        "tool": "image_gen",
+        "modelVersion": "not-exposed",
+        "generatedFile": "exec-e165e836-fe6d-4ae9-9eaa-e238ecdb163c.png",
+        "actualReferencePaths": [
+          "/workspace/scratch/stellar6-prologue-originals/deneb-news.jpg",
+          "/workspace/20261020/art/characters/standard/maiden-01/v1.png"
+        ],
+        "userArmorAttachmentDirectInput": false,
+        "note": "Scuti/Antares armor attachments described in text after direct input rejection; exact prompt archived."
+      },
+      "supportingProp": null,
+      "assetVersion": "v1",
+      "sourceOriginalVersion": "v1",
+      "sourceOriginalSha256": "85ee010f2ba0f32ad4320c93260136f4f25e546734b93b6041422146bd66c8c1",
+      "sourceReportedReviewStatus": "awaiting-user-review",
+      "visualInspection": "圓臉藍眼、灰棕及下顎短髮與青色分段瀏海標記、呆毛、低頭沉靜視線；白高領長外套藍內襯、深藍長褲、白藍平底靴；左手插袋右手垂握藍導航筆、肩後不對稱藍晶機械羽翼，左翼高大。",
+      "proposedContentId": "future:deneb",
+      "runtimeStatus": "not-integrated",
+      "changeKind": "new-character",
+      "pivot": {
+        "x": 0.53369140625,
+        "y": 0.9921875
+      },
+      "safeArea": {
+        "bodyBounds": [
+          179,
+          14,
+          914,
+          1524
+        ],
+        "note": "原圖不修整；網頁衍生版另作尺寸輸出"
+      },
+      "webAsset": {
+        "assetId": "stellaart:asset.deneb-portrait-20261023-web",
+        "characterId": "stellaart:character.deneb",
+        "path": "web/deneb.webp",
+        "preview": "web/deneb.webp",
+        "sha256": "4021386779f3d5ca9c852232129ad8d1c18a7e8c09771ea38c51f7f65dd1bc74",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "85ee010f2ba0f32ad4320c93260136f4f25e546734b93b6041422146bd66c8c1",
+        "sourceOriginalVersion": "v1",
+        "sourceAssetSha256": "85ee010f2ba0f32ad4320c93260136f4f25e546734b93b6041422146bd66c8c1",
+        "sourcePath": "standards/deneb.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.533203125,
+          "y": 0.9921875
+        },
+        "safeArea": {
+          "bodyBounds": [
+            134,
+            11,
+            685,
+            1143
+          ],
+          "marginPx": [
+            134,
+            11,
+            83,
+            9
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatarAsset": {
+        "assetId": "stellaart:asset.deneb-avatar-20261023-web",
+        "characterId": "stellaart:character.deneb",
+        "path": "avatars/deneb.webp",
+        "preview": "avatars/deneb.webp",
+        "sha256": "e3704d81cce7331d934c5741c51f51be045729bed7321452e83138c2a0659435",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "85ee010f2ba0f32ad4320c93260136f4f25e546734b93b6041422146bd66c8c1",
+        "sourceOriginalVersion": "v1",
+        "sourceAssetSha256": "85ee010f2ba0f32ad4320c93260136f4f25e546734b93b6041422146bd66c8c1",
+        "sourcePath": "standards/deneb.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              340,
+              30,
+              340,
+              340
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            0,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "battleAsset": {
+        "assetId": "stellaart:asset.deneb-battle-20261023-v1",
+        "characterId": "stellaart:character.deneb",
+        "path": "battle/deneb-v1-candidate.png",
+        "preview": "web/deneb-battle.webp",
+        "version": "1.0.0-candidate",
+        "sha256": "3c714543daa0fc64d120c62e16d35efa5e9617d638634906a3cd61836b7abe98",
+        "sourceOriginalSha256": "85ee010f2ba0f32ad4320c93260136f4f25e546734b93b6041422146bd66c8c1",
+        "sourceOriginalVersion": "v1",
+        "width": 1222,
+        "height": 1287,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.5413256955810147,
+          "y": 0.9875679875679876,
+          "note": "視覺輪廓底部，Sargas含裝備箱，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            191,
+            33,
+            1132,
+            1271
+          ],
+          "marginPx": [
+            191,
+            33,
+            90,
+            16
+          ],
+          "note": "主檔保留；網頁衍生版等比縮放加透明安全區"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/deneb.png",
+          "prompt": "prompts/deneb-battle-v1.txt",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "prologue6-20261023",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": {
+          "assetId": "stellaart:asset.deneb-battle-20261023-v1-web",
+          "characterId": "stellaart:character.deneb",
+          "path": "web/deneb-battle.webp",
+          "preview": "web/deneb-battle.webp",
+          "sha256": "3af79ef5e2f8fd697cbe18a2a8260dbe9e76a082bcf235aeba067e2c366c44cf",
+          "width": 1024,
+          "height": 1024,
+          "colorSpace": "sRGB",
+          "alpha": "straight",
+          "use": "static-SD-battle-web",
+          "sourceOriginalSha256": "85ee010f2ba0f32ad4320c93260136f4f25e546734b93b6041422146bd66c8c1",
+          "sourceOriginalVersion": "v1",
+          "sourceAssetSha256": "3c714543daa0fc64d120c62e16d35efa5e9617d638634906a3cd61836b7abe98",
+          "sourcePath": "battle/deneb-v1-candidate.png",
+          "source": {
+            "tool": "Chromium Canvas WebP 0.92",
+            "operations": "uniform scale, transparent framing, encode",
+            "frame": {
+              "x": 103.71717171717177,
+              "y": 82.00000000000006,
+              "scale": 0.6682206682206682
+            }
+          },
+          "pivot": {
+            "x": 0.53271484375,
+            "y": 0.9091796875
+          },
+          "safeArea": {
+            "bodyBounds": [
+              231,
+              104,
+              860,
+              931
+            ],
+            "marginPx": [
+              231,
+              104,
+              164,
+              93
+            ]
+          },
+          "alphaRange": [
+            0,
+            255
+          ],
+          "reviewStatus": "awaiting-user-review",
+          "animation": null
+        },
+        "proportionTarget": "M1約2.4頭身，大頭短身；實際逐圖待審"
+      }
+    },
+    {
+      "id": "stellaart:character.doradus",
+      "assetId": "stellaart:asset.doradus-standard-20261023",
+      "nameZhHant": "Doradus",
+      "chineseNamePending": true,
+      "originalGameKey": "Doradus",
+      "originalCidRow": 48,
+      "baseStars": 3,
+      "baseStarsSource": "research/stella-maiden/generated/stella_research.sqlite: characters_with_skill; original base rarity only",
+      "prologueRole": "序章支援部隊",
+      "roleSource": "user request 2026-10-23, not an original-game skill claim",
+      "bodyType": "熟女",
+      "gameCharacterId": null,
+      "originalCandidate": false,
+      "path": "standards/doradus.png",
+      "promptPath": "prompts/doradus-standard-source.txt",
+      "version": "v1",
+      "sha256": "91fab41a078452b7dc9adbe38e392903aa2029ed14c5b0f5a996cd5724a49f7b",
+      "width": 1024,
+      "height": 1536,
+      "type": "character-standard",
+      "mimeType": "image/png",
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "blendMode": "normal",
+      "opaqueBounds": [
+        114,
+        6,
+        942,
+        1525
+      ],
+      "pivotNormalized": [
+        0.515625,
+        0.9928385416666666
+      ],
+      "pivotNote": "Visual bottom of figure/props, not collision data; Sargas includes support equipment case.",
+      "atlas": null,
+      "animation": null,
+      "bundle": "prologue6-20261023",
+      "preview": "web/doradus.webp",
+      "reviewStatus": "awaiting-user-review",
+      "poseReference": {
+        "sourcePath": "references/Doradus-original.jpg",
+        "evidence": "原作局部圖可見長深藍髮、紫眼、偏頭與斜轉肩線；手腳未見，持掃描器與跨步為補全。",
+        "coverage": "partial-visible-pose"
+      },
+      "appearanceBrief": "Use ORIGINAL GAME portrait for core identity: adult woman age27, long DEEP NAVY BLUE hair flowing loose behind shoulders, soft VIOLET eyes, pale skin, small white double-fin ornament on dark naval side-cap, gentle concerned but determined feminine face, tilted head and slightly angled shoulders as source. Keep hair color and individual face unlike reference style copper-haired knight. Redesign supportive ship navigator in navy/ivory and subtle coral-red sci-fi uniform: small navy off-center naval CAP, off-shoulder navy short jacket with ivory piping and one long sleeve, opaque ivory fitted halter top fully covering chest, small midriff gap, high-waist navy field SHORTS, one asymmetrical long white split side panel, bare upper thighs, navy/ivory ankle boots, one compact thigh utility case. New outfit avoids source's extremely low cut chest focus. One hand holds an open rectangular FOLDING SCANNER TABLET at waist angled up; opposite index finger touches a single physical control on scanner. Pose: gentle side-on brisk walking step toward viewer, torso subtly counter-turned, head tilted as original, hair flows opposite step. Pair of thin white DORADO fin-shaped sensor blades attached behind waist, short and restrained, not big wings. No pointing, lance, shield, salute or staff.",
+      "source": {
+        "tool": "image_gen",
+        "modelVersion": "not-exposed",
+        "generatedFile": "exec-57122d2e-a244-46b6-a0d1-4c95d84976aa.png",
+        "actualReferencePaths": [
+          "/workspace/scratch/stellar6-prologue-originals/Doradus.jpg",
+          "/workspace/20261020/art/characters/standard/maiden-01/v1.png"
+        ],
+        "userArmorAttachmentDirectInput": false,
+        "note": "Scuti/Antares armor attachments described in text after direct input rejection; exact prompt archived."
+      },
+      "supportingProp": null,
+      "assetVersion": "v1",
+      "sourceOriginalVersion": "v1",
+      "sourceOriginalSha256": "91fab41a078452b7dc9adbe38e392903aa2029ed14c5b0f5a996cd5724a49f7b",
+      "sourceReportedReviewStatus": "awaiting-user-review",
+      "visualInspection": "柔和圓尖臉紫眼、深海軍藍長披髮與乳白細髮束、右側白雙鰭側帽；海軍藍白露肩短外套、白高領上衣、藍短褲與不對稱白長側片、白藍短靴；左手托折疊掃描器、右指操作，輕跨步偏頭，腰後細白鰭。",
+      "proposedContentId": "future:doradus",
+      "runtimeStatus": "not-integrated",
+      "changeKind": "new-character",
+      "pivot": {
+        "x": 0.515625,
+        "y": 0.9928385416666666
+      },
+      "safeArea": {
+        "bodyBounds": [
+          114,
+          6,
+          942,
+          1525
+        ],
+        "note": "原圖不修整；網頁衍生版另作尺寸輸出"
+      },
+      "webAsset": {
+        "assetId": "stellaart:asset.doradus-portrait-20261023-web",
+        "characterId": "stellaart:character.doradus",
+        "path": "web/doradus.webp",
+        "preview": "web/doradus.webp",
+        "sha256": "d556757e27a4fdd4959b743e496795b1b611ed3027620d5c3bbe1208435185b0",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "91fab41a078452b7dc9adbe38e392903aa2029ed14c5b0f5a996cd5724a49f7b",
+        "sourceOriginalVersion": "v1",
+        "sourceAssetSha256": "91fab41a078452b7dc9adbe38e392903aa2029ed14c5b0f5a996cd5724a49f7b",
+        "sourcePath": "standards/doradus.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.5162760416666666,
+          "y": 0.9930555555555556
+        },
+        "safeArea": {
+          "bodyBounds": [
+            87,
+            6,
+            706,
+            1144
+          ],
+          "marginPx": [
+            87,
+            6,
+            62,
+            8
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatarAsset": {
+        "assetId": "stellaart:asset.doradus-avatar-20261023-web",
+        "characterId": "stellaart:character.doradus",
+        "path": "avatars/doradus.webp",
+        "preview": "avatars/doradus.webp",
+        "sha256": "da797d006f8712be26c2a1cfc98a39da7fe75b40f0325ca9a36a39d9391c0726",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "91fab41a078452b7dc9adbe38e392903aa2029ed14c5b0f5a996cd5724a49f7b",
+        "sourceOriginalVersion": "v1",
+        "sourceAssetSha256": "91fab41a078452b7dc9adbe38e392903aa2029ed14c5b0f5a996cd5724a49f7b",
+        "sourcePath": "standards/doradus.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              330,
+              0,
+              340,
+              340
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            6,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            6,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "battleAsset": {
+        "assetId": "stellaart:asset.doradus-battle-20261023-v1",
+        "characterId": "stellaart:character.doradus",
+        "path": "battle/doradus-v1-candidate.png",
+        "preview": "web/doradus-battle.webp",
+        "version": "1.0.0-candidate",
+        "sha256": "66651493d1adac9ef5adb72e20f3863e187479846db65a13f0d432e707250030",
+        "sourceOriginalSha256": "91fab41a078452b7dc9adbe38e392903aa2029ed14c5b0f5a996cd5724a49f7b",
+        "sourceOriginalVersion": "v1",
+        "width": 1226,
+        "height": 1283,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.48694942903752036,
+          "y": 0.9875292283710054,
+          "note": "視覺輪廓底部，Sargas含裝備箱，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            52,
+            9,
+            1142,
+            1267
+          ],
+          "marginPx": [
+            52,
+            9,
+            84,
+            16
+          ],
+          "note": "主檔保留；網頁衍生版等比縮放加透明安全區"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/doradus.png",
+          "prompt": "prompts/doradus-battle-v1.txt",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "prologue6-20261023",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": {
+          "assetId": "stellaart:asset.doradus-battle-20261023-v1-web",
+          "characterId": "stellaart:character.doradus",
+          "path": "web/doradus-battle.webp",
+          "preview": "web/doradus-battle.webp",
+          "sha256": "261f538554fdd11d80968690f25edee4f72238783a578acc08120611627b3b66",
+          "width": 1024,
+          "height": 1024,
+          "colorSpace": "sRGB",
+          "alpha": "straight",
+          "use": "static-SD-battle-web",
+          "sourceOriginalSha256": "91fab41a078452b7dc9adbe38e392903aa2029ed14c5b0f5a996cd5724a49f7b",
+          "sourceOriginalVersion": "v1",
+          "sourceAssetSha256": "66651493d1adac9ef5adb72e20f3863e187479846db65a13f0d432e707250030",
+          "sourcePath": "battle/doradus-v1-candidate.png",
+          "source": {
+            "tool": "Chromium Canvas WebP 0.92",
+            "operations": "uniform scale, transparent framing, encode",
+            "frame": {
+              "x": 101.10366328916604,
+              "y": 82,
+              "scale": 0.6703039750584567
+            }
+          },
+          "pivot": {
+            "x": 0.48974609375,
+            "y": 0.9091796875
+          },
+          "safeArea": {
+            "bodyBounds": [
+              136,
+              88,
+              867,
+              931
+            ],
+            "marginPx": [
+              136,
+              88,
+              157,
+              93
+            ]
+          },
+          "alphaRange": [
+            0,
+            255
+          ],
+          "reviewStatus": "awaiting-user-review",
+          "animation": null
+        },
+        "proportionTarget": "M1約2.4頭身，大頭短身；實際逐圖待審"
+      }
+    },
+    {
+      "id": "stellaart:character.mucephei",
+      "assetId": "stellaart:asset.mucephei-standard-20261023",
+      "nameZhHant": "Mucephei",
+      "chineseNamePending": true,
+      "originalGameKey": "Mucephei",
+      "originalCidRow": 62,
+      "baseStars": 3,
+      "baseStarsSource": "research/stella-maiden/generated/stella_research.sqlite: characters_with_skill; original base rarity only",
+      "prologueRole": "序章能量屏障部隊",
+      "roleSource": "user request 2026-10-23, not an original-game skill claim",
+      "bodyType": "少女",
+      "gameCharacterId": null,
+      "originalCandidate": true,
+      "path": "standards/mucephei.png",
+      "promptPath": "prompts/mucephei-standard-source.txt",
+      "version": "v1",
+      "sha256": "9e1bdba450d15a82a197d7985cac0906f2c4aab6b6fa47f7a6ff494bee571ba3",
+      "width": 1024,
+      "height": 1536,
+      "type": "character-standard",
+      "mimeType": "image/png",
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "blendMode": "normal",
+      "opaqueBounds": [
+        21,
+        2,
+        985,
+        1512
+      ],
+      "pivotNormalized": [
+        0.4912109375,
+        0.984375
+      ],
+      "pivotNote": "Visual bottom of figure/props, not collision data; Sargas includes support equipment case.",
+      "atlas": null,
+      "animation": null,
+      "bundle": "prologue6-20261023",
+      "preview": "web/mucephei.webp",
+      "reviewStatus": "awaiting-user-review",
+      "poseReference": {
+        "sourcePath": null,
+        "evidence": "使用者授權原創候選；尚無可核對原作形象／姿勢，以下為序章職能的原創設計。",
+        "coverage": "original-candidate-not-verified"
+      },
+      "appearanceBrief": "ORIGINAL CANDIDATE authorized by user, no verified original-game appearance. Adult female age24, long SEAFOAM GREEN hair with a dark petrol inner underlayer, straight hime-cut cheek locks plus a small LOW BRAIDED BUN on one side, luminous amber eyes, pale skin, gentle focused feminine face. Original distinctive barrier specialist wearing black/TEAL asymmetric fitted tech vest with opaque chest coverage and short standing collar, detached long ivory glove on left arm, short exposed shoulders, a small side-waist gap, high-waist teal culotte SHORTS with angular translucent side overlay panels, bare knees and upper thighs, graphite/teal mid-calf split-shell boots. No skirts copied from others, no cape. One hand lifted PALM-OUT at shoulder height operating a small segmented HEXAGONAL SHIELD EMITTER floating just before palm, opposite hand at waist turning a physical compact cuboid control dial. Three slender ivory/teal articulated barrier pylons form a compact arch immediately behind upper back, no giant visual effect dome, no magic staff. Pose: braced SIDE LUNGE with front knee bent and rear leg extended at modest angle, torso upright, head focused toward raised palm. Natural adult proportions and feminine delicate face, not masculine, not chibi. Entire pylon arch and both boots inside frame. Role is visual prologue barrier support, do not add text or gameplay stats.",
+      "source": {
+        "tool": "image_gen",
+        "modelVersion": "not-exposed",
+        "generatedFile": "exec-eb3da80e-a83a-431c-adc5-4156fcccb6aa.png",
+        "actualReferencePaths": [
+          "/workspace/20261020/art/characters/standard/maiden-01/v1.png"
+        ],
+        "userArmorAttachmentDirectInput": false,
+        "note": "Scuti/Antares armor attachments described in text after direct input rejection; exact prompt archived."
+      },
+      "supportingProp": null,
+      "assetVersion": "v1",
+      "sourceOriginalVersion": "v1",
+      "sourceOriginalSha256": "9e1bdba450d15a82a197d7985cac0906f2c4aab6b6fa47f7a6ff494bee571ba3",
+      "sourceReportedReviewStatus": "awaiting-user-review",
+      "visualInspection": "柔和尖臉琥珀眼、海泡綠長髮深青內層、姬式臉側髮與左側低編髻；黑青不對稱上衣、青色褲裙短褲、透色側片、黑青靴、白手套；實際圖右掌前伸六邊屏障、左手腰部轉控制器，背後三個白青環帶柱，側弓步。",
+      "proposedContentId": "future:mucephei",
+      "runtimeStatus": "not-integrated",
+      "changeKind": "new-character",
+      "pivot": {
+        "x": 0.4912109375,
+        "y": 0.984375
+      },
+      "safeArea": {
+        "bodyBounds": [
+          21,
+          2,
+          985,
+          1512
+        ],
+        "note": "原圖不修整；網頁衍生版另作尺寸輸出"
+      },
+      "webAsset": {
+        "assetId": "stellaart:asset.mucephei-portrait-20261023-web",
+        "characterId": "stellaart:character.mucephei",
+        "path": "web/mucephei.webp",
+        "preview": "web/mucephei.webp",
+        "sha256": "61d21137f5684f6b47b539a2fc59fe9691bcb0837b83040646d76bbb0092a9f7",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "9e1bdba450d15a82a197d7985cac0906f2c4aab6b6fa47f7a6ff494bee571ba3",
+        "sourceOriginalVersion": "v1",
+        "sourceAssetSha256": "9e1bdba450d15a82a197d7985cac0906f2c4aab6b6fa47f7a6ff494bee571ba3",
+        "sourcePath": "standards/mucephei.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.4915364583333333,
+          "y": 0.984375
+        },
+        "safeArea": {
+          "bodyBounds": [
+            16,
+            2,
+            739,
+            1134
+          ],
+          "marginPx": [
+            16,
+            2,
+            29,
+            18
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatarAsset": {
+        "assetId": "stellaart:asset.mucephei-avatar-20261023-web",
+        "characterId": "stellaart:character.mucephei",
+        "path": "avatars/mucephei.webp",
+        "preview": "avatars/mucephei.webp",
+        "sha256": "6ea8330804d3913dc27a15d1635506f5d4c4fe9be5665a65e822e4c062384892",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "9e1bdba450d15a82a197d7985cac0906f2c4aab6b6fa47f7a6ff494bee571ba3",
+        "sourceOriginalVersion": "v1",
+        "sourceAssetSha256": "9e1bdba450d15a82a197d7985cac0906f2c4aab6b6fa47f7a6ff494bee571ba3",
+        "sourcePath": "standards/mucephei.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              365,
+              120,
+              340,
+              340
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            0,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          253
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "battleAsset": {
+        "assetId": "stellaart:asset.mucephei-battle-20261023-v1",
+        "characterId": "stellaart:character.mucephei",
+        "path": "battle/mucephei-v1-candidate.png",
+        "preview": "web/mucephei-battle.webp",
+        "version": "1.0.0-candidate",
+        "sha256": "2e0ce7f7dfbba826222ddef28dc1d0b24b76051891e4f16ae4b39ad2fddaba10",
+        "sourceOriginalSha256": "9e1bdba450d15a82a197d7985cac0906f2c4aab6b6fa47f7a6ff494bee571ba3",
+        "sourceOriginalVersion": "v1",
+        "width": 1230,
+        "height": 1278,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.5077235772357723,
+          "y": 0.9898278560250391,
+          "note": "視覺輪廓底部，Sargas含裝備箱，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            37,
+            18,
+            1212,
+            1265
+          ],
+          "marginPx": [
+            37,
+            18,
+            18,
+            13
+          ],
+          "note": "主檔保留；網頁衍生版等比縮放加透明安全區"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/mucephei.png",
+          "prompt": "prompts/mucephei-battle-v1.txt",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "prologue6-20261023",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": {
+          "assetId": "stellaart:asset.mucephei-battle-20261023-v1-web",
+          "characterId": "stellaart:character.mucephei",
+          "path": "web/mucephei-battle.webp",
+          "preview": "web/mucephei-battle.webp",
+          "sha256": "370cfc00d47b36278adea74bf5f2a174ab4888ff27a52acc481c0e7969e4b3b3",
+          "width": 1024,
+          "height": 1024,
+          "colorSpace": "sRGB",
+          "alpha": "straight",
+          "use": "static-SD-battle-web",
+          "sourceOriginalSha256": "9e1bdba450d15a82a197d7985cac0906f2c4aab6b6fa47f7a6ff494bee571ba3",
+          "sourceOriginalVersion": "v1",
+          "sourceAssetSha256": "2e0ce7f7dfbba826222ddef28dc1d0b24b76051891e4f16ae4b39ad2fddaba10",
+          "sourcePath": "battle/mucephei-v1-candidate.png",
+          "source": {
+            "tool": "Chromium Canvas WebP 0.92",
+            "operations": "uniform scale, transparent framing, encode",
+            "frame": {
+              "x": 98.150234741784,
+              "y": 81.99999999999994,
+              "scale": 0.672926447574335
+            }
+          },
+          "pivot": {
+            "x": 0.50634765625,
+            "y": 0.9111328125
+          },
+          "safeArea": {
+            "bodyBounds": [
+              123,
+              94,
+              914,
+              933
+            ],
+            "marginPx": [
+              123,
+              94,
+              110,
+              91
+            ]
+          },
+          "alphaRange": [
+            0,
+            255
+          ],
+          "reviewStatus": "awaiting-user-review",
+          "animation": null
+        },
+        "proportionTarget": "M1約2.4頭身，大頭短身；實際逐圖待審"
+      }
+    },
+    {
+      "id": "stellaart:character.sargas",
+      "assetId": "stellaart:asset.sargas-standard-20261023",
+      "nameZhHant": "Sargas",
+      "chineseNamePending": true,
+      "originalGameKey": "Sargas",
+      "originalCidRow": 101,
+      "baseStars": 3,
+      "baseStarsSource": "research/stella-maiden/generated/stella_research.sqlite: characters_with_skill; original base rarity only",
+      "prologueRole": "序章支援部隊",
+      "roleSource": "user request 2026-10-23, not an original-game skill claim",
+      "bodyType": "熟女",
+      "gameCharacterId": null,
+      "originalCandidate": true,
+      "path": "standards/sargas.png",
+      "promptPath": "prompts/sargas-standard-source.txt",
+      "version": "v1",
+      "sha256": "6da6f45bf7044376999c57222ab68919dc10fc1c5dcee77f6acf26319b81c169",
+      "width": 1024,
+      "height": 1536,
+      "type": "character-standard",
+      "mimeType": "image/png",
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "blendMode": "normal",
+      "opaqueBounds": [
+        16,
+        8,
+        1011,
+        1521
+      ],
+      "pivotNormalized": [
+        0.50146484375,
+        0.990234375
+      ],
+      "pivotNote": "Visual bottom of figure/props, not collision data; Sargas includes support equipment case.",
+      "atlas": null,
+      "animation": null,
+      "bundle": "prologue6-20261023",
+      "preview": "web/sargas.webp",
+      "reviewStatus": "awaiting-user-review",
+      "poseReference": {
+        "sourcePath": null,
+        "evidence": "使用者授權原創候選；尚無可核對原作形象／姿勢，以下為序章支援職能原創設計。",
+        "coverage": "original-candidate-not-verified"
+      },
+      "appearanceBrief": "ORIGINAL CANDIDATE authorized by user, no verified original-game appearance. Adult mature female age28, SAGE ASH-GREEN hair in one swept-up high PONYTAIL ending at shoulder blades, pale SILVER thin temple streak, golden yellow-green eyes, fair warm skin, confident relaxed smile and softly tapered adult anime face. Compact orange tactical ear receiver and one small geometric hair clasp. Original ochre ORANGE, CHARCOAL and CREAM engineering sharpshooter outfit: cropped sleeveless ochre jacket with structured ivory high collar over opaque fitted graphite top, small midriff gap, single cream utility belt across tailored black field SHORTS, bare shoulders and upper thighs, charcoal/orange knee boots, asymmetric short fingerless gloves. No skirt, cape, elaborate knight armor or green hime hair. Carry a LONG SILVER/CHARCOAL RAIL RIFLE with modest amber cooling coil. REST RIFLE OVER ONE SHOULDER, one hand gripping stock near shoulder, opposite hand lowered holding small cylindrical AMMUNITION CANISTER beside thigh. Entire rifle muzzle and stock visible, pointed away. Relaxed three-quarter leaning stance with one knee softly bent and boot resting atop a small integrated equipment case, shoulders angled and gaze toward viewer. Distinct casual support personality; rifle-on-shoulder pose unlike forward lance, shield command, tablet walk, pocket stillness or palm barrier pose. No weapons fire or effects.",
+      "source": {
+        "tool": "image_gen",
+        "modelVersion": "not-exposed",
+        "generatedFile": "exec-b5c3e8b8-22f9-4a3f-9cb9-79dc5e7d45a4.png",
+        "actualReferencePaths": [
+          "/workspace/20261020/art/characters/standard/maiden-01/v1.png"
+        ],
+        "userArmorAttachmentDirectInput": false,
+        "note": "Scuti/Antares armor attachments described in text after direct input rejection; exact prompt archived."
+      },
+      "supportingProp": "equipment case under one boot",
+      "assetVersion": "v1",
+      "sourceOriginalVersion": "v1",
+      "sourceOriginalSha256": "6da6f45bf7044376999c57222ab68919dc10fc1c5dcee77f6acf26319b81c169",
+      "sourceReportedReviewStatus": "awaiting-user-review",
+      "visualInspection": "柔和成熟尖臉黃綠眼、灰鼠尾草綠高馬尾與銀白鬢束、橙耳機；赭橙白短背心、黑上衣與短褲、白腰帶橙布片、黑橙長靴；右手扛白黑軌道步槍、左手垂握彈藥罐、左靴踩裝備箱，側身放鬆。",
+      "proposedContentId": "future:sargas",
+      "runtimeStatus": "not-integrated",
+      "changeKind": "new-character",
+      "pivot": {
+        "x": 0.50146484375,
+        "y": 0.990234375
+      },
+      "safeArea": {
+        "bodyBounds": [
+          16,
+          8,
+          1011,
+          1521
+        ],
+        "note": "原圖不修整；網頁衍生版另作尺寸輸出"
+      },
+      "webAsset": {
+        "assetId": "stellaart:asset.sargas-portrait-20261023-web",
+        "characterId": "stellaart:character.sargas",
+        "path": "web/sargas.webp",
+        "preview": "web/sargas.webp",
+        "sha256": "3bff9178f07ecd74bc4fdf5066975e9789cb87a3bd7045af342cb1b7e044b318",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "6da6f45bf7044376999c57222ab68919dc10fc1c5dcee77f6acf26319b81c169",
+        "sourceOriginalVersion": "v1",
+        "sourceAssetSha256": "6da6f45bf7044376999c57222ab68919dc10fc1c5dcee77f6acf26319b81c169",
+        "sourcePath": "standards/sargas.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.5013020833333334,
+          "y": 0.9904513888888888
+        },
+        "safeArea": {
+          "bodyBounds": [
+            12,
+            6,
+            758,
+            1141
+          ],
+          "marginPx": [
+            12,
+            6,
+            10,
+            11
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatarAsset": {
+        "assetId": "stellaart:asset.sargas-avatar-20261023-web",
+        "characterId": "stellaart:character.sargas",
+        "path": "avatars/sargas.webp",
+        "preview": "avatars/sargas.webp",
+        "sha256": "545af8d9403caa978e1cfb4391e7001ab313b02306b6dd0dc9d29d7f61d46d4d",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "6da6f45bf7044376999c57222ab68919dc10fc1c5dcee77f6acf26319b81c169",
+        "sourceOriginalVersion": "v1",
+        "sourceAssetSha256": "6da6f45bf7044376999c57222ab68919dc10fc1c5dcee77f6acf26319b81c169",
+        "sourcePath": "standards/sargas.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              340,
+              0,
+              360,
+              360
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            6,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            6,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "battleAsset": {
+        "assetId": "stellaart:asset.sargas-battle-20261023-v1",
+        "characterId": "stellaart:character.sargas",
+        "path": "battle/sargas-v1-candidate.png",
+        "preview": "web/sargas-battle.webp",
+        "version": "1.0.0-candidate",
+        "sha256": "6612a40aec5e4babfdc7b68a8d73bb85fc503004dfe0670db0a29000212e1eec",
+        "sourceOriginalSha256": "6da6f45bf7044376999c57222ab68919dc10fc1c5dcee77f6acf26319b81c169",
+        "sourceOriginalVersion": "v1",
+        "width": 1183,
+        "height": 1330,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.5139475908706678,
+          "y": 0.9939849624060151,
+          "note": "視覺輪廓底部，Sargas含裝備箱，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            48,
+            7,
+            1168,
+            1322
+          ],
+          "marginPx": [
+            48,
+            7,
+            15,
+            8
+          ],
+          "note": "主檔保留；網頁衍生版等比縮放加透明安全區"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/sargas.png",
+          "prompt": "prompts/sargas-battle-v1.txt",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "prologue6-20261023",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": {
+          "assetId": "stellaart:asset.sargas-battle-20261023-v1-web",
+          "characterId": "stellaart:character.sargas",
+          "path": "web/sargas-battle.webp",
+          "preview": "web/sargas-battle.webp",
+          "sha256": "433a2d10303430bddb4e95f4b2c9b4be9b6be005781911ccaa0f11a606f95873",
+          "width": 1024,
+          "height": 1024,
+          "colorSpace": "sRGB",
+          "alpha": "straight",
+          "use": "static-SD-battle-web",
+          "sourceOriginalSha256": "6da6f45bf7044376999c57222ab68919dc10fc1c5dcee77f6acf26319b81c169",
+          "sourceOriginalVersion": "v1",
+          "sourceAssetSha256": "6612a40aec5e4babfdc7b68a8d73bb85fc503004dfe0670db0a29000212e1eec",
+          "sourcePath": "battle/sargas-v1-candidate.png",
+          "source": {
+            "tool": "Chromium Canvas WebP 0.92",
+            "operations": "uniform scale, transparent framing, encode",
+            "frame": {
+              "x": 129.5263157894737,
+              "y": 82,
+              "scale": 0.6466165413533834
+            }
+          },
+          "pivot": {
+            "x": 0.5107421875,
+            "y": 0.9150390625
+          },
+          "safeArea": {
+            "bodyBounds": [
+              161,
+              87,
+              885,
+              937
+            ],
+            "marginPx": [
+              161,
+              87,
+              139,
+              87
+            ]
+          },
+          "alphaRange": [
+            0,
+            255
+          ],
+          "reviewStatus": "awaiting-user-review",
+          "animation": null
+        },
+        "proportionTarget": "M1約2.4頭身，大頭短身；實際逐圖待審"
+      }
+    }
+  ],
+  "legacyStandards": [
+    {
+      "path": "art/characters/standard/maiden-01/v1.png",
+      "sha256": "28d5d2e334598fa52fd18bfcc9cb25c12e76fb58ad0ff0cc367bea0e25f827cf"
+    },
+    {
+      "path": "art/characters/standard/maiden-02/v1.png",
+      "sha256": "aef0c54a2d49c289ae11ce73c88e5db2942af192d8b3cbead6e149ea229427f5"
+    },
+    {
+      "path": "art/characters/standard/maiden-03/v1.png",
+      "sha256": "53b199e4a0fcc5c4c6676fa74e1bc749e98cd427f8c760764b57b89fc5d481cd"
+    },
+    {
+      "path": "art/characters/standard/maiden-04/v1.png",
+      "sha256": "31cddf5eb8b583995ec7661901450cbf302fe00c7e89914dd84dde4d7e636d8d"
+    },
+    {
+      "path": "art/characters/standard/maiden-05/v1.png",
+      "sha256": "0c2a068e052d8f1f28b7a9bad6cff64d34634f0e8d8c334ab836b5c8b95ec111"
+    },
+    {
+      "path": "art/characters/standard/maiden-06/v1.png",
+      "sha256": "ae3d49d2440ae45a819f52a0532406039cf19bc2b9b01e979859300754a21fea"
+    },
+    {
+      "path": "art/characters/stellar10/standards/jupiter.png",
+      "sha256": "28a0ea518363f7b51665db089f99b45805d7a867dec2d36d77724db8a6b4900a"
+    },
+    {
+      "path": "art/characters/stellar10/standards/nemesis.png",
+      "sha256": "bc479c41c99f06227512e5a1bd12ebde50fddf1ad476372fab5901191ce2ac8d"
+    },
+    {
+      "path": "art/characters/stellar10/standards/io.png",
+      "sha256": "81adb3d27327499da9db3e391feab7425c6314e7b897d28c1627824d363c1833"
+    },
+    {
+      "path": "art/characters/stellar10/standards/sun.png",
+      "sha256": "163be021f75a7b1f8b1ebc7b17f6f622476a0553456ed9e2cebae1bf812bb318"
+    },
+    {
+      "path": "art/characters/stellar10/standards/ganymede.png",
+      "sha256": "2faf0de006ee302b817668a70d12755c55070743eb13a6fc855b5c0e9ccbb775"
+    },
+    {
+      "path": "art/characters/stellar10/standards/saturn.png",
+      "sha256": "c6889620e0eaf2e4920b56afff338a5510fffca1542565a3fbfd6355594fec83"
+    },
+    {
+      "path": "art/characters/stellar10/standards/ariel.png",
+      "sha256": "eb659e4a7293de2b4a37e53f630d35475b9fb5959dd422cbcd9980c322176a22"
+    },
+    {
+      "path": "art/characters/stellar10/standards/neptune.png",
+      "sha256": "f35d3c8b9894c15966258ea0dd4973fa46c79a10adc32bfabe3d92cedd96a76a"
+    },
+    {
+      "path": "art/characters/stellar10/standards/titania.png",
+      "sha256": "1ed00a42fbf8f440aabaca79ba38d9d45597adf897acc6d3eda533000105c875"
+    },
+    {
+      "path": "art/characters/stellar10/standards/pluto.png",
+      "sha256": "c2f7558cd18319fe512fd8f967d315ae7f13b6b73abb2719abb2df006126b349"
+    },
+    {
+      "path": "art/characters/stellar11/standards/izar.png",
+      "sha256": "13482e3914ef43f7193c711f8cd986937fa6d133abcc1500c32b58bdbc2c1922"
+    },
+    {
+      "path": "art/characters/stellar11/standards/wolf359.png",
+      "sha256": "fe6ca82a9076d626d2b147d9393dc744e869824442c109a2c7c8fe736ebf5141"
+    },
+    {
+      "path": "art/characters/stellar11/standards/arcturus.png",
+      "sha256": "af62aa4b006c1e8d95b89b3e95849717904b2bbcb99d3196ba1d8e9c50e155cb"
+    },
+    {
+      "path": "art/characters/stellar11/standards/jupiter.png",
+      "sha256": "a2006144e98685da301c9c3f8903bde7a11c26a87622cab4651d6672fd2e3ffe"
+    },
+    {
+      "path": "art/characters/stellar11/standards/seginus.png",
+      "sha256": "6029ad7c644e882c1b29af38b32112df9b781a4c54143ff5a4317ac4087f3c9d"
+    },
+    {
+      "path": "art/characters/stellar11/standards/valencia.png",
+      "sha256": "e3213570e5aea0cfd73d4f0b3469211efedcd35ca94dacfeab8633fdc53af93b"
+    },
+    {
+      "path": "art/characters/stellar11/standards/gliese.png",
+      "sha256": "2091255bb24105b659f2a56bbd444ef729da573b8dc16a14cb57f9ec7e3448c9"
+    },
+    {
+      "path": "art/characters/stellar11/standards/spica.png",
+      "sha256": "d3995e3023a9bf09db2c503b50165bb03c320a13898c4a77150404932b621a72"
+    },
+    {
+      "path": "art/characters/stellar11/standards/vello.png",
+      "sha256": "d7deb03c094250cae464b93a89c055a43cdcf97fd2efa75a2a77de41ee080780"
+    },
+    {
+      "path": "art/characters/stellar11/standards/linda.png",
+      "sha256": "d7971022a8d2c31d53fabb7486e323a8bed47f6639458d53e316469a7c7c7941"
+    },
+    {
+      "path": "art/characters/stellar11/standards/e581.png",
+      "sha256": "1d4217e3efcf7ba4e3c6b1ef55f0a264335a0566383fe5503a11b657058dcc82"
+    }
+  ],
+  "status": "candidate-art-package-not-runtime"
+}

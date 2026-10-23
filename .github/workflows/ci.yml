@@ -16,6 +16,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
+          fetch-depth: 0
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version-file: .node-version
@@ -29,7 +30,26 @@ jobs:
           source scripts/env.sh
           if [[ "$(python3 scripts/project.py status)" == "initialized" ]]; then
             python3 scripts/project.py install
-            python3 scripts/project.py check daily
+            if python3 - <<'PY_CHECK'
+          import os,runpy,subprocess,sys
+          m=runpy.run_path('scripts/continue-release.py') if __import__('pathlib').Path('scripts/continue-release.py').exists() else None
+          base='origin/main' if os.environ.get('GITHUB_EVENT_NAME')=='pull_request' else 'HEAD^'
+          paths=subprocess.check_output(['git','diff','--name-only',base,'HEAD'],text=True).splitlines()
+          sys.exit(0 if m and m['catalog_only'](paths) else 1)
+          PY_CHECK
+            then
+              python3 -m unittest discover -s tests -p test_release_continuation.py
+              npm run build
+              python3 - <<'PY_AFFECTED'
+          import os,runpy,subprocess
+          m=runpy.run_path('scripts/continue-release.py')
+          base='origin/main' if os.environ.get('GITHUB_EVENT_NAME')=='pull_request' else 'HEAD^'
+          paths=subprocess.check_output(['git','diff','--name-only',base,'HEAD'],text=True).splitlines()
+          for argv in m['browser_commands'](paths):subprocess.run(argv,check=True)
+          PY_AFFECTED
+            else
+              python3 scripts/project.py check daily
+            fi
           else
             echo '::notice::Template tools checked; game uninitialized, no game validation claimed.'
           fi

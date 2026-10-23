@@ -9,7 +9,13 @@ export function acquisitionSources(p: Pack, id: string) {
       .filter((v) => v.dropCharacters.includes(id))
       .map((v) => `${v.name} 首次解放`),
     ...p.quests
-      .filter((q) => q.character === id)
+      .filter(
+        (q) =>
+          q.character === id ||
+          q.story?.steps.some(
+            (s) => s.kind === "acquire" && s.character === id,
+          ),
+      )
       .map((q) => `任務「${q.name}」`),
   ];
 }

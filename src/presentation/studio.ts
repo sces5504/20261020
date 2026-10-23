@@ -74,7 +74,7 @@ export async function mountStudio(root: HTMLElement) {
     });
   }
 
-  root.innerHTML = `<main class="studio"><header class="studio-header"><a class="brand" href="#/play"><span class="brand-icon">✧</span><span>GALAXY ANGEL STUDIO<small>星 河 戰 姬 · 內 容 工 坊</small></span></a><div class="inline-actions"><a href="#/art">六位標準原圖 ↗</a><a href="#/play">返回遊戲 ↗</a></div></header><div class="studio-title"><div><span class="eyebrow">CONTENT WORKSPACE / LOCAL DRAFT</span><h1>每一道星光，由你定義。</h1><p>瀏覽、調整、試玩，再將你的星海匯出。</p></div><div class="studio-actions">${button("技能測試訓練場", "laboratory")}${button("復原", "undo")}${button("重做", "redo")}${button("套用至測試遊戲 ↗", "test", "", "primary")}</div></div><div class="studio-toolbar"><span id="project-status"></span><div>${button("從新版正式內容建立草稿", "use-published")}${button("新增項目", "new")}${button("校驗內容", "validate")}${button("鎖定工坊", "lock-studio")}${button("專案備份", "backup-project")}<label class="file-button">匯入專案／內容包<input id="import-project" type="file" accept=".json,.zip"></label>${button("匯出內容 ZIP", "export-pack")}</div></div><div class="studio-grid"><aside class="catalog-nav" id="catalog-nav"></aside><section class="catalog"><label class="search">搜尋內容<input id="catalog-search" type="search" placeholder="名稱或穩定 ID"></label><div id="catalog-list"></div></section><section class="inspector" id="inspector"></section></div><div class="studio-report" id="report" role="status"></div></main>`;
+  root.innerHTML = `<main class="studio"><header class="studio-header"><a class="brand" href="#/play"><span class="brand-icon">✧</span><span>GALAXY ANGEL STUDIO<small>星 河 戰 姬 · 內 容 工 坊</small></span></a><div class="inline-actions"><a href="#/art">全部角色圖鑑 ↗</a><a href="#/play">返回遊戲 ↗</a></div></header><div class="studio-title"><div><span class="eyebrow">CONTENT WORKSPACE / LOCAL DRAFT</span><h1>每一道星光，由你定義。</h1><p>瀏覽、調整、試玩，再將你的星海匯出。</p></div><div class="studio-actions">${button("技能測試訓練場", "laboratory")}${button("復原", "undo")}${button("重做", "redo")}${button("套用至測試遊戲 ↗", "test", "", "primary")}</div></div><div class="studio-toolbar"><span id="project-status"></span><div>${button("從新版正式內容建立草稿", "use-published")}${button("新增項目", "new")}${button("校驗內容", "validate")}${button("鎖定工坊", "lock-studio")}${button("專案備份", "backup-project")}<label class="file-button">匯入專案／內容包<input id="import-project" type="file" accept=".json,.zip"></label>${button("匯出內容 ZIP", "export-pack")}</div></div><div class="studio-grid"><aside class="catalog-nav" id="catalog-nav"></aside><section class="catalog"><label class="search">搜尋內容<input id="catalog-search" type="search" placeholder="名稱或穩定 ID"></label><div id="catalog-list"></div></section><section class="inspector" id="inspector"></section></div><div class="studio-report" id="report" role="status"></div></main>`;
   const $ = (s: string) => root.querySelector<HTMLElement>(s)!;
   function status() {
     if (disposed) return;
@@ -139,6 +139,9 @@ export async function mountStudio(root: HTMLElement) {
       .join("");
   }
   const labels: Record<string, string> = {
+    story: "劇情流程（嚴格JSON；欄位說明見 story-core-authoring.md）",
+    storyEncounter: "劇情戰鬥：目標、演員、增援與戰中對話",
+    variants: "NPC差分名稱 → 素材 ID",
     id: "穩定 ID",
     kind: "世界節點類型",
     initiallyCleared: "初始已解放（無首勝獎勵）",
@@ -153,7 +156,7 @@ export async function mountStudio(root: HTMLElement) {
     sourceRef: "原作來源與推定依據",
     campaignStart: "可選新航跡起點",
     summonable: "可透過共鳴取得",
-    category: "音效類別",
+    category: "分類（航區campaign／hard／event／daily；音效依選項）",
     waveform: "波形",
     startHz: "起始頻率 Hz",
     endHz: "結束頻率 Hz",
@@ -358,7 +361,7 @@ export async function mountStudio(root: HTMLElement) {
         .map(([k, v]) => field(k, v))
         .join(
           "",
-        )}${kind === "skills" && !("actions" in e) ? field("actions", []) : ""}${c ? acquisitionFields(p, c.id) : ""}<div class="form-actions full">${button("保存此項調整", "save-entity", "", "primary")}<span>保存草稿後，套用測試才影響試玩。</span></div></form><details><summary>引用影響 · ${refs.length} 項</summary><ul>${refs.map((v) => `<li>${esc(v)}</li>`).join("") || "<li>無其他定義引用</li>"}</ul><p>持有角色、所在星域或進行中工作缺失時，舊存檔會拒絕載入並保留原檔；退休比移除更適合既有內容。</p></details><div class="asset-import"><h3>匯入外觀素材</h3><p>PNG／JPEG／WebP，單張最多 8 MiB；媒體會隨 ZIP 匯出。立繪、頭像及 SD 分別引用，不改變碰撞與戰力。</p><label class="file-button">新增圖片到素材庫<input id="upload-asset" type="file" accept="image/png,image/jpeg,image/webp"></label></div><details><summary>進階：此項 JSON</summary><textarea id="raw-entity" rows="15">${esc(JSON.stringify(e, null, 2))}</textarea>${button("套用 JSON", "apply-json")}</details>`;
+        )}${kind === "skills" && !("actions" in e) ? field("actions", []) : ""}${kind === "quests" && !("story" in e) ? field("story", null) : ""}${kind === "planets" && !("storyEncounter" in e) ? field("storyEncounter", null) : ""}${c ? acquisitionFields(p, c.id) : ""}<div class="form-actions full">${button("保存此項調整", "save-entity", "", "primary")}<span>保存草稿後，套用測試才影響試玩。</span></div></form><details><summary>引用影響 · ${refs.length} 項</summary><ul>${refs.map((v) => `<li>${esc(v)}</li>`).join("") || "<li>無其他定義引用</li>"}</ul><p>持有角色、所在星域或進行中工作缺失時，舊存檔會拒絕載入並保留原檔；退休比移除更適合既有內容。</p></details><div class="asset-import"><h3>匯入外觀素材</h3><p>PNG／JPEG／WebP，單張最多 8 MiB；媒體會隨 ZIP 匯出。立繪、頭像及 SD 分別引用，不改變碰撞與戰力。</p><label class="file-button">新增圖片到素材庫<input id="upload-asset" type="file" accept="image/png,image/jpeg,image/webp"></label></div><details><summary>進階：此項 JSON</summary><textarea id="raw-entity" rows="15">${esc(JSON.stringify(e, null, 2))}</textarea>${button("套用 JSON", "apply-json")}</details>`;
   }
   function draw() {
     drawList();
@@ -480,7 +483,17 @@ export async function mountStudio(root: HTMLElement) {
       return;
     }
     if (action === "new") {
-      const template = project.pack[kind][0] ?? published[kind][0];
+      const template =
+        project.pack[kind][0] ??
+        published[kind][0] ??
+        (kind === "actors"
+          ? {
+              id: "draft:actor",
+              name: "測試NPC（請替換）",
+              portrait: project.pack.assets[0].id,
+              variants: {},
+            }
+          : undefined);
       if (!template) throw Error("請先匯入此分類的資料範本。");
       checkpoint();
       const copy = structuredClone(template);
@@ -524,10 +537,13 @@ export async function mountStudio(root: HTMLElement) {
               ? (t as HTMLInputElement).checked
               : typeof old === "number"
                 ? Number(t.value)
-                : typeof old === "object"
+                : typeof old === "object" ||
+                    ["story", "storyEncounter"].includes(key)
                   ? JSON.parse(t.value)
                   : t.value;
         });
+      if (raw.story === null) delete raw.story;
+      if (raw.storyEncounter === null) delete raw.storyEncounter;
       collectComplex(root, raw);
       await updateEntity(raw);
       return;

@@ -326,10 +326,27 @@ export function mountSpace(
             ? 0.72
             : 0.95
           : Math.min(w / r.width, h / r.height) * 0.88) * this.zoomFactor;
-      camera.setZoom(zoom * density);
+      const cinematic = model.storyCamera;
+      const progress = cinematic
+        ? Math.min(
+            1,
+            Math.max(
+              0,
+              (performance.now() - cinematic.startedAt) /
+                Math.max(1, cinematic.seconds * 1000),
+            ),
+          )
+        : 1;
+      const ease = progress * progress * (3 - 2 * progress);
+      const mix = (from: number, to: number) => from + (to - from) * ease;
+      camera.setZoom(
+        (cinematic ? mix(cinematic.fromZoom, cinematic.zoom) : zoom) * density,
+      );
       camera.centerOn(
-        (model.viewMode === "explore" ? model.x : r.width / 2) + this.panX,
-        (model.viewMode === "explore" ? model.y : r.height / 2) + this.panY,
+        (cinematic ? mix(cinematic.fromX, cinematic.x) : undefined) ??
+          (model.viewMode === "explore" ? model.x : r.width / 2) + this.panX,
+        (cinematic ? mix(cinematic.fromY, cinematic.y) : undefined) ??
+          (model.viewMode === "explore" ? model.y : r.height / 2) + this.panY,
       );
       this.sprites.forEach((image) => image.setVisible(false));
       g.clear();

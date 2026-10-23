@@ -326,11 +326,20 @@ try {
   await mobile.screenshot({ path: ".artifacts/m1/mobile-studio.png" });
   await page.goto(url + "#/art");
   await page.waitForSelector(".art-originals img");
-  assert.equal(await page.locator(".art-originals img").count(), 6);
+  const galleryPack = JSON.parse(
+    await readFile("content/generated/runtime.json", "utf8"),
+  );
+  assert.equal(
+    await page.locator(".art-originals img").count(),
+    galleryPack.characters.filter((c) => c.status === "active").length,
+  );
   for (const image of await page.locator(".art-originals img").all()) {
     await image.scrollIntoViewIfNeeded();
     await image.evaluate((el) => el.decode());
-    assert.equal(await image.evaluate((el) => el.naturalWidth), 1024);
+    const src = await image.getAttribute("src");
+    const asset = galleryPack.assets.find((a) => a.src === src);
+    assert.ok(asset, `gallery asset ${src}`);
+    assert.equal(await image.evaluate((el) => el.naturalWidth), asset.width);
   }
   await page.screenshot({
     path: ".artifacts/m1/original-art.png",

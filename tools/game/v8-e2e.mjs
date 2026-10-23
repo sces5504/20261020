@@ -106,9 +106,12 @@ try {
     await open("roster");
     assert.equal(
       await page.locator(".character-grid > .character-card").count(),
-      26,
+      pack.characters.length,
     );
-    assert.equal((await record(page, "save:test")).roster.length, 27);
+    assert.equal(
+      (await record(page, "save:test")).roster.length,
+      pack.characters.length + 1,
+    );
     assert.equal(await page.locator(".collection-card.owned").count(), 0);
     await page
       .locator(
@@ -189,11 +192,12 @@ try {
         c.id.startsWith("story10:") || c.id === "solar10:character.jupiter",
     )) {
       const owned = save.roster.find((o) => o.definition === c.id);
-      await page
-        .locator(
-          `.character-grid [data-action="character"][data-id="${owned.id}"]`,
-        )
-        .click();
+      const card = page.locator(
+        `.character-grid [data-action="character"][data-id="${owned.id}"]`,
+      );
+      await card.scrollIntoViewIfNeeded();
+      await card.locator("img").evaluate((im) => im.decode());
+      await card.click();
       const asset = pack.assets.find((a) => a.id === c.portrait);
       assert.equal(
         await page.locator(".character-detail > img").getAttribute("src"),
@@ -210,7 +214,7 @@ try {
     }
     await close();
     const media = pack.assets.filter((a) => a.id.includes("20261023"));
-    assert.equal(media.length, 33);
+    assert.equal(media.length, 51);
     await page.evaluate(async (assets) => {
       for (const a of assets) {
         const response = await fetch(a.src);
@@ -270,8 +274,8 @@ try {
     });
     results.push({
       mobile,
-      characters: 26,
-      instances: 27,
+      characters: pack.characters.length,
+      fixtureInstances: save.roster.length,
       dailyQuests: 7,
       passed: [
         "unique-cards",

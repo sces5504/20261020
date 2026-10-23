@@ -30,7 +30,12 @@ async function route() {
   try {
     if (location.hash.startsWith("#/catalog"))
       dispose = await mountCharacterRoster(root);
-    else if (location.hash.startsWith("#/art")) dispose = mountArtGallery(root);
+    else if (
+      location.hash.startsWith("#/art") ||
+      location.hash.startsWith("#/gallery") ||
+      location.pathname.endsWith("/gallery.html")
+    )
+      dispose = mountArtGallery(root);
     else if (location.hash.startsWith("#/studio"))
       dispose = studioUnlocked()
         ? await mountStudio(root)

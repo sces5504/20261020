@@ -1,3 +1,9 @@
+import {
+  storySchema,
+  actorSchema,
+  storyEncounterSchema,
+  type Condition,
+} from "./story";
 import { z } from "zod";
 import { actionSchema, patternTypes, defaultVolleyCount } from "./mechanics";
 const id = z.string().regex(/^[a-z][a-z0-9.-]*:[a-z][a-z0-9._-]*$/);
@@ -131,6 +137,7 @@ const planet = z
     hiddenUntilUnlocked: z.boolean().default(false),
     encounterPolicy: z.enum(["auto", "manual"]).default("auto"),
     timeLimitSeconds: z.number().finite().min(0).max(3600).default(0),
+    storyEncounter: storyEncounterSchema.optional(),
     objective: z.enum(["eliminate", "damage"]).default("eliminate"),
     schedule: z
       .object({
@@ -160,6 +167,9 @@ const planet = z
 const region = z
   .object({
     ...base,
+    category: z
+      .enum(["campaign", "hard", "event", "daily"])
+      .default("campaign"),
     campaignStart: z.boolean().default(false),
     background: z.string().default(""),
     sprite: z.string().default(""),
@@ -232,6 +242,7 @@ const research = z
 const quest = z
   .object({
     ...base,
+    story: storySchema.optional(),
     background: z.string().default(""),
     condition: z.enum([
       "cleared",
@@ -309,6 +320,7 @@ export const entitySchemas = {
   buildings: building,
   research,
   quests: quest,
+  actors: actorSchema,
   assets: asset,
   audio: audioCue,
 };
@@ -323,6 +335,7 @@ export const kindNames: Record<Kind, string> = {
   buildings: "建築",
   research: "研究",
   quests: "劇情／任務",
+  actors: "劇情演員／NPC",
   assets: "素材",
   audio: "音效",
 };
@@ -341,6 +354,7 @@ export const packSchema = z
     buildings: z.array(building),
     research: z.array(research),
     quests: z.array(quest),
+    actors: z.array(actorSchema).default([]),
     assets: z.array(asset),
     audio: z.array(audioCue).optional().default([]),
     rules: z
@@ -506,6 +520,8 @@ export function validatePack(input: unknown): {
     r.requires.forEach((v) => has("research", v, r.id)),
   );
   p.quests.forEach((q) => {
+    if (q.story && q.repeat === "daily")
+      errors.push(`${q.id}: 劇情流程不可用於每日任務`);
     if (
       q.repeat === "daily" &&
       (![
@@ -539,6 +555,260 @@ export function validatePack(input: unknown): {
     if (["cleared", "activated"].includes(q.condition))
       has("planets", q.target, q.id);
   });
+  const checkCondition = (v: Condition, owner: string, depth = 0): void => {
+    if (depth > 8) {
+      errors.push(`${owner}: 條件深度超過8`);
+      return;
+    }
+    if ("all" in v || "any" in v) {
+      ("all" in v ? v.all : v.any).forEach((x) =>
+        checkCondition(x, owner, depth + 1),
+      );
+      return;
+    }
+    const kindsByFact: Partial<Record<string, Kind>> = {
+      region: "regions",
+      position: "regions",
+      cleared: "planets",
+      activated: "planets",
+      character: "characters",
+      research: "research",
+      building: "buildings",
+      completed: "quests",
+      read: "quests",
+      claimed: "quests",
+    };
+    if (
+      [
+        "region",
+        "position",
+        "cleared",
+        "activated",
+        "research",
+        "completed",
+        "read",
+        "claimed",
+      ].includes(v.fact) &&
+      v.count !== 1
+    )
+      errors.push(`${owner}: ${v.fact}僅接受count=1`);
+    const optionalKinds: Partial<Record<string, Kind>> = {
+      summoned: "characters",
+      leveled: "characters",
+      healed: "characters",
+      built: "buildings",
+      constructed: "buildings",
+      upgraded: "buildings",
+    };
+    if (v.target && optionalKinds[v.fact])
+      has(optionalKinds[v.fact]!, v.target, owner);
+    if (v.fact !== "position" && (v.x !== 0 || v.y !== 0 || v.radius !== 100))
+      errors.push(`${owner}: x/y/radius僅供position`);
+    const kind = kindsByFact[v.fact];
+    if (kind && v.target) has(kind, v.target, owner);
+    if (kind && !v.target) errors.push(`${owner}: ${v.fact}需要target`);
+    if (
+      v.fact === "battleWon" &&
+      v.target &&
+      !p.planets.some((x) => x.id === v.target) &&
+      !patrolIds.has(v.target)
+    )
+      errors.push(`${owner}: 缺少遭遇 ${v.target}`);
+    if (v.fact === "position") {
+      const r = p.regions.find((x) => x.id === v.target);
+      if (r && (v.x < 0 || v.y < 0 || v.x > r.width || v.y > r.height))
+        errors.push(`${owner}: 位置超出星域`);
+    }
+    if (
+      v.fact === "event" &&
+      !p.quests.some((q) =>
+        q.story?.steps.some((s) => s.kind === "event" && s.event === v.target),
+      )
+    )
+      errors.push(`${owner}: 未定義事件 ${v.target}`);
+  };
+  const checkPresentation = (
+    s: import("./story").PresentationStep,
+    owner: string,
+  ) => {
+    if (
+      (s.kind === "stage" || s.kind === "say") &&
+      s.actor &&
+      !p.actors.some((a) => a.id === s.actor) &&
+      !p.characters.some((c) => c.id === s.actor)
+    )
+      errors.push(`${owner}: 缺少演員 ${s.actor}`);
+    if ((s.kind === "say" || s.kind === "stage") && s.portrait)
+      has("assets", s.portrait, owner);
+    if (s.kind === "say" && s.portrait && !s.actor)
+      errors.push(`${owner}: say.portrait需要actor`);
+    if (s.kind === "background") has("assets", s.asset, owner);
+  };
+  p.actors.forEach((a) => {
+    has("assets", a.portrait, a.id);
+    Object.values(a.variants).forEach((v) => has("assets", v, a.id));
+  });
+  p.quests.forEach((q) => {
+    if (!q.story) return;
+    q.story.chapterRequires.forEach((ch) => {
+      if (!p.quests.some((x) => x.story?.chapter === ch))
+        errors.push(`${q.id}: 缺少章節 ${ch}`);
+      if (ch === q.story!.chapter) errors.push(`${q.id}: 章節不可自我前置`);
+    });
+    if (q.story.requires) checkCondition(q.story.requires, q.id);
+    if (q.story.objective) checkCondition(q.story.objective, q.id);
+    q.story.steps.forEach((s) => {
+      if (s.kind === "acquire") has("characters", s.character, q.id);
+      else if (s.kind === "encounter") {
+        has("planets", s.planet, q.id);
+        if (s.resumeIf) checkCondition(s.resumeIf, q.id);
+        const node = p.planets.find((v) => v.id === s.planet);
+        if (node && (node.kind !== "event" || node.schedule))
+          errors.push(`${q.id}: 劇情遭遇必須引用非每日event節點`);
+      } else if (s.kind === "await") checkCondition(s.condition, q.id);
+      else if (s.kind !== "event") checkPresentation(s, q.id);
+    });
+  });
+  p.planets.forEach((v) => {
+    const e = v.storyEncounter;
+    if (!e) return;
+    if (
+      v.kind !== "event" ||
+      v.schedule ||
+      v.objective !== "eliminate" ||
+      v.timeLimitSeconds
+    )
+      errors.push(
+        `${v.id}: storyEncounter只供非每日event，時限由storyEncounter管理`,
+      );
+    if (["survive", "defend"].includes(e.mode) && !e.seconds)
+      errors.push(`${v.id}: 存活／防衛需要seconds`);
+    if (
+      ["escort", "protect"].includes(e.mode) &&
+      !e.actors.some((a) => a.required && a.side === "ally")
+    )
+      errors.push(`${v.id}: 需要受保護目標`);
+    if (
+      e.mode === "escort" &&
+      !e.actors.some((a) => a.required && a.destination)
+    )
+      errors.push(`${v.id}: 護送需要目的地`);
+    const actorIds = new Set<string>();
+    e.actors.forEach((a) => {
+      if (!!a.character === !!a.enemy)
+        errors.push(`${v.id}: 戰場演員必須指定且只能指定character或enemy`);
+      if (a.character) has("characters", a.character, v.id);
+      if (a.enemy) has("enemies", a.enemy, v.id);
+      if (actorIds.has(a.id)) errors.push(`${v.id}: 重複戰場演員`);
+      actorIds.add(a.id);
+      if (a.required && a.side !== "ally")
+        errors.push(`${v.id}: 存活目標必須友軍`);
+      if (a.destination && a.side !== "ally")
+        errors.push(`${v.id}: 僅友軍可護送`);
+    });
+    const r = p.regions.find((r) => r.id === v.region);
+    for (const a of e.actors)
+      for (const pos of [a, a.destination])
+        if (
+          pos &&
+          r &&
+          (pos.x < 0 ||
+            pos.y < 0 ||
+            pos.x > r.width ||
+            pos.y > r.height ||
+            Math.hypot(pos.x - v.x, pos.y - v.y) > v.leashWarningRadius)
+        )
+          errors.push(`${v.id}: 演員／目的地超出遭遇範圍`);
+    for (const wave of e.waves) {
+      wave.enemies.forEach((g) => has("enemies", g.enemy, v.id));
+    }
+    e.timeline.forEach((t) => {
+      const a = e.actors.find((a) => a.id === t.actor);
+      if (!a) errors.push(`${v.id}: timeline缺少演員`);
+      if (t.at === undefined && t.hpBelow === undefined)
+        errors.push(`${v.id}: timeline需要門檻`);
+      if (t.action === "team" && !t.side) errors.push(`${v.id}: team需要side`);
+      if (t.action !== "team" && t.side !== undefined)
+        errors.push(`${v.id}: side只供team`);
+      if (t.action === "move" && (t.x === undefined || t.y === undefined))
+        errors.push(`${v.id}: move需要x/y`);
+      if (t.action !== "move" && (t.x !== undefined || t.y !== undefined))
+        errors.push(`${v.id}: x/y只供move`);
+      if (t.action === "setHp" && t.ratio === undefined)
+        errors.push(`${v.id}: setHp需要ratio`);
+      if (t.action !== "setHp" && t.ratio !== undefined)
+        errors.push(`${v.id}: ratio只供setHp`);
+      if (
+        a?.required &&
+        (t.action === "retreat" || (t.action === "team" && t.side === "enemy"))
+      )
+        errors.push(`${v.id}: 必須存活目標不可撤退或變敵軍`);
+      const r = p.regions.find((r) => r.id === v.region);
+      if (
+        t.action === "move" &&
+        r &&
+        t.x !== undefined &&
+        t.y !== undefined &&
+        (t.x < 0 ||
+          t.y < 0 ||
+          t.x > r.width ||
+          t.y > r.height ||
+          Math.hypot(t.x - v.x, t.y - v.y) > v.leashWarningRadius)
+      )
+        errors.push(`${v.id}: timeline目的地超出遭遇`);
+    });
+    if (e.waves.some((w, i) => i > 0 && w.at < e.waves[i - 1].at))
+      errors.push(`${v.id}: waves必須依at遞增`);
+    e.cues.forEach((c) => {
+      if (c.at === undefined && c.hpBelow === undefined)
+        errors.push(`${v.id}: 對話需要觸發門檻`);
+      if (c.hpBelow !== undefined && !e.actors.some((a) => a.id === c.actor))
+        errors.push(`${v.id}: 生命門檻需要戰場演員`);
+      c.steps.forEach((s) => checkPresentation(s, v.id));
+    });
+    if (e.seconds && e.actors.some((a) => a.spawnAt >= e.seconds!))
+      errors.push(`${v.id}: 演員必須於時限前進場`);
+    const total =
+      v.enemies.reduce((n, g) => n + g.count, 0) +
+      e.waves.reduce(
+        (n, w) => n + w.enemies.reduce((n, g) => n + g.count, 0),
+        0,
+      ) +
+      e.actors.length;
+    if (total > 100) errors.push(`${v.id}: 劇情遭遇總單位超限100`);
+  });
+  const storyEdges = new Map<string, string[]>();
+  const dependencies = (v: Condition): string[] =>
+    "all" in v
+      ? v.all.flatMap(dependencies)
+      : "any" in v
+        ? v.any.flatMap(dependencies)
+        : ["completed", "read", "claimed"].includes(v.fact)
+          ? [v.target]
+          : [];
+  for (const q of p.quests.filter((q) => q.story)) {
+    const story = q.story!;
+    storyEdges.set(q.id, [
+      ...(story.requires ? dependencies(story.requires) : []),
+      ...story.chapterRequires.flatMap((ch) =>
+        p.quests.filter((v) => v.story?.chapter === ch).map((v) => v.id),
+      ),
+    ]);
+  }
+  const visitedStory = new Set<string>(),
+    visitingStory = new Set<string>();
+  const visitStory = (id: string): void => {
+    if (visitingStory.has(id)) {
+      errors.push(`${id}: 劇情／章節前置循環`);
+      return;
+    }
+    if (visitedStory.has(id)) return;
+    visitingStory.add(id);
+    for (const next of storyEdges.get(id) ?? []) visitStory(next);
+    visitingStory.delete(id);
+    visitedStory.add(id);
+  };
+  for (const id of storyEdges.keys()) visitStory(id);
   money(p.rules.healCost, "rules.healCost");
   money(p.rules.levelCost, "rules.levelCost");
 
@@ -615,8 +885,24 @@ export function validatePack(input: unknown): {
   const encounterBudget = (
     groups: { enemy: string; count: number }[],
     owner: string,
+    extraCharacters: string[] = [],
   ) => {
     const total = { ...allyBudget };
+    for (const id of extraCharacters) {
+      const c = p.characters.find((c) => c.id === id);
+      if (!c) continue;
+      const v = peak(
+        p.skills.find((s) => s.id === c.skill),
+        c.interval,
+      );
+      total.bullets +=
+        v.bullets +
+        (c.volleyCount ?? defaultVolleyCount(c.pattern ?? "aim")) *
+          Math.ceil(5 / c.interval);
+      total.units += 1 + v.units;
+      total.fields += v.fields;
+    }
+
     for (const group of groups) {
       const e = p.enemies.find((e) => e.id === group.enemy);
       if (!e) continue;
@@ -644,7 +930,20 @@ export function validatePack(input: unknown): {
         `${owner}: 遭遇預算超限（彈體${total.bullets}/3000，單位${total.units}/256，持續場${total.fields}/128），請在測試場縮減並驗證`,
       );
   };
-  for (const v of p.planets) encounterBudget(v.enemies, v.id);
+  for (const v of p.planets)
+    encounterBudget(
+      [
+        ...v.enemies,
+        ...(v.storyEncounter?.waves.flatMap((w) => w.enemies) ?? []),
+        ...(v.storyEncounter?.actors
+          .filter((a) => a.enemy)
+          .map((a) => ({ enemy: a.enemy!, count: 1, level: a.level })) ?? []),
+      ],
+      v.id,
+      v.storyEncounter?.actors.flatMap((a) =>
+        a.character ? [a.character] : [],
+      ),
+    );
   for (const r of p.regions)
     for (const v of r.patrols) encounterBudget(v.enemies, v.id);
   const maxGrowth =

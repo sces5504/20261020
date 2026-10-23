@@ -1,4 +1,11 @@
 import {
+  refreshStory,
+  beginStory,
+  advanceStory,
+  storyEncounterResult,
+  storyFact,
+} from "./story";
+import {
   advanceDaily,
   questClaimed,
   questPeriod,
@@ -45,6 +52,11 @@ function complete(p: Pack, s: Save, j: Save["jobs"][number]) {
   if (j.kind === "build") {
     const c = s.colonies[j.owner];
     if (c) {
+      storyFact(
+        s,
+        (c.buildings[j.definition] ?? 0) === 0 ? "constructed" : "upgraded",
+        j.definition,
+      );
       advanceDaily(
         p,
         s,
@@ -71,6 +83,21 @@ function complete(p: Pack, s: Save, j: Save["jobs"][number]) {
       advanceDaily(p, s, "healed", j.ends);
     }
   }
+  storyFact(
+    s,
+    j.kind === "build"
+      ? "built"
+      : j.kind === "research"
+        ? "research"
+        : j.kind === "heal"
+          ? "healed"
+          : "summoned",
+    j.kind === "summon"
+      ? j.payload
+      : j.kind === "heal"
+        ? (s.roster.find((o) => o.id === j.owner)?.definition ?? j.definition)
+        : j.definition,
+  );
   s.receipts.push(j.id);
 }
 export function settle(p: Pack, s: Save, now: number) {
@@ -96,8 +123,13 @@ export function settle(p: Pack, s: Save, now: number) {
     complete(p, s, j);
   s.jobs = s.jobs.filter((j) => j.ends > now);
   s.settledAt = now;
+  refreshStory(p, s);
 }
 export type Command =
+  | { type: "story-start"; id: string }
+  | { type: "story-next"; skip?: boolean }
+  | { type: "story-battle" }
+  | { type: "story-cue"; index: number }
   | { type: "travel"; region: string }
   | { type: "feed"; target: string; source: string }
   | { type: "seen-story"; id: string }
@@ -140,6 +172,7 @@ export function questReady(
   q: Pack["quests"][number],
   now = Date.now(),
 ) {
+  if (q.story) return s.story?.completed.includes(q.id) ?? false;
   if (q.repeat === "daily")
     return !questClaimed(s, q, now) && questProgress(s, q, now) >= q.count;
   return q.condition === "intro"
@@ -173,6 +206,7 @@ export function apply(
   commandId: string,
 ): Save {
   const s = structuredClone(previous);
+  refreshStory(p, s);
   s.dailyClaims ??= {};
   s.dailyAttempts ??= {};
   settle(p, s, now);
@@ -211,6 +245,37 @@ export function apply(
     )
       throw Error("角色正在治療或派駐。");
   };
+  if (c.type === "story-start") beginStory(p, s, c.id);
+  if (c.type === "story-next") advanceStory(p, s, c.skip);
+  if (c.type === "story-battle") {
+    const session = s.story.session;
+    const step = p.quests.find((q) => q.id === session?.quest)?.story?.steps[
+      session?.cursor ?? -1
+    ];
+    if (
+      !session ||
+      session.waiting ||
+      step?.kind !== "encounter" ||
+      s.encounter
+    )
+      throw Error("劇情遭遇狀態不符。");
+    const v = p.planets.find((v) => v.id === step.planet)!;
+    if (!s.team.some((id) => (s.roster.find((o) => o.id === id)?.hp ?? 0) > 0))
+      throw Error("請先治療隊伍。");
+    s.region = v.region;
+    s.x = v.x;
+    s.y = v.y;
+    session.waiting = v.id;
+    session.cues = [];
+    s.encounter = { planet: v.id, seed: Math.floor(random(s) * 4294967296) };
+  }
+  if (c.type === "story-cue") {
+    const cue = p.planets.find((v) => v.id === s.encounter?.planet)
+      ?.storyEncounter?.cues[c.index];
+    if (!s.encounter || !cue) throw Error("劇情對話狀態不符。");
+    s.encounter.cues ??= [];
+    if (!s.encounter.cues.includes(c.index)) s.encounter.cues.push(c.index);
+  }
   if (c.type === "travel") {
     if (s.encounter) throw Error("請先結束交戰，再進行星域躍遷。");
     const from = p.regions.find((r) => r.id === s.region)!;
@@ -251,6 +316,8 @@ export function apply(
     s.roster = s.roster.filter((o) => o.id !== source.id);
     s.acquisitionQueue = s.acquisitionQueue.filter((id) => id !== source.id);
   }
+  if (c.type === "seen-story" && p.quests.find((q) => q.id === c.id)?.story)
+    throw Error("新劇情請完成流程後保存已讀。");
   if (c.type === "seen-story" && !s.storySeen.includes(c.id))
     s.storySeen.push(c.id);
   if (c.type === "ack-acquisition")
@@ -399,6 +466,7 @@ export function apply(
     const old = stats(p, o).hp;
     o.level++;
     advanceDaily(p, s, "leveled", now);
+    storyFact(s, "leveled", o.definition);
     o.hp += stats(p, o).hp - old;
   }
   if (c.type === "reorder-team") {
@@ -438,7 +506,11 @@ export function apply(
     if (!q || questClaimed(s, q, now) || !questReady(s, q, now))
       throw Error("尚未達成或已領取。");
     money(s, q.reward);
-    if (q.character) addCharacter(p, s, q.character);
+    if (
+      q.character &&
+      (!q.story || !s.roster.some((o) => o.definition === q.character))
+    )
+      addCharacter(p, s, q.character);
     if (q.repeat === "daily") {
       s.dailyTasks[q.id] = {
         period: questPeriod(q, now),
@@ -534,6 +606,8 @@ export function apply(
       if (p.planets.find((v) => v.id === c.planet)?.kind === "event")
         advanceDaily(p, s, "eventWon", now);
     }
+    if (c.victory && !c.reset) storyFact(s, "battleWon", c.planet);
+    storyEncounterResult(p, s, c.planet, c.victory && !c.reset);
     s.encounter = null;
     s.receipts.push(c.receipt);
   }
@@ -547,6 +621,7 @@ export function apply(
       s.voyageSeconds = Math.max(s.voyageSeconds, c.voyageSeconds);
     for (const col of Object.values(s.colonies)) col.lost = false;
   }
+  refreshStory(p, s);
   s.receipts.push(commandId);
   s.revision = previous.revision + 1;
   return s;

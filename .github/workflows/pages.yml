@@ -5,6 +5,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+  actions: read
 concurrency:
   group: pages
   cancel-in-progress: false
@@ -17,6 +18,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
+          fetch-depth: 0
       - id: project
         run: |
           if [[ "$(python3 scripts/project.py status)" == "initialized" ]]; then
@@ -34,17 +36,26 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
+          fetch-depth: 0
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version-file: .node-version
           cache: npm
           cache-dependency-path: tools/package-lock.json
       - name: Release checks and isolated output
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           DEV_TEMPLATE_INSTALL_SYSTEM_DEPS=1 bash scripts/setup.sh
           source scripts/env.sh
           python3 scripts/project.py install
-          python3 scripts/project.py check release
+          resume_run=$(git log -1 --format=%B | sed -nE 's/^Release-Resume-Run: ([0-9]+)$/\1/p')
+          if [[ -n "$resume_run" ]]; then
+            [[ "$resume_run" =~ ^[0-9]+$ ]]
+            python3 scripts/continue-release.py --source-run "$resume_run" --repo "$GITHUB_REPOSITORY"
+          else
+            python3 scripts/project.py check release
+          fi
           python3 scripts/project.py build
           python3 scripts/project.py stage
       - name: Retain release verification evidence
@@ -56,6 +67,9 @@ jobs:
           if-no-files-found: ignore
           include-hidden-files: true
           path: |
+            .artifacts/story/browser.json
+            .artifacts/story/*-gallery.png
+            .artifacts/story/*-challenges.png
             .artifacts/checks-release.json
             .artifacts/skills/browser.json
             .artifacts/world/browser.json

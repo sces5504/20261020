@@ -1,3 +1,4 @@
+import { emptyStory, type StoryState } from "./story";
 import type { Pack } from "../content/schema";
 export type Wallet = Record<string, number>;
 export type Owned = {
@@ -25,6 +26,7 @@ export type Job = {
   cost: Wallet;
 };
 export type Save = {
+  story: StoryState;
   schemaVersion: 1;
   contentHash: string;
   migrationHistory: string[];
@@ -72,6 +74,7 @@ export type Save = {
     planet: string;
     seed: number;
     kind?: "planet" | "patrol";
+    cues?: number[];
     period?: string;
   } | null;
   orphans: Owned[];
@@ -98,6 +101,7 @@ export function newSave(p: Pack, now: number, id = "voyager"): Save {
       resonance: 0,
     }));
   return {
+    story: emptyStory(),
     schemaVersion: 1,
     contentHash: "",
     migrationHistory: [],

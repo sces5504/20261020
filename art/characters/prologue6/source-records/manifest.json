@@ -1,0 +1,400 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "characters": [
+    {
+      "id": "stellaart:character.scuti",
+      "assetId": "stellaart:asset.scuti-standard-20261023",
+      "nameZhHant": "盾牌座UY",
+      "chineseNamePending": false,
+      "originalGameKey": "Scuti",
+      "originalCidRow": 107,
+      "baseStars": 5,
+      "baseStarsSource": "research/stella-maiden/generated/stella_research.sqlite: characters_with_skill; original base rarity only",
+      "prologueRole": "序章部隊指揮",
+      "roleSource": "user request 2026-10-23, not an original-game skill claim",
+      "bodyType": "熟女",
+      "gameCharacterId": null,
+      "originalCandidate": false,
+      "path": "立繪/盾牌座UY.png",
+      "promptPath": "prompts/盾牌座UY.txt",
+      "version": "v1",
+      "sha256": "4124b88b8398a6312fd7f9b5c47ddba7db370dac29834ee0198aa7430f31f31c",
+      "width": 1024,
+      "height": 1536,
+      "type": "character-standard",
+      "mimeType": "image/png",
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "blendMode": "normal",
+      "opaqueBounds": [
+        20,
+        12,
+        1008,
+        1525
+      ],
+      "pivotNormalized": [
+        0.501953125,
+        0.9928385416666666
+      ],
+      "pivotNote": "Visual bottom of figure/props, not collision data; Sargas includes support equipment case.",
+      "atlas": null,
+      "animation": null,
+      "bundle": "prologue6-20261023",
+      "preview": "角色總覽.jpg",
+      "reviewStatus": "user-liked-retain",
+      "poseReference": {
+        "sourcePath": null,
+        "evidence": "未取得可核對原作姿勢圖；姿態為原創指揮動作，不宣稱重現原作。",
+        "coverage": "original-pose-not-found"
+      },
+      "appearanceBrief": "Clearly adult female commander age29, long pale golden-blonde straight hair, two fine rose-violet inner streaks, swept fringe, violet eyes, delicate mature feminine face, fair skin, dignified calm expression. Slim braided headband with one off-center orbital clip, no elf ears. ORIGINAL pearl WHITE, midnight INDIGO and warm GOLD sci-fi shield-command outfit. Preserve the user's fantasy armor direction: pearl-white sculpted chest armor over an opaque indigo fitted bust layer, high gold-edged collar, small upper-chest keyhole, exposed abdomen and waist, and articulated arm armor. All breasts remain fully covered. Tailored indigo short armored bottoms fully cover hips and seat, with short white pleated side panels; bare upper thighs, pearl/gold knee-high articulated boots. White/gold armor edges and purple-blue inner cloth echo the reference's open midriff battle armor; not a covered uniform tunic. One angular white shoulder mantle and slim asymmetric mechanical pauldron, no pink neck bow. One large six-sided deployable SHIELD close to left forearm with indigo enamel and segmented gold orbit motif; left hand forward bracing shield. Right arm extended horizontally with precise two-finger directional COMMAND gesture. Three-quarter torso facing left, front leg gently stepping forward, feet spaced for balance. Entire shield inside frame. This pose is an original extension, not verified original-game pose. Do not reproduce the style reference's chest-touch hand or copper hair or same face.",
+      "source": {
+        "tool": "image_gen",
+        "modelVersion": "not-exposed",
+        "generatedFile": "exec-b43e5108-502f-49fc-bc8f-64071c778566.png",
+        "actualReferencePaths": [
+          "/workspace/20261020/art/characters/standard/maiden-01/v1.png"
+        ],
+        "userArmorAttachmentDirectInput": false,
+        "note": "Scuti/Antares armor attachments described in text after direct input rejection; exact prompt archived."
+      },
+      "supportingProp": null
+    },
+    {
+      "id": "stellaart:character.antares",
+      "assetId": "stellaart:asset.antares-standard-20261023",
+      "nameZhHant": "心宿二",
+      "chineseNamePending": false,
+      "originalGameKey": "Antares",
+      "originalCidRow": 99,
+      "baseStars": 4,
+      "baseStarsSource": "research/stella-maiden/generated/stella_research.sqlite: characters_with_skill; original base rarity only",
+      "prologueRole": "序章部隊指揮",
+      "roleSource": "user request 2026-10-23, not an original-game skill claim",
+      "bodyType": "熟女",
+      "gameCharacterId": null,
+      "originalCandidate": false,
+      "path": "立繪/心宿二.png",
+      "promptPath": "prompts/心宿二.txt",
+      "version": "v1",
+      "sha256": "0fb63d28eda1b021d25774db38c0fd9c374e3e5cbaad3f0da0224a473f928f3c",
+      "width": 1024,
+      "height": 1536,
+      "type": "character-standard",
+      "mimeType": "image/png",
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "blendMode": "normal",
+      "opaqueBounds": [
+        36,
+        7,
+        1004,
+        1525
+      ],
+      "pivotNormalized": [
+        0.5078125,
+        0.9928385416666666
+      ],
+      "pivotNote": "Visual bottom of figure/props, not collision data; Sargas includes support equipment case.",
+      "atlas": null,
+      "animation": null,
+      "bundle": "prologue6-20261023",
+      "preview": "角色總覽.jpg",
+      "reviewStatus": "awaiting-user-review",
+      "poseReference": {
+        "sourcePath": null,
+        "evidence": "未取得可核對原作姿勢圖；以使用者第二張核心形象重設動態持槍姿勢，非原作姿態證據。",
+        "coverage": "original-pose-not-found"
+      },
+      "appearanceBrief": "Clearly adult mature female commander age32, short warm CHESTNUT AUBURN side-swept bob, violet-lilac eyes, fair skin, soft mature feminine facial proportions and authoritative calm half-smile. Two compact swept-back SILVER TEMPLE FINS with ruby sensor leave face and short bob clear, not a closed helmet. Redesign as pearl SILVER, GUNMETAL and WINE-RED mechanized spear commander. One sculpted graphite shoulder guard, articulated silver arm bracers, sculpted silver chest armor with opaque gunmetal panels completely covering the bust, high silver collar, OPEN ABDOMEN and bare side-waist, segmented silver/gold hip armor over opaque wine-red fitted combat shorts that fully cover hips and seat. Maintain the reference's metal armor and exposed-midriff design direction, not a covered uniform vest. Short asymmetric side-tabard over tailored graphite shorts, bare upper thighs, silver armored shin boots. No long cape, no giant matched shoulder pads. Long slender crimson-core MECHANICAL LANCE held DIAGONALLY across body using BOTH HANDS, head above left shoulder, butt beside opposite boot, entire lance in frame. Active grounded three-quarter stance, torso twisting toward viewer, one foot forward and other heel raised; head turned as if assessing flank. Feminine slender arms, no bulky muscles or masculine jaw. No shield, no pointing or salute. Appearance based on user's short auburn-haired silver-armored woman, costume redesigned with full bust/torso coverage.",
+      "source": {
+        "tool": "image_gen",
+        "modelVersion": "not-exposed",
+        "generatedFile": "exec-4fa4ff1d-fd7d-442a-9c4f-828d36b640cf.png",
+        "actualReferencePaths": [
+          "/workspace/20261020/art/characters/standard/maiden-01/v1.png"
+        ],
+        "userArmorAttachmentDirectInput": false,
+        "note": "Scuti/Antares armor attachments described in text after direct input rejection; exact prompt archived."
+      },
+      "supportingProp": null
+    },
+    {
+      "id": "stellaart:character.deneb",
+      "assetId": "stellaart:asset.deneb-standard-20261023",
+      "nameZhHant": "天津四",
+      "chineseNamePending": false,
+      "originalGameKey": "Deneb",
+      "originalCidRow": 73,
+      "baseStars": 4,
+      "baseStarsSource": "research/stella-maiden/generated/stella_research.sqlite: characters_with_skill; original base rarity only",
+      "prologueRole": "序章參戰，後續天鵝座主角",
+      "roleSource": "user request 2026-10-23, not an original-game skill claim",
+      "bodyType": "嬌小",
+      "gameCharacterId": null,
+      "originalCandidate": false,
+      "path": "立繪/天津四.png",
+      "promptPath": "prompts/天津四.txt",
+      "version": "v1",
+      "sha256": "85ee010f2ba0f32ad4320c93260136f4f25e546734b93b6041422146bd66c8c1",
+      "width": 1024,
+      "height": 1536,
+      "type": "character-standard",
+      "mimeType": "image/png",
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "blendMode": "normal",
+      "opaqueBounds": [
+        179,
+        14,
+        914,
+        1524
+      ],
+      "pivotNormalized": [
+        0.53369140625,
+        0.9921875
+      ],
+      "pivotNote": "Visual bottom of figure/props, not collision data; Sargas includes support equipment case.",
+      "atlas": null,
+      "animation": null,
+      "bundle": "prologue6-20261023",
+      "preview": "角色總覽.jpg",
+      "reviewStatus": "awaiting-user-review",
+      "poseReference": {
+        "sourcePath": "references/Deneb-original.jpg",
+        "evidence": "新聞遊戲截圖中央Deneb可見頭略低、正面沉靜視線、一手插白外套口袋及一側藍色翼；下肢未見，為補全。",
+        "coverage": "partial-visible-pose"
+      },
+      "appearanceBrief": "Use the ORIGINAL GAME screenshot reference ONLY for Deneb in the CENTER panel (the small brown-haired blue-eyed girl with white coat and blue wing); IGNORE all other characters and all UI. Small-stature female, natural slender SIX-head proportions, not chibi. Jaw-length ash BROWN bob with curved side locks, turquoise/cyan narrow highlight band through fringe, intense BLUE eyes, small ahoge, pale skin, quiet serious thoughtful soft round anime face. Keep original slightly lowered chin, straight-on calm gaze, one hand tucked into long WHITE COAT pocket and opposite arm relaxed by side. New modest fully covering science-fantasy outfit: oversized pearl-white high-collar research/command coat reaching mid-calf, sky-blue lining, restrained cyan zipper tracks, navy star clasp at neck, fully opaque pale-blue tunic beneath, opaque navy straight trousers, white/cyan flat boots. No skin exposure except face/hands, no adult curves. A pair of asymmetric folded BLUE CRYSTAL SWAN WING PANELS mounted behind shoulders, shaped like elegant layered mechanical feathers, restrained and integrated, not angel costume or magic glow. One hand in pocket, opposite hand holds short closed cyan navigation stylus lowered near thigh. Quiet offset stance, one foot ahead and head slightly down, clear personality. Whole coat, wings and shoes visible, no oversized floating weapon.",
+      "source": {
+        "tool": "image_gen",
+        "modelVersion": "not-exposed",
+        "generatedFile": "exec-e165e836-fe6d-4ae9-9eaa-e238ecdb163c.png",
+        "actualReferencePaths": [
+          "/workspace/scratch/stellar6-prologue-originals/deneb-news.jpg",
+          "/workspace/20261020/art/characters/standard/maiden-01/v1.png"
+        ],
+        "userArmorAttachmentDirectInput": false,
+        "note": "Scuti/Antares armor attachments described in text after direct input rejection; exact prompt archived."
+      },
+      "supportingProp": null
+    },
+    {
+      "id": "stellaart:character.doradus",
+      "assetId": "stellaart:asset.doradus-standard-20261023",
+      "nameZhHant": "Doradus",
+      "chineseNamePending": true,
+      "originalGameKey": "Doradus",
+      "originalCidRow": 48,
+      "baseStars": 3,
+      "baseStarsSource": "research/stella-maiden/generated/stella_research.sqlite: characters_with_skill; original base rarity only",
+      "prologueRole": "序章支援部隊",
+      "roleSource": "user request 2026-10-23, not an original-game skill claim",
+      "bodyType": "熟女",
+      "gameCharacterId": null,
+      "originalCandidate": false,
+      "path": "立繪/Doradus.png",
+      "promptPath": "prompts/Doradus.txt",
+      "version": "v1",
+      "sha256": "91fab41a078452b7dc9adbe38e392903aa2029ed14c5b0f5a996cd5724a49f7b",
+      "width": 1024,
+      "height": 1536,
+      "type": "character-standard",
+      "mimeType": "image/png",
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "blendMode": "normal",
+      "opaqueBounds": [
+        114,
+        6,
+        942,
+        1525
+      ],
+      "pivotNormalized": [
+        0.515625,
+        0.9928385416666666
+      ],
+      "pivotNote": "Visual bottom of figure/props, not collision data; Sargas includes support equipment case.",
+      "atlas": null,
+      "animation": null,
+      "bundle": "prologue6-20261023",
+      "preview": "角色總覽.jpg",
+      "reviewStatus": "awaiting-user-review",
+      "poseReference": {
+        "sourcePath": "references/Doradus-original.jpg",
+        "evidence": "原作局部圖可見長深藍髮、紫眼、偏頭與斜轉肩線；手腳未見，持掃描器與跨步為補全。",
+        "coverage": "partial-visible-pose"
+      },
+      "appearanceBrief": "Use ORIGINAL GAME portrait for core identity: adult woman age27, long DEEP NAVY BLUE hair flowing loose behind shoulders, soft VIOLET eyes, pale skin, small white double-fin ornament on dark naval side-cap, gentle concerned but determined feminine face, tilted head and slightly angled shoulders as source. Keep hair color and individual face unlike reference style copper-haired knight. Redesign supportive ship navigator in navy/ivory and subtle coral-red sci-fi uniform: small navy off-center naval CAP, off-shoulder navy short jacket with ivory piping and one long sleeve, opaque ivory fitted halter top fully covering chest, small midriff gap, high-waist navy field SHORTS, one asymmetrical long white split side panel, bare upper thighs, navy/ivory ankle boots, one compact thigh utility case. New outfit avoids source's extremely low cut chest focus. One hand holds an open rectangular FOLDING SCANNER TABLET at waist angled up; opposite index finger touches a single physical control on scanner. Pose: gentle side-on brisk walking step toward viewer, torso subtly counter-turned, head tilted as original, hair flows opposite step. Pair of thin white DORADO fin-shaped sensor blades attached behind waist, short and restrained, not big wings. No pointing, lance, shield, salute or staff.",
+      "source": {
+        "tool": "image_gen",
+        "modelVersion": "not-exposed",
+        "generatedFile": "exec-57122d2e-a244-46b6-a0d1-4c95d84976aa.png",
+        "actualReferencePaths": [
+          "/workspace/scratch/stellar6-prologue-originals/Doradus.jpg",
+          "/workspace/20261020/art/characters/standard/maiden-01/v1.png"
+        ],
+        "userArmorAttachmentDirectInput": false,
+        "note": "Scuti/Antares armor attachments described in text after direct input rejection; exact prompt archived."
+      },
+      "supportingProp": null
+    },
+    {
+      "id": "stellaart:character.mucephei",
+      "assetId": "stellaart:asset.mucephei-standard-20261023",
+      "nameZhHant": "Mucephei",
+      "chineseNamePending": true,
+      "originalGameKey": "Mucephei",
+      "originalCidRow": 62,
+      "baseStars": 3,
+      "baseStarsSource": "research/stella-maiden/generated/stella_research.sqlite: characters_with_skill; original base rarity only",
+      "prologueRole": "序章能量屏障部隊",
+      "roleSource": "user request 2026-10-23, not an original-game skill claim",
+      "bodyType": "少女",
+      "gameCharacterId": null,
+      "originalCandidate": true,
+      "path": "立繪/Mucephei.png",
+      "promptPath": "prompts/Mucephei.txt",
+      "version": "v1",
+      "sha256": "9e1bdba450d15a82a197d7985cac0906f2c4aab6b6fa47f7a6ff494bee571ba3",
+      "width": 1024,
+      "height": 1536,
+      "type": "character-standard",
+      "mimeType": "image/png",
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "blendMode": "normal",
+      "opaqueBounds": [
+        21,
+        2,
+        985,
+        1512
+      ],
+      "pivotNormalized": [
+        0.4912109375,
+        0.984375
+      ],
+      "pivotNote": "Visual bottom of figure/props, not collision data; Sargas includes support equipment case.",
+      "atlas": null,
+      "animation": null,
+      "bundle": "prologue6-20261023",
+      "preview": "角色總覽.jpg",
+      "reviewStatus": "awaiting-user-review",
+      "poseReference": {
+        "sourcePath": null,
+        "evidence": "使用者授權原創候選；尚無可核對原作形象／姿勢，以下為序章職能的原創設計。",
+        "coverage": "original-candidate-not-verified"
+      },
+      "appearanceBrief": "ORIGINAL CANDIDATE authorized by user, no verified original-game appearance. Adult female age24, long SEAFOAM GREEN hair with a dark petrol inner underlayer, straight hime-cut cheek locks plus a small LOW BRAIDED BUN on one side, luminous amber eyes, pale skin, gentle focused feminine face. Original distinctive barrier specialist wearing black/TEAL asymmetric fitted tech vest with opaque chest coverage and short standing collar, detached long ivory glove on left arm, short exposed shoulders, a small side-waist gap, high-waist teal culotte SHORTS with angular translucent side overlay panels, bare knees and upper thighs, graphite/teal mid-calf split-shell boots. No skirts copied from others, no cape. One hand lifted PALM-OUT at shoulder height operating a small segmented HEXAGONAL SHIELD EMITTER floating just before palm, opposite hand at waist turning a physical compact cuboid control dial. Three slender ivory/teal articulated barrier pylons form a compact arch immediately behind upper back, no giant visual effect dome, no magic staff. Pose: braced SIDE LUNGE with front knee bent and rear leg extended at modest angle, torso upright, head focused toward raised palm. Natural adult proportions and feminine delicate face, not masculine, not chibi. Entire pylon arch and both boots inside frame. Role is visual prologue barrier support, do not add text or gameplay stats.",
+      "source": {
+        "tool": "image_gen",
+        "modelVersion": "not-exposed",
+        "generatedFile": "exec-eb3da80e-a83a-431c-adc5-4156fcccb6aa.png",
+        "actualReferencePaths": [
+          "/workspace/20261020/art/characters/standard/maiden-01/v1.png"
+        ],
+        "userArmorAttachmentDirectInput": false,
+        "note": "Scuti/Antares armor attachments described in text after direct input rejection; exact prompt archived."
+      },
+      "supportingProp": null
+    },
+    {
+      "id": "stellaart:character.sargas",
+      "assetId": "stellaart:asset.sargas-standard-20261023",
+      "nameZhHant": "Sargas",
+      "chineseNamePending": true,
+      "originalGameKey": "Sargas",
+      "originalCidRow": 101,
+      "baseStars": 3,
+      "baseStarsSource": "research/stella-maiden/generated/stella_research.sqlite: characters_with_skill; original base rarity only",
+      "prologueRole": "序章支援部隊",
+      "roleSource": "user request 2026-10-23, not an original-game skill claim",
+      "bodyType": "熟女",
+      "gameCharacterId": null,
+      "originalCandidate": true,
+      "path": "立繪/Sargas.png",
+      "promptPath": "prompts/Sargas.txt",
+      "version": "v1",
+      "sha256": "6da6f45bf7044376999c57222ab68919dc10fc1c5dcee77f6acf26319b81c169",
+      "width": 1024,
+      "height": 1536,
+      "type": "character-standard",
+      "mimeType": "image/png",
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "blendMode": "normal",
+      "opaqueBounds": [
+        16,
+        8,
+        1011,
+        1521
+      ],
+      "pivotNormalized": [
+        0.50146484375,
+        0.990234375
+      ],
+      "pivotNote": "Visual bottom of figure/props, not collision data; Sargas includes support equipment case.",
+      "atlas": null,
+      "animation": null,
+      "bundle": "prologue6-20261023",
+      "preview": "角色總覽.jpg",
+      "reviewStatus": "awaiting-user-review",
+      "poseReference": {
+        "sourcePath": null,
+        "evidence": "使用者授權原創候選；尚無可核對原作形象／姿勢，以下為序章支援職能原創設計。",
+        "coverage": "original-candidate-not-verified"
+      },
+      "appearanceBrief": "ORIGINAL CANDIDATE authorized by user, no verified original-game appearance. Adult mature female age28, SAGE ASH-GREEN hair in one swept-up high PONYTAIL ending at shoulder blades, pale SILVER thin temple streak, golden yellow-green eyes, fair warm skin, confident relaxed smile and softly tapered adult anime face. Compact orange tactical ear receiver and one small geometric hair clasp. Original ochre ORANGE, CHARCOAL and CREAM engineering sharpshooter outfit: cropped sleeveless ochre jacket with structured ivory high collar over opaque fitted graphite top, small midriff gap, single cream utility belt across tailored black field SHORTS, bare shoulders and upper thighs, charcoal/orange knee boots, asymmetric short fingerless gloves. No skirt, cape, elaborate knight armor or green hime hair. Carry a LONG SILVER/CHARCOAL RAIL RIFLE with modest amber cooling coil. REST RIFLE OVER ONE SHOULDER, one hand gripping stock near shoulder, opposite hand lowered holding small cylindrical AMMUNITION CANISTER beside thigh. Entire rifle muzzle and stock visible, pointed away. Relaxed three-quarter leaning stance with one knee softly bent and boot resting atop a small integrated equipment case, shoulders angled and gaze toward viewer. Distinct casual support personality; rifle-on-shoulder pose unlike forward lance, shield command, tablet walk, pocket stillness or palm barrier pose. No weapons fire or effects.",
+      "source": {
+        "tool": "image_gen",
+        "modelVersion": "not-exposed",
+        "generatedFile": "exec-b5c3e8b8-22f9-4a3f-9cb9-79dc5e7d45a4.png",
+        "actualReferencePaths": [
+          "/workspace/20261020/art/characters/standard/maiden-01/v1.png"
+        ],
+        "userArmorAttachmentDirectInput": false,
+        "note": "Scuti/Antares armor attachments described in text after direct input rejection; exact prompt archived."
+      },
+      "supportingProp": "equipment case under one boot"
+    }
+  ],
+  "referenceFiles": [
+    {
+      "path": "references/Deneb-original.jpg",
+      "sha256": "cf229b86aca6b389425cec4c8879a6615bde5926de80afb6b0bf8b0ea2d50d1a"
+    },
+    {
+      "path": "references/Doradus-original.jpg",
+      "sha256": "bda84af1f3191621be07dd5e51837c3c461817d9ea6941dc40daf0814363c37c"
+    },
+    {
+      "path": "references/style-baseline-maiden01.png",
+      "sha256": "28d5d2e334598fa52fd18bfcc9cb25c12e76fb58ad0ff0cc367bea0e25f827cf"
+    }
+  ]
+}

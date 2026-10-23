@@ -1,3 +1,6 @@
+import { regionPath } from "../domain/navigation";
+import { mountStoryPlayer } from "./story-player";
+import { storyAvailable } from "../domain/story";
 import { rosterGroups } from "./roster-groups";
 import {
   questClaimed,
@@ -61,11 +64,11 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     count = 1;
   let cleanup: () => void | Promise<void> = () => {};
   let disposed = false;
-  root.innerHTML = `<main class="bridge"><header class="topbar"><a class="brand" href="#/play"><span class="brand-icon">✧</span><span>GALAXY ANGEL<small>星 河 戰 姬</small></span></a><div id="wallet" class="wallet"></div><div class="top-actions">${button("設定", "panel", "archive", "icon-button")}<a class="studio-link" href="#/studio">內容工坊 ↗</a></div></header>
+  root.innerHTML = `<main class="bridge"><header class="topbar"><a class="brand" href="#/play"><span class="brand-icon">✧</span><span>GALAXY ANGEL<small>星 河 戰 姬</small></span></a><div id="wallet" class="wallet"></div><div class="top-actions">${button("設定", "panel", "archive", "icon-button")}<a class="studio-link" href="gallery.html">角色圖鑑 ↗</a><a class="studio-link" href="#/studio">內容工坊 ↗</a></div></header>
  <div class="sector-heading"><div><span class="eyebrow">GALACTIC EXPEDITION</span><h1><b id="region-title">${esc(p.regions.find((r) => r.id === g.save.region)!.name)}</b><span>探索航線</span></h1></div><div class="sector-status"><i></i> <span id="save-status">本機自動保存</span>${test ? "<strong>隔離測試</strong>" : ""}</div></div>
  <section class="viewport"><aside class="mission-rail"><div class="section-label">航行目標 <span>MISSION</span></div><div id="mission"></div><div class="rail-bottom"><span class="eyebrow">NAVIGATION</span><p>WASD／點擊星海航行<br>M 切換大星圖</p><div class="signal"><i></i><i></i><i></i><i></i><i></i></div><small>艦隊通訊連線中</small></div></aside>
  <div id="space" class="space" aria-label="星域戰場，點擊空白處移動，點擊星球查看情報" role="application"></div><div class="map-caption"><span>✧ 星域掃描</span><span id="coordinates"></span></div><div id="battle-state" class="battle-state"></div><div id="battle-tools" class="battle-tools"></div><aside id="planet-card" class="planet-card"></aside></section>
- <footer class="flight-deck"><div class="squad-heading"><span class="eyebrow">YOUR CONSTELLATION</span><strong>航行編隊</strong>${button("編隊 ↗", "panel", "formation", "text-button")}</div><div class="squad" id="squad"></div><nav class="deck-nav">${button(icon("resonance") + "星體共鳴", "panel", "summon")}${button(icon("research") + "共振研究", "panel", "research")}${button(icon("journal") + "航行紀錄", "panel", "quests")}${button(icon("planet") + "領地", "panel", "planets")}${button(icon("crew") + "角色", "panel", "roster")}${button(icon("pause") + "暫停", "pause", "", "pause-button")}</nav></footer>
+ <footer class="flight-deck"><div class="squad-heading"><span class="eyebrow">YOUR CONSTELLATION</span><strong>航行編隊</strong>${button("編隊 ↗", "panel", "formation", "text-button")}</div><div class="squad" id="squad"></div><nav class="deck-nav">${button(icon("resonance") + "星體共鳴", "panel", "summon")}${button(icon("research") + "共振研究", "panel", "research")}${button("高難／活動", "panel", "challenges")}${button(icon("journal") + "航行紀錄", "panel", "quests")}${button(icon("planet") + "領地", "panel", "planets")}${button(icon("crew") + "角色", "panel", "roster")}${button(icon("pause") + "暫停", "pause", "", "pause-button")}</nav></footer>
  <div class="build-note">v${p.version} · ${p.characters.filter((c) => c.status === "active").length} 位少女／${p.regions.filter((r) => r.status === "active").length} 個航區</div><div class="toast" id="toast" role="status" aria-live="polite"></div><div id="skill-splash" class="skill-splash" aria-live="polite"></div><div id="overlay"></div></main>`;
   const $ = (s: string) => root.querySelector<HTMLElement>(s)!;
   const space = mountSpace(
@@ -79,6 +82,11 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     },
     audio,
   );
+  const disposeStory = mountStoryPlayer(root, g, () => {
+    panel = "";
+    g.report = null;
+    drawPanel();
+  });
   space.select(selected);
   $("#planet-card").hidden = true;
   let planetKey = "";
@@ -563,6 +571,26 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
             '<p class="muted">目前無待命少女；可在編成中移出成員。</p>'
           }</div><h3>工作佇列</h3><div id="jobs">${jobList()}</div>`;
     }
+    if (panel === "challenges") {
+      title = "高難／活動／每日母艦";
+      kick = "CHALLENGES";
+      body = `<p>沿已開放航路逐站前往；原有解放與啟動前置保留。</p><div class="list-cards">${p.regions
+        .filter((r) => r.category !== "campaign")
+        .map((r) => {
+          const path = regionPath(p, s.region, r.id),
+            next = path[1];
+          const route = p.regions
+            .find((r) => r.id === s.region)
+            ?.routes.find((r) => r.to === next);
+          const missing =
+            route?.requires.filter((id) => !s.cleared.includes(id)) ?? [];
+          const nodes = p.planets.filter(
+            (v) => v.region === r.id && v.status === "active",
+          );
+          return `<article><span class="eyebrow">${esc({ hard: "高難", event: "活動航跡", daily: "每日母艦", campaign: "航行" }[r.category])}</span><h3>${esc(r.name)}</h3><p>${esc(r.description)}</p><small>${path.length ? path.map((id) => esc(p.regions.find((r) => r.id === id)!.name)).join(" → ") : "尚無連通航路"}</small>${missing.length ? `<p>下一站需先解放：${missing.map((id) => esc(p.planets.find((v) => v.id === id)!.name)).join("、")}</p>` : ""}${next ? button("前往下一站 · " + esc(p.regions.find((r) => r.id === next)!.name), "travel", next, "primary", missing.length > 0 || !!g.combat) : ""}${s.region === r.id ? nodes.map((v) => `<div><strong>${esc(v.name)}</strong><small>${esc(nodeAvailability(s, v, Date.now()).reason)}</small>${button("導航至挑戰入口", "navigate", v.id, "primary", !nodeUnlocked(s, v, p))}${!nodeUnlocked(s, v, p) ? `<small>前置：${[...v.requires, ...v.requiresActive].map((id) => esc(p.planets.find((n) => n.id === id)!.name)).join("、")}</small>` : ""}</div>`).join("") : ""}</article>`;
+        })
+        .join("")}</div>`;
+    }
     if (panel === "quests") {
       title = "航行紀錄";
       kick = "VOYAGE JOURNAL";
@@ -572,8 +600,17 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
           (q) =>
             `<article data-daily-quest="${esc(q.id)}"><span class="eyebrow">${questClaimed(s, q, Date.now()) ? "CLAIMED" : "DAILY MISSION"}</span><h3>${esc(q.name)}</h3><p>${esc(q.description)}</p><strong>${Math.min(q.count, questProgress(s, q, Date.now()))} / ${q.count}</strong><small>更新倒數 <span data-ends="${questResetAt(q, Date.now())}"></span></small><div class="costs">${amounts(p, q.reward)}</div>${button(questClaimed(s, q, Date.now()) ? "今日已領取" : "領取每日獎勵", "quest", q.id, "primary", questClaimed(s, q, Date.now()) || !questReady(s, q, Date.now()))}</article>`,
         )
-        .join("")}</div><h3>航行紀錄</h3><div class="list-cards">${p.quests
-        .filter((q) => q.repeat !== "daily")
+        .join("")}</div><h3>章節劇情</h3><div class="list-cards">${
+        p.quests
+          .filter((q) => q.story && q.status === "active")
+          .map(
+            (q) =>
+              `<article><h3>${esc(q.name)}</h3><p>${esc(q.description)}</p><small>${s.story.completed.includes(q.id) ? "任務完成" : "任務未完成"} · ${s.storySeen.includes(q.id) ? "對話已讀" : "對話未讀"} · ${s.quests.includes(q.id) ? "獎勵已領" : "獎勵未領"}</small>${button(s.story.session?.quest === q.id ? "接續劇情" : "開始劇情", "flow-open", q.id, "primary", !storyAvailable(p, s, q.id) || s.storySeen.includes(q.id))}${button("章節回看", "flow-replay", q.id, "text-button", !s.storySeen.includes(q.id) && !s.quests.includes(q.id))}${button("領取章節獎勵", "quest", q.id, "primary", s.quests.includes(q.id) || !questReady(s, q))}</article>`,
+          )
+          .join("") ||
+        "<p>正式章節待劇情作者提供；舊航行紀錄與世界進度保留。</p>"
+      }</div><h3>航行紀錄</h3><div class="list-cards">${p.quests
+        .filter((q) => q.repeat !== "daily" && !q.story)
         .map(
           (q) =>
             `<article><span class="eyebrow">${s.quests.includes(q.id) ? "ARCHIVED" : questReady(s, q) ? "SIGNAL RECEIVED" : "AWAITING SIGNAL"}</span><h3>${esc(q.name)}</h3><p>${esc(q.description || q.dialogue[0].text)}</p>${button("閱讀對話 →", "story", q.id, "text-button")}<div class="costs">${amounts(p, q.reward)}</div>${button(s.quests.includes(q.id) ? "已收錄" : "收錄並領取獎勵", "quest", q.id, "primary", s.quests.includes(q.id) || !questReady(s, q))}</article>`,
@@ -636,6 +673,11 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       space.recenter();
       planetKey = "";
       renderPlanet();
+      return;
+    }
+    if (action === "challenge-route") {
+      panel = "regions";
+      drawPanel();
       return;
     }
     if (action === "travel") {
@@ -1017,6 +1059,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     if (
       !g.combat &&
       !g.report &&
+      !g.save.story.session &&
       !["story", "acquisition"].includes(panel) &&
       g.save.acquisitionQueue.length
     ) {
@@ -1026,11 +1069,12 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       panel = "acquisition";
       drawPanel();
     }
-    if (!panel && !g.combat && !g.report) {
+    if (!panel && !g.combat && !g.report && !g.save.story.session) {
       const q = p.quests.find(
         (q) =>
           questReady(g.save, q) &&
           q.repeat !== "daily" &&
+          !q.story &&
           !g.save.storySeen.includes(q.id),
       );
       if (q) {
@@ -1042,6 +1086,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     }
     if (
       g.report &&
+      !g.save.story.session &&
       panel !== "result" &&
       !["story", "acquisition"].includes(panel)
     ) {
@@ -1158,6 +1203,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     root.removeEventListener("change", change);
     document.removeEventListener("keydown", keys);
     document.removeEventListener("visibilitychange", visibility);
+    disposeStory();
     window.removeEventListener("stella-dialog-open", dialogOpen);
     window.removeEventListener("stella-dialog-close", dialogClose);
     g.pause.add("unmounted");

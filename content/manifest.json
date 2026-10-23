@@ -7,7 +7,9 @@
     "extensions/stella-skills.json",
     "extensions/original-world.json",
     "extensions/story10.json",
-    "extensions/stellar11-art.json"
+    "extensions/stellar11-art.json",
+    "extensions/prologue6.json",
+    "extensions/prologue6-art.json"
   ],
   "regionPresentation": [
     {
@@ -138,6 +140,42 @@
       "portrait": "stellaart:asset.jupiter-portrait-20261023-web",
       "avatar": "stellaart:asset.jupiter-avatar-20261023-web",
       "sprite": "stellaart:asset.jupiter-battle-20261023-v1-web"
+    },
+    {
+      "character": "prologue6:character.scuti",
+      "portrait": "stellaart:asset.scuti-portrait-20261023-web",
+      "avatar": "stellaart:asset.scuti-avatar-20261023-web",
+      "sprite": "stellaart:asset.scuti-battle-20261023-v1-web"
+    },
+    {
+      "character": "prologue6:character.antares",
+      "portrait": "stellaart:asset.antares-portrait-20261023-web",
+      "avatar": "stellaart:asset.antares-avatar-20261023-web",
+      "sprite": "stellaart:asset.antares-battle-20261023-v1-web"
+    },
+    {
+      "character": "prologue6:character.deneb",
+      "portrait": "stellaart:asset.deneb-portrait-20261023-web",
+      "avatar": "stellaart:asset.deneb-avatar-20261023-web",
+      "sprite": "stellaart:asset.deneb-battle-20261023-v1-web"
+    },
+    {
+      "character": "prologue6:character.doradus",
+      "portrait": "stellaart:asset.doradus-portrait-20261023-web",
+      "avatar": "stellaart:asset.doradus-avatar-20261023-web",
+      "sprite": "stellaart:asset.doradus-battle-20261023-v1-web"
+    },
+    {
+      "character": "prologue6:character.mucephei",
+      "portrait": "stellaart:asset.mucephei-portrait-20261023-web",
+      "avatar": "stellaart:asset.mucephei-avatar-20261023-web",
+      "sprite": "stellaart:asset.mucephei-battle-20261023-v1-web"
+    },
+    {
+      "character": "prologue6:character.sargas",
+      "portrait": "stellaart:asset.sargas-portrait-20261023-web",
+      "avatar": "stellaart:asset.sargas-avatar-20261023-web",
+      "sprite": "stellaart:asset.sargas-battle-20261023-v1-web"
     }
   ],
   "regionRoutes": [

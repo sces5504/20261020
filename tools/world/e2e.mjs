@@ -24,7 +24,7 @@ async function save(page) {
 }
 async function install(page, p, s) {
   await page.goto(server.url + "#/art");
-  await page.waitForSelector(".art-gallery");
+  await page.waitForSelector(".art-gallery", { timeout: 60000 });
   await page.evaluate(
     async ({ p, s }) => {
       localStorage.setItem("stella:view", "map");

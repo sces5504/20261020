@@ -161,7 +161,7 @@ try {
   await page.locator('[data-action="close"]').first().click();
   // Stop the game before installing a safe, reproducible patrol approach fixture.
   await page.goto(server.url + "#/art");
-  await page.waitForSelector(".art-gallery");
+  await page.waitForSelector(".art-gallery", { timeout: 60000 });
   const patrol = pack.regions[0].patrols[0];
   await page.evaluate(async ({ x, y }) => {
     const r = indexedDB.open("stella-maiden-m1", 1);

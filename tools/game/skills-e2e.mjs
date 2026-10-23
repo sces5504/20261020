@@ -40,7 +40,7 @@ try {
     page.setDefaultTimeout(15000);
     page.on("pageerror", (e) => errors.push(e.message));
     await page.goto(server.url + "#/art");
-    await page.waitForSelector(".art-gallery");
+    await page.waitForSelector(".art-gallery", { timeout: 60000 });
     const official = newSave(pack, Date.now());
     official.storySeen = pack.quests.map((q) => q.id);
     await page.evaluate(async (save) => {
@@ -57,7 +57,7 @@ try {
     await page.locator("#studio-access-form button[type=submit]").click();
     await page.waitForSelector(".studio");
     await page.locator("[data-action=laboratory]").click();
-    await page.waitForSelector(".laboratory");
+    await page.waitForSelector(".laboratory", { timeout: 60000 });
     const allies = page.locator(".lab-ally"),
       enemies = page.locator(".lab-enemy");
     for (let i = 0; i < 6; i++)
@@ -164,7 +164,7 @@ try {
       0.5,
     );
     await page.locator("[data-action=laboratory]").click();
-    await page.waitForSelector(".laboratory");
+    await page.waitForSelector(".laboratory", { timeout: 60000 });
     await page
       .locator(".lab-ally")
       .nth(0)

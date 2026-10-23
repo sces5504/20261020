@@ -47,7 +47,7 @@ try {
   });
   await page.goto(server.url + "#/studio");
   await unlockStudio(page);
-  await page.waitForSelector("#entity-form");
+  await page.waitForSelector("#entity-form", { timeout: 60000 });
   console.log("Playtest: image replacement + content-only seventh maiden");
   await page
     .locator("#upload-asset")

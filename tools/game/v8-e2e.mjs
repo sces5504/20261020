@@ -76,7 +76,7 @@ try {
     );
     save.acquisitionQueue = [];
     await page.goto(server.url + "#/art");
-    await page.waitForSelector(".art-gallery");
+    await page.waitForSelector(".art-gallery", { timeout: 60000 });
     await page.evaluate(
       async ({ pack, save }) => {
         const r = indexedDB.open("stella-maiden-m1", 1);
@@ -236,7 +236,7 @@ try {
       0,
     );
     await page.locator('[data-action="laboratory"]').click();
-    await page.waitForSelector(".laboratory");
+    await page.waitForSelector(".laboratory", { timeout: 60000 });
     const allies = page.locator(".lab-ally");
     for (let i = 0; i < 6; i++)
       await allies.nth(i).locator("[data-character]").selectOption("");

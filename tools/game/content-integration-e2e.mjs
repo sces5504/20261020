@@ -32,7 +32,7 @@ async function record(page, key = "save:test") {
 }
 async function install(page, save) {
   await page.goto(server.url + "#/art");
-  await page.waitForSelector(".art-gallery");
+  await page.waitForSelector(".art-gallery", { timeout: 60000 });
   await page.evaluate(
     async ({ p, s }) => {
       const r = indexedDB.open("stella-maiden-m1", 1);

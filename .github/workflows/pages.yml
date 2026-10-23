@@ -47,6 +47,22 @@ jobs:
           python3 scripts/project.py check release
           python3 scripts/project.py build
           python3 scripts/project.py stage
+      - name: Retain release verification evidence
+        if: always()
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        with:
+          name: verification-${{ github.sha }}
+          retention-days: 1
+          if-no-files-found: ignore
+          include-hidden-files: true
+          path: |
+            .artifacts/checks-release.json
+            .artifacts/skills/browser.json
+            .artifacts/world/browser.json
+            .artifacts/v8/browser.json
+            .artifacts/v8/*-territory.png
+            .artifacts/v8/*-daily.png
+            .artifacts/v8/*-jupiter-combat.png
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           path: .artifacts/site

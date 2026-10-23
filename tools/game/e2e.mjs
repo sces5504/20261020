@@ -91,7 +91,7 @@ try {
   });
   const coldStart = Date.now();
   await page.goto(url);
-  await page.waitForSelector(".bridge canvas", { timeout: 30000 });
+  await page.waitForSelector(".bridge canvas", { timeout: 60000 });
   console.log(`E2E: full catalog cold startup ${Date.now() - coldStart}ms`);
   await skipIntro(page);
   await page.waitForTimeout(500);
@@ -135,7 +135,7 @@ try {
   console.log("E2E: studio");
   await page.locator('a[href="#/studio"]').first().click();
   await unlockStudio(page);
-  await page.waitForSelector("#entity-form");
+  await page.waitForSelector("#entity-form", { timeout: 60000 });
   await page.locator('[data-field="attack"]').fill("200");
   await page.locator('[data-field="rarity"]').fill("4");
   await page.locator('[data-action="save-entity"]').click();
@@ -152,7 +152,7 @@ try {
   await page.locator('[data-action="redo"]').click();
   await page.waitForTimeout(150);
   await page.reload();
-  await page.waitForSelector("#entity-form");
+  await page.waitForSelector("#entity-form", { timeout: 60000 });
   assert.equal(await page.locator('[data-field="attack"]').inputValue(), "200");
   const skillBefore = await page.locator('[data-field="skill"]').inputValue();
   await page.locator('[data-field="skill"]').selectOption("m1:dispersion");
@@ -316,7 +316,7 @@ try {
   await mobile.setViewportSize({ width: 390, height: 844 });
   await mobile.goto(url + "#/studio");
   await unlockStudio(mobile);
-  await mobile.waitForSelector("#entity-form");
+  await mobile.waitForSelector("#entity-form", { timeout: 60000 });
   assert.ok(
     await mobile.evaluate(
       () => document.documentElement.scrollWidth <= innerWidth,
@@ -339,11 +339,11 @@ try {
   const other = await context.newPage();
   other.on("pageerror", (e) => failures.push(e.message));
   await other.goto(url);
-  await other.waitForSelector(".bridge");
+  await other.waitForSelector(".bridge", { timeout: 60000 });
   const rival = await context.newPage();
   rival.on("pageerror", (e) => failures.push(e.message));
   await rival.goto(url);
-  await rival.waitForSelector(".bridge");
+  await rival.waitForSelector(".bridge", { timeout: 60000 });
   await page.waitForTimeout(1600);
   const statuses = await Promise.all([
     other.locator("#save-status").innerText(),

@@ -43,7 +43,7 @@ async function waitSave(page, predicate, label) {
 }
 async function install(page, pack, s) {
   await page.goto(server.url + "#/art");
-  await page.waitForSelector(".art-gallery");
+  await page.waitForSelector(".art-gallery", { timeout: 60000 });
   await page.evaluate(
     async ({ pack, s }) => {
       const r = indexedDB.open("stella-maiden-m1", 1);

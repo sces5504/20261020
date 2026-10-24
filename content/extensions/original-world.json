@@ -2773,7 +2773,7 @@
           },
           {
             "to": "original:region.archive",
-            "label": "主線／活動／每日 Boss",
+            "label": "挑戰航區（戰艦／委託／母艦）",
             "requires": []
           }
         ],
@@ -4307,8 +4307,8 @@
       },
       {
         "id": "original:region.archive",
-        "name": "事件航跡",
-        "description": "主線、活動、星門與戰艦遭遇入口；選擇航跡展開作戰，入口可返回太陽系。",
+        "name": "挑戰航區",
+        "description": "戰艦討伐、委託任務與類星體母艦的入口；選擇航跡展開作戰，入口可返回太陽系。",
         "status": "active",
         "provenance": "research",
         "sourceRef": "Galaxy[1]; coordinate scale10 / inverted Y adapted, not collision from art",
@@ -4327,132 +4327,132 @@
           },
           {
             "to": "original:region.replay-1",
-            "label": "Event1",
+            "label": "委託任務 01",
             "requires": []
           },
           {
             "to": "original:region.replay-2",
-            "label": "Event2",
+            "label": "委託任務 02",
             "requires": []
           },
           {
             "to": "original:region.replay-3",
-            "label": "Event3",
+            "label": "委託任務 03",
             "requires": []
           },
           {
             "to": "original:region.replay-4",
-            "label": "Event4",
+            "label": "委託任務 04",
             "requires": []
           },
           {
             "to": "original:region.replay-5",
-            "label": "Event5",
+            "label": "委託任務 05",
             "requires": []
           },
           {
             "to": "original:region.replay-6",
-            "label": "Event6",
+            "label": "委託任務 06",
             "requires": []
           },
           {
             "to": "original:region.replay-7",
-            "label": "Event7",
+            "label": "委託任務 07",
             "requires": []
           },
           {
             "to": "original:region.replay-8",
-            "label": "Event8",
+            "label": "委託任務 08",
             "requires": []
           },
           {
             "to": "original:region.replay-9",
-            "label": "Event9",
+            "label": "委託任務 09",
             "requires": []
           },
           {
             "to": "original:region.replay-10",
-            "label": "S1",
+            "label": "特別委託 S1",
             "requires": []
           },
           {
             "to": "original:region.replay-11",
-            "label": "Battleship01",
+            "label": "搜索戰艦［Kiraba］",
             "requires": []
           },
           {
             "to": "original:region.replay-12",
-            "label": "Battleship02",
+            "label": "高速戰艦［Aitsu］",
             "requires": []
           },
           {
             "to": "original:region.replay-13",
-            "label": "Battleship03",
+            "label": "裝甲戰艦［Morugo］",
             "requires": []
           },
           {
             "to": "original:region.replay-14",
-            "label": "Battleship04",
+            "label": "強襲戰艦［Zeruga］",
             "requires": []
           },
           {
             "to": "original:region.replay-15",
-            "label": "Battleship05",
+            "label": "追跡戰艦［Leiga］",
             "requires": []
           },
           {
             "to": "original:region.replay-16",
-            "label": "S3",
+            "label": "特別委託 S3",
             "requires": []
           },
           {
             "to": "original:region.replay-17",
-            "label": "S4",
+            "label": "特別委託 S4",
             "requires": []
           },
           {
             "to": "original:region.replay-18",
-            "label": "Event10",
+            "label": "委託任務 10",
             "requires": []
           },
           {
             "to": "original:region.replay-19",
-            "label": "4",
+            "label": "第四星域 · 首領戰",
             "requires": []
           },
           {
             "to": "original:region.replay-20",
-            "label": "Event11",
+            "label": "委託任務 11",
             "requires": []
           },
           {
             "to": "original:region.replay-21",
-            "label": "Battleship06",
+            "label": "殲滅戰艦［Giria］",
             "requires": []
           },
           {
             "to": "original:region.replay-22",
-            "label": "Chapter5",
+            "label": "第五章 · 前線遭遇",
             "requires": []
           },
           {
             "to": "original:region.replay-23",
-            "label": "Event12",
+            "label": "委託任務 12",
             "requires": []
           },
           {
             "to": "original:region.replay-24",
-            "label": "Chapter6",
+            "label": "第六章 · 前線遭遇",
             "requires": []
           },
           {
             "to": "original:region.replay-25",
-            "label": "S7",
+            "label": "特別委託 S7",
             "requires": []
           },
           {
             "to": "original:region.daily",
-            "label": "每日 Boss",
+            "label": "每日母艦",
             "requires": []
           }
         ],
@@ -4461,8 +4461,8 @@
       },
       {
         "id": "original:region.replay-1",
-        "name": "Event1 · 遭遇航跡",
-        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
+        "name": "委託任務 01",
+        "description": "原作波次遭遇；逐場解鎖，勝利後開啟下一戰，可經入口航路返回。",
         "status": "active",
         "provenance": "research",
         "sourceRef": "Galaxy[1]; coordinate scale10 / inverted Y adapted, not collision from art",
@@ -4476,17 +4476,17 @@
         "routes": [
           {
             "to": "original:region.archive",
-            "label": "返回事件入口",
+            "label": "返回挑戰航區",
             "requires": []
           }
         ],
         "patrols": [],
-        "category": "event"
+        "category": "mission"
       },
       {
         "id": "original:region.replay-2",
-        "name": "Event2 · 遭遇航跡",
-        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
+        "name": "委託任務 02",
+        "description": "原作波次遭遇；逐場解鎖，勝利後開啟下一戰，可經入口航路返回。",
         "status": "active",
         "provenance": "research",
         "sourceRef": "Galaxy[2]; coordinate scale10 / inverted Y adapted, not collision from art",
@@ -4500,17 +4500,17 @@
         "routes": [
           {
             "to": "original:region.archive",
-            "label": "返回事件入口",
+            "label": "返回挑戰航區",
             "requires": []
           }
         ],
         "patrols": [],
-        "category": "event"
+        "category": "mission"
       },
       {
         "id": "original:region.replay-3",
-        "name": "Event3 · 遭遇航跡",
-        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
+        "name": "委託任務 03",
+        "description": "原作波次遭遇；逐場解鎖，勝利後開啟下一戰，可經入口航路返回。",
         "status": "active",
         "provenance": "research",
         "sourceRef": "Galaxy[3]; coordinate scale10 / inverted Y adapted, not collision from art",
@@ -4524,17 +4524,17 @@
         "routes": [
           {
             "to": "original:region.archive",
-            "label": "返回事件入口",
+            "label": "返回挑戰航區",
             "requires": []
           }
         ],
         "patrols": [],
-        "category": "event"
+        "category": "mission"
       },
       {
         "id": "original:region.replay-4",
-        "name": "Event4 · 遭遇航跡",
-        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
+        "name": "委託任務 04",
+        "description": "原作波次遭遇；逐場解鎖，勝利後開啟下一戰，可經入口航路返回。",
         "status": "active",
         "provenance": "research",
         "sourceRef": "Galaxy[4]; coordinate scale10 / inverted Y adapted, not collision from art",
@@ -4548,17 +4548,17 @@
         "routes": [
           {
             "to": "original:region.archive",
-            "label": "返回事件入口",
+            "label": "返回挑戰航區",
             "requires": []
           }
         ],
         "patrols": [],
-        "category": "event"
+        "category": "mission"
       },
       {
         "id": "original:region.replay-5",
-        "name": "Event5 · 遭遇航跡",
-        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
+        "name": "委託任務 05",
+        "description": "原作波次遭遇；逐場解鎖，勝利後開啟下一戰，可經入口航路返回。",
         "status": "active",
         "provenance": "research",
         "sourceRef": "Galaxy[5]; coordinate scale10 / inverted Y adapted, not collision from art",
@@ -4572,17 +4572,17 @@
         "routes": [
           {
             "to": "original:region.archive",
-            "label": "返回事件入口",
+            "label": "返回挑戰航區",
             "requires": []
           }
         ],
         "patrols": [],
-        "category": "event"
+        "category": "mission"
       },
       {
         "id": "original:region.replay-6",
-        "name": "Event6 · 遭遇航跡",
-        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
+        "name": "委託任務 06",
+        "description": "原作波次遭遇；逐場解鎖，勝利後開啟下一戰，可經入口航路返回。",
         "status": "active",
         "provenance": "research",
         "sourceRef": "Galaxy[6]; coordinate scale10 / inverted Y adapted, not collision from art",
@@ -4596,17 +4596,17 @@
         "routes": [
           {
             "to": "original:region.archive",
-            "label": "返回事件入口",
+            "label": "返回挑戰航區",
             "requires": []
           }
         ],
         "patrols": [],
-        "category": "event"
+        "category": "mission"
       },
       {
         "id": "original:region.replay-7",
-        "name": "Event7 · 遭遇航跡",
-        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
+        "name": "委託任務 07",
+        "description": "原作波次遭遇；逐場解鎖，勝利後開啟下一戰，可經入口航路返回。",
         "status": "active",
         "provenance": "research",
         "sourceRef": "Galaxy[7]; coordinate scale10 / inverted Y adapted, not collision from art",
@@ -4620,17 +4620,17 @@
         "routes": [
           {
             "to": "original:region.archive",
-            "label": "返回事件入口",
+            "label": "返回挑戰航區",
             "requires": []
           }
         ],
         "patrols": [],
-        "category": "event"
+        "category": "mission"
       },
       {
         "id": "original:region.replay-8",
-        "name": "Event8 · 遭遇航跡",
-        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
+        "name": "委託任務 08",
+        "description": "原作波次遭遇；逐場解鎖，勝利後開啟下一戰，可經入口航路返回。",
         "status": "active",
         "provenance": "research",
         "sourceRef": "Galaxy[8]; coordinate scale10 / inverted Y adapted, not collision from art",
@@ -4644,17 +4644,17 @@
         "routes": [
           {
             "to": "original:region.archive",
-            "label": "返回事件入口",
+            "label": "返回挑戰航區",
             "requires": []
           }
         ],
         "patrols": [],
-        "category": "event"
+        "category": "mission"
       },
       {
         "id": "original:region.replay-9",
-        "name": "Event9 · 遭遇航跡",
-        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
+        "name": "委託任務 09",
+        "description": "原作波次遭遇；逐場解鎖，勝利後開啟下一戰，可經入口航路返回。",
         "status": "active",
         "provenance": "research",
         "sourceRef": "Galaxy[9]; coordinate scale10 / inverted Y adapted, not collision from art",
@@ -4668,17 +4668,17 @@
         "routes": [
           {
             "to": "original:region.archive",
-            "label": "返回事件入口",
+            "label": "返回挑戰航區",
             "requires": []
           }
         ],
         "patrols": [],
-        "category": "event"
+        "category": "mission"
       },
       {
         "id": "original:region.replay-10",
-        "name": "S1 · 遭遇航跡",
-        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
+        "name": "特別委託 S1",
+        "description": "原作波次遭遇；逐場解鎖，勝利後開啟下一戰，可經入口航路返回。",
         "status": "active",
         "provenance": "research",
         "sourceRef": "Galaxy[1]; coordinate scale10 / inverted Y adapted, not collision from art",
@@ -4692,17 +4692,17 @@
         "routes": [
           {
             "to": "original:region.archive",
-            "label": "返回事件入口",
+            "label": "返回挑戰航區",
             "requires": []
           }
         ],
         "patrols": [],
-        "category": "event"
+        "category": "mission"
       },
       {
         "id": "original:region.replay-11",
-        "name": "Battleship01 · 遭遇航跡",
-        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
+        "name": "搜索戰艦［Kiraba］",
+        "description": "原作波次遭遇；逐場解鎖，勝利後開啟下一戰，可經入口航路返回。",
         "status": "active",
         "provenance": "research",
         "sourceRef": "Galaxy[3]; coordinate scale10 / inverted Y adapted, not collision from art",
@@ -4716,17 +4716,17 @@
         "routes": [
           {
             "to": "original:region.archive",
-            "label": "返回事件入口",
+            "label": "返回挑戰航區",
             "requires": []
           }
         ],
         "patrols": [],
-        "category": "event"
+        "category": "battleship"
       },
       {
         "id": "original:region.replay-12",
-        "name": "Battleship02 · 遭遇航跡",
-        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
+        "name": "高速戰艦［Aitsu］",
+        "description": "原作波次遭遇；逐場解鎖，勝利後開啟下一戰，可經入口航路返回。",
         "status": "active",
         "provenance": "research",
         "sourceRef": "Galaxy[4]; coordinate scale10 / inverted Y adapted, not collision from art",
@@ -4740,17 +4740,17 @@
         "routes": [
           {
             "to": "original:region.archive",
-            "label": "返回事件入口",
+            "label": "返回挑戰航區",
             "requires": []
           }
         ],
         "patrols": [],
-        "category": "event"
+        "category": "battleship"
       },
       {
         "id": "original:region.replay-13",
-        "name": "Battleship03 · 遭遇航跡",
-        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
+        "name": "裝甲戰艦［Morugo］",
+        "description": "原作波次遭遇；逐場解鎖，勝利後開啟下一戰，可經入口航路返回。",
         "status": "active",
         "provenance": "research",
         "sourceRef": "Galaxy[6]; coordinate scale10 / inverted Y adapted, not collision from art",
@@ -4764,17 +4764,17 @@
         "routes": [
           {
             "to": "original:region.archive",
-            "label": "返回事件入口",
+            "label": "返回挑戰航區",
             "requires": []
           }
         ],
         "patrols": [],
-        "category": "event"
+        "category": "battleship"
       },
       {
         "id": "original:region.replay-14",
-        "name": "Battleship04 · 遭遇航跡",
-        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
+        "name": "強襲戰艦［Zeruga］",
+        "description": "原作波次遭遇；逐場解鎖，勝利後開啟下一戰，可經入口航路返回。",
         "status": "active",
         "provenance": "research",
         "sourceRef": "Galaxy[9]; coordinate scale10 / inverted Y adapted, not collision from art",
@@ -4788,17 +4788,17 @@
         "routes": [
           {
             "to": "original:region.archive",
-            "label": "返回事件入口",
+            "label": "返回挑戰航區",
             "requires": []
           }
         ],
         "patrols": [],
-        "category": "event"
+        "category": "battleship"
       },
       {
         "id": "original:region.replay-15",
-        "name": "Battleship05 · 遭遇航跡",
-        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
+        "name": "追跡戰艦［Leiga］",
+        "description": "原作波次遭遇；逐場解鎖，勝利後開啟下一戰，可經入口航路返回。",
         "status": "active",
         "provenance": "research",
         "sourceRef": "Galaxy[10]; coordinate scale10 / inverted Y adapted, not collision from art",
@@ -4812,17 +4812,17 @@
         "routes": [
           {
             "to": "original:region.archive",
-            "label": "返回事件入口",
+            "label": "返回挑戰航區",
             "requires": []
           }
         ],
         "patrols": [],
-        "category": "event"
+        "category": "battleship"
       },
       {
         "id": "original:region.replay-16",
-        "name": "S3 · 遭遇航跡",
-        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
+        "name": "特別委託 S3",
+        "description": "原作波次遭遇；逐場解鎖，勝利後開啟下一戰，可經入口航路返回。",
         "status": "active",
         "provenance": "research",
         "sourceRef": "Galaxy[3]; coordinate scale10 / inverted Y adapted, not collision from art",
@@ -4836,17 +4836,17 @@
         "routes": [
           {
             "to": "original:region.archive",
-            "label": "返回事件入口",
+            "label": "返回挑戰航區",
             "requires": []
           }
         ],
         "patrols": [],
-        "category": "event"
+        "category": "mission"
       },
       {
         "id": "original:region.replay-17",
-        "name": "S4 · 遭遇航跡",
-        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
+        "name": "特別委託 S4",
+        "description": "原作波次遭遇；逐場解鎖，勝利後開啟下一戰，可經入口航路返回。",
         "status": "active",
         "provenance": "research",
         "sourceRef": "Galaxy[4]; coordinate scale10 / inverted Y adapted, not collision from art",
@@ -4860,17 +4860,17 @@
         "routes": [
           {
             "to": "original:region.archive",
-            "label": "返回事件入口",
+            "label": "返回挑戰航區",
             "requires": []
           }
         ],
         "patrols": [],
-        "category": "event"
+        "category": "mission"
       },
       {
         "id": "original:region.replay-18",
-        "name": "Event10 · 遭遇航跡",
-        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
+        "name": "委託任務 10",
+        "description": "原作波次遭遇；逐場解鎖，勝利後開啟下一戰，可經入口航路返回。",
         "status": "active",
         "provenance": "research",
         "sourceRef": "Galaxy[10]; coordinate scale10 / inverted Y adapted, not collision from art",
@@ -4884,17 +4884,17 @@
         "routes": [
           {
             "to": "original:region.archive",
-            "label": "返回事件入口",
+            "label": "返回挑戰航區",
             "requires": []
           }
         ],
         "patrols": [],
-        "category": "event"
+        "category": "mission"
       },
       {
         "id": "original:region.replay-19",
-        "name": "4 · 遭遇航跡",
-        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
+        "name": "第四星域 · 首領戰",
+        "description": "原作波次遭遇；逐場解鎖，勝利後開啟下一戰，可經入口航路返回。",
         "status": "active",
         "provenance": "research",
         "sourceRef": "Galaxy[10]; coordinate scale10 / inverted Y adapted, not collision from art",
@@ -4908,17 +4908,17 @@
         "routes": [
           {
             "to": "original:region.archive",
-            "label": "返回事件入口",
+            "label": "返回挑戰航區",
             "requires": []
           }
         ],
         "patrols": [],
-        "category": "event"
+        "category": "mission"
       },
       {
         "id": "original:region.replay-20",
-        "name": "Event11 · 遭遇航跡",
-        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
+        "name": "委託任務 11",
+        "description": "原作波次遭遇；逐場解鎖，勝利後開啟下一戰，可經入口航路返回。",
         "status": "active",
         "provenance": "research",
         "sourceRef": "Galaxy[10]; coordinate scale10 / inverted Y adapted, not collision from art",
@@ -4932,17 +4932,17 @@
         "routes": [
           {
             "to": "original:region.archive",
-            "label": "返回事件入口",
+            "label": "返回挑戰航區",
             "requires": []
           }
         ],
         "patrols": [],
-        "category": "event"
+        "category": "mission"
       },
       {
         "id": "original:region.replay-21",
-        "name": "Battleship06 · 遭遇航跡",
-        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
+        "name": "殲滅戰艦［Giria］",
+        "description": "原作波次遭遇；逐場解鎖，勝利後開啟下一戰，可經入口航路返回。",
         "status": "active",
         "provenance": "research",
         "sourceRef": "Galaxy[12]; coordinate scale10 / inverted Y adapted, not collision from art",
@@ -4956,17 +4956,17 @@
         "routes": [
           {
             "to": "original:region.archive",
-            "label": "返回事件入口",
+            "label": "返回挑戰航區",
             "requires": []
           }
         ],
         "patrols": [],
-        "category": "event"
+        "category": "battleship"
       },
       {
         "id": "original:region.replay-22",
-        "name": "Chapter5 · 遭遇航跡",
-        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
+        "name": "第五章 · 前線遭遇",
+        "description": "原作波次遭遇；逐場解鎖，勝利後開啟下一戰，可經入口航路返回。",
         "status": "active",
         "provenance": "research",
         "sourceRef": "Galaxy[6]; coordinate scale10 / inverted Y adapted, not collision from art",
@@ -4980,17 +4980,17 @@
         "routes": [
           {
             "to": "original:region.archive",
-            "label": "返回事件入口",
+            "label": "返回挑戰航區",
             "requires": []
           }
         ],
         "patrols": [],
-        "category": "event"
+        "category": "mission"
       },
       {
         "id": "original:region.replay-23",
-        "name": "Event12 · 遭遇航跡",
-        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
+        "name": "委託任務 12",
+        "description": "原作波次遭遇；逐場解鎖，勝利後開啟下一戰，可經入口航路返回。",
         "status": "active",
         "provenance": "research",
         "sourceRef": "Galaxy[12]; coordinate scale10 / inverted Y adapted, not collision from art",
@@ -5004,17 +5004,17 @@
         "routes": [
           {
             "to": "original:region.archive",
-            "label": "返回事件入口",
+            "label": "返回挑戰航區",
             "requires": []
           }
         ],
         "patrols": [],
-        "category": "event"
+        "category": "mission"
       },
       {
         "id": "original:region.replay-24",
-        "name": "Chapter6 · 遭遇航跡",
-        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
+        "name": "第六章 · 前線遭遇",
+        "description": "原作波次遭遇；逐場解鎖，勝利後開啟下一戰，可經入口航路返回。",
         "status": "active",
         "provenance": "research",
         "sourceRef": "Galaxy[8]; coordinate scale10 / inverted Y adapted, not collision from art",
@@ -5028,17 +5028,17 @@
         "routes": [
           {
             "to": "original:region.archive",
-            "label": "返回事件入口",
+            "label": "返回挑戰航區",
             "requires": []
           }
         ],
         "patrols": [],
-        "category": "event"
+        "category": "mission"
       },
       {
         "id": "original:region.replay-25",
-        "name": "S7 · 遭遇航跡",
-        "description": "完成目前遭遇後開啟下一個目標，可沿入口航路返回事件航跡。",
+        "name": "特別委託 S7",
+        "description": "原作波次遭遇；逐場解鎖，勝利後開啟下一戰，可經入口航路返回。",
         "status": "active",
         "provenance": "research",
         "sourceRef": "Galaxy[8]; coordinate scale10 / inverted Y adapted, not collision from art",
@@ -5052,16 +5052,16 @@
         "routes": [
           {
             "to": "original:region.archive",
-            "label": "返回事件入口",
+            "label": "返回挑戰航區",
             "requires": []
           }
         ],
         "patrols": [],
-        "category": "event"
+        "category": "mission"
       },
       {
         "id": "original:region.daily",
-        "name": "每日母艦",
+        "name": "類星體母艦",
         "description": "選擇當日母艦，180秒內累積傷害爭取補給；四個目標共用每日三次進場額度。",
         "status": "active",
         "provenance": "research",
@@ -5076,7 +5076,7 @@
         "routes": [
           {
             "to": "original:region.archive",
-            "label": "返回事件入口",
+            "label": "返回挑戰航區",
             "requires": []
           }
         ],
@@ -33273,7 +33273,7 @@
       },
       {
         "id": "original:wave.52",
-        "name": "Event1_1",
+        "name": "委託 · 第1戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -33316,7 +33316,7 @@
       },
       {
         "id": "original:wave.53",
-        "name": "Event1_2",
+        "name": "委託 · 第2戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -33366,7 +33366,7 @@
       },
       {
         "id": "original:wave.54",
-        "name": "Event1_3",
+        "name": "委託 · 第3戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -33421,7 +33421,7 @@
       },
       {
         "id": "original:wave.55",
-        "name": "Event2_1",
+        "name": "委託 · 第1戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -33469,7 +33469,7 @@
       },
       {
         "id": "original:wave.56",
-        "name": "Event2_2",
+        "name": "委託 · 第2戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -33524,7 +33524,7 @@
       },
       {
         "id": "original:wave.57",
-        "name": "Event2_3",
+        "name": "委託 · 第3戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -33574,7 +33574,7 @@
       },
       {
         "id": "original:wave.58",
-        "name": "Event3_1",
+        "name": "委託 · 第1戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -33632,7 +33632,7 @@
       },
       {
         "id": "original:wave.59",
-        "name": "Event3_2",
+        "name": "委託 · 第2戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -33687,7 +33687,7 @@
       },
       {
         "id": "original:wave.60",
-        "name": "Event3_3",
+        "name": "委託 · 第3戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -33742,7 +33742,7 @@
       },
       {
         "id": "original:wave.61",
-        "name": "Event4_1",
+        "name": "委託 · 第1戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -33795,7 +33795,7 @@
       },
       {
         "id": "original:wave.62",
-        "name": "Event4_2",
+        "name": "委託 · 第2戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -33850,7 +33850,7 @@
       },
       {
         "id": "original:wave.63",
-        "name": "Event4_3",
+        "name": "委託 · 第3戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -33900,7 +33900,7 @@
       },
       {
         "id": "original:wave.64",
-        "name": "Event5_1",
+        "name": "委託 · 第1戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -33948,7 +33948,7 @@
       },
       {
         "id": "original:wave.65",
-        "name": "Event5_2",
+        "name": "委託 · 第2戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -34008,7 +34008,7 @@
       },
       {
         "id": "original:wave.66",
-        "name": "Event5_3",
+        "name": "委託 · 第3戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -34068,7 +34068,7 @@
       },
       {
         "id": "original:wave.67",
-        "name": "Event6_1",
+        "name": "委託 · 第1戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -34126,7 +34126,7 @@
       },
       {
         "id": "original:wave.68",
-        "name": "Event6_2",
+        "name": "委託 · 第2戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -34181,7 +34181,7 @@
       },
       {
         "id": "original:wave.69",
-        "name": "Event6_3",
+        "name": "委託 · 第3戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -34236,7 +34236,7 @@
       },
       {
         "id": "original:wave.70",
-        "name": "Event7_1",
+        "name": "委託 · 第1戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -34289,7 +34289,7 @@
       },
       {
         "id": "original:wave.71",
-        "name": "Event7_2",
+        "name": "委託 · 第2戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -34339,7 +34339,7 @@
       },
       {
         "id": "original:wave.72",
-        "name": "Event7_3",
+        "name": "委託 · 第3戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -34394,7 +34394,7 @@
       },
       {
         "id": "original:wave.73",
-        "name": "Event8_1",
+        "name": "委託 · 第1戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -34442,7 +34442,7 @@
       },
       {
         "id": "original:wave.74",
-        "name": "Event8_2",
+        "name": "委託 · 第2戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -34492,7 +34492,7 @@
       },
       {
         "id": "original:wave.75",
-        "name": "Event8_3",
+        "name": "委託 · 第3戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -34542,7 +34542,7 @@
       },
       {
         "id": "original:wave.76",
-        "name": "Event9_1",
+        "name": "委託 · 第1戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -34585,7 +34585,7 @@
       },
       {
         "id": "original:wave.77",
-        "name": "Event9_2",
+        "name": "委託 · 第2戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -34635,7 +34635,7 @@
       },
       {
         "id": "original:wave.78",
-        "name": "Event9_3",
+        "name": "委託 · 第3戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -34695,7 +34695,7 @@
       },
       {
         "id": "original:wave.362",
-        "name": "S1_9",
+        "name": "特別委託 · 第1戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -34733,7 +34733,7 @@
       },
       {
         "id": "original:wave.363",
-        "name": "S1_11",
+        "name": "特別委託 · 第2戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -34773,7 +34773,7 @@
       },
       {
         "id": "original:wave.364",
-        "name": "Battleship01_1_7",
+        "name": "戰艦 · 第1戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -34811,7 +34811,7 @@
       },
       {
         "id": "original:wave.365",
-        "name": "Battleship01_1_14",
+        "name": "戰艦 · 第2戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -34851,7 +34851,7 @@
       },
       {
         "id": "original:wave.366",
-        "name": "Battleship01_2_7",
+        "name": "戰艦 · 第3戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -34891,7 +34891,7 @@
       },
       {
         "id": "original:wave.367",
-        "name": "Battleship01_2_14",
+        "name": "戰艦 · 第4戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -34931,7 +34931,7 @@
       },
       {
         "id": "original:wave.368",
-        "name": "Battleship02_3_7",
+        "name": "戰艦 · 第1戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -34969,7 +34969,7 @@
       },
       {
         "id": "original:wave.369",
-        "name": "Battleship02_3_14",
+        "name": "戰艦 · 第2戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -35009,7 +35009,7 @@
       },
       {
         "id": "original:wave.370",
-        "name": "Battleship02_4_7",
+        "name": "戰艦 · 第3戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -35049,7 +35049,7 @@
       },
       {
         "id": "original:wave.371",
-        "name": "Battleship02_4_14",
+        "name": "戰艦 · 第4戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -35089,7 +35089,7 @@
       },
       {
         "id": "original:wave.372",
-        "name": "Battleship03_5_7",
+        "name": "戰艦 · 第1戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -35127,7 +35127,7 @@
       },
       {
         "id": "original:wave.373",
-        "name": "Battleship03_5_14",
+        "name": "戰艦 · 第2戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -35167,7 +35167,7 @@
       },
       {
         "id": "original:wave.374",
-        "name": "Battleship03_6_7",
+        "name": "戰艦 · 第3戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -35207,7 +35207,7 @@
       },
       {
         "id": "original:wave.375",
-        "name": "Battleship03_6_14",
+        "name": "戰艦 · 第4戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -35247,7 +35247,7 @@
       },
       {
         "id": "original:wave.376",
-        "name": "Battleship04_7_7",
+        "name": "戰艦 · 第1戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -35285,7 +35285,7 @@
       },
       {
         "id": "original:wave.377",
-        "name": "Battleship04_7_14",
+        "name": "戰艦 · 第2戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -35325,7 +35325,7 @@
       },
       {
         "id": "original:wave.378",
-        "name": "Battleship04_8_7",
+        "name": "戰艦 · 第3戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -35365,7 +35365,7 @@
       },
       {
         "id": "original:wave.379",
-        "name": "Battleship04_8_14",
+        "name": "戰艦 · 第4戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -35405,7 +35405,7 @@
       },
       {
         "id": "original:wave.380",
-        "name": "Battleship05_9_7",
+        "name": "戰艦 · 第1戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -35443,7 +35443,7 @@
       },
       {
         "id": "original:wave.381",
-        "name": "Battleship05_9_14",
+        "name": "戰艦 · 第2戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -35483,7 +35483,7 @@
       },
       {
         "id": "original:wave.421",
-        "name": "Battleship05_10_9",
+        "name": "戰艦 · 第3戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -35523,7 +35523,7 @@
       },
       {
         "id": "original:wave.422",
-        "name": "Battleship05_10_18",
+        "name": "戰艦 · 第4戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -35563,7 +35563,7 @@
       },
       {
         "id": "original:wave.423",
-        "name": "Battleship05_10_23",
+        "name": "戰艦 · 第5戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -35608,7 +35608,7 @@
       },
       {
         "id": "original:wave.424",
-        "name": "Battleship05_10_29",
+        "name": "戰艦 · 第6戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -35653,7 +35653,7 @@
       },
       {
         "id": "original:wave.382",
-        "name": "S3_10",
+        "name": "特別委託 · 第1戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -35691,7 +35691,7 @@
       },
       {
         "id": "original:wave.383",
-        "name": "S4_9_1",
+        "name": "特別委託 · 第1戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -35749,7 +35749,7 @@
       },
       {
         "id": "original:wave.384",
-        "name": "S4_9_2",
+        "name": "特別委託 · 第2戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -35804,7 +35804,7 @@
       },
       {
         "id": "original:wave.385",
-        "name": "S4_9_3",
+        "name": "特別委託 · 第3戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -35864,7 +35864,7 @@
       },
       {
         "id": "original:wave.416",
-        "name": "Event10_1",
+        "name": "委託 · 第1戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -35922,7 +35922,7 @@
       },
       {
         "id": "original:wave.417",
-        "name": "Event10_2",
+        "name": "委託 · 第2戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -35977,7 +35977,7 @@
       },
       {
         "id": "original:wave.418",
-        "name": "Event10_3",
+        "name": "委託 · 第3戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -36032,7 +36032,7 @@
       },
       {
         "id": "original:wave.419",
-        "name": "Event10_4",
+        "name": "委託 · 第4戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -36092,7 +36092,7 @@
       },
       {
         "id": "original:wave.420",
-        "name": "Event10_5",
+        "name": "委託 · 第5戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -36147,7 +36147,7 @@
       },
       {
         "id": "original:wave.433",
-        "name": "4_8보스전",
+        "name": "首領戰 · 第1戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -36195,7 +36195,7 @@
       },
       {
         "id": "original:wave.434",
-        "name": "4_10보스전",
+        "name": "首領戰 · 第2戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -36235,7 +36235,7 @@
       },
       {
         "id": "original:wave.640",
-        "name": "Event11_1",
+        "name": "委託 · 第1戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -36288,7 +36288,7 @@
       },
       {
         "id": "original:wave.641",
-        "name": "Event11_2",
+        "name": "委託 · 第2戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -36343,7 +36343,7 @@
       },
       {
         "id": "original:wave.642",
-        "name": "Event11_3",
+        "name": "委託 · 第3戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -36398,7 +36398,7 @@
       },
       {
         "id": "original:wave.643",
-        "name": "Event11_4",
+        "name": "委託 · 第4戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -36458,7 +36458,7 @@
       },
       {
         "id": "original:wave.644",
-        "name": "Event11_5",
+        "name": "委託 · 第5戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -36513,7 +36513,7 @@
       },
       {
         "id": "original:wave.645",
-        "name": "Battleship06_11_7",
+        "name": "戰艦 · 第1戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -36556,7 +36556,7 @@
       },
       {
         "id": "original:wave.646",
-        "name": "Battleship06_11_15",
+        "name": "戰艦 · 第2戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -36596,7 +36596,7 @@
       },
       {
         "id": "original:wave.647",
-        "name": "Battleship06_11_24",
+        "name": "戰艦 · 第3戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -36636,7 +36636,7 @@
       },
       {
         "id": "original:wave.648",
-        "name": "Battleship06_11_29",
+        "name": "戰艦 · 第4戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -36676,7 +36676,7 @@
       },
       {
         "id": "original:wave.726",
-        "name": "Battleship06_12_7",
+        "name": "戰艦 · 第5戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -36716,7 +36716,7 @@
       },
       {
         "id": "original:wave.727",
-        "name": "Battleship06_12_14",
+        "name": "戰艦 · 第6戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -36756,7 +36756,7 @@
       },
       {
         "id": "original:wave.728",
-        "name": "Battleship06_12_22",
+        "name": "戰艦 · 第7戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -36796,7 +36796,7 @@
       },
       {
         "id": "original:wave.729",
-        "name": "Battleship06_12_29",
+        "name": "戰艦 · 第8戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -36836,7 +36836,7 @@
       },
       {
         "id": "original:wave.679",
-        "name": "Chapter5_1_1",
+        "name": "前線 · 第1戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -36889,7 +36889,7 @@
       },
       {
         "id": "original:wave.680",
-        "name": "Chapter5_1_2",
+        "name": "前線 · 第2戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -36944,7 +36944,7 @@
       },
       {
         "id": "original:wave.681",
-        "name": "Chapter5_2_1",
+        "name": "前線 · 第3戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -36999,7 +36999,7 @@
       },
       {
         "id": "original:wave.682",
-        "name": "Chapter5_2_2",
+        "name": "前線 · 第4戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -37054,7 +37054,7 @@
       },
       {
         "id": "original:wave.683",
-        "name": "Chapter5_4_1",
+        "name": "前線 · 第5戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -37104,7 +37104,7 @@
       },
       {
         "id": "original:wave.684",
-        "name": "Chapter5_4_2",
+        "name": "前線 · 第6戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -37154,7 +37154,7 @@
       },
       {
         "id": "original:wave.685",
-        "name": "Chapter5_4_3",
+        "name": "前線 · 第7戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -37209,7 +37209,7 @@
       },
       {
         "id": "original:wave.686",
-        "name": "Chapter5_6_1",
+        "name": "前線 · 第8戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -37259,7 +37259,7 @@
       },
       {
         "id": "original:wave.687",
-        "name": "Chapter5_6_2",
+        "name": "前線 · 第9戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -37309,7 +37309,7 @@
       },
       {
         "id": "original:wave.688",
-        "name": "Chapter5_8_1",
+        "name": "前線 · 第10戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -37364,7 +37364,7 @@
       },
       {
         "id": "original:wave.689",
-        "name": "Chapter5_8_2",
+        "name": "前線 · 第11戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -37419,7 +37419,7 @@
       },
       {
         "id": "original:wave.690",
-        "name": "Chapter5_8_3",
+        "name": "前線 · 第12戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -37474,7 +37474,7 @@
       },
       {
         "id": "original:wave.721",
-        "name": "Event12_1",
+        "name": "委託 · 第1戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -37527,7 +37527,7 @@
       },
       {
         "id": "original:wave.722",
-        "name": "Event12_2",
+        "name": "委託 · 第2戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -37587,7 +37587,7 @@
       },
       {
         "id": "original:wave.723",
-        "name": "Event12_3",
+        "name": "委託 · 第3戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -37642,7 +37642,7 @@
       },
       {
         "id": "original:wave.724",
-        "name": "Event12_4",
+        "name": "委託 · 第4戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -37697,7 +37697,7 @@
       },
       {
         "id": "original:wave.725",
-        "name": "Event12_5",
+        "name": "委託 · 第5戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -37757,7 +37757,7 @@
       },
       {
         "id": "original:wave.730",
-        "name": "Chapter6_12",
+        "name": "前線 · 第1戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -37815,7 +37815,7 @@
       },
       {
         "id": "original:wave.731",
-        "name": "Chapter6_3_1",
+        "name": "前線 · 第2戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -37870,7 +37870,7 @@
       },
       {
         "id": "original:wave.732",
-        "name": "Chapter6_3_2",
+        "name": "前線 · 第3戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -37930,7 +37930,7 @@
       },
       {
         "id": "original:wave.733",
-        "name": "Chapter6_4_1",
+        "name": "前線 · 第4戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -37990,7 +37990,7 @@
       },
       {
         "id": "original:wave.734",
-        "name": "Chapter6_4_2",
+        "name": "前線 · 第5戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -38050,7 +38050,7 @@
       },
       {
         "id": "original:wave.735",
-        "name": "Chapter6_5_1",
+        "name": "前線 · 第6戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -38110,7 +38110,7 @@
       },
       {
         "id": "original:wave.736",
-        "name": "Chapter6_5_2",
+        "name": "前線 · 第7戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -38165,7 +38165,7 @@
       },
       {
         "id": "original:wave.737",
-        "name": "Chapter6_6_1",
+        "name": "前線 · 第8戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -38230,7 +38230,7 @@
       },
       {
         "id": "original:wave.738",
-        "name": "Chapter6_6_2",
+        "name": "前線 · 第9戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -38285,7 +38285,7 @@
       },
       {
         "id": "original:wave.739",
-        "name": "Chapter6_6_3",
+        "name": "前線 · 第10戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -38345,7 +38345,7 @@
       },
       {
         "id": "original:wave.740",
-        "name": "Chapter6_7_1",
+        "name": "前線 · 第11戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -38400,7 +38400,7 @@
       },
       {
         "id": "original:wave.741",
-        "name": "Chapter6_7_2",
+        "name": "前線 · 第12戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -38455,7 +38455,7 @@
       },
       {
         "id": "original:wave.742",
-        "name": "Chapter6_7_3",
+        "name": "前線 · 第13戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -38515,7 +38515,7 @@
       },
       {
         "id": "original:wave.743",
-        "name": "Chapter6_8_1",
+        "name": "前線 · 第14戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -38565,7 +38565,7 @@
       },
       {
         "id": "original:wave.744",
-        "name": "Chapter6_8_2",
+        "name": "前線 · 第15戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -38620,7 +38620,7 @@
       },
       {
         "id": "original:wave.745",
-        "name": "Chapter6_8_3",
+        "name": "前線 · 第16戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -38675,7 +38675,7 @@
       },
       {
         "id": "original:wave.746",
-        "name": "Chapter6_9_1",
+        "name": "前線 · 第17戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -38730,7 +38730,7 @@
       },
       {
         "id": "original:wave.747",
-        "name": "Chapter6_9_2",
+        "name": "前線 · 第18戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -38790,7 +38790,7 @@
       },
       {
         "id": "original:wave.748",
-        "name": "Chapter6_10_1",
+        "name": "前線 · 第19戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -38840,7 +38840,7 @@
       },
       {
         "id": "original:wave.749",
-        "name": "Chapter6_10_2",
+        "name": "前線 · 第20戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -38890,7 +38890,7 @@
       },
       {
         "id": "original:wave.750",
-        "name": "Chapter6_10_3",
+        "name": "前線 · 第21戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -38940,7 +38940,7 @@
       },
       {
         "id": "original:wave.751",
-        "name": "Chapter6_10_4",
+        "name": "前線 · 第22戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -38995,7 +38995,7 @@
       },
       {
         "id": "original:wave.752",
-        "name": "Chapter6_10_5",
+        "name": "前線 · 第23戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -39050,7 +39050,7 @@
       },
       {
         "id": "original:wave.853",
-        "name": "S7_1_1",
+        "name": "特別委託 · 第1戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -39098,7 +39098,7 @@
       },
       {
         "id": "original:wave.854",
-        "name": "S7_1_2",
+        "name": "特別委託 · 第2戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -39153,7 +39153,7 @@
       },
       {
         "id": "original:wave.855",
-        "name": "S7_1_3",
+        "name": "特別委託 · 第3戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -39203,7 +39203,7 @@
       },
       {
         "id": "original:wave.856",
-        "name": "S7_1_4",
+        "name": "特別委託 · 第4戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -39253,7 +39253,7 @@
       },
       {
         "id": "original:wave.857",
-        "name": "S7_2_1",
+        "name": "特別委託 · 第5戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -39303,7 +39303,7 @@
       },
       {
         "id": "original:wave.858",
-        "name": "S7_2_2",
+        "name": "特別委託 · 第6戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -39353,7 +39353,7 @@
       },
       {
         "id": "original:wave.859",
-        "name": "S7_2_3",
+        "name": "特別委託 · 第7戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -39408,7 +39408,7 @@
       },
       {
         "id": "original:wave.860",
-        "name": "S7_2_4",
+        "name": "特別委託 · 第8戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -39463,7 +39463,7 @@
       },
       {
         "id": "original:wave.861",
-        "name": "S7_3_1",
+        "name": "特別委託 · 第9戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -39518,7 +39518,7 @@
       },
       {
         "id": "original:wave.862",
-        "name": "S7_3_2",
+        "name": "特別委託 · 第10戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -39568,7 +39568,7 @@
       },
       {
         "id": "original:wave.863",
-        "name": "S7_3_3",
+        "name": "特別委託 · 第11戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -39618,7 +39618,7 @@
       },
       {
         "id": "original:wave.864",
-        "name": "S7_3_4",
+        "name": "特別委託 · 第12戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -39668,7 +39668,7 @@
       },
       {
         "id": "original:wave.865",
-        "name": "S7_4_1",
+        "name": "特別委託 · 第13戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -39728,7 +39728,7 @@
       },
       {
         "id": "original:wave.866",
-        "name": "S7_4_2",
+        "name": "特別委託 · 第14戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -39783,7 +39783,7 @@
       },
       {
         "id": "original:wave.867",
-        "name": "S7_4_3",
+        "name": "特別委託 · 第15戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -39833,7 +39833,7 @@
       },
       {
         "id": "original:wave.868",
-        "name": "S7_4_4",
+        "name": "特別委託 · 第16戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -39883,7 +39883,7 @@
       },
       {
         "id": "original:wave.869",
-        "name": "S7_5_1",
+        "name": "特別委託 · 第17戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -39938,7 +39938,7 @@
       },
       {
         "id": "original:wave.870",
-        "name": "S7_5_2",
+        "name": "特別委託 · 第18戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -39988,7 +39988,7 @@
       },
       {
         "id": "original:wave.871",
-        "name": "S7_5_3",
+        "name": "特別委託 · 第19戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -40038,7 +40038,7 @@
       },
       {
         "id": "original:wave.872",
-        "name": "S7_5_4",
+        "name": "特別委託 · 第20戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -40088,7 +40088,7 @@
       },
       {
         "id": "original:wave.873",
-        "name": "S7_6_1",
+        "name": "特別委託 · 第21戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -40138,7 +40138,7 @@
       },
       {
         "id": "original:wave.874",
-        "name": "S7_6_2",
+        "name": "特別委託 · 第22戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -40183,7 +40183,7 @@
       },
       {
         "id": "original:wave.875",
-        "name": "S7_6_3",
+        "name": "特別委託 · 第23戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -40228,7 +40228,7 @@
       },
       {
         "id": "original:wave.876",
-        "name": "S7_6_4",
+        "name": "特別委託 · 第24戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -40278,7 +40278,7 @@
       },
       {
         "id": "original:wave.877",
-        "name": "S7_7_1",
+        "name": "特別委託 · 第25戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -40333,7 +40333,7 @@
       },
       {
         "id": "original:wave.878",
-        "name": "S7_7_2",
+        "name": "特別委託 · 第26戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -40378,7 +40378,7 @@
       },
       {
         "id": "original:wave.879",
-        "name": "S7_7_3",
+        "name": "特別委託 · 第27戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -40433,7 +40433,7 @@
       },
       {
         "id": "original:wave.880",
-        "name": "S7_7_4",
+        "name": "特別委託 · 第28戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -40493,7 +40493,7 @@
       },
       {
         "id": "original:wave.881",
-        "name": "S7_8_1",
+        "name": "特別委託 · 第29戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -40543,7 +40543,7 @@
       },
       {
         "id": "original:wave.882",
-        "name": "S7_8_2",
+        "name": "特別委託 · 第30戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -40593,7 +40593,7 @@
       },
       {
         "id": "original:wave.883",
-        "name": "S7_8_3",
+        "name": "特別委託 · 第31戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -40643,7 +40643,7 @@
       },
       {
         "id": "original:wave.884",
-        "name": "S7_8_4",
+        "name": "特別委託 · 第32戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -40693,7 +40693,7 @@
       },
       {
         "id": "original:wave.885",
-        "name": "S7_9_1",
+        "name": "特別委託 · 第33戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -40743,7 +40743,7 @@
       },
       {
         "id": "original:wave.886",
-        "name": "S7_9_2",
+        "name": "特別委託 · 第34戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -40793,7 +40793,7 @@
       },
       {
         "id": "original:wave.887",
-        "name": "S7_9_3",
+        "name": "特別委託 · 第35戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -40848,7 +40848,7 @@
       },
       {
         "id": "original:wave.888",
-        "name": "S7_9_4",
+        "name": "特別委託 · 第36戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -40898,7 +40898,7 @@
       },
       {
         "id": "original:wave.889",
-        "name": "S7_10_1",
+        "name": "特別委託 · 第37戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -40943,7 +40943,7 @@
       },
       {
         "id": "original:wave.890",
-        "name": "S7_10_2",
+        "name": "特別委託 · 第38戰",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -40998,7 +40998,7 @@
       },
       {
         "id": "original:daily.1-1",
-        "name": "Monday · 母艦 1",
+        "name": "週一 · 類星體母艦 1",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -41045,7 +41045,7 @@
       },
       {
         "id": "original:daily.1-2",
-        "name": "Monday · 母艦 2",
+        "name": "週一 · 類星體母艦 2",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -41092,7 +41092,7 @@
       },
       {
         "id": "original:daily.1-3",
-        "name": "Monday · 母艦 3",
+        "name": "週一 · 類星體母艦 3",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -41139,7 +41139,7 @@
       },
       {
         "id": "original:daily.1-4",
-        "name": "Monday · 母艦 4",
+        "name": "週一 · 類星體母艦 4",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -41186,7 +41186,7 @@
       },
       {
         "id": "original:daily.2-1",
-        "name": "Tuesday · 母艦 1",
+        "name": "週二 · 類星體母艦 1",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -41233,7 +41233,7 @@
       },
       {
         "id": "original:daily.2-2",
-        "name": "Tuesday · 母艦 2",
+        "name": "週二 · 類星體母艦 2",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -41280,7 +41280,7 @@
       },
       {
         "id": "original:daily.2-3",
-        "name": "Tuesday · 母艦 3",
+        "name": "週二 · 類星體母艦 3",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -41327,7 +41327,7 @@
       },
       {
         "id": "original:daily.2-4",
-        "name": "Tuesday · 母艦 4",
+        "name": "週二 · 類星體母艦 4",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -41374,7 +41374,7 @@
       },
       {
         "id": "original:daily.3-1",
-        "name": "Wednesday · 母艦 1",
+        "name": "週三 · 類星體母艦 1",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -41421,7 +41421,7 @@
       },
       {
         "id": "original:daily.3-2",
-        "name": "Wednesday · 母艦 2",
+        "name": "週三 · 類星體母艦 2",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -41468,7 +41468,7 @@
       },
       {
         "id": "original:daily.3-3",
-        "name": "Wednesday · 母艦 3",
+        "name": "週三 · 類星體母艦 3",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -41515,7 +41515,7 @@
       },
       {
         "id": "original:daily.3-4",
-        "name": "Wednesday · 母艦 4",
+        "name": "週三 · 類星體母艦 4",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -41562,7 +41562,7 @@
       },
       {
         "id": "original:daily.4-1",
-        "name": "Thursday · 母艦 1",
+        "name": "週四 · 類星體母艦 1",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -41609,7 +41609,7 @@
       },
       {
         "id": "original:daily.4-2",
-        "name": "Thursday · 母艦 2",
+        "name": "週四 · 類星體母艦 2",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -41656,7 +41656,7 @@
       },
       {
         "id": "original:daily.4-3",
-        "name": "Thursday · 母艦 3",
+        "name": "週四 · 類星體母艦 3",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -41703,7 +41703,7 @@
       },
       {
         "id": "original:daily.4-4",
-        "name": "Thursday · 母艦 4",
+        "name": "週四 · 類星體母艦 4",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -41750,7 +41750,7 @@
       },
       {
         "id": "original:daily.5-1",
-        "name": "Friday · 母艦 1",
+        "name": "週五 · 類星體母艦 1",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -41797,7 +41797,7 @@
       },
       {
         "id": "original:daily.5-2",
-        "name": "Friday · 母艦 2",
+        "name": "週五 · 類星體母艦 2",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -41844,7 +41844,7 @@
       },
       {
         "id": "original:daily.5-3",
-        "name": "Friday · 母艦 3",
+        "name": "週五 · 類星體母艦 3",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -41891,7 +41891,7 @@
       },
       {
         "id": "original:daily.5-4",
-        "name": "Friday · 母艦 4",
+        "name": "週五 · 類星體母艦 4",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -41938,7 +41938,7 @@
       },
       {
         "id": "original:daily.6-1",
-        "name": "Saturday · 母艦 1",
+        "name": "週六 · 類星體母艦 1",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -41985,7 +41985,7 @@
       },
       {
         "id": "original:daily.6-2",
-        "name": "Saturday · 母艦 2",
+        "name": "週六 · 類星體母艦 2",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -42032,7 +42032,7 @@
       },
       {
         "id": "original:daily.6-3",
-        "name": "Saturday · 母艦 3",
+        "name": "週六 · 類星體母艦 3",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -42079,7 +42079,7 @@
       },
       {
         "id": "original:daily.6-4",
-        "name": "Saturday · 母艦 4",
+        "name": "週六 · 類星體母艦 4",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -42126,7 +42126,7 @@
       },
       {
         "id": "original:daily.0-1",
-        "name": "Sunday · 母艦 1",
+        "name": "週日 · 類星體母艦 1",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -42173,7 +42173,7 @@
       },
       {
         "id": "original:daily.0-2",
-        "name": "Sunday · 母艦 2",
+        "name": "週日 · 類星體母艦 2",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -42220,7 +42220,7 @@
       },
       {
         "id": "original:daily.0-3",
-        "name": "Sunday · 母艦 3",
+        "name": "週日 · 類星體母艦 3",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",
@@ -42267,7 +42267,7 @@
       },
       {
         "id": "original:daily.0-4",
-        "name": "Sunday · 母艦 4",
+        "name": "週日 · 類星體母艦 4",
         "description": "單波自動接敵；首次清除發放四資源，重演不再領取。",
         "status": "active",
         "provenance": "research",

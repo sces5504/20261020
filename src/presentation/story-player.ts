@@ -1,6 +1,6 @@
 import type { Game } from "../application/game";
 import type { PresentationStep, StoryStep } from "../content/story";
-import { storyAvailable, conditionMet } from "../domain/story";
+import { storyAvailable, conditionMet, mainlineChain } from "../domain/story";
 import { esc, button } from "./common";
 /** Presentation owns no progression; every effect/cursor is committed by Game.command. */
 export function mountStoryPlayer(
@@ -43,12 +43,13 @@ export function mountStoryPlayer(
       !g.busy &&
       !root.querySelector("#overlay")?.childElementCount
     ) {
-      const q = g.pack.quests.find(
-        (q) =>
-          q.story?.autoStart &&
-          !g.save.storySeen.includes(q.id) &&
-          storyAvailable(g.pack, g.save, q.id),
-      );
+      const q =
+        g.pack.quests.find(
+          (q) =>
+            q.story?.autoStart &&
+            !g.save.storySeen.includes(q.id) &&
+            storyAvailable(g.pack, g.save, q.id),
+        ) ?? mainlineChain(g.pack, g.save);
       if (q) {
         pending = true;
         void g.command({ type: "story-start", id: q.id }).finally(() => {
@@ -68,7 +69,31 @@ export function mountStoryPlayer(
           steps: g.combat.storyEncounter!.cues[index].steps,
         };
     }
-    if (!replay && !cue && (!session || session.waiting)) {
+    const awaiting =
+      !replay && !cue && session && !session.waiting
+        ? g.pack.quests.find((q) => q.id === session.quest)?.story?.steps[
+            session.cursor
+          ]
+        : undefined;
+    if (awaiting?.kind === "await") {
+      // Like original EventSpot triggers: roam freely, resume the moment the goal is met.
+      if (conditionMet(g.save, awaiting.condition) && !g.combat && !g.busy) {
+        pending = true;
+        void g.command({ type: "story-next" }).finally(() => {
+          pending = false;
+          hiddenSession = "";
+          key = "";
+          draw();
+        });
+        return;
+      }
+      hiddenSession = session!.quest;
+    }
+    if (
+      !replay &&
+      !cue &&
+      (!session || session.waiting || awaiting?.kind === "await")
+    ) {
       if (opened) {
         host.innerHTML = "";
         opened = false;
@@ -257,12 +282,19 @@ export function mountStoryPlayer(
   let hiddenSession = "";
   root.addEventListener("click", click, true);
   const timer = window.setInterval(() => {
+    const session = g.save.story.session;
+    const step = session
+      ? g.pack.quests.find((q) => q.id === session.quest)?.story?.steps[
+          session.cursor
+        ]
+      : undefined;
     if (
       hiddenSession &&
-      g.save.story.session?.quest === hiddenSession &&
+      session?.quest === hiddenSession &&
       !cue &&
       !replay &&
-      !g.combat
+      !g.combat &&
+      !(step?.kind === "await" && conditionMet(g.save, step.condition))
     )
       return;
     if (g.save.story.session?.quest !== hiddenSession) hiddenSession = "";

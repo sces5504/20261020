@@ -139,6 +139,23 @@ for day in read('daily-boss'):
   n=node('original:daily.'+str(day['f10'])+'-'+str(j),day['f00']+' · 母艦 '+str(j),daily['id'],1200+(j-1)*1200,2100,w,'dailyBoss',encounterPolicy='manual',objective='damage',timeLimitSeconds=180,schedule=dict(weekdays=[day['f10']],utcOffsetMinutes=540,resetHour=0),sprite=visuals[cid],reward=money([1200]*4),sourceRef=f"Boss[{day['_row']}] f01..04 templates, f09 level inferred, f10 weekday; Global BossLimitSec=180; independent four challenges / reward budget adapted")
 assets=json.loads((ROOT/'art/world/original-world/assets.json').read_text()) if (ROOT/'art/world/original-world/assets.json').exists() else []
 pack=dict(schemaVersion=1,id='original:package.world',version='0.1.0',requires=[dict(id='m1:core',version='0.7.0'),dict(id='stella:package.skills',version='0.1.0'),dict(id='solar10:package.first-ten',version='0.2.0')],definitions=dict(enemies=enemies,skills=skills,regions=regions,planets=nodes,assets=assets))
+# Player-facing localization of replay families (see localize.py); source keys stay in sourceRef.
+import localize as L
+_order={}
+for r in regions:
+ m=re.fullmatch(r'(.+) · 遭遇航跡',r['name'])
+ if r['id'].startswith('original:region.replay-') and m:
+  r['name'],r['category'],_=L.family(m[1]);r['description']='原作波次遭遇；逐場解鎖，勝利後開啟下一戰，可經入口航路返回。'
+for v in nodes:
+ if v['region'].startswith('original:region.replay-'):
+  i=_order.get(v['region'],0);_order[v['region']]=i+1;v['name']=L.node(v['name'],i)
+ if v['region']=='original:region.daily':v['name']=L.daily(v['name'])
+hub['name']='挑戰航區';hub['description']='戰艦討伐、委託任務與類星體母艦的入口；選擇航跡展開作戰，入口可返回太陽系。';daily['name']='類星體母艦'
+_names={r['id']:r['name'] for r in regions}
+for r in regions:
+ for rt in r['routes']:
+  if r is hub and rt['to']!=region(1):rt['label']=_names.get(rt['to'],rt['label'])
+  if rt['to']==hub['id']:rt['label']='挑戰航區（戰艦／委託／母艦）' if r['id']==region(1) else '返回挑戰航區'
 write(ROOT/'content/extensions/original-world.json',pack)
 write(SRC/'coverage.json',dict(runtimeWaves=coverage,excludedWaves=excluded,counts=dict(enemies=len(enemies),regions=len(regions),nodes=len(nodes),planetCount=len(planets),remainingReplayWaves=len(remaining),supplyPatrols=sum(len(r.get('patrols',[])) for r in regions)),adaptation=dict(coordinateScale=10,planetProductionDivisor=600,firstWinPerResource='18 + 2*level (minimum 12)',dailyRewardPerResource=1200,sourceGateReturnPolicy='explicit safe return to lower tier',sourceEventVM='not recovered; combat replay entry/layout reconstructed',campResupply='free existing 20-second jobs; recovery adaptation, not recovered native price',supplyPatrols='13 normal regions; 90 active-second respawn; each resource 12 + floor(level/2); no offline combat')))
 print(pack['id'],len(enemies),'enemies',len(regions),'regions',len(nodes),'nodes',len(coverage),'wave mappings',len(excluded),'excluded')

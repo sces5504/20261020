@@ -156,7 +156,7 @@ export async function mountStudio(root: HTMLElement) {
     sourceRef: "原作來源與推定依據",
     campaignStart: "可選新航跡起點",
     summonable: "可透過共鳴取得",
-    category: "分類（航區campaign／hard／event／daily；音效依選項）",
+    category: "分類（航區campaign／hard／event／daily／battleship／mission；音效依選項）",
     waveform: "波形",
     startHz: "起始頻率 Hz",
     endHz: "結束頻率 Hz",

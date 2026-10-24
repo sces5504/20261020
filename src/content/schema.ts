@@ -168,7 +168,7 @@ const region = z
   .object({
     ...base,
     category: z
-      .enum(["campaign", "hard", "event", "daily"])
+      .enum(["campaign", "hard", "event", "daily", "battleship", "mission"])
       .default("campaign"),
     campaignStart: z.boolean().default(false),
     background: z.string().default(""),

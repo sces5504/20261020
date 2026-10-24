@@ -621,6 +621,8 @@ export function mountSpace(
         }
       if (!battle) {
         const d = model.destination;
+        const moving = Math.hypot(d.x - model.x, d.y - model.y) > 8 || !!(model.movement.x || model.movement.y);
+        const cruising = moving && model.movementSpeed > model.pack.rules.travelSpeed;
         g.lineStyle(1.2, 0x87d8d5, 0.4);
         g.lineBetween(model.x, model.y, d.x, d.y);
         g.strokeCircle(d.x, d.y, 12);
@@ -628,8 +630,31 @@ export function mountSpace(
           const o = model.save.roster.find((o) => o.id === model.save.team[i])!;
           const c = model.pack.characters.find((c) => c.id === o.definition)!;
           this.ensureAsset(c.sprite);
-          const position = model.fleet.positions.get(o.id)!;
+          const anchor = model.fleet.positions.get(o.id)!;
           const bob = Math.sin(this.elapsed * 2.2 + i * 1.7) * 3;
+          // Presentation-only drift: members weave instead of holding a rigid line.
+          const heading = model.fleet.heading ?? 0;
+          const sway = moving
+            ? Math.sin(this.elapsed * 1.4 + i * 2.1) * (10 + i * 2)
+            : 0;
+          const position = {
+            x: anchor.x - Math.sin(heading) * sway,
+            y: anchor.y + Math.cos(heading) * sway,
+          };
+          const trail = this.trails.get(o.id) ?? [];
+          trail.push({ x: position.x, y: position.y + bob });
+          if (trail.length > 14) trail.shift();
+          this.trails.set(o.id, trail);
+          if (cruising && !model.lowEffects)
+            for (let k = 1; k < trail.length; k++) {
+              const a = trail[k - 1],
+                b = trail[k],
+                t = k / trail.length;
+              g.lineStyle(10 * t, 0x5fc8ff, 0.32 * t);
+              g.lineBetween(a.x, a.y + 14, b.x, b.y + 14);
+              g.lineStyle(3 * t, 0xd8f4ff, 0.55 * t);
+              g.lineBetween(a.x, a.y + 14, b.x, b.y + 14);
+            }
           if (this.textures.exists(c.sprite)) {
             this.drawAsset(
               o.id,
@@ -1005,6 +1030,7 @@ export function mountSpace(
     }
 
     private spread = new Map<string, { x: number; y: number }>();
+    private trails = new Map<string, { x: number; y: number }[]>();
     /**
      * Presentation-only spacing: stacked units fan out on screen. Simulation positions,
      * hits and battle evidence are untouched; a coarse grid keeps it near O(n).

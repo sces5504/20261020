@@ -624,6 +624,27 @@ export function apply(
     }
     if (c.victory && !c.reset) storyFact(s, "battleWon", c.planet);
     storyEncounterResult(p, s, c.planet, c.victory && !c.reset);
+    // A wiped fleet is towed to the nearest place it can recover and repaired there.
+    const crew = s.roster.filter((o) => s.team.includes(o.id));
+    if (!c.victory && crew.length && crew.every((o) => o.hp <= 0)) {
+      const region = p.regions.find((r) => r.id === s.region)!;
+      const haven = p.planets
+        .filter(
+          (v) =>
+            v.region === s.region &&
+            ((v.kind === "camp" && nodeUnlocked(s, v, p)) ||
+              s.colonies[v.id]?.active),
+        )
+        .sort(
+          (a, b) =>
+            Math.hypot(a.x - s.x, a.y - s.y) - Math.hypot(b.x - s.x, b.y - s.y),
+        )[0];
+      s.x = haven ? haven.x - 120 : region.startX;
+      s.y = haven ? haven.y + 80 : region.startY;
+      for (const o of crew)
+        if (!s.jobs.some((j) => j.owner === o.id))
+          job("heal", o.id, o.definition, p.rules.healSeconds, {}, "", `-rescue-${o.id}`);
+    }
     s.encounter = null;
     s.receipts.push(c.receipt);
   }

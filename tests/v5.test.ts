@@ -155,7 +155,7 @@ test("enemies strafe while within firing range instead of freezing at their stop
   );
 });
 
-test("a pending planet result prevents another contact until acknowledged, without adding patrol grace time", async () => {
+test("results never hold back the next contact: a patrol in range engages at once", async () => {
   const previous = Object.getOwnPropertyDescriptor(globalThis, "localStorage");
   Object.defineProperty(globalThis, "localStorage", {
     value: { getItem: () => null },
@@ -174,15 +174,6 @@ test("a pending planet result prevents another contact until acknowledged, witho
     g.command = async (c) => {
       commands.push(c);
     };
-    g.report = {
-      title: "result",
-      message: "",
-      victory: true,
-      planet: p.planets[0].id,
-    };
-    g.step(1 / 60);
-    assert.equal(commands.length, 0);
-    g.report = null;
     g.step(1 / 60);
     assert.equal((commands[0] as { type: string }).type, "patrol");
   } finally {

@@ -119,28 +119,66 @@ export function drawCombatVfx(
       const reach = f.reach ?? a.radius,
         ex = f.x + Math.cos(f.angle) * reach,
         ey = f.y + Math.sin(f.angle) * reach;
-      base.lineStyle(a.width, edge, hostile ? 0.22 : 0.12);
-      base.lineBetween(f.x, f.y, ex, ey);
-      danger.lineStyle(Math.max(1, a.width * 0.08), edge, 0.8);
+      // Effective geometry stays readable without a translucent rectangular fill.
+      danger.lineStyle(2, edge, hostile ? 0.8 : 0.22);
       danger.lineBetween(f.x, f.y, ex, ey);
-      // The two boundary rails describe the actual beam width, including on low effects.
       const nx = (-Math.sin(f.angle) * a.width) / 2,
         ny = (Math.cos(f.angle) * a.width) / 2;
-      danger.lineStyle(1.2, edge, 0.65);
-      danger.lineBetween(f.x + nx, f.y + ny, ex + nx, ey + ny);
-      danger.lineBetween(f.x - nx, f.y - ny, ex - nx, ey - ny);
-      if (!reduced) {
-        light.lineStyle(a.width * 0.5, c, 0.18);
-        light.lineBetween(f.x, f.y, ex, ey);
-        light.lineStyle(Math.max(2, a.width * 0.1), 0xe7ffff, 0.65);
-        light.lineBetween(f.x, f.y, ex, ey);
-        for (let i = 0; i < 6; i++) {
-          const d = (t * 220 + (i * reach) / 6) % Math.max(1, reach);
-          light.fillStyle(c, 0.65);
-          light.fillCircle(
-            f.x + Math.cos(f.angle) * d,
-            f.y + Math.sin(f.angle) * d,
-            3,
+      danger.lineStyle(hostile ? 1.8 : 1, edge, hostile ? 0.8 : 0.25);
+      if (hostile) {
+        danger.lineBetween(f.x + nx, f.y + ny, ex + nx, ey + ny);
+        danger.lineBetween(f.x - nx, f.y - ny, ex - nx, ey - ny);
+      } else {
+        const dx = Math.cos(f.angle) * 14,
+          dy = Math.sin(f.angle) * 14;
+        for (const sign of [-1, 1]) {
+          danger.lineBetween(
+            f.x + nx * sign,
+            f.y + ny * sign,
+            f.x + nx * sign + dx,
+            f.y + ny * sign + dy,
+          );
+          danger.lineBetween(
+            ex + nx * sign - dx,
+            ey + ny * sign - dy,
+            ex + nx * sign,
+            ey + ny * sign,
+          );
+        }
+      }
+      if (!reduced && combat.mechanics.fields.length <= 12) {
+        // Advect fine luminous streamers through the textured plasma body.
+        const cos = Math.cos(f.angle),
+          sin = Math.sin(f.angle);
+        for (let strand = 0; strand < 2; strand++) {
+          light.lineStyle(1.2, 0xd7ffff, 0.25);
+          light.beginPath();
+          for (let i = 0; i <= 24; i++) {
+            const d = (reach * i) / 24;
+            const offset =
+              (strand ? 1 : -1) * a.width * 0.075 +
+              Math.sin(d * 0.018 - t * 8 + strand * 2) * a.width * 0.03;
+            const x = f.x + cos * d - sin * offset,
+              y = f.y + sin * d + cos * offset;
+            if (!i) light.moveTo(x, y);
+            else light.lineTo(x, y);
+          }
+          light.strokePath();
+        }
+        for (let i = 0; i < 9; i++) {
+          const d = (t * 460 + (i * reach) / 9) % Math.max(1, reach);
+          const offset = Math.sin(i * 2.4 + t * 2) * a.width * 0.12;
+          const length = Math.min(26, reach - d);
+          light.lineStyle(
+            i % 3 === 0 ? 2 : 1,
+            i % 3 === 0 ? 0xf2ffff : c,
+            0.55,
+          );
+          light.lineBetween(
+            f.x + cos * d - sin * offset,
+            f.y + sin * d + cos * offset,
+            f.x + cos * (d + length) - sin * offset,
+            f.y + sin * (d + length) + cos * offset,
           );
         }
       }

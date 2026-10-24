@@ -1,0 +1,148 @@
+{
+  "phase": "beam replacement after user visual rejection",
+  "status": "candidate-awaiting-review",
+  "userFeedback": "太沒質感了，看起來就是單純一個長方形",
+  "changes": [
+    "transparent plasma texture replaces broad solid strokes and rectangular fill",
+    "soft source corona and pending-action charging",
+    "simulation-time flow streamers",
+    "contact flare only at real hit flash positions in a current beam",
+    "hostile effective boundaries unchanged in low effects"
+  ],
+  "build": "pass; tsc and Vite",
+  "rendererTests": {
+    "pass": true,
+    "count": 2,
+    "scope": [
+      "rendering does not mutate simulation or RNG",
+      "low-effects preserves actual hostile beam/zone bounds and bullet cores"
+    ]
+  },
+  "capture": {
+    "results": [
+      {
+        "key": "beam",
+        "character": "solar10:character.pluto",
+        "label": "冥王星 · 滅絕之光",
+        "viewport": "1024x768",
+        "skill": "solar10:skill.pluto",
+        "effect": [
+          {
+            "kind": "beam",
+            "target": "enemies",
+            "radius": 1200,
+            "duration": 2,
+            "travelTime": 0,
+            "expanding": false,
+            "once": false,
+            "power": 0.18,
+            "count": 1,
+            "interval": 0.2,
+            "delay": 0.3,
+            "pattern": "aim",
+            "speed": 520,
+            "spread": 0.22,
+            "rotation": 0,
+            "startAngle": 0,
+            "randomSpread": false,
+            "spawnRadius": 0,
+            "inward": false,
+            "salvos": 1,
+            "salvoInterval": 0.5,
+            "interruptible": true,
+            "bypassEvasion": false,
+            "suppressCritical": false,
+            "width": 300,
+            "pierce": 0,
+            "splash": 0,
+            "pull": 0,
+            "summon": "clone",
+            "follow": true,
+            "track": false,
+            "origin": "owner",
+            "targeting": "single",
+            "cancelOnTargetDeath": false,
+            "cadence": 0,
+            "chain": 0,
+            "splitCount": 0,
+            "splitAfter": 0,
+            "splitPower": 0.5,
+            "splashPower": 1,
+            "knockback": 0,
+            "modifiers": []
+          }
+        ],
+        "reviewStatus": "candidate",
+        "fixture": "one actual character with its original skill; one enemy with 100000HP/1ATK, no patrols",
+        "screenshot": ".artifacts/vfx-direction/beam.png",
+        "video": ".artifacts/vfx-direction/beam-full.webm",
+        "physicalDevice": false
+      }
+    ],
+    "errors": [],
+    "note": "Real Game / Combat / Phaser renderer, not an independent animation mockup."
+  },
+  "sourceHashes": [
+    {
+      "path": "src/presentation/combat-vfx.ts",
+      "sha256": "9717d0ff7fca67a5e156c673f5a567013b562bbaac616031625de1849bbf859b"
+    },
+    {
+      "path": "src/presentation/journal.ts",
+      "sha256": "cf5343287663ef0c49ca8d495488837ca2718d2e662aa6fc1f5485c4d8049a72"
+    },
+    {
+      "path": "src/presentation/ui-polish.css",
+      "sha256": "b34a7d84b0b406a17f48369cc07f3573bc5fda4d477cf77c262c61b4861a1b95"
+    },
+    {
+      "path": "src/presentation/ui.ts",
+      "sha256": "695cddd9ac5b424a51a8b523f3fc335f5cb914b7e330c8266889c581c9eaf634"
+    },
+    {
+      "path": "src/presentation/story-player.ts",
+      "sha256": "a2b71b2ce7647ad9c8e1890192ed5faafa980a2d9b3007b901994cf7af48bb1c"
+    },
+    {
+      "path": "src/presentation/space.ts",
+      "sha256": "7520df983029d0cb8e3ea590a8067af0d1e847effd93a8f8a5f4c0fcf73eca39"
+    },
+    {
+      "path": "src/presentation/icons.ts",
+      "sha256": "2180fee39db1f9371798b80e451d1a17d2fdbaf6d6287539e70851b8b196c625"
+    },
+    {
+      "path": "src/style.css",
+      "sha256": "a5f00bf6d4a1ff3ff096f595871b6dd66ad274c672f2697f0d196c849e160065"
+    },
+    {
+      "path": "src/presentation/summon-art.ts",
+      "sha256": "fd015da86164ca0267b47ccf8422e0f726b9fb621e929822b64e6bc383e8345d"
+    },
+    {
+      "path": "src/presentation/summon-cues.ts",
+      "sha256": "f032a6d8f2751b92681ea1bf6453e287734373a62b1c49e56e528c4688f27148"
+    },
+    {
+      "path": "src/presentation/laboratory.ts",
+      "sha256": "b799bc9152d0bb14c3bc864c92980884c88c4dd67edb36d826eb9f3d556c7a79"
+    },
+    {
+      "path": "src/presentation/beam-art.ts",
+      "sha256": "3fd7066a12dfb0e09bbc96c9500df7e9878590be75292dbaf26acfe263049f08"
+    },
+    {
+      "path": "src/presentation/beam-layer.ts",
+      "sha256": "41481b881a6987c1f78080cbfbbdda1dde29fd9b947ea2d3d66e6880877cd71f"
+    }
+  ],
+  "gameRulesOrSaveChanged": false,
+  "originalStandardsChanged": false,
+  "physicalDevice": false,
+  "allSkillsUniqueVfxComplete": false,
+  "previewFiles": [
+    "docs/art/ui-polish-v1/previews/skills/beam.png",
+    "docs/art/ui-polish-v1/previews/skills/beam.webm"
+  ],
+  "rejectedBefore": "docs/art/ui-polish-v1/previews/skills/beam-flat-rejected.png"
+}

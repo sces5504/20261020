@@ -1,6 +1,7 @@
 import { drawCombatVfx } from "./combat-vfx";
 import { turretArt } from "./summon-art";
 import { SummonCues } from "./summon-cues";
+import { BeamLayer } from "./beam-layer";
 import {
   nodeUnlocked,
   nodeCleared,
@@ -94,8 +95,10 @@ export function mountSpace(
     lastHits = 0;
     lastShake = 0;
     summonCues = new SummonCues();
+    beamLayer?: BeamLayer;
 
     create() {
+      this.beamLayer = new BeamLayer(this);
       this.ensureTurretArt();
       this.ink = this.add.graphics();
       this.hud = this.add.graphics().setDepth(20);
@@ -399,6 +402,11 @@ export function mountSpace(
       }
       this.hud.clear();
       this.light.clear();
+      this.beamLayer?.draw(
+        model.combat ?? undefined,
+        model.lowEffects ||
+          matchMedia("(prefers-reduced-motion: reduce)").matches,
+      );
       this.labelIndex = 0;
       // Nebulae and a stable starfield: presentation-only, independent from simulation RNG.
       for (let i = r.background ? 0 : model.lowEffects ? 3 : 8; i > 0; i--) {

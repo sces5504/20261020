@@ -1,3 +1,4 @@
+import { beamArt } from "./beam-art";
 import { barrierEnds } from "../domain/mechanics";
 import { turretArt } from "./summon-art";
 import { SimulationClock } from "../application/simulation-clock";
@@ -59,7 +60,12 @@ export function mountLaboratory(parent: HTMLElement, pack: Pack) {
     let img = images.get(id);
     if (!img) {
       const asset = pack.assets.find((a) => a.id === id);
-      const src = id === turretArt.key ? turretArt.url : asset?.src;
+      const src =
+        id === turretArt.key
+          ? turretArt.url
+          : id === beamArt.key
+            ? beamArt.url
+            : asset?.src;
       if (!src) return undefined;
       img = new Image();
       img.src = src;
@@ -248,27 +254,51 @@ export function mountLaboratory(parent: HTMLElement, pack: Pack) {
       if (f.action.kind === "beam") {
         ctx.translate(f.x, f.y);
         ctx.rotate(f.angle);
-        const beam = ctx.createLinearGradient(
-          0,
-          -f.action.width / 2,
-          0,
-          f.action.width / 2,
-        );
-        beam.addColorStop(0, f.color + "00");
-        beam.addColorStop(0.35, f.color + "55");
-        beam.addColorStop(0.5, "#ffffffaa");
-        beam.addColorStop(0.65, f.color + "55");
-        beam.addColorStop(1, f.color + "00");
-        ctx.fillStyle = beam;
-        ctx.fillRect(
-          0,
-          -f.action.width / 2,
-          f.reach ?? f.action.radius,
-          f.action.width,
-        );
-
-        ctx.fillStyle = "#ffffff";
-        ctx.fillRect(0, -2, f.reach ?? f.action.radius, 4);
+        const beam = imageFor(beamArt.key),
+          reach = f.reach ?? f.action.radius;
+        ctx.globalCompositeOperation = "lighter";
+        if (beam?.complete && beam.naturalWidth) {
+          ctx.globalAlpha = 0.75;
+          ctx.drawImage(
+            beam,
+            16,
+            -f.action.width * 0.35,
+            Math.max(1, reach - 16),
+            f.action.width * 0.7,
+          );
+          ctx.globalAlpha = 0.14;
+          ctx.drawImage(
+            beam,
+            16,
+            -f.action.width * 0.55,
+            Math.max(1, reach - 16),
+            f.action.width * 1.1,
+          );
+        } else {
+          ctx.lineWidth = 2;
+          ctx.moveTo(0, 0);
+          ctx.lineTo(reach, 0);
+          ctx.stroke();
+        }
+        ctx.globalAlpha = 0.65;
+        const glow = ctx.createRadialGradient(16, 0, 0, 16, 0, 38);
+        glow.addColorStop(0, "#dcffff");
+        glow.addColorStop(0.25, f.color + "aa");
+        glow.addColorStop(1, f.color + "00");
+        ctx.fillStyle = glow;
+        ctx.fillRect(-22, -38, 76, 76);
+        ctx.globalAlpha = 1;
+        ctx.globalCompositeOperation = "source-over";
+        if (f.side === "enemy") {
+          ctx.strokeStyle = "#ff758f";
+          ctx.lineWidth = 1.5;
+          ctx.beginPath();
+          ctx.moveTo(0, -f.action.width / 2);
+          ctx.lineTo(reach, -f.action.width / 2);
+          ctx.moveTo(0, f.action.width / 2);
+          ctx.lineTo(reach, f.action.width / 2);
+          ctx.stroke();
+        }
       } else {
         ctx.arc(f.x, f.y, f.radius ?? f.action.radius, 0, Math.PI * 2);
         ctx.fill();

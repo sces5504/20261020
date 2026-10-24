@@ -1,14 +1,14 @@
 {
   "assetId": "presentation:ui-vfx-polish.v1",
-  "version": "1.1.0-candidate",
+  "version": "1.2.0-candidate",
   "baseCommit": "072892b21ffe69a10fd9cf9861cc9155be403357",
   "coreVersion": "0.9.0",
   "reviewStatus": "candidate",
-  "directionReview": "User requested larger characters with feet behind dialogue; applied. Full UI/VFX not approved.",
+  "directionReview": "User rejected flat rectangular beam. Textured plasma replacement is a new candidate awaiting review. Other samples are not approved.",
   "bundle": "presentation-only; Vite dynamic UI CSS/JS",
   "colorSpace": "sRGB",
   "runtime": {
-    "type": "procedural Graphics + CSS, plus first RGBA summon turret candidate",
+    "type": "Graphics/CSS plus candidate RGBA summon and plasma textures",
     "dimensions": "UI CSS pixels / VFX world units. New turret PNG/WebP 1536x1024; shared runtime texture 512x341, visual width64.",
     "pivot": {
       "cast": "flash.x/y",
@@ -20,8 +20,9 @@
     "alpha": "Renderer geometry alpha plus straight-alpha WebP for first summon candidate. No raster animation atlas.",
     "blend": {
       "ground": "NORMAL",
-      "decoration": "ADD, Phaser depth 2",
-      "hazard": "NORMAL, depth 20; above character sprites"
+      "beamBody": "ADD depth1; same field geometry/lifetime",
+      "decoration": "ADD depth2, emitter3, contact4",
+      "hazard": "NORMAL depth20; enemy true boundaries above VFX"
     },
     "atlas": null,
     "frames": null,
@@ -30,7 +31,7 @@
       "castFlashSeconds": 0.65,
       "hitFlashSeconds": "0.2 / 0.25, read actual remaining life",
       "persistent": "Active field/dash/status lifespan from the simulation",
-      "reduced": "No additive decoration, same hostile bullet cores and effective boundaries",
+      "reduced": "Static textured beam body and summon body remain; optional haze/charge/contact/flow ornaments omitted; enemy effective boundaries unchanged.",
       "damage": "Simulation only; renderer has no callbacks or RNG"
     }
   },
@@ -50,7 +51,7 @@
   "sources": [
     {
       "path": "src/presentation/combat-vfx.ts",
-      "sha256": "887cef44fde6fdc9765fb4c446095bcacbcb8f098348c82f260b1f3a4ba56fce"
+      "sha256": "9717d0ff7fca67a5e156c673f5a567013b562bbaac616031625de1849bbf859b"
     },
     {
       "path": "src/presentation/journal.ts",
@@ -70,7 +71,7 @@
     },
     {
       "path": "src/presentation/space.ts",
-      "sha256": "65a65524578a75625401bcef3092cf8ccbd0ec07b1db308effb7b1a6303488f7"
+      "sha256": "7520df983029d0cb8e3ea590a8067af0d1e847effd93a8f8a5f4c0fcf73eca39"
     },
     {
       "path": "src/presentation/icons.ts",
@@ -90,7 +91,15 @@
     },
     {
       "path": "src/presentation/laboratory.ts",
-      "sha256": "a3427b23c92dd5e30aa1ec5f6d75933173f841cb0721d7a35d992a90ed7beea9"
+      "sha256": "b799bc9152d0bb14c3bc864c92980884c88c4dd67edb36d826eb9f3d556c7a79"
+    },
+    {
+      "path": "src/presentation/beam-art.ts",
+      "sha256": "3fd7066a12dfb0e09bbc96c9500df7e9878590be75292dbaf26acfe263049f08"
+    },
+    {
+      "path": "src/presentation/beam-layer.ts",
+      "sha256": "41481b881a6987c1f78080cbfbbdda1dde29fd9b947ea2d3d66e6880877cd71f"
     }
   ],
   "families": {
@@ -1196,9 +1205,9 @@
     },
     {
       "path": "docs/art/ui-polish-v1/previews/skills/beam.png",
-      "sha256": "c70550194b1be173732017cf208fbb40b68cc954150a5712327cb4d38dc3c1ea",
-      "bytes": 308254,
-      "reviewStatus": "candidate",
+      "sha256": "8304bcc2aebbeebfc4c963ca38e66aac97967bf6f67368ea46697a77a84b766b",
+      "bytes": 360408,
+      "reviewStatus": "new-candidate-after-flat-beam-rejection",
       "type": "real Game/Combat/Phaser review evidence; one skill per clip",
       "fixture": "one original-skill character; one high-HP/low-attack enemy, no patrols",
       "alpha": "opaque preview",
@@ -1211,9 +1220,9 @@
     },
     {
       "path": "docs/art/ui-polish-v1/previews/skills/beam.webm",
-      "sha256": "04dca942ff31ccab537422984ea78cbc6d940c042c135c76191f2b26ee24a066",
-      "bytes": 255611,
-      "reviewStatus": "candidate",
+      "sha256": "82f6e21dbac087905b57804f76df78791b86ab3a3687ffbd70501f679e4274e0",
+      "bytes": 286345,
+      "reviewStatus": "new-candidate-after-flat-beam-rejection",
       "type": "real Game/Combat/Phaser review evidence; one skill per clip",
       "fixture": "one original-skill character; one high-HP/low-attack enemy, no patrols",
       "alpha": "opaque preview",
@@ -1321,8 +1330,22 @@
       "fps": 25,
       "durationSecondsApprox": 7,
       "method": "last7 seconds from captured real-game clip; no timing or damage driven by video"
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/skills/beam-flat-rejected.png",
+      "sha256": "c70550194b1be173732017cf208fbb40b68cc954150a5712327cb4d38dc3c1ea",
+      "bytes": 308254,
+      "width": 982,
+      "height": 454,
+      "reviewStatus": "rejected-by-user",
+      "type": "prior rectangle version preserved for before/after comparison",
+      "alpha": "opaque review screenshot",
+      "pivot": null,
+      "atlas": null,
+      "frames": null
     }
   ],
   "summonArtManifest": "art/vfx/summons-v1/manifest.json",
-  "coverageLimit": "245 definitions mapped to 9 common families; not 245 completed unique VFX. Drone / soldiers / decoy and individual multi-stage performances await direction review."
+  "coverageLimit": "245 definitions mapped to 9 common families; not 245 completed unique VFX. Drone / soldiers / decoy and individual multi-stage performances await direction review.",
+  "beamArtManifest": "art/vfx/beams-v1/manifest.json"
 }

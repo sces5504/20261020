@@ -34,3 +34,4 @@
 
 - PR #25合併為main `4164f9f`；Checks 40080385135成功。Pages release 40080385134失敗、未部署：build、e2e、playtest、exploration、refinement、polish通過後，test:content-integration找不到`.squad-card .avatar-cropped img`（PR #24把編隊卡改為operator-card，原選擇器失效）。
 - 修正：測試改看`.operator-art img`，並把「transform必須none」改為「不可縮放／旋轉／翻轉」，因PR #24以translateX(-50%)置中。本機重跑content-integration桌機／觸控PASS；之前未跑的skills、integration-v8、release:ready也在本機各跑一次，全部通過。
+- 第二輪：PR #26合併為`c714bb3`，Pages release 40081875663在test:world「管理面板暫停挑戰」失敗（0.13%→0.14%）；content-integration與skills已在CI通過。根因：暫停即時生效，但HUD戰況文字由250ms UI計時器刷新，測試開面板當下讀到暫停前的舊畫面。測試改為等一次刷新（300ms）再取樣，仍要求500ms內不變；本機test:world桌機／觸控PASS。

@@ -10,10 +10,10 @@
       "mode": "eliminate",
       "victory": true,
       "reset": false,
-      "seconds": 6.08,
+      "seconds": 7.83,
       "survivors": 3,
       "hp": {
-        "owned-1": 759,
+        "owned-1": 760,
         "owned-2": 549,
         "owned-3": 591
       }
@@ -26,10 +26,10 @@
       "mode": "eliminate",
       "victory": true,
       "reset": false,
-      "seconds": 2.42,
+      "seconds": 2.75,
       "survivors": 3,
       "hp": {
-        "owned-1": 668,
+        "owned-1": 667,
         "owned-2": 483,
         "owned-3": 520
       }
@@ -122,10 +122,10 @@
       "mode": "protect",
       "victory": true,
       "reset": false,
-      "seconds": 7.05,
+      "seconds": 8.62,
       "survivors": 3,
       "hp": {
-        "owned-1": 1037,
+        "owned-1": 1027,
         "owned-2": 749,
         "owned-3": 806
       }
@@ -173,9 +173,9 @@
       "seconds": 16.1,
       "survivors": 3,
       "hp": {
-        "owned-1": 851,
-        "owned-2": 615,
-        "owned-3": 662
+        "owned-1": 846,
+        "owned-2": 616,
+        "owned-3": 663
       }
     },
     {
@@ -186,12 +186,12 @@
       "mode": "eliminate",
       "victory": true,
       "reset": false,
-      "seconds": 12.33,
+      "seconds": 10.13,
       "survivors": 3,
       "hp": {
-        "owned-1": 895,
-        "owned-2": 647,
-        "owned-3": 698
+        "owned-1": 872,
+        "owned-2": 646,
+        "owned-3": 699
       }
     },
     {
@@ -205,7 +205,7 @@
       "seconds": 24.02,
       "survivors": 3,
       "hp": {
-        "owned-1": 847,
+        "owned-1": 851,
         "owned-2": 616,
         "owned-3": 663
       }
@@ -298,11 +298,11 @@
       "mode": "protect",
       "victory": true,
       "reset": false,
-      "seconds": 16.08,
+      "seconds": 15.07,
       "survivors": 3,
       "hp": {
-        "owned-1": 1059,
-        "owned-2": 781,
+        "owned-1": 1044,
+        "owned-2": 782,
         "owned-3": 842
       }
     },
@@ -330,11 +330,11 @@
       "mode": "eliminate",
       "victory": true,
       "reset": false,
-      "seconds": 23.77,
+      "seconds": 26.85,
       "survivors": 3,
       "hp": {
         "owned-1": 1454,
-        "owned-2": 1139,
+        "owned-2": 1152,
         "owned-3": 1271
       }
     },
@@ -394,12 +394,12 @@
       "mode": "protect",
       "victory": true,
       "reset": false,
-      "seconds": 14.9,
+      "seconds": 14.57,
       "survivors": 3,
       "hp": {
         "owned-1": 1285,
         "owned-2": 929,
-        "owned-3": 1021
+        "owned-3": 1017
       }
     },
     {
@@ -410,10 +410,10 @@
       "mode": "protect",
       "victory": true,
       "reset": false,
-      "seconds": 15.15,
+      "seconds": 15.92,
       "survivors": 3,
       "hp": {
-        "owned-1": 1267,
+        "owned-1": 1241,
         "owned-2": 915,
         "owned-3": 986
       }
@@ -445,7 +445,7 @@
       "seconds": 16.1,
       "survivors": 3,
       "hp": {
-        "owned-1": 1224,
+        "owned-1": 1260,
         "owned-2": 910,
         "owned-3": 986
       }
@@ -493,7 +493,7 @@
       "seconds": 24.02,
       "survivors": 3,
       "hp": {
-        "owned-1": 1426,
+        "owned-1": 1452,
         "owned-2": 1048,
         "owned-3": 1129
       }

@@ -52,3 +52,4 @@
 - UI：一鍵領取（逐項交易）、同面板重繪保留捲動且不搶焦點、頂部血量僅Boss、移除暫停鍵；手機（≤760px）照原作：細資源列、地圖滿版、左上主線／獎勵卡、右側頭部特寫直排編隊、下方等寬工具列。
 - 難度：原作來源等級對照後，劇情遭遇等級取max(章節基準, 來源roster等級)；探針顯示可選助戰即使Lv1也能扛下戰鬥（原作劇情戰由玩家隊伍作戰），故只保留護送／保護目標與木星劇本晚到。31戰在敵人等級+2重驗全勝；保守經濟路線三人約Lv12/12/11完成；Lv1在復仇女神星對決、琳達、Mitsuba失敗。對白未改。
 - 驗證：單元129/129；本機test:story、chronicle、world、e2e、playtest、exploration、refinement、polish、content-integration、skills、integration-v8皆通過（最後的頭像裁切／工具列CSS與「自動：開／關」字樣在這些之後，交由發布門檻）。chronicle-battles／economy收據已重產。
+- **第二輪發布**：PR #29合併為main `09f753b194df99521974015afa9ebe46c366619d`；Pages release 40091867708 完整門檻一次通過並部署（含最後的頭像裁切／工具列CSS）。公開version.json＝09f753b；公開站桌機1440／觸控390實測主線卡、挑戰五分頁、零pageerror（非真機）。

@@ -1,7 +1,8 @@
 import { operatorCard, updateOperatorCard } from "./operator-card";
-import { resonanceInstrument } from "./resonance-instrument";
+import { resonancePanel, resonanceAction } from "./resonance-ui";
 import "./ui-polish.css";
 import "./ui-mature.css";
+import "./ui-resonance.css";
 import { journalHtml } from "./journal";
 import { regionPath } from "../domain/navigation";
 import { mountStoryPlayer } from "./story-player";
@@ -574,7 +575,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     if (panel === "summon") {
       title = "星體共鳴";
       kick = "STELLAR RESONANCE";
-      body = `<div class="summon-layout"><div class="resonance-orb">${resonanceInstrument()}<span>STELLAR CONNECTION</span></div><div><p>調整四資源投入，尋找與少女相近的共鳴訊號。</p><label>配方預設<select id="preset">${p.characters.map((c) => `<option value="${esc(c.id)}">${esc(c.name)}的共鳴配方</option>`).join("")}</select></label><div class="recipe-inputs">${p.resources.map((r, i) => `<label style="--c:${r.color}">${resourceIcon(p, r)}${esc(r.name)}<input class="recipe" data-slot="${i}" type="number" min="1" max="999" value="${recipe[i]}"></label>`).join("")}</div><div id="recipe-info"></div><label>批次數量<input id="batch-count" type="number" min="1" max="${p.rules.summonSlots}" value="${count}"></label>${button("確認投入並共鳴 →", "summon", "", "primary")}<p class="muted">${p.rules.summonSeconds} 秒完成 · 可同時 ${p.rules.summonSlots} 組 · 結果在開工時確定</p></div></div><h3>共鳴工作</h3><div id="jobs">${jobList()}</div>`;
+      body = resonancePanel(p, s, recipe, count, jobList());
     }
     if (panel === "colony") {
       const v = p.planets.find((v) => v.id === selected)!,
@@ -652,7 +653,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
         )}<h3>聲音與畫面</h3><div class="inline-actions">${button(audio.enabled ? "聲音：開啟" : "聲音：關閉", "sound")}${button(g.lowEffects ? "特效：精簡" : "特效：完整", "effects")}</div><label>音效音量<input id="audio-volume" type="range" min="0" max="1" step="0.05" value="${audio.volume}"></label><h3>戰鬥操作</h3><p>點空白處移動與閃躲；普通攻擊自動進行。點敵人優先鎖定，點下方角色施放技能。</p>${button(g.autoSkills ? "自動技能：開啟" : "自動技能：關閉", "auto")}<h3>角色圖鑑</h3><a href="gallery.html">瀏覽全部少女立繪／Q圖 ↗</a><h3>角色製作表</h3><a href="#/catalog">查看未來角色清單／下載 CSV ↗</a><h3>內容工坊</h3><p>瀏覽與調整內容，套用至隔離測試遊戲；完成後匯出內容包再發布。</p><a class="primary link-button" href="#/studio">進入內容工坊 ↗</a>${test ? '<p><a href="#/play">退出隔離測試，返回正式進度</a></p>' : ""}<details><summary>開發版狀態</summary><p>六張原始立繪已匯入，已套用原先六角色；原圖展示入口在內容工坊。音效採可編輯的程序合成，星球與敵艦為原創程序材質。M1的平衡／劇情與部分技能為明示的新設計；原作未知機制仍保留來源缺口。</p></details></div>`;
     }
     $("#overlay").innerHTML =
-      `<div class="modal-backdrop"><section data-panel="${esc(panel)}" class="modal ${["roster", "formation", "character", "acquisition"].includes(panel) ? "wide" : ""}" role="dialog" aria-modal="true" aria-label="${esc(title)}">${heading(title, kick)}<div class="modal-body">${body}</div><div class="modal-footer"><i></i> 戰鬥已暫停 · 經營計時持續</div></section></div>`;
+      `<div class="modal-backdrop"><section data-panel="${esc(panel)}" class="modal ${["roster", "formation", "character", "acquisition"].includes(panel) ? "wide" : ""}" role="dialog" aria-modal="true" aria-label="${esc(title)}">${heading(title, kick)}<div class="modal-body">${body}</div><div class="modal-footer ${panel === "summon" ? "resonance-action-footer" : ""}">${panel === "summon" ? `<span class="resonance-clock"><i></i> 戰鬥已暫停 · 經營計時持續</span>${resonanceAction()}` : "<i></i> 戰鬥已暫停 · 經營計時持續"}</div></section></div>`;
     if (panel === "summon") recipeInfo();
     refreshTimers();
     $("#overlay")
@@ -663,10 +664,17 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     const info = $("#recipe-info");
     if (!info) return;
     const pool = summonCandidates(p, recipe);
-    info.innerHTML = `<div class="costs">${amounts(p, Object.fromEntries(p.resources.map((r, i) => [r.id, recipe[i] * count])))}</div><small class="muted">共鳴接近：${pool
+    const preset = $("#preset") as HTMLSelectElement;
+    preset.value =
+      p.characters.find((c) => c.recipe.every((v, i) => v === recipe[i]))?.id ??
+      "";
+    info.innerHTML = `<div class="resonance-cost-heading"><span>本次投入</span><small>${count} 組</small></div><div class="costs">${amounts(p, Object.fromEntries(p.resources.map((r, i) => [r.id, recipe[i] * count])))}</div><div class="resonance-signals"><span>共鳴接近</span><div>${pool
       .slice(0, 3)
-      .map((v) => esc(v.character.name))
-      .join("、")} · 配方不保證取得</small>`;
+      .map(
+        (v) =>
+          `<span>${portrait(p, v.character)}<b>${esc(v.character.name)}</b></span>`,
+      )
+      .join("")}</div></div>`;
   }
   async function act(action: string, id: string) {
     if (action === "journal-open") {

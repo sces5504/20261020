@@ -1,10 +1,10 @@
 {
   "assetId": "presentation:ui-vfx-polish.v1",
-  "version": "1.3.0-candidate",
+  "version": "1.4.0-candidate",
   "baseCommit": "072892b21ffe69a10fd9cf9861cc9155be403357",
   "coreVersion": "0.9.0",
   "reviewStatus": "candidate",
-  "directionReview": "User rejected insufficient UI refinement and flat beam. UI v2 and eight type demonstrations are candidates, not approved.",
+  "directionReview": "User accepts currently demonstrated VFX direction. User could not open local HTML UI preview and requests richer drawn UI. New painted resonance chamber is a single UI candidate for direct PNG review; not full UI approval.",
   "bundle": "presentation-only; Vite dynamic UI CSS/JS",
   "colorSpace": "sRGB",
   "runtime": {
@@ -63,7 +63,7 @@
     },
     {
       "path": "src/presentation/ui.ts",
-      "sha256": "ab34dc445c137fb0d51869d556a67b126c0756c6c88f48c4b457e62ae3d037a6"
+      "sha256": "d3ad6af82634f867b1f2d132184ac1136b00a6abda730b3192c20ec36bbca5c7"
     },
     {
       "path": "src/presentation/story-player.ts",
@@ -112,6 +112,14 @@
     {
       "path": "src/presentation/ui-mature.css",
       "sha256": "bce573d9c91b835505dffcbee05c5ea19edf99374d0a8b76d02ad35acb65d924"
+    },
+    {
+      "path": "src/presentation/resonance-ui.ts",
+      "sha256": "8f077166681b613ef1be0b71ee61bbc66f656ae6c0168ca7e9c9600e4e7c0c45"
+    },
+    {
+      "path": "src/presentation/ui-resonance.css",
+      "sha256": "8683d96cc7a4e2dc70664e62cd109f0523bff272dd79e4bf30d8d1977a854e2a"
     }
   ],
   "families": {
@@ -1648,11 +1656,170 @@
       "durationSecondsApprox": 7,
       "method": "continuous actual cast; trim near input; quarter-speed timestamps only for dash-slow",
       "fixture": "explicit Charge test carrier; production skill mapping unchanged"
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/resonance-art-v1/desktop-controls.png",
+      "sha256": "aebb465439127c3da21c5dabef45e880dac08124d0a39cb7df2a268dd7e6f4a3",
+      "bytes": 1016019,
+      "width": 1440,
+      "height": 1000,
+      "type": "actual Game UI with painted resonance candidate",
+      "reviewStatus": "candidate-awaiting-user-review",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/resonance-art-v1/desktop-jobs.png",
+      "sha256": "271b5a69a9b415046f8f9ec0ffa318c1f2c44f091e32376bc331dcb3d018bb9f",
+      "bytes": 924400,
+      "width": 1440,
+      "height": 1000,
+      "type": "actual Game UI with painted resonance candidate",
+      "reviewStatus": "candidate-awaiting-user-review",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/resonance-art-v1/desktop-top.png",
+      "sha256": "aebb465439127c3da21c5dabef45e880dac08124d0a39cb7df2a268dd7e6f4a3",
+      "bytes": 1016019,
+      "width": 1440,
+      "height": 1000,
+      "type": "actual Game UI with painted resonance candidate",
+      "reviewStatus": "candidate-awaiting-user-review",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/resonance-art-v1/landscape-controls.png",
+      "sha256": "f0c432bff24c4e9e743c9661c5b5bba5e914e5ceff2d00910e19d5c132cb43e7",
+      "bytes": 290900,
+      "width": 844,
+      "height": 390,
+      "type": "actual Game UI with painted resonance candidate",
+      "reviewStatus": "candidate-awaiting-user-review",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/resonance-art-v1/landscape-jobs.png",
+      "sha256": "ff95792f8bd3c05bcff522e8c57254260802a5c45e35e6175f9bfa74df9610a6",
+      "bytes": 290867,
+      "width": 844,
+      "height": 390,
+      "type": "actual Game UI with painted resonance candidate",
+      "reviewStatus": "candidate-awaiting-user-review",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/resonance-art-v1/landscape-top.png",
+      "sha256": "f0c432bff24c4e9e743c9661c5b5bba5e914e5ceff2d00910e19d5c132cb43e7",
+      "bytes": 290900,
+      "width": 844,
+      "height": 390,
+      "type": "actual Game UI with painted resonance candidate",
+      "reviewStatus": "candidate-awaiting-user-review",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/resonance-art-v1/mobile-controls.png",
+      "sha256": "514258e6d3779237f49e4322c1f48a4308b41d1ba9ae5a205b8b013787ec9bda",
+      "bytes": 987206,
+      "width": 780,
+      "height": 1688,
+      "type": "actual Game UI with painted resonance candidate",
+      "reviewStatus": "candidate-awaiting-user-review",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/resonance-art-v1/mobile-jobs.png",
+      "sha256": "acbc8ae5fcd6aa321e76c995a3fdadbcc1112f36cbd4bc744bd628003e3ed193",
+      "bytes": 999427,
+      "width": 780,
+      "height": 1688,
+      "type": "actual Game UI with painted resonance candidate",
+      "reviewStatus": "candidate-awaiting-user-review",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/resonance-art-v1/mobile-top.png",
+      "sha256": "514258e6d3779237f49e4322c1f48a4308b41d1ba9ae5a205b8b013787ec9bda",
+      "bytes": 987206,
+      "width": 780,
+      "height": 1688,
+      "type": "actual Game UI with painted resonance candidate",
+      "reviewStatus": "candidate-awaiting-user-review",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/resonance-art-v1/narrow-controls.png",
+      "sha256": "f6b1de505e12388dd6f2ebce95edf5c2bccea555bfb777994f6dd068c01559ca",
+      "bytes": 703111,
+      "width": 640,
+      "height": 1136,
+      "type": "actual Game UI with painted resonance candidate",
+      "reviewStatus": "candidate-awaiting-user-review",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/resonance-art-v1/narrow-jobs.png",
+      "sha256": "9f8b439dd97d78ecc338dadefaf1358be10449ed70bec5f59daaa515b0d6a8f8",
+      "bytes": 711720,
+      "width": 640,
+      "height": 1136,
+      "type": "actual Game UI with painted resonance candidate",
+      "reviewStatus": "candidate-awaiting-user-review",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/resonance-art-v1/narrow-top.png",
+      "sha256": "f6b1de505e12388dd6f2ebce95edf5c2bccea555bfb777994f6dd068c01559ca",
+      "bytes": 703111,
+      "width": 640,
+      "height": 1136,
+      "type": "actual Game UI with painted resonance candidate",
+      "reviewStatus": "candidate-awaiting-user-review",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null
     }
   ],
   "summonArtManifest": "art/vfx/summons-v1/manifest.json",
   "coverageLimit": "245 definitions mapped to 9 common families; not 245 completed unique VFX. Drone / soldiers / decoy and individual multi-stage performances await direction review.",
   "beamArtManifest": "art/vfx/beams-v1/manifest.json",
   "operatorArtManifest": "art/ui/operator-portraits-v1/manifest.json",
-  "reviewPage": "docs/art/ui-polish-v1/skill-types.html"
+  "reviewPage": "docs/art/ui-polish-v1/skill-types.html",
+  "vfxDirectionStatus": "user-accepted-current-demonstrations; does not imply 245 skills or unfinished summon art completed",
+  "paintedUiManifest": "art/ui/resonance-chamber-v1/manifest.json",
+  "directUiPreview": "docs/art/ui-polish-v1/previews/resonance-art-v1/mobile-top.png"
 }

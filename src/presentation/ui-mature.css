@@ -1844,6 +1844,20 @@
   main.bridge.bridge .flight-deck .squad .operator-copy {
     padding: 0 3px 3px;
   }
+  /* Face crop: portraits are full-body art, so zoom onto the head. */
+  main.bridge.bridge .flight-deck .squad .operator-art > img {
+    top: -4%;
+    width: 300%;
+    height: 420%;
+    object-position: 50% 0%;
+  }
+  main.bridge.bridge .flight-deck .squad .operator-shade {
+    background: linear-gradient(180deg, transparent 55%, #07101bcc);
+  }
+  /* Ready state needs no badge; the ring only appears while cooling down. */
+  main.bridge.bridge .flight-deck .squad .operator-card:not(.skill-cooling) .operator-cd-ring {
+    display: none;
+  }
   main.bridge.bridge .flight-deck .squad .operator-copy > :not(.hp-bar) {
     display: none;
   }
@@ -1869,13 +1883,11 @@
   }
   main.bridge.bridge .battle-tools {
     position: fixed;
-    inset: auto;
-    top: calc(var(--bar) + 6px + 6 * (var(--strip) + 4px) + 6px);
-    right: 4px;
-    width: var(--strip);
+    inset: auto 6px calc(var(--nav) + 6px) 6px;
+    width: auto;
     display: flex;
-    flex-direction: column;
-    gap: 4px;
+    flex-direction: row;
+    gap: 5px;
     max-width: none;
     transform: none;
     padding: 0;
@@ -1884,20 +1896,26 @@
     z-index: 6;
   }
   main.bridge.bridge .battle-tools button {
+    flex: 1 1 0;
+    min-width: 0;
+    height: 40px;
     min-height: 40px;
-    padding: 2px;
-    font-size: 10px;
-    line-height: 1.15;
+    padding: 0 4px;
+    font-size: 11px;
+    line-height: 1.1;
     border-radius: 6px;
     background: #0a1522d9;
     border: 1px solid #a3c2d344;
-    white-space: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   main.bridge.bridge .battle-tools #wave-clock {
     position: fixed;
     top: auto;
-    bottom: calc(var(--nav) + 8px);
+    bottom: calc(var(--nav) + 52px);
     left: 8px;
+    right: auto;
     transform: none;
     padding: 2px 8px;
     background: #0a1522cc;
@@ -1907,9 +1925,13 @@
   main.bridge.bridge .map-caption {
     display: none;
   }
+  main.bridge.bridge .battle-state {
+    bottom: calc(var(--nav) + 52px);
+    right: 8px;
+  }
   main.bridge.bridge .toast {
     top: auto;
-    bottom: calc(var(--nav) + 48px);
+    bottom: calc(var(--nav) + 84px);
     left: 50%;
     right: auto;
     transform: translateX(-50%);

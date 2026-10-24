@@ -1308,7 +1308,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     const toolKey = String(!!g.combat) + g.viewMode + String(g.autoSkills);
     if (battleTools.dataset.key !== toolKey) {
       battleTools.dataset.key = toolKey;
-      battleTools.innerHTML = `${button(g.viewMode === "map" ? "◈ 銀河航行" : "◇ 大星圖", "view")}${button("◎ 跟隨", "follow")}${!g.combat ? button("星域航路", "panel", "regions") : ""}${g.combat ? button(g.autoSkills ? "自動技能：開" : "自動技能：關", "auto") + button("技能情報", "panel", "skills") + button("撤離", "retreat") : ""}<small id="wave-clock"></small>`;
+      battleTools.innerHTML = `${button(g.viewMode === "map" ? "◈ 銀河航行" : "◇ 大星圖", "view")}${button("◎ 跟隨", "follow")}${!g.combat ? button("星域航路", "panel", "regions") : ""}${g.combat ? button(g.autoSkills ? "自動：開" : "自動：關", "auto") + button("技能情報", "panel", "skills") + button("撤離", "retreat") : ""}<small id="wave-clock"></small>`;
     }
     const wave = root.querySelector("#wave-clock");
     if (wave)

@@ -3452,3 +3452,197 @@ button:not(:disabled):hover {
 .story-scene.camera-view .story-sky {
   visibility: hidden;
 }
+
+/* UI polish v1: title, illustration and dialogue occupy separate safe areas. */
+.story-scene {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 12px;
+  padding: max(24px, env(safe-area-inset-top))
+    max(32px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom))
+    max(32px, env(safe-area-inset-left));
+  isolation: isolate;
+}
+.story-scene .story-chapter {
+  position: relative;
+  inset: auto;
+  grid-row: 1;
+  justify-self: start;
+  max-width: 100%;
+  padding: 8px 18px;
+  background: linear-gradient(90deg, #081322d9, #08132233);
+  backdrop-filter: none;
+  border-left-width: 2px;
+}
+.story-scene .story-chapter h2 {
+  font-size: clamp(18px, 2.1vw, 26px);
+  margin: 6px 0 0;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+.story-scene > .portrait.large,
+.story-scene .story-actors {
+  position: relative;
+  inset: auto;
+  grid-row: 2;
+  grid-column: 1;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  align-self: end;
+  object-fit: contain;
+  object-position: center bottom;
+  z-index: 1;
+}
+.story-scene .story-actors {
+  gap: 8px;
+  align-items: end;
+}
+.story-scene > .portrait.large {
+  width: 112%;
+  height: calc(100% + 100px);
+  justify-self: center;
+  align-self: start;
+  object-position: center top;
+}
+.story-actors .story-actor {
+  flex: 1;
+  min-width: 0;
+  max-width: 40%;
+  transition: filter 180ms;
+}
+.story-actors .story-actor:only-child {
+  max-width: 100%;
+}
+.story-actors .story-actor:only-child {
+  height: calc(100% + 100px);
+  align-self: start;
+}
+.story-actors .story-actor:only-child img {
+  object-position: center top;
+}
+.story-actors .story-actor img {
+  object-position: center bottom;
+}
+.story-actors .story-actor.is-speaking {
+  filter: drop-shadow(0 0 18px #a4e6e32b);
+}
+.story-scene .story-box {
+  position: relative;
+  inset: auto;
+  grid-row: 3;
+  padding: 20px 28px;
+  margin: 0;
+  min-height: 0;
+  max-height: 42dvh;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #708e9e66;
+  border-top-color: #dfc392;
+  border-radius: 3px 3px 16px 3px;
+  background: linear-gradient(115deg, #0b192bf5, #122b3af5);
+}
+.story-scene .story-speaker {
+  font-size: 19px;
+  margin-bottom: 8px;
+  flex: none;
+}
+.story-scene .story-line {
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.85;
+}
+.story-scene .story-controls {
+  flex: none;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+.story-scene .story-controls button {
+  min-height: 44px;
+}
+.story-scene .story-controls .primary {
+  padding-inline: 24px;
+}
+.story-scene .story-cinematic-fade {
+  z-index: 2;
+}
+.story-scene .story-signal {
+  grid-row: 2;
+  position: relative;
+  inset: auto;
+  align-self: center;
+  justify-self: center;
+}
+@media (max-width: 800px) {
+  .story-scene {
+    gap: 8px;
+    padding: max(12px, env(safe-area-inset-top))
+      max(12px, env(safe-area-inset-right))
+      max(12px, env(safe-area-inset-bottom))
+      max(12px, env(safe-area-inset-left));
+  }
+  .story-scene .story-chapter {
+    padding: 6px 12px;
+    width: 100%;
+  }
+  .story-scene .story-chapter .eyebrow {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .story-scene .story-box {
+    padding: 16px;
+    max-height: 45dvh;
+  }
+  .story-scene .story-speaker {
+    font-size: 17px;
+  }
+  .story-scene .story-line {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+  .story-scene .story-controls {
+    gap: 6px 12px;
+  }
+  .story-scene .story-controls .primary {
+    padding-inline: 16px;
+    margin-left: auto;
+  }
+  .story-scene .story-controls .text-button {
+    font-size: 11px;
+  }
+  .story-actors .story-actor {
+    max-width: none;
+  }
+  .story-scene > .portrait.large {
+    width: 118%;
+    height: calc(100% + 110px);
+  }
+  .story-actors .story-actor:only-child {
+    flex: none;
+    width: 118%;
+    max-width: none;
+    height: calc(100% + 110px);
+    margin-left: -9%;
+  }
+}
+@media (max-height: 500px) and (min-width: 650px) {
+  .story-scene {
+    gap: 4px;
+    padding: 8px 20px;
+  }
+  .story-scene .story-chapter h2 {
+    font-size: 16px;
+  }
+  .story-scene .story-box {
+    padding: 10px 18px;
+    max-height: 46dvh;
+  }
+  .story-scene .story-line {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+}

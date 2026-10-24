@@ -22,6 +22,9 @@ import {
   costScale,
   random,
   addCharacter,
+  maxSkillLevel,
+  skillResearchCost,
+  skillResearchGate,
 } from "./model";
 export function production(p: Pack, s: Save): Wallet {
   const rates: Wallet = {};
@@ -143,6 +146,7 @@ export type Command =
   | { type: "summon"; recipe: number[]; count: number }
   | { type: "heal"; owned: string }
   | { type: "level"; owned: string }
+  | { type: "skill-research"; owned: string }
   | { type: "team"; owned: string }
   | { type: "reorder-team"; owned: string; direction: -1 | 1 }
   | { type: "assign"; owned: string; planet: string }
@@ -468,6 +472,18 @@ export function apply(
     advanceDaily(p, s, "leveled", now);
     storyFact(s, "leveled", o.definition);
     o.hp += stats(p, o).hp - old;
+  }
+  if (c.type === "skill-research") {
+    const o = s.roster.find((o) => o.id === c.owned);
+    if (!o) throw Error("角色不存在。");
+    const c0 = p.characters.find((v) => v.id === o.definition);
+    if (!c0?.skill) throw Error("此角色沒有主動技能。");
+    const next = (o.skillLevel ?? 1) + 1;
+    if (next > maxSkillLevel) throw Error(`技能已達 Lv${maxSkillLevel}。`);
+    if (o.level < skillResearchGate(next))
+      throw Error(`角色需達 Lv${skillResearchGate(next)} 才能研究技能 Lv${next}。`);
+    pay(skillResearchCost(p, o));
+    o.skillLevel = next;
   }
   if (c.type === "reorder-team") {
     if (s.encounter) throw Error("請於遭遇結束後調整站位。");

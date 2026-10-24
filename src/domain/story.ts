@@ -216,3 +216,55 @@ export function storyEncounterResult(
     advanceStory(p, s, false, true);
   }
 }
+export type MainlineState = {
+  quest: Pack["quests"][number];
+  index: number;
+  total: number;
+  status: "start" | "dialogue" | "await" | "encounter" | "locked" | "done";
+  condition?: Condition;
+  planet?: string;
+};
+/** Original QuestS-style single main thread: chapter nodes in pack order. */
+export function mainlineQuests(p: Pack) {
+  return p.quests.filter((q) => q.status === "active" && q.story?.chapter);
+}
+export function mainlineState(p: Pack, s: Save): MainlineState | undefined {
+  const quests = mainlineQuests(p);
+  if (!quests.length) return undefined;
+  const session = s.story.session;
+  const at = (q: Pack["quests"][number]) => quests.indexOf(q);
+  if (session) {
+    const quest = quests.find((q) => q.id === session.quest);
+    if (quest) {
+      const step = quest.story!.steps[session.cursor];
+      const base = { quest, index: at(quest), total: quests.length };
+      if (step?.kind === "await")
+        return { ...base, status: "await", condition: step.condition };
+      if (step?.kind === "encounter")
+        return { ...base, status: "encounter", planet: step.planet };
+      return { ...base, status: "dialogue" };
+    }
+  }
+  const quest = quests.find((q) => !s.storySeen.includes(q.id));
+  if (!quest)
+    return {
+      quest: quests[quests.length - 1],
+      index: quests.length - 1,
+      total: quests.length,
+      status: "done",
+    };
+  return {
+    quest,
+    index: at(quest),
+    total: quests.length,
+    status: storyAvailable(p, s, quest.id) ? "start" : "locked",
+    condition: quest.story!.requires,
+  };
+}
+/** Next unseen main node may chain automatically once its predecessor was read. */
+export function mainlineChain(p: Pack, s: Save) {
+  const state = mainlineState(p, s);
+  if (state?.status !== "start" || state.index === 0) return undefined;
+  const previous = mainlineQuests(p)[state.index - 1];
+  return s.storySeen.includes(previous.id) ? state.quest : undefined;
+}

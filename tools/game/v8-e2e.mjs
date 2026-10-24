@@ -168,6 +168,7 @@ try {
     assert.match(await page.locator(".modal-heading").innerText(), /領地總覽/);
     await close();
     await open("quests");
+    await page.locator('[data-action="journal-tab"][data-id="daily"]').click();
     assert.equal(await page.locator(".daily-quests article").count(), 7);
     const q = pack.quests.find((q) => q.condition === "leveled");
     const card = page.locator(`[data-daily-quest="${q.id}"]`);

@@ -1,0 +1,70 @@
+[
+  {
+    "assetId": "presentation:resonance-chamber.v1",
+    "version": "1.0.0-candidate",
+    "kind": "opaque resonance chamber environment",
+    "master": "art/ui/resonance-chamber-v1/chamber-master.png",
+    "masterSha256": "d9f8501a0adcbb711ef7bd44272763151adf80df03fd1313b2c6aa07865563c7",
+    "path": "art/ui/resonance-chamber-v1/chamber.webp",
+    "sha256": "21924f2904a1522b689bee3f3017d72a40f8bb31686d396a443302fa7ad4702e",
+    "width": 1024,
+    "height": 1536,
+    "alpha": {
+      "mode": "opaque",
+      "min": 255,
+      "max": 255
+    },
+    "colorSpace": "sRGB",
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": null,
+    "frames": null,
+    "blend": "NORMAL",
+    "animation": "static art; does not drive timing or gameplay",
+    "bundle": "Vite URL in presentation CSS",
+    "source": {
+      "method": "OpenAI image generation; original UI art requested by user",
+      "generatedMaster": "exec-ae63022b-7114-4f7b-b12f-aab188d6685a.png",
+      "webEncoding": "same dimensions/composition, Canvas WebP .94; no semantic edit",
+      "externalArtCopied": false,
+      "bakedText": false
+    },
+    "reviewStatus": "candidate-awaiting-user-review"
+  },
+  {
+    "assetId": "presentation:resonance-activation.v1",
+    "version": "1.0.0-candidate",
+    "kind": "transparent activation button material",
+    "master": "art/ui/resonance-chamber-v1/activation-master.png",
+    "masterSha256": "14f3e198525223ebf90517296cadceaf460688d987eb934e2573f9f8a1d706e8",
+    "path": "art/ui/resonance-chamber-v1/activation.webp",
+    "sha256": "4f65dcd3e01662e19543f367881105424924472ca515e8f24f591a235f8f0450",
+    "width": 1983,
+    "height": 793,
+    "alpha": {
+      "mode": "straight, preserved",
+      "min": 0,
+      "max": 255
+    },
+    "colorSpace": "sRGB",
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "atlas": null,
+    "frames": null,
+    "blend": "NORMAL",
+    "animation": "static art; does not drive timing or gameplay",
+    "bundle": "Vite URL in presentation CSS",
+    "source": {
+      "method": "OpenAI image generation; original UI art requested by user",
+      "generatedMaster": "exec-5747420c-ecea-48c9-8108-66b6f520ba30.png",
+      "webEncoding": "same dimensions/composition, Canvas WebP .94; no semantic edit",
+      "externalArtCopied": false,
+      "bakedText": false
+    },
+    "reviewStatus": "candidate-awaiting-user-review"
+  }
+]

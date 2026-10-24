@@ -1,0 +1,57 @@
+{
+  "assetId": "presentation:summon.turret-v1",
+  "version": "1.0.0-candidate",
+  "reviewStatus": "candidate-awaiting-user-direction",
+  "master": "art/vfx/summons-v1/turret-v1-candidate.png",
+  "masterSha256": "06a0d9c9eee73d6d2ad7499b770819e508cd9a5a38a1f094973ad922d0925c40",
+  "web": "art/vfx/summons-v1/turret-v1-candidate.webp",
+  "webSha256": "f792d47954b7d070305b620da6727881c4070362470a6903e6fd42c96c3699d8",
+  "width": 1536,
+  "height": 1024,
+  "webDimensions": [
+    1536,
+    1024
+  ],
+  "colorSpace": "sRGB",
+  "alpha": {
+    "mode": "straight",
+    "masterRange": [
+      0,
+      254
+    ],
+    "webRange": [
+      0,
+      254
+    ]
+  },
+  "blend": "NORMAL; separate additive procedural muzzle / arrival / death cues",
+  "pivot": {
+    "x": 0.31,
+    "y": 0.5,
+    "space": "normalized top-left; candidate visual rotating-base anchor, not collision"
+  },
+  "worldWidth": 64,
+  "textureBudget": "512x341 per shared Phaser texture; WebP preserves 1536x1024 master dimensions",
+  "atlas": null,
+  "frames": null,
+  "animation": {
+    "rotation": "Unit.aim",
+    "shot": "Unit.shotAt; muzzle placed at visual barrel end",
+    "spawn": ".32s procedural cue starting at first observed living summon",
+    "despawn": ".3s procedural cue only after observed hp transition; no gameplay callbacks",
+    "lowEffects": "solid body remains; ornamental cues omitted"
+  },
+  "source": {
+    "tool": "image_gen.imagegen",
+    "generated": "2026-10-24",
+    "reference": "art/world/scout-ai.png; rendering style only",
+    "referenceSha256": "2fd203cc17fe458220319b4dc12497b9724c2685c1181b853910bb96ae3a7327",
+    "method": "Original friendly navy/ivory/gold/cyan twin cannon. Generated RGBA master unchanged; WebP encoding at same size. Runtime scales with original alpha.",
+    "originalFile": "/workspace/generated_images/exec-9d83922b-4269-4093-b415-a4232eb80d6c.png",
+    "originalHashMatchesMaster": true,
+    "modelVersion": "not-exposed-by-tool"
+  },
+  "preview": "docs/art/ui-polish-v1/previews/skills/turret.webm",
+  "gameAndWorkshop": "same presentation/summon-art.ts WebP and pivot",
+  "limits": "First representative only. Drone / soldiers / decoy textures are not complete. Existing clones retain the source character sprite."
+}

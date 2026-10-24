@@ -5,7 +5,7 @@ import { FleetMotion } from "./formation";
 import { guardianPositions, patrolPosition } from "./navigation";
 import { enemyStats } from "./world";
 import type { Pack, Character, Enemy, Skill } from "../content/schema";
-import { type Save, stats, damage, random } from "./model";
+import { type Save, stats, damage, random, skillAtLevel } from "./model";
 export type Unit = {
   id: string;
   def: string;
@@ -178,6 +178,7 @@ export class Combat {
           st.defense,
         ),
       );
+      this.units[this.units.length - 1].skillLevel = o.skillLevel ?? 1;
     });
     if (save.encounter?.kind === "patrol") this.spawnWave(planet.x, planet.y);
     else
@@ -393,9 +394,7 @@ export class Combat {
     const skill = this.pack.skills.find(
       (s) => s.id === (u.skillOverride ?? definition?.skill),
     );
-    const level = Math.max(1, Math.min(10, u.skillLevel ?? 1));
-    const override = level > 1 ? skill?.levels?.[level - 2] : undefined;
-    return skill && override ? { ...skill, ...override } : skill;
+    return skill && skillAtLevel(skill, u.skillLevel ?? 1);
   }
 
   patternFor(u: Unit): Pattern {

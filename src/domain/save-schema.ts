@@ -8,6 +8,7 @@ const owned = z
     level: z.number().int().min(1).max(120),
     hp: nonneg,
     resonance: z.number().int().min(0).max(5).default(0),
+    skillLevel: z.number().int().min(1).max(10).optional(),
   })
   .strict();
 export const saveSchema = z

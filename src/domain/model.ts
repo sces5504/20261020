@@ -7,6 +7,7 @@ export type Owned = {
   level: number;
   hp: number;
   resonance?: number;
+  skillLevel?: number;
 };
 export type Colony = {
   active: boolean;
@@ -153,6 +154,23 @@ export function newSave(p: Pack, now: number, id = "voyager"): Save {
 export function random(s: { rng: number }) {
   s.rng = (Math.imul(s.rng, 1664525) + 1013904223) >>> 0;
   return s.rng / 4294967296;
+}
+export const maxSkillLevel = 10;
+/** Character level needed before researching skill level `next`. */
+export const skillResearchGate = (next: number) => (next - 1) * 4;
+export function skillAtLevel<T extends { levels?: Partial<T>[] }>(
+  skill: T,
+  level: number,
+): T {
+  const l = Math.max(1, Math.min(maxSkillLevel, Math.trunc(level) || 1));
+  const override = l > 1 ? skill.levels?.[l - 2] : undefined;
+  return override ? { ...skill, ...override } : skill;
+}
+export function skillResearchCost(p: Pack, o: Owned): Wallet {
+  return costScale(
+    p.rules.skillResearchCost ?? costScale(p.rules.levelCost, 3),
+    o.skillLevel ?? 1,
+  );
 }
 export function costScale(c: Wallet, n: number): Wallet {
   return Object.fromEntries(Object.entries(c).map(([k, v]) => [k, v * n]));

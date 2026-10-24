@@ -1,6 +1,13 @@
 /** Original UI line icons. Decorative; the adjacent visible label supplies the accessible name. */
 export function icon(
-  name: "resonance" | "research" | "journal" | "planet" | "crew" | "pause",
+  name:
+    | "resonance"
+    | "research"
+    | "journal"
+    | "planet"
+    | "crew"
+    | "pause"
+    | "challenge",
 ) {
   const paths = {
     resonance:
@@ -12,6 +19,8 @@ export function icon(
     planet:
       '<circle cx="12" cy="12" r="7"/><ellipse cx="12" cy="12" rx="12" ry="3.5" transform="rotate(-30 12 12)"/>',
     crew: '<circle cx="12" cy="8" r="4"/><path d="M4 22v-3a8 8 0 0 1 16 0v3M4 5l-2 5 3 3M20 5l2 5-3 3"/>',
+    challenge:
+      '<path d="m12 2 9 5-2 10-7 5-7-5L3 7Z"/><path d="m8 8 8 8m0-8-8 8M12 4v3"/>',
     pause: '<path d="M8 4v16M16 4v16"/>',
   };
   return `<span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name]}</svg></span>`;

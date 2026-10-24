@@ -29,3 +29,8 @@
 - 召喚物數值：使用者2026-10-24回覆「不要變弱的方案」，維持本體比例，不改依f78 CID；已定案。
 - 共鳴艙UI方向待使用者回覆後再批量套用。
 - commercial仍缺人工素材批准、真機與效能證據。
+
+## 發布紀錄
+
+- PR #25合併為main `4164f9f`；Checks 40080385135成功。Pages release 40080385134失敗、未部署：build、e2e、playtest、exploration、refinement、polish通過後，test:content-integration找不到`.squad-card .avatar-cropped img`（PR #24把編隊卡改為operator-card，原選擇器失效）。
+- 修正：測試改看`.operator-art img`，並把「transform必須none」改為「不可縮放／旋轉／翻轉」，因PR #24以translateX(-50%)置中。本機重跑content-integration桌機／觸控PASS；之前未跑的skills、integration-v8、release:ready也在本機各跑一次，全部通過。

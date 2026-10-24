@@ -468,6 +468,13 @@ export class Game {
     if (!this.combat) return;
     this.combat.victory = false;
     this.combat.ended = true;
+    // A retreat never drags the fleet straight into a neighbouring node's battle.
+    for (const p of this.pack.planets)
+      if (
+        p.region === this.save.region &&
+        Math.hypot(p.x - this.x, p.y - this.y) <= p.engageRadius
+      )
+        this.disengagedPlanets.add(p.id);
   }
   move(x: number, y: number) {
     const r = this.pack.regions.find((r) => r.id === this.save.region)!;

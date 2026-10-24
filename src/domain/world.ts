@@ -52,8 +52,34 @@ export function nodeAvailability(s: Save, v: Planet, now: number) {
     return { open: false, period, reason: "本日挑戰次數已用完" };
   return { open: true, period, reason: "" };
 }
+const storyFieldCache = new WeakMap<Pack, Set<string>>();
+/** Planets that only exist as a story node's battlefield. */
+export function storyFields(p: Pack) {
+  let set = storyFieldCache.get(p);
+  if (!set) {
+    set = new Set(
+      p.quests.flatMap((q) =>
+        (q.story?.steps ?? []).flatMap((st) =>
+          st.kind === "encounter" ? [st.planet] : [],
+        ),
+      ),
+    );
+    storyFieldCache.set(p, set);
+  }
+  return set;
+}
+/** The story field the current node is waiting to fight at, if any. */
+export function activeStoryField(s: Save, p: Pack) {
+  const session = s.story?.session;
+  const step = session
+    ? p.quests.find((q) => q.id === session.quest)?.story?.steps[session.cursor]
+    : undefined;
+  return step?.kind === "encounter" ? step.planet : undefined;
+}
 export function nodeVisible(s: Save, v: Planet, p: Pack, now: number) {
   if (v.hiddenUntilUnlocked && !nodeUnlocked(s, v, p)) return false;
+  // Like original EventSpots: a story battlefield appears on the map only for its own scene.
+  if (storyFields(p).has(v.id) && activeStoryField(s, p) !== v.id) return false;
   if (!v.schedule) return true;
   const day = new Date(
     now + (v.schedule.utcOffsetMinutes - v.schedule.resetHour * 60) * 60000,

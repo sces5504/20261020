@@ -3,6 +3,8 @@ import type { Condition } from "../content/story";
 import type { Save } from "../domain/model";
 import { conditionMet, mainlineState } from "../domain/story";
 import { regionPath } from "../domain/navigation";
+import { questReady } from "../domain/economy";
+import { questClaimed, questProgress } from "../domain/daily-quests";
 import { esc, button } from "./common";
 
 const leaves = (c: Condition): Extract<Condition, { fact: string }>[] =>
@@ -81,7 +83,8 @@ export function mainlineHtml(
   const chapter = m.quest.name;
   const progress = `${Math.min(m.total, m.index + (m.status === "done" ? 1 : 0))}/${m.total}`;
   const planet = m.planet ? p.planets.find((v) => v.id === m.planet) : undefined;
-  const arrived = m.status === "encounter" && near(m.planet!);
+  const settled = m.status === "encounter" && !!m.settled;
+  const arrived = m.status === "encounter" && !settled && near(m.planet!);
   const reached =
     m.status === "await" && !!m.condition && conditionMet(s, m.condition);
   const objective =
@@ -89,6 +92,8 @@ export function mainlineHtml(
       ? "目前主線已全部完成，可於航行紀錄回看。"
       : reached
         ? "已抵達目標，可接續劇情"
+        : settled
+          ? `「${planet?.name ?? "劇情戰場"}」已完成，可接續劇情`
         : m.status === "await" || m.status === "locked"
           ? m.condition
             ? conditionLabel(p, s, m.condition)
@@ -101,7 +106,11 @@ export function mainlineHtml(
               ? "劇情進行中"
               : "新的劇情已解鎖";
   const ready =
-    m.status === "start" || m.status === "dialogue" || arrived || reached;
+    m.status === "start" ||
+    m.status === "dialogue" ||
+    arrived ||
+    reached ||
+    settled;
   const action = ready
     ? button(
         arrived ? "出擊" : m.status === "start" ? "開始" : "接續",
@@ -116,4 +125,30 @@ export function mainlineHtml(
         ? guide(p, s, m.condition)
         : "";
   return `<div class="mainline-card is-${ready ? "ready" : m.status}" data-quest="${esc(m.quest.id)}"><span class="eyebrow">主線 ${progress}</span><strong>${esc(chapter)}</strong><p>${esc(objective)}</p>${action ? `<div class="mainline-actions">${action}</div>` : ""}</div>`;
+}
+
+/** Original-style side trackers: one main mission and up to two daily missions. */
+export function missionCardsHtml(p: Pack, s: Save, now: number) {
+  const active = p.quests.filter((q) => q.status === "active" && !q.story);
+  const main = active.find(
+    (q) => q.repeat !== "daily" && !questClaimed(s, q, now),
+  );
+  const dailies = active
+    .filter((q) => q.repeat === "daily" && !questClaimed(s, q, now))
+    .slice(0, 2);
+  const card = (
+    kind: string,
+    tab: string,
+    q: Pack["quests"][number],
+    progress: string,
+  ) =>
+    `<button class="mission-card is-${kind}${questReady(s, q, now) ? " is-ready" : ""}" data-action="journal-tab-open" data-id="${tab}"><span class="eyebrow">${kind === "main" ? "主要任務" : "每日任務"}</span><strong>${esc(q.name)}</strong><small>${questReady(s, q, now) ? "可領取獎勵" : esc(progress)}</small></button>`;
+  return (
+    (main ? card("main", "voyage", main, main.description || "進行中") : "") +
+    dailies
+      .map((q) =>
+        card("daily", "daily", q, `${questProgress(s, q, now)} / ${q.count}`),
+      )
+      .join("")
+  );
 }

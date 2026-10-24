@@ -4,7 +4,7 @@ import "./ui-polish.css";
 import "./ui-mature.css";
 import "./ui-resonance.css";
 import { journalHtml } from "./journal";
-import { mainlineHtml } from "./mainline";
+import { mainlineHtml, missionCardsHtml } from "./mainline";
 import { regionPath } from "../domain/navigation";
 import { mountStoryPlayer, nearStoryPlanet } from "./story-player";
 import { storyAvailable } from "../domain/story";
@@ -42,6 +42,7 @@ import {
   nodeVisible,
   nodePeriod,
   enemyStats,
+  storyFields,
 } from "../domain/world";
 import { download, read } from "../platform/storage";
 import { mountSpace } from "./space";
@@ -71,7 +72,8 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     currentAcquisition = "",
     arrivalReturnPanel = "",
     timer: number;
-  let mainlineKey = "";
+  let mainlineKey = "",
+    missionsKey = "";
   let journalTab = "story",
     journalChapter = "";
   let recipe = p.characters[0].recipe.slice(),
@@ -79,7 +81,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
   let cleanup: () => void | Promise<void> = () => {};
   let disposed = false;
   root.innerHTML = `<main class="bridge"><header class="topbar"><a class="brand" href="#/play"><span class="brand-icon">✧</span><span>GALAXY ANGEL<small>星 河 戰 姬</small></span></a><div id="wallet" class="wallet"></div><div class="top-actions">${button("設定", "panel", "archive", "icon-button")}<a class="studio-link" href="gallery.html">角色圖鑑 ↗</a><a class="studio-link" href="#/studio">內容工坊 ↗</a></div></header>
- <div class="sector-heading"><div id="skill-splash" class="skill-splash" aria-live="polite"></div><div><span class="eyebrow">GALACTIC EXPEDITION</span><h1><b id="region-title">${esc(p.regions.find((r) => r.id === g.save.region)!.name)}</b><span>探索航線</span></h1></div><button class="journal-shortcut" data-action="journal-open" data-id="quests">${icon("journal")}<span id="journal-status">章節／任務</span> →</button><div id="mainline" class="mainline" aria-live="polite"></div><div class="sector-status"><i></i> <span id="save-status">本機自動保存</span>${test ? "<strong>隔離測試</strong>" : ""}</div></div>
+ <div class="sector-heading"><div id="skill-splash" class="skill-splash" aria-live="polite"></div><div><span class="eyebrow">GALACTIC EXPEDITION</span><h1><b id="region-title">${esc(p.regions.find((r) => r.id === g.save.region)!.name)}</b><span>探索航線</span></h1></div><button class="journal-shortcut" data-action="journal-open" data-id="quests">${icon("journal")}<span id="journal-status">章節／任務</span> →</button><div id="mainline" class="mainline" aria-live="polite"></div><div id="missions" class="missions"></div><div class="sector-status"><i></i> <span id="save-status">本機自動保存</span>${test ? "<strong>隔離測試</strong>" : ""}</div></div>
  <section class="viewport"><aside class="mission-rail"><div class="section-label">航行目標 <span>MISSION</span></div><div id="mission"></div><div class="rail-bottom"><span class="eyebrow">NAVIGATION</span><p>WASD／點擊星海航行<br>M 切換大星圖</p><div class="signal"><i></i><i></i><i></i><i></i><i></i></div><small>艦隊通訊連線中</small></div></aside>
  <div id="space" class="space" aria-label="星域戰場，點擊空白處移動，點擊星球查看情報" role="application"></div><div class="map-caption"><span>✧ 星域掃描</span><span id="coordinates"></span></div><div id="target-hud" class="target-hud" hidden aria-label="目前戰鬥目標"></div><div id="battle-state" class="battle-state"></div><div id="battle-tools" class="battle-tools"></div><aside id="planet-card" class="planet-card"></aside></section>
  <footer class="flight-deck"><div class="squad-heading"><span class="eyebrow">YOUR CONSTELLATION</span><strong>航行編隊</strong>${button("編隊 ↗", "panel", "formation", "text-button")}</div><div class="squad" id="squad"></div><nav class="deck-nav" aria-label="艦隊功能">${navButton("星體共鳴", "共鳴", "RESONANCE", "resonance", "summon")}${navButton("共振研究", "研究", "RESEARCH", "research", "research")}${navButton("高難／活動", "挑戰", "SORTIE", "challenge", "challenges")}${navButton("航行紀錄", "紀錄", "CHRONICLE", "journal", "quests")}${navButton("領地", "領地", "COLONY", "planet", "planets")}${navButton("角色", "角色", "OPERATORS", "crew", "roster")}</nav></footer>
@@ -195,7 +197,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
         " " +
         threat;
       $("#planet-card").innerHTML =
-        `${button("✕", "intel-close", "", "intel-dismiss")}<div class="section-label">${esc(nodeKindNames[v.kind])}</div>${entityImage(p, v, "intel-planet-art")}<h2>${esc(v.name)}</h2><p class="intel-guidance">${locked ? "請先完成前置據點／星球啟動。" : esc(text)}</p><div class="tags"><span>${cleared && !v.schedule ? "已完成" : "可探索"}</span><span>${esc(availability.reason || nodeKindNames[v.kind])}</span></div><div class="costs">${amounts(p, v.kind === "camp" ? serviceCost : v.reward)}</div>${v.enemies.length ? button("敵群情報", "panel", "enemy-intel", "text-button") : ""}${button("導航接近 →", "navigate", v.id, "primary", locked || !!g.combat)}${v.kind === "camp" ? button("隊伍整補", "resupply", v.id, "primary", locked || !nearby || !!g.combat || !injured || !canAfford(s, serviceCost)) : button(cleared && !v.schedule ? "再次挑戰（無首勝獎勵）" : "開始挑戰", "battle", v.id, "primary", locked || !nearby || !availability.open || !!g.combat)}`;
+        `${button("✕", "intel-close", "", "intel-dismiss")}<div class="section-label">${esc(nodeKindNames[v.kind])}</div>${entityImage(p, v, "intel-planet-art")}<h2>${esc(v.name)}</h2><p class="intel-guidance">${locked ? "請先完成前置據點／星球啟動。" : esc(text)}</p><div class="tags"><span>${cleared && !v.schedule ? "已完成" : "可探索"}</span><span>${esc(availability.reason || nodeKindNames[v.kind])}</span></div><div class="costs">${amounts(p, v.kind === "camp" ? serviceCost : v.reward)}</div>${v.enemies.length ? button("敵群情報", "panel", "enemy-intel", "text-button") : ""}${button("導航接近 →", "navigate", v.id, "primary", locked || !!g.combat)}${v.kind === "camp" ? button("隊伍整補", "resupply", v.id, "primary", locked || !nearby || !!g.combat || !injured || !canAfford(s, serviceCost)) : storyFields(p).has(v.id) ? button("劇情出擊", "flow-open", s.story.session?.quest ?? "", "primary", !nearStoryPlanet(g, v.id) || !!g.combat) : button(cleared && !v.schedule ? "再次挑戰（無首勝獎勵）" : "開始挑戰", "battle", v.id, "primary", locked || !nearby || !availability.open || !!g.combat)}`;
       return;
     }
     const missing = Object.entries(v.activationCost)
@@ -728,7 +730,12 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     const s = g.save,
       now = Date.now();
     const tabs = challengeTabs.filter(([id]) =>
-      p.regions.some((r) => r.category === id && r.status === "active"),
+      p.regions.some(
+        (r) =>
+          r.category === id &&
+          r.status === "active" &&
+          p.planets.some((v) => v.region === r.id && v.status === "active"),
+      ),
     );
     if (!tabs.some(([id]) => id === challengeTab))
       challengeTab = tabs[0]?.[0] ?? "daily";
@@ -828,6 +835,12 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
           ?.chapter ??
         ready.find((q) => q.story)?.story?.chapter ??
         "";
+      panel = "quests";
+      drawPanel();
+      return;
+    }
+    if (action === "journal-tab-open") {
+      journalTab = id;
       panel = "quests";
       drawPanel();
       return;
@@ -1369,12 +1382,18 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     root
       .querySelector(".journal-shortcut")
       ?.classList.toggle("has-rewards", rewards > 0);
-    const mainline = mainlineHtml(p, g.save, !!g.combat || g.busy, (id) =>
+    // Saving never disables the tracker: re-rendering mid-tap swallowed phone taps.
+    const mainline = mainlineHtml(p, g.save, !!g.combat, (id) =>
       nearStoryPlanet(g, id),
     );
     if (mainline !== mainlineKey) {
       mainlineKey = mainline;
       $("#mainline").innerHTML = mainline;
+    }
+    const missions = missionCardsHtml(p, g.save, Date.now());
+    if (missions !== missionsKey) {
+      missionsKey = missions;
+      $("#missions").innerHTML = missions;
     }
     $("#coordinates").textContent = `X ${g.x.toFixed(0)} / Y ${g.y.toFixed(0)}`;
     $("#save-status").textContent = g.error

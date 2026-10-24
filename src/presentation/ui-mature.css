@@ -1774,7 +1774,7 @@
   main.bridge.bridge .sector-heading > * {
     pointer-events: auto;
   }
-  main.bridge.bridge .sector-heading > div:not(.skill-splash):not(.mainline),
+  main.bridge.bridge .sector-heading > div:not(.skill-splash):not(.mainline):not(.missions),
   main.bridge.bridge .sector-status {
     display: none;
   }
@@ -1943,5 +1943,88 @@
     left: calc(min(54vw, 260px) + 12px);
     right: calc(var(--strip) + 10px);
     width: auto;
+  }
+}
+/* Original-style mission trackers (main mission + dailies) under the scenario card. */
+.bridge .missions:empty {
+  display: none;
+}
+.bridge .missions {
+  display: flex;
+  gap: 5px;
+  min-width: 0;
+}
+.bridge .mission-card {
+  display: grid;
+  gap: 1px;
+  min-width: 0;
+  max-width: 190px;
+  padding: 5px 9px;
+  text-align: left;
+  border: 1px solid #a3c2d333;
+  border-left: 3px solid #7fb9c9;
+  border-radius: 0;
+  background: #0a1522d9;
+  color: #dfe9ee;
+}
+.bridge .mission-card.is-main {
+  border-left-color: #e48b6f;
+}
+.bridge .mission-card.is-ready {
+  border-color: #e2c47f88;
+  box-shadow: inset 0 0 0 1px #e2c47f33;
+}
+.bridge .mission-card .eyebrow {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: #9fc6d3;
+}
+.bridge .mission-card.is-main .eyebrow {
+  color: #f0a78f;
+}
+.bridge .mission-card strong,
+.bridge .mission-card small {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.bridge .mission-card strong {
+  font-size: 12px;
+}
+.bridge .mission-card small {
+  font-size: 10px;
+  color: #a9bcc5;
+}
+.bridge .mission-card.is-ready small {
+  color: #f0d79b;
+}
+@media (max-width: 760px) {
+  main.bridge.bridge .missions {
+    flex-direction: column;
+    order: 0;
+  }
+  main.bridge.bridge .mission-card {
+    max-width: none;
+    min-height: 40px;
+  }
+}
+.bridge .mission-card {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  column-gap: 6px;
+  padding: 3px 8px;
+}
+.bridge .mission-card .eyebrow {
+  grid-column: 1 / -1;
+}
+@media (max-width: 760px) {
+  main.bridge.bridge .mission-card {
+    min-height: 36px;
+  }
+  main.bridge.bridge .sector-heading {
+    gap: 4px;
+  }
+  main.bridge.bridge .mainline-card p {
+    font-size: 11px;
   }
 }

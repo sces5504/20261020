@@ -312,7 +312,10 @@ export function mountStoryPlayer(
         replay.cursor = skip ? steps.length : replay.cursor + 1;
         if (replay.cursor >= steps.length) replay = null;
       } else if (step?.kind === "encounter") {
-        if (nearStoryPlanet(g, step.planet))
+        // A field already won (e.g. its source node) resumes instead of refighting.
+        if (step.resumeIf && conditionMet(g.save, step.resumeIf))
+          await g.command({ type: "story-next" });
+        else if (nearStoryPlanet(g, step.planet))
           await g.command({ type: "story-battle" });
       } else await g.command({ type: "story-next", skip });
     } finally {

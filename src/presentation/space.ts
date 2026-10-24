@@ -1040,9 +1040,9 @@ export function mountSpace(
 
     private spread = new Map<string, { x: number; y: number }>();
     private trails = new Map<string, { x: number; y: number }[]>();
-    /** Exploration-only display positions: a loose wedge around the captain. */
+    /** Exploration-only display positions: the original two-column block behind the captain. */
     private shown = new Map<string, { x: number; y: number }>();
-    /** Display offsets carried into a battle so the wedge eases into the combat line. */
+    /** Display offsets carried into a battle so the block eases into the combat line. */
     private handoff = new Map<string, { x: number; y: number }>();
     private flockHeading?: number;
     private flock(id: string, i: number, moving: boolean, dt: number) {
@@ -1060,19 +1060,19 @@ export function mountSpace(
       let target: { x: number; y: number };
       if (i === 0) target = { ...leader };
       else {
-        // Wedge slots behind the captain; idle members gather closer around her.
-        const row = Math.ceil(i / 2),
-          side = i % 2 ? -1 : 1,
-          back = (moving ? 0.85 : 0.5) * s * row,
-          lateral = side * s * (0.55 + row * 0.18),
-          drift = 0.18 * s,
+        // Original-style block: members fly in pairs, two columns, rows tight behind the captain.
+        const row = Math.floor(i / 2),
+          col = i % 2,
+          back = row * s * (moving ? 0.56 : 0.5) + col * s * 0.08,
+          lateral = col * s * 0.5,
+          drift = 0.05 * s,
           bx = -back + Math.sin(this.elapsed * 0.62 + i * 1.9) * drift,
           by = lateral + Math.cos(this.elapsed * 0.47 + i * 2.6) * drift,
           c = Math.cos(this.flockHeading),
           n = Math.sin(this.flockHeading);
         target = { x: leader.x + bx * c - by * n, y: leader.y + bx * n + by * c };
       }
-      const rate = i === 0 ? 30 : 3.4 - Math.min(1.6, i * 0.4);
+      const rate = i === 0 ? 30 : 6 - Math.min(2, i * 0.4);
       const k = 1 - Math.exp(-dt * rate);
       const next = {
         x: prev.x + (target.x - prev.x) * k,
@@ -1080,7 +1080,7 @@ export function mountSpace(
       };
       // Never let a follower fall far behind on long cruises.
       const gap = Math.hypot(next.x - leader.x, next.y - leader.y),
-        limit = s * (1.4 + i * 0.6);
+        limit = s * (0.8 + i * 0.35);
       if (gap > limit) {
         next.x = leader.x + ((next.x - leader.x) / gap) * limit;
         next.y = leader.y + ((next.y - leader.y) / gap) * limit;

@@ -1,0 +1,309 @@
+{
+  "baseCommit": "072892b21ffe69a10fd9cf9861cc9155be403357",
+  "candidateSources": [
+    {
+      "path": "src/presentation/combat-vfx.ts",
+      "sha256": "c8264c6b326ceb802d4d1fbd881c3ba5cd03183925d9fa00e7305fd910a47798"
+    },
+    {
+      "path": "src/presentation/journal.ts",
+      "sha256": "cf5343287663ef0c49ca8d495488837ca2718d2e662aa6fc1f5485c4d8049a72"
+    },
+    {
+      "path": "src/presentation/ui-polish.css",
+      "sha256": "b34a7d84b0b406a17f48369cc07f3573bc5fda4d477cf77c262c61b4861a1b95"
+    },
+    {
+      "path": "src/presentation/ui.ts",
+      "sha256": "695cddd9ac5b424a51a8b523f3fc335f5cb914b7e330c8266889c581c9eaf634"
+    },
+    {
+      "path": "src/presentation/story-player.ts",
+      "sha256": "a2b71b2ce7647ad9c8e1890192ed5faafa980a2d9b3007b901994cf7af48bb1c"
+    },
+    {
+      "path": "src/presentation/space.ts",
+      "sha256": "306d17af2c5632e52c9f06dbe4ef4cc62e0d5274e94554bbea10117026a8e9a0"
+    },
+    {
+      "path": "src/presentation/icons.ts",
+      "sha256": "2180fee39db1f9371798b80e451d1a17d2fdbaf6d6287539e70851b8b196c625"
+    },
+    {
+      "path": "src/style.css",
+      "sha256": "a5f00bf6d4a1ff3ff096f595871b6dd66ad274c672f2697f0d196c849e160065"
+    }
+  ],
+  "notDeployed": true,
+  "originalStandards": [
+    {
+      "path": "art/characters/standard/maiden-01/v1.png",
+      "sha256": "28d5d2e334598fa52fd18bfcc9cb25c12e76fb58ad0ff0cc367bea0e25f827cf",
+      "unchanged": true
+    },
+    {
+      "path": "art/characters/standard/maiden-02/v1.png",
+      "sha256": "aef0c54a2d49c289ae11ce73c88e5db2942af192d8b3cbead6e149ea229427f5",
+      "unchanged": true
+    },
+    {
+      "path": "art/characters/standard/maiden-03/v1.png",
+      "sha256": "53b199e4a0fcc5c4c6676fa74e1bc749e98cd427f8c760764b57b89fc5d481cd",
+      "unchanged": true
+    },
+    {
+      "path": "art/characters/standard/maiden-04/v1.png",
+      "sha256": "31cddf5eb8b583995ec7661901450cbf302fe00c7e89914dd84dde4d7e636d8d",
+      "unchanged": true
+    },
+    {
+      "path": "art/characters/standard/maiden-05/v1.png",
+      "sha256": "0c2a068e052d8f1f28b7a9bad6cff64d34634f0e8d8c334ab836b5c8b95ec111",
+      "unchanged": true
+    },
+    {
+      "path": "art/characters/standard/maiden-06/v1.png",
+      "sha256": "ae3d49d2440ae45a819f52a0532406039cf19bc2b9b01e979859300754a21fea",
+      "unchanged": true
+    }
+  ],
+  "researchBundle": {
+    "pass": true,
+    "files": 863,
+    "tables": 67,
+    "rows": 37723,
+    "originalAPKExecuted": false
+  },
+  "build": {
+    "status": "pass",
+    "command": "npm run build",
+    "typecheckIncluded": true
+  },
+  "unit": {
+    "status": "pass",
+    "command": "node --import tsx --test --test-isolation=none tests/presentation-vfx.test.ts",
+    "tests": 2,
+    "checks": [
+      "rendering-does-not-advance-or-mutate-simulation-or-RNG",
+      "low-effects-identical-hostile-bullets-and-true-field-boundaries"
+    ]
+  },
+  "browser": {
+    "polishV5": {
+      "status": "pass",
+      "command": "node --import tsx tools/game/v5-e2e.mjs",
+      "scope": [
+        "studio-access",
+        "jobs-art",
+        "M-key",
+        "travel",
+        "ready-cooling",
+        "touch-entry"
+      ],
+      "reusedBeforeLaterNewStoryOnlyFixes": true
+    },
+    "v8": {
+      "results": [
+        {
+          "mobile": false,
+          "characters": 32,
+          "fixtureInstances": 33,
+          "dailyQuests": 7,
+          "passed": [
+            "unique-cards",
+            "copy-picker",
+            "small-feed",
+            "formation-remove",
+            "stationed-portrait",
+            "colony-back",
+            "daily-claim",
+            "all-new-portraits",
+            "jupiter-update",
+            "no-overflow",
+            "main-save-isolation"
+          ]
+        },
+        {
+          "mobile": true,
+          "characters": 32,
+          "fixtureInstances": 33,
+          "dailyQuests": 7,
+          "passed": [
+            "unique-cards",
+            "copy-picker",
+            "small-feed",
+            "formation-remove",
+            "stationed-portrait",
+            "colony-back",
+            "daily-claim",
+            "all-new-portraits",
+            "jupiter-update",
+            "no-overflow",
+            "main-save-isolation"
+          ]
+        }
+      ],
+      "errors": []
+    },
+    "viewportStages": [
+      {
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "touch": false,
+        "physicalDevice": false,
+        "checks": [
+          "chapter-actor",
+          "long-text-scroll",
+          "six-real-skill-casts",
+          "chapter-default-claim-replay",
+          "reward-shortcut",
+          "low-effects-toggle",
+          "formal-save-isolated",
+          "scroll-position-survives-economy-checkpoint"
+        ]
+      },
+      {
+        "viewport": {
+          "width": 390,
+          "height": 700
+        },
+        "touch": true,
+        "physicalDevice": false,
+        "checks": [
+          "chapter-actor",
+          "long-text-scroll",
+          "six-real-skill-casts",
+          "chapter-default-claim-replay",
+          "reward-shortcut",
+          "low-effects-toggle",
+          "formal-save-isolated",
+          "scroll-position-survives-economy-checkpoint"
+        ]
+      },
+      {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "touch": true,
+        "physicalDevice": false,
+        "checks": [
+          "legacy-dialogue",
+          "no-overflow",
+          "safe-controls",
+          "chapter-locks-rewards",
+          "three-journal-tabs",
+          "seven-dailies",
+          "formal-save-isolated"
+        ]
+      },
+      {
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "touch": false,
+        "physicalDevice": false,
+        "checks": [
+          "legacy-dialogue",
+          "no-overflow",
+          "safe-controls",
+          "chapter-locks-rewards",
+          "three-journal-tabs",
+          "seven-dailies",
+          "formal-save-isolated"
+        ]
+      }
+    ],
+    "componentScreens": {
+      "status": "pass-before-long-text-stress-fixture",
+      "sizes": [
+        "1440x1000",
+        "390x700"
+      ],
+      "screens": [
+        "bridge",
+        "chapters",
+        "daily",
+        "roster",
+        "summon",
+        "research",
+        "planets",
+        "challenges",
+        "formation"
+      ],
+      "laterTargetedFixes": [
+        "chapter-default-claim-replay",
+        "reward-shortcut",
+        "long-scroll-preserved-across-economy-save",
+        "mobile-six-skill-row-and-banner"
+      ]
+    },
+    "storyFlow": {
+      "passed": true,
+      "results": [
+        {
+          "mobile": false,
+          "gallery": 32,
+          "skipInitialization": true,
+          "reloadNoDuplicate": true,
+          "actualBattleAndCue": true,
+          "claimAndReplay": true,
+          "challengeEntries": true,
+          "npcWorkshop": true,
+          "mainSaveUntouched": true
+        },
+        {
+          "mobile": true,
+          "gallery": 32,
+          "skipInitialization": true,
+          "reloadNoDuplicate": true,
+          "actualBattleAndCue": true,
+          "claimAndReplay": true,
+          "challengeEntries": true,
+          "npcWorkshop": true,
+          "mainSaveUntouched": true
+        }
+      ],
+      "errors": [],
+      "physicalDevice": false,
+      "command": "node --import tsx tools/story/e2e.mjs",
+      "status": "pass"
+    }
+  },
+  "failureHistory": [
+    {
+      "test": "new UI browser",
+      "cause": "test clicked hidden desktop formation entry on mobile",
+      "resolution": "use visible roster -> formation; assertions unchanged"
+    },
+    {
+      "test": "new UI long text",
+      "cause": "entrance animation measured before settled layout",
+      "resolution": "finish finite entrance animation for layout assertions; stress text remains scrollable; later add actual checkpoint scroll preservation"
+    },
+    {
+      "test": "new UI details-only entry",
+      "cause": "fresh gallery context had no IndexedDB store",
+      "resolution": "seed helper implements onupgradeneeded"
+    },
+    {
+      "test": "chronicle browser initial run",
+      "cause": "default chapter favored earliest unclaimed prologue; solar quest claim not mounted",
+      "resolution": "default current/first incomplete chapter; dedicated actual chapter claim + read-only replay regression passed in both viewports; no 31-battle rerun"
+    },
+    {
+      "test": "existing story fixture after chapter grouping",
+      "cause": "reload lost in-memory chapter selection, so test needed to choose its fixture chapter again",
+      "resolution": "two genuine chapter-select clicks added; final desktop/mobile story flow passed with battle/cue/camera and read-only replay assertions intact"
+    }
+  ],
+  "physicalDevice": false,
+  "hardwarePerformanceMeasured": false,
+  "reviewStatus": "candidate",
+  "commercialApproved": false,
+  "fullReleaseRun": false,
+  "integrationNext": "Review single PR then run existing full release gate, including fifth test:polish and later suites. No merge or deployment in author chat."
+}

@@ -1,0 +1,1186 @@
+{
+  "assetId": "presentation:ui-vfx-polish.v1",
+  "version": "1.0.0-candidate",
+  "baseCommit": "072892b21ffe69a10fd9cf9861cc9155be403357",
+  "coreVersion": "0.9.0",
+  "reviewStatus": "candidate",
+  "directionReview": "User requested larger characters with feet behind dialogue; applied. Full UI/VFX not approved.",
+  "bundle": "presentation-only; Vite dynamic UI CSS/JS",
+  "colorSpace": "sRGB",
+  "runtime": {
+    "type": "procedural Graphics + CSS; no new raster assets",
+    "dimensions": "CSS pixels for UI; simulation world units for VFX; no fixed texture size",
+    "pivot": {
+      "cast": "flash.x/y",
+      "field": "field.x/y",
+      "bullet": "bullet.x/y",
+      "shield": "unit.x/y",
+      "portrait": "top-aligned display crop only; original image pivot unchanged"
+    },
+    "alpha": "Renderer-managed geometry alpha; transparent VFX background; no premultiplied raster atlas",
+    "blend": {
+      "ground": "NORMAL",
+      "decoration": "ADD, Phaser depth 2",
+      "hazard": "NORMAL, depth 20; above character sprites"
+    },
+    "atlas": null,
+    "frames": null,
+    "animation": {
+      "clock": "Combat.time / Flash.life / Field.until; continuous procedural render, no sprite-frame animation",
+      "castFlashSeconds": 0.65,
+      "hitFlashSeconds": "0.2 / 0.25, read actual remaining life",
+      "persistent": "Active field/dash/status lifespan from the simulation",
+      "reduced": "No additive decoration, same hostile bullet cores and effective boundaries",
+      "damage": "Simulation only; renderer has no callbacks or RNG"
+    }
+  },
+  "sourcePolicy": {
+    "artwork": "Existing user-selected standard and integrated candidate media. No original art was edited.",
+    "research": [
+      "research/stella-maiden/scenes/Actor_00/Bg_Ray.act.json",
+      "research/stella-maiden/scenes/Actor_00/SkillReady.act.json",
+      "research/stella-maiden/scenes/Actor_00/SkillStop.act.json",
+      "docs/art/ui-reference-20261021.md",
+      "docs/art/style-guide.md"
+    ],
+    "referenceScope": "Stella Maiden source actions and static ray/focus/wormhole vocabulary; existing navy/cyan/gold UI baseline informed by prior NIKKE reference notes. New procedural rendering, not extracted/certified original frames.",
+    "originalAPKExecuted": false,
+    "rawExternalArtCopied": false
+  },
+  "sources": [
+    {
+      "path": "src/presentation/combat-vfx.ts",
+      "sha256": "c8264c6b326ceb802d4d1fbd881c3ba5cd03183925d9fa00e7305fd910a47798"
+    },
+    {
+      "path": "src/presentation/journal.ts",
+      "sha256": "cf5343287663ef0c49ca8d495488837ca2718d2e662aa6fc1f5485c4d8049a72"
+    },
+    {
+      "path": "src/presentation/ui-polish.css",
+      "sha256": "b34a7d84b0b406a17f48369cc07f3573bc5fda4d477cf77c262c61b4861a1b95"
+    },
+    {
+      "path": "src/presentation/ui.ts",
+      "sha256": "695cddd9ac5b424a51a8b523f3fc335f5cb914b7e330c8266889c581c9eaf634"
+    },
+    {
+      "path": "src/presentation/story-player.ts",
+      "sha256": "a2b71b2ce7647ad9c8e1890192ed5faafa980a2d9b3007b901994cf7af48bb1c"
+    },
+    {
+      "path": "src/presentation/space.ts",
+      "sha256": "306d17af2c5632e52c9f06dbe4ef4cc62e0d5274e94554bbea10117026a8e9a0"
+    },
+    {
+      "path": "src/presentation/icons.ts",
+      "sha256": "2180fee39db1f9371798b80e451d1a17d2fdbaf6d6287539e70851b8b196c625"
+    },
+    {
+      "path": "src/style.css",
+      "sha256": "a5f00bf6d4a1ff3ff096f595871b6dd66ad274c672f2697f0d196c849e160065"
+    }
+  ],
+  "families": {
+    "shield": [
+      {
+        "skillId": "m1:deflect",
+        "sourceSkill": 62
+      },
+      {
+        "skillId": "solar10:skill.saturn",
+        "sourceSkill": 60
+      },
+      {
+        "skillId": "stella:skill.58",
+        "sourceSkill": 58
+      },
+      {
+        "skillId": "stella:skill.59",
+        "sourceSkill": 59
+      },
+      {
+        "skillId": "stella:skill.60",
+        "sourceSkill": 60
+      },
+      {
+        "skillId": "stella:skill.61",
+        "sourceSkill": 61
+      },
+      {
+        "skillId": "stella:skill.62",
+        "sourceSkill": 62
+      },
+      {
+        "skillId": "stella:skill.63",
+        "sourceSkill": 63
+      },
+      {
+        "skillId": "stella:skill.64",
+        "sourceSkill": 64
+      },
+      {
+        "skillId": "stella:skill.65",
+        "sourceSkill": 65
+      },
+      {
+        "skillId": "stella:skill.66",
+        "sourceSkill": 66
+      },
+      {
+        "skillId": "stella:skill.67",
+        "sourceSkill": 67
+      },
+      {
+        "skillId": "stella:skill.74",
+        "sourceSkill": 74
+      },
+      {
+        "skillId": "stella:skill.75",
+        "sourceSkill": 75
+      },
+      {
+        "skillId": "stella:skill.174",
+        "sourceSkill": 174
+      },
+      {
+        "skillId": "stella:skill.199",
+        "sourceSkill": 199
+      },
+      {
+        "skillId": "stella:skill.203",
+        "sourceSkill": 203
+      },
+      {
+        "skillId": "stella:skill.207",
+        "sourceSkill": 207
+      }
+    ],
+    "enhance": [
+      {
+        "skillId": "m1:dispersion",
+        "sourceSkill": 187
+      },
+      {
+        "skillId": "m1:armor",
+        "sourceSkill": 48
+      },
+      {
+        "skillId": "m1:critical",
+        "sourceSkill": 11
+      },
+      {
+        "skillId": "m1:eclipse",
+        "sourceSkill": 90
+      },
+      {
+        "skillId": "solar10:skill.sun",
+        "sourceSkill": 71
+      },
+      {
+        "skillId": "solar10:skill.neptune",
+        "sourceSkill": 26
+      },
+      {
+        "skillId": "solar10:skill.io",
+        "sourceSkill": 98
+      },
+      {
+        "skillId": "solar10:skill.titania",
+        "sourceSkill": 89
+      },
+      {
+        "skillId": "stella:skill.1",
+        "sourceSkill": 1
+      },
+      {
+        "skillId": "stella:skill.2",
+        "sourceSkill": 2
+      },
+      {
+        "skillId": "stella:skill.3",
+        "sourceSkill": 3
+      },
+      {
+        "skillId": "stella:skill.4",
+        "sourceSkill": 4
+      },
+      {
+        "skillId": "stella:skill.5",
+        "sourceSkill": 5
+      },
+      {
+        "skillId": "stella:skill.6",
+        "sourceSkill": 6
+      },
+      {
+        "skillId": "stella:skill.7",
+        "sourceSkill": 7
+      },
+      {
+        "skillId": "stella:skill.8",
+        "sourceSkill": 8
+      },
+      {
+        "skillId": "stella:skill.9",
+        "sourceSkill": 9
+      },
+      {
+        "skillId": "stella:skill.10",
+        "sourceSkill": 10
+      },
+      {
+        "skillId": "stella:skill.11",
+        "sourceSkill": 11
+      },
+      {
+        "skillId": "stella:skill.12",
+        "sourceSkill": 12
+      },
+      {
+        "skillId": "stella:skill.13",
+        "sourceSkill": 13
+      },
+      {
+        "skillId": "stella:skill.14",
+        "sourceSkill": 14
+      },
+      {
+        "skillId": "stella:skill.15",
+        "sourceSkill": 15
+      },
+      {
+        "skillId": "stella:skill.16",
+        "sourceSkill": 16
+      },
+      {
+        "skillId": "stella:skill.17",
+        "sourceSkill": 17
+      },
+      {
+        "skillId": "stella:skill.18",
+        "sourceSkill": 18
+      },
+      {
+        "skillId": "stella:skill.19",
+        "sourceSkill": 19
+      },
+      {
+        "skillId": "stella:skill.20",
+        "sourceSkill": 20
+      },
+      {
+        "skillId": "stella:skill.21",
+        "sourceSkill": 21
+      },
+      {
+        "skillId": "stella:skill.22",
+        "sourceSkill": 22
+      },
+      {
+        "skillId": "stella:skill.23",
+        "sourceSkill": 23
+      },
+      {
+        "skillId": "stella:skill.24",
+        "sourceSkill": 24
+      },
+      {
+        "skillId": "stella:skill.25",
+        "sourceSkill": 25
+      },
+      {
+        "skillId": "stella:skill.26",
+        "sourceSkill": 26
+      },
+      {
+        "skillId": "stella:skill.27",
+        "sourceSkill": 27
+      },
+      {
+        "skillId": "stella:skill.28",
+        "sourceSkill": 28
+      },
+      {
+        "skillId": "stella:skill.29",
+        "sourceSkill": 29
+      },
+      {
+        "skillId": "stella:skill.30",
+        "sourceSkill": 30
+      },
+      {
+        "skillId": "stella:skill.31",
+        "sourceSkill": 31
+      },
+      {
+        "skillId": "stella:skill.32",
+        "sourceSkill": 32
+      },
+      {
+        "skillId": "stella:skill.33",
+        "sourceSkill": 33
+      },
+      {
+        "skillId": "stella:skill.34",
+        "sourceSkill": 34
+      },
+      {
+        "skillId": "stella:skill.35",
+        "sourceSkill": 35
+      },
+      {
+        "skillId": "stella:skill.36",
+        "sourceSkill": 36
+      },
+      {
+        "skillId": "stella:skill.37",
+        "sourceSkill": 37
+      },
+      {
+        "skillId": "stella:skill.38",
+        "sourceSkill": 38
+      },
+      {
+        "skillId": "stella:skill.39",
+        "sourceSkill": 39
+      },
+      {
+        "skillId": "stella:skill.40",
+        "sourceSkill": 40
+      },
+      {
+        "skillId": "stella:skill.41",
+        "sourceSkill": 41
+      },
+      {
+        "skillId": "stella:skill.42",
+        "sourceSkill": 42
+      },
+      {
+        "skillId": "stella:skill.43",
+        "sourceSkill": 43
+      },
+      {
+        "skillId": "stella:skill.44",
+        "sourceSkill": 44
+      },
+      {
+        "skillId": "stella:skill.45",
+        "sourceSkill": 45
+      },
+      {
+        "skillId": "stella:skill.46",
+        "sourceSkill": 46
+      },
+      {
+        "skillId": "stella:skill.47",
+        "sourceSkill": 47
+      },
+      {
+        "skillId": "stella:skill.48",
+        "sourceSkill": 48
+      },
+      {
+        "skillId": "stella:skill.49",
+        "sourceSkill": 49
+      },
+      {
+        "skillId": "stella:skill.50",
+        "sourceSkill": 50
+      },
+      {
+        "skillId": "stella:skill.51",
+        "sourceSkill": 51
+      },
+      {
+        "skillId": "stella:skill.52",
+        "sourceSkill": 52
+      },
+      {
+        "skillId": "stella:skill.53",
+        "sourceSkill": 53
+      },
+      {
+        "skillId": "stella:skill.54",
+        "sourceSkill": 54
+      },
+      {
+        "skillId": "stella:skill.55",
+        "sourceSkill": 55
+      },
+      {
+        "skillId": "stella:skill.56",
+        "sourceSkill": 56
+      },
+      {
+        "skillId": "stella:skill.57",
+        "sourceSkill": 57
+      },
+      {
+        "skillId": "stella:skill.68",
+        "sourceSkill": 68
+      },
+      {
+        "skillId": "stella:skill.69",
+        "sourceSkill": 69
+      },
+      {
+        "skillId": "stella:skill.70",
+        "sourceSkill": 70
+      },
+      {
+        "skillId": "stella:skill.71",
+        "sourceSkill": 71
+      },
+      {
+        "skillId": "stella:skill.72",
+        "sourceSkill": 72
+      },
+      {
+        "skillId": "stella:skill.73",
+        "sourceSkill": 73
+      },
+      {
+        "skillId": "stella:skill.76",
+        "sourceSkill": 76
+      },
+      {
+        "skillId": "stella:skill.77",
+        "sourceSkill": 77
+      },
+      {
+        "skillId": "stella:skill.78",
+        "sourceSkill": 78
+      },
+      {
+        "skillId": "stella:skill.79",
+        "sourceSkill": 79
+      },
+      {
+        "skillId": "stella:skill.89",
+        "sourceSkill": 89
+      },
+      {
+        "skillId": "stella:skill.90",
+        "sourceSkill": 90
+      },
+      {
+        "skillId": "stella:skill.91",
+        "sourceSkill": 91
+      },
+      {
+        "skillId": "stella:skill.92",
+        "sourceSkill": 92
+      },
+      {
+        "skillId": "stella:skill.93",
+        "sourceSkill": 93
+      },
+      {
+        "skillId": "stella:skill.98",
+        "sourceSkill": 98
+      },
+      {
+        "skillId": "stella:skill.99",
+        "sourceSkill": 99
+      },
+      {
+        "skillId": "stella:skill.141",
+        "sourceSkill": 141
+      },
+      {
+        "skillId": "stella:skill.143",
+        "sourceSkill": 143
+      },
+      {
+        "skillId": "stella:skill.144",
+        "sourceSkill": 144
+      },
+      {
+        "skillId": "stella:skill.145",
+        "sourceSkill": 145
+      },
+      {
+        "skillId": "stella:skill.146",
+        "sourceSkill": 146
+      },
+      {
+        "skillId": "stella:skill.147",
+        "sourceSkill": 147
+      },
+      {
+        "skillId": "stella:skill.148",
+        "sourceSkill": 148
+      },
+      {
+        "skillId": "stella:skill.150",
+        "sourceSkill": 150
+      },
+      {
+        "skillId": "stella:skill.153",
+        "sourceSkill": 153
+      },
+      {
+        "skillId": "stella:skill.154",
+        "sourceSkill": 154
+      },
+      {
+        "skillId": "stella:skill.155",
+        "sourceSkill": 155
+      },
+      {
+        "skillId": "stella:skill.158",
+        "sourceSkill": 158
+      },
+      {
+        "skillId": "stella:skill.181",
+        "sourceSkill": 181
+      },
+      {
+        "skillId": "stella:skill.182",
+        "sourceSkill": 182
+      },
+      {
+        "skillId": "stella:skill.183",
+        "sourceSkill": 183
+      },
+      {
+        "skillId": "stella:skill.184",
+        "sourceSkill": 184
+      },
+      {
+        "skillId": "stella:skill.185",
+        "sourceSkill": 185
+      },
+      {
+        "skillId": "stella:skill.186",
+        "sourceSkill": 186
+      },
+      {
+        "skillId": "stella:skill.187",
+        "sourceSkill": 187
+      },
+      {
+        "skillId": "stella:skill.188",
+        "sourceSkill": 188
+      },
+      {
+        "skillId": "stella:skill.189",
+        "sourceSkill": 189
+      },
+      {
+        "skillId": "stella:skill.191",
+        "sourceSkill": 191
+      },
+      {
+        "skillId": "stella:skill.194",
+        "sourceSkill": 194
+      },
+      {
+        "skillId": "stella:skill.197",
+        "sourceSkill": 197
+      },
+      {
+        "skillId": "stella:skill.200",
+        "sourceSkill": 200
+      },
+      {
+        "skillId": "stella:skill.202",
+        "sourceSkill": 202
+      },
+      {
+        "skillId": "stella:skill.204",
+        "sourceSkill": 204
+      },
+      {
+        "skillId": "stella:skill.210",
+        "sourceSkill": 210
+      },
+      {
+        "skillId": "stella:skill.211",
+        "sourceSkill": 211
+      },
+      {
+        "skillId": "stella:skill.212",
+        "sourceSkill": 212
+      },
+      {
+        "skillId": "stella:skill.213",
+        "sourceSkill": 213
+      },
+      {
+        "skillId": "stella:skill.219",
+        "sourceSkill": 219
+      },
+      {
+        "skillId": "stella:skill.223",
+        "sourceSkill": 223
+      },
+      {
+        "skillId": "prologue6:skill.overload",
+        "sourceSkill": 6
+      }
+    ],
+    "summon": [
+      {
+        "skillId": "m1:cannon",
+        "sourceSkill": 87
+      },
+      {
+        "skillId": "solar10:skill.ganymede",
+        "sourceSkill": 82
+      },
+      {
+        "skillId": "stella:skill.82",
+        "sourceSkill": 82
+      },
+      {
+        "skillId": "stella:skill.83",
+        "sourceSkill": 83
+      },
+      {
+        "skillId": "stella:skill.84",
+        "sourceSkill": 84
+      },
+      {
+        "skillId": "stella:skill.85",
+        "sourceSkill": 85
+      },
+      {
+        "skillId": "stella:skill.86",
+        "sourceSkill": 86
+      },
+      {
+        "skillId": "stella:skill.87",
+        "sourceSkill": 87
+      },
+      {
+        "skillId": "stella:skill.88",
+        "sourceSkill": 88
+      },
+      {
+        "skillId": "stella:skill.163",
+        "sourceSkill": 163
+      },
+      {
+        "skillId": "stella:skill.164",
+        "sourceSkill": 164
+      },
+      {
+        "skillId": "stella:skill.165",
+        "sourceSkill": 165
+      },
+      {
+        "skillId": "stella:skill.166",
+        "sourceSkill": 166
+      },
+      {
+        "skillId": "stella:skill.167",
+        "sourceSkill": 167
+      },
+      {
+        "skillId": "stella:skill.168",
+        "sourceSkill": 168
+      },
+      {
+        "skillId": "stella:skill.169",
+        "sourceSkill": 169
+      },
+      {
+        "skillId": "stella:skill.170",
+        "sourceSkill": 170
+      },
+      {
+        "skillId": "stella:skill.171",
+        "sourceSkill": 171
+      },
+      {
+        "skillId": "stella:skill.180",
+        "sourceSkill": 180
+      },
+      {
+        "skillId": "stella:skill.192",
+        "sourceSkill": 192
+      },
+      {
+        "skillId": "stella:skill.198",
+        "sourceSkill": 198
+      },
+      {
+        "skillId": "stella:skill.216",
+        "sourceSkill": 216
+      },
+      {
+        "skillId": "stella:skill.217",
+        "sourceSkill": 217
+      },
+      {
+        "skillId": "stella:skill.218",
+        "sourceSkill": 218
+      },
+      {
+        "skillId": "stella:skill.226",
+        "sourceSkill": 226
+      }
+    ],
+    "gravity": [
+      {
+        "skillId": "solar10:skill.jupiter",
+        "sourceSkill": 81
+      },
+      {
+        "skillId": "stella:skill.80",
+        "sourceSkill": 80
+      },
+      {
+        "skillId": "stella:skill.81",
+        "sourceSkill": 81
+      },
+      {
+        "skillId": "stella:skill.130",
+        "sourceSkill": 130
+      },
+      {
+        "skillId": "stella:skill.131",
+        "sourceSkill": 131
+      },
+      {
+        "skillId": "stella:skill.173",
+        "sourceSkill": 173
+      },
+      {
+        "skillId": "stella:skill.175",
+        "sourceSkill": 175
+      },
+      {
+        "skillId": "stella:skill.214",
+        "sourceSkill": 214
+      }
+    ],
+    "beam": [
+      {
+        "skillId": "solar10:skill.pluto",
+        "sourceSkill": 124
+      },
+      {
+        "skillId": "stella:skill.124",
+        "sourceSkill": 124
+      },
+      {
+        "skillId": "stella:skill.125",
+        "sourceSkill": 125
+      },
+      {
+        "skillId": "stella:skill.126",
+        "sourceSkill": 126
+      },
+      {
+        "skillId": "stella:skill.127",
+        "sourceSkill": 127
+      },
+      {
+        "skillId": "stella:skill.176",
+        "sourceSkill": 176
+      },
+      {
+        "skillId": "stella:skill.190",
+        "sourceSkill": 190
+      }
+    ],
+    "projectile": [
+      {
+        "skillId": "solar10:skill.nemesis",
+        "sourceSkill": 119
+      },
+      {
+        "skillId": "solar10:skill.ariel",
+        "sourceSkill": 95
+      },
+      {
+        "skillId": "stella:skill.94",
+        "sourceSkill": 94
+      },
+      {
+        "skillId": "stella:skill.95",
+        "sourceSkill": 95
+      },
+      {
+        "skillId": "stella:skill.96",
+        "sourceSkill": 96
+      },
+      {
+        "skillId": "stella:skill.97",
+        "sourceSkill": 97
+      },
+      {
+        "skillId": "stella:skill.113",
+        "sourceSkill": 113
+      },
+      {
+        "skillId": "stella:skill.114",
+        "sourceSkill": 114
+      },
+      {
+        "skillId": "stella:skill.115",
+        "sourceSkill": 115
+      },
+      {
+        "skillId": "stella:skill.116",
+        "sourceSkill": 116
+      },
+      {
+        "skillId": "stella:skill.117",
+        "sourceSkill": 117
+      },
+      {
+        "skillId": "stella:skill.118",
+        "sourceSkill": 118
+      },
+      {
+        "skillId": "stella:skill.119",
+        "sourceSkill": 119
+      },
+      {
+        "skillId": "stella:skill.120",
+        "sourceSkill": 120
+      },
+      {
+        "skillId": "stella:skill.121",
+        "sourceSkill": 121
+      },
+      {
+        "skillId": "stella:skill.122",
+        "sourceSkill": 122
+      },
+      {
+        "skillId": "stella:skill.123",
+        "sourceSkill": 123
+      },
+      {
+        "skillId": "stella:skill.128",
+        "sourceSkill": 128
+      },
+      {
+        "skillId": "stella:skill.129",
+        "sourceSkill": 129
+      },
+      {
+        "skillId": "stella:skill.132",
+        "sourceSkill": 132
+      },
+      {
+        "skillId": "stella:skill.133",
+        "sourceSkill": 133
+      },
+      {
+        "skillId": "stella:skill.134",
+        "sourceSkill": 134
+      },
+      {
+        "skillId": "stella:skill.135",
+        "sourceSkill": 135
+      },
+      {
+        "skillId": "stella:skill.136",
+        "sourceSkill": 136
+      },
+      {
+        "skillId": "stella:skill.137",
+        "sourceSkill": 137
+      },
+      {
+        "skillId": "stella:skill.138",
+        "sourceSkill": 138
+      },
+      {
+        "skillId": "stella:skill.139",
+        "sourceSkill": 139
+      },
+      {
+        "skillId": "stella:skill.140",
+        "sourceSkill": 140
+      },
+      {
+        "skillId": "stella:skill.142",
+        "sourceSkill": 142
+      },
+      {
+        "skillId": "stella:skill.149",
+        "sourceSkill": 149
+      },
+      {
+        "skillId": "stella:skill.151",
+        "sourceSkill": 151
+      },
+      {
+        "skillId": "stella:skill.152",
+        "sourceSkill": 152
+      },
+      {
+        "skillId": "stella:skill.159",
+        "sourceSkill": 159
+      },
+      {
+        "skillId": "stella:skill.160",
+        "sourceSkill": 160
+      },
+      {
+        "skillId": "stella:skill.161",
+        "sourceSkill": 161
+      },
+      {
+        "skillId": "stella:skill.177",
+        "sourceSkill": 177
+      },
+      {
+        "skillId": "stella:skill.178",
+        "sourceSkill": 178
+      },
+      {
+        "skillId": "stella:skill.193",
+        "sourceSkill": 193
+      },
+      {
+        "skillId": "stella:skill.195",
+        "sourceSkill": 195
+      },
+      {
+        "skillId": "stella:skill.205",
+        "sourceSkill": 205
+      },
+      {
+        "skillId": "stella:skill.209",
+        "sourceSkill": 209
+      },
+      {
+        "skillId": "stella:skill.215",
+        "sourceSkill": 215
+      },
+      {
+        "skillId": "stella:skill.221",
+        "sourceSkill": 221
+      }
+    ],
+    "burst": [
+      {
+        "skillId": "stella:skill.100",
+        "sourceSkill": 100
+      },
+      {
+        "skillId": "stella:skill.101",
+        "sourceSkill": 101
+      },
+      {
+        "skillId": "stella:skill.102",
+        "sourceSkill": 102
+      },
+      {
+        "skillId": "stella:skill.103",
+        "sourceSkill": 103
+      },
+      {
+        "skillId": "stella:skill.104",
+        "sourceSkill": 104
+      },
+      {
+        "skillId": "stella:skill.105",
+        "sourceSkill": 105
+      },
+      {
+        "skillId": "stella:skill.106",
+        "sourceSkill": 106
+      },
+      {
+        "skillId": "stella:skill.107",
+        "sourceSkill": 107
+      },
+      {
+        "skillId": "stella:skill.108",
+        "sourceSkill": 108
+      },
+      {
+        "skillId": "stella:skill.109",
+        "sourceSkill": 109
+      },
+      {
+        "skillId": "stella:skill.162",
+        "sourceSkill": 162
+      },
+      {
+        "skillId": "stella:skill.179",
+        "sourceSkill": 179
+      },
+      {
+        "skillId": "stella:skill.196",
+        "sourceSkill": 196
+      },
+      {
+        "skillId": "stella:skill.201",
+        "sourceSkill": 201
+      },
+      {
+        "skillId": "stella:skill.206",
+        "sourceSkill": 206
+      },
+      {
+        "skillId": "stella:skill.220",
+        "sourceSkill": 220
+      },
+      {
+        "skillId": "stella:skill.224",
+        "sourceSkill": 224
+      },
+      {
+        "skillId": "stella:skill.225",
+        "sourceSkill": 225
+      }
+    ],
+    "dash": [
+      {
+        "skillId": "stella:skill.110",
+        "sourceSkill": 110
+      },
+      {
+        "skillId": "stella:skill.111",
+        "sourceSkill": 111
+      },
+      {
+        "skillId": "stella:skill.112",
+        "sourceSkill": 112
+      },
+      {
+        "skillId": "stella:skill.156",
+        "sourceSkill": 156
+      },
+      {
+        "skillId": "stella:skill.157",
+        "sourceSkill": 157
+      },
+      {
+        "skillId": "stella:skill.172",
+        "sourceSkill": 172
+      },
+      {
+        "skillId": "stella:skill.208",
+        "sourceSkill": 208
+      },
+      {
+        "skillId": "original:skill.kiraba",
+        "sourceSkill": 153
+      },
+      {
+        "skillId": "original:skill.mitsuba",
+        "sourceSkill": 155
+      }
+    ],
+    "time": [
+      {
+        "skillId": "stella:skill.222",
+        "sourceSkill": 222
+      }
+    ]
+  },
+  "webOutput": "Vite compiles sources to hashed dynamic UI CSS/JS; integrator rebuilds. Documentation review.html is self-contained with adjacent previews.",
+  "previews": [
+    {
+      "path": "docs/art/ui-polish-v1/previews/desktop-chapters.png",
+      "sha256": "afbea257f4aa81e2fb19a80175d80744c70b6d69d65479d1fc817072d04a8e61",
+      "bytes": 492490,
+      "reviewStatus": "candidate",
+      "type": "in-game-review-evidence; not a runtime texture",
+      "source": "Chromium screenshots / video of the real game renderer; test fixtures declared in handoff",
+      "width": 1440,
+      "height": 1000,
+      "alpha": "opaque screenshot",
+      "pivot": null,
+      "atlas": null,
+      "frames": null
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/mobile-chapters.png",
+      "sha256": "2a0b76a220f67f4cba166575706fe631d6592e4b1e5051212dcb1b6f75e4473b",
+      "bytes": 501345,
+      "reviewStatus": "candidate",
+      "type": "in-game-review-evidence; not a runtime texture",
+      "source": "Chromium screenshots / video of the real game renderer; test fixtures declared in handoff",
+      "width": 780,
+      "height": 1400,
+      "alpha": "opaque screenshot",
+      "pivot": null,
+      "atlas": null,
+      "frames": null
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/mobile-combat-low.png",
+      "sha256": "89a17920bb15f38a749f030da08f2395db6464779efd3e26867b9b999aebc02f",
+      "bytes": 527451,
+      "reviewStatus": "candidate",
+      "type": "in-game-review-evidence; not a runtime texture",
+      "source": "Chromium screenshots / video of the real game renderer; test fixtures declared in handoff",
+      "width": 780,
+      "height": 1400,
+      "alpha": "opaque screenshot",
+      "pivot": null,
+      "atlas": null,
+      "frames": null
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/mobile-combat.png",
+      "sha256": "0c922192e611d8120be9514cec06ec172b759728a4cdd635ca5647109d352500",
+      "bytes": 522719,
+      "reviewStatus": "candidate",
+      "type": "in-game-review-evidence; not a runtime texture",
+      "source": "Chromium screenshots / video of the real game renderer; test fixtures declared in handoff",
+      "width": 780,
+      "height": 1400,
+      "alpha": "opaque screenshot",
+      "pivot": null,
+      "atlas": null,
+      "frames": null
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/mobile-dialogue.png",
+      "sha256": "c7d505e49048431cd06972d1a1c75a33a1aa7fdea278541b995264600028d26c",
+      "bytes": 1315771,
+      "reviewStatus": "candidate",
+      "type": "in-game-review-evidence; not a runtime texture",
+      "source": "Chromium screenshots / video of the real game renderer; test fixtures declared in handoff",
+      "width": 780,
+      "height": 1400,
+      "alpha": "opaque screenshot",
+      "pivot": null,
+      "atlas": null,
+      "frames": null
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/mobile-preview.webm",
+      "sha256": "ce83d05da3429abc6323d3f4a3f4ef84bf2723f6598da22cf53569653a7b971d",
+      "bytes": 4537580,
+      "reviewStatus": "candidate",
+      "type": "in-game-review-evidence; not a runtime texture",
+      "source": "Chromium screenshots / video of the real game renderer; test fixtures declared in handoff",
+      "width": 390,
+      "height": 700,
+      "fps": 25,
+      "alpha": "opaque video",
+      "pivot": null,
+      "atlas": null,
+      "frames": "browser capture at 25fps; unrelated to simulation hits"
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/mobile-story.png",
+      "sha256": "bea70ef94056ce22f023a6bf1b7382b8649d7c1e5040174d648b1624b5cbe80e",
+      "bytes": 1399377,
+      "reviewStatus": "candidate",
+      "type": "in-game-review-evidence; not a runtime texture",
+      "source": "Chromium screenshots / video of the real game renderer; test fixtures declared in handoff",
+      "width": 780,
+      "height": 1400,
+      "alpha": "opaque screenshot",
+      "pivot": null,
+      "atlas": null,
+      "frames": null
+    }
+  ]
+}

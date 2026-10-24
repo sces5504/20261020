@@ -1,3 +1,5 @@
+import "./ui-polish.css";
+import { journalHtml } from "./journal";
 import { regionPath } from "../domain/navigation";
 import { mountStoryPlayer } from "./story-player";
 import { storyAvailable } from "../domain/story";
@@ -60,16 +62,18 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     currentAcquisition = "",
     arrivalReturnPanel = "",
     timer: number;
+  let journalTab = "story",
+    journalChapter = "";
   let recipe = p.characters[0].recipe.slice(),
     count = 1;
   let cleanup: () => void | Promise<void> = () => {};
   let disposed = false;
   root.innerHTML = `<main class="bridge"><header class="topbar"><a class="brand" href="#/play"><span class="brand-icon">✧</span><span>GALAXY ANGEL<small>星 河 戰 姬</small></span></a><div id="wallet" class="wallet"></div><div class="top-actions">${button("設定", "panel", "archive", "icon-button")}<a class="studio-link" href="gallery.html">角色圖鑑 ↗</a><a class="studio-link" href="#/studio">內容工坊 ↗</a></div></header>
- <div class="sector-heading"><div><span class="eyebrow">GALACTIC EXPEDITION</span><h1><b id="region-title">${esc(p.regions.find((r) => r.id === g.save.region)!.name)}</b><span>探索航線</span></h1></div><div class="sector-status"><i></i> <span id="save-status">本機自動保存</span>${test ? "<strong>隔離測試</strong>" : ""}</div></div>
+ <div class="sector-heading"><div id="skill-splash" class="skill-splash" aria-live="polite"></div><div><span class="eyebrow">GALACTIC EXPEDITION</span><h1><b id="region-title">${esc(p.regions.find((r) => r.id === g.save.region)!.name)}</b><span>探索航線</span></h1></div><button class="journal-shortcut" data-action="journal-open" data-id="quests">${icon("journal")}<span id="journal-status">章節／任務</span> →</button><div class="sector-status"><i></i> <span id="save-status">本機自動保存</span>${test ? "<strong>隔離測試</strong>" : ""}</div></div>
  <section class="viewport"><aside class="mission-rail"><div class="section-label">航行目標 <span>MISSION</span></div><div id="mission"></div><div class="rail-bottom"><span class="eyebrow">NAVIGATION</span><p>WASD／點擊星海航行<br>M 切換大星圖</p><div class="signal"><i></i><i></i><i></i><i></i><i></i></div><small>艦隊通訊連線中</small></div></aside>
  <div id="space" class="space" aria-label="星域戰場，點擊空白處移動，點擊星球查看情報" role="application"></div><div class="map-caption"><span>✧ 星域掃描</span><span id="coordinates"></span></div><div id="battle-state" class="battle-state"></div><div id="battle-tools" class="battle-tools"></div><aside id="planet-card" class="planet-card"></aside></section>
- <footer class="flight-deck"><div class="squad-heading"><span class="eyebrow">YOUR CONSTELLATION</span><strong>航行編隊</strong>${button("編隊 ↗", "panel", "formation", "text-button")}</div><div class="squad" id="squad"></div><nav class="deck-nav">${button(icon("resonance") + "星體共鳴", "panel", "summon")}${button(icon("research") + "共振研究", "panel", "research")}${button("高難／活動", "panel", "challenges")}${button(icon("journal") + "航行紀錄", "panel", "quests")}${button(icon("planet") + "領地", "panel", "planets")}${button(icon("crew") + "角色", "panel", "roster")}${button(icon("pause") + "暫停", "pause", "", "pause-button")}</nav></footer>
- <div class="build-note">v${p.version} · ${p.characters.filter((c) => c.status === "active").length} 位少女／${p.regions.filter((r) => r.status === "active").length} 個航區</div><div class="toast" id="toast" role="status" aria-live="polite"></div><div id="skill-splash" class="skill-splash" aria-live="polite"></div><div id="overlay"></div></main>`;
+ <footer class="flight-deck"><div class="squad-heading"><span class="eyebrow">YOUR CONSTELLATION</span><strong>航行編隊</strong>${button("編隊 ↗", "panel", "formation", "text-button")}</div><div class="squad" id="squad"></div><nav class="deck-nav">${button(icon("resonance") + "星體共鳴", "panel", "summon")}${button(icon("research") + "共振研究", "panel", "research")}${button(icon("challenge") + "高難／活動", "panel", "challenges")}${button(icon("journal") + "航行紀錄", "panel", "quests")}${button(icon("planet") + "領地", "panel", "planets")}${button(icon("crew") + "角色", "panel", "roster")}${button(icon("pause") + "暫停", "pause", "", "pause-button")}</nav></footer>
+ <div class="build-note">v${p.version} · ${p.characters.filter((c) => c.status === "active").length} 位少女／${p.regions.filter((r) => r.status === "active").length} 個航區</div><div class="toast" id="toast" role="status" aria-live="polite"></div><div id="overlay"></div></main>`;
   const $ = (s: string) => root.querySelector<HTMLElement>(s)!;
   const space = mountSpace(
     $("#space"),
@@ -594,28 +598,10 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     if (panel === "quests") {
       title = "航行紀錄";
       kick = "VOYAGE JOURNAL";
-      body = `${jobList()}<h3>每日任務</h3><p class="muted">每日台灣時間 23:00 更新（與原作 KST 午夜一致）；進度與獎勵每日各自結算，未領獎勵不跨日累積。</p><div class="list-cards daily-quests">${p.quests
-        .filter((q) => q.repeat === "daily")
-        .map(
-          (q) =>
-            `<article data-daily-quest="${esc(q.id)}"><span class="eyebrow">${questClaimed(s, q, Date.now()) ? "CLAIMED" : "DAILY MISSION"}</span><h3>${esc(q.name)}</h3><p>${esc(q.description)}</p><strong>${Math.min(q.count, questProgress(s, q, Date.now()))} / ${q.count}</strong><small>更新倒數 <span data-ends="${questResetAt(q, Date.now())}"></span></small><div class="costs">${amounts(p, q.reward)}</div>${button(questClaimed(s, q, Date.now()) ? "今日已領取" : "領取每日獎勵", "quest", q.id, "primary", questClaimed(s, q, Date.now()) || !questReady(s, q, Date.now()))}</article>`,
-        )
-        .join("")}</div><h3>章節劇情</h3><div class="list-cards">${
-        p.quests
-          .filter((q) => q.story && q.status === "active")
-          .map(
-            (q) =>
-              `<article><h3>${esc(q.name)}</h3><p>${esc(q.description)}</p><small>${s.story.completed.includes(q.id) ? "任務完成" : "任務未完成"} · ${s.storySeen.includes(q.id) ? "對話已讀" : "對話未讀"} · ${s.quests.includes(q.id) ? "獎勵已領" : "獎勵未領"}</small>${button(s.story.session?.quest === q.id ? "接續劇情" : "開始劇情", "flow-open", q.id, "primary", !storyAvailable(p, s, q.id) || s.storySeen.includes(q.id))}${button("章節回看", "flow-replay", q.id, "text-button", !s.storySeen.includes(q.id) && !s.quests.includes(q.id))}${button("領取章節獎勵", "quest", q.id, "primary", s.quests.includes(q.id) || !questReady(s, q))}</article>`,
-          )
-          .join("") ||
-        "<p>正式章節待劇情作者提供；舊航行紀錄與世界進度保留。</p>"
-      }</div><h3>航行紀錄</h3><div class="list-cards">${p.quests
-        .filter((q) => q.repeat !== "daily" && !q.story)
-        .map(
-          (q) =>
-            `<article><span class="eyebrow">${s.quests.includes(q.id) ? "ARCHIVED" : questReady(s, q) ? "SIGNAL RECEIVED" : "AWAITING SIGNAL"}</span><h3>${esc(q.name)}</h3><p>${esc(q.description || q.dialogue[0].text)}</p>${button("閱讀對話 →", "story", q.id, "text-button")}<div class="costs">${amounts(p, q.reward)}</div>${button(s.quests.includes(q.id) ? "已收錄" : "收錄並領取獎勵", "quest", q.id, "primary", s.quests.includes(q.id) || !questReady(s, q))}</article>`,
-        )
-        .join("")}</div>`;
+      body =
+        (s.jobs.length
+          ? `<details class="journal-jobs"><summary>進行中的工作 · ${s.jobs.length}</summary>${jobList()}</details>`
+          : "") + journalHtml(p, s, journalTab, journalChapter);
     }
     if (panel === "guide") {
       title = "航行指南";
@@ -641,10 +627,10 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
         )
         .join(
           "",
-        )}<h3>聲音與畫面</h3><div class="inline-actions">${button(audio.enabled ? "聲音：開啟" : "聲音：關閉", "sound")}${button(g.lowEffects ? "特效：精簡" : "特效：完整", "effects")}</div><label>音效音量<input id="audio-volume" type="range" min="0" max="1" step="0.05" value="${audio.volume}"></label><h3>戰鬥操作</h3><p>點空白處移動與閃躲；普通攻擊自動進行。點敵人優先鎖定，點下方角色施放技能。</p>${button(g.autoSkills ? "自動技能：開啟" : "自動技能：關閉", "auto")}<h3>角色製作表</h3><a href="#/catalog">查看未來角色清單／下載 CSV ↗</a><h3>內容工坊</h3><p>瀏覽與調整內容，套用至隔離測試遊戲；完成後匯出內容包再發布。</p><a class="primary link-button" href="#/studio">進入內容工坊 ↗</a>${test ? '<p><a href="#/play">退出隔離測試，返回正式進度</a></p>' : ""}<details><summary>開發版狀態</summary><p>六張原始立繪已匯入，已套用原先六角色；原圖展示入口在內容工坊。音效採可編輯的程序合成，星球與敵艦為原創程序材質。M1的平衡／劇情與部分技能為明示的新設計；原作未知機制仍保留來源缺口。</p></details></div>`;
+        )}<h3>聲音與畫面</h3><div class="inline-actions">${button(audio.enabled ? "聲音：開啟" : "聲音：關閉", "sound")}${button(g.lowEffects ? "特效：精簡" : "特效：完整", "effects")}</div><label>音效音量<input id="audio-volume" type="range" min="0" max="1" step="0.05" value="${audio.volume}"></label><h3>戰鬥操作</h3><p>點空白處移動與閃躲；普通攻擊自動進行。點敵人優先鎖定，點下方角色施放技能。</p>${button(g.autoSkills ? "自動技能：開啟" : "自動技能：關閉", "auto")}<h3>角色圖鑑</h3><a href="gallery.html">瀏覽全部少女立繪／Q圖 ↗</a><h3>角色製作表</h3><a href="#/catalog">查看未來角色清單／下載 CSV ↗</a><h3>內容工坊</h3><p>瀏覽與調整內容，套用至隔離測試遊戲；完成後匯出內容包再發布。</p><a class="primary link-button" href="#/studio">進入內容工坊 ↗</a>${test ? '<p><a href="#/play">退出隔離測試，返回正式進度</a></p>' : ""}<details><summary>開發版狀態</summary><p>六張原始立繪已匯入，已套用原先六角色；原圖展示入口在內容工坊。音效採可編輯的程序合成，星球與敵艦為原創程序材質。M1的平衡／劇情與部分技能為明示的新設計；原作未知機制仍保留來源缺口。</p></details></div>`;
     }
     $("#overlay").innerHTML =
-      `<div class="modal-backdrop"><section class="modal ${["roster", "formation", "character", "acquisition"].includes(panel) ? "wide" : ""}" role="dialog" aria-modal="true" aria-label="${esc(title)}">${heading(title, kick)}<div class="modal-body">${body}</div><div class="modal-footer"><i></i> 戰鬥已暫停 · 經營計時持續</div></section></div>`;
+      `<div class="modal-backdrop"><section data-panel="${esc(panel)}" class="modal ${["roster", "formation", "character", "acquisition"].includes(panel) ? "wide" : ""}" role="dialog" aria-modal="true" aria-label="${esc(title)}">${heading(title, kick)}<div class="modal-body">${body}</div><div class="modal-footer"><i></i> 戰鬥已暫停 · 經營計時持續</div></section></div>`;
     if (panel === "summon") recipeInfo();
     refreshTimers();
     $("#overlay")
@@ -661,6 +647,44 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       .join("、")} · 配方不保證取得</small>`;
   }
   async function act(action: string, id: string) {
+    if (action === "journal-open") {
+      const ready = p.quests.filter(
+        (q) =>
+          q.status === "active" &&
+          !questClaimed(g.save, q, Date.now()) &&
+          questReady(g.save, q, Date.now()),
+      );
+      journalTab =
+        g.save.story.session || ready.some((q) => q.story)
+          ? "story"
+          : ready.some((q) => q.repeat === "daily")
+            ? "daily"
+            : ready.length
+              ? "voyage"
+              : "story";
+      journalChapter =
+        p.quests.find((q) => q.id === g.save.story.session?.quest)?.story
+          ?.chapter ??
+        ready.find((q) => q.story)?.story?.chapter ??
+        "";
+      panel = "quests";
+      drawPanel();
+      return;
+    }
+    if (action === "journal-tab" || action === "journal-chapter") {
+      if (action === "journal-tab") journalTab = id;
+      else {
+        journalChapter = id;
+        journalTab = "story";
+      }
+      drawPanel();
+      root
+        .querySelector<HTMLButtonElement>(
+          `[data-action="${action}"][data-id="${CSS.escape(id)}"]`,
+        )
+        ?.focus();
+      return;
+    }
     if (action === "intel-close") {
       intelOpen = false;
       renderPlanet();
@@ -1110,6 +1134,30 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
           ? "安全航行 · 巡航加速"
           : "偵測到敵方訊號";
 
+    if (wave && g.combat?.storyEncounter) {
+      const encounter = g.combat.storyEncounter;
+      const mode = {
+        eliminate: "清除敵軍",
+        escort: "護送目標抵達",
+        protect: "保護目標",
+        survive: "存活至時限",
+        defend: "守住防線",
+      }[encounter.mode];
+      const remaining = encounter.seconds
+        ? ` · ${Math.ceil(Math.max(0, encounter.seconds - g.combat.time))}s`
+        : "";
+      const protectedUnits = encounter.actors
+        .filter((a) => a.required)
+        .map((a) => {
+          const u = g.combat!.units.find((u) => u.id === a.id);
+          return u
+            ? `${u.name} ${Math.ceil((100 * u.hp) / u.maxHp)}%`
+            : "等待目標入場";
+        })
+        .join("／");
+      wave.textContent = `${mode}${remaining}${protectedUnits ? " · " + protectedUnits : ""} · ${wave.textContent}`;
+    }
+
     const rates = production(p, g.save);
     $("#wallet").innerHTML = p.resources
       .map(
@@ -1120,6 +1168,20 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     $("#region-title").textContent = p.regions.find(
       (r) => r.id === g.save.region,
     )!.name;
+    const rewards = p.quests.filter(
+      (q) =>
+        q.status === "active" &&
+        !questClaimed(g.save, q, Date.now()) &&
+        questReady(g.save, q, Date.now()),
+    ).length;
+    $("#journal-status").textContent = rewards
+      ? `可領獎勵 ${rewards}`
+      : g.save.story.session
+        ? "接續劇情"
+        : "章節／任務";
+    root
+      .querySelector(".journal-shortcut")
+      ?.classList.toggle("has-rewards", rewards > 0);
     $("#coordinates").textContent = `X ${g.x.toFixed(0)} / Y ${g.y.toFixed(0)}`;
     $("#save-status").textContent = g.error
       ? "進度尚未保存"
@@ -1131,6 +1193,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       noticeUntil = Date.now() + 4200;
     }
     $("#toast").textContent = g.error || g.notice;
+    $("#toast").classList.toggle("is-error", !!g.error);
     $("#toast").classList.toggle(
       "visible",
       !!g.error || (!!g.notice && Date.now() < noticeUntil),

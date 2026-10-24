@@ -73,6 +73,11 @@ try {
       .locator('.deck-nav [data-action="panel"][data-id="quests"]')
       .click();
     await page
+      .locator(
+        `[data-action="journal-chapter"][data-id="${pack.quests.find((q) => q.id === "fixture:quest").story.chapter}"]`,
+      )
+      .click();
+    await page
       .locator('[data-action="flow-open"][data-id="fixture:quest"]')
       .click();
     await page.locator('[data-action="flow-skip"]').click();
@@ -125,6 +130,11 @@ try {
       await page.locator('[data-action="acquisition-next"]').click();
     await page
       .locator('.deck-nav [data-action="panel"][data-id="quests"]')
+      .click();
+    await page
+      .locator(
+        `[data-action="journal-chapter"][data-id="${pack.quests.find((q) => q.id === "fixture:quest").story.chapter}"]`,
+      )
       .click();
     await page
       .locator('[data-action="quest"][data-id="fixture:quest"]')

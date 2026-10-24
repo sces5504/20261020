@@ -54,6 +54,7 @@ try {
   await page.locator('.character-card [data-action="level"]').first().click();
   await page.locator('.modal-heading [data-action="close"]').click();
   await page.locator('.deck-nav [data-id="quests"]').click();
+  await page.locator('[data-action="journal-tab"][data-id="daily"]').click();
   assert.equal(await page.locator(".daily-quests article").count(), 7);
   const task = page.locator('[data-daily-quest="m1:daily.forcegirl"]');
   await task.locator('[data-action="quest"]').click();

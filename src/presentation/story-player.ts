@@ -91,12 +91,11 @@ export function mountStoryPlayer(
       }
       return;
     }
-    const nextKey = `${replay ? "replay" : cue ? "cue" + cue.index : "story"}:${q?.id}:${cursor}:${g.save.revision}`;
+    // Economy saves do not change the current presentation step. Rebuilding on
+    // every revision restarted entrance animations and reset long-text scrolling.
+    const nextKey = `${replay ? "replay" : cue ? "cue" + cue.index : "story"}:${q?.id}:${cursor}`;
     if (key === nextKey) return;
-    const sameStep =
-      key.split(":").slice(0, -1).join(":") ===
-      nextKey.split(":").slice(0, -1).join(":");
-    if (!sameStep) shownAt = performance.now();
+    shownAt = performance.now();
     key = nextKey;
     opened = true;
     g.pause.add("story-flow");
@@ -151,7 +150,7 @@ export function mountStoryPlayer(
               : step.kind === "event"
                 ? "事件初始化"
                 : "航跡演出";
-    host.innerHTML = `<div class="story-scene ${step.kind === "camera" ? "camera-view" : ""}" role="dialog" aria-modal="true" aria-label="${replay ? "章節回看" : "章節劇情"}"><div class="story-sky">${bg ? `<img class="story-background" src="${esc(bg.src)}" alt="">` : ""}</div><div class="story-chapter"><span class="eyebrow">${replay ? "REPLAY · 回看" : "CHRONICLE"}</span><h2>${esc(q?.name ?? "戰場通訊")}</h2></div><div class="story-actors">${[...actors].map(([id, a]) => `<div class="story-actor ${a.slot}">${actorImage(id, a.portrait)}</div>`).join("")}</div><div class="story-cinematic-fade" style="opacity:${fade};transition:opacity ${step.kind === "fade" ? step.seconds : 0}s"></div><div class="story-box"><div class="story-speaker">${esc(step.kind === "say" ? step.speaker : "航行紀錄")}</div><p class="story-line">${esc(text)}</p><div class="story-controls"><small>${cursor + 1} / ${steps.length}</small>${button("返回航行", "flow-close", "", "text-button")}${button("略過演出", "flow-skip", "", "text-button")}${button(step.kind === "encounter" && !replay ? "開始劇情遭遇" : "繼續 →", "flow-next", "", "primary")}</div></div></div>`;
+    host.innerHTML = `<div class="story-scene ${step.kind === "camera" ? "camera-view" : ""}" role="dialog" aria-modal="true" aria-label="${replay ? "章節回看" : "章節劇情"}"><div class="story-sky">${bg ? `<img class="story-background" src="${esc(bg.src)}" alt="">` : ""}</div><div class="story-chapter"><span class="eyebrow">${replay ? "REPLAY · 回看" : "CHRONICLE"}</span><h2>${esc(q?.name ?? "戰場通訊")}</h2></div><div class="story-actors">${[...actors].map(([id, a]) => `<div class="story-actor ${a.slot} ${step.kind === "say" && step.actor === id ? "is-speaking" : ""}">${actorImage(id, a.portrait)}</div>`).join("")}</div><div class="story-cinematic-fade" style="opacity:${fade};transition:opacity ${step.kind === "fade" ? step.seconds : 0}s"></div><div class="story-box"><div class="story-speaker">${esc(step.kind === "say" ? step.speaker : "航行紀錄")}</div><p class="story-line">${esc(text)}</p><div class="story-controls"><small>${cursor + 1} / ${steps.length}</small>${button("返回航行", "flow-close", "", "text-button")}${button("略過演出", "flow-skip", "", "text-button")}${button(step.kind === "encounter" && !replay ? "開始劇情遭遇" : "繼續 →", "flow-next", "", "primary")}</div></div></div>`;
     if (step.kind === "fade" && step.seconds > 0) {
       const previous = steps
         .slice(0, cursor)

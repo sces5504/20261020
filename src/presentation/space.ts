@@ -1,3 +1,4 @@
+import { drawCombatVfx } from "./combat-vfx";
 import {
   nodeUnlocked,
   nodeCleared,
@@ -69,6 +70,7 @@ export function mountSpace(
   class Space extends Phaser.Scene {
     ink!: Phaser.GameObjects.Graphics;
     hud!: Phaser.GameObjects.Graphics;
+    light!: Phaser.GameObjects.Graphics;
     labels: Phaser.GameObjects.Text[] = [];
     labelIndex = 0;
     selected = "";
@@ -93,6 +95,10 @@ export function mountSpace(
     create() {
       this.ink = this.add.graphics();
       this.hud = this.add.graphics().setDepth(20);
+      this.light = this.add
+        .graphics()
+        .setDepth(2)
+        .setBlendMode(Phaser.BlendModes.ADD);
       const r = model.pack.regions.find((v) => v.id === model.save.region)!;
       for (let i = 0; i < 420; i++) {
         const n = Math.sin(i * 127.1 + 77) * 43758.5453,
@@ -372,6 +378,7 @@ export function mountSpace(
         }
       }
       this.hud.clear();
+      this.light.clear();
       this.labelIndex = 0;
       // Nebulae and a stable starfield: presentation-only, independent from simulation RNG.
       for (let i = r.background ? 0 : model.lowEffects ? 3 : 8; i > 0; i--) {
@@ -648,83 +655,15 @@ export function mountSpace(
           );
           g.strokeCircle(p.x, p.y, p.leashRadius);
         }
-        // Persistent visuals read the same field geometry used by core hit detection.
-        for (const f of combat.mechanics.fields) {
-          const a = f.action,
-            color = Phaser.Display.Color.HexStringToColor(f.color).color;
-          g.lineStyle(2, color, 0.7);
-          g.fillStyle(color, 0.035);
-          if (a.kind === "beam") {
-            const dx = Math.cos(f.angle) * (f.reach ?? a.radius),
-              dy = Math.sin(f.angle) * (f.reach ?? a.radius);
-            g.lineStyle(a.width, color, 0.2);
-            g.lineBetween(f.x, f.y, f.x + dx, f.y + dy);
-            g.lineStyle(a.width * 0.45, color, 0.14);
-            g.lineBetween(f.x, f.y, f.x + dx, f.y + dy);
-            g.lineStyle(Math.max(3, a.width * 0.08), 0xffffff, 0.9);
-            g.lineBetween(f.x, f.y, f.x + dx, f.y + dy);
-          } else {
-            g.fillCircle(f.x, f.y, f.radius ?? a.radius);
-            g.strokeCircle(f.x, f.y, f.radius ?? a.radius);
-            if (a.pull) {
-              g.fillStyle(0x030617, 0.95);
-              g.fillCircle(f.x, f.y, 50);
-              g.lineStyle(3, 0xddd0ff, 0.8);
-              g.strokeEllipse(f.x, f.y, 115, 72);
-              for (let arm = 0; arm < (model.lowEffects ? 1 : 3); arm++)
-                for (let i = 1; i < 24; i++) {
-                  const r = 48 + i * 3,
-                    prior = 45 + i * 3,
-                    a = combat.time * 2 + (arm * Math.PI * 2) / 3 + i * 0.15;
-                  g.lineStyle(2, color, 0.7);
-                  g.lineBetween(
-                    f.x + Math.cos(a - 0.15) * prior,
-                    f.y + Math.sin(a - 0.15) * prior * 0.65,
-                    f.x + Math.cos(a) * r,
-                    f.y + Math.sin(a) * r * 0.65,
-                  );
-                }
-              for (let i = 0; i < (model.lowEffects ? 2 : 5); i++) {
-                g.lineStyle(2, color, 0.6);
-                g.strokeCircle(
-                  f.x,
-                  f.y,
-                  20 + ((combat.time * 90 + i * 30) % 140),
-                );
-              }
-            }
-          }
-        }
-        for (const d of combat.mechanics.dashes) {
-          const u = combat.units.find((u) => u.id === d.owner);
-          if (!u) continue;
-          const color = Phaser.Display.Color.HexStringToColor(u.color).color;
-          g.lineStyle(d.action.width, color, 0.08);
-          g.lineBetween(d.from.x, d.from.y, u.x, u.y);
-          g.lineStyle(3, color, 0.7);
-          g.lineBetween(d.from.x, d.from.y, u.x, u.y);
-        }
-        for (const b of combat.bullets) {
-          const speed = Math.hypot(b.vx, b.vy) || 1;
-          g.lineStyle(
-            b.side === "ally" ? 2 : 3,
-            Phaser.Display.Color.HexStringToColor(b.color).color,
-            0.55,
-          );
-          g.lineBetween(
-            b.x,
-            b.y,
-            b.x - (b.vx / speed) * 16,
-            b.y - (b.vy / speed) * 16,
-          );
-          g.fillStyle(
-            Phaser.Display.Color.HexStringToColor(b.color).color,
-            0.2,
-          );
-          g.fillCircle(b.x, b.y, b.side === "enemy" ? 10 : 6);
-          g.fillStyle(Phaser.Display.Color.HexStringToColor(b.color).color, 1);
-          g.fillCircle(b.x, b.y, b.side === "enemy" ? 4 : 2.7);
-        }
+        drawCombatVfx(
+          g,
+          this.light,
+          this.hud,
+          combat,
+          model.pack,
+          model.lowEffects ||
+            matchMedia("(prefers-reduced-motion: reduce)").matches,
+        );
         for (const u of combat.units) {
           if (u.hp <= 0) continue;
           if (u.sprite) this.ensureAsset(u.sprite);
@@ -855,30 +794,18 @@ export function mountSpace(
           }
           if (u.boss) this.text(u.x, u.y - 80, u.name, 15, "#e8c2ff");
         }
+        // Event labels use the same simulation lifetime; limit numerical clutter.
+        let hitLabels = 0;
         for (const f of combat.flashes) {
-          if (f.side) {
-            const color = Phaser.Display.Color.HexStringToColor(f.color).color;
-            g.fillStyle(0xffffff, Math.min(0.7, f.life * 3));
-            g.fillCircle(f.x, f.y, Math.max(2, f.life * 30));
-            g.lineStyle(1.6, color, Math.min(1, f.life * 5));
-            for (let i = 0; i < 6; i++) {
-              const a = (i * Math.PI) / 3;
-              const radius = (0.25 - f.life) * 110;
-              g.lineBetween(
-                f.x + Math.cos(a) * radius,
-                f.y + Math.sin(a) * radius,
-                f.x + Math.cos(a) * (radius + 9),
-                f.y + Math.sin(a) * (radius + 9),
-              );
-            }
-          }
-          g.lineStyle(
-            2,
-            Phaser.Display.Color.HexStringToColor(f.color).color,
-            Math.min(1, f.life * 2),
+          if (!f.skillId && ++hitLabels > (model.lowEffects ? 6 : 16)) continue;
+          const age = f.skillId ? 0.65 - f.life : 0.25 - f.life;
+          this.text(
+            f.x,
+            f.y - 38 - Math.max(0, age) * 28,
+            f.label,
+            f.skillId ? 14 : 11,
+            f.side === "ally" ? "#ffb2be" : f.color,
           );
-          g.strokeCircle(f.x, f.y, f.radius * (1.3 - f.life));
-          this.text(f.x, f.y - 45, f.label, 13, f.color);
         }
         // Direction markers keep offscreen threats discoverable on portrait displays.
         for (const u of combat.units.filter(

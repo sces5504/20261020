@@ -1,0 +1,797 @@
+/* Candidate v1 · same navy/cyan/gold language as the existing character artwork. */
+.bridge {
+  --line: #87bbd62b;
+  --muted: #9aaebb;
+  background:
+    radial-gradient(ellipse at 15% 0, #28485c44, transparent 60%), #080f1c;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.bridge button {
+  border-radius: 5px;
+}
+.bridge button:focus-visible {
+  outline-color: #ffe0a6;
+}
+.bridge .primary {
+  background: linear-gradient(110deg, #f1d7a8, #d8b77c);
+  border-color: #f7dfb4;
+  box-shadow:
+    inset 0 1px #fff5,
+    0 3px 12px #0003;
+}
+.bridge .primary:disabled {
+  box-shadow: none;
+}
+.topbar {
+  background: #080f1bb3;
+  border-bottom-color: #bdd5e026;
+}
+.brand-icon {
+  text-shadow: 0 0 24px #e7c79544;
+}
+.wallet {
+  gap: 12px;
+}
+.wallet .resource {
+  padding: 6px 10px;
+  border: 1px solid #8eb4c01f;
+  background: linear-gradient(120deg, #1a2f3f88, #101c2b88);
+  border-radius: 5px;
+}
+.wallet .resource strong {
+  font-variant-numeric: tabular-nums;
+  font-size: 21px;
+}
+.sector-heading {
+  position: relative;
+  gap: 12px;
+}
+.sector-heading > .skill-splash + div {
+  min-width: 0;
+}
+.sector-heading h1 b {
+  font-weight: 500;
+}
+.sector-heading h1 {
+  overflow-wrap: anywhere;
+}
+.journal-shortcut {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  padding: 9px 14px;
+  font-size: 12px;
+  min-height: 44px;
+  color: #c5dce3;
+  background: #152736;
+}
+.journal-shortcut .nav-icon {
+  width: 18px;
+  height: 18px;
+}
+.journal-shortcut.has-rewards {
+  color: #f4d8a7;
+  border-color: #ddbe7866;
+}
+.viewport {
+  border-color: #708e9c44;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: inset 0 0 60px #030b15;
+}
+.mission-rail {
+  background: linear-gradient(90deg, #091524e8, #09152411);
+}
+.planet-card {
+  border-radius: 7px;
+  border-color: #82b0bd55;
+  box-shadow: 0 12px 36px #0005;
+}
+.flight-deck {
+  background: linear-gradient(0deg, #0a1422, #101f2b88);
+}
+.squad-card {
+  border-radius: 5px;
+  background: linear-gradient(110deg, #1d394b99, #101c2d);
+}
+.squad-card .hp-bar {
+  height: 3px;
+  border-radius: 3px;
+}
+.deck-nav button {
+  background: #172b3c55;
+  border-radius: 5px;
+}
+.deck-nav button:hover {
+  background: #234558;
+}
+.battle-tools {
+  border-radius: 6px;
+  background: #0a1928ed;
+  border: 1px solid #7ca9bb44;
+  padding: 6px;
+}
+.battle-tools button {
+  font-size: 11px;
+}
+.skill-splash {
+  pointer-events: none;
+  max-width: 300px;
+  border-radius: 0 8px 8px 0;
+}
+.bridge:has(.modal-backdrop) .toast:not(.is-error) {
+  visibility: hidden;
+}
+.modal-backdrop {
+  background: #020713bd;
+  backdrop-filter: blur(7px);
+}
+.modal {
+  border-radius: 9px;
+  border-color: #819fb267;
+  background: linear-gradient(135deg, #182b3c, #0c1728 70%);
+  overflow: hidden;
+}
+.modal-heading {
+  background: linear-gradient(90deg, #243e5055, transparent);
+  border-bottom: 1px solid #d3c09445;
+  padding-block: 20px;
+  flex: none;
+}
+.modal-heading h2 {
+  font-size: 23px;
+  letter-spacing: 2px;
+}
+.modal-heading button {
+  min-width: 44px;
+  min-height: 44px;
+}
+.modal-body {
+  scrollbar-width: thin;
+  scrollbar-color: #729eac55 transparent;
+  min-height: 0;
+}
+.modal-body h3 {
+  color: #e2eaf0;
+}
+.list-cards > article {
+  border-radius: 7px;
+  border: 1px solid #7e9daf3b;
+  background: linear-gradient(125deg, #1b334358, #0c182a99);
+  box-shadow: inset 0 1px #c4e8f509;
+}
+.list-cards > article > .primary {
+  min-height: 44px;
+}
+.modal-footer {
+  flex: none;
+  background: #070f1b66;
+}
+.costs {
+  gap: 7px 12px;
+}
+.cost {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-variant-numeric: tabular-nums;
+}
+.settings-list > h3 {
+  margin-top: 30px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 12px;
+}
+.result-screen > span {
+  text-shadow: 0 0 40px #e7c79555;
+}
+.journal-hero {
+  position: relative;
+  padding: 22px;
+  border: 1px solid #97b9cf44;
+  border-radius: 6px;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 90% 30%, #47859b33, transparent 65%),
+    linear-gradient(130deg, #1b3048, #101c2b);
+}
+.journal-hero > div:first-child {
+  position: relative;
+  z-index: 1;
+}
+.journal-hero h3 {
+  margin: 10px 0;
+  font-size: 21px;
+  letter-spacing: 0.05em;
+}
+.journal-hero p {
+  margin: 0;
+  color: #b0c3d1;
+  font-size: 12px;
+}
+.journal-emblem {
+  position: absolute;
+  right: 10px;
+  top: -36px;
+  color: #d8edfc12;
+  font-size: 180px;
+  line-height: 1.4;
+}
+.journal-progress {
+  height: 3px;
+  overflow: hidden;
+  margin-top: 16px;
+  background: #02091388;
+  border-radius: 3px;
+}
+.journal-progress > span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #8bd9d2, #f2d7a5);
+}
+.journal-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  margin: 20px 0;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 8px;
+}
+.journal-tabs button {
+  min-height: 46px;
+  padding: 8px;
+  font-size: 13px;
+  background: #0a1725;
+  color: #9db0bd;
+  border-color: transparent;
+}
+.journal-tabs button span {
+  margin-left: 7px;
+  font-size: 10px;
+  opacity: 0.7;
+}
+.journal-tabs [aria-current="page"] {
+  background: #26445577;
+  color: #f4dbac;
+  border-bottom-color: #e7c795;
+}
+.chapter-select {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 8px;
+  margin-bottom: 22px;
+}
+.chapter-select button {
+  text-align: left;
+  position: relative;
+  padding: 12px 16px;
+  min-width: 0;
+  background: #122334;
+}
+.chapter-select small,
+.chapter-select strong {
+  display: block;
+}
+.chapter-select small {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  margin-bottom: 6px;
+}
+.chapter-select strong {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.chapter-select span {
+  font-size: 11px;
+  color: #8bdbd1;
+}
+.chapter-select [aria-current="page"] {
+  border-color: #cdb587aa;
+  background: linear-gradient(120deg, #40505a77, #152b3c);
+}
+.chapter-timeline {
+  display: grid;
+  gap: 12px;
+  border-left: 1px solid #7192a255;
+  padding-left: 16px;
+  margin-left: 4px;
+}
+.journal-card {
+  padding: 20px;
+  position: relative;
+  background: linear-gradient(110deg, #1a304155, #0c182b99);
+  border: 1px solid #8aabba33;
+  border-radius: 6px;
+  min-width: 0;
+}
+.chapter-timeline > .journal-card::before {
+  content: "";
+  position: absolute;
+  left: -21px;
+  top: 23px;
+  width: 7px;
+  height: 7px;
+  border: 1px solid #83acae;
+  background: #0c1928;
+  transform: rotate(45deg);
+}
+.journal-card.is-ready {
+  border-color: #d7bc7e88;
+}
+.journal-card.is-ready::before {
+  background: #f1d7a4;
+  box-shadow: 0 0 12px #f1d7a455;
+}
+.journal-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.quest-state {
+  display: inline-block;
+  color: #aec5d2;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  border: 1px solid #88acbd44;
+  border-radius: 3px;
+  padding: 4px 7px;
+}
+.is-ready .quest-state {
+  color: #f2d8a9;
+  border-color: #d7bc7e66;
+}
+.journal-card h3 {
+  margin: 14px 0 8px;
+  font-size: 18px;
+}
+.journal-card p {
+  font-size: 13px;
+  color: #acbdca;
+}
+.journal-requirements {
+  background: #030c1766;
+  padding: 12px 14px;
+  border-radius: 4px;
+  margin: 12px 0;
+}
+.journal-requirements ul {
+  padding: 0;
+  margin: 8px 0 0;
+  list-style: none;
+  font-size: 12px;
+  line-height: 1.8;
+  color: #bdccd4;
+}
+.journal-requirements li > span {
+  display: inline-block;
+  width: 20px;
+}
+.is-done {
+  color: #8dd9c8 !important;
+}
+.chapter-receipts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding-top: 10px;
+  font-size: 11px;
+  color: #8296a8;
+}
+.journal-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.journal-actions button {
+  min-height: 44px;
+}
+.journal-notice {
+  border-left: 2px solid #88c5cd;
+  padding: 0 12px;
+  font-size: 12px;
+}
+.journal-card .cost {
+  font-size: 11px;
+}
+@media (max-width: 800px) {
+  .bridge {
+    min-height: 0;
+  }
+  .topbar {
+    flex: none;
+    min-height: 0;
+    gap: 8px;
+    padding: 8px 12px;
+  }
+  .topbar .brand {
+    font-size: 15px;
+    letter-spacing: 1.3px;
+  }
+  .topbar .brand small {
+    font-size: 8px;
+  }
+  .topbar .brand-icon {
+    font-size: 27px;
+  }
+  .top-actions .studio-link {
+    display: none;
+  }
+  .top-actions .icon-button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  .wallet {
+    gap: 5px;
+  }
+  .wallet .resource {
+    flex: 1;
+    min-width: 0;
+    padding: 5px;
+    gap: 4px;
+  }
+  .wallet .resource strong {
+    font-size: 15px;
+    white-space: nowrap;
+  }
+  .wallet .resource small {
+    font-size: 9px;
+  }
+  .wallet .resource-icon {
+    width: 16px;
+    height: 20px;
+  }
+  .wallet .resource em {
+    display: none;
+  }
+  .sector-heading {
+    padding: 8px 12px;
+    flex: none;
+  }
+  .sector-heading h1 {
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-top: 3px;
+  }
+  .sector-heading h1 span,
+  .sector-status {
+    display: none;
+  }
+  .sector-heading .eyebrow {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+  .journal-shortcut {
+    flex: none;
+    gap: 6px;
+    font-size: 11px;
+    padding: 8px;
+  }
+  .journal-shortcut .nav-icon {
+    width: 16px;
+    height: 16px;
+  }
+  /* Flight controls get their own row; the canvas camera never centers under them. */
+  .viewport {
+    margin: 0 8px;
+    min-height: 120px;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) auto;
+  }
+  .viewport .space {
+    position: relative;
+    inset: auto;
+    grid-row: 1;
+    grid-column: 1;
+    min-height: 0;
+  }
+  .mission-rail {
+    display: none;
+  }
+  .battle-tools {
+    position: relative;
+    inset: auto;
+    transform: none;
+    grid-column: 1;
+    grid-row: 2;
+    max-width: none;
+    width: 100%;
+    border: 0;
+    border-top: 1px solid var(--line);
+    border-radius: 0;
+    justify-content: center;
+    gap: 4px;
+    padding: 5px;
+  }
+  .battle-tools button {
+    flex: 1 1 auto;
+    min-height: 44px;
+    padding: 6px 9px;
+    font-size: 10px;
+  }
+  .battle-tools small {
+    margin: 0;
+    min-height: 12px;
+    line-height: 1.3;
+    font-size: 9px;
+  }
+  .in-battle .battle-tools {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .in-battle .battle-tools small {
+    grid-column: 1 / -1;
+  }
+  .map-caption {
+    bottom: 80px;
+    pointer-events: none;
+  }
+  .in-battle .map-caption {
+    display: none;
+  }
+  .battle-state {
+    top: 8px;
+    right: 8px;
+    pointer-events: none;
+    max-width: calc(100% - 16px);
+  }
+  .battle-state span {
+    white-space: normal;
+  }
+  .planet-card {
+    bottom: 80px;
+    max-height: 50%;
+    width: min(230px, 75%);
+  }
+  .flight-deck {
+    flex: none;
+    min-height: 0;
+    padding: 7px 8px 0;
+    gap: 6px;
+  }
+  .squad {
+    gap: 5px;
+  }
+  .squad-card {
+    min-width: 0;
+    height: 70px;
+  }
+  .squad-card > .portrait {
+    height: 70px;
+  }
+  .squad:has(> .squad-card:nth-child(4)) {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 4px;
+  }
+  .squad:has(> .squad-card:nth-child(4)) > .squad-card {
+    position: relative;
+    display: block;
+    height: 86px;
+  }
+  .squad:has(> .squad-card:nth-child(4)) > .squad-card > .portrait {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  .squad:has(> .squad-card:nth-child(4)) > .squad-card > div:not(.portrait) {
+    position: absolute;
+    inset: auto 0 0;
+    padding: 16px 3px 4px;
+    background: linear-gradient(transparent, #071322f5 35%);
+  }
+  .squad:has(> .squad-card:nth-child(4)) .rarity,
+  .squad:has(> .squad-card:nth-child(4)) strong small {
+    display: none;
+  }
+  .squad:has(> .squad-card:nth-child(4)) strong {
+    font-size: 9px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .squad:has(> .squad-card:nth-child(4)) .skill-label {
+    font-size: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .deck-nav {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 2px;
+    padding-top: 4px;
+  }
+  .deck-nav button {
+    min-width: 0;
+    min-height: 56px;
+    padding: 4px 1px;
+    font-size: 9px;
+    line-height: 1.4;
+    white-space: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+  .deck-nav .nav-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+  }
+  .deck-nav button > span {
+    margin: 0;
+  }
+  .deck-nav .pause-button {
+    min-height: 56px;
+  }
+  .build-note {
+    display: none;
+  }
+  .sector-heading .skill-splash {
+    position: absolute;
+    inset: 0 auto 0 8px;
+    max-width: calc(100% - 145px);
+    padding: 5px 10px;
+    gap: 8px;
+    background: linear-gradient(90deg, #12303cf5, #10202cf5);
+  }
+  .skill-splash .avatar-window {
+    width: 30px;
+    height: 38px;
+    flex: none;
+  }
+  .skill-splash strong {
+    font-size: 12px;
+    line-height: 1.4;
+    margin-top: 3px;
+  }
+  .skill-splash small {
+    font-size: 7px;
+  }
+  .toast {
+    bottom: 150px;
+    max-width: calc(100% - 24px);
+  }
+  .modal-backdrop {
+    align-items: end;
+    padding: max(8px, env(safe-area-inset-top))
+      max(8px, env(safe-area-inset-right)) max(8px, env(safe-area-inset-bottom))
+      max(8px, env(safe-area-inset-left));
+  }
+  .modal {
+    max-height: 100%;
+    width: 100%;
+    border-radius: 14px 14px 5px 5px;
+  }
+  .modal-heading {
+    padding: 14px 16px;
+    gap: 8px;
+  }
+  .modal-heading h2 {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+  .modal-heading .eyebrow {
+    font-size: 9px;
+  }
+  .modal-body {
+    padding: 18px 16px;
+  }
+  .modal-footer {
+    padding: 10px 16px;
+    font-size: 9px;
+  }
+  .modal-body .inline-actions button {
+    min-height: 44px;
+  }
+  .journal-hero {
+    padding: 18px;
+  }
+  .journal-hero h3 {
+    font-size: 18px;
+  }
+  .journal-tabs {
+    margin: 16px 0;
+  }
+  .journal-tabs button {
+    font-size: 12px;
+  }
+  .journal-tabs button span {
+    margin-left: 4px;
+  }
+  .chapter-select {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 5px;
+  }
+  .chapter-select button {
+    padding: 10px 8px;
+  }
+  .chapter-select small {
+    font-size: 8px;
+    letter-spacing: 0.5px;
+  }
+  .chapter-select strong {
+    font-size: 12px;
+  }
+  .chapter-timeline {
+    padding-left: 12px;
+  }
+  .chapter-timeline > .journal-card::before {
+    left: -17px;
+  }
+  .journal-card {
+    padding: 16px 12px;
+  }
+  .journal-card h3 {
+    font-size: 16px;
+  }
+  .journal-card .eyebrow {
+    font-size: 9px;
+  }
+  .journal-actions {
+    gap: 8px;
+  }
+  .journal-actions button {
+    flex: 1;
+    padding-inline: 8px;
+    font-size: 12px;
+  }
+  .journal-card .costs {
+    gap: 7px 10px;
+  }
+}
+@media (max-width: 359px) {
+  .wallet .resource strong {
+    font-size: 13px;
+  }
+  .wallet .resource-icon {
+    display: none;
+  }
+  .deck-nav button {
+    font-size: 8px;
+  }
+  .journal-tabs button {
+    font-size: 11px;
+  }
+}
+@media (max-height: 500px) and (min-width: 650px) {
+  .topbar .wallet {
+    width: auto;
+    order: initial;
+    flex: 1;
+  }
+  .wallet .resource small,
+  .brand small {
+    display: none;
+  }
+  .sector-heading {
+    padding-block: 4px;
+  }
+  .sector-heading .eyebrow {
+    display: none;
+  }
+  .flight-deck {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .squad {
+    width: 45%;
+  }
+  .deck-nav {
+    width: 55%;
+    border: 0;
+  }
+  .squad-card,
+  .squad-card > .portrait {
+    height: 50px;
+  }
+  .squad-card .rarity,
+  .squad-card .level {
+    display: none;
+  }
+}

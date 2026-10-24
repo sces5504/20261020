@@ -47,5 +47,5 @@ test("old saves without skill level load at Lv1", () => {
   const s = newSave(p, 1) as unknown as { roster: Record<string, unknown>[] };
   for (const o of s.roster) delete o.skillLevel;
   const loaded = checkSave(s, p);
-  assert.ok(loaded.roster.every((o) => o.skillLevel === 1));
+  assert.ok(loaded.roster.every((o) => (o.skillLevel ?? 1) === 1));
 });

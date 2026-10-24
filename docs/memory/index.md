@@ -1,3 +1,5 @@
+> 整合AI4（2026-10-24）：PR #24 VFX／UI、原作式主線追蹤與自動接續、挑戰依原作分類、技能研究Lv2–10、星域背景統一密度；[交接](../handoffs/integration-ai4-20261024.md)。PR #23劇情（24節點）已由劇情AI合併部署。
+
 > 整合AI3功能完成（2026-10-23）：24節點通用劇情核心0.9、六名角色／美術、挑戰入口與同步圖鑑；[交接](../handoffs/story-core-20261023.md)、[來源需求](../design/story-core-requirements.md)、[作者契約](../design/story-core-authoring.md)。正式劇情交另一作者，最終main完整發布／公開狀態見交接及[PR #20最新描述](https://github.com/sces5504/20261020/pull/20)，不因文件紀錄再觸發重複發布。
 
 > 0.8功能整合完成（2026-10-23）：26角色／33新媒體、五項操作／編隊改善、七每日任務。候選CI115核心＋九瀏覽器通過，最後每日背景門檻已最小修復並單獨通過；[實際收據](../verification/integration-v8-0.8.json)、[最新交接](../handoffs/integration-v8-20261023.md)。最終main完整release、Pages與公開結果以[PR #17](https://github.com/sces5504/20261020/pull/17)描述／version.json為準。使用者明確要求減少非必要與重複測試，見owner-preferences末段。下方歷史檢查點不代表目前仍在實作。

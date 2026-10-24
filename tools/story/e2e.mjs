@@ -172,12 +172,15 @@ try {
     await page.locator('[data-action="panel"][data-id="challenges"]').click();
     assert.ok(
       await page
-        .getByRole("heading", { name: "太陽系 · 高難", exact: true })
+        .getByRole("heading", { name: "類星體母艦", exact: true })
         .count(),
     );
+    await page
+      .locator('[data-action="challenge-tab"][data-id="hard"]')
+      .click();
     assert.ok(
       await page
-        .getByRole("heading", { name: "每日母艦", exact: true })
+        .getByRole("heading", { name: "太陽系 · 高難", exact: true })
         .count(),
     );
     await page.screenshot({

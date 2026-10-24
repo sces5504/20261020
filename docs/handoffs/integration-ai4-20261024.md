@@ -1,0 +1,29 @@
+# 整合AI4：VFX／UI整合、原作式主線、挑戰重整、技能研究、星域背景（2026-10-24）
+
+- 範圍／branch：`claude/gifted-shannon-coveiq`，接手基準main `072892b`（PR #23劇情已合併部署）。使用者六項要求見owner-preferences「2026-10-24整合AI4直接要求」。
+- 開工狀態：cwd `/home/user/20261020`，乾淨；PR #24（`feat/mobile-ui-vfx-polish` `f84b10c`，CI成功）以fast-forward併入本分支，未改其內容。
+
+## 已完成
+
+1. **VFX／UI**：PR #24全部提交原樣整合；其共鳴艙代表仍是待使用者確認的candidate，未批量套用。
+2. **原作式主線進程**（`src/domain/story.ts` `mainlineState/mainlineChain`、`src/presentation/mainline.ts`、story-player）：
+   - 主線＝含chapter的劇情任務依內容包順序，與原作QuestS單線一致；HUD標題列常駐「主線 n/24」卡：節點名、目前目標、單一行動（開始／接續／出擊／躍遷下一站／導航據點）。
+   - 讀完一節點後，下一節點可用即自動開始（第一節點不自動，避免打斷新玩家／工坊）。
+   - await步驟不再擋住畫面：自動收起對話，目標達成（例如抵達太陽系）即自動接續，類似原作EventSpot觸發。略過仍不越過await／遭遇。
+   - 未改schema、交易、receipt與完成／已讀／領獎分離；沒有內容ID特判。
+3. **挑戰重整**（依原作分類）：類星體母艦（每日限次，LocalStr BossScoreRank）、戰艦討伐（Battleship01–06依LocalStr Enemy_Battleship名稱：搜索戰艦［Kiraba］等）、委託任務（EventQ Requested Mission；Event／S系列／Chapter5–6／4_x首領戰）、高難星域、劇情戰役。卡片顯示建議等級、進度、今日剩餘次數；「前往」逐站合法躍遷（每段都走既有travel命令，不繞過解鎖），到達後列出逐戰出擊。
+   - region category新增`battleship`、`mission`（封閉schema擴充）；`original-world.json`只改顯示名稱／分類／描述與路線標籤，戰鬥、座標、敵群、獎勵不變，sourceRef保留原Wave key。`tools/world/localize.py`並接入compile.py。
+4. **技能持續時間稽核**：226技能以描述token（[time]=f12、[skilltime]=f52）逐一比對，映射全部正確（唯一差異為爆炸擴散動畫）。異常短的真因是正式存檔技能固定Lv1：砲台Lv1為3秒（Lv10 5.7秒）、無人機4秒（Lv10 6.7秒）。新增原作「研究→技能」對應的**技能研究**：角色詳情可升技能Lv2–10，費用＝`rules.skillResearchCost`（缺省為強化費×3）×目前技能等級，需角色Lv≥(目標技能Lv−1)×4（本作適配，原作研究資料／時間未恢復）。存檔`skillLevel`預設1，舊檔相容。召喚物HP／攻擊實際應取Skill.f78所指CID（例：金星小砲台CID199 HP700/ATK90），現行為本體50%推定；因會改動敵方召喚及671世界證據，本輪未改，列為後續。
+5. **星域背景清晰度**：所有背景同為1672×941，原本10000單位星域拉伸約4倍。改為各星域統一第一星域像素密度（2.55世界單位／像素），大星域以視差位移取代拉伸；未重畫素材。
+
+## 驗證（只跑受影響項）
+
+- tsc／vite build通過。新增`tests/skill-research.test.ts`、`tests/mainline.test.ts`通過。
+- 審閱截圖腳本（非發布門檻）：`tools/game/mainline-preview.mts`、`challenge-preview.mts`、`backdrop-preview.mts`，桌機1440與觸控390 DPR2，零pageerror。
+- 其餘結果見本檔末段與PR描述。本機Node 22需用`--experimental-test-isolation=none`代替CI Node 24的`--test-isolation=none`。
+
+## 後續
+
+- 召喚物數值改依f78 CID需重驗世界戰鬥，先問使用者是否接受。
+- 共鳴艙UI方向待使用者回覆後再批量套用。
+- commercial仍缺人工素材批准、真機與效能證據。

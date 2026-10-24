@@ -256,8 +256,9 @@ try {
   await page.locator('[data-answer="yes"]').click();
   try {
     await page.waitForFunction(() =>
-      document.querySelector("#toast")?.textContent?.includes("已撤離交戰區"),
+      document.querySelector("#toast")?.textContent?.includes("撤離"),
     );
+    assert.equal((await record(page)).encounter, null);
   } catch (e) {
     console.log(
       "Retreat failure",

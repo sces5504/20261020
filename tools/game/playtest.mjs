@@ -172,7 +172,18 @@ try {
     if (await go.count() && (await go.first().click({ timeout: 1000 }).then(() => true, () => false))) break;
     await page.waitForTimeout(250);
   }
-  await page.locator('#planet-card [data-action="panel"][data-id="colony"]').click();
+  // The story resumes ~1s after a win; clear any scene that opened after activation.
+  for (let i = 0; i < 40; i++) {
+    const next = page.locator(
+      '[data-action="acquisition-next"]:visible, [data-action="story-skip"]:visible',
+    );
+    if (await next.count()) await next.first().click().catch(() => {});
+    else if (i >= 8) {
+      const go = page.locator('#planet-card [data-action="panel"][data-id="colony"]');
+      if (await go.first().click({ timeout: 1000 }).then(() => true, () => false)) break;
+    }
+    await page.waitForTimeout(250);
+  }
   await page.locator('[data-action="build"]').click();
   s = await waitSave(
     page,

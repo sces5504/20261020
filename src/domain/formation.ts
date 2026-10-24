@@ -72,7 +72,30 @@ export class FleetMotion {
     if (this.members[0]) this.positions.set(this.members[0], { ...point });
   }
   private guardHeading?: number;
-  /** Combat: the captain faces the threat while every member receives the same dodge input.
+  /** Deterministic combat clock for the cluster's slow drift (no wall time, no randomness). */
+  private guardClock = 0;
+  /**
+   * Original-style battle cluster: members spread loosely around the captain facing the
+   * threat (flanks first, then a rear arc) and drift slowly, instead of a single file.
+   */
+  private clusterSlot(i: number): Point {
+    if (i === 0) return { ...this.anchor };
+    const s = this.spacing,
+      ring = i <= 2 ? 0 : i <= 4 ? 1 : 2,
+      side = i % 2 ? 1 : -1,
+      back = [0.32, 0.9, 1.35][ring] * s,
+      lateral = (ring === 2 ? 0 : [0.78, 0.42][ring] * side) * s,
+      drift = 0.16 * s,
+      bx = -back + Math.sin(this.guardClock * 0.7 + i * 1.9) * drift,
+      by = lateral + Math.cos(this.guardClock * 0.55 + i * 2.4) * drift,
+      c = Math.cos(this.guardHeading!),
+      n = Math.sin(this.guardHeading!);
+    return {
+      x: this.anchor.x + bx * c - by * n,
+      y: this.anchor.y + bx * n + by * c,
+    };
+  }
+  /** Combat: the captain faces the threat with the team clustered around her; every member receives the same dodge input.
    * Offsets converge with bounded movement; neither entering combat nor turning teleports units.
    */
   advanceGuarded(destination: Point, speed: number, dt: number, threat: Point) {
@@ -86,6 +109,7 @@ export class FleetMotion {
       Math.cos(desired - this.guardHeading),
     );
     this.guardHeading += Math.max(-2.4 * dt, Math.min(2.4 * dt, turn));
+    this.guardClock += dt;
     const old = { ...this.anchor };
     // Record the same travel history for a continuous return to exploration after combat.
     const held = new Map([...this.positions].map(([id, p]) => [id, { ...p }]));
@@ -95,14 +119,7 @@ export class FleetMotion {
       dy = this.anchor.y - old.y;
     this.members.forEach((id, i) => {
       const before = held.get(id)!;
-      const target = {
-        x:
-          this.anchor.x -
-          Math.cos(this.guardHeading!) * i * this.spacing * 0.72,
-        y:
-          this.anchor.y -
-          Math.sin(this.guardHeading!) * i * this.spacing * 0.72,
-      };
+      const target = this.clusterSlot(i);
       const translated = { x: before.x + dx, y: before.y + dy };
       const gap = Math.hypot(target.x - translated.x, target.y - translated.y);
       const correction = Math.min(gap, speed * 1.1 * dt);

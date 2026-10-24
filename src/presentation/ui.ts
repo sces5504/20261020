@@ -3,11 +3,32 @@ import { resonancePanel, resonanceAction } from "./resonance-ui";
 import "./ui-polish.css";
 import "./ui-mature.css";
 import "./ui-resonance.css";
+import "./ui-suite.css";
+import "./ui-clean.css";
+import "./ui-personnel.css";
+import "./ui-operations.css";
+import "./ui-service.css";
+import { settingsPage, battleResult, arrivalPage } from "./service-ui";
+import {
+  formationPage,
+  researchPage,
+  territoriesPage,
+  colonyPage,
+} from "./operations-ui";
+import {
+  personnelPage,
+  personnelCards,
+  personnelEntries,
+  profilePage,
+  profileActions,
+  type PersonnelState,
+  type ProfileTab,
+} from "./personnel-ui";
+import { menuScene } from "./menu-scene";
 import { journalHtml } from "./journal";
 import { regionPath } from "../domain/navigation";
 import { mountStoryPlayer } from "./story-player";
 import { storyAvailable } from "../domain/story";
-import { rosterGroups } from "./roster-groups";
 import {
   questClaimed,
   questProgress,
@@ -18,16 +39,9 @@ import { icon } from "./icons";
 import { skillMechanic, patternNames } from "../content/descriptions";
 import { ask } from "./dialog";
 import { AudioMixer } from "../platform/audio";
-import { acquisitionSources } from "../content/queries";
 import type { Game } from "../application/game";
 import type { Pack, Character } from "../content/schema";
-import {
-  stats,
-  costScale,
-  newSave,
-  canAfford,
-  type Save,
-} from "../domain/model";
+import { stats, newSave, canAfford, type Save } from "../domain/model";
 import { production, questReady, summonCandidates } from "../domain/economy";
 import {
   nodeUnlocked,
@@ -44,6 +58,8 @@ import { esc, button, amounts, portrait, entityImage, stars } from "./common";
 export { esc } from "./common";
 export function mountGame(root: HTMLElement, g: Game, test: boolean) {
   const p = g.pack;
+  const personnel: PersonnelState = { view: "owned", category: "", query: "" };
+  let profileTab: ProfileTab = "stats";
   const audio = new AudioMixer(p);
   let intelOpen = g.viewMode === "map";
   const firstTarget = () =>
@@ -384,39 +400,17 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       : '<p class="muted">目前沒有進行中的工作。</p>';
   }
   function heading(title: string, kicker: string) {
-    return `<div class="modal-heading"><div><span class="eyebrow">${kicker}</span><h2>${esc(title)}</h2></div>${button("✕", "close", "", "icon-button")}</div>`;
+    return `<div class="modal-heading">${["character", "dossier"].includes(panel) ? '<button class="dossier-back" data-action="panel" data-id="roster" aria-label="返回名冊">←</button>' : ""}<div><span class="eyebrow">${kicker}</span><h2>${esc(title)}</h2></div><button class="icon-button" data-action="close" aria-label="關閉面板"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>`;
   }
   function rosterHtml() {
-    return `<div class="character-grid">${rosterGroups(g.save)
-      .map(({ primary: o, copies }) => {
-        const c = p.characters.find((c) => c.id === o.definition)!,
-          st = stats(p, o),
-          skill = p.skills.find((s) => s.id === c.skill)!,
-          assigned = Object.entries(g.save.colonies).find(
-            ([, v]) => v.assigned === o.id,
-          );
-        return `<article class="character-card">${button(portrait(p, c, true), "character", o.id, "portrait-button")}<div class="character-info"><span class="rarity">${stars(c, o)}</span><h3>${esc(c.name)} <small>Lv.${o.level}</small></h3><small>持有 ${copies.length} 位${copies.length > 1 ? " · 重複角色可於詳情同調" : ""}</small><p>${esc(c.role)}</p><div class="stat-grid"><span>生命<strong>${Math.ceil(o.hp)} / ${st.hp}</strong></span><span>攻擊<strong>${Math.round(st.attack)}</strong></span><span>防禦<strong>${Math.round(st.defense)}</strong></span></div><p><strong>${esc(skill.name)}</strong> · 冷卻 ${skill.cooldown}s</p><p class="skill-copy">${esc(skillMechanic(skill))}</p><div class="character-actions">${button(g.save.team.includes(o.id) ? "移出編隊" : "加入編隊", "team", o.id, "", !!assigned)}${button("強化 ↑", "level", o.id)}${button("整補", "heal", o.id, "", o.hp >= st.hp || g.save.jobs.some((j) => j.owner === o.id))}</div><small>${
-          assigned
-            ? "派駐於 " + esc(p.planets.find((v) => v.id === assigned[0])?.name)
-            : `強化費用：${Object.entries(costScale(p.rules.levelCost, o.level))
-                .map(
-                  ([id, n]) =>
-                    (p.resources.find((r) => r.id === id)?.name ?? id) +
-                    " " +
-                    n,
-                )
-                .join("／")}`
-        }</small></div></article>`;
-      })
-      .join(
-        "",
-      )}</div><h3 class="collection-heading">待收集星體 · 已收集 ${new Set(g.save.roster.map((o) => o.definition)).size} / ${p.characters.length}</h3><div class="collection-grid">${p.characters
-      .filter((c) => !g.save.roster.some((o) => o.definition === c.id))
-      .map(
-        (c) =>
-          `<article class="collection-card ${g.save.roster.some((o) => o.definition === c.id) ? "owned" : "locked"}">${portrait(p, c, true)}<div><span class="rarity">${"★".repeat(c.rarity)}</span><h3>${esc(c.name)}</h3><p>${acquisitionSources(p, c.id).map(esc).join(" · ") || "目前無取得來源"}</p></div></article>`,
-      )
-      .join("")}</div>`;
+    return personnelPage(p, g.save, personnel);
+  }
+  function refreshPersonnelCards() {
+    const host = root.querySelector("#roster-cards");
+    if (!host) return;
+    host.innerHTML = personnelCards(p, g.save, personnel);
+    $("#roster-result-count").textContent =
+      `${personnelEntries(p, g.save, personnel).length} 位`;
   }
   function stationedArt(id?: string) {
     const o = g.save.roster.find((v) => v.id === id);
@@ -462,17 +456,15 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     if (panel === "roster") {
       title = "星體少女";
       kick = "CONSTELLATION ARCHIVE";
-      body = `${button("調整編隊 →", "panel", "formation", "primary")}<div class="section-gap"></div>${rosterHtml()}`;
+      body = rosterHtml();
     }
-    if (panel === "character") {
-      const o = s.roster.find((o) => o.id === sub)!;
-      const c = p.characters.find((c) => c.id === o.definition)!;
-      const st = stats(p, o),
-        skill = p.skills.find((sk) => sk.id === c.skill)!;
-      title = c.name;
-      kick = "STELLAR PROFILE";
-      const copies = s.roster.filter((v) => v.definition === o.definition);
-      body = `${button("← 返回角色選單", "panel", "roster", "text-button")}${copies.length > 1 ? `<div class="copy-picker" aria-label="同角色持有實例">${copies.map((v) => button(`${portrait(p, c)}<span>Lv.${v.level} · 同調 ${v.resonance ?? 0}/5${s.team.includes(v.id) ? " · 編隊中" : Object.values(s.colonies).some((col) => col.assigned === v.id) ? " · 派駐中" : ""}</span>`, "character", v.id, v.id === o.id ? "selected" : "")).join("")}</div>` : ""}<div class="character-detail">${portrait(p, c, true)}<div class="profile-copy"><span class="rarity">${stars(c, o)}</span><h2>${esc(c.name)} <small>Lv.${o.level}</small></h2><p class="role-tag">${esc(c.role)}</p><p>${esc(c.description)}</p><div class="stat-grid"><span>生命<strong>${Math.ceil(o.hp)} / ${st.hp}</strong></span><span>攻擊<strong>${Math.round(st.attack)}</strong></span><span>防禦<strong>${Math.round(st.defense)}</strong></span></div><section class="skill-detail"><span class="eyebrow">ACTIVE SKILL · ${skill.cooldown}s</span><h3>${esc(skill.name)}</h3><p>${esc(skill.description)}</p><strong>${esc(skillMechanic(skill))}</strong></section><div class="costs">${amounts(p, costScale(p.rules.levelCost, o.level))}</div><div class="inline-actions">${button("強化 +1", "level", o.id)}${button("整補", "heal", o.id, "", o.hp >= st.hp || g.save.jobs.some((j) => j.owner === o.id))}${button(`同調 ${o.resonance ?? 0}/5`, "open-feed", o.id, "", !!g.combat || (o.resonance ?? 0) >= 5 || s.jobs.some((j) => j.owner === o.id) || Object.values(s.colonies).some((col) => col.assigned === o.id))}${button(s.team.includes(o.id) ? "移出編隊" : "加入編隊", "team", o.id, "", !!g.combat || (s.team.includes(o.id) ? s.team.length <= 1 : s.team.length >= p.rules.teamSize) || s.jobs.some((j) => j.owner === o.id) || Object.values(s.colonies).some((col) => col.assigned === o.id))}${button("調整編隊 →", "panel", "formation", "primary")}</div><p class="resonance-info">同調 ${o.resonance ?? 0}/5 · 每次生命／攻擊／防禦 +${p.rules.duplicateStatBonus * 100}% · 5次追加紫星；滿階後新共鳴返還投入的${p.rules.duplicateRefundRate * 100}%四資源。</p><p class="muted">取得方式：${acquisitionSources(p, c.id).map(esc).join("／")}</p></div></div>`;
+    if (panel === "character" || panel === "dossier") {
+      const o =
+        panel === "character" ? s.roster.find((o) => o.id === sub) : undefined;
+      const c = p.characters.find((c) => c.id === (o?.definition ?? sub))!;
+      title = "少女檔案";
+      kick = "PERSONNEL DOSSIER";
+      body = profilePage(p, s, c, o, profileTab);
     }
     if (panel === "feed") {
       const target = s.roster.find((o) => o.id === sub)!;
@@ -510,13 +502,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     if (panel === "formation") {
       title = "航行編隊";
       kick = "FLEET FORMATION";
-      body = `<p class="muted">最多 ${p.rules.teamSize} 人。01 為隊長，建議配置坦克；戰鬥中面向敵人掩護後排，全隊同步閃避，航行時沿航跡跟隨。使用前移／後移調整順序，戰鬥中鎖定編隊。</p><div class="formation-slots">${s.team
-        .map((id, i) => {
-          const o = s.roster.find((o) => o.id === id)!;
-          const c = p.characters.find((c) => c.id === o.definition)!;
-          return `<div>${button("移出編隊", "team", id, "text-button remove-member", !!g.combat || s.team.length <= 1)}<span>0${i + 1}</span>${portrait(p, c)}<strong>${esc(c.name)}</strong>${button("詳細", "character", id, "text-button")}<small>${i === 0 ? "前鋒 · 優先接敵" : "後衛 · 支援火力"}</small><div class="inline-actions">${button("前移", "team-forward", id, "text-button", !!g.combat || i === 0)}${button("後移", "team-back", id, "text-button", !!g.combat || i === s.team.length - 1)}</div></div>`;
-        })
-        .join("")}</div>${rosterHtml()}`;
+      body = formationPage(p, s, !!g.combat);
     }
     if (panel === "skills") {
       title = "技能情報";
@@ -539,38 +525,19 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     if (panel === "planets") {
       title = "領地總覽";
       kick = "PLANETARY NETWORK";
-      body = `<p class="muted">${Object.values(s.colonies).filter((c) => c.active).length} 顆已啟動星球。所有領地持續生產，不會遭受防衛襲擊。</p><div class="costs">${amounts(p, Object.fromEntries(Object.entries(production(p, s)).map(([id, n]) => [id, n * 60])))}<small>／分鐘，全部領地</small></div><div class="list-cards">${
-        p.planets
-          .filter(
-            (v) =>
-              v.kind === "planet" &&
-              (s.cleared.includes(v.id) ||
-                s.colonies[v.id] ||
-                (v.initiallyCleared &&
-                  v.region === s.region &&
-                  nodeUnlocked(s, v, p))),
-          )
-          .map((v) => {
-            const col = s.colonies[v.id];
-            return `<article class="territory-card">${entityImage(p, v)}<span class="eyebrow">${col?.active ? "PRODUCTION ONLINE" : "AWAITING ACTIVATION"}</span><h3>${esc(v.name)}</h3><p>${esc(v.description)}</p><div class="costs">${amounts(p, Object.fromEntries(Object.entries(v.production).map(([id, n]) => [id, n * 60])))}</div>${stationedArt(col?.assigned)}${button(col?.active ? "管理建設 →" : "啟動星球 →", col?.active ? "manage-planet" : "activate", v.id, "primary")}${button("導航至星球", "navigate", v.id, "text-button")}</article>`;
-          })
-          .join("") ||
-        '<p class="empty-state">尚無領地。探索並解放第一顆星球後，便能在這裡管理。</p>'
-      }</div>`;
+      body = territoriesPage(p, s, stationedArt);
     }
     if (panel === "acquisition") {
       const o = s.roster.find((o) => o.id === currentAcquisition);
       const c = o && p.characters.find((c) => c.id === o.definition);
       title = "星體共鳴成功";
       kick = "STELLAR CONNECTION ESTABLISHED";
-      body = c
-        ? `<div class="acquisition-screen" style="--c:${c.color}"><div class="acquisition-rays"></div>${portrait(p, c, true)}<div class="acquisition-copy"><span class="eyebrow">${s.roster.filter((o) => o.definition === c.id).length > 1 ? "RESONANCE · 再次相遇" : "NEW MAIDEN"}</span><span class="rarity">${stars(c, o)}</span><h2>${esc(c.name)}</h2><p>${esc(c.role)}</p><p>${esc(c.description)}</p>${button("確認獲得 →", "acquisition-next", "", "primary")}</div></div>`
-        : "<p>少女已加入編隊庫。</p>";
+      body = c && o ? arrivalPage(p, s, c, o) : "<p>少女已加入編隊庫。</p>";
     }
     if (panel === "research") {
       title = "共振研究";
       kick = "RESONANCE LAB";
-      body = `<p class="muted">研究持續進行，戰鬥期間完成的加成會在下場戰鬥生效。</p><div class="list-cards">${p.research.map((r) => `<article class="research-card">${entityImage(p, r, "research-art")}<span class="eyebrow">${s.jobs.some((j) => j.definition === r.id) ? "等待研究中" : r.seconds + " SEC"}</span><h3>${esc(r.name)}</h3><p>${esc(r.description)}</p><div class="costs">${amounts(p, r.cost)}</div>${button(s.research.includes(r.id) ? "研究完成" : s.jobs.some((j) => j.definition === r.id) ? "研究進行中" : "開始研究", "research", r.id, "primary", s.research.includes(r.id) || s.jobs.some((j) => j.definition === r.id) || !r.requires.every((id) => s.research.includes(id)))}</article>`).join("")}</div><h3>工作佇列</h3><div id="jobs">${jobList()}</div>`;
+      body = researchPage(p, s, jobList());
     }
     if (panel === "summon") {
       title = "星體共鳴";
@@ -582,26 +549,12 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
         col = s.colonies[selected];
       title = v.name;
       kick = "PLANETARY OPERATIONS";
-      body = !col
-        ? "<p>請先啟動星球。</p>"
-        : `${button("← 返回領地總覽", "panel", "planets", "text-button")}${stationedArt(col.assigned)}<div class="colony-summary">${entityImage(p, v)}<div><span class="eyebrow">${col.lost ? "PRODUCTION SUSPENDED" : "PRODUCTION ONLINE"}</span><h3>${col.lost ? "生產待恢復 · 停產中" : "生產運作中"}</h3><p>星球持續提供資源；可建造、升級與派駐，增加產能。</p></div></div><div class="costs">${amounts(p, Object.fromEntries(Object.entries(production(p, { ...s, colonies: { [selected]: col } })).map(([id, n]) => [id, n * 60])))}<small>／分鐘，此星球目前產量</small></div><div class="list-cards">${p.buildings.map((b) => `<article class="building-card">${entityImage(p, b)}<span class="eyebrow">LEVEL ${col.buildings[b.id] ?? 0} / ${b.maxLevel}</span><h3>${esc(b.name)}</h3><p>${esc(b.description)} · ${b.seconds}s</p><div class="costs">${amounts(p, costScale(b.cost, (col.buildings[b.id] ?? 0) + 1))}</div>${button("建造／升級", "build", b.id, "primary", col.lost || (col.buildings[b.id] ?? 0) >= b.maxLevel || s.jobs.some((j) => j.kind === "build" && j.owner === selected))}</article>`).join("")}</div><h3>派駐少女 <small>採集站產出 +20%</small></h3><div class="inline-actions">${
-            s.roster
-              .filter((o) => !s.team.includes(o.id))
-              .map((o) =>
-                button(
-                  `${col.assigned === o.id ? "撤回" : "派駐"} ${esc(p.characters.find((c) => c.id === o.definition)?.name)}`,
-                  "assign",
-                  o.id,
-                ),
-              )
-              .join("") ||
-            '<p class="muted">目前無待命少女；可在編成中移出成員。</p>'
-          }</div><h3>工作佇列</h3><div id="jobs">${jobList()}</div>`;
+      body = colonyPage(p, s, selected, stationedArt(col?.assigned), jobList());
     }
     if (panel === "challenges") {
       title = "高難／活動／每日母艦";
       kick = "CHALLENGES";
-      body = `<p>沿已開放航路逐站前往；原有解放與啟動前置保留。</p><div class="list-cards">${p.regions
+      body = `<p>沿已開放航路逐站前往；原有解放與啟動前置保留。</p><div class="list-cards sortie-grid">${p.regions
         .filter((r) => r.category !== "campaign")
         .map((r) => {
           const path = regionPath(p, s.region, r.id),
@@ -614,7 +567,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
           const nodes = p.planets.filter(
             (v) => v.region === r.id && v.status === "active",
           );
-          return `<article><span class="eyebrow">${esc({ hard: "高難", event: "活動航跡", daily: "每日母艦", campaign: "航行" }[r.category])}</span><h3>${esc(r.name)}</h3><p>${esc(r.description)}</p><small>${path.length ? path.map((id) => esc(p.regions.find((r) => r.id === id)!.name)).join(" → ") : "尚無連通航路"}</small>${missing.length ? `<p>下一站需先解放：${missing.map((id) => esc(p.planets.find((v) => v.id === id)!.name)).join("、")}</p>` : ""}${next ? button("前往下一站 · " + esc(p.regions.find((r) => r.id === next)!.name), "travel", next, "primary", missing.length > 0 || !!g.combat) : ""}${s.region === r.id ? nodes.map((v) => `<div><strong>${esc(v.name)}</strong><small>${esc(nodeAvailability(s, v, Date.now()).reason)}</small>${button("導航至挑戰入口", "navigate", v.id, "primary", !nodeUnlocked(s, v, p))}${!nodeUnlocked(s, v, p) ? `<small>前置：${[...v.requires, ...v.requiresActive].map((id) => esc(p.planets.find((n) => n.id === id)!.name)).join("、")}</small>` : ""}</div>`).join("") : ""}</article>`;
+          return `<article>${entityImage(p, r, "sortie-art")}<span class="eyebrow">${esc({ hard: "高難", event: "活動航跡", daily: "每日母艦", campaign: "航行" }[r.category])}</span><h3>${esc(r.name)}</h3><p>${esc(r.description)}</p><small>${path.length ? path.map((id) => esc(p.regions.find((r) => r.id === id)!.name)).join(" → ") : "尚無連通航路"}</small>${missing.length ? `<p>下一站需先解放：${missing.map((id) => esc(p.planets.find((v) => v.id === id)!.name)).join("、")}</p>` : ""}${next ? button("前往下一站 · " + esc(p.regions.find((r) => r.id === next)!.name), "travel", next, "primary", missing.length > 0 || !!g.combat) : ""}${s.region === r.id ? nodes.map((v) => `<div><strong>${esc(v.name)}</strong><small>${esc(nodeAvailability(s, v, Date.now()).reason)}</small>${button("導航至挑戰入口", "navigate", v.id, "primary", !nodeUnlocked(s, v, p))}${!nodeUnlocked(s, v, p) ? `<small>前置：${[...v.requires, ...v.requiresActive].map((id) => esc(p.planets.find((n) => n.id === id)!.name)).join("、")}</small>` : ""}</div>`).join("") : ""}</article>`;
         })
         .join("")}</div>`;
     }
@@ -634,26 +587,35 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     if (panel === "result" && g.report) {
       title = g.report.title;
       kick = g.report.victory ? "MISSION COMPLETE" : "FLIGHT REPORT";
-      body = `<div class="result-screen"><span>${g.report.victory ? "✧" : "◇"}</span><p>${esc(g.report.message)}</p>${g.report.planet && g.report.victory && p.planets.find((v) => v.id === g.report!.planet)?.kind === "planet" && !s.colonies[g.report.planet]?.active ? button("啟動剛解放的星球", "result-activate", g.report.planet, "primary") : ""}${button("返回航線 →", "close", "", "primary")}</div>`;
+      body = battleResult(p, s, g.report);
     }
     if (panel === "archive") {
       title = "航行設定";
       kick = "SAVE & PREFERENCES";
-      body = `<div class="settings-list"><h3>本機進度</h3><p>進度自動保存在此瀏覽器。跨裝置時，請匯出後在另一裝置匯入。</p><div class="inline-actions">${button("匯出存檔", "export-save", "", "primary")}<label class="file-button">匯入存檔<input id="import-save" type="file" accept="application/json,.json"></label>${button("匯出還原備份", "export-backup")}</div>${button("開始新航跡（先備份）", "new-voyage")}${p.regions
-        .filter((r) => r.campaignStart)
-        .map((r) =>
-          button(
-            "開始「" + esc(r.name) + "」航跡（先備份）",
-            "new-voyage",
-            r.id,
-          ),
-        )
-        .join(
-          "",
-        )}<h3>聲音與畫面</h3><div class="inline-actions">${button(audio.enabled ? "聲音：開啟" : "聲音：關閉", "sound")}${button(g.lowEffects ? "特效：精簡" : "特效：完整", "effects")}</div><label>音效音量<input id="audio-volume" type="range" min="0" max="1" step="0.05" value="${audio.volume}"></label><h3>戰鬥操作</h3><p>點空白處移動與閃躲；普通攻擊自動進行。點敵人優先鎖定，點下方角色施放技能。</p>${button(g.autoSkills ? "自動技能：開啟" : "自動技能：關閉", "auto")}<h3>角色圖鑑</h3><a href="gallery.html">瀏覽全部少女立繪／Q圖 ↗</a><h3>角色製作表</h3><a href="#/catalog">查看未來角色清單／下載 CSV ↗</a><h3>內容工坊</h3><p>瀏覽與調整內容，套用至隔離測試遊戲；完成後匯出內容包再發布。</p><a class="primary link-button" href="#/studio">進入內容工坊 ↗</a>${test ? '<p><a href="#/play">退出隔離測試，返回正式進度</a></p>' : ""}<details><summary>開發版狀態</summary><p>六張原始立繪已匯入，已套用原先六角色；原圖展示入口在內容工坊。音效採可編輯的程序合成，星球與敵艦為原創程序材質。M1的平衡／劇情與部分技能為明示的新設計；原作未知機制仍保留來源缺口。</p></details></div>`;
+      body = settingsPage(p, s, {
+        sound: audio.enabled,
+        volume: audio.volume,
+        effects: g.lowEffects,
+        auto: g.autoSkills,
+        test,
+      });
     }
+    body =
+      ([
+        "roster",
+        "formation",
+        "research",
+        "planets",
+        "colony",
+        "archive",
+        "guide",
+        "regions",
+        "challenges",
+      ].includes(panel)
+        ? ""
+        : menuScene(panel, p, s)) + body;
     $("#overlay").innerHTML =
-      `<div class="modal-backdrop"><section data-panel="${esc(panel)}" class="modal ${["roster", "formation", "character", "acquisition"].includes(panel) ? "wide" : ""}" role="dialog" aria-modal="true" aria-label="${esc(title)}">${heading(title, kick)}<div class="modal-body">${body}</div><div class="modal-footer ${panel === "summon" ? "resonance-action-footer" : ""}">${panel === "summon" ? `<span class="resonance-clock"><i></i> 戰鬥已暫停 · 經營計時持續</span>${resonanceAction()}` : "<i></i> 戰鬥已暫停 · 經營計時持續"}</div></section></div>`;
+      `<div class="modal-backdrop"><section data-panel="${esc(panel)}" class="modal ${["roster", "formation", "character", "acquisition"].includes(panel) ? "wide" : ""}" role="dialog" aria-modal="true" aria-label="${esc(title)}">${heading(title, kick)}<div class="modal-body">${body}</div><div class="modal-footer ${panel === "summon" ? "resonance-action-footer" : ["character", "dossier"].includes(panel) ? "dossier-action-footer" : panel === "acquisition" ? "arrival-action-footer" : ""}">${panel === "summon" ? `<span class="resonance-clock"><i></i> 戰鬥已暫停 · 經營計時持續</span>${resonanceAction()}` : ["character", "dossier"].includes(panel) ? profileActions(p, s, panel === "character" ? s.roster.find((o) => o.id === sub) : undefined, !!g.combat) : panel === "acquisition" ? button("確認獲得 →", "acquisition-next", "", "primary") : "<i></i> 戰鬥已暫停 · 經營計時持續"}</div></section></div>`;
     if (panel === "summon") recipeInfo();
     refreshTimers();
     $("#overlay")
@@ -677,6 +639,29 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       .join("")}</div></div>`;
   }
   async function act(action: string, id: string) {
+    if (action === "roster-tab") {
+      personnel.view = id === "all" ? "all" : "owned";
+      drawPanel();
+      return;
+    }
+    if (action === "roster-category") {
+      personnel.category = id;
+      drawPanel();
+      return;
+    }
+    if (action === "roster-preview") {
+      sub = id;
+      panel = "dossier";
+      profileTab = "source";
+      drawPanel();
+      return;
+    }
+    if (action === "profile-tab" && ["stats", "skill", "source"].includes(id)) {
+      profileTab = id as ProfileTab;
+      drawPanel();
+      return;
+    }
+
     if (action === "journal-open") {
       const ready = p.quests.filter(
         (q) =>
@@ -859,6 +844,17 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     if (action === "pause") {
       if (g.pause.has("user")) g.pause.delete("user");
       else g.pause.add("user");
+      const b = root.querySelector<HTMLElement>(
+        '.deck-nav [data-action="pause"]',
+      );
+      if (b) {
+        const paused = g.pause.has("user");
+        b.setAttribute("aria-label", paused ? "繼續航行" : "暫停");
+        b.setAttribute("aria-pressed", String(paused));
+        b.querySelector(".deck-label")!.innerHTML = paused
+          ? "繼續<small>RESUME</small>"
+          : "暫停<small>PAUSE</small>";
+      }
       return;
     }
     if (action === "cast") {
@@ -866,6 +862,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       return;
     }
     if (action === "character") {
+      profileTab = "stats";
       sub = id;
       panel = "character";
       drawPanel();
@@ -1072,6 +1069,14 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       void g.tickEconomy();
     }
   };
+  const personnelInput = (e: Event) => {
+    const t = e.target as HTMLInputElement;
+    if (t.id === "roster-query") {
+      personnel.query = t.value;
+      refreshPersonnelCards();
+    }
+  };
+  root.addEventListener("input", personnelInput);
   root.addEventListener("click", click);
   root.addEventListener("change", change);
   document.addEventListener("keydown", keys);
@@ -1297,6 +1302,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     clearTimeout(splashTimer);
     space.destroy();
     audio.destroy();
+    root.removeEventListener("input", personnelInput);
     root.removeEventListener("click", click);
     root.removeEventListener("change", change);
     document.removeEventListener("keydown", keys);

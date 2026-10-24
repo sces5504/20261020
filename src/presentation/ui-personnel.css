@@ -1,0 +1,755 @@
+/* Personnel screens use game dossiers and a portrait grid, rather than document cards. */
+.bridge .modal[data-panel="roster"] {
+  height: min(900px, 96dvh);
+}
+.bridge .modal[data-panel="roster"] .modal-heading h2 {
+  font-size: 22px;
+}
+.bridge .personnel-page {
+  min-width: 0;
+}
+.personnel-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.personnel-search {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex: 1;
+  min-width: 0;
+  border-bottom: 1px solid #ffffff3b;
+  background: #171d26;
+  padding-left: 14px;
+}
+.personnel-search > span {
+  font-size: 25px;
+  color: #a4adb9;
+}
+.bridge .personnel-page .personnel-search input {
+  border: 0;
+  background: none;
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  font-size: 13px;
+  padding: 10px 12px;
+}
+.bridge .personnel-page .personnel-toolbar .personnel-formation {
+  min-height: 44px;
+  min-width: 110px;
+  background: #d6bd88;
+  border: 0;
+  color: #171b20;
+  padding: 9px 18px;
+  font-weight: 700;
+}
+.personnel-view-tabs {
+  display: flex;
+  border-bottom: 1px solid #ffffff20;
+  gap: 25px;
+}
+.bridge .personnel-page .personnel-view-tabs > button {
+  background: none;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  min-height: 46px;
+  min-width: 145px;
+  text-align: left;
+  padding: 8px 4px 12px;
+  font-size: 14px;
+  color: #8e98a7;
+}
+.bridge .personnel-page .personnel-view-tabs > button.is-selected {
+  color: #efdfbb;
+  border-bottom-color: #d6bd88;
+}
+.personnel-view-tabs b {
+  font-weight: 400;
+  font-size: 12px;
+  color: #b9a882;
+  margin-left: 14px;
+}
+.personnel-filter {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding-block: 12px;
+}
+.personnel-filter > span {
+  color: #7f8b9b;
+  font-size: 10px;
+  flex: none;
+}
+.personnel-filter > nav {
+  display: flex;
+  gap: 4px;
+  min-width: 0;
+}
+.bridge .personnel-page .personnel-filter button {
+  padding: 7px 14px;
+  min-width: 44px;
+  min-height: 40px;
+  font-size: 11px;
+  border: 0;
+  border-radius: 2px;
+  background: #1c242f;
+  color: #929eae;
+}
+.bridge .personnel-page .personnel-filter button.is-selected {
+  background: #d6bd8826;
+  color: #edd3a1;
+}
+#roster-result-count {
+  margin-left: auto;
+  color: #78879b;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.bridge .personnel-page .personnel-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 4px;
+}
+.bridge .personnel-page button.personnel-card {
+  display: block;
+  position: relative;
+  min-width: 0;
+  height: 250px;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #ffffff22;
+  border-radius: 2px;
+  background: #1b2531;
+  text-align: left;
+  isolation: isolate;
+  transition:
+    border-color 0.15s,
+    transform 0.15s;
+}
+.bridge .personnel-page button.personnel-card:hover {
+  border-color: #d6bd8899;
+  background: #233344;
+  transform: translateY(-2px);
+}
+.personnel-card-art {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: -2;
+  background: radial-gradient(ellipse at 45% 25%, #41597055, #14202c);
+}
+.personnel-card-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transform: scale(1.65);
+  transform-origin: center 10%;
+}
+.personnel-card-shade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    #0b111930,
+    transparent 25%,
+    transparent 45%,
+    #0c121bc4 72%,
+    #0b1018 100%
+  );
+}
+.personnel-card-level {
+  position: absolute;
+  top: 10px;
+  left: 9px;
+  color: #e7e9e9;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  text-shadow: 0 1px 4px #000;
+}
+.personnel-card-glyph {
+  position: absolute;
+  right: 8px;
+  top: 9px;
+  width: 22px;
+  height: 22px;
+  color: #e8d4aa;
+  background: #0d1521a6;
+  padding: 3px;
+}
+.personnel-card-glyph svg {
+  width: 100%;
+  height: 100%;
+}
+.personnel-card-status {
+  position: absolute;
+  right: 0;
+  top: 42px;
+  padding: 3px 7px;
+  color: #f0dfbd;
+  background: #202c3acc;
+  border-left: 2px solid #d6bd88;
+  font-size: 9px;
+}
+.personnel-card-copy {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 12px 12px 10px;
+}
+.personnel-card-copy .rarity {
+  display: block;
+  font-size: 8px;
+  line-height: 1;
+  margin-bottom: 7px;
+  color: #d8bb7c;
+  letter-spacing: 0.08em;
+}
+.personnel-card-copy strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #f0e9dd;
+  letter-spacing: 0.025em;
+}
+.personnel-card-class {
+  display: block;
+  font-size: 9px;
+  color: #8e9bae;
+  margin-top: 3px;
+}
+.personnel-card.is-team::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #d6bd88;
+}
+.personnel-card.is-locked .personnel-card-art {
+  filter: grayscale(0.8);
+  opacity: 0.4;
+}
+.personnel-card.is-locked .personnel-card-copy strong {
+  color: #a1abba;
+}
+.personnel-hint {
+  text-align: center;
+  color: #69778a;
+  font-size: 10px;
+  margin: 21px 0 0;
+}
+.personnel-empty {
+  grid-column: 1/-1;
+  padding: 55px 20px;
+  text-align: center;
+  color: #8e9bae;
+  font-size: 13px;
+}
+.bridge .modal[data-panel="character"] .modal-body,
+.bridge .modal[data-panel="dossier"] .modal-body {
+  padding: 0 !important;
+}
+.dossier-viewport {
+  position: relative;
+  height: 540px;
+  overflow: hidden;
+  isolation: isolate;
+  background: #101925;
+}
+.dossier-environment {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(90deg, #111820a6, #111820b8),
+    url("../../art/ui/interface-suite-v1/operations.webp") center / cover;
+}
+.dossier-viewport::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(0deg, #10151e 1%, transparent 36%),
+    repeating-linear-gradient(90deg, transparent 0 79px, #ffffff03 79px 80px);
+}
+.dossier-index {
+  position: absolute;
+  top: 22px;
+  left: 28px;
+  font-size: 9px;
+  letter-spacing: 0.13em;
+  color: #66758a;
+}
+.dossier-portrait {
+  position: absolute;
+  height: 108%;
+  width: 65%;
+  max-width: none;
+  left: 14%;
+  top: 0;
+  object-fit: contain;
+  object-position: center top;
+  filter: drop-shadow(0 12px 30px #0007);
+}
+.dossier-name {
+  position: absolute;
+  left: 32px;
+  bottom: 30px;
+  max-width: 55%;
+}
+.dossier-name .rarity {
+  color: #d7bb81;
+  letter-spacing: 0.14em;
+  font-size: 11px;
+}
+.bridge .dossier-name h2 {
+  color: #f3eee2;
+  font-weight: 700;
+  letter-spacing: 0.055em;
+  font-size: 36px;
+  margin: 10px 0 7px;
+}
+.dossier-name p {
+  color: #aeb9c6;
+  font-size: 12px;
+  margin: 0 0 13px;
+}
+.dossier-level {
+  display: inline-block;
+  color: #d5c4a0;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  border-bottom: 1px solid #d6bd8855;
+  padding-bottom: 6px;
+}
+.dossier-stat-rail {
+  position: absolute;
+  right: 28px;
+  top: 65px;
+  width: 126px;
+  display: grid;
+  gap: 12px;
+}
+.dossier-stat-rail > div {
+  padding: 14px 16px;
+  border-top: 1px solid #ffffff26;
+  background: #0f1722ba;
+}
+.dossier-stat-rail small {
+  display: block;
+  color: #8291a4;
+  font-size: 10px;
+}
+.dossier-stat-rail strong {
+  display: block;
+  margin-top: 5px;
+  color: #e1d0ad;
+  font-size: 21px;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+}
+.dossier-stat-rail span {
+  display: block;
+  color: #738197;
+  font-size: 9px;
+  margin-top: 3px;
+}
+.dossier-tabs {
+  display: flex;
+  padding-inline: 28px;
+  gap: 26px;
+  background: #11171f;
+  border-bottom: 1px solid #ffffff12;
+}
+.bridge .dossier-page .dossier-tabs button {
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: none;
+  color: #7f8b9d;
+  min-height: 48px;
+  min-width: 90px;
+  padding: 11px 0;
+  font-size: 12px;
+}
+.bridge .dossier-page .dossier-tabs button.is-selected {
+  color: #e0cba3;
+  border-bottom-color: #d6bd88;
+}
+.dossier-sheet {
+  padding: 20px 30px 24px;
+  background: #131a23;
+}
+.dossier-sheet p,
+.dossier-sheet li {
+  color: #a6b3c3;
+  font-size: 12px;
+  line-height: 1.85;
+}
+.dossier-overview > p {
+  margin: 0 0 16px;
+}
+.dossier-training {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 17px;
+}
+.dossier-training > span {
+  color: #b6a587;
+  font-size: 11px;
+}
+.dossier-training b {
+  font-size: 14px;
+  color: #dfc89a;
+  margin-left: 9px;
+}
+.dossier-training small {
+  color: #67778e;
+  font-size: 10px;
+}
+.dossier-cost-label {
+  color: #718199;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+}
+.bridge .dossier-sheet .costs {
+  margin: 8px 0 0;
+  gap: 14px;
+}
+.bridge .dossier-sheet .cost {
+  font-size: 11px;
+  color: #9cabbf;
+}
+.dossier-skill {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  gap: 15px;
+}
+.dossier-skill-icon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #d6bd8844;
+  color: #d8be8b;
+  padding: 8px;
+}
+.dossier-skill-icon svg {
+  width: 100%;
+  height: 100%;
+}
+.bridge .dossier-skill h3,
+.bridge .dossier-source h3 {
+  font-size: 20px;
+  color: #e7dac0;
+  font-weight: 700;
+  margin: 6px 0 8px;
+}
+.dossier-skill .eyebrow {
+  font-size: 9px;
+  color: #9c8b6b;
+}
+.dossier-mechanic {
+  border-top: 1px solid #ffffff14;
+  padding-top: 10px;
+}
+.profile-instance-picker {
+  margin-top: 20px;
+  border-top: 1px solid #ffffff18;
+}
+.bridge .profile-instance-picker > summary {
+  background: none;
+  border: 0;
+  padding: 12px 0;
+  color: #9dabbf;
+  font-size: 11px;
+  min-height: 44px;
+}
+.bridge .profile-instance-picker .copy-picker {
+  margin: 0;
+}
+.bridge .profile-instance-picker .copy-picker button {
+  font-size: 10px;
+  min-height: 44px;
+  padding: 10px;
+  background: #1e2a39;
+  border: 1px solid #ffffff1c;
+}
+.bridge .modal[data-panel] .dossier-action-footer {
+  padding: 14px 28px;
+  border-top: 1px solid #ffffff20;
+  background: #0f151e;
+}
+.dossier-actions {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+}
+.bridge .dossier-actions button {
+  min-height: 48px;
+  min-width: 44px;
+  padding: 10px 13px;
+  font-size: 12px;
+  border-radius: 2px;
+}
+.dossier-actions.readonly {
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 1100px) and (min-width: 801px) {
+  .bridge .personnel-page .personnel-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .bridge .personnel-page button.personnel-card {
+    height: 230px;
+  }
+}
+@media (max-width: 800px) {
+  .bridge .personnel-page .personnel-toolbar .personnel-formation {
+    min-width: 85px;
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+  .personnel-toolbar {
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .bridge .personnel-page .personnel-search input {
+    font-size: 12px;
+  }
+  .personnel-view-tabs {
+    gap: 16px;
+  }
+  .bridge .personnel-page .personnel-view-tabs > button {
+    font-size: 13px;
+    min-width: 130px;
+    min-height: 44px;
+  }
+  .personnel-filter {
+    gap: 8px;
+    padding-block: 9px;
+  }
+  .personnel-filter > span {
+    display: none;
+  }
+  .personnel-filter > nav {
+    gap: 4px;
+  }
+  .bridge .personnel-page .personnel-filter button {
+    padding: 8px 9px;
+    min-height: 44px;
+    font-size: 10px;
+  }
+  #roster-result-count {
+    font-size: 10px;
+  }
+  .bridge .personnel-page .personnel-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 9px;
+  }
+  .bridge .personnel-page button.personnel-card {
+    height: 184px;
+  }
+  .personnel-card-level {
+    top: 8px;
+    left: 6px;
+    font-size: 8px;
+  }
+  .personnel-card-glyph {
+    right: 5px;
+    top: 7px;
+    width: 18px;
+    height: 18px;
+    padding: 2px;
+  }
+  .personnel-card-status {
+    font-size: 8px;
+    top: 32px;
+    padding: 2px 5px;
+  }
+  .personnel-card-copy {
+    padding: 8px;
+  }
+  .personnel-card-copy strong {
+    font-size: 13px;
+    letter-spacing: 0;
+  }
+  .personnel-card-copy .rarity {
+    font-size: 6px;
+    margin-bottom: 5px;
+  }
+  .personnel-card-class {
+    font-size: 8px;
+    margin-top: 2px;
+  }
+  .personnel-hint {
+    font-size: 9px;
+    margin-top: 14px;
+  }
+  .dossier-viewport {
+    height: clamp(320px, 47dvh, 430px);
+  }
+  .dossier-index {
+    top: 16px;
+    left: 18px;
+    font-size: 7px;
+    letter-spacing: 0.11em;
+  }
+  .dossier-portrait {
+    width: 88%;
+    left: -3%;
+    height: 112%;
+    top: 0;
+  }
+  .dossier-name {
+    left: 20px;
+    bottom: 22px;
+    max-width: 65%;
+  }
+  .bridge .dossier-name h2 {
+    font-size: 29px;
+    margin: 7px 0 5px;
+  }
+  .dossier-name p {
+    font-size: 10px;
+    margin-bottom: 9px;
+  }
+  .dossier-name .rarity {
+    font-size: 9px;
+  }
+  .dossier-level {
+    font-size: 8px;
+  }
+  .dossier-stat-rail {
+    right: 16px;
+    top: 48px;
+    width: 76px;
+    gap: 9px;
+  }
+  .dossier-stat-rail > div {
+    padding: 10px 9px;
+  }
+  .dossier-stat-rail small {
+    font-size: 8px;
+  }
+  .dossier-stat-rail strong {
+    font-size: 17px;
+    margin-top: 4px;
+  }
+  .dossier-stat-rail span {
+    font-size: 7px;
+  }
+  .dossier-tabs {
+    padding-inline: 20px;
+    gap: 22px;
+  }
+  .bridge .dossier-page .dossier-tabs button {
+    min-width: 76px;
+    min-height: 44px;
+    font-size: 11px;
+  }
+  .dossier-sheet {
+    padding: 16px 20px 20px;
+  }
+  .dossier-sheet p,
+  .dossier-sheet li {
+    font-size: 11px;
+  }
+  .dossier-training {
+    gap: 10px;
+    margin-bottom: 13px;
+  }
+  .dossier-training small {
+    font-size: 9px;
+  }
+  .bridge .dossier-sheet .costs {
+    gap: 10px;
+  }
+  .bridge .dossier-sheet .cost {
+    font-size: 10px;
+  }
+  .bridge .modal[data-panel] .dossier-action-footer {
+    padding: 12px 14px calc(12px + env(safe-area-inset-bottom));
+  }
+  .dossier-actions {
+    gap: 6px;
+    grid-template-columns: 1.25fr 0.85fr 1.1fr 1fr;
+  }
+  .bridge .dossier-actions button {
+    padding: 9px 5px;
+    min-height: 46px;
+    font-size: 10px;
+  }
+}
+@media (max-width: 359px) {
+  .bridge .personnel-page button.personnel-card {
+    height: 164px;
+  }
+  .bridge .personnel-page .personnel-filter button {
+    min-width: 44px;
+    padding-inline: 7px;
+  }
+  #roster-result-count {
+    display: none;
+  }
+  .personnel-card-copy {
+    padding: 7px 5px;
+  }
+  .personnel-card-copy strong {
+    font-size: 12px;
+  }
+  .dossier-stat-rail {
+    right: 10px;
+    width: 65px;
+  }
+  .bridge .dossier-name h2 {
+    font-size: 25px;
+  }
+  .dossier-tabs {
+    padding-inline: 14px;
+    gap: 14px;
+  }
+  .bridge .dossier-page .dossier-tabs button {
+    min-width: 72px;
+  }
+}
+@media (max-height: 550px) and (min-width: 650px) {
+  .dossier-viewport {
+    height: 360px;
+  }
+  .bridge .personnel-page .personnel-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .bridge .personnel-page button.personnel-card {
+    height: 215px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bridge .personnel-page button.personnel-card {
+    transition: none;
+  }
+}
+
+.personnel-search svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.bridge .personnel-page .personnel-filter button {
+  min-height: 44px;
+}
+.bridge .dossier-actions .primary {
+  font-size: 12px;
+  padding: 10px 9px;
+}

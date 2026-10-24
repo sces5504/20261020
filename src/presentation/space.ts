@@ -15,6 +15,8 @@ import { SimulationClock } from "../application/simulation-clock";
 import { guardianPositions, patrolPosition } from "../domain/navigation";
 import { planetMaterial, enemyMaterial } from "./materials";
 import type { AudioMixer } from "../platform/audio";
+/** World units per backdrop pixel in the first sector (3600x2400 over 1672x941 art). */
+const backdropDensity = 2.55;
 import type { Game } from "../application/game";
 export function mountSpace(
   host: HTMLElement,
@@ -394,20 +396,21 @@ export function mountSpace(
       camera.setZoom(
         (cinematic ? mix(cinematic.fromZoom, cinematic.zoom) : zoom) * density,
       );
-      camera.centerOn(
-        (cinematic ? mix(cinematic.fromX, cinematic.x) : undefined) ??
+      const viewX =
+          (cinematic ? mix(cinematic.fromX, cinematic.x) : undefined) ??
           (model.viewMode === "explore"
             ? teamBounds
               ? (teamBounds.left + teamBounds.right) / 2
               : model.x
             : r.width / 2) + this.panX,
-        (cinematic ? mix(cinematic.fromY, cinematic.y) : undefined) ??
+        viewY =
+          (cinematic ? mix(cinematic.fromY, cinematic.y) : undefined) ??
           (model.viewMode === "explore"
             ? teamBounds
               ? (teamBounds.top + teamBounds.bottom) / 2
               : model.y
-            : r.height / 2) + this.panY,
-      );
+            : r.height / 2) + this.panY;
+      camera.centerOn(viewX, viewY);
       this.sprites.forEach((image) => image.setVisible(false));
       g.clear();
       if (r.background) {
@@ -422,11 +425,24 @@ export function mountSpace(
           );
           const im = this.sprites.get("region-background")!;
           const asset = model.pack.assets.find((a) => a.id === r.background)!;
+          // Every sector keeps the first sector's texel density; large sectors
+          // pan the backdrop as parallax instead of stretching one image 4x.
+          const viewW = camera.width / camera.zoom,
+            viewH = camera.height / camera.zoom;
           const scale = Math.max(
-            r.width / asset.width,
-            r.height / asset.height,
+            backdropDensity,
+            viewW / asset.width,
+            viewH / asset.height,
           );
-          im.setDisplaySize(asset.width * scale, asset.height * scale)
+          const bw = asset.width * scale,
+            bh = asset.height * scale;
+          const u = Math.min(1, Math.max(0, viewX / r.width)),
+            v = Math.min(1, Math.max(0, viewY / r.height));
+          im.setDisplaySize(bw, bh)
+            .setPosition(
+              viewX + (0.5 - u) * (bw - viewW),
+              viewY + (0.5 - v) * (bh - viewH),
+            )
             .setDepth(-2)
             .setAlpha(0.58);
         }

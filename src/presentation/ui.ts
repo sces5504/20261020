@@ -26,6 +26,10 @@ import {
   costScale,
   newSave,
   canAfford,
+  maxSkillLevel,
+  skillAtLevel,
+  skillResearchCost,
+  skillResearchGate,
   type Save,
 } from "../domain/model";
 import { production, questReady, summonCandidates } from "../domain/economy";
@@ -311,7 +315,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       const unit = g.combat?.allies.find((u) => u.id === id);
       const skill =
         (unit ? g.combat?.skillFor(unit) : undefined) ??
-        p.skills.find((sk) => sk.id === c.skill)!;
+        skillAtLevel(p.skills.find((sk) => sk.id === c.skill)!, o.skillLevel ?? 1);
       return { o, c, unit, skill, slot };
     });
     if (key !== squadKey) {
@@ -391,11 +395,14 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       .map(({ primary: o, copies }) => {
         const c = p.characters.find((c) => c.id === o.definition)!,
           st = stats(p, o),
-          skill = p.skills.find((s) => s.id === c.skill)!,
+          skill = skillAtLevel(
+            p.skills.find((s) => s.id === c.skill)!,
+            o.skillLevel ?? 1,
+          ),
           assigned = Object.entries(g.save.colonies).find(
             ([, v]) => v.assigned === o.id,
           );
-        return `<article class="character-card">${button(portrait(p, c, true), "character", o.id, "portrait-button")}<div class="character-info"><span class="rarity">${stars(c, o)}</span><h3>${esc(c.name)} <small>Lv.${o.level}</small></h3><small>持有 ${copies.length} 位${copies.length > 1 ? " · 重複角色可於詳情同調" : ""}</small><p>${esc(c.role)}</p><div class="stat-grid"><span>生命<strong>${Math.ceil(o.hp)} / ${st.hp}</strong></span><span>攻擊<strong>${Math.round(st.attack)}</strong></span><span>防禦<strong>${Math.round(st.defense)}</strong></span></div><p><strong>${esc(skill.name)}</strong> · 冷卻 ${skill.cooldown}s</p><p class="skill-copy">${esc(skillMechanic(skill))}</p><div class="character-actions">${button(g.save.team.includes(o.id) ? "移出編隊" : "加入編隊", "team", o.id, "", !!assigned)}${button("強化 ↑", "level", o.id)}${button("整補", "heal", o.id, "", o.hp >= st.hp || g.save.jobs.some((j) => j.owner === o.id))}</div><small>${
+        return `<article class="character-card">${button(portrait(p, c, true), "character", o.id, "portrait-button")}<div class="character-info"><span class="rarity">${stars(c, o)}</span><h3>${esc(c.name)} <small>Lv.${o.level}</small></h3><small>持有 ${copies.length} 位${copies.length > 1 ? " · 重複角色可於詳情同調" : ""}</small><p>${esc(c.role)}</p><div class="stat-grid"><span>生命<strong>${Math.ceil(o.hp)} / ${st.hp}</strong></span><span>攻擊<strong>${Math.round(st.attack)}</strong></span><span>防禦<strong>${Math.round(st.defense)}</strong></span></div><p><strong>${esc(skill.name)}</strong> <small>技能Lv${o.skillLevel ?? 1}</small> · 冷卻 ${skill.cooldown}s</p><p class="skill-copy">${esc(skillMechanic(skill))}</p><div class="character-actions">${button(g.save.team.includes(o.id) ? "移出編隊" : "加入編隊", "team", o.id, "", !!assigned)}${button("強化 ↑", "level", o.id)}${button("整補", "heal", o.id, "", o.hp >= st.hp || g.save.jobs.some((j) => j.owner === o.id))}</div><small>${
           assigned
             ? "派駐於 " + esc(p.planets.find((v) => v.id === assigned[0])?.name)
             : `強化費用：${Object.entries(costScale(p.rules.levelCost, o.level))
@@ -468,11 +475,23 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       const o = s.roster.find((o) => o.id === sub)!;
       const c = p.characters.find((c) => c.id === o.definition)!;
       const st = stats(p, o),
-        skill = p.skills.find((sk) => sk.id === c.skill)!;
+        baseSkill = p.skills.find((sk) => sk.id === c.skill)!,
+        skillLevel = o.skillLevel ?? 1,
+        skill = skillAtLevel(baseSkill, skillLevel),
+        nextSkill =
+          skillLevel < maxSkillLevel
+            ? skillAtLevel(baseSkill, skillLevel + 1)
+            : undefined,
+        gate = skillResearchGate(skillLevel + 1),
+        researchCost = skillResearchCost(p, o);
       title = c.name;
       kick = "STELLAR PROFILE";
       const copies = s.roster.filter((v) => v.definition === o.definition);
-      body = `${button("← 返回角色選單", "panel", "roster", "text-button")}${copies.length > 1 ? `<div class="copy-picker" aria-label="同角色持有實例">${copies.map((v) => button(`${portrait(p, c)}<span>Lv.${v.level} · 同調 ${v.resonance ?? 0}/5${s.team.includes(v.id) ? " · 編隊中" : Object.values(s.colonies).some((col) => col.assigned === v.id) ? " · 派駐中" : ""}</span>`, "character", v.id, v.id === o.id ? "selected" : "")).join("")}</div>` : ""}<div class="character-detail">${portrait(p, c, true)}<div class="profile-copy"><span class="rarity">${stars(c, o)}</span><h2>${esc(c.name)} <small>Lv.${o.level}</small></h2><p class="role-tag">${esc(c.role)}</p><p>${esc(c.description)}</p><div class="stat-grid"><span>生命<strong>${Math.ceil(o.hp)} / ${st.hp}</strong></span><span>攻擊<strong>${Math.round(st.attack)}</strong></span><span>防禦<strong>${Math.round(st.defense)}</strong></span></div><section class="skill-detail"><span class="eyebrow">ACTIVE SKILL · ${skill.cooldown}s</span><h3>${esc(skill.name)}</h3><p>${esc(skill.description)}</p><strong>${esc(skillMechanic(skill))}</strong></section><div class="costs">${amounts(p, costScale(p.rules.levelCost, o.level))}</div><div class="inline-actions">${button("強化 +1", "level", o.id)}${button("整補", "heal", o.id, "", o.hp >= st.hp || g.save.jobs.some((j) => j.owner === o.id))}${button(`同調 ${o.resonance ?? 0}/5`, "open-feed", o.id, "", !!g.combat || (o.resonance ?? 0) >= 5 || s.jobs.some((j) => j.owner === o.id) || Object.values(s.colonies).some((col) => col.assigned === o.id))}${button(s.team.includes(o.id) ? "移出編隊" : "加入編隊", "team", o.id, "", !!g.combat || (s.team.includes(o.id) ? s.team.length <= 1 : s.team.length >= p.rules.teamSize) || s.jobs.some((j) => j.owner === o.id) || Object.values(s.colonies).some((col) => col.assigned === o.id))}${button("調整編隊 →", "panel", "formation", "primary")}</div><p class="resonance-info">同調 ${o.resonance ?? 0}/5 · 每次生命／攻擊／防禦 +${p.rules.duplicateStatBonus * 100}% · 5次追加紫星；滿階後新共鳴返還投入的${p.rules.duplicateRefundRate * 100}%四資源。</p><p class="muted">取得方式：${acquisitionSources(p, c.id).map(esc).join("／")}</p></div></div>`;
+      body = `${button("← 返回角色選單", "panel", "roster", "text-button")}${copies.length > 1 ? `<div class="copy-picker" aria-label="同角色持有實例">${copies.map((v) => button(`${portrait(p, c)}<span>Lv.${v.level} · 同調 ${v.resonance ?? 0}/5${s.team.includes(v.id) ? " · 編隊中" : Object.values(s.colonies).some((col) => col.assigned === v.id) ? " · 派駐中" : ""}</span>`, "character", v.id, v.id === o.id ? "selected" : "")).join("")}</div>` : ""}<div class="character-detail">${portrait(p, c, true)}<div class="profile-copy"><span class="rarity">${stars(c, o)}</span><h2>${esc(c.name)} <small>Lv.${o.level}</small></h2><p class="role-tag">${esc(c.role)}</p><p>${esc(c.description)}</p><div class="stat-grid"><span>生命<strong>${Math.ceil(o.hp)} / ${st.hp}</strong></span><span>攻擊<strong>${Math.round(st.attack)}</strong></span><span>防禦<strong>${Math.round(st.defense)}</strong></span></div><section class="skill-detail"><span class="eyebrow">ACTIVE SKILL · Lv${skillLevel}/${maxSkillLevel} · ${skill.cooldown}s</span><h3>${esc(skill.name)}</h3><p>${esc(skill.description)}</p><strong>${esc(skillMechanic(skill))}</strong>${
+        nextSkill
+          ? `<div class="skill-research"><span class="eyebrow">技能研究 → Lv${skillLevel + 1}</span><p class="muted">${esc(skillMechanic(nextSkill))} · 冷卻 ${nextSkill.cooldown}s</p><div class="costs">${amounts(p, researchCost)}</div>${button(o.level < gate ? `角色需 Lv${gate}` : `研究技能 Lv${skillLevel + 1}`, "skill-research", o.id, "", !!g.combat || o.level < gate || !canAfford(s, researchCost))}</div>`
+          : `<p class="muted">技能研究已達上限 Lv${maxSkillLevel}。</p>`
+      }</section><div class="costs">${amounts(p, costScale(p.rules.levelCost, o.level))}</div><div class="inline-actions">${button("強化 +1", "level", o.id)}${button("整補", "heal", o.id, "", o.hp >= st.hp || g.save.jobs.some((j) => j.owner === o.id))}${button(`同調 ${o.resonance ?? 0}/5`, "open-feed", o.id, "", !!g.combat || (o.resonance ?? 0) >= 5 || s.jobs.some((j) => j.owner === o.id) || Object.values(s.colonies).some((col) => col.assigned === o.id))}${button(s.team.includes(o.id) ? "移出編隊" : "加入編隊", "team", o.id, "", !!g.combat || (s.team.includes(o.id) ? s.team.length <= 1 : s.team.length >= p.rules.teamSize) || s.jobs.some((j) => j.owner === o.id) || Object.values(s.colonies).some((col) => col.assigned === o.id))}${button("調整編隊 →", "panel", "formation", "primary")}</div><p class="resonance-info">同調 ${o.resonance ?? 0}/5 · 每次生命／攻擊／防禦 +${p.rules.duplicateStatBonus * 100}% · 5次追加紫星；滿階後新共鳴返還投入的${p.rules.duplicateRefundRate * 100}%四資源。</p><p class="muted">取得方式：${acquisitionSources(p, c.id).map(esc).join("／")}</p></div></div>`;
     }
     if (panel === "feed") {
       const target = s.roster.find((o) => o.id === sub)!;
@@ -960,6 +979,8 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       });
     if (action === "team") await g.command({ type: "team", owned: id });
     if (action === "level") await g.command({ type: "level", owned: id });
+    if (action === "skill-research")
+      await g.command({ type: "skill-research", owned: id });
     if (action === "heal") await g.command({ type: "heal", owned: id });
     if (action === "assign")
       await g.command({ type: "assign", owned: id, planet: selected });

@@ -378,6 +378,7 @@ export const packSchema = z
         healSeconds: positive,
         healCost: amount,
         levelCost: amount,
+        skillResearchCost: amount.optional(),
         trainingSeconds: z.number().min(5).max(120).optional().default(30),
         raidWarningSeconds: z.number().min(5).max(120).optional().default(45),
       })
@@ -811,6 +812,8 @@ export function validatePack(input: unknown): {
   for (const id of storyEdges.keys()) visitStory(id);
   money(p.rules.healCost, "rules.healCost");
   money(p.rules.levelCost, "rules.levelCost");
+  if (p.rules.skillResearchCost)
+    money(p.rules.skillResearchCost, "rules.skillResearchCost");
 
   for (const s of p.skills) {
     if (s.effect === "program" && !s.actions?.length)

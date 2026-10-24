@@ -1,0 +1,72 @@
+[
+  {
+    "assetId": "presentation:interface-operations.v1",
+    "version": "1.0.0-candidate",
+    "kind": "opaque command and research environment",
+    "master": "art/ui/interface-suite-v1/operations-master.png",
+    "masterSha256": "77377c65b6eeed4694c45e0fdc79053e5af0e9a83ab9b14f1685d43586a0118f",
+    "path": "art/ui/interface-suite-v1/operations.webp",
+    "sha256": "34f38558820d9f7fd93a912b81ee33b9b2e515eb9799283164791003dca52da3",
+    "width": 1536,
+    "height": 1024,
+    "alpha": {
+      "mode": "opaque",
+      "min": 255,
+      "max": 255
+    },
+    "colorSpace": "sRGB",
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "nineSlice": null,
+    "atlas": null,
+    "frames": null,
+    "blend": "NORMAL",
+    "animation": "static art; does not drive timing or gameplay",
+    "bundle": "Vite URL in presentation CSS",
+    "source": {
+      "method": "OpenAI image generation; original UI art requested by user",
+      "generatedMaster": "exec-402dc844-10e6-4b59-935c-1239bb4ee426.png",
+      "webEncoding": "same dimensions/composition, Canvas WebP .94; no semantic edit",
+      "externalArtCopied": false,
+      "bakedText": false
+    },
+    "reviewStatus": "candidate-awaiting-user-review"
+  },
+  {
+    "assetId": "presentation:interface-sortie.v1",
+    "version": "1.0.0-candidate",
+    "kind": "opaque fleet expedition environment",
+    "master": "art/ui/interface-suite-v1/sortie-master.png",
+    "masterSha256": "4f9f62ced583b419746b942874e570cf364887d64905e57cb1bf0f1688881659",
+    "path": "art/ui/interface-suite-v1/sortie.webp",
+    "sha256": "9412f71066a8e1299e2cbf5841743714b0561f1e2a4859110cc9dde2cf4e4273",
+    "width": 1536,
+    "height": 1024,
+    "alpha": {
+      "mode": "opaque",
+      "min": 255,
+      "max": 255
+    },
+    "colorSpace": "sRGB",
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "nineSlice": null,
+    "atlas": null,
+    "frames": null,
+    "blend": "NORMAL",
+    "animation": "static art; does not drive timing or gameplay",
+    "bundle": "Vite URL in presentation CSS",
+    "source": {
+      "method": "OpenAI image generation; original UI art requested by user",
+      "generatedMaster": "exec-cbc85a6b-313b-4356-abe0-4c115ac060ee.png",
+      "webEncoding": "same dimensions/composition, Canvas WebP .94; no semantic edit",
+      "externalArtCopied": false,
+      "bakedText": false
+    },
+    "reviewStatus": "candidate-awaiting-user-review"
+  }
+]

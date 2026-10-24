@@ -1,3 +1,7 @@
+import { drawCombatVfx } from "./combat-vfx";
+import { turretArt } from "./summon-art";
+import { SummonCues } from "./summon-cues";
+import { BeamLayer } from "./beam-layer";
 import {
   nodeUnlocked,
   nodeCleared,
@@ -69,6 +73,7 @@ export function mountSpace(
   class Space extends Phaser.Scene {
     ink!: Phaser.GameObjects.Graphics;
     hud!: Phaser.GameObjects.Graphics;
+    light!: Phaser.GameObjects.Graphics;
     labels: Phaser.GameObjects.Text[] = [];
     labelIndex = 0;
     selected = "";
@@ -89,10 +94,18 @@ export function mountSpace(
     lastFlashCount = 0;
     lastHits = 0;
     lastShake = 0;
+    summonCues = new SummonCues();
+    beamLayer?: BeamLayer;
 
     create() {
+      this.beamLayer = new BeamLayer(this);
+      this.ensureTurretArt();
       this.ink = this.add.graphics();
       this.hud = this.add.graphics().setDepth(20);
+      this.light = this.add
+        .graphics()
+        .setDepth(2)
+        .setBlendMode(Phaser.BlendModes.ADD);
       const r = model.pack.regions.find((v) => v.id === model.save.region)!;
       for (let i = 0; i < 420; i++) {
         const n = Math.sin(i * 127.1 + 77) * 43758.5453,
@@ -225,6 +238,22 @@ export function mountSpace(
         .filter((a) => used.has(a.id))
         .forEach((a) => this.ensureAsset(a.id));
     }
+    private ensureTurretArt() {
+      if (this.textures.exists(turretArt.key)) return;
+      const image = new Image();
+      image.onload = () => {
+        if (!this.sys?.isActive() || this.textures.exists(turretArt.key))
+          return;
+        const canvas = document.createElement("canvas");
+        canvas.width = 512;
+        canvas.height = Math.round((512 * turretArt.height) / turretArt.width);
+        const ctx = canvas.getContext("2d")!;
+        ctx.imageSmoothingQuality = "high";
+        ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+        this.textures.addCanvas(turretArt.key, canvas);
+      };
+      image.src = turretArt.url;
+    }
     private ensureAsset(id: string) {
       if (this.textures.exists(id) || this.loaded.has(id)) return;
       const a = model.pack.assets.find((a) => a.id === id);
@@ -320,10 +349,33 @@ export function mountSpace(
         this.panY = 0;
         this.zoomFactor = 1;
       }
+      // Portrait combat frames the living team, including the rear formation slots.
+      // This is camera-only; unit positions and combat rules remain untouched.
+      const team =
+        battle && w < 650 && model.viewMode === "explore"
+          ? model.combat!.units.filter(
+              (u) => u.side === "ally" && u.hp > 0 && !u.summonOwner,
+            )
+          : [];
+      const teamBounds = team.length
+        ? {
+            left: Math.min(...team.map((u) => u.x)),
+            right: Math.max(...team.map((u) => u.x)),
+            top: Math.min(...team.map((u) => u.y)),
+            bottom: Math.max(...team.map((u) => u.y)),
+          }
+        : undefined;
+      const portraitZoom = teamBounds
+        ? Math.min(
+            0.72,
+            w / (teamBounds.right - teamBounds.left + 280),
+            h / (teamBounds.bottom - teamBounds.top + 200),
+          )
+        : 0.72;
       const zoom =
         (model.viewMode === "explore"
           ? w < 650
-            ? 0.72
+            ? portraitZoom
             : 0.95
           : Math.min(w / r.width, h / r.height) * 0.88) * this.zoomFactor;
       const cinematic = model.storyCamera;
@@ -344,9 +396,17 @@ export function mountSpace(
       );
       camera.centerOn(
         (cinematic ? mix(cinematic.fromX, cinematic.x) : undefined) ??
-          (model.viewMode === "explore" ? model.x : r.width / 2) + this.panX,
+          (model.viewMode === "explore"
+            ? teamBounds
+              ? (teamBounds.left + teamBounds.right) / 2
+              : model.x
+            : r.width / 2) + this.panX,
         (cinematic ? mix(cinematic.fromY, cinematic.y) : undefined) ??
-          (model.viewMode === "explore" ? model.y : r.height / 2) + this.panY,
+          (model.viewMode === "explore"
+            ? teamBounds
+              ? (teamBounds.top + teamBounds.bottom) / 2
+              : model.y
+            : r.height / 2) + this.panY,
       );
       this.sprites.forEach((image) => image.setVisible(false));
       g.clear();
@@ -372,6 +432,12 @@ export function mountSpace(
         }
       }
       this.hud.clear();
+      this.light.clear();
+      this.beamLayer?.draw(
+        model.combat ?? undefined,
+        model.lowEffects ||
+          matchMedia("(prefers-reduced-motion: reduce)").matches,
+      );
       this.labelIndex = 0;
       // Nebulae and a stable starfield: presentation-only, independent from simulation RNG.
       for (let i = r.background ? 0 : model.lowEffects ? 3 : 8; i > 0; i--) {
@@ -648,82 +714,45 @@ export function mountSpace(
           );
           g.strokeCircle(p.x, p.y, p.leashRadius);
         }
-        // Persistent visuals read the same field geometry used by core hit detection.
-        for (const f of combat.mechanics.fields) {
-          const a = f.action,
-            color = Phaser.Display.Color.HexStringToColor(f.color).color;
-          g.lineStyle(2, color, 0.7);
-          g.fillStyle(color, 0.035);
-          if (a.kind === "beam") {
-            const dx = Math.cos(f.angle) * (f.reach ?? a.radius),
-              dy = Math.sin(f.angle) * (f.reach ?? a.radius);
-            g.lineStyle(a.width, color, 0.2);
-            g.lineBetween(f.x, f.y, f.x + dx, f.y + dy);
-            g.lineStyle(a.width * 0.45, color, 0.14);
-            g.lineBetween(f.x, f.y, f.x + dx, f.y + dy);
-            g.lineStyle(Math.max(3, a.width * 0.08), 0xffffff, 0.9);
-            g.lineBetween(f.x, f.y, f.x + dx, f.y + dy);
-          } else {
-            g.fillCircle(f.x, f.y, f.radius ?? a.radius);
-            g.strokeCircle(f.x, f.y, f.radius ?? a.radius);
-            if (a.pull) {
-              g.fillStyle(0x030617, 0.95);
-              g.fillCircle(f.x, f.y, 50);
-              g.lineStyle(3, 0xddd0ff, 0.8);
-              g.strokeEllipse(f.x, f.y, 115, 72);
-              for (let arm = 0; arm < (model.lowEffects ? 1 : 3); arm++)
-                for (let i = 1; i < 24; i++) {
-                  const r = 48 + i * 3,
-                    prior = 45 + i * 3,
-                    a = combat.time * 2 + (arm * Math.PI * 2) / 3 + i * 0.15;
-                  g.lineStyle(2, color, 0.7);
-                  g.lineBetween(
-                    f.x + Math.cos(a - 0.15) * prior,
-                    f.y + Math.sin(a - 0.15) * prior * 0.65,
-                    f.x + Math.cos(a) * r,
-                    f.y + Math.sin(a) * r * 0.65,
-                  );
-                }
-              for (let i = 0; i < (model.lowEffects ? 2 : 5); i++) {
-                g.lineStyle(2, color, 0.6);
-                g.strokeCircle(
-                  f.x,
-                  f.y,
-                  20 + ((combat.time * 90 + i * 30) % 140),
-                );
-              }
+        drawCombatVfx(
+          g,
+          this.light,
+          this.hud,
+          combat,
+          model.pack,
+          model.lowEffects ||
+            matchMedia("(prefers-reduced-motion: reduce)").matches,
+        );
+        this.summonCues.draw(
+          g,
+          this.light,
+          combat,
+          model.lowEffects ||
+            matchMedia("(prefers-reduced-motion: reduce)").matches,
+        );
+        if (
+          !model.lowEffects &&
+          !matchMedia("(prefers-reduced-motion: reduce)").matches
+        ) {
+          for (const d of combat.mechanics.dashes) {
+            const u = combat.units.find((u) => u.id === d.owner);
+            if (!u?.sprite || !this.textures.exists(u.sprite)) continue;
+            for (let i = 1; i <= 3; i++) {
+              const part = i * 0.22;
+              const key = `${u.id}:dash-echo:${i}`;
+              this.drawAsset(
+                key,
+                u.sprite,
+                u.x + (d.from.x - u.x) * part,
+                u.y + (d.from.y - u.y) * part,
+                model.pack.rules.allySpriteSize,
+              );
+              this.sprites
+                .get(key)
+                ?.setAlpha(0.2 - i * 0.035)
+                .setTint(u.side === "enemy" ? 0xff9baa : 0x9ee6ef);
             }
           }
-        }
-        for (const d of combat.mechanics.dashes) {
-          const u = combat.units.find((u) => u.id === d.owner);
-          if (!u) continue;
-          const color = Phaser.Display.Color.HexStringToColor(u.color).color;
-          g.lineStyle(d.action.width, color, 0.08);
-          g.lineBetween(d.from.x, d.from.y, u.x, u.y);
-          g.lineStyle(3, color, 0.7);
-          g.lineBetween(d.from.x, d.from.y, u.x, u.y);
-        }
-        for (const b of combat.bullets) {
-          const speed = Math.hypot(b.vx, b.vy) || 1;
-          g.lineStyle(
-            b.side === "ally" ? 2 : 3,
-            Phaser.Display.Color.HexStringToColor(b.color).color,
-            0.55,
-          );
-          g.lineBetween(
-            b.x,
-            b.y,
-            b.x - (b.vx / speed) * 16,
-            b.y - (b.vy / speed) * 16,
-          );
-          g.fillStyle(
-            Phaser.Display.Color.HexStringToColor(b.color).color,
-            0.2,
-          );
-          g.fillCircle(b.x, b.y, b.side === "enemy" ? 10 : 6);
-          g.fillStyle(Phaser.Display.Color.HexStringToColor(b.color).color, 1);
-          g.fillCircle(b.x, b.y, b.side === "enemy" ? 4 : 2.7);
         }
         for (const u of combat.units) {
           if (u.hp <= 0) continue;
@@ -731,7 +760,20 @@ export function mountSpace(
           const color = Phaser.Display.Color.HexStringToColor(u.color).color;
           const scale = combat.mechanics.stat(u, "scale");
           const size = (u.boss ? 42 : u.turretUntil ? 14 : 18) * scale;
-          if (u.side === "ally") {
+          const texturedTurret =
+            u.summonKind === "turret" && this.textures.exists(turretArt.key);
+          if (texturedTurret) {
+            this.drawAsset(
+              u.id,
+              turretArt.key,
+              u.x,
+              u.y,
+              turretArt.worldWidth * scale,
+            );
+            this.sprites
+              .get(u.id)
+              ?.setOrigin(turretArt.pivot.x, turretArt.pivot.y);
+          } else if (u.side === "ally") {
             if (!u.sprite || !this.textures.exists(u.sprite))
               this.ship(u.x, u.y, color, size);
           } else if (!u.sprite || !this.textures.exists(u.sprite)) {
@@ -796,9 +838,12 @@ export function mountSpace(
           this.sprites
             .get(u.id)
             ?.setRotation(
-              Math.sin(this.elapsed * 1.6 + combat.units.indexOf(u)) * 0.025,
+              texturedTurret
+                ? u.aim
+                : Math.sin(this.elapsed * 1.6 + combat.units.indexOf(u)) *
+                    0.025,
             );
-          if (u.side === "enemy")
+          if (u.side === "enemy" && !texturedTurret)
             this.sprites.get(u.id)?.setFlipX(u.x > combat.center.x);
           const sprite =
             this.sprites.get(u.id) ?? this.sprites.get(u.id + ":hull");
@@ -808,6 +853,12 @@ export function mountSpace(
                 .setTint(0xffb6aa)
                 .setAlpha(0.75 + Math.sin(combat.time * 65) * 0.25);
             else sprite.clearTint().setAlpha(1);
+            if (
+              texturedTurret &&
+              u.side === "enemy" &&
+              u.hurtUntil <= combat.time
+            )
+              sprite.setTint(0xffa2b1);
             if (combat.time - u.shotAt < 0.12) sprite.x -= Math.cos(u.aim) * 2;
           }
           const statuses = combat.mechanics.active(u);
@@ -855,30 +906,18 @@ export function mountSpace(
           }
           if (u.boss) this.text(u.x, u.y - 80, u.name, 15, "#e8c2ff");
         }
+        // Event labels use the same simulation lifetime; limit numerical clutter.
+        let hitLabels = 0;
         for (const f of combat.flashes) {
-          if (f.side) {
-            const color = Phaser.Display.Color.HexStringToColor(f.color).color;
-            g.fillStyle(0xffffff, Math.min(0.7, f.life * 3));
-            g.fillCircle(f.x, f.y, Math.max(2, f.life * 30));
-            g.lineStyle(1.6, color, Math.min(1, f.life * 5));
-            for (let i = 0; i < 6; i++) {
-              const a = (i * Math.PI) / 3;
-              const radius = (0.25 - f.life) * 110;
-              g.lineBetween(
-                f.x + Math.cos(a) * radius,
-                f.y + Math.sin(a) * radius,
-                f.x + Math.cos(a) * (radius + 9),
-                f.y + Math.sin(a) * (radius + 9),
-              );
-            }
-          }
-          g.lineStyle(
-            2,
-            Phaser.Display.Color.HexStringToColor(f.color).color,
-            Math.min(1, f.life * 2),
+          if (!f.skillId && ++hitLabels > (model.lowEffects ? 6 : 16)) continue;
+          const age = f.skillId ? 0.65 - f.life : 0.25 - f.life;
+          this.text(
+            f.x,
+            f.y - 38 - Math.max(0, age) * 28,
+            f.label,
+            f.skillId ? 14 : 11,
+            f.side === "ally" ? "#ffb2be" : f.color,
           );
-          g.strokeCircle(f.x, f.y, f.radius * (1.3 - f.life));
-          this.text(f.x, f.y - 45, f.label, 13, f.color);
         }
         // Direction markers keep offscreen threats discoverable on portrait displays.
         for (const u of combat.units.filter(
@@ -918,12 +957,15 @@ export function mountSpace(
         this.sprites.set(key, image);
       }
       const a = model.pack.assets.find((a) => a.id === id);
-      const ratio = a ? a.width / a.height : 1;
       if (image.texture.key !== id) image.setTexture(id);
+      const ratio = a
+        ? a.width / a.height
+        : image.frame.width / image.frame.height;
       image
         .clearTint()
         .setAlpha(1)
         .setFlipX(false)
+        .setOrigin(0.5)
         .setPosition(x, y)
         .setDisplaySize(size * Math.min(1, ratio), size / Math.max(1, ratio))
         .setVisible(true);

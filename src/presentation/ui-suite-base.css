@@ -1,0 +1,146 @@
+@font-face {
+  font-family: "Galaxy TC";
+  src: url("../../art/ui/interface-suite-v1/fonts/galaxy-tc-400.woff")
+    format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Galaxy TC";
+  src: url("../../art/ui/interface-suite-v1/fonts/galaxy-tc-700.woff")
+    format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+html:root {
+  --font-game:
+    "Galaxy TC", "Noto Sans CJK TC", "PingFang TC", "Microsoft JhengHei",
+    system-ui, sans-serif;
+  font-family: var(--font-game);
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+#app,
+.game-confirm-layer {
+  font-family: var(--font-game);
+}
+:is(.art-gallery, .roster-page, .studio-access, .recovery) {
+  background:
+    linear-gradient(105deg, #071321eb 22%, #071321bb),
+    url("../../art/ui/interface-suite-v1/operations.webp") center top / cover
+      fixed;
+  min-height: 100dvh;
+  color: #d4e3e8;
+}
+:is(.art-gallery, .roster-page) :is(h1, h2, h3) {
+  font-weight: 400;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+  letter-spacing: 0.04em;
+  color: #f0e4cc;
+}
+:is(.art-gallery, .roster-page) .studio-header {
+  border-bottom: 1px solid #cbb48377;
+  background: #0c1b2bea;
+}
+.art-gallery .art-originals > article {
+  border: 1px solid #b8a57d77;
+  background: linear-gradient(145deg, #2a4051cc, #0a1728e8);
+  padding: 13px;
+}
+.art-gallery .art-originals > article .section-label {
+  color: #e9d4ac;
+  line-height: 1.7;
+}
+.art-gallery .gallery-toolbar {
+  background: #101f2ce8;
+  padding: 18px;
+  border-block: 1px solid #adbac333;
+  gap: 14px;
+}
+.art-gallery .gallery-toolbar :is(input, button) {
+  min-height: 44px;
+}
+.roster-page table {
+  background: #0a1726e8;
+}
+.roster-page th {
+  color: #e6cfa4;
+  background: #27394a;
+}
+.studio-access {
+  padding: clamp(24px, 7vw, 85px);
+}
+.studio-access > form {
+  padding: 25px;
+  border: 1px solid #c7b18277;
+  background: #122432e8;
+  max-width: 520px;
+}
+.studio-access :is(input, button) {
+  min-height: 44px;
+}
+@media (max-width: 800px) {
+  .art-gallery .studio-header {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .art-gallery .gallery-toolbar {
+    flex-wrap: wrap;
+  }
+  .art-gallery .gallery-toolbar > label {
+    min-width: 0;
+    flex: 1 1 220px;
+  }
+  .roster-page {
+    overflow-x: auto;
+  }
+}
+:is(.art-gallery, .roster-page, .studio-access, .recovery)
+  :is(button, input, select, .link-button),
+.art-gallery .art-originals > article,
+.studio-access > form {
+  border: 5px solid transparent;
+
+  border-radius: 0;
+  background-color: #122a3c;
+  color: #dce5e4;
+}
+:is(.art-gallery, .roster-page, .studio-access) button {
+  min-height: 44px;
+}
+:is(.studio-access, .roster-page) .primary {
+  border: 0;
+  background: url("../../art/ui/resonance-chamber-v1/activation.webp") center /
+    100% 190% no-repeat;
+  color: #17303c;
+  padding: 12px 26px;
+  min-height: 54px;
+  font-weight: 700;
+}
+:is(.art-gallery, .roster-page, .studio-access, .recovery) {
+  background-color: #0d1219;
+}
+:is(.art-gallery, .roster-page, .studio-access)
+  :is(button, input, select, .link-button),
+.art-gallery .art-originals > article,
+.studio-access > form {
+  border: 1px solid #ffffff26;
+  background-color: #19212c;
+  background-image: none;
+  color: #dde0e3;
+  border-radius: 2px;
+}
+:is(.studio-access, .roster-page) .primary {
+  background: #d6bd88;
+  color: #141619;
+  border: 0;
+}
+.art-gallery .gallery-toolbar {
+  background: #171e28;
+  border-color: #ffffff20;
+}
+:is(.art-gallery, .roster-page) .studio-header {
+  background: #0e141cf5;
+  border-color: #ffffff20;
+}

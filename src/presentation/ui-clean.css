@@ -1,0 +1,655 @@
+/* Final owner direction: restrained NIKKE-like hierarchy in the game's black/gold palette. */
+.bridge,
+.story-scene,
+.game-confirm-layer {
+  --ui-bg: #090b0f;
+  --ui-panel: #12151a;
+  --ui-raised: #1b1f25;
+  --ui-line: #ffffff1c;
+  --ui-text: #eeeae2;
+  --ui-muted: #9fa5ad;
+  --ui-gold: #d6bd88;
+  --gold: #d6bd88;
+  --cyan: #d6bd88;
+  color: var(--ui-text);
+}
+/* Explicitly retire the ornamental skins across every player component family. */
+.bridge *,
+.story-scene *,
+.game-confirm-layer * {
+  border-image: none !important;
+}
+.bridge button,
+.story-scene button,
+.game-confirm-layer button {
+  --ui-control: clean-black-gold;
+  background-image: none !important;
+  border-radius: 2px;
+  border-color: #ffffff26;
+  color: #d9dce0;
+  text-shadow: none;
+  box-shadow: none;
+}
+.bridge button:not(.primary):not(.portrait-button),
+.story-scene button:not(.primary) {
+  background: #22262d;
+  border: 1px solid #ffffff26;
+}
+.bridge button:not(.primary):not(.portrait-button):hover:not(:disabled),
+.story-scene button:not(.primary):hover:not(:disabled) {
+  background: #30353d;
+  border-color: #d6bd8877;
+  filter: none;
+}
+.bridge .primary:not(.resonance-activate),
+.bridge .resonance-activate.primary,
+.story-scene .primary,
+.game-confirm-layer .game-confirm .primary {
+  background: #d6bd88;
+  color: #141619;
+  border: 0;
+  border-radius: 2px;
+  min-height: 48px;
+  padding: 12px 22px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-shadow: none;
+  letter-spacing: 0.025em;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 5px),
+    calc(100% - 5px) 100%,
+    0 100%
+  );
+}
+.bridge .primary:not(:disabled):hover,
+.story-scene .primary:hover:not(:disabled) {
+  background: #e9d29e;
+  filter: none;
+}
+.bridge .primary:not(:disabled):active,
+.story-scene .primary:active:not(:disabled) {
+  background: #bea36f;
+  filter: none;
+}
+.bridge button:disabled {
+  opacity: 0.45;
+  filter: none;
+}
+.bridge :is(button, a, input, select, textarea):focus-visible,
+.story-scene :is(button, a, input, select, textarea):focus-visible {
+  outline: 2px solid #e0c68c;
+  outline-offset: 2px;
+}
+.bridge .topbar {
+  background: #0b0e13f5;
+  border-bottom: 1px solid #ffffff1c;
+  box-shadow: none;
+}
+.bridge .brand {
+  color: #eee8dc;
+}
+.bridge .brand-icon {
+  text-shadow: none;
+  color: #d6bd88;
+}
+.bridge .wallet .resource {
+  background: #15191f;
+  border: 1px solid #ffffff12;
+  border-radius: 2px;
+}
+.bridge .wallet .resource strong {
+  color: #f0ece4;
+}
+.bridge .sector-heading {
+  background: #0e1117;
+  border-bottom: 1px solid #ffffff16;
+}
+.bridge .sector-heading h1 {
+  font-weight: 700;
+  letter-spacing: 0.035em;
+}
+.bridge .sector-heading .journal-shortcut {
+  background: #22262c;
+  border: 1px solid #d6bd8855;
+  color: #e4cfaa;
+}
+.bridge .mission-rail {
+  background: #0b0f16d9;
+  border: 0;
+}
+.bridge .viewport {
+  border: 1px solid #ffffff18;
+  box-shadow: none;
+}
+.bridge .flight-deck {
+  background: #101319f7;
+  border-top: 1px solid #ffffff20;
+}
+.bridge .deck-nav {
+  background: #0c0f14;
+  border-top: 1px solid #ffffff16;
+}
+.bridge .deck-nav > button {
+  background: transparent;
+  border: 0;
+  border-right: 1px solid #ffffff10;
+  color: #b8bec7;
+  border-radius: 0;
+}
+.bridge .deck-nav > button:hover {
+  background: #22262f;
+  color: #e5d2ab;
+}
+.bridge .deck-nav > button[aria-pressed="true"] {
+  background: #d6bd881a;
+  color: #e3ca94;
+}
+.bridge .deck-symbol {
+  filter: none;
+}
+.bridge .deck-label small {
+  color: #858d99;
+}
+.bridge .flight-deck .squad > .operator-card {
+  border: 1px solid #ffffff24;
+  box-shadow: none;
+}
+.bridge .operator-card .operator-glyph {
+  background: #10141bdd;
+  border: 1px solid #d6bd8866;
+  color: #e5ce9e;
+}
+.bridge .operator-card.skill-ready {
+  border-bottom-color: #d6bd88;
+}
+.bridge .battle-tools {
+  background: #131820ef;
+  border: 1px solid #ffffff20;
+  border-radius: 2px;
+}
+.bridge .battle-tools button {
+  background: #222831;
+  border: 1px solid #ffffff20;
+}
+.bridge .target-hud {
+  background: #151a20ed;
+  border: 1px solid #b67d6870;
+  border-radius: 0;
+}
+.bridge .target-heading > span {
+  color: #ce9a87;
+}
+.bridge .target-copy > strong {
+  color: #e9e5dd;
+  font-weight: 700;
+}
+.bridge .planet-card {
+  background: #14191ff5;
+  border: 1px solid #ffffff2b;
+}
+.bridge .planet-card h2 {
+  color: #eee6d7;
+  font-weight: 700;
+}
+.bridge .modal[data-panel]:not([data-panel="summon"]),
+.bridge .modal[data-panel="summon"] {
+  border: 0;
+  border-radius: 3px;
+  background: #101318;
+  box-shadow: 0 18px 80px #000a;
+}
+.bridge .modal[data-panel] .modal-heading {
+  background: #15191f;
+  border-bottom: 1px solid #ffffff18;
+  padding: 17px 24px;
+}
+.bridge .modal[data-panel] .modal-heading h2 {
+  font-weight: 700;
+  font-size: 24px;
+  color: #f0ece5;
+  letter-spacing: 0.035em;
+}
+.bridge .modal[data-panel] .modal-heading .eyebrow {
+  color: #b7a37e;
+  letter-spacing: 0.13em;
+  font-size: 9px;
+}
+.bridge .modal[data-panel] .modal-heading > button {
+  background: transparent;
+  border: 0;
+  color: #b9bec6;
+  font-size: 19px;
+}
+.bridge .modal[data-panel] .modal-heading > button:hover {
+  background: #ffffff0a;
+  color: #fff;
+}
+.bridge .modal[data-panel] .modal-footer {
+  background: #0d1015;
+  border-top: 1px solid #ffffff14;
+  color: #8e98a6;
+}
+.panel-masthead {
+  border: 0;
+  border-radius: 2px;
+  min-height: 150px;
+  padding: 24px;
+  background: #191e26;
+}
+.panel-masthead::after {
+  background: linear-gradient(90deg, #11161ef5 5%, #11161ed9 40%, #11161e22);
+}
+.panel-masthead .eyebrow {
+  color: #c1ad87;
+}
+.bridge .panel-masthead h3 {
+  color: #f4eee1;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 0.04em;
+}
+.panel-masthead p {
+  color: #b5bdc8;
+}
+.bridge .list-cards > article,
+.bridge .character-grid .character-card,
+.bridge .collection-card,
+.bridge .formation-slots > div,
+.bridge .journal-card {
+  background: #191e25;
+  border: 1px solid #ffffff20;
+  border-radius: 2px;
+  box-shadow: none;
+}
+.bridge .list-cards > article h3,
+.bridge .journal-card h3 {
+  color: #ece7df;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+}
+.bridge .list-cards > article p,
+.bridge .journal-card p {
+  color: #b3bcc8;
+}
+.bridge .list-cards > article > .eyebrow {
+  color: #bfa77b;
+}
+.bridge .cost {
+  color: #c4b18b;
+}
+.bridge .character-grid .character-card > .portrait-button {
+  background: #1c222b;
+  border: 0;
+}
+.bridge .character-grid .character-info {
+  background: transparent;
+}
+.bridge .character-grid .character-info > h3 {
+  font-weight: 700;
+  color: #f1eadd;
+}
+.bridge .character-card .rarity,
+.bridge .profile-copy .rarity {
+  color: #d6bd88;
+}
+.bridge .character-detail {
+  background: transparent;
+}
+.bridge .character-detail > .portrait.large {
+  border: 0;
+  background:
+    radial-gradient(ellipse, #3a393333, transparent 65%),
+    var(--suite-operations) 60% / cover;
+}
+.bridge .profile-copy {
+  border: 0;
+  background: #171c23;
+}
+.bridge .profile-copy h2,
+.bridge .profile-copy .skill-detail h3 {
+  color: #eee6d5;
+  font-weight: 700;
+}
+.bridge .profile-copy .skill-detail {
+  border-color: #ffffff20;
+}
+.bridge .stat-grid {
+  border-color: #ffffff16;
+}
+.bridge .stat-grid > span {
+  background: #10151c;
+  border: 0;
+  border-bottom: 1px solid #ffffff16;
+  border-radius: 1px;
+}
+.bridge .stat-grid strong {
+  color: #ede7dc;
+}
+.bridge .formation-slots > div > strong {
+  color: #f1e8d6;
+  font-weight: 700;
+}
+.bridge .copy-picker button.selected {
+  background: #d6bd881a;
+  border-color: #d6bd8877;
+}
+.bridge .feed-copy {
+  background: #20262f;
+  border: 1px solid #ffffff2b;
+}
+.bridge .collection-card {
+  background: #181e27;
+}
+.bridge .journal-hero {
+  border: 0;
+  background: #171c25;
+}
+.bridge .journal-hero::after {
+  background: linear-gradient(90deg, #101720f5, #101720b8 60%, #10172033);
+}
+.bridge .journal-hero h3 {
+  color: #f0e8d8;
+  font-weight: 700;
+}
+.bridge .journal-tabs button {
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: #1a1f28;
+  color: #aab3bf;
+  border-radius: 0;
+}
+.bridge .journal-tabs button[aria-current="page"] {
+  background: #d6bd8814;
+  border-color: #d6bd88;
+  color: #ecd6aa;
+  box-shadow: none;
+}
+.bridge .chapter-select button {
+  border: 1px solid #ffffff1d;
+  background: #1a2029;
+  color: #bdc4ce;
+  border-radius: 2px;
+}
+.bridge .chapter-select button[aria-current="page"] {
+  background: #d6bd8812;
+  border-color: #d6bd8880;
+  box-shadow: inset 3px 0 #d6bd88;
+  color: #eee2c8;
+}
+.bridge .chapter-select button strong {
+  font-weight: 700;
+}
+.bridge .quest-state,
+.bridge .tags > span,
+.bridge .chapter-receipts > span {
+  border: 1px solid #ffffff24;
+  background: #101720;
+  border-radius: 1px;
+  color: #acb8c6;
+}
+.bridge .chapter-receipts > .is-done {
+  color: #d6bd88;
+}
+.bridge .journal-card.is-ready {
+  border-left: 3px solid #d6bd88;
+}
+.bridge .journal-requirements {
+  border: 0;
+  border-left: 2px solid #747b89;
+  background: #101720;
+}
+.bridge .journal-notice {
+  background: #25251f;
+  border: 0;
+  border-left: 2px solid #b9a476;
+  color: #c6bca6;
+}
+.bridge .colony-summary {
+  border: 1px solid #ffffff20;
+  background: #1a2029;
+}
+.bridge .colony-summary h3 {
+  color: #eee8dd;
+  font-weight: 700;
+}
+.bridge .stationed-maiden {
+  border: 1px solid #ffffff20;
+  background: #161e28;
+}
+.bridge .stationed-maiden strong {
+  color: #eee5d1;
+  font-weight: 700;
+}
+.bridge .job {
+  background: #1b222d;
+  border: 1px solid #ffffff1b;
+  border-radius: 2px;
+}
+.bridge .job strong {
+  color: #d6bd88;
+}
+.bridge .settings-list h3 {
+  color: #ddd2bb;
+  border-color: #ffffff20;
+  font-weight: 700;
+}
+.bridge .settings-list :is(button, .file-button, .link-button) {
+  border-radius: 2px;
+}
+.bridge :is(.file-button, .link-button),
+.bridge details > summary,
+.bridge .settings-list > label:not(.file-button) {
+  border: 1px solid #ffffff26;
+  background: #1c232d;
+}
+.bridge .settings-list a {
+  color: #dcc695;
+  text-decoration-color: #d6bd8855;
+}
+.bridge .guide-steps > li {
+  background: #1a2029;
+  border: 1px solid #ffffff20;
+  border-radius: 2px;
+}
+.bridge .guide-steps > li::before {
+  color: #d6bd88;
+}
+.bridge .guide-steps strong {
+  color: #eee7da;
+  font-weight: 700;
+}
+.bridge .result-screen {
+  border: 0;
+  background:
+    linear-gradient(#0b101766, #0b1017ee),
+    var(--suite-sortie) 65% center / cover;
+}
+.bridge .result-screen > span {
+  color: #d6bd88;
+  text-shadow: none;
+}
+.bridge .result-screen p {
+  font-weight: 700;
+}
+.bridge .acquisition-screen {
+  border: 0;
+  background:
+    linear-gradient(100deg, #11161a22, #11161aa8),
+    var(--suite-operations) center / cover;
+}
+.bridge .acquisition-copy {
+  background: #11171eef;
+  border-color: #ffffff20;
+}
+.bridge .acquisition-copy h2 {
+  color: #f2e5ca;
+  font-weight: 700;
+}
+.story-scene .story-box {
+  border: 1px solid #ffffff28;
+  border-top: 2px solid #bda575;
+  border-radius: 2px;
+  background: #0e141df5;
+  box-shadow: none;
+}
+.story-scene .story-chapter {
+  border: 0;
+  border-left: 2px solid #bda575;
+  background: #111821df;
+}
+.story-scene .story-chapter h2 {
+  color: #eee7d8;
+  font-weight: 700;
+}
+.story-scene .story-speaker {
+  color: #d6bd88;
+  font-weight: 700;
+}
+.story-scene .story-line {
+  color: #d9e0e7;
+}
+.story-scene .story-controls button {
+  min-width: 44px;
+}
+.game-confirm-layer .game-confirm {
+  border: 0;
+  border-radius: 3px;
+  background: #171d26;
+  box-shadow: 0 20px 70px #0009;
+}
+.game-confirm-layer .game-confirm h2 {
+  color: #eee5d2;
+  font-weight: 700;
+}
+.game-confirm-layer .game-confirm button:not(.primary) {
+  border: 1px solid #ffffff26;
+  background: #282f3a;
+}
+.bridge .modal[data-panel="summon"] {
+  background: #10151c;
+}
+.bridge .modal[data-panel="summon"] .modal-heading {
+  background: #151a22;
+}
+.bridge .resonance-console {
+  background: #141a23;
+}
+.bridge .resonance-console-heading {
+  border-color: #ffffff20;
+}
+.bridge .resonance-console-heading h3 {
+  color: #eee6d4;
+  font-weight: 700;
+}
+.bridge .resonance-console-heading .eyebrow {
+  color: #b7a27b;
+}
+.bridge .resonance-slots {
+  background: #202731;
+  border: 1px solid #ffffff26;
+  color: #c9c1ae;
+}
+.bridge .resonance-slots i {
+  background: #d6bd88;
+}
+.bridge .resonance-visual-copy {
+  background: #0d141de8;
+  border: 0;
+  border-left: 2px solid #bda575;
+}
+.bridge .resonance-visual-copy h3 {
+  font-weight: 700;
+  color: #f1e9d9;
+}
+.bridge .resonance-resources > label {
+  border: 1px solid #ffffff26;
+  background: #1b232f;
+  box-shadow: none;
+}
+.bridge :is(input:not([type="range"]):not([type="file"]), select, textarea) {
+  border: 1px solid #ffffff2b;
+  border-radius: 2px;
+  background-color: #101720;
+  color: #e9e2d4;
+}
+.bridge .resonance-preset select {
+  background: #202833;
+  border: 1px solid #ffffff2b;
+  color: #ece4d4;
+}
+.bridge .resonance-resources input {
+  border: 0;
+  border-bottom: 1px solid #ffffff26;
+  background: #131a24;
+  color: #f0e5cd;
+}
+.bridge .resonance-batch {
+  border-color: #ffffff20;
+}
+.bridge .resonance-batch input {
+  border: 1px solid #ffffff26;
+  background: #202833;
+}
+.bridge .resonance-job-section {
+  background: #111821;
+  border-color: #ffffff20;
+}
+.bridge .modal[data-panel="summon"] .resonance-action-footer {
+  background: #10151d;
+  border-color: #ffffff1e;
+}
+.bridge .resonance-signals {
+  border-color: #ffffff20;
+}
+.bridge .resonance-signals .portrait {
+  border-color: #d6bd8855;
+  background: #202833;
+}
+.bridge .resonance-signals b {
+  color: #d6c9af;
+}
+@media (max-width: 800px) {
+  .bridge .modal[data-panel]:not([data-panel="summon"]),
+  .bridge .modal[data-panel="summon"] {
+    border: 0;
+    border-radius: 0;
+  }
+  .bridge .modal[data-panel] .modal-heading {
+    padding: calc(12px + env(safe-area-inset-top)) 16px 12px;
+  }
+  .bridge .modal[data-panel] .modal-heading h2 {
+    font-size: 21px;
+  }
+  .bridge .panel-masthead h3 {
+    font-size: 24px;
+  }
+  .panel-masthead {
+    min-height: 125px;
+    padding: 18px;
+  }
+  .bridge .character-grid .character-card {
+    padding: 13px;
+  }
+  .bridge .character-grid .character-info > h3 {
+    font-size: 22px;
+  }
+  .bridge .primary:not(.resonance-activate),
+  .bridge .resonance-activate.primary,
+  .story-scene .primary {
+    min-height: 48px;
+    padding: 12px 20px;
+    font-size: 13px;
+  }
+  .bridge .resonance-action-footer .resonance-activate {
+    min-height: 52px;
+  }
+  .bridge .resonance-visual-copy h3 {
+    font-size: 20px;
+  }
+  .bridge .wallet .resource {
+    padding: 4px;
+  }
+}

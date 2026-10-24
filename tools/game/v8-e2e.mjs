@@ -120,20 +120,22 @@ try {
       .click();
     assert.equal(await page.locator(".copy-picker button").count(), 2);
     // A secondary instance remains operable even though the roster has only one card.
+    await page.locator(".profile-instance-picker > summary").click();
     await page.locator(".copy-picker button").last().click();
-    await page.locator('.character-detail [data-action="team"]').click();
+    await page.locator('.dossier-actions [data-action="team"]').click();
     await page.waitForFunction(
       () =>
-        document.querySelector('.character-detail [data-action="team"]')
+        document.querySelector('.dossier-actions [data-action="team"]')
           .textContent === "移出編隊",
     );
     assert.equal((await record(page, "save:test")).team.length, 4);
-    await page.locator('.character-detail [data-action="team"]').click();
+    await page.locator('.dossier-actions [data-action="team"]').click();
     await page.waitForFunction(
       () =>
-        document.querySelector('.character-detail [data-action="team"]')
+        document.querySelector('.dossier-actions [data-action="team"]')
           .textContent === "加入編隊",
     );
+    await page.locator(".profile-instance-picker > summary").click();
     await page.locator(".copy-picker button").first().click();
     await page.locator('[data-action="open-feed"]').click();
     assert.equal(await page.locator(".feed-copy").count(), 1);
@@ -142,7 +144,7 @@ try {
     await close();
     await open("roster");
     await page
-      .locator('.modal-body > [data-action="panel"][data-id="formation"]')
+      .locator('.personnel-toolbar [data-action="panel"][data-id="formation"]')
       .click();
     assert.equal(
       await page.locator(".formation-slots .remove-member").count(),
@@ -168,6 +170,7 @@ try {
     assert.match(await page.locator(".modal-heading").innerText(), /領地總覽/);
     await close();
     await open("quests");
+    await page.locator('[data-action="journal-tab"][data-id="daily"]').click();
     assert.equal(await page.locator(".daily-quests article").count(), 7);
     const q = pack.quests.find((q) => q.condition === "leveled");
     const card = page.locator(`[data-daily-quest="${q.id}"]`);

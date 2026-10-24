@@ -1,0 +1,22 @@
+[
+  {
+    "path": "art/ui/interface-suite-v1/fonts/galaxy-tc-400.woff",
+    "sha256": "a39f965d04a75a34762c2c9dfa2f2f203626e06e7a0986f312ac80e24e7e06c7",
+    "weight": 400,
+    "source": "Noto Sans CJK TC Regular; installed noto-cjk TTC index 3",
+    "sourceSha256": "b76b0433203017ca80401b2ee0dd69350349871c4b19d504c34dbdd80541690a",
+    "license": "SIL Open Font License 1.1",
+    "glyphPolicy": "Current content and UI subset; missing future characters use system TC fallback",
+    "format": "WOFF1"
+  },
+  {
+    "path": "art/ui/interface-suite-v1/fonts/galaxy-tc-700.woff",
+    "sha256": "74e2da3010d7b4227d9ef953e77ca7f15f4b64a9ee7226816265a3852ceb98d9",
+    "weight": 700,
+    "source": "Noto Sans CJK TC Bold; installed noto-cjk TTC index 3",
+    "sourceSha256": "faa5f3656a78b2e2d450d27fe8382c778bc2b6bb5ea29c986664a6a435056ceb",
+    "license": "SIL Open Font License 1.1",
+    "glyphPolicy": "Current content and UI subset; missing future characters use system TC fallback",
+    "format": "WOFF1"
+  }
+]

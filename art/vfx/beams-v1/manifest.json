@@ -1,0 +1,54 @@
+{
+  "assetId": "presentation:plasma-body.v1",
+  "version": "1.0.0-candidate",
+  "reviewStatus": "candidate-after-user-rejected-flat-rectangle",
+  "master": "art/vfx/beams-v1/plasma-body-v1-candidate.png",
+  "masterSha256": "40bbe3d22d86338be29d68ae244ad886c39798be92cd98db8e65ab1e6c022d70",
+  "web": "art/vfx/beams-v1/plasma-body-v1-candidate.webp",
+  "webSha256": "0581ab1e647a7ab3a7c8d59ceacbfca153feaf0bc00073e870ee8b0c0ef94e29",
+  "width": 2172,
+  "height": 724,
+  "webDimensions": [
+    2172,
+    724
+  ],
+  "alpha": {
+    "mode": "straight",
+    "masterRange": [
+      0,
+      254
+    ],
+    "webRange": [
+      0,
+      254
+    ]
+  },
+  "colorSpace": "sRGB",
+  "pivot": {
+    "x": 0,
+    "y": 0.5,
+    "meaning": "beam start at Field.x/y + 16 world units; endpoint remains Field.reach"
+  },
+  "atlas": null,
+  "frames": null,
+  "runtimeTexture": "1536x512 shared GPU texture; 3MB RGBA, body/haze reuse it",
+  "blend": "ADD body depth1 / source glow3 / actual hit contact4; danger lines NORMAL20 above all VFX",
+  "source": {
+    "tool": "image_gen.imagegen",
+    "modelVersion": "not-exposed-by-tool",
+    "method": "New neutral hot plasma body with branching filaments, irregular feathered alpha and pale cyan accents; no UI/weapon/scene; master copied unchanged; same-size WebP encoding",
+    "originalSha256Matches": true,
+    "created": "2026-10-24"
+  },
+  "animation": {
+    "body": "width70% of declared beam width; same actual reach; small continuous intensity modulation using Combat.time",
+    "haze": "soft 110% envelope; reduced mode omitted",
+    "flow": "simulation-time-advection of fine streamers and particles",
+    "charge": "only pending beam actions with remaining <=0.4s",
+    "contact": "actual hit flashes whose positions lie inside an active opposite-side beam; cannot create damage",
+    "end": "fade in final0.15s while field is active; destroy when field removed",
+    "lowEffects": "one static body layer; hostile effective-width boundaries stay fully present; no haze/charge/contact/flow ornaments"
+  },
+  "logicBoundary": "renderer only; does not change Field, damage, scheduling, collision, unit HP or RNG",
+  "preview": "docs/art/ui-polish-v1/previews/skills/beam.webm"
+}

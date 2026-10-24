@@ -1,0 +1,870 @@
+.operations-page {
+  min-width: 0;
+}
+.ops-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 0 0 22px;
+  border-bottom: 1px solid #ffffff18;
+  margin-bottom: 22px;
+}
+.ops-summary .eyebrow {
+  font-size: 9px;
+  color: #8f7f61;
+}
+.bridge .operations-page .ops-summary h3 {
+  font-size: 25px;
+  color: #e5dfd3;
+  font-weight: 700;
+  letter-spacing: 0.035em;
+  margin: 7px 0;
+}
+.ops-summary p {
+  font-size: 12px;
+  color: #78899f;
+  margin: 0;
+}
+.ops-summary > div:first-child {
+  min-width: 0;
+  flex: 1;
+}
+.ops-metric {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex: none;
+  white-space: nowrap;
+}
+.ops-metric strong {
+  font-size: 36px;
+  color: #d6bd88;
+  font-weight: 400;
+}
+.ops-metric span {
+  font-size: 14px;
+  color: #607187;
+}
+.ops-section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin: 28px 0 15px;
+}
+.bridge .ops-section-title h3 {
+  margin: 0;
+  color: #d5c6a7;
+  font-size: 16px;
+  font-weight: 400;
+}
+.ops-section-title > span {
+  font-size: 10px;
+  color: #66788e;
+  letter-spacing: 0.08em;
+}
+.ops-note {
+  font-size: 11px;
+  color: #73859c;
+  margin: 17px 0;
+}
+.ops-empty {
+  padding: 30px 20px;
+  color: #75879f;
+  font-size: 12px;
+  text-align: center;
+}
+.formation-deck {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+}
+.bridge .operations-page .formation-slots,
+.formation-vacancies {
+  display: contents;
+}
+.bridge .operations-page .formation-slots > .formation-slot {
+  display: block;
+  position: relative;
+  padding: 0;
+  border: 1px solid #ffffff24;
+  background: #172230;
+  min-width: 0;
+  overflow: hidden;
+}
+.formation-index {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 2;
+  color: #e0cda5;
+  font-size: 13px;
+}
+.formation-leader {
+  position: absolute;
+  top: 10px;
+  left: 43px;
+  font-size: 9px;
+  color: #c9b486;
+  z-index: 2;
+}
+.bridge .operations-page .formation-slot .remove-member {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  z-index: 3;
+  font-size: 9px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 7px;
+  border: 0;
+  background: #111a2588;
+  color: #8996a9;
+}
+.bridge .operations-page .formation-portrait {
+  display: block;
+  width: 100%;
+  height: 190px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  overflow: hidden;
+  background: radial-gradient(ellipse, #3e526b55, #111d2b);
+}
+.formation-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transform: scale(1.45);
+  transform-origin: center 12%;
+}
+.formation-identity {
+  padding: 10px 11px 11px;
+  border-top: 1px solid #ffffff0c;
+  background: #111a25;
+}
+.formation-identity strong {
+  font-size: 13px;
+  display: block;
+  color: #e7e0d2;
+  line-height: 1.5;
+}
+.formation-identity small {
+  font-size: 9px;
+  color: #778ba5;
+}
+.formation-order {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid #ffffff0c;
+}
+.bridge .operations-page .formation-order button {
+  min-width: 0;
+  min-height: 44px;
+  font-size: 9px;
+  padding: 5px 2px;
+  border: 0;
+  background: #1d2b3b;
+  color: #91a1b7;
+}
+.bridge .operations-page .formation-order button + button {
+  border-left: 1px solid #ffffff12;
+}
+.formation-empty {
+  position: relative;
+  background: #131b25;
+  border: 1px dashed #ffffff22;
+  min-width: 0;
+  min-height: 285px;
+}
+.formation-empty > span {
+  position: absolute;
+  top: 11px;
+  left: 11px;
+  color: #45566c;
+  font-size: 13px;
+}
+.bridge .operations-page .formation-empty-add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  height: 100%;
+  min-height: 285px;
+  background: none;
+  border: 0;
+  color: #697d97;
+  padding: 14px;
+}
+.formation-empty-add b {
+  font-size: 28px;
+  font-weight: 400;
+}
+.formation-empty-add small {
+  font-size: 11px;
+}
+.reserve-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+.reserve-card {
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1fr);
+  gap: 12px;
+  padding: 10px;
+  background: #182432;
+  border: 1px solid #ffffff14;
+}
+.reserve-card > img {
+  width: 70px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center top;
+}
+.reserve-card strong {
+  display: block;
+  color: #d4c7ad;
+  font-size: 12px;
+  margin: 5px 0;
+}
+.reserve-card small {
+  display: block;
+  font-size: 9px;
+  color: #7287a1;
+  margin-bottom: 8px;
+}
+.bridge .operations-page .reserve-card button {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 8px;
+  font-size: 10px;
+}
+.research-summary {
+  position: relative;
+  isolation: isolate;
+  min-height: 112px;
+  padding: 20px 22px;
+  border: 0;
+  background: #152333;
+  overflow: hidden;
+}
+.research-summary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, #111a27f5 0%, #111a27c9 50%, #111a2740),
+    url("../../art/ui/interface-suite-v1/operations.webp") center 45% / cover;
+}
+.research-tree {
+  display: grid;
+  gap: 17px;
+}
+.research-node {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: 18px;
+}
+.research-node-marker {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 27px;
+}
+.research-node-marker::after {
+  content: "";
+  position: absolute;
+  top: 55px;
+  bottom: -43px;
+  width: 1px;
+  background: #59677a55;
+}
+.research-node:last-child .research-node-marker::after {
+  display: none;
+}
+.research-node-marker > span {
+  border: 1px solid #a6936b88;
+  color: #c8b17d;
+  font-size: 10px;
+  line-height: 26px;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  transform: rotate(0);
+  background: #192535;
+}
+.research-node.is-locked .research-node-marker > span {
+  border-color: #ffffff24;
+  color: #54677f;
+}
+.research-node-main {
+  padding: 20px 24px;
+  border-top: 1px solid #ffffff20;
+  background: #182331;
+}
+.research-node-heading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.research-node-art {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+}
+.ops-state {
+  display: inline-block;
+  font-size: 9px;
+  color: #c3ad7c;
+  letter-spacing: 0.055em;
+}
+.bridge .research-node h3 {
+  font-size: 21px;
+  color: #e6ddcb;
+  font-weight: 700;
+  margin: 4px 0;
+}
+.research-node-heading small {
+  font-size: 9px;
+  color: #71859e;
+}
+.research-node-main > p {
+  font-size: 12px;
+  color: #9babc0;
+  margin: 12px 0;
+}
+.research-node-main > .research-prerequisite {
+  font-size: 10px;
+  color: #6b7e98;
+  border-top: 1px solid #ffffff12;
+  padding-top: 10px;
+}
+.research-node-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding-top: 5px;
+}
+.bridge .research-node-action .costs {
+  margin: 0;
+  gap: 12px;
+}
+.bridge .research-node-action .cost {
+  font-size: 10px;
+}
+.bridge .operations-page .research-node-action > button {
+  min-width: 130px;
+  min-height: 44px;
+  font-size: 12px;
+}
+.research-node.is-complete .research-node-main {
+  border-top-color: #b49e6c;
+}
+.production-rail {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 25px;
+}
+.bridge .production-rail > .cost {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #172433;
+  padding: 14px 6px;
+  color: #d0bd96;
+  font-size: 12px;
+  border-bottom: 1px solid #ffffff14;
+}
+.bridge .production-rail .resource-icon {
+  width: 32px;
+  height: 32px;
+}
+.territory-list {
+  display: grid;
+  gap: 16px;
+}
+.territory-row {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr) 150px;
+  gap: 22px;
+  background: #182330;
+  border-top: 1px solid #ffffff1f;
+  padding: 22px;
+}
+.territory-world {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.territory-world > .entity-image {
+  width: 135px;
+  height: 135px;
+  object-fit: contain;
+}
+.territory-information .eyebrow {
+  font-size: 9px;
+  color: #6d839f;
+}
+.bridge .territory-information h3 {
+  font-size: 25px;
+  color: #e6ddca;
+  font-weight: 700;
+  margin: 7px 0;
+}
+.territory-information > p {
+  font-size: 12px;
+  color: #8c9eb6;
+}
+.bridge .territory-information .cost {
+  font-size: 11px;
+}
+.territory-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 11px;
+}
+.bridge .operations-page .territory-controls button {
+  min-height: 44px;
+  font-size: 12px;
+}
+.territory-row .stationed-maiden {
+  min-height: 0;
+  padding: 8px;
+  border: 0;
+  background: #101b29;
+  margin: 13px 0 0;
+}
+.territory-row .stationed-maiden > .portrait.large {
+  width: 50px;
+  height: 64px;
+  object-fit: cover;
+  object-position: center top;
+}
+.bridge .territory-row .stationed-maiden strong {
+  font-size: 12px;
+}
+.territory-row .stationed-maiden .eyebrow {
+  font-size: 7px;
+}
+.territory-row .stationed-maiden small {
+  font-size: 9px;
+}
+.territory-row .stationed-maiden button {
+  min-height: 44px;
+  padding: 7px;
+  font-size: 10px;
+}
+.colony-control-header {
+  display: grid;
+  grid-template-columns: 145px minmax(0, 1fr);
+  gap: 25px;
+  align-items: center;
+  padding: 22px 0 26px;
+  border-bottom: 1px solid #ffffff18;
+}
+.colony-control-header > .entity-image {
+  width: 145px;
+  height: 145px;
+  object-fit: contain;
+}
+.colony-control-header .eyebrow {
+  font-size: 9px;
+  color: #7a8da6;
+}
+.bridge .colony-control-header h3 {
+  font-size: 27px;
+  color: #e8dfcf;
+  font-weight: 700;
+  margin: 7px 0;
+}
+.colony-control-header p {
+  font-size: 10px;
+  color: #7d91ab;
+  margin: 12px 0 5px;
+}
+.bridge .colony-control-header .costs {
+  margin: 0;
+}
+.bridge .colony-control-header .cost {
+  font-size: 11px;
+}
+.facility-list {
+  display: grid;
+  gap: 13px;
+}
+.facility-row {
+  display: grid;
+  grid-template-columns: 85px minmax(0, 1fr) 140px;
+  gap: 20px;
+  padding: 20px;
+  background: #182331;
+  border-top: 1px solid #ffffff1c;
+  align-items: center;
+}
+.facility-row > .entity-image {
+  width: 85px;
+  height: 95px;
+  object-fit: contain;
+}
+.facility-info .eyebrow {
+  font-size: 8px;
+  color: #9d8b65;
+}
+.bridge .facility-info h3 {
+  font-size: 20px;
+  color: #e3d7be;
+  font-weight: 700;
+  margin: 6px 0;
+}
+.facility-info p {
+  font-size: 11px;
+  color: #8b9fb9;
+  margin: 7px 0;
+}
+.facility-info > small {
+  font-size: 9px;
+  color: #596e88;
+}
+.bridge .facility-info .costs {
+  margin: 8px 0 0;
+}
+.bridge .facility-info .cost {
+  font-size: 10px;
+}
+.bridge .operations-page .facility-row > button {
+  min-height: 44px;
+  font-size: 12px;
+}
+.station-roster {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+.station-candidate {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #182636;
+  padding: 9px;
+}
+.station-candidate > img {
+  width: 42px;
+  height: 55px;
+  object-fit: cover;
+  object-position: center top;
+}
+.station-candidate > span {
+  flex: 1;
+  min-width: 0;
+}
+.station-candidate strong {
+  display: block;
+  font-size: 12px;
+  color: #d9ccb0;
+}
+.station-candidate small {
+  display: block;
+  color: #6e85a2;
+  font-size: 9px;
+}
+.bridge .operations-page .station-candidate button {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 7px;
+  font-size: 10px;
+}
+@media (max-width: 1100px) and (min-width: 801px) {
+  .formation-deck {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .reserve-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .territory-row {
+    grid-template-columns: 110px minmax(0, 1fr);
+  }
+  .territory-controls {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .station-roster {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 800px) {
+  .ops-summary {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    gap: 14px;
+  }
+  .bridge .operations-page .ops-summary h3 {
+    font-size: 22px;
+  }
+  .ops-summary p {
+    font-size: 10px;
+  }
+  .ops-metric strong {
+    font-size: 30px;
+  }
+  .ops-metric span {
+    font-size: 11px;
+  }
+  .formation-deck {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .bridge .operations-page .formation-portrait {
+    height: 135px;
+  }
+  .formation-index {
+    font-size: 10px;
+    top: 9px;
+    left: 7px;
+  }
+  .formation-leader {
+    display: none;
+  }
+  .bridge .operations-page .formation-slot .remove-member {
+    min-width: 44px;
+    min-height: 44px;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    font-size: 8px;
+  }
+  .formation-identity {
+    padding: 8px 6px;
+  }
+  .formation-identity strong {
+    font-size: 12px;
+  }
+  .formation-identity small {
+    font-size: 8px;
+  }
+  .bridge .operations-page .formation-order button {
+    font-size: 8px;
+    padding: 6px 0;
+    min-width: 44px;
+  }
+  .formation-empty,
+  .bridge .operations-page .formation-empty-add {
+    min-height: 230px;
+  }
+  .formation-empty-add small {
+    font-size: 9px;
+  }
+  .ops-note {
+    font-size: 10px;
+    line-height: 1.8;
+  }
+  .reserve-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .reserve-card {
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 8px;
+    padding: 8px;
+  }
+  .reserve-card > img {
+    width: 48px;
+    height: 83px;
+  }
+  .reserve-card strong {
+    font-size: 11px;
+  }
+  .bridge .operations-page .reserve-card button {
+    min-height: 44px;
+    font-size: 9px;
+    padding: 7px 5px;
+  }
+  .research-summary {
+    padding: 17px;
+    min-height: 103px;
+  }
+  .research-node {
+    grid-template-columns: 25px minmax(0, 1fr);
+    gap: 10px;
+  }
+  .research-node-marker > span {
+    width: 24px;
+    height: 24px;
+    line-height: 22px;
+    font-size: 8px;
+  }
+  .research-node-main {
+    padding: 15px;
+  }
+  .research-node-heading {
+    gap: 12px;
+  }
+  .research-node-art {
+    width: 55px;
+    height: 60px;
+  }
+  .bridge .research-node h3 {
+    font-size: 18px;
+  }
+  .research-node-main > p {
+    font-size: 11px;
+  }
+  .research-node-action {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 13px;
+  }
+  .bridge .research-node-action .costs {
+    gap: 8px;
+  }
+  .bridge .research-node-action .cost {
+    font-size: 9px;
+  }
+  .bridge .operations-page .research-node-action > button {
+    min-width: 0;
+    width: 100%;
+    min-height: 44px;
+  }
+  .production-rail {
+    gap: 6px;
+  }
+  .bridge .production-rail > .cost {
+    font-size: 10px;
+    padding: 12px 3px;
+  }
+  .bridge .production-rail .resource-icon {
+    width: 27px;
+    height: 27px;
+  }
+  .territory-row {
+    grid-template-columns: 80px minmax(0, 1fr);
+    gap: 14px;
+    padding: 17px;
+  }
+  .territory-world > .entity-image {
+    width: 80px;
+    height: 90px;
+  }
+  .territory-world .ops-state {
+    font-size: 7px;
+  }
+  .bridge .territory-information h3 {
+    font-size: 21px;
+  }
+  .territory-information > p {
+    font-size: 10px;
+  }
+  .bridge .territory-information .cost {
+    font-size: 9px;
+  }
+  .territory-controls {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+  }
+  .bridge .operations-page .territory-controls button {
+    font-size: 11px;
+    min-height: 44px;
+  }
+  .territory-row .stationed-maiden {
+    display: grid;
+    grid-template-columns: 35px minmax(0, 1fr);
+    gap: 8px;
+  }
+  .territory-row .stationed-maiden > .portrait.large {
+    width: 35px;
+    height: 50px;
+  }
+  .bridge .territory-row .stationed-maiden strong {
+    font-size: 10px;
+  }
+  .territory-row .stationed-maiden small {
+    font-size: 8px;
+  }
+  .territory-row .stationed-maiden .eyebrow {
+    display: none;
+  }
+  .colony-control-header {
+    grid-template-columns: 85px minmax(0, 1fr);
+    gap: 17px;
+    padding: 20px 0;
+  }
+  .colony-control-header > .entity-image {
+    width: 85px;
+    height: 100px;
+  }
+  .bridge .colony-control-header h3 {
+    font-size: 23px;
+  }
+  .bridge .colony-control-header .cost {
+    font-size: 9px;
+  }
+  .facility-row {
+    grid-template-columns: 60px minmax(0, 1fr);
+    padding: 15px;
+    gap: 13px;
+  }
+  .facility-row > .entity-image {
+    width: 60px;
+    height: 75px;
+  }
+  .bridge .facility-info h3 {
+    font-size: 18px;
+  }
+  .facility-info p {
+    font-size: 10px;
+  }
+  .bridge .facility-info .cost {
+    font-size: 9px;
+  }
+  .bridge .operations-page .facility-row > button {
+    grid-column: 1/-1;
+    width: 100%;
+    min-height: 44px;
+  }
+  .station-roster {
+    grid-template-columns: 1fr;
+  }
+  .station-candidate {
+    padding: 10px 13px;
+  }
+}
+@media (max-width: 359px) {
+  .formation-deck {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .reserve-grid {
+    grid-template-columns: 1fr;
+  }
+  .production-rail {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .territory-row {
+    grid-template-columns: 65px minmax(0, 1fr);
+    padding: 13px;
+    gap: 10px;
+  }
+  .territory-world > .entity-image {
+    width: 65px;
+    height: 85px;
+  }
+}
+.research-node-marker::after {
+  display: none;
+}
+.research-node.has-dependent .research-node-marker::after {
+  display: block;
+}

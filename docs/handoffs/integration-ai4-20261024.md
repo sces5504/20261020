@@ -36,3 +36,9 @@
 - 修正：測試改看`.operator-art img`，並把「transform必須none」改為「不可縮放／旋轉／翻轉」，因PR #24以translateX(-50%)置中。本機重跑content-integration桌機／觸控PASS；之前未跑的skills、integration-v8、release:ready也在本機各跑一次，全部通過。
 - 第二輪：PR #26合併為`c714bb3`，Pages release 40081875663在test:world「管理面板暫停挑戰」失敗（0.13%→0.14%）；content-integration與skills已在CI通過。根因：暫停即時生效，但HUD戰況文字由250ms UI計時器刷新，測試開面板當下讀到暫停前的舊畫面。測試改為等一次刷新（300ms）再取樣，仍要求500ms內不變；本機test:world桌機／觸控PASS。
 - 第三輪：PR #27合併為`6bd8896`，Pages release 40083233135中world、integration-v8、story皆通過，test:chronicle在等待自動接續的1-02時逾時：結算面板較晚彈出時，舊測試只檢查一次就略過，面板擋住接續（設計上有覆蓋層時不插入劇情）。改為持續關閉晚出現的結算／取得面板直到劇情出現；本機chronicle桌機／觸控PASS。剩release:ready已於本機通過。
+- **最終發布**：PR #28合併為main `c0dec4c117e006933a76df1e09da5f6c30cd9aaa`；Pages release 40084530908 build／deploy成功（完整release門檻一次跑完，未用接續）。公開`version.json` commit＝c0dec4c、core 0.9.0。公開站以Chromium 1440與390 DPR2觸控實測：主線卡「主線 0/24 序章·指揮官／開始」、挑戰五分頁（類星體母艦／戰艦討伐／委託任務／高難星域／劇情戰役），零pageerror。非真機；commercial仍未驗收。
+
+## 下一步
+
+1. 共鳴艙UI代表待使用者確認後再批量延伸其他頁。
+2. 繼續打磨（使用者第6項）：依實玩回饋逐項處理；Doradus／Mucephei／Sargas中文名仍待核對。

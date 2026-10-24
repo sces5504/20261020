@@ -130,12 +130,16 @@ try {
         .map((c) => fleet.roster.find((o) => o.definition === c.id).id);
       await install(page, fleet);
       await page.locator(".squad-card").first().waitFor();
-      assert.equal(
-        await page
-          .locator(".squad-card .avatar-cropped img")
-          .first()
-          .evaluate((im) => getComputedStyle(im).transform),
-        "none",
+      // Operator art may be centred by translation, but never scaled, rotated or flipped.
+      const transform = await page
+        .locator(".squad-card .operator-art img")
+        .first()
+        .evaluate((im) => getComputedStyle(im).transform);
+      const m = transform.match(/^matrix\(([^,]+), ([^,]+), ([^,]+), ([^,]+),/);
+      assert.ok(
+        transform === "none" ||
+          (m && +m[1] === 1 && +m[2] === 0 && +m[3] === 0 && +m[4] === 1),
+        `operator art undistorted: ${transform}`,
       );
       await page.screenshot({
         path: `${output}/new-fleet-${offset}-${width}.png`,

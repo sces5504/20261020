@@ -1693,3 +1693,233 @@
     animation: none;
   }
 }
+/*
+ * Phone layout after the original: the star map fills the screen between a slim
+ * resource bar and the bottom menu; quest trackers float top-left, the formation
+ * is a vertical portrait strip on the right with map tools beneath it.
+ */
+@media (max-width: 760px) {
+  main.bridge.bridge {
+    --bar: calc(env(safe-area-inset-top, 0px) + 46px);
+    --nav: calc(env(safe-area-inset-bottom, 0px) + 58px);
+    --strip: 62px;
+  }
+  main.bridge.bridge .topbar {
+    position: fixed;
+    inset: 0 0 auto 0;
+    height: var(--bar);
+    min-height: 0;
+    padding: env(safe-area-inset-top, 0px) 6px 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    z-index: 12;
+  }
+  main.bridge.bridge .brand {
+    display: none;
+  }
+  main.bridge.bridge .wallet {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2px;
+    margin: 0;
+  }
+  main.bridge.bridge .wallet .resource {
+    min-width: 0;
+    padding: 2px 4px;
+    gap: 3px;
+    border: 0;
+  }
+  main.bridge.bridge .wallet .resource small,
+  main.bridge.bridge .wallet .resource em {
+    display: none;
+  }
+  main.bridge.bridge .wallet .resource strong {
+    font-size: 13px;
+  }
+  main.bridge.bridge .wallet .resource img,
+  main.bridge.bridge .wallet .resource svg {
+    width: 22px;
+    height: 22px;
+  }
+  main.bridge.bridge .top-actions .icon-button {
+    min-height: 36px;
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+  main.bridge.bridge .viewport {
+    position: fixed;
+    inset: var(--bar) 0 var(--nav) 0;
+    margin: 0;
+    border: 0;
+    height: auto;
+    min-height: 0;
+    z-index: 1;
+  }
+  main.bridge.bridge .sector-heading {
+    position: fixed;
+    top: calc(var(--bar) + 6px);
+    left: 6px;
+    width: min(54vw, 260px);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+    background: none;
+    z-index: 6;
+    pointer-events: none;
+  }
+  main.bridge.bridge .sector-heading > * {
+    pointer-events: auto;
+  }
+  main.bridge.bridge .sector-heading > div:not(.skill-splash):not(.mainline),
+  main.bridge.bridge .sector-status {
+    display: none;
+  }
+  main.bridge.bridge .mainline {
+    order: 0;
+    flex: none;
+  }
+  main.bridge.bridge .mainline-card {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 6px 8px;
+    background: #0a1522d9;
+    border: 1px solid #a3c2d333;
+    border-left: 3px solid #e2c47f;
+  }
+  main.bridge.bridge .mainline-actions {
+    grid-column: 1;
+    grid-row: auto;
+    margin-top: 4px;
+  }
+  main.bridge.bridge .mainline-actions button {
+    width: 100%;
+    min-height: 36px;
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+  main.bridge.bridge .journal-shortcut {
+    order: 1;
+    min-height: 36px;
+    padding: 4px 8px;
+    justify-content: flex-start;
+    background: #0a1522d9;
+    border: 1px solid #a3c2d333;
+    border-left: 3px solid #7fb9c9;
+    font-size: 11px;
+  }
+  main.bridge.bridge .flight-deck {
+    position: static;
+    padding: 0;
+    background: none;
+    border: 0;
+  }
+  main.bridge.bridge .squad-heading {
+    display: none;
+  }
+  main.bridge.bridge .flight-deck .squad,
+  main.bridge.bridge .flight-deck .squad:has(> .operator-card:nth-child(4)) {
+    position: fixed;
+    top: calc(var(--bar) + 6px);
+    right: 4px;
+    width: var(--strip);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    grid-template-columns: none;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+    z-index: 6;
+  }
+  main.bridge.bridge .flight-deck .squad > .operator-card,
+  main.bridge.bridge .flight-deck .squad:has(> .operator-card:nth-child(4)) > .operator-card {
+    width: var(--strip);
+    height: var(--strip);
+    min-height: 0;
+    flex: none;
+  }
+  main.bridge.bridge .flight-deck .squad .operator-copy {
+    padding: 0 3px 3px;
+  }
+  main.bridge.bridge .flight-deck .squad .operator-copy > :not(.hp-bar) {
+    display: none;
+  }
+  main.bridge.bridge .flight-deck .squad .operator-glyph,
+  main.bridge.bridge .flight-deck .squad .operator-level {
+    display: none;
+  }
+  main.bridge.bridge .flight-deck .squad .operator-slot {
+    font-size: 9px;
+  }
+  main.bridge.bridge .flight-deck .squad .operator-cd-ring {
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+  main.bridge.bridge .deck-nav {
+    position: fixed;
+    inset: auto 0 0 0;
+    height: var(--nav);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    margin: 0;
+    z-index: 12;
+  }
+  main.bridge.bridge .battle-tools {
+    position: fixed;
+    inset: auto;
+    top: calc(var(--bar) + 6px + 6 * (var(--strip) + 4px) + 6px);
+    right: 4px;
+    width: var(--strip);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-width: none;
+    transform: none;
+    padding: 0;
+    background: none;
+    border: 0;
+    z-index: 6;
+  }
+  main.bridge.bridge .battle-tools button {
+    min-height: 40px;
+    padding: 2px;
+    font-size: 10px;
+    line-height: 1.15;
+    border-radius: 6px;
+    background: #0a1522d9;
+    border: 1px solid #a3c2d344;
+    white-space: normal;
+  }
+  main.bridge.bridge .battle-tools #wave-clock {
+    position: fixed;
+    top: auto;
+    bottom: calc(var(--nav) + 8px);
+    left: 8px;
+    transform: none;
+    padding: 2px 8px;
+    background: #0a1522cc;
+    font-size: 10px;
+    white-space: nowrap;
+  }
+  main.bridge.bridge .map-caption {
+    display: none;
+  }
+  main.bridge.bridge .toast {
+    top: auto;
+    bottom: calc(var(--nav) + 48px);
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    max-width: calc(100vw - 24px);
+    z-index: 14;
+  }
+  main.bridge.bridge .target-hud {
+    top: 6px;
+    left: calc(min(54vw, 260px) + 12px);
+    right: calc(var(--strip) + 10px);
+    width: auto;
+  }
+}

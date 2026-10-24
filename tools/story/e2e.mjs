@@ -81,20 +81,30 @@ try {
       .locator('[data-action="flow-open"][data-id="fixture:quest"]')
       .click();
     await page.locator('[data-action="flow-skip"]').click();
-    await page
-      .getByText("前往劇情戰場；勝利後接續。", { exact: true })
-      .waitFor();
+    // A battle step closes the dialogue; the fleet is already at the field, so the
+    // tracker offers the sortie (fields far away are reached by flying, never teleporting).
+    const sortie = page.locator(".mainline-card button", { hasText: "出擊" });
+    await sortie.waitFor();
     let s = await record(page, "save:test");
     assert.equal(s.story.counters["event:fixture:initialized"], 1);
     const count = s.roster.length;
     await page.reload();
-    await page
-      .getByText("前往劇情戰場；勝利後接續。", { exact: true })
-      .waitFor();
+    await sortie.waitFor();
     assert.equal((await record(page, "save:test")).roster.length, count);
-    await page.locator('[data-action="flow-next"]').click();
+    await page.evaluate(() => {
+      window.__sceneInBattle = false;
+      new MutationObserver(() => {
+        if (document.querySelector(".bridge.in-battle .story-scene"))
+          window.__sceneInBattle = true;
+      }).observe(document.body, { subtree: true, childList: true });
+    });
+    await sortie.click();
     try {
-      await page.getByText("測試：戰中通訊。", { exact: true }).waitFor();
+      // In-battle lines are a non-blocking radio feed, never a paused dialogue.
+      await page
+        .locator(".story-radio")
+        .getByText("測試：戰中通訊。", { exact: true })
+        .waitFor();
     } catch (e) {
       await page.screenshot({ path: ".artifacts/story/failure.png" });
       console.log(
@@ -105,20 +115,31 @@ try {
       );
       throw e;
     }
-    await page.locator('[data-action="flow-next"]').click();
-    await page.locator(".camera-view").waitFor();
     await page.screenshot({
-      path: `.artifacts/story/${mobile ? "mobile" : "desktop"}-camera.png`,
+      path: `.artifacts/story/${mobile ? "mobile" : "desktop"}-radio.png`,
     });
-    await page.waitForTimeout(160);
-    await page.locator('[data-action="flow-next"]').click();
-    await page.waitForTimeout(160);
-    await page.locator('[data-action="flow-next"]').click();
-    await page.waitForTimeout(160);
-    await page.locator('[data-action="flow-next"]').click();
+    for (
+      let i = 0;
+      i < 120 &&
+      !(await page
+        .getByText("測試：戰後對話，領獎獨立。", { exact: true })
+        .count());
+      i++
+    ) {
+      const close = page.locator(
+        '.result-screen [data-action="close"]:visible, #overlay [data-action="close"]:visible',
+      );
+      if (await close.count()) await close.first().click().catch(() => {});
+      await page.waitForTimeout(500);
+    }
     await page
       .getByText("測試：戰後對話，領獎獨立。", { exact: true })
       .waitFor();
+    assert.equal(
+      await page.evaluate(() => window.__sceneInBattle),
+      false,
+      "no dialogue scene opens during combat",
+    );
     await page.locator('[data-action="flow-skip"]').click();
     await page.waitForFunction(
       () => !document.querySelector('[data-action="flow-next"]'),

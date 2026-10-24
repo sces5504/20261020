@@ -45,6 +45,11 @@ export function mountStoryPlayer(
       ? `<img src="${esc(asset.src)}" alt="${esc(a?.name ?? id)}">`
       : "";
   };
+  // Hiding is tied to one step: when the cursor moves on (battle won, goal resumed) the scene returns.
+  const mark = () => {
+    const session = g.save.story.session;
+    return session ? `${session.quest}:${session.cursor}` : "";
+  };
   const sessionStep = () => {
     const session = g.save.story.session;
     return session
@@ -144,18 +149,17 @@ export function mountStoryPlayer(
           return;
         }
         resume = false;
-        hiddenSession = session.quest;
+        hiddenSession = mark();
       }
       // Battles start from the tracker once the fleet has flown to the field.
-      if (step?.kind === "encounter") hiddenSession = session.quest;
+      if (step?.kind === "encounter") hiddenSession = mark();
     }
     if (
       !replay &&
       (!session ||
         session.waiting ||
         g.combat ||
-        g.report ||
-        hiddenSession === session.quest)
+        hiddenSession === mark())
     ) {
       closeScene();
       return;
@@ -353,15 +357,12 @@ export function mountStoryPlayer(
       await next(action === "flow-skip");
     if (action === "flow-close") {
       replay = null;
-      hiddenSession = g.save.story.session?.quest ?? "";
+      hiddenSession = mark();
       closeScene();
     }
   };
   root.addEventListener("click", click, true);
-  const timer = window.setInterval(() => {
-    if (g.save.story.session?.quest !== hiddenSession) hiddenSession = "";
-    draw();
-  }, 150);
+  const timer = window.setInterval(draw, 150);
   draw();
   return () => {
     disposed = true;

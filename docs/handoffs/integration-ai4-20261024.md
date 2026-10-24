@@ -20,7 +20,9 @@
 
 - tsc／vite build通過。新增`tests/skill-research.test.ts`、`tests/mainline.test.ts`通過。
 - 審閱截圖腳本（非發布門檻）：`tools/game/mainline-preview.mts`、`challenge-preview.mts`、`backdrop-preview.mts`，桌機1440與觸控390 DPR2，零pageerror。
-- 其餘結果見本檔末段與PR描述。本機Node 22需用`--experimental-test-isolation=none`代替CI Node 24的`--test-isolation=none`。
+- 單元測試129項（Node 22以`--experimental-test-isolation=none`代替CI Node 24旗標）：首輪127過、2項舊檔往返因`skillLevel`預設補值失敗→改為選填後該兩檔＋新測試12/12通過。
+- 受影響瀏覽器流程（本機實跑）：test:story通過；test:chronicle首輪因1-01完成後自動接續1-02擋住導覽而失敗→測試改為斷言自動接續後按「返回航行」，桌機／手機PASS；test:polish通過；test:world首輪兩項失敗：(a)開新航跡後存檔座標為舊航跡x=1200——既有競態，checkpoint在replaceSave寫入期間以呼叫當下座標排隊，已改為執行時讀取；(b)手機六人技能卡58px（PR #24單排六張、6–7px字）——改為三欄兩列120px。修正後桌機／手機PASS。
+- 其餘release項目（e2e、playtest、exploration、refinement、content-integration、skills、integration-v8、release:ready）未在本機重跑，交由合併後Pages完整發布門檻；未跑不記為通過。未重跑671場世界戰鬥（戰鬥／技能資料未變；技能研究僅在玩家升級後生效，預設Lv1與既有證據一致）。
 
 ## 後續
 

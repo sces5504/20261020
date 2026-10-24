@@ -42,7 +42,9 @@ try{
   // No teleport: follow the tracker's own route/navigation buttons until it offers the sortie.
   for(let i=0;i<40;i++){
    const card=page.locator('.mainline-card');const action=card.locator('button');
-   if((await action.innerText().catch(()=>'')).includes('出擊'))break;
+   // En-route contacts now engage on their own; retreat so the story sortie can open.
+   if(await page.locator('[data-action="retreat"]:visible').count()){await page.locator('[data-action="retreat"]').click().catch(()=>{});const ok=page.locator('[data-answer="yes"]');await ok.waitFor({timeout:3000}).catch(()=>{});if(await ok.count())await ok.click().catch(()=>{});await page.waitForTimeout(1500);continue;}
+   if((await action.innerText().catch(()=>'')).includes('出擊')&&await action.isEnabled().catch(()=>false))break;
    if(await action.count())await action.click().catch(()=>{});
    const yes=page.locator('[data-answer="yes"]');if(await yes.count())await yes.click().catch(()=>{});
    await page.waitForTimeout(1500);

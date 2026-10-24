@@ -223,6 +223,8 @@ export type MainlineState = {
   status: "start" | "dialogue" | "await" | "encounter" | "locked" | "done";
   condition?: Condition;
   planet?: string;
+  /** An encounter whose result is already on record continues without refighting. */
+  settled?: boolean;
 };
 /** Original QuestS-style single main thread: chapter nodes in pack order. */
 export function mainlineQuests(p: Pack) {
@@ -241,7 +243,12 @@ export function mainlineState(p: Pack, s: Save): MainlineState | undefined {
       if (step?.kind === "await")
         return { ...base, status: "await", condition: step.condition };
       if (step?.kind === "encounter")
-        return { ...base, status: "encounter", planet: step.planet };
+        return {
+          ...base,
+          status: "encounter",
+          planet: step.planet,
+          settled: !!step.resumeIf && conditionMet(s, step.resumeIf),
+        };
       return { ...base, status: "dialogue" };
     }
   }

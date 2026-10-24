@@ -9,7 +9,7 @@
         3
       ],
       "victory": true,
-      "seconds": 7.8,
+      "seconds": 7.98,
       "wallet": {
         "m1:crystal": 150,
         "m1:gas": 140,
@@ -25,12 +25,12 @@
         4
       ],
       "victory": true,
-      "seconds": 2.4,
+      "seconds": 2.45,
       "wallet": {
-        "m1:crystal": 156,
-        "m1:gas": 146,
-        "m1:metal": 216,
-        "m1:ether": 126
+        "m1:crystal": 166,
+        "m1:gas": 156,
+        "m1:metal": 226,
+        "m1:ether": 136
       }
     },
     {
@@ -121,7 +121,7 @@
         6
       ],
       "victory": true,
-      "seconds": 8.72,
+      "seconds": 8.15,
       "wallet": {
         "m1:crystal": 128,
         "m1:gas": 118,
@@ -139,10 +139,10 @@
       "victory": true,
       "seconds": 7.42,
       "wallet": {
-        "m1:crystal": 146,
-        "m1:gas": 136,
-        "m1:metal": 206,
-        "m1:ether": 116
+        "m1:crystal": 136,
+        "m1:gas": 126,
+        "m1:metal": 196,
+        "m1:ether": 106
       }
     },
     {
@@ -155,10 +155,10 @@
       "victory": true,
       "seconds": 10.38,
       "wallet": {
-        "m1:crystal": 174,
-        "m1:gas": 164,
-        "m1:metal": 234,
-        "m1:ether": 144
+        "m1:crystal": 164,
+        "m1:gas": 154,
+        "m1:metal": 224,
+        "m1:ether": 134
       }
     },
     {
@@ -171,10 +171,10 @@
       "victory": true,
       "seconds": 16.1,
       "wallet": {
-        "m1:crystal": 154,
-        "m1:gas": 144,
-        "m1:metal": 214,
-        "m1:ether": 124
+        "m1:crystal": 144,
+        "m1:gas": 134,
+        "m1:metal": 204,
+        "m1:ether": 114
       }
     },
     {
@@ -185,12 +185,12 @@
         7
       ],
       "victory": true,
-      "seconds": 11.17,
+      "seconds": 13.63,
       "wallet": {
-        "m1:crystal": 150,
-        "m1:gas": 140,
-        "m1:metal": 210,
-        "m1:ether": 120
+        "m1:crystal": 140,
+        "m1:gas": 130,
+        "m1:metal": 200,
+        "m1:ether": 110
       }
     },
     {
@@ -203,10 +203,10 @@
       "victory": true,
       "seconds": 24.02,
       "wallet": {
-        "m1:crystal": 130,
-        "m1:gas": 120,
-        "m1:metal": 190,
-        "m1:ether": 100
+        "m1:crystal": 120,
+        "m1:gas": 110,
+        "m1:metal": 180,
+        "m1:ether": 90
       }
     },
     {
@@ -219,10 +219,10 @@
       "victory": true,
       "seconds": 11.38,
       "wallet": {
-        "m1:crystal": 136,
-        "m1:gas": 126,
-        "m1:metal": 196,
-        "m1:ether": 106
+        "m1:crystal": 126,
+        "m1:gas": 116,
+        "m1:metal": 186,
+        "m1:ether": 96
       }
     },
     {
@@ -235,10 +235,10 @@
       "victory": true,
       "seconds": 19.3,
       "wallet": {
-        "m1:crystal": 116,
-        "m1:gas": 106,
-        "m1:metal": 176,
-        "m1:ether": 86
+        "m1:crystal": 106,
+        "m1:gas": 96,
+        "m1:metal": 166,
+        "m1:ether": 76
       }
     },
     {
@@ -251,10 +251,10 @@
       "victory": true,
       "seconds": 25.35,
       "wallet": {
-        "m1:crystal": 122,
-        "m1:gas": 112,
-        "m1:metal": 182,
-        "m1:ether": 92
+        "m1:crystal": 112,
+        "m1:gas": 102,
+        "m1:metal": 172,
+        "m1:ether": 82
       }
     },
     {
@@ -267,10 +267,10 @@
       "victory": true,
       "seconds": 16.1,
       "wallet": {
-        "m1:crystal": 170,
-        "m1:gas": 160,
-        "m1:metal": 230,
-        "m1:ether": 140
+        "m1:crystal": 160,
+        "m1:gas": 150,
+        "m1:metal": 220,
+        "m1:ether": 130
       }
     },
     {
@@ -283,26 +283,26 @@
       "victory": true,
       "seconds": 20,
       "wallet": {
-        "m1:crystal": 194,
-        "m1:gas": 184,
-        "m1:metal": 254,
-        "m1:ether": 164
+        "m1:crystal": 184,
+        "m1:gas": 174,
+        "m1:metal": 244,
+        "m1:ether": 154
       }
     },
     {
       "id": "chronicle:encounter.gliee",
       "levels": [
         10,
-        10,
+        9,
         9
       ],
       "victory": true,
       "seconds": 15.87,
       "wallet": {
-        "m1:crystal": 98,
-        "m1:gas": 88,
-        "m1:metal": 158,
-        "m1:ether": 68
+        "m1:crystal": 196,
+        "m1:gas": 186,
+        "m1:metal": 256,
+        "m1:ether": 166
       }
     },
     {
@@ -315,10 +315,10 @@
       "victory": true,
       "seconds": 32.03,
       "wallet": {
-        "m1:crystal": 130,
-        "m1:gas": 120,
-        "m1:metal": 190,
-        "m1:ether": 100
+        "m1:crystal": 120,
+        "m1:gas": 110,
+        "m1:metal": 180,
+        "m1:ether": 90
       }
     },
     {
@@ -329,12 +329,12 @@
         10
       ],
       "victory": true,
-      "seconds": 39.48,
+      "seconds": 37.28,
       "wallet": {
-        "m1:crystal": 130,
-        "m1:gas": 120,
-        "m1:metal": 190,
-        "m1:ether": 100
+        "m1:crystal": 120,
+        "m1:gas": 110,
+        "m1:metal": 180,
+        "m1:ether": 90
       }
     },
     {
@@ -347,10 +347,10 @@
       "victory": true,
       "seconds": 21.78,
       "wallet": {
-        "m1:crystal": 160,
-        "m1:gas": 150,
-        "m1:metal": 220,
-        "m1:ether": 130
+        "m1:crystal": 150,
+        "m1:gas": 140,
+        "m1:metal": 210,
+        "m1:ether": 120
       }
     },
     {
@@ -363,10 +363,10 @@
       "victory": true,
       "seconds": 25.22,
       "wallet": {
-        "m1:crystal": 130,
-        "m1:gas": 120,
-        "m1:metal": 190,
-        "m1:ether": 100
+        "m1:crystal": 120,
+        "m1:gas": 110,
+        "m1:metal": 180,
+        "m1:ether": 90
       }
     },
     {
@@ -379,10 +379,10 @@
       "victory": true,
       "seconds": 25.55,
       "wallet": {
-        "m1:crystal": 100,
-        "m1:gas": 90,
-        "m1:metal": 160,
-        "m1:ether": 70
+        "m1:crystal": 90,
+        "m1:gas": 80,
+        "m1:metal": 150,
+        "m1:ether": 60
       }
     },
     {
@@ -393,12 +393,12 @@
         11
       ],
       "victory": true,
-      "seconds": 15.8,
+      "seconds": 15.98,
       "wallet": {
-        "m1:crystal": 90,
-        "m1:gas": 80,
-        "m1:metal": 150,
-        "m1:ether": 60
+        "m1:crystal": 80,
+        "m1:gas": 70,
+        "m1:metal": 140,
+        "m1:ether": 50
       }
     },
     {
@@ -409,7 +409,7 @@
         11
       ],
       "victory": true,
-      "seconds": 16.63,
+      "seconds": 16.7,
       "wallet": {
         "m1:crystal": 220,
         "m1:gas": 210,
@@ -427,10 +427,10 @@
       "victory": true,
       "seconds": 23.88,
       "wallet": {
-        "m1:crystal": 218,
-        "m1:gas": 208,
-        "m1:metal": 278,
-        "m1:ether": 188
+        "m1:crystal": 228,
+        "m1:gas": 218,
+        "m1:metal": 288,
+        "m1:ether": 198
       }
     },
     {
@@ -443,10 +443,10 @@
       "victory": true,
       "seconds": 16.1,
       "wallet": {
-        "m1:crystal": 198,
-        "m1:gas": 188,
-        "m1:metal": 258,
-        "m1:ether": 168
+        "m1:crystal": 208,
+        "m1:gas": 198,
+        "m1:metal": 268,
+        "m1:ether": 178
       }
     },
     {
@@ -459,10 +459,10 @@
       "victory": true,
       "seconds": 16.1,
       "wallet": {
-        "m1:crystal": 196,
-        "m1:gas": 186,
-        "m1:metal": 256,
-        "m1:ether": 166
+        "m1:crystal": 206,
+        "m1:gas": 196,
+        "m1:metal": 266,
+        "m1:ether": 176
       }
     },
     {
@@ -475,10 +475,10 @@
       "victory": true,
       "seconds": 55.25,
       "wallet": {
-        "m1:crystal": 176,
-        "m1:gas": 166,
-        "m1:metal": 236,
-        "m1:ether": 146
+        "m1:crystal": 186,
+        "m1:gas": 176,
+        "m1:metal": 246,
+        "m1:ether": 156
       }
     },
     {
@@ -491,10 +491,10 @@
       "victory": true,
       "seconds": 24.02,
       "wallet": {
-        "m1:crystal": 146,
-        "m1:gas": 136,
-        "m1:metal": 206,
-        "m1:ether": 116
+        "m1:crystal": 156,
+        "m1:gas": 146,
+        "m1:metal": 216,
+        "m1:ether": 126
       }
     }
   ],
@@ -605,10 +605,10 @@
         6
       ],
       "wallet": {
-        "m1:crystal": 246,
-        "m1:gas": 236,
-        "m1:metal": 306,
-        "m1:ether": 216
+        "m1:crystal": 236,
+        "m1:gas": 226,
+        "m1:metal": 296,
+        "m1:ether": 206
       }
     },
     {
@@ -619,10 +619,10 @@
         7
       ],
       "wallet": {
-        "m1:crystal": 254,
-        "m1:gas": 244,
-        "m1:metal": 314,
-        "m1:ether": 224
+        "m1:crystal": 244,
+        "m1:gas": 234,
+        "m1:metal": 304,
+        "m1:ether": 214
       }
     },
     {
@@ -633,10 +633,10 @@
         7
       ],
       "wallet": {
-        "m1:crystal": 230,
-        "m1:gas": 220,
-        "m1:metal": 290,
-        "m1:ether": 200
+        "m1:crystal": 220,
+        "m1:gas": 210,
+        "m1:metal": 280,
+        "m1:ether": 190
       }
     },
     {
@@ -647,10 +647,10 @@
         7
       ],
       "wallet": {
-        "m1:crystal": 216,
-        "m1:gas": 206,
-        "m1:metal": 276,
-        "m1:ether": 186
+        "m1:crystal": 206,
+        "m1:gas": 196,
+        "m1:metal": 266,
+        "m1:ether": 176
       }
     },
     {
@@ -661,10 +661,10 @@
         8
       ],
       "wallet": {
-        "m1:crystal": 222,
-        "m1:gas": 212,
-        "m1:metal": 282,
-        "m1:ether": 192
+        "m1:crystal": 212,
+        "m1:gas": 202,
+        "m1:metal": 272,
+        "m1:ether": 182
       }
     },
     {
@@ -675,10 +675,10 @@
         8
       ],
       "wallet": {
-        "m1:crystal": 372,
-        "m1:gas": 362,
-        "m1:metal": 432,
-        "m1:ether": 342
+        "m1:crystal": 362,
+        "m1:gas": 352,
+        "m1:metal": 422,
+        "m1:ether": 332
       }
     },
     {
@@ -689,10 +689,10 @@
         8
       ],
       "wallet": {
-        "m1:crystal": 320,
-        "m1:gas": 310,
-        "m1:metal": 380,
-        "m1:ether": 290
+        "m1:crystal": 310,
+        "m1:gas": 300,
+        "m1:metal": 370,
+        "m1:ether": 280
       }
     },
     {
@@ -703,24 +703,24 @@
         9
       ],
       "wallet": {
-        "m1:crystal": 344,
-        "m1:gas": 334,
-        "m1:metal": 404,
-        "m1:ether": 314
+        "m1:crystal": 334,
+        "m1:gas": 324,
+        "m1:metal": 394,
+        "m1:ether": 304
       }
     },
     {
       "id": "chronicle:quest.16",
       "levels": [
         10,
-        10,
+        9,
         9
       ],
       "wallet": {
-        "m1:crystal": 248,
-        "m1:gas": 238,
-        "m1:metal": 308,
-        "m1:ether": 218
+        "m1:crystal": 346,
+        "m1:gas": 336,
+        "m1:metal": 406,
+        "m1:ether": 316
       }
     },
     {
@@ -731,10 +731,10 @@
         10
       ],
       "wallet": {
-        "m1:crystal": 280,
-        "m1:gas": 270,
-        "m1:metal": 340,
-        "m1:ether": 250
+        "m1:crystal": 270,
+        "m1:gas": 260,
+        "m1:metal": 330,
+        "m1:ether": 240
       }
     },
     {
@@ -745,10 +745,10 @@
         10
       ],
       "wallet": {
-        "m1:crystal": 280,
-        "m1:gas": 270,
-        "m1:metal": 340,
-        "m1:ether": 250
+        "m1:crystal": 270,
+        "m1:gas": 260,
+        "m1:metal": 330,
+        "m1:ether": 240
       }
     },
     {
@@ -759,10 +759,10 @@
         10
       ],
       "wallet": {
-        "m1:crystal": 430,
-        "m1:gas": 420,
-        "m1:metal": 490,
-        "m1:ether": 400
+        "m1:crystal": 420,
+        "m1:gas": 410,
+        "m1:metal": 480,
+        "m1:ether": 390
       }
     },
     {
@@ -773,10 +773,10 @@
         11
       ],
       "wallet": {
-        "m1:crystal": 240,
-        "m1:gas": 230,
-        "m1:metal": 300,
-        "m1:ether": 210
+        "m1:crystal": 230,
+        "m1:gas": 220,
+        "m1:metal": 290,
+        "m1:ether": 200
       }
     },
     {
@@ -801,10 +801,10 @@
         11
       ],
       "wallet": {
-        "m1:crystal": 348,
-        "m1:gas": 338,
-        "m1:metal": 408,
-        "m1:ether": 318
+        "m1:crystal": 358,
+        "m1:gas": 348,
+        "m1:metal": 418,
+        "m1:ether": 328
       }
     },
     {
@@ -815,10 +815,10 @@
         11
       ],
       "wallet": {
-        "m1:crystal": 296,
-        "m1:gas": 286,
-        "m1:metal": 356,
-        "m1:ether": 266
+        "m1:crystal": 306,
+        "m1:gas": 296,
+        "m1:metal": 366,
+        "m1:ether": 276
       }
     },
     {
@@ -829,14 +829,14 @@
         11
       ],
       "wallet": {
-        "m1:crystal": 496,
-        "m1:gas": 486,
-        "m1:metal": 556,
-        "m1:ether": 466
+        "m1:crystal": 506,
+        "m1:gas": 496,
+        "m1:metal": 566,
+        "m1:ether": 476
       }
     }
   ],
-  "heals": 54,
+  "heals": 53,
   "levels": 32,
   "passed": true
 }

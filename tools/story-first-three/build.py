@@ -1,5 +1,5 @@
 """Build only the additive chronicle pack from reviewed text and explicit encounter briefs."""
-import json,hashlib,collections,struct
+import math,json,hashlib,collections,struct
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
 read=lambda p:json.loads((ROOT/p).read_text())
@@ -61,13 +61,28 @@ briefs={
  'mitsuba':('逆流之歌','original:spawn.34','eliminate',None,[6,29,33,28],(2844,2907),'在角宿一與木星支援下，擊敗Mitsuba'),
  'collapse':('守護者','original:spawn.33','defend',24,[6],(2913,2949),'掩護木星穩定人造黑洞，維持撤離通道'),
 }
-for suffix,original in [('solar','original:region.solar'),('virgo','original:region.virgo')]:
- template=next(r for r in read('content/extensions/original-world.json')['definitions']['regions'] if r['id']==original)
- definitions['regions'].append({**template,'id':f'chronicle:region.{suffix}','name':('太陽系' if suffix=='solar' else '處女座')+' · 戰役航跡','description':'從章節進入救援與決戰；可沿回程航路返回星圖整補。','provenance':'inferred','sourceRef':'Isolated story staging region; original world positions/routes unchanged','category':'event','campaignStart':False,'routes':[dict(to=original,label='返回'+('太陽系' if suffix=='solar' else '處女座'),requires=[])],'patrols':[],'startX':1200,'startY':1200})
+# Owner 2026-10-24: original flow. Story fields live on the real galaxy map beside the
+# source SpawnPoint (original EventSpot triggers fire at map nodes), not in staging regions.
+world=read('content/extensions/original-world.json')['definitions']
+world_nodes=[n for n in world['planets'] if n['region'] in ('original:region.solar','original:region.virgo')]
+world_regions={r['id']:r for r in world['regions']}
+placed=[];anchors={}
+def place(region,ax,ay):
+ r=world_regions[region]
+ for radius in (650,900,1200,1600,2100):
+  for k in range(24):
+   a=math.radians(k*15+35);x=round(ax+math.cos(a)*radius);y=round(ay+math.sin(a)*radius)
+   if not (500<=x<=r['width']-500 and 500<=y<=r['height']-500):continue
+   if all(math.hypot(n['x']-x,n['y']-y)>=650 for n in world_nodes if n['region']==region) and all(math.hypot(px-x,py-y)>=650 for pr,px,py in placed if pr==region):
+    placed.append((region,x,y));return x,y
+ raise SystemExit(f'no free story field near {region} {ax},{ay}')
 mission_meta={}
 for order,(key,(title,source,mode,seconds,support,rows,note)) in enumerate(briefs.items()):
- template=byplanet[source];region='chronicle:region.virgo' if order>=16 else 'chronicle:region.solar';x,y=1600+(order%4)*1900,1600+(order//4)*1000
- v={**template,'id':f'chronicle:encounter.{key}','name':title,'description':note+'。劇情參戰不等於角色入手；失敗可整補後重試。','status':'active','provenance':'inferred','sourceRef':f'EventScript[{rows[0]}..{rows[1]}]; source roster {source}; pacing/coordinates/levels adapted','region':region,'x':x,'y':y,'radius':58,'sprite':'original:asset.node-event','kind':'event','requires':[],'requiresActive':[],'hiddenUntilUnlocked':True,'initiallyCleared':False,'encounterPolicy':'manual','objective':'eliminate','timeLimitSeconds':0,'reward':{},'activationCost':{},'production':{},'dropCharacters':[],'waves':[],'leashRadius':1400,'leashWarningRadius':1200}
+ template=byplanet[source];region='original:region.virgo' if order>=16 else 'original:region.solar'
+ # Wave-only sources have no map node: stay beside the previous field of the same chapter.
+ anchor=(template['x'],template['y']) if template['region']==region else anchors.get(region,(world_regions[region]['startX'],world_regions[region]['startY']))
+ x,y=place(region,*anchor);anchors[region]=(x,y)
+ v={**template,'id':f'chronicle:encounter.{key}','name':title,'description':note+'。劇情參戰不等於角色入手；失敗可整補後重試。','status':'active','provenance':'inferred','sourceRef':f'EventScript[{rows[0]}..{rows[1]}]; source roster {source}; field beside source node on the real map; pacing/levels adapted','region':region,'x':x,'y':y,'radius':58,'sprite':'original:asset.node-event','kind':'event','requires':[],'requiresActive':[],'hiddenUntilUnlocked':True,'initiallyCleared':False,'encounterPolicy':'manual','objective':'eliminate','timeLimitSeconds':0,'reward':{},'activationCost':{},'production':{},'dropCharacters':[],'waves':[],'leashRadius':1400,'leashWarningRadius':1200}
  chronology=(1 if order<3 else 3 if order<9 else 5 if order<16 else 10 if order<21 else 13 if order<29 else 18)
  # Owner 2026-10-24: follow the original curve. Never below the source roster's own level;
  # Source CID roster/counts preserved; chronology is only a floor between source points.

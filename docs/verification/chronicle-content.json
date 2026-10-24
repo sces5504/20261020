@@ -5,17 +5,17 @@
     {
       "id": "chronicle:encounter.venus",
       "team": "initial three starters; no resonance/research; full health",
-      "teamLevel": 3,
+      "teamLevel": 5,
       "seed": 42,
       "mode": "eliminate",
       "victory": true,
       "reset": false,
-      "seconds": 3.73,
+      "seconds": 6.08,
       "survivors": 3,
       "hp": {
-        "owned-1": 668,
-        "owned-2": 483,
-        "owned-3": 520
+        "owned-1": 759,
+        "owned-2": 549,
+        "owned-3": 591
       }
     },
     {
@@ -37,7 +37,7 @@
     {
       "id": "chronicle:encounter.receiver-b",
       "team": "initial three starters; no resonance/research; full health",
-      "teamLevel": 3,
+      "teamLevel": 4,
       "seed": 42,
       "mode": "eliminate",
       "victory": true,
@@ -45,9 +45,9 @@
       "seconds": 5.47,
       "survivors": 3,
       "hp": {
-        "owned-1": 668,
-        "owned-2": 483,
-        "owned-3": 520
+        "owned-1": 714,
+        "owned-2": 516,
+        "owned-3": 556
       }
     },
     {
@@ -58,11 +58,11 @@
       "mode": "eliminate",
       "victory": true,
       "reset": false,
-      "seconds": 7.13,
+      "seconds": 10.02,
       "survivors": 3,
       "hp": {
-        "owned-1": 760,
-        "owned-2": 549,
+        "owned-1": 758,
+        "owned-2": 547,
         "owned-3": 591
       }
     },
@@ -90,7 +90,7 @@
       "mode": "eliminate",
       "victory": true,
       "reset": false,
-      "seconds": 4.17,
+      "seconds": 8,
       "survivors": 3,
       "hp": {
         "owned-1": 760,
@@ -109,31 +109,31 @@
       "seconds": 24.02,
       "survivors": 3,
       "hp": {
-        "owned-1": 703,
-        "owned-2": 616,
-        "owned-3": 663
+        "owned-1": 453,
+        "owned-2": 582,
+        "owned-3": 631
       }
     },
     {
       "id": "chronicle:encounter.saturn",
       "team": "initial three starters; no resonance/research; full health",
-      "teamLevel": 5,
+      "teamLevel": 11,
       "seed": 42,
       "mode": "protect",
       "victory": true,
       "reset": false,
-      "seconds": 7.75,
+      "seconds": 7.05,
       "survivors": 3,
       "hp": {
-        "owned-1": 760,
-        "owned-2": 549,
-        "owned-3": 591
+        "owned-1": 1037,
+        "owned-2": 749,
+        "owned-3": 806
       }
     },
     {
       "id": "chronicle:encounter.uranus",
       "team": "initial three starters; no resonance/research; full health",
-      "teamLevel": 5,
+      "teamLevel": 7,
       "seed": 42,
       "mode": "protect",
       "victory": true,
@@ -141,9 +141,9 @@
       "seconds": 4.57,
       "survivors": 3,
       "hp": {
-        "owned-1": 760,
-        "owned-2": 549,
-        "owned-3": 574
+        "owned-1": 852,
+        "owned-2": 616,
+        "owned-3": 644
       }
     },
     {
@@ -173,25 +173,25 @@
       "seconds": 16.1,
       "survivors": 3,
       "hp": {
-        "owned-1": 852,
-        "owned-2": 616,
-        "owned-3": 663
+        "owned-1": 851,
+        "owned-2": 615,
+        "owned-3": 662
       }
     },
     {
       "id": "chronicle:encounter.pluto-parts",
       "team": "initial three starters; no resonance/research; full health",
-      "teamLevel": 7,
+      "teamLevel": 8,
       "seed": 42,
       "mode": "eliminate",
       "victory": true,
       "reset": false,
-      "seconds": 12.02,
+      "seconds": 12.33,
       "survivors": 3,
       "hp": {
-        "owned-1": 848,
-        "owned-2": 614,
-        "owned-3": 662
+        "owned-1": 895,
+        "owned-2": 647,
+        "owned-3": 698
       }
     },
     {
@@ -205,7 +205,7 @@
       "seconds": 24.02,
       "survivors": 3,
       "hp": {
-        "owned-1": 852,
+        "owned-1": 847,
         "owned-2": 616,
         "owned-3": 663
       }
@@ -213,55 +213,55 @@
     {
       "id": "chronicle:encounter.nemesis-parts",
       "team": "initial three starters; no resonance/research; full health",
-      "teamLevel": 7,
+      "teamLevel": 8,
       "seed": 42,
       "mode": "eliminate",
       "victory": true,
       "reset": false,
-      "seconds": 9.58,
+      "seconds": 11.17,
       "survivors": 3,
       "hp": {
-        "owned-1": 844,
-        "owned-2": 615,
-        "owned-3": 663
+        "owned-1": 890,
+        "owned-2": 648,
+        "owned-3": 699
       }
     },
     {
       "id": "chronicle:encounter.nemesis-duel",
       "team": "initial three starters; no resonance/research; full health",
-      "teamLevel": 9,
+      "teamLevel": 15,
       "seed": 42,
       "mode": "eliminate",
       "victory": true,
       "reset": false,
-      "seconds": 11.27,
+      "seconds": 16.55,
       "survivors": 3,
       "hp": {
-        "owned-1": 884,
-        "owned-2": 682,
-        "owned-3": 735
+        "owned-1": 641,
+        "owned-2": 882,
+        "owned-3": 950
       }
     },
     {
       "id": "chronicle:encounter.kiraba",
       "team": "initial three starters; no resonance/research; full health",
-      "teamLevel": 7,
+      "teamLevel": 10,
       "seed": 42,
       "mode": "eliminate",
       "victory": true,
       "reset": false,
-      "seconds": 10.88,
+      "seconds": 24.73,
       "survivors": 3,
       "hp": {
-        "owned-1": 852,
-        "owned-2": 616,
-        "owned-3": 663
+        "owned-1": 795,
+        "owned-2": 716,
+        "owned-3": 771
       }
     },
     {
       "id": "chronicle:encounter.gliese",
       "team": "initial three starters; no resonance/research; full health",
-      "teamLevel": 12,
+      "teamLevel": 13,
       "seed": 42,
       "mode": "escort",
       "victory": true,
@@ -269,153 +269,153 @@
       "seconds": 16.1,
       "survivors": 3,
       "hp": {
-        "owned-1": 1045,
-        "owned-2": 772,
-        "owned-3": 838
+        "owned-1": 1088,
+        "owned-2": 805,
+        "owned-3": 874
       }
     },
     {
       "id": "chronicle:encounter.vello",
-      "team": "initial three starters; no resonance/research; full health",
-      "teamLevel": 12,
-      "seed": 42,
-      "mode": "eliminate",
-      "victory": true,
-      "reset": false,
-      "seconds": 15.25,
-      "survivors": 3,
-      "hp": {
-        "owned-1": 1082,
-        "owned-2": 782,
-        "owned-3": 842
-      }
-    },
-    {
-      "id": "chronicle:encounter.gliee",
-      "team": "initial three starters; no resonance/research; full health",
-      "teamLevel": 10,
-      "seed": 42,
-      "mode": "protect",
-      "victory": true,
-      "reset": false,
-      "seconds": 10.45,
-      "survivors": 3,
-      "hp": {
-        "owned-1": 991,
-        "owned-2": 716,
-        "owned-3": 771
-      }
-    },
-    {
-      "id": "chronicle:encounter.izar-standoff",
       "team": "initial three starters; no resonance/research; full health",
       "teamLevel": 14,
       "seed": 42,
       "mode": "eliminate",
       "victory": true,
       "reset": false,
-      "seconds": 20.75,
+      "seconds": 17.55,
       "survivors": 3,
       "hp": {
-        "owned-1": 641,
-        "owned-2": 354,
-        "owned-3": 583
+        "owned-1": 1167,
+        "owned-2": 828,
+        "owned-3": 914
+      }
+    },
+    {
+      "id": "chronicle:encounter.gliee",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 12,
+      "seed": 42,
+      "mode": "protect",
+      "victory": true,
+      "reset": false,
+      "seconds": 16.08,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 1059,
+        "owned-2": 781,
+        "owned-3": 842
+      }
+    },
+    {
+      "id": "chronicle:encounter.izar-standoff",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 17,
+      "seed": 42,
+      "mode": "eliminate",
+      "victory": true,
+      "reset": false,
+      "seconds": 24,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 651,
+        "owned-2": 503,
+        "owned-3": 656
       }
     },
     {
       "id": "chronicle:encounter.linda",
       "team": "initial three starters; no resonance/research; full health",
-      "teamLevel": 12,
+      "teamLevel": 24,
       "seed": 42,
       "mode": "eliminate",
       "victory": true,
       "reset": false,
-      "seconds": 12.75,
+      "seconds": 23.77,
       "survivors": 3,
       "hp": {
-        "owned-1": 1037,
-        "owned-2": 768,
-        "owned-3": 842
+        "owned-1": 1454,
+        "owned-2": 1139,
+        "owned-3": 1271
       }
     },
     {
       "id": "chronicle:encounter.tactical-a",
       "team": "initial three starters; no resonance/research; full health",
-      "teamLevel": 15,
+      "teamLevel": 16,
       "seed": 42,
       "mode": "eliminate",
       "victory": true,
       "reset": false,
-      "seconds": 12.92,
+      "seconds": 19.12,
       "survivors": 3,
       "hp": {
-        "owned-1": 1221,
-        "owned-2": 882,
-        "owned-3": 950
+        "owned-1": 1224,
+        "owned-2": 910,
+        "owned-3": 982
       }
     },
     {
       "id": "chronicle:encounter.tactical-b",
       "team": "initial three starters; no resonance/research; full health",
-      "teamLevel": 15,
+      "teamLevel": 16,
       "seed": 42,
       "mode": "eliminate",
       "victory": true,
       "reset": false,
-      "seconds": 16.2,
+      "seconds": 23.33,
       "survivors": 3,
       "hp": {
-        "owned-1": 1220,
-        "owned-2": 882,
-        "owned-3": 950
+        "owned-1": 1229,
+        "owned-2": 899,
+        "owned-3": 958
       }
     },
     {
       "id": "chronicle:encounter.tactical-c",
       "team": "initial three starters; no resonance/research; full health",
-      "teamLevel": 15,
+      "teamLevel": 17,
       "seed": 42,
       "mode": "eliminate",
       "victory": true,
       "reset": false,
-      "seconds": 15.77,
+      "seconds": 23,
       "survivors": 3,
       "hp": {
-        "owned-1": 1192,
-        "owned-2": 882,
-        "owned-3": 950
+        "owned-1": 1253,
+        "owned-2": 948,
+        "owned-3": 1017
       }
     },
     {
       "id": "chronicle:encounter.valencia",
       "team": "initial three starters; no resonance/research; full health",
-      "teamLevel": 15,
+      "teamLevel": 17,
       "seed": 42,
       "mode": "protect",
       "victory": true,
       "reset": false,
-      "seconds": 12.95,
+      "seconds": 14.9,
       "survivors": 3,
       "hp": {
-        "owned-1": 1195,
-        "owned-2": 865,
-        "owned-3": 950
+        "owned-1": 1285,
+        "owned-2": 929,
+        "owned-3": 1021
       }
     },
     {
       "id": "chronicle:encounter.seginus",
       "team": "initial three starters; no resonance/research; full health",
-      "teamLevel": 15,
+      "teamLevel": 16,
       "seed": 42,
       "mode": "protect",
       "victory": true,
       "reset": false,
-      "seconds": 9.23,
+      "seconds": 15.15,
       "survivors": 3,
       "hp": {
-        "owned-1": 1221,
-        "owned-2": 882,
-        "owned-3": 950
+        "owned-1": 1267,
+        "owned-2": 915,
+        "owned-3": 986
       }
     },
     {
@@ -426,18 +426,18 @@
       "mode": "eliminate",
       "victory": true,
       "reset": false,
-      "seconds": 4.87,
+      "seconds": 20.97,
       "survivors": 3,
       "hp": {
-        "owned-1": 1218,
-        "owned-2": 882,
+        "owned-1": 1168,
+        "owned-2": 829,
         "owned-3": 950
       }
     },
     {
       "id": "chronicle:encounter.spica-return",
       "team": "initial three starters; no resonance/research; full health",
-      "teamLevel": 15,
+      "teamLevel": 16,
       "seed": 42,
       "mode": "escort",
       "victory": true,
@@ -445,15 +445,15 @@
       "seconds": 16.1,
       "survivors": 3,
       "hp": {
-        "owned-1": 1205,
-        "owned-2": 882,
-        "owned-3": 950
+        "owned-1": 1224,
+        "owned-2": 910,
+        "owned-3": 986
       }
     },
     {
       "id": "chronicle:encounter.blackhole-delivery",
       "team": "initial three starters; no resonance/research; full health",
-      "teamLevel": 15,
+      "teamLevel": 20,
       "seed": 42,
       "mode": "escort",
       "victory": true,
@@ -461,25 +461,25 @@
       "seconds": 16.1,
       "survivors": 3,
       "hp": {
-        "owned-1": 1221,
-        "owned-2": 882,
-        "owned-3": 950
+        "owned-1": 1434,
+        "owned-2": 1043,
+        "owned-3": 1095
       }
     },
     {
       "id": "chronicle:encounter.mitsuba",
       "team": "initial three starters; no resonance/research; full health",
-      "teamLevel": 20,
+      "teamLevel": 22,
       "seed": 42,
       "mode": "eliminate",
       "victory": true,
       "reset": false,
-      "seconds": 16.53,
+      "seconds": 43.1,
       "survivors": 3,
       "hp": {
-        "owned-1": 1449,
-        "owned-2": 1048,
-        "owned-3": 1129
+        "owned-1": 1277,
+        "owned-2": 1054,
+        "owned-3": 1134
       }
     },
     {

@@ -47,6 +47,15 @@ export function conditionLabel(p: Pack, s: Save, c: Condition): string {
   }
 }
 
+function routeTo(p: Pack, s: Save, region: string, planet?: Pack["planets"][number]) {
+  if (region !== s.region) {
+    const path = regionPath(p, s.region, region);
+    const next = p.regions.find((r) => r.id === path[1]);
+    return next ? button(`躍遷 → ${esc(next.name)}`, "travel", next.id, "primary") : "";
+  }
+  return planet ? button(`導航 · ${esc(planet.name)}`, "navigate", planet.id, "primary") : "";
+}
+
 /** First unmet navigable leaf: a region to reach or a planet to clear. */
 function guide(p: Pack, s: Save, c: Condition | undefined) {
   if (!c) return "";
@@ -57,43 +66,54 @@ function guide(p: Pack, s: Save, c: Condition | undefined) {
   if (!leaf) return "";
   const planet =
     leaf.fact === "cleared" ? p.planets.find((v) => v.id === leaf.target) : undefined;
-  const region = planet?.region ?? leaf.target;
-  if (region !== s.region) {
-    const path = regionPath(p, s.region, region);
-    const next = p.regions.find((r) => r.id === path[1]);
-    return next ? button(`躍遷 → ${esc(next.name)}`, "travel", next.id, "primary") : "";
-  }
-  return planet ? button(`導航 · ${esc(planet.name)}`, "navigate", planet.id, "primary") : "";
+  return routeTo(p, s, planet?.region ?? leaf.target, planet);
 }
 
-export function mainlineHtml(p: Pack, s: Save, busy: boolean) {
+/** `near` reports whether the fleet has flown to a story battlefield. */
+export function mainlineHtml(
+  p: Pack,
+  s: Save,
+  busy: boolean,
+  near: (planet: string) => boolean,
+) {
   const m = mainlineState(p, s);
   if (!m) return "";
   const chapter = m.quest.name;
   const progress = `${Math.min(m.total, m.index + (m.status === "done" ? 1 : 0))}/${m.total}`;
+  const planet = m.planet ? p.planets.find((v) => v.id === m.planet) : undefined;
+  const arrived = m.status === "encounter" && near(m.planet!);
+  const reached =
+    m.status === "await" && !!m.condition && conditionMet(s, m.condition);
   const objective =
     m.status === "done"
       ? "目前主線已全部完成，可於航行紀錄回看。"
-      : m.status === "await" || m.status === "locked"
-        ? m.condition
-          ? conditionLabel(p, s, m.condition)
-          : "完成前一章節"
-        : m.status === "encounter"
-          ? `迎戰「${p.planets.find((v) => v.id === m.planet)?.name ?? "劇情戰場"}」`
-          : m.status === "dialogue"
-            ? "劇情進行中"
-            : "新的劇情已解鎖";
-  const action =
-    m.status === "start" || m.status === "dialogue" || m.status === "encounter"
-      ? button(
-          m.status === "encounter" ? "出擊" : m.status === "start" ? "開始" : "接續",
-          "flow-open",
-          m.quest.id,
-          "primary",
-          busy,
-        )
+      : reached
+        ? "已抵達目標，可接續劇情"
+        : m.status === "await" || m.status === "locked"
+          ? m.condition
+            ? conditionLabel(p, s, m.condition)
+            : "完成前一章節"
+          : m.status === "encounter"
+            ? arrived
+              ? `已抵達「${planet?.name ?? "劇情戰場"}」，可出擊`
+              : `前往「${planet?.name ?? "劇情戰場"}」迎戰`
+            : m.status === "dialogue"
+              ? "劇情進行中"
+              : "新的劇情已解鎖";
+  const ready =
+    m.status === "start" || m.status === "dialogue" || arrived || reached;
+  const action = ready
+    ? button(
+        arrived ? "出擊" : m.status === "start" ? "開始" : "接續",
+        "flow-open",
+        m.quest.id,
+        "primary",
+        busy,
+      )
+    : m.status === "encounter" && planet
+      ? routeTo(p, s, planet.region, planet)
       : m.status === "await" || m.status === "locked"
         ? guide(p, s, m.condition)
         : "";
-  return `<div class="mainline-card is-${m.status}" data-quest="${esc(m.quest.id)}"><span class="eyebrow">主線 ${progress}</span><strong>${esc(chapter)}</strong><p>${esc(objective)}</p>${action ? `<div class="mainline-actions">${action}</div>` : ""}</div>`;
+  return `<div class="mainline-card is-${ready ? "ready" : m.status}" data-quest="${esc(m.quest.id)}"><span class="eyebrow">主線 ${progress}</span><strong>${esc(chapter)}</strong><p>${esc(objective)}</p>${action ? `<div class="mainline-actions">${action}</div>` : ""}</div>`;
 }

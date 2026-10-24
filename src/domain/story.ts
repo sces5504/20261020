@@ -261,10 +261,3 @@ export function mainlineState(p: Pack, s: Save): MainlineState | undefined {
     condition: quest.story!.requires,
   };
 }
-/** Next unseen main node may chain automatically once its predecessor was read. */
-export function mainlineChain(p: Pack, s: Save) {
-  const state = mainlineState(p, s);
-  if (state?.status !== "start" || state.index === 0) return undefined;
-  const previous = mainlineQuests(p)[state.index - 1];
-  return s.storySeen.includes(previous.id) ? state.quest : undefined;
-}

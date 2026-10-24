@@ -17,6 +17,18 @@ import { planetMaterial, enemyMaterial } from "./materials";
 import type { AudioMixer } from "../platform/audio";
 /** World units per backdrop pixel in the first sector (3600x2400 over 1672x941 art). */
 const backdropDensity = 2.55;
+const zoomKey = "stella:explore-zoom",
+  minZoom = 0.5;
+/** Phones open the voyage fully zoomed out; a remembered player choice wins. */
+function exploreZoom() {
+  try {
+    const saved = Number(localStorage.getItem(zoomKey));
+    if (saved >= minZoom && saved <= 2.8) return saved;
+  } catch {
+    // Storage unavailable: fall back to the device default.
+  }
+  return window.innerWidth < 650 ? minZoom : 1;
+}
 import type { Game } from "../application/game";
 export function mountSpace(
   host: HTMLElement,
@@ -84,7 +96,7 @@ export function mountSpace(
     loaded = new Set<string>();
     elapsed = 0;
     clock = new SimulationClock();
-    zoomFactor = 1;
+    zoomFactor = exploreZoom();
     panX = 0;
     panY = 0;
     drag: { x: number; y: number; startX: number; startY: number } | null =
@@ -143,9 +155,10 @@ export function mountSpace(
           if (this.pinch)
             this.zoomFactor = Phaser.Math.Clamp(
               (this.zoomFactor * dist) / this.pinch,
-              0.65,
+              minZoom,
               2.8,
             );
+          this.rememberZoom();
           this.pinch = dist;
           this.cancelTap = true;
           return;
@@ -172,9 +185,10 @@ export function mountSpace(
         (_pointer: unknown, _targets: unknown, _dx: number, dy: number) => {
           this.zoomFactor = Phaser.Math.Clamp(
             this.zoomFactor * (dy > 0 ? 0.9 : 1.1),
-            0.65,
+            minZoom,
             2.8,
           );
+          this.rememberZoom();
         },
       );
       this.input.on("pointerup", (pointer: Phaser.Input.Pointer) => {
@@ -349,7 +363,7 @@ export function mountSpace(
 
         this.panX = 0;
         this.panY = 0;
-        this.zoomFactor = 1;
+        this.zoomFactor = battle ? 1 : exploreZoom();
       }
       // Portrait combat frames the living team, including the rear formation slots.
       // This is camera-only; unit positions and combat rules remain untouched.
@@ -770,8 +784,11 @@ export function mountSpace(
             }
           }
         }
-        for (const u of combat.units) {
-          if (u.hp <= 0) continue;
+        this.separate(combat.units);
+        for (const sim of combat.units) {
+          if (sim.hp <= 0) continue;
+          const o = this.spread.get(sim.id);
+          const u = o ? { ...sim, x: sim.x + o.x, y: sim.y + o.y } : sim;
           if (u.sprite) this.ensureAsset(u.sprite);
           const color = Phaser.Display.Color.HexStringToColor(u.color).color;
           const scale = combat.mechanics.stat(u, "scale");
@@ -843,7 +860,7 @@ export function mountSpace(
               u.sprite,
               u.x,
               u.y +
-                Math.sin(this.elapsed * 2.2 + combat.units.indexOf(u) * 1.7) *
+                Math.sin(this.elapsed * 2.2 + combat.units.indexOf(sim) * 1.7) *
                   3,
               u.side === "ally"
                 ? model.pack.rules.allySpriteSize * scale
@@ -856,7 +873,7 @@ export function mountSpace(
             ?.setRotation(
               texturedTurret
                 ? u.aim
-                : Math.sin(this.elapsed * 1.6 + combat.units.indexOf(u)) *
+                : Math.sin(this.elapsed * 1.6 + combat.units.indexOf(sim)) *
                     0.025,
             );
           if (u.side === "enemy" && !texturedTurret)
@@ -987,10 +1004,78 @@ export function mountSpace(
         .setVisible(true);
     }
 
+    private spread = new Map<string, { x: number; y: number }>();
+    /**
+     * Presentation-only spacing: stacked units fan out on screen. Simulation positions,
+     * hits and battle evidence are untouched; a coarse grid keeps it near O(n).
+     */
+    private separate(units: { id: string; x: number; y: number; hp: number; boss: boolean }[]) {
+      const cell = 48,
+        gap = 34,
+        grid = new Map<string, number[]>();
+      const live = units.filter((u) => u.hp > 0);
+      const pos = live.map((u) => {
+        const o = this.spread.get(u.id) ?? { x: 0, y: 0 };
+        return { x: u.x + o.x, y: u.y + o.y };
+      });
+      pos.forEach((q, i) => {
+        const k = `${Math.floor(q.x / cell)},${Math.floor(q.y / cell)}`;
+        grid.get(k)?.push(i) ?? grid.set(k, [i]);
+      });
+      const push = pos.map(() => ({ x: 0, y: 0 }));
+      pos.forEach((a, i) => {
+        const cx = Math.floor(a.x / cell),
+          cy = Math.floor(a.y / cell);
+        for (let dx = -1; dx <= 1; dx++)
+          for (let dy = -1; dy <= 1; dy++)
+            for (const j of grid.get(`${cx + dx},${cy + dy}`) ?? []) {
+              if (j <= i) continue;
+              const b = pos[j];
+              const min = live[i].boss || live[j].boss ? gap * 1.6 : gap;
+              let ex = b.x - a.x,
+                ey = b.y - a.y,
+                d = Math.hypot(ex, ey);
+              if (d >= min) continue;
+              // Deterministic split direction for exact overlaps.
+              if (d < 0.01) {
+                ex = Math.cos(i * 2.4);
+                ey = Math.sin(i * 2.4);
+                d = 1;
+              }
+              const f = (min - d) / (2 * d);
+              push[i].x -= ex * f;
+              push[i].y -= ey * f;
+              push[j].x += ex * f;
+              push[j].y += ey * f;
+            }
+      });
+      const next = new Map<string, { x: number; y: number }>();
+      live.forEach((u, i) => {
+        const o = this.spread.get(u.id) ?? { x: 0, y: 0 };
+        let x = o.x * 0.9 + push[i].x * 0.35,
+          y = o.y * 0.9 + push[i].y * 0.35;
+        const len = Math.hypot(x, y);
+        if (len > 28) {
+          x = (x / len) * 28;
+          y = (y / len) * 28;
+        }
+        if (len > 0.2) next.set(u.id, { x, y });
+      });
+      this.spread = next;
+    }
     recenter() {
       this.panX = 0;
       this.panY = 0;
-      this.zoomFactor = 1;
+      this.zoomFactor = model.combat ? 1 : exploreZoom();
+    }
+    /** The voyage keeps the player's own zoom across reloads; battles frame themselves. */
+    private rememberZoom() {
+      if (model.combat) return;
+      try {
+        localStorage.setItem(zoomKey, String(this.zoomFactor));
+      } catch {
+        // Private mode: zoom still works for this session.
+      }
     }
     private ship(x: number, y: number, color: number, size: number) {
       const g = this.ink;

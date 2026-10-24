@@ -213,12 +213,12 @@
           {
             "enemy": "original:enemy.151",
             "count": 3,
-            "level": 1
+            "level": 3
           },
           {
             "enemy": "original:enemy.148",
             "count": 3,
-            "level": 1
+            "level": 3
           }
         ],
         "initiallyCleared": false,
@@ -238,18 +238,7 @@
         "waves": [],
         "storyEncounter": {
           "mode": "eliminate",
-          "actors": [
-            {
-              "id": "chronicle:unit.venus-4",
-              "character": "m1:venus",
-              "x": 1720,
-              "y": 1510,
-              "side": "ally",
-              "level": 4,
-              "required": false,
-              "spawnAt": 0
-            }
-          ],
+          "actors": [],
           "waves": [],
           "timeline": [],
           "cues": [
@@ -331,7 +320,7 @@
           {
             "enemy": "original:enemy.148",
             "count": 7,
-            "level": 1
+            "level": 2
           }
         ],
         "initiallyCleared": false,
@@ -401,18 +390,7 @@
         "waves": [],
         "storyEncounter": {
           "mode": "eliminate",
-          "actors": [
-            {
-              "id": "chronicle:unit.mars-5",
-              "character": "m1:mars",
-              "x": 7420,
-              "y": 1510,
-              "side": "ally",
-              "level": 6,
-              "required": false,
-              "spawnAt": 0
-            }
-          ],
+          "actors": [],
           "waves": [],
           "timeline": [],
           "cues": []
@@ -469,7 +447,7 @@
               "x": 1720,
               "y": 2510,
               "side": "ally",
-              "level": 6,
+              "level": 3,
               "required": false,
               "spawnAt": 18
             }
@@ -567,18 +545,7 @@
         "waves": [],
         "storyEncounter": {
           "mode": "eliminate",
-          "actors": [
-            {
-              "id": "chronicle:unit.sun-traces-6",
-              "character": "solar10:character.jupiter",
-              "x": 3620,
-              "y": 2510,
-              "side": "ally",
-              "level": 6,
-              "required": false,
-              "spawnAt": 0
-            }
-          ],
+          "actors": [],
           "waves": [],
           "timeline": [],
           "cues": []
@@ -623,18 +590,7 @@
         "waves": [],
         "storyEncounter": {
           "mode": "survive",
-          "actors": [
-            {
-              "id": "chronicle:unit.nemesis-first-5",
-              "character": "m1:mars",
-              "x": 5520,
-              "y": 2510,
-              "side": "ally",
-              "level": 6,
-              "required": false,
-              "spawnAt": 0
-            }
-          ],
+          "actors": [],
           "waves": [
             {
               "at": 6,
@@ -691,17 +647,17 @@
           {
             "enemy": "original:enemy.157",
             "count": 2,
-            "level": 3
+            "level": 9
           },
           {
             "enemy": "original:enemy.149",
             "count": 3,
-            "level": 3
+            "level": 9
           },
           {
             "enemy": "original:enemy.148",
             "count": 2,
-            "level": 3
+            "level": 9
           }
         ],
         "initiallyCleared": false,
@@ -728,7 +684,7 @@
               "x": 7420,
               "y": 2510,
               "side": "ally",
-              "level": 6,
+              "level": 9,
               "required": true,
               "spawnAt": 0
             }
@@ -757,17 +713,17 @@
           {
             "enemy": "original:enemy.161",
             "count": 1,
-            "level": 3
+            "level": 5
           },
           {
             "enemy": "original:enemy.155",
             "count": 1,
-            "level": 3
+            "level": 5
           },
           {
             "enemy": "original:enemy.148",
             "count": 2,
-            "level": 3
+            "level": 5
           }
         ],
         "initiallyCleared": false,
@@ -794,7 +750,7 @@
               "x": 1720,
               "y": 3510,
               "side": "ally",
-              "level": 6,
+              "level": 5,
               "required": true,
               "spawnAt": 0
             }
@@ -910,7 +866,7 @@
               "x": 4700,
               "y": 3200,
               "side": "ally",
-              "level": 8,
+              "level": 5,
               "required": true,
               "spawnAt": 0,
               "destination": {
@@ -918,16 +874,6 @@
                 "y": 3480,
                 "radius": 35
               }
-            },
-            {
-              "id": "chronicle:unit.neptune-8",
-              "character": "m1:uranus",
-              "x": 5575,
-              "y": 3570,
-              "side": "ally",
-              "level": 8,
-              "required": false,
-              "spawnAt": 0
             }
           ],
           "waves": [],
@@ -989,17 +935,17 @@
           {
             "enemy": "original:enemy.148",
             "count": 5,
-            "level": 5
+            "level": 6
           },
           {
             "enemy": "original:enemy.149",
             "count": 4,
-            "level": 5
+            "level": 6
           },
           {
             "enemy": "original:enemy.151",
             "count": 1,
-            "level": 5
+            "level": 6
           }
         ],
         "initiallyCleared": false,
@@ -1086,7 +1032,7 @@
               "x": 1720,
               "y": 4510,
               "side": "ally",
-              "level": 8,
+              "level": 5,
               "required": true,
               "spawnAt": 0
             }
@@ -1159,17 +1105,17 @@
           {
             "enemy": "original:enemy.155",
             "count": 1,
-            "level": 5
+            "level": 6
           },
           {
             "enemy": "original:enemy.148",
             "count": 1,
-            "level": 5
+            "level": 6
           },
           {
             "enemy": "original:enemy.149",
             "count": 5,
-            "level": 5
+            "level": 6
           }
         ],
         "initiallyCleared": false,
@@ -1214,7 +1160,7 @@
           {
             "enemy": "chronicle:enemy.nemesis",
             "count": 1,
-            "level": 7
+            "level": 13
           }
         ],
         "initiallyCleared": false,
@@ -1234,18 +1180,7 @@
         "waves": [],
         "storyEncounter": {
           "mode": "eliminate",
-          "actors": [
-            {
-              "id": "chronicle:unit.nemesis-duel-6",
-              "character": "solar10:character.jupiter",
-              "x": 5520,
-              "y": 4510,
-              "side": "ally",
-              "level": 8,
-              "required": false,
-              "spawnAt": 0
-            }
-          ],
+          "actors": [],
           "waves": [],
           "timeline": [],
           "cues": []
@@ -1270,7 +1205,7 @@
           {
             "enemy": "original:enemy.189",
             "count": 1,
-            "level": 5
+            "level": 8
           }
         ],
         "initiallyCleared": false,
@@ -1290,48 +1225,7 @@
         "waves": [],
         "storyEncounter": {
           "mode": "eliminate",
-          "actors": [
-            {
-              "id": "chronicle:unit.kiraba-6",
-              "character": "solar10:character.jupiter",
-              "x": 7420,
-              "y": 4510,
-              "side": "ally",
-              "level": 8,
-              "required": false,
-              "spawnAt": 0
-            },
-            {
-              "id": "chronicle:unit.kiraba-7",
-              "character": "solar10:character.saturn",
-              "x": 7475,
-              "y": 4570,
-              "side": "ally",
-              "level": 8,
-              "required": false,
-              "spawnAt": 0
-            },
-            {
-              "id": "chronicle:unit.kiraba-8",
-              "character": "m1:uranus",
-              "x": 7530,
-              "y": 4630,
-              "side": "ally",
-              "level": 8,
-              "required": false,
-              "spawnAt": 0
-            },
-            {
-              "id": "chronicle:unit.kiraba-9",
-              "character": "solar10:character.neptune",
-              "x": 7585,
-              "y": 4690,
-              "side": "ally",
-              "level": 8,
-              "required": false,
-              "spawnAt": 0
-            }
-          ],
+          "actors": [],
           "waves": [],
           "timeline": [],
           "cues": [
@@ -1368,17 +1262,17 @@
           {
             "enemy": "original:enemy.148",
             "count": 10,
-            "level": 10
+            "level": 11
           },
           {
             "enemy": "original:enemy.149",
             "count": 10,
-            "level": 10
+            "level": 11
           },
           {
             "enemy": "original:enemy.147",
             "count": 2,
-            "level": 10
+            "level": 11
           }
         ],
         "initiallyCleared": false,
@@ -1405,7 +1299,7 @@
               "x": 900,
               "y": 5200,
               "side": "ally",
-              "level": 13,
+              "level": 11,
               "required": true,
               "spawnAt": 0,
               "destination": {
@@ -1474,22 +1368,22 @@
           {
             "enemy": "original:enemy.148",
             "count": 10,
-            "level": 10
+            "level": 12
           },
           {
             "enemy": "original:enemy.149",
             "count": 4,
-            "level": 10
+            "level": 12
           },
           {
             "enemy": "original:enemy.151",
             "count": 3,
-            "level": 10
+            "level": 12
           },
           {
             "enemy": "original:enemy.147",
             "count": 3,
-            "level": 10
+            "level": 12
           }
         ],
         "initiallyCleared": false,
@@ -1509,18 +1403,7 @@
         "waves": [],
         "storyEncounter": {
           "mode": "eliminate",
-          "actors": [
-            {
-              "id": "chronicle:unit.vello-31",
-              "character": "story10:character.vello",
-              "x": 3620,
-              "y": 5510,
-              "side": "ally",
-              "level": 13,
-              "required": false,
-              "spawnAt": 0
-            }
-          ],
+          "actors": [],
           "waves": [],
           "timeline": [],
           "cues": []
@@ -1587,18 +1470,8 @@
               "x": 5520,
               "y": 5510,
               "side": "ally",
-              "level": 13,
+              "level": 10,
               "required": true,
-              "spawnAt": 0
-            },
-            {
-              "id": "chronicle:unit.gliee-6",
-              "character": "solar10:character.jupiter",
-              "x": 5575,
-              "y": 5570,
-              "side": "ally",
-              "level": 13,
-              "required": false,
               "spawnAt": 0
             }
           ],
@@ -1626,7 +1499,7 @@
           {
             "enemy": "chronicle:enemy.izar",
             "count": 1,
-            "level": 12
+            "level": 15
           }
         ],
         "initiallyCleared": false,
@@ -1646,18 +1519,7 @@
         "waves": [],
         "storyEncounter": {
           "mode": "eliminate",
-          "actors": [
-            {
-              "id": "chronicle:unit.izar-standoff-31",
-              "character": "story10:character.vello",
-              "x": 7420,
-              "y": 5510,
-              "side": "ally",
-              "level": 13,
-              "required": false,
-              "spawnAt": 0
-            }
-          ],
+          "actors": [],
           "waves": [],
           "timeline": [],
           "cues": []
@@ -1682,17 +1544,17 @@
           {
             "enemy": "original:enemy.158",
             "count": 3,
-            "level": 10
+            "level": 22
           },
           {
             "enemy": "original:enemy.161",
             "count": 1,
-            "level": 10
+            "level": 22
           },
           {
             "enemy": "original:enemy.149",
             "count": 3,
-            "level": 10
+            "level": 22
           }
         ],
         "initiallyCleared": false,
@@ -1712,18 +1574,7 @@
         "waves": [],
         "storyEncounter": {
           "mode": "eliminate",
-          "actors": [
-            {
-              "id": "chronicle:unit.linda-32",
-              "character": "story10:character.linda",
-              "x": 1720,
-              "y": 6510,
-              "side": "ally",
-              "level": 13,
-              "required": false,
-              "spawnAt": 0
-            }
-          ],
+          "actors": [],
           "waves": [],
           "timeline": [],
           "cues": []
@@ -1748,17 +1599,17 @@
           {
             "enemy": "original:enemy.155",
             "count": 5,
-            "level": 13
+            "level": 14
           },
           {
             "enemy": "original:enemy.147",
             "count": 2,
-            "level": 13
+            "level": 14
           },
           {
             "enemy": "original:enemy.149",
             "count": 3,
-            "level": 13
+            "level": 14
           }
         ],
         "initiallyCleared": false,
@@ -1778,18 +1629,7 @@
         "waves": [],
         "storyEncounter": {
           "mode": "eliminate",
-          "actors": [
-            {
-              "id": "chronicle:unit.tactical-a-30",
-              "character": "story10:character.valencia",
-              "x": 3620,
-              "y": 6510,
-              "side": "ally",
-              "level": 16,
-              "required": false,
-              "spawnAt": 0
-            }
-          ],
+          "actors": [],
           "waves": [],
           "timeline": [],
           "cues": []
@@ -1814,17 +1654,17 @@
           {
             "enemy": "original:enemy.150",
             "count": 2,
-            "level": 13
+            "level": 14
           },
           {
             "enemy": "original:enemy.149",
             "count": 7,
-            "level": 13
+            "level": 14
           },
           {
             "enemy": "original:enemy.148",
             "count": 11,
-            "level": 13
+            "level": 14
           }
         ],
         "initiallyCleared": false,
@@ -1844,18 +1684,7 @@
         "waves": [],
         "storyEncounter": {
           "mode": "eliminate",
-          "actors": [
-            {
-              "id": "chronicle:unit.tactical-b-30",
-              "character": "story10:character.valencia",
-              "x": 5520,
-              "y": 6510,
-              "side": "ally",
-              "level": 16,
-              "required": false,
-              "spawnAt": 0
-            }
-          ],
+          "actors": [],
           "waves": [],
           "timeline": [],
           "cues": []
@@ -1880,17 +1709,17 @@
           {
             "enemy": "original:enemy.149",
             "count": 7,
-            "level": 13
+            "level": 15
           },
           {
             "enemy": "original:enemy.151",
             "count": 2,
-            "level": 13
+            "level": 15
           },
           {
             "enemy": "original:enemy.148",
             "count": 10,
-            "level": 13
+            "level": 15
           }
         ],
         "initiallyCleared": false,
@@ -1910,18 +1739,7 @@
         "waves": [],
         "storyEncounter": {
           "mode": "eliminate",
-          "actors": [
-            {
-              "id": "chronicle:unit.tactical-c-30",
-              "character": "story10:character.valencia",
-              "x": 7420,
-              "y": 6510,
-              "side": "ally",
-              "level": 16,
-              "required": false,
-              "spawnAt": 0
-            }
-          ],
+          "actors": [],
           "waves": [],
           "timeline": [],
           "cues": []
@@ -1946,17 +1764,17 @@
           {
             "enemy": "original:enemy.155",
             "count": 2,
-            "level": 13
+            "level": 15
           },
           {
             "enemy": "original:enemy.151",
             "count": 4,
-            "level": 13
+            "level": 15
           },
           {
             "enemy": "original:enemy.149",
             "count": 5,
-            "level": 13
+            "level": 15
           }
         ],
         "initiallyCleared": false,
@@ -1983,7 +1801,7 @@
               "x": 1720,
               "y": 7510,
               "side": "ally",
-              "level": 16,
+              "level": 15,
               "required": true,
               "spawnAt": 0
             }
@@ -2012,22 +1830,22 @@
           {
             "enemy": "original:enemy.148",
             "count": 11,
-            "level": 13
+            "level": 14
           },
           {
             "enemy": "original:enemy.150",
             "count": 2,
-            "level": 13
+            "level": 14
           },
           {
             "enemy": "original:enemy.149",
             "count": 9,
-            "level": 13
+            "level": 14
           },
           {
             "enemy": "original:enemy.147",
             "count": 1,
-            "level": 13
+            "level": 14
           }
         ],
         "initiallyCleared": false,
@@ -2054,18 +1872,8 @@
               "x": 3620,
               "y": 7510,
               "side": "ally",
-              "level": 16,
+              "level": 14,
               "required": true,
-              "spawnAt": 0
-            },
-            {
-              "id": "chronicle:unit.seginus-6",
-              "character": "solar10:character.jupiter",
-              "x": 3675,
-              "y": 7570,
-              "side": "ally",
-              "level": 16,
-              "required": false,
               "spawnAt": 0
             }
           ],
@@ -2123,18 +1931,7 @@
         "waves": [],
         "storyEncounter": {
           "mode": "eliminate",
-          "actors": [
-            {
-              "id": "chronicle:unit.spica-33",
-              "character": "story10:character.izar",
-              "x": 5520,
-              "y": 7510,
-              "side": "ally",
-              "level": 16,
-              "required": false,
-              "spawnAt": 0
-            }
-          ],
+          "actors": [],
           "waves": [],
           "timeline": [],
           "cues": []
@@ -2159,22 +1956,22 @@
           {
             "enemy": "original:enemy.149",
             "count": 6,
-            "level": 13
+            "level": 14
           },
           {
             "enemy": "original:enemy.151",
             "count": 2,
-            "level": 13
+            "level": 14
           },
           {
             "enemy": "original:enemy.148",
             "count": 9,
-            "level": 13
+            "level": 14
           },
           {
             "enemy": "original:enemy.147",
             "count": 4,
-            "level": 13
+            "level": 14
           }
         ],
         "initiallyCleared": false,
@@ -2201,7 +1998,7 @@
               "x": 6600,
               "y": 7200,
               "side": "ally",
-              "level": 16,
+              "level": 14,
               "required": true,
               "spawnAt": 0,
               "destination": {
@@ -2209,16 +2006,6 @@
                 "y": 7480,
                 "radius": 35
               }
-            },
-            {
-              "id": "chronicle:unit.spica-return-33",
-              "character": "story10:character.izar",
-              "x": 7475,
-              "y": 7570,
-              "side": "ally",
-              "level": 16,
-              "required": false,
-              "spawnAt": 0
             }
           ],
           "waves": [],
@@ -2268,17 +2055,17 @@
           {
             "enemy": "original:enemy.157",
             "count": 2,
-            "level": 13
+            "level": 18
           },
           {
             "enemy": "original:enemy.155",
             "count": 3,
-            "level": 13
+            "level": 18
           },
           {
             "enemy": "original:enemy.149",
             "count": 2,
-            "level": 13
+            "level": 18
           }
         ],
         "initiallyCleared": false,
@@ -2305,7 +2092,7 @@
               "x": 900,
               "y": 8200,
               "side": "ally",
-              "level": 16,
+              "level": 18,
               "required": true,
               "spawnAt": 0,
               "destination": {
@@ -2313,16 +2100,6 @@
                 "y": 8480,
                 "radius": 35
               }
-            },
-            {
-              "id": "chronicle:unit.blackhole-delivery-29",
-              "character": "story10:character.arcturus",
-              "x": 1775,
-              "y": 8570,
-              "side": "ally",
-              "level": 16,
-              "required": false,
-              "spawnAt": 0
             }
           ],
           "waves": [],
@@ -2384,17 +2161,17 @@
           {
             "enemy": "original:enemy.190",
             "count": 1,
-            "level": 18
+            "level": 20
           },
           {
             "enemy": "original:enemy.151",
             "count": 2,
-            "level": 18
+            "level": 20
           },
           {
             "enemy": "original:enemy.148",
             "count": 2,
-            "level": 18
+            "level": 20
           }
         ],
         "initiallyCleared": false,
@@ -2414,48 +2191,7 @@
         "waves": [],
         "storyEncounter": {
           "mode": "eliminate",
-          "actors": [
-            {
-              "id": "chronicle:unit.mitsuba-6",
-              "character": "solar10:character.jupiter",
-              "x": 3620,
-              "y": 8510,
-              "side": "ally",
-              "level": 21,
-              "required": false,
-              "spawnAt": 0
-            },
-            {
-              "id": "chronicle:unit.mitsuba-29",
-              "character": "story10:character.arcturus",
-              "x": 3675,
-              "y": 8570,
-              "side": "ally",
-              "level": 21,
-              "required": false,
-              "spawnAt": 0
-            },
-            {
-              "id": "chronicle:unit.mitsuba-33",
-              "character": "story10:character.izar",
-              "x": 3730,
-              "y": 8630,
-              "side": "ally",
-              "level": 21,
-              "required": false,
-              "spawnAt": 0
-            },
-            {
-              "id": "chronicle:unit.mitsuba-28",
-              "character": "story10:character.spica",
-              "x": 3785,
-              "y": 8690,
-              "side": "ally",
-              "level": 21,
-              "required": false,
-              "spawnAt": 0
-            }
-          ],
+          "actors": [],
           "waves": [
             {
               "at": 8,
@@ -2463,7 +2199,7 @@
                 {
                   "enemy": "original:enemy.148",
                   "count": 3,
-                  "level": 18
+                  "level": 20
                 }
               ]
             },
@@ -2473,7 +2209,7 @@
                 {
                   "enemy": "original:enemy.148",
                   "count": 3,
-                  "level": 18
+                  "level": 20
                 }
               ]
             }
@@ -2550,7 +2286,7 @@
               "x": 5520,
               "y": 8510,
               "side": "ally",
-              "level": 21,
+              "level": 18,
               "required": true,
               "spawnAt": 0
             }

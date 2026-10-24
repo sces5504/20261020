@@ -2028,3 +2028,142 @@
     font-size: 11px;
   }
 }
+/* Touch joystick (phones only); WASD and tap-to-move keep working everywhere. */
+.joystick {
+  display: none;
+}
+@media (max-width: 760px) and (pointer: coarse) {
+  main.bridge.bridge .joystick {
+    display: grid;
+    place-items: center;
+    position: fixed;
+    left: 14px;
+    bottom: calc(var(--nav) + 64px);
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #9edcde18, #0a152288 70%);
+    border: 1px solid #9edcde55;
+    z-index: 7;
+    touch-action: none;
+  }
+  main.bridge.bridge .joystick span {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 40% 35%, #e9f6f7, #8fc3cf);
+    box-shadow: 0 2px 10px #0008;
+    pointer-events: none;
+  }
+}
+.bridge .missions-toggle {
+  min-height: 32px;
+  padding: 2px 10px;
+  border: 1px solid #a3c2d333;
+  border-radius: 0;
+  background: #0a1522d9;
+  color: #cfe0e7;
+  font-size: 11px;
+  text-align: left;
+}
+.bridge.missions-collapsed .missions,
+.bridge.missions-collapsed .journal-shortcut {
+  display: none !important;
+}
+@media (max-width: 760px) {
+  main.bridge.bridge .missions-toggle {
+    align-self: flex-start;
+    order: 0;
+  }
+}
+/*
+ * Desktop: the star map runs down behind the formation row (its panel background
+ * removed) and the map tools sit at the map's top-right corner.
+ */
+@media (min-width: 761px) {
+  main.bridge.bridge .flight-deck {
+    position: relative;
+    z-index: 4;
+    margin-top: -168px;
+    background: none;
+    border-top: 0;
+    pointer-events: none;
+  }
+  main.bridge.bridge .flight-deck > * {
+    pointer-events: auto;
+  }
+  main.bridge.bridge .flight-deck .squad-heading {
+    visibility: hidden;
+  }
+  main.bridge.bridge .deck-nav {
+    background: linear-gradient(#0d1826f2, #09121ef2);
+    margin-inline: -28px;
+    padding-inline: 28px;
+    width: calc(100% + 56px);
+    grid-column: 1 / -1;
+  }
+  main.bridge.bridge .viewport {
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+  main.bridge.bridge .battle-tools {
+    top: 14px;
+    right: 14px;
+    left: auto;
+    bottom: auto;
+    transform: none;
+    width: auto;
+    padding: 4px;
+    background: #0a1522cc;
+  }
+  main.bridge.bridge .battle-tools small {
+    display: none;
+  }
+}
+/* Route list: compact rows grouped by destination type. */
+.route-here {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 8px 10px;
+  border-left: 3px solid #e2c47f;
+  background: #0b1a27;
+}
+.route-here strong {
+  font-size: 16px;
+}
+.route-here small,
+.route-row small {
+  color: #9fb4bf;
+}
+.route-group h3 {
+  margin: 14px 0 6px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #9fc6d3;
+}
+.route-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 10px;
+  border-bottom: 1px solid #a3c2d31f;
+}
+.route-row > div {
+  display: grid;
+  min-width: 0;
+}
+.route-row small {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 11px;
+}
+.route-row button {
+  min-width: 76px;
+  min-height: 40px;
+}
+.route-row.is-locked strong {
+  color: #8395a0;
+}

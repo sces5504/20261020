@@ -33,7 +33,9 @@ export function mountStoryPlayer(
     // Set only by the player's own "continue" on a waiting node.
     resume = false,
     hiddenSession = "",
-    autoTimer = 0;
+    autoTimer = 0,
+    combatSeen = false,
+    combatEndedAt = -Infinity;
   const actorImage = (id: string, portrait?: string) => {
     const a =
       g.pack.actors.find((a) => a.id === id) ??
@@ -112,7 +114,6 @@ export function mountStoryPlayer(
       !session &&
       !replay &&
       !g.combat &&
-      !g.report &&
       !g.error &&
       !g.busy &&
       !root.querySelector("#overlay")?.childElementCount
@@ -154,11 +155,18 @@ export function mountStoryPlayer(
       // Battles start from the tracker once the fleet has flown to the field.
       if (step?.kind === "encounter") hiddenSession = mark();
     }
+    // Let a won battle breathe for a second before the next lines appear.
+    if (g.combat) combatSeen = true;
+    else if (combatSeen) {
+      combatSeen = false;
+      combatEndedAt = performance.now();
+    }
     if (
       !replay &&
       (!session ||
         session.waiting ||
         g.combat ||
+        performance.now() - combatEndedAt < 1000 ||
         hiddenSession === mark())
     ) {
       closeScene();

@@ -8,6 +8,7 @@ import {
   nodeUnlocked,
   nodeAvailability,
   nodeVisible,
+  storyFields,
 } from "../domain/world";
 import { FleetMotion } from "../domain/formation";
 import { Combat } from "../domain/combat";
@@ -39,13 +40,6 @@ export class Game {
   autoSkills = false;
   lowEffects = localStorage.getItem("stella:effects") === "low";
   contentHash = "";
-
-  report: {
-    title: string;
-    message: string;
-    victory: boolean;
-    planet: string;
-  } | null = null;
 
   storyCamera: {
     x: number;
@@ -156,7 +150,6 @@ export class Game {
           s.team,
           this.pack.rules.formationSpacing,
         );
-        this.report = null;
         this.notice = `已抵達 ${this.pack.regions.find((r) => r.id === s.region)!.name}`;
       }
       if (
@@ -182,22 +175,28 @@ export class Game {
       if (c.type === "result") {
         const patrol = base.encounter?.kind === "patrol";
         this.events.push(c.victory ? "victory" : "defeat");
-        this.report =
-          (patrol && c.victory) || c.reset
-            ? null
-            : {
-                title: c.victory ? "航跡已開拓" : "已撤離交戰區",
-                message: c.victory
-                  ? this.pack.planets.find((v) => v.id === c.planet)?.kind ===
-                    "planet"
-                    ? "星球守軍已全部清除。啟動星球，建立新的生產據點。"
-                    : "遭遇已完成，獎勵與通關進度已保存；此據點不提供生產。"
-                  : "角色生命已保存，可整補後再挑戰。",
-                victory: c.victory,
-                planet: patrol ? "" : c.planet,
-              };
+        // Results are an on-screen line, never a blocking panel: a pending report used to
+        // stall every later engagement while a story node was open.
+        const name = this.pack.planets.find((v) => v.id === c.planet)?.name;
+        if (!(patrol && c.victory) && !c.reset)
+          this.notice = c.victory
+            ? `✧ ${name ?? "遭遇"} · 已完成`
+            : "已撤離交戰區 · 角色生命已保存";
         this.disengagedPlanets = new Set(s.disengagedPlanets);
         this.combat = null;
+        if (Math.hypot(s.x - base.x, s.y - base.y) > 1) {
+          // The domain towed a wiped fleet to a haven; follow it there.
+          this.x = s.x;
+          this.y = s.y;
+          this.fleet = new FleetMotion(
+            s.x,
+            s.y,
+            s.heading ?? 0,
+            s.team,
+            this.pack.rules.formationSpacing,
+          );
+          this.notice = "全隊失去戰力 · 已返回整補點，修復中";
+        }
         if (!(patrol && c.victory)) this.destination = { x: this.x, y: this.y };
         if (c.reset)
           this.notice =
@@ -328,7 +327,6 @@ export class Game {
         this.disengagedPlanets.delete(p.id);
     if (
       !this.combat &&
-      !this.report &&
       !this.encounterPending &&
       this.save.team.some(
         (id) => (this.save.roster.find((o) => o.id === id)?.hp ?? 0) > 0,
@@ -355,7 +353,7 @@ export class Game {
               p.status === "active" &&
               !nodeCleared(this.save, p) &&
               p.enemies.length > 0 &&
-              p.encounterPolicy === "auto" &&
+              this.engagesOnContact(p) &&
               nodeAvailability(this.save, p, Date.now()).open &&
               !this.disengagedPlanets.has(p.id) &&
               nodeUnlocked(this.save, p, this.pack),
@@ -383,8 +381,18 @@ export class Game {
             : { type: "begin", planet: contact.id },
         ).finally(() => (this.encounterPending = false));
       }
-    } else if (!this.combat && !this.report && !this.encounterPending)
+    } else if (!this.combat && !this.encounterPending)
       this.engageHint(r.id);
+  }
+  /**
+   * Entering a node's radius starts its battle. Daily motherships keep a manual start
+   * (three attempts a day) and story fields sortie from the story tracker.
+   */
+  private engagesOnContact(p: Pack["planets"][number]) {
+    return (
+      p.encounterPolicy === "auto" ||
+      (p.kind !== "dailyBoss" && !storyFields(this.pack).has(p.id))
+    );
   }
   private hintKey = "";
   /** Explain silent non-engagements inside a node's radius instead of doing nothing. */
@@ -412,7 +420,7 @@ export class Game {
               .join("、")}`
           : this.disengagedPlanets.has(v.id)
             ? `${v.name} · 剛撤離，駛離範圍後再接近即可重新交戰`
-            : v.encounterPolicy === "manual"
+            : !this.engagesOnContact(v)
               ? `抵達 ${v.name} · 於情報卡按「出擊」開始`
               : !nodeAvailability(this.save, v, Date.now()).open
                 ? `${v.name} · ${nodeAvailability(this.save, v, Date.now()).reason}`
@@ -438,7 +446,7 @@ export class Game {
           !nodeCleared(this.save, p) &&
           p.enemies.length > 0 &&
           nodeUnlocked(this.save, p, this.pack) &&
-          p.encounterPolicy === "auto" &&
+          this.engagesOnContact(p) &&
           Math.hypot(p.x - this.x, p.y - this.y) < p.engageRadius + 250,
       );
     return threat ? this.pack.rules.travelSpeed : this.pack.rules.cruiseSpeed;
@@ -460,6 +468,13 @@ export class Game {
     if (!this.combat) return;
     this.combat.victory = false;
     this.combat.ended = true;
+    // A retreat never drags the fleet straight into a neighbouring node's battle.
+    for (const p of this.pack.planets)
+      if (
+        p.region === this.save.region &&
+        Math.hypot(p.x - this.x, p.y - this.y) <= p.engageRadius
+      )
+        this.disengagedPlanets.add(p.id);
   }
   move(x: number, y: number) {
     const r = this.pack.regions.find((r) => r.id === this.save.region)!;

@@ -2591,7 +2591,7 @@
     "duplicateStatBonus": 0.02,
     "duplicateRefundRate": 0.25,
     "travelSpeed": 180,
-    "cruiseSpeed": 255
+    "cruiseSpeed": 380
   },
   "audio": [
     {

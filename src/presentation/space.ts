@@ -18,7 +18,7 @@ import type { AudioMixer } from "../platform/audio";
 /** World units per backdrop pixel in the first sector (3600x2400 over 1672x941 art). */
 const backdropDensity = 2.55;
 const zoomKey = "stella:explore-zoom",
-  minZoom = 0.5;
+  minZoom = 0.4;
 /** Phones open the voyage fully zoomed out; a remembered player choice wins. */
 function exploreZoom() {
   try {
@@ -363,7 +363,10 @@ export function mountSpace(
 
         this.panX = 0;
         this.panY = 0;
-        this.zoomFactor = battle ? 1 : exploreZoom();
+        // Battles on the voyage keep the player's zoom; only the galaxy map frames itself.
+        this.zoomFactor = model.viewMode === "explore" ? exploreZoom() : 1;
+        if (battle) this.handoff = new Map(this.shown);
+        this.shown.clear();
       }
       // Portrait combat frames the living team, including the rear formation slots.
       // This is camera-only; unit positions and combat rules remain untouched.
@@ -621,6 +624,8 @@ export function mountSpace(
         }
       if (!battle) {
         const d = model.destination;
+        const moving = Math.hypot(d.x - model.x, d.y - model.y) > 8 || !!(model.movement.x || model.movement.y);
+        const cruising = moving && model.movementSpeed > model.pack.rules.travelSpeed;
         g.lineStyle(1.2, 0x87d8d5, 0.4);
         g.lineBetween(model.x, model.y, d.x, d.y);
         g.strokeCircle(d.x, d.y, 12);
@@ -628,8 +633,22 @@ export function mountSpace(
           const o = model.save.roster.find((o) => o.id === model.save.team[i])!;
           const c = model.pack.characters.find((c) => c.id === o.definition)!;
           this.ensureAsset(c.sprite);
-          const position = model.fleet.positions.get(o.id)!;
+          const position = this.flock(o.id, i, moving, dt);
           const bob = Math.sin(this.elapsed * 2.2 + i * 1.7) * 3;
+          const trail = this.trails.get(o.id) ?? [];
+          trail.push({ x: position.x, y: position.y + bob });
+          if (trail.length > 14) trail.shift();
+          this.trails.set(o.id, trail);
+          if (cruising && !model.lowEffects)
+            for (let k = 1; k < trail.length; k++) {
+              const a = trail[k - 1],
+                b = trail[k],
+                t = k / trail.length;
+              g.lineStyle(10 * t, 0x5fc8ff, 0.32 * t);
+              g.lineBetween(a.x, a.y + 14, b.x, b.y + 14);
+              g.lineStyle(3 * t, 0xd8f4ff, 0.55 * t);
+              g.lineBetween(a.x, a.y + 14, b.x, b.y + 14);
+            }
           if (this.textures.exists(c.sprite)) {
             this.drawAsset(
               o.id,
@@ -787,8 +806,23 @@ export function mountSpace(
         this.separate(combat.units);
         for (const sim of combat.units) {
           if (sim.hp <= 0) continue;
-          const o = this.spread.get(sim.id);
-          const u = o ? { ...sim, x: sim.x + o.x, y: sim.y + o.y } : sim;
+          const o = { ...(this.spread.get(sim.id) ?? { x: 0, y: 0 }) };
+          const h = this.handoff.get(sim.id);
+          if (h) {
+            const k = Math.exp(-dt * 3.5);
+            h.x = sim.x + (h.x - sim.x) * k;
+            h.y = sim.y + (h.y - sim.y) * k;
+            o.x += h.x - sim.x;
+            o.y += h.y - sim.y;
+            if (Math.hypot(h.x - sim.x, h.y - sim.y) < 0.5) this.handoff.delete(sim.id);
+          }
+          const slot = sim.side === "ally" ? model.save.team.indexOf(sim.id) : -1;
+          if (slot > 0) {
+            // Rear members hover loosely around the battle line (display only, ≤10px).
+            o.x += Math.sin(this.elapsed * 0.9 + slot * 2.1) * 8;
+            o.y += Math.cos(this.elapsed * 0.7 + slot * 1.3) * 10;
+          }
+          const u = { ...sim, x: sim.x + o.x, y: sim.y + o.y };
           if (u.sprite) this.ensureAsset(u.sprite);
           const color = Phaser.Display.Color.HexStringToColor(u.color).color;
           const scale = combat.mechanics.stat(u, "scale");
@@ -1005,6 +1039,55 @@ export function mountSpace(
     }
 
     private spread = new Map<string, { x: number; y: number }>();
+    private trails = new Map<string, { x: number; y: number }[]>();
+    /** Exploration-only display positions: a loose wedge around the captain. */
+    private shown = new Map<string, { x: number; y: number }>();
+    /** Display offsets carried into a battle so the wedge eases into the combat line. */
+    private handoff = new Map<string, { x: number; y: number }>();
+    private flockHeading?: number;
+    private flock(id: string, i: number, moving: boolean, dt: number) {
+      const leader = model.fleet.positions.get(model.save.team[0])!;
+      const own = model.fleet.positions.get(id)!;
+      const s = model.fleet.spacing;
+      const heading = model.fleet.heading ?? 0;
+      this.flockHeading ??= heading;
+      const turn = Math.atan2(
+        Math.sin(heading - this.flockHeading),
+        Math.cos(heading - this.flockHeading),
+      );
+      this.flockHeading += turn * Math.min(1, dt * 2.2);
+      const prev = this.shown.get(id) ?? { ...own };
+      let target: { x: number; y: number };
+      if (i === 0) target = { ...leader };
+      else {
+        // Wedge slots behind the captain; idle members gather closer around her.
+        const row = Math.ceil(i / 2),
+          side = i % 2 ? -1 : 1,
+          back = (moving ? 0.85 : 0.5) * s * row,
+          lateral = side * s * (0.55 + row * 0.18),
+          drift = 0.18 * s,
+          bx = -back + Math.sin(this.elapsed * 0.62 + i * 1.9) * drift,
+          by = lateral + Math.cos(this.elapsed * 0.47 + i * 2.6) * drift,
+          c = Math.cos(this.flockHeading),
+          n = Math.sin(this.flockHeading);
+        target = { x: leader.x + bx * c - by * n, y: leader.y + bx * n + by * c };
+      }
+      const rate = i === 0 ? 30 : 3.4 - Math.min(1.6, i * 0.4);
+      const k = 1 - Math.exp(-dt * rate);
+      const next = {
+        x: prev.x + (target.x - prev.x) * k,
+        y: prev.y + (target.y - prev.y) * k,
+      };
+      // Never let a follower fall far behind on long cruises.
+      const gap = Math.hypot(next.x - leader.x, next.y - leader.y),
+        limit = s * (1.4 + i * 0.6);
+      if (gap > limit) {
+        next.x = leader.x + ((next.x - leader.x) / gap) * limit;
+        next.y = leader.y + ((next.y - leader.y) / gap) * limit;
+      }
+      this.shown.set(id, next);
+      return next;
+    }
     /**
      * Presentation-only spacing: stacked units fan out on screen. Simulation positions,
      * hits and battle evidence are untouched; a coarse grid keeps it near O(n).
@@ -1066,11 +1149,11 @@ export function mountSpace(
     recenter() {
       this.panX = 0;
       this.panY = 0;
-      this.zoomFactor = model.combat ? 1 : exploreZoom();
+      this.zoomFactor = model.viewMode === "explore" ? exploreZoom() : 1;
     }
     /** The voyage keeps the player's own zoom across reloads; battles frame themselves. */
     private rememberZoom() {
-      if (model.combat) return;
+      if (model.viewMode !== "explore") return;
       try {
         localStorage.setItem(zoomKey, String(this.zoomFactor));
       } catch {

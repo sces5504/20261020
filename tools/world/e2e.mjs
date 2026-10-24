@@ -221,11 +221,11 @@ try {
       "management pauses challenge",
     );
     await page.locator('.modal [data-action="close"]').first().click();
-    await page.waitForSelector(".result-screen", { timeout: 15000 });
+    // Results are an on-screen line now, not a panel to dismiss.
     const result = await waitSave(page, (s) => !s.encounter);
     assert.equal(result.dailyAttempts[f.v.region].count, 1);
     assert.equal(Object.keys(result.dailyClaims).length, 1);
-    await page.locator('.result-screen [data-action="close"]').click();
+    await page.locator(".planet-card").waitFor();
     assert(
       (await page.locator("#planet-card").innerText()).includes(
         "本日獎勵已領取",

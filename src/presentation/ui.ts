@@ -72,6 +72,15 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     currentAcquisition = "",
     arrivalReturnPanel = "",
     timer: number;
+  // Phones start with the side missions folded so the map stays open; the choice is remembered.
+  let missionsCollapsed = (() => {
+    try {
+      const saved = localStorage.getItem("stella:missions-collapsed");
+      return saved === null ? window.innerWidth < 760 : saved === "1";
+    } catch {
+      return window.innerWidth < 760;
+    }
+  })();
   let mainlineKey = "",
     missionsKey = "";
   let journalTab = "story",
@@ -81,9 +90,9 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
   let cleanup: () => void | Promise<void> = () => {};
   let disposed = false;
   root.innerHTML = `<main class="bridge"><header class="topbar"><a class="brand" href="#/play"><span class="brand-icon">✧</span><span>GALAXY ANGEL<small>星 河 戰 姬</small></span></a><div id="wallet" class="wallet"></div><div class="top-actions">${button("設定", "panel", "archive", "icon-button")}<a class="studio-link" href="gallery.html">角色圖鑑 ↗</a><a class="studio-link" href="#/studio">內容工坊 ↗</a></div></header>
- <div class="sector-heading"><div id="skill-splash" class="skill-splash" aria-live="polite"></div><div><span class="eyebrow">GALACTIC EXPEDITION</span><h1><b id="region-title">${esc(p.regions.find((r) => r.id === g.save.region)!.name)}</b><span>探索航線</span></h1></div><button class="journal-shortcut" data-action="journal-open" data-id="quests">${icon("journal")}<span id="journal-status">章節／任務</span> →</button><div id="mainline" class="mainline" aria-live="polite"></div><div id="missions" class="missions"></div><div class="sector-status"><i></i> <span id="save-status">本機自動保存</span>${test ? "<strong>隔離測試</strong>" : ""}</div></div>
+ <div class="sector-heading"><div id="skill-splash" class="skill-splash" aria-live="polite"></div><div><span class="eyebrow">GALACTIC EXPEDITION</span><h1><b id="region-title">${esc(p.regions.find((r) => r.id === g.save.region)!.name)}</b><span>探索航線</span></h1></div><button class="journal-shortcut" data-action="journal-open" data-id="quests">${icon("journal")}<span id="journal-status">章節／任務</span> →</button><div id="mainline" class="mainline" aria-live="polite"></div><button id="missions-toggle" class="missions-toggle" data-action="missions-toggle"></button><div id="missions" class="missions"></div><div class="sector-status"><i></i> <span id="save-status">本機自動保存</span>${test ? "<strong>隔離測試</strong>" : ""}</div></div>
  <section class="viewport"><aside class="mission-rail"><div class="section-label">航行目標 <span>MISSION</span></div><div id="mission"></div><div class="rail-bottom"><span class="eyebrow">NAVIGATION</span><p>WASD／點擊星海航行<br>M 切換大星圖</p><div class="signal"><i></i><i></i><i></i><i></i><i></i></div><small>艦隊通訊連線中</small></div></aside>
- <div id="space" class="space" aria-label="星域戰場，點擊空白處移動，點擊星球查看情報" role="application"></div><div class="map-caption"><span>✧ 星域掃描</span><span id="coordinates"></span></div><div id="target-hud" class="target-hud" hidden aria-label="目前戰鬥目標"></div><div id="battle-state" class="battle-state"></div><div id="battle-tools" class="battle-tools"></div><aside id="planet-card" class="planet-card"></aside></section>
+ <div id="space" class="space" aria-label="星域戰場，點擊空白處移動，點擊星球查看情報" role="application"></div><div class="map-caption"><span>✧ 星域掃描</span><span id="coordinates"></span></div><div id="target-hud" class="target-hud" hidden aria-label="目前戰鬥目標"></div><div id="battle-state" class="battle-state"></div><div id="battle-tools" class="battle-tools"></div><div id="joystick" class="joystick" aria-hidden="true"><span></span></div><aside id="planet-card" class="planet-card"></aside></section>
  <footer class="flight-deck"><div class="squad-heading"><span class="eyebrow">YOUR CONSTELLATION</span><strong>航行編隊</strong>${button("編隊 ↗", "panel", "formation", "text-button")}</div><div class="squad" id="squad"></div><nav class="deck-nav" aria-label="艦隊功能">${navButton("星體共鳴", "共鳴", "RESONANCE", "resonance", "summon")}${navButton("共振研究", "研究", "RESEARCH", "research", "research")}${navButton("高難／活動", "挑戰", "SORTIE", "challenge", "challenges")}${navButton("航行紀錄", "紀錄", "CHRONICLE", "journal", "quests")}${navButton("領地", "領地", "COLONY", "planet", "planets")}${navButton("角色", "角色", "OPERATORS", "crew", "roster")}</nav></footer>
  <div class="build-note">v${p.version} · ${p.characters.filter((c) => c.status === "active").length} 位少女／${p.regions.filter((r) => r.status === "active").length} 個航區</div><div class="toast" id="toast" role="status" aria-live="polite"></div><div id="overlay"></div></main>`;
   function navButton(
@@ -108,9 +117,38 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     },
     audio,
   );
+  // Touch joystick: drives the same movement vector as WASD.
+  const stick = $("#joystick"),
+    knob = stick.querySelector<HTMLElement>("span")!;
+  let stickId = -1;
+  const steer = (e: PointerEvent) => {
+    const r = stick.getBoundingClientRect(),
+      dx = e.clientX - (r.left + r.width / 2),
+      dy = e.clientY - (r.top + r.height / 2),
+      max = r.width / 2,
+      len = Math.hypot(dx, dy),
+      k = len > max ? max / len : 1;
+    knob.style.transform = `translate(${dx * k}px, ${dy * k}px)`;
+    g.movement = len > 10 ? { x: dx, y: dy } : { x: 0, y: 0 };
+  };
+  const release = () => {
+    stickId = -1;
+    knob.style.transform = "";
+    g.movement = { x: 0, y: 0 };
+  };
+  stick.addEventListener("pointerdown", (e) => {
+    stickId = e.pointerId;
+    stick.setPointerCapture(e.pointerId);
+    steer(e);
+    e.preventDefault();
+  });
+  stick.addEventListener("pointermove", (e) => {
+    if (e.pointerId === stickId) steer(e);
+  });
+  stick.addEventListener("pointerup", release);
+  stick.addEventListener("pointercancel", release);
   const disposeStory = mountStoryPlayer(root, g, () => {
     panel = "";
-    g.report = null;
     drawPanel();
   });
   space.select(selected);
@@ -520,17 +558,42 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       title = "星域航路";
       kick = "INTERSTELLAR ROUTES";
       const here = p.regions.find((r) => r.id === s.region)!;
-      body = `<p>目前位於 ${esc(here.name)}。選擇已開放的航線進行躍遷，經營工作與已解放星球會保留。</p><div class="list-cards">${
-        here.routes
-          .map((route) => {
-            const to = p.regions.find((r) => r.id === route.to)!;
-            const locked =
-              to.status !== "active" ||
-              !route.requires.every((id) => s.cleared.includes(id));
-            return `<article class="region-route">${entityImage(p, to)}<span class="eyebrow">${locked ? "LOCKED" : "ROUTE OPEN"}</span><h3>${esc(to.name)}</h3><p>${esc(to.description)}</p>${route.requires.length ? `<small>需要解放：${route.requires.map((id) => esc(p.planets.find((v) => v.id === id)!.name)).join("、")}</small>` : ""}${button(locked ? "航路尚未開放" : esc(route.label), "travel", to.id, "primary", locked || !!g.combat || g.encounterPending)}</article>`;
+      const progress = (id: string) => {
+        const nodes = p.planets.filter(
+          (v) => v.region === id && v.status === "active" && v.kind !== "camp",
+        );
+        return nodes.length
+          ? `${nodes.filter((v) => nodeCleared(s, v)).length}/${nodes.length}`
+          : "";
+      };
+      // One compact row per route, grouped like the original galaxy menu.
+      const groups = [
+        ["campaign", "主要星域"],
+        ["hard", "高難星域"],
+        ["other", "挑戰航區"],
+      ] as const;
+      const rows = here.routes.map((route) => {
+        const to = p.regions.find((r) => r.id === route.to)!;
+        const missing = route.requires.filter((id) => !s.cleared.includes(id));
+        const locked = to.status !== "active" || missing.length > 0;
+        const group =
+          to.category === "campaign" ? "campaign" : to.category === "hard" ? "hard" : "other";
+        const done = progress(to.id);
+        return {
+          group,
+          html: `<div class="route-row ${locked ? "is-locked" : ""}"><div><strong>${esc(to.name)}</strong><small>${locked ? `需先解放 ${missing.length} 處：${missing.slice(0, 2).map((id) => esc(p.planets.find((v) => v.id === id)?.name ?? id)).join("、")}${missing.length > 2 ? "…" : ""}` : done ? `解放進度 ${done}` : esc(route.label)}</small></div>${button(locked ? "未開放" : "躍遷", "travel", to.id, locked ? "" : "primary", locked || !!g.combat || g.encounterPending)}</div>`,
+        };
+      });
+      body = `<div class="route-here"><span class="eyebrow">目前位置</span><strong>${esc(here.name)}</strong>${progress(here.id) ? `<small>解放進度 ${progress(here.id)}</small>` : ""}</div>${
+        groups
+          .map(([id, name]) => {
+            const list = rows.filter((r) => r.group === id);
+            return list.length
+              ? `<section class="route-group"><h3>${name}</h3>${list.map((r) => r.html).join("")}</section>`
+              : "";
           })
-          .join("") || "<p>目前沒有可用航線，請由內容工坊配置星域 routes。</p>"
-      }</div>`;
+          .join("") || "<p>目前沒有可用航線。</p>"
+      }<p class="muted">經營工作與已解放星球在躍遷後都會保留。</p>`;
     }
     if (panel === "formation") {
       title = "航行編隊";
@@ -640,11 +703,6 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       title = "航行指南";
       kick = "FLIGHT MANUAL";
       body = `<ol class="guide-steps"><li><strong>探索與出擊</strong><p>在銀河裡航行並靠近星球，或按 M 切換大星圖規劃航路。WASD／點空白處移動，拖曳平移鏡頭；滾輪或雙指可縮放，「跟隨」返回隊伍。</p></li><li><strong>走位與技能</strong><p>普通攻擊自動進行。將守護角色排第一，轉向時讓隊長先走到前方。點敵人鎖定，點下方角色或鍵盤1～6施放技能。紅色線條是敵方射擊預警，移動避開。</p></li><li><strong>啟動與經營</strong><p>解放星球後啟動生產，再建造採集站與研究。多數工作在數十秒至數分鐘內完成，管理面板只暫停戰鬥。序章與航行任務會提供額外補給，可先強化角色、開始研究。</p></li><li><strong>收集與編成</strong><p>四資源共鳴、首次解放與任務可取得少女。在編成中強化、整補與更換隊伍。</p></li><li><strong>領地與存檔</strong><p>領地總覽可管理所有星球、查看產能與進行建設。可於設定匯出／匯入存檔。</p></li><li><strong>星域航路</strong><p>銀河下方的「星域航路」可選擇目的地並躍遷。各星域的據點與解放前置可在情報中查看；原有領地與工作在跨區後仍會保留。</p></li></ol>`;
-    }
-    if (panel === "result" && g.report) {
-      title = g.report.title;
-      kick = g.report.victory ? "MISSION COMPLETE" : "FLIGHT REPORT";
-      body = `<div class="result-screen"><span>${g.report.victory ? "✧" : "◇"}</span><p>${esc(g.report.message)}</p>${g.report.planet && g.report.victory && p.planets.find((v) => v.id === g.report!.planet)?.kind === "planet" && !s.colonies[g.report.planet]?.active ? button("啟動剛解放的星球", "result-activate", g.report.planet, "primary") : ""}${button("返回航線 →", "close", "", "primary")}</div>`;
     }
     if (panel === "archive") {
       title = "航行設定";
@@ -839,6 +897,15 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       drawPanel();
       return;
     }
+    if (action === "missions-toggle") {
+      missionsCollapsed = !missionsCollapsed;
+      try {
+        localStorage.setItem("stella:missions-collapsed", missionsCollapsed ? "1" : "0");
+      } catch {
+        // Storage unavailable: the fold still applies for this session.
+      }
+      return;
+    }
     if (action === "journal-tab-open") {
       journalTab = id;
       panel = "quests";
@@ -989,15 +1056,6 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
         g.retreat();
       return;
     }
-    if (action === "result-activate") {
-      await g.command({ type: "activate", planet: id });
-      selected = id;
-      g.report = null;
-      panel = "colony";
-      drawPanel();
-      renderPlanet();
-      return;
-    }
 
     if (action === "panel") {
       panel = id;
@@ -1008,7 +1066,6 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       if (panel === "acquisition")
         await g.command({ type: "ack-acquisition", id: currentAcquisition });
       panel = "";
-      g.report = null;
       drawPanel();
       return;
     }
@@ -1282,7 +1339,6 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     }
     if (
       !g.combat &&
-      !g.report &&
       !g.save.story.session &&
       !["story", "acquisition"].includes(panel) &&
       g.save.acquisitionQueue.length
@@ -1293,7 +1349,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       panel = "acquisition";
       drawPanel();
     }
-    if (!panel && !g.combat && !g.report && !g.save.story.session) {
+    if (!panel && !g.combat && !g.save.story.session) {
       const q = p.quests.find(
         (q) =>
           questReady(g.save, q) &&
@@ -1307,15 +1363,6 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
         panel = "story";
         drawPanel();
       }
-    }
-    if (
-      g.report &&
-      !g.save.story.session &&
-      panel !== "result" &&
-      !["story", "acquisition"].includes(panel)
-    ) {
-      panel = "result";
-      drawPanel();
     }
     const battleTools = $("#battle-tools");
     const toolKey = String(!!g.combat) + g.viewMode + String(g.autoSkills);
@@ -1390,6 +1437,12 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       mainlineKey = mainline;
       $("#mainline").innerHTML = mainline;
     }
+    const toggle = `${missionsCollapsed ? "▸" : "▾"} 任務${rewards ? ` · 可領 ${rewards}` : ""}`;
+    if ($("#missions-toggle").textContent !== toggle)
+      $("#missions-toggle").textContent = toggle;
+    root
+      .querySelector(".bridge")
+      ?.classList.toggle("missions-collapsed", missionsCollapsed);
     const missions = missionCardsHtml(p, g.save, Date.now());
     if (missions !== missionsKey) {
       missionsKey = missions;

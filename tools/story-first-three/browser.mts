@@ -38,6 +38,8 @@ try{
   persisted=await record(page);assert.ok(persisted.story.completed.includes('chronicle:quest.02'));assert.ok(!persisted.quests.includes('chronicle:quest.02'));
   if(await page.locator('#overlay .modal-backdrop').count()){console.log('Post-story panel:',(await page.locator('#overlay').innerText()).slice(0,250));const close=page.locator('#overlay [data-action="close"]');if(await close.count())await close.first().click();}
   // The next main node now chains in like the original; return to the voyage before opening the journal.
+  // Chaining waits until result/acquisition panels are dismissed; close any that appear late.
+  for(let i=0;i<60&&!(await page.locator('.story-scene').count());i++){const close=page.locator('#overlay [data-action="close"]:visible, .result-screen [data-action="close"]:visible');if(await close.count())await close.first().click().catch(()=>{});await page.waitForTimeout(250);}
   await page.locator('.story-scene').waitFor();assert.equal((await record(page)).story.session?.quest,'chronicle:quest.03');await page.locator('[data-action="flow-close"]').click();await page.locator('.story-scene').waitFor({state:'detached'});
   await page.locator('.deck-nav [data-action="panel"][data-id="quests"]').click();
   const claim=page.locator('[data-action="quest"][data-id="chronicle:quest.02"]');await claim.scrollIntoViewIfNeeded();await claim.click();await page.waitForTimeout(250);

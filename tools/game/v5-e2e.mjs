@@ -165,9 +165,9 @@ try {
     .locator('[data-action="panel"][data-id="regions"]')
     .first()
     .click();
-  assert.equal(await page.locator(".region-route em").count(), 0);
+  assert.equal(await page.locator(".route-row em").count(), 0);
   assert.ok(
-    (await page.locator('[data-action="travel"]').innerText()).includes("<em>"),
+    (await page.locator(".route-row").first().innerText()).includes("<em>"),
   );
   await page
     .locator(`[data-action="travel"][data-id="${pack.regions[1].id}"]`)

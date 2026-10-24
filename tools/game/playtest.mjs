@@ -134,9 +134,11 @@ try {
     } catch {}
   }, 15000);
   try {
-    await page
-      .getByRole("heading", { name: "航跡已開拓" })
-      .waitFor({ timeout: 120000 });
+    const deadline = Date.now() + 120000;
+    while (!(await record(page, "save:test"))?.cleared?.includes("m1:haven")) {
+      if (Date.now() > deadline) throw Error("haven battle did not settle");
+      await page.waitForTimeout(500);
+    }
   } catch (e) {
     console.log(
       "Battle failure:",
@@ -159,7 +161,18 @@ try {
     undefined,
     "sandbox must not create official progress",
   );
-  await page.locator('[data-action="result-activate"]').click();
+  await page.screenshot({ path: ".artifacts/v2/playtest-after-haven.png" });
+  console.log("after haven overlay:", (await page.locator("#overlay").innerText()).slice(0, 300));
+  for (let i = 0; i < 40; i++) {
+    const next = page.locator(
+      '[data-action="acquisition-next"]:visible, [data-action="story-skip"]:visible',
+    );
+    if (await next.count()) await next.first().click().catch(() => {});
+    const go = page.locator('[data-action="activate"][data-id="m1:haven"]:visible');
+    if (await go.count() && (await go.first().click({ timeout: 1000 }).then(() => true, () => false))) break;
+    await page.waitForTimeout(250);
+  }
+  await page.locator('#planet-card [data-action="panel"][data-id="colony"]').click();
   await page.locator('[data-action="build"]').click();
   s = await waitSave(
     page,

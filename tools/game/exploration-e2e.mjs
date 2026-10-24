@@ -255,7 +255,9 @@ try {
   await page.getByRole("alertdialog").waitFor();
   await page.locator('[data-answer="yes"]').click();
   try {
-    await page.getByRole("heading", { name: "已撤離交戰區" }).waitFor();
+    await page.waitForFunction(() =>
+      document.querySelector("#toast")?.textContent?.includes("已撤離交戰區"),
+    );
   } catch (e) {
     console.log(
       "Retreat failure",

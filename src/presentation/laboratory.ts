@@ -1,4 +1,5 @@
 import { barrierEnds } from "../domain/mechanics";
+import { turretArt } from "./summon-art";
 import { SimulationClock } from "../application/simulation-clock";
 import { patternNames, skillMechanic } from "../content/descriptions";
 import { laboratory, type LaboratoryConfig } from "../domain/laboratory";
@@ -58,9 +59,10 @@ export function mountLaboratory(parent: HTMLElement, pack: Pack) {
     let img = images.get(id);
     if (!img) {
       const asset = pack.assets.find((a) => a.id === id);
-      if (!asset) return undefined;
+      const src = id === turretArt.key ? turretArt.url : asset?.src;
+      if (!src) return undefined;
       img = new Image();
-      img.src = asset.src;
+      img.src = src;
       images.set(id, img);
     }
     return img;
@@ -349,8 +351,23 @@ export function mountLaboratory(parent: HTMLElement, pack: Pack) {
         ctx.globalAlpha = 1;
       }
       ctx.globalAlpha = u.summonKind === "clone" ? 0.6 : 1;
-      const img = imageFor(u.sprite);
-      if (img?.complete && img.naturalWidth) {
+      const texturedTurret = u.summonKind === "turret";
+      const img = imageFor(texturedTurret ? turretArt.key : u.sprite);
+      if (texturedTurret && img?.complete && img.naturalWidth) {
+        const w = turretArt.worldWidth * c.mechanics.stat(u, "scale"),
+          h = (w * img.naturalHeight) / img.naturalWidth;
+        ctx.save();
+        ctx.translate(u.x, u.y);
+        ctx.rotate(u.aim);
+        ctx.drawImage(
+          img,
+          -w * turretArt.pivot.x,
+          -h * turretArt.pivot.y,
+          w,
+          h,
+        );
+        ctx.restore();
+      } else if (img?.complete && img.naturalWidth) {
         const h = (u.boss ? 110 : 70) * c.mechanics.stat(u, "scale"),
           w = (h * img.naturalWidth) / img.naturalHeight;
         ctx.drawImage(img, u.x - w / 2, u.y - h / 2, w, h);

@@ -1,4 +1,5 @@
 import type Phaser from "phaser";
+import { turretArt } from "./summon-art";
 import type { Combat } from "../domain/combat";
 import type { Pack, Skill } from "../content/schema";
 
@@ -325,8 +326,12 @@ export function drawCombatVfx(
       }
     }
     if (!reduced && t - u.shotAt < 0.08) {
-      const x = u.x + Math.cos(u.aim) * 18,
-        y = u.y + Math.sin(u.aim) * 18;
+      const reach =
+        u.summonKind === "turret"
+          ? turretArt.worldWidth * (1 - turretArt.pivot.x) - 4
+          : 18;
+      const x = u.x + Math.cos(u.aim) * reach,
+        y = u.y + Math.sin(u.aim) * reach;
       light.fillStyle(c, 0.7);
       light.fillTriangle(
         x + Math.cos(u.aim) * 12,

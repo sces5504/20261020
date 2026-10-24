@@ -1,6 +1,6 @@
 {
   "assetId": "presentation:ui-vfx-polish.v1",
-  "version": "1.0.0-candidate",
+  "version": "1.1.0-candidate",
   "baseCommit": "072892b21ffe69a10fd9cf9861cc9155be403357",
   "coreVersion": "0.9.0",
   "reviewStatus": "candidate",
@@ -8,8 +8,8 @@
   "bundle": "presentation-only; Vite dynamic UI CSS/JS",
   "colorSpace": "sRGB",
   "runtime": {
-    "type": "procedural Graphics + CSS; no new raster assets",
-    "dimensions": "CSS pixels for UI; simulation world units for VFX; no fixed texture size",
+    "type": "procedural Graphics + CSS, plus first RGBA summon turret candidate",
+    "dimensions": "UI CSS pixels / VFX world units. New turret PNG/WebP 1536x1024; shared runtime texture 512x341, visual width64.",
     "pivot": {
       "cast": "flash.x/y",
       "field": "field.x/y",
@@ -17,7 +17,7 @@
       "shield": "unit.x/y",
       "portrait": "top-aligned display crop only; original image pivot unchanged"
     },
-    "alpha": "Renderer-managed geometry alpha; transparent VFX background; no premultiplied raster atlas",
+    "alpha": "Renderer geometry alpha plus straight-alpha WebP for first summon candidate. No raster animation atlas.",
     "blend": {
       "ground": "NORMAL",
       "decoration": "ADD, Phaser depth 2",
@@ -35,7 +35,7 @@
     }
   },
   "sourcePolicy": {
-    "artwork": "Existing user-selected standard and integrated candidate media. No original art was edited.",
+    "artwork": "Existing user-selected standards and integrated media unchanged. First new original turret candidate added; separate manifest records source and alpha.",
     "research": [
       "research/stella-maiden/scenes/Actor_00/Bg_Ray.act.json",
       "research/stella-maiden/scenes/Actor_00/SkillReady.act.json",
@@ -50,7 +50,7 @@
   "sources": [
     {
       "path": "src/presentation/combat-vfx.ts",
-      "sha256": "c8264c6b326ceb802d4d1fbd881c3ba5cd03183925d9fa00e7305fd910a47798"
+      "sha256": "887cef44fde6fdc9765fb4c446095bcacbcb8f098348c82f260b1f3a4ba56fce"
     },
     {
       "path": "src/presentation/journal.ts",
@@ -70,7 +70,7 @@
     },
     {
       "path": "src/presentation/space.ts",
-      "sha256": "306d17af2c5632e52c9f06dbe4ef4cc62e0d5274e94554bbea10117026a8e9a0"
+      "sha256": "65a65524578a75625401bcef3092cf8ccbd0ec07b1db308effb7b1a6303488f7"
     },
     {
       "path": "src/presentation/icons.ts",
@@ -79,6 +79,18 @@
     {
       "path": "src/style.css",
       "sha256": "a5f00bf6d4a1ff3ff096f595871b6dd66ad274c672f2697f0d196c849e160065"
+    },
+    {
+      "path": "src/presentation/summon-art.ts",
+      "sha256": "fd015da86164ca0267b47ccf8422e0f726b9fb621e929822b64e6bc383e8345d"
+    },
+    {
+      "path": "src/presentation/summon-cues.ts",
+      "sha256": "f032a6d8f2751b92681ea1bf6453e287734373a62b1c49e56e528c4688f27148"
+    },
+    {
+      "path": "src/presentation/laboratory.ts",
+      "sha256": "a3427b23c92dd5e30aa1ec5f6d75933173f841cb0721d7a35d992a90ed7beea9"
     }
   ],
   "families": {
@@ -1181,6 +1193,136 @@
       "pivot": null,
       "atlas": null,
       "frames": null
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/skills/beam.png",
+      "sha256": "c70550194b1be173732017cf208fbb40b68cc954150a5712327cb4d38dc3c1ea",
+      "bytes": 308254,
+      "reviewStatus": "candidate",
+      "type": "real Game/Combat/Phaser review evidence; one skill per clip",
+      "fixture": "one original-skill character; one high-HP/low-attack enemy, no patrols",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null,
+      "width": 982,
+      "height": 454,
+      "method": "paused through real in-game pause control before screenshot encoding"
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/skills/beam.webm",
+      "sha256": "04dca942ff31ccab537422984ea78cbc6d940c042c135c76191f2b26ee24a066",
+      "bytes": 255611,
+      "reviewStatus": "candidate",
+      "type": "real Game/Combat/Phaser review evidence; one skill per clip",
+      "fixture": "one original-skill character; one high-HP/low-attack enemy, no patrols",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null,
+      "width": 1024,
+      "height": 768,
+      "fps": 25,
+      "durationSecondsApprox": 7,
+      "method": "last7 seconds from captured real-game clip; no timing or damage driven by video"
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/skills/gravity.png",
+      "sha256": "3f15192f8ab3d86e306f8fb90d725491fd69046798801d1bfcb48dfeb7948c22",
+      "bytes": 333445,
+      "reviewStatus": "candidate",
+      "type": "real Game/Combat/Phaser review evidence; one skill per clip",
+      "fixture": "one original-skill character; one high-HP/low-attack enemy, no patrols",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null,
+      "width": 982,
+      "height": 454,
+      "method": "paused through real in-game pause control before screenshot encoding"
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/skills/gravity.webm",
+      "sha256": "2f86262e0946a88e93d6512c38e54c99ecbeb36b108ace6b9614cf98324a0189",
+      "bytes": 278413,
+      "reviewStatus": "candidate",
+      "type": "real Game/Combat/Phaser review evidence; one skill per clip",
+      "fixture": "one original-skill character; one high-HP/low-attack enemy, no patrols",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null,
+      "width": 1024,
+      "height": 768,
+      "fps": 25,
+      "durationSecondsApprox": 7,
+      "method": "last7 seconds from captured real-game clip; no timing or damage driven by video"
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/skills/shield.png",
+      "sha256": "7920387b84fc958461db6c49a5d9e782660a0f7e3edefacfdf91d2b2be5953d0",
+      "bytes": 318763,
+      "reviewStatus": "candidate",
+      "type": "real Game/Combat/Phaser review evidence; one skill per clip",
+      "fixture": "one original-skill character; one high-HP/low-attack enemy, no patrols",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null,
+      "width": 982,
+      "height": 454,
+      "method": "paused through real in-game pause control before screenshot encoding"
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/skills/shield.webm",
+      "sha256": "57a2c30d363b85f0dda481903bc29d9d4713501e6a68931d0ec458cec7257560",
+      "bytes": 274391,
+      "reviewStatus": "candidate",
+      "type": "real Game/Combat/Phaser review evidence; one skill per clip",
+      "fixture": "one original-skill character; one high-HP/low-attack enemy, no patrols",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null,
+      "width": 1024,
+      "height": 768,
+      "fps": 25,
+      "durationSecondsApprox": 7,
+      "method": "last7 seconds from captured real-game clip; no timing or damage driven by video"
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/skills/turret.png",
+      "sha256": "8d4685b082014c6c036f2565f51812fd172bb8d94adb2e376a03f2e1d7ae4de5",
+      "bytes": 325687,
+      "reviewStatus": "candidate",
+      "type": "real Game/Combat/Phaser review evidence; one skill per clip",
+      "fixture": "one original-skill character; one high-HP/low-attack enemy, no patrols",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null,
+      "width": 982,
+      "height": 454,
+      "method": "paused through real in-game pause control before screenshot encoding"
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/skills/turret.webm",
+      "sha256": "28fb3dad49026e76cfb1fb660be0d40e47ca4b67b5cc64d96ebec5ef03c638f9",
+      "bytes": 314571,
+      "reviewStatus": "candidate",
+      "type": "real Game/Combat/Phaser review evidence; one skill per clip",
+      "fixture": "one original-skill character; one high-HP/low-attack enemy, no patrols",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null,
+      "width": 1024,
+      "height": 768,
+      "fps": 25,
+      "durationSecondsApprox": 7,
+      "method": "last7 seconds from captured real-game clip; no timing or damage driven by video"
     }
-  ]
+  ],
+  "summonArtManifest": "art/vfx/summons-v1/manifest.json",
+  "coverageLimit": "245 definitions mapped to 9 common families; not 245 completed unique VFX. Drone / soldiers / decoy and individual multi-stage performances await direction review."
 }

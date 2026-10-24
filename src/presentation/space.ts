@@ -1,4 +1,6 @@
 import { drawCombatVfx } from "./combat-vfx";
+import { turretArt } from "./summon-art";
+import { SummonCues } from "./summon-cues";
 import {
   nodeUnlocked,
   nodeCleared,
@@ -91,8 +93,10 @@ export function mountSpace(
     lastFlashCount = 0;
     lastHits = 0;
     lastShake = 0;
+    summonCues = new SummonCues();
 
     create() {
+      this.ensureTurretArt();
       this.ink = this.add.graphics();
       this.hud = this.add.graphics().setDepth(20);
       this.light = this.add
@@ -230,6 +234,22 @@ export function mountSpace(
       model.pack.assets
         .filter((a) => used.has(a.id))
         .forEach((a) => this.ensureAsset(a.id));
+    }
+    private ensureTurretArt() {
+      if (this.textures.exists(turretArt.key)) return;
+      const image = new Image();
+      image.onload = () => {
+        if (!this.sys?.isActive() || this.textures.exists(turretArt.key))
+          return;
+        const canvas = document.createElement("canvas");
+        canvas.width = 512;
+        canvas.height = Math.round((512 * turretArt.height) / turretArt.width);
+        const ctx = canvas.getContext("2d")!;
+        ctx.imageSmoothingQuality = "high";
+        ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+        this.textures.addCanvas(turretArt.key, canvas);
+      };
+      image.src = turretArt.url;
     }
     private ensureAsset(id: string) {
       if (this.textures.exists(id) || this.loaded.has(id)) return;
@@ -664,13 +684,33 @@ export function mountSpace(
           model.lowEffects ||
             matchMedia("(prefers-reduced-motion: reduce)").matches,
         );
+        this.summonCues.draw(
+          g,
+          this.light,
+          combat,
+          model.lowEffects ||
+            matchMedia("(prefers-reduced-motion: reduce)").matches,
+        );
         for (const u of combat.units) {
           if (u.hp <= 0) continue;
           if (u.sprite) this.ensureAsset(u.sprite);
           const color = Phaser.Display.Color.HexStringToColor(u.color).color;
           const scale = combat.mechanics.stat(u, "scale");
           const size = (u.boss ? 42 : u.turretUntil ? 14 : 18) * scale;
-          if (u.side === "ally") {
+          const texturedTurret =
+            u.summonKind === "turret" && this.textures.exists(turretArt.key);
+          if (texturedTurret) {
+            this.drawAsset(
+              u.id,
+              turretArt.key,
+              u.x,
+              u.y,
+              turretArt.worldWidth * scale,
+            );
+            this.sprites
+              .get(u.id)
+              ?.setOrigin(turretArt.pivot.x, turretArt.pivot.y);
+          } else if (u.side === "ally") {
             if (!u.sprite || !this.textures.exists(u.sprite))
               this.ship(u.x, u.y, color, size);
           } else if (!u.sprite || !this.textures.exists(u.sprite)) {
@@ -735,9 +775,12 @@ export function mountSpace(
           this.sprites
             .get(u.id)
             ?.setRotation(
-              Math.sin(this.elapsed * 1.6 + combat.units.indexOf(u)) * 0.025,
+              texturedTurret
+                ? u.aim
+                : Math.sin(this.elapsed * 1.6 + combat.units.indexOf(u)) *
+                    0.025,
             );
-          if (u.side === "enemy")
+          if (u.side === "enemy" && !texturedTurret)
             this.sprites.get(u.id)?.setFlipX(u.x > combat.center.x);
           const sprite =
             this.sprites.get(u.id) ?? this.sprites.get(u.id + ":hull");
@@ -747,6 +790,12 @@ export function mountSpace(
                 .setTint(0xffb6aa)
                 .setAlpha(0.75 + Math.sin(combat.time * 65) * 0.25);
             else sprite.clearTint().setAlpha(1);
+            if (
+              texturedTurret &&
+              u.side === "enemy" &&
+              u.hurtUntil <= combat.time
+            )
+              sprite.setTint(0xffa2b1);
             if (combat.time - u.shotAt < 0.12) sprite.x -= Math.cos(u.aim) * 2;
           }
           const statuses = combat.mechanics.active(u);
@@ -845,12 +894,15 @@ export function mountSpace(
         this.sprites.set(key, image);
       }
       const a = model.pack.assets.find((a) => a.id === id);
-      const ratio = a ? a.width / a.height : 1;
       if (image.texture.key !== id) image.setTexture(id);
+      const ratio = a
+        ? a.width / a.height
+        : image.frame.width / image.frame.height;
       image
         .clearTint()
         .setAlpha(1)
         .setFlipX(false)
+        .setOrigin(0.5)
         .setPosition(x, y)
         .setDisplaySize(size * Math.min(1, ratio), size / Math.max(1, ratio))
         .setVisible(true);

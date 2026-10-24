@@ -6,7 +6,7 @@ import "./ui-resonance.css";
 import { journalHtml } from "./journal";
 import { mainlineHtml } from "./mainline";
 import { regionPath } from "../domain/navigation";
-import { mountStoryPlayer } from "./story-player";
+import { mountStoryPlayer, nearStoryPlanet } from "./story-player";
 import { storyAvailable } from "../domain/story";
 import { rosterGroups } from "./roster-groups";
 import {
@@ -82,7 +82,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
  <div class="sector-heading"><div id="skill-splash" class="skill-splash" aria-live="polite"></div><div><span class="eyebrow">GALACTIC EXPEDITION</span><h1><b id="region-title">${esc(p.regions.find((r) => r.id === g.save.region)!.name)}</b><span>探索航線</span></h1></div><button class="journal-shortcut" data-action="journal-open" data-id="quests">${icon("journal")}<span id="journal-status">章節／任務</span> →</button><div id="mainline" class="mainline" aria-live="polite"></div><div class="sector-status"><i></i> <span id="save-status">本機自動保存</span>${test ? "<strong>隔離測試</strong>" : ""}</div></div>
  <section class="viewport"><aside class="mission-rail"><div class="section-label">航行目標 <span>MISSION</span></div><div id="mission"></div><div class="rail-bottom"><span class="eyebrow">NAVIGATION</span><p>WASD／點擊星海航行<br>M 切換大星圖</p><div class="signal"><i></i><i></i><i></i><i></i><i></i></div><small>艦隊通訊連線中</small></div></aside>
  <div id="space" class="space" aria-label="星域戰場，點擊空白處移動，點擊星球查看情報" role="application"></div><div class="map-caption"><span>✧ 星域掃描</span><span id="coordinates"></span></div><div id="target-hud" class="target-hud" hidden aria-label="目前戰鬥目標"></div><div id="battle-state" class="battle-state"></div><div id="battle-tools" class="battle-tools"></div><aside id="planet-card" class="planet-card"></aside></section>
- <footer class="flight-deck"><div class="squad-heading"><span class="eyebrow">YOUR CONSTELLATION</span><strong>航行編隊</strong>${button("編隊 ↗", "panel", "formation", "text-button")}</div><div class="squad" id="squad"></div><nav class="deck-nav" aria-label="艦隊功能">${navButton("星體共鳴", "共鳴", "RESONANCE", "resonance", "summon")}${navButton("共振研究", "研究", "RESEARCH", "research", "research")}${navButton("高難／活動", "挑戰", "SORTIE", "challenge", "challenges")}${navButton("航行紀錄", "紀錄", "CHRONICLE", "journal", "quests")}${navButton("領地", "領地", "COLONY", "planet", "planets")}${navButton("角色", "角色", "OPERATORS", "crew", "roster")}${navButton("暫停", "暫停", "PAUSE", "pause", "", "pause")}</nav></footer>
+ <footer class="flight-deck"><div class="squad-heading"><span class="eyebrow">YOUR CONSTELLATION</span><strong>航行編隊</strong>${button("編隊 ↗", "panel", "formation", "text-button")}</div><div class="squad" id="squad"></div><nav class="deck-nav" aria-label="艦隊功能">${navButton("星體共鳴", "共鳴", "RESONANCE", "resonance", "summon")}${navButton("共振研究", "研究", "RESEARCH", "research", "research")}${navButton("高難／活動", "挑戰", "SORTIE", "challenge", "challenges")}${navButton("航行紀錄", "紀錄", "CHRONICLE", "journal", "quests")}${navButton("領地", "領地", "COLONY", "planet", "planets")}${navButton("角色", "角色", "OPERATORS", "crew", "roster")}</nav></footer>
  <div class="build-note">v${p.version} · ${p.characters.filter((c) => c.status === "active").length} 位少女／${p.regions.filter((r) => r.status === "active").length} 個航區</div><div class="toast" id="toast" role="status" aria-live="polite"></div><div id="overlay"></div></main>`;
   function navButton(
     label: string,
@@ -345,9 +345,11 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
   function renderTargetHud() {
     const host = $("#target-hud"),
       combat = g.combat;
+    // Only bosses earn the top health bar; regular enemies keep their in-field bars.
     const target =
-      combat?.units.find((u) => u.id === combat.target && u.hp > 0) ??
-      combat?.units.find((u) => u.side === "enemy" && u.hp > 0);
+      combat?.units.find(
+        (u) => u.id === combat.target && u.hp > 0 && u.boss,
+      ) ?? combat?.units.find((u) => u.side === "enemy" && u.hp > 0 && u.boss);
     host.hidden = !target;
     if (!target) {
       host.dataset.key = "";
@@ -658,13 +660,44 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
           "",
         )}<h3>聲音與畫面</h3><div class="inline-actions">${button(audio.enabled ? "聲音：開啟" : "聲音：關閉", "sound")}${button(g.lowEffects ? "特效：精簡" : "特效：完整", "effects")}</div><label>音效音量<input id="audio-volume" type="range" min="0" max="1" step="0.05" value="${audio.volume}"></label><h3>戰鬥操作</h3><p>點空白處移動與閃躲；普通攻擊自動進行。點敵人優先鎖定，點下方角色施放技能。</p>${button(g.autoSkills ? "自動技能：開啟" : "自動技能：關閉", "auto")}<h3>角色圖鑑</h3><a href="gallery.html">瀏覽全部少女立繪／Q圖 ↗</a><h3>角色製作表</h3><a href="#/catalog">查看未來角色清單／下載 CSV ↗</a><h3>內容工坊</h3><p>瀏覽與調整內容，套用至隔離測試遊戲；完成後匯出內容包再發布。</p><a class="primary link-button" href="#/studio">進入內容工坊 ↗</a>${test ? '<p><a href="#/play">退出隔離測試，返回正式進度</a></p>' : ""}<details><summary>開發版狀態</summary><p>六張原始立繪已匯入，已套用原先六角色；原圖展示入口在內容工坊。音效採可編輯的程序合成，星球與敵艦為原創程序材質。M1的平衡／劇情與部分技能為明示的新設計；原作未知機制仍保留來源缺口。</p></details></div>`;
     }
+    // Redrawing the same panel (claims, upgrades) keeps every scroll position and focus.
+    const previous = $("#overlay").querySelector<HTMLElement>("section[data-panel]");
+    const samePanel = previous?.dataset.panel === panel;
+    const scrolls = samePanel
+      ? [previous!, ...previous!.querySelectorAll<HTMLElement>("*")]
+          .filter((el) => el.scrollTop || el.scrollLeft)
+          .map((el) => ({
+            path: elementPath(previous!, el),
+            top: el.scrollTop,
+            left: el.scrollLeft,
+          }))
+      : [];
     $("#overlay").innerHTML =
       `<div class="modal-backdrop"><section data-panel="${esc(panel)}" class="modal ${["roster", "formation", "character", "acquisition"].includes(panel) ? "wide" : ""}" role="dialog" aria-modal="true" aria-label="${esc(title)}">${heading(title, kick)}<div class="modal-body">${body}</div><div class="modal-footer ${panel === "summon" ? "resonance-action-footer" : ""}">${panel === "summon" ? `<span class="resonance-clock"><i></i> 戰鬥已暫停 · 經營計時持續</span>${resonanceAction()}` : "<i></i> 戰鬥已暫停 · 經營計時持續"}</div></section></div>`;
     if (panel === "summon") recipeInfo();
     refreshTimers();
-    $("#overlay")
-      .querySelector<HTMLButtonElement>('[data-action="close"]')
-      ?.focus();
+    const section = $("#overlay").querySelector<HTMLElement>("section[data-panel]");
+    if (section)
+      for (const { path, top, left } of scrolls) {
+        const el = path.reduce<Element | undefined>(
+          (node, i) => node?.children[i],
+          section,
+        ) as HTMLElement | undefined;
+        if (el) {
+          el.scrollTop = top;
+          el.scrollLeft = left;
+        }
+      }
+    if (!samePanel)
+      $("#overlay")
+        .querySelector<HTMLButtonElement>('[data-action="close"]')
+        ?.focus({ preventScroll: true });
+  }
+  function elementPath(root: Element, el: Element) {
+    const path: number[] = [];
+    for (let node = el; node !== root && node.parentElement; node = node.parentElement)
+      path.unshift([...node.parentElement.children].indexOf(node));
+    return path;
   }
   function recipeInfo() {
     const info = $("#recipe-info");
@@ -839,10 +872,12 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
         await g.command({ type: "travel", region: to });
         if (g.save.region !== to) return;
       }
+      // Close the hub so the voyage resumes and the fleet can engage on arrival.
+      panel = "";
+      drawPanel();
       space.recenter();
       planetKey = "";
       renderPlanet();
-      drawPanel();
       return;
     }
     if (action === "challenge-route") {
@@ -972,11 +1007,6 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       renderPlanet();
       return;
     }
-    if (action === "pause") {
-      if (g.pause.has("user")) g.pause.delete("user");
-      else g.pause.add("user");
-      return;
-    }
     if (action === "cast") {
       castSkill(id);
       return;
@@ -1082,6 +1112,15 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     if (action === "assign")
       await g.command({ type: "assign", owned: id, planet: selected });
     if (action === "quest") await g.command({ type: "quest", id });
+    if (action === "quest-claim-all")
+      // Each claim stays its own receipt-checked transaction.
+      for (const q of p.quests.filter(
+        (q) =>
+          q.status === "active" &&
+          !questClaimed(g.save, q, Date.now()) &&
+          questReady(g.save, q, Date.now()),
+      ))
+        await g.command({ type: "quest", id: q.id });
     if (action === "summon") {
       if (
         !(await ask(
@@ -1269,7 +1308,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     const toolKey = String(!!g.combat) + g.viewMode + String(g.autoSkills);
     if (battleTools.dataset.key !== toolKey) {
       battleTools.dataset.key = toolKey;
-      battleTools.innerHTML = `${button(g.viewMode === "map" ? "◈ 銀河航行" : "◇ 大星圖", "view")}${button("◎ 跟隨", "follow")}${!g.combat ? button("星域航路", "panel", "regions") : ""}${g.combat ? button(g.autoSkills ? "自動技能：開" : "自動技能：關", "auto") + button("技能情報", "panel", "skills") + button("撤離", "retreat") : ""}<small id="wave-clock"></small>`;
+      battleTools.innerHTML = `${button(g.viewMode === "map" ? "◈ 銀河航行" : "◇ 大星圖", "view")}${button("◎ 跟隨", "follow")}${!g.combat ? button("星域航路", "panel", "regions") : ""}${g.combat ? button(g.autoSkills ? "自動：開" : "自動：關", "auto") + button("技能情報", "panel", "skills") + button("撤離", "retreat") : ""}<small id="wave-clock"></small>`;
     }
     const wave = root.querySelector("#wave-clock");
     if (wave)
@@ -1330,7 +1369,9 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     root
       .querySelector(".journal-shortcut")
       ?.classList.toggle("has-rewards", rewards > 0);
-    const mainline = mainlineHtml(p, g.save, !!g.combat || g.busy);
+    const mainline = mainlineHtml(p, g.save, !!g.combat || g.busy, (id) =>
+      nearStoryPlanet(g, id),
+    );
     if (mainline !== mainlineKey) {
       mainlineKey = mainline;
       $("#mainline").innerHTML = mainline;

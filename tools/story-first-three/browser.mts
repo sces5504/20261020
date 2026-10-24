@@ -9,6 +9,7 @@ import {apply} from '../../src/domain/economy.ts';
 const server=await serveBuilt(), browser=await chromium.launch({headless:true,args:['--no-sandbox']});
 const results:any[]=[],errors:string[]=[];await mkdir('.artifacts/chronicle',{recursive:true});
 async function record(page:any,key='save:test'){return page.evaluate(key=>new Promise(resolve=>{const r=indexedDB.open('stella-maiden-m1',1);r.onsuccess=()=>{const tx=r.result.transaction('records'),q=tx.objectStore('records').get(key);q.onsuccess=()=>resolve(q.result);tx.oncomplete=()=>r.result.close()}}),key)}
+const q2=(save:any)=>p.quests.find(q=>q.id===save.story.session.quest)!.story!;
 async function seed(page:any,s:any){await page.goto(server.url+'gallery.html');await page.evaluate(async ({pack,save})=>{const r=indexedDB.open('stella-maiden-m1',1);r.onupgradeneeded=()=>r.result.createObjectStore('records');await new Promise(res=>r.onsuccess=res);const tx=r.result.transaction('records','readwrite');tx.objectStore('records').put(pack,'content:test');tx.objectStore('records').put(save,'save:test');tx.objectStore('records').put({marker:'untouched-main'},'save:main');await new Promise(res=>tx.oncomplete=res);r.result.close()},{pack:p,save:s});await page.goto(server.url+'#/test');await page.waitForSelector('canvas',{timeout:60000});}
 try{
  for(const mobile of [false,true]){
@@ -21,26 +22,42 @@ try{
   await page.locator('[data-action="flow-skip"]').click();await page.waitForFunction(()=>!document.querySelector('[data-action="flow-next"]'));
   let persisted:any=await record(page);assert.equal(persisted.story.counters['event:chronicle:event.master-awakened'],1);assert.equal(persisted.roster.length,save.roster.length);
   await page.reload();await page.waitForSelector('canvas',{timeout:60000});persisted=await record(page);assert.equal(persisted.story.counters['event:chronicle:event.master-awakened'],1);
-  // Start the real first rescue with the declared level3 starter team, not a test-only encounter.
-  save=persisted;save.region='original:region.solar';save.roster.forEach(o=>{o.level=3;o.hp=stats(p,o).hp});
+  // Real first rescue: the player resumes from the tracker, flies to the field and sorties.
+  // Team at enemy level +2, the level the 31-battle evidence uses.
+  save=persisted;save.region='original:region.solar';save.roster.forEach(o=>{o.level=5;o.hp=stats(p,o).hp});
   save=apply(p,save,{type:'story-start',id:'chronicle:quest.02'},Date.now(),'browser-venus');await seed(page,save);
+  // The player started this node already in the Solar System, so its arrival goal is met and
+  // the lines show; otherwise the tracker's continue button would reopen it.
+  await page.waitForTimeout(600);if(!(await page.locator('.story-scene').count()))await page.locator('.mainline-card [data-action="flow-open"]').click();
   await page.getByText('天津四大人說，指揮官應該在地球……可通訊始終沒有回應。',{exact:true}).waitFor();
   const geometry=await page.locator('.story-box').evaluate(el=>{const text=el.querySelector('.story-line'),controls=el.querySelector('.story-controls');return {box:el.getBoundingClientRect().toJSON(),text:text.getBoundingClientRect().toJSON(),controls:controls.getBoundingClientRect().toJSON(),scroll:document.documentElement.scrollWidth,width:innerWidth}});
   assert.ok(geometry.text.bottom<=geometry.controls.top+1,'dialogue does not overlap controls');assert.ok(geometry.scroll<=geometry.width+1,'no horizontal scroll');
+  // Consecutive lines update in place: the scene element survives a line change (no close/reopen).
+  await page.locator('.story-scene').evaluate(el=>{(el as any).__keep=1});await page.locator('[data-action="flow-next"]').click();await page.waitForTimeout(200);
+  assert.equal(await page.locator('.story-scene').evaluate(el=>(el as any).__keep),1,'scene persists between lines');
   await page.screenshot({path:`.artifacts/chronicle/${mobile?'mobile':'desktop'}-venus.png`});
-  await page.locator('[data-action="flow-skip"]').click();await page.getByRole('button',{name:'開始劇情遭遇',exact:true}).waitFor();
-  const before=await record(page);await page.reload();await page.getByRole('button',{name:'開始劇情遭遇',exact:true}).waitFor();assert.equal((await record(page)).story.session.cursor,before.story.session.cursor);
-  await page.getByRole('button',{name:'開始劇情遭遇',exact:true}).click();
-  // Combat's real radio cue must be acknowledged, not disabled.
-  await page.getByText('金星，保持距離！我們來替妳開路！',{exact:true}).waitFor();await page.locator('[data-action="flow-skip"]').click();
-  await page.getByText('金星！我們來幫妳！',{exact:true}).waitFor({timeout:60000});
-  await page.locator('[data-action="flow-skip"]').click();await page.waitForFunction(()=>!document.querySelector('[data-action="flow-next"]'));
+  await page.locator('[data-action="flow-skip"]').click();await page.locator('.story-scene').waitFor({state:'detached'});
+  const before=await record(page);assert.equal(q2(before).steps[before.story.session.cursor].kind,'encounter');
+  await page.reload();await page.waitForSelector('canvas',{timeout:60000});assert.equal((await record(page)).story.session.cursor,before.story.session.cursor);
+  // No teleport: follow the tracker's own route/navigation buttons until it offers the sortie.
+  for(let i=0;i<40;i++){
+   const card=page.locator('.mainline-card');const action=card.locator('button');
+   if((await action.innerText().catch(()=>'')).includes('出擊'))break;
+   if(await action.count())await action.click().catch(()=>{});
+   const yes=page.locator('[data-answer="yes"]');if(await yes.count())await yes.click().catch(()=>{});
+   await page.waitForTimeout(1500);
+  }
+  await page.locator('.mainline-card button',{hasText:'出擊'}).click();
+  // Combat radio is acknowledged by itself and never pauses the battle.
+  await page.locator('.story-radio').getByText('金星，保持距離！我們來替妳開路！',{exact:true}).waitFor();
+  assert.equal(await page.locator('.story-scene').count(),0,'no dialogue scene during combat');
+  for(let i=0;i<120&&!(await page.getByText('金星！我們來幫妳！',{exact:true}).count());i++){const close=page.locator('.result-screen [data-action="close"]:visible, #overlay [data-action="close"]:visible');if(await close.count())await close.first().click().catch(()=>{});await page.waitForTimeout(500);}
+  await page.getByText('金星！我們來幫妳！',{exact:true}).waitFor();
+  await page.locator('[data-action="flow-skip"]').click();await page.locator('.story-scene').waitFor({state:'detached'});
   persisted=await record(page);assert.ok(persisted.story.completed.includes('chronicle:quest.02'));assert.ok(!persisted.quests.includes('chronicle:quest.02'));
-  if(await page.locator('#overlay .modal-backdrop').count()){console.log('Post-story panel:',(await page.locator('#overlay').innerText()).slice(0,250));const close=page.locator('#overlay [data-action="close"]');if(await close.count())await close.first().click();}
-  // The next main node now chains in like the original; return to the voyage before opening the journal.
-  // Chaining waits until result/acquisition panels are dismissed; close any that appear late.
-  for(let i=0;i<60&&!(await page.locator('.story-scene').count());i++){const close=page.locator('#overlay [data-action="close"]:visible, .result-screen [data-action="close"]:visible');if(await close.count())await close.first().click().catch(()=>{});await page.waitForTimeout(250);}
-  await page.locator('.story-scene').waitFor();assert.equal((await record(page)).story.session?.quest,'chronicle:quest.03');await page.locator('[data-action="flow-close"]').click();await page.locator('.story-scene').waitFor({state:'detached'});
+  // The next node waits for the player instead of chaining in.
+  await page.waitForTimeout(800);assert.equal(await page.locator('.story-scene').count(),0);assert.equal((await record(page)).story.session,null);
+  for(let i=0;i<5;i++){const close=page.locator('#overlay [data-action="close"]:visible');if(await close.count())await close.first().click().catch(()=>{});else break;}
   await page.locator('.deck-nav [data-action="panel"][data-id="quests"]').click();
   const claim=page.locator('[data-action="quest"][data-id="chronicle:quest.02"]');await claim.scrollIntoViewIfNeeded();await claim.click();await page.waitForTimeout(250);
   persisted=await record(page);assert.ok(persisted.quests.includes('chronicle:quest.02'));const wallet=persisted.wallet;

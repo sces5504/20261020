@@ -172,7 +172,14 @@ try {
     const controls = await page.locator(".deck-nav").boundingBox();
     for (const card of await page.locator("#squad .squad-card").all()) {
       const box = await card.boundingBox();
-      assert(box && box.width >= 100, "six-person skill cards remain readable");
+      // Desktop keeps wide skill cards; phones use the original's portrait strip.
+      assert(
+        box &&
+          (viewport.width < 760
+            ? box.width >= 56 && box.height >= 56
+            : box.width >= 100),
+        "six-person skill cards remain readable and tappable",
+      );
       assert(
         controls &&
           box &&
@@ -185,7 +192,8 @@ try {
     }
     const arenaBox = await page.locator("#space").boundingBox();
     assert(
-      arenaBox && arenaBox.height >= 200,
+      arenaBox &&
+        arenaBox.height >= (viewport.width < 760 ? viewport.height * 0.5 : 200),
       "six-person HUD preserves a playable battlefield",
     );
     await page.locator('[data-action="panel"][data-id="enemy-intel"]').click();

@@ -4370,7 +4370,7 @@
         880,
         909
       ],
-      "level": 1,
+      "level": 3,
       "mode": "eliminate",
       "seconds": null,
       "reward": {},
@@ -4394,7 +4394,7 @@
         981,
         1004
       ],
-      "level": 1,
+      "level": 2,
       "mode": "eliminate",
       "seconds": null,
       "reward": {},
@@ -4454,7 +4454,7 @@
         1338,
         1357
       ],
-      "level": 3,
+      "level": 9,
       "mode": "protect",
       "seconds": null,
       "reward": {},
@@ -4466,7 +4466,7 @@
         1436,
         1451
       ],
-      "level": 3,
+      "level": 5,
       "mode": "protect",
       "seconds": null,
       "reward": {},
@@ -4502,7 +4502,7 @@
         1687,
         1716
       ],
-      "level": 5,
+      "level": 6,
       "mode": "eliminate",
       "seconds": null,
       "reward": {},
@@ -4526,7 +4526,7 @@
         1762,
         1793
       ],
-      "level": 5,
+      "level": 6,
       "mode": "eliminate",
       "seconds": null,
       "reward": {},
@@ -4538,7 +4538,7 @@
         1809,
         1842
       ],
-      "level": 5,
+      "level": 11,
       "mode": "eliminate",
       "seconds": null,
       "reward": {},
@@ -4550,7 +4550,7 @@
         1956,
         2002
       ],
-      "level": 5,
+      "level": 8,
       "mode": "eliminate",
       "seconds": null,
       "reward": {},
@@ -4562,7 +4562,7 @@
         2092,
         2124
       ],
-      "level": 10,
+      "level": 11,
       "mode": "escort",
       "seconds": 90,
       "reward": {},
@@ -4574,7 +4574,7 @@
         2159,
         2202
       ],
-      "level": 10,
+      "level": 12,
       "mode": "eliminate",
       "seconds": null,
       "reward": {},
@@ -4598,7 +4598,7 @@
         2319,
         2345
       ],
-      "level": 10,
+      "level": 13,
       "mode": "eliminate",
       "seconds": null,
       "reward": {},
@@ -4610,7 +4610,7 @@
         2432,
         2448
       ],
-      "level": 10,
+      "level": 22,
       "mode": "eliminate",
       "seconds": null,
       "reward": {},
@@ -4622,7 +4622,7 @@
         2547,
         2556
       ],
-      "level": 13,
+      "level": 14,
       "mode": "eliminate",
       "seconds": null,
       "reward": {},
@@ -4634,7 +4634,7 @@
         2556,
         2562
       ],
-      "level": 13,
+      "level": 14,
       "mode": "eliminate",
       "seconds": null,
       "reward": {},
@@ -4646,7 +4646,7 @@
         2568,
         2577
       ],
-      "level": 13,
+      "level": 15,
       "mode": "eliminate",
       "seconds": null,
       "reward": {},
@@ -4658,7 +4658,7 @@
         2582,
         2590
       ],
-      "level": 13,
+      "level": 15,
       "mode": "protect",
       "seconds": null,
       "reward": {},
@@ -4670,7 +4670,7 @@
         2610,
         2631
       ],
-      "level": 13,
+      "level": 14,
       "mode": "protect",
       "seconds": null,
       "reward": {},
@@ -4694,7 +4694,7 @@
         2704,
         2733
       ],
-      "level": 13,
+      "level": 14,
       "mode": "escort",
       "seconds": 90,
       "reward": {},
@@ -4706,7 +4706,7 @@
         2773,
         2801
       ],
-      "level": 13,
+      "level": 18,
       "mode": "escort",
       "seconds": 90,
       "reward": {},
@@ -4718,7 +4718,7 @@
         2844,
         2907
       ],
-      "level": 18,
+      "level": 20,
       "mode": "eliminate",
       "seconds": null,
       "reward": {},

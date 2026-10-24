@@ -857,7 +857,7 @@
   grid-row: 2;
   grid-column: 1/-1;
   display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   width: 100%;
   gap: 0;
   padding: 0;
@@ -1477,8 +1477,7 @@
   padding: 6px 14px;
   white-space: nowrap;
 }
-.bridge .mainline-card.is-start,
-.bridge .mainline-card.is-encounter {
+.bridge .mainline-card.is-ready {
   animation: mainline-pulse 2.4s ease-in-out infinite;
 }
 @keyframes mainline-pulse {
@@ -1632,4 +1631,317 @@
 .bridge .mainline-card > :not(.mainline-actions) {
   grid-column: 1;
   min-width: 0;
+}
+/* In-battle radio: lines play over combat without pausing or covering controls. */
+.story-radio {
+  position: fixed;
+  left: 50%;
+  top: calc(env(safe-area-inset-top, 0px) + 150px);
+  transform: translateX(-50%);
+  width: min(520px, calc(100vw - 24px));
+  z-index: 30;
+  pointer-events: none;
+}
+.story-radio:empty {
+  display: none;
+}
+.story-radio-line {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  padding: 8px 12px;
+  border-left: 2px solid #e2c47f;
+  background: linear-gradient(90deg, #0b1724ee, #0b172499);
+  box-shadow: 0 8px 22px #0006;
+  animation: radio-in 0.25s ease-out;
+}
+.story-radio-avatar {
+  width: 52px;
+  height: 52px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #12263a;
+}
+.story-radio-avatar img {
+  width: 100%;
+  height: 160%;
+  object-fit: cover;
+  object-position: top;
+}
+.story-radio-line strong {
+  color: #f0d79b;
+  font-size: 12px;
+}
+.story-radio-line p {
+  margin: 2px 0 0;
+  color: #eef3f5;
+  font-size: 13px;
+  line-height: 1.45;
+}
+@keyframes radio-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+.story-box.no-line {
+  visibility: hidden;
+}
+@media (prefers-reduced-motion: reduce) {
+  .story-radio-line {
+    animation: none;
+  }
+}
+/*
+ * Phone layout after the original: the star map fills the screen between a slim
+ * resource bar and the bottom menu; quest trackers float top-left, the formation
+ * is a vertical portrait strip on the right with map tools beneath it.
+ */
+@media (max-width: 760px) {
+  main.bridge.bridge {
+    --bar: calc(env(safe-area-inset-top, 0px) + 46px);
+    --nav: calc(env(safe-area-inset-bottom, 0px) + 58px);
+    --strip: 62px;
+  }
+  main.bridge.bridge .topbar {
+    position: fixed;
+    inset: 0 0 auto 0;
+    height: var(--bar);
+    min-height: 0;
+    padding: env(safe-area-inset-top, 0px) 6px 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    z-index: 12;
+  }
+  main.bridge.bridge .brand {
+    display: none;
+  }
+  main.bridge.bridge .wallet {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2px;
+    margin: 0;
+  }
+  main.bridge.bridge .wallet .resource {
+    min-width: 0;
+    padding: 2px 4px;
+    gap: 3px;
+    border: 0;
+  }
+  main.bridge.bridge .wallet .resource small,
+  main.bridge.bridge .wallet .resource em {
+    display: none;
+  }
+  main.bridge.bridge .wallet .resource strong {
+    font-size: 13px;
+  }
+  main.bridge.bridge .wallet .resource img,
+  main.bridge.bridge .wallet .resource svg {
+    width: 22px;
+    height: 22px;
+  }
+  main.bridge.bridge .top-actions .icon-button {
+    min-height: 36px;
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+  main.bridge.bridge .viewport {
+    position: fixed;
+    inset: var(--bar) 0 var(--nav) 0;
+    margin: 0;
+    border: 0;
+    height: auto;
+    min-height: 0;
+    z-index: 1;
+  }
+  main.bridge.bridge .sector-heading {
+    position: fixed;
+    top: calc(var(--bar) + 6px);
+    left: 6px;
+    width: min(54vw, 260px);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+    background: none;
+    z-index: 6;
+    pointer-events: none;
+  }
+  main.bridge.bridge .sector-heading > * {
+    pointer-events: auto;
+  }
+  main.bridge.bridge .sector-heading > div:not(.skill-splash):not(.mainline),
+  main.bridge.bridge .sector-status {
+    display: none;
+  }
+  main.bridge.bridge .mainline {
+    order: 0;
+    flex: none;
+  }
+  main.bridge.bridge .mainline-card {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 6px 8px;
+    background: #0a1522d9;
+    border: 1px solid #a3c2d333;
+    border-left: 3px solid #e2c47f;
+  }
+  main.bridge.bridge .mainline-actions {
+    grid-column: 1;
+    grid-row: auto;
+    margin-top: 4px;
+  }
+  main.bridge.bridge .mainline-actions button {
+    width: 100%;
+    min-height: 36px;
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+  main.bridge.bridge .journal-shortcut {
+    order: 1;
+    min-height: 36px;
+    padding: 4px 8px;
+    justify-content: flex-start;
+    background: #0a1522d9;
+    border: 1px solid #a3c2d333;
+    border-left: 3px solid #7fb9c9;
+    font-size: 11px;
+  }
+  main.bridge.bridge .flight-deck {
+    position: static;
+    padding: 0;
+    background: none;
+    border: 0;
+  }
+  main.bridge.bridge .squad-heading {
+    display: none;
+  }
+  main.bridge.bridge .flight-deck .squad,
+  main.bridge.bridge .flight-deck .squad:has(> .operator-card:nth-child(4)) {
+    position: fixed;
+    top: calc(var(--bar) + 6px);
+    right: 4px;
+    width: var(--strip);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    grid-template-columns: none;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+    z-index: 6;
+  }
+  main.bridge.bridge .flight-deck .squad > .operator-card,
+  main.bridge.bridge .flight-deck .squad:has(> .operator-card:nth-child(4)) > .operator-card {
+    width: var(--strip);
+    height: var(--strip);
+    min-height: 0;
+    flex: none;
+  }
+  main.bridge.bridge .flight-deck .squad .operator-copy {
+    padding: 0 3px 3px;
+  }
+  /* Face crop: portraits are full-body art, so zoom onto the head. */
+  main.bridge.bridge .flight-deck .squad .operator-art > img {
+    top: -4%;
+    width: 300%;
+    height: 420%;
+    object-position: 50% 0%;
+  }
+  main.bridge.bridge .flight-deck .squad .operator-shade {
+    background: linear-gradient(180deg, transparent 55%, #07101bcc);
+  }
+  /* Ready state needs no badge; the ring only appears while cooling down. */
+  main.bridge.bridge .flight-deck .squad .operator-card:not(.skill-cooling) .operator-cd-ring {
+    display: none;
+  }
+  main.bridge.bridge .flight-deck .squad .operator-copy > :not(.hp-bar) {
+    display: none;
+  }
+  main.bridge.bridge .flight-deck .squad .operator-glyph,
+  main.bridge.bridge .flight-deck .squad .operator-level {
+    display: none;
+  }
+  main.bridge.bridge .flight-deck .squad .operator-slot {
+    font-size: 9px;
+  }
+  main.bridge.bridge .flight-deck .squad .operator-cd-ring {
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+  main.bridge.bridge .deck-nav {
+    position: fixed;
+    inset: auto 0 0 0;
+    height: var(--nav);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    margin: 0;
+    z-index: 12;
+  }
+  main.bridge.bridge .battle-tools {
+    position: fixed;
+    inset: auto 6px calc(var(--nav) + 6px) 6px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    max-width: none;
+    transform: none;
+    padding: 0;
+    background: none;
+    border: 0;
+    z-index: 6;
+  }
+  main.bridge.bridge .battle-tools button {
+    flex: 1 1 0;
+    min-width: 0;
+    height: 40px;
+    min-height: 40px;
+    padding: 0 4px;
+    font-size: 11px;
+    line-height: 1.1;
+    border-radius: 6px;
+    background: #0a1522d9;
+    border: 1px solid #a3c2d344;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  main.bridge.bridge .battle-tools #wave-clock {
+    position: fixed;
+    top: auto;
+    bottom: calc(var(--nav) + 52px);
+    left: 8px;
+    right: auto;
+    transform: none;
+    padding: 2px 8px;
+    background: #0a1522cc;
+    font-size: 10px;
+    white-space: nowrap;
+  }
+  main.bridge.bridge .map-caption {
+    display: none;
+  }
+  main.bridge.bridge .battle-state {
+    bottom: calc(var(--nav) + 52px);
+    right: 8px;
+  }
+  main.bridge.bridge .toast {
+    top: auto;
+    bottom: calc(var(--nav) + 84px);
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    max-width: calc(100vw - 24px);
+    z-index: 14;
+  }
+  main.bridge.bridge .target-hud {
+    top: 6px;
+    left: calc(min(54vw, 260px) + 12px);
+    right: calc(var(--strip) + 10px);
+    width: auto;
+  }
 }

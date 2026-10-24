@@ -1,7 +1,16 @@
 import type { Game } from "../application/game";
 import type { PresentationStep, StoryStep } from "../content/story";
-import { storyAvailable, conditionMet, mainlineChain } from "../domain/story";
+import { storyAvailable, conditionMet } from "../domain/story";
 import { esc, button } from "./common";
+
+/** A story battlefield is entered by flying there, never by teleporting from afar. */
+export function nearStoryPlanet(g: Game, planetId: string) {
+  const v = g.pack.planets.find((v) => v.id === planetId);
+  if (!v) return false;
+  const reach = Math.max(600, ("engageRadius" in v ? v.engageRadius : 300) * 2);
+  return g.save.region === v.region && Math.hypot(g.x - v.x, g.y - v.y) <= reach;
+}
+
 /** Presentation owns no progression; every effect/cursor is committed by Game.command. */
 export function mountStoryPlayer(
   root: HTMLElement,
@@ -9,16 +18,22 @@ export function mountStoryPlayer(
   onOpen: () => void = () => {},
 ) {
   const host = document.createElement("div");
-  root.append(host);
-  let replay: { id: string; cursor: number } | null = null,
-    cue: { index: number; cursor: number; steps: PresentationStep[] } | null =
-      null;
+  const radioHost = document.createElement("div");
+  radioHost.className = "story-radio";
+  radioHost.setAttribute("aria-live", "polite");
+  root.append(host, radioHost);
+  let replay: { id: string; cursor: number } | null = null;
+  // In-battle lines play as a non-blocking radio feed; combat never pauses for them.
+  let radio: { index: number; lines: Extract<PresentationStep, { kind: "say" }>[]; at: number; shownAt: number } | null = null;
   let key = "",
-    opened = false,
+    sceneQuest = "",
     pending = false,
     shownAt = 0,
-    disposed = false;
-  const active = () => replay || cue || g.save.story.session;
+    disposed = false,
+    // Set only by the player's own "continue" on a waiting node.
+    resume = false,
+    hiddenSession = "",
+    autoTimer = 0;
   const actorImage = (id: string, portrait?: string) => {
     const a =
       g.pack.actors.find((a) => a.id === id) ??
@@ -30,26 +45,85 @@ export function mountStoryPlayer(
       ? `<img src="${esc(asset.src)}" alt="${esc(a?.name ?? id)}">`
       : "";
   };
+  // Hiding is tied to one step: when the cursor moves on (battle won, goal resumed) the scene returns.
+  const mark = () => {
+    const session = g.save.story.session;
+    return session ? `${session.quest}:${session.cursor}` : "";
+  };
+  const sessionStep = () => {
+    const session = g.save.story.session;
+    return session
+      ? g.pack.quests.find((q) => q.id === session.quest)?.story?.steps[
+          session.cursor
+        ]
+      : undefined;
+  };
+  function closeScene() {
+    if (host.childElementCount) host.innerHTML = "";
+    sceneQuest = "";
+    key = "";
+    g.pause.delete("story-flow");
+    g.storyCamera = null;
+  }
+  function drawRadio() {
+    if (!g.combat) {
+      radio = null;
+      radioHost.innerHTML = "";
+      return;
+    }
+    if (!radio) {
+      const index = g.pendingStoryCue();
+      if (index < 0) return;
+      const lines = g.combat.storyEncounter!.cues[index].steps.filter(
+        (s): s is Extract<PresentationStep, { kind: "say" }> => s.kind === "say",
+      );
+      radio = { index, lines, at: 0, shownAt: performance.now() };
+      radioHost.dataset.key = "";
+    }
+    const line = radio.lines[radio.at];
+    if (!line || performance.now() - radio.shownAt > 2200 + line.text.length * 70) {
+      if (line && radio.at + 1 < radio.lines.length) {
+        radio.at++;
+        radio.shownAt = performance.now();
+      } else if (!pending && !g.combat.ended) {
+        const index = radio.index;
+        pending = true;
+        void g.command({ type: "story-cue", index }).finally(() => {
+          pending = false;
+          radio = null;
+          radioHost.innerHTML = "";
+        });
+        return;
+      }
+    }
+    const current = radio.lines[radio.at];
+    const k = `${radio.index}:${radio.at}`;
+    if (current && radioHost.dataset.key !== k) {
+      radioHost.dataset.key = k;
+      radioHost.innerHTML = `<div class="story-radio-line"><span class="story-radio-avatar">${current.actor ? actorImage(current.actor, current.portrait) : ""}</span><div><strong>${esc(current.speaker)}</strong><p>${esc(current.text)}</p></div></div>`;
+    }
+  }
   function draw() {
-    if (disposed || pending) return;
+    if (disposed) return;
+    drawRadio();
+    if (pending) return;
     const session = g.save.story.session;
     if (
       !session &&
       !replay &&
-      !cue &&
       !g.combat &&
       !g.report &&
       !g.error &&
       !g.busy &&
       !root.querySelector("#overlay")?.childElementCount
     ) {
-      const q =
-        g.pack.quests.find(
-          (q) =>
-            q.story?.autoStart &&
-            !g.save.storySeen.includes(q.id) &&
-            storyAvailable(g.pack, g.save, q.id),
-        ) ?? mainlineChain(g.pack, g.save);
+      // Only content that explicitly opts in starts itself; main nodes wait for the player.
+      const q = g.pack.quests.find(
+        (q) =>
+          q.story?.autoStart &&
+          !g.save.storySeen.includes(q.id) &&
+          storyAvailable(g.pack, g.save, q.id),
+      );
       if (q) {
         pending = true;
         void g.command({ type: "story-start", id: q.id }).finally(() => {
@@ -60,54 +134,41 @@ export function mountStoryPlayer(
         return;
       }
     }
-    if (!replay && !cue && g.combat) {
-      const index = g.pendingStoryCue();
-      if (index >= 0)
-        cue = {
-          index,
-          cursor: 0,
-          steps: g.combat.storyEncounter!.cues[index].steps,
-        };
-    }
-    const awaiting =
-      !replay && !cue && session && !session.waiting
-        ? g.pack.quests.find((q) => q.id === session.quest)?.story?.steps[
-            session.cursor
-          ]
-        : undefined;
-    if (awaiting?.kind === "await") {
-      // Like original EventSpot triggers: roam freely, resume the moment the goal is met.
-      if (conditionMet(g.save, awaiting.condition) && !g.combat && !g.busy) {
-        pending = true;
-        void g.command({ type: "story-next" }).finally(() => {
-          pending = false;
-          hiddenSession = "";
-          key = "";
-          draw();
-        });
-        return;
+    if (!replay && session && !session.waiting) {
+      const step = sessionStep();
+      if (step?.kind === "await") {
+        if (resume && conditionMet(g.save, step.condition) && !g.combat) {
+          resume = false;
+          pending = true;
+          void g.command({ type: "story-next" }).finally(() => {
+            pending = false;
+            hiddenSession = "";
+            key = "";
+            draw();
+          });
+          return;
+        }
+        resume = false;
+        hiddenSession = mark();
       }
-      hiddenSession = session!.quest;
+      // Battles start from the tracker once the fleet has flown to the field.
+      if (step?.kind === "encounter") hiddenSession = mark();
     }
     if (
       !replay &&
-      !cue &&
-      (!session || session.waiting || awaiting?.kind === "await")
+      (!session ||
+        session.waiting ||
+        g.combat ||
+        hiddenSession === mark())
     ) {
-      if (opened) {
-        host.innerHTML = "";
-        opened = false;
-        g.pause.delete("story-flow");
-        g.storyCamera = null;
-      }
-      key = "";
+      closeScene();
       return;
     }
     const q = g.pack.quests.find(
       (q) => q.id === (replay?.id ?? session?.quest),
     );
-    const steps: StoryStep[] = cue?.steps ?? q?.story?.steps ?? [];
-    const cursor = replay?.cursor ?? cue?.cursor ?? session!.cursor;
+    const steps: StoryStep[] = q?.story?.steps ?? [];
+    const cursor = replay?.cursor ?? session!.cursor;
     const step = steps[cursor];
     if (!step) {
       if (replay) {
@@ -116,20 +177,19 @@ export function mountStoryPlayer(
       }
       return;
     }
-    // Economy saves do not change the current presentation step. Rebuilding on
-    // every revision restarted entrance animations and reset long-text scrolling.
-    const nextKey = `${replay ? "replay" : cue ? "cue" + cue.index : "story"}:${q?.id}:${cursor}`;
+    const nextKey = `${replay ? "replay" : "story"}:${q?.id}:${cursor}`;
     if (key === nextKey) return;
     shownAt = performance.now();
     key = nextKey;
-    opened = true;
     g.pause.add("story-flow");
     let background = q?.background ?? "",
-      fade = 0;
+      fade = 0,
+      lastSay: Extract<StoryStep, { kind: "say" }> | undefined;
     const actors = new Map<string, { portrait?: string; slot: string }>();
     for (const s of steps.slice(0, cursor + 1)) {
       if (s.kind === "background") background = s.asset;
       if (s.kind === "fade") fade = s.opacity;
+      if (s.kind === "say") lastSay = s;
       if (s.kind === "stage") {
         if (s.visible)
           actors.set(s.actor, { portrait: s.portrait, slot: s.slot });
@@ -163,49 +223,80 @@ export function mountStoryPlayer(
     )
       actors.get(step.actor)!.portrait = step.portrait;
     const bg = g.pack.assets.find((a) => a.id === background);
-    const text =
+    // Presentation-only steps keep the previous line on screen and advance by themselves.
+    const line =
       step.kind === "say"
-        ? step.text
-        : step.kind === "await"
-          ? "等待條件達成；可返回航行，完成後接續。"
-          : step.kind === "encounter"
-            ? "前往劇情戰場；勝利後接續。"
-            : step.kind === "acquire"
-              ? "角色初始化"
-              : step.kind === "event"
-                ? "事件初始化"
-                : "航跡演出";
-    host.innerHTML = `<div class="story-scene ${step.kind === "camera" ? "camera-view" : ""}" role="dialog" aria-modal="true" aria-label="${replay ? "章節回看" : "章節劇情"}"><div class="story-sky">${bg ? `<img class="story-background" src="${esc(bg.src)}" alt="">` : ""}</div><div class="story-chapter"><span class="eyebrow">${replay ? "REPLAY · 回看" : "CHRONICLE"}</span><h2>${esc(q?.name ?? "戰場通訊")}</h2></div><div class="story-actors">${[...actors].map(([id, a]) => `<div class="story-actor ${a.slot} ${step.kind === "say" && step.actor === id ? "is-speaking" : ""}">${actorImage(id, a.portrait)}</div>`).join("")}</div><div class="story-cinematic-fade" style="opacity:${fade};transition:opacity ${step.kind === "fade" ? step.seconds : 0}s"></div><div class="story-box"><div class="story-speaker">${esc(step.kind === "say" ? step.speaker : "航行紀錄")}</div><p class="story-line">${esc(text)}</p><div class="story-controls"><small>${cursor + 1} / ${steps.length}</small>${button("返回航行", "flow-close", "", "text-button")}${button("略過演出", "flow-skip", "", "text-button")}${button(step.kind === "encounter" && !replay ? "開始劇情遭遇" : "繼續 →", "flow-next", "", "primary")}</div></div></div>`;
+        ? step
+        : step.kind === "await" && replay
+          ? { speaker: "航行紀錄", text: "等待條件達成；可返回航行，完成後接續。" }
+          : step.kind === "encounter" && replay
+            ? { speaker: "航行紀錄", text: "劇情遭遇（回看不重戰）。" }
+            : lastSay;
+    // One persistent scene per node: consecutive lines update in place, no re-entry flash.
+    const sceneId = `${replay ? "replay" : "story"}:${q?.id}`;
+    if (sceneQuest !== sceneId || !host.querySelector(".story-scene")) {
+      sceneQuest = sceneId;
+      host.innerHTML = `<div class="story-scene" role="dialog" aria-modal="true" aria-label="${replay ? "章節回看" : "章節劇情"}"><div class="story-sky"></div><div class="story-chapter"><span class="eyebrow">${replay ? "REPLAY · 回看" : "CHRONICLE"}</span><h2>${esc(q?.name ?? "戰場通訊")}</h2></div><div class="story-actors" data-key=""></div><div class="story-cinematic-fade" style="opacity:0"></div><div class="story-box"><div class="story-speaker"></div><p class="story-line"></p><div class="story-controls"><small class="story-count"></small>${button("返回航行", "flow-close", "", "text-button")}${button("略過演出", "flow-skip", "", "text-button")}${button("繼續 →", "flow-next", "", "primary")}</div></div></div>`;
+    }
+    const scene = host.querySelector<HTMLElement>(".story-scene")!;
+    scene.classList.toggle("camera-view", step.kind === "camera");
+    const sky = scene.querySelector<HTMLElement>(".story-sky")!;
+    const img = sky.querySelector<HTMLImageElement>("img");
+    if (bg && img?.getAttribute("src") !== bg.src)
+      sky.innerHTML = `<img class="story-background" src="${esc(bg.src)}" alt="">`;
+    else if (!bg && img) sky.innerHTML = "";
+    const stage = scene.querySelector<HTMLElement>(".story-actors")!;
+    const stageKey = JSON.stringify([...actors]);
+    if (stage.dataset.key !== stageKey) {
+      stage.dataset.key = stageKey;
+      stage.innerHTML = [...actors]
+        .map(
+          ([id, a]) =>
+            `<div class="story-actor ${a.slot}" data-actor="${esc(id)}">${actorImage(id, a.portrait)}</div>`,
+        )
+        .join("");
+    }
+    stage
+      .querySelectorAll<HTMLElement>(".story-actor")
+      .forEach((el) =>
+        el.classList.toggle(
+          "is-speaking",
+          step.kind === "say" && el.dataset.actor === step.actor,
+        ),
+      );
+    const box = scene.querySelector<HTMLElement>(".story-box")!;
+    box.classList.toggle("no-line", !line);
+    box.querySelector(".story-speaker")!.textContent = line?.speaker ?? "";
+    box.querySelector(".story-line")!.textContent = line?.text ?? "";
+    box.querySelector(".story-count")!.textContent = `${cursor + 1} / ${steps.length}`;
+    const fadeEl = scene.querySelector<HTMLElement>(".story-cinematic-fade")!;
     if (step.kind === "fade" && step.seconds > 0) {
-      const previous = steps
+      const prior = steps
         .slice(0, cursor)
         .reverse()
         .find((s) => s.kind === "fade");
-      const from = previous?.kind === "fade" ? previous.opacity : 0;
-      const elapsed = Math.max(0, performance.now() - shownAt),
-        duration = step.seconds * 1000;
-      host.querySelector(".story-cinematic-fade")?.animate(
-        [
-          {
-            opacity:
-              from + (step.opacity - from) * Math.min(1, elapsed / duration),
-          },
-          { opacity: step.opacity },
-        ],
-        { duration: Math.max(0, duration - elapsed), fill: "forwards" },
-      );
+      const from = prior?.kind === "fade" ? prior.opacity : 0;
+      fadeEl.animate([{ opacity: from }, { opacity: step.opacity }], {
+        duration: step.seconds * 1000,
+        fill: "forwards",
+      });
+    } else fadeEl.style.opacity = String(fade);
+    window.clearTimeout(autoTimer);
+    if (!["say", "await", "encounter"].includes(step.kind)) {
+      const wait = "seconds" in step ? step.seconds * 1000 : 0;
+      const at = nextKey;
+      autoTimer = window.setTimeout(() => {
+        if (key === at) void next();
+      }, wait + 30);
     }
   }
   async function next(skip = false) {
     if (pending) return;
-    const state = active();
-    if (!state) return;
-    const q = g.pack.quests.find(
-      (q) => q.id === (replay?.id ?? g.save.story.session?.quest),
-    );
-    const steps = cue?.steps ?? q?.story?.steps ?? [];
-    const cursor =
-      replay?.cursor ?? cue?.cursor ?? g.save.story.session!.cursor;
+    const session = g.save.story.session;
+    if (!replay && !session) return;
+    const q = g.pack.quests.find((q) => q.id === (replay?.id ?? session?.quest));
+    const steps = q?.story?.steps ?? [];
+    const cursor = replay?.cursor ?? session!.cursor;
     const step = steps[cursor];
     if (
       !skip &&
@@ -220,14 +311,9 @@ export function mountStoryPlayer(
       if (replay) {
         replay.cursor = skip ? steps.length : replay.cursor + 1;
         if (replay.cursor >= steps.length) replay = null;
-      } else if (cue) {
-        cue.cursor = skip ? steps.length : cue.cursor + 1;
-        if (cue.cursor >= steps.length) {
-          await g.command({ type: "story-cue", index: cue.index });
-          cue = null;
-        }
       } else if (step?.kind === "encounter") {
-        await g.command({ type: "story-battle" });
+        if (nearStoryPlanet(g, step.planet))
+          await g.command({ type: "story-battle" });
       } else await g.command({ type: "story-next", skip });
     } finally {
       pending = false;
@@ -249,7 +335,12 @@ export function mountStoryPlayer(
         await g.command({ type: "story-start", id });
         pending = false;
       }
-      opened = true;
+      const step = sessionStep();
+      if (step?.kind === "await") resume = true;
+      if (step?.kind === "encounter") {
+        await next();
+        return;
+      }
       key = "";
       draw();
     }
@@ -265,47 +356,21 @@ export function mountStoryPlayer(
     if (action === "flow-next" || action === "flow-skip")
       await next(action === "flow-skip");
     if (action === "flow-close") {
-      if (cue) {
-        await next(true);
-        return;
-      }
       replay = null;
-      cue = null;
-      host.innerHTML = "";
-      g.pause.delete("story-flow");
-      g.storyCamera = null;
-      opened = false;
-      hiddenSession = g.save.story.session?.quest ?? "";
-      key = "";
+      hiddenSession = mark();
+      closeScene();
     }
   };
-  let hiddenSession = "";
   root.addEventListener("click", click, true);
-  const timer = window.setInterval(() => {
-    const session = g.save.story.session;
-    const step = session
-      ? g.pack.quests.find((q) => q.id === session.quest)?.story?.steps[
-          session.cursor
-        ]
-      : undefined;
-    if (
-      hiddenSession &&
-      session?.quest === hiddenSession &&
-      !cue &&
-      !replay &&
-      !g.combat &&
-      !(step?.kind === "await" && conditionMet(g.save, step.condition))
-    )
-      return;
-    if (g.save.story.session?.quest !== hiddenSession) hiddenSession = "";
-    draw();
-  }, 150);
+  const timer = window.setInterval(draw, 150);
   draw();
   return () => {
     disposed = true;
     clearInterval(timer);
+    window.clearTimeout(autoTimer);
     root.removeEventListener("click", click, true);
     host.remove();
+    radioHost.remove();
     g.pause.delete("story-flow");
     g.storyCamera = null;
   };

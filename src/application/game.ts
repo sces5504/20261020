@@ -179,7 +179,6 @@ export class Game {
         this.x = s.x;
         this.y = s.y;
       }
-      if (c.type === "story-cue") this.pause.delete("story-cue-ready");
       if (c.type === "result") {
         const patrol = base.encounter?.kind === "patrol";
         this.events.push(c.victory ? "victory" : "defeat");
@@ -292,10 +291,6 @@ export class Game {
         this.x = center.x;
         this.y = center.y;
       }
-      if (this.pendingStoryCue() >= 0) {
-        this.pause.add("story-cue-ready");
-        return;
-      }
       if (this.combat.ended && !this.encounterPending) {
         const c = this.combat;
         this.encounterPending = true;
@@ -375,6 +370,7 @@ export class Game {
         .filter((c) => c.d <= c.radius)
         .sort((a, b) => a.d / a.radius - b.d / b.radius);
       const contact = contacts[0];
+      if (!contact) this.engageHint(r.id);
       if (contact) {
         this.encounterPending = true;
         this.notice =
@@ -387,7 +383,43 @@ export class Game {
             : { type: "begin", planet: contact.id },
         ).finally(() => (this.encounterPending = false));
       }
-    }
+    } else if (!this.combat && !this.report && !this.encounterPending)
+      this.engageHint(r.id);
+  }
+  private hintKey = "";
+  /** Explain silent non-engagements inside a node's radius instead of doing nothing. */
+  private engageHint(region: string) {
+    const v = this.pack.planets.find(
+      (p) =>
+        p.region === region &&
+        p.status === "active" &&
+        p.enemies.length > 0 &&
+        !nodeCleared(this.save, p) &&
+        Math.hypot(p.x - this.x, p.y - this.y) <= p.engageRadius,
+    );
+    const teamDown = !this.save.team.some(
+      (id) => (this.save.roster.find((o) => o.id === id)?.hp ?? 0) > 0,
+    );
+    const reason = !v
+      ? ""
+      : teamDown
+        ? `${v.name} · 編隊需先整補才能交戰`
+        : !nodeUnlocked(this.save, v, this.pack)
+          ? `${v.name} · 需先解放：${[...v.requires, ...v.requiresActive]
+              .filter((id) => !this.save.cleared.includes(id))
+              .map((id) => this.pack.planets.find((p) => p.id === id)?.name ?? id)
+              .slice(0, 3)
+              .join("、")}`
+          : this.disengagedPlanets.has(v.id)
+            ? `${v.name} · 剛撤離，駛離範圍後再接近即可重新交戰`
+            : v.encounterPolicy === "manual"
+              ? `抵達 ${v.name} · 於情報卡按「出擊」開始`
+              : !nodeAvailability(this.save, v, Date.now()).open
+                ? `${v.name} · ${nodeAvailability(this.save, v, Date.now()).reason}`
+                : "";
+    const key = v && reason ? `${v.id}:${reason}` : "";
+    if (key && key !== this.hintKey) this.notice = reason;
+    this.hintKey = key;
   }
   get movementSpeed() {
     if (this.combat) return this.pack.rules.travelSpeed;

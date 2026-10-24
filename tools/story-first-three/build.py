@@ -68,19 +68,24 @@ mission_meta={}
 for order,(key,(title,source,mode,seconds,support,rows,note)) in enumerate(briefs.items()):
  template=byplanet[source];region='chronicle:region.virgo' if order>=16 else 'chronicle:region.solar';x,y=1600+(order%4)*1900,1600+(order//4)*1000
  v={**template,'id':f'chronicle:encounter.{key}','name':title,'description':note+'。劇情參戰不等於角色入手；失敗可整補後重試。','status':'active','provenance':'inferred','sourceRef':f'EventScript[{rows[0]}..{rows[1]}]; source roster {source}; pacing/coordinates/levels adapted','region':region,'x':x,'y':y,'radius':58,'sprite':'original:asset.node-event','kind':'event','requires':[],'requiresActive':[],'hiddenUntilUnlocked':True,'initiallyCleared':False,'encounterPolicy':'manual','objective':'eliminate','timeLimitSeconds':0,'reward':{},'activationCost':{},'production':{},'dropCharacters':[],'waves':[],'leashRadius':1400,'leashWarningRadius':1200}
- level=(1 if order<3 else 3 if order<9 else 5 if order<16 else 10 if order<21 else 13 if order<29 else 18)
- # Source CID roster/counts preserved; chronology uses separately declared chapter levels.
+ chronology=(1 if order<3 else 3 if order<9 else 5 if order<16 else 10 if order<21 else 13 if order<29 else 18)
+ # Owner 2026-10-24: follow the original curve. Never below the source roster's own level;
+ # Source CID roster/counts preserved; chronology is only a floor between source points.
+ level=max(chronology,max(e.get('level',1) for e in template['enemies']))
  v['enemies']=[dict(enemy=e['enemy'],count=e['count'],level=level) for e in template['enemies']]
  if key in ['nemesis-first','nemesis-duel','izar-standoff']:v['enemies']=[dict(enemy='chronicle:enemy.izar' if key=='izar-standoff' else 'chronicle:enemy.nemesis',count=1,level=level+2)]
  story=dict(mode=mode,actors=[],waves=[],timeline=[],cues=[])
  if seconds:story['seconds']=seconds
  for i,c in enumerate(support):
-  a=dict(id=f'chronicle:unit.{key}-{c}',character=chars[c]['id'],x=x+120+i*55,y=y-90+i*60,side='ally',level=level+3,required=mode in ['escort','protect','defend'] and i==0,spawnAt=0)
+  a=dict(id=f'chronicle:unit.{key}-{c}',character=chars[c]['id'],x=x+120+i*55,y=y-90+i*60,side='ally',level=level,required=mode in ['escort','protect','defend'] and i==0,spawnAt=0)
   if mode=='escort' and i==0:
    a['x']=x-700;a['y']=y-400;a['destination']=dict(x=x+1100,y=y-120,radius=35)
    for at,dx,dy in [(0,-700,400),(5,300,400),(11,1100,-120)]:story['timeline'].append(dict(actor=a['id'],at=at,action='move',x=x+dx,y=y+dy))
   if key=='jupiter-seal':a['spawnAt']=seconds-6;a['required']=False
-  story['actors'].append(a)
+  # Owner 2026-10-24 difficulty review: optional companions carried even Lv1 fleets
+  # (original story battles are fought by the player's team). Keep only escort/protect
+  # targets and Jupiter's scripted late arrival; dialogue still names the companions.
+  if a['required'] or key=='jupiter-seal':story['actors'].append(a)
  if mode in ['defend','survive']:
   story['waves']=[dict(at=at,enemies=[dict(enemy='original:enemy.148',count=3,level=level)]) for at in [6,12,18]]
  if key=='mitsuba':story['waves']=[dict(at=at,enemies=[dict(enemy='original:enemy.148',count=3,level=level)]) for at in [8,16]]

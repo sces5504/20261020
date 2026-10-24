@@ -1,4 +1,7 @@
+import { operatorCard, updateOperatorCard } from "./operator-card";
+import { resonanceInstrument } from "./resonance-instrument";
 import "./ui-polish.css";
+import "./ui-mature.css";
 import { journalHtml } from "./journal";
 import { regionPath } from "../domain/navigation";
 import { mountStoryPlayer } from "./story-player";
@@ -71,9 +74,19 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
   root.innerHTML = `<main class="bridge"><header class="topbar"><a class="brand" href="#/play"><span class="brand-icon">✧</span><span>GALAXY ANGEL<small>星 河 戰 姬</small></span></a><div id="wallet" class="wallet"></div><div class="top-actions">${button("設定", "panel", "archive", "icon-button")}<a class="studio-link" href="gallery.html">角色圖鑑 ↗</a><a class="studio-link" href="#/studio">內容工坊 ↗</a></div></header>
  <div class="sector-heading"><div id="skill-splash" class="skill-splash" aria-live="polite"></div><div><span class="eyebrow">GALACTIC EXPEDITION</span><h1><b id="region-title">${esc(p.regions.find((r) => r.id === g.save.region)!.name)}</b><span>探索航線</span></h1></div><button class="journal-shortcut" data-action="journal-open" data-id="quests">${icon("journal")}<span id="journal-status">章節／任務</span> →</button><div class="sector-status"><i></i> <span id="save-status">本機自動保存</span>${test ? "<strong>隔離測試</strong>" : ""}</div></div>
  <section class="viewport"><aside class="mission-rail"><div class="section-label">航行目標 <span>MISSION</span></div><div id="mission"></div><div class="rail-bottom"><span class="eyebrow">NAVIGATION</span><p>WASD／點擊星海航行<br>M 切換大星圖</p><div class="signal"><i></i><i></i><i></i><i></i><i></i></div><small>艦隊通訊連線中</small></div></aside>
- <div id="space" class="space" aria-label="星域戰場，點擊空白處移動，點擊星球查看情報" role="application"></div><div class="map-caption"><span>✧ 星域掃描</span><span id="coordinates"></span></div><div id="battle-state" class="battle-state"></div><div id="battle-tools" class="battle-tools"></div><aside id="planet-card" class="planet-card"></aside></section>
- <footer class="flight-deck"><div class="squad-heading"><span class="eyebrow">YOUR CONSTELLATION</span><strong>航行編隊</strong>${button("編隊 ↗", "panel", "formation", "text-button")}</div><div class="squad" id="squad"></div><nav class="deck-nav">${button(icon("resonance") + "星體共鳴", "panel", "summon")}${button(icon("research") + "共振研究", "panel", "research")}${button(icon("challenge") + "高難／活動", "panel", "challenges")}${button(icon("journal") + "航行紀錄", "panel", "quests")}${button(icon("planet") + "領地", "panel", "planets")}${button(icon("crew") + "角色", "panel", "roster")}${button(icon("pause") + "暫停", "pause", "", "pause-button")}</nav></footer>
+ <div id="space" class="space" aria-label="星域戰場，點擊空白處移動，點擊星球查看情報" role="application"></div><div class="map-caption"><span>✧ 星域掃描</span><span id="coordinates"></span></div><div id="target-hud" class="target-hud" hidden aria-label="目前戰鬥目標"></div><div id="battle-state" class="battle-state"></div><div id="battle-tools" class="battle-tools"></div><aside id="planet-card" class="planet-card"></aside></section>
+ <footer class="flight-deck"><div class="squad-heading"><span class="eyebrow">YOUR CONSTELLATION</span><strong>航行編隊</strong>${button("編隊 ↗", "panel", "formation", "text-button")}</div><div class="squad" id="squad"></div><nav class="deck-nav" aria-label="艦隊功能">${navButton("星體共鳴", "共鳴", "RESONANCE", "resonance", "summon")}${navButton("共振研究", "研究", "RESEARCH", "research", "research")}${navButton("高難／活動", "挑戰", "SORTIE", "challenge", "challenges")}${navButton("航行紀錄", "紀錄", "CHRONICLE", "journal", "quests")}${navButton("領地", "領地", "COLONY", "planet", "planets")}${navButton("角色", "角色", "OPERATORS", "crew", "roster")}${navButton("暫停", "暫停", "PAUSE", "pause", "", "pause")}</nav></footer>
  <div class="build-note">v${p.version} · ${p.characters.filter((c) => c.status === "active").length} 位少女／${p.regions.filter((r) => r.status === "active").length} 個航區</div><div class="toast" id="toast" role="status" aria-live="polite"></div><div id="overlay"></div></main>`;
+  function navButton(
+    label: string,
+    short: string,
+    english: string,
+    glyph: Parameters<typeof icon>[0],
+    id: string,
+    action = "panel",
+  ) {
+    return `<button data-action="${action}" data-id="${id}" aria-label="${label}"><span class="deck-symbol">${icon(glyph)}</span><span class="deck-label">${short}<small>${english}</small></span></button>`;
+  }
   const $ = (s: string) => root.querySelector<HTMLElement>(s)!;
   const space = mountSpace(
     $("#space"),
@@ -291,49 +304,58 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       s.roster.map((o) => [o.id, o.level, o.resonance]),
       !!g.combat,
     ]);
-    if (key === squadKey) {
-      s.team.forEach((id) => {
-        const o = s.roster.find((o) => o.id === id)!,
-          c = p.characters.find((c) => c.id === o.definition)!,
-          unit = g.combat?.allies.find((u) => u.id === id),
-          card = root.querySelector<HTMLElement>(
-            `.squad-card[data-id="${CSS.escape(id)}"]`,
-          );
-        if (!card) return;
-        const hp = card.querySelector<HTMLElement>(".hp-bar span");
-        if (hp)
-          hp.style.width = `${Math.max(0, ((unit?.hp ?? o.hp) / (unit?.maxHp ?? stats(p, o).hp)) * 100)}%`;
-        card.classList.toggle(
-          "skill-cooling",
-          !!unit && unit.skillCooldown > 0,
+    const operators = s.team.map((id, slot) => {
+      const o = s.roster.find((o) => o.id === id)!,
+        c = p.characters.find((c) => c.id === o.definition)!;
+      const unit = g.combat?.allies.find((u) => u.id === id);
+      const skill =
+        (unit ? g.combat?.skillFor(unit) : undefined) ??
+        p.skills.find((sk) => sk.id === c.skill)!;
+      return { o, c, unit, skill, slot };
+    });
+    if (key !== squadKey) {
+      squadKey = key;
+      $("#squad").style.setProperty("--team-count", String(s.team.length));
+      $("#squad").innerHTML = operators
+        .map((v) => operatorCard(p, v.c, v.o, v.skill, v.slot, !!g.combat))
+        .join("");
+    }
+    for (const v of operators) {
+      const card = root.querySelector<HTMLElement>(
+        `.squad-card[data-id="${CSS.escape(v.o.id)}"]`,
+      );
+      if (card)
+        updateOperatorCard(
+          card,
+          v.unit,
+          v.unit?.hp ?? v.o.hp,
+          v.unit?.maxHp ?? stats(p, v.o).hp,
+          v.skill,
+          !!g.combat,
         );
-        card.classList.toggle(
-          "skill-ready",
-          !!unit && unit.hp > 0 && unit.skillCooldown <= 0,
-        );
-        card.dataset.ready = String(
-          !!unit && unit.hp > 0 && unit.skillCooldown <= 0,
-        );
-        const label = card.querySelector<HTMLElement>(".skill-label");
-        if (label)
-          label.textContent = g.combat
-            ? `${p.skills.find((sk) => sk.id === c.skill)!.name} · ${unit && unit.skillCooldown > 0 ? unit.skillCooldown.toFixed(1) + "s" : "就緒"}`
-            : c.role;
-      });
+    }
+  }
+  function renderTargetHud() {
+    const host = $("#target-hud"),
+      combat = g.combat;
+    const target =
+      combat?.units.find((u) => u.id === combat.target && u.hp > 0) ??
+      combat?.units.find((u) => u.side === "enemy" && u.hp > 0);
+    host.hidden = !target;
+    if (!target) {
+      host.dataset.key = "";
       return;
     }
-    squadKey = key;
-    $("#squad").innerHTML = s.team
-      .map((id) => {
-        const o = s.roster.find((o) => o.id === id)!,
-          c = p.characters.find((c) => c.id === o.definition)!,
-          unit = g.combat?.allies.find((u) => u.id === id),
-          hp = unit?.hp ?? o.hp,
-          max = unit?.maxHp ?? stats(p, o).hp,
-          skill = p.skills.find((sk) => sk.id === c.skill)!;
-        return `<button class="squad-card ${unit && unit.hp > 0 && unit.skillCooldown <= 0 ? "skill-ready" : unit && unit.skillCooldown > 0 ? "skill-cooling" : ""}" data-ready="${!!unit && unit.hp > 0 && unit.skillCooldown <= 0}" style="--c:${c.color}" data-action="${g.combat ? "cast" : "character"}" data-id="${esc(id)}">${portrait(p, c)}<div><span class="rarity">${stars(c, o)}</span><strong>${esc(c.name)} <small>Lv.${o.level}</small></strong><div class="hp-bar"><span style="width:${Math.max(0, (hp / max) * 100)}%"></span></div><small class="skill-label">${g.combat ? `${esc(skill.name)} · ${unit && unit.skillCooldown > 0 ? unit.skillCooldown.toFixed(1) + "s" : "就緒"}` : esc(c.role)}</small></div></button>`;
-      })
-      .join("");
+    const key = target.id + target.sprite;
+    if (host.dataset.key !== key) {
+      host.dataset.key = key;
+      const art = p.assets.find((a) => a.id === target.sprite);
+      host.innerHTML = `<span class="target-portrait">${art ? `<img src="${esc(art.src)}" alt="">` : icon("challenge")}</span><div class="target-copy"><div class="target-heading"><span>${target.boss ? "BOSS SIGNAL" : "HOSTILE SIGNAL"}</span><small class="target-health-numbers"></small></div><strong>${esc(target.name)}</strong><div class="target-health"><span></span></div></div><span class="target-lock" aria-hidden="true">${icon("challenge")}</span>`;
+    }
+    host.querySelector<HTMLElement>(".target-health > span")!.style.width =
+      `${Math.max(0, (target.hp / target.maxHp) * 100)}%`;
+    host.querySelector(".target-health-numbers")!.textContent =
+      `${Math.ceil(target.hp).toLocaleString("zh-TW")} / ${Math.ceil(target.maxHp).toLocaleString("zh-TW")}`;
   }
   function jobArt(j: Save["jobs"][number]) {
     const entity =
@@ -547,12 +569,12 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     if (panel === "research") {
       title = "共振研究";
       kick = "RESONANCE LAB";
-      body = `<p class="muted">研究持續進行，戰鬥期間完成的加成會在下場戰鬥生效。</p><div class="list-cards">${p.research.map((r) => `<article><span class="eyebrow">${s.jobs.some((j) => j.definition === r.id) ? "等待研究中" : r.seconds + " SEC"}</span><h3>${esc(r.name)}</h3><p>${esc(r.description)}</p><div class="costs">${amounts(p, r.cost)}</div>${button(s.research.includes(r.id) ? "研究完成" : s.jobs.some((j) => j.definition === r.id) ? "研究進行中" : "開始研究", "research", r.id, "primary", s.research.includes(r.id) || s.jobs.some((j) => j.definition === r.id) || !r.requires.every((id) => s.research.includes(id)))}</article>`).join("")}</div><h3>工作佇列</h3><div id="jobs">${jobList()}</div>`;
+      body = `<p class="muted">研究持續進行，戰鬥期間完成的加成會在下場戰鬥生效。</p><div class="list-cards">${p.research.map((r) => `<article class="research-card">${entityImage(p, r, "research-art")}<span class="eyebrow">${s.jobs.some((j) => j.definition === r.id) ? "等待研究中" : r.seconds + " SEC"}</span><h3>${esc(r.name)}</h3><p>${esc(r.description)}</p><div class="costs">${amounts(p, r.cost)}</div>${button(s.research.includes(r.id) ? "研究完成" : s.jobs.some((j) => j.definition === r.id) ? "研究進行中" : "開始研究", "research", r.id, "primary", s.research.includes(r.id) || s.jobs.some((j) => j.definition === r.id) || !r.requires.every((id) => s.research.includes(id)))}</article>`).join("")}</div><h3>工作佇列</h3><div id="jobs">${jobList()}</div>`;
     }
     if (panel === "summon") {
       title = "星體共鳴";
       kick = "STELLAR RESONANCE";
-      body = `<div class="summon-layout"><div class="resonance-orb">✧<span>CONNECTING THE STARS</span></div><div><p>調整四資源投入，尋找與少女相近的共鳴訊號。</p><label>配方預設<select id="preset">${p.characters.map((c) => `<option value="${esc(c.id)}">${esc(c.name)}的共鳴配方</option>`).join("")}</select></label><div class="recipe-inputs">${p.resources.map((r, i) => `<label style="--c:${r.color}">${resourceIcon(p, r)}${esc(r.name)}<input class="recipe" data-slot="${i}" type="number" min="1" max="999" value="${recipe[i]}"></label>`).join("")}</div><div id="recipe-info"></div><label>批次數量<input id="batch-count" type="number" min="1" max="${p.rules.summonSlots}" value="${count}"></label>${button("確認投入並共鳴 →", "summon", "", "primary")}<p class="muted">${p.rules.summonSeconds} 秒完成 · 可同時 ${p.rules.summonSlots} 組 · 結果在開工時確定</p></div></div><h3>共鳴工作</h3><div id="jobs">${jobList()}</div>`;
+      body = `<div class="summon-layout"><div class="resonance-orb">${resonanceInstrument()}<span>STELLAR CONNECTION</span></div><div><p>調整四資源投入，尋找與少女相近的共鳴訊號。</p><label>配方預設<select id="preset">${p.characters.map((c) => `<option value="${esc(c.id)}">${esc(c.name)}的共鳴配方</option>`).join("")}</select></label><div class="recipe-inputs">${p.resources.map((r, i) => `<label style="--c:${r.color}">${resourceIcon(p, r)}${esc(r.name)}<input class="recipe" data-slot="${i}" type="number" min="1" max="999" value="${recipe[i]}"></label>`).join("")}</div><div id="recipe-info"></div><label>批次數量<input id="batch-count" type="number" min="1" max="${p.rules.summonSlots}" value="${count}"></label>${button("確認投入並共鳴 →", "summon", "", "primary")}<p class="muted">${p.rules.summonSeconds} 秒完成 · 可同時 ${p.rules.summonSlots} 組 · 結果在開工時確定</p></div></div><h3>共鳴工作</h3><div id="jobs">${jobList()}</div>`;
     }
     if (panel === "colony") {
       const v = p.planets.find((v) => v.id === selected)!,
@@ -1162,7 +1184,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     $("#wallet").innerHTML = p.resources
       .map(
         (r) =>
-          `<div class="resource" style="--c:${r.color}">${resourceIcon(p, r)}<div><small>${esc(r.name)}</small><strong>${(g.save.wallet[r.id] ?? 0).toLocaleString("zh-TW", { maximumFractionDigits: 2 })}</strong></div><em>+${((rates[r.id] ?? 0) * 60).toFixed(0)}/m</em></div>`,
+          `<div class="resource" style="--c:${r.color}">${resourceIcon(p, r)}<div><small>${esc(r.name)}</small><strong>${Math.floor(g.save.wallet[r.id] ?? 0).toLocaleString("zh-TW")}</strong></div><em>+${((rates[r.id] ?? 0) * 60).toFixed(0)}/m</em></div>`,
       )
       .join("");
     $("#region-title").textContent = p.regions.find(
@@ -1195,6 +1217,10 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     $("#toast").textContent = g.error || g.notice;
     $("#toast").classList.toggle("is-error", !!g.error);
     $("#toast").classList.toggle(
+      "is-ambient",
+      /^(發現星球|內容版本已更新)/.test(g.notice),
+    );
+    $("#toast").classList.toggle(
       "visible",
       !!g.error || (!!g.notice && Date.now() < noticeUntil),
     );
@@ -1216,6 +1242,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
           : "";
 
     renderSquad();
+    renderTargetHud();
     refreshTimers();
     if (g.dirty) {
       g.dirty = false;

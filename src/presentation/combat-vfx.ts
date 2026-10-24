@@ -202,7 +202,8 @@ export function drawCombatVfx(
           for (let arm = 0; arm < 3; arm++) {
             light.beginPath();
             for (let i = 0; i <= 28; i++) {
-              const rr = 35 + ((Math.max(35, r * 0.85) - 35) * i) / 28,
+              const rr =
+                  35 + ((Math.max(35, Math.min(165, r * 0.85)) - 35) * i) / 28,
                 a = t * 0.7 + (arm * Math.PI * 2) / 3 + i * 0.14;
               if (!i)
                 light.moveTo(f.x + Math.cos(a) * rr, f.y + Math.sin(a) * rr);
@@ -215,6 +216,15 @@ export function drawCombatVfx(
       } else if (!reduced) {
         polygon(light, f.x, f.y, r * 0.75, c, 0.18, t * 0.12);
         ring(light, f.x, f.y, r * ((t * 0.35) % 1), c, 0.15);
+        const inner = Math.min(140, r * 0.38),
+          age = t - (f.born ?? t);
+        for (let i = 0; i < 6; i++) {
+          const a = age * 2.6 + (i * Math.PI) / 3;
+          light.lineStyle(2, c, 0.38);
+          light.beginPath();
+          light.arc(f.x, f.y, inner, a, a + 0.55);
+          light.strokePath();
+        }
       }
     }
   }
@@ -308,8 +318,14 @@ export function drawCombatVfx(
           for (let i = 0; i < 5; i++) {
             const x = f.x + Math.cos(i * 2.4) * 45,
               y = f.y + Math.sin(i * 2.4) * 30 - phase * 40;
-            light.lineBetween(x - 4, y, x + 4, y);
-            light.lineBetween(x, y - 4, x, y + 4);
+            if (family === "heal") {
+              light.lineBetween(x - 4, y, x + 4, y);
+              light.lineBetween(x, y - 4, x, y + 4);
+            } else {
+              light.lineBetween(x - 4, y + 3, x, y - 3);
+              light.lineBetween(x, y - 3, x + 4, y + 3);
+              light.lineBetween(x, y - 3, x, y + 8);
+            }
           }
         } else {
           light.lineStyle(2, c, fade * 0.75);
@@ -350,9 +366,30 @@ export function drawCombatVfx(
       danger.lineBetween(u.x, u.y - 12, u.x, u.y);
       danger.lineBetween(u.x, u.y, u.x + 8, u.y + 4);
     }
-    if (u.shield > 0 && !reduced) {
-      polygon(light, u.x, u.y, 34, cyan, 0.5, Math.PI / 6);
-      ring(light, u.x, u.y, 36, cyan, 0.1, 8);
+    const guarded =
+      u.shield > 0 ||
+      statuses.some((s) =>
+        ["deflect", "reflect", "directional", "invincible", "absorb"].includes(
+          s.stat,
+        ),
+      );
+    if (guarded && !reduced) {
+      const edge = u.side === "enemy" ? threat : cyan;
+      const r = 48 + Math.sin(t * 2) * 1.5;
+      ring(light, u.x, u.y, r, edge, 0.1, 9);
+      ring(light, u.x, u.y, r - 2, edge, 0.45, 1);
+      for (let i = 0; i < 8; i++) {
+        const a = (i * Math.PI) / 4;
+        polygon(
+          light,
+          u.x + Math.cos(a) * r * 0.76,
+          u.y + Math.sin(a) * r * 0.76,
+          10,
+          edge,
+          0.22 + (Math.sin(t * 2 + i) + 1) * 0.12,
+          Math.PI / 6,
+        );
+      }
     }
     if (!reduced && (statuses.length || u.buffUntil > t)) {
       base.lineStyle(1.5, c, 0.4);

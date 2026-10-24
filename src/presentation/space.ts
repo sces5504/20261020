@@ -349,10 +349,33 @@ export function mountSpace(
         this.panY = 0;
         this.zoomFactor = 1;
       }
+      // Portrait combat frames the living team, including the rear formation slots.
+      // This is camera-only; unit positions and combat rules remain untouched.
+      const team =
+        battle && w < 650 && model.viewMode === "explore"
+          ? model.combat!.units.filter(
+              (u) => u.side === "ally" && u.hp > 0 && !u.summonOwner,
+            )
+          : [];
+      const teamBounds = team.length
+        ? {
+            left: Math.min(...team.map((u) => u.x)),
+            right: Math.max(...team.map((u) => u.x)),
+            top: Math.min(...team.map((u) => u.y)),
+            bottom: Math.max(...team.map((u) => u.y)),
+          }
+        : undefined;
+      const portraitZoom = teamBounds
+        ? Math.min(
+            0.72,
+            w / (teamBounds.right - teamBounds.left + 280),
+            h / (teamBounds.bottom - teamBounds.top + 200),
+          )
+        : 0.72;
       const zoom =
         (model.viewMode === "explore"
           ? w < 650
-            ? 0.72
+            ? portraitZoom
             : 0.95
           : Math.min(w / r.width, h / r.height) * 0.88) * this.zoomFactor;
       const cinematic = model.storyCamera;
@@ -373,9 +396,17 @@ export function mountSpace(
       );
       camera.centerOn(
         (cinematic ? mix(cinematic.fromX, cinematic.x) : undefined) ??
-          (model.viewMode === "explore" ? model.x : r.width / 2) + this.panX,
+          (model.viewMode === "explore"
+            ? teamBounds
+              ? (teamBounds.left + teamBounds.right) / 2
+              : model.x
+            : r.width / 2) + this.panX,
         (cinematic ? mix(cinematic.fromY, cinematic.y) : undefined) ??
-          (model.viewMode === "explore" ? model.y : r.height / 2) + this.panY,
+          (model.viewMode === "explore"
+            ? teamBounds
+              ? (teamBounds.top + teamBounds.bottom) / 2
+              : model.y
+            : r.height / 2) + this.panY,
       );
       this.sprites.forEach((image) => image.setVisible(false));
       g.clear();
@@ -699,6 +730,30 @@ export function mountSpace(
           model.lowEffects ||
             matchMedia("(prefers-reduced-motion: reduce)").matches,
         );
+        if (
+          !model.lowEffects &&
+          !matchMedia("(prefers-reduced-motion: reduce)").matches
+        ) {
+          for (const d of combat.mechanics.dashes) {
+            const u = combat.units.find((u) => u.id === d.owner);
+            if (!u?.sprite || !this.textures.exists(u.sprite)) continue;
+            for (let i = 1; i <= 3; i++) {
+              const part = i * 0.22;
+              const key = `${u.id}:dash-echo:${i}`;
+              this.drawAsset(
+                key,
+                u.sprite,
+                u.x + (d.from.x - u.x) * part,
+                u.y + (d.from.y - u.y) * part,
+                model.pack.rules.allySpriteSize,
+              );
+              this.sprites
+                .get(key)
+                ?.setAlpha(0.2 - i * 0.035)
+                .setTint(u.side === "enemy" ? 0xff9baa : 0x9ee6ef);
+            }
+          }
+        }
         for (const u of combat.units) {
           if (u.hp <= 0) continue;
           if (u.sprite) this.ensureAsset(u.sprite);

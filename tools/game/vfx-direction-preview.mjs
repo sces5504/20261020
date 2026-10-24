@@ -25,6 +25,29 @@ const cases = [
   },
   { key: "shield", character: "m1:earth", label: "地球 · 偏折領域" },
   {
+    key: "barrage",
+    character: "solar10:character.nemesis",
+    label: "復仇女神星 · 追蹤彈幕",
+  },
+  {
+    key: "area",
+    character: "prologue6:character.sargas",
+    label: "Sargas · Shock Accelerated Spin（範圍場）",
+  },
+  {
+    key: "dash",
+    character: "m1:earth",
+    skill: "stella:skill.110",
+    label: "Charge · 突進（測試載體）",
+    peakMs: 80,
+  },
+  {
+    key: "buff",
+    character: "m1:uranus",
+    label: "天王星 · 臨界加速（強化）",
+    peakMs: 120,
+  },
+  {
     key: "turret",
     character: "m1:venus",
     label: "金星 · 設置砲台（新貼圖候選）",
@@ -40,6 +63,11 @@ try {
     const p = structuredClone(pack),
       target = p.planets[0],
       c = p.characters.find((c) => c.id === item.character);
+    const originalSkill = c.skill;
+    if (item.skill) {
+      c.skill = item.skill;
+      c.name = "突進測試載體";
+    }
     p.regions.forEach((r) => (r.patrols = []));
     target.enemies = [{ enemy: p.enemies[0].id, count: 1, level: 1 }];
     p.enemies[0].hp = 100000;
@@ -60,6 +88,7 @@ try {
       recordVideo: { dir: `${out}/raw`, size: { width: 1024, height: 768 } },
     });
     const page = await videoContext.newPage();
+    const recordingStart = Date.now();
     page.setDefaultTimeout(20000);
     page.on("pageerror", (e) => errors.push(e.message));
     // Seed only the isolated test slot; the production slot is a sentinel.
@@ -86,17 +115,28 @@ try {
     await page.waitForSelector("canvas", { timeout: 60000 });
     await page.locator(".squad-card img").evaluate((i) => i.decode());
     await page.waitForTimeout(800);
-    await page.locator(".squad-card").click();
+    await page.locator(".squad-card.skill-ready").waitFor();
+    const castAtSeconds = (Date.now() - recordingStart) / 1000;
+    if (process.env.VFX_VIDEO_ONLY) {
+      await page.evaluate(() => document.querySelector(".squad-card").click());
+    } else
+      await page.evaluate(
+        async (peak) => {
+          document.querySelector(".squad-card").click();
+          await new Promise((resolve) => setTimeout(resolve, peak));
+          document.querySelector('.deck-nav [data-action="pause"]').click();
+        },
+        item.peakMs ?? (item.key === "beam" ? 500 : 250),
+      );
     await page.waitForSelector(".squad-card.skill-cooling");
-    // Freeze through the real pause control before PNG encoding, which can take
-    // longer than a short skill's entire lifetime on a shared cloud GPU.
-    await page.evaluate(async () => {
-      await new Promise((resolve) => setTimeout(resolve, 350));
-      document.querySelector('.deck-nav [data-action="pause"]').click();
-    });
-    await page.locator("#space").screenshot({ path: `${out}/${item.key}.png` });
-    await page.locator('.deck-nav [data-action="pause"]').click();
-    await page.waitForTimeout(6200);
+    if (!process.env.VFX_VIDEO_ONLY)
+      await page
+        .locator("#space")
+        .screenshot({ path: `${out}/${item.key}.png` });
+    const resumeAtSeconds = (Date.now() - recordingStart) / 1000;
+    if (!process.env.VFX_VIDEO_ONLY)
+      await page.locator('.deck-nav [data-action="pause"]').click();
+    await page.waitForTimeout(6500);
     const video = page.video();
     await videoContext.close();
     await video.saveAs(`${out}/${item.key}-full.webm`);
@@ -104,10 +144,20 @@ try {
       ...item,
       viewport: "1024x768",
       skill: c.skill,
+      originalCharacterSkill: originalSkill,
+      fixtureSkillOverride: !!item.skill,
+      castAtSeconds,
+      resumeAtSeconds,
+      clipStartSeconds: Math.max(
+        0,
+        (process.env.VFX_VIDEO_ONLY ? castAtSeconds : resumeAtSeconds) - 0.3,
+      ),
+      uninterruptedVideo: !!process.env.VFX_VIDEO_ONLY,
       effect: p.skills.find((s) => s.id === c.skill).actions,
       reviewStatus: "candidate",
-      fixture:
-        "one actual character with its original skill; one enemy with 100000HP/1ATK, no patrols",
+      fixture: item.skill
+        ? "explicit test carrier, native Charge skill; enemy100000HP/1ATK; production pack unchanged"
+        : "one actual character with its original skill; one enemy with 100000HP/1ATK, no patrols",
       screenshot: `${out}/${item.key}.png`,
       video: `${out}/${item.key}-full.webm`,
       physicalDevice: false,

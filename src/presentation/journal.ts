@@ -93,7 +93,9 @@ export function journalHtml(
       active.filter((q) => !q.story && q.repeat !== "daily").length,
     ],
   ];
-  const hero = `<div class="journal-hero"><div><span class="eyebrow">THE STARS REMEMBER</span><h3>每一道星光，都是我們的航跡</h3><p>章節完成 ${completed} / ${stories.length} · 可領獎勵 ${ready}</p></div><span class="journal-emblem" aria-hidden="true">✧</span>${progress(completed, stories.length, "章節完成")}</div><nav class="journal-tabs" aria-label="紀錄分類">${tabs.map(([id, label, count]) => `<button data-action="journal-tab" data-id="${id}" aria-current="${tab === id ? "page" : "false"}">${label}<span>${count}</span></button>`).join("")}</nav>`;
+  const heroQuest = stories.find((q) => q.story!.chapter === chapter);
+  const heroBackground = p.assets.find((a) => a.id === heroQuest?.background);
+  const hero = `<div class="journal-hero">${heroBackground ? `<img class="journal-hero-art" src="${esc(heroBackground.src)}" alt="">` : ""}<div class="journal-hero-copy"><span class="eyebrow">VOYAGE ARCHIVE</span><h3>${esc(tab === "daily" ? "每日航行委託" : tab === "voyage" ? "艦隊航行紀錄" : chapter ? chapterName(chapter) : "航行編年史")}</h3><p>章節完成 ${completed} / ${stories.length} · 可領獎勵 ${ready}</p></div><span class="journal-emblem" aria-hidden="true">✧</span>${progress(completed, stories.length, "章節完成")}</div><nav class="journal-tabs" aria-label="紀錄分類">${tabs.map(([id, label, count]) => `<button data-action="journal-tab" data-id="${id}" aria-current="${tab === id ? "page" : "false"}">${label}<span>${count}</span></button>`).join("")}</nav>`;
   if (tab === "daily")
     return (
       hero +

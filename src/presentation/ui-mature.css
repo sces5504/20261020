@@ -1,0 +1,1431 @@
+/* Second UI direction: illustrated operators, compact combat telemetry and a
+   deliberate command deck. Candidate for visual review, no gameplay state. */
+.bridge.in-battle .toast.is-ambient {
+  visibility: hidden;
+}
+.bridge .sector-heading .skill-splash {
+  position: absolute;
+  inset: 0 auto 0 20px;
+  max-width: calc(100% - 150px);
+  padding: 5px 12px;
+  gap: 9px;
+  background: linear-gradient(90deg, #16303ef5, #0b1827f5);
+}
+.bridge .sector-heading .skill-splash .avatar-window {
+  width: 32px;
+  height: 40px;
+}
+.bridge .sector-heading .skill-splash strong {
+  font-size: 15px;
+  margin-top: 3px;
+}
+.bridge .sector-heading .skill-splash small {
+  font-size: 7px;
+}
+.bridge .operator-card:focus-visible::after {
+  border: 2px solid #f4d9a1;
+}
+.bridge .operator-card:active {
+  filter: brightness(1.12);
+}
+.bridge .primary {
+  border-radius: 1px;
+  clip-path: polygon(
+    6px 0,
+    100% 0,
+    100% calc(100% - 6px),
+    calc(100% - 6px) 100%,
+    0 100%,
+    0 6px
+  );
+  letter-spacing: 1px;
+}
+.bridge .journal-hero {
+  min-height: 150px;
+  position: relative;
+  isolation: isolate;
+  padding: 25px 26px;
+}
+.journal-hero-art {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70% 43%;
+  opacity: 0.45;
+  z-index: -2;
+}
+.bridge .journal-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, #0b1c2af5, #10213399 55%, #0816250d);
+}
+.journal-hero-copy {
+  position: relative;
+  z-index: 1;
+}
+.bridge .journal-hero h3 {
+  font-size: 26px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  margin: 12px 0;
+  color: #f1ecdf;
+}
+.bridge .journal-hero .journal-emblem {
+  opacity: 0.5;
+}
+.bridge .chapter-select button {
+  background: linear-gradient(110deg, #29455466, #102030);
+  padding: 14px 16px;
+}
+.bridge .chapter-select button[aria-current="page"] {
+  background: linear-gradient(120deg, #5b5b4d88, #243b4d);
+}
+.bridge .character-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.bridge .character-grid .character-card {
+  position: relative;
+  display: block;
+  min-height: 320px;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 15% 30%, #43617255, transparent 70%), #101e2e;
+  border: 1px solid #819ea541;
+  border-radius: 0;
+}
+.bridge .character-grid .portrait-button {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 42%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(90deg, transparent, #0b182a33);
+  border: 0;
+  padding: 0;
+}
+.bridge .character-grid .portrait-button > .portrait.large {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  object-position: 50% 10%;
+  background: none;
+}
+.bridge .character-grid .character-info {
+  position: relative;
+  margin-left: 42%;
+  padding: 20px 16px;
+  background: linear-gradient(90deg, #0f1f2c22, #0e1c29dd);
+}
+.bridge .character-info h3 {
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #efe9dd;
+  margin: 7px 0 4px;
+}
+.bridge .character-info h3 small {
+  font-size: 9px;
+  letter-spacing: 0;
+}
+.bridge .character-info .stat-grid {
+  padding: 10px 0;
+  margin: 12px 0;
+}
+.bridge .character-info .stat-grid strong {
+  font-size: 11px;
+}
+.bridge .character-info .skill-copy {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 10px;
+  line-height: 1.7;
+}
+.bridge .character-actions {
+  flex-wrap: wrap;
+}
+.bridge .character-actions button {
+  min-height: 38px;
+  font-size: 10px;
+  padding: 5px 7px;
+  border-radius: 1px;
+}
+.bridge .research-card {
+  position: relative;
+  overflow: hidden;
+  border-left: 2px solid #d7be87aa;
+  padding: 24px;
+  min-height: 230px;
+}
+.research-art {
+  position: absolute;
+  width: 145px;
+  height: 145px;
+  right: 0;
+  top: -10px;
+  object-fit: contain;
+  opacity: 0.6;
+  filter: drop-shadow(0 5px 12px #0007);
+}
+.bridge .research-card h3 {
+  position: relative;
+  font-size: 22px;
+  letter-spacing: 2px;
+  margin-top: 12px;
+  padding-right: 40px;
+}
+.bridge .research-card p {
+  position: relative;
+  max-width: 75%;
+  min-height: 48px;
+  font-size: 12px;
+}
+.bridge .research-card .costs {
+  position: relative;
+}
+.bridge .research-card > .primary {
+  min-width: 140px;
+  margin-top: 7px;
+}
+.bridge .summon-layout {
+  gap: 32px;
+  align-items: center;
+  padding: 12px 0 28px;
+}
+.bridge .resonance-orb {
+  width: 270px;
+  height: 300px;
+  position: relative;
+  margin: auto;
+  border: 0;
+  box-shadow: none;
+  background: radial-gradient(ellipse, #37717b22, transparent 65%);
+  border-radius: 0;
+  font-size: 0;
+}
+.bridge .resonance-orb > svg {
+  width: 100%;
+  height: 270px;
+  display: block;
+}
+.bridge .resonance-orb > span {
+  position: static;
+  display: block;
+  font-size: 8px;
+  letter-spacing: 3px;
+  text-align: center;
+  color: #b6a67e;
+}
+.bridge .recipe-inputs {
+  gap: 8px;
+  margin-block: 18px;
+}
+.bridge .recipe-inputs label {
+  padding: 10px;
+  background: #0a1624;
+  border: 1px solid #a5c4d32b;
+  color: #a6becb;
+  border-top-color: color-mix(in srgb, var(--c), transparent 45%);
+}
+.bridge .recipe-inputs .resource-icon {
+  width: 24px;
+  height: 27px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.bridge .recipe-inputs input {
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #b2c7cf44;
+  border-radius: 0;
+  font-size: 22px;
+  font-weight: 400;
+  padding: 10px 0 5px;
+  color: #f1ebdc;
+  text-align: center;
+  min-height: 44px;
+}
+.bridge .summon-layout > div:last-child > .primary {
+  width: 100%;
+  margin-top: 18px;
+  min-height: 46px;
+}
+@media (max-width: 800px) {
+  .bridge .journal-hero {
+    min-height: 135px;
+    padding: 22px 18px;
+  }
+  .bridge .journal-hero h3 {
+    font-size: 21px;
+    letter-spacing: 2px;
+  }
+  .bridge .character-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .bridge .character-grid .character-card {
+    min-height: 290px;
+  }
+  .bridge .character-grid .character-info {
+    padding: 16px 13px;
+  }
+  .bridge .character-info h3 {
+    font-size: 19px;
+  }
+  .bridge .character-actions button {
+    min-height: 44px;
+  }
+  .bridge .summon-layout {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .bridge .resonance-orb {
+    width: 190px;
+    height: 210px;
+  }
+  .bridge .resonance-orb > svg {
+    height: 190px;
+  }
+  .bridge .resonance-orb > span {
+    font-size: 6px;
+    letter-spacing: 2px;
+  }
+  .bridge .recipe-inputs label {
+    padding: 8px 5px;
+    font-size: 10px;
+  }
+  .bridge .recipe-inputs .resource-icon {
+    width: 20px;
+    height: 24px;
+    margin-right: 3px;
+  }
+  .bridge .recipe-inputs input {
+    font-size: 19px;
+  }
+  .bridge .research-card {
+    padding: 20px 17px;
+    min-height: 210px;
+  }
+}
+.bridge {
+  --gold: #edcf94;
+  --cyan: #9edcde;
+  background: #080e19;
+}
+.bridge .topbar {
+  height: 70px;
+  flex: none;
+  padding: 0 28px;
+  background: linear-gradient(180deg, #142436f2, #0b1421f2);
+  border-bottom: 1px solid #ddc38d32;
+  box-shadow: 0 4px 24px #0003;
+}
+.bridge .brand {
+  font-size: 18px;
+  letter-spacing: 2.5px;
+}
+.bridge .brand-icon {
+  font-size: 35px;
+  color: #f3d7a1;
+}
+.bridge .brand small {
+  font-size: 8px;
+  color: #b2c3ce;
+  letter-spacing: 5px;
+  margin-top: 2px;
+}
+.bridge .wallet {
+  gap: 18px;
+}
+.bridge .wallet .resource {
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0 16px 0 0;
+  gap: 9px;
+  border-right: 1px solid #b1cddd20;
+}
+.bridge .wallet .resource:last-child {
+  border-right: 0;
+}
+.bridge .wallet .resource-icon {
+  width: 29px;
+  height: 32px;
+  filter: drop-shadow(0 3px 8px #0008);
+}
+.bridge .wallet .resource small {
+  color: #9baebb;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+.bridge .wallet .resource strong {
+  font-size: 19px;
+  color: #edf1ef;
+  font-weight: 500;
+  line-height: 1.15;
+}
+.bridge .wallet .resource em {
+  display: none;
+}
+.bridge .top-actions .icon-button {
+  min-height: 44px;
+  border-color: #9ab5c52b;
+  background: #09142077;
+}
+.bridge .top-actions .studio-link {
+  color: #a1b3bf;
+}
+.bridge .sector-heading {
+  padding: 14px 28px 12px;
+  flex: none;
+  background: linear-gradient(90deg, #1e35412b, transparent 70%);
+}
+.bridge .sector-heading .eyebrow {
+  color: #8daeba;
+  font-size: 9px;
+  letter-spacing: 2.7px;
+}
+.bridge .sector-heading h1 {
+  font-size: 22px;
+  letter-spacing: 3px;
+  margin: 5px 0 0;
+  color: #f0eee5;
+}
+.bridge .journal-shortcut {
+  border: 0;
+  border-left: 1px solid #d6bd7d66;
+  border-radius: 0;
+  background: linear-gradient(90deg, #dcc08015, transparent);
+  color: #e8d5ad;
+  font-size: 11px;
+  padding: 8px 20px;
+}
+.bridge .sector-status {
+  color: #7894a5;
+  font-size: 9px;
+}
+.bridge .viewport {
+  margin: 0 20px;
+  border: 1px solid #a3c2d32b;
+  border-radius: 0;
+  box-shadow:
+    0 0 0 1px #030911,
+    0 16px 40px #0002;
+}
+.bridge .viewport::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid #c2d4d608;
+  box-shadow: inset 0 0 70px #0005;
+  pointer-events: none;
+  z-index: 1;
+}
+.bridge .mission-rail {
+  background: linear-gradient(90deg, #091420ed, #09142011);
+  border-right: none;
+}
+.bridge .mission-rail .section-label {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #9bb7c6;
+}
+.bridge .mission-number {
+  font-weight: 300;
+  color: #f1d59c;
+}
+.bridge .mission-rail h3 {
+  color: #ece8dc;
+}
+.bridge .battle-tools {
+  padding: 7px 10px 5px;
+  background: linear-gradient(180deg, #112231ed, #091521f2);
+  border: 1px solid #b4d4e02c;
+  box-shadow: 0 6px 20px #0005;
+  border-radius: 2px;
+}
+.bridge .battle-tools button {
+  border: 0;
+  border-right: 1px solid #91aabb26;
+  border-radius: 0;
+  background: none;
+  min-height: 40px;
+  padding: 5px 14px;
+  color: #c8d8df;
+}
+.bridge .battle-tools button:last-of-type {
+  border-right: 0;
+  color: #e4c9a2;
+}
+.bridge .battle-tools small {
+  font-size: 9px;
+  color: #99afb9;
+  letter-spacing: 0.5px;
+}
+.bridge .in-battle .battle-state {
+  bottom: 100px;
+}
+.bridge.in-battle .battle-state {
+  top: auto;
+  right: 22px;
+  left: auto;
+  bottom: 104px;
+  transform: none;
+}
+.bridge .battle-state span {
+  padding: 6px 10px;
+  font-size: 9px;
+  letter-spacing: 1px;
+  background: #101e2bd9;
+  border: 1px solid #86a4b744;
+  box-shadow: none;
+}
+.bridge .target-hud {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: min(420px, 65%);
+  padding: 10px 14px;
+  pointer-events: none;
+  background: linear-gradient(100deg, #182b3bef, #12202ce3);
+  border-top: 1px solid #f1b7a58c;
+  border-bottom: 1px solid #728f9b44;
+  box-shadow: 0 8px 20px #0004;
+  clip-path: polygon(
+    10px 0,
+    100% 0,
+    100% calc(100% - 10px),
+    calc(100% - 10px) 100%,
+    0 100%,
+    0 10px
+  );
+}
+.target-portrait {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  background: radial-gradient(#a74b4030, transparent 70%);
+  border: 1px solid #dfb4a533;
+  transform: rotate(0);
+}
+.target-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.target-copy {
+  flex: 1;
+  min-width: 0;
+}
+.target-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
+.target-heading > span {
+  font-size: 7px;
+  color: #d49b90;
+  letter-spacing: 1.7px;
+}
+.target-health-numbers {
+  font-size: 8px;
+  font-variant-numeric: tabular-nums;
+  color: #b8c4c9;
+}
+.target-copy > strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: #f3e8df;
+  margin: 3px 0 7px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.target-health {
+  height: 3px;
+  background: #010813aa;
+  position: relative;
+}
+.target-health::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0 24%,
+    #071420cc 24% 25%
+  );
+}
+.target-health > span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #ab675d, #f3b29d);
+  box-shadow: 0 0 8px #ffac8e33;
+  transition: width 0.18s linear;
+}
+.target-lock {
+  color: #d6a69866;
+  width: 22px;
+  height: 22px;
+}
+.target-lock .nav-icon {
+  width: 100%;
+  height: 100%;
+}
+.bridge .flight-deck {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  grid-template-rows: auto 57px;
+  gap: 12px 24px;
+  padding: 14px 28px 0;
+  flex: none;
+  min-height: 0;
+  align-items: center;
+  background:
+    radial-gradient(ellipse at 55% 0, #233b4a5c, transparent 65%),
+    linear-gradient(#101d2d, #09121e);
+  border-top: 1px solid #a4bdcc1c;
+}
+.bridge .flight-deck .squad-heading {
+  grid-column: 1;
+  grid-row: 1;
+  width: auto;
+  padding-left: 12px;
+  border-left: 2px solid #d5b779;
+}
+.bridge .squad-heading .eyebrow {
+  font-size: 8px;
+  letter-spacing: 1.3px;
+  color: #94a8b7;
+}
+.bridge .squad-heading strong {
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #e7e3d6;
+  margin-top: 7px;
+}
+.bridge .squad-heading .text-button {
+  min-height: 36px;
+  font-size: 10px;
+  color: #d5bd8f;
+}
+.bridge .flight-deck .squad {
+  grid-column: 2;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: repeat(var(--team-count, 3), minmax(0, 130px));
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+  flex: none;
+}
+.bridge .flight-deck .squad > .operator-card {
+  position: relative;
+  display: block;
+  min-width: 0;
+  width: 100%;
+  max-width: none;
+  height: 132px;
+  padding: 0;
+  overflow: hidden;
+  text-align: left;
+  border: 1px solid #9fbcc349;
+  border-radius: 0;
+  clip-path: polygon(
+    7px 0,
+    100% 0,
+    100% calc(100% - 7px),
+    calc(100% - 7px) 100%,
+    0 100%,
+    0 7px
+  );
+  background:
+    radial-gradient(
+      ellipse at 60% 30%,
+      color-mix(in srgb, var(--c), transparent 75%),
+      transparent 80%
+    ),
+    #102131;
+  box-shadow: none;
+  isolation: isolate;
+  transform: none;
+}
+.bridge .flight-deck .squad > .operator-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-top: 1px solid #fff2;
+  border-bottom: 2px solid #93b4bd33;
+  pointer-events: none;
+  z-index: 5;
+}
+.operator-art {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+.operator-art > img {
+  position: absolute;
+  left: 50%;
+  top: -12%;
+  width: 160%;
+  height: 230%;
+  max-width: none;
+  object-fit: cover;
+  object-position: 50% 8%;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 3px 5px #0005);
+}
+.operator-shade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    #07131c44,
+    transparent 32%,
+    #08142255 48%,
+    #071321f5 79%
+  );
+}
+.operator-slot {
+  position: absolute;
+  left: 8px;
+  top: 7px;
+  z-index: 3;
+  font-size: 9px;
+  color: #eee2c9;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 1px;
+}
+.operator-level {
+  position: absolute;
+  left: 29px;
+  top: 8px;
+  z-index: 3;
+  font-size: 7px;
+  color: #c7d4d9;
+}
+.operator-glyph {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  width: 22px;
+  height: 22px;
+  padding: 3px;
+  color: #e8d6ac;
+  background: #071422aa;
+  border: 1px solid #cebb8c55;
+  border-radius: 3px;
+  z-index: 3;
+}
+.operator-glyph svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.operator-cd-ring {
+  position: absolute;
+  top: 37px;
+  right: 7px;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: conic-gradient(#f1d9a8 calc(var(--cd, 0) * 1turn), #637f8b55 0);
+  z-index: 3;
+}
+.operator-cd-ring::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #0a1829eb;
+  border-radius: 50%;
+}
+.operator-cd {
+  font-size: 14px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  position: relative;
+  color: #f0e8d5;
+}
+.bridge .flight-deck .squad > .operator-card > .operator-copy {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 3;
+  padding: 4px 9px 8px;
+  background: none;
+}
+.bridge .operator-copy .rarity {
+  display: block;
+  margin: 0 0 2px;
+  color: #dac392;
+  font-size: 6px;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+.bridge .operator-copy strong {
+  color: #f1f0e7;
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: 1px;
+}
+.bridge .operator-copy .hp-bar {
+  height: 2px;
+  margin: 4px 0;
+  background: #a6c4ce26;
+  border-radius: 0;
+}
+.bridge .operator-copy .hp-bar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #5d9e9d, #b6ede1);
+}
+.bridge .operator-copy .skill-label {
+  display: block;
+  color: #c5d1da;
+  font-size: 9px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  line-height: 1.5;
+}
+.operator-state {
+  display: block;
+  color: #a9bac6;
+  font-size: 7px;
+  letter-spacing: 1.2px;
+  margin-top: 3px;
+  line-height: 1.3;
+}
+.bridge .flight-deck .operator-card.skill-ready {
+  animation: none;
+  border-color: #d7be805f;
+  background-color: #112231;
+  box-shadow: none;
+}
+.bridge .flight-deck .operator-card.skill-ready::after {
+  border-bottom-color: #efce8d;
+}
+.operator-card.skill-ready .operator-cd {
+  color: #f0d394;
+  font-size: 13px;
+}
+.operator-card.skill-ready .operator-state {
+  color: #f1d59a;
+}
+.bridge .flight-deck .operator-card.skill-cooling {
+  animation: none;
+  background-color: #0c1927;
+  box-shadow: none;
+}
+.operator-card.skill-cooling .operator-art {
+  opacity: 0.65;
+}
+.operator-card.operator-down .operator-art {
+  filter: grayscale(1);
+  opacity: 0.35;
+}
+.bridge .operator-card[data-action="character"] .operator-cd-ring {
+  display: none;
+}
+.bridge .flight-deck .deck-nav {
+  grid-row: 2;
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  width: 100%;
+  gap: 0;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #b4c9d626;
+  align-self: stretch;
+}
+.bridge .deck-nav > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  min-width: 0;
+  padding: 6px;
+  border: 0;
+  border-right: 1px solid #a8bfce18;
+  border-radius: 0;
+  background: none;
+  color: #bbc9d3;
+  text-align: left;
+  box-shadow: none;
+}
+.bridge .deck-nav > button:last-child {
+  border-right: 0;
+}
+.bridge .deck-nav > button:hover {
+  background: linear-gradient(#efcf8e0b, #d7b67b18);
+  color: #f4d8a7;
+}
+.bridge .deck-nav .deck-symbol {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  width: 28px;
+  height: 28px;
+  color: #d4bb87;
+  transform: rotate(0);
+}
+.bridge .deck-nav .deck-symbol .nav-icon {
+  margin: 0;
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+.bridge .deck-nav .deck-label {
+  display: block;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: 2px;
+}
+.bridge .deck-nav .deck-label small {
+  display: block;
+  font-size: 6px;
+  color: #758e9f;
+  letter-spacing: 1.2px;
+  line-height: 1.1;
+}
+.bridge .build-note {
+  display: none;
+}
+.bridge .modal {
+  border-radius: 0;
+  border: 1px solid #8ba9b855;
+  background:
+    radial-gradient(ellipse at 0 0, #304b5d66, transparent 60%), #0c1928;
+  box-shadow: 0 30px 100px #000a;
+}
+.bridge .modal-heading {
+  position: relative;
+  background: linear-gradient(90deg, #203b4b99, #0c192800);
+  border-bottom: 1px solid #c8b37e55;
+  padding: 20px 28px;
+}
+.bridge .modal-heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(#f2d49a, #bc985200);
+}
+.bridge .modal-heading h2 {
+  color: #f0eadc;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 4px;
+}
+.bridge .modal-heading .eyebrow {
+  color: #b9a77d;
+  letter-spacing: 3px;
+  font-size: 9px;
+}
+.bridge .modal-footer {
+  background: #06101b88;
+  color: #75909d;
+}
+.bridge .journal-hero {
+  border: 1px solid #b3c9d433;
+  border-left: 2px solid #d8bd83;
+  border-radius: 0;
+  background: linear-gradient(110deg, #263e4d, #111f30);
+}
+.bridge .journal-tabs button {
+  border-radius: 0;
+}
+.bridge .chapter-select button {
+  border-radius: 0;
+}
+.bridge .journal-card {
+  border-radius: 0;
+  background: linear-gradient(135deg, #20394a44, #0b172666);
+}
+@media (max-width: 1100px) and (min-width: 801px) {
+  .bridge .topbar {
+    padding-inline: 20px;
+  }
+  .bridge .wallet {
+    gap: 9px;
+  }
+  .bridge .wallet .resource {
+    padding-right: 9px;
+  }
+  .bridge .brand {
+    font-size: 15px;
+    letter-spacing: 1.7px;
+  }
+  .bridge .top-actions .studio-link {
+    display: none;
+  }
+  .bridge .flight-deck {
+    grid-template-columns: 105px minmax(0, 1fr);
+    gap: 10px 16px;
+    padding-inline: 20px;
+  }
+}
+@media (max-width: 800px) {
+  .bridge .topbar {
+    height: auto;
+    min-height: 0;
+    padding: 7px 12px;
+    gap: 5px;
+  }
+  .bridge .brand {
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+  .bridge .brand-icon {
+    font-size: 28px;
+  }
+  .bridge .brand small {
+    display: none;
+  }
+  .bridge .top-actions .icon-button {
+    padding: 4px 10px;
+    min-height: 36px;
+    font-size: 10px;
+  }
+  .bridge .wallet {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .bridge .wallet .resource {
+    padding: 0 5px 0 0;
+    gap: 5px;
+  }
+  .bridge .wallet .resource-icon {
+    width: 22px;
+    height: 26px;
+  }
+  .bridge .wallet .resource small {
+    font-size: 7px;
+    letter-spacing: 0.5px;
+  }
+  .bridge .wallet .resource strong {
+    font-size: 14px;
+  }
+  .bridge .sector-heading {
+    padding: 9px 12px;
+    gap: 8px;
+  }
+  .bridge .sector-heading h1 {
+    font-size: 17px;
+    letter-spacing: 2px;
+    margin-top: 2px;
+  }
+  .bridge .sector-heading .eyebrow {
+    font-size: 7px;
+    letter-spacing: 1.5px;
+  }
+  .bridge .journal-shortcut {
+    min-height: 42px;
+    padding: 6px 10px;
+    gap: 6px;
+    font-size: 10px;
+  }
+  .bridge .viewport {
+    margin: 0;
+    border-left: 0;
+    border-right: 0;
+  }
+  .bridge .viewport::after {
+    box-shadow: inset 0 0 50px #0004;
+  }
+  .bridge .target-hud {
+    top: 8px;
+    width: min(340px, calc(100% - 32px));
+    padding: 7px 11px;
+    gap: 8px;
+  }
+  .target-portrait {
+    width: 32px;
+    height: 32px;
+  }
+  .target-copy > strong {
+    font-size: 12px;
+    margin: 2px 0 5px;
+  }
+  .target-heading > span {
+    font-size: 6px;
+    letter-spacing: 1px;
+  }
+  .target-health-numbers {
+    font-size: 7px;
+  }
+  .target-lock {
+    width: 18px;
+    height: 18px;
+  }
+  .bridge .battle-tools {
+    padding: 0 5px 4px;
+    box-shadow: none;
+    border-left: 0;
+    border-right: 0;
+    background: linear-gradient(#142735, #0a1624);
+  }
+  .bridge .battle-tools button {
+    min-height: 44px;
+    padding: 5px 4px;
+    font-size: 10px;
+  }
+  .bridge.in-battle .battle-tools {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0;
+  }
+  .bridge .battle-tools small {
+    line-height: 1.2;
+    padding: 0 0 2px;
+    font-size: 8px;
+  }
+  .bridge.in-battle .battle-state {
+    bottom: 75px;
+    right: 10px;
+  }
+  .bridge .battle-state span {
+    font-size: 8px;
+    padding: 5px 8px;
+  }
+  .bridge .flight-deck {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto 55px;
+    gap: 9px;
+    padding: 10px 9px 0;
+  }
+  .bridge .flight-deck .squad-heading {
+    display: none;
+  }
+  .bridge .flight-deck .squad {
+    grid-column: 1;
+    width: 100%;
+    gap: 6px;
+    grid-template-columns: repeat(var(--team-count, 3), minmax(0, 105px));
+  }
+  .bridge .flight-deck .squad > .operator-card {
+    height: 111px;
+  }
+  .bridge .flight-deck .squad > .operator-card > .operator-copy {
+    padding: 2px 7px 6px;
+  }
+  .bridge .operator-copy strong {
+    font-size: 12px;
+    letter-spacing: 0.7px;
+  }
+  .bridge .operator-copy .skill-label {
+    font-size: 8px;
+  }
+  .bridge .operator-copy .rarity {
+    font-size: 5px;
+  }
+  .operator-level {
+    font-size: 6px;
+    left: 25px;
+  }
+  .operator-slot {
+    font-size: 8px;
+    left: 7px;
+  }
+  .operator-glyph {
+    width: 20px;
+    height: 20px;
+    right: 5px;
+    top: 6px;
+  }
+  .operator-cd-ring {
+    width: 27px;
+    height: 27px;
+    top: 33px;
+    right: 5px;
+  }
+  .operator-cd {
+    font-size: 13px;
+  }
+  .operator-state {
+    font-size: 6px;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+  }
+  .bridge .flight-deck .squad:has(> .operator-card:nth-child(4)) {
+    grid-template-columns: repeat(var(--team-count, 6), minmax(0, 1fr));
+    gap: 4px;
+  }
+  .bridge
+    .flight-deck
+    .squad:has(> .operator-card:nth-child(4))
+    > .operator-card {
+    height: 107px;
+  }
+  .bridge
+    .flight-deck
+    .squad:has(> .operator-card:nth-child(4))
+    .operator-copy {
+    padding: 2px 4px 5px;
+  }
+  .bridge
+    .flight-deck
+    .squad:has(> .operator-card:nth-child(4))
+    .operator-copy
+    strong {
+    font-size: 10px;
+  }
+  .bridge
+    .flight-deck
+    .squad:has(> .operator-card:nth-child(4))
+    .operator-copy
+    .skill-label {
+    font-size: 7px;
+  }
+  .bridge
+    .flight-deck
+    .squad:has(> .operator-card:nth-child(4))
+    .operator-copy
+    .rarity {
+    display: block;
+  }
+  .bridge
+    .flight-deck
+    .squad:has(> .operator-card:nth-child(4))
+    .operator-level {
+    display: none;
+  }
+  .bridge
+    .flight-deck
+    .squad:has(> .operator-card:nth-child(4))
+    .operator-state {
+    font-size: 6px;
+    letter-spacing: 0;
+  }
+  .bridge .flight-deck .deck-nav {
+    grid-column: 1;
+    grid-row: 2;
+    gap: 0;
+  }
+  .bridge .deck-nav > button {
+    flex-direction: column;
+    gap: 2px;
+    padding: 5px 1px;
+    min-height: 52px;
+  }
+  .bridge .deck-nav .deck-symbol {
+    width: 22px;
+    height: 22px;
+  }
+  .bridge .deck-nav .deck-symbol .nav-icon {
+    width: 21px;
+    height: 21px;
+  }
+  .bridge .deck-nav .deck-label {
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  .bridge .deck-nav .deck-label small {
+    display: none;
+  }
+  .bridge .modal-heading {
+    padding: 16px 18px;
+  }
+  .bridge .modal-heading h2 {
+    font-size: 21px;
+    letter-spacing: 3px;
+  }
+  .bridge .modal-body {
+    padding: 18px;
+  }
+  .bridge .journal-hero h3 {
+    font-size: 17px;
+  }
+}
+@media (max-width: 359px) {
+  .bridge .wallet .resource strong {
+    font-size: 12px;
+  }
+  .bridge .wallet .resource-icon {
+    width: 19px;
+    height: 23px;
+    display: block;
+  }
+  .bridge
+    .flight-deck
+    .squad:has(> .operator-card:nth-child(4))
+    > .operator-card {
+    height: 101px;
+  }
+  .bridge
+    .flight-deck
+    .squad:has(> .operator-card:nth-child(4))
+    .operator-copy
+    strong {
+    font-size: 9px;
+    letter-spacing: 0;
+  }
+  .operator-glyph {
+    width: 17px;
+    height: 17px;
+    right: 4px;
+  }
+  .operator-cd-ring {
+    width: 24px;
+    height: 24px;
+    right: 4px;
+    top: 29px;
+  }
+}
+@media (max-height: 550px) and (min-width: 650px) {
+  .bridge .topbar {
+    height: 45px;
+    min-height: 45px;
+  }
+  .bridge .wallet {
+    width: auto;
+    order: initial;
+  }
+  .bridge .wallet .resource small {
+    display: none;
+  }
+  .bridge .sector-heading {
+    padding: 5px 20px;
+  }
+  .bridge .sector-heading .eyebrow {
+    display: none;
+  }
+  .bridge .sector-heading h1 {
+    font-size: 16px;
+  }
+  .bridge .flight-deck {
+    grid-template-columns: 90px minmax(0, 1fr);
+    grid-template-rows: auto 42px;
+    gap: 4px 12px;
+    padding: 6px 16px 0;
+  }
+  .bridge .flight-deck .squad-heading {
+    display: block;
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .bridge .squad-heading .eyebrow,
+  .bridge .squad-heading .text-button {
+    display: none;
+  }
+  .bridge .squad-heading strong {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  .bridge .flight-deck .squad {
+    grid-column: 2;
+    grid-template-columns: repeat(var(--team-count, 3), minmax(0, 110px));
+  }
+  .bridge .flight-deck .squad > .operator-card {
+    height: 71px;
+  }
+  .bridge .operator-copy .rarity,
+  .operator-level,
+  .operator-state {
+    display: none;
+  }
+  .bridge .operator-copy strong {
+    font-size: 10px;
+  }
+  .bridge .operator-copy .skill-label {
+    font-size: 7px;
+  }
+  .operator-art > img {
+    top: -25%;
+  }
+  .operator-cd-ring {
+    top: 23px;
+    width: 24px;
+    height: 24px;
+  }
+  .bridge .flight-deck .deck-nav {
+    grid-column: 1/-1;
+    grid-row: 2;
+  }
+  .bridge .deck-nav > button {
+    flex-direction: row;
+    min-height: 40px;
+    gap: 7px;
+  }
+  .bridge .deck-nav .deck-label {
+    font-size: 10px;
+  }
+  .bridge .deck-nav .deck-label small {
+    display: none;
+  }
+  .bridge .target-hud {
+    top: 7px;
+    padding: 5px 10px;
+  }
+  .target-portrait {
+    width: 28px;
+    height: 28px;
+  }
+  .target-copy > strong {
+    font-size: 11px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .target-health > span {
+    transition: none;
+  }
+}
+
+/* Give mobile target information a real row, outside the character camera. */
+@media (max-width: 800px) {
+  .bridge .viewport {
+    grid-template-rows: auto minmax(0, 1fr) auto;
+  }
+  .bridge .viewport .target-hud {
+    position: relative;
+    inset: auto;
+    transform: none;
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    margin: 0;
+    clip-path: none;
+    box-shadow: none;
+  }
+  .bridge .viewport .space {
+    grid-row: 2;
+  }
+  .bridge .viewport .battle-tools {
+    grid-row: 3;
+  }
+}

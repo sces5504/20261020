@@ -1,10 +1,10 @@
 {
   "assetId": "presentation:ui-vfx-polish.v1",
-  "version": "1.2.0-candidate",
+  "version": "1.3.0-candidate",
   "baseCommit": "072892b21ffe69a10fd9cf9861cc9155be403357",
   "coreVersion": "0.9.0",
   "reviewStatus": "candidate",
-  "directionReview": "User rejected flat rectangular beam. Textured plasma replacement is a new candidate awaiting review. Other samples are not approved.",
+  "directionReview": "User rejected insufficient UI refinement and flat beam. UI v2 and eight type demonstrations are candidates, not approved.",
   "bundle": "presentation-only; Vite dynamic UI CSS/JS",
   "colorSpace": "sRGB",
   "runtime": {
@@ -36,7 +36,7 @@
     }
   },
   "sourcePolicy": {
-    "artwork": "Existing user-selected standards and integrated media unchanged. First new original turret candidate added; separate manifest records source and alpha.",
+    "artwork": "All original art unchanged. 32 same-composition mechanical WebP thumbnails derive from existing character portraits; source/output hashes in separate UI manifest. Existing turret/plasma candidates retained.",
     "research": [
       "research/stella-maiden/scenes/Actor_00/Bg_Ray.act.json",
       "research/stella-maiden/scenes/Actor_00/SkillReady.act.json",
@@ -51,11 +51,11 @@
   "sources": [
     {
       "path": "src/presentation/combat-vfx.ts",
-      "sha256": "9717d0ff7fca67a5e156c673f5a567013b562bbaac616031625de1849bbf859b"
+      "sha256": "72083e37ef7de3e6bfe12a946ed7ae3866a580ac1831d79dbf0e0b47cc536762"
     },
     {
       "path": "src/presentation/journal.ts",
-      "sha256": "cf5343287663ef0c49ca8d495488837ca2718d2e662aa6fc1f5485c4d8049a72"
+      "sha256": "773ec7b841aa32bc30d4358d311b464b5492aed8b1d5375bb7959fb14b5802be"
     },
     {
       "path": "src/presentation/ui-polish.css",
@@ -63,7 +63,7 @@
     },
     {
       "path": "src/presentation/ui.ts",
-      "sha256": "695cddd9ac5b424a51a8b523f3fc335f5cb914b7e330c8266889c581c9eaf634"
+      "sha256": "ab34dc445c137fb0d51869d556a67b126c0756c6c88f48c4b457e62ae3d037a6"
     },
     {
       "path": "src/presentation/story-player.ts",
@@ -71,7 +71,7 @@
     },
     {
       "path": "src/presentation/space.ts",
-      "sha256": "7520df983029d0cb8e3ea590a8067af0d1e847effd93a8f8a5f4c0fcf73eca39"
+      "sha256": "f5d92fb158c90eccbf4a420511757580833f2891efaeee8fe1b02271e0a0bcbd"
     },
     {
       "path": "src/presentation/icons.ts",
@@ -100,6 +100,18 @@
     {
       "path": "src/presentation/beam-layer.ts",
       "sha256": "41481b881a6987c1f78080cbfbbdda1dde29fd9b947ea2d3d66e6880877cd71f"
+    },
+    {
+      "path": "src/presentation/operator-card.ts",
+      "sha256": "5c1c80ccddf092c3bd6f676352af406d7a19b969774acaba9c690d05566aaff1"
+    },
+    {
+      "path": "src/presentation/resonance-instrument.ts",
+      "sha256": "bfd349272aa74bf4bbd3bdba84846858415f8c369c5cff453c6bfaece0b88df4"
+    },
+    {
+      "path": "src/presentation/ui-mature.css",
+      "sha256": "bce573d9c91b835505dffcbee05c5ea19edf99374d0a8b76d02ad35acb65d924"
     }
   ],
   "families": {
@@ -1205,8 +1217,8 @@
     },
     {
       "path": "docs/art/ui-polish-v1/previews/skills/beam.png",
-      "sha256": "8304bcc2aebbeebfc4c963ca38e66aac97967bf6f67368ea46697a77a84b766b",
-      "bytes": 360408,
+      "sha256": "f968f0be1f3b16f227c93669a7ac57af6ca82403d28b692cfab56823b73c9f81",
+      "bytes": 343380,
       "reviewStatus": "new-candidate-after-flat-beam-rejection",
       "type": "real Game/Combat/Phaser review evidence; one skill per clip",
       "fixture": "one original-skill character; one high-HP/low-attack enemy, no patrols",
@@ -1215,16 +1227,16 @@
       "atlas": null,
       "frames": null,
       "width": 982,
-      "height": 454,
+      "height": 409,
       "method": "paused through real in-game pause control before screenshot encoding"
     },
     {
       "path": "docs/art/ui-polish-v1/previews/skills/beam.webm",
-      "sha256": "82f6e21dbac087905b57804f76df78791b86ab3a3687ffbd70501f679e4274e0",
-      "bytes": 286345,
+      "sha256": "60912a1b04d90798a6910cb2fadc1c32aee43986a594bdea3dbe9a0c4da65480",
+      "bytes": 548665,
       "reviewStatus": "new-candidate-after-flat-beam-rejection",
       "type": "real Game/Combat/Phaser review evidence; one skill per clip",
-      "fixture": "one original-skill character; one high-HP/low-attack enemy, no patrols",
+      "fixture": "original skill; isolated highHP lowATK enemy",
       "alpha": "opaque preview",
       "pivot": null,
       "atlas": null,
@@ -1233,12 +1245,12 @@
       "height": 768,
       "fps": 25,
       "durationSecondsApprox": 7,
-      "method": "last7 seconds from captured real-game clip; no timing or damage driven by video"
+      "method": "continuous actual cast; trim near input; quarter-speed timestamps only for dash-slow"
     },
     {
       "path": "docs/art/ui-polish-v1/previews/skills/gravity.png",
-      "sha256": "3f15192f8ab3d86e306f8fb90d725491fd69046798801d1bfcb48dfeb7948c22",
-      "bytes": 333445,
+      "sha256": "8ad8b984753833fe379b836749a187104edd25002087e4b48551fa4aea96e2f6",
+      "bytes": 322741,
       "reviewStatus": "candidate",
       "type": "real Game/Combat/Phaser review evidence; one skill per clip",
       "fixture": "one original-skill character; one high-HP/low-attack enemy, no patrols",
@@ -1247,16 +1259,16 @@
       "atlas": null,
       "frames": null,
       "width": 982,
-      "height": 454,
+      "height": 409,
       "method": "paused through real in-game pause control before screenshot encoding"
     },
     {
       "path": "docs/art/ui-polish-v1/previews/skills/gravity.webm",
-      "sha256": "2f86262e0946a88e93d6512c38e54c99ecbeb36b108ace6b9614cf98324a0189",
-      "bytes": 278413,
+      "sha256": "8c9fe8e8894676f8db855d5fd04c6688ff93ec218d3c5271dd7394ab06c050e5",
+      "bytes": 620400,
       "reviewStatus": "candidate",
       "type": "real Game/Combat/Phaser review evidence; one skill per clip",
-      "fixture": "one original-skill character; one high-HP/low-attack enemy, no patrols",
+      "fixture": "original skill; isolated highHP lowATK enemy",
       "alpha": "opaque preview",
       "pivot": null,
       "atlas": null,
@@ -1265,12 +1277,12 @@
       "height": 768,
       "fps": 25,
       "durationSecondsApprox": 7,
-      "method": "last7 seconds from captured real-game clip; no timing or damage driven by video"
+      "method": "continuous actual cast; trim near input; quarter-speed timestamps only for dash-slow"
     },
     {
       "path": "docs/art/ui-polish-v1/previews/skills/shield.png",
-      "sha256": "7920387b84fc958461db6c49a5d9e782660a0f7e3edefacfdf91d2b2be5953d0",
-      "bytes": 318763,
+      "sha256": "f23844b1b51d526bb03be9b562ed27dd68b3d215cbdbcd5d5bcabfea44cee5ad",
+      "bytes": 314745,
       "reviewStatus": "candidate",
       "type": "real Game/Combat/Phaser review evidence; one skill per clip",
       "fixture": "one original-skill character; one high-HP/low-attack enemy, no patrols",
@@ -1279,16 +1291,16 @@
       "atlas": null,
       "frames": null,
       "width": 982,
-      "height": 454,
+      "height": 409,
       "method": "paused through real in-game pause control before screenshot encoding"
     },
     {
       "path": "docs/art/ui-polish-v1/previews/skills/shield.webm",
-      "sha256": "57a2c30d363b85f0dda481903bc29d9d4713501e6a68931d0ec458cec7257560",
-      "bytes": 274391,
+      "sha256": "f096862dc242db9c75192c689b2ffbcb1bfc74b3be625592b1be685440a3c6f2",
+      "bytes": 596922,
       "reviewStatus": "candidate",
       "type": "real Game/Combat/Phaser review evidence; one skill per clip",
-      "fixture": "one original-skill character; one high-HP/low-attack enemy, no patrols",
+      "fixture": "original skill; isolated highHP lowATK enemy",
       "alpha": "opaque preview",
       "pivot": null,
       "atlas": null,
@@ -1297,12 +1309,12 @@
       "height": 768,
       "fps": 25,
       "durationSecondsApprox": 7,
-      "method": "last7 seconds from captured real-game clip; no timing or damage driven by video"
+      "method": "continuous actual cast; trim near input; quarter-speed timestamps only for dash-slow"
     },
     {
       "path": "docs/art/ui-polish-v1/previews/skills/turret.png",
-      "sha256": "8d4685b082014c6c036f2565f51812fd172bb8d94adb2e376a03f2e1d7ae4de5",
-      "bytes": 325687,
+      "sha256": "047556774c87c02b73ddd65edafd128638316d769333b0772484c2f58dafdfba",
+      "bytes": 319275,
       "reviewStatus": "candidate",
       "type": "real Game/Combat/Phaser review evidence; one skill per clip",
       "fixture": "one original-skill character; one high-HP/low-attack enemy, no patrols",
@@ -1311,16 +1323,16 @@
       "atlas": null,
       "frames": null,
       "width": 982,
-      "height": 454,
+      "height": 409,
       "method": "paused through real in-game pause control before screenshot encoding"
     },
     {
       "path": "docs/art/ui-polish-v1/previews/skills/turret.webm",
-      "sha256": "28fb3dad49026e76cfb1fb660be0d40e47ca4b67b5cc64d96ebec5ef03c638f9",
-      "bytes": 314571,
+      "sha256": "df70472500566276a3f6ac2069ce2343a5c0e873a877cf65e16a965090b0529b",
+      "bytes": 630590,
       "reviewStatus": "candidate",
       "type": "real Game/Combat/Phaser review evidence; one skill per clip",
-      "fixture": "one original-skill character; one high-HP/low-attack enemy, no patrols",
+      "fixture": "original skill; isolated highHP lowATK enemy",
       "alpha": "opaque preview",
       "pivot": null,
       "atlas": null,
@@ -1329,7 +1341,7 @@
       "height": 768,
       "fps": 25,
       "durationSecondsApprox": 7,
-      "method": "last7 seconds from captured real-game clip; no timing or damage driven by video"
+      "method": "continuous actual cast; trim near input; quarter-speed timestamps only for dash-slow"
     },
     {
       "path": "docs/art/ui-polish-v1/previews/skills/beam-flat-rejected.png",
@@ -1343,9 +1355,304 @@
       "pivot": null,
       "atlas": null,
       "frames": null
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/hud-v2/desktop-bridge.png",
+      "reviewStatus": "candidate",
+      "type": "real renderer review evidence",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null,
+      "sha256": "63574c8744fe429bd238bc417a93bf4337b58dde159d982305a2f217eaf190ff",
+      "bytes": 966160,
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/hud-v2/desktop-combat.png",
+      "reviewStatus": "candidate",
+      "type": "real renderer review evidence",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null,
+      "sha256": "8125f648e2b01c14b355dd02973aba89eb97d6068d6a84484da6c4a8e8f20b77",
+      "bytes": 977061,
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/hud-v2/desktop-quests.png",
+      "reviewStatus": "candidate",
+      "type": "real renderer review evidence",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null,
+      "sha256": "64ce61c71f207b624677f2be9ea49eca48c9c505bc2a7edda651c885bf967e90",
+      "bytes": 578577,
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/hud-v2/desktop-research.png",
+      "reviewStatus": "candidate",
+      "type": "real renderer review evidence",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null,
+      "sha256": "331382ab847d62c57cf09907fdfc42d1f68b4594f7cd3b5dabef1d6ad0428da4",
+      "bytes": 456163,
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/hud-v2/desktop-roster.png",
+      "reviewStatus": "candidate",
+      "type": "real renderer review evidence",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null,
+      "sha256": "3a01b5436c0896e8f70a406b22aa55a7b8dbc50869476849ba0abe91f985e565",
+      "bytes": 864267,
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/hud-v2/desktop-summon.png",
+      "reviewStatus": "candidate",
+      "type": "real renderer review evidence",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null,
+      "sha256": "703a814490266ec07ee0437cc8f0bd9f58cdb7b1a51ae611882c2d2f11564a43",
+      "bytes": 411139,
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/hud-v2/mobile-bridge.png",
+      "reviewStatus": "candidate",
+      "type": "real renderer review evidence",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null,
+      "sha256": "a1507b03c41c6aadb40f1043fe7b6d861dfa95ad376bb39828b6649f7cc30dc2",
+      "bytes": 677086,
+      "width": 780,
+      "height": 1688
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/hud-v2/mobile-combat.png",
+      "reviewStatus": "candidate",
+      "type": "real renderer review evidence",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null,
+      "sha256": "01b48edbf8160c12fcab166d9b161723632f300caa99cdac2071a756dba1c400",
+      "bytes": 648231,
+      "width": 780,
+      "height": 1688
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/hud-v2/mobile-quests.png",
+      "reviewStatus": "candidate",
+      "type": "real renderer review evidence",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null,
+      "sha256": "a76c8ba020951288a44a5c2946913024951616f36e57cf64ebb6db14483aef91",
+      "bytes": 710831,
+      "width": 780,
+      "height": 1688
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/hud-v2/mobile-research.png",
+      "reviewStatus": "candidate",
+      "type": "real renderer review evidence",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null,
+      "sha256": "d4a213e1f5afccf9555e93b111672f489e125f421c19d0945d5a5b1f6a213804",
+      "bytes": 725441,
+      "width": 780,
+      "height": 1688
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/hud-v2/mobile-roster.png",
+      "reviewStatus": "candidate",
+      "type": "real renderer review evidence",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null,
+      "sha256": "56b178d94f3b39be71f5a445508bb0670e131bae92f82621cbda2ad475caf5ac",
+      "bytes": 921691,
+      "width": 780,
+      "height": 1688
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/hud-v2/mobile-summon.png",
+      "reviewStatus": "candidate",
+      "type": "real renderer review evidence",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null,
+      "sha256": "067e4a50fc5004d4917df7c60bb35bc0e658b16c0d4767508b77f80840fe2834",
+      "bytes": 528705,
+      "width": 780,
+      "height": 1688
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/skills/area.png",
+      "reviewStatus": "candidate",
+      "type": "real renderer review evidence",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null,
+      "sha256": "b7121656eecd2cc1277183c19b38aea3303ca28c7ade2230145041b6064a2bea",
+      "bytes": 328604,
+      "width": 982,
+      "height": 409
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/skills/area.webm",
+      "reviewStatus": "candidate",
+      "type": "real renderer review evidence",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null,
+      "sha256": "f28775e2d61b8d2dfd1e8b4d147bd95797d769adc4fa4fc332c321221024030a",
+      "bytes": 597682,
+      "width": 1024,
+      "height": 768,
+      "fps": 25,
+      "durationSecondsApprox": 7,
+      "method": "continuous actual cast; trim near input; quarter-speed timestamps only for dash-slow",
+      "fixture": "original skill; isolated highHP lowATK enemy"
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/skills/barrage.png",
+      "reviewStatus": "candidate",
+      "type": "real renderer review evidence",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null,
+      "sha256": "efce3cc1059e843a51936ea1c2ff6a9383798cb82bc58a87908f392d62951452",
+      "bytes": 310032,
+      "width": 982,
+      "height": 409
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/skills/barrage.webm",
+      "reviewStatus": "candidate",
+      "type": "real renderer review evidence",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null,
+      "sha256": "e6acd1f36ef3c07a83ff4e2b293ab4429a66bfc04fef0ee14fb9eea35abd5486",
+      "bytes": 569501,
+      "width": 1024,
+      "height": 768,
+      "fps": 25,
+      "durationSecondsApprox": 7,
+      "method": "continuous actual cast; trim near input; quarter-speed timestamps only for dash-slow",
+      "fixture": "original skill; isolated highHP lowATK enemy"
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/skills/buff.png",
+      "reviewStatus": "candidate",
+      "type": "real renderer review evidence",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null,
+      "sha256": "6b9372edf3fd4b842332be026eb2557a587f2059650e5a48b0427c26c894e41a",
+      "bytes": 306629,
+      "width": 982,
+      "height": 409
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/skills/buff.webm",
+      "reviewStatus": "candidate",
+      "type": "real renderer review evidence",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null,
+      "sha256": "ce5d7ecd71cf74e34af7f233df006b7148c00c32ae95e6158a4efcb701bcc3e1",
+      "bytes": 571941,
+      "width": 1024,
+      "height": 768,
+      "fps": 25,
+      "durationSecondsApprox": 7,
+      "method": "continuous actual cast; trim near input; quarter-speed timestamps only for dash-slow",
+      "fixture": "original skill; isolated highHP lowATK enemy"
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/skills/dash-slow.webm",
+      "reviewStatus": "candidate",
+      "type": "real renderer review evidence",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null,
+      "sha256": "c636c68e31eec3a198ce9cde5d63eb2a63028805a7fbc8597de7b4c5848d77e9",
+      "bytes": 306867,
+      "width": 1024,
+      "height": 768,
+      "fps": 25,
+      "durationSecondsApprox": 6,
+      "method": "continuous actual cast; trim near input; quarter-speed timestamps only for dash-slow",
+      "fixture": "explicit Charge test carrier; production skill mapping unchanged"
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/skills/dash.png",
+      "reviewStatus": "candidate",
+      "type": "real renderer review evidence",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null,
+      "sha256": "cb6a90986c83588a8ad72e720cba0a1f5c92732bfe7cee1d66129b711817c355",
+      "bytes": 300163,
+      "width": 982,
+      "height": 409
+    },
+    {
+      "path": "docs/art/ui-polish-v1/previews/skills/dash.webm",
+      "reviewStatus": "candidate",
+      "type": "real renderer review evidence",
+      "alpha": "opaque preview",
+      "pivot": null,
+      "atlas": null,
+      "frames": null,
+      "sha256": "3fa7dd8115675aed20a9a34c319b1fde1be67e7d2a7b3d14e429c3f6a1db92f7",
+      "bytes": 602883,
+      "width": 1024,
+      "height": 768,
+      "fps": 25,
+      "durationSecondsApprox": 7,
+      "method": "continuous actual cast; trim near input; quarter-speed timestamps only for dash-slow",
+      "fixture": "explicit Charge test carrier; production skill mapping unchanged"
     }
   ],
   "summonArtManifest": "art/vfx/summons-v1/manifest.json",
   "coverageLimit": "245 definitions mapped to 9 common families; not 245 completed unique VFX. Drone / soldiers / decoy and individual multi-stage performances await direction review.",
-  "beamArtManifest": "art/vfx/beams-v1/manifest.json"
+  "beamArtManifest": "art/vfx/beams-v1/manifest.json",
+  "operatorArtManifest": "art/ui/operator-portraits-v1/manifest.json",
+  "reviewPage": "docs/art/ui-polish-v1/skill-types.html"
 }

@@ -202,6 +202,9 @@ try {
       path: `.artifacts/world/${name}-daily-warning.png`,
     });
     await page.locator('[data-action="panel"][data-id="archive"]').click();
+    // Pause is immediate; the HUD clock refreshes on the 250 ms UI timer, so
+    // sample after one refresh to compare paused values, not a stale frame.
+    await page.waitForTimeout(300);
     const before = await page.locator("#wave-clock").innerText();
     await page.waitForTimeout(500);
     assert.equal(

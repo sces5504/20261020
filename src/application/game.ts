@@ -124,8 +124,11 @@ export class Game {
       .catch(() => {});
     return this.serial;
   }
-  command(c: Command) {
+  command(command: Command) {
     return this.enqueue(async () => {
+      // A checkpoint queued behind replaceSave must not carry the old voyage's position.
+      const c: Command =
+        command.type === "checkpoint" ? this.position() : command;
       const base = structuredClone(this.save);
       base.discovered = [...this.discovered];
       base.voyageSeconds = this.voyageSeconds;
@@ -220,7 +223,7 @@ export class Game {
             : "已撤離交戰區，整補後可再出發。";
       }
       this.dirty = true;
-    }, c.type !== "checkpoint");
+    }, command.type !== "checkpoint");
   }
   tickEconomy() {
     return this.enqueue(async () => {
@@ -242,15 +245,18 @@ export class Game {
       this.dirty = true;
     }, false);
   }
-  checkpoint() {
-    return this.command({
+  private position(): Command {
+    return {
       type: "checkpoint",
       x: this.x,
       y: this.y,
       discovered: [...this.discovered],
       voyageSeconds: this.voyageSeconds,
       heading: this.fleet.heading,
-    });
+    };
+  }
+  checkpoint() {
+    return this.command(this.position());
   }
   pendingStoryCue() {
     const combat = this.combat;

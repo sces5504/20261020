@@ -91,3 +91,10 @@
 - **驗證**：單元134/134（新增 `tests/story-mechanics.test.ts` 5項：未知欄位與錯誤引用被拒、護盾分類／層數／干擾窗口／到期恢復／trigger、交易建造一次與重播不重複扣款、戰敗restore與勝利寫回、必要設施被毀即失敗、劇情remove、battle範圍每場重置、舊存檔無facilities可讀、真實防衛戰砲台造成傷害並守到時限勝利）；content:check 72人PASS；瀏覽器套件test:story、chronicle、exploration、polish、content-integration、e2e、playtest、skills、integration-v8、refinement通過（e2e因美術頁計數更新斷言後重跑；借圖後再重跑單元與e2e）；瀏覽器預覽桌機／手機兩個範例戰場與追蹤卡建造（扣款一次、重載不重扣、零pageerror）。671世界未重跑（一般戰鬥未改；新規則只在storyEncounter帶護盾／設施時生效，不可受擊旗標只在設施上）。
 - 發布修正：Pages 40181920382 在test:world失敗——桌機右側角色欄蓋住星球情報卡「敵群情報」鈕（本機先前未跑world）。情報卡在桌機左移196px讓出角色欄；本機test:world桌機／手機通過。
 - **第五輪發布**：PR #38（main 6a22094）發布在test:world失敗→PR #39修正→main `69fb108ee9ca91dcd7a105f60e7462ee446d4a73` Pages完整門檻通過並部署。公開version.json＝69fb108；公開站桌機1440／觸控390實測右側角色欄、主線卡、搖桿、零pageerror（非真機）。
+
+## 第六輪：接入獅子座／南天／大犬座35節（2026-10-25，使用者「把劇情接入吧 做好了」）
+
+- 合併 `content/chronicle-next-three-audit`（PR #40）；依其 `content/story-next-three/integration.json`：root manifest 在 `stellar40-art.json` 後加入 `extensions/chronicle-next-three.json`，12筆 `art/story-next-three/media.json` 追加至 `art/catalog/extension-assets.json`（建置hash校驗複製）。14包、72人、851節點，content:check PASS；主線共59節。
+- 工坊完整匯出ZIP上限：完整內容的已壓縮媒體達68.7 MiB，超過舊64 MiB上限（packages單元測試2項失敗）。延續前次擴容做法調為壓縮96 MiB／解壓192 MiB，單檔30 MiB與炸彈防護不變；文案與測試同步。
+- 舊存檔：完成前24節的存檔，主線卡顯示「主線 24/59 · 3-01 異常蟲洞 · 開始」並可開始。跨章航路：離開星域需解放該星域15據點（原作式門檻）；主線卡／挑戰前往原本不看門檻、可能建議未開放的直達航路，改為優先選全程已開放的航路（`regionPath(..., cleared)`），新增單元測試。
+- 故事作者已驗56戰＋6掃描、625框交易流程、雙viewport瀏覽器（收據 docs/verification/chronicle-next-*.json）；整合後內容與其核對的組裝相同，未重跑其56戰。

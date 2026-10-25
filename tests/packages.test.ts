@@ -53,7 +53,7 @@ test("workshop ZIP deduplicates real bytes across local and uploaded paths, neve
   );
   assert.ok(
     zip.length <= ARCHIVE_BYTES,
-    `bounded 64 MiB full-game budget: ${zip.length}`,
+    `bounded 96 MiB full-game budget: ${zip.length}`,
   );
   const files = unzipSync(zip);
   const archived = JSON.parse(strFromU8(files["pack.json"]));
@@ -85,5 +85,5 @@ test("portable imports reject oversized expansion and unsafe paths before decodi
     "assets/huge.png": new Uint8Array(31 * 1024 * 1024),
   });
   assert.throws(() => importPack(large), /解壓大小/);
-  assert.throws(() => importPack(new Uint8Array(ARCHIVE_BYTES + 1)), /64 MiB/);
+  assert.throws(() => importPack(new Uint8Array(ARCHIVE_BYTES + 1)), /96 MiB/);
 });

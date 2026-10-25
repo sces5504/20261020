@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "id": "story40:package.chapter-three-seven",
+  "version": "0.1.0",
+  "requires": [
+    {
+      "id": "m1:core",
+      "version": "0.9.0"
+    },
+    {
+      "id": "stella:package.skills",
+      "version": "0.1.0"
+    }
+  ],
+  "definitions": {
+    "characters": [
+      {
+        "id": "story40:character.luyten",
+        "name": "Luyten",
+        "description": "提高自身攻擊與暴擊率。建議後衛，實際位置由玩家編隊決定。美術待補。",
+        "status": "active",
+        "provenance": "inferred",
+        "sourceRef": "Stella Maiden 4.3.2 CID[38] -> Skill[34]; Gacha[37]; EventScript[3030] first observed presence",
+        "rarity": 4,
+        "hp": 546,
+        "attack": 25,
+        "defense": 16,
+        "speed": 180,
+        "range": 430,
+        "interval": 0.8,
+        "growth": 0.08,
+        "critical": 0.11,
+        "evasion": 0.11,
+        "skill": "stella:skill.34",
+        "color": "#9cb1e6",
+        "portrait": "",
+        "avatar": "",
+        "sprite": "",
+        "recipe": [
+          480,
+          281,
+          523,
+          270
+        ],
+        "starter": false,
+        "role": "後衛 · 火力支援",
+        "sourceRow": 38,
+        "summonable": true
+      }
+    ]
+  }
+}

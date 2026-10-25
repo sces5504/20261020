@@ -1,0 +1,2640 @@
+{
+  "schemaVersion": 1,
+  "packId": "stellaart.stellar40-art-20261025",
+  "coreVersionObserved": "0.9.0",
+  "scope": "40-standard-portraits-and-static-SD-art-only",
+  "characters": [
+    {
+      "id": "stellaart:character.polaris",
+      "key": "polaris",
+      "order": 1,
+      "assetId": "stellaart:asset.polaris-standard-20261025",
+      "nameZhHant": "北極星",
+      "originalGameKey": "Polaris",
+      "originalCidRow": 61,
+      "sourceBaseStars": 5,
+      "gameCharacterId": null,
+      "proposedContentId": "future:polaris",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/polaris.png",
+      "assetVersion": "01-polaris-v4-floating-seated",
+      "sourceOriginalVersion": "01-polaris-v4-floating-seated",
+      "sourceOriginalSha256": "89cbef94290dd7a9e699db59bd3a4884bdacf9e2668147d4aaf7eddd81fedee5",
+      "sha256": "89cbef94290dd7a9e699db59bd3a4884bdacf9e2668147d4aaf7eddd81fedee5",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.49658203125,
+        "y": 0.9694010416666666
+      },
+      "safeArea": {
+        "bodyBounds": [
+          14,
+          28,
+          1003,
+          1489
+        ]
+      },
+      "preview": "web/polaris.webp",
+      "sourceReportedReviewStatus": "accepted-by-user-v4",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": "Polaris / 北極星: soft oval face, GREEN eyes, pale golden BLONDE very long loose wavy hair, side-swept bangs. White long blouse sleeves, sky BLUE double-breasted fitted vest with gold buttons, purple tie and gold star clasp, navy short layered skirt with white frill, long sky-blue trailing ribbons with gold star emblems, white thigh socks and white/blue/gold boots. Gentle confident smile. Preserve FLOATING SEATED pose, one knee raised, both short legs angled to side; RIGHT hand softly out/down, LEFT hand raised balancing a small BLUE diamond CRYSTAL with narrow orbit ring. No chair, no added weapon. All ribbons and hair ends fully visible.",
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-01-20.zip",
+        "originalPath": "standards/01-polaris-v4-floating-seated.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": {
+        "assetId": "stellaart:asset.polaris-battle-20261025-v1",
+        "characterId": "stellaart:character.polaris",
+        "path": "battle/polaris-v1-candidate.png",
+        "preview": "web/polaris-battle.webp",
+        "version": "v1-candidate",
+        "sha256": "6a093ca57c384a9c8602b846435e11059c10b5b139a3432119485ed0e31cd38f",
+        "sourceOriginalSha256": "89cbef94290dd7a9e699db59bd3a4884bdacf9e2668147d4aaf7eddd81fedee5",
+        "sourceOriginalVersion": "01-polaris-v4-floating-seated",
+        "width": 1223,
+        "height": 1286,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.5,
+          "y": 0.9937791601866252,
+          "note": "視覺輪廓底部，含裝備／座具時須場景校準，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            18,
+            11,
+            1205,
+            1278
+          ],
+          "marginPx": [
+            18,
+            11,
+            18,
+            8
+          ],
+          "note": "保留生成主檔；網頁輸出另加透明安全留白"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/polaris.png",
+          "prompt": "prompts/polaris-battle-v1.txt",
+          "toolOutputFileName": "exec-cf9fa953-897a-4cd2-add2-5ca14f6c51c5.png",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "stellar40-20261025",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": null
+      }
+    },
+    {
+      "id": "stellaart:character.heimdal",
+      "key": "heimdal",
+      "order": 2,
+      "assetId": "stellaart:asset.heimdal-standard-20261025",
+      "nameZhHant": "海姆達爾",
+      "originalGameKey": "Heimdal",
+      "originalCidRow": 13,
+      "sourceBaseStars": 3,
+      "gameCharacterId": null,
+      "proposedContentId": "future:heimdal",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/heimdal.png",
+      "assetVersion": "02-heimdal-v4-ponytail-empty-hands",
+      "sourceOriginalVersion": "02-heimdal-v4-ponytail-empty-hands",
+      "sourceOriginalSha256": "7ea6e2b9d973d3eed9dc5b1591eed4938e2cd846f051d6ddbfc63535da4047cf",
+      "sha256": "7ea6e2b9d973d3eed9dc5b1591eed4938e2cd846f051d6ddbfc63535da4047cf",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.5302734375,
+        "y": 0.9915364583333334
+      },
+      "safeArea": {
+        "bodyBounds": [
+          74,
+          6,
+          1012,
+          1523
+        ]
+      },
+      "preview": "web/heimdal.webp",
+      "sourceReportedReviewStatus": "user-requested-hair-and-prop-revision-awaiting-review",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": "Heimdal / 海姆達爾: smooth SILVER HIGH PONYTAIL with soft side bangs, amber almond eyes, confident soft oval face. Navy cropped sentinel jacket with TEAL lining and gold trim over ivory fitted top, navy/teal tailored shorts, dark fingerless gloves, ivory/navy/teal calf boots. BOTH HANDS EMPTY, no shield, spear or other prop. RIGHT palm forward open and LEFT hand out to side; preserve wide grounded sideways guard stance with one short knee bent and other little leg diagonal. Latest silver ponytail version only, not pixie haircut. Modest compact SD costume and tiny body.",
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-01-20.zip",
+        "originalPath": "standards/02-heimdal-v4-ponytail-empty-hands.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": {
+        "assetId": "stellaart:asset.heimdal-battle-20261025-v1",
+        "characterId": "stellaart:character.heimdal",
+        "path": "battle/heimdal-v1-candidate.png",
+        "preview": "web/heimdal-battle.webp",
+        "version": "v1-candidate",
+        "sha256": "1e23803c85ffa617474f7c096e3aa98b48cb54384ccd78dea3c436964afb7ddc",
+        "sourceOriginalSha256": "7ea6e2b9d973d3eed9dc5b1591eed4938e2cd846f051d6ddbfc63535da4047cf",
+        "sourceOriginalVersion": "02-heimdal-v4-ponytail-empty-hands",
+        "width": 1229,
+        "height": 1280,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.5455655004068348,
+          "y": 0.99765625,
+          "note": "視覺輪廓底部，含裝備／座具時須場景校準，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            151,
+            8,
+            1190,
+            1277
+          ],
+          "marginPx": [
+            151,
+            8,
+            39,
+            3
+          ],
+          "note": "保留生成主檔；網頁輸出另加透明安全留白"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/heimdal.png",
+          "prompt": "prompts/heimdal-battle-v1.txt",
+          "toolOutputFileName": "exec-acfcae27-960f-46ca-b610-15e47976c608.png",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "stellar40-20261025",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": null
+      }
+    },
+    {
+      "id": "stellaart:character.cruithne",
+      "key": "cruithne",
+      "order": 3,
+      "assetId": "stellaart:asset.cruithne-standard-20261025",
+      "nameZhHant": "克魯特尼",
+      "originalGameKey": "Cruithne",
+      "originalCidRow": 14,
+      "sourceBaseStars": 4,
+      "gameCharacterId": null,
+      "proposedContentId": "future:cruithne",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/cruithne.png",
+      "assetVersion": "03-cruithne-v3-style-locked",
+      "sourceOriginalVersion": "03-cruithne-v3-style-locked",
+      "sourceOriginalSha256": "4266484d34c089851abfaf4cbe3d8b573179bd1e468c8639b7b4fa9efc351e21",
+      "sha256": "4266484d34c089851abfaf4cbe3d8b573179bd1e468c8639b7b4fa9efc351e21",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.5,
+        "y": 0.9908854166666666
+      },
+      "safeArea": {
+        "bodyBounds": [
+          11,
+          7,
+          1013,
+          1522
+        ]
+      },
+      "preview": "web/cruithne.webp",
+      "sourceReportedReviewStatus": "generated-awaiting-user-review",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": "Cruithne / 克魯特尼: warm AUBURN crown braid wrapping into a LOW SIDE BUN, soft violet eyes and gentle oval face, loose curled cheek strands, a small GOLD CRESCENT hair comb at LEFT side. CREAM and BURGUNDY asymmetrical layered halter formal DRESS with thin flat gold edging and crescent waist clasp, dark gold-trim ankle boots. Preserve walking forward step: RIGHT hand open offering greeting, LEFT hand gathering skirt edge. Keep flowing layered fabric but shorten limbs and simplify neckline to modest SD coverage. No new jewelry, weapon, staff or military armor. Entire dress tails and feet visible.",
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-01-20.zip",
+        "originalPath": "standards/03-cruithne-v3-style-locked.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": {
+        "assetId": "stellaart:asset.cruithne-battle-20261025-v1",
+        "characterId": "stellaart:character.cruithne",
+        "path": "battle/cruithne-v1-candidate.png",
+        "preview": "web/cruithne-battle.webp",
+        "version": "v1-candidate",
+        "sha256": "681800c4581a34061c12a2533edf0990a2524bdc43e8cf7862def6f3a457c29d",
+        "sourceOriginalSha256": "4266484d34c089851abfaf4cbe3d8b573179bd1e468c8639b7b4fa9efc351e21",
+        "sourceOriginalVersion": "03-cruithne-v3-style-locked",
+        "width": 1024,
+        "height": 1536,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.50048828125,
+          "y": 0.990234375,
+          "note": "視覺輪廓底部，含裝備／座具時須場景校準，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            16,
+            21,
+            1009,
+            1521
+          ],
+          "marginPx": [
+            16,
+            21,
+            15,
+            15
+          ],
+          "note": "保留生成主檔；網頁輸出另加透明安全留白"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/cruithne.png",
+          "prompt": "prompts/cruithne-battle-v1.txt",
+          "toolOutputFileName": "exec-95e23bec-99f7-432f-bec3-e9a5a40f32b9.png",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "stellar40-20261025",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": null
+      }
+    },
+    {
+      "id": "stellaart:character.phobos",
+      "key": "phobos",
+      "order": 4,
+      "assetId": "stellaart:asset.phobos-standard-20261025",
+      "nameZhHant": "火衛一",
+      "originalGameKey": "Phobos",
+      "originalCidRow": 15,
+      "sourceBaseStars": 2,
+      "gameCharacterId": null,
+      "proposedContentId": "future:phobos",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/phobos.png",
+      "assetVersion": "04-phobos-v5-space-combat",
+      "sourceOriginalVersion": "04-phobos-v5-space-combat",
+      "sourceOriginalSha256": "fc02c71b9cbc08fbcea3df248bc819342fe1a982ec80b00eaa3c6a3c3f912b4f",
+      "sha256": "fc02c71b9cbc08fbcea3df248bc819342fe1a982ec80b00eaa3c6a3c3f912b4f",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.521484375,
+        "y": 0.9934895833333334
+      },
+      "safeArea": {
+        "bodyBounds": [
+          55,
+          16,
+          1013,
+          1526
+        ]
+      },
+      "preview": "web/phobos.webp",
+      "sourceReportedReviewStatus": "space-combat-redesign-awaiting-review",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": "Phobos / 火衛一: black long hair tied back in a flowing HIGH PONYTAIL with dark red accent strands and swept bangs, RED eyes, stern soft pointed oval face. BLACK and CRIMSON segmented sci-fi combat armor, high neck, red RIGHT shoulder pauldron, mechanical forearm guards, dark fitted short armored bottom and split black/red waist panels, tall black armored boots with red luminous inlays. RIGHT arm reaching forward palm open with a small RED targeting circle near fingertips; LEFT arm lowered with compact red-lit forearm module. Preserve airborne forward-lunge/raised-knee pose, but make both legs VERY SHORT and body miniature. No new weapon, horns or cape. Huge chibi head, torso only half a head high.",
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-01-20.zip",
+        "originalPath": "standards/04-phobos-v5-space-combat.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": {
+        "assetId": "stellaart:asset.phobos-battle-20261025-v1",
+        "characterId": "stellaart:character.phobos",
+        "path": "battle/phobos-v1-candidate.png",
+        "preview": "web/phobos-battle.webp",
+        "version": "v1-candidate",
+        "sha256": "acbf4e4bbca5690618a15494b91f0acbde986cd34b0c6ee148bb8864988e6f71",
+        "sourceOriginalSha256": "fc02c71b9cbc08fbcea3df248bc819342fe1a982ec80b00eaa3c6a3c3f912b4f",
+        "sourceOriginalVersion": "04-phobos-v5-space-combat",
+        "width": 1214,
+        "height": 1296,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.5102965403624382,
+          "y": 0.9907407407407407,
+          "note": "視覺輪廓底部，含裝備／座具時須場景校準，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            34,
+            18,
+            1205,
+            1284
+          ],
+          "marginPx": [
+            34,
+            18,
+            9,
+            12
+          ],
+          "note": "保留生成主檔；網頁輸出另加透明安全留白"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/phobos.png",
+          "prompt": "prompts/phobos-battle-v1.txt",
+          "toolOutputFileName": "exec-00ee5d2d-e126-45cb-a5de-3af133933a2a.png",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "stellar40-20261025",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": null
+      }
+    },
+    {
+      "id": "stellaart:character.leah",
+      "key": "leah",
+      "order": 5,
+      "assetId": "stellaart:asset.leah-standard-20261025",
+      "nameZhHant": "瑞亞",
+      "originalGameKey": "Leah",
+      "originalCidRow": 18,
+      "sourceBaseStars": 3,
+      "gameCharacterId": null,
+      "proposedContentId": "future:leah",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/leah.png",
+      "assetVersion": "05-leah-v22-seated-hips",
+      "sourceOriginalVersion": "05-leah-v22-seated-hips",
+      "sourceOriginalSha256": "fd57da96f926d0f15e7551a068b6bc6b027e1342c6b777418e79ef953ef007ea",
+      "sha256": "fd57da96f926d0f15e7551a068b6bc6b027e1342c6b777418e79ef953ef007ea",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.56591796875,
+        "y": 0.9739583333333334
+      },
+      "safeArea": {
+        "bodyBounds": [
+          172,
+          14,
+          987,
+          1496
+        ]
+      },
+      "preview": "web/leah.webp",
+      "sourceReportedReviewStatus": "visually-reviewed-repair-awaiting-user",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": "Leah / 瑞亞: chestnut BROWN shoulder-length straight hair with blunt bangs, warm BROWN eyes, friendly soft round adult face. WHITE/navy and dusty ROSE sci-fi medical command outfit, high collar, long white detached/shoulder-open sleeves with rose cuffs, opaque fitted top and navy tailored SHORTS, white/rose short mechanical boots and white socks; modest SD coverage. Seated upright on compact WHITE/charcoal medical equipment CASE with cyan strips, both short knees and feet visible, both hands resting on small cyan-screen diagnostic TABLET across lap. Preserve tilted head and calm smile, seated hips naturally on case, no standing pose or new satchel.",
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-01-20.zip",
+        "originalPath": "standards/05-leah-v22-seated-hips.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": {
+        "assetId": "stellaart:asset.leah-battle-20261025-v1",
+        "characterId": "stellaart:character.leah",
+        "path": "battle/leah-v1-candidate.png",
+        "preview": "web/leah-battle.webp",
+        "version": "v1-candidate",
+        "sha256": "2ec087bde4b303eab6190af2ec253c1ac59c04cdaa1217832fd4b28bd374c3b4",
+        "sourceOriginalSha256": "fd57da96f926d0f15e7551a068b6bc6b027e1342c6b777418e79ef953ef007ea",
+        "sourceOriginalVersion": "05-leah-v22-seated-hips",
+        "width": 1216,
+        "height": 1293,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.5197368421052632,
+          "y": 0.9938128383604021,
+          "note": "視覺輪廓底部，含裝備／座具時須場景校準，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            242,
+            10,
+            1022,
+            1285
+          ],
+          "marginPx": [
+            242,
+            10,
+            194,
+            8
+          ],
+          "note": "保留生成主檔；網頁輸出另加透明安全留白"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/leah.png",
+          "prompt": "prompts/leah-battle-v1.txt",
+          "toolOutputFileName": "exec-e380a237-8036-49e6-9bf4-6dd5ddefa847.png",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "stellar40-20261025",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": null
+      }
+    },
+    {
+      "id": "stellaart:character.umbriel",
+      "key": "umbriel",
+      "order": 6,
+      "assetId": "stellaart:asset.umbriel-standard-20261025",
+      "nameZhHant": "天衛二",
+      "originalGameKey": "Umbriel",
+      "originalCidRow": 21,
+      "sourceBaseStars": 2,
+      "gameCharacterId": null,
+      "proposedContentId": "future:umbriel",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/umbriel.png",
+      "assetVersion": "06-umbriel-v5-space-combat",
+      "sourceOriginalVersion": "06-umbriel-v5-space-combat",
+      "sourceOriginalSha256": "7dc1286ba990cfb2aa9dde06ae37ab76e75e985f3fc704bbd02f6cdbeb7bd510",
+      "sha256": "7dc1286ba990cfb2aa9dde06ae37ab76e75e985f3fc704bbd02f6cdbeb7bd510",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.5244140625,
+        "y": 0.98828125
+      },
+      "safeArea": {
+        "bodyBounds": [
+          89,
+          10,
+          985,
+          1518
+        ]
+      },
+      "preview": "web/umbriel.webp",
+      "sourceReportedReviewStatus": "space-combat-redesign-awaiting-review",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": "Umbriel / 天衛二: chin-length angled dark PURPLE BOB with side-swept fringe, cool GRAY eyes, reserved soft oval face looking back over shoulder. BLACK/graphite and violet futuristic stealth combat suit, opaque fitted dark top, asymmetric shoulder armor and articulated long forearm guards with small violet luminous inlays, fitted dark SHORTS and high dark armored boots. No hooded casual outfit, no weapon or handheld prop. Preserve SIDE-PROFILE walking stride toward image right, torso slightly turned and face back toward viewer; arms loosely offset. Huge SD head and very SHORT little legs, not a fashion figure. Keep all armor tips in frame.",
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-01-20.zip",
+        "originalPath": "standards/06-umbriel-v5-space-combat.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": {
+        "assetId": "stellaart:asset.umbriel-battle-20261025-v1",
+        "characterId": "stellaart:character.umbriel",
+        "path": "battle/umbriel-v1-candidate.png",
+        "preview": "web/umbriel-battle.webp",
+        "version": "v1-candidate",
+        "sha256": "54aca2916873b35ab72594a39f6dba5240ec6fb3d70111cd4bf87e3bc31cdd29",
+        "sourceOriginalSha256": "7dc1286ba990cfb2aa9dde06ae37ab76e75e985f3fc704bbd02f6cdbeb7bd510",
+        "sourceOriginalVersion": "06-umbriel-v5-space-combat",
+        "width": 1212,
+        "height": 1297,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.5156765676567657,
+          "y": 0.9868928296067849,
+          "note": "視覺輪廓底部，含裝備／座具時須場景校準，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            226,
+            7,
+            1024,
+            1280
+          ],
+          "marginPx": [
+            226,
+            7,
+            188,
+            17
+          ],
+          "note": "保留生成主檔；網頁輸出另加透明安全留白"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/umbriel.png",
+          "prompt": "prompts/umbriel-battle-v1.txt",
+          "toolOutputFileName": "exec-d4816b55-6c4a-4714-9f43-918d2a235690.png",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "stellar40-20261025",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": null
+      }
+    },
+    {
+      "id": "stellaart:character.larissa",
+      "key": "larissa",
+      "order": 7,
+      "assetId": "stellaart:asset.larissa-standard-20261025",
+      "nameZhHant": "海衛七",
+      "originalGameKey": "Larissa",
+      "originalCidRow": 22,
+      "sourceBaseStars": 4,
+      "gameCharacterId": null,
+      "proposedContentId": "future:larissa",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/larissa.png",
+      "assetVersion": "07-larissa-v3-style-locked",
+      "sourceOriginalVersion": "07-larissa-v3-style-locked",
+      "sourceOriginalSha256": "aeeaa24e4cbfc69022da743dc5fac0cf23d103114e03d5f4ddd35e4c3d246591",
+      "sha256": "aeeaa24e4cbfc69022da743dc5fac0cf23d103114e03d5f4ddd35e4c3d246591",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.50146484375,
+        "y": 0.990234375
+      },
+      "safeArea": {
+        "bodyBounds": [
+          8,
+          9,
+          1019,
+          1521
+        ]
+      },
+      "preview": "web/larissa.webp",
+      "sourceReportedReviewStatus": "generated-awaiting-user-review",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": "Larissa / 海衛七: COBALT BLUE very long hair gathered into ONE HIGH FAN PONYTAIL with gold fan-shaped hairpiece and small side braids, AMBER eyes, gentle soft oval smiling face. Turquoise/ivory flowing celestial dress structure with gold eye-shaped ornaments, detached huge pale-aqua WHITE bell sleeves, white/teal gold-trim boots; keep same design translated to modest small chibi coverage. BOTH PALMS TOGETHER near chest in prayer; upright FLOATING KNEEL with short shins folded backward to image left, feet visible behind. Preserve head tilt and graceful fabric. No staff, book, halo or weapon. Compact small torso and legs, huge head.",
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-01-20.zip",
+        "originalPath": "standards/07-larissa-v3-style-locked.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": {
+        "assetId": "stellaart:asset.larissa-battle-20261025-v1",
+        "characterId": "stellaart:character.larissa",
+        "path": "battle/larissa-v1-candidate.png",
+        "preview": "web/larissa-battle.webp",
+        "version": "v1-candidate",
+        "sha256": "582c7f6b604c0a1532b840a6bc89290ff3f129e009143bf143bdbe0e69d25aff",
+        "sourceOriginalSha256": "aeeaa24e4cbfc69022da743dc5fac0cf23d103114e03d5f4ddd35e4c3d246591",
+        "sourceOriginalVersion": "07-larissa-v3-style-locked",
+        "width": 1220,
+        "height": 1289,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.5004098360655738,
+          "y": 0.9953452288595811,
+          "note": "視覺輪廓底部，含裝備／座具時須場景校準，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            8,
+            5,
+            1213,
+            1283
+          ],
+          "marginPx": [
+            8,
+            5,
+            7,
+            6
+          ],
+          "note": "保留生成主檔；網頁輸出另加透明安全留白"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/larissa.png",
+          "prompt": "prompts/larissa-battle-v1.txt",
+          "toolOutputFileName": "exec-31cb30f8-02d1-4a1f-a563-4beed7e6129e.png",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "stellar40-20261025",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": null
+      }
+    },
+    {
+      "id": "stellaart:character.nix",
+      "key": "nix",
+      "order": 8,
+      "assetId": "stellaart:asset.nix-standard-20261025",
+      "nameZhHant": "尼克斯",
+      "originalGameKey": "Nix",
+      "originalCidRow": 23,
+      "sourceBaseStars": 2,
+      "gameCharacterId": null,
+      "proposedContentId": "future:nix",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/nix.png",
+      "assetVersion": "08-nix-v13-role-outfit",
+      "sourceOriginalVersion": "08-nix-v13-role-outfit",
+      "sourceOriginalSha256": "3a964c7fee1d93c1c6f940b57f42ab21f7b935f402dc62363df138f16667e41b",
+      "sha256": "3a964c7fee1d93c1c6f940b57f42ab21f7b935f402dc62363df138f16667e41b",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.5078125,
+        "y": 0.970703125
+      },
+      "safeArea": {
+        "bodyBounds": [
+          48,
+          15,
+          992,
+          1491
+        ]
+      },
+      "preview": "web/nix.webp",
+      "sourceReportedReviewStatus": "generated-awaiting-user-review",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": "Nix / 尼克斯: MINT GREEN asymmetrical ear-length tousled BOB with TWO very long curved antenna hair locks, MAGENTA eyes and narrow soft youthful adult face. Latest WHITE/MINT/charcoal segmented futuristic combat suit, high neck, opaque geometric chest panels simplified modestly, dark tailored short bottom, mint/white mechanical bracers with cyan indicators and chunky mint/white calf boots. No casual hoodie and no beacon or handheld prop in this latest standard. Preserve LOW COMPACT SQUAT, heels down, knees at different depths, LEFT hand lightly under cheek and RIGHT hand loosely down between knees. Huge head, tiny SHORT body, feet and hair antenna tips fully visible.",
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-01-20.zip",
+        "originalPath": "standards/08-nix-v13-role-outfit.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": {
+        "assetId": "stellaart:asset.nix-battle-20261025-v1",
+        "characterId": "stellaart:character.nix",
+        "path": "battle/nix-v1-candidate.png",
+        "preview": "web/nix-battle.webp",
+        "version": "v1-candidate",
+        "sha256": "a17b53e0ba946ef1c0ec79bf7ebb1893c4174b794c36aa0f3e1d903dd5bdedc9",
+        "sourceOriginalSha256": "3a964c7fee1d93c1c6f940b57f42ab21f7b935f402dc62363df138f16667e41b",
+        "sourceOriginalVersion": "08-nix-v13-role-outfit",
+        "width": 1241,
+        "height": 1268,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.5302175664786463,
+          "y": 0.9873817034700315,
+          "note": "視覺輪廓底部，含裝備／座具時須場景校準，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            100,
+            23,
+            1216,
+            1252
+          ],
+          "marginPx": [
+            100,
+            23,
+            25,
+            16
+          ],
+          "note": "保留生成主檔；網頁輸出另加透明安全留白"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/nix.png",
+          "prompt": "prompts/nix-battle-v1.txt",
+          "toolOutputFileName": "exec-d8f42b83-2d97-4aa7-99c8-9817c81528b0.png",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "stellar40-20261025",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": null
+      }
+    },
+    {
+      "id": "stellaart:character.hydra",
+      "key": "hydra",
+      "order": 9,
+      "assetId": "stellaart:asset.hydra-standard-20261025",
+      "nameZhHant": "許德拉",
+      "originalGameKey": "Hydra",
+      "originalCidRow": 24,
+      "sourceBaseStars": 3,
+      "gameCharacterId": null,
+      "proposedContentId": "future:hydra",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/hydra.png",
+      "assetVersion": "09-hydra-v3-style-locked",
+      "sourceOriginalVersion": "09-hydra-v3-style-locked",
+      "sourceOriginalSha256": "dfa4f9439c6a8a23da010248ba7a3029b15408411825bf046d6a641525bfcf9f",
+      "sha256": "dfa4f9439c6a8a23da010248ba7a3029b15408411825bf046d6a641525bfcf9f",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.5078125,
+        "y": 0.9765625
+      },
+      "safeArea": {
+        "bodyBounds": [
+          54,
+          4,
+          986,
+          1500
+        ]
+      },
+      "preview": "web/hydra.webp",
+      "sourceReportedReviewStatus": "generated-awaiting-user-review",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": "Hydra / 許德拉: warm COPPER RED hair in TWO long thick BRAIDS tied with dark bows, bright BLUE eyes, friendly clever soft oval face. BURGUNDY hood and short shoulder cape with flat gold edging, dark plum halter top, burgundy/plum asymmetric layered split skirt, dark gold-trim ankle boots. Preserve ARMS CROSSED across torso and slight side lean, soft smile; small violet orbital SPHERE floats by RIGHT shoulder (image left). Compact chibi coverage, small torso and VERY SHORT legs, head almost half total height. Entire braids, hood, skirt tails and sphere visible; no staff or new accessories.",
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-01-20.zip",
+        "originalPath": "standards/09-hydra-v3-style-locked.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": {
+        "assetId": "stellaart:asset.hydra-battle-20261025-v1",
+        "characterId": "stellaart:character.hydra",
+        "path": "battle/hydra-v1-candidate.png",
+        "preview": "web/hydra-battle.webp",
+        "version": "v1-candidate",
+        "sha256": "2cb3da367cc67ad2048578fd1c89d3a6967125c4a06a063c3e42f91d77df3242",
+        "sourceOriginalSha256": "dfa4f9439c6a8a23da010248ba7a3029b15408411825bf046d6a641525bfcf9f",
+        "sourceOriginalVersion": "09-hydra-v3-style-locked",
+        "width": 1145,
+        "height": 1374,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.5200873362445415,
+          "y": 0.987627365356623,
+          "note": "視覺輪廓底部，含裝備／座具時須場景校準，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            75,
+            19,
+            1116,
+            1357
+          ],
+          "marginPx": [
+            75,
+            19,
+            29,
+            17
+          ],
+          "note": "保留生成主檔；網頁輸出另加透明安全留白"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/hydra.png",
+          "prompt": "prompts/hydra-battle-v1.txt",
+          "toolOutputFileName": "exec-0247ca70-e5e2-444b-bdca-b1015e09d6e1.png",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "stellar40-20261025",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": null
+      }
+    },
+    {
+      "id": "stellaart:character.regulus",
+      "key": "regulus",
+      "order": 10,
+      "assetId": "stellaart:asset.regulus-standard-20261025",
+      "nameZhHant": "軒轅十四",
+      "originalGameKey": "Regulus",
+      "originalCidRow": 34,
+      "sourceBaseStars": 3,
+      "gameCharacterId": null,
+      "proposedContentId": "future:regulus",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/regulus.png",
+      "assetVersion": "10-regulus-v3-style-locked",
+      "sourceOriginalVersion": "10-regulus-v3-style-locked",
+      "sourceOriginalSha256": "541f284f56356bb98bf0ca877a7fab489ce37bafcd7fdf57b20da5956e4954f5",
+      "sha256": "541f284f56356bb98bf0ca877a7fab489ce37bafcd7fdf57b20da5956e4954f5",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.4970703125,
+        "y": 0.9928385416666666
+      },
+      "safeArea": {
+        "bodyBounds": [
+          0,
+          12,
+          1018,
+          1525
+        ]
+      },
+      "preview": "web/regulus.webp",
+      "sourceReportedReviewStatus": "generated-awaiting-user-review",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": "Regulus / 軒轅十四: GOLDEN BLONDE tousled shoulder-length curls, BLUE eyes, confident soft face with open smile. WHITE cropped sleeveless military vest with red inner collar and gold buttons/epaulets over navy fitted top, dark SHORTS, RED split waist cape panels with gold stars, white gloves, dark brown/gold tall boots. RIGHT hand thrusting slender RAPiER toward image LEFT, LEFT hand open behind for balance, short grounded fencing LUNGE with tiny bent legs. Rapier has gold circular guard and silver blade: show COMPLETE blade and tip fully in frame by shortening its visual scale, unlike source cropped tip. HUGE head, tiny torso, no long fashion legs.",
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-01-20.zip",
+        "originalPath": "standards/10-regulus-v3-style-locked.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": {
+        "assetId": "stellaart:asset.regulus-battle-20261025-v1",
+        "characterId": "stellaart:character.regulus",
+        "path": "battle/regulus-v1-candidate.png",
+        "preview": "web/regulus-battle.webp",
+        "version": "v1-candidate",
+        "sha256": "8b00d0a9a25b15360e89d3e533b1bdf437d575c484cda5047bf92cbbff60d34e",
+        "sourceOriginalSha256": "541f284f56356bb98bf0ca877a7fab489ce37bafcd7fdf57b20da5956e4954f5",
+        "sourceOriginalVersion": "10-regulus-v3-style-locked",
+        "width": 1366,
+        "height": 1151,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.4978038067349927,
+          "y": 0.9913119026933102,
+          "note": "視覺輪廓底部，含裝備／座具時須場景校準，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            18,
+            14,
+            1342,
+            1141
+          ],
+          "marginPx": [
+            18,
+            14,
+            24,
+            10
+          ],
+          "note": "保留生成主檔；網頁輸出另加透明安全留白"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/regulus.png",
+          "prompt": "prompts/regulus-battle-v1.txt",
+          "toolOutputFileName": "exec-758f468b-a2b7-4f72-beab-40069fd2fbe1.png",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "stellar40-20261025",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": null
+      }
+    },
+    {
+      "id": "stellaart:character.arkas",
+      "key": "arkas",
+      "order": 11,
+      "assetId": "stellaart:asset.arkas-standard-20261025",
+      "nameZhHant": "阿爾卡斯",
+      "originalGameKey": "Arkas",
+      "originalCidRow": 35,
+      "sourceBaseStars": 2,
+      "gameCharacterId": null,
+      "proposedContentId": "future:arkas",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/arkas.png",
+      "assetVersion": "11-arkas-v5-space-combat",
+      "sourceOriginalVersion": "11-arkas-v5-space-combat",
+      "sourceOriginalSha256": "caa29a9615f8304ec34ab34420ab8700beef7bd9d4aeba452b563f0260d85234",
+      "sha256": "caa29a9615f8304ec34ab34420ab8700beef7bd9d4aeba452b563f0260d85234",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.5244140625,
+        "y": 0.984375
+      },
+      "safeArea": {
+        "bodyBounds": [
+          73,
+          9,
+          1001,
+          1512
+        ]
+      },
+      "preview": "web/arkas.webp",
+      "sourceReportedReviewStatus": "space-combat-redesign-awaiting-review",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": "Arkas / 阿爾卡斯: dark BLACK shoulder-length layered hair with one small side braid, golden AMBER eyes and fierce determined soft face. WHITE/black/GOLD sci-fi boxer armor with orange energy lights, high collar and BEAR emblem on chest, black tailored SHORTS, white/gold articulated shin boots. TWO HUGE matching WHITE/black mechanical GAUNTLETS with orange cores: RIGHT fist thrust toward image left/front, LEFT fist held near chest. Preserve compact aerial boxing lunge, one knee flexed, both SHORT feet visible. Keep gloves large but entire knuckles safely within frame. No sword, gun or new cape. Huge head, tiny torso, chibi body.",
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-01-20.zip",
+        "originalPath": "standards/11-arkas-v5-space-combat.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": {
+        "assetId": "stellaart:asset.arkas-battle-20261025-v1",
+        "characterId": "stellaart:character.arkas",
+        "path": "battle/arkas-v1-candidate.png",
+        "preview": "web/arkas-battle.webp",
+        "version": "v1-candidate",
+        "sha256": "2dd1982aa51dc8041c1aed96c0db0e241d758dc0e3f74a7af8a72eafa13c517a",
+        "sourceOriginalSha256": "caa29a9615f8304ec34ab34420ab8700beef7bd9d4aeba452b563f0260d85234",
+        "sourceOriginalVersion": "11-arkas-v5-space-combat",
+        "width": 1223,
+        "height": 1286,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.5024529844644318,
+          "y": 0.995334370139969,
+          "note": "視覺輪廓底部，含裝備／座具時須場景校準，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            19,
+            20,
+            1210,
+            1280
+          ],
+          "marginPx": [
+            19,
+            20,
+            13,
+            6
+          ],
+          "note": "保留生成主檔；網頁輸出另加透明安全留白"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/arkas.png",
+          "prompt": "prompts/arkas-battle-v1.txt",
+          "toolOutputFileName": "exec-f106e609-f537-4cc0-97aa-67fe56c9b98d.png",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "stellar40-20261025",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": null
+      }
+    },
+    {
+      "id": "stellaart:character.procyon",
+      "key": "procyon",
+      "order": 12,
+      "assetId": "stellaart:asset.procyon-standard-20261025",
+      "nameZhHant": "南河三",
+      "originalGameKey": "Procyon",
+      "originalCidRow": 36,
+      "sourceBaseStars": 3,
+      "gameCharacterId": null,
+      "proposedContentId": "future:procyon",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/procyon.png",
+      "assetVersion": "12-procyon-v3-style-locked",
+      "sourceOriginalVersion": "12-procyon-v3-style-locked",
+      "sourceOriginalSha256": "7f542022a7bbf7c1f21180db7b03672234dcd1e381f1e84abc272301585ecd39",
+      "sha256": "7f542022a7bbf7c1f21180db7b03672234dcd1e381f1e84abc272301585ecd39",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.50244140625,
+        "y": 0.9895833333333334
+      },
+      "safeArea": {
+        "bodyBounds": [
+          10,
+          14,
+          1019,
+          1520
+        ]
+      },
+      "preview": "web/procyon.webp",
+      "sourceReportedReviewStatus": "generated-awaiting-user-review",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": "Procyon / 南河三: long loose WAVY IVORY WHITE hair with small side clip, TEAL BLUE eyes and cheerful open smile, soft oval face. Cream/white cropped flight jacket with navy edging and rolled sleeves, ORANGE scarf and straps, opaque white/navy fitted top, navy tailored SHORTS, dark fingerless gloves, white/navy/orange mechanical boots and small orange/navy radio at LEFT hip. Preserve energetic LEAP: LEFT hand reaching openly toward viewer, RIGHT arm out behind for balance, one short knee folded back. No wings, sword or new prop. Make legs and torso visibly SHORT beneath oversized head; retain hair flowing backward and complete scarf tails.",
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-01-20.zip",
+        "originalPath": "standards/12-procyon-v3-style-locked.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": {
+        "assetId": "stellaart:asset.procyon-battle-20261025-v1",
+        "characterId": "stellaart:character.procyon",
+        "path": "battle/procyon-v1-candidate.png",
+        "preview": "web/procyon-battle.webp",
+        "version": "v1-candidate",
+        "sha256": "e042d9b9fb7a267dc41cec7fd09053e7520ef9e46e1f5aa5e5fc617d45aaf7ee",
+        "sourceOriginalSha256": "7f542022a7bbf7c1f21180db7b03672234dcd1e381f1e84abc272301585ecd39",
+        "sourceOriginalVersion": "12-procyon-v3-style-locked",
+        "width": 1230,
+        "height": 1278,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.5089430894308943,
+          "y": 0.986697965571205,
+          "note": "視覺輪廓底部，含裝備／座具時須場景校準，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            37,
+            12,
+            1215,
+            1261
+          ],
+          "marginPx": [
+            37,
+            12,
+            15,
+            17
+          ],
+          "note": "保留生成主檔；網頁輸出另加透明安全留白"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/procyon.png",
+          "prompt": "prompts/procyon-battle-v1.txt",
+          "toolOutputFileName": "exec-b7443f0d-7f92-4499-a144-3d158c2ba5ba.png",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "stellar40-20261025",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": null
+      }
+    },
+    {
+      "id": "stellaart:character.luyten",
+      "key": "luyten",
+      "order": 13,
+      "assetId": "stellaart:asset.luyten-standard-20261025",
+      "nameZhHant": "魯坦星",
+      "originalGameKey": "Luyten",
+      "originalCidRow": 38,
+      "sourceBaseStars": 4,
+      "gameCharacterId": null,
+      "proposedContentId": "future:luyten",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/luyten.png",
+      "assetVersion": "13-luyten-v3-style-locked",
+      "sourceOriginalVersion": "13-luyten-v3-style-locked",
+      "sourceOriginalSha256": "693221e3e8047def8f82b8bb80f5a0c87e27938e6db8d79e311ae3ded37b54d2",
+      "sha256": "693221e3e8047def8f82b8bb80f5a0c87e27938e6db8d79e311ae3ded37b54d2",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.50048828125,
+        "y": 0.9928385416666666
+      },
+      "safeArea": {
+        "bodyBounds": [
+          6,
+          9,
+          1019,
+          1525
+        ]
+      },
+      "preview": "web/luyten.webp",
+      "sourceReportedReviewStatus": "keep-user-approved",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": null,
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-01-20.zip",
+        "originalPath": "standards/13-luyten-v3-style-locked.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": null
+    },
+    {
+      "id": "stellaart:character.regor",
+      "key": "regor",
+      "order": 14,
+      "assetId": "stellaart:asset.regor-standard-20261025",
+      "nameZhHant": "天社一",
+      "originalGameKey": "Regor",
+      "originalCidRow": 39,
+      "sourceBaseStars": 3,
+      "gameCharacterId": null,
+      "proposedContentId": "future:regor",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/regor.png",
+      "assetVersion": "14-regor-v11-grimoire",
+      "sourceOriginalVersion": "14-regor-v11-grimoire",
+      "sourceOriginalSha256": "b4885d44d2311027ff057c9a543e055ec0cfe0d35545a4daba933e7e6eae4f4e",
+      "sha256": "b4885d44d2311027ff057c9a543e055ec0cfe0d35545a4daba933e7e6eae4f4e",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.501953125,
+        "y": 0.9947916666666666
+      },
+      "safeArea": {
+        "bodyBounds": [
+          8,
+          8,
+          1020,
+          1528
+        ]
+      },
+      "preview": "web/regor.webp",
+      "sourceReportedReviewStatus": "grimoire-equipment-revision-awaiting-review",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": null,
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-01-20.zip",
+        "originalPath": "standards/14-regor-v11-grimoire.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": null
+    },
+    {
+      "id": "stellaart:character.tseenke",
+      "key": "tseenke",
+      "order": 15,
+      "assetId": "stellaart:asset.tseenke-standard-20261025",
+      "nameZhHant": "天紀",
+      "originalGameKey": "TseenKe",
+      "originalCidRow": 40,
+      "sourceBaseStars": 2,
+      "gameCharacterId": null,
+      "proposedContentId": "future:tseenke",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/tseenke.png",
+      "assetVersion": "15-tseenke-v3-style-locked",
+      "sourceOriginalVersion": "15-tseenke-v3-style-locked",
+      "sourceOriginalSha256": "a8aa2246f4acbc30bc242b1e38a0ad268dca7608a25292d595d9245a2e3b99cc",
+      "sha256": "a8aa2246f4acbc30bc242b1e38a0ad268dca7608a25292d595d9245a2e3b99cc",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.51806640625,
+        "y": 0.9622395833333334
+      },
+      "safeArea": {
+        "bodyBounds": [
+          40,
+          77,
+          1021,
+          1478
+        ]
+      },
+      "preview": "web/tseenke.webp",
+      "sourceReportedReviewStatus": "generated-awaiting-user-review",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": null,
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-01-20.zip",
+        "originalPath": "standards/15-tseenke-v3-style-locked.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": null
+    },
+    {
+      "id": "stellaart:character.suhail",
+      "key": "suhail",
+      "order": 16,
+      "assetId": "stellaart:asset.suhail-standard-20261025",
+      "nameZhHant": "天社五",
+      "originalGameKey": "Suhail",
+      "originalCidRow": 41,
+      "sourceBaseStars": 2,
+      "gameCharacterId": null,
+      "proposedContentId": "future:suhail",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/suhail.png",
+      "assetVersion": "16-suhail-v13-role-outfit",
+      "sourceOriginalVersion": "16-suhail-v13-role-outfit",
+      "sourceOriginalSha256": "9437edccdfd81be2ea3dd694fbd8d072a2039838d09c17ac5c274afc35c50d41",
+      "sha256": "9437edccdfd81be2ea3dd694fbd8d072a2039838d09c17ac5c274afc35c50d41",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.52978515625,
+        "y": 0.9876302083333334
+      },
+      "safeArea": {
+        "bodyBounds": [
+          94,
+          7,
+          991,
+          1517
+        ]
+      },
+      "preview": "web/suhail.webp",
+      "sourceReportedReviewStatus": "generated-awaiting-user-review",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": null,
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-01-20.zip",
+        "originalPath": "standards/16-suhail-v13-role-outfit.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": null
+    },
+    {
+      "id": "stellaart:character.alherem",
+      "key": "alherem",
+      "order": 17,
+      "assetId": "stellaart:asset.alherem-standard-20261025",
+      "nameZhHant": "天壇座α",
+      "originalGameKey": "Alherem",
+      "originalCidRow": 42,
+      "sourceBaseStars": 2,
+      "gameCharacterId": null,
+      "proposedContentId": "future:alherem",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/alherem.png",
+      "assetVersion": "17-alherem-v3-style-locked",
+      "sourceOriginalVersion": "17-alherem-v3-style-locked",
+      "sourceOriginalSha256": "9b74dc4c25a697dec3603a718172fd8cbfad7440ff15c11d4b43abc04a54b509",
+      "sha256": "9b74dc4c25a697dec3603a718172fd8cbfad7440ff15c11d4b43abc04a54b509",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.5263671875,
+        "y": 0.9928385416666666
+      },
+      "safeArea": {
+        "bodyBounds": [
+          177,
+          9,
+          901,
+          1525
+        ]
+      },
+      "preview": "web/alherem.webp",
+      "sourceReportedReviewStatus": "keep-user-approved",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": null,
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-01-20.zip",
+        "originalPath": "standards/17-alherem-v3-style-locked.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": null
+    },
+    {
+      "id": "stellaart:character.musca",
+      "key": "musca",
+      "order": 18,
+      "assetId": "stellaart:asset.musca-standard-20261025",
+      "nameZhHant": "蒼蠅座",
+      "originalGameKey": "Musca",
+      "originalCidRow": 43,
+      "sourceBaseStars": 3,
+      "gameCharacterId": null,
+      "proposedContentId": "future:musca",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/musca.png",
+      "assetVersion": "18-musca-v3-style-locked",
+      "sourceOriginalVersion": "18-musca-v3-style-locked",
+      "sourceOriginalSha256": "e40ad47ddfe67c39362827d4494709fb4d21638c9e91b752998e336094c18225",
+      "sha256": "e40ad47ddfe67c39362827d4494709fb4d21638c9e91b752998e336094c18225",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.50439453125,
+        "y": 0.9453125
+      },
+      "safeArea": {
+        "bodyBounds": [
+          19,
+          6,
+          1014,
+          1452
+        ]
+      },
+      "preview": "web/musca.webp",
+      "sourceReportedReviewStatus": "generated-awaiting-user-review",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": null,
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-01-20.zip",
+        "originalPath": "standards/18-musca-v3-style-locked.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": null
+    },
+    {
+      "id": "stellaart:character.acrux",
+      "key": "acrux",
+      "order": 19,
+      "assetId": "stellaart:asset.acrux-standard-20261025",
+      "nameZhHant": "十字架二",
+      "originalGameKey": "Acrux",
+      "originalCidRow": 44,
+      "sourceBaseStars": 3,
+      "gameCharacterId": null,
+      "proposedContentId": "future:acrux",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/acrux.png",
+      "assetVersion": "19-acrux-v6-multigenre",
+      "sourceOriginalVersion": "19-acrux-v6-multigenre",
+      "sourceOriginalSha256": "8fc09fb75ca1bd2e192d8c761b2e3422f85efa1adec6835456ec8e6848a2c285",
+      "sha256": "8fc09fb75ca1bd2e192d8c761b2e3422f85efa1adec6835456ec8e6848a2c285",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.5009765625,
+        "y": 0.990234375
+      },
+      "safeArea": {
+        "bodyBounds": [
+          11,
+          4,
+          1015,
+          1521
+        ]
+      },
+      "preview": "web/acrux.webp",
+      "sourceReportedReviewStatus": "generated-awaiting-user-review",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": null,
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-01-20.zip",
+        "originalPath": "standards/19-acrux-v6-multigenre.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": null
+    },
+    {
+      "id": "stellaart:character.achernar",
+      "key": "achernar",
+      "order": 20,
+      "assetId": "stellaart:asset.achernar-standard-20261025",
+      "nameZhHant": "水委一",
+      "originalGameKey": "Achernar",
+      "originalCidRow": 45,
+      "sourceBaseStars": 2,
+      "gameCharacterId": null,
+      "proposedContentId": "future:achernar",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/achernar.png",
+      "assetVersion": "20-achernar-v10-anatomy-straight-hair",
+      "sourceOriginalVersion": "20-achernar-v10-anatomy-straight-hair",
+      "sourceOriginalSha256": "c14c7b8806e5f89534ee6a76eedaebd9192903e5c277d993252314fa8f7c61cc",
+      "sha256": "c14c7b8806e5f89534ee6a76eedaebd9192903e5c277d993252314fa8f7c61cc",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.49951171875,
+        "y": 0.96875
+      },
+      "safeArea": {
+        "bodyBounds": [
+          12,
+          54,
+          1011,
+          1488
+        ]
+      },
+      "preview": "web/achernar.webp",
+      "sourceReportedReviewStatus": "hip-leg-anatomy-and-hair-revision-awaiting-review",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": null,
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-01-20.zip",
+        "originalPath": "standards/20-achernar-v10-anatomy-straight-hair.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": null
+    },
+    {
+      "id": "stellaart:character.ran",
+      "key": "ran",
+      "order": 21,
+      "assetId": "stellaart:asset.ran-standard-20261025",
+      "nameZhHant": "天苑四",
+      "originalGameKey": "Ran",
+      "originalCidRow": 46,
+      "sourceBaseStars": 4,
+      "gameCharacterId": null,
+      "proposedContentId": "future:ran",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/ran.png",
+      "assetVersion": "21-ran-v6-multigenre",
+      "sourceOriginalVersion": "21-ran-v6-multigenre",
+      "sourceOriginalSha256": "0eefaf4f1a1ec356cd8b509aac2d88fc6be40b8d077e49d060514eeb23e0eb26",
+      "sha256": "0eefaf4f1a1ec356cd8b509aac2d88fc6be40b8d077e49d060514eeb23e0eb26",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.5029296875,
+        "y": 0.9954427083333334
+      },
+      "safeArea": {
+        "bodyBounds": [
+          11,
+          11,
+          1019,
+          1529
+        ]
+      },
+      "preview": "web/ran.webp",
+      "sourceReportedReviewStatus": "generated-awaiting-user-review",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": null,
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-21-40.zip",
+        "originalPath": "standards/21-ran-v6-multigenre.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": null
+    },
+    {
+      "id": "stellaart:character.aegir",
+      "key": "aegir",
+      "order": 22,
+      "assetId": "stellaart:asset.aegir-standard-20261025",
+      "nameZhHant": "天苑四b",
+      "originalGameKey": "Aegir",
+      "originalCidRow": 47,
+      "sourceBaseStars": 4,
+      "gameCharacterId": null,
+      "proposedContentId": "future:aegir",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/aegir.png",
+      "assetVersion": "22-aegir-v9-feminine",
+      "sourceOriginalVersion": "22-aegir-v9-feminine",
+      "sourceOriginalSha256": "4f04230acb63df775044631598739943fefd9a44e19d9d7fdc417a54813263ad",
+      "sha256": "4f04230acb63df775044631598739943fefd9a44e19d9d7fdc417a54813263ad",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.5068359375,
+        "y": 0.9921875
+      },
+      "safeArea": {
+        "bodyBounds": [
+          30,
+          16,
+          1008,
+          1524
+        ]
+      },
+      "preview": "web/aegir.webp",
+      "sourceReportedReviewStatus": "feminine-revision-awaiting-user-review",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": null,
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-21-40.zip",
+        "originalPath": "standards/22-aegir-v9-feminine.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": null
+    },
+    {
+      "id": "stellaart:character.acamar",
+      "key": "acamar",
+      "order": 23,
+      "assetId": "stellaart:asset.acamar-standard-20261025",
+      "nameZhHant": "天園一",
+      "originalGameKey": "Acamar",
+      "originalCidRow": 49,
+      "sourceBaseStars": 3,
+      "gameCharacterId": null,
+      "proposedContentId": "future:acamar",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/acamar.png",
+      "assetVersion": "23-acamar-v6-multigenre",
+      "sourceOriginalVersion": "23-acamar-v6-multigenre",
+      "sourceOriginalSha256": "9902a6162f5234202d154552148d6d28d210bdbe148d7419fcf54e83797187f1",
+      "sha256": "9902a6162f5234202d154552148d6d28d210bdbe148d7419fcf54e83797187f1",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.505859375,
+        "y": 0.9869791666666666
+      },
+      "safeArea": {
+        "bodyBounds": [
+          27,
+          15,
+          1009,
+          1516
+        ]
+      },
+      "preview": "web/acamar.webp",
+      "sourceReportedReviewStatus": "generated-awaiting-user-review",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": null,
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-21-40.zip",
+        "originalPath": "standards/23-acamar-v6-multigenre.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": null
+    },
+    {
+      "id": "stellaart:character.ots44",
+      "key": "ots44",
+      "order": 24,
+      "assetId": "stellaart:asset.ots44-standard-20261025",
+      "nameZhHant": "OTS 44",
+      "originalGameKey": "OTS44",
+      "originalCidRow": 50,
+      "sourceBaseStars": 3,
+      "gameCharacterId": null,
+      "proposedContentId": "future:ots44",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/ots44.png",
+      "assetVersion": "24-ots44-v6-multigenre",
+      "sourceOriginalVersion": "24-ots44-v6-multigenre",
+      "sourceOriginalSha256": "0483d52c5e8066c6a1ceb36b168774654a0f602d5a639ac162832351afa978fb",
+      "sha256": "0483d52c5e8066c6a1ceb36b168774654a0f602d5a639ac162832351afa978fb",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.49951171875,
+        "y": 0.9934895833333334
+      },
+      "safeArea": {
+        "bodyBounds": [
+          10,
+          10,
+          1013,
+          1526
+        ]
+      },
+      "preview": "web/ots44.webp",
+      "sourceReportedReviewStatus": "keep-user-approved",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": null,
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-21-40.zip",
+        "originalPath": "standards/24-ots44-v6-multigenre.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": null
+    },
+    {
+      "id": "stellaart:character.den",
+      "key": "den",
+      "order": 25,
+      "assetId": "stellaart:asset.den-standard-20261025",
+      "nameZhHant": "DEN",
+      "originalGameKey": "DEN",
+      "originalCidRow": 51,
+      "sourceBaseStars": 4,
+      "gameCharacterId": null,
+      "proposedContentId": "future:den",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/den.png",
+      "assetVersion": "25-den-v12-completed",
+      "sourceOriginalVersion": "25-den-v12-completed",
+      "sourceOriginalSha256": "3995b95e6012bd30d40d72cb68b88f6878d87cdee431ea2beacf9dd1fc765f54",
+      "sha256": "3995b95e6012bd30d40d72cb68b88f6878d87cdee431ea2beacf9dd1fc765f54",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.49951171875,
+        "y": 0.9908854166666666
+      },
+      "safeArea": {
+        "bodyBounds": [
+          6,
+          13,
+          1017,
+          1522
+        ]
+      },
+      "preview": "web/den.webp",
+      "sourceReportedReviewStatus": "generated-awaiting-user-review",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": null,
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-21-40.zip",
+        "originalPath": "standards/25-den-v12-completed.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": null
+    },
+    {
+      "id": "stellaart:character.sirius",
+      "key": "sirius",
+      "order": 26,
+      "assetId": "stellaart:asset.sirius-standard-20261025",
+      "nameZhHant": "天狼星",
+      "originalGameKey": "Sirius",
+      "originalCidRow": 52,
+      "sourceBaseStars": 3,
+      "gameCharacterId": null,
+      "proposedContentId": "future:sirius",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/sirius.png",
+      "assetVersion": "26-sirius-v18-natural-pose",
+      "sourceOriginalVersion": "26-sirius-v18-natural-pose",
+      "sourceOriginalSha256": "cfe1947ca8722c5a285b3faf2d8e3d2a9babedad6a5074b4290fd01fb927fe03",
+      "sha256": "cfe1947ca8722c5a285b3faf2d8e3d2a9babedad6a5074b4290fd01fb927fe03",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.50390625,
+        "y": 0.9876302083333334
+      },
+      "safeArea": {
+        "bodyBounds": [
+          12,
+          12,
+          1020,
+          1517
+        ]
+      },
+      "preview": "web/sirius.webp",
+      "sourceReportedReviewStatus": "latest-user-anatomy-pose-revision",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": null,
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-21-40.zip",
+        "originalPath": "standards/26-sirius-v18-natural-pose.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": null
+    },
+    {
+      "id": "stellaart:character.bayes",
+      "key": "bayes",
+      "order": 27,
+      "assetId": "stellaart:asset.bayes-standard-20261025",
+      "nameZhHant": "貝葉斯",
+      "originalGameKey": "Bayes",
+      "originalCidRow": 53,
+      "sourceBaseStars": 3,
+      "gameCharacterId": null,
+      "proposedContentId": "future:bayes",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/bayes.png",
+      "assetVersion": "27-bayes-v12-completed",
+      "sourceOriginalVersion": "27-bayes-v12-completed",
+      "sourceOriginalSha256": "0a7097c510b4f32fdf5796944e301580ba52b825e3618ac84ccf522a5a1ec011",
+      "sha256": "0a7097c510b4f32fdf5796944e301580ba52b825e3618ac84ccf522a5a1ec011",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.5029296875,
+        "y": 0.97265625
+      },
+      "safeArea": {
+        "bodyBounds": [
+          22,
+          16,
+          1008,
+          1494
+        ]
+      },
+      "preview": "web/bayes.webp",
+      "sourceReportedReviewStatus": "generated-awaiting-user-review",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": null,
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-21-40.zip",
+        "originalPath": "standards/27-bayes-v12-completed.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": null
+    },
+    {
+      "id": "stellaart:character.rufus",
+      "key": "rufus",
+      "order": 28,
+      "assetId": "stellaart:asset.rufus-standard-20261025",
+      "nameZhHant": "魯弗斯",
+      "originalGameKey": "Rufus",
+      "originalCidRow": 54,
+      "sourceBaseStars": 2,
+      "gameCharacterId": null,
+      "proposedContentId": "future:rufus",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/rufus.png",
+      "assetVersion": "28-rufus-v12-completed",
+      "sourceOriginalVersion": "28-rufus-v12-completed",
+      "sourceOriginalSha256": "de55cfc2cc6ee6dc8be7cd3466dbcca0d301c2a5c377d5006d4940d612580b6d",
+      "sha256": "de55cfc2cc6ee6dc8be7cd3466dbcca0d301c2a5c377d5006d4940d612580b6d",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.5029296875,
+        "y": 0.990234375
+      },
+      "safeArea": {
+        "bodyBounds": [
+          7,
+          0,
+          1023,
+          1521
+        ]
+      },
+      "preview": "web/rufus.webp",
+      "sourceReportedReviewStatus": "generated-awaiting-user-review",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": null,
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-21-40.zip",
+        "originalPath": "standards/28-rufus-v12-completed.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": null
+    },
+    {
+      "id": "stellaart:character.asmidiske",
+      "key": "asmidiske",
+      "order": 29,
+      "assetId": "stellaart:asset.asmidiske-standard-20261025",
+      "nameZhHant": "船尾座ξ",
+      "originalGameKey": "Asmidiske",
+      "originalCidRow": 55,
+      "sourceBaseStars": 2,
+      "gameCharacterId": null,
+      "proposedContentId": "future:asmidiske",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/asmidiske.png",
+      "assetVersion": "29-asmidiske-v12-completed",
+      "sourceOriginalVersion": "29-asmidiske-v12-completed",
+      "sourceOriginalSha256": "b2a583c6a00e5fd1df402526755dcadea2c5148a16e7448a1a971ba25c36b1a2",
+      "sha256": "b2a583c6a00e5fd1df402526755dcadea2c5148a16e7448a1a971ba25c36b1a2",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.49951171875,
+        "y": 0.986328125
+      },
+      "safeArea": {
+        "bodyBounds": [
+          12,
+          6,
+          1011,
+          1515
+        ]
+      },
+      "preview": "web/asmidiske.webp",
+      "sourceReportedReviewStatus": "generated-awaiting-user-review",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": null,
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-21-40.zip",
+        "originalPath": "standards/29-asmidiske-v12-completed.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": null
+    },
+    {
+      "id": "stellaart:character.canis",
+      "key": "canis",
+      "order": 30,
+      "assetId": "stellaart:asset.canis-standard-20261025",
+      "nameZhHant": "大犬座",
+      "originalGameKey": "Canis",
+      "originalCidRow": 56,
+      "sourceBaseStars": 4,
+      "gameCharacterId": null,
+      "proposedContentId": "future:canis",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/canis.png",
+      "assetVersion": "30-canis-v16-rifle-commander",
+      "sourceOriginalVersion": "30-canis-v16-rifle-commander",
+      "sourceOriginalSha256": "5d25850a21a5c87e2992603c41f8496ef8d9417c5ef8b7c66bb7aa9426e5b218",
+      "sha256": "5d25850a21a5c87e2992603c41f8496ef8d9417c5ef8b7c66bb7aa9426e5b218",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.51025390625,
+        "y": 0.99609375
+      },
+      "safeArea": {
+        "bodyBounds": [
+          26,
+          8,
+          1019,
+          1530
+        ]
+      },
+      "preview": "web/canis.webp",
+      "sourceReportedReviewStatus": "generated-awaiting-user-review",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": null,
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-21-40.zip",
+        "originalPath": "standards/30-canis-v16-rifle-commander.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": null
+    },
+    {
+      "id": "stellaart:character.wezen",
+      "key": "wezen",
+      "order": 31,
+      "assetId": "stellaart:asset.wezen-standard-20261025",
+      "nameZhHant": "弧矢一",
+      "originalGameKey": "Wezen",
+      "originalCidRow": 57,
+      "sourceBaseStars": 2,
+      "gameCharacterId": null,
+      "proposedContentId": "future:wezen",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/wezen.png",
+      "assetVersion": "31-wezen-v21-no-chest-star",
+      "sourceOriginalVersion": "31-wezen-v21-no-chest-star",
+      "sourceOriginalSha256": "72e05a2996f8521f9c785d732ba5942c8129e80b182b361f2e1bfd863daa8c1e",
+      "sha256": "72e05a2996f8521f9c785d732ba5942c8129e80b182b361f2e1bfd863daa8c1e",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "safeArea": {
+        "bodyBounds": [
+          0,
+          0,
+          1024,
+          1536
+        ]
+      },
+      "preview": "web/wezen.webp",
+      "sourceReportedReviewStatus": "visually-reviewed-local-edit-awaiting-user",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": null,
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-21-40.zip",
+        "originalPath": "standards/31-wezen-v21-no-chest-star.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": null
+    },
+    {
+      "id": "stellaart:character.aludra",
+      "key": "aludra",
+      "order": 32,
+      "assetId": "stellaart:asset.aludra-standard-20261025",
+      "nameZhHant": "弧矢七",
+      "originalGameKey": "Aludra",
+      "originalCidRow": 58,
+      "sourceBaseStars": 4,
+      "gameCharacterId": null,
+      "proposedContentId": "future:aludra",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/aludra.png",
+      "assetVersion": "32-aludra-v15-anatomy",
+      "sourceOriginalVersion": "32-aludra-v15-anatomy",
+      "sourceOriginalSha256": "c5927a9656e039629cff12d7f9def9b6429fdbf48522aa8eb4a77bbfdda79fba",
+      "sha256": "c5927a9656e039629cff12d7f9def9b6429fdbf48522aa8eb4a77bbfdda79fba",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.50927734375,
+        "y": 0.9934895833333334
+      },
+      "safeArea": {
+        "bodyBounds": [
+          27,
+          5,
+          1016,
+          1526
+        ]
+      },
+      "preview": "web/aludra.webp",
+      "sourceReportedReviewStatus": "anatomy-repaired-awaiting-user-review",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": null,
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-21-40.zip",
+        "originalPath": "standards/32-aludra-v15-anatomy.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": null
+    },
+    {
+      "id": "stellaart:character.furud",
+      "key": "furud",
+      "order": 33,
+      "assetId": "stellaart:asset.furud-standard-20261025",
+      "nameZhHant": "孫增一",
+      "originalGameKey": "Furud",
+      "originalCidRow": 59,
+      "sourceBaseStars": 2,
+      "gameCharacterId": null,
+      "proposedContentId": "future:furud",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/furud.png",
+      "assetVersion": "33-furud-v15-anatomy",
+      "sourceOriginalVersion": "33-furud-v15-anatomy",
+      "sourceOriginalSha256": "275b0e9c903f0750c094b3f0e285c06a61d4dfe2746941bbf55e56879d653cc9",
+      "sha256": "275b0e9c903f0750c094b3f0e285c06a61d4dfe2746941bbf55e56879d653cc9",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.4892578125,
+        "y": 0.9817708333333334
+      },
+      "safeArea": {
+        "bodyBounds": [
+          9,
+          9,
+          993,
+          1508
+        ]
+      },
+      "preview": "web/furud.webp",
+      "sourceReportedReviewStatus": "anatomy-repaired-awaiting-user-review",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": null,
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-21-40.zip",
+        "originalPath": "standards/33-furud-v15-anatomy.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": null
+    },
+    {
+      "id": "stellaart:character.naos",
+      "key": "naos",
+      "order": 34,
+      "assetId": "stellaart:asset.naos-standard-20261025",
+      "nameZhHant": "弧矢增二十二",
+      "originalGameKey": "Naos",
+      "originalCidRow": 60,
+      "sourceBaseStars": 3,
+      "gameCharacterId": null,
+      "proposedContentId": "future:naos",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/naos.png",
+      "assetVersion": "34-naos-v19-hip-alignment",
+      "sourceOriginalVersion": "34-naos-v19-hip-alignment",
+      "sourceOriginalSha256": "f5ccdfbdf50d00c800c8c0f85f0cbde972ce666b14338b667b9bcc2488b33275",
+      "sha256": "f5ccdfbdf50d00c800c8c0f85f0cbde972ce666b14338b667b9bcc2488b33275",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.5078125,
+        "y": 0.9381510416666666
+      },
+      "safeArea": {
+        "bodyBounds": [
+          16,
+          36,
+          1024,
+          1441
+        ]
+      },
+      "preview": "web/naos.webp",
+      "sourceReportedReviewStatus": "latest-hip-alignment-revision",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": null,
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-21-40.zip",
+        "originalPath": "standards/34-naos-v19-hip-alignment.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": null
+    },
+    {
+      "id": "stellaart:character.alrai",
+      "key": "alrai",
+      "order": 35,
+      "assetId": "stellaart:asset.alrai-standard-20261025",
+      "nameZhHant": "少衛增八",
+      "originalGameKey": "Alrai",
+      "originalCidRow": 63,
+      "sourceBaseStars": 4,
+      "gameCharacterId": null,
+      "proposedContentId": "future:alrai",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/alrai.png",
+      "assetVersion": "35-alrai-v17-two-legs",
+      "sourceOriginalVersion": "35-alrai-v17-two-legs",
+      "sourceOriginalSha256": "1722ae56bd20c556b6b8162b346414c7cf0bf4bd7da7336118759dc9d1fceced",
+      "sha256": "1722ae56bd20c556b6b8162b346414c7cf0bf4bd7da7336118759dc9d1fceced",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.5,
+        "y": 1.0
+      },
+      "safeArea": {
+        "bodyBounds": [
+          0,
+          0,
+          1024,
+          1536
+        ]
+      },
+      "preview": "web/alrai.webp",
+      "sourceReportedReviewStatus": "anatomy-repaired-awaiting-user-review",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": null,
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-21-40.zip",
+        "originalPath": "standards/35-alrai-v17-two-legs.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": null
+    },
+    {
+      "id": "stellaart:character.vega",
+      "key": "vega",
+      "order": 36,
+      "assetId": "stellaart:asset.vega-standard-20261025",
+      "nameZhHant": "織女星",
+      "originalGameKey": "Vega",
+      "originalCidRow": 66,
+      "sourceBaseStars": 4,
+      "gameCharacterId": null,
+      "proposedContentId": "future:vega",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/vega.png",
+      "assetVersion": "36-vega-v20-reviewed",
+      "sourceOriginalVersion": "36-vega-v20-reviewed",
+      "sourceOriginalSha256": "04996cea981fd21b460123c925e28331c12b662c6c67407f59098ab6ee39e655",
+      "sha256": "04996cea981fd21b460123c925e28331c12b662c6c67407f59098ab6ee39e655",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.50537109375,
+        "y": 0.9876302083333334
+      },
+      "safeArea": {
+        "bodyBounds": [
+          15,
+          13,
+          1020,
+          1517
+        ]
+      },
+      "preview": "web/vega.webp",
+      "sourceReportedReviewStatus": "visually-reviewed-repair-awaiting-user",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": null,
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-21-40.zip",
+        "originalPath": "standards/36-vega-v20-reviewed.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": null
+    },
+    {
+      "id": "stellaart:character.kochab",
+      "key": "kochab",
+      "order": 37,
+      "assetId": "stellaart:asset.kochab-standard-20261025",
+      "nameZhHant": "北極二",
+      "originalGameKey": "Kochab",
+      "originalCidRow": 68,
+      "sourceBaseStars": 4,
+      "gameCharacterId": null,
+      "proposedContentId": "future:kochab",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/kochab.png",
+      "assetVersion": "37-kochab-v12-completed",
+      "sourceOriginalVersion": "37-kochab-v12-completed",
+      "sourceOriginalSha256": "0d61dde825a23944f530f79e66b30bc73322c70d47af65a25c0e77e64a135658",
+      "sha256": "0d61dde825a23944f530f79e66b30bc73322c70d47af65a25c0e77e64a135658",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.5068359375,
+        "y": 0.990234375
+      },
+      "safeArea": {
+        "bodyBounds": [
+          17,
+          3,
+          1021,
+          1521
+        ]
+      },
+      "preview": "web/kochab.webp",
+      "sourceReportedReviewStatus": "generated-awaiting-user-review",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": null,
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-21-40.zip",
+        "originalPath": "standards/37-kochab-v12-completed.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": null
+    },
+    {
+      "id": "stellaart:character.aldebaran",
+      "key": "aldebaran",
+      "order": 38,
+      "assetId": "stellaart:asset.aldebaran-standard-20261025",
+      "nameZhHant": "畢宿五",
+      "originalGameKey": "Aldebaran",
+      "originalCidRow": 89,
+      "sourceBaseStars": 5,
+      "gameCharacterId": null,
+      "proposedContentId": "future:aldebaran",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/aldebaran.png",
+      "assetVersion": "38-aldebaran-v12-completed",
+      "sourceOriginalVersion": "38-aldebaran-v12-completed",
+      "sourceOriginalSha256": "22e781c8cb9607a56d3e3ce5cd3ed58f6f37a1bd29e1c8b469dea9917f49341a",
+      "sha256": "22e781c8cb9607a56d3e3ce5cd3ed58f6f37a1bd29e1c8b469dea9917f49341a",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.5029296875,
+        "y": 0.9869791666666666
+      },
+      "safeArea": {
+        "bodyBounds": [
+          8,
+          12,
+          1022,
+          1516
+        ]
+      },
+      "preview": "web/aldebaran.webp",
+      "sourceReportedReviewStatus": "generated-awaiting-user-review",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": null,
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-21-40.zip",
+        "originalPath": "standards/38-aldebaran-v12-completed.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": null
+    },
+    {
+      "id": "stellaart:character.denebola",
+      "key": "denebola",
+      "order": 39,
+      "assetId": "stellaart:asset.denebola-standard-20261025",
+      "nameZhHant": "五帝座一",
+      "originalGameKey": "Denebola",
+      "originalCidRow": 117,
+      "sourceBaseStars": 5,
+      "gameCharacterId": null,
+      "proposedContentId": "future:denebola",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/denebola.png",
+      "assetVersion": "39-denebola-v20-reviewed",
+      "sourceOriginalVersion": "39-denebola-v20-reviewed",
+      "sourceOriginalSha256": "33b96ce95fbecb6483ceac8389dac6a61bf83727dc72e074710c7a87123d1168",
+      "sha256": "33b96ce95fbecb6483ceac8389dac6a61bf83727dc72e074710c7a87123d1168",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.50537109375,
+        "y": 0.98046875
+      },
+      "safeArea": {
+        "bodyBounds": [
+          16,
+          8,
+          1019,
+          1506
+        ]
+      },
+      "preview": "web/denebola.webp",
+      "sourceReportedReviewStatus": "visually-reviewed-repair-awaiting-user",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": null,
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-21-40.zip",
+        "originalPath": "standards/39-denebola-v20-reviewed.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": null
+    },
+    {
+      "id": "stellaart:character.dubhe",
+      "key": "dubhe",
+      "order": 40,
+      "assetId": "stellaart:asset.dubhe-standard-20261025",
+      "nameZhHant": "天樞",
+      "originalGameKey": "Dubhe",
+      "originalCidRow": 127,
+      "sourceBaseStars": 5,
+      "gameCharacterId": null,
+      "proposedContentId": "future:dubhe",
+      "runtimeStatus": "not-integrated",
+      "path": "standards/dubhe.png",
+      "assetVersion": "40-dubhe-v12-completed",
+      "sourceOriginalVersion": "40-dubhe-v12-completed",
+      "sourceOriginalSha256": "8bcd96399538fe6fb40d062487689f7663c23cd3194666cf74935b07c8bbb032",
+      "sha256": "8bcd96399538fe6fb40d062487689f7663c23cd3194666cf74935b07c8bbb032",
+      "width": 1024,
+      "height": 1536,
+      "colorSpace": "sRGB",
+      "alpha": "straight",
+      "pivot": {
+        "x": 0.50439453125,
+        "y": 0.9934895833333334
+      },
+      "safeArea": {
+        "bodyBounds": [
+          10,
+          15,
+          1023,
+          1526
+        ]
+      },
+      "preview": "web/dubhe.webp",
+      "sourceReportedReviewStatus": "generated-awaiting-user-review",
+      "reviewStatus": "awaiting-user-review",
+      "visualInspection": null,
+      "source": {
+        "type": "user-provided-Drive-standard",
+        "archive": "portraits-21-40.zip",
+        "originalPath": "standards/40-dubhe-v12-completed.png",
+        "promptArchiveStatus": "not-in-Drive-ZIPs",
+        "metadataPath": "source-records/delivery-manifest.json"
+      },
+      "webAsset": null,
+      "avatarAsset": null,
+      "battleAsset": null
+    }
+  ],
+  "legacyStandards": [
+    {
+      "path": "art/characters/standard/maiden-01/v1.png",
+      "sha256": "28d5d2e334598fa52fd18bfcc9cb25c12e76fb58ad0ff0cc367bea0e25f827cf"
+    },
+    {
+      "path": "art/characters/standard/maiden-02/v1.png",
+      "sha256": "aef0c54a2d49c289ae11ce73c88e5db2942af192d8b3cbead6e149ea229427f5"
+    },
+    {
+      "path": "art/characters/standard/maiden-03/v1.png",
+      "sha256": "53b199e4a0fcc5c4c6676fa74e1bc749e98cd427f8c760764b57b89fc5d481cd"
+    },
+    {
+      "path": "art/characters/standard/maiden-04/v1.png",
+      "sha256": "31cddf5eb8b583995ec7661901450cbf302fe00c7e89914dd84dde4d7e636d8d"
+    },
+    {
+      "path": "art/characters/standard/maiden-05/v1.png",
+      "sha256": "0c2a068e052d8f1f28b7a9bad6cff64d34634f0e8d8c334ab836b5c8b95ec111"
+    },
+    {
+      "path": "art/characters/standard/maiden-06/v1.png",
+      "sha256": "ae3d49d2440ae45a819f52a0532406039cf19bc2b9b01e979859300754a21fea"
+    },
+    {
+      "path": "art/characters/stellar10/standards/jupiter.png",
+      "sha256": "28a0ea518363f7b51665db089f99b45805d7a867dec2d36d77724db8a6b4900a"
+    },
+    {
+      "path": "art/characters/stellar10/standards/nemesis.png",
+      "sha256": "bc479c41c99f06227512e5a1bd12ebde50fddf1ad476372fab5901191ce2ac8d"
+    },
+    {
+      "path": "art/characters/stellar10/standards/io.png",
+      "sha256": "81adb3d27327499da9db3e391feab7425c6314e7b897d28c1627824d363c1833"
+    },
+    {
+      "path": "art/characters/stellar10/standards/sun.png",
+      "sha256": "163be021f75a7b1f8b1ebc7b17f6f622476a0553456ed9e2cebae1bf812bb318"
+    },
+    {
+      "path": "art/characters/stellar10/standards/ganymede.png",
+      "sha256": "2faf0de006ee302b817668a70d12755c55070743eb13a6fc855b5c0e9ccbb775"
+    },
+    {
+      "path": "art/characters/stellar10/standards/saturn.png",
+      "sha256": "c6889620e0eaf2e4920b56afff338a5510fffca1542565a3fbfd6355594fec83"
+    },
+    {
+      "path": "art/characters/stellar10/standards/ariel.png",
+      "sha256": "eb659e4a7293de2b4a37e53f630d35475b9fb5959dd422cbcd9980c322176a22"
+    },
+    {
+      "path": "art/characters/stellar10/standards/neptune.png",
+      "sha256": "f35d3c8b9894c15966258ea0dd4973fa46c79a10adc32bfabe3d92cedd96a76a"
+    },
+    {
+      "path": "art/characters/stellar10/standards/titania.png",
+      "sha256": "1ed00a42fbf8f440aabaca79ba38d9d45597adf897acc6d3eda533000105c875"
+    },
+    {
+      "path": "art/characters/stellar10/standards/pluto.png",
+      "sha256": "c2f7558cd18319fe512fd8f967d315ae7f13b6b73abb2719abb2df006126b349"
+    },
+    {
+      "path": "art/characters/stellar11/standards/izar.png",
+      "sha256": "13482e3914ef43f7193c711f8cd986937fa6d133abcc1500c32b58bdbc2c1922"
+    },
+    {
+      "path": "art/characters/stellar11/standards/wolf359.png",
+      "sha256": "fe6ca82a9076d626d2b147d9393dc744e869824442c109a2c7c8fe736ebf5141"
+    },
+    {
+      "path": "art/characters/stellar11/standards/arcturus.png",
+      "sha256": "af62aa4b006c1e8d95b89b3e95849717904b2bbcb99d3196ba1d8e9c50e155cb"
+    },
+    {
+      "path": "art/characters/stellar11/standards/jupiter.png",
+      "sha256": "a2006144e98685da301c9c3f8903bde7a11c26a87622cab4651d6672fd2e3ffe"
+    },
+    {
+      "path": "art/characters/stellar11/standards/seginus.png",
+      "sha256": "6029ad7c644e882c1b29af38b32112df9b781a4c54143ff5a4317ac4087f3c9d"
+    },
+    {
+      "path": "art/characters/stellar11/standards/valencia.png",
+      "sha256": "e3213570e5aea0cfd73d4f0b3469211efedcd35ca94dacfeab8633fdc53af93b"
+    },
+    {
+      "path": "art/characters/stellar11/standards/gliese.png",
+      "sha256": "2091255bb24105b659f2a56bbd444ef729da573b8dc16a14cb57f9ec7e3448c9"
+    },
+    {
+      "path": "art/characters/stellar11/standards/spica.png",
+      "sha256": "d3995e3023a9bf09db2c503b50165bb03c320a13898c4a77150404932b621a72"
+    },
+    {
+      "path": "art/characters/stellar11/standards/vello.png",
+      "sha256": "d7deb03c094250cae464b93a89c055a43cdcf97fd2efa75a2a77de41ee080780"
+    },
+    {
+      "path": "art/characters/stellar11/standards/linda.png",
+      "sha256": "d7971022a8d2c31d53fabb7486e323a8bed47f6639458d53e316469a7c7c7941"
+    },
+    {
+      "path": "art/characters/stellar11/standards/e581.png",
+      "sha256": "1d4217e3efcf7ba4e3c6b1ef55f0a264335a0566383fe5503a11b657058dcc82"
+    },
+    {
+      "path": "art/characters/prologue6/standards/doradus.png",
+      "sha256": "91fab41a078452b7dc9adbe38e392903aa2029ed14c5b0f5a996cd5724a49f7b"
+    },
+    {
+      "path": "art/characters/prologue6/standards/antares.png",
+      "sha256": "0fb63d28eda1b021d25774db38c0fd9c374e3e5cbaad3f0da0224a473f928f3c"
+    },
+    {
+      "path": "art/characters/prologue6/standards/mucephei.png",
+      "sha256": "9e1bdba450d15a82a197d7985cac0906f2c4aab6b6fa47f7a6ff494bee571ba3"
+    },
+    {
+      "path": "art/characters/prologue6/standards/scuti.png",
+      "sha256": "4124b88b8398a6312fd7f9b5c47ddba7db370dac29834ee0198aa7430f31f31c"
+    },
+    {
+      "path": "art/characters/prologue6/standards/sargas.png",
+      "sha256": "6da6f45bf7044376999c57222ab68919dc10fc1c5dcee77f6acf26319b81c169"
+    },
+    {
+      "path": "art/characters/prologue6/standards/deneb.png",
+      "sha256": "85ee010f2ba0f32ad4320c93260136f4f25e546734b93b6041422146bd66c8c1"
+    }
+  ],
+  "status": "in-progress",
+  "generationTarget": "M1約2.4頭身，大頭短身，透明底；每位只參考自己的單張標準圖",
+  "sourceArchives": [
+    {
+      "name": "portraits-21-40.zip",
+      "bytes": 53676855,
+      "sha256": "6746cb7728614ab872179e05f029721f5c55b931b2d662030b0a7c2fed136fdd"
+    },
+    {
+      "name": "portraits-01-20.zip",
+      "bytes": 44941363,
+      "sha256": "eea559a618993cbaae63e436175c0df0d137399909a79bd975f7c19106587896"
+    }
+  ]
+}

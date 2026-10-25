@@ -1774,6 +1774,10 @@
   main.bridge.bridge .sector-heading > * {
     pointer-events: auto;
   }
+  /* The splash only displays; it must never swallow taps on the tracker below it. */
+  main.bridge.bridge .sector-heading > .skill-splash {
+    pointer-events: none;
+  }
   main.bridge.bridge .sector-heading > div:not(.skill-splash):not(.mainline):not(.missions),
   main.bridge.bridge .sector-status {
     display: none;
@@ -2166,4 +2170,22 @@
 }
 .route-row.is-locked strong {
   color: #8395a0;
+}
+
+/* Phone play: no text selection flash, tap highlight or double-tap page zoom. */
+html,
+body {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+.bridge,
+.bridge * {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+.bridge input,
+.bridge textarea {
+  -webkit-user-select: text;
+  user-select: text;
 }

@@ -81,3 +81,4 @@
 - 戰鬥編隊（使用者回覆「yes」核准）：`FleetMotion.advanceGuarded`由隊長在前直線改為原作式散開群聚（兩側→後弧，含決定性緩慢漂移）。單元測試的直線斷言改為群聚斷言，129/129。劇情31戰（敵人等級+2）重驗全勝，收據已重產。671世界全量重跑中途依使用者指示「no need to rerun battle check」停止：停止前已跑318場基準隊伍、0敗，其餘未跑，**整體未完成，不記為通過**；既有671證據是直線編隊時期的。
 - **第四輪發布**：PR #31（第四輪十項）→ Pages 40101969594 在playtest失敗（勝利後1秒劇情場景擋點擊，測試問題）；PR #32（修正＋原作式編隊）→ Pages 40108381667 在chronicle失敗（途中自動交戰使出擊停用，測試問題）；PR #33 測試修正 → main `cb34b8e8594cb80547048c95942e2353a756bfe4`，Pages 40111897178 完整門檻通過並部署。公開version.json＝cb34b8e；公開站桌機1440／觸控390實測主線卡、任務摺疊鈕、手機搖桿、零pageerror（非真機）。
 - 下一步：等使用者實玩回饋；671世界證據仍為直線編隊時期（使用者指示不重跑）。
+- 小修（使用者回報，指示不跑整套測試）：1. 手機左上主線／任務鈕常沒反應——根因為手機版`.sector-heading > *`設`pointer-events:auto`蓋過技能橫幅的`none`，透明`#skill-splash`吞掉點擊；改為橫幅永遠不接收點擊（tap-probe確認點擊落在按鈕）。2. 選取變藍：遊戲畫面`user-select:none`、`-webkit-touch-callout:none`、去除點擊高亮（輸入框除外）。3. 點兩下放大：`touch-action:manipulation`、viewport `maximum-scale=1`，iOS另擋`gesturestart`頁面縮放（地圖自身捏合縮放不受影響）。只跑build＋觸控探針，未跑瀏覽器套件，交由發布門檻。

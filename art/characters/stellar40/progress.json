@@ -1,5 +1,5 @@
 {
-  "completedCount": 36,
+  "completedCount": 40,
   "targetCount": 40,
   "completedKeys": [
     "polaris",
@@ -37,12 +37,11 @@
     "furud",
     "naos",
     "alrai",
-    "vega"
-  ],
-  "remainingKeys": [
+    "vega",
     "kochab",
     "aldebaran",
     "denebola",
     "dubhe"
-  ]
+  ],
+  "remainingKeys": []
 }

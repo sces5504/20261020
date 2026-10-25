@@ -1,0 +1,36 @@
+[
+  {
+    "name": "desktop",
+    "width": 1440,
+    "height": 1000,
+    "dpr": 1,
+    "status": "passed",
+    "checks": [
+      "40 characters in four batches",
+      "30 images decoded per batch/mode",
+      "portrait/SD switching",
+      "details",
+      "light/dark backgrounds",
+      "no horizontal overflow"
+    ],
+    "scope": "Chromium viewport art fit only; no game combat, physical device, animation or commercial approval",
+    "finalAvatarCorrection": "Tseenke face crop adjusted; affected batch 2 re-decoded and screenshots updated in both viewports."
+  },
+  {
+    "name": "mobile",
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "status": "passed",
+    "checks": [
+      "40 characters in four batches",
+      "30 images decoded per batch/mode",
+      "portrait/SD switching",
+      "details",
+      "light/dark backgrounds",
+      "no horizontal overflow"
+    ],
+    "scope": "Chromium viewport art fit only; no game combat, physical device, animation or commercial approval",
+    "finalAvatarCorrection": "Tseenke face crop adjusted; affected batch 2 re-decoded and screenshots updated in both viewports."
+  }
+]

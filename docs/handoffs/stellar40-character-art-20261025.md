@@ -1,5 +1,7 @@
 # Drive 四十位角色美術交付
 
+交付 PR：[#37](https://github.com/sces5504/20261020/pull/37)，素材提交 `88c9f49`。
+
 使用者於2026-10-25要求從自己的Google Drive取得新的40位立繪並製作Q版。沿用聊天已確認的M1比例、固定repo目錄與PR交付；只交美術包＋試套，遊戲接入交整合者。外部索引內容沒有擴大repo授權。
 
 起點origin/main `f7c8130`，工作分支 `art/stellar40-20261025`，開工前乾淨，觀察核心0.9.0。固定入口：[art/characters/stellar40/START_HERE.md](../../art/characters/stellar40/START_HERE.md)。

@@ -1,5 +1,7 @@
 # Drive 四十位角色美術：固定整合入口
 
+交付 PR：[#37](https://github.com/sces5504/20261020/pull/37)，素材提交 `88c9f49`。
+
 素材固定放在 repo `art/characters/stellar40/`。40張使用者立繪原檔與40位獨立參考生成的Q版候選已備妥；本批只交美術與試套，遊戲接入交整合者。
 
 - [完整交接](../../../docs/handoffs/stellar40-character-art-20261025.md)

@@ -136,6 +136,8 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     knob.style.transform = "";
     g.movement = { x: 0, y: 0 };
   };
+  // iOS ignores maximum-scale: stop page pinch-zoom; the map's own pinch uses pointer events.
+  root.addEventListener("gesturestart", (e) => e.preventDefault());
   stick.addEventListener("pointerdown", (e) => {
     stickId = e.pointerId;
     stick.setPointerCapture(e.pointerId);

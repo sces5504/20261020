@@ -1,0 +1,1617 @@
+{
+  "battleInputFingerprint": "e66999df19e1e223b1b6a39949f7fa2d9e24e59b47c11f7b6a8a7a46b90eb6a5",
+  "scope": "Only the new story encounters; original world battles not rerun. Scripted player movement, autoskills, declared levels. No health locks or altered combat.",
+  "battles": [
+    {
+      "id": "chronicle3:encounter.leo-ambush",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 23,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 20.72,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 1491,
+        "owned-2": 1110,
+        "owned-3": 1214
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.leo-escape",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 23,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 16,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 1590,
+        "owned-2": 1003,
+        "owned-3": 1080
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": [
+        {
+          "name": "Battleship02",
+          "hp": 2358
+        }
+      ]
+    },
+    {
+      "id": "chronicle3:encounter.sentry-search",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 25,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 19.2,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 1570,
+        "owned-2": 1138,
+        "owned-3": 1274
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.abandoned-base",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 27,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 20.58,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 1685,
+        "owned-2": 1256,
+        "owned-3": 1380
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.hunter-rescue",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 27,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 19.2,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 1651,
+        "owned-2": 1200,
+        "owned-3": 1342
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.sentry-trail",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 29,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 22.05,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 1785,
+        "owned-2": 1341,
+        "owned-3": 1447
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.regulus-rescue",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 29,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 22.4,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 1843,
+        "owned-2": 1348,
+        "owned-3": 1452
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.receiver-base",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 30,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 25.48,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 1789,
+        "owned-2": 1234,
+        "owned-3": 1482
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.aitsu-first",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 42,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 18,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2465,
+        "owned-2": 1709,
+        "owned-3": 1917
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": [
+        {
+          "name": "Aitsu",
+          "hp": 10860
+        }
+      ]
+    },
+    {
+      "id": "chronicle3:encounter.arkas",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 42,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 18,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2465,
+        "owned-2": 1576,
+        "owned-3": 1705
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": [
+        {
+          "name": "Battleship02",
+          "hp": 3871
+        },
+        {
+          "name": "無人機",
+          "hp": 1936
+        },
+        {
+          "name": "無人機",
+          "hp": 2131
+        },
+        {
+          "name": "無人機",
+          "hp": 2159
+        }
+      ]
+    },
+    {
+      "id": "chronicle3:encounter.arkas-help",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 30,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 20.37,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 1808,
+        "owned-2": 1343,
+        "owned-3": 1459
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.aitsu-gather",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 52,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 15,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2926,
+        "owned-2": 2033,
+        "owned-3": 2276
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": [
+        {
+          "name": "Aitsu",
+          "hp": 13204
+        }
+      ]
+    },
+    {
+      "id": "chronicle3:encounter.aitsu-release",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 52,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 45.55,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2619,
+        "owned-2": 2033,
+        "owned-3": 2276
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.defense-material-a",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 31,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 23.08,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 1807,
+        "owned-2": 1348,
+        "owned-3": 1505
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.defense-material-b",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 31,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 17.52,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 1853,
+        "owned-2": 1374,
+        "owned-3": 1473
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.defense-material-c",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 31,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 20.97,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 1887,
+        "owned-2": 1387,
+        "owned-3": 1523
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.leo-defense",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 32,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 40.02,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 1886,
+        "owned-2": 1376,
+        "owned-3": 1328
+      },
+      "facilityResult": {
+        "facilities": {
+          "chronicle3:facility.leo-turret": {
+            "hp": 15899,
+            "destroyed": false
+          }
+        },
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": [
+        {
+          "name": "Bomber01",
+          "hp": 290
+        },
+        {
+          "name": "Bomber01",
+          "hp": 406
+        },
+        {
+          "name": "Frigate01",
+          "hp": 1693
+        },
+        {
+          "name": "Corvette01",
+          "hp": 784
+        }
+      ]
+    },
+    {
+      "id": "chronicle3:encounter.jupiter-stop",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 32,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 30.02,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 1938,
+        "owned-2": 1448,
+        "owned-3": 1559
+      },
+      "facilityResult": {
+        "facilities": {
+          "chronicle3:facility.leo-turret": {
+            "hp": 18000,
+            "destroyed": false
+          }
+        },
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.samael",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 25,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 20,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 1519,
+        "owned-2": 608,
+        "owned-3": 1308
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": [
+        {
+          "name": "高速母艦 Samael",
+          "hp": 112971
+        }
+      ]
+    },
+    {
+      "id": "chronicle3:encounter.samael-final",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 25,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 181.83,
+      "survivors": 1,
+      "hp": {
+        "owned-1": 0,
+        "owned-2": 1156,
+        "owned-3": 0
+      },
+      "facilityResult": {
+        "facilities": {
+          "chronicle3:facility.blackhole-cannon": {
+            "hp": 9150,
+            "destroyed": false
+          }
+        },
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.energy-a",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 34,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 24,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2024,
+        "owned-2": 1315,
+        "owned-3": 1597
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.energy-b",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 34,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 25.48,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 1800,
+        "owned-2": 1362,
+        "owned-3": 1584
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.southern-wormhole",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 35,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 24.28,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 1876,
+        "owned-2": 1422,
+        "owned-3": 1661
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.drift-patrol",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 45,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 20,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2604,
+        "owned-2": 1835,
+        "owned-3": 2025
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": [
+        {
+          "name": "Frigate01",
+          "hp": 1153
+        },
+        {
+          "name": "Frigate01",
+          "hp": 909
+        },
+        {
+          "name": "Corvette01",
+          "hp": 1029
+        },
+        {
+          "name": "Bomber01",
+          "hp": 523
+        },
+        {
+          "name": "PatrolKiller01",
+          "hp": 51
+        },
+        {
+          "name": "Fighter02",
+          "hp": 870
+        }
+      ]
+    },
+    {
+      "id": "chronicle3:encounter.magellan-rescue",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 37,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 12.47,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2215,
+        "owned-2": 1585,
+        "owned-3": 1738
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.acamar-rescue",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 40,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 30.13,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2183,
+        "owned-2": 1606,
+        "owned-3": 1653
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.return-wormhole",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 39,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 24.67,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2065,
+        "owned-2": 1574,
+        "owned-3": 1775
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.reunited-defense",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 39,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 24.02,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2287,
+        "owned-2": 1375,
+        "owned-3": 1756
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.seal-material-a",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 40,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 23.95,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2349,
+        "owned-2": 1666,
+        "owned-3": 1764
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.seal-material-b",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 40,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 25.8,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2050,
+        "owned-2": 1549,
+        "owned-3": 1795
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.haitsu",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 42,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 55.22,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 1936,
+        "owned-2": 1780,
+        "owned-3": 1917
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.magellan-conflict",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 42,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 33.07,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2320,
+        "owned-2": 1463,
+        "owned-3": 1812
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.hijack-material-a",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 42,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 22.15,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2348,
+        "owned-2": 1583,
+        "owned-3": 1887
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.hijack-material-b",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 42,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 24.45,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2388,
+        "owned-2": 1608,
+        "owned-3": 1849
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.hijack-material-c",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 42,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 21.35,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2320,
+        "owned-2": 1546,
+        "owned-3": 1847
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.mothership-hijack",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 42,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 35.02,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2465,
+        "owned-2": 1441,
+        "owned-3": 1917
+      },
+      "facilityResult": {
+        "facilities": {
+          "chronicle3:facility.blocker": {
+            "hp": 18707,
+            "destroyed": false
+          }
+        },
+        "activated": {
+          "chronicle3:facility.blocker": 2
+        }
+      },
+      "shieldSeen": true,
+      "jamSeen": true,
+      "restored": false,
+      "remaining": [
+        {
+          "name": "Mothership01",
+          "hp": 13391
+        }
+      ]
+    },
+    {
+      "id": "chronicle3:encounter.traitor-fleet",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 44,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 17.25,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2520,
+        "owned-2": 1847,
+        "owned-3": 1979
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.kiraba-last",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 44,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 30.02,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2461,
+        "owned-2": 1639,
+        "owned-3": 1908
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": [
+        {
+          "name": "Kiraba",
+          "hp": 11351
+        },
+        {
+          "name": "Mitsuba",
+          "hp": 12931
+        }
+      ]
+    },
+    {
+      "id": "chronicle3:encounter.scouting-fleet",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 52,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 30.03,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2711,
+        "owned-2": 1554,
+        "owned-3": 2095
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.stage-material-a",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 52,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 24.75,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2903,
+        "owned-2": 1890,
+        "owned-3": 2154
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.stage-material-b",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 52,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 31.67,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2742,
+        "owned-2": 1964,
+        "owned-3": 2276
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.stage-defense",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 52,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 30.02,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2864,
+        "owned-2": 1991,
+        "owned-3": 2222
+      },
+      "facilityResult": {
+        "facilities": {
+          "chronicle3:facility.stage": {
+            "hp": 23723,
+            "destroyed": false
+          },
+          "chronicle3:facility.stage-turret": {
+            "hp": 19606,
+            "destroyed": false
+          }
+        },
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.beam-material-a",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 53,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 29.32,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2842,
+        "owned-2": 1989,
+        "owned-3": 2258
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.beam-material-b",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 53,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 39.72,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2881,
+        "owned-2": 1808,
+        "owned-3": 2258
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.beam-material-c",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 53,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 46.57,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2721,
+        "owned-2": 1417,
+        "owned-3": 2077
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.stage-defense-two",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 54,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 35.02,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2990,
+        "owned-2": 2180,
+        "owned-3": 2348
+      },
+      "facilityResult": {
+        "facilities": {
+          "chronicle3:facility.stage": {
+            "hp": 24000,
+            "destroyed": false
+          },
+          "chronicle3:facility.stage-turret": {
+            "hp": 19553,
+            "destroyed": false
+          },
+          "chronicle3:facility.beam-turret": {
+            "hp": 21652,
+            "destroyed": false
+          }
+        },
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.tracker-material-a",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 55,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 37.18,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 3002,
+        "owned-2": 2118,
+        "owned-3": 2383
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.tracker-material-b",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 55,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 31.67,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2798,
+        "owned-2": 1935,
+        "owned-3": 2088
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.morugo-scout",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 57,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 18,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 3089,
+        "owned-2": 2280,
+        "owned-3": 2455
+      },
+      "facilityResult": {
+        "facilities": {
+          "chronicle3:facility.scout-turret": {
+            "hp": 15870,
+            "destroyed": false
+          }
+        },
+        "activated": {}
+      },
+      "shieldSeen": true,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": [
+        {
+          "name": "Morugo",
+          "hp": 24457
+        }
+      ]
+    },
+    {
+      "id": "chronicle3:encounter.shield-sample-a",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 56,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 64.4,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 3105,
+        "owned-2": 2213,
+        "owned-3": 2419
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": true,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.shield-sample-b",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 56,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 98.33,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2950,
+        "owned-2": 2182,
+        "owned-3": 2364
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": true,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.shield-sample-c",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 56,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 58.23,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2953,
+        "owned-2": 2221,
+        "owned-3": 2321
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": true,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.idol-defense",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 57,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 35.02,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 3138,
+        "owned-2": 2280,
+        "owned-3": 2455
+      },
+      "facilityResult": {
+        "facilities": {
+          "chronicle3:facility.stage": {
+            "hp": 23846,
+            "destroyed": false
+          },
+          "chronicle3:facility.stage-turret": {
+            "hp": 19855,
+            "destroyed": false
+          },
+          "chronicle3:facility.beam-turret": {
+            "hp": 21959,
+            "destroyed": false
+          }
+        },
+        "activated": {}
+      },
+      "shieldSeen": true,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": [
+        {
+          "name": "Ramer01",
+          "hp": 1266
+        }
+      ]
+    },
+    {
+      "id": "chronicle3:encounter.jammer-material-a",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 58,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 39.57,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 3053,
+        "owned-2": 2117,
+        "owned-3": 2337
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.jammer-material-b",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 58,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 32.15,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 2953,
+        "owned-2": 1992,
+        "owned-3": 2038
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.morugo-final",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 62,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 56.35,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 3387,
+        "owned-2": 2446,
+        "owned-3": 2634
+      },
+      "facilityResult": {
+        "facilities": {
+          "chronicle3:facility.stage": {
+            "hp": 24000,
+            "destroyed": false
+          },
+          "chronicle3:facility.stage-turret": {
+            "hp": 20000,
+            "destroyed": false
+          },
+          "chronicle3:facility.beam-turret": {
+            "hp": 19971,
+            "destroyed": false
+          },
+          "chronicle3:facility.nullifier": {
+            "hp": 22000,
+            "destroyed": false
+          }
+        },
+        "activated": {
+          "chronicle3:facility.nullifier": 2
+        }
+      },
+      "shieldSeen": true,
+      "jamSeen": true,
+      "restored": true,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.scan-wormhole",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 3,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 3.02,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 668,
+        "owned-2": 483,
+        "owned-3": 520
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.scan-aegir",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 3,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 3.02,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 668,
+        "owned-2": 483,
+        "owned-3": 520
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.scan-residue-a",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 3,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 3.02,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 668,
+        "owned-2": 483,
+        "owned-3": 520
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.scan-residue-b",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 3,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 3.02,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 668,
+        "owned-2": 483,
+        "owned-3": 520
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.scan-residue-c",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 3,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 3.02,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 668,
+        "owned-2": 483,
+        "owned-3": 520
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    },
+    {
+      "id": "chronicle3:encounter.scan-enemy-base",
+      "team": "initial three starters; no resonance/research; full health",
+      "teamLevel": 3,
+      "seed": 42,
+      "victory": true,
+      "reset": false,
+      "seconds": 3.02,
+      "survivors": 3,
+      "hp": {
+        "owned-1": 668,
+        "owned-2": 483,
+        "owned-3": 520
+      },
+      "facilityResult": {
+        "facilities": {},
+        "activated": {}
+      },
+      "shieldSeen": false,
+      "jamSeen": false,
+      "restored": false,
+      "remaining": []
+    }
+  ],
+  "reusedUnchangedBattles": 56
+}

@@ -1,0 +1,12 @@
+{
+  "baseline": "69fb108ee9ca91dcd7a105f60e7462ee446d4a73",
+  "extension": "extensions/chronicle-next-three.json",
+  "mediaManifest": "art/story-next-three/media.json",
+  "appendAfter": "extensions/stellar40-art.json",
+  "sharedChangesRequired": [
+    "Append extension to content/manifest.json extensions; preserve existing order and all presentation bindings.",
+    "Append the 12 mediaManifest entries to art/catalog/extension-assets.json; do not replace existing entries.",
+    "Run normal content build and one integration release gate; do not hand-edit generated runtime or public media."
+  ],
+  "newCoreMechanicsRequired": false
+}

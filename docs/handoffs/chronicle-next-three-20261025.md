@@ -69,3 +69,48 @@
 先接PR36正式角色ID，按獅子座→南天→大犬座製作；先交一段Luyten／沃爾夫359代表通訊與一個調查任務，核對來源speaker、字數與手機換行、飛行門檻、勝敗重載與獎勵，再擴充35節。新包獨立命名空間，保留前24節與舊存檔；角色取得與獎勵走資料關聯，整合者檢查新增共鳴池和獎勵的經濟影響。
 
 正式門檻：必要初始化略過仍執行；刷新／重試不重領；舊存檔能接續；角色／立繪引用有效；戰中通訊非阻斷；手機可讀。遵守減少重複測試偏好，只測本次受影響內容，完整發布檢查留整合發布一次。本次僅盤點，未啟用PR36、未新增35節內容、未執行遊戲驗收，也未宣稱商業品質已驗收。
+
+---
+
+## 已完成製作（使用者回覆前置完成後，取代上方舊缺口）
+
+同步main `69fb108ee9ca91dcd7a105f60e7462ee446d4a73`，已整合72角色、美術與護盾／設施。保留先前盤點作歷史；22人的缺角色／缺圖不再是阻塞。依使用者直接授權完成敵方立繪與特殊素材，未改共享核心或他人包。
+
+正式簡報：[chronicle-next-three](../design/chronicle-next-three.md)。本輪完整交付：
+
+- `content/extensions/chronicle-next-three.json`，`chronicle3:package.next-three@0.1.0`：35節、625框、56場戰鬥＋6處無守軍掃描、8設施、3新演員、3非收藏交戰定義（Samael、十字架二、Canis近戰客席）。依賴核心／世界／前24節／story40／stellar40正式版本，沒有新增共鳴角色或掉落。
+- `content/story-next-three/dialogue.txt`與`sources.json`：逐框來源、章節label→首row、遭遇適配與預算。編譯器 `tools/story-next-three/build.py`，不修改研究原表。
+- `art/story-next-three/masters`原始候選及`web`衍生圖，12項；`media.json`給整合，`source-records.json`記Q圖／風格來源、hash、尺寸、alpha與檢視狀態。不是原版素材／使用者人工批准。
+- `tools/story-next-three/load.mts` 顯式assemble候選，根manifest不啟用；`verify.mts`／`browser.mts`為本包隔離驗收，不動正式存檔。媒體在browser時只複製到忽略的dist測試目錄。
+
+### 已驗證與精簡測試紀錄
+
+1. 研究包verify／SQLite建立通過；根程式build（含tsc）通過。根build仍是已啟用main內容，候選另外assemble，不能把此命令當候選已上線。
+2. 先驗獅子座第一任務兩場，再驗其餘54場：56/56勝利，seed42，初始三人、敵方等級＋2、零研究／同調、自動技能與明示走位。沒有健康鎖、強制勝利或修改Combat。最慢Samael決戰181.83秒，護盾樣本二98.33秒。固定操作是驗證條件，非所有隊伍／打法勝利保證。
+3. 首輪625框／35節交易流程完成。發現同區position條件沒有導航按鈕，改六處調查為可導航的空守軍event，三秒掃描；不改核心、不加假敵人或默默省略調查。新6/6掃描通過，原56場資料fingerprint相同，沿用成功證據未重跑。
+4. 35節順序、略過不越過門檻、JSON重載、35次實際領獎與第二次拒絕、六次正式建造扣款及重送receipt不重扣、六個調查初始化各一次、章末設施撤除均通過。必要舞台HP=0強制邊界確認失敗與retry:restore，明標非自然戰敗實玩。Morugo最終戰實際看到45秒干擾啟動、到期恢復後仍可近戰完成。
+5. 桌機1440×1000與觸控390×844 DPR2：Luyten／沃爾夫開場、文字／按鈕不重疊、首場真實伏擊勝利、正式設施建造按鈕與扣款重載、3敵方立繪、各章情境與最長框、12媒體HTTP／SHA／尺寸／decode、正式save隔離通過。六調查更改後只補跑雙viewport調查流程；導航時第一個斷言讀到尚未自動保存的舊座標，補等1.3秒再讀存檔，沒有改遊戲或force點擊。補跑雙viewport帶建造章節的唯讀回看，錢包、設施、receipts不變。
+6. 未重跑未變的134核心／671世界與整套發布；完整發布閘門留給啟用整合一次。收據為 `docs/verification/chronicle-next-battles.json`、`chronicle-next-content.json`、`chronicle-next-browser.json`。真機與人工商業品質未驗。
+
+### 給核心整合者的具體下一步
+
+變更單：`content/story-next-three/integration.json`。沒有待補核心機制；只需兩項共享資料接入：
+
+1. 根 `content/manifest.json` 的extensions末尾加入 `extensions/chronicle-next-three.json`，保留既有順序／全部bindings。不可覆寫前24節或把包內容貼進核心pack。
+2. 把 `art/story-next-three/media.json` 的12筆追加至 `art/catalog/extension-assets.json`；現有build會依hash複製，無需改複製程式。不能只啟用包卻漏媒體，也不能把dist測試副本當來源。
+3. 用正常build重新產出，再做舊存檔接續、主線卡跨章航路、設施與最終護盾代表路徑、共鳴／既有主線回歸及一次完整release（保留test:polish等）。發布仍只stage的site，公開SHA依實際結果記錄。
+4. 經濟：新增每種9000；建造每種540，淨新增每種8460。戰場本身零獎勵、零產能、無角色掉落；既有配方／同調不變。請依實玩與既有每日／被動產量審視成長曲線；本包不假稱新帳號零農達成全部推薦等級。
+
+可重現：
+
+```bash
+source scripts/env.sh
+python3 tools/story-next-three/build.py
+node --import tsx tools/story-next-three/verify.mts
+npm run build
+node --import tsx tools/story-next-three/browser.mts
+```
+
+第一次完整verify不要帶`--resume`；resume只在輸入fingerprint吻合時沿用成功戰鬥，不能在資料改變後偽稱已驗。browser的`--survey-only`／`--replay-only`需先有完整收據，只供本次局部接續，不能當初次驗收捷徑。
+
+整合後更新共享索引／公開發布狀態由整合者負責。此內容分支未合main、未啟用、未部署；PR與commit結果見下方紀錄或實際Git，不能沿用前24節PR23的發布成功當這三章成功。

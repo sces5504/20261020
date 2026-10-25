@@ -1,0 +1,1795 @@
+{
+  "baseline": "1e6604f",
+  "method": "38 missing summon-target CIDs ordered by first EventScript Chat f34/f35 or SpawnCID f09 presence; same-row appearances are tied, not speaker proof. 2 regional companions appended at chapter ends with user authorization.",
+  "scales": {
+    "hp": 3.0670575995460134,
+    "attack": 1.780185758513932,
+    "defense": 1.1428571428571428
+  },
+  "characters": [
+    {
+      "order": 1,
+      "cid": 38,
+      "key": "Luyten",
+      "name": "Luyten",
+      "chapter": 3,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 3030,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 0,
+        "f35": 38,
+        "f43": "This is temporary commanding officer Luyten."
+      },
+      "planet": null,
+      "sourceSkill": 34,
+      "sourceDescription": "Increases attack power [atkup] and critical rate [criup] for [time].",
+      "gachaRow": 37,
+      "gachaFlag": 0,
+      "recipe": [
+        480,
+        281,
+        523,
+        270
+      ],
+      "sourceRefs": {
+        "f15": 149,
+        "f16": 144,
+        "f17": 1785,
+        "f18": 11,
+        "f19": 11
+      },
+      "nativeLv1": {
+        "hp": 178,
+        "attack": 14,
+        "defense": 14
+      },
+      "converted": {
+        "hp": 546,
+        "attack": 25,
+        "defense": 16
+      }
+    },
+    {
+      "order": 2,
+      "cid": 39,
+      "key": "Regor",
+      "name": "Regor",
+      "chapter": 3,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 3086,
+        "f01": 0,
+        "f02": 47,
+        "f09": 39,
+        "f34": 0,
+        "f35": 0,
+        "f43": ""
+      },
+      "planet": null,
+      "sourceSkill": 43,
+      "sourceDescription": "Decreases received damage [dmgdec] of allies within [dist] for [time]",
+      "gachaRow": 38,
+      "gachaFlag": 1,
+      "recipe": [
+        578,
+        578,
+        578,
+        578
+      ],
+      "sourceRefs": {
+        "f15": 401,
+        "f16": 189,
+        "f17": 2895,
+        "f18": 9,
+        "f19": 10
+      },
+      "nativeLv1": {
+        "hp": 289,
+        "attack": 40,
+        "defense": 18
+      },
+      "converted": {
+        "hp": 886,
+        "attack": 71,
+        "defense": 21
+      }
+    },
+    {
+      "order": 3,
+      "cid": 40,
+      "key": "TseenKe",
+      "name": "TseenKe",
+      "chapter": 3,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 3116,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 40,
+        "f35": 39,
+        "f43": "Sentry. TseenKe."
+      },
+      "planet": null,
+      "sourceSkill": 103,
+      "sourceDescription": "Creates an area which inflicts attack power [dotattack] corrosive damage to enemies within [dist] for [skilltime] every [dotms].",
+      "gachaRow": 39,
+      "gachaFlag": 0,
+      "recipe": [
+        700,
+        300,
+        300,
+        800
+      ],
+      "sourceRefs": {
+        "f15": 141,
+        "f16": 254,
+        "f17": 4673,
+        "f18": 6,
+        "f19": 10
+      },
+      "nativeLv1": {
+        "hp": 467,
+        "attack": 14,
+        "defense": 25
+      },
+      "converted": {
+        "hp": 1432,
+        "attack": 25,
+        "defense": 29
+      }
+    },
+    {
+      "order": 4,
+      "cid": 42,
+      "key": "Alherem",
+      "name": "Alherem",
+      "chapter": 3,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 3134,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 40,
+        "f35": 42,
+        "f43": "By the way, Sis TseenKe.\\nWhy do we have to find her?"
+      },
+      "planet": null,
+      "sourceSkill": 19,
+      "sourceDescription": "Increases attack power [atkup] for [time].",
+      "gachaRow": 41,
+      "gachaFlag": 0,
+      "recipe": [
+        300,
+        700,
+        600,
+        400
+      ],
+      "sourceRefs": {
+        "f15": 508,
+        "f16": 96,
+        "f17": 1710,
+        "f18": 18,
+        "f19": 0
+      },
+      "nativeLv1": {
+        "hp": 171,
+        "attack": 50,
+        "defense": 9
+      },
+      "converted": {
+        "hp": 524,
+        "attack": 89,
+        "defense": 10
+      }
+    },
+    {
+      "order": 5,
+      "cid": 41,
+      "key": "Suhail",
+      "name": "Suhail",
+      "chapter": 3,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 3142,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 41,
+        "f35": 42,
+        "f43": "Well that is… I think Sister TseenKe is right…."
+      },
+      "planet": null,
+      "sourceSkill": 51,
+      "sourceDescription": "Increases defense [defup] for [time].",
+      "gachaRow": 40,
+      "gachaFlag": 0,
+      "recipe": [
+        700,
+        300,
+        300,
+        800
+      ],
+      "sourceRefs": {
+        "f15": 113,
+        "f16": 296,
+        "f17": 5568,
+        "f18": 5,
+        "f19": 10
+      },
+      "nativeLv1": {
+        "hp": 556,
+        "attack": 11,
+        "defense": 29
+      },
+      "converted": {
+        "hp": 1705,
+        "attack": 20,
+        "defense": 33
+      }
+    },
+    {
+      "order": 6,
+      "cid": 36,
+      "key": "Procyon",
+      "name": "南河三",
+      "chapter": 3,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 3190,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 0,
+        "f35": 36,
+        "f43": "You!\\nNot the face around here! Where did you come from?"
+      },
+      "planet": null,
+      "sourceSkill": 47,
+      "sourceDescription": "Increases evasion [evaup] of allies within [dist] for [time].",
+      "gachaRow": 35,
+      "gachaFlag": 0,
+      "recipe": [
+        315,
+        630,
+        210,
+        420
+      ],
+      "sourceRefs": {
+        "f15": 109,
+        "f16": 375,
+        "f17": 2033,
+        "f18": 11,
+        "f19": 24
+      },
+      "nativeLv1": {
+        "hp": 203,
+        "attack": 10,
+        "defense": 37
+      },
+      "converted": {
+        "hp": 623,
+        "attack": 18,
+        "defense": 42
+      }
+    },
+    {
+      "order": 7,
+      "cid": 34,
+      "key": "Regulus",
+      "name": "軒轅十四",
+      "chapter": 3,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 3259,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 34,
+        "f35": 0,
+        "f43": "Woah! Can't we be friends and not fight?\\nRegulus believe that anyone can become a friend!"
+      },
+      "planet": null,
+      "sourceSkill": 8,
+      "sourceDescription": "Increases attack speed [atkspdup] of allies within [dist] for [time].",
+      "gachaRow": 33,
+      "gachaFlag": 0,
+      "recipe": [
+        315,
+        630,
+        210,
+        420
+      ],
+      "sourceRefs": {
+        "f15": 108,
+        "f16": 435,
+        "f17": 2356,
+        "f18": 8,
+        "f19": 20
+      },
+      "nativeLv1": {
+        "hp": 235,
+        "attack": 10,
+        "defense": 43
+      },
+      "converted": {
+        "hp": 721,
+        "attack": 18,
+        "defense": 49
+      }
+    },
+    {
+      "order": 8,
+      "cid": 35,
+      "key": "Arkas",
+      "name": "Arkas",
+      "chapter": 3,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 3433,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 35,
+        "f35": 0,
+        "f43": "Ya fools fighting in front of my turf!It's so loud I can't get to sleep!"
+      },
+      "planet": null,
+      "sourceSkill": 1,
+      "sourceDescription": "Increases attack speed [atkspdup] for [time].",
+      "gachaRow": 34,
+      "gachaFlag": 0,
+      "recipe": [
+        300,
+        150,
+        400,
+        150
+      ],
+      "sourceRefs": {
+        "f15": 161,
+        "f16": 241,
+        "f17": 1785,
+        "f18": 20,
+        "f19": 28
+      },
+      "nativeLv1": {
+        "hp": 178,
+        "attack": 16,
+        "defense": 24
+      },
+      "converted": {
+        "hp": 546,
+        "attack": 28,
+        "defense": 27
+      }
+    },
+    {
+      "order": 9,
+      "cid": 47,
+      "key": "Aegir",
+      "name": "Aegir",
+      "chapter": 4,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 4133,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 0,
+        "f35": 47,
+        "f43": "………………………………."
+      },
+      "planet": null,
+      "sourceSkill": 88,
+      "sourceDescription": "Creates a cannon [dronenum] which stays for [skilltime]. Cannon HP:[hp] Atk:[atk]",
+      "gachaRow": 46,
+      "gachaFlag": 0,
+      "recipe": [
+        399,
+        165,
+        440,
+        196
+      ],
+      "sourceRefs": {
+        "f15": 233,
+        "f16": 201,
+        "f17": 1390,
+        "f18": 20,
+        "f19": 22
+      },
+      "nativeLv1": {
+        "hp": 139,
+        "attack": 23,
+        "defense": 20
+      },
+      "converted": {
+        "hp": 426,
+        "attack": 41,
+        "defense": 23
+      }
+    },
+    {
+      "order": 10,
+      "cid": 50,
+      "key": "OTS44",
+      "name": "OTS44",
+      "chapter": 4,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 4316,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 48,
+        "f35": 50,
+        "f43": "OTS, can you check the coordinate of where we are?"
+      },
+      "planet": null,
+      "sourceSkill": 13,
+      "sourceDescription": "Increases attack speed [atkspdup] and critical rate [criup] for [time].",
+      "gachaRow": 49,
+      "gachaFlag": 0,
+      "recipe": [
+        420,
+        263,
+        525,
+        263
+      ],
+      "sourceRefs": {
+        "f15": 172,
+        "f16": 155,
+        "f17": 2006,
+        "f18": 11,
+        "f19": 10
+      },
+      "nativeLv1": {
+        "hp": 200,
+        "attack": 17,
+        "defense": 15
+      },
+      "converted": {
+        "hp": 613,
+        "attack": 30,
+        "defense": 17
+      }
+    },
+    {
+      "order": 11,
+      "cid": 51,
+      "key": "DEN",
+      "name": "DEN",
+      "chapter": 4,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 4319,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 48,
+        "f35": 51,
+        "f43": "Oh my~ Can we not follow it anymore?"
+      },
+      "planet": null,
+      "sourceSkill": 123,
+      "sourceDescription": "Randomly fires forward [shootcount] projectiles of [atk] damage.",
+      "gachaRow": 50,
+      "gachaFlag": 0,
+      "recipe": [
+        422,
+        267,
+        605,
+        289
+      ],
+      "sourceRefs": {
+        "f15": 156,
+        "f16": 116,
+        "f17": 1485,
+        "f18": 11,
+        "f19": 9
+      },
+      "nativeLv1": {
+        "hp": 148,
+        "attack": 15,
+        "defense": 11
+      },
+      "converted": {
+        "hp": 454,
+        "attack": 27,
+        "defense": 13
+      }
+    },
+    {
+      "order": 12,
+      "cid": 43,
+      "key": "Musca",
+      "name": "Musca",
+      "chapter": 4,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 4402,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 33,
+        "f35": 43,
+        "f43": "Musca Planet."
+      },
+      "planet": null,
+      "sourceSkill": 33,
+      "sourceDescription": "Increases attack power [atkup] and critical rate [criup] for [time].",
+      "gachaRow": 42,
+      "gachaFlag": 0,
+      "recipe": [
+        420,
+        263,
+        525,
+        263
+      ],
+      "sourceRefs": {
+        "f15": 141,
+        "f16": 163,
+        "f17": 1943,
+        "f18": 11,
+        "f19": 12
+      },
+      "nativeLv1": {
+        "hp": 194,
+        "attack": 14,
+        "defense": 16
+      },
+      "converted": {
+        "hp": 595,
+        "attack": 25,
+        "defense": 18
+      }
+    },
+    {
+      "order": 13,
+      "cid": 44,
+      "key": "Acrux",
+      "name": "十字架二",
+      "chapter": 4,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 4438,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 44,
+        "f35": 49,
+        "f43": "It will only make it harder for by holding on. \\nPurely going to dust will be less painful?\\nWell. this is good for me though~"
+      },
+      "planet": null,
+      "sourceSkill": 38,
+      "sourceDescription": "Increases attack power [atkup] and critical rate [criup] of allies within [dist] for [time].",
+      "gachaRow": 43,
+      "gachaFlag": 0,
+      "recipe": [
+        315,
+        630,
+        210,
+        420
+      ],
+      "sourceRefs": {
+        "f15": 143,
+        "f16": 361,
+        "f17": 2223,
+        "f18": 11,
+        "f19": 20
+      },
+      "nativeLv1": {
+        "hp": 222,
+        "attack": 14,
+        "defense": 36
+      },
+      "converted": {
+        "hp": 681,
+        "attack": 25,
+        "defense": 41
+      }
+    },
+    {
+      "order": 14,
+      "cid": 49,
+      "key": "Acamar",
+      "name": "Acamar",
+      "chapter": 4,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 4438,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 44,
+        "f35": 49,
+        "f43": "It will only make it harder for by holding on. \\nPurely going to dust will be less painful?\\nWell. this is good for me though~"
+      },
+      "planet": null,
+      "sourceSkill": 42,
+      "sourceDescription": "Increases defense [defup] of allies within [dist] for [time].",
+      "gachaRow": 48,
+      "gachaFlag": 0,
+      "recipe": [
+        315,
+        630,
+        210,
+        420
+      ],
+      "sourceRefs": {
+        "f15": 144,
+        "f16": 304,
+        "f17": 1653,
+        "f18": 10,
+        "f19": 19
+      },
+      "nativeLv1": {
+        "hp": 165,
+        "attack": 14,
+        "defense": 30
+      },
+      "converted": {
+        "hp": 506,
+        "attack": 25,
+        "defense": 34
+      }
+    },
+    {
+      "order": 15,
+      "cid": 46,
+      "key": "Ran",
+      "name": "Ran",
+      "chapter": 4,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 4652,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 192,
+        "f35": 46,
+        "f43": "Yes- I was lucky-. \\nDestroyed just right-"
+      },
+      "planet": null,
+      "sourceSkill": 40,
+      "sourceDescription": "All attacks become critical for [time].",
+      "gachaRow": 45,
+      "gachaFlag": 0,
+      "recipe": [
+        497,
+        248,
+        539,
+        297
+      ],
+      "sourceRefs": {
+        "f15": 186,
+        "f16": 106,
+        "f17": 1437,
+        "f18": 11,
+        "f19": 9
+      },
+      "nativeLv1": {
+        "hp": 143,
+        "attack": 18,
+        "defense": 10
+      },
+      "converted": {
+        "hp": 439,
+        "attack": 32,
+        "defense": 11
+      }
+    },
+    {
+      "order": 16,
+      "cid": 45,
+      "key": "Achernar",
+      "name": "水委一",
+      "chapter": 4,
+      "placement": "inferred-regional-companion",
+      "event": null,
+      "planet": "original:planet.33",
+      "sourceSkill": 41,
+      "sourceDescription": "Increases defense [defup] of allies within [dist] for [time].",
+      "gachaRow": 44,
+      "gachaFlag": 0,
+      "recipe": [
+        300,
+        600,
+        200,
+        400
+      ],
+      "sourceRefs": {
+        "f15": 163,
+        "f16": 301,
+        "f17": 2090,
+        "f18": 11,
+        "f19": 18
+      },
+      "nativeLv1": {
+        "hp": 209,
+        "attack": 16,
+        "defense": 30
+      },
+      "converted": {
+        "hp": 641,
+        "attack": 28,
+        "defense": 34
+      }
+    },
+    {
+      "order": 17,
+      "cid": 52,
+      "key": "Sirius",
+      "name": "天狼星",
+      "chapter": 5,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 5182,
+        "f01": 0,
+        "f02": 47,
+        "f09": 52,
+        "f34": 0,
+        "f35": 0,
+        "f43": ""
+      },
+      "planet": null,
+      "sourceSkill": 22,
+      "sourceDescription": "Increases attack power [atkup] of allies within [dist] for [time].",
+      "gachaRow": 51,
+      "gachaFlag": 0,
+      "recipe": [
+        315,
+        630,
+        210,
+        420
+      ],
+      "sourceRefs": {
+        "f15": 157,
+        "f16": 272,
+        "f17": 1558,
+        "f18": 11,
+        "f19": 16
+      },
+      "nativeLv1": {
+        "hp": 155,
+        "attack": 15,
+        "defense": 27
+      },
+      "converted": {
+        "hp": 475,
+        "attack": 27,
+        "defense": 31
+      }
+    },
+    {
+      "order": 18,
+      "cid": 56,
+      "key": "Canis",
+      "name": "Canis",
+      "chapter": 5,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 5203,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 56,
+        "f35": 0,
+        "f43": "Everyone! Focus more, and let’s try again."
+      },
+      "planet": null,
+      "sourceSkill": 54,
+      "sourceDescription": "Increases attack power [atkup] and defense [defup] within [dist] for [time]",
+      "gachaRow": 55,
+      "gachaFlag": 0,
+      "recipe": [
+        732,
+        383,
+        310,
+        915
+      ],
+      "sourceRefs": {
+        "f15": 148,
+        "f16": 229,
+        "f17": 5369,
+        "f18": 6,
+        "f19": 10
+      },
+      "nativeLv1": {
+        "hp": 536,
+        "attack": 14,
+        "defense": 22
+      },
+      "converted": {
+        "hp": 1644,
+        "attack": 25,
+        "defense": 25
+      }
+    },
+    {
+      "order": 19,
+      "cid": 57,
+      "key": "Wezen",
+      "name": "弧矢一",
+      "chapter": 5,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 5204,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 56,
+        "f35": 57,
+        "f43": "Aww...Can we have just a short break…"
+      },
+      "planet": null,
+      "sourceSkill": 100,
+      "sourceDescription": "Creates an area of fire which inflicts attack power [dotattack] for [skilltime] to enemies within [dist] every [dotms] .",
+      "gachaRow": 56,
+      "gachaFlag": 0,
+      "recipe": [
+        700,
+        300,
+        300,
+        800
+      ],
+      "sourceRefs": {
+        "f15": 119,
+        "f16": 265,
+        "f17": 4972,
+        "f18": 5,
+        "f19": 10
+      },
+      "nativeLv1": {
+        "hp": 497,
+        "attack": 11,
+        "defense": 26
+      },
+      "converted": {
+        "hp": 1524,
+        "attack": 20,
+        "defense": 30
+      }
+    },
+    {
+      "order": 20,
+      "cid": 59,
+      "key": "Furud",
+      "name": "Furud",
+      "chapter": 5,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 5208,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 56,
+        "f35": 59,
+        "f43": "Furud! Run away silently!"
+      },
+      "planet": null,
+      "sourceSkill": 21,
+      "sourceDescription": "Increases attack power [atkup] of allies within [dist] for [time].",
+      "gachaRow": 58,
+      "gachaFlag": 0,
+      "recipe": [
+        300,
+        600,
+        200,
+        400
+      ],
+      "sourceRefs": {
+        "f15": 110,
+        "f16": 460,
+        "f17": 2090,
+        "f18": 8,
+        "f19": 21
+      },
+      "nativeLv1": {
+        "hp": 209,
+        "attack": 11,
+        "defense": 46
+      },
+      "converted": {
+        "hp": 641,
+        "attack": 20,
+        "defense": 53
+      }
+    },
+    {
+      "order": 21,
+      "cid": 58,
+      "key": "Aludra",
+      "name": "弧矢二",
+      "chapter": 5,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 5212,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 56,
+        "f35": 58,
+        "f43": "Aludra, I’m sorry, please take care of kids for me.\\nYou have more experience than me. Please let me know what I should learn."
+      },
+      "planet": null,
+      "sourceSkill": 67,
+      "sourceDescription": "Creates a barrier within [dist]\\nwhich has a [percent] chance to reflect projectiles for [time].\\nReflected projectiles are 100% of opponent's damage",
+      "gachaRow": 57,
+      "gachaFlag": 0,
+      "recipe": [
+        770,
+        347,
+        337,
+        862
+      ],
+      "sourceRefs": {
+        "f15": 156,
+        "f16": 205,
+        "f17": 4623,
+        "f18": 5,
+        "f19": 9
+      },
+      "nativeLv1": {
+        "hp": 462,
+        "attack": 15,
+        "defense": 20
+      },
+      "converted": {
+        "hp": 1417,
+        "attack": 27,
+        "defense": 23
+      }
+    },
+    {
+      "order": 22,
+      "cid": 53,
+      "key": "Bayes",
+      "name": "Bayes",
+      "chapter": 5,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 5222,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 56,
+        "f35": 53,
+        "f43": "That’s right! The error is less than 2%, but it is still very accurate!"
+      },
+      "planet": null,
+      "sourceSkill": 114,
+      "sourceDescription": "When hit, inflicts [atk] damage and [atksplashdmg] to all enemies within [splashrange] and knocks them back. 2 bullets",
+      "gachaRow": 52,
+      "gachaFlag": 0,
+      "recipe": [
+        420,
+        263,
+        525,
+        263
+      ],
+      "sourceRefs": {
+        "f15": 149,
+        "f16": 150,
+        "f17": 1785,
+        "f18": 9,
+        "f19": 12
+      },
+      "nativeLv1": {
+        "hp": 178,
+        "attack": 14,
+        "defense": 15
+      },
+      "converted": {
+        "hp": 546,
+        "attack": 25,
+        "defense": 17
+      }
+    },
+    {
+      "order": 23,
+      "cid": 60,
+      "key": "Naos",
+      "name": "弧矢增二十二",
+      "chapter": 5,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 5748,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 56,
+        "f35": 60,
+        "f43": "Excuse me~\\nI think it’s serious, let me help you too."
+      },
+      "planet": null,
+      "sourceSkill": 52,
+      "sourceDescription": "Increases defense [defup] for [time].",
+      "gachaRow": 59,
+      "gachaFlag": 0,
+      "recipe": [
+        735,
+        315,
+        315,
+        840
+      ],
+      "sourceRefs": {
+        "f15": 127,
+        "f16": 302,
+        "f17": 5369,
+        "f18": 4,
+        "f19": 10
+      },
+      "nativeLv1": {
+        "hp": 536,
+        "attack": 12,
+        "defense": 30
+      },
+      "converted": {
+        "hp": 1644,
+        "attack": 21,
+        "defense": 34
+      }
+    },
+    {
+      "order": 24,
+      "cid": 54,
+      "key": "Rufus",
+      "name": "Rufus",
+      "chapter": 5,
+      "placement": "inferred-regional-companion",
+      "event": null,
+      "planet": "original:planet.42",
+      "sourceSkill": 12,
+      "sourceDescription": "Increases attack speed [atkspdup] and critical rate [criup] for [time].",
+      "gachaRow": 53,
+      "gachaFlag": 0,
+      "recipe": [
+        400,
+        250,
+        500,
+        250
+      ],
+      "sourceRefs": {
+        "f15": 177,
+        "f16": 108,
+        "f17": 1406,
+        "f18": 12,
+        "f19": 10
+      },
+      "nativeLv1": {
+        "hp": 140,
+        "attack": 17,
+        "defense": 10
+      },
+      "converted": {
+        "hp": 429,
+        "attack": 30,
+        "defense": 11
+      }
+    },
+    {
+      "order": 25,
+      "cid": 67,
+      "key": "Kruger60",
+      "name": "Kruger60",
+      "chapter": 6,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 6047,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 322,
+        "f35": 67,
+        "f43": "This is Kruger, I'm going."
+      },
+      "planet": null,
+      "sourceSkill": 4,
+      "sourceDescription": "Increases attack speed [atkspdup] for [time].",
+      "gachaRow": 66,
+      "gachaFlag": 0,
+      "recipe": [
+        400,
+        250,
+        500,
+        250
+      ],
+      "sourceRefs": {
+        "f15": 183,
+        "f16": 113,
+        "f17": 1453,
+        "f18": 12,
+        "f19": 10
+      },
+      "nativeLv1": {
+        "hp": 145,
+        "attack": 18,
+        "defense": 11
+      },
+      "converted": {
+        "hp": 445,
+        "attack": 32,
+        "defense": 13
+      }
+    },
+    {
+      "order": 26,
+      "cid": 68,
+      "key": "Kochab",
+      "name": "北極二",
+      "chapter": 6,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 6085,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 0,
+        "f35": 68,
+        "f43": "Why is it so noisy! What are you doing, all guards!"
+      },
+      "planet": null,
+      "sourceSkill": 36,
+      "sourceDescription": "Increases attack power [atkup] and critical rate [criup] for [time].",
+      "gachaRow": 67,
+      "gachaFlag": 0,
+      "recipe": [
+        363,
+        724,
+        752,
+        396
+      ],
+      "sourceRefs": {
+        "f15": 475,
+        "f16": 122,
+        "f17": 1957,
+        "f18": 16,
+        "f19": 0
+      },
+      "nativeLv1": {
+        "hp": 195,
+        "attack": 47,
+        "defense": 12
+      },
+      "converted": {
+        "hp": 598,
+        "attack": 84,
+        "defense": 14
+      }
+    },
+    {
+      "order": 27,
+      "cid": 66,
+      "key": "Vega",
+      "name": "織女星",
+      "chapter": 6,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 6099,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 68,
+        "f35": 66,
+        "f43": "Calm down. Kochab, the queen's regent."
+      },
+      "planet": null,
+      "sourceSkill": 68,
+      "sourceDescription": "Increases defense [defup] of allies within [dist] for [time] and resists stun.",
+      "gachaRow": 65,
+      "gachaFlag": 0,
+      "recipe": [
+        297,
+        726,
+        260,
+        396
+      ],
+      "sourceRefs": {
+        "f15": 136,
+        "f16": 327,
+        "f17": 1767,
+        "f18": 11,
+        "f19": 18
+      },
+      "nativeLv1": {
+        "hp": 176,
+        "attack": 13,
+        "defense": 32
+      },
+      "converted": {
+        "hp": 540,
+        "attack": 23,
+        "defense": 37
+      }
+    },
+    {
+      "order": 28,
+      "cid": 61,
+      "key": "Polaris",
+      "name": "北極星",
+      "chapter": 6,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 6116,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 6,
+        "f35": 61,
+        "f43": "Are you Polaris?\\nI am Jupiter."
+      },
+      "planet": null,
+      "sourceSkill": 80,
+      "sourceDescription": "Creates a black hole to pull enemies within [splashrange] for [skilltime] and causes [atksplashdmg] splash damage.",
+      "gachaRow": 60,
+      "gachaFlag": 0,
+      "recipe": [
+        801,
+        310,
+        297,
+        924
+      ],
+      "sourceRefs": {
+        "f15": 118,
+        "f16": 310,
+        "f17": 5916,
+        "f18": 4,
+        "f19": 10
+      },
+      "nativeLv1": {
+        "hp": 591,
+        "attack": 11,
+        "defense": 31
+      },
+      "converted": {
+        "hp": 1813,
+        "attack": 20,
+        "defense": 35
+      }
+    },
+    {
+      "order": 29,
+      "cid": 63,
+      "key": "Alrai",
+      "name": "Alrai",
+      "chapter": 6,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 6221,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 63,
+        "f35": 0,
+        "f43": "You are so persistent!"
+      },
+      "planet": null,
+      "sourceSkill": 23,
+      "sourceDescription": "Increases attack power [atkup] of allies within [dist] for [time].",
+      "gachaRow": 62,
+      "gachaFlag": 0,
+      "recipe": [
+        360,
+        706,
+        200,
+        405
+      ],
+      "sourceRefs": {
+        "f15": 112,
+        "f16": 469,
+        "f17": 2584,
+        "f18": 8,
+        "f19": 20
+      },
+      "nativeLv1": {
+        "hp": 258,
+        "attack": 11,
+        "defense": 46
+      },
+      "converted": {
+        "hp": 791,
+        "attack": 20,
+        "defense": 53
+      }
+    },
+    {
+      "order": 30,
+      "cid": 108,
+      "key": "Ioannina",
+      "name": "Ioannina",
+      "chapter": 6,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 6259,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 6,
+        "f35": 108,
+        "f43": "I...I request your identification!\\nHow do you know this channel?!"
+      },
+      "planet": null,
+      "sourceSkill": 65,
+      "sourceDescription": "Creates a barrier within [dist]\\nwhich has a [percent] chance to reflect projectiles for [time].\\nReflected projectiles are 100% of opponent's damage",
+      "gachaRow": 107,
+      "gachaFlag": 0,
+      "recipe": [
+        700,
+        300,
+        300,
+        800
+      ],
+      "sourceRefs": {
+        "f15": 103,
+        "f16": 331,
+        "f17": 6115,
+        "f18": 5,
+        "f19": 11
+      },
+      "nativeLv1": {
+        "hp": 611,
+        "attack": 10,
+        "defense": 33
+      },
+      "converted": {
+        "hp": 1874,
+        "attack": 18,
+        "defense": 38
+      }
+    },
+    {
+      "order": 31,
+      "cid": 64,
+      "key": "Shedar",
+      "name": "王良四",
+      "chapter": 6,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 6285,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 64,
+        "f35": 6,
+        "f43": "Are you Jupiter who our commander told me about?"
+      },
+      "planet": null,
+      "sourceSkill": 132,
+      "sourceDescription": "Fires 3 snipe shots of [atk] damage.",
+      "gachaRow": 63,
+      "gachaFlag": 0,
+      "recipe": [
+        300,
+        700,
+        600,
+        400
+      ],
+      "sourceRefs": {
+        "f15": 531,
+        "f16": 104,
+        "f17": 1786,
+        "f18": 16,
+        "f19": 0
+      },
+      "nativeLv1": {
+        "hp": 178,
+        "attack": 53,
+        "defense": 10
+      },
+      "converted": {
+        "hp": 546,
+        "attack": 94,
+        "defense": 11
+      }
+    },
+    {
+      "order": 32,
+      "cid": 65,
+      "key": "Hypatia",
+      "name": "Hypatia",
+      "chapter": 6,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 6468,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 65,
+        "f35": 0,
+        "f43": "C...calm down!\\nWe can solve this through conversation, not violence!"
+      },
+      "planet": null,
+      "sourceSkill": 10,
+      "sourceDescription": "Increases attack speed [atkspdup] and critical rate [criup] for [time].",
+      "gachaRow": 64,
+      "gachaFlag": 0,
+      "recipe": [
+        300,
+        150,
+        400,
+        150
+      ],
+      "sourceRefs": {
+        "f15": 171,
+        "f16": 299,
+        "f17": 1738,
+        "f18": 17,
+        "f19": 25
+      },
+      "nativeLv1": {
+        "hp": 173,
+        "attack": 17,
+        "defense": 29
+      },
+      "converted": {
+        "hp": 531,
+        "attack": 30,
+        "defense": 33
+      }
+    },
+    {
+      "order": 33,
+      "cid": 69,
+      "key": "Navi",
+      "name": "Navi",
+      "chapter": 6,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 6538,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 0,
+        "f35": 69,
+        "f43": "Who dare stand in my way? Such fool scrap metals!"
+      },
+      "planet": null,
+      "sourceSkill": 15,
+      "sourceDescription": "Increases attack speed [atkspdup] and critical rate [criup] of allies within [dist] for [time]",
+      "gachaRow": 68,
+      "gachaFlag": 0,
+      "recipe": [
+        304,
+        693,
+        229,
+        418
+      ],
+      "sourceRefs": {
+        "f15": 154,
+        "f16": 348,
+        "f17": 1729,
+        "f18": 10,
+        "f19": 18
+      },
+      "nativeLv1": {
+        "hp": 172,
+        "attack": 15,
+        "defense": 34
+      },
+      "converted": {
+        "hp": 528,
+        "attack": 27,
+        "defense": 39
+      }
+    },
+    {
+      "order": 34,
+      "cid": 118,
+      "key": "Gienah",
+      "name": "Gienah",
+      "chapter": 7,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 7022,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 73,
+        "f35": 118,
+        "f43": "I finally found you, Deneb."
+      },
+      "planet": null,
+      "sourceSkill": 193,
+      "sourceDescription": "Reduces the skill cooling time of the allies' reflectstars by [percent]",
+      "gachaRow": 117,
+      "gachaFlag": 0,
+      "recipe": [
+        330,
+        770,
+        660,
+        440
+      ],
+      "sourceRefs": {
+        "f15": 457,
+        "f16": 123,
+        "f17": 2166,
+        "f18": 13,
+        "f19": 0
+      },
+      "nativeLv1": {
+        "hp": 216,
+        "attack": 45,
+        "defense": 12
+      },
+      "converted": {
+        "hp": 662,
+        "attack": 80,
+        "defense": 14
+      }
+    },
+    {
+      "order": 35,
+      "cid": 74,
+      "key": "Enif",
+      "name": "Enif",
+      "chapter": 7,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 7061,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 74,
+        "f35": 77,
+        "f43": "Piazzi. Wake Up!\\nThe energy tracking device that Dr. Deneb gave me before she left started to receive signal."
+      },
+      "planet": null,
+      "sourceSkill": 218,
+      "sourceDescription": "Create a device to induce guide and laser attacks during [skilltime]. HP : [hp]",
+      "gachaRow": 73,
+      "gachaFlag": 0,
+      "recipe": [
+        735,
+        315,
+        315,
+        840
+      ],
+      "sourceRefs": {
+        "f15": 152,
+        "f16": 201,
+        "f17": 4126,
+        "f18": 5,
+        "f19": 9
+      },
+      "nativeLv1": {
+        "hp": 412,
+        "attack": 15,
+        "defense": 20
+      },
+      "converted": {
+        "hp": 1264,
+        "attack": 27,
+        "defense": 23
+      }
+    },
+    {
+      "order": 36,
+      "cid": 77,
+      "key": "Piazzi",
+      "name": "Piazzi",
+      "chapter": 7,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 7061,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 74,
+        "f35": 77,
+        "f43": "Piazzi. Wake Up!\\nThe energy tracking device that Dr. Deneb gave me before she left started to receive signal."
+      },
+      "planet": null,
+      "sourceSkill": 122,
+      "sourceDescription": "Randomly fires forward [shootcount] projectiles of [atk] damage.",
+      "gachaRow": 76,
+      "gachaFlag": 0,
+      "recipe": [
+        420,
+        263,
+        525,
+        263
+      ],
+      "sourceRefs": {
+        "f15": 180,
+        "f16": 118,
+        "f17": 1374,
+        "f18": 12,
+        "f19": 10
+      },
+      "nativeLv1": {
+        "hp": 137,
+        "attack": 18,
+        "defense": 11
+      },
+      "converted": {
+        "hp": 420,
+        "attack": 32,
+        "defense": 13
+      }
+    },
+    {
+      "order": 37,
+      "cid": 71,
+      "key": "Cygni",
+      "name": "Cygni",
+      "chapter": 7,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 7099,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 71,
+        "f35": 0,
+        "f43": "Hey pretty girls?\\nIt's dangerous to walk around defenseless in a place like this."
+      },
+      "planet": null,
+      "sourceSkill": 108,
+      "sourceDescription": "Fires a shock wave up to [dist] to inflict [atk] damage and stuns enemies within range. Stun time [stun]",
+      "gachaRow": 70,
+      "gachaFlag": 1,
+      "recipe": [
+        575,
+        635,
+        575,
+        641
+      ],
+      "sourceRefs": {
+        "f15": 405,
+        "f16": 161,
+        "f17": 2895,
+        "f18": 13,
+        "f19": 12
+      },
+      "nativeLv1": {
+        "hp": 289,
+        "attack": 40,
+        "defense": 16
+      },
+      "converted": {
+        "hp": 886,
+        "attack": 71,
+        "defense": 18
+      }
+    },
+    {
+      "order": 38,
+      "cid": 72,
+      "key": "Sadr",
+      "name": "天津一",
+      "chapter": 7,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 7141,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 72,
+        "f35": 74,
+        "f43": "If I follow Cygni I can use the sword as much as I want.\\nStab, slash, stab, slash, Stab, slash, stab, slash ... Heh heh heh...  "
+      },
+      "planet": null,
+      "sourceSkill": 78,
+      "sourceDescription": "Provoke enemies within [dist] and Increase one's defenses [defup] for [time].",
+      "gachaRow": 71,
+      "gachaFlag": 0,
+      "recipe": [
+        700,
+        300,
+        300,
+        800
+      ],
+      "sourceRefs": {
+        "f15": 122,
+        "f16": 238,
+        "f17": 5469,
+        "f18": 7,
+        "f19": 11
+      },
+      "nativeLv1": {
+        "hp": 546,
+        "attack": 12,
+        "defense": 23
+      },
+      "converted": {
+        "hp": 1675,
+        "attack": 21,
+        "defense": 26
+      }
+    },
+    {
+      "order": 39,
+      "cid": 117,
+      "key": "Denebola",
+      "name": "五帝座一",
+      "chapter": 7,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 7772,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 73,
+        "f35": 117,
+        "f43": "Deneb, I admire you..."
+      },
+      "planet": null,
+      "sourceSkill": 191,
+      "sourceDescription": "Increases defense [defup] of allies within [dist] for [time] and resists laser.",
+      "gachaRow": 116,
+      "gachaFlag": 0,
+      "recipe": [
+        327,
+        680,
+        213,
+        444
+      ],
+      "sourceRefs": {
+        "f15": 146,
+        "f16": 302,
+        "f17": 2736,
+        "f18": 7,
+        "f19": 20
+      },
+      "nativeLv1": {
+        "hp": 273,
+        "attack": 14,
+        "defense": 30
+      },
+      "converted": {
+        "hp": 837,
+        "attack": 25,
+        "defense": 34
+      }
+    },
+    {
+      "order": 40,
+      "cid": 124,
+      "key": "Behemoth",
+      "name": "Behemoth",
+      "chapter": 7,
+      "placement": "first-source-appearance",
+      "event": {
+        "_row": 7777,
+        "f01": 0,
+        "f02": 0,
+        "f09": 0,
+        "f34": 124,
+        "f35": 73,
+        "f43": "I found you!!!"
+      },
+      "planet": null,
+      "sourceSkill": 220,
+      "sourceDescription": "Releases shock wave dealing [atk] dmg taken by allies within [dist]  for [time].It is not applicable to things summoned.",
+      "gachaRow": 123,
+      "gachaFlag": 1,
+      "recipe": [
+        635,
+        605,
+        666,
+        545
+      ],
+      "sourceRefs": {
+        "f15": 436,
+        "f16": 176,
+        "f17": 2964,
+        "f18": 10,
+        "f19": 10
+      },
+      "nativeLv1": {
+        "hp": 296,
+        "attack": 43,
+        "defense": 17
+      },
+      "converted": {
+        "hp": 908,
+        "attack": 77,
+        "defense": 19
+      }
+    }
+  ]
+}

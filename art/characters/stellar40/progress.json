@@ -1,5 +1,5 @@
 {
-  "completedCount": 20,
+  "completedCount": 28,
   "targetCount": 40,
   "completedKeys": [
     "polaris",
@@ -21,9 +21,7 @@
     "alherem",
     "musca",
     "acrux",
-    "achernar"
-  ],
-  "remainingKeys": [
+    "achernar",
     "ran",
     "aegir",
     "acamar",
@@ -31,7 +29,9 @@
     "den",
     "sirius",
     "bayes",
-    "rufus",
+    "rufus"
+  ],
+  "remainingKeys": [
     "asmidiske",
     "canis",
     "wezen",

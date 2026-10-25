@@ -4,7 +4,9 @@ import {
   advanceStory,
   storyEncounterResult,
   storyFact,
+  conditionMet,
 } from "./story";
+import type { Condition } from "../content/story";
 import {
   advanceDaily,
   questClaimed,
@@ -147,6 +149,7 @@ export type Command =
   | { type: "heal"; owned: string }
   | { type: "level"; owned: string }
   | { type: "skill-research"; owned: string }
+  | { type: "facility-build"; facility: string }
   | { type: "team"; owned: string }
   | { type: "reorder-team"; owned: string; direction: -1 | 1 }
   | { type: "assign"; owned: string; planet: string }
@@ -160,6 +163,10 @@ export type Command =
       reset?: boolean;
       receipt: string;
       scoreRatio?: number;
+      /** Save-scoped facility HP after the battle, keyed by facility definition. */
+      facilities?: Record<string, { hp: number; destroyed: boolean }>;
+      /** Facility activations during the battle, keyed by facility definition. */
+      activated?: Record<string, number>;
     }
   | {
       type: "checkpoint";
@@ -485,6 +492,17 @@ export function apply(
     pay(skillResearchCost(p, o));
     o.skillLevel = next;
   }
+  if (c.type === "facility-build") {
+    const f = p.facilities.find((v) => v.id === c.facility);
+    if (!f || f.scope !== "save") throw Error("沒有這個章節設施。");
+    if (s.encounter) throw Error("請先結束戰鬥。");
+    if (!facilityOffered(p, s, f.id)) throw Error("目前任務沒有要求建造此設施。");
+    if (s.facilities[f.id] && !s.facilities[f.id].destroyed)
+      throw Error("設施已建成。");
+    pay(f.cost);
+    s.facilities[f.id] = { hp: f.hp, destroyed: false };
+    storyFact(s, "facilityBuilt", f.id);
+  }
   if (c.type === "reorder-team") {
     if (s.encounter) throw Error("請於遭遇結束後調整站位。");
     const i = s.team.indexOf(c.owned),
@@ -622,6 +640,21 @@ export function apply(
       if (p.planets.find((v) => v.id === c.planet)?.kind === "event")
         advanceDaily(p, s, "eventWon", now);
     }
+    for (const [id, state] of Object.entries(c.facilities ?? {})) {
+      const f = p.facilities.find((v) => v.id === id);
+      // Defeat with retry=restore discards the battle's damage, so a retry starts as before.
+      if (!f || f.scope !== "save" || !s.facilities[id]) continue;
+      if (!c.victory && f.retry === "restore") continue;
+      s.facilities[id] = {
+        hp: Math.max(0, Math.min(f.hp, state.hp)),
+        destroyed: state.destroyed,
+      };
+    }
+    for (const id of Object.keys(c.facilities ?? {}))
+      if (s.facilities[id]?.destroyed) storyFact(s, "facilityDestroyed", id);
+    for (const [id, n] of Object.entries(c.activated ?? {}))
+      if (p.facilities.some((v) => v.id === id) && n > 0)
+        storyFact(s, "facilityActivated", id, Math.floor(n));
     if (c.victory && !c.reset) storyFact(s, "battleWon", c.planet);
     storyEncounterResult(p, s, c.planet, c.victory && !c.reset);
     // A wiped fleet is towed to the nearest place it can recover and repaired there.
@@ -662,4 +695,17 @@ export function apply(
   s.receipts.push(commandId);
   s.revision = previous.revision + 1;
   return s;
+}
+/** A save-scoped facility can be built while the current story gate waits for it. */
+export function facilityOffered(p: Pack, s: Save, id: string) {
+  const session = s.story?.session;
+  const step =
+    session &&
+    p.quests.find((q) => q.id === session.quest)?.story?.steps[session.cursor];
+  if (!step || step.kind !== "await") return false;
+  const leaves = (c: Condition): Condition[] =>
+    "all" in c ? c.all.flatMap(leaves) : "any" in c ? c.any.flatMap(leaves) : [c];
+  return leaves(step.condition).some(
+    (v) => "fact" in v && v.fact === "facility" && v.target === id && !conditionMet(s, v),
+  );
 }

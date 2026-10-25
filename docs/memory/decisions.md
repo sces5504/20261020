@@ -159,3 +159,9 @@ AI 設計補充：戰鬥參戰能力快照固定，管理期間已完成研究�
 ## 2026-10-23 · 通用劇情核心0.9（本輪明確授權）
 
 依使用者24節點需求，沿Quest新增可選story、獨立actor素材與Planet.storyEncounter，共用既有Combat／domain receipt／schema1遷移。完成、已讀、已領分開；略過呈現仍處理必要初始化、遭遇門檻不跳過；回看只在呈現層。既有世界與角色是舊檔條件證據，resumeIf明示已完成遭遇銜接；進行中流程signature改版拒絕猜測cursor。正式24節點台詞與任務由劇情作者製作。來源／推論與完整欄位見story-core-requirements.md、story-core-authoring.md；新功能不等於原版逐幀／commercial／真機認證。
+
+## 2026-10-25 劇情護盾／章節設施（整合AI4）
+
+- 護盾定義在 `storyEncounter.shields`（只作用於劇情遭遇），以攻擊分類 `blocks`＋倍率＋可選層數容量表達；層數以傷害容量計，不以命中次數計。干擾設施以標籤選擇護盾，窗口結束依 `refillOnRestore` 恢復。
+- 章節設施為獨立內容種類 `facilities`（工坊「章節設施」），`scope: battle|save`、`retry: restore|keep` 明確配置；存檔欄位 `save.facilities` 與殖民地建築分離。建造走正式指令 `facility-build`（只在劇情 await 要求時、收據防重複）或劇情步驟 `facility grant|repair|remove`。
+- 來源：使用者2026-10-25直接要求；範例 `content/examples/story-mechanics-demo.json`、文件 `docs/design/story-shields-facilities.md`。

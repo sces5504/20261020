@@ -92,7 +92,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
   root.innerHTML = `<main class="bridge"><header class="topbar"><a class="brand" href="#/play"><span class="brand-icon">✧</span><span>GALAXY ANGEL<small>星 河 戰 姬</small></span></a><div id="wallet" class="wallet"></div><div class="top-actions">${button("設定", "panel", "archive", "icon-button")}<a class="studio-link" href="gallery.html">角色圖鑑 ↗</a><a class="studio-link" href="#/studio">內容工坊 ↗</a></div></header>
  <div class="sector-heading"><div id="skill-splash" class="skill-splash" aria-live="polite"></div><div><span class="eyebrow">GALACTIC EXPEDITION</span><h1><b id="region-title">${esc(p.regions.find((r) => r.id === g.save.region)!.name)}</b><span>探索航線</span></h1></div><button class="journal-shortcut" data-action="journal-open" data-id="quests">${icon("journal")}<span id="journal-status">章節／任務</span> →</button><div id="mainline" class="mainline" aria-live="polite"></div><button id="missions-toggle" class="missions-toggle" data-action="missions-toggle"></button><div id="missions" class="missions"></div><div class="sector-status"><i></i> <span id="save-status">本機自動保存</span>${test ? "<strong>隔離測試</strong>" : ""}</div></div>
  <section class="viewport"><aside class="mission-rail"><div class="section-label">航行目標 <span>MISSION</span></div><div id="mission"></div><div class="rail-bottom"><span class="eyebrow">NAVIGATION</span><p>WASD／點擊星海航行<br>M 切換大星圖</p><div class="signal"><i></i><i></i><i></i><i></i><i></i></div><small>艦隊通訊連線中</small></div></aside>
- <div id="space" class="space" aria-label="星域戰場，點擊空白處移動，點擊星球查看情報" role="application"></div><div class="map-caption"><span>✧ 星域掃描</span><span id="coordinates"></span></div><div id="target-hud" class="target-hud" hidden aria-label="目前戰鬥目標"></div><div id="battle-state" class="battle-state"></div><div id="battle-tools" class="battle-tools"></div><div id="joystick" class="joystick" aria-hidden="true"><span></span></div><aside id="planet-card" class="planet-card"></aside></section>
+ <div id="space" class="space" aria-label="星域戰場，點擊空白處移動，點擊星球查看情報" role="application"></div><div class="map-caption"><span>✧ 星域掃描</span><span id="coordinates"></span></div><div id="target-hud" class="target-hud" hidden aria-label="目前戰鬥目標"></div><div id="battle-state" class="battle-state"></div><div id="story-status" class="story-status" aria-live="polite"></div><div id="battle-tools" class="battle-tools"></div><div id="joystick" class="joystick" aria-hidden="true"><span></span></div><aside id="planet-card" class="planet-card"></aside></section>
  <footer class="flight-deck"><div class="squad-heading"><span class="eyebrow">YOUR CONSTELLATION</span><strong>航行編隊</strong>${button("編隊 ↗", "panel", "formation", "text-button")}</div><div class="squad" id="squad"></div><nav class="deck-nav" aria-label="艦隊功能">${navButton("星體共鳴", "共鳴", "RESONANCE", "resonance", "summon")}${navButton("共振研究", "研究", "RESEARCH", "research", "research")}${navButton("高難／活動", "挑戰", "SORTIE", "challenge", "challenges")}${navButton("航行紀錄", "紀錄", "CHRONICLE", "journal", "quests")}${navButton("領地", "領地", "COLONY", "planet", "planets")}${navButton("角色", "角色", "OPERATORS", "crew", "roster")}</nav></footer>
  <div class="build-note">v${p.version} · ${p.characters.filter((c) => c.status === "active").length} 位少女／${p.regions.filter((r) => r.status === "active").length} 個航區</div><div class="toast" id="toast" role="status" aria-live="polite"></div><div id="overlay"></div></main>`;
   function navButton(
@@ -1139,6 +1139,8 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       renderSquad();
       return;
     }
+    if (action === "facility-build")
+      await g.command({ type: "facility-build", facility: id });
     if (action === "activate")
       await g.command({ type: "activate", planet: id });
     if (action === "resupply")
@@ -1405,6 +1407,17 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
         })
         .join("／");
       wave.textContent = `${mode}${remaining}${protectedUnits ? " · " + protectedUnits : ""} · ${wave.textContent}`;
+    }
+
+    // Shields, jam windows and facility prompts: status chips only, never a modal.
+    const hints = g.combat?.story?.hints() ?? [];
+    const hintKey = hints.map((h) => h.tone + h.text).join("|");
+    const status = $("#story-status");
+    if (status.dataset.key !== hintKey) {
+      status.dataset.key = hintKey;
+      status.innerHTML = hints
+        .map((h) => `<span class="is-${h.tone}">${esc(h.text)}</span>`)
+        .join("");
     }
 
     const rates = production(p, g.save);

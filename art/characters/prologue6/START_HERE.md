@@ -32,3 +32,5 @@ gameCharacterId 全為 null，future ID僅供候選對應。原作世界資料�
 全數衍生圖仍 awaiting-user-review；Q 圖為單張靜態候選，未提供動畫幀或骨架。Sargas 包含腳下裝備箱；其 pivot 為整體輪廓底部，場景錨點需整合者校準。大盾、長槍、羽翼與屏障柱也只屬視覺設備，不決定碰撞或技能。
 
 校驗：`python art/characters/prologue6/verify-catalog.py`。預覽：在 repo root 執行 `python -m http.server 5184 --bind 127.0.0.1 --directory art/characters/prologue6`，開啟 `http://127.0.0.1:5184/preview.html`。
+
+後續新批次：[Drive四十位角色美術固定入口](../stellar40/START_HERE.md)。

@@ -5966,5 +5966,885 @@
     "sha256": "3ff4d8c3fa35c65581b8a322946fecf9f18b8ad6f9156408836e9fecb2435f80",
     "master": "art/story-first-three/masters/blackhole.png",
     "masterSha256": "da684dc328ac0894b0bcd172a09250e28af8cfcd6232457d035545e25b4a05a2"
+  },
+  {
+    "id": "stellaart:asset.polaris-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/polaris.webp",
+    "runtime": "assets/extensions/stellar40/web/polaris.webp",
+    "sha256": "ae8f1cbff5adf17535be2ac343fbfa8d64499a951b7593a4ec560089b331f6bb",
+    "master": "art/characters/stellar40/standards/polaris.png",
+    "masterSha256": "89cbef94290dd7a9e699db59bd3a4884bdacf9e2668147d4aaf7eddd81fedee5"
+  },
+  {
+    "id": "stellaart:asset.polaris-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/polaris.webp",
+    "runtime": "assets/extensions/stellar40/avatars/polaris.webp",
+    "sha256": "143ad95bb19598ffb7b90cf711e4be256edd9d8b8cc67be03c605e107d3a950c",
+    "master": "art/characters/stellar40/standards/polaris.png",
+    "masterSha256": "89cbef94290dd7a9e699db59bd3a4884bdacf9e2668147d4aaf7eddd81fedee5"
+  },
+  {
+    "id": "stellaart:asset.polaris-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/polaris-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/polaris-battle.webp",
+    "sha256": "f4cfcb1d42da00bf2ac4ec9cfb9de32e156d3546c1fad21f106e6e5abcbc15e1"
+  },
+  {
+    "id": "stellaart:asset.regulus-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/regulus.webp",
+    "runtime": "assets/extensions/stellar40/web/regulus.webp",
+    "sha256": "fff51617b67167b4b4e830c50d4fab507d160557e37ad6f87417a4a542132fbe",
+    "master": "art/characters/stellar40/standards/regulus.png",
+    "masterSha256": "541f284f56356bb98bf0ca877a7fab489ce37bafcd7fdf57b20da5956e4954f5"
+  },
+  {
+    "id": "stellaart:asset.regulus-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/regulus.webp",
+    "runtime": "assets/extensions/stellar40/avatars/regulus.webp",
+    "sha256": "9dbaef4cc8433c4caec2c7ba48aad785b7696113599ed9b56bd6f02a2b115ea1",
+    "master": "art/characters/stellar40/standards/regulus.png",
+    "masterSha256": "541f284f56356bb98bf0ca877a7fab489ce37bafcd7fdf57b20da5956e4954f5"
+  },
+  {
+    "id": "stellaart:asset.regulus-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/regulus-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/regulus-battle.webp",
+    "sha256": "ab14de3e2fcb82d41adc7c2eba58108e8044dee2f30c3673d2a79b512ea75537"
+  },
+  {
+    "id": "stellaart:asset.arkas-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/arkas.webp",
+    "runtime": "assets/extensions/stellar40/web/arkas.webp",
+    "sha256": "f224a78fc23412255c0e00ee94b3d2725bbeea9ae2da9a82d8d2980b86f0c4a8",
+    "master": "art/characters/stellar40/standards/arkas.png",
+    "masterSha256": "caa29a9615f8304ec34ab34420ab8700beef7bd9d4aeba452b563f0260d85234"
+  },
+  {
+    "id": "stellaart:asset.arkas-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/arkas.webp",
+    "runtime": "assets/extensions/stellar40/avatars/arkas.webp",
+    "sha256": "888f4b36ebd6d5cf6901e159dd9ad247d3121580173b43dbf0952165774f13f4",
+    "master": "art/characters/stellar40/standards/arkas.png",
+    "masterSha256": "caa29a9615f8304ec34ab34420ab8700beef7bd9d4aeba452b563f0260d85234"
+  },
+  {
+    "id": "stellaart:asset.arkas-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/arkas-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/arkas-battle.webp",
+    "sha256": "29b107ce8d1afb504c4df9146e6b889d0e16131b2b8991971e305c7866d23344"
+  },
+  {
+    "id": "stellaart:asset.procyon-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/procyon.webp",
+    "runtime": "assets/extensions/stellar40/web/procyon.webp",
+    "sha256": "bdeb4eda187163c7ef88aeab2735f77ff0ca0ff7811c956fad3bc9e7bbd52300",
+    "master": "art/characters/stellar40/standards/procyon.png",
+    "masterSha256": "7f542022a7bbf7c1f21180db7b03672234dcd1e381f1e84abc272301585ecd39"
+  },
+  {
+    "id": "stellaart:asset.procyon-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/procyon.webp",
+    "runtime": "assets/extensions/stellar40/avatars/procyon.webp",
+    "sha256": "6ee5ddbcc16790b97be25e077c14d87c0ff77ca5cfdf835c33fb54d877ee0773",
+    "master": "art/characters/stellar40/standards/procyon.png",
+    "masterSha256": "7f542022a7bbf7c1f21180db7b03672234dcd1e381f1e84abc272301585ecd39"
+  },
+  {
+    "id": "stellaart:asset.procyon-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/procyon-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/procyon-battle.webp",
+    "sha256": "d3704dcf8d4473d0315c4d5a9c1d33514e01037cd4240527f7d0ab42474c5605"
+  },
+  {
+    "id": "stellaart:asset.luyten-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/luyten.webp",
+    "runtime": "assets/extensions/stellar40/web/luyten.webp",
+    "sha256": "6cfedcb698e3880d9fb55a3b19a17a0f1fb13093fe35c4c0ced000aa7392b66c",
+    "master": "art/characters/stellar40/standards/luyten.png",
+    "masterSha256": "693221e3e8047def8f82b8bb80f5a0c87e27938e6db8d79e311ae3ded37b54d2"
+  },
+  {
+    "id": "stellaart:asset.luyten-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/luyten.webp",
+    "runtime": "assets/extensions/stellar40/avatars/luyten.webp",
+    "sha256": "d5dfe443258382036d6c112076e2fb6373bccde48141d2cbcadc806c49d376b6",
+    "master": "art/characters/stellar40/standards/luyten.png",
+    "masterSha256": "693221e3e8047def8f82b8bb80f5a0c87e27938e6db8d79e311ae3ded37b54d2"
+  },
+  {
+    "id": "stellaart:asset.luyten-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/luyten-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/luyten-battle.webp",
+    "sha256": "04287cd08e48f8c0397fad31c57b28f58eda3199c4b210616a18f9b7a161ce0b"
+  },
+  {
+    "id": "stellaart:asset.regor-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/regor.webp",
+    "runtime": "assets/extensions/stellar40/web/regor.webp",
+    "sha256": "32cea2a9d1003cf6f6186f96837a9a5e83ddae6c95da9a7600ac631b28d3c662",
+    "master": "art/characters/stellar40/standards/regor.png",
+    "masterSha256": "b4885d44d2311027ff057c9a543e055ec0cfe0d35545a4daba933e7e6eae4f4e"
+  },
+  {
+    "id": "stellaart:asset.regor-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/regor.webp",
+    "runtime": "assets/extensions/stellar40/avatars/regor.webp",
+    "sha256": "edae3da6275b63ba7b777b991228b0ada4b0157c4330dd67adcd86224d9a7ce9",
+    "master": "art/characters/stellar40/standards/regor.png",
+    "masterSha256": "b4885d44d2311027ff057c9a543e055ec0cfe0d35545a4daba933e7e6eae4f4e"
+  },
+  {
+    "id": "stellaart:asset.regor-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/regor-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/regor-battle.webp",
+    "sha256": "8fbdfcb4b7a4d11c7716a0f43156fb6a348b474a2abf31658217704d1e470939"
+  },
+  {
+    "id": "stellaart:asset.tseenke-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/tseenke.webp",
+    "runtime": "assets/extensions/stellar40/web/tseenke.webp",
+    "sha256": "7e758022773d220e9ca9ca4a8c0e9cdfb6f4bd69db2e50a23f493757700a777c",
+    "master": "art/characters/stellar40/standards/tseenke.png",
+    "masterSha256": "a8aa2246f4acbc30bc242b1e38a0ad268dca7608a25292d595d9245a2e3b99cc"
+  },
+  {
+    "id": "stellaart:asset.tseenke-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/tseenke.webp",
+    "runtime": "assets/extensions/stellar40/avatars/tseenke.webp",
+    "sha256": "49e2c40b7eb481995365aa2180b3634558291730100d8757ebf32ec3798160f2",
+    "master": "art/characters/stellar40/standards/tseenke.png",
+    "masterSha256": "a8aa2246f4acbc30bc242b1e38a0ad268dca7608a25292d595d9245a2e3b99cc"
+  },
+  {
+    "id": "stellaart:asset.tseenke-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/tseenke-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/tseenke-battle.webp",
+    "sha256": "008bd6111a91fca43f34fad683482d2aa9d2c3fd993e47be18268392070b6960"
+  },
+  {
+    "id": "stellaart:asset.suhail-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/suhail.webp",
+    "runtime": "assets/extensions/stellar40/web/suhail.webp",
+    "sha256": "2cdca0978c5241500758a9e7370588201a5d02cdd01c11783f710beb86f980dc",
+    "master": "art/characters/stellar40/standards/suhail.png",
+    "masterSha256": "9437edccdfd81be2ea3dd694fbd8d072a2039838d09c17ac5c274afc35c50d41"
+  },
+  {
+    "id": "stellaart:asset.suhail-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/suhail.webp",
+    "runtime": "assets/extensions/stellar40/avatars/suhail.webp",
+    "sha256": "668f88e31f035b4d8fbdc062335c43f38a9b0c5a7a4b4dc0ea06f134abae3452",
+    "master": "art/characters/stellar40/standards/suhail.png",
+    "masterSha256": "9437edccdfd81be2ea3dd694fbd8d072a2039838d09c17ac5c274afc35c50d41"
+  },
+  {
+    "id": "stellaart:asset.suhail-battle-20261025-v2-web",
+    "path": "art/characters/stellar40/web/suhail-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/suhail-battle.webp",
+    "sha256": "366a17a78cbbb7b123549a51411ee095125788ec12f8d349b0b52c3bef1481d6"
+  },
+  {
+    "id": "stellaart:asset.alherem-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/alherem.webp",
+    "runtime": "assets/extensions/stellar40/web/alherem.webp",
+    "sha256": "37454480883ac78d055be33076fcfa5d6383c8fbbb8f5833f0af5dc9ac8c497b",
+    "master": "art/characters/stellar40/standards/alherem.png",
+    "masterSha256": "9b74dc4c25a697dec3603a718172fd8cbfad7440ff15c11d4b43abc04a54b509"
+  },
+  {
+    "id": "stellaart:asset.alherem-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/alherem.webp",
+    "runtime": "assets/extensions/stellar40/avatars/alherem.webp",
+    "sha256": "65dfbc87218972d1a6d7fb38f888ab9f09e266e95372845754f40fd89ecab887",
+    "master": "art/characters/stellar40/standards/alherem.png",
+    "masterSha256": "9b74dc4c25a697dec3603a718172fd8cbfad7440ff15c11d4b43abc04a54b509"
+  },
+  {
+    "id": "stellaart:asset.alherem-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/alherem-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/alherem-battle.webp",
+    "sha256": "9336c2df68ed892899ebc64adfbe7ac4694f96f4c9c4402b64e4f4435fee2207"
+  },
+  {
+    "id": "stellaart:asset.musca-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/musca.webp",
+    "runtime": "assets/extensions/stellar40/web/musca.webp",
+    "sha256": "6d2c57e8cbfb38d6577e3ec206e988a1292868bce262733af81579adaccab0d5",
+    "master": "art/characters/stellar40/standards/musca.png",
+    "masterSha256": "e40ad47ddfe67c39362827d4494709fb4d21638c9e91b752998e336094c18225"
+  },
+  {
+    "id": "stellaart:asset.musca-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/musca.webp",
+    "runtime": "assets/extensions/stellar40/avatars/musca.webp",
+    "sha256": "c683ec530a50d4656b9f73692df10925fc904fe4fe02759c95cade66d9780610",
+    "master": "art/characters/stellar40/standards/musca.png",
+    "masterSha256": "e40ad47ddfe67c39362827d4494709fb4d21638c9e91b752998e336094c18225"
+  },
+  {
+    "id": "stellaart:asset.musca-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/musca-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/musca-battle.webp",
+    "sha256": "b121209189bcd68482e4b63d0bfa5ef60e1d7c87b32c27e5dc0538c3887bdc2c"
+  },
+  {
+    "id": "stellaart:asset.acrux-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/acrux.webp",
+    "runtime": "assets/extensions/stellar40/web/acrux.webp",
+    "sha256": "dad217be63859d2237958040c9030eca1febb4ca9e19d69db169ad16ac79fa38",
+    "master": "art/characters/stellar40/standards/acrux.png",
+    "masterSha256": "8fc09fb75ca1bd2e192d8c761b2e3422f85efa1adec6835456ec8e6848a2c285"
+  },
+  {
+    "id": "stellaart:asset.acrux-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/acrux.webp",
+    "runtime": "assets/extensions/stellar40/avatars/acrux.webp",
+    "sha256": "9dd1cd53e1577807b29a97b4292741c9daa2a32e4374feee1ec5a829874985e7",
+    "master": "art/characters/stellar40/standards/acrux.png",
+    "masterSha256": "8fc09fb75ca1bd2e192d8c761b2e3422f85efa1adec6835456ec8e6848a2c285"
+  },
+  {
+    "id": "stellaart:asset.acrux-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/acrux-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/acrux-battle.webp",
+    "sha256": "9954c952c2f15aefc018b599c94f2b861835780fa0bed5b5374ac85353cb8904"
+  },
+  {
+    "id": "stellaart:asset.achernar-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/achernar.webp",
+    "runtime": "assets/extensions/stellar40/web/achernar.webp",
+    "sha256": "3dd5b0ffdc5051106b284f78baa5d11235967c251fe44e7ef0e28f6323676c4c",
+    "master": "art/characters/stellar40/standards/achernar.png",
+    "masterSha256": "c14c7b8806e5f89534ee6a76eedaebd9192903e5c277d993252314fa8f7c61cc"
+  },
+  {
+    "id": "stellaart:asset.achernar-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/achernar.webp",
+    "runtime": "assets/extensions/stellar40/avatars/achernar.webp",
+    "sha256": "c7bfd84c5227bf76020a8991075455d5bfcc3797054d707213c383cd2ee45d0c",
+    "master": "art/characters/stellar40/standards/achernar.png",
+    "masterSha256": "c14c7b8806e5f89534ee6a76eedaebd9192903e5c277d993252314fa8f7c61cc"
+  },
+  {
+    "id": "stellaart:asset.achernar-battle-20261025-v2-web",
+    "path": "art/characters/stellar40/web/achernar-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/achernar-battle.webp",
+    "sha256": "9f971f465a855767f8fb466aad2b72b0d636ca618808205a713aafa98e3b51f6"
+  },
+  {
+    "id": "stellaart:asset.ran-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/ran.webp",
+    "runtime": "assets/extensions/stellar40/web/ran.webp",
+    "sha256": "60c2d11cbe33955d113374e866229d607198c1cee33f390416459d0e65fa1b30",
+    "master": "art/characters/stellar40/standards/ran.png",
+    "masterSha256": "0eefaf4f1a1ec356cd8b509aac2d88fc6be40b8d077e49d060514eeb23e0eb26"
+  },
+  {
+    "id": "stellaart:asset.ran-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/ran.webp",
+    "runtime": "assets/extensions/stellar40/avatars/ran.webp",
+    "sha256": "2adb4424757e34de1c83e55400d4c556ff72b607bf48e5b92536ab3900ad5df7",
+    "master": "art/characters/stellar40/standards/ran.png",
+    "masterSha256": "0eefaf4f1a1ec356cd8b509aac2d88fc6be40b8d077e49d060514eeb23e0eb26"
+  },
+  {
+    "id": "stellaart:asset.ran-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/ran-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/ran-battle.webp",
+    "sha256": "719df477fabdac80d375db5fa123fdb4637d2328197ed7a9d39853a378090589"
+  },
+  {
+    "id": "stellaart:asset.aegir-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/aegir.webp",
+    "runtime": "assets/extensions/stellar40/web/aegir.webp",
+    "sha256": "25492ed5e1372ae92a6781fc3a792fc69d62358ffa46c9c2ee6c14bc736059f0",
+    "master": "art/characters/stellar40/standards/aegir.png",
+    "masterSha256": "4f04230acb63df775044631598739943fefd9a44e19d9d7fdc417a54813263ad"
+  },
+  {
+    "id": "stellaart:asset.aegir-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/aegir.webp",
+    "runtime": "assets/extensions/stellar40/avatars/aegir.webp",
+    "sha256": "1a619125c85fcb8082a00b0832f46d095cebaeab71392f902be9cffe94995e73",
+    "master": "art/characters/stellar40/standards/aegir.png",
+    "masterSha256": "4f04230acb63df775044631598739943fefd9a44e19d9d7fdc417a54813263ad"
+  },
+  {
+    "id": "stellaart:asset.aegir-battle-20261025-v2-web",
+    "path": "art/characters/stellar40/web/aegir-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/aegir-battle.webp",
+    "sha256": "2c0f73a995f443f097842b5e31382ff343308c8f9907b185b92cae206ed05743"
+  },
+  {
+    "id": "stellaart:asset.acamar-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/acamar.webp",
+    "runtime": "assets/extensions/stellar40/web/acamar.webp",
+    "sha256": "bd777a6f9e8d7ecfc242da23e811ea8425103369dc43e3f04b8e3d87a6cdd095",
+    "master": "art/characters/stellar40/standards/acamar.png",
+    "masterSha256": "9902a6162f5234202d154552148d6d28d210bdbe148d7419fcf54e83797187f1"
+  },
+  {
+    "id": "stellaart:asset.acamar-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/acamar.webp",
+    "runtime": "assets/extensions/stellar40/avatars/acamar.webp",
+    "sha256": "a9746856695de1dad899c8c46e6769f208c343446277bdc2860525c926b0f46c",
+    "master": "art/characters/stellar40/standards/acamar.png",
+    "masterSha256": "9902a6162f5234202d154552148d6d28d210bdbe148d7419fcf54e83797187f1"
+  },
+  {
+    "id": "stellaart:asset.acamar-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/acamar-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/acamar-battle.webp",
+    "sha256": "b3a785f01eec660d76c687eddab0f0f3bc68b5033467a22aae5309af84f15ded"
+  },
+  {
+    "id": "stellaart:asset.ots44-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/ots44.webp",
+    "runtime": "assets/extensions/stellar40/web/ots44.webp",
+    "sha256": "dae408971fe0db3e6eb3b3e1c112064f9bea50ac0d05e5310957dbe519fb42c9",
+    "master": "art/characters/stellar40/standards/ots44.png",
+    "masterSha256": "0483d52c5e8066c6a1ceb36b168774654a0f602d5a639ac162832351afa978fb"
+  },
+  {
+    "id": "stellaart:asset.ots44-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/ots44.webp",
+    "runtime": "assets/extensions/stellar40/avatars/ots44.webp",
+    "sha256": "af8711ec09e28ca76d25df4face8fe4756403406aa16b49c896ead97e4e2edf8",
+    "master": "art/characters/stellar40/standards/ots44.png",
+    "masterSha256": "0483d52c5e8066c6a1ceb36b168774654a0f602d5a639ac162832351afa978fb"
+  },
+  {
+    "id": "stellaart:asset.ots44-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/ots44-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/ots44-battle.webp",
+    "sha256": "fcd99062745d099a69af3968311a254ea735e45fc86a946e1103323ed35cbbbf"
+  },
+  {
+    "id": "stellaart:asset.den-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/den.webp",
+    "runtime": "assets/extensions/stellar40/web/den.webp",
+    "sha256": "5f5141106392567c018d69f903e1959f922f7d8eacac19b340d2ec9bc9d51e26",
+    "master": "art/characters/stellar40/standards/den.png",
+    "masterSha256": "3995b95e6012bd30d40d72cb68b88f6878d87cdee431ea2beacf9dd1fc765f54"
+  },
+  {
+    "id": "stellaart:asset.den-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/den.webp",
+    "runtime": "assets/extensions/stellar40/avatars/den.webp",
+    "sha256": "0db9ab75e9c637686fcf806e302393bf41554be691530c9fc9d7a004a967a5c3",
+    "master": "art/characters/stellar40/standards/den.png",
+    "masterSha256": "3995b95e6012bd30d40d72cb68b88f6878d87cdee431ea2beacf9dd1fc765f54"
+  },
+  {
+    "id": "stellaart:asset.den-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/den-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/den-battle.webp",
+    "sha256": "9d1a3db088f771a23afc8967165101e8d23673fbdb3750e3373907608a499351"
+  },
+  {
+    "id": "stellaart:asset.sirius-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/sirius.webp",
+    "runtime": "assets/extensions/stellar40/web/sirius.webp",
+    "sha256": "923febf90e8ac7c1971895984c73d0298f572f07258be0f7cf851938fab98a38",
+    "master": "art/characters/stellar40/standards/sirius.png",
+    "masterSha256": "cfe1947ca8722c5a285b3faf2d8e3d2a9babedad6a5074b4290fd01fb927fe03"
+  },
+  {
+    "id": "stellaart:asset.sirius-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/sirius.webp",
+    "runtime": "assets/extensions/stellar40/avatars/sirius.webp",
+    "sha256": "ff67e5fb1063f48cda616ec54435beea8e9e97b42ed03ad40a63fa07c5271e01",
+    "master": "art/characters/stellar40/standards/sirius.png",
+    "masterSha256": "cfe1947ca8722c5a285b3faf2d8e3d2a9babedad6a5074b4290fd01fb927fe03"
+  },
+  {
+    "id": "stellaart:asset.sirius-battle-20261025-v2-web",
+    "path": "art/characters/stellar40/web/sirius-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/sirius-battle.webp",
+    "sha256": "2e60bd4da3effefc8fe7cd862b3390842d5ab0681d568008648f2bb9d943586f"
+  },
+  {
+    "id": "stellaart:asset.bayes-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/bayes.webp",
+    "runtime": "assets/extensions/stellar40/web/bayes.webp",
+    "sha256": "94c2c306af3e5ce0452d3ffdab9a25b5859901dd23198c0ff156a263803673cb",
+    "master": "art/characters/stellar40/standards/bayes.png",
+    "masterSha256": "0a7097c510b4f32fdf5796944e301580ba52b825e3618ac84ccf522a5a1ec011"
+  },
+  {
+    "id": "stellaart:asset.bayes-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/bayes.webp",
+    "runtime": "assets/extensions/stellar40/avatars/bayes.webp",
+    "sha256": "a879bb6b159e812009bf9570887515a5d8a2264b2dd78cdf3e715e915e8e2069",
+    "master": "art/characters/stellar40/standards/bayes.png",
+    "masterSha256": "0a7097c510b4f32fdf5796944e301580ba52b825e3618ac84ccf522a5a1ec011"
+  },
+  {
+    "id": "stellaart:asset.bayes-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/bayes-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/bayes-battle.webp",
+    "sha256": "e4f025dc924e190c3de705e06acc6527df34b137292695ac5ad2be4576077773"
+  },
+  {
+    "id": "stellaart:asset.rufus-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/rufus.webp",
+    "runtime": "assets/extensions/stellar40/web/rufus.webp",
+    "sha256": "dc493c025a46fad70098a0819f20f46240a707a9bc95aede80364a717110fb0f",
+    "master": "art/characters/stellar40/standards/rufus.png",
+    "masterSha256": "de55cfc2cc6ee6dc8be7cd3466dbcca0d301c2a5c377d5006d4940d612580b6d"
+  },
+  {
+    "id": "stellaart:asset.rufus-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/rufus.webp",
+    "runtime": "assets/extensions/stellar40/avatars/rufus.webp",
+    "sha256": "936f468db25220c6b045fa6875f2a6945eb389fefc201f6d2dbe6a81380635e1",
+    "master": "art/characters/stellar40/standards/rufus.png",
+    "masterSha256": "de55cfc2cc6ee6dc8be7cd3466dbcca0d301c2a5c377d5006d4940d612580b6d"
+  },
+  {
+    "id": "stellaart:asset.rufus-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/rufus-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/rufus-battle.webp",
+    "sha256": "b9b7724de5ab9beb000f19852fd81a672d4240e56e5da602efab685ccbf0ea75"
+  },
+  {
+    "id": "stellaart:asset.canis-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/canis.webp",
+    "runtime": "assets/extensions/stellar40/web/canis.webp",
+    "sha256": "197372425bf335bfcf9cc55d25b7211cd3a59fc526ddd6fe6fee49c6e82348b1",
+    "master": "art/characters/stellar40/standards/canis.png",
+    "masterSha256": "5d25850a21a5c87e2992603c41f8496ef8d9417c5ef8b7c66bb7aa9426e5b218"
+  },
+  {
+    "id": "stellaart:asset.canis-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/canis.webp",
+    "runtime": "assets/extensions/stellar40/avatars/canis.webp",
+    "sha256": "b2f54ab6911e27a6e90fca2dccde947d6e7c86a292714150185f3c0d58c47295",
+    "master": "art/characters/stellar40/standards/canis.png",
+    "masterSha256": "5d25850a21a5c87e2992603c41f8496ef8d9417c5ef8b7c66bb7aa9426e5b218"
+  },
+  {
+    "id": "stellaart:asset.canis-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/canis-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/canis-battle.webp",
+    "sha256": "bcb7fcd1ef64fd19020029441ac62484bba64e8fc3aa92114431f3fe48b89818"
+  },
+  {
+    "id": "stellaart:asset.wezen-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/wezen.webp",
+    "runtime": "assets/extensions/stellar40/web/wezen.webp",
+    "sha256": "2496fbac562d9ee9c205c4f5f4295bc8e9d45490e15475e86a1779ca95eb0b67",
+    "master": "art/characters/stellar40/standards/wezen.png",
+    "masterSha256": "72e05a2996f8521f9c785d732ba5942c8129e80b182b361f2e1bfd863daa8c1e"
+  },
+  {
+    "id": "stellaart:asset.wezen-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/wezen.webp",
+    "runtime": "assets/extensions/stellar40/avatars/wezen.webp",
+    "sha256": "b498b2b824fba75872c895d883f75a093501dcfad64b07c9ba5ceffab8281b19",
+    "master": "art/characters/stellar40/standards/wezen.png",
+    "masterSha256": "72e05a2996f8521f9c785d732ba5942c8129e80b182b361f2e1bfd863daa8c1e"
+  },
+  {
+    "id": "stellaart:asset.wezen-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/wezen-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/wezen-battle.webp",
+    "sha256": "07e5c9c6eacabd68ed0c8a807873684211bb072f9edb0fb96e53523388c81764"
+  },
+  {
+    "id": "stellaart:asset.aludra-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/aludra.webp",
+    "runtime": "assets/extensions/stellar40/web/aludra.webp",
+    "sha256": "364b9fcd1b3e976883c0b10117fee5d03ff4731f0a1d742b06b426df05c5e4fa",
+    "master": "art/characters/stellar40/standards/aludra.png",
+    "masterSha256": "c5927a9656e039629cff12d7f9def9b6429fdbf48522aa8eb4a77bbfdda79fba"
+  },
+  {
+    "id": "stellaart:asset.aludra-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/aludra.webp",
+    "runtime": "assets/extensions/stellar40/avatars/aludra.webp",
+    "sha256": "1deaffe4df6920c5a03ad8239041620031551b55d83a80d37047a0844e5d3a5a",
+    "master": "art/characters/stellar40/standards/aludra.png",
+    "masterSha256": "c5927a9656e039629cff12d7f9def9b6429fdbf48522aa8eb4a77bbfdda79fba"
+  },
+  {
+    "id": "stellaart:asset.aludra-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/aludra-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/aludra-battle.webp",
+    "sha256": "a0f1e457abe9f6491c8e6f689de6f1b44ba1b2384691faad176480bdb7eda893"
+  },
+  {
+    "id": "stellaart:asset.furud-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/furud.webp",
+    "runtime": "assets/extensions/stellar40/web/furud.webp",
+    "sha256": "8df029394850d0463d2b2a99e465de8a4a1c19bc338953323d2cf4f9b5a2deb1",
+    "master": "art/characters/stellar40/standards/furud.png",
+    "masterSha256": "275b0e9c903f0750c094b3f0e285c06a61d4dfe2746941bbf55e56879d653cc9"
+  },
+  {
+    "id": "stellaart:asset.furud-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/furud.webp",
+    "runtime": "assets/extensions/stellar40/avatars/furud.webp",
+    "sha256": "0754420a2642089cd38562f9a8a1e26164278f61922d852190f475732824e7af",
+    "master": "art/characters/stellar40/standards/furud.png",
+    "masterSha256": "275b0e9c903f0750c094b3f0e285c06a61d4dfe2746941bbf55e56879d653cc9"
+  },
+  {
+    "id": "stellaart:asset.furud-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/furud-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/furud-battle.webp",
+    "sha256": "5bdc2dc855f13dfbc326fa32003a8e8439590c1b531ac5f5ea7d174079892462"
+  },
+  {
+    "id": "stellaart:asset.naos-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/naos.webp",
+    "runtime": "assets/extensions/stellar40/web/naos.webp",
+    "sha256": "317db338e818e504fcf11a7bf12d008fcf1cff98a0c11d3384f77a62bd804ab7",
+    "master": "art/characters/stellar40/standards/naos.png",
+    "masterSha256": "f5ccdfbdf50d00c800c8c0f85f0cbde972ce666b14338b667b9bcc2488b33275"
+  },
+  {
+    "id": "stellaart:asset.naos-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/naos.webp",
+    "runtime": "assets/extensions/stellar40/avatars/naos.webp",
+    "sha256": "632c12a6cb448226d684aac35b29926abb48c20afa6ff788c0283389191b9110",
+    "master": "art/characters/stellar40/standards/naos.png",
+    "masterSha256": "f5ccdfbdf50d00c800c8c0f85f0cbde972ce666b14338b667b9bcc2488b33275"
+  },
+  {
+    "id": "stellaart:asset.naos-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/naos-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/naos-battle.webp",
+    "sha256": "845e13bf3901566dc81f91d380c7418f47bcd7f9272af4cc4d5d7e8dda05fe73"
+  },
+  {
+    "id": "stellaart:asset.alrai-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/alrai.webp",
+    "runtime": "assets/extensions/stellar40/web/alrai.webp",
+    "sha256": "4cdd779e44f47d849e79235e2dd4f632f2a194ec9107ad6eeaa7287b935d27fd",
+    "master": "art/characters/stellar40/standards/alrai.png",
+    "masterSha256": "1722ae56bd20c556b6b8162b346414c7cf0bf4bd7da7336118759dc9d1fceced"
+  },
+  {
+    "id": "stellaart:asset.alrai-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/alrai.webp",
+    "runtime": "assets/extensions/stellar40/avatars/alrai.webp",
+    "sha256": "886db3d9b1187bbf0672df7468d70850a300240998306d21fecf185f3c4049d7",
+    "master": "art/characters/stellar40/standards/alrai.png",
+    "masterSha256": "1722ae56bd20c556b6b8162b346414c7cf0bf4bd7da7336118759dc9d1fceced"
+  },
+  {
+    "id": "stellaart:asset.alrai-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/alrai-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/alrai-battle.webp",
+    "sha256": "adcbcdf3145bbc6fc1522b6df2daf13fdd2d72ad3bbd90e45c71fa920b443893"
+  },
+  {
+    "id": "stellaart:asset.vega-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/vega.webp",
+    "runtime": "assets/extensions/stellar40/web/vega.webp",
+    "sha256": "8cd367b4c40a0e7ccadd1199716e3e7dd64d0e48c721602a42a729cc45dd05a3",
+    "master": "art/characters/stellar40/standards/vega.png",
+    "masterSha256": "04996cea981fd21b460123c925e28331c12b662c6c67407f59098ab6ee39e655"
+  },
+  {
+    "id": "stellaart:asset.vega-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/vega.webp",
+    "runtime": "assets/extensions/stellar40/avatars/vega.webp",
+    "sha256": "4ab87076b7ac304044cc13f842678a3f0dc65e96726ac32c264b4e9613feee8e",
+    "master": "art/characters/stellar40/standards/vega.png",
+    "masterSha256": "04996cea981fd21b460123c925e28331c12b662c6c67407f59098ab6ee39e655"
+  },
+  {
+    "id": "stellaart:asset.vega-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/vega-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/vega-battle.webp",
+    "sha256": "72eb3e15f6956b537233841e136d7f67f8884d9b5c1d662765f693498ec7024c"
+  },
+  {
+    "id": "stellaart:asset.kochab-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/kochab.webp",
+    "runtime": "assets/extensions/stellar40/web/kochab.webp",
+    "sha256": "4dc0b0f445b49f8617592c9f1785e02bb49c50a6dd13856bc2834fa9ae642a23",
+    "master": "art/characters/stellar40/standards/kochab.png",
+    "masterSha256": "0d61dde825a23944f530f79e66b30bc73322c70d47af65a25c0e77e64a135658"
+  },
+  {
+    "id": "stellaart:asset.kochab-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/kochab.webp",
+    "runtime": "assets/extensions/stellar40/avatars/kochab.webp",
+    "sha256": "4421d528d141dc9165e9be1010defae868e538c18668d94c0248c6c43206eb0e",
+    "master": "art/characters/stellar40/standards/kochab.png",
+    "masterSha256": "0d61dde825a23944f530f79e66b30bc73322c70d47af65a25c0e77e64a135658"
+  },
+  {
+    "id": "stellaart:asset.kochab-battle-20261025-v2-web",
+    "path": "art/characters/stellar40/web/kochab-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/kochab-battle.webp",
+    "sha256": "e4e53f185c499f0ef5570860f991c326e5ab0528360ec2b49961bc9c17bb6a8a"
+  },
+  {
+    "id": "stellaart:asset.denebola-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/denebola.webp",
+    "runtime": "assets/extensions/stellar40/web/denebola.webp",
+    "sha256": "391d3ff519b5125eff2d30bd162f0329e7df7b4a60ee84e99429e30b6299ce17",
+    "master": "art/characters/stellar40/standards/denebola.png",
+    "masterSha256": "33b96ce95fbecb6483ceac8389dac6a61bf83727dc72e074710c7a87123d1168"
+  },
+  {
+    "id": "stellaart:asset.denebola-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/denebola.webp",
+    "runtime": "assets/extensions/stellar40/avatars/denebola.webp",
+    "sha256": "564797ce8b55391f4b08f6f5d2364ce0d74ab6939a0b195a21f73f3dca78fcca",
+    "master": "art/characters/stellar40/standards/denebola.png",
+    "masterSha256": "33b96ce95fbecb6483ceac8389dac6a61bf83727dc72e074710c7a87123d1168"
+  },
+  {
+    "id": "stellaart:asset.denebola-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/denebola-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/denebola-battle.webp",
+    "sha256": "320dd7ea981fb41af1558849e22e82762b957062a3673515f7747b586ecf1648"
+  },
+  {
+    "id": "stellaart:asset.aldebaran-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/aldebaran.webp",
+    "runtime": "assets/extensions/stellar40/web/aldebaran.webp",
+    "sha256": "42568300a14b8bddcbb50b63baeb0a5f54d5512827226638e0b1dc7e8d086680",
+    "master": "art/characters/stellar40/standards/aldebaran.png",
+    "masterSha256": "22e781c8cb9607a56d3e3ce5cd3ed58f6f37a1bd29e1c8b469dea9917f49341a"
+  },
+  {
+    "id": "stellaart:asset.aldebaran-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/aldebaran.webp",
+    "runtime": "assets/extensions/stellar40/avatars/aldebaran.webp",
+    "sha256": "6faa2ed0b5d140a6d729a2dcacfcfe3cbc0e98beab6be447542b3fbdb16f6cb1",
+    "master": "art/characters/stellar40/standards/aldebaran.png",
+    "masterSha256": "22e781c8cb9607a56d3e3ce5cd3ed58f6f37a1bd29e1c8b469dea9917f49341a"
+  },
+  {
+    "id": "stellaart:asset.aldebaran-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/aldebaran-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/aldebaran-battle.webp",
+    "sha256": "02d9f0a3e861324e724d7cefdb5688fe9585c530c95fb0d09a9ffbfde79f5b25"
+  },
+  {
+    "id": "stellaart:asset.dubhe-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/dubhe.webp",
+    "runtime": "assets/extensions/stellar40/web/dubhe.webp",
+    "sha256": "64a126dfa1ca6a609ccd5360bd2592b1f3cbf9b3648c6c4add1e81a39cde4841",
+    "master": "art/characters/stellar40/standards/dubhe.png",
+    "masterSha256": "8bcd96399538fe6fb40d062487689f7663c23cd3194666cf74935b07c8bbb032"
+  },
+  {
+    "id": "stellaart:asset.dubhe-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/dubhe.webp",
+    "runtime": "assets/extensions/stellar40/avatars/dubhe.webp",
+    "sha256": "4438222648fef4f53a3a81c7dad139ac4dbbb23c4c6c69eb5945ea2d8916572b",
+    "master": "art/characters/stellar40/standards/dubhe.png",
+    "masterSha256": "8bcd96399538fe6fb40d062487689f7663c23cd3194666cf74935b07c8bbb032"
+  },
+  {
+    "id": "stellaart:asset.dubhe-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/dubhe-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/dubhe-battle.webp",
+    "sha256": "71141683a78ca468ab83fa18eb920f68241b3bf22bf903552577a0db85d2c1ec"
+  },
+  {
+    "id": "stellaart:asset.cruithne-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/cruithne.webp",
+    "runtime": "assets/extensions/stellar40/web/cruithne.webp",
+    "sha256": "b1faa8f8c24d59232ff8c6e540d0f20f91c0a2f6610fb9d48e919af83baa6a9e",
+    "master": "art/characters/stellar40/standards/cruithne.png",
+    "masterSha256": "4266484d34c089851abfaf4cbe3d8b573179bd1e468c8639b7b4fa9efc351e21"
+  },
+  {
+    "id": "stellaart:asset.cruithne-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/cruithne.webp",
+    "runtime": "assets/extensions/stellar40/avatars/cruithne.webp",
+    "sha256": "a32171b76d2a60960f48abee4f7ef20647a55737e1eee82a98b5bf69228ea326",
+    "master": "art/characters/stellar40/standards/cruithne.png",
+    "masterSha256": "4266484d34c089851abfaf4cbe3d8b573179bd1e468c8639b7b4fa9efc351e21"
+  },
+  {
+    "id": "stellaart:asset.cruithne-battle-20261025-v2-web",
+    "path": "art/characters/stellar40/web/cruithne-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/cruithne-battle.webp",
+    "sha256": "6b876b2498ad135a2694c77d344a3700e036cd9d32b26b129cfc75cc9062b0f0"
+  },
+  {
+    "id": "stellaart:asset.larissa-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/larissa.webp",
+    "runtime": "assets/extensions/stellar40/web/larissa.webp",
+    "sha256": "7d8036af4439bce23c356d8f23485811c0f9d0b7564d85d37ef03d1b491bfbdf",
+    "master": "art/characters/stellar40/standards/larissa.png",
+    "masterSha256": "aeeaa24e4cbfc69022da743dc5fac0cf23d103114e03d5f4ddd35e4c3d246591"
+  },
+  {
+    "id": "stellaart:asset.larissa-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/larissa.webp",
+    "runtime": "assets/extensions/stellar40/avatars/larissa.webp",
+    "sha256": "7ff07e15547840061c802e1675939d569690ce967299af6c6f58251dfebd16b3",
+    "master": "art/characters/stellar40/standards/larissa.png",
+    "masterSha256": "aeeaa24e4cbfc69022da743dc5fac0cf23d103114e03d5f4ddd35e4c3d246591"
+  },
+  {
+    "id": "stellaart:asset.larissa-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/larissa-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/larissa-battle.webp",
+    "sha256": "e2a66432830f567e35b389820644cd0a2631963eb300c96b433b1a32f9920a7f"
+  },
+  {
+    "id": "stellaart:asset.heimdal-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/heimdal.webp",
+    "runtime": "assets/extensions/stellar40/web/heimdal.webp",
+    "sha256": "aaa08a75331586d8354cb711088aa5e6ffeb5d20bb70d528548975d07fd8f7a3",
+    "master": "art/characters/stellar40/standards/heimdal.png",
+    "masterSha256": "7ea6e2b9d973d3eed9dc5b1591eed4938e2cd846f051d6ddbfc63535da4047cf"
+  },
+  {
+    "id": "stellaart:asset.heimdal-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/heimdal.webp",
+    "runtime": "assets/extensions/stellar40/avatars/heimdal.webp",
+    "sha256": "95fc78bf197030b91294927ade69d99e84a39836b18550a831585510d32cb4a8",
+    "master": "art/characters/stellar40/standards/heimdal.png",
+    "masterSha256": "7ea6e2b9d973d3eed9dc5b1591eed4938e2cd846f051d6ddbfc63535da4047cf"
+  },
+  {
+    "id": "stellaart:asset.heimdal-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/heimdal-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/heimdal-battle.webp",
+    "sha256": "d55f57308cc5ce9e8993aba04103506abca5e9ff397e753bb21343514376ab4a"
+  },
+  {
+    "id": "stellaart:asset.leah-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/leah.webp",
+    "runtime": "assets/extensions/stellar40/web/leah.webp",
+    "sha256": "01cb4e21e608d8723521b08b8a22c2eb9df64b5f76a143dc08957801b23220ec",
+    "master": "art/characters/stellar40/standards/leah.png",
+    "masterSha256": "fd57da96f926d0f15e7551a068b6bc6b027e1342c6b777418e79ef953ef007ea"
+  },
+  {
+    "id": "stellaart:asset.leah-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/leah.webp",
+    "runtime": "assets/extensions/stellar40/avatars/leah.webp",
+    "sha256": "f02249d78f4a3a8416fe89a2e628a96c940c7a3eaf16d82013c2c065309e355c",
+    "master": "art/characters/stellar40/standards/leah.png",
+    "masterSha256": "fd57da96f926d0f15e7551a068b6bc6b027e1342c6b777418e79ef953ef007ea"
+  },
+  {
+    "id": "stellaart:asset.leah-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/leah-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/leah-battle.webp",
+    "sha256": "c18ff0e7ae2c848f642b3d15d23534c0c0490c6242b898679aa8db1ca5cb5cd8"
+  },
+  {
+    "id": "stellaart:asset.hydra-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/hydra.webp",
+    "runtime": "assets/extensions/stellar40/web/hydra.webp",
+    "sha256": "a70cb6f804976dd68b0e9009859cea9d45e930b6bb77a7c384cb347a74a4eced",
+    "master": "art/characters/stellar40/standards/hydra.png",
+    "masterSha256": "dfa4f9439c6a8a23da010248ba7a3029b15408411825bf046d6a641525bfcf9f"
+  },
+  {
+    "id": "stellaart:asset.hydra-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/hydra.webp",
+    "runtime": "assets/extensions/stellar40/avatars/hydra.webp",
+    "sha256": "454859deb5bae9f036fa23d45ea6a153db5667ce4186dc379ba09533bc29a032",
+    "master": "art/characters/stellar40/standards/hydra.png",
+    "masterSha256": "dfa4f9439c6a8a23da010248ba7a3029b15408411825bf046d6a641525bfcf9f"
+  },
+  {
+    "id": "stellaart:asset.hydra-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/hydra-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/hydra-battle.webp",
+    "sha256": "bb88509277898526f6a3d1a788a564f1b5f3ce127e282fe803ed230c7010a66c"
+  },
+  {
+    "id": "stellaart:asset.phobos-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/phobos.webp",
+    "runtime": "assets/extensions/stellar40/web/phobos.webp",
+    "sha256": "c0bd45caeb2413da3ba64f35ddf1153056aec64e110c76596926b513cbd2a0e1",
+    "master": "art/characters/stellar40/standards/phobos.png",
+    "masterSha256": "fc02c71b9cbc08fbcea3df248bc819342fe1a982ec80b00eaa3c6a3c3f912b4f"
+  },
+  {
+    "id": "stellaart:asset.phobos-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/phobos.webp",
+    "runtime": "assets/extensions/stellar40/avatars/phobos.webp",
+    "sha256": "1288d960d62631a4832cc91236081b4d13725576006af410baf77ea66431fc1b",
+    "master": "art/characters/stellar40/standards/phobos.png",
+    "masterSha256": "fc02c71b9cbc08fbcea3df248bc819342fe1a982ec80b00eaa3c6a3c3f912b4f"
+  },
+  {
+    "id": "stellaart:asset.phobos-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/phobos-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/phobos-battle.webp",
+    "sha256": "d00990c7da1cb5001debea355c587632e7da6833144c85d3fdb3c4e75c59e15b"
+  },
+  {
+    "id": "stellaart:asset.umbriel-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/umbriel.webp",
+    "runtime": "assets/extensions/stellar40/web/umbriel.webp",
+    "sha256": "2926bf8a5c9cc7317c6b5762c53e750bc817de0236a54923778015e03b60b084",
+    "master": "art/characters/stellar40/standards/umbriel.png",
+    "masterSha256": "7dc1286ba990cfb2aa9dde06ae37ab76e75e985f3fc704bbd02f6cdbeb7bd510"
+  },
+  {
+    "id": "stellaart:asset.umbriel-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/umbriel.webp",
+    "runtime": "assets/extensions/stellar40/avatars/umbriel.webp",
+    "sha256": "e49aaa72c38e6044c452f603830fa03a19ea62d2ea7b61857342b282be4e94ee",
+    "master": "art/characters/stellar40/standards/umbriel.png",
+    "masterSha256": "7dc1286ba990cfb2aa9dde06ae37ab76e75e985f3fc704bbd02f6cdbeb7bd510"
+  },
+  {
+    "id": "stellaart:asset.umbriel-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/umbriel-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/umbriel-battle.webp",
+    "sha256": "be51db874a79d96a67d5c683529dac277e1475c4ea121ca02da49c04dee3a3ab"
+  },
+  {
+    "id": "stellaart:asset.nix-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/nix.webp",
+    "runtime": "assets/extensions/stellar40/web/nix.webp",
+    "sha256": "856e975c13b627e882d6493dd01ebaeb33f1d5015b3e6a61299e4808197459ac",
+    "master": "art/characters/stellar40/standards/nix.png",
+    "masterSha256": "3a964c7fee1d93c1c6f940b57f42ab21f7b935f402dc62363df138f16667e41b"
+  },
+  {
+    "id": "stellaart:asset.nix-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/nix.webp",
+    "runtime": "assets/extensions/stellar40/avatars/nix.webp",
+    "sha256": "474b1da6bd15c5d9e7f5ceacbebec281569dc33f61bda517e775f76b1b3794e2",
+    "master": "art/characters/stellar40/standards/nix.png",
+    "masterSha256": "3a964c7fee1d93c1c6f940b57f42ab21f7b935f402dc62363df138f16667e41b"
+  },
+  {
+    "id": "stellaart:asset.nix-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/nix-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/nix-battle.webp",
+    "sha256": "330797888f6f8d0a018c76de91320ee18165aa5564954744a8e96dd0fa6d9f64"
+  },
+  {
+    "id": "stellaart:asset.asmidiske-portrait-20261025-web",
+    "path": "art/characters/stellar40/web/asmidiske.webp",
+    "runtime": "assets/extensions/stellar40/web/asmidiske.webp",
+    "sha256": "db7a84cd46adb875e05dd1749f5d3d61ff6cd618ccbcf67ac544c3c483afa10c",
+    "master": "art/characters/stellar40/standards/asmidiske.png",
+    "masterSha256": "b2a583c6a00e5fd1df402526755dcadea2c5148a16e7448a1a971ba25c36b1a2"
+  },
+  {
+    "id": "stellaart:asset.asmidiske-avatar-20261025-web",
+    "path": "art/characters/stellar40/avatars/asmidiske.webp",
+    "runtime": "assets/extensions/stellar40/avatars/asmidiske.webp",
+    "sha256": "d586226da47a7fa97994610dc9a30e7bf88260d0033d8ce0ab80d889b4f9d315",
+    "master": "art/characters/stellar40/standards/asmidiske.png",
+    "masterSha256": "b2a583c6a00e5fd1df402526755dcadea2c5148a16e7448a1a971ba25c36b1a2"
+  },
+  {
+    "id": "stellaart:asset.asmidiske-battle-20261025-v1-web",
+    "path": "art/characters/stellar40/web/asmidiske-battle.webp",
+    "runtime": "assets/extensions/stellar40/web/asmidiske-battle.webp",
+    "sha256": "48652110cf40d178de275e298cc072e9929192a5bd5c86a87e8aca4f88be4c55"
   }
 ]

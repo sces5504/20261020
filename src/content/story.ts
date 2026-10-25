@@ -20,7 +20,21 @@ export const factTypes = [
   "healed",
   "constructed",
   "upgraded",
+  "facility",
+  "facilityDestroyed",
+  "facilityActivated",
 ] as const;
+/** Attack categories a story shield can block; "status" covers damage-over-time ticks. */
+export const shieldCategories = [
+  "melee",
+  "normal",
+  "piercing",
+  "splash",
+  "homing",
+  "laser",
+  "status",
+] as const;
+const tag = z.string().regex(/^[a-z][a-z0-9-]{0,31}$/);
 export type Condition =
   | {
       fact: (typeof factTypes)[number];
@@ -93,6 +107,14 @@ export const storyStep = z.union([
   presentationStep,
   z.object({ kind: z.literal("acquire"), character: ref }).strict(),
   z.object({ kind: z.literal("event"), event: ref }).strict(),
+  // Story-granted facility change: runs on skip/reload exactly once (receipt).
+  z
+    .object({
+      kind: z.literal("facility"),
+      facility: ref,
+      op: z.enum(["grant", "repair", "remove"]),
+    })
+    .strict(),
   z
     .object({
       kind: z.literal("encounter"),
@@ -197,6 +219,82 @@ export const storyEncounterSchema = z
           .strict(),
       )
       .max(24)
+      .default([]),
+    /** Author-placed chapter facilities (definitions live in pack.facilities). */
+    facilities: z
+      .array(
+        z
+          .object({
+            id: ref,
+            facility: ref,
+            x: finite,
+            y: finite,
+            // A destroyed placement either fails the battle or only stops working.
+            onDestroyed: z.enum(["fail", "disable"]).default("disable"),
+          })
+          .strict(),
+      )
+      .max(8)
+      .default([]),
+    shields: z
+      .array(
+        z
+          .object({
+            id: ref,
+            name: z.string().min(1).max(40),
+            tags: z.array(tag).max(8).default([]),
+            // Story actor ids and/or enemy definitions (every unit of that kind).
+            units: z.array(ref).max(12).default([]),
+            enemies: z.array(ref).max(12).default([]),
+            blocks: z.array(z.enum(shieldCategories)).min(1).max(7),
+            // Damage multiplier for blocked categories while up; 0 cancels the hit.
+            multiplier: finite.min(0).max(1).default(0),
+            // 0 = no layer accounting; otherwise each layer soaks `capacity` blocked damage.
+            layers: z.number().int().min(0).max(99).default(0),
+            capacity: finite.positive().max(10000000).default(1),
+            startsActive: z.boolean().default(true),
+            duration: finite.positive().max(1800).optional(),
+            restoreAfter: finite.positive().max(1800).optional(),
+            refillOnRestore: z.boolean().default(true),
+          })
+          .strict(),
+      )
+      .max(8)
+      .default([]),
+    triggers: z
+      .array(
+        z
+          .object({
+            at: finite.min(0).max(1800).optional(),
+            hpBelow: finite.min(0).max(1).optional(),
+            actor: ref.optional(),
+            defeated: ref.optional(),
+            facility: ref.optional(),
+            state: z.enum(["activated", "destroyed"]).optional(),
+            shieldDown: ref.optional(),
+            repeat: z.boolean().default(false),
+            then: z
+              .array(
+                z
+                  .object({
+                    op: z.enum([
+                      "enableShield",
+                      "suspendShield",
+                      "removeShield",
+                      "activateFacility",
+                    ]),
+                    shield: ref.optional(),
+                    facility: ref.optional(),
+                    seconds: finite.positive().max(1800).optional(),
+                  })
+                  .strict(),
+              )
+              .min(1)
+              .max(8),
+          })
+          .strict(),
+      )
+      .max(32)
       .default([]),
   })
   .strict();

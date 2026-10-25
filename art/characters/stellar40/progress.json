@@ -1,5 +1,5 @@
 {
-  "completedCount": 28,
+  "completedCount": 36,
   "targetCount": 40,
   "completedKeys": [
     "polaris",
@@ -29,9 +29,7 @@
     "den",
     "sirius",
     "bayes",
-    "rufus"
-  ],
-  "remainingKeys": [
+    "rufus",
     "asmidiske",
     "canis",
     "wezen",
@@ -39,7 +37,9 @@
     "furud",
     "naos",
     "alrai",
-    "vega",
+    "vega"
+  ],
+  "remainingKeys": [
     "kochab",
     "aldebaran",
     "denebola",

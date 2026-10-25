@@ -2700,7 +2700,7 @@
       "preview": "web/asmidiske.webp",
       "sourceReportedReviewStatus": "generated-awaiting-user-review",
       "reviewStatus": "awaiting-user-review",
-      "visualInspection": null,
+      "visualInspection": "Dark navy shoulder-length wavy hair, purple eyes, gold star hairclip with blue ribbon at RIGHT temple. WHITE NAVY GOLD highcollar uniform, detached split sleeves, long layered coat tails. MODEST knee-length navy skirt and opaque dark leggings, white gold boots. Neutral FRONT THREEQUARTER standing guard pose, calm face, left hand open at side; RIGHT forearm white/navy/gold winch with cable and small anchor. Chibi giant head HALF height, tiny torso stubby limbs. NONSEXUAL fully clothed SD game mascot; avoid the rear-facing pose in source. Entire anchor inside generous margin, clear transparent alpha no haze.",
       "source": {
         "type": "user-provided-Drive-standard",
         "archive": "portraits-21-40.zip",
@@ -2710,7 +2710,54 @@
       },
       "webAsset": null,
       "avatarAsset": null,
-      "battleAsset": null
+      "battleAsset": {
+        "assetId": "stellaart:asset.asmidiske-battle-20261025-v1",
+        "characterId": "stellaart:character.asmidiske",
+        "path": "battle/asmidiske-v1-candidate.png",
+        "preview": "web/asmidiske-battle.webp",
+        "version": "v1-candidate",
+        "sha256": "79c48a655f72f9a658436a19bcb37d85809f2fa4b250316b21d36245f1412890",
+        "sourceOriginalSha256": "b2a583c6a00e5fd1df402526755dcadea2c5148a16e7448a1a971ba25c36b1a2",
+        "sourceOriginalVersion": "29-asmidiske-v12-completed",
+        "width": 1223,
+        "height": 1286,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.5098119378577269,
+          "y": 0.9883359253499222,
+          "note": "視覺輪廓底部，含裝備／座具時須場景校準，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            46,
+            16,
+            1201,
+            1271
+          ],
+          "marginPx": [
+            46,
+            16,
+            22,
+            15
+          ],
+          "note": "保留生成主檔；網頁輸出另加透明安全留白"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/asmidiske.png",
+          "prompt": "prompts/asmidiske-battle-v1.txt",
+          "toolOutputFileName": "exec-1ab0b73d-adcb-4597-9e03-42320935251c.png",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "stellar40-20261025",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": null
+      }
     },
     {
       "id": "stellaart:character.canis",
@@ -2748,7 +2795,7 @@
       "preview": "web/canis.webp",
       "sourceReportedReviewStatus": "generated-awaiting-user-review",
       "reviewStatus": "awaiting-user-review",
-      "visualInspection": null,
+      "visualInspection": "Golden-orange long twin low ponytails with dark bows and cheek braids, bright blue eyes soft confident smile. White charcoal GOLD officer uniform with gray fur collar, GOLD CANINE HEAD pauldron on RIGHT shoulder viewer left, long black/white coat tails, dark stockings and armored boots. RIGHT hand holds WHITE black GOLD LONG RIFLE angled down viewer left; LEFT hand on hip and LEFT boot on small navy/gold equipment crate viewer right. CHIBI giant head HALF figure height and tiny short legs. ENTIRE muzzle/stock/crate fully inside with generous margin, clear transparent background no orange haze.",
       "source": {
         "type": "user-provided-Drive-standard",
         "archive": "portraits-21-40.zip",
@@ -2758,7 +2805,54 @@
       },
       "webAsset": null,
       "avatarAsset": null,
-      "battleAsset": null
+      "battleAsset": {
+        "assetId": "stellaart:asset.canis-battle-20261025-v1",
+        "characterId": "stellaart:character.canis",
+        "path": "battle/canis-v1-candidate.png",
+        "preview": "web/canis-battle.webp",
+        "version": "v1-candidate",
+        "sha256": "4ab50cb8bf5edc9df1961044c167212452c89a55313b907e013e0ca09e111fe0",
+        "sourceOriginalSha256": "5d25850a21a5c87e2992603c41f8496ef8d9417c5ef8b7c66bb7aa9426e5b218",
+        "sourceOriginalVersion": "30-canis-v16-rifle-commander",
+        "width": 1225,
+        "height": 1284,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.5,
+          "y": 0.9992211838006231,
+          "note": "視覺輪廓底部，含裝備／座具時須場景校準，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            4,
+            3,
+            1221,
+            1283
+          ],
+          "marginPx": [
+            4,
+            3,
+            4,
+            1
+          ],
+          "note": "保留生成主檔；網頁輸出另加透明安全留白"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/canis.png",
+          "prompt": "prompts/canis-battle-v1.txt",
+          "toolOutputFileName": "exec-21cf21a3-fded-40fe-9c1a-b28295f5560a.png",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "stellar40-20261025",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": null
+      }
     },
     {
       "id": "stellaart:character.wezen",
@@ -2796,7 +2890,7 @@
       "preview": "web/wezen.webp",
       "sourceReportedReviewStatus": "visually-reviewed-local-edit-awaiting-user",
       "reviewStatus": "awaiting-user-review",
-      "visualInspection": null,
+      "visualInspection": "Long light pink high side ponytail tied black/orange star ornament, amber eyes playful smile. Charcoal and vivid orange gold-trim star tech short suit, armored orange dark gauntlets, short skirt panels over shorts, black orange knee boots. BOTH hands hold bulky black-orange FLAMETHROWER aimed upper viewer left, bounded small flame plume. Wide stance tiny bent knees. HEAD HALF total figure height, toy-like tiny torso and stubby short limbs. Keep flame fully visible with generous margins; remove ALL orange backdrop/haze, actual clear alpha.",
       "source": {
         "type": "user-provided-Drive-standard",
         "archive": "portraits-21-40.zip",
@@ -2806,7 +2900,54 @@
       },
       "webAsset": null,
       "avatarAsset": null,
-      "battleAsset": null
+      "battleAsset": {
+        "assetId": "stellaart:asset.wezen-battle-20261025-v1",
+        "characterId": "stellaart:character.wezen",
+        "path": "battle/wezen-v1-candidate.png",
+        "preview": "web/wezen-battle.webp",
+        "version": "v1-candidate",
+        "sha256": "310120f89500a7a0ee5f1f6e869e8b07b0d8eaf1b4ded15a50e366761d75b706",
+        "sourceOriginalSha256": "72e05a2996f8521f9c785d732ba5942c8129e80b182b361f2e1bfd863daa8c1e",
+        "sourceOriginalVersion": "31-wezen-v21-no-chest-star",
+        "width": 1168,
+        "height": 1347,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.5042808219178082,
+          "y": 0.991833704528582,
+          "note": "視覺輪廓底部，含裝備／座具時須場景校準，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            17,
+            19,
+            1161,
+            1336
+          ],
+          "marginPx": [
+            17,
+            19,
+            7,
+            11
+          ],
+          "note": "保留生成主檔；網頁輸出另加透明安全留白"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/wezen.png",
+          "prompt": "prompts/wezen-battle-v1.txt",
+          "toolOutputFileName": "exec-f79d86c9-4529-4dbd-b502-afbf73d3578d.png",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "stellar40-20261025",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": null
+      }
     },
     {
       "id": "stellaart:character.aludra",
@@ -2844,7 +2985,7 @@
       "preview": "web/aludra.webp",
       "sourceReportedReviewStatus": "anatomy-repaired-awaiting-user-review",
       "reviewStatus": "awaiting-user-review",
-      "visualInspection": null,
+      "visualInspection": "Very long black navy hair in large segmented low twin tails tied blue bows/gold stars, loose face locks, green eyes and gentle smile, small gold blue star hairpins. Navy blue gold star dress with translucent pale blue detached bell sleeves, long blue starry tails, white gold tall boots. RIGHT open hand holds floating gold-rim BLUE DIAMOND lens on viewer left with four smaller diamonds and a short bounded blue beam; LEFT arm down, one tiny knee bent. Giant head HALF height tiny torso stubby limbs. Whole lens and beam fully inside canvas generous margin, clear transparent background NO studio aura.",
       "source": {
         "type": "user-provided-Drive-standard",
         "archive": "portraits-21-40.zip",
@@ -2854,7 +2995,54 @@
       },
       "webAsset": null,
       "avatarAsset": null,
-      "battleAsset": null
+      "battleAsset": {
+        "assetId": "stellaart:asset.aludra-battle-20261025-v1",
+        "characterId": "stellaart:character.aludra",
+        "path": "battle/aludra-v1-candidate.png",
+        "preview": "web/aludra-battle.webp",
+        "version": "v1-candidate",
+        "sha256": "1c369918749ac9bdb2480127e3191aefd77373bc5da478b0ea97878f05e5cc8b",
+        "sourceOriginalSha256": "c5927a9656e039629cff12d7f9def9b6429fdbf48522aa8eb4a77bbfdda79fba",
+        "sourceOriginalVersion": "32-aludra-v15-anatomy",
+        "width": 1133,
+        "height": 1388,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.5097087378640777,
+          "y": 0.9913544668587896,
+          "note": "視覺輪廓底部，含裝備／座具時須場景校準，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            29,
+            29,
+            1126,
+            1376
+          ],
+          "marginPx": [
+            29,
+            29,
+            7,
+            12
+          ],
+          "note": "保留生成主檔；網頁輸出另加透明安全留白"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/aludra.png",
+          "prompt": "prompts/aludra-battle-v1.txt",
+          "toolOutputFileName": "exec-d90a0e27-e012-4812-a415-90ab7eca6337.png",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "stellar40-20261025",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": null
+      }
     },
     {
       "id": "stellaart:character.furud",
@@ -2892,7 +3080,7 @@
       "preview": "web/furud.webp",
       "sourceReportedReviewStatus": "anatomy-repaired-awaiting-user-review",
       "reviewStatus": "awaiting-user-review",
-      "visualInspection": null,
+      "visualInspection": "Honey lightbrown chin-length wavy bob, blue ribbon/gold star at LEFT temple viewer right, tiny curved ahoge. Cheerful CLOSED smiling eyes blowing a white GOLD BUGLE held in RIGHT hand viewer left, blue gold star pennant hanging from bugle. White navy gold military band uniform with gold fringed epaulets, blue tie, short pleated skirt, white gold boots. LEFT hand on hip, one tiny leg bent back. Giant head HALF height tiny torso/stubby limbs. Entire bugle inside clear generous margins, transparent background no studio glow.",
       "source": {
         "type": "user-provided-Drive-standard",
         "archive": "portraits-21-40.zip",
@@ -2902,7 +3090,54 @@
       },
       "webAsset": null,
       "avatarAsset": null,
-      "battleAsset": null
+      "battleAsset": {
+        "assetId": "stellaart:asset.furud-battle-20261025-v1",
+        "characterId": "stellaart:character.furud",
+        "path": "battle/furud-v1-candidate.png",
+        "preview": "web/furud-battle.webp",
+        "version": "v1-candidate",
+        "sha256": "3c44a651199231388a461f14c9d517633758282fec3398bf7bef48e5b475d1b6",
+        "sourceOriginalSha256": "275b0e9c903f0750c094b3f0e285c06a61d4dfe2746941bbf55e56879d653cc9",
+        "sourceOriginalVersion": "33-furud-v15-anatomy",
+        "width": 1119,
+        "height": 1406,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.501787310098302,
+          "y": 0.9879089615931721,
+          "note": "視覺輪廓底部，含裝備／座具時須場景校準，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            14,
+            13,
+            1109,
+            1389
+          ],
+          "marginPx": [
+            14,
+            13,
+            10,
+            17
+          ],
+          "note": "保留生成主檔；網頁輸出另加透明安全留白"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/furud.png",
+          "prompt": "prompts/furud-battle-v1.txt",
+          "toolOutputFileName": "exec-187cb7e3-7dfd-4199-abf7-3a9e6a0c168d.png",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "stellar40-20261025",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": null
+      }
     },
     {
       "id": "stellaart:character.naos",
@@ -2940,7 +3175,7 @@
       "preview": "web/naos.webp",
       "sourceReportedReviewStatus": "latest-hip-alignment-revision",
       "reviewStatus": "awaiting-user-review",
-      "visualInspection": null,
+      "visualInspection": "Dark periwinkle blue shoulder-length curly hair with side braid and small gold blue diamond clip at LEFT temple, pinkish purple eyes serious face. White navy lightblue gold armor, angular shoulder plates and gauntlets, blue star chest clasp, dark shorts, long split blue coat tails, white gold boots. Both hands hold long dark/gold shaft of huge WHITE NAVY BLUE CRYSTAL HAMMER angled down viewer left, tiny wide bent-knee grounded stance. Giant head HALF figure height very tiny torso stubby limbs. Hammer fully inside generous margins, clear transparent canvas NO blue gray studio aura.",
       "source": {
         "type": "user-provided-Drive-standard",
         "archive": "portraits-21-40.zip",
@@ -2950,7 +3185,54 @@
       },
       "webAsset": null,
       "avatarAsset": null,
-      "battleAsset": null
+      "battleAsset": {
+        "assetId": "stellaart:asset.naos-battle-20261025-v1",
+        "characterId": "stellaart:character.naos",
+        "path": "battle/naos-v1-candidate.png",
+        "preview": "web/naos-battle.webp",
+        "version": "v1-candidate",
+        "sha256": "7841ba08f6ae9147c1b9c71a3d5c9234a591a743dcfa9753671dedf134b1f5a4",
+        "sourceOriginalSha256": "f5ccdfbdf50d00c800c8c0f85f0cbde972ce666b14338b667b9bcc2488b33275",
+        "sourceOriginalVersion": "34-naos-v19-hip-alignment",
+        "width": 1223,
+        "height": 1286,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.5032706459525756,
+          "y": 0.9891135303265941,
+          "note": "視覺輪廓底部，含裝備／座具時須場景校準，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            18,
+            21,
+            1213,
+            1272
+          ],
+          "marginPx": [
+            18,
+            21,
+            10,
+            14
+          ],
+          "note": "保留生成主檔；網頁輸出另加透明安全留白"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/naos.png",
+          "prompt": "prompts/naos-battle-v1.txt",
+          "toolOutputFileName": "exec-0a3210ac-28e7-448e-86dc-a3f8886a070f.png",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "stellar40-20261025",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": null
+      }
     },
     {
       "id": "stellaart:character.alrai",
@@ -2988,7 +3270,7 @@
       "preview": "web/alrai.webp",
       "sourceReportedReviewStatus": "anatomy-repaired-awaiting-user-review",
       "reviewStatus": "awaiting-user-review",
-      "visualInspection": null,
+      "visualInspection": "Long deep crimson wavy hair with ONE thick braid over LEFT shoulder viewer right, amber eyes and gentle smile. Large gold crescent/star ornament and hanging tassel at LEFT temple. Black crimson GOLD highcollar layered dress with draped split sleeves and star/tassel trim, matching dark gold boots. Floating side seated with tiny legs folded together, RIGHT hand holds open black/crimson/gold folding fan on viewer left, LEFT palm down at side. HEAD HALF figure height, very compact tiny torso/stubby limbs, modest SD skirt coverage. Whole hair fan and hem inside generous margins. Clear transparent alpha no red haze.",
       "source": {
         "type": "user-provided-Drive-standard",
         "archive": "portraits-21-40.zip",
@@ -2998,7 +3280,54 @@
       },
       "webAsset": null,
       "avatarAsset": null,
-      "battleAsset": null
+      "battleAsset": {
+        "assetId": "stellaart:asset.alrai-battle-20261025-v1",
+        "characterId": "stellaart:character.alrai",
+        "path": "battle/alrai-v1-candidate.png",
+        "preview": "web/alrai-battle.webp",
+        "version": "v1-candidate",
+        "sha256": "304b7cd676c3312f541daabb08d710e17d06cd4e4e3a2f2d330078b75ceef0fb",
+        "sourceOriginalSha256": "1722ae56bd20c556b6b8162b346414c7cf0bf4bd7da7336118759dc9d1fceced",
+        "sourceOriginalVersion": "35-alrai-v17-two-legs",
+        "width": 1243,
+        "height": 1265,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.5084473049074819,
+          "y": 0.9889328063241106,
+          "note": "視覺輪廓底部，含裝備／座具時須場景校準，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            26,
+            9,
+            1238,
+            1251
+          ],
+          "marginPx": [
+            26,
+            9,
+            5,
+            14
+          ],
+          "note": "保留生成主檔；網頁輸出另加透明安全留白"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/alrai.png",
+          "prompt": "prompts/alrai-battle-v1.txt",
+          "toolOutputFileName": "exec-2dcdcf18-1a1e-4f90-9993-1738c444a227.png",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "stellar40-20261025",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": null
+      }
     },
     {
       "id": "stellaart:character.vega",
@@ -3036,7 +3365,7 @@
       "preview": "web/vega.webp",
       "sourceReportedReviewStatus": "visually-reviewed-repair-awaiting-user",
       "reviewStatus": "awaiting-user-review",
-      "visualInspection": null,
+      "visualInspection": "Very long bright periwinkle-blue flowing hair with side braid, gold star clips, large WHITE hair bow and long white ribbons, purple eyes, pointed elf ears and singing smile. Ivory white blue GOLD layered flowing gown, translucent detached sleeves and gold blue diamond pendants, white gold shoes. BOTH hands play tall gold/white/blue STAR HARP on viewer right, blue glowing strings and bounded curl of light. Compact floating stance with tiny feet. HEAD HALF figure height tiny torso/stubby limbs, modest skirt coverage. Entire harp and dress with generous clear margins. ACTUAL transparent alpha, NO blue gray background glow.",
       "source": {
         "type": "user-provided-Drive-standard",
         "archive": "portraits-21-40.zip",
@@ -3046,7 +3375,54 @@
       },
       "webAsset": null,
       "avatarAsset": null,
-      "battleAsset": null
+      "battleAsset": {
+        "assetId": "stellaart:asset.vega-battle-20261025-v1",
+        "characterId": "stellaart:character.vega",
+        "path": "battle/vega-v1-candidate.png",
+        "preview": "web/vega-battle.webp",
+        "version": "v1-candidate",
+        "sha256": "fb0124b8c3c473e15d39fcef73c9ec620e6932457d0e3dfd940acd301fad42e0",
+        "sourceOriginalSha256": "04996cea981fd21b460123c925e28331c12b662c6c67407f59098ab6ee39e655",
+        "sourceOriginalVersion": "36-vega-v20-reviewed",
+        "width": 1222,
+        "height": 1287,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.5,
+          "y": 0.9937839937839937,
+          "note": "視覺輪廓底部，含裝備／座具時須場景校準，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            6,
+            7,
+            1216,
+            1279
+          ],
+          "marginPx": [
+            6,
+            7,
+            6,
+            8
+          ],
+          "note": "保留生成主檔；網頁輸出另加透明安全留白"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/vega.png",
+          "prompt": "prompts/vega-battle-v1.txt",
+          "toolOutputFileName": "exec-fd8d49b3-0752-43d6-96b1-82c3c60723f9.png",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "stellar40-20261025",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": null
+      }
     },
     {
       "id": "stellaart:character.kochab",

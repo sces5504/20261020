@@ -1,0 +1,798 @@
+{
+  "schemaVersion": 1,
+  "id": "stellaart:package.stellar40",
+  "version": "0.1.0",
+  "requires": [
+    {
+      "id": "story40:package.chapter-three-seven",
+      "version": "0.1.0"
+    }
+  ],
+  "definitions": {
+    "assets": [
+      {
+        "id": "stellaart:asset.polaris-portrait-20261025-web",
+        "name": "北極星 · portrait",
+        "src": "assets/extensions/stellar40/web/polaris.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "ae8f1cbff5adf17535be2ac343fbfa8d64499a951b7593a4ec560089b331f6bb",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.polaris-avatar-20261025-web",
+        "name": "北極星 · avatar",
+        "src": "assets/extensions/stellar40/avatars/polaris.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "143ad95bb19598ffb7b90cf711e4be256edd9d8b8cc67be03c605e107d3a950c",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.polaris-battle-20261025-v1-web",
+        "name": "北極星 · sprite",
+        "src": "assets/extensions/stellar40/web/polaris-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "f4cfcb1d42da00bf2ac4ec9cfb9de32e156d3546c1fad21f106e6e5abcbc15e1",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.regulus-portrait-20261025-web",
+        "name": "軒轅十四 · portrait",
+        "src": "assets/extensions/stellar40/web/regulus.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "fff51617b67167b4b4e830c50d4fab507d160557e37ad6f87417a4a542132fbe",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.regulus-avatar-20261025-web",
+        "name": "軒轅十四 · avatar",
+        "src": "assets/extensions/stellar40/avatars/regulus.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "9dbaef4cc8433c4caec2c7ba48aad785b7696113599ed9b56bd6f02a2b115ea1",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.regulus-battle-20261025-v1-web",
+        "name": "軒轅十四 · sprite",
+        "src": "assets/extensions/stellar40/web/regulus-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "ab14de3e2fcb82d41adc7c2eba58108e8044dee2f30c3673d2a79b512ea75537",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.arkas-portrait-20261025-web",
+        "name": "阿爾卡斯 · portrait",
+        "src": "assets/extensions/stellar40/web/arkas.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "f224a78fc23412255c0e00ee94b3d2725bbeea9ae2da9a82d8d2980b86f0c4a8",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.arkas-avatar-20261025-web",
+        "name": "阿爾卡斯 · avatar",
+        "src": "assets/extensions/stellar40/avatars/arkas.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "888f4b36ebd6d5cf6901e159dd9ad247d3121580173b43dbf0952165774f13f4",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.arkas-battle-20261025-v1-web",
+        "name": "阿爾卡斯 · sprite",
+        "src": "assets/extensions/stellar40/web/arkas-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "29b107ce8d1afb504c4df9146e6b889d0e16131b2b8991971e305c7866d23344",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.procyon-portrait-20261025-web",
+        "name": "南河三 · portrait",
+        "src": "assets/extensions/stellar40/web/procyon.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "bdeb4eda187163c7ef88aeab2735f77ff0ca0ff7811c956fad3bc9e7bbd52300",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.procyon-avatar-20261025-web",
+        "name": "南河三 · avatar",
+        "src": "assets/extensions/stellar40/avatars/procyon.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "6ee5ddbcc16790b97be25e077c14d87c0ff77ca5cfdf835c33fb54d877ee0773",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.procyon-battle-20261025-v1-web",
+        "name": "南河三 · sprite",
+        "src": "assets/extensions/stellar40/web/procyon-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "d3704dcf8d4473d0315c4d5a9c1d33514e01037cd4240527f7d0ab42474c5605",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.luyten-portrait-20261025-web",
+        "name": "魯坦星 · portrait",
+        "src": "assets/extensions/stellar40/web/luyten.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "6cfedcb698e3880d9fb55a3b19a17a0f1fb13093fe35c4c0ced000aa7392b66c",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.luyten-avatar-20261025-web",
+        "name": "魯坦星 · avatar",
+        "src": "assets/extensions/stellar40/avatars/luyten.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "d5dfe443258382036d6c112076e2fb6373bccde48141d2cbcadc806c49d376b6",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.luyten-battle-20261025-v1-web",
+        "name": "魯坦星 · sprite",
+        "src": "assets/extensions/stellar40/web/luyten-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "04287cd08e48f8c0397fad31c57b28f58eda3199c4b210616a18f9b7a161ce0b",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.regor-portrait-20261025-web",
+        "name": "天社一 · portrait",
+        "src": "assets/extensions/stellar40/web/regor.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "32cea2a9d1003cf6f6186f96837a9a5e83ddae6c95da9a7600ac631b28d3c662",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.regor-avatar-20261025-web",
+        "name": "天社一 · avatar",
+        "src": "assets/extensions/stellar40/avatars/regor.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "edae3da6275b63ba7b777b991228b0ada4b0157c4330dd67adcd86224d9a7ce9",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.regor-battle-20261025-v1-web",
+        "name": "天社一 · sprite",
+        "src": "assets/extensions/stellar40/web/regor-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "8fbdfcb4b7a4d11c7716a0f43156fb6a348b474a2abf31658217704d1e470939",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.tseenke-portrait-20261025-web",
+        "name": "天紀 · portrait",
+        "src": "assets/extensions/stellar40/web/tseenke.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "7e758022773d220e9ca9ca4a8c0e9cdfb6f4bd69db2e50a23f493757700a777c",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.tseenke-avatar-20261025-web",
+        "name": "天紀 · avatar",
+        "src": "assets/extensions/stellar40/avatars/tseenke.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "49e2c40b7eb481995365aa2180b3634558291730100d8757ebf32ec3798160f2",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.tseenke-battle-20261025-v1-web",
+        "name": "天紀 · sprite",
+        "src": "assets/extensions/stellar40/web/tseenke-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "008bd6111a91fca43f34fad683482d2aa9d2c3fd993e47be18268392070b6960",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.suhail-portrait-20261025-web",
+        "name": "天社五 · portrait",
+        "src": "assets/extensions/stellar40/web/suhail.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "2cdca0978c5241500758a9e7370588201a5d02cdd01c11783f710beb86f980dc",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.suhail-avatar-20261025-web",
+        "name": "天社五 · avatar",
+        "src": "assets/extensions/stellar40/avatars/suhail.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "668f88e31f035b4d8fbdc062335c43f38a9b0c5a7a4b4dc0ea06f134abae3452",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.suhail-battle-20261025-v2-web",
+        "name": "天社五 · sprite",
+        "src": "assets/extensions/stellar40/web/suhail-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "366a17a78cbbb7b123549a51411ee095125788ec12f8d349b0b52c3bef1481d6",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.alherem-portrait-20261025-web",
+        "name": "天壇座α · portrait",
+        "src": "assets/extensions/stellar40/web/alherem.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "37454480883ac78d055be33076fcfa5d6383c8fbbb8f5833f0af5dc9ac8c497b",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.alherem-avatar-20261025-web",
+        "name": "天壇座α · avatar",
+        "src": "assets/extensions/stellar40/avatars/alherem.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "65dfbc87218972d1a6d7fb38f888ab9f09e266e95372845754f40fd89ecab887",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.alherem-battle-20261025-v1-web",
+        "name": "天壇座α · sprite",
+        "src": "assets/extensions/stellar40/web/alherem-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "9336c2df68ed892899ebc64adfbe7ac4694f96f4c9c4402b64e4f4435fee2207",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.musca-portrait-20261025-web",
+        "name": "蒼蠅座 · portrait",
+        "src": "assets/extensions/stellar40/web/musca.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "6d2c57e8cbfb38d6577e3ec206e988a1292868bce262733af81579adaccab0d5",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.musca-avatar-20261025-web",
+        "name": "蒼蠅座 · avatar",
+        "src": "assets/extensions/stellar40/avatars/musca.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "c683ec530a50d4656b9f73692df10925fc904fe4fe02759c95cade66d9780610",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.musca-battle-20261025-v1-web",
+        "name": "蒼蠅座 · sprite",
+        "src": "assets/extensions/stellar40/web/musca-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "b121209189bcd68482e4b63d0bfa5ef60e1d7c87b32c27e5dc0538c3887bdc2c",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.acrux-portrait-20261025-web",
+        "name": "十字架二 · portrait",
+        "src": "assets/extensions/stellar40/web/acrux.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "dad217be63859d2237958040c9030eca1febb4ca9e19d69db169ad16ac79fa38",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.acrux-avatar-20261025-web",
+        "name": "十字架二 · avatar",
+        "src": "assets/extensions/stellar40/avatars/acrux.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "9dd1cd53e1577807b29a97b4292741c9daa2a32e4374feee1ec5a829874985e7",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.acrux-battle-20261025-v1-web",
+        "name": "十字架二 · sprite",
+        "src": "assets/extensions/stellar40/web/acrux-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "9954c952c2f15aefc018b599c94f2b861835780fa0bed5b5374ac85353cb8904",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.achernar-portrait-20261025-web",
+        "name": "水委一 · portrait",
+        "src": "assets/extensions/stellar40/web/achernar.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "3dd5b0ffdc5051106b284f78baa5d11235967c251fe44e7ef0e28f6323676c4c",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.achernar-avatar-20261025-web",
+        "name": "水委一 · avatar",
+        "src": "assets/extensions/stellar40/avatars/achernar.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "c7bfd84c5227bf76020a8991075455d5bfcc3797054d707213c383cd2ee45d0c",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.achernar-battle-20261025-v2-web",
+        "name": "水委一 · sprite",
+        "src": "assets/extensions/stellar40/web/achernar-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "9f971f465a855767f8fb466aad2b72b0d636ca618808205a713aafa98e3b51f6",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.ran-portrait-20261025-web",
+        "name": "天苑四 · portrait",
+        "src": "assets/extensions/stellar40/web/ran.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "60c2d11cbe33955d113374e866229d607198c1cee33f390416459d0e65fa1b30",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.ran-avatar-20261025-web",
+        "name": "天苑四 · avatar",
+        "src": "assets/extensions/stellar40/avatars/ran.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "2adb4424757e34de1c83e55400d4c556ff72b607bf48e5b92536ab3900ad5df7",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.ran-battle-20261025-v1-web",
+        "name": "天苑四 · sprite",
+        "src": "assets/extensions/stellar40/web/ran-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "719df477fabdac80d375db5fa123fdb4637d2328197ed7a9d39853a378090589",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.aegir-portrait-20261025-web",
+        "name": "天苑四b · portrait",
+        "src": "assets/extensions/stellar40/web/aegir.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "25492ed5e1372ae92a6781fc3a792fc69d62358ffa46c9c2ee6c14bc736059f0",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.aegir-avatar-20261025-web",
+        "name": "天苑四b · avatar",
+        "src": "assets/extensions/stellar40/avatars/aegir.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "1a619125c85fcb8082a00b0832f46d095cebaeab71392f902be9cffe94995e73",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.aegir-battle-20261025-v2-web",
+        "name": "天苑四b · sprite",
+        "src": "assets/extensions/stellar40/web/aegir-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "2c0f73a995f443f097842b5e31382ff343308c8f9907b185b92cae206ed05743",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.acamar-portrait-20261025-web",
+        "name": "天園一 · portrait",
+        "src": "assets/extensions/stellar40/web/acamar.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "bd777a6f9e8d7ecfc242da23e811ea8425103369dc43e3f04b8e3d87a6cdd095",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.acamar-avatar-20261025-web",
+        "name": "天園一 · avatar",
+        "src": "assets/extensions/stellar40/avatars/acamar.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "a9746856695de1dad899c8c46e6769f208c343446277bdc2860525c926b0f46c",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.acamar-battle-20261025-v1-web",
+        "name": "天園一 · sprite",
+        "src": "assets/extensions/stellar40/web/acamar-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "b3a785f01eec660d76c687eddab0f0f3bc68b5033467a22aae5309af84f15ded",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.ots44-portrait-20261025-web",
+        "name": "OTS 44 · portrait",
+        "src": "assets/extensions/stellar40/web/ots44.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "dae408971fe0db3e6eb3b3e1c112064f9bea50ac0d05e5310957dbe519fb42c9",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.ots44-avatar-20261025-web",
+        "name": "OTS 44 · avatar",
+        "src": "assets/extensions/stellar40/avatars/ots44.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "af8711ec09e28ca76d25df4face8fe4756403406aa16b49c896ead97e4e2edf8",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.ots44-battle-20261025-v1-web",
+        "name": "OTS 44 · sprite",
+        "src": "assets/extensions/stellar40/web/ots44-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "fcd99062745d099a69af3968311a254ea735e45fc86a946e1103323ed35cbbbf",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.den-portrait-20261025-web",
+        "name": "DEN · portrait",
+        "src": "assets/extensions/stellar40/web/den.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "5f5141106392567c018d69f903e1959f922f7d8eacac19b340d2ec9bc9d51e26",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.den-avatar-20261025-web",
+        "name": "DEN · avatar",
+        "src": "assets/extensions/stellar40/avatars/den.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "0db9ab75e9c637686fcf806e302393bf41554be691530c9fc9d7a004a967a5c3",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.den-battle-20261025-v1-web",
+        "name": "DEN · sprite",
+        "src": "assets/extensions/stellar40/web/den-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "9d1a3db088f771a23afc8967165101e8d23673fbdb3750e3373907608a499351",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.sirius-portrait-20261025-web",
+        "name": "天狼星 · portrait",
+        "src": "assets/extensions/stellar40/web/sirius.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "923febf90e8ac7c1971895984c73d0298f572f07258be0f7cf851938fab98a38",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.sirius-avatar-20261025-web",
+        "name": "天狼星 · avatar",
+        "src": "assets/extensions/stellar40/avatars/sirius.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "ff67e5fb1063f48cda616ec54435beea8e9e97b42ed03ad40a63fa07c5271e01",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.sirius-battle-20261025-v2-web",
+        "name": "天狼星 · sprite",
+        "src": "assets/extensions/stellar40/web/sirius-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "2e60bd4da3effefc8fe7cd862b3390842d5ab0681d568008648f2bb9d943586f",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.bayes-portrait-20261025-web",
+        "name": "貝葉斯 · portrait",
+        "src": "assets/extensions/stellar40/web/bayes.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "94c2c306af3e5ce0452d3ffdab9a25b5859901dd23198c0ff156a263803673cb",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.bayes-avatar-20261025-web",
+        "name": "貝葉斯 · avatar",
+        "src": "assets/extensions/stellar40/avatars/bayes.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "a879bb6b159e812009bf9570887515a5d8a2264b2dd78cdf3e715e915e8e2069",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.bayes-battle-20261025-v1-web",
+        "name": "貝葉斯 · sprite",
+        "src": "assets/extensions/stellar40/web/bayes-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "e4f025dc924e190c3de705e06acc6527df34b137292695ac5ad2be4576077773",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.rufus-portrait-20261025-web",
+        "name": "魯弗斯 · portrait",
+        "src": "assets/extensions/stellar40/web/rufus.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "dc493c025a46fad70098a0819f20f46240a707a9bc95aede80364a717110fb0f",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.rufus-avatar-20261025-web",
+        "name": "魯弗斯 · avatar",
+        "src": "assets/extensions/stellar40/avatars/rufus.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "936f468db25220c6b045fa6875f2a6945eb389fefc201f6d2dbe6a81380635e1",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.rufus-battle-20261025-v1-web",
+        "name": "魯弗斯 · sprite",
+        "src": "assets/extensions/stellar40/web/rufus-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "b9b7724de5ab9beb000f19852fd81a672d4240e56e5da602efab685ccbf0ea75",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.canis-portrait-20261025-web",
+        "name": "大犬座 · portrait",
+        "src": "assets/extensions/stellar40/web/canis.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "197372425bf335bfcf9cc55d25b7211cd3a59fc526ddd6fe6fee49c6e82348b1",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.canis-avatar-20261025-web",
+        "name": "大犬座 · avatar",
+        "src": "assets/extensions/stellar40/avatars/canis.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "b2f54ab6911e27a6e90fca2dccde947d6e7c86a292714150185f3c0d58c47295",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.canis-battle-20261025-v1-web",
+        "name": "大犬座 · sprite",
+        "src": "assets/extensions/stellar40/web/canis-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "bcb7fcd1ef64fd19020029441ac62484bba64e8fc3aa92114431f3fe48b89818",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.wezen-portrait-20261025-web",
+        "name": "弧矢一 · portrait",
+        "src": "assets/extensions/stellar40/web/wezen.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "2496fbac562d9ee9c205c4f5f4295bc8e9d45490e15475e86a1779ca95eb0b67",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.wezen-avatar-20261025-web",
+        "name": "弧矢一 · avatar",
+        "src": "assets/extensions/stellar40/avatars/wezen.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "b498b2b824fba75872c895d883f75a093501dcfad64b07c9ba5ceffab8281b19",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.wezen-battle-20261025-v1-web",
+        "name": "弧矢一 · sprite",
+        "src": "assets/extensions/stellar40/web/wezen-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "07e5c9c6eacabd68ed0c8a807873684211bb072f9edb0fb96e53523388c81764",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.aludra-portrait-20261025-web",
+        "name": "弧矢七 · portrait",
+        "src": "assets/extensions/stellar40/web/aludra.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "364b9fcd1b3e976883c0b10117fee5d03ff4731f0a1d742b06b426df05c5e4fa",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.aludra-avatar-20261025-web",
+        "name": "弧矢七 · avatar",
+        "src": "assets/extensions/stellar40/avatars/aludra.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "1deaffe4df6920c5a03ad8239041620031551b55d83a80d37047a0844e5d3a5a",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.aludra-battle-20261025-v1-web",
+        "name": "弧矢七 · sprite",
+        "src": "assets/extensions/stellar40/web/aludra-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "a0f1e457abe9f6491c8e6f689de6f1b44ba1b2384691faad176480bdb7eda893",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.furud-portrait-20261025-web",
+        "name": "孫增一 · portrait",
+        "src": "assets/extensions/stellar40/web/furud.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "8df029394850d0463d2b2a99e465de8a4a1c19bc338953323d2cf4f9b5a2deb1",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.furud-avatar-20261025-web",
+        "name": "孫增一 · avatar",
+        "src": "assets/extensions/stellar40/avatars/furud.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "0754420a2642089cd38562f9a8a1e26164278f61922d852190f475732824e7af",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.furud-battle-20261025-v1-web",
+        "name": "孫增一 · sprite",
+        "src": "assets/extensions/stellar40/web/furud-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "5bdc2dc855f13dfbc326fa32003a8e8439590c1b531ac5f5ea7d174079892462",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.naos-portrait-20261025-web",
+        "name": "弧矢增二十二 · portrait",
+        "src": "assets/extensions/stellar40/web/naos.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "317db338e818e504fcf11a7bf12d008fcf1cff98a0c11d3384f77a62bd804ab7",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.naos-avatar-20261025-web",
+        "name": "弧矢增二十二 · avatar",
+        "src": "assets/extensions/stellar40/avatars/naos.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "632c12a6cb448226d684aac35b29926abb48c20afa6ff788c0283389191b9110",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.naos-battle-20261025-v1-web",
+        "name": "弧矢增二十二 · sprite",
+        "src": "assets/extensions/stellar40/web/naos-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "845e13bf3901566dc81f91d380c7418f47bcd7f9272af4cc4d5d7e8dda05fe73",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.alrai-portrait-20261025-web",
+        "name": "少衛增八 · portrait",
+        "src": "assets/extensions/stellar40/web/alrai.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "4cdd779e44f47d849e79235e2dd4f632f2a194ec9107ad6eeaa7287b935d27fd",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.alrai-avatar-20261025-web",
+        "name": "少衛增八 · avatar",
+        "src": "assets/extensions/stellar40/avatars/alrai.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "886db3d9b1187bbf0672df7468d70850a300240998306d21fecf185f3c4049d7",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.alrai-battle-20261025-v1-web",
+        "name": "少衛增八 · sprite",
+        "src": "assets/extensions/stellar40/web/alrai-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "adcbcdf3145bbc6fc1522b6df2daf13fdd2d72ad3bbd90e45c71fa920b443893",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.vega-portrait-20261025-web",
+        "name": "織女星 · portrait",
+        "src": "assets/extensions/stellar40/web/vega.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "8cd367b4c40a0e7ccadd1199716e3e7dd64d0e48c721602a42a729cc45dd05a3",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.vega-avatar-20261025-web",
+        "name": "織女星 · avatar",
+        "src": "assets/extensions/stellar40/avatars/vega.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "4ab87076b7ac304044cc13f842678a3f0dc65e96726ac32c264b4e9613feee8e",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.vega-battle-20261025-v1-web",
+        "name": "織女星 · sprite",
+        "src": "assets/extensions/stellar40/web/vega-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "72eb3e15f6956b537233841e136d7f67f8884d9b5c1d662765f693498ec7024c",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.kochab-portrait-20261025-web",
+        "name": "北極二 · portrait",
+        "src": "assets/extensions/stellar40/web/kochab.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "4dc0b0f445b49f8617592c9f1785e02bb49c50a6dd13856bc2834fa9ae642a23",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.kochab-avatar-20261025-web",
+        "name": "北極二 · avatar",
+        "src": "assets/extensions/stellar40/avatars/kochab.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "4421d528d141dc9165e9be1010defae868e538c18668d94c0248c6c43206eb0e",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.kochab-battle-20261025-v2-web",
+        "name": "北極二 · sprite",
+        "src": "assets/extensions/stellar40/web/kochab-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "e4e53f185c499f0ef5570860f991c326e5ab0528360ec2b49961bc9c17bb6a8a",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.denebola-portrait-20261025-web",
+        "name": "五帝座一 · portrait",
+        "src": "assets/extensions/stellar40/web/denebola.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "391d3ff519b5125eff2d30bd162f0329e7df7b4a60ee84e99429e30b6299ce17",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.denebola-avatar-20261025-web",
+        "name": "五帝座一 · avatar",
+        "src": "assets/extensions/stellar40/avatars/denebola.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "564797ce8b55391f4b08f6f5d2364ce0d74ab6939a0b195a21f73f3dca78fcca",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.denebola-battle-20261025-v1-web",
+        "name": "五帝座一 · sprite",
+        "src": "assets/extensions/stellar40/web/denebola-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "320dd7ea981fb41af1558849e22e82762b957062a3673515f7747b586ecf1648",
+        "review": "candidate"
+      }
+    ]
+  }
+}

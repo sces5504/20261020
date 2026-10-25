@@ -10,7 +10,9 @@
     "extensions/stellar11-art.json",
     "extensions/prologue6.json",
     "extensions/prologue6-art.json",
-    "extensions/chronicle-first-three.json"
+    "extensions/chronicle-first-three.json",
+    "extensions/story40.json",
+    "extensions/stellar40-art.json"
   ],
   "regionPresentation": [
     {
@@ -177,6 +179,180 @@
       "portrait": "stellaart:asset.sargas-portrait-20261023-web",
       "avatar": "stellaart:asset.sargas-avatar-20261023-web",
       "sprite": "stellaart:asset.sargas-battle-20261023-v1-web"
+    },
+    {
+      "character": "story40:character.polaris",
+      "portrait": "stellaart:asset.polaris-portrait-20261025-web",
+      "avatar": "stellaart:asset.polaris-avatar-20261025-web",
+      "sprite": "stellaart:asset.polaris-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.regulus",
+      "portrait": "stellaart:asset.regulus-portrait-20261025-web",
+      "avatar": "stellaart:asset.regulus-avatar-20261025-web",
+      "sprite": "stellaart:asset.regulus-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.arkas",
+      "portrait": "stellaart:asset.arkas-portrait-20261025-web",
+      "avatar": "stellaart:asset.arkas-avatar-20261025-web",
+      "sprite": "stellaart:asset.arkas-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.procyon",
+      "portrait": "stellaart:asset.procyon-portrait-20261025-web",
+      "avatar": "stellaart:asset.procyon-avatar-20261025-web",
+      "sprite": "stellaart:asset.procyon-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.luyten",
+      "portrait": "stellaart:asset.luyten-portrait-20261025-web",
+      "avatar": "stellaart:asset.luyten-avatar-20261025-web",
+      "sprite": "stellaart:asset.luyten-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.regor",
+      "portrait": "stellaart:asset.regor-portrait-20261025-web",
+      "avatar": "stellaart:asset.regor-avatar-20261025-web",
+      "sprite": "stellaart:asset.regor-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.tseenke",
+      "portrait": "stellaart:asset.tseenke-portrait-20261025-web",
+      "avatar": "stellaart:asset.tseenke-avatar-20261025-web",
+      "sprite": "stellaart:asset.tseenke-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.suhail",
+      "portrait": "stellaart:asset.suhail-portrait-20261025-web",
+      "avatar": "stellaart:asset.suhail-avatar-20261025-web",
+      "sprite": "stellaart:asset.suhail-battle-20261025-v2-web"
+    },
+    {
+      "character": "story40:character.alherem",
+      "portrait": "stellaart:asset.alherem-portrait-20261025-web",
+      "avatar": "stellaart:asset.alherem-avatar-20261025-web",
+      "sprite": "stellaart:asset.alherem-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.musca",
+      "portrait": "stellaart:asset.musca-portrait-20261025-web",
+      "avatar": "stellaart:asset.musca-avatar-20261025-web",
+      "sprite": "stellaart:asset.musca-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.acrux",
+      "portrait": "stellaart:asset.acrux-portrait-20261025-web",
+      "avatar": "stellaart:asset.acrux-avatar-20261025-web",
+      "sprite": "stellaart:asset.acrux-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.achernar",
+      "portrait": "stellaart:asset.achernar-portrait-20261025-web",
+      "avatar": "stellaart:asset.achernar-avatar-20261025-web",
+      "sprite": "stellaart:asset.achernar-battle-20261025-v2-web"
+    },
+    {
+      "character": "story40:character.ran",
+      "portrait": "stellaart:asset.ran-portrait-20261025-web",
+      "avatar": "stellaart:asset.ran-avatar-20261025-web",
+      "sprite": "stellaart:asset.ran-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.aegir",
+      "portrait": "stellaart:asset.aegir-portrait-20261025-web",
+      "avatar": "stellaart:asset.aegir-avatar-20261025-web",
+      "sprite": "stellaart:asset.aegir-battle-20261025-v2-web"
+    },
+    {
+      "character": "story40:character.acamar",
+      "portrait": "stellaart:asset.acamar-portrait-20261025-web",
+      "avatar": "stellaart:asset.acamar-avatar-20261025-web",
+      "sprite": "stellaart:asset.acamar-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.ots44",
+      "portrait": "stellaart:asset.ots44-portrait-20261025-web",
+      "avatar": "stellaart:asset.ots44-avatar-20261025-web",
+      "sprite": "stellaart:asset.ots44-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.den",
+      "portrait": "stellaart:asset.den-portrait-20261025-web",
+      "avatar": "stellaart:asset.den-avatar-20261025-web",
+      "sprite": "stellaart:asset.den-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.sirius",
+      "portrait": "stellaart:asset.sirius-portrait-20261025-web",
+      "avatar": "stellaart:asset.sirius-avatar-20261025-web",
+      "sprite": "stellaart:asset.sirius-battle-20261025-v2-web"
+    },
+    {
+      "character": "story40:character.bayes",
+      "portrait": "stellaart:asset.bayes-portrait-20261025-web",
+      "avatar": "stellaart:asset.bayes-avatar-20261025-web",
+      "sprite": "stellaart:asset.bayes-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.rufus",
+      "portrait": "stellaart:asset.rufus-portrait-20261025-web",
+      "avatar": "stellaart:asset.rufus-avatar-20261025-web",
+      "sprite": "stellaart:asset.rufus-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.canis",
+      "portrait": "stellaart:asset.canis-portrait-20261025-web",
+      "avatar": "stellaart:asset.canis-avatar-20261025-web",
+      "sprite": "stellaart:asset.canis-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.wezen",
+      "portrait": "stellaart:asset.wezen-portrait-20261025-web",
+      "avatar": "stellaart:asset.wezen-avatar-20261025-web",
+      "sprite": "stellaart:asset.wezen-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.aludra",
+      "portrait": "stellaart:asset.aludra-portrait-20261025-web",
+      "avatar": "stellaart:asset.aludra-avatar-20261025-web",
+      "sprite": "stellaart:asset.aludra-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.furud",
+      "portrait": "stellaart:asset.furud-portrait-20261025-web",
+      "avatar": "stellaart:asset.furud-avatar-20261025-web",
+      "sprite": "stellaart:asset.furud-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.naos",
+      "portrait": "stellaart:asset.naos-portrait-20261025-web",
+      "avatar": "stellaart:asset.naos-avatar-20261025-web",
+      "sprite": "stellaart:asset.naos-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.alrai",
+      "portrait": "stellaart:asset.alrai-portrait-20261025-web",
+      "avatar": "stellaart:asset.alrai-avatar-20261025-web",
+      "sprite": "stellaart:asset.alrai-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.vega",
+      "portrait": "stellaart:asset.vega-portrait-20261025-web",
+      "avatar": "stellaart:asset.vega-avatar-20261025-web",
+      "sprite": "stellaart:asset.vega-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.kochab",
+      "portrait": "stellaart:asset.kochab-portrait-20261025-web",
+      "avatar": "stellaart:asset.kochab-avatar-20261025-web",
+      "sprite": "stellaart:asset.kochab-battle-20261025-v2-web"
+    },
+    {
+      "character": "story40:character.denebola",
+      "portrait": "stellaart:asset.denebola-portrait-20261025-web",
+      "avatar": "stellaart:asset.denebola-avatar-20261025-web",
+      "sprite": "stellaart:asset.denebola-battle-20261025-v1-web"
     }
   ],
   "regionRoutes": [

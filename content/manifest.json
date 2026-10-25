@@ -353,6 +353,72 @@
       "portrait": "stellaart:asset.denebola-portrait-20261025-web",
       "avatar": "stellaart:asset.denebola-avatar-20261025-web",
       "sprite": "stellaart:asset.denebola-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.gienah",
+      "portrait": "stellaart:asset.aldebaran-portrait-20261025-web",
+      "avatar": "stellaart:asset.aldebaran-avatar-20261025-web",
+      "sprite": "stellaart:asset.aldebaran-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.behemoth",
+      "portrait": "stellaart:asset.dubhe-portrait-20261025-web",
+      "avatar": "stellaart:asset.dubhe-avatar-20261025-web",
+      "sprite": "stellaart:asset.dubhe-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.navi",
+      "portrait": "stellaart:asset.cruithne-portrait-20261025-web",
+      "avatar": "stellaart:asset.cruithne-avatar-20261025-web",
+      "sprite": "stellaart:asset.cruithne-battle-20261025-v2-web"
+    },
+    {
+      "character": "story40:character.cygni",
+      "portrait": "stellaart:asset.larissa-portrait-20261025-web",
+      "avatar": "stellaart:asset.larissa-avatar-20261025-web",
+      "sprite": "stellaart:asset.larissa-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.enif",
+      "portrait": "stellaart:asset.heimdal-portrait-20261025-web",
+      "avatar": "stellaart:asset.heimdal-avatar-20261025-web",
+      "sprite": "stellaart:asset.heimdal-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.piazzi",
+      "portrait": "stellaart:asset.leah-portrait-20261025-web",
+      "avatar": "stellaart:asset.leah-avatar-20261025-web",
+      "sprite": "stellaart:asset.leah-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.kruger60",
+      "portrait": "stellaart:asset.hydra-portrait-20261025-web",
+      "avatar": "stellaart:asset.hydra-avatar-20261025-web",
+      "sprite": "stellaart:asset.hydra-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.ioannina",
+      "portrait": "stellaart:asset.phobos-portrait-20261025-web",
+      "avatar": "stellaart:asset.phobos-avatar-20261025-web",
+      "sprite": "stellaart:asset.phobos-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.shedar",
+      "portrait": "stellaart:asset.umbriel-portrait-20261025-web",
+      "avatar": "stellaart:asset.umbriel-avatar-20261025-web",
+      "sprite": "stellaart:asset.umbriel-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.hypatia",
+      "portrait": "stellaart:asset.nix-portrait-20261025-web",
+      "avatar": "stellaart:asset.nix-avatar-20261025-web",
+      "sprite": "stellaart:asset.nix-battle-20261025-v1-web"
+    },
+    {
+      "character": "story40:character.sadr",
+      "portrait": "stellaart:asset.asmidiske-portrait-20261025-web",
+      "avatar": "stellaart:asset.asmidiske-avatar-20261025-web",
+      "sprite": "stellaart:asset.asmidiske-battle-20261025-v1-web"
     }
   ],
   "regionRoutes": [

@@ -331,7 +331,9 @@ try {
   );
   assert.equal(
     await page.locator(".art-originals img").count(),
-    galleryPack.characters.filter((c) => c.status === "active").length,
+    // Characters still awaiting art keep their geometric fallback and no original.
+    galleryPack.characters.filter((c) => c.status === "active" && c.portrait)
+      .length,
   );
   for (const image of await page.locator(".art-originals img").all()) {
     await image.scrollIntoViewIfNeeded();

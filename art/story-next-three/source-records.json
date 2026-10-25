@@ -1,0 +1,326 @@
+{
+  "authorization": "使用者2026-10-25明確授權敵方立繪與特殊素材由故事作者自行畫；先前要求敵方依Q圖、風格與遊戲一致。",
+  "encoding": "Chromium Canvas PNG→WebP .92 only, dimensions retained; masters/original character art unmodified.",
+  "entries": [
+    {
+      "name": "aitsu",
+      "assetId": "chronicle3:asset.aitsu",
+      "master": "art/story-next-three/masters/aitsu.png",
+      "web": "art/story-next-three/web/aitsu.webp",
+      "masterSha256": "2ab877ba618379a568092e44bd86c63292a803326c38812b522fb4cd9d901e5b",
+      "webSha256": "4689f9b05729272b4fbe9f1d19ddd7410e38897266191323c898f3372214f21f",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "colorSpace": "sRGB",
+      "alpha": true,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "atlas": null,
+      "animation": null,
+      "review": "candidate",
+      "tool": "image_gen.imagegen",
+      "transparentPixelFraction": 0.3845,
+      "inspection": "Opened generated master; checked identity colors, silhouette, visible extremities, environment composition and alpha histogram. Not user approval or physical-device acceptance.",
+      "sourceCID": 191,
+      "identityReference": "art/world/original-world/web/enemy-191.webp",
+      "styleReference": "art/characters/prologue6/web/scuti.webp",
+      "classification": "adult-proportion dialogue portrait adaptation from existing chibi; not original-game illustration"
+    },
+    {
+      "name": "haitsu",
+      "assetId": "chronicle3:asset.haitsu",
+      "master": "art/story-next-three/masters/haitsu.png",
+      "web": "art/story-next-three/web/haitsu.webp",
+      "masterSha256": "71a0abf6717ba59565b025c923828c17d0fc63afb3efbd30fc064413942cd847",
+      "webSha256": "024074ed9c799d6098ec6ed56655c89a6a1b05a5052917c04fc04365bf81f461",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "colorSpace": "sRGB",
+      "alpha": true,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "atlas": null,
+      "animation": null,
+      "review": "candidate",
+      "tool": "image_gen.imagegen",
+      "transparentPixelFraction": 0.4946,
+      "inspection": "Opened generated master; checked identity colors, silhouette, visible extremities, environment composition and alpha histogram. Not user approval or physical-device acceptance.",
+      "sourceCID": 192,
+      "identityReference": "art/world/original-world/web/enemy-192.webp",
+      "styleReference": "art/characters/prologue6/web/scuti.webp",
+      "classification": "adult-proportion dialogue portrait adaptation from existing chibi; not original-game illustration"
+    },
+    {
+      "name": "morugo",
+      "assetId": "chronicle3:asset.morugo",
+      "master": "art/story-next-three/masters/morugo.png",
+      "web": "art/story-next-three/web/morugo.webp",
+      "masterSha256": "d52bdb0bd5c2e74c553a5d35e3939bd7310205b2ae986f6010d9e22a9d611a30",
+      "webSha256": "ece75b1d5a4e14fc506d6e2412a79c972a746f44bdf050ffdb1951faf01508b4",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "colorSpace": "sRGB",
+      "alpha": true,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "atlas": null,
+      "animation": null,
+      "review": "candidate",
+      "tool": "image_gen.imagegen",
+      "transparentPixelFraction": 0.3442,
+      "inspection": "Opened generated master; checked identity colors, silhouette, visible extremities, environment composition and alpha histogram. Not user approval or physical-device acceptance.",
+      "sourceCID": 193,
+      "identityReference": "art/world/original-world/web/enemy-193.webp",
+      "styleReference": "art/characters/prologue6/web/scuti.webp",
+      "classification": "adult-proportion dialogue portrait adaptation from existing chibi; not original-game illustration"
+    },
+    {
+      "name": "leo-front",
+      "assetId": "chronicle3:asset.leo-front",
+      "master": "art/story-next-three/masters/leo-front.png",
+      "web": "art/story-next-three/web/leo-front.webp",
+      "masterSha256": "4496ae0151fb51a411f54b4d28fcffa4fbd0956881bf8bce9919d9e843b22068",
+      "webSha256": "97cb1b189af7bb06deb9087615a2d24189223696e07c0a39ea969c3fc0dc9ca6",
+      "dimensions": [
+        1659,
+        948
+      ],
+      "colorSpace": "sRGB",
+      "alpha": false,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "atlas": null,
+      "animation": null,
+      "review": "candidate",
+      "tool": "image_gen.imagegen",
+      "transparentPixelFraction": 0.0,
+      "inspection": "Opened generated master; checked identity colors, silhouette, visible extremities, environment composition and alpha histogram. Not user approval or physical-device acceptance.",
+      "classification": "new scenario/object design based on story purpose; not recovered original-game art"
+    },
+    {
+      "name": "southern-ship",
+      "assetId": "chronicle3:asset.southern-ship",
+      "master": "art/story-next-three/masters/southern-ship.png",
+      "web": "art/story-next-three/web/southern-ship.webp",
+      "masterSha256": "e8954db790c8aa075e41954a1c9746ae80447d17efe09261bc8aed612907e96f",
+      "webSha256": "822c842bb18c27849975387425d5c94048dff7dce9553f04c182b35d41a468c4",
+      "dimensions": [
+        1659,
+        948
+      ],
+      "colorSpace": "sRGB",
+      "alpha": false,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "atlas": null,
+      "animation": null,
+      "review": "candidate",
+      "tool": "image_gen.imagegen",
+      "transparentPixelFraction": 0.0,
+      "inspection": "Opened generated master; checked identity colors, silhouette, visible extremities, environment composition and alpha histogram. Not user approval or physical-device acceptance.",
+      "classification": "new scenario/object design based on story purpose; not recovered original-game art"
+    },
+    {
+      "name": "southern-haven",
+      "assetId": "chronicle3:asset.southern-haven",
+      "master": "art/story-next-three/masters/southern-haven.png",
+      "web": "art/story-next-three/web/southern-haven.webp",
+      "masterSha256": "909e3991b93fb6ff308f7a1812d8e39735160a21d1a8f4ad21539332abe8dd41",
+      "webSha256": "2725955802c795b6d9e5a29d279cc78e46b72ddabffc07f7dca89a54553afe14",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "colorSpace": "sRGB",
+      "alpha": false,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "atlas": null,
+      "animation": null,
+      "review": "candidate",
+      "tool": "image_gen.imagegen",
+      "transparentPixelFraction": 0.0,
+      "inspection": "Opened generated master; checked identity colors, silhouette, visible extremities, environment composition and alpha histogram. Not user approval or physical-device acceptance.",
+      "classification": "new scenario/object design based on story purpose; not recovered original-game art"
+    },
+    {
+      "name": "canis-stage",
+      "assetId": "chronicle3:asset.canis-stage",
+      "master": "art/story-next-three/masters/canis-stage.png",
+      "web": "art/story-next-three/web/canis-stage.webp",
+      "masterSha256": "1638bc28c5a0908e6fa17f16dd2140c8ef5740b52231646db3f505b8fd1d0946",
+      "webSha256": "e95e04d679afb0048b422c85a71f196fdd14067dfa681ef32213426a850363a8",
+      "dimensions": [
+        1659,
+        948
+      ],
+      "colorSpace": "sRGB",
+      "alpha": false,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "atlas": null,
+      "animation": null,
+      "review": "candidate",
+      "tool": "image_gen.imagegen",
+      "transparentPixelFraction": 0.0,
+      "inspection": "Opened generated master; checked identity colors, silhouette, visible extremities, environment composition and alpha histogram. Not user approval or physical-device acceptance.",
+      "classification": "new scenario/object design based on story purpose; not recovered original-game art"
+    },
+    {
+      "name": "turret",
+      "assetId": "chronicle3:asset.turret",
+      "master": "art/story-next-three/masters/turret.png",
+      "web": "art/story-next-three/web/turret.webp",
+      "masterSha256": "a8422640c90eceee367c4d0ce453c61ee2f13cc51afafbc2011fa7b512755189",
+      "webSha256": "d8f263ec78175fd0080587c198612bcb8025166fa80747336fa4daeb4e8d73e0",
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "colorSpace": "sRGB",
+      "alpha": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "atlas": null,
+      "animation": null,
+      "review": "candidate",
+      "tool": "image_gen.imagegen",
+      "transparentPixelFraction": 0.4531,
+      "inspection": "Opened generated master; checked identity colors, silhouette, visible extremities, environment composition and alpha histogram. Not user approval or physical-device acceptance.",
+      "classification": "new scenario/object design based on story purpose; not recovered original-game art"
+    },
+    {
+      "name": "blackhole-cannon",
+      "assetId": "chronicle3:asset.blackhole-cannon",
+      "master": "art/story-next-three/masters/blackhole-cannon.png",
+      "web": "art/story-next-three/web/blackhole-cannon.webp",
+      "masterSha256": "7df6715a8ee18418e4bc7d7f5c243849404f691eeab29b54605903f3df513093",
+      "webSha256": "99df96c78da8d67e748a52662edab52d7e3b06a6b0e5a9a61718b39631709cd2",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "colorSpace": "sRGB",
+      "alpha": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "atlas": null,
+      "animation": null,
+      "review": "candidate",
+      "tool": "image_gen.imagegen",
+      "transparentPixelFraction": 0.6026,
+      "inspection": "Opened generated master; checked identity colors, silhouette, visible extremities, environment composition and alpha histogram. Not user approval or physical-device acceptance.",
+      "classification": "new scenario/object design based on story purpose; not recovered original-game art"
+    },
+    {
+      "name": "jammer",
+      "assetId": "chronicle3:asset.jammer",
+      "master": "art/story-next-three/masters/jammer.png",
+      "web": "art/story-next-three/web/jammer.webp",
+      "masterSha256": "379d41cad64470bd87d53f35347efd3692afe695f9fbedbaaf9689a7ddd162ee",
+      "webSha256": "25f5e0074d0985c839f7c9f92a013101eb8b395b33cafd5c4def5ad5b181b62b",
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "colorSpace": "sRGB",
+      "alpha": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "atlas": null,
+      "animation": null,
+      "review": "candidate",
+      "tool": "image_gen.imagegen",
+      "transparentPixelFraction": 0.5561,
+      "inspection": "Opened generated master; checked identity colors, silhouette, visible extremities, environment composition and alpha histogram. Not user approval or physical-device acceptance.",
+      "classification": "new scenario/object design based on story purpose; not recovered original-game art"
+    },
+    {
+      "name": "stage",
+      "assetId": "chronicle3:asset.stage",
+      "master": "art/story-next-three/masters/stage.png",
+      "web": "art/story-next-three/web/stage.webp",
+      "masterSha256": "c0e9b1d22bdfbfe9703afaed94251a153c7965e42f20fe2391eecf48880dd595",
+      "webSha256": "d4f855ef56b0d43e9063a710284b846d83b43fbaadae3b1db9b28546fac45e7b",
+      "dimensions": [
+        1374,
+        1145
+      ],
+      "colorSpace": "sRGB",
+      "alpha": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "atlas": null,
+      "animation": null,
+      "review": "candidate",
+      "tool": "image_gen.imagegen",
+      "transparentPixelFraction": 0.4993,
+      "inspection": "Opened generated master; checked identity colors, silhouette, visible extremities, environment composition and alpha histogram. Not user approval or physical-device acceptance.",
+      "classification": "new scenario/object design based on story purpose; not recovered original-game art"
+    },
+    {
+      "name": "samael",
+      "assetId": "chronicle3:asset.samael",
+      "master": "art/story-next-three/masters/samael.png",
+      "web": "art/story-next-three/web/samael.webp",
+      "masterSha256": "f82d6f5bac6a4b8e81204d0ab56842aa950fc308c35d35ab4ae828dbbaa2b273",
+      "webSha256": "c17fa737ca9ce5c5e93803b7709ab21de9ade2d933b797c9f493a2379340ba62",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "colorSpace": "sRGB",
+      "alpha": true,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "atlas": null,
+      "animation": null,
+      "review": "candidate",
+      "tool": "image_gen.imagegen",
+      "transparentPixelFraction": 0.6815,
+      "inspection": "Opened generated master; checked identity colors, silhouette, visible extremities, environment composition and alpha histogram. Not user approval or physical-device acceptance.",
+      "classification": "new scenario/object design based on story purpose; not recovered original-game art"
+    }
+  ],
+  "sceneBriefs": {
+    "leo-front": "前線指揮窗外防線與古代艦整備",
+    "southern-haven": "南天地表避難聚落，旅人休息與合流",
+    "southern-ship": "奪取母艦後的人格資料內部空間",
+    "canis-stage": "可巡遊舞台、星光與受控反應爐；無角色／文字",
+    "turret": "海軍藍銀色雙砲管防衛平台",
+    "blackhole-cannon": "黑洞收束環與分裂導軌砲",
+    "jammer": "三片天線與共振核心",
+    "stage": "無人物的巡遊演出平台",
+    "samael": "低裝甲高速箭形母艦，新設計輪廓，非原版外觀復原"
+  }
+}

@@ -823,7 +823,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
         );
         const levels = nodes.flatMap((v) => v.enemies.map((e) => e.level ?? 1));
         const cleared = nodes.filter((v) => nodeCleared(s, v)).length;
-        const path = regionPath(p, s.region, r.id);
+        const path = regionPath(p, s.region, r.id, s.cleared);
         const blocked = path.slice(1).find((to, i) => {
           const route = p.regions
             .find((v) => v.id === path[i])
@@ -949,7 +949,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     }
     if (action === "route-go") {
       if (g.combat || g.encounterPending) return;
-      const path = regionPath(p, g.save.region, id);
+      const path = regionPath(p, g.save.region, id, g.save.cleared);
       for (const to of path.slice(1)) {
         await g.command({ type: "travel", region: to });
         if (g.save.region !== to) return;

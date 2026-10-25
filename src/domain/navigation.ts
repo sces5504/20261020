@@ -48,22 +48,31 @@ export function guardianPositions(planet: Pack["planets"][number]) {
 }
 
 /** Shortest declared route, retaining locks so the UI can explain the next prerequisite. */
+/** Shortest route chain; with `cleared`, prefers a chain whose gates are all open. */
 export function regionPath(
   p: import("../content/schema").Pack,
   from: string,
   to: string,
+  cleared?: string[],
 ): string[] {
-  const queue = [[from]],
-    seen = new Set([from]);
-  while (queue.length) {
-    const path = queue.shift()!;
-    const last = path[path.length - 1];
-    if (last === to) return path;
-    for (const r of p.regions.find((r) => r.id === last)?.routes ?? [])
-      if (!seen.has(r.to)) {
-        seen.add(r.to);
-        queue.push([...path, r.to]);
-      }
-  }
-  return [];
+  const search = (open: boolean) => {
+    const queue = [[from]],
+      seen = new Set([from]);
+    while (queue.length) {
+      const path = queue.shift()!;
+      const last = path[path.length - 1];
+      if (last === to) return path;
+      for (const r of p.regions.find((r) => r.id === last)?.routes ?? [])
+        if (
+          !seen.has(r.to) &&
+          (!open || r.requires.every((id) => cleared!.includes(id)))
+        ) {
+          seen.add(r.to);
+          queue.push([...path, r.to]);
+        }
+    }
+    return [];
+  };
+  const open = cleared ? search(true) : [];
+  return open.length ? open : search(false);
 }

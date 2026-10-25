@@ -56,7 +56,7 @@ export function conditionLabel(p: Pack, s: Save, c: Condition): string {
 
 function routeTo(p: Pack, s: Save, region: string, planet?: Pack["planets"][number]) {
   if (region !== s.region) {
-    const path = regionPath(p, s.region, region);
+    const path = regionPath(p, s.region, region, s.cleared);
     const next = p.regions.find((r) => r.id === path[1]);
     return next ? button(`躍遷 → ${esc(next.name)}`, "travel", next.id, "primary") : "";
   }

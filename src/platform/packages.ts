@@ -64,11 +64,11 @@ export async function exportPack(
   files["pack.json"] = strToU8(JSON.stringify(p));
   const result = zipSync(files, { level: 6 });
   if (result.length > ARCHIVE_BYTES)
-    throw Error("內容包壓縮檔超過 64 MiB，請拆分內容包。");
+    throw Error("內容包壓縮檔超過 96 MiB，請拆分內容包。");
   return result;
 }
 export function importPack(bytes: Uint8Array): Pack {
-  if (bytes.length > ARCHIVE_BYTES) throw Error("內容包壓縮檔超過 64 MiB。");
+  if (bytes.length > ARCHIVE_BYTES) throw Error("內容包壓縮檔超過 96 MiB。");
   let total = 0;
   const files = unzipSync(bytes, {
     filter: (f) => {

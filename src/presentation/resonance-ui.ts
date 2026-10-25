@@ -30,6 +30,6 @@ export function resonancePanel(
   </div><section class="resonance-job-section"><div class="resonance-job-title"><h3>進行中的工作</h3><span>OPERATION LOG</span></div><div id="jobs">${jobs}</div></section>`;
 }
 
-export function resonanceAction() {
-  return `<div class="resonance-action-content">${button('<span>確認投入並共鳴</span><b aria-hidden="true">→</b>', "summon", "", "primary resonance-activate")}<p class="resonance-disclosure">配方不保證取得指定少女 · 結果在開工時確定</p></div>`;
+export function resonanceAction(ready = 0) {
+  return `<div class="resonance-action-content">${ready ? button(`<span>✦ 開獎 · ${ready} 組完成</span>`, "summon-claim", "", "primary resonance-claim") : ""}${button('<span>確認投入並共鳴</span><b aria-hidden="true">→</b>', "summon", "", "primary resonance-activate")}<p class="resonance-disclosure">配方不保證取得指定少女 · 結果在開工時確定</p></div>`;
 }

@@ -37,6 +37,8 @@ test("summon completion persists an acquisition screen queue once and confirmati
     "summon",
   );
   settle(p, s, t + 40000);
+  assert.equal(s.acquisitionQueue.length, 0, "waits for the player to open it");
+  s = apply(p, s, { type: "summon-claim" }, t + 40000, "claim");
   assert.equal(s.acquisitionQueue.length, 1);
   const id = s.acquisitionQueue[0];
   settle(p, s, t + 50000);

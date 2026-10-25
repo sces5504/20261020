@@ -96,6 +96,7 @@ test("post-cap summons refund the actual four-resource recipe at one quarter, on
   const before = { ...s.wallet };
   s = apply(pack, s, { type: "summon", recipe, count: 2 }, t, "batch");
   settle(pack, s, t + pack.rules.summonSeconds * 1000 + 1);
+  s = apply(pack, s, { type: "summon-claim" }, t + pack.rules.summonSeconds * 1000 + 1, "claim");
   for (const [i, r] of pack.resources.entries())
     assert.equal(
       s.wallet[r.id],

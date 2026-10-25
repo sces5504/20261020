@@ -62,6 +62,7 @@ test("offline job completion belongs to its completion day, and settlement canno
   );
   assert(s.jobs[0].ends < midnight);
   settle(p, s, midnight + 5000);
+  s = apply(p, s, { type: "summon-claim" }, midnight + 5000, "claim");
   assert.equal(questProgress(s, q, midnight - 1), 1);
   assert.equal(questProgress(s, q, midnight + 1), 0);
   settle(p, s, midnight + 6000);

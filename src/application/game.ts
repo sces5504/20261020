@@ -184,6 +184,7 @@ export class Game {
             : "已撤離交戰區 · 角色生命已保存";
         this.disengagedPlanets = new Set(s.disengagedPlanets);
         this.combat = null;
+        let towed = false;
         if (Math.hypot(s.x - base.x, s.y - base.y) > 1) {
           // The domain towed a wiped fleet to a haven; follow it there.
           this.x = s.x;
@@ -195,7 +196,7 @@ export class Game {
             s.team,
             this.pack.rules.formationSpacing,
           );
-          this.notice = "全隊失去戰力 · 已返回整補點，修復中";
+          towed = true;
         }
         if (!(patrol && c.victory)) this.destination = { x: this.x, y: this.y };
         if (c.reset)
@@ -218,7 +219,9 @@ export class Game {
         } else
           this.notice = c.victory
             ? "星球已解放 · 航跡更新"
-            : "已撤離交戰區，整補後可再出發。";
+            : towed
+              ? `全隊失去戰力 · 已返回整補點，${this.healWait()}`
+              : "已撤離交戰區，整補後可再出發。";
       }
       this.dirty = true;
     }, command.type !== "checkpoint");
@@ -412,7 +415,7 @@ export class Game {
     const reason = !v
       ? ""
       : teamDown
-        ? `${v.name} · 編隊需先整補才能交戰`
+        ? `${v.name} · 編隊需先整補才能交戰（${this.healWait()}）`
         : !nodeUnlocked(this.save, v, this.pack)
           ? `${v.name} · 需先解放：${[...v.requires, ...v.requiresActive]
               .filter((id) => !this.save.cleared.includes(id))
@@ -429,6 +432,14 @@ export class Game {
     const key = v && reason ? `${v.id}:${reason}` : "";
     if (key && key !== this.hintKey) this.notice = reason;
     this.hintKey = key;
+  }
+  /** Remaining repair time for the team, for hints ("整補約 42 秒"). */
+  healWait() {
+    const ends = this.save.jobs
+      .filter((j) => j.kind === "heal" && this.save.team.includes(j.owner))
+      .map((j) => j.ends);
+    const left = Math.ceil((Math.max(0, ...ends) - Date.now()) / 1000);
+    return left > 0 ? `整補約 ${left} 秒` : "請於角色頁整補";
   }
   get movementSpeed() {
     if (this.combat) return this.pack.rules.travelSpeed;

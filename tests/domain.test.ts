@@ -30,9 +30,12 @@ test("batch summon is atomic, persists results at start, and duplicate command c
   assert.deepEqual(duplicate, a);
   const copy = structuredClone(a);
   settle(p, copy, t + 40000);
-  assert.equal(copy.roster.length, s.roster.length + 2);
-  settle(p, copy, t + 40000);
-  assert.equal(copy.roster.length, s.roster.length + 2);
+  // Finished resonance waits for the player to open it; then lands exactly once.
+  assert.equal(copy.roster.length, s.roster.length);
+  const opened = cmd(copy, { type: "summon-claim" }, "claim", t + 40000);
+  assert.equal(opened.roster.length, s.roster.length + 2);
+  assert.deepEqual(cmd(opened, { type: "summon-claim" }, "claim", t + 40000), opened);
+  assert.throws(() => cmd(opened, { type: "summon-claim" }, "claim-2", t + 40000), /沒有可開獎/);
   assert.throws(
     () => cmd(s, { type: "summon", recipe: [999, 999, 999, 999], count: 4 }),
     /資源不足/,

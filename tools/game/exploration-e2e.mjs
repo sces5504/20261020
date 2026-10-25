@@ -151,6 +151,9 @@ try {
   );
   await page.clock.install();
   await page.clock.fastForward(37000);
+  // Finished resonance waits in its seat; the player opens it from the panel.
+  assert.equal((await record(page)).acquisitionQueue.length, 0);
+  await page.locator('[data-action="summon-claim"]').click();
   await page.waitForSelector(".acquisition-screen");
   await page.screenshot({ path: ".artifacts/v2/acquisition.png" });
   assert.equal((await record(page)).acquisitionQueue.length, 1);

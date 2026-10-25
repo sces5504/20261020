@@ -1848,6 +1848,21 @@
   main.bridge.bridge .flight-deck .squad .operator-copy {
     padding: 0 3px 3px;
   }
+  /* Prefer the dedicated head crop when the character has one. */
+  main.bridge.bridge .flight-deck .squad .operator-art:has(.operator-face) > img:not(.operator-face),
+  main.bridge.bridge .flight-deck .squad .operator-art:has(.operator-face) > .portrait {
+    display: none;
+  }
+  main.bridge.bridge .flight-deck .squad .operator-art > img.operator-face {
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 30%;
+    transform: none;
+  }
   /* Face crop: portraits are full-body art, so zoom onto the head. */
   main.bridge.bridge .flight-deck .squad .operator-art > img {
     top: -4%;
@@ -2273,5 +2288,130 @@ body {
   main.bridge.bridge .story-status span {
     font-size: 11px;
     padding: 3px 7px;
+  }
+}
+/* Skill cut-in: the caster's portrait sweeps across like the original. Never blocks input. */
+.bridge .sector-heading .skill-splash,
+.bridge .skill-splash {
+  opacity: 0;
+}
+.skill-cutin {
+  position: absolute;
+  left: 0;
+  top: 8%;
+  height: 64%;
+  width: min(62%, 560px);
+  pointer-events: none;
+  z-index: 7;
+  opacity: 0;
+  overflow: hidden;
+}
+.skill-cutin.show {
+  animation: skill-cutin 1.25s ease-out forwards;
+}
+.skill-cutin img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: auto;
+  filter: drop-shadow(0 0 18px #8fd8ffaa);
+  mask-image: linear-gradient(90deg, #000 70%, transparent);
+}
+.skill-cutin div {
+  position: absolute;
+  left: 38%;
+  bottom: 14%;
+  display: grid;
+  gap: 2px;
+  padding: 6px 16px 8px;
+  background: linear-gradient(90deg, #0a1a2ae6, #0a1a2a00);
+  border-left: 3px solid #8fd8ff;
+  white-space: nowrap;
+}
+.skill-cutin small {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #8fd8ff;
+}
+.skill-cutin strong {
+  font-size: 22px;
+  color: #fff;
+  text-shadow: 0 0 10px #8fd8ff;
+}
+.skill-cutin span {
+  font-size: 12px;
+  color: #cfe7f2;
+}
+@keyframes skill-cutin {
+  0% {
+    opacity: 0;
+    transform: translateX(-40%);
+  }
+  14% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  78% {
+    opacity: 1;
+    transform: translateX(4%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(8%);
+  }
+}
+@media (max-width: 760px) {
+  main.bridge.bridge .skill-cutin {
+    position: fixed;
+    top: calc(var(--bar) + 120px);
+    height: 42vh;
+    width: 78vw;
+  }
+  main.bridge.bridge .skill-cutin strong {
+    font-size: 18px;
+  }
+}
+.operator-face {
+  display: none;
+}
+/* Phone: an open panel owns the screen; bars, tools and joystick step aside. */
+@media (max-width: 760px) {
+  main.bridge.bridge .modal-backdrop {
+    z-index: 40;
+  }
+  main.bridge.bridge:has(.modal-backdrop) .topbar,
+  main.bridge.bridge:has(.modal-backdrop) .deck-nav,
+  main.bridge.bridge:has(.modal-backdrop) .battle-tools,
+  main.bridge.bridge:has(.modal-backdrop) .joystick,
+  main.bridge.bridge:has(.modal-backdrop) .flight-deck .squad,
+  main.bridge.bridge:has(.modal-backdrop) .sector-heading {
+    visibility: hidden;
+  }
+}
+/* Heal countdown on operator cards (phone strip and desktop column). */
+.operator-heal {
+  position: absolute;
+  left: 50%;
+  bottom: 8px;
+  transform: translateX(-50%);
+  z-index: 3;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: #0b2a2ae6;
+  border: 1px solid #7fe0c4aa;
+  color: #c9f5e6;
+  font-size: 10px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.operator-heal[hidden] {
+  display: none;
+}
+@media (max-width: 760px) {
+  main.bridge.bridge .flight-deck .squad .operator-heal {
+    bottom: 4px;
+    font-size: 9px;
+    padding: 1px 3px;
   }
 }

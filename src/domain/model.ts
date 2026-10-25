@@ -26,8 +26,11 @@ export type Job = {
   production: Wallet;
   cost: Wallet;
 };
+/** Save-scoped chapter facility; battle-scoped facilities never reach the save. */
+export type FacilityState = { hp: number; destroyed: boolean };
 export type Save = {
   story: StoryState;
+  facilities: Record<string, FacilityState>;
   schemaVersion: 1;
   contentHash: string;
   migrationHistory: string[];
@@ -103,6 +106,7 @@ export function newSave(p: Pack, now: number, id = "voyager"): Save {
     }));
   return {
     story: emptyStory(),
+    facilities: {},
     schemaVersion: 1,
     contentHash: "",
     migrationHistory: [],

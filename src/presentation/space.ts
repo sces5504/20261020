@@ -840,6 +840,8 @@ export function mountSpace(
             this.sprites
               .get(u.id)
               ?.setOrigin(turretArt.pivot.x, turretArt.pivot.y);
+          } else if (u.facility) {
+            this.facility(combat, sim, color);
           } else if (u.side === "ally") {
             if (!u.sprite || !this.textures.exists(u.sprite))
               this.ship(u.x, u.y, color, size);
@@ -888,7 +890,15 @@ export function mountSpace(
               );
             }
           }
-          if (u.sprite && this.textures.exists(u.sprite))
+          if (combat.story?.shielded(sim)) {
+            // Story shield: layered rings, brighter while up.
+            const r = (u.boss ? 62 : 34) * scale + Math.sin(this.elapsed * 4) * 2;
+            g.lineStyle(2, 0x8fd8ff, 0.85);
+            g.strokeCircle(u.x, u.y, r);
+            g.lineStyle(6, 0x8fd8ff, 0.12);
+            g.strokeCircle(u.x, u.y, r + 4);
+          }
+          if (u.sprite && this.textures.exists(u.sprite) && !u.facility)
             this.drawAsset(
               u.id,
               u.sprite,
@@ -1158,6 +1168,47 @@ export function mountSpace(
         localStorage.setItem(zoomKey, String(this.zoomFactor));
       } catch {
         // Private mode: zoom still works for this session.
+      }
+    }
+    /** Chapter facility: art when provided, otherwise a readable hex platform. */
+    private facility(combat: NonNullable<typeof model.combat>, u: { id: string; def: string; x: number; y: number; hp: number; maxHp: number; side: string }, color: number) {
+      const def = model.pack.facilities.find((f) => f.id === u.def);
+      if (!def) return;
+      const g = this.ink,
+        r = def.size / 2;
+      if (def.sprite && this.textures.exists(def.sprite))
+        this.drawAsset(u.id, def.sprite, u.x, u.y, def.size);
+      else {
+        const points = Array.from({ length: 6 }, (_, i) => {
+          const a = (i * Math.PI) / 3 + Math.PI / 6;
+          return new Phaser.Math.Vector2(u.x + Math.cos(a) * r, u.y + Math.sin(a) * r);
+        });
+        g.fillStyle(color, 0.22);
+        g.fillPoints(points, true);
+        g.lineStyle(2, color, 0.95);
+        g.strokePoints(points, true);
+        g.fillStyle(color, 0.85);
+        g.fillCircle(u.x, u.y, r * 0.28);
+      }
+      const ratio = Math.max(0, u.hp / u.maxHp);
+      g.fillStyle(0x0a1522, 0.8);
+      g.fillRect(u.x - r, u.y + r + 6, r * 2, 5);
+      g.fillStyle(u.side === "ally" ? 0x7fe0c4 : 0xff8f7a, 1);
+      g.fillRect(u.x - r, u.y + r + 6, r * 2 * ratio, 5);
+      if (def.effect.kind === "jammer" && u.side === "ally" && u.hp > 0) {
+        const state = combat.story?.placements.get(u.id);
+        g.lineStyle(1.5, 0xffe08a, 0.35);
+        g.strokeCircle(u.x, u.y, def.effect.reach);
+        if (state && state.channel > 0) {
+          g.lineStyle(5, 0xffe08a, 0.9);
+          g.beginPath();
+          g.arc(u.x, u.y, r + 12, -Math.PI / 2, -Math.PI / 2 + (Math.PI * 2 * state.channel) / Math.max(0.01, def.effect.channel));
+          g.strokePath();
+        }
+      }
+      if (def.effect.kind === "aura" && u.hp > 0) {
+        g.lineStyle(1, color, 0.25);
+        g.strokeCircle(u.x, u.y, def.effect.radius);
       }
     }
     private ship(x: number, y: number, color: number, size: number) {

@@ -82,6 +82,10 @@ export function conditionMet(s: Save, c: Condition): boolean {
             )
           : s.built) >= c.count
       );
+    case "facility":
+      return !!s.facilities?.[c.target] && !s.facilities[c.target].destroyed;
+    case "facilityDestroyed":
+      return !!s.facilities?.[c.target]?.destroyed;
     case "battleWon":
       return (
         Math.max(
@@ -191,6 +195,11 @@ export function advanceStory(p: Pack, s: Save, skip = false, initial = false) {
         storyFact(s, "event", step.event);
         s.receipts.push(receipt);
       }
+    } else if (step.kind === "facility") {
+      if (!s.receipts.includes(receipt)) {
+        applyFacility(p, s, step.facility, step.op);
+        s.receipts.push(receipt);
+      }
     } else if (step.kind === "encounter") {
       if (!step.resumeIf || !conditionMet(s, step.resumeIf)) return;
     } else if (!skip) return;
@@ -267,4 +276,21 @@ export function mainlineState(p: Pack, s: Save): MainlineState | undefined {
     status: storyAvailable(p, s, quest.id) ? "start" : "locked",
     condition: quest.story!.requires,
   };
+}
+/** Story-driven facility change (free): grant builds it, repair restores HP, remove clears it. */
+export function applyFacility(
+  p: Pack,
+  s: Save,
+  id: string,
+  op: "grant" | "repair" | "remove",
+) {
+  const f = p.facilities.find((v) => v.id === id);
+  if (!f || f.scope !== "save") throw Error("設施定義缺失，請恢復內容包。");
+  s.facilities ??= {};
+  if (op === "remove") delete s.facilities[id];
+  else if (op === "grant") {
+    if (!s.facilities[id] || s.facilities[id].destroyed)
+      s.facilities[id] = { hp: f.hp, destroyed: false };
+    storyFact(s, "facilityBuilt", id);
+  } else if (s.facilities[id]) s.facilities[id] = { hp: f.hp, destroyed: false };
 }

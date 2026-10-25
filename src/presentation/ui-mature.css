@@ -2222,3 +2222,52 @@ body {
   -webkit-user-select: text;
   user-select: text;
 }
+/* Story combat status: shields, jam windows and facility prompts. Never blocks input. */
+.story-status {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  max-width: min(92%, 640px);
+  pointer-events: none;
+  z-index: 5;
+}
+.story-status:empty {
+  display: none;
+}
+.story-status span {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  background: #0a1522d9;
+  border: 1px solid #8fd8ff55;
+  color: #cfeeff;
+}
+.story-status .is-jam {
+  border-color: #ffe08a99;
+  color: #ffe9a8;
+  background: #2a2208d9;
+}
+.story-status .is-facility {
+  border-color: #7fe0c466;
+  color: #c9f5e6;
+}
+@media (max-width: 760px) {
+  main.bridge.bridge .story-status {
+    position: fixed;
+    top: calc(var(--bar) + 160px);
+    left: 6px;
+    transform: none;
+    justify-content: flex-start;
+    max-width: calc(100% - var(--strip) - 20px);
+  }
+  main.bridge.bridge .story-status span {
+    font-size: 11px;
+    padding: 3px 7px;
+  }
+}

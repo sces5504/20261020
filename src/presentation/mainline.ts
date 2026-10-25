@@ -4,6 +4,7 @@ import type { Save } from "../domain/model";
 import { conditionMet, mainlineState } from "../domain/story";
 import { regionPath } from "../domain/navigation";
 import { questReady } from "../domain/economy";
+import { canAfford } from "../domain/model";
 import { questClaimed, questProgress } from "../domain/daily-quests";
 import { esc, button } from "./common";
 
@@ -44,6 +45,10 @@ export function conditionLabel(p: Pack, s: Save, c: Condition): string {
       return `取得 ${name(p.characters, c.target)}`;
     case "research":
       return `完成研究「${name(p.research, c.target)}」`;
+    case "facility":
+      return `建成「${name(p.facilities, c.target)}」`;
+    case "facilityActivated":
+      return `啟動「${name(p.facilities, c.target)}」`;
     default:
       return c.target ? `${c.fact}：${c.target}` : c.fact;
   }
@@ -61,6 +66,21 @@ function routeTo(p: Pack, s: Save, region: string, planet?: Pack["planets"][numb
 /** First unmet navigable leaf: a region to reach or a planet to clear. */
 function guide(p: Pack, s: Save, c: Condition | undefined) {
   if (!c) return "";
+  // Chapter facilities are built through a real transaction from the tracker.
+  const build = leaves(c).find((v) => v.fact === "facility" && !conditionMet(s, v));
+  const facility = build && p.facilities.find((f) => f.id === build.target);
+  if (facility && facility.scope === "save") {
+    const cost = Object.entries(facility.cost)
+      .map(([id, n]) => `${p.resources.find((r) => r.id === id)?.name ?? id} ${n}`)
+      .join("、");
+    return button(
+      `建造 · ${esc(facility.name)}${cost ? `（${esc(cost)}）` : ""}`,
+      "facility-build",
+      facility.id,
+      "primary",
+      !canAfford(s, facility.cost),
+    );
+  }
   const leaf = leaves(c).find(
     (v) =>
       !conditionMet(s, v) && ["region", "position", "cleared"].includes(v.fact),
@@ -91,7 +111,7 @@ export function mainlineHtml(
     m.status === "done"
       ? "目前主線已全部完成，可於航行紀錄回看。"
       : reached
-        ? "已抵達目標，可接續劇情"
+        ? "目標已達成，可接續劇情"
         : settled
           ? `「${planet?.name ?? "劇情戰場"}」已完成，可接續劇情`
         : m.status === "await" || m.status === "locked"

@@ -2,6 +2,7 @@ import { defaultVolleyCount } from "../content/mechanics";
 import { Mechanics } from "./mechanics";
 import type { Action, Modifier, Pattern } from "../content/mechanics";
 import { FleetMotion } from "./formation";
+import { StoryMechanics } from "./story-mechanics";
 import { guardianPositions, patrolPosition } from "./navigation";
 import { enemyStats } from "./world";
 import type { Pack, Character, Enemy, Skill } from "../content/schema";
@@ -41,6 +42,10 @@ export type Unit = {
   storyActor?: boolean;
   summonOwner?: string;
   summonKind?: string;
+  /** Chapter facility placement id (story-only, immobile). */
+  facility?: string;
+  /** Never targeted or hit (e.g. a non-attackable stage). */
+  untargetable?: boolean;
 };
 export type Bullet = {
   id: number;
@@ -91,6 +96,8 @@ export class Combat {
   >();
   storyRetreated = new Set<string>();
   mechanics = new Mechanics(this);
+  /** Shields, jam windows and chapter facilities of a story encounter. */
+  story?: StoryMechanics;
   laboratory = false;
   lockHealth = false;
   units: Unit[] = [];
@@ -202,6 +209,12 @@ export class Combat {
         );
       }
     this.spawnStoryActors();
+    const story = this.storyEncounter;
+    if (story) this.story = new StoryMechanics(this, story);
+  }
+  /** Save-scoped facility state and activations for the result command. */
+  facilityResults() {
+    return this.story?.results() ?? { facilities: {}, activated: {} };
   }
   get storyEncounter() {
     return this.pack.planets.find((v) => v.id === this.planetId)
@@ -262,6 +275,7 @@ export class Combat {
         this.storyDestinations.set(u.id, { x: ev.x!, y: ev.y!, radius: 20 });
       if (ev.action === "setHp") u.hp = u.maxHp * ev.ratio!;
     });
+    if (this.story?.step(dt)) return true;
     while (
       this.storyWave < e.waves.length &&
       e.waves[this.storyWave].at <= this.time
@@ -410,6 +424,16 @@ export class Combat {
     );
   }
   volleyFor(u: Unit) {
+    const facility = u.facility
+      ? this.pack.facilities.find((f) => f.id === u.def)
+      : undefined;
+    if (facility?.effect.kind === "turret")
+      return {
+        pattern: facility.effect.pattern,
+        count: facility.effect.count ?? defaultVolleyCount(facility.effect.pattern),
+        speed: 520,
+        spread: 0.22,
+      };
     const definition =
       this.pack.enemies.find((e) => e.id === u.def) ??
       this.pack.characters.find((c) => c.id === u.def);
@@ -589,6 +613,7 @@ export class Combat {
           (v) =>
             v.side !== u.side &&
             v.hp > 0 &&
+            !v.untargetable &&
             !this.mechanics.has(v, "invisible"),
         )
         .sort(
@@ -757,7 +782,9 @@ export class Combat {
     if (!this.allies.some((u) => u.hp > 0)) {
       this.ended = true;
       this.victory = false;
-    } else if (!this.units.some((u) => u.side === "enemy" && u.hp > 0)) {
+    } else if (
+      !this.units.some((u) => u.side === "enemy" && u.hp > 0 && !u.untargetable)
+    ) {
       if (this.waveIndex < this.waveGroups.length - 1) {
         if (!this.nextWaveAt) this.nextWaveAt = this.time + this.waveDelay;
         if (this.time >= this.nextWaveAt) {

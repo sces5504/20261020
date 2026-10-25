@@ -2123,6 +2123,10 @@
   main.bridge.bridge .battle-tools small {
     display: none;
   }
+  /* The planet card sits left of the operator column so both stay clickable. */
+  main.bridge.bridge .planet-card {
+    transform: translateX(-196px);
+  }
   /* Desktop: operator cards stack on the right edge of the map, like the phone strip. */
   main.bridge.bridge .flight-deck .squad,
   main.bridge.bridge .flight-deck .squad:has(> .operator-card:nth-child(4)) {

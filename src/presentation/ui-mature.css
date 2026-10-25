@@ -2112,7 +2112,7 @@
   }
   main.bridge.bridge .battle-tools {
     top: 14px;
-    right: 14px;
+    right: 214px;
     left: auto;
     bottom: auto;
     transform: none;
@@ -2121,6 +2121,39 @@
     background: #0a1522cc;
   }
   main.bridge.bridge .battle-tools small {
+    display: none;
+  }
+  /* Desktop: operator cards stack on the right edge of the map, like the phone strip. */
+  main.bridge.bridge .flight-deck .squad,
+  main.bridge.bridge .flight-deck .squad:has(> .operator-card:nth-child(4)) {
+    --card: clamp(56px, calc((100vh - 310px) / 6), 116px);
+    position: fixed;
+    top: 196px;
+    right: 22px;
+    width: 176px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    grid-template-columns: none;
+    height: auto;
+    max-height: calc(100vh - 290px);
+    overflow: visible;
+    z-index: 6;
+  }
+  main.bridge.bridge .flight-deck .squad > .operator-card,
+  main.bridge.bridge .flight-deck .squad:has(> .operator-card:nth-child(4)) > .operator-card {
+    width: 176px;
+    height: var(--card);
+    min-height: 0;
+    flex: none;
+  }
+}
+/* Short desktop windows: compact operator cards keep name and HP only. */
+@media (min-width: 761px) and (max-height: 900px) {
+  main.bridge.bridge .flight-deck .squad .operator-copy > :not(strong):not(.hp-bar) {
+    display: none;
+  }
+  main.bridge.bridge .flight-deck .squad .operator-glyph {
     display: none;
   }
 }

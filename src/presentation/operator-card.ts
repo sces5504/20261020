@@ -34,8 +34,11 @@ export function operatorCard(
   combat: boolean,
 ) {
   const file = c.id.replace(/[^a-z0-9.-]/g, "_") + ".webp",
-    src = portraits[`../../art/ui/operator-portraits-v1/${file}`];
-  return `<button class="squad-card operator-card" style="--c:${c.color}" data-action="${combat ? "cast" : "character"}" data-id="${esc(o.id)}" aria-label="${esc(c.name)} · ${esc(s.name)}"><span class="operator-art">${src ? `<img src="${esc(src)}" alt="${esc(c.name)}" loading="eager">` : portrait(p, c, true)}</span><span class="operator-shade" aria-hidden="true"></span><span class="operator-slot">${String(slot + 1).padStart(2, "0")}</span><span class="operator-glyph">${skillGlyph(s)}</span><span class="operator-level">Lv.${o.level}</span><span class="operator-cd-ring"><b class="operator-cd"></b></span><div class="operator-copy"><span class="rarity">${stars(c, o)}</span><strong>${esc(c.name)}</strong><div class="hp-bar"><span></span></div><small class="skill-label">${esc(s.name)}</small><span class="operator-state">${combat ? "戰技就緒" : "檢視檔案"}</span></div></button>`;
+    src = portraits[`../../art/ui/operator-portraits-v1/${file}`],
+    // Dedicated head crop for the phone strip; framing differs per portrait.
+    face =
+      !src && c.avatar ? p.assets.find((a) => a.id === c.avatar)?.src : undefined;
+  return `<button class="squad-card operator-card" style="--c:${c.color}" data-action="${combat ? "cast" : "character"}" data-id="${esc(o.id)}" aria-label="${esc(c.name)} · ${esc(s.name)}"><span class="operator-art">${src ? `<img src="${esc(src)}" alt="${esc(c.name)}" loading="eager">` : portrait(p, c, true)}${face ? `<img class="operator-face" src="${esc(face)}" alt="" loading="eager">` : ""}</span><span class="operator-shade" aria-hidden="true"></span><span class="operator-slot">${String(slot + 1).padStart(2, "0")}</span><span class="operator-glyph">${skillGlyph(s)}</span><span class="operator-level">Lv.${o.level}</span><span class="operator-cd-ring"><b class="operator-cd"></b></span><span class="operator-heal" hidden></span><div class="operator-copy"><span class="rarity">${stars(c, o)}</span><strong>${esc(c.name)}</strong><div class="hp-bar"><span></span></div><small class="skill-label">${esc(s.name)}</small><span class="operator-state">${combat ? "戰技就緒" : "檢視檔案"}</span></div></button>`;
 }
 export function updateOperatorCard(
   card: HTMLElement,
@@ -44,7 +47,14 @@ export function updateOperatorCard(
   max: number,
   skill: Skill,
   combat: boolean,
+  healEnds = 0,
 ) {
+  // Repair countdown stays visible on the card while a heal job runs.
+  const heal = card.querySelector<HTMLElement>(".operator-heal")!,
+    left = Math.ceil((healEnds - Date.now()) / 1000);
+  heal.hidden = left <= 0;
+  if (left > 0)
+    heal.textContent = `整補 ${Math.floor(left / 60)}:${String(left % 60).padStart(2, "0")}`;
   const cooling = !!unit && unit.skillCooldown > 0,
     ready = !!unit && unit.hp > 0 && !cooling;
   card.classList.toggle("skill-cooling", cooling);

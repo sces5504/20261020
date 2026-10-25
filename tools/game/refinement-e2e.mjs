@@ -139,6 +139,7 @@ try {
   const before = await record(page);
   await page.locator('[data-action="summon"]').click();
   await page.locator('[data-answer="yes"]').click();
+  await page.locator('[data-action="summon-claim"]').click({ timeout: 60000 });
   const converted = await waitSave(
     page,
     (s) => s.duplicateConversions === 1,

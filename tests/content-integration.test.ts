@@ -66,6 +66,7 @@ test("all ten authored maidens remain actually summonable with the combined pool
         assert.equal(s.wallet[r.id], 5000 - c.recipe[i]),
       );
       settle(p, s, p.rules.summonSeconds * 1000 + 1);
+      s = apply(p, s, { type: "summon-claim" }, p.rules.summonSeconds * 1000 + 1, "claim");
       assert(s.roster.some((o) => o.definition === promised));
       checkSave(s, p);
       acquired = s.roster.some((o) => o.definition === c.id);
@@ -105,10 +106,11 @@ test("old second-sector save preserves position, colonies and committed summon r
   const migrated = checkSave(JSON.parse(JSON.stringify(s)), p);
   assert.deepEqual(migrated, before);
   settle(p, migrated, core.rules.summonSeconds * 1000 + 2);
-  assert(migrated.roster.some((o) => o.definition === promised));
+  const claimed = apply(p, migrated, { type: "summon-claim" }, migrated.settledAt, "claim");
+  assert(claimed.roster.some((o) => o.definition === promised));
   const home = apply(
     p,
-    migrated,
+    claimed,
     { type: "travel", region: "m1:helios" },
     migrated.settledAt,
     "return",

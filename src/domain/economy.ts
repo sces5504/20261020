@@ -110,8 +110,9 @@ export function settle(p: Pack, s: Save, now: number) {
   const limit = s.settledAt + p.rules.offlineCapSeconds * 1000,
     end = Math.min(now, limit);
   let cursor = s.settledAt;
+  // Finished resonance waits in its seat until the player opens it (summon-claim).
   const due = s.jobs
-    .filter((j) => j.ends <= end)
+    .filter((j) => j.ends <= end && j.kind !== "summon")
     .sort((a, b) => a.ends - b.ends || a.id.localeCompare(b.id));
   for (const j of due) {
     const at = Math.max(cursor, j.ends);
@@ -120,13 +121,13 @@ export function settle(p: Pack, s: Save, now: number) {
     cursor = at;
   }
   accrue(p, s, (end - cursor) / 1000);
-  s.jobs = s.jobs.filter((j) => j.ends > end);
+  s.jobs = s.jobs.filter((j) => j.ends > end || j.kind === "summon");
   // Jobs mature even after capped production; no missed-time attack simulation.
   for (const j of s.jobs
-    .filter((j) => j.ends <= now)
+    .filter((j) => j.ends <= now && j.kind !== "summon")
     .sort((a, b) => a.ends - b.ends || a.id.localeCompare(b.id)))
     complete(p, s, j);
-  s.jobs = s.jobs.filter((j) => j.ends > now);
+  s.jobs = s.jobs.filter((j) => j.ends > now || j.kind === "summon");
   s.settledAt = now;
   refreshStory(p, s);
 }
@@ -150,6 +151,7 @@ export type Command =
   | { type: "level"; owned: string }
   | { type: "skill-research"; owned: string }
   | { type: "facility-build"; facility: string }
+  | { type: "summon-claim" }
   | { type: "team"; owned: string }
   | { type: "reorder-team"; owned: string; direction: -1 | 1 }
   | { type: "assign"; owned: string; planet: string }
@@ -491,6 +493,14 @@ export function apply(
       throw Error(`角色需達 Lv${skillResearchGate(next)} 才能研究技能 Lv${next}。`);
     pay(skillResearchCost(p, o));
     o.skillLevel = next;
+  }
+  if (c.type === "summon-claim") {
+    const ready = s.jobs
+      .filter((j) => j.kind === "summon" && j.ends <= now)
+      .sort((a, b) => a.ends - b.ends || a.id.localeCompare(b.id));
+    if (!ready.length) throw Error("目前沒有可開獎的共鳴。");
+    for (const j of ready) complete(p, s, j);
+    s.jobs = s.jobs.filter((j) => !ready.includes(j));
   }
   if (c.type === "facility-build") {
     const f = p.facilities.find((v) => v.id === c.facility);

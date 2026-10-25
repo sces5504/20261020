@@ -35,6 +35,8 @@ export function mountSpace(
   model: Game,
   onPlanet: (id: string) => void,
   audio?: AudioMixer,
+  /** Empty-space tap; returning true consumes it (e.g. dismissing the intel card). */
+  onEmptyTap?: () => boolean,
 ) {
   const density = Math.min(window.devicePixelRatio || 1, 2);
   const held = new Set<string>();
@@ -229,6 +231,7 @@ export function mountSpace(
           onPlanet(planet.id);
           return;
         }
+        if (!model.combat && onEmptyTap?.()) return;
         model.move(p.x, p.y);
       });
       this.game.canvas.addEventListener("pointercancel", () => {

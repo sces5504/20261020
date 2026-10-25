@@ -114,3 +114,5 @@ node --import tsx tools/story-next-three/browser.mts
 第一次完整verify不要帶`--resume`；resume只在輸入fingerprint吻合時沿用成功戰鬥，不能在資料改變後偽稱已驗。browser的`--survey-only`／`--replay-only`需先有完整收據，只供本次局部接續，不能當初次驗收捷徑。
 
 整合後更新共享索引／公開發布狀態由整合者負責。此內容分支未合main、未啟用、未部署；PR與commit結果見下方紀錄或實際Git，不能沿用前24節PR23的發布成功當這三章成功。
+
+交付PR：[PR #40](https://github.com/sces5504/20261020/pull/40)。美術提交 `96499b4`；故事／驗證提交 `dbcf869`。PR未啟用共享manifest；下一位核心整合者按上方步驟完成接入及發布。最後文件更新不重新跑未改的遊戲測試。

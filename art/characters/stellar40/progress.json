@@ -1,5 +1,5 @@
 {
-  "completedCount": 12,
+  "completedCount": 20,
   "targetCount": 40,
   "completedKeys": [
     "polaris",
@@ -13,9 +13,7 @@
     "hydra",
     "regulus",
     "arkas",
-    "procyon"
-  ],
-  "remainingKeys": [
+    "procyon",
     "luyten",
     "regor",
     "tseenke",
@@ -23,7 +21,9 @@
     "alherem",
     "musca",
     "acrux",
-    "achernar",
+    "achernar"
+  ],
+  "remainingKeys": [
     "ran",
     "aegir",
     "acamar",

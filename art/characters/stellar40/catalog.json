@@ -1180,7 +1180,7 @@
       "preview": "web/luyten.webp",
       "sourceReportedReviewStatus": "keep-user-approved",
       "reviewStatus": "awaiting-user-review",
-      "visualInspection": null,
+      "visualInspection": "Dark charcoal-purple rounded short bob with lavender inner tips; magenta eyes and sly gentle smile. Two small black/violet curved horn ornaments, a pair of small purple-black bat wings with gem joints. Black/plum sleeveless high halter short costume with violet star gems, long fingerless dark gloves, dark ankle boots. Floating seated cross-legged pose, RIGHT knuckles against cheek and LEFT open palm extended. Compact modest SD coverage. Preserve both wings and horns fully inside canvas.",
       "source": {
         "type": "user-provided-Drive-standard",
         "archive": "portraits-01-20.zip",
@@ -1190,7 +1190,54 @@
       },
       "webAsset": null,
       "avatarAsset": null,
-      "battleAsset": null
+      "battleAsset": {
+        "assetId": "stellaart:asset.luyten-battle-20261025-v1",
+        "characterId": "stellaart:character.luyten",
+        "path": "battle/luyten-v1-candidate.png",
+        "preview": "web/luyten-battle.webp",
+        "version": "v1-candidate",
+        "sha256": "ca13fba2089a82a998735e92baa91cdfadfe89ed38d62444f58a02f2a902a125",
+        "sourceOriginalSha256": "693221e3e8047def8f82b8bb80f5a0c87e27938e6db8d79e311ae3ded37b54d2",
+        "sourceOriginalVersion": "13-luyten-v3-style-locked",
+        "width": 1230,
+        "height": 1278,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.5,
+          "y": 0.9937402190923318,
+          "note": "視覺輪廓底部，含裝備／座具時須場景校準，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            7,
+            6,
+            1223,
+            1270
+          ],
+          "marginPx": [
+            7,
+            6,
+            7,
+            8
+          ],
+          "note": "保留生成主檔；網頁輸出另加透明安全留白"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/luyten.png",
+          "prompt": "prompts/luyten-battle-v1.txt",
+          "toolOutputFileName": "exec-63afa7cf-6476-42b2-8ef3-df151edf5f3b.png",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "stellar40-20261025",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": null
+      }
     },
     {
       "id": "stellaart:character.regor",
@@ -1228,7 +1275,7 @@
       "preview": "web/regor.webp",
       "sourceReportedReviewStatus": "grimoire-equipment-revision-awaiting-review",
       "reviewStatus": "awaiting-user-review",
-      "visualInspection": null,
+      "visualInspection": "Long deep navy wavy hair tied low/side with red streak at LEFT temple, blue eyes, confident soft smile. White/navy/gold sleeveless uniform, burgundy shoulders, split long navy-red waist panels, dark shorts, white/red/gold knee boots, gloves and white forearm plate. RIGHT hand near collar, LEFT holds open navy/red grimoire with gold star cover and subtle red wisps. Airborne kneel, one knee up other shin folded back. Small compact body, no anatomy emphasis.",
       "source": {
         "type": "user-provided-Drive-standard",
         "archive": "portraits-01-20.zip",
@@ -1238,7 +1285,54 @@
       },
       "webAsset": null,
       "avatarAsset": null,
-      "battleAsset": null
+      "battleAsset": {
+        "assetId": "stellaart:asset.regor-battle-20261025-v1",
+        "characterId": "stellaart:character.regor",
+        "path": "battle/regor-v1-candidate.png",
+        "preview": "web/regor-battle.webp",
+        "version": "v1-candidate",
+        "sha256": "c3498c49a64e508512fbcd86c5520b9a3dc4604d5a99c3ea96417307020aa304",
+        "sourceOriginalSha256": "b4885d44d2311027ff057c9a543e055ec0cfe0d35545a4daba933e7e6eae4f4e",
+        "sourceOriginalVersion": "14-regor-v11-grimoire",
+        "width": 1179,
+        "height": 1334,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.5513146734520781,
+          "y": 0.9895052473763118,
+          "note": "視覺輪廓底部，含裝備／座具時須場景校準，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            134,
+            19,
+            1166,
+            1320
+          ],
+          "marginPx": [
+            134,
+            19,
+            13,
+            14
+          ],
+          "note": "保留生成主檔；網頁輸出另加透明安全留白"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/regor.png",
+          "prompt": "prompts/regor-battle-v1.txt",
+          "toolOutputFileName": "exec-bc883edd-3302-4374-a7b1-9e2a175505e8.png",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "stellar40-20261025",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": null
+      }
     },
     {
       "id": "stellaart:character.tseenke",
@@ -1276,7 +1370,7 @@
       "preview": "web/tseenke.webp",
       "sourceReportedReviewStatus": "generated-awaiting-user-review",
       "reviewStatus": "awaiting-user-review",
-      "visualInspection": null,
+      "visualInspection": "Black hair in TWO LOW BRAIDED SIDE BUNS, loose curved cheek strands with sage ties. Warm amber-brown eyes, one eye closed at telescope. Ivory/sage high collar sleeveless tunic, detached short flowing sleeves, gold square fasteners, dark shorts, white sage gold ankle boots. Floating seated side pose with tiny legs angled left/down, RIGHT hand holding short brass green-lens telescope to RIGHT eye, LEFT hand down behind supports posture, no seat. EXTRA SHORT chibi body and legs: head is almost HALF figure height; no elongated adult limbs.",
       "source": {
         "type": "user-provided-Drive-standard",
         "archive": "portraits-01-20.zip",
@@ -1286,7 +1380,54 @@
       },
       "webAsset": null,
       "avatarAsset": null,
-      "battleAsset": null
+      "battleAsset": {
+        "assetId": "stellaart:asset.tseenke-battle-20261025-v1",
+        "characterId": "stellaart:character.tseenke",
+        "path": "battle/tseenke-v1-candidate.png",
+        "preview": "web/tseenke-battle.webp",
+        "version": "v1-candidate",
+        "sha256": "db0c9f2551bc84119d91785b307c4127f30839a537b979c73e4115ecbe19c5e3",
+        "sourceOriginalSha256": "a8aa2246f4acbc30bc242b1e38a0ad268dca7608a25292d595d9245a2e3b99cc",
+        "sourceOriginalVersion": "15-tseenke-v3-style-locked",
+        "width": 1222,
+        "height": 1287,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.5241407528641571,
+          "y": 0.9906759906759907,
+          "note": "視覺輪廓底部，含裝備／座具時須場景校準，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            143,
+            9,
+            1138,
+            1275
+          ],
+          "marginPx": [
+            143,
+            9,
+            84,
+            12
+          ],
+          "note": "保留生成主檔；網頁輸出另加透明安全留白"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/tseenke.png",
+          "prompt": "prompts/tseenke-battle-v1.txt",
+          "toolOutputFileName": "exec-0eae0774-88f2-45ee-92ad-5bf987c3d763.png",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "stellar40-20261025",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": null
+      }
     },
     {
       "id": "stellaart:character.suhail",
@@ -1324,7 +1465,7 @@
       "preview": "web/suhail.webp",
       "sourceReportedReviewStatus": "generated-awaiting-user-review",
       "reviewStatus": "awaiting-user-review",
-      "visualInspection": null,
+      "visualInspection": "Warm tan skin, pale blonde chin-length wavy bob, brown eyes, cheerful smile. Latest WHITE/ORANGE/NAVY sci-fi fitted short top, asymmetric orange shoulder armor, white bracers, navy shorts and white-orange hip panel, white-orange boots, dark fingerless gloves. LEFT hand salutes forehead on viewer right, RIGHT arm opens sideways, LEFT knee raised and right short leg down. No weapon or shield. EXTRA compact 2.4-head chibi with tiny torso/short limbs, head almost half figure height; neutral modest coverage.",
       "source": {
         "type": "user-provided-Drive-standard",
         "archive": "portraits-01-20.zip",
@@ -1334,7 +1475,54 @@
       },
       "webAsset": null,
       "avatarAsset": null,
-      "battleAsset": null
+      "battleAsset": {
+        "assetId": "stellaart:asset.suhail-battle-20261025-v1",
+        "characterId": "stellaart:character.suhail",
+        "path": "battle/suhail-v1-candidate.png",
+        "preview": "web/suhail-battle.webp",
+        "version": "v1-candidate",
+        "sha256": "acd2bb95ab7a3a71cb36891990552c7bbe0698ff381679cd83d19d4396f44694",
+        "sourceOriginalSha256": "9437edccdfd81be2ea3dd694fbd8d072a2039838d09c17ac5c274afc35c50d41",
+        "sourceOriginalVersion": "16-suhail-v13-role-outfit",
+        "width": 1024,
+        "height": 1536,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.5048828125,
+          "y": 0.9928385416666666,
+          "note": "視覺輪廓底部，含裝備／座具時須場景校準，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            34,
+            17,
+            1000,
+            1525
+          ],
+          "marginPx": [
+            34,
+            17,
+            24,
+            11
+          ],
+          "note": "保留生成主檔；網頁輸出另加透明安全留白"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/suhail.png",
+          "prompt": "prompts/suhail-battle-v1.txt",
+          "toolOutputFileName": "exec-5d56527d-3a54-4a25-ba83-126da6e0327c.png",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "stellar40-20261025",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": null
+      }
     },
     {
       "id": "stellaart:character.alherem",
@@ -1372,7 +1560,7 @@
       "preview": "web/alherem.webp",
       "sourceReportedReviewStatus": "keep-user-approved",
       "reviewStatus": "awaiting-user-review",
-      "visualInspection": null,
+      "visualInspection": "Charcoal long thick braid draped over RIGHT shoulder/viewer left, gold star braid tie; amber eyes, warm soft smile. White/lavender/navy gold-trim high collar outfit with detached loose sleeves, purple-lined split long skirt panels and short underlayer, dark knee boots, round gold compass at LEFT hip. Lean slightly forward with BOTH hands behind back. Cover torso modestly in SD translation. HEAD almost half total height, tiny torso and stubby limbs. Absolutely no gray studio halo or background: fully clear alpha around silhouette.",
       "source": {
         "type": "user-provided-Drive-standard",
         "archive": "portraits-01-20.zip",
@@ -1382,7 +1570,54 @@
       },
       "webAsset": null,
       "avatarAsset": null,
-      "battleAsset": null
+      "battleAsset": {
+        "assetId": "stellaart:asset.alherem-battle-20261025-v1",
+        "characterId": "stellaart:character.alherem",
+        "path": "battle/alherem-v1-candidate.png",
+        "preview": "web/alherem-battle.webp",
+        "version": "v1-candidate",
+        "sha256": "ead01ee05b1b77a89f3659c2384c247c19a819b35b314a47026ad5208adbcefb",
+        "sourceOriginalSha256": "9b74dc4c25a697dec3603a718172fd8cbfad7440ff15c11d4b43abc04a54b509",
+        "sourceOriginalVersion": "17-alherem-v3-style-locked",
+        "width": 1122,
+        "height": 1402,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.5138146167557932,
+          "y": 0.992867332382311,
+          "note": "視覺輪廓底部，含裝備／座具時須場景校準，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            109,
+            15,
+            1044,
+            1392
+          ],
+          "marginPx": [
+            109,
+            15,
+            78,
+            10
+          ],
+          "note": "保留生成主檔；網頁輸出另加透明安全留白"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/alherem.png",
+          "prompt": "prompts/alherem-battle-v1.txt",
+          "toolOutputFileName": "exec-a60a224c-f23a-41a0-b5ea-11488d332232.png",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "stellar40-20261025",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": null
+      }
     },
     {
       "id": "stellaart:character.musca",
@@ -1420,7 +1655,7 @@
       "preview": "web/musca.webp",
       "sourceReportedReviewStatus": "generated-awaiting-user-review",
       "reviewStatus": "awaiting-user-review",
-      "visualInspection": null,
+      "visualInspection": "Moss-green tousled short bob with TWO long curved antenna-like hair strands, purple eyes, playful smile. Green high collar fitted top, silver/gray offshoulder tech jacket with lime lines, dark short bottoms, green gray shoes. Four pale translucent insect wings with pale veins; cyan rectangular hologram by EACH wrist. Float with both arms spread palms up and tiny legs bent in a playful hop. Head nearly half total figure height, tiny torso stubby limbs. Clear alpha outside wings and panels; NO studio haze.",
       "source": {
         "type": "user-provided-Drive-standard",
         "archive": "portraits-01-20.zip",
@@ -1430,7 +1665,54 @@
       },
       "webAsset": null,
       "avatarAsset": null,
-      "battleAsset": null
+      "battleAsset": {
+        "assetId": "stellaart:asset.musca-battle-20261025-v1",
+        "characterId": "stellaart:character.musca",
+        "path": "battle/musca-v1-candidate.png",
+        "preview": "web/musca-battle.webp",
+        "version": "v1-candidate",
+        "sha256": "7a3ffac909dd9c32343b80de718bea20c4add3eeb2eb389e23458f3828793333",
+        "sourceOriginalSha256": "e40ad47ddfe67c39362827d4494709fb4d21638c9e91b752998e336094c18225",
+        "sourceOriginalVersion": "18-musca-v3-style-locked",
+        "width": 1230,
+        "height": 1278,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.4991869918699187,
+          "y": 0.9859154929577465,
+          "note": "視覺輪廓底部，含裝備／座具時須場景校準，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            30,
+            7,
+            1198,
+            1260
+          ],
+          "marginPx": [
+            30,
+            7,
+            32,
+            18
+          ],
+          "note": "保留生成主檔；網頁輸出另加透明安全留白"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/musca.png",
+          "prompt": "prompts/musca-battle-v1.txt",
+          "toolOutputFileName": "exec-7940ad88-9d8a-4487-95d8-44352b1cf5bc.png",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "stellar40-20261025",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": null
+      }
     },
     {
       "id": "stellaart:character.acrux",
@@ -1468,7 +1750,7 @@
       "preview": "web/acrux.webp",
       "sourceReportedReviewStatus": "generated-awaiting-user-review",
       "reviewStatus": "awaiting-user-review",
-      "visualInspection": null,
+      "visualInspection": "Silver-white very long wavy hair with ONE thick braid over RIGHT shoulder/viewer left; rose red eyes, determined open mouth. White navy gold star armor dress, white detached sleeves/gloves, split long coat panels, white gold tall boots. RIGHT hand holds diagonal dark polearm across back with large gold/white cross-star spearhead at upper viewer left and gold star butt; LEFT arm points forward viewer right. Compact wide battle stance, very short legs, giant head almost half body height. ENTIRE spearhead and boots within generous margins. No background/gray haze.",
       "source": {
         "type": "user-provided-Drive-standard",
         "archive": "portraits-01-20.zip",
@@ -1478,7 +1760,54 @@
       },
       "webAsset": null,
       "avatarAsset": null,
-      "battleAsset": null
+      "battleAsset": {
+        "assetId": "stellaart:asset.acrux-battle-20261025-v1",
+        "characterId": "stellaart:character.acrux",
+        "path": "battle/acrux-v1-candidate.png",
+        "preview": "web/acrux-battle.webp",
+        "version": "v1-candidate",
+        "sha256": "c2b21c6d36ec3616ba5fa86cb91214b2fe72f2272048835f6d5178d23bf3582c",
+        "sourceOriginalSha256": "8fc09fb75ca1bd2e192d8c761b2e3422f85efa1adec6835456ec8e6848a2c285",
+        "sourceOriginalVersion": "19-acrux-v6-multigenre",
+        "width": 1385,
+        "height": 1136,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.5173285198555957,
+          "y": 0.9867957746478874,
+          "note": "視覺輪廓底部，含裝備／座具時須場景校準，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            70,
+            21,
+            1363,
+            1121
+          ],
+          "marginPx": [
+            70,
+            21,
+            22,
+            15
+          ],
+          "note": "保留生成主檔；網頁輸出另加透明安全留白"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/acrux.png",
+          "prompt": "prompts/acrux-battle-v1.txt",
+          "toolOutputFileName": "exec-5d95ea5e-f843-4724-a730-3e7c7e88e4c6.png",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "stellar40-20261025",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": null
+      }
     },
     {
       "id": "stellaart:character.achernar",
@@ -1516,7 +1845,7 @@
       "preview": "web/achernar.webp",
       "sourceReportedReviewStatus": "hip-leg-anatomy-and-hair-revision-awaiting-review",
       "reviewStatus": "awaiting-user-review",
-      "visualInspection": null,
+      "visualInspection": "Long flowing azure-blue hair with gold blue fourpoint star clip at LEFT temple/viewer right, dangling star earrings, amber eyes, serene smile. White azure navy gold-trim highcollar short tunic with detached bell sleeves, blue star gems, split flowing waist cloth and white gold boots. Floating with both arms open, RIGHT hand summons a curling bright blue water ribbon on viewer left and flowing translucent watery ribbons wrap around waist, one tiny knee bent. HEAD almost half figure height, tiny torso short limbs. Keep bounded distinct water shapes but remove ALL blue background aura and studio haze: actual transparent empty canvas.",
       "source": {
         "type": "user-provided-Drive-standard",
         "archive": "portraits-01-20.zip",
@@ -1526,7 +1855,54 @@
       },
       "webAsset": null,
       "avatarAsset": null,
-      "battleAsset": null
+      "battleAsset": {
+        "assetId": "stellaart:asset.achernar-battle-20261025-v1",
+        "characterId": "stellaart:character.achernar",
+        "path": "battle/achernar-v1-candidate.png",
+        "preview": "web/achernar-battle.webp",
+        "version": "v1-candidate",
+        "sha256": "f22dc7cbf2ccb94225d82d8f15b41edd6b069dd51b57dedfb46c4a5fc81ff425",
+        "sourceOriginalSha256": "c14c7b8806e5f89534ee6a76eedaebd9192903e5c277d993252314fa8f7c61cc",
+        "sourceOriginalVersion": "20-achernar-v10-anatomy-straight-hair",
+        "width": 1024,
+        "height": 1536,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "pivot": {
+          "x": 0.50146484375,
+          "y": 0.9791666666666666,
+          "note": "視覺輪廓底部，含裝備／座具時須場景校準，非碰撞判定"
+        },
+        "safeArea": {
+          "bodyBounds": [
+            15,
+            69,
+            1012,
+            1504
+          ],
+          "marginPx": [
+            15,
+            69,
+            12,
+            32
+          ],
+          "note": "保留生成主檔；網頁輸出另加透明安全留白"
+        },
+        "source": {
+          "tool": "image_gen.imagegen",
+          "modelVersion": "not-exposed",
+          "reference": "standards/achernar.png",
+          "prompt": "prompts/achernar-battle-v1.txt",
+          "toolOutputFileName": "exec-1e6dad31-73bd-4d12-b288-c5ed5105966f.png",
+          "retouch": "none"
+        },
+        "use": "static-SD-battle-candidate",
+        "bundle": "stellar40-20261025",
+        "atlas": null,
+        "animation": null,
+        "reviewStatus": "awaiting-user-review",
+        "webAsset": null
+      }
     },
     {
       "id": "stellaart:character.ran",

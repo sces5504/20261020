@@ -32,6 +32,11 @@ export const saveSchema = z
       })
       .strict()
       .default({}),
+    facilities: z
+      .record(
+        z.object({ hp: nonneg, destroyed: z.boolean() }).strict(),
+      )
+      .default({}),
     schemaVersion: z.literal(1),
     contentHash: z.string().default(""),
     migrationHistory: z.array(z.string()).default([]),

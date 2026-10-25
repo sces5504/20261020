@@ -37,7 +37,7 @@ try {
     page.on("pageerror", (e) => errors.push(e.message));
     await page.goto(server.url + "gallery.html");
     await page.waitForSelector("[data-gallery-character]");
-    assert.equal(await page.locator("[data-gallery-character]").count(), 32);
+    assert.equal(await page.locator("[data-gallery-character]").count(), 72);
     await page.locator("#gallery-search").fill("盾牌座UY");
     assert.equal(await page.locator("[data-gallery-character]").count(), 1);
     await page.locator("#gallery-mode").click();
@@ -219,7 +219,7 @@ try {
     assert.equal(await page.locator('[data-field="variants"]').count(), 1);
     results.push({
       mobile,
-      gallery: 32,
+      gallery: 72,
       skipInitialization: true,
       reloadNoDuplicate: true,
       actualBattleAndCue: true,

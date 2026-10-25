@@ -300,6 +300,7 @@ export class Game {
           reset: c.reset,
           hp: c.result(),
           scoreRatio: c.damageRatio,
+          ...c.facilityResults(),
           receipt: `encounter-${this.save.encounter?.seed}`,
         }).finally(() => (this.encounterPending = false));
       }

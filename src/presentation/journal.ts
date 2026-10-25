@@ -23,6 +23,7 @@ export function conditionLabel(p: Pack, c: Condition): string {
       ...p.quests,
       ...p.research,
       ...p.buildings,
+      ...p.facilities,
     ].find((v) => v.id === c.target)?.name ?? "指定目標";
   const labels: Record<typeof c.fact, string> = {
     region: `抵達${name}`,
@@ -43,6 +44,9 @@ export function conditionLabel(p: Pack, c: Condition): string {
     healed: `完成整補 ×${c.count}`,
     constructed: `建造設施 ×${c.count}`,
     upgraded: `升級設施 ×${c.count}`,
+    facility: `建成「${name}」`,
+    facilityDestroyed: `「${name}」遭摧毀`,
+    facilityActivated: `啟動「${name}」 ×${c.count}`,
   };
   return labels[c.fact];
 }

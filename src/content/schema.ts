@@ -5,7 +5,12 @@ import {
   type Condition,
 } from "./story";
 import { z } from "zod";
-import { actionSchema, patternTypes, defaultVolleyCount } from "./mechanics";
+import {
+  actionSchema,
+  modifierSchema,
+  patternTypes,
+  defaultVolleyCount,
+} from "./mechanics";
 const id = z.string().regex(/^[a-z][a-z0-9.-]*:[a-z][a-z0-9._-]*$/);
 const positive = z.number().finite().positive();
 const amount = z.record(id, z.number().finite().nonnegative());
@@ -289,6 +294,60 @@ const asset = z
     review: z.enum(["candidate", "approved"]),
   })
   .strict();
+/** Chapter facilities: author-placed story objects, never colony production buildings. */
+const facility = z
+  .object({
+    ...base,
+    color: z.string().regex(/^#[0-9a-f]{6}$/i),
+    sprite: z.string().default(""),
+    size: z.number().min(16).max(240).default(56),
+    hp: z.number().int().min(1).max(10000000),
+    defense: z.number().finite().min(0).max(100000).default(0),
+    side: z.enum(["ally", "enemy"]).default("ally"),
+    targetable: z.boolean().default(true),
+    // "battle": fresh every battle; "save": built once by a transaction/event and carried across battles.
+    scope: z.enum(["battle", "save"]).default("battle"),
+    // Defeat with "restore" discards the battle's damage; "keep" persists it (save scope only).
+    retry: z.enum(["restore", "keep"]).default("restore"),
+    cost: amount.default({}),
+    effect: z.discriminatedUnion("kind", [
+      z.object({ kind: z.literal("none") }).strict(),
+      z
+        .object({
+          kind: z.literal("turret"),
+          attack: z.number().finite().positive().max(1000000),
+          range: z.number().min(40).max(2000),
+          interval: z.number().min(0.1).max(30),
+          pattern: z.enum(patternTypes).default("aim"),
+          count: z.number().int().min(1).max(32).optional(),
+        })
+        .strict(),
+      z
+        .object({
+          kind: z.literal("aura"),
+          radius: z.number().min(20).max(2000),
+          modifiers: z.array(modifierSchema).min(1).max(8),
+        })
+        .strict(),
+      z
+        .object({
+          kind: z.literal("jammer"),
+          // Shield tags to suspend; empty suspends every shield in the encounter.
+          jams: z
+            .array(z.string().regex(/^[a-z][a-z0-9-]{0,31}$/))
+            .max(8)
+            .default([]),
+          seconds: z.number().min(1).max(600),
+          cooldown: z.number().min(0).max(600).default(0),
+          // The captain holds position inside `reach` for `channel` seconds to activate.
+          channel: z.number().min(0).max(30).default(2),
+          reach: z.number().min(30).max(600).default(120),
+          charges: z.number().int().min(0).max(99).default(0),
+        })
+        .strict(),
+    ]),
+  })
+  .strict();
 const audioCue = z
   .object({
     ...base,
@@ -321,6 +380,7 @@ export const entitySchemas = {
   research,
   quests: quest,
   actors: actorSchema,
+  facilities: facility,
   assets: asset,
   audio: audioCue,
 };
@@ -336,6 +396,7 @@ export const kindNames: Record<Kind, string> = {
   research: "研究",
   quests: "劇情／任務",
   actors: "劇情演員／NPC",
+  facilities: "章節設施",
   assets: "素材",
   audio: "音效",
 };
@@ -355,6 +416,7 @@ export const packSchema = z
     research: z.array(research),
     quests: z.array(quest),
     actors: z.array(actorSchema).default([]),
+    facilities: z.array(facility).default([]),
     assets: z.array(asset),
     audio: z.array(audioCue).optional().default([]),
     rules: z
@@ -390,6 +452,7 @@ export type Character = z.infer<typeof character>;
 export type Planet = z.infer<typeof planet>;
 export type Enemy = z.infer<typeof enemy>;
 export type Skill = z.infer<typeof skill>;
+export type Facility = z.infer<typeof facility>;
 export type Entity = Pack[Kind][number];
 export const kinds = Object.keys(entitySchemas) as Kind[];
 export function validatePack(input: unknown): {
@@ -578,6 +641,9 @@ export function validatePack(input: unknown): {
       completed: "quests",
       read: "quests",
       claimed: "quests",
+      facility: "facilities",
+      facilityDestroyed: "facilities",
+      facilityActivated: "facilities",
     };
     if (
       [
@@ -645,6 +711,14 @@ export function validatePack(input: unknown): {
       errors.push(`${owner}: say.portrait需要actor`);
     if (s.kind === "background") has("assets", s.asset, owner);
   };
+  p.facilities.forEach((f) => {
+    if (f.sprite) has("assets", f.sprite, f.id);
+    money(f.cost, f.id);
+    if (f.scope === "battle" && (f.retry !== "restore" || Object.keys(f.cost).length))
+      errors.push(`${f.id}: scope=battle每場重置，不可設cost或retry=keep`);
+    if (f.effect.kind === "turret" && !f.targetable && f.side === "enemy")
+      errors.push(`${f.id}: 不可受擊的敵方砲台無法被擊破`);
+  });
   p.actors.forEach((a) => {
     has("assets", a.portrait, a.id);
     Object.values(a.variants).forEach((v) => has("assets", v, a.id));
@@ -667,7 +741,11 @@ export function validatePack(input: unknown): {
         if (node && (node.kind !== "event" || node.schedule))
           errors.push(`${q.id}: 劇情遭遇必須引用非每日event節點`);
       } else if (s.kind === "await") checkCondition(s.condition, q.id);
-      else if (s.kind !== "event") checkPresentation(s, q.id);
+      else if (s.kind === "facility") {
+        has("facilities", s.facility, q.id);
+        if (p.facilities.find((f) => f.id === s.facility)?.scope !== "save")
+          errors.push(`${q.id}: 劇情設施步驟只供scope=save的設施`);
+      } else if (s.kind !== "event") checkPresentation(s, q.id);
     });
   });
   p.planets.forEach((v) => {
@@ -769,6 +847,81 @@ export function validatePack(input: unknown): {
     });
     if (e.seconds && e.actors.some((a) => a.spawnAt >= e.seconds!))
       errors.push(`${v.id}: 演員必須於時限前進場`);
+    const region = p.regions.find((r) => r.id === v.region);
+    const placements = new Set<string>();
+    e.facilities.forEach((f) => {
+      has("facilities", f.facility, v.id);
+      if (placements.has(f.id) || actorIds.has(f.id))
+        errors.push(`${v.id}: 設施擺放id重複 ${f.id}`);
+      placements.add(f.id);
+      if (
+        region &&
+        (f.x < 0 ||
+          f.y < 0 ||
+          f.x > region.width ||
+          f.y > region.height ||
+          Math.hypot(f.x - v.x, f.y - v.y) > v.leashWarningRadius)
+      )
+        errors.push(`${v.id}: 設施${f.id}超出遭遇範圍`);
+      const def = p.facilities.find((x) => x.id === f.facility);
+      if (f.onDestroyed === "fail" && def && (def.side !== "ally" || !def.targetable))
+        errors.push(`${v.id}: 失敗條件設施${f.id}必須是可受擊友方設施`);
+    });
+    const shieldIds = new Set<string>();
+    e.shields.forEach((s) => {
+      if (shieldIds.has(s.id)) errors.push(`${v.id}: 護盾id重複 ${s.id}`);
+      shieldIds.add(s.id);
+      if (!s.units.length && !s.enemies.length)
+        errors.push(`${v.id}: 護盾${s.id}需要units或enemies`);
+      s.units.forEach((u) => {
+        if (!e.actors.some((a) => a.id === u))
+          errors.push(`${v.id}: 護盾${s.id}缺少演員 ${u}`);
+      });
+      s.enemies.forEach((x) => has("enemies", x, v.id));
+      if (s.layers === 0 && s.capacity !== 1)
+        errors.push(`${v.id}: 護盾${s.id}的capacity只供layers>0`);
+      if (s.restoreAfter && !s.layers && !s.duration)
+        errors.push(`${v.id}: 護盾${s.id}的restoreAfter需要layers或duration`);
+    });
+    e.facilities.forEach((f) => {
+      const def = p.facilities.find((x) => x.id === f.facility);
+      if (def?.effect.kind === "jammer")
+        for (const tag of def.effect.jams)
+          if (!e.shields.some((s) => s.tags.includes(tag)))
+            errors.push(`${v.id}: 干擾設施${f.id}找不到標籤${tag}的護盾`);
+    });
+    e.triggers.forEach((t, i) => {
+      const at = `${v.id}: triggers[${i}]`;
+      const gates = [
+        t.at !== undefined,
+        t.hpBelow !== undefined,
+        !!t.defeated,
+        !!t.facility,
+        !!t.shieldDown,
+      ].filter(Boolean).length;
+      if (gates !== 1) errors.push(`${at}需要恰好一種觸發門檻`);
+      if (t.hpBelow !== undefined && !t.actor) errors.push(`${at}的hpBelow需要actor`);
+      if (t.hpBelow === undefined && t.actor) errors.push(`${at}的actor只供hpBelow`);
+      for (const ref of [t.actor, t.defeated])
+        if (ref && !e.actors.some((a) => a.id === ref))
+          errors.push(`${at}缺少演員 ${ref}`);
+      if (!!t.facility !== !!t.state) errors.push(`${at}的facility需搭配state`);
+      if (t.facility && !placements.has(t.facility))
+        errors.push(`${at}缺少設施擺放 ${t.facility}`);
+      if (t.shieldDown && !shieldIds.has(t.shieldDown))
+        errors.push(`${at}缺少護盾 ${t.shieldDown}`);
+      t.then.forEach((x) => {
+        if (x.op === "activateFacility") {
+          if (!x.facility || !placements.has(x.facility) || x.shield)
+            errors.push(`${at}的activateFacility需要facility擺放id`);
+        } else {
+          if (!x.shield || !shieldIds.has(x.shield) || x.facility)
+            errors.push(`${at}的${x.op}需要護盾id`);
+          if (x.op !== "suspendShield" && x.seconds !== undefined)
+            errors.push(`${at}的seconds只供suspendShield`);
+        }
+      });
+    });
     const total =
       v.enemies.reduce((n, g) => n + g.count, 0) +
       e.waves.reduce(

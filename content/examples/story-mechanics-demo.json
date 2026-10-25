@@ -1,0 +1,320 @@
+{
+  "schemaVersion": 1,
+  "id": "demo:package.story-mechanics",
+  "version": "0.1.0",
+  "requires": [
+    {
+      "id": "m1:core",
+      "version": "0.9.0"
+    }
+  ],
+  "definitions": {
+    "facilities": [
+      {
+        "id": "demo:facility.jammer",
+        "name": "干擾裝置",
+        "description": "示範：隊長靠近並停留1.5秒後啟動，暫停帶energy標籤的護盾8秒。",
+        "status": "active",
+        "provenance": "m1-design",
+        "color": "#ffd36b",
+        "hp": 2400,
+        "side": "ally",
+        "targetable": true,
+        "scope": "battle",
+        "effect": {
+          "kind": "jammer",
+          "jams": [
+            "energy"
+          ],
+          "seconds": 8,
+          "cooldown": 6,
+          "channel": 1.5,
+          "reach": 140
+        }
+      },
+      {
+        "id": "demo:facility.barricade",
+        "name": "前線防禦砲台",
+        "description": "示範：由任務交易建造並保存到存檔；防衛戰中自動射擊，被摧毀即判定失敗。",
+        "status": "active",
+        "provenance": "m1-design",
+        "color": "#7fe0c4",
+        "hp": 3000,
+        "defense": 20,
+        "side": "ally",
+        "targetable": true,
+        "scope": "save",
+        "retry": "restore",
+        "cost": {
+          "m1:metal": 60,
+          "m1:crystal": 30
+        },
+        "effect": {
+          "kind": "turret",
+          "attack": 40,
+          "range": 380,
+          "interval": 1.2,
+          "pattern": "aim"
+        }
+      }
+    ],
+    "planets": [
+      {
+        "id": "demo:planet.shield-trial",
+        "name": "示範 · 三重護盾",
+        "description": "護盾擋下遠程能量攻擊、近戰仍有效；啟動干擾裝置取得突破窗口。",
+        "status": "active",
+        "provenance": "m1-design",
+        "region": "m1:helios",
+        "x": 3200,
+        "y": 2050,
+        "radius": 58,
+        "color": "#83cedf",
+        "sprite": "m1art:haven-v1",
+        "kind": "event",
+        "requires": [],
+        "enemies": [
+          {
+            "enemy": "m1:scout",
+            "count": 2,
+            "level": 2
+          }
+        ],
+        "reward": {},
+        "activationCost": {},
+        "production": {},
+        "dropCharacters": [],
+        "hiddenUntilUnlocked": true,
+        "encounterPolicy": "manual",
+        "storyEncounter": {
+          "mode": "eliminate",
+          "actors": [
+            {
+              "id": "demo:actor.warden",
+              "enemy": "m1:sentinel",
+              "x": 3260,
+              "y": 2010,
+              "side": "enemy",
+              "level": 3
+            }
+          ],
+          "facilities": [
+            {
+              "id": "demo:place.jammer",
+              "facility": "demo:facility.jammer",
+              "x": 3020,
+              "y": 2120
+            }
+          ],
+          "shields": [
+            {
+              "id": "demo:shield.triple",
+              "name": "三重護盾",
+              "tags": [
+                "energy"
+              ],
+              "units": [
+                "demo:actor.warden"
+              ],
+              "blocks": [
+                "normal",
+                "piercing",
+                "splash",
+                "homing",
+                "laser"
+              ],
+              "multiplier": 0,
+              "layers": 3,
+              "capacity": 400,
+              "restoreAfter": 10
+            }
+          ],
+          "triggers": [
+            {
+              "hpBelow": 0.5,
+              "actor": "demo:actor.warden",
+              "then": [
+                {
+                  "op": "enableShield",
+                  "shield": "demo:shield.triple"
+                }
+              ]
+            }
+          ],
+          "cues": [
+            {
+              "at": 1,
+              "steps": [
+                {
+                  "kind": "say",
+                  "speaker": "地球",
+                  "actor": "m1:earth",
+                  "text": "遠程攻擊被擋下了！先啟動干擾裝置！"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "demo:planet.defense-line",
+        "name": "示範 · 防線攻防",
+        "description": "守住建好的防禦砲台30秒；砲台被摧毀即失敗。",
+        "status": "active",
+        "provenance": "m1-design",
+        "region": "m1:helios",
+        "x": 400,
+        "y": 2050,
+        "radius": 58,
+        "color": "#83cedf",
+        "sprite": "m1art:haven-v1",
+        "kind": "event",
+        "requires": [],
+        "enemies": [
+          {
+            "enemy": "m1:scout",
+            "count": 2,
+            "level": 2
+          }
+        ],
+        "reward": {},
+        "activationCost": {},
+        "production": {},
+        "dropCharacters": [],
+        "hiddenUntilUnlocked": true,
+        "encounterPolicy": "manual",
+        "storyEncounter": {
+          "mode": "defend",
+          "seconds": 30,
+          "facilities": [
+            {
+              "id": "demo:place.barricade",
+              "facility": "demo:facility.barricade",
+              "x": 340,
+              "y": 2050,
+              "onDestroyed": "fail"
+            }
+          ],
+          "waves": [
+            {
+              "at": 4,
+              "enemies": [
+                {
+                  "enemy": "m1:scout",
+                  "count": 4,
+                  "level": 2
+                }
+              ]
+            },
+            {
+              "at": 14,
+              "enemies": [
+                {
+                  "enemy": "m1:sentinel",
+                  "count": 2,
+                  "level": 2
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "quests": [
+      {
+        "id": "demo:quest.shield",
+        "name": "示範 · 突破護盾",
+        "description": "護盾→干擾→到期恢復的最小流程。",
+        "status": "active",
+        "provenance": "m1-design",
+        "condition": "intro",
+        "target": "",
+        "count": 1,
+        "reward": {},
+        "character": "",
+        "dialogue": [
+          {
+            "speaker": "旁白",
+            "text": "護盾→干擾→到期恢復的最小流程。"
+          }
+        ],
+        "story": {
+          "chapter": "demo:chapter.mechanics",
+          "steps": [
+            {
+              "kind": "say",
+              "speaker": "旁白",
+              "text": "前方守衛展開了多重護盾。"
+            },
+            {
+              "kind": "encounter",
+              "planet": "demo:planet.shield-trial",
+              "resumeIf": {
+                "fact": "cleared",
+                "target": "demo:planet.shield-trial"
+              }
+            },
+            {
+              "kind": "say",
+              "speaker": "旁白",
+              "text": "護盾守衛已被擊退。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "demo:quest.defense",
+        "name": "示範 · 建造防線",
+        "description": "設施完成→防衛→成功／摧毀失敗的最小流程。",
+        "status": "active",
+        "provenance": "m1-design",
+        "condition": "intro",
+        "target": "",
+        "count": 1,
+        "reward": {},
+        "character": "",
+        "dialogue": [
+          {
+            "speaker": "旁白",
+            "text": "設施完成→防衛→成功／摧毀失敗的最小流程。"
+          }
+        ],
+        "story": {
+          "chapter": "demo:chapter.mechanics",
+          "steps": [
+            {
+              "kind": "say",
+              "speaker": "旁白",
+              "text": "敵軍來襲前，先在前線架設防禦砲台。"
+            },
+            {
+              "kind": "await",
+              "condition": {
+                "fact": "facility",
+                "target": "demo:facility.barricade"
+              }
+            },
+            {
+              "kind": "encounter",
+              "planet": "demo:planet.defense-line",
+              "resumeIf": {
+                "fact": "cleared",
+                "target": "demo:planet.defense-line"
+              }
+            },
+            {
+              "kind": "facility",
+              "facility": "demo:facility.barricade",
+              "op": "remove"
+            },
+            {
+              "kind": "say",
+              "speaker": "旁白",
+              "text": "防線守住了，臨時砲台已拆除。"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

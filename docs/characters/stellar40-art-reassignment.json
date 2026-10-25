@@ -1,0 +1,90 @@
+[
+  {
+    "character": "story40:character.gienah",
+    "name": "Gienah",
+    "stars": 5,
+    "artKey": "Aldebaran",
+    "artName": "畢宿五",
+    "artStars": 5
+  },
+  {
+    "character": "story40:character.behemoth",
+    "name": "Behemoth",
+    "stars": 5,
+    "artKey": "Dubhe",
+    "artName": "天樞",
+    "artStars": 5
+  },
+  {
+    "character": "story40:character.navi",
+    "name": "Navi",
+    "stars": 4,
+    "artKey": "Cruithne",
+    "artName": "克魯特尼",
+    "artStars": 4
+  },
+  {
+    "character": "story40:character.cygni",
+    "name": "Cygni",
+    "stars": 4,
+    "artKey": "Larissa",
+    "artName": "海衛七",
+    "artStars": 4
+  },
+  {
+    "character": "story40:character.enif",
+    "name": "Enif",
+    "stars": 3,
+    "artKey": "Heimdal",
+    "artName": "海姆達爾",
+    "artStars": 3
+  },
+  {
+    "character": "story40:character.piazzi",
+    "name": "Piazzi",
+    "stars": 3,
+    "artKey": "Leah",
+    "artName": "瑞亞",
+    "artStars": 3
+  },
+  {
+    "character": "story40:character.kruger60",
+    "name": "Kruger60",
+    "stars": 2,
+    "artKey": "Hydra",
+    "artName": "許德拉",
+    "artStars": 3
+  },
+  {
+    "character": "story40:character.ioannina",
+    "name": "Ioannina",
+    "stars": 2,
+    "artKey": "Phobos",
+    "artName": "火衛一",
+    "artStars": 2
+  },
+  {
+    "character": "story40:character.shedar",
+    "name": "王良四",
+    "stars": 2,
+    "artKey": "Umbriel",
+    "artName": "天衛二",
+    "artStars": 2
+  },
+  {
+    "character": "story40:character.hypatia",
+    "name": "Hypatia",
+    "stars": 2,
+    "artKey": "Nix",
+    "artName": "尼克斯",
+    "artStars": 2
+  },
+  {
+    "character": "story40:character.sadr",
+    "name": "天津一",
+    "stars": 2,
+    "artKey": "Asmidiske",
+    "artName": "船尾座ξ",
+    "artStars": 2
+  }
+]

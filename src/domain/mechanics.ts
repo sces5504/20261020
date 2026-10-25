@@ -163,7 +163,7 @@ export class Mechanics {
     if (a.target === "self") return [u];
     if (a.target === "allies") return pool.filter((v) => v.side === u.side);
     const foes = pool.filter(
-      (v) => v.side !== u.side && !this.has(v, "invisible"),
+      (v) => v.side !== u.side && !v.untargetable && !this.has(v, "invisible"),
     );
     foes.sort(
       (x, y) =>
@@ -683,6 +683,7 @@ export class Mechanics {
   ) {
     if (
       u.hp <= 0 ||
+      u.untargetable ||
       this.has(u, "invisible") ||
       this.has(u, "invincible") ||
       this.immune(u, kind as Modifier["immune"][number])
@@ -707,6 +708,7 @@ export class Mechanics {
       !flags?.bypassEvasion && random(this.c) < evade,
     );
     hit = Math.max(0, Math.round(hit * this.stat(u, "damageTaken")));
+    if (this.c.story) hit = this.c.story.filter(u, kind, hit);
     if (
       !flags?.skipDirectional &&
       !["corrosion", "blaze", "splash"].includes(kind) &&
@@ -1045,7 +1047,7 @@ export class Mechanics {
         let t = c.units.find((v) => v.id === b.target && v.hp > 0);
         if (!t && !b.action?.cancelOnTargetDeath) {
           t = c.units
-            .filter((v) => v.side !== b.side && v.hp > 0)
+            .filter((v) => v.side !== b.side && v.hp > 0 && !v.untargetable)
             .sort((a, d) => distance(a, b) - distance(d, b))[0];
           b.target = t?.id;
         }
@@ -1073,6 +1075,7 @@ export class Mechanics {
           (u) =>
             u.hp > 0 &&
             u.side !== b.side &&
+            !u.untargetable &&
             !b.hitIds?.includes(u.id) &&
             segmentDistance(x, y, b.x, b.y, u.x, u.y) <
               (u.boss ? 45 : 17) * this.stat(u, "scale") + (b.width ?? 0) / 2,
@@ -1141,7 +1144,8 @@ export class Mechanics {
           b.nextHitAt = c.time + 0.15;
           const next =
             c.units.find(
-              (v) => v.hp > 0 && v.side !== b.side && v.id !== u.id,
+              (v) =>
+                v.hp > 0 && v.side !== b.side && v.id !== u.id && !v.untargetable,
             ) ?? (u.hp > 0 ? u : undefined);
           if (!next) {
             b.life = 0;

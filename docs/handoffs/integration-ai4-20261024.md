@@ -82,3 +82,10 @@
 - **第四輪發布**：PR #31（第四輪十項）→ Pages 40101969594 在playtest失敗（勝利後1秒劇情場景擋點擊，測試問題）；PR #32（修正＋原作式編隊）→ Pages 40108381667 在chronicle失敗（途中自動交戰使出擊停用，測試問題）；PR #33 測試修正 → main `cb34b8e8594cb80547048c95942e2353a756bfe4`，Pages 40111897178 完整門檻通過並部署。公開version.json＝cb34b8e；公開站桌機1440／觸控390實測主線卡、任務摺疊鈕、手機搖桿、零pageerror（非真機）。
 - 下一步：等使用者實玩回饋；671世界證據仍為直線編隊時期（使用者指示不重跑）。
 - 小修（使用者回報，指示不跑整套測試）：1. 手機左上主線／任務鈕常沒反應——根因為手機版`.sector-heading > *`設`pointer-events:auto`蓋過技能橫幅的`none`，透明`#skill-splash`吞掉點擊；改為橫幅永遠不接收點擊（tap-probe確認點擊落在按鈕）。2. 選取變藍：遊戲畫面`user-select:none`、`-webkit-touch-callout:none`、去除點擊高亮（輸入框除外）。3. 點兩下放大：`touch-action:manipulation`、viewport `maximum-scale=1`，iOS另擋`gesturestart`頁面縮放（地圖自身捏合縮放不受影響）。只跑build＋觸控探針，未跑瀏覽器套件，交由發布門檻。
+
+## 第五輪：40角色、桌機右側角色欄、劇情護盾／章節設施（2026-10-25，使用者直接要求）
+
+- **40角色**：合併 `content/story40`（PR #36，40人資料）與 `art/stellar40-20261025`（PR #37，40人美術）。啟用 `extensions/story40.json`（72人）；兩批名單只有29人重疊（以CID對照），新增 `stellar40-art.json` 接上29人立繪／頭像／Q圖並寫入 `art/catalog/extension-assets.json`（建置時hash校驗複製）。兩邊各多出11人；使用者指示「把美術對應到需要的角色」，依星數高低配對，將美術包11人的立繪／頭像／Q圖借給story40缺圖的11人（對照表 `docs/characters/stellar40-art-reassignment.json`；外觀非原作該角色，公開製作表已註明）。72人全部有圖。公開製作表標記72人已整合（保持單行JSON）。內容／圖鑑計數測試由32改72；e2e美術頁改為計算有立繪的角色。
+- **桌機右側角色欄**：≥761px 時角色卡固定在地圖右側直排（高度隨視窗縮放，≤900px高精簡為名稱＋血條），地圖工具列移到其左側。1440×1000、1280×720截圖確認不重疊。
+- **劇情機制**：見 `docs/design/story-shields-facilities.md`。新檔 `src/domain/story-mechanics.ts`；`Combat.story`、`Mechanics.hit`（護盾過濾、不可受擊）、`save.facilities`、`facility-build`指令、結算 `facilities/activated`、劇情步驟 `facility`、條件 `facility/facilityDestroyed/facilityActivated`、追蹤卡建造鈕、戰中非阻斷狀態列 `#story-status`、設施／護盾／干擾範圍呈現。範例包 `content/examples/story-mechanics-demo.json`（不在root manifest）。
+- **驗證**：單元134/134（新增 `tests/story-mechanics.test.ts` 5項：未知欄位與錯誤引用被拒、護盾分類／層數／干擾窗口／到期恢復／trigger、交易建造一次與重播不重複扣款、戰敗restore與勝利寫回、必要設施被毀即失敗、劇情remove、battle範圍每場重置、舊存檔無facilities可讀、真實防衛戰砲台造成傷害並守到時限勝利）；content:check 72人PASS；瀏覽器套件test:story、chronicle、exploration、polish、content-integration、e2e、playtest、skills、integration-v8、refinement通過（e2e因美術頁計數更新斷言後重跑；借圖後再重跑單元與e2e）；瀏覽器預覽桌機／手機兩個範例戰場與追蹤卡建造（扣款一次、重載不重扣、零pageerror）。671世界未重跑（一般戰鬥未改；新規則只在storyEncounter帶護盾／設施時生效，不可受擊旗標只在設施上）。

@@ -1,0 +1,16 @@
+{
+  "baseline": "69fb108",
+  "nodes": 35,
+  "encounters": 62,
+  "claims": 35,
+  "positions": 0,
+  "builds": 6,
+  "totalConstructionCost": 2160,
+  "totalRewardPerResource": 9000,
+  "frames": 625,
+  "maxFrame": 36,
+  "oldWorldRerun": false,
+  "facilityDestroyedBoundary": "forced HP=0, verified fail and retry:restore; not claimed played loss",
+  "jammerWindow": "observed actual final battle activation and restoration",
+  "scope": "New content only. Region/world-history preconditions and battle-entry positions are explicit fixtures; JSON reload at each gate; actual battle result evidence above; not new-account full journey or physical-device certification."
+}

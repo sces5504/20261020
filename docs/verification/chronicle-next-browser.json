@@ -1,0 +1,427 @@
+{
+  "results": [
+    {
+      "mobile": false,
+      "viewport": "1440x1000",
+      "opening": {
+        "text": {
+          "x": 61,
+          "y": 865.40625,
+          "width": 1318,
+          "height": 29.59375,
+          "top": 865.40625,
+          "right": 1379,
+          "bottom": 895,
+          "left": 61
+        },
+        "controls": {
+          "x": 61,
+          "y": 911,
+          "width": 1318,
+          "height": 44,
+          "top": 911,
+          "right": 1379,
+          "bottom": 955,
+          "left": 61
+        },
+        "scroll": 1440,
+        "width": 1440
+      },
+      "previews": [
+        {
+          "label": "aitsu",
+          "geometry": {
+            "text": {
+              "x": 61,
+              "y": 865.40625,
+              "width": 1318,
+              "height": 29.59375,
+              "top": 865.40625,
+              "right": 1379,
+              "bottom": 895,
+              "left": 61
+            },
+            "controls": {
+              "x": 61,
+              "y": 911,
+              "width": 1318,
+              "height": 44,
+              "top": 911,
+              "right": 1379,
+              "bottom": 955,
+              "left": 61
+            },
+            "scroll": 1440,
+            "width": 1440
+          }
+        },
+        {
+          "label": "haitsu",
+          "geometry": {
+            "text": {
+              "x": 61,
+              "y": 865.40625,
+              "width": 1318,
+              "height": 29.59375,
+              "top": 865.40625,
+              "right": 1379,
+              "bottom": 895,
+              "left": 61
+            },
+            "controls": {
+              "x": 61,
+              "y": 911,
+              "width": 1318,
+              "height": 44,
+              "top": 911,
+              "right": 1379,
+              "bottom": 955,
+              "left": 61
+            },
+            "scroll": 1440,
+            "width": 1440
+          }
+        },
+        {
+          "label": "morugo",
+          "geometry": {
+            "text": {
+              "x": 61,
+              "y": 865.40625,
+              "width": 1318,
+              "height": 29.59375,
+              "top": 865.40625,
+              "right": 1379,
+              "bottom": 895,
+              "left": 61
+            },
+            "controls": {
+              "x": 61,
+              "y": 911,
+              "width": 1318,
+              "height": 44,
+              "top": 911,
+              "right": 1379,
+              "bottom": 955,
+              "left": 61
+            },
+            "scroll": 1440,
+            "width": 1440
+          }
+        },
+        {
+          "label": "southern-haven",
+          "geometry": {
+            "text": {
+              "x": 61,
+              "y": 865.40625,
+              "width": 1318,
+              "height": 29.59375,
+              "top": 865.40625,
+              "right": 1379,
+              "bottom": 895,
+              "left": 61
+            },
+            "controls": {
+              "x": 61,
+              "y": 911,
+              "width": 1318,
+              "height": 44,
+              "top": 911,
+              "right": 1379,
+              "bottom": 955,
+              "left": 61
+            },
+            "scroll": 1440,
+            "width": 1440
+          }
+        },
+        {
+          "label": "freedom",
+          "geometry": {
+            "text": {
+              "x": 61,
+              "y": 865.40625,
+              "width": 1318,
+              "height": 29.59375,
+              "top": 865.40625,
+              "right": 1379,
+              "bottom": 895,
+              "left": 61
+            },
+            "controls": {
+              "x": 61,
+              "y": 911,
+              "width": 1318,
+              "height": 44,
+              "top": 911,
+              "right": 1379,
+              "bottom": 955,
+              "left": 61
+            },
+            "scroll": 1440,
+            "width": 1440
+          }
+        },
+        {
+          "label": "stage-finale",
+          "geometry": {
+            "text": {
+              "x": 61,
+              "y": 865.40625,
+              "width": 1318,
+              "height": 29.59375,
+              "top": 865.40625,
+              "right": 1379,
+              "bottom": 895,
+              "left": 61
+            },
+            "controls": {
+              "x": 61,
+              "y": 911,
+              "width": 1318,
+              "height": 44,
+              "top": 911,
+              "right": 1379,
+              "bottom": 955,
+              "left": 61
+            },
+            "scroll": 1440,
+            "width": 1440
+          }
+        }
+      ],
+      "checks": [
+        "opening-two-speakers",
+        "real-first-ambush-sortie-and-victory",
+        "actual-facility-build-button-debit-once-and-reload",
+        "three-enemy-portraits",
+        "scene-backgrounds",
+        "longest-frame-layout",
+        "all-12-media-http-sha-dimensions-decode",
+        "formal-save-isolation",
+        "navigable-unopposed-survey-gate-skip-reload-real-approach-and-3-second-scan",
+        "read-only-replay-of-facility-chapter-wallet-facilities-receipts-unchanged"
+      ],
+      "scanRevision": {
+        "realNavigation": true,
+        "scanSeconds": 3,
+        "initializesOnce": true,
+        "previousOtherChecksReused": true
+      }
+    },
+    {
+      "mobile": true,
+      "viewport": "390x844 DPR2 touch",
+      "opening": {
+        "text": {
+          "x": 29,
+          "y": 703.5,
+          "width": 332,
+          "height": 55.5,
+          "top": 703.5,
+          "right": 361,
+          "bottom": 759,
+          "left": 29
+        },
+        "controls": {
+          "x": 29,
+          "y": 771,
+          "width": 332,
+          "height": 44,
+          "top": 771,
+          "right": 361,
+          "bottom": 815,
+          "left": 29
+        },
+        "scroll": 390,
+        "width": 390
+      },
+      "previews": [
+        {
+          "label": "aitsu",
+          "geometry": {
+            "text": {
+              "x": 29,
+              "y": 703.5,
+              "width": 332,
+              "height": 55.5,
+              "top": 703.5,
+              "right": 361,
+              "bottom": 759,
+              "left": 29
+            },
+            "controls": {
+              "x": 29,
+              "y": 771,
+              "width": 332,
+              "height": 44,
+              "top": 771,
+              "right": 361,
+              "bottom": 815,
+              "left": 29
+            },
+            "scroll": 390,
+            "width": 390
+          }
+        },
+        {
+          "label": "haitsu",
+          "geometry": {
+            "text": {
+              "x": 29,
+              "y": 703.5,
+              "width": 332,
+              "height": 55.5,
+              "top": 703.5,
+              "right": 361,
+              "bottom": 759,
+              "left": 29
+            },
+            "controls": {
+              "x": 29,
+              "y": 771,
+              "width": 332,
+              "height": 44,
+              "top": 771,
+              "right": 361,
+              "bottom": 815,
+              "left": 29
+            },
+            "scroll": 390,
+            "width": 390
+          }
+        },
+        {
+          "label": "morugo",
+          "geometry": {
+            "text": {
+              "x": 29,
+              "y": 731.25,
+              "width": 332,
+              "height": 27.75,
+              "top": 731.25,
+              "right": 361,
+              "bottom": 759,
+              "left": 29
+            },
+            "controls": {
+              "x": 29,
+              "y": 771,
+              "width": 332,
+              "height": 44,
+              "top": 771,
+              "right": 361,
+              "bottom": 815,
+              "left": 29
+            },
+            "scroll": 390,
+            "width": 390
+          }
+        },
+        {
+          "label": "southern-haven",
+          "geometry": {
+            "text": {
+              "x": 29,
+              "y": 731.25,
+              "width": 332,
+              "height": 27.75,
+              "top": 731.25,
+              "right": 361,
+              "bottom": 759,
+              "left": 29
+            },
+            "controls": {
+              "x": 29,
+              "y": 771,
+              "width": 332,
+              "height": 44,
+              "top": 771,
+              "right": 361,
+              "bottom": 815,
+              "left": 29
+            },
+            "scroll": 390,
+            "width": 390
+          }
+        },
+        {
+          "label": "freedom",
+          "geometry": {
+            "text": {
+              "x": 29,
+              "y": 731.25,
+              "width": 332,
+              "height": 27.75,
+              "top": 731.25,
+              "right": 361,
+              "bottom": 759,
+              "left": 29
+            },
+            "controls": {
+              "x": 29,
+              "y": 771,
+              "width": 332,
+              "height": 44,
+              "top": 771,
+              "right": 361,
+              "bottom": 815,
+              "left": 29
+            },
+            "scroll": 390,
+            "width": 390
+          }
+        },
+        {
+          "label": "stage-finale",
+          "geometry": {
+            "text": {
+              "x": 29,
+              "y": 731.25,
+              "width": 332,
+              "height": 27.75,
+              "top": 731.25,
+              "right": 361,
+              "bottom": 759,
+              "left": 29
+            },
+            "controls": {
+              "x": 29,
+              "y": 771,
+              "width": 332,
+              "height": 44,
+              "top": 771,
+              "right": 361,
+              "bottom": 815,
+              "left": 29
+            },
+            "scroll": 390,
+            "width": 390
+          }
+        }
+      ],
+      "checks": [
+        "opening-two-speakers",
+        "real-first-ambush-sortie-and-victory",
+        "actual-facility-build-button-debit-once-and-reload",
+        "three-enemy-portraits",
+        "scene-backgrounds",
+        "longest-frame-layout",
+        "all-12-media-http-sha-dimensions-decode",
+        "formal-save-isolation",
+        "navigable-unopposed-survey-gate-skip-reload-real-approach-and-3-second-scan",
+        "read-only-replay-of-facility-chapter-wallet-facilities-receipts-unchanged"
+      ],
+      "scanRevision": {
+        "realNavigation": true,
+        "scanSeconds": 3,
+        "initializesOnce": true,
+        "previousOtherChecksReused": true
+      }
+    }
+  ],
+  "errors": [],
+  "physicalDevice": false,
+  "scope": "New-content isolated pack, arrival/preview fixtures explicitly declared; no live save writes, not a full new-account travel or physical-device certification."
+}

@@ -1,5 +1,7 @@
 # 2026-10-26 十一位新繪／重繪：固定整合入口
 
+交付 PR：[#44](https://github.com/sces5504/20261020/pull/44)，素材提交 `a6575fa`。
+
 本批固定在repo `art/characters/stellar11-20261026/`。11張使用者Drive最新立繪與各自單張標準參考生成的11張Q版候選已完成，交美術包與試套給整合者。
 
 - [完整交接](../../../docs/handoffs/stellar11-character-art-20261026.md)

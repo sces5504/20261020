@@ -1,5 +1,7 @@
 # 2026-10-26 十一位新繪／重繪美術交付
 
+交付 PR：[#44](https://github.com/sces5504/20261020/pull/44)，素材提交 `a6575fa`。
+
 使用者要求從Google Drive取得今天11位新繪與重繪並製作Q版。沿用已確認的M1比例、固定repo目錄＋PR、美術包與試套交整合者；不擴大為修改核心／技能／全域manifest或自動部署。
 
 固定入口：[art/characters/stellar11-20261026/START_HERE.md](../../art/characters/stellar11-20261026/START_HERE.md)。起點origin/main `ed6cbda`，分支`art/stellar11-20261026`，開工前乾淨，觀察核心0.9.0。六位完成時已做檢查點提交`fe83da3`。

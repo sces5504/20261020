@@ -1,5 +1,5 @@
 {
-  "completedCount": 6,
+  "completedCount": 11,
   "targetCount": 11,
   "completedKeys": [
     "posterior",
@@ -7,13 +7,12 @@
     "alrami",
     "gienah",
     "mercury",
-    "alrai"
-  ],
-  "remainingKeys": [
+    "alrai",
     "wezen",
     "hypatia",
     "pluto",
     "nemesis",
     "ganymede"
-  ]
+  ],
+  "remainingKeys": []
 }

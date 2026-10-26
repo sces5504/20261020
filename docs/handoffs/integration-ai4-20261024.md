@@ -122,3 +122,4 @@
 8. 上方資源列顯示「+N/m」（手機小字疊在數字下）。
 9. 整合 PR #44（11位新繪／重繪）與 content/requested4（late3：Posterior、Alpheratz、Alrami）：啟用late3（75人），新增 `stellar11-20261026-art.json`（33素材），依integration-plan更新8位既有角色引用（Gienah、Hypatia不再借圖；水星、冥王星、復仇女神星、木衛三、Alrai、Wezen改新圖）、3位新角色綁定。操作員頭像裁切只在角色仍使用原裁切來源立繪時沿用（以 art/ui/operator-portraits-v1/manifest.json 的sourceAsset判斷）。公開製作表75人已整合。
 10. 稽核：手機首次載入約2.4秒出畫面／12.9 MiB（主程式4.6 MiB、首屏兩張PNG立繪各約1.3–1.9 MiB）；各主要面板無橫向溢出、零錯誤。順手修：角色卡按鈕手機換行、非戰鬥時面板底部誤寫「戰鬥已暫停」。待使用者決定的問題列於最終回報。
+- 驗證：單元135/135；本機瀏覽器e2e、playtest、exploration、refinement、polish、content-integration、skills、world、integration-v8、chronicle通過；story因獲得畫面改為立即顯示（手機面板開啟時主線卡隱藏）更新測試流程後通過。未重跑31劇情戰與671世界（雙前鋒改動影響戰鬥站位，依使用者偏好不重跑戰鬥檢查）。

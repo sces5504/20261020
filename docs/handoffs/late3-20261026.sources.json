@@ -1,0 +1,90 @@
+{
+  "baseline": "ed6cbda",
+  "scales": {
+    "hp": 3.0670575995460134,
+    "attack": 1.780185758513932,
+    "defense": 1.1428571428571428
+  },
+  "requestResolution": {
+    "posteior": "Source key Posterior CID123",
+    "Alpheratz": "User explicitly chose CID120/5-star; not Elacrab CID115/4-star",
+    "Gienah": "Retain existing story40:character.gienah CID118, do not duplicate"
+  },
+  "characters": [
+    {
+      "cid": 123,
+      "key": "Posterior",
+      "sourceSkill": 205,
+      "sourceDescription": "Fire eight guided missiles chasing enemies, dealing [atk] damage.Hugified",
+      "gachaRow": 122,
+      "gachaFlag": 0,
+      "nativeLv1": {
+        "hp": 174,
+        "attack": 52,
+        "defense": 11
+      },
+      "converted": {
+        "hp": 534,
+        "attack": 93,
+        "defense": 13
+      },
+      "sourceRefs": {
+        "f15": 526,
+        "f16": 111,
+        "f17": 1748,
+        "f18": 16,
+        "f19": 0
+      }
+    },
+    {
+      "cid": 120,
+      "key": "Alpheratz",
+      "sourceSkill": 200,
+      "sourceDescription": "Increases attack power [atkup] of allies within [dist] for [time] and decrease the defense [defdn].",
+      "gachaRow": 119,
+      "gachaFlag": 1,
+      "nativeLv1": {
+        "hp": 292,
+        "attack": 10,
+        "defense": 36
+      },
+      "converted": {
+        "hp": 896,
+        "attack": 18,
+        "defense": 41
+      },
+      "sourceRefs": {
+        "f15": 107,
+        "f16": 365,
+        "f17": 2926,
+        "f18": 7,
+        "f19": 20
+      }
+    },
+    {
+      "cid": 119,
+      "key": "Alrami",
+      "sourceSkill": 197,
+      "sourceDescription": "For [time], increases attack power [atkup] and ignore the enemy's defenses.",
+      "gachaRow": 118,
+      "gachaFlag": 0,
+      "nativeLv1": {
+        "hp": 156,
+        "attack": 18,
+        "defense": 12
+      },
+      "converted": {
+        "hp": 478,
+        "attack": 32,
+        "defense": 14
+      },
+      "sourceRefs": {
+        "f15": 185,
+        "f16": 126,
+        "f17": 1564,
+        "f18": 11,
+        "f19": 6
+      }
+    }
+  ]
+}

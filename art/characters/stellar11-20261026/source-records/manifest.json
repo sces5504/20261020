@@ -1,0 +1,270 @@
+{
+  "scope": "原8人包擴充為11人：替換Alpheratz，加入Pluto、Nemisis、木衛三；保留舊圖，不改runtime或角色ID映射",
+  "characters": [
+    {
+      "key": "posteior",
+      "id": 123,
+      "stars": 5,
+      "order": 1,
+      "name": "posteior",
+      "source": "/workspace/generated_images/exec-a84c08e4-21ae-4562-900d-ff54ba2da87f.png",
+      "file": "portraits/posteior-v1.png",
+      "prompt": "Draw ONE standalone full-body portrait of an ADULT WOMAN for an anime space-fantasy RPG. The attached local image is ONLY the approved DRAWING STYLE reference: match its clean delicate anime outlines, restrained smooth soft cel-painted shadows, simple readable materials and moderate detail density. Do not copy its person, pose or hair. Character design is described below based on the user's visual references. The whole character is FULLY CLOTHED in an opaque functional combat uniform; normal adult anatomy and natural proportions. Distinct elegant feminine face with soft jawline. Exactly two arms and two legs; coherent shoulder-elbow-wrist connections, ribcage and pelvis face the same direction, two thighs originate from paired hip sockets, normal knees and ankles. Whole body and all equipment comfortably within frame. Actual transparent background. No text, watermark, UI, gradient, setting, or border. Five-star angel-machine commander. Rose-pink short wavy asymmetrical bob, magenta eyes, composed mischievous smile, slim feminine brows. Opaque white-lilac tailored officer dress with fitted high collar, purple seams, long detached uniform sleeves over gloves, opaque white leggings, lavender armored shoes. Six large tapered white mechanical feather-like wing blades rise in a wide arch from a compact back mount, with rose-magenta recessed round sensors underneath and a little white plumage by their roots. A slim lavender command rapier held low down her left side, fully in frame. Composed front-facing hovering pose, pelvis directly under waist, both legs descend gently, feet slightly apart with one knee mildly flexed. Right hand held outward palm-up at waist. Powerful unique wing silhouette, very limited metallic trim. No unnecessary crystal props.",
+      "sourceNote": "圖1：粉短髮、白色機械羽翼、洋紅感測器；原作參考已於聊天目視。",
+      "status": "目視檢查後候選，待使用者審閱",
+      "sha256": "a44b66accbf9ee108c76ff5a89f125daf2eb507b5f7b1ab601d116199666e76e",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ]
+    },
+    {
+      "key": "alpheratz",
+      "id": 115,
+      "stars": 5,
+      "order": 2,
+      "name": "alpheratz",
+      "source": "/workspace/generated_images/exec-8a967790-b243-4be9-8bed-2f670ee9a157.png",
+      "file": "portraits/alpheratz-v6.png",
+      "prompt": "COLOR AND MATERIAL REFINEMENT ONLY of this exact full-body ADULT pink-haired Alpheratz and guardian mecha flying pair. Preserve characters, face, hairstyle, one-piece pilot suit design with same skin coverage, poses, anatomy and mechanical construction. Match the user's ORIGINAL reference's delicate premium icy palette: DOMINANT PEARLESCENT WHITE and VERY PALE POWDER ICE BLUE ceramic surfaces, DEEP DESATURATED INK NAVY inner panels and joints, subtle pale CYAN luminous lines, very restrained brushed CHAMPAGNE SILVER trims. Remove the current saturated COBALT/ROYAL BLUE and yellow gold. Mecha large panels predominantly cool pearl white with pale blue shadow planes, dark ink-navy recessed joints, light cyan reactor, minimal metal edges; whites must remain soft nuanced cool white, not flat gray or bright plastic. Woman suit pearl-white with powder-ice-blue central fabric panel and ink-navy only at narrow side seams, tiny champagne trim; blue tails become pale ice-blue translucent SATIN with very subtle lilac and rose-pink iridescence echoing original reference. Hair stays beautiful rose-pink high ponytail but reduce overly hot pink to sophisticated soft rose with luminous pale pink highlights and muted rose shadows. Define material quality through controlled broad soft highlights on pearl ceramic, satin folds in pale blue fabric, matte dark joints and restrained metal glints. Maintain approved anime line quality and restrained cel-painterly shading; no photorealism, 3D gloss or extra tiny details. Cool harmonious original reference palette, no saturated comic-book primary colors. Keep both complete flying figures and margins exactly, actual transparent background, no gradients or text.",
+      "sourceNote": "圖2：粉長馬尾、藍白機甲搭檔；依回饋小修機械手並增加露膚。 掌上坐姿v2已退回，站立配色v3後再依要求改成兩者飛行v4：珍珠白、石墨黑、低飽和藍綠、少量香檳金。 最新使用者要求：恢復最初參考圖的冷白、淺冰藍、深藏藍與冷青發光；高馬尾整理，星際連身露膚服，雙人各自飛行。v5亮寶藍與金色材質被退回；v6使用珍珠白、粉冰藍、暗藏藍與少量香檳金屬。",
+      "status": "目視檢查後候選，待使用者審閱",
+      "retainedVersions": [
+        "portraits/alpheratz-v2.png",
+        "portraits/alpheratz-v4.png"
+      ],
+      "sha256": "97bd5fb25860063f3d35de2c10989b102bfc3961746ea2888331ff34c8cb9bbb",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ]
+    },
+    {
+      "key": "alrami",
+      "id": 119,
+      "stars": 5,
+      "order": 3,
+      "name": "alrami",
+      "source": "/workspace/generated_images/exec-701a69bc-e5bb-4074-8274-b254a4685f52.png",
+      "file": "portraits/alrami-v3.png",
+      "prompt": "SUBSTANTIALLY REDESIGN the costume and equipment silhouette of this exact ADULT white-haired female railgun operator into a coherent FIVE-STAR character. Preserve face identity, red eyes, silver-white hair and rounded twin buns, white-graphite-cyan palette. High-quality ORIGINAL designed space-valkyrie concept, no increase in rendering complexity. Main visual motif: long split blade-like tapered white panels with graphite insets and a single cyan seam, echoed consistently in bodice, cuffs, hip panels, boots and twin railguns. Costume: structured opaque white halter CORSET with an angular supported sweetheart neckline, slim dark neck harness, open shoulders, asymmetrical side-waist openings; a narrow graphite waist belt joins TWO elegant asymmetrical short split tactical skirt panels over opaque fitted navy shorts. One longer white panel arcs from hip to mid-thigh, the other short panel creates deliberate asymmetry, understated cyan lining. Natural bare upper thighs and part of midriff; detached slim forearm gauntlets and sharp elegant white knee boots, no bulky random plates. The outfit reads as a deliberately designed complete battle uniform. Equipment: TWO powerful WHITE RAIL LANCES with long graphite barrel channels and luminous cyan power spines, mounted by a clearly engineered short articulated back yoke; angle them outward to create a poised crescent silhouette around her rather than two identical industrial poles. Small upper-back mechanical stabilizer, organized shapes, fewer greebles. Character stands calmly three-quarter forward, one hand lightly touches a collar control, other low and relaxed; normal shoulders, slim adult feminine body, natural pelvis and two separated legs. Bare shoulders, waist and thighs integrated elegantly with armor. Keep exact clean soft cel-anime style; no gold filigree, no extra stars, no floating ornaments. Whole figure, both weapons and boots within roomy margins, true transparent background, no text or scene.",
+      "sourceNote": "圖3：白髮雙髻、雙重型軌砲；連身甲及僅去除甲片版本均遭使用者退回，v3重做輪廓。",
+      "status": "目視檢查後候選，待使用者審閱",
+      "sha256": "bcdbe6cbbda15f21af6d7710a799501affa609591fdcf46add365381b5090cbb",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ]
+    },
+    {
+      "key": "gienah",
+      "id": 118,
+      "stars": 5,
+      "order": 4,
+      "name": "gienah",
+      "source": "/workspace/generated_images/exec-c3b139b3-1778-4f4c-9a05-6f029b8dd8a5.png",
+      "file": "portraits/gienah-v3.png",
+      "prompt": "Upgrade the FIVE-STAR visual impact of this exact adult blonde elven knight while PRESERVING the user-approved beautiful face, long blonde hair, pointed ears, green eyes, exposed-shoulder white-blue corset dress, bare thighs, boots, single-weapon concept and clean restrained anime rendering. Do not redesign her face or cover up skin. Crucial enhancement: replace her current ordinary slim sword with ONE SINGLE UNIQUE LARGE ELVEN STARFORGE GREATSWORD, held in the SAME low right-hand position. Elegant broad cobalt-white energy greatsword with a distinctive long tapered silhouette and angular open central channel carrying a bright azure energy core; blade has solid satin-silver structural edges, a few broad blue enamel surfaces, elongated crescent-like swept guard wings that are ATTACHED TO THE HILT, one central cyan core. Blade width meaningfully larger and majestic, still sleek and beautifully engineered, not an industrial slab. Entire sword from pommel to tip remains inside canvas. THIS IS HER ONLY WEAPON: no second blade in other hand, no floating swords. Add one small tasteful white-cobalt commander shoulder mantle at the back of one shoulder, framing exposed shoulder without hiding it; two long royal blue fabric tails with restrained pale-blue translucent energy lining echo sword's swept panel shapes. A slender silver elven crest headband, no giant crown. A few contained blue energy sparks travel along the sword, no scene or huge magic circle. She should read as an elite five-star royal star-knight with a unique iconic equipment silhouette matching other five-stars, using LARGE CLEAR SHAPES, not extra tiny gold stars/chains/filigree. Maintain exact same clean delicate outlines, smooth restrained soft cel-painted shadows and detail density. Preserve her elegant relaxed standing stance, coherent anatomy, two natural legs and two arms, left empty hand near collar. Allow extra canvas margin around hair, tails, sword and boots, actual transparent background. No writing, border, rarity labels, UI or background gradients.",
+      "sourceNote": "圖4：金髮精靈耳、藍白騎士；使用者確認為既有角色重繪，改單劍與露膚。 使用者表示v2主要已ok，五星氣勢需加強；v3保留服裝與臉，升級單柄大劍及肩披。",
+      "status": "目視檢查後候選，待使用者審閱",
+      "retainedVersions": [
+        "portraits/gienah-v2.png"
+      ],
+      "sha256": "4cfc2351e0840bb40fc353010cb2d3eb6813a39da81223c354f633f5bd835b99",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ]
+    },
+    {
+      "key": "mercury",
+      "id": null,
+      "stars": null,
+      "order": 5,
+      "name": "水星",
+      "source": "/workspace/generated_images/exec-8c7a5c92-dd9d-4dd7-ba33-f87a6eaea664.png",
+      "file": "portraits/mercury-v2.png",
+      "prompt": "Edit this exact adult blue-haired female space officer portrait. REMOVE THE ENTIRE KATANA, BLADE, SCABBARD, RED WRAPPED HANDLE, sword belt hardware and sword tassels. She is COMPLETELY UNARMED, no weapon anywhere and no replacement prop, matching the user's unarmed Earth and Venus character portraits. Keep face identity, straight steel-blue hair, violet-gray eyes, navy-white officer uniform, pants, boots and drawing style. Repose her two hands gracefully: one hand rests lightly over her upper chest/collar, other hangs relaxed open beside hip, natural elbows and five fingers. Repair only uniform beneath removed sword so continuous clean naval tailoring with fewer dangling straps. Keep lower-body pose but clear natural pelvis and two legs. Whole adult woman full-body, transparent background, no text or scenery.",
+      "sourceNote": "使用者提供藍髮軍服劍士參考後，明確要求如地球、金星一樣空手；已移除全部刀劍。",
+      "status": "目視檢查後候選，待使用者審閱",
+      "sha256": "d7b13d8885a54ee17661caf30dc02e6dfebd2816eafa6d6d0bf3252b71a7eb6b",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ]
+    },
+    {
+      "key": "alrai",
+      "id": null,
+      "stars": 4,
+      "order": 6,
+      "name": "alrai",
+      "source": "/workspace/generated_images/exec-1887cbe9-e96e-4cf9-a13c-7262f4589605.png",
+      "file": "portraits/alrai-v1.png",
+      "prompt": "Redraw this exact adult female celestial battle-kimono commander as a fresh complete character portrait, preserving long wine-red hair with one side braid, amber eyes, gold crescent hair comb, black-burgundy palette, and the functional red-black folding command fan. Keep the SAME clean delicate anime outlines and restrained smooth cel-painted rendering, avoid extra gold microdecoration. Change the old folded sitting pose into graceful grounded upright three-quarter walking stance. Torso, waist and pelvis all face the same three-quarter direction; two legs descend naturally from the hips, one foot half-step forward, two feet clearly separated, no crossed or folded legs. Command fan held open near shoulder in one hand, other hand lightly directs forward near waist with normal fingers. Opaque fitted sleeveless black-red high-collar combat dress with bare shoulders, detached wide kimono sleeves, narrow bare waist, long split skirt draped from a coherent pelvis over opaque fitted battle shorts, one bare thigh and two dark calf boots visible. Attractive adult fantasy commander with normal anatomy. No third leg, two arms and two legs, normal knees and elbows. Entire figure, hair, fan, boots and flowing fabric contained with margins. True transparent background, no scenery, no text.",
+      "sourceNote": "保留前批紅髮側辮、紅黑戰扇、戰鬥和服；重繪為直立姿勢。",
+      "status": "目視檢查後候選，待使用者審閱",
+      "sha256": "cc903e490004a34515aa2bd59e8879a0805e8a077497a3a800597f7278645d3d",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ]
+    },
+    {
+      "key": "wezen",
+      "id": null,
+      "stars": 2,
+      "order": 7,
+      "name": "弧矢一",
+      "source": "/workspace/generated_images/exec-9e5a8320-3df4-428c-a51e-046fa692c261.png",
+      "file": "portraits/wezen-v1.png",
+      "prompt": "Redraw this exact adult female pink-haired fire-zone skirmisher in a NEW normal grounded combat pose. Preserve pink high side ponytail, amber eyes, cheeky small fang smile, charcoal-black and ember-orange futuristic battle outfit and one compact recognizable flamethrower with fuel cell, handle and nozzle. Maintain exact clean anime linework and restrained soft cel-painted style, not ornate. POSE: three-quarter profile facing image-left, steady normal-width staggered stance with both feet grounded, rear knee softly flexed, hips beneath torso and aligned with chest; two arms naturally grip the gun close to chest, one trigger hand and one under-barrel support hand, flame nozzle points upward diagonally toward left with a small contained flame. No extreme splay, no crouch or jumping. Outfit has a simple opaque cropped black armored top with bare shoulders, short fitted opaque combat shorts under two compact orange side plates, bare waist, normal bare upper thighs and dark calf armor boots. The viewer-right side of chest top must be PLAIN BLACK, with NO star-shaped badge, per user request. Cool practical attack-unit gear with no decorative overload. Natural adult body proportions, paired hips, two normal legs, two connected arms, proper hands. Full figure, boots, flame and nozzle within frame with margins. Transparent background, no text or scenery.",
+      "sourceNote": "弧矢一：保留粉馬尾、橘黑火焰裝備；胸口右側不加星徽。",
+      "status": "目視檢查後候選，待使用者審閱",
+      "sha256": "bae10b5c2b251acf6c984f0b2202f02bec9deaa198a824704aca5cb819527046",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ]
+    },
+    {
+      "key": "hypatia",
+      "id": 65,
+      "stars": 2,
+      "order": 8,
+      "name": "hypatia",
+      "source": "/workspace/generated_images/exec-848541c1-5f4a-4617-af6e-1dfcd033ef79.png",
+      "file": "portraits/hypatia-v1.png",
+      "prompt": "Create ONE full-body character portrait of HYPATIA, an ADULT FEMALE two-star northern-sector tactical scholar for an anime space-fantasy RPG. Match ONLY the attached approved portrait's clean delicate anime drawing style and restrained smooth soft cel-painting, not its blonde character, pose or ornaments. Original interpretation of the name Hypatia as an intelligent mathematical strategist, since no original appearance reference is available. Distinct face: intelligent slender teal-gray almond eyes, gently arched thin brows, small composed smile, soft oval mature adult face, one small beauty mark below LEFT eye. Dark chestnut hair in a practical single low looped bun with an asymmetrical long face-framing lock, a simple bronze geometric hairpin. Battle-ready space-academy uniform with a dark deep-teal fitted sleeveless officer dress, ivory structured collar and opaque chest panel, short asymmetric angular skirt over opaque fitted shorts, one small side-waist opening, exposed shoulders, detached light forearm cuffs, modest bare upper thighs and sturdy dark-teal mid-calf boots. One short ivory half-cape at one shoulder, tiny copper rank clasp. TWO-STAR restrained practical equipment: a single clearly constructed slim rectangular field-calculation tablet with turquoise holographic geometric trajectory lines a few centimeters above the screen, held in one hand, other hand lightly taps it. No enormous weapons, no shields, no random floating stones, no jewelry clutter. Pose: natural calm walking pause in side-facing three-quarter stance, both arms together at waist supporting tablet, elbows correctly connected, torso and pelvis aligned; near leg bears weight with straight relaxed knee and far leg steps a little behind, uncrossed feet, sensible adult proportions. Exact two arms and two legs, natural hands. Portrait crop includes entire hair, boots and cape with room around edges. Actual transparent background; no gradients, writing, numbers, stars, scene, watermark or UI. Elegant feminine adult scholar with clear readable shape, not modern casual clothes or schoolchild.",
+      "sourceNote": "使用者提供story40:character.hypatia、第32項、ID65、2星、北天、待繪製。未收到原作外觀圖；本候選為依名字的星際學者原創詮釋，非聲稱原作外觀。",
+      "status": "目視檢查後候選，待使用者審閱",
+      "sha256": "430f962897b0eb18a2d71a6956f5428758644cba8907c80af0f7c4637dabb40d",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ]
+    },
+    {
+      "key": "pluto",
+      "id": 10,
+      "stars": 5,
+      "order": 9,
+      "name": "Pluto",
+      "source": "/workspace/generated_images/exec-9142d7bd-d911-493f-b904-7e4d21290c6d.png",
+      "file": "portraits/pluto-v1.png",
+      "prompt": "Create ONE full-body adult female character portrait for the user's established anime space-fantasy game. Same delicate clean anime linework, restrained smooth soft cel-painted shading and moderate readable detail density as the approved local style reference. Normal adult anatomy: exactly two arms and two legs, natural shoulders/elbows/wrists, coherent ribcage/waist/pelvis aligned in same direction, paired hip sockets and sensible knees/ankles, correct hands. All hair, horns, shoes, weapons and equipment comfortably within picture with margins. Actual transparent background, no scenery, gradients, UI, writing, logos, borders, or chibi. Redesign PLUTO to restore the ORIGINAL design traits described by the user, while keeping a clearly ADULT woman in her twenties. Expression is the highest priority: innocent SAD red eyes slightly watery, raised inner brows, small downturned mouth and gentle vulnerable worried gaze, soft adult oval face, NOT angry, proud, smirking or seductive. Loose silver-white wavy long hair with pale icy-blue ends and soft forehead fringe, no side ponytail. Two long slender black mechanical dragon-horn antennas rise upward with cyan inset segments, original iconic horn silhouette. Fine black tear-like ornamental cheek markings. Gothic BLACK AND ICE BLUE off-shoulder battle dress, opaque fitted black corset chest with delicate scalloped edges and supportive full coverage, subtle pale blue side insets, detached black glove sleeves, high collar with one small blue gem. Knee-length layered feather skirt: short black upper feather panels over a pale blue-white pointed feather hem, two long flowing blue ribbons. Black/silver armored tall boots with curved thorn-like fins. A small pair of black icy-blue mechanical BLADE WINGS extends from upper-back mount, coherent symmetrical machine assemblies rather than human arms. One elegant dark staff with a BLUE luminous sphere in a claw-shaped head held naturally near waist, shaft extends diagonally down at her side. Pose: slightly inward gentle shoulders, upright three-quarter body with two feet separated gently and normal knees, free hand rests loosely over sternum expressing sadness, no crossed legs or exaggerated hip twist. Preserve original sorrowful gothic-ice angel identity, no casual jacket/shorts/modern explorer accessories. Single adult human, no nudity.",
+      "sourceNote": "原作參考圖1已目視：銀白髮、紅眼、無辜傷心神情、黑藍長角、機械刃翼、羽毛裙與藍球杖。使用stellar10原圖作風格身份參照；新候選另存，不覆寫原圖。",
+      "status": "目視檢查後候選，待使用者審閱",
+      "sha256": "05e6117a2afde11115b57fe2aea9179975551027cc038c6c38280d3243b00a6c",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ]
+    },
+    {
+      "key": "nemesis",
+      "id": 11,
+      "stars": 5,
+      "order": 10,
+      "name": "Nemisis",
+      "source": "/workspace/generated_images/exec-b9962a4f-41d2-4a6b-8954-6a952e5d0a76.png",
+      "file": "portraits/nemesis-v20-original-light-upper.png",
+      "prompt": "Generate a fresh complete full-body painting of the mature ADULT Nemesis shown in the reference, using it as the approved DESIGN authority and original-character pose reference. Repaint clean linework, lighting and surfaces rather than retaining edited picture pixels. The user approves all existing identity, hair, expression, pose, four tails and lower-body equipment. Preserve them closely: silver-white original rounded crown and thick forehead bang, outward-flipped hair layers, one long/one short black-crimson horn, amber-red eyes and sly sharp-canine smile; lightly hovering front pose, one hand grips original red trident upright at picture-left near shoulder, other claw arm extends picture-right, one armored rear leg bent slightly behind and the other extended down with ankle footpiece. FOUR LARGE THICK original black-crimson segmented blade tails, two sweeping to each side, exactly four readable tips; broad black-red cape. Natural mature adult proportions and connected limbs. ONLY DESIGN CHANGE: reduce UPPER TORSO ARMOR COVERAGE noticeably, making compact beautifully designed graphite-crimson chest armor. Remove the broad high collar/yoke area and all armor extending below the chest into the upper abdomen. A small narrow dark neck clasp only; upper chest and collarbones open. Replace the large upper armor with two compact slender angular LEAF-SHAPED protective front panels with slanted cut edges and short pointed lower tips ending immediately beneath ribcage, thinner outer sides revealing more lateral torso. Opaque panels securely cover the front with a naturally supported adult fit; small central ruby structural link and narrow sturdy metallic shoulder attachments. Broad uninterrupted bare midriff and upper abdomen, open shoulder-to-collar region and side waist. Maintain functional hard armor design with faceted matte metal and thin crimson bevels, no fabric bra look or round cup seams, no rectangular stacked block, no continuous corset/bodysuit. Keep original shoulder spikes and forearm guards and entire lower outfit unchanged. Full opaque chest and pelvis coverage, no nudity or erotic pose. All other design elements match reference closely, no new hairstyle, horns, generic smile or tail redesign. Refined fine 2D anime outlines, restrained smooth soft cel painting, organized hair groups and clean skin/metal surfaces, consistent moderate detail; no 3D gloss, filigree, blur, ghost lines or melted detail. Entire trident, horns, hair, hands, all four tails and two complete feet fully inside transparent safety margins. True transparent background with NO black vignette, scenery, UI, text, chibi or gradients. Exactly one mature adult character, two arms and legs, four tail appendages.",
+      "sourceNote": "原作參考圖2已目視：白髮、金紅眼、病嬌笑容、黑紅角、三叉戟、黑紅非對稱惡魔戰服。首版長裙／臉／髮型遭使用者退回；高露出重繪與表情修改多次遭工具安全過濾。當前為覆蓋更完整的成年兩件式裝甲候選，保留表情與主要原作元素；已明告使用者差異，未核定。 最新直接要求：改用新參考的大片交叉緞帶、高衩垂布與腰側結，轉黑紅；身高骨架參考木衛三而胸型更豐滿，保持成年體態；姿勢要求原作。v7調整為肩旁握直立戟、另一手側向攤開與輕懸浮。 使用者再退回v7：髮型直接依原作、布料需大幅減少。v8改厚瀏海與兩側外翹分層，移除長裙與披風，保留交叉胸布、短腰結與遮蔽完整的短下裝；成年比例、原作持戟攤掌姿勢保留。 最新使用者提供遮住服裝區的參考圖，已明告僅使用可見髮型、表情、姿勢、四尾，不復原被遮住內容；另設計完整黑紅護甲。v10由這張可見特徵參考生成，已目視四尾和肢體，仍是待審閱候選。 最新使用者要求參考迷你比基尼＋戰甲、增加露膚；v11以已穿護甲成年候選為輸入，改不透明兩件式裝甲比基尼，去掉腹甲，保留原姿勢、四尾、披風、肩甲護臂及單側腿甲。已目視，待使用者審閱。 使用者對v11表示可以，但要求不要像內衣、改漂亮裝甲；v12維持露膚和人物姿勢，改分層金屬胸甲、與肩甲相連的固定件、立體髖甲和側連接。已目視人體與四尾，待使用者審閱。 使用者指出v12胸甲仍圓、像內衣；v13改成一體式橫向梯形分層胸甲，消除兩個獨立罩杯與圓弧縫線，保留露腹比例和其餘造型。已實際查看，待審閱。 使用者退回橫向胸甲，指定新騎士參考的修長尖角胸甲，且其他部分已ok；之後要求整張重新生成避免反覆編輯劣化，並縮小胸甲遮蔽。v16採完整全身新繪指令，以既有設計和畫風作參照，縮窄胸甲外緣與縮短下尖角；已逐張查看手指、腿、甲片與四尾，仍待審閱。 使用者再澄清：必須整張重新生成、不能一直改舊圖。本次兩次呼叫均只有文字prompt及透明背景參數，完全沒有圖像輸入。第一張純文字新圖光澤偏重且戟尖貼邊，另以純文字再生v18，採較簡潔2D陰影；已目視人體、胸甲與四尾，待使用者審閱。 使用者再澄清必須還原重貼的原作，純文字新圖已偏離。v19只以此次重貼的原作圖作圖像參照，未輸入任何舊生成圖，重新繪全身；還原可見臉髮、表情、持戟攤掌與腿部前後、四尾，遮住的衣裝區另設計不透明護甲。已目視，仍是待審閱候選，不宣稱完全還原或全項核定。 使用者對v19表示其他地方都可以，要求重新參考該版生成、上半身露膚增加。v20打開領口和胸側、縮小胸甲並縮短下緣，保留原作導向的臉髮、姿勢、四尾與下半身；已目視，待審閱。",
+      "status": "目視檢查後候選，待使用者審閱",
+      "retainedVersions": [
+        "portraits/nemesis-v4.png",
+        "portraits/nemesis-v7-original-pose.png",
+        "portraits/nemesis-v8-short-wrap.png",
+        "portraits/nemesis-v10-visible-reference-armor.png",
+        "portraits/nemesis-v11-bikini-armor.png",
+        "portraits/nemesis-v12-sculpted-armor.png",
+        "portraits/nemesis-v13-angular-chest.png",
+        "portraits/nemesis-v16-fresh-compact-armor.png",
+        "portraits/nemesis-v18-text-only-new.png",
+        "portraits/nemesis-v19-original-guided-new.png"
+      ],
+      "generationMethod": "full-body generation guided by v19 approved design; upper armor coverage reduced",
+      "inputImages": [
+        "exec-99a6f4f6-baa7-4696-a48b-1d1ba7dab4d7.png"
+      ],
+      "sha256": "6813076332d26dd0b0c7a49c9c6f8b7af86bee3ad0fdf74297f16ee18f4c0649",
+      "size": [
+        1042,
+        1509
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    {
+      "key": "ganymede",
+      "id": 16,
+      "stars": 5,
+      "order": 11,
+      "name": "木衛三",
+      "source": "/workspace/generated_images/exec-cd4c26e0-52d9-4760-81ca-a4e43d449f26.png",
+      "file": "portraits/ganymede-v1.png",
+      "prompt": "Create ONE full-body adult female character portrait for the user's established anime space-fantasy game. Same delicate clean anime linework, restrained smooth soft cel-painted shading and moderate readable detail density as the approved local style reference. Normal adult anatomy: exactly two arms and two legs, natural shoulders/elbows/wrists, coherent ribcage/waist/pelvis aligned in same direction, paired hip sockets and sensible knees/ankles, correct hands. All hair, horns, shoes, weapons and equipment comfortably within picture with margins. Actual transparent background, no scenery, gradients, UI, writing, logos, borders, or chibi. Redesign GANYMEDE / 木衛三. FIRST reference is her CURRENT IDENTITY: preserve exact sandy-beige blonde hair, two low braided loop buns, soft side locks, amber eyes, rounded heart-shaped adult face, cheeky gentle closed smile, orange triangle hair clip and existing natural light skin tone. Do not change her into a different brown-haired or glasses-wearing person. Replace the casual courier cargo clothing with the ORIGINAL reference's WHITE-ORANGE HEAVY SPACE ARMOR elements described here: clean orange-and-white ceramic chest armor with a small triangular warm-yellow power core, dark graphite mechanical joints, open shoulder gaps above detached long white gauntlets; integrated sleek white-orange fitted one-piece battle suit with opaque chest and hip panels, small side-waist cutouts, bare upper thighs above long white armored boots with orange heels and warm-yellow shin lights. Keep naturally proportioned adult body, no extreme bust enlargement. Two large ORANGE-WHITE aerodynamic propulsion/armor pods mount independently behind shoulders on a compact engineered backpack, tapered orange upper shells, white lower shells, large circular dark turbines and small warm-yellow position lights, no text printed on them. Two bold clear machine silhouettes frame her while keeping both human arms readable and separate from pods. Pose: cheerful practical adult armored pilot in a light hover with one leg descending and other knee softly bent a little behind, pelvis directly beneath waist, one hand at hip and other naturally lifted palm open beside shoulder, moderate perspective. Exactly two connected arms, two legs, normal hips and knees. Full equipment and boots inside margins. Keep the first reference's facial identity and fine anime shading while using a clear futuristic heavy-equipment uniform instead of everyday cargo outfit.",
+      "sourceNote": "保留stellar10已有人物的沙金髮低髻、琥珀眼、臉型；使用者參考圖3的橘白重裝連身服、雙大型推進裝置、黃色燈光作裝備設計元素。",
+      "status": "目視檢查後候選，待使用者審閱",
+      "sha256": "a826ce5416bc50c4260cf43b594dc10d644f19c194ebd32379b3b0c6746fa607",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        254
+      ]
+    }
+  ]
+}

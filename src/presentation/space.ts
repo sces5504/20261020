@@ -859,40 +859,6 @@ export function mountSpace(
                 : model.pack.rules.enemySpriteSize,
             );
           }
-          if (u.side === "enemy" && u.windup > 0) {
-            g.lineStyle(2, 0xffbc85, 0.65);
-            g.strokeCircle(u.x, u.y, 60 + (1 - u.windup / 0.55) * 25);
-            const { pattern, count, spread } = combat.volleyFor(u);
-            if (pattern === "laser") {
-              g.lineStyle(24, 0xff876b, 0.12);
-              g.lineBetween(
-                u.x,
-                u.y,
-                u.x + Math.cos(u.aim) * u.range,
-                u.y + Math.sin(u.aim) * u.range,
-              );
-              g.lineStyle(1, 0xffbc85, 0.7);
-            }
-            const rays =
-              pattern === "ring" ||
-              pattern === "spiral" ||
-              pattern === "fan" ||
-              pattern === "shotgun"
-                ? count
-                : 1;
-            for (let i = 0; i < rays; i++) {
-              const a =
-                pattern === "ring" || pattern === "spiral"
-                  ? (i * Math.PI * 2) / rays
-                  : u.aim + (i - (rays - 1) / 2) * spread;
-              g.lineBetween(
-                u.x,
-                u.y,
-                u.x + Math.cos(a) * u.range,
-                u.y + Math.sin(a) * u.range,
-              );
-            }
-          }
           if (combat.story?.shielded(sim)) {
             // Story shield: layered rings, brighter while up.
             const r = (u.boss ? 62 : 34) * scale + Math.sin(this.elapsed * 4) * 2;

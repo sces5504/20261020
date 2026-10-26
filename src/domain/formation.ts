@@ -75,16 +75,24 @@ export class FleetMotion {
   /** Deterministic combat clock for the cluster's slow drift (no wall time, no randomness). */
   private guardClock = 0;
   /**
-   * Original-style battle cluster: members spread loosely around the captain facing the
-   * threat (flanks first, then a rear arc) and drift slowly, instead of a single file.
+   * Original-style battle cluster: two vanguards abreast facing the threat, the rest in
+   * loose pairs behind, drifting slowly instead of a single file.
    */
   private clusterSlot(i: number): Point {
     if (i === 0) return { ...this.anchor };
+    // Two vanguards side by side (01 + 02), then loose pairs behind them.
     const s = this.spacing,
-      ring = i <= 2 ? 0 : i <= 4 ? 1 : 2,
-      side = i % 2 ? 1 : -1,
-      back = [0.32, 0.9, 1.35][ring] * s,
-      lateral = (ring === 2 ? 0 : [0.78, 0.42][ring] * side) * s,
+      slots: [number, number][] = [
+        [0, 0],
+        [0, 0.8],
+        [0.62, -0.15],
+        [0.62, 0.95],
+        [1.2, 0.1],
+        [1.2, 0.7],
+      ],
+      [row, lane] = slots[Math.min(i, slots.length - 1)],
+      back = row * s,
+      lateral = lane * s,
       drift = 0.16 * s,
       bx = -back + Math.sin(this.guardClock * 0.7 + i * 1.9) * drift,
       by = lateral + Math.cos(this.guardClock * 0.55 + i * 2.4) * drift,

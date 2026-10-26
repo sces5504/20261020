@@ -1,0 +1,203 @@
+{
+  "format": "reviewable-art-integration-plan-NOT-runtime-manifest",
+  "baseCommit": "ed6cbda",
+  "existingCharacterUpdates": [
+    {
+      "artCharacterId": "stellaart:character.gienah",
+      "key": "gienah",
+      "originalCidRow": 118,
+      "sourceReportedId": 118,
+      "existingPresentation": {
+        "character": "story40:character.gienah",
+        "portrait": "stellaart:asset.aldebaran-portrait-20261025-web",
+        "avatar": "stellaart:asset.aldebaran-avatar-20261025-web",
+        "sprite": "stellaart:asset.aldebaran-battle-20261025-v1-web"
+      },
+      "requestedPresentation": {
+        "character": "story40:character.gienah",
+        "portrait": "stellaart:asset.gienah-portrait-20261026-web",
+        "avatar": "stellaart:asset.gienah-avatar-20261026-web",
+        "sprite": "stellaart:asset.gienah-battle-20261026-v1-web"
+      },
+      "note": "by verified exact name/CID"
+    },
+    {
+      "artCharacterId": "stellaart:character.mercury",
+      "key": "mercury",
+      "originalCidRow": 3,
+      "sourceReportedId": null,
+      "existingPresentation": {
+        "character": "m1:mercury",
+        "portrait": "m1art:asset.maiden-04-original-v1",
+        "avatar": "m1art:asset.maiden-04-original-v1",
+        "sprite": "m1art:maiden-04-battle-v1"
+      },
+      "requestedPresentation": {
+        "character": "m1:mercury",
+        "portrait": "stellaart:asset.mercury-portrait-20261026-web",
+        "avatar": "stellaart:asset.mercury-avatar-20261026-web",
+        "sprite": "stellaart:asset.mercury-battle-20261026-v1-web"
+      },
+      "note": "by verified exact name/CID"
+    },
+    {
+      "artCharacterId": "stellaart:character.alrai",
+      "key": "alrai",
+      "originalCidRow": 63,
+      "sourceReportedId": null,
+      "existingPresentation": {
+        "character": "story40:character.alrai",
+        "portrait": "stellaart:asset.alrai-portrait-20261025-web",
+        "avatar": "stellaart:asset.alrai-avatar-20261025-web",
+        "sprite": "stellaart:asset.alrai-battle-20261025-v1-web"
+      },
+      "requestedPresentation": {
+        "character": "story40:character.alrai",
+        "portrait": "stellaart:asset.alrai-portrait-20261026-web",
+        "avatar": "stellaart:asset.alrai-avatar-20261026-web",
+        "sprite": "stellaart:asset.alrai-battle-20261026-v1-web"
+      },
+      "note": "by verified exact name/CID"
+    },
+    {
+      "artCharacterId": "stellaart:character.wezen",
+      "key": "wezen",
+      "originalCidRow": 57,
+      "sourceReportedId": null,
+      "existingPresentation": {
+        "character": "story40:character.wezen",
+        "portrait": "stellaart:asset.wezen-portrait-20261025-web",
+        "avatar": "stellaart:asset.wezen-avatar-20261025-web",
+        "sprite": "stellaart:asset.wezen-battle-20261025-v1-web"
+      },
+      "requestedPresentation": {
+        "character": "story40:character.wezen",
+        "portrait": "stellaart:asset.wezen-portrait-20261026-web",
+        "avatar": "stellaart:asset.wezen-avatar-20261026-web",
+        "sprite": "stellaart:asset.wezen-battle-20261026-v1-web"
+      },
+      "note": "by verified exact name/CID"
+    },
+    {
+      "artCharacterId": "stellaart:character.hypatia",
+      "key": "hypatia",
+      "originalCidRow": 65,
+      "sourceReportedId": 65,
+      "existingPresentation": {
+        "character": "story40:character.hypatia",
+        "portrait": "stellaart:asset.nix-portrait-20261025-web",
+        "avatar": "stellaart:asset.nix-avatar-20261025-web",
+        "sprite": "stellaart:asset.nix-battle-20261025-v1-web"
+      },
+      "requestedPresentation": {
+        "character": "story40:character.hypatia",
+        "portrait": "stellaart:asset.hypatia-portrait-20261026-web",
+        "avatar": "stellaart:asset.hypatia-avatar-20261026-web",
+        "sprite": "stellaart:asset.hypatia-battle-20261026-v1-web"
+      },
+      "note": "by verified exact name/CID"
+    },
+    {
+      "artCharacterId": "stellaart:character.pluto",
+      "key": "pluto",
+      "originalCidRow": 10,
+      "sourceReportedId": 10,
+      "existingPresentation": {
+        "character": "solar10:character.pluto",
+        "portrait": "stellaart:asset.pluto-portrait-web",
+        "avatar": "stellaart:asset.pluto-avatar-web",
+        "sprite": "stellaart:asset.pluto-battle-v2-web"
+      },
+      "requestedPresentation": {
+        "character": "solar10:character.pluto",
+        "portrait": "stellaart:asset.pluto-portrait-20261026-web",
+        "avatar": "stellaart:asset.pluto-avatar-20261026-web",
+        "sprite": "stellaart:asset.pluto-battle-20261026-v1-web"
+      },
+      "note": "by verified exact name/CID"
+    },
+    {
+      "artCharacterId": "stellaart:character.nemesis",
+      "key": "nemesis",
+      "originalCidRow": 11,
+      "sourceReportedId": 11,
+      "existingPresentation": {
+        "character": "solar10:character.nemesis",
+        "portrait": "stellaart:asset.nemesis-portrait-web",
+        "avatar": "stellaart:asset.nemesis-avatar-web",
+        "sprite": "stellaart:asset.nemesis-battle-v3-web"
+      },
+      "requestedPresentation": {
+        "character": "solar10:character.nemesis",
+        "portrait": "stellaart:asset.nemesis-portrait-20261026-web",
+        "avatar": "stellaart:asset.nemesis-avatar-20261026-web",
+        "sprite": "stellaart:asset.nemesis-battle-20261026-v1-web"
+      },
+      "note": "by verified exact name/CID"
+    },
+    {
+      "artCharacterId": "stellaart:character.ganymede",
+      "key": "ganymede",
+      "originalCidRow": 16,
+      "sourceReportedId": 16,
+      "existingPresentation": {
+        "character": "solar10:character.ganymede",
+        "portrait": "stellaart:asset.ganymede-portrait-web",
+        "avatar": "stellaart:asset.ganymede-avatar-web",
+        "sprite": "stellaart:asset.ganymede-battle-v2-web"
+      },
+      "requestedPresentation": {
+        "character": "solar10:character.ganymede",
+        "portrait": "stellaart:asset.ganymede-portrait-20261026-web",
+        "avatar": "stellaart:asset.ganymede-avatar-20261026-web",
+        "sprite": "stellaart:asset.ganymede-battle-20261026-v1-web"
+      },
+      "note": "by verified exact name/CID"
+    }
+  ],
+  "newCharacterArtOnly": [
+    {
+      "artCharacterId": "stellaart:character.posterior",
+      "key": "posterior",
+      "originalCidRow": 123,
+      "sourceReportedId": 123,
+      "existingPresentation": null,
+      "requestedPresentation": {
+        "character": null,
+        "portrait": "stellaart:asset.posterior-portrait-20261026-web",
+        "avatar": "stellaart:asset.posterior-avatar-20261026-web",
+        "sprite": "stellaart:asset.posterior-battle-20261026-v1-web"
+      },
+      "note": "identity by user-confirmed name"
+    },
+    {
+      "artCharacterId": "stellaart:character.alpheratz",
+      "key": "alpheratz",
+      "originalCidRow": 120,
+      "sourceReportedId": 115,
+      "existingPresentation": null,
+      "requestedPresentation": {
+        "character": null,
+        "portrait": "stellaart:asset.alpheratz-portrait-20261026-web",
+        "avatar": "stellaart:asset.alpheratz-avatar-20261026-web",
+        "sprite": "stellaart:asset.alpheratz-battle-20261026-v1-web"
+      },
+      "note": "identity by user-confirmed name"
+    },
+    {
+      "artCharacterId": "stellaart:character.alrami",
+      "key": "alrami",
+      "originalCidRow": 119,
+      "sourceReportedId": 119,
+      "existingPresentation": null,
+      "requestedPresentation": {
+        "character": null,
+        "portrait": "stellaart:asset.alrami-portrait-20261026-web",
+        "avatar": "stellaart:asset.alrami-avatar-20261026-web",
+        "sprite": "stellaart:asset.alrami-battle-20261026-v1-web"
+      },
+      "note": "by verified exact name/CID"
+    }
+  ],
+  "policy": "僅更新列出的角色呈現引用；保留舊asset和其他共用引用；新增可玩角色由內容整合者提供數值與技能。"
+}

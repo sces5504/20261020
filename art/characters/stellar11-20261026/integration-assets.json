@@ -1,0 +1,1954 @@
+{
+  "format": "art-only-integration-map-not-runtime-content-pack",
+  "coreVersionObserved": "0.9.0",
+  "reviewStatus": "awaiting-user-review",
+  "identityPolicy": "使用者確認拼字Posterior；Alpheratz以名字為主，CID120優先於來源115。",
+  "characters": [
+    {
+      "artCharacterId": "stellaart:character.posterior",
+      "name": "Posterior",
+      "gameCharacterId": null,
+      "runtimeStatus": "new-character-art-only",
+      "proposedContentId": "future:posterior",
+      "originalKey": "Posterior",
+      "originalCidRow": 123,
+      "sourceReportedId": 123,
+      "sourceBaseStars": 5,
+      "sourceMetadataNote": "來源星數不改玩法數值；asset日期獨立，保留舊標準與其他共用圖引用。",
+      "previousStandards": [],
+      "portrait": {
+        "assetId": "stellaart:asset.posterior-portrait-20261026-web",
+        "characterId": "stellaart:character.posterior",
+        "path": "web/posterior.webp",
+        "preview": "web/posterior.webp",
+        "sha256": "bcf1417dfea2441128e799062d0930a04db0b4efdbfe9eed3e1a04b3a75801b6",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "a44b66accbf9ee108c76ff5a89f125daf2eb507b5f7b1ab601d116199666e76e",
+        "sourceOriginalVersion": "posteior-v1",
+        "sourceAssetSha256": "a44b66accbf9ee108c76ff5a89f125daf2eb507b5f7b1ab601d116199666e76e",
+        "sourcePath": "standards/posterior.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.5013020833333334,
+          "y": 0.9895833333333334
+        },
+        "safeArea": {
+          "bodyBounds": [
+            10,
+            6,
+            760,
+            1140
+          ],
+          "marginPx": [
+            10,
+            6,
+            8,
+            12
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.posterior-avatar-20261026-web",
+        "characterId": "stellaart:character.posterior",
+        "path": "avatars/posterior.webp",
+        "preview": "avatars/posterior.webp",
+        "sha256": "6b2048fa7d52c9b1e7cc98ac21a2598b5a525ad513a2ee3ff8840a04d7a0e141",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "a44b66accbf9ee108c76ff5a89f125daf2eb507b5f7b1ab601d116199666e76e",
+        "sourceOriginalVersion": "posteior-v1",
+        "sourceAssetSha256": "a44b66accbf9ee108c76ff5a89f125daf2eb507b5f7b1ab601d116199666e76e",
+        "sourcePath": "standards/posterior.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              350,
+              30,
+              330,
+              330
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            0,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.posterior-battle-20261026-v1-web",
+        "characterId": "stellaart:character.posterior",
+        "path": "web/posterior-battle.webp",
+        "preview": "web/posterior-battle.webp",
+        "sha256": "cd835aa1b85a2567c6d9ff7cd98a1f1351ee8aee4798dc85d259dd970831855c",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "a44b66accbf9ee108c76ff5a89f125daf2eb507b5f7b1ab601d116199666e76e",
+        "sourceOriginalVersion": "posteior-v1",
+        "sourceAssetSha256": "f863d14a706cd43c96f7362d263dc27255b98af8877bb6e18438f21a29a20210",
+        "sourcePath": "battle/posterior-v1-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 82.00000000000006,
+            "y": 82.00000000000006,
+            "scale": 0.6858054226475279
+          }
+        },
+        "pivot": {
+          "x": 0.50048828125,
+          "y": 0.89453125
+        },
+        "safeArea": {
+          "bodyBounds": [
+            97,
+            124,
+            928,
+            916
+          ],
+          "marginPx": [
+            97,
+            124,
+            96,
+            108
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "master": "battle/posterior-v1-candidate.png",
+      "reviewNotes": [
+        "M1約2.4頭身為生成方向；實際比例與外觀細節仍待使用者逐張審閱。",
+        "靜態候選，不含動畫幀／骨架；pivot為含裝備整體輪廓底部，場景需校準。",
+        "使用者確認來源拼字誤植；採Posterior / CID123。"
+      ],
+      "previousRuntimePresentation": null
+    },
+    {
+      "artCharacterId": "stellaart:character.alpheratz",
+      "name": "Alpheratz",
+      "gameCharacterId": null,
+      "runtimeStatus": "new-character-art-only",
+      "proposedContentId": "future:alpheratz",
+      "originalKey": "Alpheratz",
+      "originalCidRow": 120,
+      "sourceReportedId": 115,
+      "sourceBaseStars": 5,
+      "sourceMetadataNote": "來源星數不改玩法數值；asset日期獨立，保留舊標準與其他共用圖引用。",
+      "previousStandards": [],
+      "portrait": {
+        "assetId": "stellaart:asset.alpheratz-portrait-20261026-web",
+        "characterId": "stellaart:character.alpheratz",
+        "path": "web/alpheratz.webp",
+        "preview": "web/alpheratz.webp",
+        "sha256": "391460bcbccf0d92f336ad4afd7e29691fda58072513f403f28a86ec86cbf17e",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "97bd5fb25860063f3d35de2c10989b102bfc3961746ea2888331ff34c8cb9bbb",
+        "sourceOriginalVersion": "alpheratz-v6",
+        "sourceAssetSha256": "97bd5fb25860063f3d35de2c10989b102bfc3961746ea2888331ff34c8cb9bbb",
+        "sourcePath": "standards/alpheratz.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.50390625,
+          "y": 0.9887152777777778
+        },
+        "safeArea": {
+          "bodyBounds": [
+            12,
+            4,
+            762,
+            1139
+          ],
+          "marginPx": [
+            12,
+            4,
+            6,
+            13
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.alpheratz-avatar-20261026-web",
+        "characterId": "stellaart:character.alpheratz",
+        "path": "avatars/alpheratz.webp",
+        "preview": "avatars/alpheratz.webp",
+        "sha256": "16614a244638ba54519a25e2f29d71ba0bbf8e1965e7c7131c2b12f496b2bec1",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "97bd5fb25860063f3d35de2c10989b102bfc3961746ea2888331ff34c8cb9bbb",
+        "sourceOriginalVersion": "alpheratz-v6",
+        "sourceAssetSha256": "97bd5fb25860063f3d35de2c10989b102bfc3961746ea2888331ff34c8cb9bbb",
+        "sourcePath": "standards/alpheratz.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              280,
+              150,
+              340,
+              340
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            0,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.alpheratz-battle-20261026-v1-web",
+        "characterId": "stellaart:character.alpheratz",
+        "path": "web/alpheratz-battle.webp",
+        "preview": "web/alpheratz-battle.webp",
+        "sha256": "44af3308492a797f0ee124b4d342603f1f495048b73931c060cfa28c3530b413",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "97bd5fb25860063f3d35de2c10989b102bfc3961746ea2888331ff34c8cb9bbb",
+        "sourceOriginalVersion": "alpheratz-v6",
+        "sourceAssetSha256": "cdaa29c3bdb08cf688f07a730e115995a38f7c07caba2d38a4dbae7e7faba7dc",
+        "sourcePath": "battle/alpheratz-v1-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 82.00000000000006,
+            "y": 82.00000000000006,
+            "scale": 0.6858054226475279
+          }
+        },
+        "pivot": {
+          "x": 0.50390625,
+          "y": 0.912109375
+        },
+        "safeArea": {
+          "bodyBounds": [
+            105,
+            96,
+            927,
+            934
+          ],
+          "marginPx": [
+            105,
+            96,
+            97,
+            90
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "master": "battle/alpheratz-v1-candidate.png",
+      "reviewNotes": [
+        "M1約2.4頭身為生成方向；實際比例與外觀細節仍待使用者逐張審閱。",
+        "靜態候選，不含動畫幀／骨架；pivot為含裝備整體輪廓底部，場景需校準。",
+        "一位少女與其機甲搭檔為同張sprite；需整合者校準視覺尺度與錨點。",
+        "使用者明確指示以Alpheratz名字為主；repo CID120，來源115不作綁定。"
+      ],
+      "previousRuntimePresentation": null
+    },
+    {
+      "artCharacterId": "stellaart:character.alrami",
+      "name": "Alrami",
+      "gameCharacterId": null,
+      "runtimeStatus": "new-character-art-only",
+      "proposedContentId": "future:alrami",
+      "originalKey": "Alrami",
+      "originalCidRow": 119,
+      "sourceReportedId": 119,
+      "sourceBaseStars": 5,
+      "sourceMetadataNote": "來源星數不改玩法數值；asset日期獨立，保留舊標準與其他共用圖引用。",
+      "previousStandards": [],
+      "portrait": {
+        "assetId": "stellaart:asset.alrami-portrait-20261026-web",
+        "characterId": "stellaart:character.alrami",
+        "path": "web/alrami.webp",
+        "preview": "web/alrami.webp",
+        "sha256": "d4ca922362b24ede5c7318f9df6dbe6a337a574e7acc4bc0bde23c8e395c0314",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "bcdbe6cbbda15f21af6d7710a799501affa609591fdcf46add365381b5090cbb",
+        "sourceOriginalVersion": "alrami-v3",
+        "sourceAssetSha256": "bcdbe6cbbda15f21af6d7710a799501affa609591fdcf46add365381b5090cbb",
+        "sourcePath": "standards/alrami.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.5013020833333334,
+          "y": 0.9965277777777778
+        },
+        "safeArea": {
+          "bodyBounds": [
+            7,
+            3,
+            763,
+            1148
+          ],
+          "marginPx": [
+            7,
+            3,
+            5,
+            4
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.alrami-avatar-20261026-web",
+        "characterId": "stellaart:character.alrami",
+        "path": "avatars/alrami.webp",
+        "preview": "avatars/alrami.webp",
+        "sha256": "21d4d34db557f2993318e0c402f0e34f0e9d790e54cf34383499cd15ac357bc4",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "bcdbe6cbbda15f21af6d7710a799501affa609591fdcf46add365381b5090cbb",
+        "sourceOriginalVersion": "alrami-v3",
+        "sourceAssetSha256": "bcdbe6cbbda15f21af6d7710a799501affa609591fdcf46add365381b5090cbb",
+        "sourcePath": "standards/alrami.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              410,
+              20,
+              340,
+              340
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            0,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.alrami-battle-20261026-v1-web",
+        "characterId": "stellaart:character.alrami",
+        "path": "web/alrami-battle.webp",
+        "preview": "web/alrami-battle.webp",
+        "sha256": "4a7636c3e964f9ebe29029e4873d8a904d686bad4cec2edd74a5c29d8b4db17e",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "bcdbe6cbbda15f21af6d7710a799501affa609591fdcf46add365381b5090cbb",
+        "sourceOriginalVersion": "alrami-v3",
+        "sourceAssetSha256": "2d77ef7dd0d4962d592d230727642b9ea2c87d6a1b66e60a722947f1eea42c3a",
+        "sourcePath": "battle/alrami-v1-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 82.00000000000006,
+            "y": 82.00000000000006,
+            "scale": 0.6858054226475279
+          }
+        },
+        "pivot": {
+          "x": 0.50634765625,
+          "y": 0.9111328125
+        },
+        "safeArea": {
+          "bodyBounds": [
+            110,
+            109,
+            927,
+            933
+          ],
+          "marginPx": [
+            110,
+            109,
+            97,
+            91
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "master": "battle/alrami-v1-candidate.png",
+      "reviewNotes": [
+        "M1約2.4頭身為生成方向；實際比例與外觀細節仍待使用者逐張審閱。",
+        "靜態候選，不含動畫幀／骨架；pivot為含裝備整體輪廓底部，場景需校準。"
+      ],
+      "previousRuntimePresentation": null
+    },
+    {
+      "artCharacterId": "stellaart:character.gienah",
+      "name": "Gienah",
+      "gameCharacterId": "story40:character.gienah",
+      "runtimeStatus": "existing-character-art-update-pending",
+      "proposedContentId": "future:gienah",
+      "originalKey": "Gienah",
+      "originalCidRow": 118,
+      "sourceReportedId": 118,
+      "sourceBaseStars": 5,
+      "sourceMetadataNote": "來源星數不改玩法數值；asset日期獨立，保留舊標準與其他共用圖引用。",
+      "previousStandards": [],
+      "portrait": {
+        "assetId": "stellaart:asset.gienah-portrait-20261026-web",
+        "characterId": "stellaart:character.gienah",
+        "path": "web/gienah.webp",
+        "preview": "web/gienah.webp",
+        "sha256": "48630860d2615e916d96fddce143c9e4666337cba4ec729890f3ac00c4c296cc",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "4cfc2351e0840bb40fc353010cb2d3eb6813a39da81223c354f633f5bd835b99",
+        "sourceOriginalVersion": "gienah-v3",
+        "sourceAssetSha256": "4cfc2351e0840bb40fc353010cb2d3eb6813a39da81223c354f633f5bd835b99",
+        "sourcePath": "standards/gienah.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.5006510416666666,
+          "y": 0.9913194444444444
+        },
+        "safeArea": {
+          "bodyBounds": [
+            6,
+            13,
+            763,
+            1142
+          ],
+          "marginPx": [
+            6,
+            13,
+            5,
+            10
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.gienah-avatar-20261026-web",
+        "characterId": "stellaart:character.gienah",
+        "path": "avatars/gienah.webp",
+        "preview": "avatars/gienah.webp",
+        "sha256": "fbd7abf93a194a69e3795ee1bc59a3ee58ae342d72f6a6720f4487acd52b8a57",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "4cfc2351e0840bb40fc353010cb2d3eb6813a39da81223c354f633f5bd835b99",
+        "sourceOriginalVersion": "gienah-v3",
+        "sourceAssetSha256": "4cfc2351e0840bb40fc353010cb2d3eb6813a39da81223c354f633f5bd835b99",
+        "sourcePath": "standards/gienah.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              400,
+              0,
+              330,
+              330
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            13,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            13,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.gienah-battle-20261026-v1-web",
+        "characterId": "stellaart:character.gienah",
+        "path": "web/gienah-battle.webp",
+        "preview": "web/gienah-battle.webp",
+        "sha256": "1e9a1714d09b4e80124d1c253bc7cfae7a73a1509560d3e06531919e500b7921",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "4cfc2351e0840bb40fc353010cb2d3eb6813a39da81223c354f633f5bd835b99",
+        "sourceOriginalVersion": "gienah-v3",
+        "sourceAssetSha256": "3536dfcad367a46c75157e29ad19420463e8a01806081f3f8e4559b298662988",
+        "sourcePath": "battle/gienah-v1-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 82.00000000000006,
+            "y": 82.00000000000006,
+            "scale": 0.6858054226475279
+          }
+        },
+        "pivot": {
+          "x": 0.52197265625,
+          "y": 0.9111328125
+        },
+        "safeArea": {
+          "bodyBounds": [
+            138,
+            96,
+            931,
+            933
+          ],
+          "marginPx": [
+            138,
+            96,
+            93,
+            91
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "master": "battle/gienah-v1-candidate.png",
+      "reviewNotes": [
+        "M1約2.4頭身為生成方向；實際比例與外觀細節仍待使用者逐張審閱。",
+        "靜態候選，不含動畫幀／骨架；pivot為含裝備整體輪廓底部，場景需校準。",
+        "替換目前借用Aldebaran形象；不改Aldebaran或其他引用該舊圖的角色。"
+      ],
+      "previousRuntimePresentation": {
+        "character": "story40:character.gienah",
+        "portrait": "stellaart:asset.aldebaran-portrait-20261025-web",
+        "avatar": "stellaart:asset.aldebaran-avatar-20261025-web",
+        "sprite": "stellaart:asset.aldebaran-battle-20261025-v1-web"
+      }
+    },
+    {
+      "artCharacterId": "stellaart:character.mercury",
+      "name": "水星",
+      "gameCharacterId": "m1:mercury",
+      "runtimeStatus": "existing-character-art-update-pending",
+      "proposedContentId": "m1:mercury",
+      "originalKey": "Mercury",
+      "originalCidRow": 3,
+      "sourceReportedId": null,
+      "sourceBaseStars": null,
+      "sourceMetadataNote": "來源星數不改玩法數值；asset日期獨立，保留舊標準與其他共用圖引用。",
+      "previousStandards": [
+        {
+          "pack": "m1-standard",
+          "path": "art/characters/standard/maiden-04/v1.png",
+          "sha256": "31cddf5eb8b583995ec7661901450cbf302fe00c7e89914dd84dde4d7e636d8d",
+          "version": "1.0.0"
+        }
+      ],
+      "portrait": {
+        "assetId": "stellaart:asset.mercury-portrait-20261026-web",
+        "characterId": "stellaart:character.mercury",
+        "path": "web/mercury.webp",
+        "preview": "web/mercury.webp",
+        "sha256": "3e0d6aa4568c418a701a63d0ce7d2480c4a55d1c9bb6b003ce8b750af62e5ef0",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "d7b13d8885a54ee17661caf30dc02e6dfebd2816eafa6d6d0bf3252b71a7eb6b",
+        "sourceOriginalVersion": "mercury-v2",
+        "sourceAssetSha256": "d7b13d8885a54ee17661caf30dc02e6dfebd2816eafa6d6d0bf3252b71a7eb6b",
+        "sourcePath": "standards/mercury.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.5130208333333334,
+          "y": 0.9930555555555556
+        },
+        "safeArea": {
+          "bodyBounds": [
+            35,
+            5,
+            753,
+            1144
+          ],
+          "marginPx": [
+            35,
+            5,
+            15,
+            8
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.mercury-avatar-20261026-web",
+        "characterId": "stellaart:character.mercury",
+        "path": "avatars/mercury.webp",
+        "preview": "avatars/mercury.webp",
+        "sha256": "6e99b1e5863543728a095c1f4e04e67a303add8ce26cba4562a961965ab7fdfa",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "d7b13d8885a54ee17661caf30dc02e6dfebd2816eafa6d6d0bf3252b71a7eb6b",
+        "sourceOriginalVersion": "mercury-v2",
+        "sourceAssetSha256": "d7b13d8885a54ee17661caf30dc02e6dfebd2816eafa6d6d0bf3252b71a7eb6b",
+        "sourcePath": "standards/mercury.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              450,
+              0,
+              340,
+              340
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            5,
+            249,
+            256
+          ],
+          "marginPx": [
+            0,
+            5,
+            7,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.mercury-battle-20261026-v1-web",
+        "characterId": "stellaart:character.mercury",
+        "path": "web/mercury-battle.webp",
+        "preview": "web/mercury-battle.webp",
+        "sha256": "0a8c8f47cb13f2799cded8b83da74092dad5975bbef02112a588f2daac129986",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "d7b13d8885a54ee17661caf30dc02e6dfebd2816eafa6d6d0bf3252b71a7eb6b",
+        "sourceOriginalVersion": "mercury-v2",
+        "sourceAssetSha256": "d6818f32bb9b89ad9a702b2696f2aea2aa470cd6e7f883b4186acc711d3f0150",
+        "sourcePath": "battle/mercury-v1-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 82.00000000000006,
+            "y": 82.00000000000006,
+            "scale": 0.6858054226475279
+          }
+        },
+        "pivot": {
+          "x": 0.4921875,
+          "y": 0.9130859375
+        },
+        "safeArea": {
+          "bodyBounds": [
+            139,
+            104,
+            869,
+            935
+          ],
+          "marginPx": [
+            139,
+            104,
+            155,
+            89
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "master": "battle/mercury-v1-candidate.png",
+      "reviewNotes": [
+        "M1約2.4頭身為生成方向；實際比例與外觀細節仍待使用者逐張審閱。",
+        "靜態候選，不含動畫幀／骨架；pivot為含裝備整體輪廓底部，場景需校準。"
+      ],
+      "previousRuntimePresentation": {
+        "character": "m1:mercury",
+        "portrait": "m1art:asset.maiden-04-original-v1",
+        "avatar": "m1art:asset.maiden-04-original-v1",
+        "sprite": "m1art:maiden-04-battle-v1"
+      }
+    },
+    {
+      "artCharacterId": "stellaart:character.alrai",
+      "name": "少衛增八",
+      "gameCharacterId": "story40:character.alrai",
+      "runtimeStatus": "existing-character-art-update-pending",
+      "proposedContentId": "future:alrai",
+      "originalKey": "Alrai",
+      "originalCidRow": 63,
+      "sourceReportedId": null,
+      "sourceBaseStars": 4,
+      "sourceMetadataNote": "來源星數不改玩法數值；asset日期獨立，保留舊標準與其他共用圖引用。",
+      "previousStandards": [
+        {
+          "pack": "stellar40",
+          "path": "art/characters/stellar40/standards/alrai.png",
+          "sha256": "1722ae56bd20c556b6b8162b346414c7cf0bf4bd7da7336118759dc9d1fceced",
+          "version": "35-alrai-v17-two-legs"
+        }
+      ],
+      "portrait": {
+        "assetId": "stellaart:asset.alrai-portrait-20261026-web",
+        "characterId": "stellaart:character.alrai",
+        "path": "web/alrai.webp",
+        "preview": "web/alrai.webp",
+        "sha256": "1bd0221756ea563d245545a3984444cdebe16a050c1da44ab8b147081f412ced",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "cc903e490004a34515aa2bd59e8879a0805e8a077497a3a800597f7278645d3d",
+        "sourceOriginalVersion": "alrai-v1",
+        "sourceAssetSha256": "cc903e490004a34515aa2bd59e8879a0805e8a077497a3a800597f7278645d3d",
+        "sourcePath": "standards/alrai.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.501953125,
+          "y": 0.9982638888888888
+        },
+        "safeArea": {
+          "bodyBounds": [
+            5,
+            4,
+            766,
+            1150
+          ],
+          "marginPx": [
+            5,
+            4,
+            2,
+            2
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.alrai-avatar-20261026-web",
+        "characterId": "stellaart:character.alrai",
+        "path": "avatars/alrai.webp",
+        "preview": "avatars/alrai.webp",
+        "sha256": "ea830f7f70f29e02ad38fd2c8775fe2d56349a4aa0ffd743d610e90d08a80458",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "cc903e490004a34515aa2bd59e8879a0805e8a077497a3a800597f7278645d3d",
+        "sourceOriginalVersion": "alrai-v1",
+        "sourceAssetSha256": "cc903e490004a34515aa2bd59e8879a0805e8a077497a3a800597f7278645d3d",
+        "sourcePath": "standards/alrai.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              340,
+              0,
+              340,
+              340
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            4,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            4,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.alrai-battle-20261026-v1-web",
+        "characterId": "stellaart:character.alrai",
+        "path": "web/alrai-battle.webp",
+        "preview": "web/alrai-battle.webp",
+        "sha256": "9ac94b1140969b913da27be826285043567775623c830b1e74b3da800a8be5aa",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "cc903e490004a34515aa2bd59e8879a0805e8a077497a3a800597f7278645d3d",
+        "sourceOriginalVersion": "alrai-v1",
+        "sourceAssetSha256": "d850fae86e9f9c907e00c56d757badfcbeb79083d99ca6d850dafedb1a0d3165",
+        "sourcePath": "battle/alrai-v1-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 82.00000000000006,
+            "y": 82.00000000000006,
+            "scale": 0.6858054226475279
+          }
+        },
+        "pivot": {
+          "x": 0.51123046875,
+          "y": 0.9140625
+        },
+        "safeArea": {
+          "bodyBounds": [
+            138,
+            85,
+            909,
+            936
+          ],
+          "marginPx": [
+            138,
+            85,
+            115,
+            88
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "master": "battle/alrai-v1-candidate.png",
+      "reviewNotes": [
+        "M1約2.4頭身為生成方向；實際比例與外觀細節仍待使用者逐張審閱。",
+        "靜態候選，不含動畫幀／骨架；pivot為含裝備整體輪廓底部，場景需校準。"
+      ],
+      "previousRuntimePresentation": {
+        "character": "story40:character.alrai",
+        "portrait": "stellaart:asset.alrai-portrait-20261025-web",
+        "avatar": "stellaart:asset.alrai-avatar-20261025-web",
+        "sprite": "stellaart:asset.alrai-battle-20261025-v1-web"
+      }
+    },
+    {
+      "artCharacterId": "stellaart:character.wezen",
+      "name": "弧矢一",
+      "gameCharacterId": "story40:character.wezen",
+      "runtimeStatus": "existing-character-art-update-pending",
+      "proposedContentId": "future:wezen",
+      "originalKey": "Wezen",
+      "originalCidRow": 57,
+      "sourceReportedId": null,
+      "sourceBaseStars": 2,
+      "sourceMetadataNote": "來源星數不改玩法數值；asset日期獨立，保留舊標準與其他共用圖引用。",
+      "previousStandards": [
+        {
+          "pack": "stellar40",
+          "path": "art/characters/stellar40/standards/wezen.png",
+          "sha256": "72e05a2996f8521f9c785d732ba5942c8129e80b182b361f2e1bfd863daa8c1e",
+          "version": "31-wezen-v21-no-chest-star"
+        }
+      ],
+      "portrait": {
+        "assetId": "stellaart:asset.wezen-portrait-20261026-web",
+        "characterId": "stellaart:character.wezen",
+        "path": "web/wezen.webp",
+        "preview": "web/wezen.webp",
+        "sha256": "0fb432c93150ba32142da627f08da1a4a70e9fac6a23acac1e27c710f7f1fdb8",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "bae10b5c2b251acf6c984f0b2202f02bec9deaa198a824704aca5cb819527046",
+        "sourceOriginalVersion": "wezen-v1",
+        "sourceAssetSha256": "bae10b5c2b251acf6c984f0b2202f02bec9deaa198a824704aca5cb819527046",
+        "sourcePath": "standards/wezen.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.5006510416666666,
+          "y": 0.9852430555555556
+        },
+        "safeArea": {
+          "bodyBounds": [
+            14,
+            7,
+            755,
+            1135
+          ],
+          "marginPx": [
+            14,
+            7,
+            13,
+            17
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.wezen-avatar-20261026-web",
+        "characterId": "stellaart:character.wezen",
+        "path": "avatars/wezen.webp",
+        "preview": "avatars/wezen.webp",
+        "sha256": "552aed9b0df3338c248d7ed2d7b6210ea4906f50bb23c1c0d1b2a950fda9c8bc",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "bae10b5c2b251acf6c984f0b2202f02bec9deaa198a824704aca5cb819527046",
+        "sourceOriginalVersion": "wezen-v1",
+        "sourceAssetSha256": "bae10b5c2b251acf6c984f0b2202f02bec9deaa198a824704aca5cb819527046",
+        "sourcePath": "standards/wezen.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              440,
+              20,
+              360,
+              360
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            0,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.wezen-battle-20261026-v1-web",
+        "characterId": "stellaart:character.wezen",
+        "path": "web/wezen-battle.webp",
+        "preview": "web/wezen-battle.webp",
+        "sha256": "2faf6b419efd3dae18c1a06b09083791c877ba8915f40460a6b58d3ca366eae5",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "bae10b5c2b251acf6c984f0b2202f02bec9deaa198a824704aca5cb819527046",
+        "sourceOriginalVersion": "wezen-v1",
+        "sourceAssetSha256": "e9621d99f6c27ecbb1e64d69d4cd6e8969317b606ec40a818add53f709392adb",
+        "sourcePath": "battle/wezen-v1-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 82.00000000000006,
+            "y": 82.00000000000006,
+            "scale": 0.6858054226475279
+          }
+        },
+        "pivot": {
+          "x": 0.51416015625,
+          "y": 0.912109375
+        },
+        "safeArea": {
+          "bodyBounds": [
+            122,
+            90,
+            931,
+            934
+          ],
+          "marginPx": [
+            122,
+            90,
+            93,
+            90
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "master": "battle/wezen-v1-candidate.png",
+      "reviewNotes": [
+        "M1約2.4頭身為生成方向；實際比例與外觀細節仍待使用者逐張審閱。",
+        "靜態候選，不含動畫幀／骨架；pivot為含裝備整體輪廓底部，場景需校準。"
+      ],
+      "previousRuntimePresentation": {
+        "character": "story40:character.wezen",
+        "portrait": "stellaart:asset.wezen-portrait-20261025-web",
+        "avatar": "stellaart:asset.wezen-avatar-20261025-web",
+        "sprite": "stellaart:asset.wezen-battle-20261025-v1-web"
+      }
+    },
+    {
+      "artCharacterId": "stellaart:character.hypatia",
+      "name": "Hypatia",
+      "gameCharacterId": "story40:character.hypatia",
+      "runtimeStatus": "existing-character-art-update-pending",
+      "proposedContentId": "future:hypatia",
+      "originalKey": "Hypatia",
+      "originalCidRow": 65,
+      "sourceReportedId": 65,
+      "sourceBaseStars": 2,
+      "sourceMetadataNote": "來源星數不改玩法數值；asset日期獨立，保留舊標準與其他共用圖引用。",
+      "previousStandards": [],
+      "portrait": {
+        "assetId": "stellaart:asset.hypatia-portrait-20261026-web",
+        "characterId": "stellaart:character.hypatia",
+        "path": "web/hypatia.webp",
+        "preview": "web/hypatia.webp",
+        "sha256": "394902a1a4d13317f919a32d5a116f80ed25d5704b218e8398ade8990e977142",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "430f962897b0eb18a2d71a6956f5428758644cba8907c80af0f7c4637dabb40d",
+        "sourceOriginalVersion": "hypatia-v1",
+        "sourceAssetSha256": "430f962897b0eb18a2d71a6956f5428758644cba8907c80af0f7c4637dabb40d",
+        "sourcePath": "standards/hypatia.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.4720052083333333,
+          "y": 0.9939236111111112
+        },
+        "safeArea": {
+          "bodyBounds": [
+            122,
+            11,
+            603,
+            1145
+          ],
+          "marginPx": [
+            122,
+            11,
+            165,
+            7
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.hypatia-avatar-20261026-web",
+        "characterId": "stellaart:character.hypatia",
+        "path": "avatars/hypatia.webp",
+        "preview": "avatars/hypatia.webp",
+        "sha256": "9143acf20990a567ab10ccb83e2ddd714e8773fde0587616723e76f05e23ab1d",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "430f962897b0eb18a2d71a6956f5428758644cba8907c80af0f7c4637dabb40d",
+        "sourceOriginalVersion": "hypatia-v1",
+        "sourceAssetSha256": "430f962897b0eb18a2d71a6956f5428758644cba8907c80af0f7c4637dabb40d",
+        "sourcePath": "standards/hypatia.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              320,
+              0,
+              330,
+              330
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            12,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            12,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.hypatia-battle-20261026-v1-web",
+        "characterId": "stellaart:character.hypatia",
+        "path": "web/hypatia-battle.webp",
+        "preview": "web/hypatia-battle.webp",
+        "sha256": "eedf5fc9e0bf02625b1728f0deeda5f4201fcccf2a8443dafc782c5060c3a49c",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "430f962897b0eb18a2d71a6956f5428758644cba8907c80af0f7c4637dabb40d",
+        "sourceOriginalVersion": "hypatia-v1",
+        "sourceAssetSha256": "7eec98bc1ddda0e65a16b258303e3e4085a8f8cdebee60641a4c7c30e5e259be",
+        "sourcePath": "battle/hypatia-v1-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 82.00000000000006,
+            "y": 82.00000000000006,
+            "scale": 0.6858054226475279
+          }
+        },
+        "pivot": {
+          "x": 0.50048828125,
+          "y": 0.91015625
+        },
+        "safeArea": {
+          "bodyBounds": [
+            256,
+            122,
+            769,
+            932
+          ],
+          "marginPx": [
+            256,
+            122,
+            255,
+            92
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "master": "battle/hypatia-v1-candidate.png",
+      "reviewNotes": [
+        "M1約2.4頭身為生成方向；實際比例與外觀細節仍待使用者逐張審閱。",
+        "靜態候選，不含動畫幀／骨架；pivot為含裝備整體輪廓底部，場景需校準。",
+        "本批原創學者形象依提供的標準圖衍生，不聲稱原作已證實外觀；替換目前借用Nix形象。"
+      ],
+      "previousRuntimePresentation": {
+        "character": "story40:character.hypatia",
+        "portrait": "stellaart:asset.nix-portrait-20261025-web",
+        "avatar": "stellaart:asset.nix-avatar-20261025-web",
+        "sprite": "stellaart:asset.nix-battle-20261025-v1-web"
+      }
+    },
+    {
+      "artCharacterId": "stellaart:character.pluto",
+      "name": "冥王星",
+      "gameCharacterId": "solar10:character.pluto",
+      "runtimeStatus": "existing-character-art-update-pending",
+      "proposedContentId": "solar10:character.pluto",
+      "originalKey": "Pluto",
+      "originalCidRow": 10,
+      "sourceReportedId": 10,
+      "sourceBaseStars": 5,
+      "sourceMetadataNote": "來源星數不改玩法數值；asset日期獨立，保留舊標準與其他共用圖引用。",
+      "previousStandards": [
+        {
+          "pack": "stellar10",
+          "path": "art/characters/stellar10/standards/pluto.png",
+          "sha256": "c2f7558cd18319fe512fd8f967d315ae7f13b6b73abb2719abb2df006126b349",
+          "version": "v2-redesigned"
+        }
+      ],
+      "portrait": {
+        "assetId": "stellaart:asset.pluto-portrait-20261026-web",
+        "characterId": "stellaart:character.pluto",
+        "path": "web/pluto.webp",
+        "preview": "web/pluto.webp",
+        "sha256": "7ad3b64d9931fc3221e2ea593784eeba9e9a7a763a8941545364c77e13814b26",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "05e6117a2afde11115b57fe2aea9179975551027cc038c6c38280d3243b00a6c",
+        "sourceOriginalVersion": "pluto-v1",
+        "sourceAssetSha256": "05e6117a2afde11115b57fe2aea9179975551027cc038c6c38280d3243b00a6c",
+        "sourcePath": "standards/pluto.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.50390625,
+          "y": 0.9904513888888888
+        },
+        "safeArea": {
+          "bodyBounds": [
+            18,
+            10,
+            756,
+            1141
+          ],
+          "marginPx": [
+            18,
+            10,
+            12,
+            11
+          ]
+        },
+        "alphaRange": [
+          0,
+          253
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.pluto-avatar-20261026-web",
+        "characterId": "stellaart:character.pluto",
+        "path": "avatars/pluto.webp",
+        "preview": "avatars/pluto.webp",
+        "sha256": "62565588b1165bc0cbde5f0ed07907ae07003076ed1cd54ad1c25b8f783443ff",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "05e6117a2afde11115b57fe2aea9179975551027cc038c6c38280d3243b00a6c",
+        "sourceOriginalVersion": "pluto-v1",
+        "sourceAssetSha256": "05e6117a2afde11115b57fe2aea9179975551027cc038c6c38280d3243b00a6c",
+        "sourcePath": "standards/pluto.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              350,
+              80,
+              350,
+              350
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            0,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          253
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.pluto-battle-20261026-v1-web",
+        "characterId": "stellaart:character.pluto",
+        "path": "web/pluto-battle.webp",
+        "preview": "web/pluto-battle.webp",
+        "sha256": "63972f1b146f005bfb87ef82a5197bc696e11dc99838d5a2acf8fb40c091ec2c",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "05e6117a2afde11115b57fe2aea9179975551027cc038c6c38280d3243b00a6c",
+        "sourceOriginalVersion": "pluto-v1",
+        "sourceAssetSha256": "31dae7d520bcad64664f189a91608a9eb14520065a7527a6953997b8e7d6a2e2",
+        "sourcePath": "battle/pluto-v1-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 82.00000000000006,
+            "y": 82.00000000000006,
+            "scale": 0.6858054226475279
+          }
+        },
+        "pivot": {
+          "x": 0.5029296875,
+          "y": 0.9130859375
+        },
+        "safeArea": {
+          "bodyBounds": [
+            105,
+            84,
+            925,
+            935
+          ],
+          "marginPx": [
+            105,
+            84,
+            99,
+            89
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "master": "battle/pluto-v1-candidate.png",
+      "reviewNotes": [
+        "M1約2.4頭身為生成方向；實際比例與外觀細節仍待使用者逐張審閱。",
+        "靜態候選，不含動畫幀／骨架；pivot為含裝備整體輪廓底部，場景需校準。"
+      ],
+      "previousRuntimePresentation": {
+        "character": "solar10:character.pluto",
+        "portrait": "stellaart:asset.pluto-portrait-web",
+        "avatar": "stellaart:asset.pluto-avatar-web",
+        "sprite": "stellaart:asset.pluto-battle-v2-web"
+      }
+    },
+    {
+      "artCharacterId": "stellaart:character.nemesis",
+      "name": "復仇女神星",
+      "gameCharacterId": "solar10:character.nemesis",
+      "runtimeStatus": "existing-character-art-update-pending",
+      "proposedContentId": "solar10:character.nemesis",
+      "originalKey": "Nemesis",
+      "originalCidRow": 11,
+      "sourceReportedId": 11,
+      "sourceBaseStars": 5,
+      "sourceMetadataNote": "來源星數不改玩法數值；asset日期獨立，保留舊標準與其他共用圖引用。",
+      "previousStandards": [
+        {
+          "pack": "stellar10",
+          "path": "art/characters/stellar10/standards/nemesis.png",
+          "sha256": "bc479c41c99f06227512e5a1bd12ebde50fddf1ad476372fab5901191ce2ac8d",
+          "version": "v6-loose-hair-orbit-accents"
+        }
+      ],
+      "portrait": {
+        "assetId": "stellaart:asset.nemesis-portrait-20261026-web",
+        "characterId": "stellaart:character.nemesis",
+        "path": "web/nemesis.webp",
+        "preview": "web/nemesis.webp",
+        "sha256": "a315bd73e571dda15868c5dc0faed48ae6598ccfcb03696b620f4cdeab6452e4",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "6813076332d26dd0b0c7a49c9c6f8b7af86bee3ad0fdf74297f16ee18f4c0649",
+        "sourceOriginalVersion": "nemesis-v20-original-light-upper",
+        "sourceAssetSha256": "6813076332d26dd0b0c7a49c9c6f8b7af86bee3ad0fdf74297f16ee18f4c0649",
+        "sourcePath": "standards/nemesis.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 19.90019193857961,
+            "scale": 0.7370441458733206
+          }
+        },
+        "pivot": {
+          "x": 0.5013020833333334,
+          "y": 0.9809027777777778
+        },
+        "safeArea": {
+          "bodyBounds": [
+            2,
+            22,
+            768,
+            1130
+          ],
+          "marginPx": [
+            2,
+            22,
+            0,
+            22
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.nemesis-avatar-20261026-web",
+        "characterId": "stellaart:character.nemesis",
+        "path": "avatars/nemesis.webp",
+        "preview": "avatars/nemesis.webp",
+        "sha256": "6075ed6f0125b0818fd3f1ba53ac6c8af124255b0bf983f6793175446e3c535d",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "6813076332d26dd0b0c7a49c9c6f8b7af86bee3ad0fdf74297f16ee18f4c0649",
+        "sourceOriginalVersion": "nemesis-v20-original-light-upper",
+        "sourceAssetSha256": "6813076332d26dd0b0c7a49c9c6f8b7af86bee3ad0fdf74297f16ee18f4c0649",
+        "sourcePath": "standards/nemesis.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              360,
+              180,
+              340,
+              340
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            0,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.nemesis-battle-20261026-v1-web",
+        "characterId": "stellaart:character.nemesis",
+        "path": "web/nemesis-battle.webp",
+        "preview": "web/nemesis-battle.webp",
+        "sha256": "1c945c9704acc5af270d575022b02d8af98f7d78b5ca4e7e5b17d0e07614ecf7",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "6813076332d26dd0b0c7a49c9c6f8b7af86bee3ad0fdf74297f16ee18f4c0649",
+        "sourceOriginalVersion": "nemesis-v20-original-light-upper",
+        "sourceAssetSha256": "9900db39ef6c43064a01edef10b06879e65d89ac6ab50beb1e9d7d1191d2aa71",
+        "sourcePath": "battle/nemesis-v1-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 82.00000000000006,
+            "y": 82.00000000000006,
+            "scale": 0.6858054226475279
+          }
+        },
+        "pivot": {
+          "x": 0.501953125,
+          "y": 0.8955078125
+        },
+        "safeArea": {
+          "bodyBounds": [
+            121,
+            94,
+            907,
+            917
+          ],
+          "marginPx": [
+            121,
+            94,
+            117,
+            107
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "master": "battle/nemesis-v1-candidate.png",
+      "reviewNotes": [
+        "M1約2.4頭身為生成方向；實際比例與外觀細節仍待使用者逐張審閱。",
+        "靜態候選，不含動畫幀／骨架；pivot為含裝備整體輪廓底部，場景需校準。"
+      ],
+      "previousRuntimePresentation": {
+        "character": "solar10:character.nemesis",
+        "portrait": "stellaart:asset.nemesis-portrait-web",
+        "avatar": "stellaart:asset.nemesis-avatar-web",
+        "sprite": "stellaart:asset.nemesis-battle-v3-web"
+      }
+    },
+    {
+      "artCharacterId": "stellaart:character.ganymede",
+      "name": "木衛三",
+      "gameCharacterId": "solar10:character.ganymede",
+      "runtimeStatus": "existing-character-art-update-pending",
+      "proposedContentId": "solar10:character.ganymede",
+      "originalKey": "Ganymede",
+      "originalCidRow": 16,
+      "sourceReportedId": 16,
+      "sourceBaseStars": 5,
+      "sourceMetadataNote": "來源星數不改玩法數值；asset日期獨立，保留舊標準與其他共用圖引用。",
+      "previousStandards": [
+        {
+          "pack": "stellar10",
+          "path": "art/characters/stellar10/standards/ganymede.png",
+          "sha256": "2faf0de006ee302b817668a70d12755c55070743eb13a6fc855b5c0e9ccbb775",
+          "version": "v2-redesigned"
+        }
+      ],
+      "portrait": {
+        "assetId": "stellaart:asset.ganymede-portrait-20261026-web",
+        "characterId": "stellaart:character.ganymede",
+        "path": "web/ganymede.webp",
+        "preview": "web/ganymede.webp",
+        "sha256": "f458f689dc2d07d5f796bc70f6aef67fa6e18d771911107df106a8bf0d07caa9",
+        "width": 768,
+        "height": 1152,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "full-body-portrait-web",
+        "sourceOriginalSha256": "a826ce5416bc50c4260cf43b594dc10d644f19c194ebd32379b3b0c6746fa607",
+        "sourceOriginalVersion": "ganymede-v1",
+        "sourceAssetSha256": "a826ce5416bc50c4260cf43b594dc10d644f19c194ebd32379b3b0c6746fa607",
+        "sourcePath": "standards/ganymede.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "scale": 0.75
+          }
+        },
+        "pivot": {
+          "x": 0.515625,
+          "y": 0.9939236111111112
+        },
+        "safeArea": {
+          "bodyBounds": [
+            40,
+            5,
+            752,
+            1145
+          ],
+          "marginPx": [
+            40,
+            5,
+            16,
+            7
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "avatar": {
+        "assetId": "stellaart:asset.ganymede-avatar-20261026-web",
+        "characterId": "stellaart:character.ganymede",
+        "path": "avatars/ganymede.webp",
+        "preview": "avatars/ganymede.webp",
+        "sha256": "cbad2ca08dbbcac787b3d0e6040a3742a4c45f17c3944f047ac628b9bb1b3df3",
+        "width": 256,
+        "height": 256,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "portrait-face-crop",
+        "sourceOriginalSha256": "a826ce5416bc50c4260cf43b594dc10d644f19c194ebd32379b3b0c6746fa607",
+        "sourceOriginalVersion": "ganymede-v1",
+        "sourceAssetSha256": "a826ce5416bc50c4260cf43b594dc10d644f19c194ebd32379b3b0c6746fa607",
+        "sourcePath": "standards/ganymede.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "individual face crop, scale, encode",
+          "frame": {
+            "crop": [
+              365,
+              0,
+              350,
+              350
+            ]
+          }
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "safeArea": {
+          "bodyBounds": [
+            0,
+            9,
+            256,
+            256
+          ],
+          "marginPx": [
+            0,
+            9,
+            0,
+            0
+          ]
+        },
+        "alphaRange": [
+          0,
+          254
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "sprite": {
+        "assetId": "stellaart:asset.ganymede-battle-20261026-v1-web",
+        "characterId": "stellaart:character.ganymede",
+        "path": "web/ganymede-battle.webp",
+        "preview": "web/ganymede-battle.webp",
+        "sha256": "b7d2a4983d59bc7e63815a8d8cbbb23aef56c8b24405295550fd54d07ba6b9c1",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB",
+        "alpha": "straight",
+        "use": "static-SD-battle-web",
+        "sourceOriginalSha256": "a826ce5416bc50c4260cf43b594dc10d644f19c194ebd32379b3b0c6746fa607",
+        "sourceOriginalVersion": "ganymede-v1",
+        "sourceAssetSha256": "25ad3c765242a25612a217fddf62ac6ec70246103b121b9e300fc7877d4ffad3",
+        "sourcePath": "battle/ganymede-v1-candidate.png",
+        "source": {
+          "tool": "Chromium Canvas WebP 0.92",
+          "operations": "uniform scale, transparent framing, encode",
+          "frame": {
+            "x": 82.00000000000006,
+            "y": 82.00000000000006,
+            "scale": 0.6858054226475279
+          }
+        },
+        "pivot": {
+          "x": 0.5048828125,
+          "y": 0.9091796875
+        },
+        "safeArea": {
+          "bodyBounds": [
+            121,
+            124,
+            913,
+            931
+          ],
+          "marginPx": [
+            121,
+            124,
+            111,
+            93
+          ]
+        },
+        "alphaRange": [
+          0,
+          255
+        ],
+        "reviewStatus": "awaiting-user-review",
+        "animation": null
+      },
+      "master": "battle/ganymede-v1-candidate.png",
+      "reviewNotes": [
+        "M1約2.4頭身為生成方向；實際比例與外觀細節仍待使用者逐張審閱。",
+        "靜態候選，不含動畫幀／骨架；pivot為含裝備整體輪廓底部，場景需校準。"
+      ],
+      "previousRuntimePresentation": {
+        "character": "solar10:character.ganymede",
+        "portrait": "stellaart:asset.ganymede-portrait-web",
+        "avatar": "stellaart:asset.ganymede-avatar-web",
+        "sprite": "stellaart:asset.ganymede-battle-v2-web"
+      }
+    }
+  ]
+}

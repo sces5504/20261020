@@ -37,7 +37,7 @@ try {
     page.on("pageerror", (e) => errors.push(e.message));
     await page.goto(server.url + "gallery.html");
     await page.waitForSelector("[data-gallery-character]");
-    assert.equal(await page.locator("[data-gallery-character]").count(), 72);
+    assert.equal(await page.locator("[data-gallery-character]").count(), 75);
     await page.locator("#gallery-search").fill("盾牌座UY");
     assert.equal(await page.locator("[data-gallery-character]").count(), 1);
     await page.locator("#gallery-mode").click();
@@ -84,11 +84,22 @@ try {
     // A battle step closes the dialogue; the fleet is already at the field, so the
     // tracker offers the sortie (fields far away are reached by flying, never teleporting).
     const sortie = page.locator(".mainline-card button", { hasText: "出擊" });
+    // Acquisition results open immediately, even mid-node; confirm them first.
+    const confirmAcquisitions = async () => {
+      for (let i = 0; i < 20; i++) {
+        const next = page.locator('[data-action="acquisition-next"]:visible');
+        if (await next.count()) await next.first().click();
+        else if (await sortie.isVisible()) return;
+        await page.waitForTimeout(250);
+      }
+    };
+    await confirmAcquisitions();
     await sortie.waitFor();
     let s = await record(page, "save:test");
     assert.equal(s.story.counters["event:fixture:initialized"], 1);
     const count = s.roster.length;
     await page.reload();
+    await confirmAcquisitions();
     await sortie.waitFor();
     assert.equal((await record(page, "save:test")).roster.length, count);
     await page.evaluate(() => {
@@ -98,6 +109,7 @@ try {
           window.__sceneInBattle = true;
       }).observe(document.body, { subtree: true, childList: true });
     });
+    await confirmAcquisitions();
     await sortie.click();
     try {
       // In-battle lines are a non-blocking radio feed, never a paused dialogue.
@@ -219,7 +231,7 @@ try {
     assert.equal(await page.locator('[data-field="variants"]').count(), 1);
     results.push({
       mobile,
-      gallery: 72,
+      gallery: 75,
       skipInitialization: true,
       reloadNoDuplicate: true,
       actualBattleAndCue: true,

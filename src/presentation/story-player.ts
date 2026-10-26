@@ -182,7 +182,7 @@ export function mountStoryPlayer(
       if (replay) {
         replay = null;
         draw();
-      }
+      } else closeScene();
       return;
     }
     const nextKey = `${replay ? "replay" : "story"}:${q?.id}:${cursor}`;

@@ -76,3 +76,5 @@
 `python art/characters/stellar40/verify-catalog.py` 核對本批hash、尺寸、SD透明安全區與SQLite，並保護33張既有標準原圖。
 
 預覽：repo root執行 `python -m http.server 5185 --bind 127.0.0.1 --directory art/characters/stellar40`，開啟 `http://127.0.0.1:5185/preview.html`。瀏覽器證據只涵蓋Chromium桌機1440×1000與觸控viewport390×844，不代表實機、遊戲戰鬥或動畫驗收。
+
+後續新繪／重繪：[2026-10-26十一位固定整合入口](../stellar11-20261026/START_HERE.md)。

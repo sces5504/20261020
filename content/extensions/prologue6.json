@@ -17,7 +17,7 @@
       {
         "id": "prologue6:character.scuti",
         "name": "盾牌座UY",
-        "description": "展開抵消領域，以機率消除穿越的來襲彈體。建議前鋒，實際位置由玩家編隊順序決定。美術待補。",
+        "description": "展開抵消領域，以機率消除穿越的來襲彈體。建議前鋒，實際位置由玩家編隊順序決定。",
         "status": "active",
         "provenance": "inferred",
         "rarity": 5,
@@ -49,7 +49,7 @@
       {
         "id": "prologue6:character.antares",
         "name": "心宿二",
-        "description": "短時間不受敵方攻擊傷害，適合在前鋒承壓時使用。建議前鋒，實際位置由玩家編隊順序決定。美術待補。",
+        "description": "短時間不受敵方攻擊傷害，適合在前鋒承壓時使用。建議前鋒，實際位置由玩家編隊順序決定。",
         "status": "active",
         "provenance": "inferred",
         "rarity": 4,
@@ -81,7 +81,7 @@
       {
         "id": "prologue6:character.deneb",
         "name": "天津四",
-        "description": "短時間降低範圍內友軍承受傷害。建議前鋒／後衛，實際位置由玩家編隊順序決定。美術待補。",
+        "description": "短時間降低範圍內友軍承受傷害。建議前鋒／後衛，實際位置由玩家編隊順序決定。",
         "status": "active",
         "provenance": "inferred",
         "rarity": 4,
@@ -113,7 +113,7 @@
       {
         "id": "prologue6:character.doradus",
         "name": "Doradus",
-        "description": "發射爆破彈，命中造成範圍傷害並擊退敵人。建議後衛，實際位置由玩家編隊順序決定。美術待補。",
+        "description": "發射爆破彈，命中造成範圍傷害並擊退敵人。建議後衛，實際位置由玩家編隊順序決定。",
         "status": "active",
         "provenance": "inferred",
         "rarity": 3,
@@ -145,7 +145,7 @@
       {
         "id": "prologue6:character.mucephei",
         "name": "Mucephei",
-        "description": "過載同時提高自身攻速與彈速；屏障部隊是序章用途，不是此角色的主動技能。建議後衛，實際位置由玩家編隊順序決定。美術待補。",
+        "description": "過載同時提高自身攻速與彈速；屏障部隊是序章用途，不是此角色的主動技能。建議後衛，實際位置由玩家編隊順序決定。",
         "status": "active",
         "provenance": "inferred",
         "rarity": 3,
@@ -177,7 +177,7 @@
       {
         "id": "prologue6:character.sargas",
         "name": "Sargas",
-        "description": "建立跟隨自身的範圍場，週期傷害並暈眩附近敵人。建議前鋒，實際位置由玩家編隊順序決定。美術待補。",
+        "description": "建立跟隨自身的範圍場，週期傷害並暈眩附近敵人。建議前鋒，實際位置由玩家編隊順序決定。",
         "status": "active",
         "provenance": "inferred",
         "rarity": 3,

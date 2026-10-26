@@ -1,0 +1,312 @@
+{
+  "schemaVersion": 1,
+  "id": "stellaart:package.stellar11-20261026",
+  "version": "0.1.0",
+  "requires": [
+    {
+      "id": "late3:package.additional-three",
+      "version": "0.1.0"
+    }
+  ],
+  "definitions": {
+    "assets": [
+      {
+        "id": "stellaart:asset.posterior-portrait-20261026-web",
+        "name": "Posterior · portrait",
+        "src": "assets/extensions/stellar11-20261026/web/posterior.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "bcf1417dfea2441128e799062d0930a04db0b4efdbfe9eed3e1a04b3a75801b6",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.posterior-avatar-20261026-web",
+        "name": "Posterior · avatar",
+        "src": "assets/extensions/stellar11-20261026/avatars/posterior.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "6b2048fa7d52c9b1e7cc98ac21a2598b5a525ad513a2ee3ff8840a04d7a0e141",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.posterior-battle-20261026-v1-web",
+        "name": "Posterior · sprite",
+        "src": "assets/extensions/stellar11-20261026/web/posterior-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "cd835aa1b85a2567c6d9ff7cd98a1f1351ee8aee4798dc85d259dd970831855c",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.alpheratz-portrait-20261026-web",
+        "name": "Alpheratz · portrait",
+        "src": "assets/extensions/stellar11-20261026/web/alpheratz.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "391460bcbccf0d92f336ad4afd7e29691fda58072513f403f28a86ec86cbf17e",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.alpheratz-avatar-20261026-web",
+        "name": "Alpheratz · avatar",
+        "src": "assets/extensions/stellar11-20261026/avatars/alpheratz.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "16614a244638ba54519a25e2f29d71ba0bbf8e1965e7c7131c2b12f496b2bec1",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.alpheratz-battle-20261026-v1-web",
+        "name": "Alpheratz · sprite",
+        "src": "assets/extensions/stellar11-20261026/web/alpheratz-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "44af3308492a797f0ee124b4d342603f1f495048b73931c060cfa28c3530b413",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.alrami-portrait-20261026-web",
+        "name": "Alrami · portrait",
+        "src": "assets/extensions/stellar11-20261026/web/alrami.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "d4ca922362b24ede5c7318f9df6dbe6a337a574e7acc4bc0bde23c8e395c0314",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.alrami-avatar-20261026-web",
+        "name": "Alrami · avatar",
+        "src": "assets/extensions/stellar11-20261026/avatars/alrami.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "21d4d34db557f2993318e0c402f0e34f0e9d790e54cf34383499cd15ac357bc4",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.alrami-battle-20261026-v1-web",
+        "name": "Alrami · sprite",
+        "src": "assets/extensions/stellar11-20261026/web/alrami-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "4a7636c3e964f9ebe29029e4873d8a904d686bad4cec2edd74a5c29d8b4db17e",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.gienah-portrait-20261026-web",
+        "name": "Gienah · portrait",
+        "src": "assets/extensions/stellar11-20261026/web/gienah.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "48630860d2615e916d96fddce143c9e4666337cba4ec729890f3ac00c4c296cc",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.gienah-avatar-20261026-web",
+        "name": "Gienah · avatar",
+        "src": "assets/extensions/stellar11-20261026/avatars/gienah.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "fbd7abf93a194a69e3795ee1bc59a3ee58ae342d72f6a6720f4487acd52b8a57",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.gienah-battle-20261026-v1-web",
+        "name": "Gienah · sprite",
+        "src": "assets/extensions/stellar11-20261026/web/gienah-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "1e9a1714d09b4e80124d1c253bc7cfae7a73a1509560d3e06531919e500b7921",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.mercury-portrait-20261026-web",
+        "name": "水星 · portrait",
+        "src": "assets/extensions/stellar11-20261026/web/mercury.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "3e0d6aa4568c418a701a63d0ce7d2480c4a55d1c9bb6b003ce8b750af62e5ef0",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.mercury-avatar-20261026-web",
+        "name": "水星 · avatar",
+        "src": "assets/extensions/stellar11-20261026/avatars/mercury.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "6e99b1e5863543728a095c1f4e04e67a303add8ce26cba4562a961965ab7fdfa",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.mercury-battle-20261026-v1-web",
+        "name": "水星 · sprite",
+        "src": "assets/extensions/stellar11-20261026/web/mercury-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "0a8c8f47cb13f2799cded8b83da74092dad5975bbef02112a588f2daac129986",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.alrai-portrait-20261026-web",
+        "name": "少衛增八 · portrait",
+        "src": "assets/extensions/stellar11-20261026/web/alrai.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "1bd0221756ea563d245545a3984444cdebe16a050c1da44ab8b147081f412ced",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.alrai-avatar-20261026-web",
+        "name": "少衛增八 · avatar",
+        "src": "assets/extensions/stellar11-20261026/avatars/alrai.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "ea830f7f70f29e02ad38fd2c8775fe2d56349a4aa0ffd743d610e90d08a80458",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.alrai-battle-20261026-v1-web",
+        "name": "少衛增八 · sprite",
+        "src": "assets/extensions/stellar11-20261026/web/alrai-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "9ac94b1140969b913da27be826285043567775623c830b1e74b3da800a8be5aa",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.wezen-portrait-20261026-web",
+        "name": "弧矢一 · portrait",
+        "src": "assets/extensions/stellar11-20261026/web/wezen.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "0fb432c93150ba32142da627f08da1a4a70e9fac6a23acac1e27c710f7f1fdb8",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.wezen-avatar-20261026-web",
+        "name": "弧矢一 · avatar",
+        "src": "assets/extensions/stellar11-20261026/avatars/wezen.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "552aed9b0df3338c248d7ed2d7b6210ea4906f50bb23c1c0d1b2a950fda9c8bc",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.wezen-battle-20261026-v1-web",
+        "name": "弧矢一 · sprite",
+        "src": "assets/extensions/stellar11-20261026/web/wezen-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "2faf6b419efd3dae18c1a06b09083791c877ba8915f40460a6b58d3ca366eae5",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.hypatia-portrait-20261026-web",
+        "name": "Hypatia · portrait",
+        "src": "assets/extensions/stellar11-20261026/web/hypatia.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "394902a1a4d13317f919a32d5a116f80ed25d5704b218e8398ade8990e977142",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.hypatia-avatar-20261026-web",
+        "name": "Hypatia · avatar",
+        "src": "assets/extensions/stellar11-20261026/avatars/hypatia.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "9143acf20990a567ab10ccb83e2ddd714e8773fde0587616723e76f05e23ab1d",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.hypatia-battle-20261026-v1-web",
+        "name": "Hypatia · sprite",
+        "src": "assets/extensions/stellar11-20261026/web/hypatia-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "eedf5fc9e0bf02625b1728f0deeda5f4201fcccf2a8443dafc782c5060c3a49c",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.pluto-portrait-20261026-web",
+        "name": "冥王星 · portrait",
+        "src": "assets/extensions/stellar11-20261026/web/pluto.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "7ad3b64d9931fc3221e2ea593784eeba9e9a7a763a8941545364c77e13814b26",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.pluto-avatar-20261026-web",
+        "name": "冥王星 · avatar",
+        "src": "assets/extensions/stellar11-20261026/avatars/pluto.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "62565588b1165bc0cbde5f0ed07907ae07003076ed1cd54ad1c25b8f783443ff",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.pluto-battle-20261026-v1-web",
+        "name": "冥王星 · sprite",
+        "src": "assets/extensions/stellar11-20261026/web/pluto-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "63972f1b146f005bfb87ef82a5197bc696e11dc99838d5a2acf8fb40c091ec2c",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.nemesis-portrait-20261026-web",
+        "name": "復仇女神星 · portrait",
+        "src": "assets/extensions/stellar11-20261026/web/nemesis.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "a315bd73e571dda15868c5dc0faed48ae6598ccfcb03696b620f4cdeab6452e4",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.nemesis-avatar-20261026-web",
+        "name": "復仇女神星 · avatar",
+        "src": "assets/extensions/stellar11-20261026/avatars/nemesis.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "6075ed6f0125b0818fd3f1ba53ac6c8af124255b0bf983f6793175446e3c535d",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.nemesis-battle-20261026-v1-web",
+        "name": "復仇女神星 · sprite",
+        "src": "assets/extensions/stellar11-20261026/web/nemesis-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "1c945c9704acc5af270d575022b02d8af98f7d78b5ca4e7e5b17d0e07614ecf7",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.ganymede-portrait-20261026-web",
+        "name": "木衛三 · portrait",
+        "src": "assets/extensions/stellar11-20261026/web/ganymede.webp",
+        "width": 768,
+        "height": 1152,
+        "hash": "f458f689dc2d07d5f796bc70f6aef67fa6e18d771911107df106a8bf0d07caa9",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.ganymede-avatar-20261026-web",
+        "name": "木衛三 · avatar",
+        "src": "assets/extensions/stellar11-20261026/avatars/ganymede.webp",
+        "width": 256,
+        "height": 256,
+        "hash": "cbad2ca08dbbcac787b3d0e6040a3742a4c45f17c3944f047ac628b9bb1b3df3",
+        "review": "candidate"
+      },
+      {
+        "id": "stellaart:asset.ganymede-battle-20261026-v1-web",
+        "name": "木衛三 · sprite",
+        "src": "assets/extensions/stellar11-20261026/web/ganymede-battle.webp",
+        "width": 1024,
+        "height": 1024,
+        "hash": "b7d2a4983d59bc7e63815a8d8cbbb23aef56c8b24405295550fd54d07ba6b9c1",
+        "review": "candidate"
+      }
+    ]
+  }
+}

@@ -13,7 +13,9 @@
     "extensions/chronicle-first-three.json",
     "extensions/story40.json",
     "extensions/stellar40-art.json",
-    "extensions/chronicle-next-three.json"
+    "extensions/chronicle-next-three.json",
+    "extensions/late3.json",
+    "extensions/stellar11-20261026-art.json"
   ],
   "regionPresentation": [
     {
@@ -45,21 +47,21 @@
     },
     {
       "character": "solar10:character.pluto",
-      "portrait": "stellaart:asset.pluto-portrait-web",
-      "avatar": "stellaart:asset.pluto-avatar-web",
-      "sprite": "stellaart:asset.pluto-battle-v2-web"
+      "portrait": "stellaart:asset.pluto-portrait-20261026-web",
+      "avatar": "stellaart:asset.pluto-avatar-20261026-web",
+      "sprite": "stellaart:asset.pluto-battle-20261026-v1-web"
     },
     {
       "character": "solar10:character.nemesis",
-      "portrait": "stellaart:asset.nemesis-portrait-web",
-      "avatar": "stellaart:asset.nemesis-avatar-web",
-      "sprite": "stellaart:asset.nemesis-battle-v3-web"
+      "portrait": "stellaart:asset.nemesis-portrait-20261026-web",
+      "avatar": "stellaart:asset.nemesis-avatar-20261026-web",
+      "sprite": "stellaart:asset.nemesis-battle-20261026-v1-web"
     },
     {
       "character": "solar10:character.ganymede",
-      "portrait": "stellaart:asset.ganymede-portrait-web",
-      "avatar": "stellaart:asset.ganymede-avatar-web",
-      "sprite": "stellaart:asset.ganymede-battle-v2-web"
+      "portrait": "stellaart:asset.ganymede-portrait-20261026-web",
+      "avatar": "stellaart:asset.ganymede-avatar-20261026-web",
+      "sprite": "stellaart:asset.ganymede-battle-20261026-v1-web"
     },
     {
       "character": "solar10:character.io",
@@ -309,9 +311,9 @@
     },
     {
       "character": "story40:character.wezen",
-      "portrait": "stellaart:asset.wezen-portrait-20261025-web",
-      "avatar": "stellaart:asset.wezen-avatar-20261025-web",
-      "sprite": "stellaart:asset.wezen-battle-20261025-v1-web"
+      "portrait": "stellaart:asset.wezen-portrait-20261026-web",
+      "avatar": "stellaart:asset.wezen-avatar-20261026-web",
+      "sprite": "stellaart:asset.wezen-battle-20261026-v1-web"
     },
     {
       "character": "story40:character.aludra",
@@ -333,9 +335,9 @@
     },
     {
       "character": "story40:character.alrai",
-      "portrait": "stellaart:asset.alrai-portrait-20261025-web",
-      "avatar": "stellaart:asset.alrai-avatar-20261025-web",
-      "sprite": "stellaart:asset.alrai-battle-20261025-v1-web"
+      "portrait": "stellaart:asset.alrai-portrait-20261026-web",
+      "avatar": "stellaart:asset.alrai-avatar-20261026-web",
+      "sprite": "stellaart:asset.alrai-battle-20261026-v1-web"
     },
     {
       "character": "story40:character.vega",
@@ -357,9 +359,9 @@
     },
     {
       "character": "story40:character.gienah",
-      "portrait": "stellaart:asset.aldebaran-portrait-20261025-web",
-      "avatar": "stellaart:asset.aldebaran-avatar-20261025-web",
-      "sprite": "stellaart:asset.aldebaran-battle-20261025-v1-web"
+      "portrait": "stellaart:asset.gienah-portrait-20261026-web",
+      "avatar": "stellaart:asset.gienah-avatar-20261026-web",
+      "sprite": "stellaart:asset.gienah-battle-20261026-v1-web"
     },
     {
       "character": "story40:character.behemoth",
@@ -411,15 +413,39 @@
     },
     {
       "character": "story40:character.hypatia",
-      "portrait": "stellaart:asset.nix-portrait-20261025-web",
-      "avatar": "stellaart:asset.nix-avatar-20261025-web",
-      "sprite": "stellaart:asset.nix-battle-20261025-v1-web"
+      "portrait": "stellaart:asset.hypatia-portrait-20261026-web",
+      "avatar": "stellaart:asset.hypatia-avatar-20261026-web",
+      "sprite": "stellaart:asset.hypatia-battle-20261026-v1-web"
     },
     {
       "character": "story40:character.sadr",
       "portrait": "stellaart:asset.asmidiske-portrait-20261025-web",
       "avatar": "stellaart:asset.asmidiske-avatar-20261025-web",
       "sprite": "stellaart:asset.asmidiske-battle-20261025-v1-web"
+    },
+    {
+      "character": "m1:mercury",
+      "portrait": "stellaart:asset.mercury-portrait-20261026-web",
+      "avatar": "stellaart:asset.mercury-avatar-20261026-web",
+      "sprite": "stellaart:asset.mercury-battle-20261026-v1-web"
+    },
+    {
+      "character": "late3:character.posterior",
+      "portrait": "stellaart:asset.posterior-portrait-20261026-web",
+      "avatar": "stellaart:asset.posterior-avatar-20261026-web",
+      "sprite": "stellaart:asset.posterior-battle-20261026-v1-web"
+    },
+    {
+      "character": "late3:character.alpheratz",
+      "portrait": "stellaart:asset.alpheratz-portrait-20261026-web",
+      "avatar": "stellaart:asset.alpheratz-avatar-20261026-web",
+      "sprite": "stellaart:asset.alpheratz-battle-20261026-v1-web"
+    },
+    {
+      "character": "late3:character.alrami",
+      "portrait": "stellaart:asset.alrami-portrait-20261026-web",
+      "avatar": "stellaart:asset.alrami-avatar-20261026-web",
+      "sprite": "stellaart:asset.alrami-battle-20261026-v1-web"
     }
   ],
   "regionRoutes": [

@@ -6942,5 +6942,247 @@
     "sha256": "c17fa737ca9ce5c5e93803b7709ab21de9ade2d933b797c9f493a2379340ba62",
     "master": "art/story-next-three/masters/samael.png",
     "masterSha256": "f82d6f5bac6a4b8e81204d0ab56842aa950fc308c35d35ab4ae828dbbaa2b273"
+  },
+  {
+    "id": "stellaart:asset.posterior-portrait-20261026-web",
+    "path": "art/characters/stellar11-20261026/web/posterior.webp",
+    "runtime": "assets/extensions/stellar11-20261026/web/posterior.webp",
+    "sha256": "bcf1417dfea2441128e799062d0930a04db0b4efdbfe9eed3e1a04b3a75801b6",
+    "master": "art/characters/stellar11-20261026/standards/posterior.png",
+    "masterSha256": "a44b66accbf9ee108c76ff5a89f125daf2eb507b5f7b1ab601d116199666e76e"
+  },
+  {
+    "id": "stellaart:asset.posterior-avatar-20261026-web",
+    "path": "art/characters/stellar11-20261026/avatars/posterior.webp",
+    "runtime": "assets/extensions/stellar11-20261026/avatars/posterior.webp",
+    "sha256": "6b2048fa7d52c9b1e7cc98ac21a2598b5a525ad513a2ee3ff8840a04d7a0e141",
+    "master": "art/characters/stellar11-20261026/standards/posterior.png",
+    "masterSha256": "a44b66accbf9ee108c76ff5a89f125daf2eb507b5f7b1ab601d116199666e76e"
+  },
+  {
+    "id": "stellaart:asset.posterior-battle-20261026-v1-web",
+    "path": "art/characters/stellar11-20261026/web/posterior-battle.webp",
+    "runtime": "assets/extensions/stellar11-20261026/web/posterior-battle.webp",
+    "sha256": "cd835aa1b85a2567c6d9ff7cd98a1f1351ee8aee4798dc85d259dd970831855c"
+  },
+  {
+    "id": "stellaart:asset.alpheratz-portrait-20261026-web",
+    "path": "art/characters/stellar11-20261026/web/alpheratz.webp",
+    "runtime": "assets/extensions/stellar11-20261026/web/alpheratz.webp",
+    "sha256": "391460bcbccf0d92f336ad4afd7e29691fda58072513f403f28a86ec86cbf17e",
+    "master": "art/characters/stellar11-20261026/standards/alpheratz.png",
+    "masterSha256": "97bd5fb25860063f3d35de2c10989b102bfc3961746ea2888331ff34c8cb9bbb"
+  },
+  {
+    "id": "stellaart:asset.alpheratz-avatar-20261026-web",
+    "path": "art/characters/stellar11-20261026/avatars/alpheratz.webp",
+    "runtime": "assets/extensions/stellar11-20261026/avatars/alpheratz.webp",
+    "sha256": "16614a244638ba54519a25e2f29d71ba0bbf8e1965e7c7131c2b12f496b2bec1",
+    "master": "art/characters/stellar11-20261026/standards/alpheratz.png",
+    "masterSha256": "97bd5fb25860063f3d35de2c10989b102bfc3961746ea2888331ff34c8cb9bbb"
+  },
+  {
+    "id": "stellaart:asset.alpheratz-battle-20261026-v1-web",
+    "path": "art/characters/stellar11-20261026/web/alpheratz-battle.webp",
+    "runtime": "assets/extensions/stellar11-20261026/web/alpheratz-battle.webp",
+    "sha256": "44af3308492a797f0ee124b4d342603f1f495048b73931c060cfa28c3530b413"
+  },
+  {
+    "id": "stellaart:asset.alrami-portrait-20261026-web",
+    "path": "art/characters/stellar11-20261026/web/alrami.webp",
+    "runtime": "assets/extensions/stellar11-20261026/web/alrami.webp",
+    "sha256": "d4ca922362b24ede5c7318f9df6dbe6a337a574e7acc4bc0bde23c8e395c0314",
+    "master": "art/characters/stellar11-20261026/standards/alrami.png",
+    "masterSha256": "bcdbe6cbbda15f21af6d7710a799501affa609591fdcf46add365381b5090cbb"
+  },
+  {
+    "id": "stellaart:asset.alrami-avatar-20261026-web",
+    "path": "art/characters/stellar11-20261026/avatars/alrami.webp",
+    "runtime": "assets/extensions/stellar11-20261026/avatars/alrami.webp",
+    "sha256": "21d4d34db557f2993318e0c402f0e34f0e9d790e54cf34383499cd15ac357bc4",
+    "master": "art/characters/stellar11-20261026/standards/alrami.png",
+    "masterSha256": "bcdbe6cbbda15f21af6d7710a799501affa609591fdcf46add365381b5090cbb"
+  },
+  {
+    "id": "stellaart:asset.alrami-battle-20261026-v1-web",
+    "path": "art/characters/stellar11-20261026/web/alrami-battle.webp",
+    "runtime": "assets/extensions/stellar11-20261026/web/alrami-battle.webp",
+    "sha256": "4a7636c3e964f9ebe29029e4873d8a904d686bad4cec2edd74a5c29d8b4db17e"
+  },
+  {
+    "id": "stellaart:asset.gienah-portrait-20261026-web",
+    "path": "art/characters/stellar11-20261026/web/gienah.webp",
+    "runtime": "assets/extensions/stellar11-20261026/web/gienah.webp",
+    "sha256": "48630860d2615e916d96fddce143c9e4666337cba4ec729890f3ac00c4c296cc",
+    "master": "art/characters/stellar11-20261026/standards/gienah.png",
+    "masterSha256": "4cfc2351e0840bb40fc353010cb2d3eb6813a39da81223c354f633f5bd835b99"
+  },
+  {
+    "id": "stellaart:asset.gienah-avatar-20261026-web",
+    "path": "art/characters/stellar11-20261026/avatars/gienah.webp",
+    "runtime": "assets/extensions/stellar11-20261026/avatars/gienah.webp",
+    "sha256": "fbd7abf93a194a69e3795ee1bc59a3ee58ae342d72f6a6720f4487acd52b8a57",
+    "master": "art/characters/stellar11-20261026/standards/gienah.png",
+    "masterSha256": "4cfc2351e0840bb40fc353010cb2d3eb6813a39da81223c354f633f5bd835b99"
+  },
+  {
+    "id": "stellaart:asset.gienah-battle-20261026-v1-web",
+    "path": "art/characters/stellar11-20261026/web/gienah-battle.webp",
+    "runtime": "assets/extensions/stellar11-20261026/web/gienah-battle.webp",
+    "sha256": "1e9a1714d09b4e80124d1c253bc7cfae7a73a1509560d3e06531919e500b7921"
+  },
+  {
+    "id": "stellaart:asset.mercury-portrait-20261026-web",
+    "path": "art/characters/stellar11-20261026/web/mercury.webp",
+    "runtime": "assets/extensions/stellar11-20261026/web/mercury.webp",
+    "sha256": "3e0d6aa4568c418a701a63d0ce7d2480c4a55d1c9bb6b003ce8b750af62e5ef0",
+    "master": "art/characters/stellar11-20261026/standards/mercury.png",
+    "masterSha256": "d7b13d8885a54ee17661caf30dc02e6dfebd2816eafa6d6d0bf3252b71a7eb6b"
+  },
+  {
+    "id": "stellaart:asset.mercury-avatar-20261026-web",
+    "path": "art/characters/stellar11-20261026/avatars/mercury.webp",
+    "runtime": "assets/extensions/stellar11-20261026/avatars/mercury.webp",
+    "sha256": "6e99b1e5863543728a095c1f4e04e67a303add8ce26cba4562a961965ab7fdfa",
+    "master": "art/characters/stellar11-20261026/standards/mercury.png",
+    "masterSha256": "d7b13d8885a54ee17661caf30dc02e6dfebd2816eafa6d6d0bf3252b71a7eb6b"
+  },
+  {
+    "id": "stellaart:asset.mercury-battle-20261026-v1-web",
+    "path": "art/characters/stellar11-20261026/web/mercury-battle.webp",
+    "runtime": "assets/extensions/stellar11-20261026/web/mercury-battle.webp",
+    "sha256": "0a8c8f47cb13f2799cded8b83da74092dad5975bbef02112a588f2daac129986"
+  },
+  {
+    "id": "stellaart:asset.alrai-portrait-20261026-web",
+    "path": "art/characters/stellar11-20261026/web/alrai.webp",
+    "runtime": "assets/extensions/stellar11-20261026/web/alrai.webp",
+    "sha256": "1bd0221756ea563d245545a3984444cdebe16a050c1da44ab8b147081f412ced",
+    "master": "art/characters/stellar11-20261026/standards/alrai.png",
+    "masterSha256": "cc903e490004a34515aa2bd59e8879a0805e8a077497a3a800597f7278645d3d"
+  },
+  {
+    "id": "stellaart:asset.alrai-avatar-20261026-web",
+    "path": "art/characters/stellar11-20261026/avatars/alrai.webp",
+    "runtime": "assets/extensions/stellar11-20261026/avatars/alrai.webp",
+    "sha256": "ea830f7f70f29e02ad38fd2c8775fe2d56349a4aa0ffd743d610e90d08a80458",
+    "master": "art/characters/stellar11-20261026/standards/alrai.png",
+    "masterSha256": "cc903e490004a34515aa2bd59e8879a0805e8a077497a3a800597f7278645d3d"
+  },
+  {
+    "id": "stellaart:asset.alrai-battle-20261026-v1-web",
+    "path": "art/characters/stellar11-20261026/web/alrai-battle.webp",
+    "runtime": "assets/extensions/stellar11-20261026/web/alrai-battle.webp",
+    "sha256": "9ac94b1140969b913da27be826285043567775623c830b1e74b3da800a8be5aa"
+  },
+  {
+    "id": "stellaart:asset.wezen-portrait-20261026-web",
+    "path": "art/characters/stellar11-20261026/web/wezen.webp",
+    "runtime": "assets/extensions/stellar11-20261026/web/wezen.webp",
+    "sha256": "0fb432c93150ba32142da627f08da1a4a70e9fac6a23acac1e27c710f7f1fdb8",
+    "master": "art/characters/stellar11-20261026/standards/wezen.png",
+    "masterSha256": "bae10b5c2b251acf6c984f0b2202f02bec9deaa198a824704aca5cb819527046"
+  },
+  {
+    "id": "stellaart:asset.wezen-avatar-20261026-web",
+    "path": "art/characters/stellar11-20261026/avatars/wezen.webp",
+    "runtime": "assets/extensions/stellar11-20261026/avatars/wezen.webp",
+    "sha256": "552aed9b0df3338c248d7ed2d7b6210ea4906f50bb23c1c0d1b2a950fda9c8bc",
+    "master": "art/characters/stellar11-20261026/standards/wezen.png",
+    "masterSha256": "bae10b5c2b251acf6c984f0b2202f02bec9deaa198a824704aca5cb819527046"
+  },
+  {
+    "id": "stellaart:asset.wezen-battle-20261026-v1-web",
+    "path": "art/characters/stellar11-20261026/web/wezen-battle.webp",
+    "runtime": "assets/extensions/stellar11-20261026/web/wezen-battle.webp",
+    "sha256": "2faf6b419efd3dae18c1a06b09083791c877ba8915f40460a6b58d3ca366eae5"
+  },
+  {
+    "id": "stellaart:asset.hypatia-portrait-20261026-web",
+    "path": "art/characters/stellar11-20261026/web/hypatia.webp",
+    "runtime": "assets/extensions/stellar11-20261026/web/hypatia.webp",
+    "sha256": "394902a1a4d13317f919a32d5a116f80ed25d5704b218e8398ade8990e977142",
+    "master": "art/characters/stellar11-20261026/standards/hypatia.png",
+    "masterSha256": "430f962897b0eb18a2d71a6956f5428758644cba8907c80af0f7c4637dabb40d"
+  },
+  {
+    "id": "stellaart:asset.hypatia-avatar-20261026-web",
+    "path": "art/characters/stellar11-20261026/avatars/hypatia.webp",
+    "runtime": "assets/extensions/stellar11-20261026/avatars/hypatia.webp",
+    "sha256": "9143acf20990a567ab10ccb83e2ddd714e8773fde0587616723e76f05e23ab1d",
+    "master": "art/characters/stellar11-20261026/standards/hypatia.png",
+    "masterSha256": "430f962897b0eb18a2d71a6956f5428758644cba8907c80af0f7c4637dabb40d"
+  },
+  {
+    "id": "stellaart:asset.hypatia-battle-20261026-v1-web",
+    "path": "art/characters/stellar11-20261026/web/hypatia-battle.webp",
+    "runtime": "assets/extensions/stellar11-20261026/web/hypatia-battle.webp",
+    "sha256": "eedf5fc9e0bf02625b1728f0deeda5f4201fcccf2a8443dafc782c5060c3a49c"
+  },
+  {
+    "id": "stellaart:asset.pluto-portrait-20261026-web",
+    "path": "art/characters/stellar11-20261026/web/pluto.webp",
+    "runtime": "assets/extensions/stellar11-20261026/web/pluto.webp",
+    "sha256": "7ad3b64d9931fc3221e2ea593784eeba9e9a7a763a8941545364c77e13814b26",
+    "master": "art/characters/stellar11-20261026/standards/pluto.png",
+    "masterSha256": "05e6117a2afde11115b57fe2aea9179975551027cc038c6c38280d3243b00a6c"
+  },
+  {
+    "id": "stellaart:asset.pluto-avatar-20261026-web",
+    "path": "art/characters/stellar11-20261026/avatars/pluto.webp",
+    "runtime": "assets/extensions/stellar11-20261026/avatars/pluto.webp",
+    "sha256": "62565588b1165bc0cbde5f0ed07907ae07003076ed1cd54ad1c25b8f783443ff",
+    "master": "art/characters/stellar11-20261026/standards/pluto.png",
+    "masterSha256": "05e6117a2afde11115b57fe2aea9179975551027cc038c6c38280d3243b00a6c"
+  },
+  {
+    "id": "stellaart:asset.pluto-battle-20261026-v1-web",
+    "path": "art/characters/stellar11-20261026/web/pluto-battle.webp",
+    "runtime": "assets/extensions/stellar11-20261026/web/pluto-battle.webp",
+    "sha256": "63972f1b146f005bfb87ef82a5197bc696e11dc99838d5a2acf8fb40c091ec2c"
+  },
+  {
+    "id": "stellaart:asset.nemesis-portrait-20261026-web",
+    "path": "art/characters/stellar11-20261026/web/nemesis.webp",
+    "runtime": "assets/extensions/stellar11-20261026/web/nemesis.webp",
+    "sha256": "a315bd73e571dda15868c5dc0faed48ae6598ccfcb03696b620f4cdeab6452e4",
+    "master": "art/characters/stellar11-20261026/standards/nemesis.png",
+    "masterSha256": "6813076332d26dd0b0c7a49c9c6f8b7af86bee3ad0fdf74297f16ee18f4c0649"
+  },
+  {
+    "id": "stellaart:asset.nemesis-avatar-20261026-web",
+    "path": "art/characters/stellar11-20261026/avatars/nemesis.webp",
+    "runtime": "assets/extensions/stellar11-20261026/avatars/nemesis.webp",
+    "sha256": "6075ed6f0125b0818fd3f1ba53ac6c8af124255b0bf983f6793175446e3c535d",
+    "master": "art/characters/stellar11-20261026/standards/nemesis.png",
+    "masterSha256": "6813076332d26dd0b0c7a49c9c6f8b7af86bee3ad0fdf74297f16ee18f4c0649"
+  },
+  {
+    "id": "stellaart:asset.nemesis-battle-20261026-v1-web",
+    "path": "art/characters/stellar11-20261026/web/nemesis-battle.webp",
+    "runtime": "assets/extensions/stellar11-20261026/web/nemesis-battle.webp",
+    "sha256": "1c945c9704acc5af270d575022b02d8af98f7d78b5ca4e7e5b17d0e07614ecf7"
+  },
+  {
+    "id": "stellaart:asset.ganymede-portrait-20261026-web",
+    "path": "art/characters/stellar11-20261026/web/ganymede.webp",
+    "runtime": "assets/extensions/stellar11-20261026/web/ganymede.webp",
+    "sha256": "f458f689dc2d07d5f796bc70f6aef67fa6e18d771911107df106a8bf0d07caa9",
+    "master": "art/characters/stellar11-20261026/standards/ganymede.png",
+    "masterSha256": "a826ce5416bc50c4260cf43b594dc10d644f19c194ebd32379b3b0c6746fa607"
+  },
+  {
+    "id": "stellaart:asset.ganymede-avatar-20261026-web",
+    "path": "art/characters/stellar11-20261026/avatars/ganymede.webp",
+    "runtime": "assets/extensions/stellar11-20261026/avatars/ganymede.webp",
+    "sha256": "cbad2ca08dbbcac787b3d0e6040a3742a4c45f17c3944f047ac628b9bb1b3df3",
+    "master": "art/characters/stellar11-20261026/standards/ganymede.png",
+    "masterSha256": "a826ce5416bc50c4260cf43b594dc10d644f19c194ebd32379b3b0c6746fa607"
+  },
+  {
+    "id": "stellaart:asset.ganymede-battle-20261026-v1-web",
+    "path": "art/characters/stellar11-20261026/web/ganymede-battle.webp",
+    "runtime": "assets/extensions/stellar11-20261026/web/ganymede-battle.webp",
+    "sha256": "b7d2a4983d59bc7e63815a8d8cbbb23aef56c8b24405295550fd54d07ba6b9c1"
   }
 ]

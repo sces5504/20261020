@@ -109,8 +109,9 @@ test("sub-five-unit keyboard steps move living allies in combat, and movement st
       "each ally must actually move, not only the camera",
     ),
   );
+  // 01/02 are abreast vanguards; the third member is the first rear slot.
   const captain = c.allies[0],
-    rear = c.allies[1];
+    rear = c.allies[2];
   const enemy = c.units
     .filter((u) => u.side === "enemy" && u.hp > 0)
     .sort(
@@ -123,7 +124,7 @@ test("sub-five-unit keyboard steps move living allies in combat, and movement st
     (captain.x - rear.x) * Math.cos(facing) +
       (captain.y - rear.y) * Math.sin(facing) >
       30,
-    "captain shields the threat-facing side during a strafe",
+    "vanguards hold the threat-facing side during a strafe",
   );
   assert.ok(
     Math.hypot(c.allies[1].x - c.allies[2].x, c.allies[1].y - c.allies[2].y) >

@@ -305,7 +305,16 @@ export class Game {
           scoreRatio: c.damageRatio,
           ...c.facilityResults(),
           receipt: `encounter-${this.save.encounter?.seed}`,
-        }).finally(() => (this.encounterPending = false));
+        }).finally(() => {
+          this.encounterPending = false;
+          // A result the save no longer recognises must not leave a finished battle
+          // on screen forever (planets stay untappable while combat exists).
+          if (
+            this.combat === c &&
+            (!this.save.encounter || this.save.encounter.planet !== c.planetId)
+          )
+            this.combat = null;
+        });
       }
     } else {
       this.fleet.advance(this.destination, speed, dt);

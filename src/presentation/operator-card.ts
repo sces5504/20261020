@@ -7,6 +7,14 @@ const portraits = import.meta.glob(
   "../../art/ui/operator-portraits-v1/*.webp",
   { eager: true, query: "?url", import: "default" },
 ) as Record<string, string>;
+import cropManifest from "../../art/ui/operator-portraits-v1/manifest.json";
+// A layout crop is only valid while the character still uses the art it was cut from.
+const cropSource = new Map(
+  (cropManifest as { character: string; sourceAsset: string }[]).map((v) => [
+    v.character,
+    v.sourceAsset,
+  ]),
+);
 export function skillGlyph(s: Skill) {
   const paths: Record<string, string> = {
     beam: '<path d="M3 8h6l12-5v18L9 16H3zM9 8v8M12 10h7M12 14h7"/>',
@@ -34,7 +42,10 @@ export function operatorCard(
   combat: boolean,
 ) {
   const file = c.id.replace(/[^a-z0-9.-]/g, "_") + ".webp",
-    src = portraits[`../../art/ui/operator-portraits-v1/${file}`],
+    src =
+      cropSource.get(c.id) === c.portrait
+        ? portraits[`../../art/ui/operator-portraits-v1/${file}`]
+        : undefined,
     // Dedicated head crop for the phone strip; framing differs per portrait.
     face =
       !src && c.avatar ? p.assets.find((a) => a.id === c.avatar)?.src : undefined;

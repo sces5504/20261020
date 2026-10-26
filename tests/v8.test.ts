@@ -143,7 +143,7 @@ test("story ten and updated Jupiter bind unique art without changing character i
   );
 });
 
-test("combat strafe and reversal translate the cluster immediately around a threat-facing captain", () => {
+test("combat strafe and reversal translate two abreast vanguards and the cluster behind them", () => {
   const f = new FleetMotion(1000, 1000, 0, ["captain", "rear", "support"], 106);
   const threat = { x: 3000, y: 1000 };
   for (let i = 0; i < 180; i++) f.advanceGuarded(f.anchor, 180, 1 / 60, threat);
@@ -167,8 +167,9 @@ test("combat strafe and reversal translate the cluster immediately around a thre
       );
       if (id !== "captain") {
         const captain = f.positions.get("captain")!;
-        // Original-style cluster: flanks and rear around the captain, never ahead of her.
-        assert(after.x < captain.x - 10);
+        // Two vanguards abreast; everyone else clusters behind them.
+        if (id === "rear") assert(Math.abs(after.x - captain.x) < 106 * 0.35);
+        else assert(after.x < captain.x - 30);
         assert(Math.hypot(after.x - captain.x, after.y - captain.y) < 106 * 1.8);
       }
     }

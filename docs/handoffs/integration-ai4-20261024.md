@@ -139,3 +139,4 @@
 - 驗證：單元135/135；本機瀏覽器 e2e（第一次背景執行卡住無結果，重跑通過）、exploration（修正新航程測試後通過）、playtest 通過。未重跑671世界戰鬥與其他未受影響套件，留給Pages發布門檻。
 - **數值改回原作比例**（2026-10-27，使用者指示「這16人也改成同一組倍率」「太陽照原作但改成5星水準」）：核心6＋solar10 共16人的 HP／攻／防改為原生Lv1 × 固定係數（HP 3.0670575995460134、攻 1.780185758513932、防 1.1428571428571428，四捨五入），與其他59人相同；速度、射程、攻速間隔、成長未動。太陽依原作比例（233／11／44）整體放大至轉換包5★戰力中位（247），得 HP1071／攻29／防75。單元135/135、playtest 通過；671世界戰鬥留給Pages門檻。
 - 發布修正：PR #47 後 Pages 門檻連續失敗於舊測試假設（e2e 寫死地球攻擊28、world／exploration 新航程等待舊開場、exploration 換頁讀存檔競態），PR #48/#49 與本次修正。本機（Node 22，project.py release 因不支援 --test-isolation 在第一步停止，屬環境限制未記為通過）逐套重跑：e2e、playtest、exploration×2、world、refinement、polish、content-integration、integration-v8、story、chronicle 全通過；skills 已在 CI 新數值下通過。
+- **第九輪發布**：PR #46–#50 → main `0e12e162a23ea7e4cb7fbb9f1eb5d81925f8ac1b`，Pages完整門檻通過並部署；公開站桌機／觸控煙測零pageerror（非真機）。

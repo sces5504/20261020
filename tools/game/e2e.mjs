@@ -138,6 +138,9 @@ try {
   await page.locator('a[href="#/studio"]').first().click();
   await unlockStudio(page);
   await page.waitForSelector("#entity-form", { timeout: 60000 });
+  const attackBefore = Number(
+    await page.locator('[data-field="attack"]').inputValue(),
+  );
   await page.locator('[data-field="attack"]').fill("200");
   await page.locator('[data-field="rarity"]').fill("4");
   await page.locator('[data-action="save-entity"]').click();
@@ -149,7 +152,7 @@ try {
   await page.waitForTimeout(150);
   assert.equal(
     (await getRecord(page, "editor:project")).pack.characters[0].attack,
-    28,
+    attackBefore,
   );
   await page.locator('[data-action="redo"]').click();
   await page.waitForTimeout(150);

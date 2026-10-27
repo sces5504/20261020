@@ -29,7 +29,8 @@ async function record(page, key = "save:main") {
 async function waitSave(page, ready, description) {
   const end = Date.now() + 15000;
   while (Date.now() < end) {
-    const save = await record(page);
+    // 新航程等操作會重新載入頁面；換頁瞬間讀取失敗就重試。
+    const save = await record(page).catch(() => undefined);
     if (save && ready(save)) return save;
     await page.waitForTimeout(100);
   }
@@ -330,6 +331,7 @@ try {
   await page.locator('[data-answer="yes"]').click();
   // 新航程不再彈出舊開場對白；等新存檔建立即可。
   await waitSave(page, (s) => s.summoned === 0, "new voyage must start fresh");
+  await page.waitForSelector("canvas", { timeout: 60000 });
   assert.equal(await page.locator(".story-scene").count(), 0);
   const reset = await record(page);
   assert.equal(reset.summoned, 0);

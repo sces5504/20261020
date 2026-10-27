@@ -56,18 +56,11 @@ try {
     void d.dismiss();
   });
   await page.goto(server.url);
-  await page.waitForSelector(".story-scene");
-  await page.screenshot({ path: ".artifacts/v2/story.png" });
+  await page.waitForSelector("canvas", { timeout: 60000 });
   assert.equal(await page.title(), "Galaxy Angel · 星河戰姬");
-  await page.locator(".story-background").evaluate(async (im) => {
-    await im.decode();
-    if (im.naturalWidth < 1000) throw Error("story artwork did not load");
-  });
-  const first = await page.locator(".story-line").innerText();
-  await page.locator('[data-action="story-next"]').click();
-  assert.notEqual(await page.locator(".story-line").innerText(), first);
-  await page.locator('[data-action="story-skip"]').click();
-  await page.waitForSelector(".story-scene", { state: "hidden" });
+  // 舊版開場對白已移除：首載直接進入星海，補給靜默入帳。
+  await waitSave(page, (s) => s.storySeen.length > 0);
+  assert.equal(await page.locator(".story-scene").count(), 0);
   assert.equal(await page.locator('[data-id="training"]').count(), 0);
   assert.equal(await page.locator("#defense-alerts").count(), 0);
   // Move away from the first planet: approaching it now intentionally starts combat.
@@ -360,10 +353,7 @@ try {
     m = await mobileContext.newPage();
   m.on("pageerror", (e) => errors.push(e.message));
   await m.goto(server.url);
-  await m.locator(".story-background").evaluate(async (im) => {
-    await im.decode();
-    if (!im.naturalWidth) throw Error("mobile scenario background missing");
-  });
+  await m.waitForSelector("canvas", { timeout: 60000 });
   await m.evaluate(async () => {
     await Promise.all(
       document
@@ -372,9 +362,6 @@ try {
         .map((a) => a.finished.catch(() => {})),
     );
   });
-  await m.screenshot({ path: ".artifacts/v2/mobile-story.png" });
-  await m.locator('[data-action="story-skip"]').click();
-  await m.waitForSelector(".story-scene", { state: "hidden" });
   await m.screenshot({ path: ".artifacts/v2/mobile.png" });
   assert.ok(
     await m.evaluate(() => document.documentElement.scrollWidth <= innerWidth),

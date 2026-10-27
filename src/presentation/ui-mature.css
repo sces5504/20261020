@@ -2047,7 +2047,7 @@
     font-size: 11px;
   }
 }
-/* Touch joystick (phones only); WASD and tap-to-move keep working everywhere. */
+/* Floating touch joystick (phones only): the faint ring marks the lower-left thumb zone; dragging there summons it under the thumb. */
 .joystick {
   display: none;
 }
@@ -2064,7 +2064,14 @@
     background: radial-gradient(circle, #9edcde18, #0a152288 70%);
     border: 1px solid #9edcde55;
     z-index: 7;
-    touch-action: none;
+    pointer-events: none;
+    opacity: 0.32;
+    transition: opacity 0.15s;
+  }
+  main.bridge.bridge .joystick.active {
+    bottom: auto;
+    opacity: 1;
+    transition: none;
   }
   main.bridge.bridge .joystick span {
     width: 46px;

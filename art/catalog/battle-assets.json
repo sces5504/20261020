@@ -1,62 +1,80 @@
 [
   {
     "id": "m1art:maiden-01-battle-v1",
-    "path": "art/characters/battle/maiden-01/v1.png",
-    "sha256": "24508cad11015e09b5cdfebdccc001b56f521b6ee92495c82344c09976c4892a",
+    "path": "art/characters/battle/maiden-01/web-v1.webp",
+    "sha256": "2aae4de379cfaf1318fd8aff047839a8b89e243a3932f3bda8f0086b24719351",
     "reference": "art/characters/standard/maiden-01/v1.png",
     "tool": "image_gen",
     "intent": "2026-10-21 user requested separate chibi battle art",
     "review": "candidate",
-    "runtime": "assets/battle/maiden-01.png"
+    "runtime": "assets/battle/maiden-01.webp",
+    "master": "art/characters/battle/maiden-01/v1.png",
+    "masterSha256": "24508cad11015e09b5cdfebdccc001b56f521b6ee92495c82344c09976c4892a",
+    "derivation": "2026-10-27 web derivative (max 768px, WebP q90) for first-load size; master kept unchanged"
   },
   {
     "id": "m1art:maiden-02-battle-v1",
-    "path": "art/characters/battle/maiden-02/v1.png",
-    "sha256": "a8ad0e565c1d52941ec3969421edb4bd6613cedccd61a6f0f6bc3fdeea28f999",
+    "path": "art/characters/battle/maiden-02/web-v1.webp",
+    "sha256": "30643360f07c5ca3fc8d0e1e02b5e78a437e37dfa379bf7bfef67bea1c914b48",
     "reference": "art/characters/standard/maiden-02/v1.png",
     "tool": "image_gen",
     "intent": "2026-10-21 user requested separate chibi battle art",
     "review": "candidate",
-    "runtime": "assets/battle/maiden-02.png"
+    "runtime": "assets/battle/maiden-02.webp",
+    "master": "art/characters/battle/maiden-02/v1.png",
+    "masterSha256": "a8ad0e565c1d52941ec3969421edb4bd6613cedccd61a6f0f6bc3fdeea28f999",
+    "derivation": "2026-10-27 web derivative (max 768px, WebP q90) for first-load size; master kept unchanged"
   },
   {
     "id": "m1art:maiden-03-battle-v1",
-    "path": "art/characters/battle/maiden-03/v1.png",
-    "sha256": "577e8847d9d6cd85de63498935f04006647c4f1d31e7ecfff03adeed86874781",
+    "path": "art/characters/battle/maiden-03/web-v1.webp",
+    "sha256": "bac7cff6db6b707b2a205d3712c4db37ebb953ac038a315c780ec0fac31360bd",
     "reference": "art/characters/standard/maiden-03/v1.png",
     "tool": "image_gen",
     "intent": "2026-10-21 user requested separate chibi battle art",
     "review": "candidate",
-    "runtime": "assets/battle/maiden-03.png"
+    "runtime": "assets/battle/maiden-03.webp",
+    "master": "art/characters/battle/maiden-03/v1.png",
+    "masterSha256": "577e8847d9d6cd85de63498935f04006647c4f1d31e7ecfff03adeed86874781",
+    "derivation": "2026-10-27 web derivative (max 768px, WebP q90) for first-load size; master kept unchanged"
   },
   {
     "id": "m1art:maiden-04-battle-v1",
-    "path": "art/characters/battle/maiden-04/v1.png",
-    "sha256": "78ff967258d0318e9f2e0c4a56a2746ba36582f0c51e4783e6b9e8b6f14a2f25",
+    "path": "art/characters/battle/maiden-04/web-v1.webp",
+    "sha256": "d4d286631b8f09f045170189a14ad4528a885e0647b2e4b73bb8e3daa15ce489",
     "reference": "art/characters/standard/maiden-04/v1.png",
     "tool": "image_gen",
     "intent": "2026-10-21 user requested separate chibi battle art",
     "review": "candidate",
-    "runtime": "assets/battle/maiden-04.png"
+    "runtime": "assets/battle/maiden-04.webp",
+    "master": "art/characters/battle/maiden-04/v1.png",
+    "masterSha256": "78ff967258d0318e9f2e0c4a56a2746ba36582f0c51e4783e6b9e8b6f14a2f25",
+    "derivation": "2026-10-27 web derivative (max 768px, WebP q90) for first-load size; master kept unchanged"
   },
   {
     "id": "m1art:maiden-05-battle-v1",
-    "path": "art/characters/battle/maiden-05/v1.png",
-    "sha256": "8c731507495a671e58cea6aaf68779f6f788a2eaeb317b4f8bda3e74a0cfc229",
+    "path": "art/characters/battle/maiden-05/web-v1.webp",
+    "sha256": "8b6e892d6b87906c2e25720ebed03af56d7ade8999b804b0d6752e0ce6f64a10",
     "reference": "art/characters/standard/maiden-05/v1.png",
     "tool": "image_gen",
     "intent": "2026-10-21 user requested separate chibi battle art",
     "review": "candidate",
-    "runtime": "assets/battle/maiden-05.png"
+    "runtime": "assets/battle/maiden-05.webp",
+    "master": "art/characters/battle/maiden-05/v1.png",
+    "masterSha256": "8c731507495a671e58cea6aaf68779f6f788a2eaeb317b4f8bda3e74a0cfc229",
+    "derivation": "2026-10-27 web derivative (max 768px, WebP q90) for first-load size; master kept unchanged"
   },
   {
     "id": "m1art:maiden-06-battle-v1",
-    "path": "art/characters/battle/maiden-06/v1.png",
-    "sha256": "be70ff09e4668c529cf47529437357c4fdbcd6fff23bd59f944f86d81a0fc507",
+    "path": "art/characters/battle/maiden-06/web-v1.webp",
+    "sha256": "e74ade55d619039e45d893b6c0f4190da0ec43ba5afa1a7d7a739b45c7c2e1a9",
     "reference": "art/characters/standard/maiden-06/v1.png",
     "tool": "image_gen",
     "intent": "2026-10-21 user requested separate chibi battle art",
     "review": "candidate",
-    "runtime": "assets/battle/maiden-06.png"
+    "runtime": "assets/battle/maiden-06.webp",
+    "master": "art/characters/battle/maiden-06/v1.png",
+    "masterSha256": "be70ff09e4668c529cf47529437357c4fdbcd6fff23bd59f944f86d81a0fc507",
+    "derivation": "2026-10-27 web derivative (max 768px, WebP q90) for first-load size; master kept unchanged"
   }
 ]

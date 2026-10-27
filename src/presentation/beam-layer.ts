@@ -2,6 +2,7 @@ import Phaser from "phaser";
 import type { Combat } from "../domain/combat";
 import type { Field } from "../domain/mechanics";
 import { beamArt } from "./beam-art";
+import { whenIdle } from "../platform/idle";
 
 /** Soft textured emission. Combat still owns every field, hit and lifetime. */
 export class BeamLayer {
@@ -43,7 +44,7 @@ export class BeamLayer {
         ctx.drawImage(image, 0, 0, 1536, 512);
         scene.textures.addCanvas(beamArt.key, canvas);
       };
-      image.src = beamArt.url;
+      whenIdle(() => (image.src = beamArt.url));
     }
     scene.events.once(Phaser.Scenes.Events.SHUTDOWN, () => this.clear());
   }

@@ -795,7 +795,7 @@
       },
       {
         "id": "stellaart:asset.aldebaran-portrait-20261025-web",
-        "name": "畢宿五（借用給Gienah） · portrait",
+        "name": "Gienah · portrait",
         "src": "assets/extensions/stellar40/web/aldebaran.webp",
         "width": 768,
         "height": 1152,
@@ -804,7 +804,7 @@
       },
       {
         "id": "stellaart:asset.aldebaran-avatar-20261025-web",
-        "name": "畢宿五（借用給Gienah） · avatar",
+        "name": "Gienah · avatar",
         "src": "assets/extensions/stellar40/avatars/aldebaran.webp",
         "width": 256,
         "height": 256,
@@ -813,7 +813,7 @@
       },
       {
         "id": "stellaart:asset.aldebaran-battle-20261025-v1-web",
-        "name": "畢宿五（借用給Gienah） · sprite",
+        "name": "Gienah · sprite",
         "src": "assets/extensions/stellar40/web/aldebaran-battle.webp",
         "width": 1024,
         "height": 1024,
@@ -822,7 +822,7 @@
       },
       {
         "id": "stellaart:asset.dubhe-portrait-20261025-web",
-        "name": "天樞（借用給Behemoth） · portrait",
+        "name": "Behemoth · portrait",
         "src": "assets/extensions/stellar40/web/dubhe.webp",
         "width": 768,
         "height": 1152,
@@ -831,7 +831,7 @@
       },
       {
         "id": "stellaart:asset.dubhe-avatar-20261025-web",
-        "name": "天樞（借用給Behemoth） · avatar",
+        "name": "Behemoth · avatar",
         "src": "assets/extensions/stellar40/avatars/dubhe.webp",
         "width": 256,
         "height": 256,
@@ -840,7 +840,7 @@
       },
       {
         "id": "stellaart:asset.dubhe-battle-20261025-v1-web",
-        "name": "天樞（借用給Behemoth） · sprite",
+        "name": "Behemoth · sprite",
         "src": "assets/extensions/stellar40/web/dubhe-battle.webp",
         "width": 1024,
         "height": 1024,
@@ -849,7 +849,7 @@
       },
       {
         "id": "stellaart:asset.cruithne-portrait-20261025-web",
-        "name": "克魯特尼（借用給Navi） · portrait",
+        "name": "Navi · portrait",
         "src": "assets/extensions/stellar40/web/cruithne.webp",
         "width": 768,
         "height": 1152,
@@ -858,7 +858,7 @@
       },
       {
         "id": "stellaart:asset.cruithne-avatar-20261025-web",
-        "name": "克魯特尼（借用給Navi） · avatar",
+        "name": "Navi · avatar",
         "src": "assets/extensions/stellar40/avatars/cruithne.webp",
         "width": 256,
         "height": 256,
@@ -867,7 +867,7 @@
       },
       {
         "id": "stellaart:asset.cruithne-battle-20261025-v2-web",
-        "name": "克魯特尼（借用給Navi） · sprite",
+        "name": "Navi · sprite",
         "src": "assets/extensions/stellar40/web/cruithne-battle.webp",
         "width": 1024,
         "height": 1024,
@@ -876,7 +876,7 @@
       },
       {
         "id": "stellaart:asset.larissa-portrait-20261025-web",
-        "name": "海衛七（借用給Cygni） · portrait",
+        "name": "Cygni · portrait",
         "src": "assets/extensions/stellar40/web/larissa.webp",
         "width": 768,
         "height": 1152,
@@ -885,7 +885,7 @@
       },
       {
         "id": "stellaart:asset.larissa-avatar-20261025-web",
-        "name": "海衛七（借用給Cygni） · avatar",
+        "name": "Cygni · avatar",
         "src": "assets/extensions/stellar40/avatars/larissa.webp",
         "width": 256,
         "height": 256,
@@ -894,7 +894,7 @@
       },
       {
         "id": "stellaart:asset.larissa-battle-20261025-v1-web",
-        "name": "海衛七（借用給Cygni） · sprite",
+        "name": "Cygni · sprite",
         "src": "assets/extensions/stellar40/web/larissa-battle.webp",
         "width": 1024,
         "height": 1024,
@@ -903,7 +903,7 @@
       },
       {
         "id": "stellaart:asset.heimdal-portrait-20261025-web",
-        "name": "海姆達爾（借用給Enif） · portrait",
+        "name": "Enif · portrait",
         "src": "assets/extensions/stellar40/web/heimdal.webp",
         "width": 768,
         "height": 1152,
@@ -912,7 +912,7 @@
       },
       {
         "id": "stellaart:asset.heimdal-avatar-20261025-web",
-        "name": "海姆達爾（借用給Enif） · avatar",
+        "name": "Enif · avatar",
         "src": "assets/extensions/stellar40/avatars/heimdal.webp",
         "width": 256,
         "height": 256,
@@ -921,7 +921,7 @@
       },
       {
         "id": "stellaart:asset.heimdal-battle-20261025-v1-web",
-        "name": "海姆達爾（借用給Enif） · sprite",
+        "name": "Enif · sprite",
         "src": "assets/extensions/stellar40/web/heimdal-battle.webp",
         "width": 1024,
         "height": 1024,
@@ -930,7 +930,7 @@
       },
       {
         "id": "stellaart:asset.leah-portrait-20261025-web",
-        "name": "瑞亞（借用給Piazzi） · portrait",
+        "name": "Piazzi · portrait",
         "src": "assets/extensions/stellar40/web/leah.webp",
         "width": 768,
         "height": 1152,
@@ -939,7 +939,7 @@
       },
       {
         "id": "stellaart:asset.leah-avatar-20261025-web",
-        "name": "瑞亞（借用給Piazzi） · avatar",
+        "name": "Piazzi · avatar",
         "src": "assets/extensions/stellar40/avatars/leah.webp",
         "width": 256,
         "height": 256,
@@ -948,7 +948,7 @@
       },
       {
         "id": "stellaart:asset.leah-battle-20261025-v1-web",
-        "name": "瑞亞（借用給Piazzi） · sprite",
+        "name": "Piazzi · sprite",
         "src": "assets/extensions/stellar40/web/leah-battle.webp",
         "width": 1024,
         "height": 1024,
@@ -957,7 +957,7 @@
       },
       {
         "id": "stellaart:asset.hydra-portrait-20261025-web",
-        "name": "許德拉（借用給Kruger60） · portrait",
+        "name": "Kruger60 · portrait",
         "src": "assets/extensions/stellar40/web/hydra.webp",
         "width": 768,
         "height": 1152,
@@ -966,7 +966,7 @@
       },
       {
         "id": "stellaart:asset.hydra-avatar-20261025-web",
-        "name": "許德拉（借用給Kruger60） · avatar",
+        "name": "Kruger60 · avatar",
         "src": "assets/extensions/stellar40/avatars/hydra.webp",
         "width": 256,
         "height": 256,
@@ -975,7 +975,7 @@
       },
       {
         "id": "stellaart:asset.hydra-battle-20261025-v1-web",
-        "name": "許德拉（借用給Kruger60） · sprite",
+        "name": "Kruger60 · sprite",
         "src": "assets/extensions/stellar40/web/hydra-battle.webp",
         "width": 1024,
         "height": 1024,
@@ -984,7 +984,7 @@
       },
       {
         "id": "stellaart:asset.phobos-portrait-20261025-web",
-        "name": "火衛一（借用給Ioannina） · portrait",
+        "name": "Ioannina · portrait",
         "src": "assets/extensions/stellar40/web/phobos.webp",
         "width": 768,
         "height": 1152,
@@ -993,7 +993,7 @@
       },
       {
         "id": "stellaart:asset.phobos-avatar-20261025-web",
-        "name": "火衛一（借用給Ioannina） · avatar",
+        "name": "Ioannina · avatar",
         "src": "assets/extensions/stellar40/avatars/phobos.webp",
         "width": 256,
         "height": 256,
@@ -1002,7 +1002,7 @@
       },
       {
         "id": "stellaart:asset.phobos-battle-20261025-v1-web",
-        "name": "火衛一（借用給Ioannina） · sprite",
+        "name": "Ioannina · sprite",
         "src": "assets/extensions/stellar40/web/phobos-battle.webp",
         "width": 1024,
         "height": 1024,
@@ -1011,7 +1011,7 @@
       },
       {
         "id": "stellaart:asset.umbriel-portrait-20261025-web",
-        "name": "天衛二（借用給王良四） · portrait",
+        "name": "王良四 · portrait",
         "src": "assets/extensions/stellar40/web/umbriel.webp",
         "width": 768,
         "height": 1152,
@@ -1020,7 +1020,7 @@
       },
       {
         "id": "stellaart:asset.umbriel-avatar-20261025-web",
-        "name": "天衛二（借用給王良四） · avatar",
+        "name": "王良四 · avatar",
         "src": "assets/extensions/stellar40/avatars/umbriel.webp",
         "width": 256,
         "height": 256,
@@ -1029,7 +1029,7 @@
       },
       {
         "id": "stellaart:asset.umbriel-battle-20261025-v1-web",
-        "name": "天衛二（借用給王良四） · sprite",
+        "name": "王良四 · sprite",
         "src": "assets/extensions/stellar40/web/umbriel-battle.webp",
         "width": 1024,
         "height": 1024,
@@ -1038,7 +1038,7 @@
       },
       {
         "id": "stellaart:asset.nix-portrait-20261025-web",
-        "name": "尼克斯（借用給Hypatia） · portrait",
+        "name": "Hypatia · portrait",
         "src": "assets/extensions/stellar40/web/nix.webp",
         "width": 768,
         "height": 1152,
@@ -1047,7 +1047,7 @@
       },
       {
         "id": "stellaart:asset.nix-avatar-20261025-web",
-        "name": "尼克斯（借用給Hypatia） · avatar",
+        "name": "Hypatia · avatar",
         "src": "assets/extensions/stellar40/avatars/nix.webp",
         "width": 256,
         "height": 256,
@@ -1056,7 +1056,7 @@
       },
       {
         "id": "stellaart:asset.nix-battle-20261025-v1-web",
-        "name": "尼克斯（借用給Hypatia） · sprite",
+        "name": "Hypatia · sprite",
         "src": "assets/extensions/stellar40/web/nix-battle.webp",
         "width": 1024,
         "height": 1024,
@@ -1065,7 +1065,7 @@
       },
       {
         "id": "stellaart:asset.asmidiske-portrait-20261025-web",
-        "name": "船尾座ξ（借用給天津一） · portrait",
+        "name": "天津一 · portrait",
         "src": "assets/extensions/stellar40/web/asmidiske.webp",
         "width": 768,
         "height": 1152,
@@ -1074,7 +1074,7 @@
       },
       {
         "id": "stellaart:asset.asmidiske-avatar-20261025-web",
-        "name": "船尾座ξ（借用給天津一） · avatar",
+        "name": "天津一 · avatar",
         "src": "assets/extensions/stellar40/avatars/asmidiske.webp",
         "width": 256,
         "height": 256,
@@ -1083,7 +1083,7 @@
       },
       {
         "id": "stellaart:asset.asmidiske-battle-20261025-v1-web",
-        "name": "船尾座ξ（借用給天津一） · sprite",
+        "name": "天津一 · sprite",
         "src": "assets/extensions/stellar40/web/asmidiske-battle.webp",
         "width": 1024,
         "height": 1024,

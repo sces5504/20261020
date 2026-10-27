@@ -160,12 +160,7 @@ try {
     const close = () => page.locator('#overlay [data-action="close"]').click();
     if (!process.env.UI_DETAILS_ONLY) {
       await page.goto(server.url);
-      await page.waitForSelector('[data-action="story-skip"]', {
-        timeout: 60000,
-      });
-      await page.locator(".story-scene > img").evaluate((i) => i.decode());
-      await geometry(page);
-      await page.screenshot({ path: `${out}/${name}-dialogue.png` });
+      await page.waitForSelector("canvas", { timeout: 60000 });
       const s = quietSave(p);
       await seed(page, p, s);
       const bridge = await geometry(page);

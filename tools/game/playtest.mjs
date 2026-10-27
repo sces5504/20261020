@@ -87,7 +87,6 @@ try {
   );
   await page.locator('[data-action="test"]').click();
   await page.waitForSelector("canvas", { timeout: 60000 });
-  await page.locator('[data-action="story-skip"]').click();
   await page.locator('[data-action="view"]').click();
   await page.locator('[data-action="navigate"]').first().click();
   await page.locator('[data-action="auto"]').click();

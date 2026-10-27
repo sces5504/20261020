@@ -44,6 +44,7 @@ test("Sun protects nearby allies from both DoTs, and independent timed buffs coe
   const { c, u } = scene("solar10:character.sun");
   assert(c.cast(u.id));
   assert.equal(c.mechanics.stat(u, "defense"), 1.6);
+  assert.equal(c.mechanics.stat(u, "attack"), 1.3);
   c.mechanics.add(
     u,
     mod({ stat: "corrosion", value: 1, duration: 3 }),
@@ -60,10 +61,11 @@ test("Sun protects nearby allies from both DoTs, and independent timed buffs coe
     "attack",
   );
   advance(c, 1.1);
-  assert.equal(c.mechanics.stat(u, "attack"), 1);
+  assert.equal(c.mechanics.stat(u, "attack"), 1.3);
   assert.equal(c.mechanics.stat(u, "defense"), 1.6);
   advance(c, 3);
   assert.equal(c.mechanics.stat(u, "defense"), 1);
+  assert.equal(c.mechanics.stat(u, "attack"), 1);
 });
 test("Jupiter black hole pulls multiple enemies and deals repeated splash while reducing incoming damage", () => {
   const { c, u, foes } = scene("solar10:character.jupiter");

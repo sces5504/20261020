@@ -45,6 +45,7 @@ import {
   storyFields,
 } from "../domain/world";
 import { download, read } from "../platform/storage";
+import { prefetchImages } from "../platform/idle";
 import { mountSpace } from "./space";
 import { esc, button, amounts, portrait, entityImage, stars } from "./common";
 export { esc } from "./common";
@@ -69,6 +70,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     panel = "",
     sub = "",
     storyId = "",
+    introClaiming = new Set<string>(),
     storyIndex = 0,
     currentAcquisition = "",
     arrivalReturnPanel = "",
@@ -107,6 +109,7 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     return `<button data-action="${action}" data-id="${id}" aria-label="${label}"><span class="deck-symbol">${icon(glyph)}</span><span class="deck-label">${short}<small>${english}</small></span></button>`;
   }
   const $ = (s: string) => root.querySelector<HTMLElement>(s)!;
+  const phoneStick = matchMedia("(max-width: 760px) and (pointer: coarse)");
   const space = mountSpace(
     $("#space"),
     g,
@@ -125,39 +128,38 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
       renderPlanet();
       return true;
     },
+    {
+      // Phone floating joystick: drag from the lower-left thumb zone to steer; taps there still hit the map, and panning works from anywhere else.
+      accepts: (x, y) =>
+        phoneStick.matches &&
+        g.viewMode !== "map" &&
+        x < innerWidth * 0.45 &&
+        y > innerHeight * 0.5,
+      steer(fromX, fromY, toX, toY) {
+        const base = $("#joystick"),
+          knob = base.querySelector<HTMLElement>("span")!,
+          max = 48,
+          dx = toX - fromX,
+          dy = toY - fromY,
+          len = Math.hypot(dx, dy),
+          k = len > max ? max / len : 1;
+        base.classList.add("active");
+        base.style.left = `${fromX - 56}px`;
+        base.style.top = `${fromY - 56}px`;
+        knob.style.transform = `translate(${dx * k}px, ${dy * k}px)`;
+        g.movement = len > 10 ? { x: dx, y: dy } : { x: 0, y: 0 };
+      },
+      release() {
+        const base = $("#joystick");
+        base.classList.remove("active");
+        base.style.left = base.style.top = "";
+        base.querySelector<HTMLElement>("span")!.style.transform = "";
+        g.movement = { x: 0, y: 0 };
+      },
+    },
   );
-  // Touch joystick: drives the same movement vector as WASD.
-  const stick = $("#joystick"),
-    knob = stick.querySelector<HTMLElement>("span")!;
-  let stickId = -1;
-  const steer = (e: PointerEvent) => {
-    const r = stick.getBoundingClientRect(),
-      dx = e.clientX - (r.left + r.width / 2),
-      dy = e.clientY - (r.top + r.height / 2),
-      max = r.width / 2,
-      len = Math.hypot(dx, dy),
-      k = len > max ? max / len : 1;
-    knob.style.transform = `translate(${dx * k}px, ${dy * k}px)`;
-    g.movement = len > 10 ? { x: dx, y: dy } : { x: 0, y: 0 };
-  };
-  const release = () => {
-    stickId = -1;
-    knob.style.transform = "";
-    g.movement = { x: 0, y: 0 };
-  };
   // iOS ignores maximum-scale: stop page pinch-zoom; the map's own pinch uses pointer events.
   root.addEventListener("gesturestart", (e) => e.preventDefault());
-  stick.addEventListener("pointerdown", (e) => {
-    stickId = e.pointerId;
-    stick.setPointerCapture(e.pointerId);
-    steer(e);
-    e.preventDefault();
-  });
-  stick.addEventListener("pointermove", (e) => {
-    if (e.pointerId === stickId) steer(e);
-  });
-  stick.addEventListener("pointerup", release);
-  stick.addEventListener("pointercancel", release);
   const disposeStory = mountStoryPlayer(root, g, () => {
     panel = "";
     drawPanel();
@@ -1402,7 +1404,20 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
           !q.story &&
           !g.save.storySeen.includes(q.id),
       );
-      if (q) {
+      if (q?.condition === "intro") {
+        // 開場補給直接入帳；舊版開場對白已由序章劇情取代，不再彈出。
+        if (!introClaiming.has(q.id)) {
+          introClaiming.add(q.id);
+          void g
+            .command({ type: "seen-story", id: q.id })
+            .then(() =>
+              g.save.quests.includes(q.id)
+                ? undefined
+                : g.command({ type: "quest", id: q.id }),
+            )
+            .finally(() => introClaiming.delete(q.id));
+        }
+      } else if (q) {
         storyId = q.id;
         storyIndex = 0;
         panel = "story";
@@ -1586,7 +1601,23 @@ export function mountGame(root: HTMLElement, g: Game, test: boolean) {
     }
     if (ticks % 4 === 0) void g.tickEconomy();
     if (ticks % 12 === 0) void g.checkpoint();
+    if (ticks % 40 === 16) warmAssets();
   }, 250);
+  // 本體先進遊戲；之後邊玩邊在閒置時預載已擁有角色與目前星域的素材。
+  function warmAssets() {
+    const ids = new Set<string>();
+    for (const o of g.save.roster) {
+      const c = p.characters.find((c) => c.id === o.definition);
+      if (c) [c.portrait, c.avatar, c.sprite].forEach((id) => ids.add(id));
+    }
+    const region = p.regions.find((r) => r.id === g.save.region);
+    if (region?.background) ids.add(region.background);
+    for (const v of p.planets)
+      if (v.region === g.save.region && v.sprite) ids.add(v.sprite);
+    prefetchImages(
+      p.assets.filter((a) => ids.has(a.id)).map((a) => a.src),
+    );
+  }
   renderPlanet();
   renderMission();
   renderSquad();

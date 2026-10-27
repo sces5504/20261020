@@ -243,7 +243,7 @@ try {
       .locator('[data-action="new-voyage"][data-id="original:region.solar"]')
       .click();
     await page.locator('[data-answer="yes"]').click();
-    await page.waitForSelector(".story-scene");
+    // 新航程不再彈出舊開場對白；直接等新存檔。
     const restarted = await waitSave(
       page,
       (s) =>

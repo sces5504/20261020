@@ -56,8 +56,21 @@ for (const binding of artBindings.bindings) {
 // Derived chibi sprites are separate from immutable standard portraits.
 const battleAssets = JSON.parse(
   readFileSync("art/catalog/battle-assets.json", "utf8"),
-) as { id: string; path: string; sha256: string; runtime: string }[];
+) as {
+  id: string;
+  path: string;
+  sha256: string;
+  runtime: string;
+  master?: string;
+  masterSha256?: string;
+}[];
 for (const entry of battleAssets) {
+  if (
+    entry.master &&
+    createHash("sha256").update(readFileSync(entry.master)).digest("hex") !==
+      entry.masterSha256
+  )
+    throw Error("Q版素材母檔hash不符");
   const bytes = readFileSync(entry.path),
     asset = merged.assets.find((a) => a.id === entry.id);
   if (

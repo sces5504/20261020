@@ -73,9 +73,11 @@ const getRecord = async (page, key) =>
     key,
   );
 async function skipIntro(page) {
-  await page.waitForSelector('[data-action="story-skip"]');
-  await page.locator('[data-action="story-skip"]').click();
-  await page.waitForSelector(".story-scene", { state: "hidden" });
+  // 舊版開場對白已移除：開場補給靜默入帳，不再彈出對話。
+  await page.waitForSelector("canvas", { timeout: 60000 });
+  await page.waitForTimeout(800);
+  if (await page.locator(".story-scene").count())
+    throw Error("legacy intro dialogue must not pop up");
 }
 try {
   const context = await browser.newContext({

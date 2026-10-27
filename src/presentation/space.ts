@@ -1,5 +1,6 @@
 import { drawCombatVfx } from "./combat-vfx";
 import { turretArt } from "./summon-art";
+import { whenIdle } from "../platform/idle";
 import { SummonCues } from "./summon-cues";
 import { BeamLayer } from "./beam-layer";
 import {
@@ -37,6 +38,12 @@ export function mountSpace(
   audio?: AudioMixer,
   /** Empty-space tap; returning true consumes it (e.g. dismissing the intel card). */
   onEmptyTap?: () => boolean,
+  /** Floating joystick: a drag that starts inside its zone steers instead of panning; a quick tap there still taps the map. */
+  stick?: {
+    accepts(clientX: number, clientY: number): boolean;
+    steer(fromX: number, fromY: number, toX: number, toY: number): void;
+    release(): void;
+  },
 ) {
   const density = Math.min(window.devicePixelRatio || 1, 2);
   const held = new Set<string>();
@@ -103,6 +110,9 @@ export function mountSpace(
     panY = 0;
     drag: { x: number; y: number; startX: number; startY: number } | null =
       null;
+    stickPointer = -1;
+    stickActive = false;
+    stickFrom = { x: 0, y: 0 };
     pinch = 0;
     cancelTap = false;
     lastBattle = false;
@@ -136,6 +146,15 @@ export function mountSpace(
       }
       this.input.addPointer(1);
       this.input.on("pointerdown", (pointer: Phaser.Input.Pointer) => {
+        if (this.stickPointer >= 0) return;
+        const client = this.client(pointer);
+        if (stick?.accepts(client.x, client.y)) {
+          this.stickPointer = pointer.id;
+          this.stickActive = false;
+          this.stickFrom = client;
+          this.cancelTap = false;
+          return;
+        }
         this.drag = {
           x: pointer.x,
           y: pointer.y,
@@ -145,6 +164,17 @@ export function mountSpace(
         this.cancelTap = false;
       });
       this.input.on("pointermove", (pointer: Phaser.Input.Pointer) => {
+        if (pointer.id === this.stickPointer) {
+          const c = this.client(pointer),
+            far =
+              Math.hypot(c.x - this.stickFrom.x, c.y - this.stickFrom.y) > 10;
+          if (far || this.stickActive) {
+            this.stickActive = true;
+            stick!.steer(this.stickFrom.x, this.stickFrom.y, c.x, c.y);
+          }
+          return;
+        }
+        if (this.stickActive) return;
         if (!this.drag || !pointer.isDown) return;
         const pointers = this.input.manager.pointers.filter((p) => p.isDown);
         if (pointers.length > 1) {
@@ -194,6 +224,15 @@ export function mountSpace(
         },
       );
       this.input.on("pointerup", (pointer: Phaser.Input.Pointer) => {
+        if (pointer.id === this.stickPointer) {
+          const steered = this.stickActive;
+          this.stickPointer = -1;
+          this.stickActive = false;
+          if (steered) {
+            stick!.release();
+            return;
+          }
+        } else if (this.stickPointer >= 0) return;
         const cancelled = this.cancelTap;
         this.drag = null;
         this.pinch = 0;
@@ -235,6 +274,9 @@ export function mountSpace(
         model.move(p.x, p.y);
       });
       this.game.canvas.addEventListener("pointercancel", () => {
+        if (this.stickActive) stick?.release();
+        this.stickPointer = -1;
+        this.stickActive = false;
         this.drag = null;
         this.pinch = 0;
         this.cancelTap = true;
@@ -257,6 +299,13 @@ export function mountSpace(
         .filter((a) => used.has(a.id))
         .forEach((a) => this.ensureAsset(a.id));
     }
+    private client(pointer: Phaser.Input.Pointer) {
+      const r = this.game.canvas.getBoundingClientRect();
+      return {
+        x: r.left + (pointer.x * r.width) / this.scale.width,
+        y: r.top + (pointer.y * r.height) / this.scale.height,
+      };
+    }
     private ensureTurretArt() {
       if (this.textures.exists(turretArt.key)) return;
       const image = new Image();
@@ -271,7 +320,7 @@ export function mountSpace(
         ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
         this.textures.addCanvas(turretArt.key, canvas);
       };
-      image.src = turretArt.url;
+      whenIdle(() => (image.src = turretArt.url));
     }
     private ensureAsset(id: string) {
       if (this.textures.exists(id) || this.loaded.has(id)) return;

@@ -37,6 +37,8 @@ export default defineConfig({
       },
     },
   ],
+  // 大型內容包以 JSON.parse 載入，解析比等量 JS 物件字面值快。
+  json: { stringify: true },
   build: {
     target: "es2022",
     rollupOptions: {

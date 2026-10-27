@@ -17,7 +17,7 @@
       {
         "id": "story40:character.luyten",
         "name": "Luyten",
-        "description": "提高自身攻擊與暴擊率。建議後衛，實際位置由玩家編隊決定。",
+        "description": "提高自身攻擊與暴擊率。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[38] -> Skill[34]; Gacha[37]; EventScript[3030] first observed presence",
@@ -50,7 +50,7 @@
       {
         "id": "story40:character.regor",
         "name": "Regor",
-        "description": "降低附近友軍承受的傷害。建議前鋒，實際位置由玩家編隊決定。",
+        "description": "降低附近友軍承受的傷害。適合擔任前鋒。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[39] -> Skill[43]; Gacha[38]; EventScript[3086] first observed presence",
@@ -83,7 +83,7 @@
       {
         "id": "story40:character.tseenke",
         "name": "TseenKe",
-        "description": "建立侵蝕區域，對附近敵人附加持續侵蝕傷害。建議後衛，實際位置由玩家編隊決定。",
+        "description": "建立侵蝕區域，對附近敵人附加持續侵蝕傷害。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[40] -> Skill[103]; Gacha[39]; EventScript[3116] first observed presence",
@@ -116,7 +116,7 @@
       {
         "id": "story40:character.alherem",
         "name": "Alherem",
-        "description": "提高自身攻擊。建議後衛，實際位置由玩家編隊決定。",
+        "description": "提高自身攻擊。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[42] -> Skill[19]; Gacha[41]; EventScript[3134] first observed presence",
@@ -149,7 +149,7 @@
       {
         "id": "story40:character.suhail",
         "name": "Suhail",
-        "description": "提高自身防禦。建議前鋒，實際位置由玩家編隊決定。",
+        "description": "提高自身防禦。適合擔任前鋒。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[41] -> Skill[51]; Gacha[40]; EventScript[3142] first observed presence",
@@ -182,7 +182,7 @@
       {
         "id": "story40:character.procyon",
         "name": "南河三",
-        "description": "提高附近友軍迴避率。建議後衛，實際位置由玩家編隊決定。",
+        "description": "提高附近友軍迴避率。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[36] -> Skill[47]; Gacha[35]; EventScript[3190] first observed presence",
@@ -215,7 +215,7 @@
       {
         "id": "story40:character.regulus",
         "name": "軒轅十四",
-        "description": "提高附近友軍攻速。建議後衛，實際位置由玩家編隊決定。",
+        "description": "提高附近友軍攻速。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[34] -> Skill[8]; Gacha[33]; EventScript[3259] first observed presence",
@@ -248,7 +248,7 @@
       {
         "id": "story40:character.arkas",
         "name": "Arkas",
-        "description": "提高自身攻速。建議後衛，實際位置由玩家編隊決定。",
+        "description": "提高自身攻速。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[35] -> Skill[1]; Gacha[34]; EventScript[3433] first observed presence",
@@ -281,7 +281,7 @@
       {
         "id": "story40:character.aegir",
         "name": "Aegir",
-        "description": "設置可被攻擊的砲台提供額外火力。建議後衛，實際位置由玩家編隊決定。",
+        "description": "設置可被攻擊的砲台提供額外火力。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[47] -> Skill[88]; Gacha[46]; EventScript[4133] first observed presence",
@@ -314,7 +314,7 @@
       {
         "id": "story40:character.ots44",
         "name": "OTS44",
-        "description": "提高自身攻速與暴擊率。建議後衛，實際位置由玩家編隊決定。",
+        "description": "提高自身攻速與暴擊率。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[50] -> Skill[13]; Gacha[49]; EventScript[4316] first observed presence",
@@ -347,7 +347,7 @@
       {
         "id": "story40:character.den",
         "name": "DEN",
-        "description": "向前發射多枚散射彈。建議後衛，實際位置由玩家編隊決定。",
+        "description": "向前發射多枚散射彈。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[51] -> Skill[123]; Gacha[50]; EventScript[4319] first observed presence",
@@ -380,7 +380,7 @@
       {
         "id": "story40:character.musca",
         "name": "Musca",
-        "description": "提高自身攻擊與暴擊率。建議後衛，實際位置由玩家編隊決定。",
+        "description": "提高自身攻擊與暴擊率。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[43] -> Skill[33]; Gacha[42]; EventScript[4402] first observed presence",
@@ -413,7 +413,7 @@
       {
         "id": "story40:character.acrux",
         "name": "十字架二",
-        "description": "提高附近友軍攻擊與暴擊率。建議後衛，實際位置由玩家編隊決定。",
+        "description": "提高附近友軍攻擊與暴擊率。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[44] -> Skill[38]; Gacha[43]; EventScript[4438] first observed presence",
@@ -446,7 +446,7 @@
       {
         "id": "story40:character.acamar",
         "name": "Acamar",
-        "description": "提高附近友軍防禦。建議後衛，實際位置由玩家編隊決定。",
+        "description": "提高附近友軍防禦。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[49] -> Skill[42]; Gacha[48]; EventScript[4438] first observed presence",
@@ -479,7 +479,7 @@
       {
         "id": "story40:character.ran",
         "name": "Ran",
-        "description": "短時間將自身暴擊率設為100%，實際命中沿用共用上限。建議後衛，實際位置由玩家編隊決定。",
+        "description": "短時間將自身暴擊率設為100%。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[46] -> Skill[40]; Gacha[45]; EventScript[4652] first observed presence",
@@ -512,7 +512,7 @@
       {
         "id": "story40:character.achernar",
         "name": "水委一",
-        "description": "提高附近友軍防禦。建議後衛，實際位置由玩家編隊決定。同章星域補位，出場順序為推定。",
+        "description": "提高附近友軍防禦。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[45] -> Skill[41]; Gacha[44]; PID[33] southern inferred placement",
@@ -545,7 +545,7 @@
       {
         "id": "story40:character.sirius",
         "name": "天狼星",
-        "description": "提高附近友軍攻擊。建議後衛，實際位置由玩家編隊決定。",
+        "description": "提高附近友軍攻擊。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[52] -> Skill[22]; Gacha[51]; EventScript[5182] first observed presence",
@@ -578,7 +578,7 @@
       {
         "id": "story40:character.canis",
         "name": "Canis",
-        "description": "提高附近友軍攻擊與防禦。建議前鋒，實際位置由玩家編隊決定。",
+        "description": "提高附近友軍攻擊與防禦。適合擔任前鋒。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[56] -> Skill[54]; Gacha[55]; EventScript[5203] first observed presence",
@@ -611,7 +611,7 @@
       {
         "id": "story40:character.wezen",
         "name": "弧矢一",
-        "description": "建立持續火焰區域，週期傷害範圍內敵人。建議後衛，實際位置由玩家編隊決定。",
+        "description": "建立持續火焰區域，週期傷害範圍內敵人。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[57] -> Skill[100]; Gacha[56]; EventScript[5204] first observed presence",
@@ -644,7 +644,7 @@
       {
         "id": "story40:character.furud",
         "name": "Furud",
-        "description": "提高附近友軍攻擊。建議後衛，實際位置由玩家編隊決定。",
+        "description": "提高附近友軍攻擊。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[59] -> Skill[21]; Gacha[58]; EventScript[5208] first observed presence",
@@ -677,7 +677,7 @@
       {
         "id": "story40:character.aludra",
         "name": "弧矢二",
-        "description": "展開反射領域，將來襲彈體反射回敵方。建議前鋒，實際位置由玩家編隊決定。",
+        "description": "展開反射領域，將來襲彈體反射回敵方。適合擔任前鋒。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[58] -> Skill[67]; Gacha[57]; EventScript[5212] first observed presence",
@@ -710,7 +710,7 @@
       {
         "id": "story40:character.bayes",
         "name": "Bayes",
-        "description": "發射兩枚爆破彈，命中造成範圍傷害並擊退。建議後衛，實際位置由玩家編隊決定。",
+        "description": "發射兩枚爆破彈，命中造成範圍傷害並擊退。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[53] -> Skill[114]; Gacha[52]; EventScript[5222] first observed presence",
@@ -743,7 +743,7 @@
       {
         "id": "story40:character.naos",
         "name": "弧矢增二十二",
-        "description": "提高自身防禦。建議前鋒，實際位置由玩家編隊決定。",
+        "description": "提高自身防禦。適合擔任前鋒。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[60] -> Skill[52]; Gacha[59]; EventScript[5748] first observed presence",
@@ -776,7 +776,7 @@
       {
         "id": "story40:character.rufus",
         "name": "Rufus",
-        "description": "提高自身攻速與暴擊率。建議後衛，實際位置由玩家編隊決定。同章星域補位，出場順序為推定。",
+        "description": "提高自身攻速與暴擊率。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[54] -> Skill[12]; Gacha[53]; PID[42] canis inferred placement",
@@ -809,7 +809,7 @@
       {
         "id": "story40:character.kruger60",
         "name": "Kruger60",
-        "description": "提高自身攻速。建議後衛，實際位置由玩家編隊決定。",
+        "description": "提高自身攻速。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[67] -> Skill[4]; Gacha[66]; EventScript[6047] first observed presence",
@@ -842,7 +842,7 @@
       {
         "id": "story40:character.kochab",
         "name": "北極二",
-        "description": "提高自身攻擊與暴擊率。建議後衛，實際位置由玩家編隊決定。",
+        "description": "提高自身攻擊與暴擊率。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[68] -> Skill[36]; Gacha[67]; EventScript[6085] first observed presence",
@@ -875,7 +875,7 @@
       {
         "id": "story40:character.vega",
         "name": "織女星",
-        "description": "提高附近友軍防禦並抵抗暈眩。建議前鋒，實際位置由玩家編隊決定。",
+        "description": "提高附近友軍防禦並抵抗暈眩。適合擔任前鋒。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[66] -> Skill[68]; Gacha[65]; EventScript[6099] first observed presence",
@@ -908,7 +908,7 @@
       {
         "id": "story40:character.polaris",
         "name": "北極星",
-        "description": "建立重力場，牽引並持續傷害附近敵人。建議後衛，實際位置由玩家編隊決定。",
+        "description": "建立重力場，牽引並持續傷害附近敵人。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[61] -> Skill[80]; Gacha[60]; EventScript[6116] first observed presence",
@@ -941,7 +941,7 @@
       {
         "id": "story40:character.alrai",
         "name": "Alrai",
-        "description": "提高附近友軍攻擊。建議後衛，實際位置由玩家編隊決定。",
+        "description": "提高附近友軍攻擊。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[63] -> Skill[23]; Gacha[62]; EventScript[6221] first observed presence",
@@ -974,7 +974,7 @@
       {
         "id": "story40:character.ioannina",
         "name": "Ioannina",
-        "description": "展開反射領域，將來襲彈體反射回敵方。建議前鋒，實際位置由玩家編隊決定。",
+        "description": "展開反射領域，將來襲彈體反射回敵方。適合擔任前鋒。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[108] -> Skill[65]; Gacha[107]; EventScript[6259] first observed presence",
@@ -1007,7 +1007,7 @@
       {
         "id": "story40:character.shedar",
         "name": "王良四",
-        "description": "發射三枚狙擊彈。建議後衛，實際位置由玩家編隊決定。",
+        "description": "發射三枚狙擊彈。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[64] -> Skill[132]; Gacha[63]; EventScript[6285] first observed presence",
@@ -1040,7 +1040,7 @@
       {
         "id": "story40:character.hypatia",
         "name": "Hypatia",
-        "description": "提高自身攻速與暴擊率。建議後衛，實際位置由玩家編隊決定。",
+        "description": "提高自身攻速與暴擊率。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[65] -> Skill[10]; Gacha[64]; EventScript[6468] first observed presence",
@@ -1073,7 +1073,7 @@
       {
         "id": "story40:character.navi",
         "name": "Navi",
-        "description": "提高附近友軍攻速與暴擊率。建議後衛，實際位置由玩家編隊決定。",
+        "description": "提高附近友軍攻速與暴擊率。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[69] -> Skill[15]; Gacha[68]; EventScript[6538] first observed presence",
@@ -1106,7 +1106,7 @@
       {
         "id": "story40:character.gienah",
         "name": "Gienah",
-        "description": "減少附近友軍剩餘技能冷卻；時間停止技能遵守核心排除規則。建議後衛，實際位置由玩家編隊決定。",
+        "description": "減少附近友軍剩餘技能冷卻；時間停止技能遵守核心排除規則。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[118] -> Skill[193]; Gacha[117]; EventScript[7022] first observed presence",
@@ -1139,7 +1139,7 @@
       {
         "id": "story40:character.enif",
         "name": "Enif",
-        "description": "召喚誘敵裝置，吸引追蹤與雷射攻擊，不會攻擊。建議後衛，實際位置由玩家編隊決定。",
+        "description": "召喚誘敵裝置，吸引追蹤與雷射攻擊，不會攻擊。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[74] -> Skill[218]; Gacha[73]; EventScript[7061] first observed presence",
@@ -1172,7 +1172,7 @@
       {
         "id": "story40:character.piazzi",
         "name": "Piazzi",
-        "description": "向前發射多枚散射彈。建議後衛，實際位置由玩家編隊決定。",
+        "description": "向前發射多枚散射彈。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[77] -> Skill[122]; Gacha[76]; EventScript[7061] first observed presence",
@@ -1205,7 +1205,7 @@
       {
         "id": "story40:character.cygni",
         "name": "Cygni",
-        "description": "釋放擴散衝擊波，傷害並暈眩範圍內敵人。建議前鋒，實際位置由玩家編隊決定。",
+        "description": "釋放擴散衝擊波，傷害並暈眩範圍內敵人。適合擔任前鋒。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[71] -> Skill[108]; Gacha[70]; EventScript[7099] first observed presence",
@@ -1238,7 +1238,7 @@
       {
         "id": "story40:character.sadr",
         "name": "天津一",
-        "description": "提高自身防禦並嘲諷附近敵人。建議前鋒，實際位置由玩家編隊決定。",
+        "description": "提高自身防禦並嘲諷附近敵人。適合擔任前鋒。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[72] -> Skill[78]; Gacha[71]; EventScript[7141] first observed presence",
@@ -1271,7 +1271,7 @@
       {
         "id": "story40:character.denebola",
         "name": "五帝座一",
-        "description": "提高附近友軍防禦並抵抗雷射。建議前鋒，實際位置由玩家編隊決定。",
+        "description": "提高附近友軍防禦並抵抗雷射。適合擔任前鋒。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[117] -> Skill[191]; Gacha[116]; EventScript[7772] first observed presence",
@@ -1304,7 +1304,7 @@
       {
         "id": "story40:character.behemoth",
         "name": "Behemoth",
-        "description": "蓄積友軍受到的實際生命損失，延遲釋放反擊震波；召喚物不計入。建議前鋒，實際位置由玩家編隊決定。",
+        "description": "蓄積友軍受到的實際生命損失，延遲釋放反擊震波；召喚物不計入。適合擔任前鋒。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[124] -> Skill[220]; Gacha[123]; EventScript[7777] first observed presence",

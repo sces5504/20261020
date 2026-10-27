@@ -1,4 +1,3 @@
-import { mountCharacterRoster } from "./presentation/character-roster";
 import { ask } from "./presentation/dialog";
 import "./style.css";
 import { published } from "./content";
@@ -7,12 +6,6 @@ import { Game } from "./application/game";
 import { compatibilityPlan } from "./domain/migration";
 import { read, download, commit } from "./platform/storage";
 import { esc } from "./presentation/common";
-import { mountArtGallery } from "./presentation/art-gallery";
-import {
-  studioUnlocked,
-  mountStudioAccess,
-} from "./presentation/studio-access";
-import { mountStudio } from "./presentation/studio";
 const root = document.querySelector<HTMLElement>("#app")!;
 let dispose: (() => void | Promise<void>) | undefined,
   loading = false,
@@ -28,26 +21,37 @@ async function route() {
   root.innerHTML =
     '<div class="loading"><span>✧</span><p>正在連接星海航跡…</p></div>';
   try {
-    if (location.hash.startsWith("#/catalog"))
+    // 圖鑑、畫廊與工坊各自分包，只在進入該頁時下載，不拖慢遊戲本體首載。
+    if (location.hash.startsWith("#/catalog")) {
+      const { mountCharacterRoster } = await import(
+        "./presentation/character-roster"
+      );
       dispose = await mountCharacterRoster(root);
-    else if (
+    } else if (
       location.hash.startsWith("#/art") ||
       location.hash.startsWith("#/gallery") ||
       location.pathname.endsWith("/gallery.html")
-    )
+    ) {
+      const { mountArtGallery } = await import("./presentation/art-gallery");
       dispose = mountArtGallery(root);
-    else if (location.hash.startsWith("#/studio"))
+    } else if (location.hash.startsWith("#/studio")) {
+      const { studioUnlocked, mountStudioAccess } = await import(
+        "./presentation/studio-access"
+      );
       dispose = studioUnlocked()
-        ? await mountStudio(root)
+        ? await (await import("./presentation/studio")).mountStudio(root)
         : mountStudioAccess(root, () => void route());
-    else {
+    } else {
+      // 遊戲介面與 Phaser 與內容校驗並行下載。
+      const ui = import("./presentation/ui");
+      ui.catch(() => undefined);
       const test = location.hash.startsWith("#/test");
       const candidate = test ? await read<Pack>("content:test") : published;
       const checked = validatePack(candidate);
       if (!checked.pack)
         throw Error("測試內容無效，請回工坊校驗：" + checked.errors.join("\n"));
       const game = await Game.load(checked.pack, test);
-      const { mountGame } = await import("./presentation/ui");
+      const { mountGame } = await ui;
       dispose = mountGame(root, game, test);
     }
   } catch (e) {

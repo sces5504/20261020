@@ -17,7 +17,7 @@
       {
         "id": "late3:character.posterior",
         "name": "Posterior",
-        "description": "發射八枚追蹤彈攻擊敵人。建議後衛，實際位置由玩家編隊順序決定。",
+        "description": "發射八枚追蹤彈攻擊敵人。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[123] -> Skill[205]; Gacha[122]",
@@ -50,7 +50,7 @@
       {
         "id": "late3:character.alpheratz",
         "name": "Alpheratz",
-        "description": "短時間提高範圍內友軍攻擊，同時降低這些友軍的防禦，需掌握施放時機。建議後衛，實際位置由玩家編隊順序決定。",
+        "description": "短時間提高範圍內友軍攻擊，同時降低這些友軍的防禦，需掌握施放時機。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[120] -> Skill[200]; Gacha[119]",
@@ -83,7 +83,7 @@
       {
         "id": "late3:character.alrami",
         "name": "Alrami",
-        "description": "短時間提高自身攻擊，並在攻擊時無視敵方防禦。建議後衛，實際位置由玩家編隊順序決定。",
+        "description": "短時間提高自身攻擊，並在攻擊時無視敵方防禦。適合擔任後衛。",
         "status": "active",
         "provenance": "inferred",
         "sourceRef": "Stella Maiden 4.3.2 CID[119] -> Skill[197]; Gacha[118]",

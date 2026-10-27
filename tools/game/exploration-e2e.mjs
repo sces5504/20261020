@@ -328,7 +328,9 @@ try {
   const beforeReset = await record(page);
   await page.locator('[data-action="new-voyage"][data-id=""]').click();
   await page.locator('[data-answer="yes"]').click();
-  await page.waitForSelector(".story-scene");
+  // 新航程不再彈出舊開場對白；等新存檔建立即可。
+  await waitSave(page, (s) => s.summoned === 0, "new voyage must start fresh");
+  assert.equal(await page.locator(".story-scene").count(), 0);
   const reset = await record(page);
   assert.equal(reset.summoned, 0);
   await waitSave(

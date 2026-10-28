@@ -1,6 +1,6 @@
 [線上遊玩](https://sces5504.github.io/20261020/) · [角色圖鑑](https://sces5504.github.io/20261020/gallery.html)
 
-![星河戰姬 Galaxy Angel — 與星體少女，開拓下一段航跡](public/presentation/galaxy-angel-banner.png)
+![星河戰姬 Galaxy Angel — 地球、太陽、重繪版復仇女神星與冥王星；集結星靈，守住下一道防線](public/presentation/galaxy-angel-banner-ensemble.png)
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Galaxy_Angel-79cdd5?style=flat&labelColor=172733)](https://sces5504.github.io/20261020/) [![GitHub](https://img.shields.io/badge/GitHub-Source-344653?style=flat&labelColor=172733&logo=github&logoColor=white)](https://github.com/sces5504/20261020) [![角色圖鑑](https://img.shields.io/badge/角色圖鑑-Gallery-344653?style=flat&labelColor=172733)](https://sces5504.github.io/20261020/gallery.html)
 
